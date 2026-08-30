@@ -11,18 +11,18 @@ export const metadata: Metadata = {
     default: `${BRAND.name} — ${BRAND.tagline.nl}`,
     template: `%s | ${BRAND.name}`,
   },
-  description: BRAND.tagline.nl,
+  description: BRAND.description.nl,
   openGraph: {
     type: "website",
     locale: "nl_NL",
     siteName: BRAND.name,
     title: BRAND.name,
-    description: BRAND.tagline.nl,
+    description: BRAND.description.nl,
   },
   twitter: {
     card: "summary",
     title: BRAND.name,
-    description: BRAND.tagline.nl,
+    description: BRAND.description.nl,
   },
 };
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main id="main-content" className="page-shell reading-page">
+    <main id="main-content" className="page-shell">
       <div className="page-intro">
         <p className="eyebrow">Niet gevonden</p>
         <h1>Deze pagina bestaat niet.</h1>

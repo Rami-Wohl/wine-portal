@@ -61,7 +61,7 @@ npm run content:check
 npm run content:build
 ```
 
-`npm run dev` and `npm run build` run content generation first. Generated JSON includes entity indexes, forward relations, inverse relations, backlinks, localized slug lookups, geography references, and search metadata.
+`npm run dev` and `npm run build` run content generation first. The generated `knowledge-base.json` bundle includes entity indexes, forward relations, inverse relations, backlinks, localized slug lookups, geography references, and search metadata.
 
 Validation fails for malformed schemas and IDs, duplicate IDs/slugs, missing locale files, unknown entity/source references, unsupported relation types, and malformed entity links. Suggestions are shown for close entity-ID typos.
 
@@ -73,4 +73,4 @@ Authors edit:
 - `content/narratives/**`
 - `data/sources/**`
 
-Authors never edit `src/generated/content/**`. Delete or rebuild that directory freely with `npm run content:build`; canonical content is not stored there.
+Authors never edit `src/generated/content/**`. Rebuild it with `npm run content:build`; canonical content is not stored there. The generator also removes retired split JSON fragments that were previously emitted beside the runtime bundle.

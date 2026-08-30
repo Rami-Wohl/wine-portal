@@ -5,6 +5,7 @@ import { EntityLink } from "@/components/entity-link";
 import {
   getEntities,
   getEntityById,
+  getEntityByRoute,
   getNarrativeBacklinks,
   getRelationsForEntity,
 } from "@/content/repository";
@@ -12,7 +13,6 @@ import {
   ENTITY_ROUTE_SEGMENTS,
   ENTITY_TYPE_LABELS_NL,
   entityHref,
-  entityTypeFromRouteSegment,
   narrativeHref,
 } from "@/content/routing";
 import type { Entity } from "@/content/model";
@@ -35,14 +35,6 @@ const relationLabels: Record<string, string> = {
   scope: "Geografische scope",
 };
 
-function findEntity(entityType: string, slug: string): Entity | undefined {
-  const type = entityTypeFromRouteSegment(entityType);
-  if (!type) return undefined;
-  return getEntities().find(
-    (entity) => entity.type === type && entity.slugs.nl === slug,
-  );
-}
-
 export function generateStaticParams() {
   return getEntities().map((entity) => ({
     entityType: ENTITY_ROUTE_SEGMENTS[entity.type],
@@ -52,7 +44,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: EntityPageProps): Promise<Metadata> {
   const { entityType, slug } = await params;
-  const entity = findEntity(entityType, slug);
+  const entity = getEntityByRoute(entityType, slug);
   if (!entity) return {};
   const canonical = entityHref(entity);
   return {
@@ -73,7 +65,7 @@ export async function generateMetadata({ params }: EntityPageProps): Promise<Met
 
 export default async function EntityPage({ params }: EntityPageProps) {
   const { entityType, slug } = await params;
-  const entity = findEntity(entityType, slug);
+  const entity = getEntityByRoute(entityType, slug);
   if (!entity) notFound();
 
   const relations = getRelationsForEntity(entity.id).map((relation) => {

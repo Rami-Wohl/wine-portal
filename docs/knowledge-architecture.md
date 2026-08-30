@@ -930,36 +930,36 @@ Voor v1 kan de technische implementatie eventueel via GitHub Issues/PR's lopen. 
 
 ---
 
-# 17. Voorgestelde repositorystructuur na migratie
+# 17. Repositorystructuur na migratie
 
-De uiteindelijke exacte namen kunnen bij implementatie nog veranderen, maar deze scheiding is het doelmodel:
+De v1-implementatie gebruikt self-contained content packages. Daarmee blijven canonical metadata en gelokaliseerde presentatie bij dezelfde entity of narrative, zonder een parallelle `data/entities/`-structuur of losse `content/<type>/<locale>/`-boom. `data/` blijft voor herbruikbare bronnen en geverifieerde geografie; `content/legacy/` blijft de tijdelijke, niet-canonical importzone.
 
 ```text
 project/
 ├── README.md
-├── knowledge-architecture.md
+├── docs/
+│   └── knowledge-architecture.md
 ├── curriculum.md                  # curated Learn-structuur
 │
 ├── data/
-│   ├── entities/
-│   │   ├── regions/
-│   │   ├── appellations/
-│   │   ├── sites/
-│   │   ├── producers/
-│   │   ├── grapes/
-│   │   ├── classifications/
-│   │   ├── vintages/
-│   │   └── concepts/
 │   ├── sources/
 │   └── geography/
 │
 ├── content/
+│   ├── entities/
+│   │   └── <entity-type>/<slug>/
+│   │       ├── entity.yaml
+│   │       ├── overview.nl.md
+│   │       ├── overview.en.md
+│   │       └── media/             # alleen package-specifieke assets
 │   ├── narratives/
-│   │   ├── nl/
-│   │   └── en/
-│   └── entities/
-│       ├── nl/
-│       └── en/
+│   │   └── <type>/<slug>/
+│   │       ├── narrative.yaml
+│   │       ├── article.nl.md
+│   │       ├── article.en.md
+│   │       └── media/             # alleen package-specifieke assets
+│   └── legacy/
+│       └── modules/               # tijdelijke, intacte migratie-input
 │
 ├── media/
 │   ├── illustrations/
@@ -975,8 +975,8 @@ project/
 │   ├── visual-style.md
 │   └── migration-status.md
 │
-└── legacy/
-    └── modules/                    # tijdelijk totdat migratie gecontroleerd is
+└── src/generated/content/
+    └── knowledge-base.json         # afgeleid runtimebestand; niet canonical
 ```
 
 ### Waarom media niet meer standaard naast een les staat

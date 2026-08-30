@@ -142,9 +142,13 @@ export interface NarrativeMention {
   locale: Locale;
 }
 
+export type GeneratedNarrative = Narrative & {
+  mentions: NarrativeMention[];
+};
+
 export interface GeneratedKnowledgeBase {
   entities: Entity[];
-  narratives: Array<Narrative & { mentions: NarrativeMention[] }>;
+  narratives: GeneratedNarrative[];
   sources: Source[];
   relations: {
     forward: ResolvedRelation[];

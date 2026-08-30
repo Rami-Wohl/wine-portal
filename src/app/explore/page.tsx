@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
-import { getEntities } from "@/content/repository";
+import { getEntitiesByType } from "@/content/repository";
 import type { EntityType } from "@/content/model";
 
 export const metadata: Metadata = {
@@ -19,6 +19,7 @@ const categories: Array<{
 }> = [
   { type: "region", title: "Regio's", description: "Wijngebieden als geografische en culturele context." },
   { type: "appellation", title: "Appellaties", description: "Beschermde herkomsten en hun plaats in het grotere geheel." },
+  { type: "site", title: "Wijngaardsites", description: "Afgebakende wijngaarden en lieux-dits binnen hun geografische context." },
   { type: "producer", title: "Producenten", description: "Châteaux, domeinen, estates en andere producenten." },
   { type: "grape", title: "Druiven", description: "Druivenrassen, synoniemen en relevante relaties." },
   { type: "vintage", title: "Jaargangen", description: "Jaargangen binnen een expliciete regionale scope." },
@@ -27,8 +28,6 @@ const categories: Array<{
 ];
 
 export default function ExplorePage() {
-  const entities = getEntities();
-
   return (
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Ontdekken" title="Waar ben je nieuwsgierig naar?">
@@ -57,7 +56,7 @@ export default function ExplorePage() {
           <h2 id="categories-title">Begin bij een categorie</h2>
         </div>
         {categories.map((category) => {
-          const available = entities.filter((entity) => entity.type === category.type);
+          const available = getEntitiesByType(category.type);
           return (
             <article className="category-row" key={category.type}>
               <div>

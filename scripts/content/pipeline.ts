@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
 import { z } from "zod";
@@ -41,6 +41,16 @@ export interface BuildResult {
   knowledgeBase: GeneratedKnowledgeBase;
   outputs: Record<string, string>;
 }
+
+const GENERATED_BUNDLE_FILENAME = "knowledge-base.json";
+const RETIRED_GENERATED_FILENAMES = [
+  "entities.json",
+  "narratives.json",
+  "sources.json",
+  "relations.json",
+  "backlinks.json",
+  "indexes.json",
+] as const;
 
 async function discoverFiles(directory: string, filename: string): Promise<string[]> {
   try {
@@ -85,7 +95,7 @@ async function loadYamlRecords<T>(files: string[], schema: z.ZodType<T>, root: s
   for (const file of files) {
     const relativeFile = path.relative(root, file);
     try {
-      const raw: object = parseYaml(await readFile(file, "utf8"));
+      const raw: unknown = parseYaml(await readFile(file, "utf8"));
       const result = schema.safeParse(raw);
       if (!result.success) {
         issues.push(...formatZodIssues(relativeFile, result.error));
@@ -175,6 +185,42 @@ function findDuplicates(values: Array<{ key: string; file: string }>, label: str
   }
 }
 
+function findDuplicatesWithinRecord(
+  values: string[],
+  label: string,
+  file: string,
+  issues: string[],
+): void {
+  const seen = new Set<string>();
+  for (const value of values) {
+    if (seen.has(value)) issues.push(`${file}: Duplicate ${label} '${value}'`);
+    seen.add(value);
+  }
+}
+
+function findDuplicateRelations(record: LoadedRecord<Entity>, issues: string[]): void {
+  const seen = new Set<string>();
+  for (const relation of record.value.relations) {
+    const key = JSON.stringify(relation);
+    if (seen.has(key)) {
+      issues.push(
+        `${record.file}: Duplicate relation '${relation.type}' to '${relation.target}'`,
+      );
+    }
+    seen.add(key);
+  }
+}
+
+async function removeRetiredGeneratedFiles(outputDirectory: string): Promise<void> {
+  await Promise.all(RETIRED_GENERATED_FILENAMES.map(async (filename) => {
+    try {
+      await unlink(path.join(outputDirectory, filename));
+    } catch (error) {
+      if (!isNodeError(error) || error.code !== "ENOENT") throw error;
+    }
+  }));
+}
+
 function stableJson(value: object): string {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
@@ -196,6 +242,21 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
   findDuplicates(entityRecords.map(({ file, value }) => ({ key: value.id, file })), "entity ID", issues);
   findDuplicates(narrativeRecords.map(({ file, value }) => ({ key: value.id, file })), "narrative ID", issues);
   findDuplicates(sourceRecords.map(({ file, value }) => ({ key: value.id, file })), "source ID", issues);
+  findDuplicates(
+    entityRecords.flatMap(({ file, value }) => value.assertions.map((assertion) => ({
+      key: assertion.id,
+      file,
+    }))),
+    "assertion ID",
+    issues,
+  );
+  findDuplicates(
+    entityRecords.flatMap(({ file, value }) => value.geography_id
+      ? [{ key: value.geography_id, file }]
+      : []),
+    "geography ID",
+    issues,
+  );
   for (const locale of LOCALES) {
     findDuplicates(entityRecords.map(({ file, value }) => ({ key: `${value.type}:${locale}:${value.slugs[locale]}`, file })), `${locale} entity slug`, issues);
     findDuplicates(narrativeRecords.map(({ file, value }) => ({ key: `${value.type}:${locale}:${value.slugs[locale]}`, file })), `${locale} narrative slug`, issues);
@@ -211,8 +272,23 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       issues.push(`${record.file}: ID '${record.value.id}' does not match entity type '${record.value.type}'`);
     }
     await validateLocaleFiles(record, issues);
+    findDuplicatesWithinRecord(
+      record.value.source_refs,
+      "source reference",
+      record.file,
+      issues,
+    );
+    findDuplicateRelations(record, issues);
     for (const relation of record.value.relations) {
       if (!entityIdSet.has(relation.target)) issues.push(`${record.file}: relation '${relation.type}': ${unknownReferenceMessage(relation.target, entityIds)}`);
+    }
+    for (const assertion of record.value.assertions) {
+      findDuplicatesWithinRecord(
+        assertion.sources,
+        `source reference on assertion '${assertion.id}'`,
+        record.file,
+        issues,
+      );
     }
     for (const sourceRef of [...record.value.source_refs, ...record.value.assertions.flatMap((assertion) => assertion.sources)]) {
       if (!sourceIdSet.has(sourceRef)) issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
@@ -221,6 +297,26 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
 
   for (const record of narrativeRecords) {
     const markdownByLocale = await validateLocaleFiles(record, issues);
+    findDuplicatesWithinRecord(
+      record.value.related_entities,
+      "related entity reference",
+      record.file,
+      issues,
+    );
+    findDuplicatesWithinRecord(
+      record.value.source_refs,
+      "source reference",
+      record.file,
+      issues,
+    );
+    if (
+      record.value.primary_entity &&
+      record.value.related_entities.includes(record.value.primary_entity)
+    ) {
+      issues.push(
+        `${record.file}: primary entity '${record.value.primary_entity}' must not be repeated in related_entities`,
+      );
+    }
     const references = [record.value.primary_entity, ...record.value.related_entities].filter((id): id is string => Boolean(id));
     for (const reference of references) {
       if (!entityIdSet.has(reference)) issues.push(`${record.file}: ${unknownReferenceMessage(reference, entityIds)}`);
@@ -267,17 +363,12 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     indexes: { entity_ids: entityIds, entities_by_type: entitiesByType, localized_slugs: localizedSlugs, geography, search },
   };
   const outputs = {
-    "entities.json": stableJson(entities),
-    "narratives.json": stableJson(narratives),
-    "sources.json": stableJson(sources),
-    "relations.json": stableJson(knowledgeBase.relations),
-    "backlinks.json": stableJson(backlinks),
-    "indexes.json": stableJson(knowledgeBase.indexes),
-    "knowledge-base.json": stableJson(knowledgeBase),
+    [GENERATED_BUNDLE_FILENAME]: stableJson(knowledgeBase),
   };
   if (options.write !== false) {
     const outputDirectory = path.resolve(options.outputDirectory ?? path.join(root, "src", "generated", "content"));
     await mkdir(outputDirectory, { recursive: true });
+    await removeRetiredGeneratedFiles(outputDirectory);
     await Promise.all(Object.entries(outputs).map(([filename, contents]) => writeFile(path.join(outputDirectory, filename), contents, "utf8")));
   }
   return { knowledgeBase, outputs };

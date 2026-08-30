@@ -1,18 +1,34 @@
 import knowledgeBaseJson from "../generated/content/knowledge-base.json";
 import type {
   Entity,
+  EntityType,
   GeneratedKnowledgeBase,
-  Narrative,
-  NarrativeMention,
+  GeneratedNarrative,
   ResolvedRelation,
 } from "./model";
-
-type GeneratedNarrative = Narrative & { mentions: NarrativeMention[] };
+import {
+  NARRATIVE_ROUTE_SEGMENTS,
+  entityTypeFromRouteSegment,
+} from "./routing";
 
 const knowledgeBase = knowledgeBaseJson as GeneratedKnowledgeBase;
-
-export function getKnowledgeBase(): GeneratedKnowledgeBase {
-  return knowledgeBase;
+const entitiesById = new Map(
+  knowledgeBase.entities.map((entity) => [entity.id, entity]),
+);
+const narrativesById = new Map(
+  knowledgeBase.narratives.map((narrative) => [narrative.id, narrative]),
+);
+const narrativesByRoute = new Map(
+  knowledgeBase.narratives.map((narrative) => [
+    `${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}:${narrative.slugs.nl}`,
+    narrative,
+  ]),
+);
+const forwardRelationsByEntity = new Map<string, ResolvedRelation[]>();
+for (const relation of knowledgeBase.relations.forward) {
+  const relations = forwardRelationsByEntity.get(relation.source) ?? [];
+  relations.push(relation);
+  forwardRelationsByEntity.set(relation.source, relations);
 }
 
 export function getEntities(): Entity[] {
@@ -20,7 +36,23 @@ export function getEntities(): Entity[] {
 }
 
 export function getEntityById(id: string): Entity | undefined {
-  return knowledgeBase.entities.find((entity) => entity.id === id);
+  return entitiesById.get(id);
+}
+
+export function getEntitiesByType(type: EntityType): Entity[] {
+  return knowledgeBase.indexes.entities_by_type[type]
+    .map(getEntityById)
+    .filter((entity): entity is Entity => Boolean(entity));
+}
+
+export function getEntityByRoute(
+  routeSegment: string,
+  slug: string,
+): Entity | undefined {
+  const type = entityTypeFromRouteSegment(routeSegment);
+  if (!type) return undefined;
+  const id = knowledgeBase.indexes.localized_slugs.nl[`${type}:${slug}`];
+  return id ? getEntityById(id) : undefined;
 }
 
 export function getNarratives(): GeneratedNarrative[] {
@@ -28,13 +60,18 @@ export function getNarratives(): GeneratedNarrative[] {
 }
 
 export function getNarrativeById(id: string): GeneratedNarrative | undefined {
-  return knowledgeBase.narratives.find((narrative) => narrative.id === id);
+  return narrativesById.get(id);
+}
+
+export function getNarrativeByRoute(
+  routeSegment: string,
+  slug: string,
+): GeneratedNarrative | undefined {
+  return narrativesByRoute.get(`${routeSegment}:${slug}`);
 }
 
 export function getRelationsForEntity(entityId: string): ResolvedRelation[] {
-  const forward = knowledgeBase.relations.forward.filter(
-    (relation) => relation.source === entityId,
-  );
+  const forward = forwardRelationsByEntity.get(entityId) ?? [];
   const inverse = knowledgeBase.relations.inverse[entityId] ?? [];
   return [...forward, ...inverse];
 }

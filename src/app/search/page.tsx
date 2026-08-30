@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
 import { getEntities } from "@/content/repository";
+import {
+  filterEntities,
+  firstSearchParam,
+  parseEntityTypeFilter,
+} from "@/content/search";
 import { ENTITY_TYPE_LABELS_NL } from "@/content/routing";
 import type { EntityType } from "@/content/model";
 
@@ -21,21 +26,11 @@ interface SearchPageProps {
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const rawSearchParams = await searchParams;
-  const q = Array.isArray(rawSearchParams.q)
-    ? rawSearchParams.q[0] ?? ""
-    : rawSearchParams.q ?? "";
-  const type = Array.isArray(rawSearchParams.type)
-    ? rawSearchParams.type[0] ?? "all"
-    : rawSearchParams.type ?? "all";
-  const normalizedQuery = q.trim().toLocaleLowerCase("nl");
+  const q = firstSearchParam(rawSearchParams.q);
+  const type = firstSearchParam(rawSearchParams.type, "all");
   const validTypes = Object.keys(ENTITY_TYPE_LABELS_NL) as EntityType[];
-  const selectedType = validTypes.includes(type as EntityType) ? (type as EntityType) : "all";
-  const results = getEntities().filter((entity) => {
-    const matchesQuery = normalizedQuery.length === 0 || [entity.canonical_name, entity.names.nl, entity.names.en, entity.id]
-      .some((value) => value.toLocaleLowerCase("nl").includes(normalizedQuery));
-    const matchesType = selectedType === "all" || entity.type === selectedType;
-    return matchesQuery && matchesType;
-  });
+  const selectedType = parseEntityTypeFilter(type);
+  const results = filterEntities(getEntities(), q, selectedType);
 
   return (
     <main id="main-content" className="page-shell">
@@ -68,7 +63,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         <div className="section-heading-compact">
           <p className="eyebrow">Resultaten</p>
           <h2 id="results-title">
-            {normalizedQuery ? `${results.length} voor “${q.trim()}”` : "Beschikbare kennis"}
+            {q.trim() ? `${results.length} voor “${q.trim()}”` : "Beschikbare kennis"}
           </h2>
         </div>
         <div className="entity-link-list entity-link-list-wide">

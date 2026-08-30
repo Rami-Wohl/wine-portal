@@ -2,22 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
-import { getEntityById, getNarratives } from "@/content/repository";
+import {
+  getEntityById,
+  getNarrativeByRoute,
+  getNarratives,
+} from "@/content/repository";
 import { NARRATIVE_ROUTE_SEGMENTS, narrativeHref } from "@/content/routing";
-import type { Entity, Narrative, NarrativeMention } from "@/content/model";
-
-type GeneratedNarrative = Narrative & { mentions: NarrativeMention[] };
+import type { Entity } from "@/content/model";
 
 interface NarrativePageProps {
   params: Promise<{ path: string; lesson: string }>;
-}
-
-function findNarrative(path: string, lesson: string): GeneratedNarrative | undefined {
-  return getNarratives().find(
-    (narrative) =>
-      NARRATIVE_ROUTE_SEGMENTS[narrative.type] === path &&
-      narrative.slugs.nl === lesson,
-  );
 }
 
 export function generateStaticParams() {
@@ -29,7 +23,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: NarrativePageProps): Promise<Metadata> {
   const { path, lesson } = await params;
-  const narrative = findNarrative(path, lesson);
+  const narrative = getNarrativeByRoute(path, lesson);
   if (!narrative) return {};
   const canonical = narrativeHref(narrative);
   return {
@@ -42,7 +36,7 @@ export async function generateMetadata({ params }: NarrativePageProps): Promise<
 
 export default async function NarrativePage({ params }: NarrativePageProps) {
   const { path, lesson } = await params;
-  const narrative = findNarrative(path, lesson);
+  const narrative = getNarrativeByRoute(path, lesson);
   if (!narrative) notFound();
 
   const mentionedEntities = Array.from(

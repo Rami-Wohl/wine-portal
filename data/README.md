@@ -1,5 +1,8 @@
-# Canonical data
+# Shared data registers
 
-Placeholder for shared, language-independent knowledge data.
+This directory is reserved for reusable records that sit outside an individual content package:
 
-Entity serialization and runtime storage remain open decisions; see `docs/knowledge-architecture.md`.
+- `sources/` contains provenance records with stable `source.*` IDs;
+- `geography/` will contain verified geographic source data.
+
+Canonical entities live in `content/entities/`, where shared YAML metadata is colocated with Dutch and English Markdown. Do not recreate a parallel `data/entities/` tree.

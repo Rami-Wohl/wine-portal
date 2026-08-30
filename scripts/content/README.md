@@ -24,7 +24,7 @@ Validates schemas, IDs, slugs, locale files, relations, source references, and M
 npm run content:build
 ```
 
-Runs the same validation, then writes deterministic JSON to `src/generated/content/`.
+Runs the same validation, then writes the deterministic runtime bundle `src/generated/content/knowledge-base.json`.
 
 ```bash
 npm run content:new -- producer example-estate
@@ -34,6 +34,6 @@ Creates a starter entity package with YAML metadata, Dutch and English Markdown 
 
 ## Output
 
-The generated directory contains normalized entities and narratives, forward and inverse relations, narrative backlinks, source data, and application indexes for lookup, localized slugs, search, and geography references.
+The generated bundle contains normalized entities and narratives, forward and inverse relations, narrative backlinks, source data, and application indexes for lookup, localized slugs, search, and geography references.
 
 `src/generated/content/` is ignored by Git and must not be edited manually. Change the canonical content and run `npm run content:build` again instead.
