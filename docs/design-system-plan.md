@@ -4,7 +4,7 @@ Status: implemented as the first UI vertical slice.
 
 ## Product character
 
-Vinaria should feel calm, thoughtful and trustworthy. It should not imitate a
+Oenocademy should feel calm, thoughtful and trustworthy. It should not imitate a
 wine shop, luxury label or exam portal. The interface gives long-form learning
 room to breathe and makes depth optional instead of intimidating.
 

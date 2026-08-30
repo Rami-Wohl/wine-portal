@@ -8,9 +8,9 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# Wine Knowledge Portal
+# Oenocademy
 
-This repository implements a multilingual, entity-first wine knowledge platform.
+Oenocademy is a multilingual, entity-first wine knowledge platform for structured learning and free exploration.
 
 ## Sources of truth
 

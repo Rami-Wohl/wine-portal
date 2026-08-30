@@ -1,6 +1,6 @@
 ---
 title: "Knowledge architecture"
-purpose: "Canonical content-, data-, provenance- en migratiearchitectuur voor het wijnkennisportaal"
+purpose: "Canonical content-, data-, provenance- en migratiearchitectuur voor Oenocademy"
 status: "draft-for-review"
 version: "0.1"
 created: "2026-08-25"
@@ -8,6 +8,8 @@ last_updated: "2026-08-25"
 ---
 
 # Knowledge architecture
+
+Oenocademy is een meertalig, entity-first kennisplatform voor wijn, gericht op zowel gestructureerd leren als vrij verkennen.
 
 > **Status:** eerste architectuurvoorstel, geschreven vóór de daadwerkelijke migratie van Bordeaux. Dit document beschrijft de beoogde *source of truth* voor content en data. De huidige module-/lesstructuur blijft intact als legacy-bron totdat onderdelen gecontroleerd zijn gemigreerd.
 
@@ -1293,4 +1295,3 @@ Exact bepalen hoe fijnmazig de mapping wordt en hoe in de UI duidelijk wordt gem
 8. **Bordeaux wordt de eerste vertical slice.**
 9. **Migratie is niet destructief: legacy blijft totdat de vervanger is gecontroleerd.**
 10. **We ontwerpen niet eerst de hele wijnwereld; we bewijzen het model volledig met Bordeaux.**
-

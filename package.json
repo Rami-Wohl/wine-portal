@@ -2,6 +2,7 @@
   "name": "wine-portal",
   "version": "0.1.0",
   "private": true,
+  "description": "Oenocademy is a multilingual, entity-first wine knowledge platform for structured learning and free exploration.",
   "scripts": {
     "predev": "npm run content:build",
     "dev": "next dev",
