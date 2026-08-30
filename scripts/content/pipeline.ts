@@ -1,0 +1,284 @@
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { parse as parseYaml } from "yaml";
+import { z } from "zod";
+import {
+  ENTITY_TYPES,
+  LOCALES,
+  entityIdPattern,
+  entitySchema,
+  narrativeSchema,
+  sourceSchema,
+  type Entity,
+  type EntityType,
+  type GeneratedKnowledgeBase,
+  type Locale,
+  type Narrative,
+  type NarrativeMention,
+  type ResolvedRelation,
+} from "../../src/content/model";
+
+export class ContentValidationError extends Error {
+  constructor(public readonly issues: string[]) {
+    super(`Content validation failed with ${issues.length} issue${issues.length === 1 ? "" : "s"}:\n\n${issues.map((issue) => `- ${issue}`).join("\n")}`);
+    this.name = "ContentValidationError";
+  }
+}
+
+interface LoadedRecord<T> {
+  file: string;
+  directory: string;
+  value: T;
+}
+
+export interface BuildOptions {
+  root?: string;
+  write?: boolean;
+  outputDirectory?: string;
+}
+
+export interface BuildResult {
+  knowledgeBase: GeneratedKnowledgeBase;
+  outputs: Record<string, string>;
+}
+
+async function discoverFiles(directory: string, filename: string): Promise<string[]> {
+  try {
+    const entries = await readdir(directory, { withFileTypes: true });
+    const nested = await Promise.all(entries.map(async (entry) => {
+      const entryPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) return discoverFiles(entryPath, filename);
+      return entry.isFile() && entry.name === filename ? [entryPath] : [];
+    }));
+    return nested.flat().sort();
+  } catch (error) {
+    if (isNodeError(error) && error.code === "ENOENT") return [];
+    throw error;
+  }
+}
+
+async function discoverYamlFiles(directory: string): Promise<string[]> {
+  try {
+    const entries = await readdir(directory, { withFileTypes: true });
+    const nested = await Promise.all(entries.map(async (entry) => {
+      const entryPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) return discoverYamlFiles(entryPath);
+      return entry.isFile() && /\.ya?ml$/.test(entry.name) && entry.name !== "entity.yaml" && entry.name !== "narrative.yaml" ? [entryPath] : [];
+    }));
+    return nested.flat().sort();
+  } catch (error) {
+    if (isNodeError(error) && error.code === "ENOENT") return [];
+    throw error;
+  }
+}
+
+function isNodeError(error: unknown): error is NodeJS.ErrnoException {
+  return typeof error === "object" && error !== null && "code" in error;
+}
+
+function formatZodIssues(file: string, error: z.ZodError): string[] {
+  return error.issues.map((issue) => `${file}: ${issue.path.join(".") || "record"} ${issue.message}`);
+}
+
+async function loadYamlRecords<T>(files: string[], schema: z.ZodType<T>, root: string, issues: string[]): Promise<Array<LoadedRecord<T>>> {
+  const records: Array<LoadedRecord<T>> = [];
+  for (const file of files) {
+    const relativeFile = path.relative(root, file);
+    try {
+      const raw: object = parseYaml(await readFile(file, "utf8"));
+      const result = schema.safeParse(raw);
+      if (!result.success) {
+        issues.push(...formatZodIssues(relativeFile, result.error));
+        continue;
+      }
+      records.push({ file: relativeFile, directory: path.dirname(file), value: result.data });
+    } catch (error) {
+      issues.push(`${relativeFile}: invalid YAML (${error instanceof Error ? error.message : String(error)})`);
+    }
+  }
+  return records;
+}
+
+function levenshtein(left: string, right: string): number {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex];
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      current[rightIndex] = Math.min(
+        current[rightIndex - 1] + 1,
+        previous[rightIndex] + 1,
+        previous[rightIndex - 1] + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      );
+    }
+    previous.splice(0, previous.length, ...current);
+  }
+  return previous[right.length];
+}
+
+function unknownReferenceMessage(reference: string, knownIds: string[]): string {
+  const suggestion = knownIds
+    .map((id) => ({ id, distance: levenshtein(reference, id) }))
+    .sort((left, right) => left.distance - right.distance || left.id.localeCompare(right.id))[0];
+  const hint = suggestion && suggestion.distance <= 4 ? ` Did you mean '${suggestion.id}'?` : "";
+  return `Unknown entity reference '${reference}'.${hint}`;
+}
+
+export function parseEntityLinks(markdown: string, file: string): NarrativeMention[] {
+  const mentions: NarrativeMention[] = [];
+  let cursor = 0;
+  while (cursor < markdown.length) {
+    const start = markdown.indexOf("[[", cursor);
+    if (start === -1) break;
+    const end = markdown.indexOf("]]", start + 2);
+    if (end === -1) throw new ContentValidationError([`${file}: unclosed entity link starting at character ${start + 1}`]);
+    const body = markdown.slice(start + 2, end);
+    const parts = body.split("|");
+    const id = parts[0];
+    const label = parts.length === 2 ? parts[1] : null;
+    if (parts.length > 2 || !entityIdPattern.test(id) || (label !== null && label.trim().length === 0)) {
+      throw new ContentValidationError([`${file}: invalid entity link '[[${body}]]'; use [[entity.id]] or [[entity.id|Label]]`]);
+    }
+    mentions.push({ entity_id: id, label, locale: file.includes(".nl.md") ? "nl" : "en" });
+    cursor = end + 2;
+  }
+  return mentions;
+}
+
+async function validateLocaleFiles<T extends Entity | Narrative>(record: LoadedRecord<T>, issues: string[]): Promise<Record<Locale, string>> {
+  const markdownByLocale = {} as Record<Locale, string>;
+  for (const locale of LOCALES) {
+    const configuredPath = record.value.locales[locale];
+    if (path.basename(configuredPath) !== configuredPath) {
+      issues.push(`${record.file}: locales.${locale} must name a file inside its content package`);
+      continue;
+    }
+    const contentPath = path.join(record.directory, configuredPath);
+    try {
+      markdownByLocale[locale] = await readFile(contentPath, "utf8");
+    } catch (error) {
+      if (isNodeError(error) && error.code === "ENOENT") {
+        issues.push(`${record.file}: locales.${locale} references missing file '${configuredPath}'`);
+      } else {
+        throw error;
+      }
+    }
+  }
+  return markdownByLocale;
+}
+
+function findDuplicates(values: Array<{ key: string; file: string }>, label: string, issues: string[]): void {
+  const firstByKey = new Map<string, string>();
+  for (const { key, file } of values) {
+    const first = firstByKey.get(key);
+    if (first) issues.push(`Duplicate ${label} '${key}' in ${first} and ${file}`);
+    else firstByKey.set(key, file);
+  }
+}
+
+function stableJson(value: object): string {
+  return `${JSON.stringify(value, null, 2)}\n`;
+}
+
+export async function buildContent(options: BuildOptions = {}): Promise<BuildResult> {
+  const root = path.resolve(options.root ?? process.cwd());
+  const issues: string[] = [];
+  const [entityFiles, narrativeFiles, sourceFiles] = await Promise.all([
+    discoverFiles(path.join(root, "content", "entities"), "entity.yaml"),
+    discoverFiles(path.join(root, "content", "narratives"), "narrative.yaml"),
+    discoverYamlFiles(path.join(root, "data", "sources")),
+  ]);
+  const [entityRecords, narrativeRecords, sourceRecords] = await Promise.all([
+    loadYamlRecords(entityFiles, entitySchema, root, issues),
+    loadYamlRecords(narrativeFiles, narrativeSchema, root, issues),
+    loadYamlRecords(sourceFiles, sourceSchema, root, issues),
+  ]);
+
+  findDuplicates(entityRecords.map(({ file, value }) => ({ key: value.id, file })), "entity ID", issues);
+  findDuplicates(narrativeRecords.map(({ file, value }) => ({ key: value.id, file })), "narrative ID", issues);
+  findDuplicates(sourceRecords.map(({ file, value }) => ({ key: value.id, file })), "source ID", issues);
+  for (const locale of LOCALES) {
+    findDuplicates(entityRecords.map(({ file, value }) => ({ key: `${value.type}:${locale}:${value.slugs[locale]}`, file })), `${locale} entity slug`, issues);
+    findDuplicates(narrativeRecords.map(({ file, value }) => ({ key: `${value.type}:${locale}:${value.slugs[locale]}`, file })), `${locale} narrative slug`, issues);
+  }
+
+  const entityIds = entityRecords.map(({ value }) => value.id).sort();
+  const entityIdSet = new Set(entityIds);
+  const sourceIdSet = new Set(sourceRecords.map(({ value }) => value.id));
+  const mentionMap = new Map<string, NarrativeMention[]>();
+
+  for (const record of entityRecords) {
+    if (!record.value.id.startsWith(`${record.value.type}.`)) {
+      issues.push(`${record.file}: ID '${record.value.id}' does not match entity type '${record.value.type}'`);
+    }
+    await validateLocaleFiles(record, issues);
+    for (const relation of record.value.relations) {
+      if (!entityIdSet.has(relation.target)) issues.push(`${record.file}: relation '${relation.type}': ${unknownReferenceMessage(relation.target, entityIds)}`);
+    }
+    for (const sourceRef of [...record.value.source_refs, ...record.value.assertions.flatMap((assertion) => assertion.sources)]) {
+      if (!sourceIdSet.has(sourceRef)) issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
+    }
+  }
+
+  for (const record of narrativeRecords) {
+    const markdownByLocale = await validateLocaleFiles(record, issues);
+    const references = [record.value.primary_entity, ...record.value.related_entities].filter((id): id is string => Boolean(id));
+    for (const reference of references) {
+      if (!entityIdSet.has(reference)) issues.push(`${record.file}: ${unknownReferenceMessage(reference, entityIds)}`);
+    }
+    for (const sourceRef of record.value.source_refs) {
+      if (!sourceIdSet.has(sourceRef)) issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
+    }
+    const mentions: NarrativeMention[] = [];
+    for (const locale of LOCALES) {
+      if (!(locale in markdownByLocale)) continue;
+      try {
+        const parsed = parseEntityLinks(markdownByLocale[locale], `${record.file}:${record.value.locales[locale]}`);
+        mentions.push(...parsed);
+        for (const mention of parsed) {
+          if (!entityIdSet.has(mention.entity_id)) issues.push(`${record.file}:${record.value.locales[locale]}: ${unknownReferenceMessage(mention.entity_id, entityIds)}`);
+        }
+      } catch (error) {
+        if (error instanceof ContentValidationError) issues.push(...error.issues);
+        else throw error;
+      }
+    }
+    mentionMap.set(record.value.id, mentions.sort((left, right) => left.locale.localeCompare(right.locale) || left.entity_id.localeCompare(right.entity_id)));
+  }
+
+  if (issues.length > 0) throw new ContentValidationError(issues.sort());
+
+  const entities = entityRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
+  const sources = sourceRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
+  const narratives = narrativeRecords.map(({ value }) => ({ ...value, mentions: mentionMap.get(value.id) ?? [] })).sort((left, right) => left.id.localeCompare(right.id));
+  const forward: ResolvedRelation[] = entities.flatMap((entity) => entity.relations.map((relation) => ({ source: entity.id, ...relation })))
+    .sort((left, right) => left.source.localeCompare(right.source) || left.type.localeCompare(right.type) || left.target.localeCompare(right.target));
+  const inverse = Object.fromEntries(entityIds.map((id) => [id, forward.filter((relation) => relation.target === id)]));
+  const backlinks = Object.fromEntries(entityIds.map((id) => [id, narratives.filter((narrative) => narrative.mentions.some((mention) => mention.entity_id === id) || narrative.primary_entity === id || narrative.related_entities.includes(id)).map((narrative) => narrative.id)]));
+  const entitiesByType = Object.fromEntries(ENTITY_TYPES.map((type) => [type, entities.filter((entity) => entity.type === type).map((entity) => entity.id)])) as Record<EntityType, string[]>;
+  const localizedSlugs = Object.fromEntries(LOCALES.map((locale) => [locale, Object.fromEntries(entities.map((entity) => [`${entity.type}:${entity.slugs[locale]}`, entity.id]))])) as Record<Locale, Record<string, string>>;
+  const geography = Object.fromEntries(entities.filter((entity) => entity.geography_id).map((entity) => [entity.geography_id as string, entity.id]));
+  const search = entities.map(({ id, type, canonical_name, names, slugs }) => ({ id, type, canonical_name, names, slugs }));
+  const knowledgeBase: GeneratedKnowledgeBase = {
+    entities,
+    narratives,
+    sources,
+    relations: { forward, inverse },
+    backlinks,
+    indexes: { entity_ids: entityIds, entities_by_type: entitiesByType, localized_slugs: localizedSlugs, geography, search },
+  };
+  const outputs = {
+    "entities.json": stableJson(entities),
+    "narratives.json": stableJson(narratives),
+    "sources.json": stableJson(sources),
+    "relations.json": stableJson(knowledgeBase.relations),
+    "backlinks.json": stableJson(backlinks),
+    "indexes.json": stableJson(knowledgeBase.indexes),
+    "knowledge-base.json": stableJson(knowledgeBase),
+  };
+  if (options.write !== false) {
+    const outputDirectory = path.resolve(options.outputDirectory ?? path.join(root, "src", "generated", "content"));
+    await mkdir(outputDirectory, { recursive: true });
+    await Promise.all(Object.entries(outputs).map(([filename, contents]) => writeFile(path.join(outputDirectory, filename), contents, "utf8")));
+  }
+  return { knowledgeBase, outputs };
+}

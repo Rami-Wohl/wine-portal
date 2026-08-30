@@ -1,0 +1,16 @@
+id: classification.bordeaux-1855
+type: classification
+status: draft
+canonical_name: Bordeaux 1855
+names:
+  nl: Bordeaux 1855
+  en: Bordeaux 1855
+slugs:
+  nl: bordeaux-1855
+  en: bordeaux-1855
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

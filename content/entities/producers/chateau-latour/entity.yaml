@@ -1,0 +1,23 @@
+id: producer.chateau-latour
+type: producer
+status: draft
+canonical_name: Château Latour
+names:
+  nl: Château Latour
+  en: Château Latour
+slugs:
+  nl: chateau-latour
+  en: chateau-latour
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties:
+      tier: premier-cru
+    valid_from: 1855
+assertions: []
+source_refs: []

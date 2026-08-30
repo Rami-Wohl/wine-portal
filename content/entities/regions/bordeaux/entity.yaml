@@ -1,0 +1,16 @@
+id: region.bordeaux
+type: region
+status: draft
+canonical_name: Bordeaux
+names:
+  nl: Bordeaux
+  en: Bordeaux
+slugs:
+  nl: bordeaux
+  en: bordeaux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

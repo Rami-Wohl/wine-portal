@@ -1,0 +1,16 @@
+id: grape.cabernet-sauvignon
+type: grape
+status: draft
+canonical_name: Cabernet Sauvignon
+names:
+  nl: Cabernet Sauvignon
+  en: Cabernet Sauvignon
+slugs:
+  nl: cabernet-sauvignon
+  en: cabernet-sauvignon
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

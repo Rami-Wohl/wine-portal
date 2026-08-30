@@ -1,0 +1,16 @@
+id: narrative.regional.bordeaux-proof
+type: regional-deep-dive
+status: draft
+title:
+  nl: Bordeaux pipeline-proef
+  en: Bordeaux pipeline proof
+slugs:
+  nl: bordeaux-pipeline-proef
+  en: bordeaux-pipeline-proof
+locales:
+  nl: article.nl.md
+  en: article.en.md
+primary_entity: region.bordeaux
+related_entities: []
+source_refs: []
+depth: foundation

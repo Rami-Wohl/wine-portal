@@ -20,6 +20,9 @@
 # production
 /build
 
+# generated content graph (rebuild with npm run content:build)
+/src/generated/content/
+
 # misc
 .DS_Store
 *.pem

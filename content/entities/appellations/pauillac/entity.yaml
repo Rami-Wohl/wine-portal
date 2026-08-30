@@ -1,0 +1,20 @@
+id: appellation.pauillac
+type: appellation
+status: draft
+canonical_name: Pauillac
+names:
+  nl: Pauillac
+  en: Pauillac
+slugs:
+  nl: pauillac
+  en: pauillac
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: part_of
+    target: region.bordeaux
+  - type: important_grape
+    target: grape.cabernet-sauvignon
+assertions: []
+source_refs: []
