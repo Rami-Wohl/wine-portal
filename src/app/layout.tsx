@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { BRAND } from "@/config/brand";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { BRAND, SITE_URL } from "@/config/brand";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: SITE_URL,
   applicationName: BRAND.name,
   title: {
     default: `${BRAND.name} — ${BRAND.tagline.nl}`,
@@ -26,7 +29,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="nl">
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#main-content">
+          Ga naar de inhoud
+        </a>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }

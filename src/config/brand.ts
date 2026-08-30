@@ -9,3 +9,7 @@ export const BRAND = {
     en: "Oenocademy is a multilingual, entity-first wine knowledge platform for structured learning and free exploration.",
   },
 } as const;
+
+export const SITE_URL = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+);
