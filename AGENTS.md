@@ -12,13 +12,28 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Oenocademy is a multilingual, entity-first wine knowledge platform for structured learning and free exploration.
 
-## Sources of truth
+## Binding repository guidance
 
-Read these before making architectural changes:
+The following policies are sources of truth, not optional background. Read every
+document relevant to a task before editing, and apply them together:
 
-- `docs/knowledge-architecture.md`
-- `docs/product-principles.md`
-- `docs/geography-policy.md`
+- `docs/product-principles.md` — product, content, design, UI, and application
+  work.
+- `docs/knowledge-architecture.md` — content models, entities, relations,
+  backlinks, routing, search, indexes, pipelines, and migrations.
+- `docs/geography-policy.md` — places, maps, coordinates, boundaries,
+  geographic hierarchy, geometry, and Atlas.
+- `docs/visual-language.md` — UI, responsive behavior, imagery, illustration,
+  diagrams, maps as presentation, and other visual output.
+- `editorial/research-policy.md` — factual content, sources, provenance,
+  migration, translation, corrections, and editorial work.
+
+A task can require more than one policy. For example, an Atlas UI change must
+follow the product, knowledge architecture, geography, and visual guidance;
+migrating a regional article also requires the research policy. When guidance
+appears to conflict, preserve verified facts and provenance, avoid destructive
+migration, and raise the conflict rather than silently choosing or inventing a
+resolution.
 
 ## Core principles
 

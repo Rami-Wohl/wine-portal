@@ -1,306 +1,207 @@
 ---
 title: "Knowledge architecture"
-purpose: "Canonical content-, data-, provenance- en migratiearchitectuur voor Oenocademy"
-status: "draft-for-review"
-version: "0.1"
+purpose: "Actieve content-, data-, provenance- en migratiearchitectuur voor Oenocademy"
+status: "active"
+version: "1.0"
 created: "2026-08-25"
-last_updated: "2026-08-25"
+last_updated: "2026-08-31"
 ---
 
 # Knowledge architecture
 
-Oenocademy is een meertalig, entity-first kennisplatform voor wijn, gericht op zowel gestructureerd leren als vrij verkennen.
+Oenocademy is een Dutch-first, meertalig en entity-first kennisplatform voor wijn. Deze architectuur beschrijft het geïmplementeerde v1-contract voor canonical content en de afgeleide knowledge graph. Waar dit document toekomstige mogelijkheden noemt, zijn die expliciet als **roadmap** gemarkeerd en geen huidig pipelinecontract.
 
-> **Status:** eerste architectuurvoorstel, geschreven vóór de daadwerkelijke migratie van Bordeaux. Dit document beschrijft de beoogde *source of truth* voor content en data. De huidige module-/lesstructuur blijft intact als legacy-bron totdat onderdelen gecontroleerd zijn gemigreerd.
+## Status van v1
 
-## 1. Van curriculum naar kennisplatform
+De v1-contentarchitectuur is geïmplementeerd:
 
-Het project begon als een modulair curriculum voor verdieping na WSET 3. Dat blijft een belangrijk gebruiksdoel, maar is niet langer de beste primaire structuur voor alle kennis die het project verzamelt.
+- YAML-metadata en gelokaliseerde Markdown staan in self-contained entity- en narrativepackages;
+- strikte schema's valideren entities, narratives, relaties, assertions, bronverwijzingen, lokale bestanden, IDs en slugs;
+- de pipeline leidt inverse relaties, narrative mentions en backlinks af;
+- gelokaliseerde slug-, zoek-, type- en geography-indexes worden opgebouwd;
+- één deterministische runtimebundle wordt gegenereerd in `src/generated/content/knowledge-base.json`;
+- `npm run content:new` genereert een leeg entitypackage zonder wijnfeiten toe te voegen.
 
-De nieuwe architectuur behandelt het project als een **verbonden kennisplatform over wijn**. Dezelfde onderliggende kennis moet meerdere interfaces kunnen voeden:
-
-- **Learn** — didactische leerroutes en lessen;
-- **Explore** — vrij doorklikken tussen onderwerpen;
-- **Atlas** — geografische exploratie van regio's, appellaties, sites en producenten;
-- **Search** — full-text en entity-aware zoeken;
-- **Compare** — regio's, druiven, producenten, jaargangen of concepten naast elkaar;
-- **Reference** — snel feiten, definities, classificaties en broninformatie opzoeken.
-
-De fundamentele verschuiving is daarom:
+Op 31 augustus 2026 valideert `npm run content:check`:
 
 ```text
-oude primaire structuur
-module → les → tekst → afbeeldingen
+5 entities
+1 narrative
+0 sources
+4 forward relations
+```
 
-nieuwe primaire structuur
+Alle vijf entities en de narrative zijn prototypes met status `draft`. Deze getallen beschrijven de huidige repository, niet de beoogde uiteindelijke dekking.
+
+## Samenhang met bindend beleid
+
+Dit document definieert eigendom, structuur, relaties, indexing en migratie van kennis. Aanvullende bindende regels staan in:
+
+- `product-principles.md` voor productrollen, lokalisatie, kwaliteit en interfaceprincipes;
+- `geography-policy.md` voor plaatsen, coördinaten, geometrie en Atlas;
+- `visual-language.md` voor UI, responsive gedrag, kaarten, media en toegankelijkheid;
+- `../editorial/research-policy.md` voor onderzoek, provenance, claims, vertaling, correcties en redactionele migratie.
+
+De concrete authoringworkflow staat in `content-authoring.md`. Bij verschil tussen een voorbeeld in dit document en het strikte schema is `../src/content/model.ts` het uitvoerbare v1-contract; dit document moet daarna worden gecorrigeerd.
+
+---
+
+## 1. Eén kennisstelsel, meerdere productvormen
+
+Oenocademy behandelt wijnkennis als een verbonden systeem:
+
+```text
 entities + relations + assertions + sources + geography
                          ↓
-          narratives / lessons / maps / search / compare
+       Explore / Learn / Atlas / search / compare
+                         ↓
+                  localized presentation
 ```
 
-Een les blijft waardevol, maar is voortaan een **narrative view** op gedeelde kennis en niet de enige plek waar die kennis bestaat.
+Explore, Learn en Atlas zijn complementaire views op hetzelfde stelsel:
+
+- **Explore** ondersteunt vrij ontdekken en doorklikken;
+- **Learn** ordent gedeelde kennis didactisch;
+- **Atlas** is de geografische expressie van dezelfde knowledge graph.
+
+Learn is geen aparte contentdatabase en domineert Explore of Atlas niet. Een learning path rangschikt entities en narratives; het kopieert hun canonical feiten niet.
+
+### Eén feit, meerdere views
+
+Een stabiel feit krijgt één canonical eigenaar. Dat een producent in een appellation ligt, hoort bijvoorbeeld in een entityrelatie. Een narrative mag uitleggen waarom die ligging relevant is, maar wordt niet de enige of tweede bron van dezelfde structurele relatie.
+
+### Data en narratief verschillen
+
+- **Data** legt vast wat iets is, hoe het verbonden is, wanneer een claim geldt en waarop die claim steunt.
+- **Narratief** legt betekenis, context, samenhang, nuance en didactische volgorde uit.
+
+### Relaties zijn first-class
+
+Relaties voeden afgeleide backlinks, gerelateerde onderwerpen, navigatie en zoekindexen. Publieke interfaces vertalen relaties naar menselijk leesbare taal; raw IDs en relation enums zijn geen eindgebruikerscopy.
 
 ---
 
-# 2. Architectuurprincipes
+## 2. Vaste architectuurprincipes
 
-## 2.1 Eén feit, meerdere views
+1. **Entity-first, narrative-second.** Stabiele onderwerpkennis hoort bij entities; narratives verbinden en verklaren.
+2. **Eén shared graph voor NL en EN.** Feiten, IDs, relaties, assertions, bronnen en geografie worden niet per taal gedupliceerd.
+3. **Nederlands is de primaire redactietaal.** Engels is een bewust onderhouden lokalisatie, geen onafhankelijke feitenlaag of ongecontroleerde fallback.
+4. **Provenance gaat voor volledigheid.** Een schema-geldige claim is niet automatisch een geverifieerde claim.
+5. **Geografie komt uit geverifieerde data.** Grenzen, coördinaten en containment worden nooit gegokt of generatief verzonnen.
+6. **Concepten mogen educatief worden geïllustreerd.** Illustratie mag vereenvoudigen, maar geen documentaire, wetenschappelijke of geografische bewijsrol veinzen.
+7. **Kennisdiepte staat los van routes en opleidingen.** Het interne depth-model is niet hetzelfde als WSET of een andere externe indeling.
+8. **Migratie is niet-destructief.** Legacy-input blijft herstelbaar totdat een gecontroleerde vervanger bestaat.
+9. **Geen filler of verzonnen feiten.** Onbekend, afwezig of expliciet draft is beter dan schijnbare volledigheid.
+10. **Het model groeit vanuit aangetoonde use-cases.** Nieuwe typen en velden worden niet toegevoegd om hypothetische volledigheid na te streven.
 
-Feiten die op meerdere plaatsen nodig zijn worden niet onafhankelijk in verschillende artikelen onderhouden.
+---
 
-Voorbeeld:
+## 3. Contentlagen
 
-> Château Latour is een producent in Pauillac en behoort tot de Premiers Crus van de classificatie van 1855.
+### Geïmplementeerd in v1
 
-De structurele relaties horen bij de Latour-, Pauillac- en classificatiedata. De Bordeaux-verdieping mag deze feiten narratief gebruiken, maar is niet de enige bron ervan.
+#### Entities
 
-## 2.2 Narratief en data zijn verschillende dingen
+Zelfstandig adresseerbare kennisobjecten met een stabiele ID, gedeelde metadata en NL/EN-presentatie.
 
-**Data** beschrijft wat iets *is* en hoe het met andere dingen verbonden is.
+#### Relations en assertions
 
-**Narratief** legt uit waarom die informatie ertoe doet, welke nuance nodig is en hoe een lezer erover kan denken.
+Gestructureerde verbindingen tussen entities en brongebonden scalaire claims.
 
-Een producentrecord kan bijvoorbeeld bevatten dat Latour in Pauillac ligt en Premier Cru is. Een artikel kan uitleggen waarom Latour stilistisch en historisch belangrijk is.
+#### Narratives
 
-## 2.3 Relaties zijn first-class
+Gelokaliseerde redactionele documenten die entities expliciet kunnen noemen en daardoor backlinks genereren.
 
-De waarde van het platform zit niet alleen in losse pagina's, maar in verbindingen:
+#### Sources
+
+Herbruikbare bronrecords onder `data/sources/`. Het schema en de validatie zijn geïmplementeerd; de repository bevat momenteel nog geen echt bronrecord.
+
+#### Geography references
+
+Een entity kan een gevalideerde `geography_id` dragen en de bundle bouwt daar een index voor. Het beheer en importeren van echte geometrie is nog roadmap.
+
+### Roadmap
+
+- een volwaardige, geverifieerde geography-datalaag;
+- een platformbreed mediaregister met stabiele asset-IDs;
+- learning-pathpackages die gedeelde kennis rangschikken;
+- section-/blockmetadata voor fijnmazige depth en provenance;
+- rijkere search, compare en bronweergave boven op de gegenereerde graph.
+
+---
+
+## 4. Entitymodel
+
+### Geïmplementeerde v1-typen
+
+Het strikte schema accepteert precies deze entitytypen:
 
 ```text
-Bordeaux
-  ├── Pauillac
-  │    ├── Château Latour
-  │    ├── Cabernet Sauvignon
-  │    └── Classification 1855
-  ├── Pomerol
-  └── Vintage 2016
+region
+appellation
+site
+producer
+grape
+classification
+vintage
+concept
 ```
 
-De interface moet zulke verbindingen kunnen gebruiken voor breadcrumbs, related topics, search, filters, vergelijking en kaartnavigatie.
+#### `region`
 
-## 2.4 Geografie wordt uit data gerenderd; concepten worden geïllustreerd
+Een geografisch of cultureel wijngebied dat als kennisobject relevant is. Een region is niet automatisch een wettelijke appellation.
 
-> **Geography is rendered from data. Concepts are illustrated.**
+#### `appellation`
 
-Dit is een harde publicatieregel.
+Een wettelijk beschermde geografische herkomstbenaming of vergelijkbaar formeel systeem. Juridische status en geografische vorm moeten volgens het research- en geographybeleid worden onderbouwd.
 
-Geografische grenzen, rivieren, producentlocaties en wijngaarden mogen niet door een generatief beeldmodel worden verzonnen wanneer zij als naslagwerk worden gepresenteerd.
+#### `site`
 
-## 2.5 Bronnen en tijdigheid zijn onderdeel van de data
+Een betekenisvolle kleinere wijnbouwsite, bijvoorbeeld een climat, lieu-dit of individuele wijngaard. Land- of stelselspecifieke verschillen horen in metadata of relaties, niet automatisch in een nieuw entitytype.
 
-Bij veranderlijke of betwistbare informatie is niet alleen de waarde belangrijk, maar ook:
+#### `producer`
 
-- waar die vandaan komt;
-- wanneer zij is gecontroleerd;
-- voor welke periode zij geldig is;
-- hoe zeker of voorlopig zij is.
+Een château, domaine, Weingut, estate, coöperatie of andere producerende organisatie. Een producer kan meerdere relevante plaatsen en appellations hebben; een adres is niet automatisch een wijnbouwlocatie.
 
-## 2.6 Kennisdiepte is onafhankelijk van navigatie
+#### `grape`
 
-Een gebruiker mag dezelfde Bordeaux-pagina kunnen bekijken met verschillende informatiedieptes. We maken daarom geen aparte "WSET 3 Bordeaux" en "expert Bordeaux" als twee los onderhouden kenniswerelden.
+Een druivenras of cultivar. Lokale namen en synoniemen zijn presentatie- en zoekvraagstukken, niet automatisch afzonderlijke cultivars.
 
-## 2.7 Meertaligheid wordt vanaf het datamodel ondersteund
+#### `classification`
 
-Nederlands en Engels zijn twee presentatielagen op dezelfde entiteiten, relaties, bronnen en geometrieën. Feitelijke data wordt niet dubbel bijgehouden per taal.
+Een classificatiesysteem met relaties die zo nodig temporele geldigheid en tiermetadata dragen.
 
-## 2.8 Migratie is niet destructief
+#### `vintage`
 
-Legacy-bestanden worden pas verwijderd wanneer hun vervanger inhoudelijk gecontroleerd is. Tot die tijd blijft de huidige curriculumstructuur een herstelbare bron.
+Een jaargang binnen een expliciete scope. Een Bordeaux-jaargang zegt niet automatisch iets over heel Frankrijk, iedere appellation of iedere producent.
 
----
+#### `concept`
 
-# 3. De vijf contentlagen
+Een inhoudelijk begrip dat niet primair geografisch of organisatorisch is, bijvoorbeeld véraison, botrytis of carbonic maceration.
 
-De nieuwe kennisbank bestaat conceptueel uit vijf lagen.
+Het huidige strikte schema heeft **geen** `domain`-veld voor concepts. Een gecontroleerde domeinindeling, bijvoorbeeld `viticulture` of `winemaking`, is een mogelijke latere schema-extensie en geen geaccepteerde v1-syntax.
 
-## Laag A — Entities
+### Uitgesteld kandidaat-type
 
-Dingen waarnaar zelfstandig kan worden verwezen.
+`wine_style` is niet geïmplementeerd. Het blijft hoogstens een kandidaat voor later, wanneer meerdere browse- of compare-use-cases aantonen dat een stijl een zelfstandig entitytype nodig heeft. Tot die beslissing mag `wine_style` niet in canonical metadata worden gebruikt.
 
-Voorbeelden:
+### Geen entity voor ieder zelfstandig naamwoord
 
-- Bordeaux;
-- Pauillac;
-- Château Latour;
-- Cabernet Sauvignon;
-- classificatie van 1855;
-- Bordeaux 2016;
-- botrytis;
-- véraison.
-
-## Laag B — Relations en assertions
-
-Gestructureerde verbindingen en controleerbare claims.
-
-Voorbeelden:
-
-- Château Latour → `located_in` → Pauillac;
-- Pauillac → `part_of` → Bordeaux;
-- Château Latour → `classified_as` → Premier Cru 1855;
-- Cabernet Sauvignon → `important_in` → Pauillac.
-
-## Laag C — Geography
-
-Exacte of expliciet afgeleide geometrieën:
-
-- regio-/appellationpolygonen;
-- rivieren;
-- sites en wijngaarden;
-- producentpunten;
-- optioneel hoogte/topografie.
-
-## Laag D — Narratives
-
-Menselijk geschreven uitleg:
-
-- lessen;
-- regionale deep dives;
-- producer profiles;
-- vergelijkingen;
-- tasting guides;
-- historische essays.
-
-## Laag E — Media
-
-- conceptuele illustraties;
-- data-driven kaarten;
-- hybride kaarten;
-- diagrammen;
-- grafieken;
-- eventueel foto's waarvoor gebruiksrecht beschikbaar is.
+Maak pas een entity wanneer gebruikers het onderwerp zelfstandig moeten kunnen vinden, meerdere pagina's ernaar moeten verwijzen, of er voldoende eigen kennis en relaties voor bestaan.
 
 ---
 
-# 4. Entitymodel
+## 5. Identiteit, slugs en lokalisatie
 
-## 4.1 Kernentitytypes voor v1
+### Stable IDs
 
-We beginnen bewust met een beperkt aantal typen. Nieuwe typen worden pas toegevoegd wanneer meerdere concrete use-cases aantonen dat een generiek bestaand type niet voldoet.
-
-### `region`
-
-Een geografisch/cultureel wijngebied dat als kennisobject relevant is.
-
-Voorbeelden:
-
-- Bordeaux;
-- Bourgogne;
-- Mosel;
-- Napa Valley.
-
-Een region is niet automatisch hetzelfde als een wettelijke appellation.
-
-### `appellation`
-
-Een wettelijk beschermde geografische herkomstbenaming of equivalent systeem.
-
-Voorbeelden:
-
-- Pauillac AOC;
-- Saint-Émilion AOC;
-- Bordeaux AOC.
-
-Dit onderscheid voorkomt problemen wanneer een naam zowel een brede regio als een formele appellation aanduidt.
-
-### `site`
-
-Een geografisch kleinere wijnbouwsite die betekenisvol genoeg is voor een eigen pagina.
-
-Voorbeelden kunnen zijn:
-
-- climat;
-- lieu-dit;
-- cru-site;
-- individuele wijngaard;
-- MGA;
-- Grosses Gewächs-site.
-
-`site` gebruikt een subtype in plaats van voor ieder land een nieuw entitytype te introduceren.
-
-### `producer`
-
-Producent, château, domaine, Weingut, estate, coöperatie of andere producerende organisatie.
-
-Een producer kan meerdere locaties, appellations en wijnen hebben.
-
-### `grape`
-
-Druivenras of relevante cultivar-entiteit.
-
-Synoniemen en lokale namen worden als alias vastgelegd en niet als onafhankelijke druif, tenzij het werkelijk verschillende cultivars zijn.
-
-### `classification`
-
-Classificatiesysteem inclusief temporele geldigheid en tiers.
-
-Voorbeelden:
-
-- Bordeaux 1855;
-- Saint-Émilion 2022;
-- Crus Bourgeois 2025.
-
-### `vintage`
-
-Jaargangbeoordeling binnen een expliciete scope.
-
-Voorbeeld:
-
-- `vintage.bordeaux.2016` is iets anders dan `vintage.sauternes.2016` of een producent-specifieke jaargangnotitie.
-
-Een vintage-entiteit zegt dus nooit impliciet iets over "heel Frankrijk".
-
-### `concept`
-
-Een inhoudelijk begrip dat niet primair geografisch of organisatorisch is.
-
-Voorbeelden:
-
-- véraison;
-- botrytis cinerea;
-- vine water status;
-- carbonic maceration;
-- limestone;
-- source–sink-relations.
-
-`concept` krijgt een `domain`, bijvoorbeeld `viticulture`, `geology`, `winemaking`, `chemistry`, `sensory` of `economics`.
-
-### `wine_style`
-
-Een herkenbare stijl die nuttig is voor vergelijkende navigatie en leren.
-
-Voorbeelden:
-
-- dry botrytised-free Sémillon/Sauvignon Bordeaux blend;
-- Sauternes-style botrytised sweet wine;
-- traditional-method sparkling wine.
-
-Dit type wordt alleen gebruikt wanneer stijlen daadwerkelijk als zelfstandig browse-/compare-object nodig zijn.
-
-## 4.2 Geen entity voor ieder zelfstandig naamwoord
-
-De knowledge graph is geen excuus om alles te atomiseren.
-
-Een keldervat, snoeischaar of individuele technische term hoeft geen entity te zijn tenzij:
-
-1. gebruikers er zelfstandig naar zullen zoeken;
-2. meerdere pagina's ernaar moeten linken;
-3. er voldoende inhoud voor een zelfstandige pagina bestaat.
-
----
-
-# 5. IDs, slugs en namen
-
-## 5.1 Stable ID
-
-Een entity krijgt één stabiele technische ID.
-
-Voorkeursvorm:
+Een entity-ID volgt:
 
 ```text
-<type>.<canonical-slug>
+<entity-type>.<canonical-slug>
 ```
 
-Voorbeelden:
+Bijvoorbeeld:
 
 ```text
 region.bordeaux
@@ -308,87 +209,94 @@ appellation.pauillac
 producer.chateau-latour
 grape.cabernet-sauvignon
 classification.bordeaux-1855
-vintage.bordeaux-2016
-concept.vine-water-status
 ```
 
-De ID wordt niet aangepast vanwege een vertaling of kleine naamswijziging.
+Een ID verandert niet door vertaling of een kleine naamswijziging.
 
-## 5.2 Slugs zijn presentatie, IDs zijn identiteit
+### Slugs zijn presentatie; IDs zijn identiteit
 
-Routes mogen later veranderen zonder entityreferenties te breken.
+NL- en EN-routes mogen verschillende slugs hebben en toch naar dezelfde entity wijzen. De pipeline valideert slugbotsingen per entity- of narrativetype en locale en genereert een `localized_slugs`-index.
 
-Bijvoorbeeld:
+### Gedeeld en gelokaliseerd
 
-```text
-/nl/regios/bordeaux/pauillac
-/en/regions/bordeaux/pauillac
-```
+Gedeeld:
 
-kan in beide gevallen verwijzen naar:
+- IDs, typen en status;
+- relaties en assertions;
+- bron- en geographyreferenties;
+- numerieke en temporele metadata.
 
-```text
-appellation.pauillac
-```
+Gelokaliseerd:
 
-## 5.3 Aliases
+- namen, titels en slugs;
+- entity-overviews en narrativeartikelen;
+- toekomstige captions, alt-teksten, aliases en UI-copy.
 
-Per taal kunnen zoek- en historische namen worden vastgelegd.
-
-Voorbeeld:
-
-```yaml
-aliases:
-  nl:
-    - cabernet sauvignon
-  en:
-    - cabernet sauvignon
-  fr:
-    - cabernet-sauvignon
-```
-
-Aliases zijn belangrijk voor search, oude namen en lokale spellingen.
+Beide localebestanden zijn in v1 verplicht. Ontbrekende vertalingen worden niet stilzwijgend gegenereerd of vervangen door de andere taal.
 
 ---
 
-# 6. Basisrecord van een entity
+## 6. Geïmplementeerd entitypackage
 
-Een portable serialisatie kan YAML of JSON zijn. De exacte runtime-implementatie wordt bewust niet door dit document aan Next.js, Prisma of een specifieke database gekoppeld.
+Canonical entities staan in:
 
-Conceptueel minimum:
+```text
+content/entities/<entity-type-directory>/<slug>/
+├── entity.yaml
+├── overview.nl.md
+├── overview.en.md
+└── media/              # alleen package-specifiek en optioneel
+```
+
+Een schema-geldig voorbeeld:
 
 ```yaml
-id: producer.chateau-latour
+id: producer.example-estate
 type: producer
-canonical_name: Château Latour
-status: active
-
+status: draft
+canonical_name: Example Estate
 names:
-  nl: Château Latour
-  en: Château Latour
-
+  nl: Example Estate
+  en: Example Estate
+slugs:
+  nl: example-estate
+  en: example-estate
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
 relations:
   - type: located_in
-    target: appellation.pauillac
-
-assertions: []
-
-content:
-  nl: content/entities/producers/chateau-latour.nl.md
-  en: content/entities/producers/chateau-latour.en.md
-
-last_reviewed: 2026-08-25
+    target: appellation.example
+assertions:
+  - id: assertion.example-estate.founded
+    predicate: founded
+    value: 1900
+    status: verified
+    sources:
+      - source.example-register
+    last_verified: 2026-08-31
+source_refs:
+  - source.example-register
+geography_id: geo.example-estate-winery
+depth: intermediate
+framework_alignment:
+  - framework: WSET
+    level: 3
+    relation: extension
+last_reviewed: 2026-08-31
 ```
 
-Niet elk veld hoeft direct gevuld te zijn. Onbekend is beter dan gegokt.
+`geography_id`, `depth`, `framework_alignment` en `last_reviewed` zijn optioneel. Het schema is strict: niet-gedefinieerde velden, waaronder een oud genest `content:`-object, worden afgewezen. `locales` bevat alleen package-relative bestandsnamen; paden buiten het package worden afgewezen.
+
+De voorbeeldwaarden hierboven demonstreren uitsluitend de vorm. Ze zijn geen publiceerbare wijnfeiten en mogen niet zonder onderzoek als content worden overgenomen.
 
 ---
 
-# 7. Relatiemodel
+## 7. Relatiemodel
 
-## 7.1 Veelvoorkomende relaties
+### Geïmplementeerde relation vocabulary
 
-Voor v1 voorzien we ten minste:
+V1 valideert deze typen:
 
 ```text
 part_of
@@ -401,255 +309,91 @@ parent_appellation
 classified_under
 related_to
 contrasts_with
+scope
 ```
 
-Een deel hiervan kan in de applicatie bidirectioneel worden afgeleid. Als `producer.chateau-latour located_in appellation.pauillac`, hoeft Pauillac niet noodzakelijk handmatig een lijst met alle producenten bij te houden.
+De vocabulary is bewust klein en mag via een expliciete schemawijziging evolueren. Een nieuw enum wordt niet ad hoc in content geïntroduceerd.
 
-## 7.2 Relaties mogen metadata hebben
+### Forward eenmaal schrijven, inverse afleiden
 
-Bijvoorbeeld classificatiemembership:
+Auteurs leggen de canonical forward relation eenmaal vast:
 
 ```yaml
-- type: classified_under
-  target: classification.bordeaux-1855
-  properties:
-    tier: premier-cru
+relations:
+  - type: located_in
+    target: appellation.pauillac
+```
+
+De pipeline valideert de target-ID, weigert exacte duplicaten en leidt de inverse lookup af. Een targetentity hoeft dus niet handmatig dezelfde verbinding terug te schrijven.
+
+### Metadata en tijd
+
+Relaties ondersteunen scalaire `properties` en top-level `valid_from` en `valid_to`:
+
+```yaml
+relations:
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties:
+      tier: premier-cru
     valid_from: 1855
 ```
 
-Of een producent die meerdere appellations gebruikt:
-
-```yaml
-- type: produces_in
-  target: appellation.pessac-leognan
-  properties:
-    role: primary
-```
-
-## 7.3 Tijdsafhankelijke relaties
-
-Eigendom, classificaties, appellationregels en namen veranderen.
-
-Relaties ondersteunen daarom waar relevant:
-
-```yaml
-valid_from: 2022
-valid_to: null
-```
-
-Historie wordt niet overschreven alsof de huidige toestand altijd heeft bestaan.
+`tier` is eigenschappenmetadata; `valid_from` staat op relatieniveau. Hierdoor kan historie worden behouden zonder de huidige toestand over het verleden te projecteren.
 
 ---
 
-# 8. Assertions en provenance
+## 8. Assertions en provenance
 
-Niet ieder simpel identiteitsveld hoeft een uitgebreid claimobject te zijn. Maar **tijdelijke, numerieke, betwistbare, reputatiegerelateerde of potentieel veranderlijke informatie** moet bron- en tijdmetadata kunnen dragen.
-
-## 8.1 Assertionmodel
-
-Conceptueel:
+Assertions zijn geschikt voor tijdgevoelige, numerieke, betwistbare of andere claims die expliciete ondersteuning nodig hebben. Het v1-schema accepteert een string, getal of boolean als `value`, geen `{type, value}`-object:
 
 ```yaml
-- id: assertion.chateau-latour.sales-policy-2012
-  predicate: sales_policy
-  value:
-    type: text
-    value: "Niet langer via de klassieke jaarlijkse en-primeurrelease"
-  valid_from: 2012
-  status: verified
-  sources:
-    - source.chateau-latour-official
-  last_verified: 2026-08-25
+assertions:
+  - id: assertion.example-estate.organic-since
+    predicate: organic_since
+    value: 2018
+    status: verified
+    sources:
+      - source.example-certifier
+    valid_from: 2018
+    last_verified: 2026-08-31
 ```
 
-## 8.2 Assertionstatus
+Geïmplementeerde assertionstatussen:
 
 ```text
-verified      voldoende ondersteund
-provisional   waarschijnlijk maar nog te vroeg voor definitief oordeel
-contested     relevante bronnen spreken elkaar tegen
-historical    historisch waar, niet meer huidige situatie
-deprecated    claim bleek onjuist of is vervangen
+verified
+provisional
+contested
+historical
+deprecated
 ```
 
-## 8.3 Bronhiërarchie is contextafhankelijk
+`sources` bevat minimaal één bekende `source.*`-ID. De pipeline valideert bronreferenties en dubbele assertion-IDs. Het huidige prototype heeft nog geen sources en daarom ook geen brongebonden assertions.
 
-Geen simpele algemene rangorde is in iedere situatie correct.
+### Sourceregister
 
-Voor wet- en appellationgegevens heeft een officiële regulator meestal prioriteit. Voor een producents eigen hectare- of kelderinformatie is een officiële technische fiche vaak de primaire bron. Voor kwalitatieve reputatie of jaarganginterpretatie is juist triangulatie van meerdere onafhankelijke kritische bronnen nodig.
-
-Daarom krijgt een source een `source_type`, maar geen universele automatische waarheidsscore.
-
----
-
-# 9. Sourceregister
-
-Bronnen worden herbruikbaar geregistreerd zodat URL, titel en publisher niet in tientallen bestanden onafhankelijk hoeven te worden onderhouden.
-
-Conceptueel:
+Herbruikbare YAML-records onder `data/sources/` volgen het geïmplementeerde schema:
 
 ```yaml
-id: source.inao-saint-emilion-2022
+id: source.example-register
 source_type: regulator
-publisher: INAO
-title: "Classement des crus de Saint-Émilion 2022"
-url: "..."
-published_at: 2022-09-08
-accessed_at: 2026-08-25
-language: fr
+publisher: Example authority
+title: Example official register
+url: https://example.org/register
+published_at: 2026-01-15
+accessed_at: 2026-08-31
+language: en
 status: active
 ```
 
-Mogelijke `source_type`-waarden:
-
-```text
-regulator
-academic
-book
-trade-body
-producer
-critic
-journalism
-historical-document
-dataset
-```
-
-## 9.1 Geen stilzwijgende bronvervanging
-
-Wanneer een oude bron niet meer bereikbaar is, wordt zij niet zonder notitie vervangen door een andere bron die toevallig dezelfde claim ondersteunt. De provenancegeschiedenis moet controleerbaar blijven.
+Ondersteunde source types zijn `regulator`, `academic`, `book`, `trade-body`, `producer`, `critic`, `journalism`, `historical-document` en `dataset`. Bronkeuze, claim-level support, citaten en correcties volgen `../editorial/research-policy.md`; er bestaat geen universele automatische waarheidsscore per source type.
 
 ---
 
-# 10. Kennisdiepte en opleidingsalignment
+## 9. Narratives en entitylinks
 
-## 10.1 Eigen depth-model
-
-Het platform gebruikt een onafhankelijk intern dieptemodel:
-
-```text
-foundation    noodzakelijke basis voor het onderwerp
-intermediate  directe verdieping; gevorderde wijnstudent
-advanced      meerdere systemen/nuances combineren
-specialist    niche, academisch, producent- of site-specifiek
-```
-
-De gebruiker kan bijvoorbeeld kiezen:
-
-```text
-Depth: Intermediate
-Depth: Advanced
-Depth: No limits
-```
-
-## 10.2 Externe opleidingskaders zijn metadata
-
-WSET kan als behulpzaam referentiekader worden gebruikt, maar bepaalt niet de interne ontologie.
-
-Conceptueel:
-
-```yaml
-framework_alignment:
-  - framework: WSET
-    level: 3
-    relation: extension
-```
-
-Mogelijke `relation`-waarden:
-
-```text
-prerequisite
-core-overlap
-extension
-beyond
-```
-
-Dit maakt later ook andere leerframeworks mogelijk zonder de contentstructuur te veranderen.
-
-## 10.3 Depth hoort uiteindelijk bij contentblokken
-
-Een hele Bordeauxpagina is niet eenvoudig één niveau.
-
-De introductie kan `foundation` zijn, de uitleg over bodem × waterstatus `advanced` en de producent-specifieke vintageanalyse `specialist`.
-
-De contentpipeline moet daarom metadata op **sectie-/blokniveau** kunnen ondersteunen.
-
-De exacte Markdown/MDX-syntax wordt pas bij de website-implementatie gekozen. De architectuur vereist alleen dat ieder zelfstandig contentblok minimaal kan dragen:
-
-```text
-block_id
-depth
-entity_mentions
-source_refs
-optional framework_alignment
-```
-
----
-
-# 11. Meertaligheid
-
-## 11.1 Eén knowledge graph, meerdere talen
-
-Niet:
-
-```text
-NL-database
-EN-database
-```
-
-maar:
-
-```text
-shared entities / relations / assertions / sources / geography
-                 ↓
-           localized content
-```
-
-## 11.2 Wat gedeeld wordt
-
-Taalonafhankelijk:
-
-- IDs;
-- relaties;
-- coördinaten;
-- geometrieën;
-- classificatiemembership;
-- numerieke feiten;
-- data-provenance;
-- bronregister.
-
-## 11.3 Wat gelokaliseerd wordt
-
-- titels waar vertaling wenselijk is;
-- summaries;
-- lange artikelen;
-- labels en UI-copy;
-- captions;
-- alt-teksten;
-- zoekaliases.
-
-## 11.4 Illustraties met ingebakken tekst
-
-De huidige Nederlandstalige infographic-PNG's leren ons een belangrijke regel:
-
-> **Nieuwe herbruikbare visuals bevatten bij voorkeur geen taalafhankelijke labels die permanent in het rasterbeeld zijn gebakken.**
-
-Voorkeursvolgorde:
-
-1. labelvrije basisillustratie + HTML/SVG-overlay;
-2. volledig vector-/HTML-diagram met lokaliseerbare labels;
-3. aparte, expliciet gelokaliseerde rastervarianten wanneer 1 en 2 onpraktisch zijn.
-
-Een Nederlandse PNG mag als legacy-lesasset blijven bestaan, maar is niet automatisch een geschikte platformasset voor Engels.
-
----
-
-# 12. Narratives en learning paths
-
-## 12.1 Narratives
-
-Narratives zijn redactionele documenten die entities en claims tot een begrijpelijk verhaal verbinden.
-
-Typen kunnen zijn:
+Narratives verbinden entities en claims tot menselijke uitleg. V1 ondersteunt:
 
 ```text
 lesson
@@ -661,637 +405,354 @@ historical-essay
 explainer
 ```
 
-Een narrative krijgt bijvoorbeeld:
+Een schema-geldig package bevat:
+
+```text
+content/narratives/<type-directory>/<slug>/
+├── narrative.yaml
+├── article.nl.md
+├── article.en.md
+└── media/              # alleen package-specifiek en optioneel
+```
+
+Voorbeeldmetadata:
 
 ```yaml
-id: narrative.regional.bordeaux-deep-dive
+id: narrative.regional.bordeaux-proof
 type: regional-deep-dive
-primary_entity: region.bordeaux
+status: draft
+title:
+  nl: Bordeaux pipeline-proef
+  en: Bordeaux pipeline proof
+slugs:
+  nl: bordeaux-pipeline-proef
+  en: bordeaux-pipeline-proof
 locales:
-  nl: content/narratives/bordeaux.nl.md
-  en: content/narratives/bordeaux.en.md
+  nl: article.nl.md
+  en: article.en.md
+primary_entity: region.bordeaux
+related_entities:
+  - appellation.pauillac
+source_refs: []
+depth: foundation
 ```
 
-## 12.2 Learning paths
+`primary_entity`, `depth` en `framework_alignment` zijn optioneel; `related_entities` en `source_refs` worden als arrays gevalideerd.
 
-Een curriculum/module is een geordende verzameling narratives en eventueel specifieke entity-pages.
+### Inline entitylinks zijn geïmplementeerd
 
-Dus:
+Markdown gebruikt definitief deze vormen:
+
+```md
+[[producer.example-estate]]
+[[producer.example-estate|Example Estate]]
+```
+
+De eerste vorm laat de renderer later een gelokaliseerd label kiezen; de tweede legt het zichtbare label vast. De parser valideert syntax en entity-ID, bouwt locale-aware mentions en genereert narrativebacklinks. Routes worden niet in Markdown hardgecodeerd.
+
+### Learning paths
+
+Een learning path is conceptueel een geordende view op bestaande narratives en entities:
 
 ```text
-curriculum != content storage
-curriculum = curated path through content
+curriculum != canonical content storage
+curriculum = curated path through shared content
 ```
 
-Dat maakt het mogelijk dezelfde Bordeaux-deep-dive zowel los via Explore als als onderdeel van een gevorderd leerpad aan te bieden.
-
-## 12.3 Inline entitylinks
-
-Narratives moeten expliciet naar entities kunnen linken zonder routes hard te coderen.
-
-Conceptueel voorbeeld:
-
-```text
-[[Château Latour|producer.chateau-latour]]
-```
-
-De uiteindelijke parser mag hiervan later een route, preview-card of tooltip maken.
-
-De gekozen serialization-syntax staat nog open; de **stable entity ID** is het belangrijke architectuurpunt.
+Een formeel learning-pathschema en pipeline-integratie zijn nog roadmap.
 
 ---
 
-# 13. Geography
+## 10. Kennisdiepte en opleidingsalignment
 
-## 13.1 Geografie is first-class data
+### Geïmplementeerd metadata-contract
 
-Een kaart-PNG is nooit de bron van geografische waarheid.
+Entities en narratives kunnen één optionele `depth` dragen:
 
-Geografische entities verwijzen naar geometrie-objecten of datasets.
+```text
+foundation
+intermediate
+advanced
+specialist
+```
 
-Conceptueel:
+Ook `framework_alignment` is op entity- en narrativeniveau geïmplementeerd:
 
 ```yaml
-geography:
-  geometry_ref: geometry.appellation.pauillac
-  geometry_status: official-informative
-  source: source.inao-pauillac-geodata
-  last_verified: 2026-08-25
+framework_alignment:
+  - framework: WSET
+    level: 3
+    relation: extension
 ```
 
-## 13.2 Geometrietype
+Ondersteunde relaties zijn `prerequisite`, `core-overlap`, `extension` en `beyond`. Een extern opleidingskader is metadata en bepaalt de ontologie niet.
 
-Ondersteun minimaal:
+### Roadmap: depth per section of block
 
-```text
-Point
-LineString
-Polygon
-MultiPolygon
-```
-
-Daarmee kunnen producenten, rivieren, appellaties en complexe gebieden worden weergegeven.
-
-## 13.3 Betekenis van producer-coördinaten
-
-Een producerpunt moet een expliciete semantiek hebben:
-
-```text
-winery             fysieke kelder / bezoeklocatie
-estate-centroid    representatief punt van landgoed
-vineyard-centroid  representatief punt van wijngaarden
-mailing-address    administratieve locatie; niet automatisch kaartlocatie
-```
-
-We plotten nooit een geocoded postadres alsof dat vanzelf de wijngaardlocatie is.
-
-## 13.4 Geometry provenance
-
-Iedere geometry heeft waar mogelijk:
-
-- bron/dataset;
-- licentie;
-- publicatie-/updatedatum;
-- datum van import;
-- toepasselijke disclaimer;
-- transformatiestappen;
-- precisie/status.
-
-Mogelijke status:
-
-```text
-authoritative        juridisch/formeel leidend
-official-informative officiële dataset maar niet juridisch leidend
-derived              afgeleid uit betrouwbare data
-community-reviewed   extern/community, handmatig gecontroleerd
-schematic             alleen voor uitleg, nooit exacte naslagkaart
-```
-
-## 13.5 Schematische geografie
-
-Een mentale kaart mag bestaan, maar alleen wanneer zij visueel niet wordt verward met exacte cartografie en expliciet als `schematic` is gemarkeerd.
-
-Voor de Atlas-interface worden `schematic` geometrieën nooit als appellationgrens gebruikt.
-
-## 13.6 Rendering is los van geometrie
-
-Kleuren, labels, hoverstates en simplification zijn presentatielaag. De brongeometrie blijft behouden.
-
-Hierdoor kan dezelfde Pauillac-polygon gebruikt worden voor:
-
-- wereldkaart;
-- Bordeauxdetailkaart;
-- appellationpagina;
-- compare view;
-- mobiele kaart.
+Een lang document kan secties met verschillende diepte hebben. Metadata zoals `block_id`, `depth`, `entity_mentions`, `source_refs` en `framework_alignment` per zelfstandig contentblok is gewenst, maar nog niet door het huidige Markdownformaat of de pipeline ondersteund. Het is daarom geen v1-authoringcontract.
 
 ---
 
-# 14. Media-architectuur
+## 11. Contentpipeline
 
-## 14.1 Mediatypen
+### Canonical input
 
-```text
-concept-illustration
-scientific-diagram
-data-map
-hybrid-map
-chart
-photo
-historical-image
-```
+De pipeline leest:
 
-## 14.2 Accuracy contract
+- `content/entities/**/entity.yaml` plus hun package-relative NL/EN-Markdown;
+- `content/narratives/**/narrative.yaml` plus hun package-relative NL/EN-Markdown;
+- herbruikbare YAML-bronrecords onder `data/sources/`.
 
-### `concept-illustration`
+Canonical content staat niet in `src/generated/content/`.
 
-Mag vereenvoudigen, maar moet inhoudelijk expliciet gecontroleerd zijn.
+### Validatie
 
-Geschikt voor:
+`npm run content:check` valideert zonder output te schrijven onder meer:
 
-- wijnstokfysiologie;
-- bodem-waterconcepten;
-- vinificatie;
-- source–sink;
-- botrytis.
+- strikte schema's, enums, IDs en ID/type-overeenkomst;
+- dubbele entity-, narrative-, assertion- en geography-IDs;
+- gelokaliseerde slugs en routebotsingen;
+- vereiste package-relative localebestanden;
+- bekende entity- en sourceverwijzingen;
+- dubbele relaties en bronverwijzingen;
+- inline entitylinksyntax, mentions en targets.
 
-### `data-map`
+Validatie is noodzakelijk maar bewijst geen feitelijke juistheid.
 
-Alle geometrie komt uit gecontroleerde geografische data.
+### Afgeleide graph en bundle
 
-Geen generatief model bepaalt grenzen of coördinaten.
-
-### `hybrid-map`
-
-De kaartbasis is data-driven; illustratieve elementen mogen daaromheen of bovenop worden toegevoegd zolang zij de geografie niet wijzigen.
-
-### `chart`
-
-Grafiekwaarden komen uit gestructureerde, bronvermelde data. Een afbeeldingmodel verzint geen assen of waarden.
-
-## 14.3 Assetmetadata
-
-Een platformasset moet conceptueel minimaal kunnen dragen:
-
-```yaml
-id: media.bordeaux.soil-water
-media_type: concept-illustration
-status: reviewed
-localization: layered
-accuracy: conceptual-reviewed
-sources:
-  - source.example
-alt:
-  nl: "..."
-  en: "..."
-```
-
-## 14.4 Publicatiestatus media
+`npm run content:build` voert dezelfde validatie uit en schrijft precies één deterministische runtimebundle:
 
 ```text
-draft
-review-needed
-approved
-deprecated
-replace-before-publication
+src/generated/content/knowledge-base.json
 ```
+
+Die bundle bevat:
+
+- genormaliseerde entities, narratives en sources;
+- forward relations en afgeleide inverse relations;
+- locale-aware narrative mentions en entitybacklinks;
+- entity-ID- en entity-type-indexes;
+- gelokaliseerde sluglookups;
+- een entitymetadata-searchindex;
+- geography-ID-lookups.
+
+De generator verwijdert oude gesplitste JSON-outputs. De gegenereerde directory is genegeerd door Git, kan vóór een build afwezig zijn en mag nooit handmatig worden aangepast.
+
+### Packagegenerator
+
+```bash
+npm run content:new -- producer example-estate
+```
+
+maakt een schema-geldig draftpackage met metadata, NL/EN-Markdown en een lokale `media/`-directory. De generator voegt bewust geen feiten, bronnen, relaties of vertalingen met inhoud toe.
 
 ---
 
-# 15. Search en discovery
-
-Search wordt entity-aware en niet alleen full-text.
-
-Een entity levert minimaal:
-
-- canonical name;
-- localized names;
-- aliases;
-- type;
-- parent geography;
-- korte summary;
-- relevante relations.
-
-Zo kan zoeken naar `Latour` direct onderscheid maken tussen:
-
-- Château Latour;
-- eventueel andere producenten/sites met Latour in de naam;
-- passages waarin Latour wordt genoemd.
-
-## 15.1 Searchresultaten
-
-Voorkeur voor drie lagen:
-
-1. **exact entities**;
-2. **related entities**;
-3. **narrative passages**.
-
-## 15.2 Facetten
-
-Later mogelijk:
-
-- type;
-- land/regio;
-- depth;
-- taal;
-- classification;
-- grape;
-- vintage;
-- contenttype.
-
----
-
-# 16. Corrections en community suggestions
-
-Gebruikers wijzigen canonical data niet direct.
-
-Een suggestie is een **change proposal**.
-
-Conceptueel:
-
-```yaml
-proposal_type: correction
-target_entity: producer.example
-target_assertion: assertion.example.owner
-current_value: "..."
-proposed_value: "..."
-source_url: "..."
-rationale: "..."
-status: submitted
-```
-
-Workflow:
-
-```text
-submitted → triaged → accepted/rejected → verified → merged
-```
-
-Voor v1 kan de technische implementatie eventueel via GitHub Issues/PR's lopen. De knowledge architecture hoeft daar niet van afhankelijk te zijn.
-
----
-
-# 17. Repositorystructuur na migratie
-
-De v1-implementatie gebruikt self-contained content packages. Daarmee blijven canonical metadata en gelokaliseerde presentatie bij dezelfde entity of narrative, zonder een parallelle `data/entities/`-structuur of losse `content/<type>/<locale>/`-boom. `data/` blijft voor herbruikbare bronnen en geverifieerde geografie; `content/legacy/` blijft de tijdelijke, niet-canonical importzone.
+## 12. Repositorystructuur voor v1
 
 ```text
 project/
-├── README.md
-├── docs/
-│   └── knowledge-architecture.md
-├── curriculum.md                  # curated Learn-structuur
-│
-├── data/
-│   ├── sources/
-│   └── geography/
-│
 ├── content/
 │   ├── entities/
-│   │   └── <entity-type>/<slug>/
+│   │   └── <entity-type-directory>/<slug>/
 │   │       ├── entity.yaml
 │   │       ├── overview.nl.md
 │   │       ├── overview.en.md
-│   │       └── media/             # alleen package-specifieke assets
-│   ├── narratives/
-│   │   └── <type>/<slug>/
-│   │       ├── narrative.yaml
-│   │       ├── article.nl.md
-│   │       ├── article.en.md
-│   │       └── media/             # alleen package-specifieke assets
-│   └── legacy/
-│       └── modules/               # tijdelijke, intacte migratie-input
-│
-├── media/
-│   ├── illustrations/
-│   ├── diagrams/
-│   └── generated-map-exports/     # outputs; nooit geometry source of truth
-│
-├── learning/
-│   └── paths/
-│
+│   │       └── media/
+│   └── narratives/
+│       └── <type-directory>/<slug>/
+│           ├── narrative.yaml
+│           ├── article.nl.md
+│           ├── article.en.md
+│           └── media/
+├── data/
+│   ├── sources/
+│   └── geography/                  # roadmap zodra verified data is gekozen
+├── docs/
+│   ├── content-authoring.md
+│   ├── geography-policy.md
+│   ├── knowledge-architecture.md
+│   ├── product-principles.md
+│   └── visual-language.md
 ├── editorial/
-│   ├── research-policy.md
-│   ├── writing-style.md
-│   ├── visual-style.md
-│   └── migration-status.md
-│
+│   └── research-policy.md
+├── scripts/content/
+│   ├── cli.ts
+│   ├── generator.ts
+│   └── pipeline.ts
+├── src/content/model.ts            # strict uitvoerbaar v1-schema
 └── src/generated/content/
-    └── knowledge-base.json         # afgeleid runtimebestand; niet canonical
+    └── knowledge-base.json         # afgeleid, deterministisch, niet canonical
 ```
 
-### Waarom media niet meer standaard naast een les staat
+Eventuele lege legacy-directoryremnants zijn geen onderdeel van het canonical v1-contract. Legacy-materiaal is uitsluitend migratie-input en wordt niet door de huidige canonical pipeline gelezen.
 
-In het oude curriculum was dat logisch omdat een illustratie vrijwel altijd één les diende.
-
-In het nieuwe platform kunnen dezelfde media voorkomen op:
-
-- een entitypagina;
-- een deep dive;
-- een learning path;
-- search/preview;
-- een compare view.
-
-Herbruikbare media horen daarom een eigen stabiele asset-ID te krijgen.
-
-**Uitzondering:** volledig narrative-specifieke assets mogen naast het narrative blijven als hergebruik zeer onwaarschijnlijk is.
+YAML-metadata plus gelokaliseerde Markdownpackages en file-backed canonical content met build-time indexing zijn voor v1 besloten en geïmplementeerd. Een latere database of PostGIS-runtime kan nuttig worden bij schaal, querying of geografie, maar is geen open keuze die huidige authoring of canonical ownership blokkeert. Zo'n verandering vereist een expliciet, niet-destructief migratieontwerp.
 
 ---
 
-# 18. Migratiestatussen
+## 13. Geografie
 
-Bestaande content/assets krijgen één van deze migratiestatussen.
+Geografie is first-class kennis, maar de volledige geographydatalaag is nog niet geïmplementeerd. V1 heeft alleen:
 
-## `retain`
+- een optioneel gevalideerd `geography_id` op entities;
+- uniquenessvalidatie voor geography-IDs;
+- een geography lookup in de gegenereerde bundle.
 
-Inhoud en vorm passen in de nieuwe architectuur. Alleen registreren/verplaatsen/metadata toevoegen.
+Er staan nog geen geverifieerde Bordeauxgrenzen, producentcoördinaten of andere Atlasgeometrieën in het huidige prototype.
 
-## `migrate`
+Wanneer geography wordt toegevoegd, gelden `geography-policy.md` en `../editorial/research-policy.md`. De kernregel blijft:
 
-Inhoud is bruikbaar, maar moet worden opgesplitst, gelokaliseerd, van provenance voorzien of naar nieuwe datastructuren worden vertaald.
+> Geography is rendered from verified data. Concepts may be illustrated.
 
-## `redesign`
-
-Het concept blijft, de huidige presentatie is niet geschikt voor het platform.
-
-## `replace`
-
-De asset/data mag niet als canonical publicatiebron worden gebruikt. Een nieuwe bron/asset is noodzakelijk.
-
-## `deprecated`
-
-Alleen voor historische/hersteldoeleinden bewaren; niet in publieke output.
+Een kaartafbeelding, screenshot, generatieve vorm of geocoded postadres wordt niet de bron van een grens of wijngaardlocatie. Source, licentie, CRS, transformaties, versie, semantiek en onzekerheid moeten behouden blijven.
 
 ---
 
-# 19. Bordeaux als architectuurtest
+## 14. Media
 
-Bordeaux bevat vrijwel alle moeilijke gevallen en is daarom de eerste vertical slice.
+Package-specifieke `media/`-directories worden door de packagestructuur ondersteund. Een platformbreed mediaschema, stable media IDs, reviewstatussen en automatische media-indexing zijn nog niet geïmplementeerd.
 
-## 19.1 Testentities
+Roadmapmedia kunnen onder meer conceptillustraties, wetenschappelijke diagrammen, data-driven kaarten, hybrid maps, charts, foto's en historische beelden omvatten. Hun nauwkeurigheid, rechten, credits, lokalisatie en toegankelijkheid volgen `visual-language.md` en het researchbeleid.
 
-De architectuur moet minimaal elegant kunnen modelleren:
+Nieuwe herbruikbare visuals bevatten bij voorkeur geen permanent ingebakken taalafhankelijke labels. Factual maps en charts komen uit geverifieerde data; een beeldmodel verzint geen grenzen, coördinaten, assen of waarden.
+
+---
+
+## 15. Search, routing en discovery
+
+### Geïmplementeerd
+
+De bundle bevat:
+
+- alle entity-IDs;
+- entities gegroepeerd per type;
+- NL- en EN-sluglookups per entitytype;
+- een zoekindex met ID, type, canonical name, localized names en slugs;
+- geographylookups waar `geography_id` bestaat;
+- forward/inverse relations en narrativebacklinks voor discovery.
+
+Dit is indexing-infrastructuur. Welke routes en zoekinterfaces de applicatie publiek aanbiedt, blijft een applicatiebeslissing boven op deze graph.
+
+### Roadmap
+
+- full-text zoeken in narrativepassages;
+- aliases en historische namen zodra het schema die ondersteunt;
+- ranking van exacte entities, related entities en passages;
+- facetten zoals geography, depth, classification, grape en contenttype;
+- compare views en rijke relationele discovery.
+
+---
+
+## 16. Correcties en migratie
+
+Gebruikers wijzigen canonical data niet rechtstreeks. Een toekomstige correction flow kan change proposals gebruiken, maar het reviewproces is nog niet als applicatiefunctie geïmplementeerd.
+
+Voor iedere migratie gelden deze stappen:
+
+1. inventariseer legacyfeiten, narratief, assets en bronverwijzingen;
+2. wijs stabiele feiten toe aan entities en assertions;
+3. schrijf relaties eenmaal als canonical forward relation;
+4. registreer en verifieer bronnen volgens het researchbeleid;
+5. migreer uitleg naar NL/EN-narratives zonder feiten te dupliceren;
+6. valideer packages en afgeleide graph;
+7. controleer inhoud, provenance, lokalisatie en media vóór legacyverwijdering.
+
+Een schema-geldige migratie is nog niet automatisch inhoudelijk geverifieerd. Legacy-input blijft herstelbaar totdat de vervanger volledig gecontroleerd is.
+
+---
+
+## 17. Bordeaux: huidige proof en roadmap
+
+### Huidige repositorystatus
+
+De Bordeaux proof bevat vijf draftentities:
+
+| Entity | Huidige rol |
+| --- | --- |
+| `region.bordeaux` | regionale root van de proof |
+| `appellation.pauillac` | onderdeel van Bordeaux; koppelt Cabernet Sauvignon |
+| `producer.chateau-latour` | ligt in Pauillac; tijdsbewuste classificatierelatie |
+| `grape.cabernet-sauvignon` | druifentity voor relationele proof |
+| `classification.bordeaux-1855` | target van `classified_under` |
+
+Daarnaast bestaat één draft `regional-deep-dive`:
 
 ```text
-region.bordeaux
-appellation.pauillac
-producer.chateau-latour
-grape.cabernet-sauvignon
-classification.bordeaux-1855
-vintage.bordeaux-2016
+narrative.regional.bordeaux-proof
 ```
 
-### Relatievoorbeeld
+De vier forward relations bewijzen `part_of`, `important_grape`, `located_in` en `classified_under`. De classificatierelatie bevat `tier: premier-cru` en top-level `valid_from: 1855`.
 
-```text
-region.bordeaux
-  └── contains → appellation.pauillac
+Dit is een pipeline- en modelproof, geen inhoudelijk complete of publiceerbare Bordeauxvertical slice. Er is nog geen `vintage.bordeaux-2016`, geen echt `source.*`-record, geen brongebonden assertion en geen geverifieerde geografie.
 
-appellation.pauillac
-  ├── part_of → region.bordeaux
-  ├── important_grape → grape.cabernet-sauvignon
-  └── contains/associated producer → producer.chateau-latour
+### Pending voor een echte vertical slice
 
-producer.chateau-latour
-  ├── located_in → appellation.pauillac
-  └── classified_under → classification.bordeaux-1855 [tier: premier-cru]
+- research en migratie van rijke canonical entitycontent;
+- de geplande scoped vintage-entity;
+- minimaal één echt herbruikbaar bronrecord en claim-level ondersteuning;
+- inhoudelijk volwaardige NL- en EN-narratives;
+- geverifieerde boundaries, punten en Atlasdata met volledige provenance;
+- vervanging of review van legacy media;
+- section-/block-level depth en provenance;
+- publieke bronweergave en menselijk leesbare relaties;
+- Explore-, Learn- en Atlaspresentaties uit dezelfde canonical graph;
+- end-to-end routing, search, related content en accessibility review.
 
-vintage.bordeaux-2016
-  └── scope → region.bordeaux
-```
-
-Dit is voldoende om bijvoorbeeld automatisch te tonen:
-
-- Latour op de Pauillacpagina;
-- Pauillac in Bordeaux;
-- de classificatie op Latour;
-- Bordeaux 2016 als relevante vintage;
-- alle expliciete narrative-mentions van Latour.
+De architectuur wordt vóór grootschalige regiomigratie aangepast als deze slice alleen met grote uitzonderingen kan worden gebouwd.
 
 ---
 
-# 20. Triage van de bestaande Bordeaux-assets
+## 18. V1-contract versus roadmap
 
-De vier huidige PNG's worden **niet verwijderd tijdens architectuurfase**. Zij blijven legacy-bronnen totdat vervangers zijn goedgekeurd.
+### Besloten en geïmplementeerd
 
-## `06-01-bordeaux-river-system.png`
+- self-contained YAML + localized Markdownpackages;
+- file-backed canonical content;
+- acht entitytypen en de gevalideerde relation vocabulary;
+- entity-, narrative-, relation-, assertion- en sourceschema's;
+- NL/EN als verplichte gelokaliseerde presentatielagen;
+- stable entitylinks met mentions en backlinks;
+- entity/narrative depth en framework alignment;
+- inverse relations, localized slug/search/geography-indexes;
+- één deterministische gegenereerde runtimebundle;
+- een entitypackagegenerator en validation/buildcommands.
 
-**Migratiestatus: `replace` → daarna `deprecated`.**
+### Besloten principe, implementatie pending
 
-Reden:
+- verified-data-only geography en Atlas;
+- reusable provenance en claim-level support in echte content;
+- learning paths als curated views in plaats van contentopslag;
+- media met controleerbare accuracy, rights en localization;
+- niet-destructieve migratie van legacycontent.
 
-- de afbeelding gebruikt kaartachtige geometrie;
-- ook al staat er "schematisch, niet op schaal", de vormen en locaties kunnen gemakkelijk als geografische referentie worden geïnterpreteerd;
-- de toekomstige Atlas heeft exacte, bronvermelde geografie nodig;
-- Nederlandse labels zijn in het raster ingebakken.
+### Open roadmapontwerp
 
-Vervanger:
+- Markdown/MDX- of directivesyntax voor section-/blockmetadata;
+- learning-pathschema en voortgangsmodel;
+- geography storage, import en mogelijke PostGIS-runtime;
+- mediaschema en platformbrede assetcatalogus;
+- aliasmodel, full-text search, ranking en facetten;
+- provenance- en uncertaintypresentatie in de UI;
+- correctie- en community suggestionworkflow;
+- de fijnmazigheid en UI van externe framework alignment;
+- criteria voor een mogelijk toekomstig `wine_style`-type.
 
-- data-driven Bordeaux-basemap;
-- echte rivierlijnen en appellation-/regiogeometrie;
-- labels uit de UI/localizationlaag;
-- dezelfde visuele stijl kan in de renderer worden benaderd.
-
-## `06-02-bordeaux-soil-water.png`
-
-**Migratiestatus: `redesign`, concept behouden.**
-
-Sterk punt:
-
-- het beeld legt een fysiologisch concept uit en pretendeert geen exacte kaart te zijn.
-
-Waarom toch redesign:
-
-- labels zijn Nederlands ingebakken;
-- "Médoc/Graves = grind", "Pomerol = klei" en "Saint-Émilion = kalksteen" zijn didactische archetypen, geen volledige lokale bodemkaarten;
-- in het platform moet dat visueel explicieter als model worden gepresenteerd.
-
-Vervanger:
-
-- labelvrije bodemillustraties of SVG/vectorcomponent;
-- tekst/callouts in HTML/SVG;
-- expliciete caption: archetypische profielen, niet uniforme bodems van hele appellations.
-
-## `06-03-left-bank-right-bank.png`
-
-**Migratiestatus: `redesign`, concept behouden.**
-
-Sterk punt:
-
-- geen pseudo-cartografie;
-- goede waarschuwing dat gemiddelden geen natuurwetten zijn.
-
-Waarom redesign:
-
-- taal zit in het raster;
-- sommige stijltermen zijn interpretatief en moeten makkelijker te wijzigen/citeren zijn;
-- als interactieve component kan de gebruiker later bijvoorbeeld druif, bodem, rijping en uitzonderingen afzonderlijk tonen.
-
-Vervanger:
-
-- responsive compare-component of SVG;
-- labels en claims als lokaliseerbare data/content;
-- illustratieve wijnstok/bodemlaag kan behouden worden.
-
-## `06-04-bordeaux-classifications.png`
-
-**Migratiestatus: `replace-as-component`; huidige PNG blijft tijdelijke NL-referentie.**
-
-De informatie is momenteel bruikbaar, maar classificaties zijn **gestructureerde, veranderlijke data**. Een statische PNG is daarom een slechte canonical representatie.
-
-Vervanger:
-
-- data-driven classification component;
-- aantallen/tiernamen uit classification-entities/assertions;
-- automatisch Nederlands/Engels;
-- bron en geldigheidsdatum direct zichtbaar;
-- optioneel exporteerbare infographic als afgeleide output.
-
-### Algemene conclusie Bordeaux-media
-
-Geen van de vier concepten gaat verloren. We vervangen vooral de manier waarop feiten, labels en geografie aan het beeld zijn gekoppeld.
+Open roadmapkeuzes veranderen het huidige v1-authoringcontract niet stilzwijgend. Iedere schema- of canonical-storagewijziging vereist documentatie, validatie, migratie en behoud van bestaande provenance.
 
 ---
 
-# 21. Gevolg voor de illustraties uit les 1.1
+## 19. Definition of done voor architectuuruitbreidingen
 
-De fysiologische illustraties zijn **inhoudelijk juist het soort beeld dat we willen behouden**: conceptueel, didactisch en niet afhankelijk van exacte cartografie.
+Een uitbreiding is pas onderdeel van het actieve contract wanneer:
 
-Maar ook zij hebben Nederlandse tekst ingebakken.
+- het schema en de canonical authoringvorm expliciet zijn;
+- validatie en relevante afleidingen zijn geïmplementeerd en getest;
+- NL/EN-eigendom en routinggedrag duidelijk zijn;
+- provenance, onzekerheid en migratie-effecten zijn beoordeeld;
+- geography en media aan hun bindende beleid voldoen;
+- generated output reproduceerbaar en niet handmatig authored blijft;
+- documentatie current state en roadmap opnieuw correct scheidt.
 
-Daarom:
-
-```text
-inhoudelijke status: retain
-platform/i18n-status: migrate
-```
-
-Voor de eerste Nederlandse versie mogen de bestaande PNG's blijven. Voor een tweetalig platform kiezen we later per figuur tussen:
-
-- een Engelse variant;
-- labelvrije base art + gelokaliseerde overlays;
-- herbouw als SVG/HTML-diagram.
-
-We hoeven deze migratie niet vóór de Bordeaux vertical slice af te ronden.
-
----
-
-# 22. Bordeaux-migratievolgorde
-
-Na goedkeuring van deze architectuur:
-
-## Fase 1 — structuur valideren
-
-1. zes prototype-entities modelleren;
-2. één sourcerecord;
-3. één tijdsafhankelijke classificatierelatie;
-4. één vintage-record;
-5. controleren of de modellen niet Bordeaux-specifiek zijn.
-
-## Fase 2 — Bordeaux-data extraheren
-
-1. regio en appellations;
-2. classificaties;
-3. producenten;
-4. druivenrelaties;
-5. vintage-overzicht;
-6. relevante conceptlinks;
-7. iedere veranderlijke claim koppelen aan provenance.
-
-## Fase 3 — geography
-
-1. geschikte authoritative/official-informative datasets selecteren;
-2. licentie en disclaimers registreren;
-3. geometrieën normaliseren;
-4. eerste exacte Bordeauxkaart renderen;
-5. producerpunten alleen toevoegen als hun betekenis en bron duidelijk zijn.
-
-## Fase 4 — narrative migreren
-
-1. `06-01-bordeaux.md` als legacy-bron behouden;
-2. facts die nu data zijn niet onnodig dupliceren;
-3. narrative in gelokaliseerde contentblokken opdelen;
-4. entitylinks toevoegen;
-5. depthmetadata per blok toekennen;
-6. bronnen behouden waar het narratief interpretatie bevat.
-
-## Fase 5 — media
-
-1. river-system vervangen;
-2. soil-water redesignen;
-3. Left/Right Bank redesignen;
-4. classifications vervangen door data-component;
-5. legacy-PNG's pas daarna deprecated markeren.
-
-## Fase 6 — tweede use-case
-
-Pas wanneer Bordeaux werkt, migreren we les 1.1 om te testen of de architectuur ook niet-regionale, fysiologische kennis goed ondersteunt.
-
----
-
-# 23. Definition of done voor de Bordeaux vertical slice
-
-Bordeaux is architectonisch geslaagd wanneer een toekomstige frontend uit dezelfde contentset minimaal kan maken:
-
-- een Bordeaux-overviewpagina;
-- een Pauillac-appellationpagina;
-- een Château Latour-pagina;
-- een Cabernet Sauvignon-pagina met Bordeauxrelaties;
-- een 1855-classificationpagina;
-- een Bordeaux 2016-vintagepagina;
-- een exacte interactieve kaart;
-- de lange Bordeaux-deep-dive;
-- depth filtering;
-- NL/EN content zonder duplicatie van kernfeiten;
-- bronweergave per relevante claim;
-- related-content-links zonder handmatige routehardcoding.
-
-Wanneer daarvoor grote uitzonderingen nodig blijken, passen we de architectuur aan vóór verdere regio's worden geschreven.
-
----
-
-# 24. Open beslissingen
-
-Deze punten zijn bewust nog niet definitief omdat zij beter tijdens de eerste migratie kunnen worden getest.
-
-### Serialisatie
-
-- YAML versus JSON voor entitydata;
-- Markdown versus MDX/directives voor blockmetadata.
-
-### Runtime storage
-
-- bestanden als canonical source met build-time indexing;
-- of later database/PostGIS als canonical runtime-store.
-
-De contentarchitectuur moet beide routes toelaten.
-
-### Relationship vocabulary
-
-De initiële relation types worden tijdens Bordeaux getest en daarna aangescherpt. Geen ontologie van honderden predicates vooraf ontwerpen.
-
-### Media localization
-
-Per type bepalen wanneer SVG/HTML-overlay beter is dan aparte localized rastervariants.
-
-### Geography detail
-
-Niet ieder land heeft even toegankelijke officiële appellationgeometrie. Per jurisdictie moet provenancebeleid worden toegepast zonder inferieure data stilzwijgend als exact te presenteren.
-
-### WSET alignment
-
-Exact bepalen hoe fijnmazig de mapping wordt en hoe in de UI duidelijk wordt gemaakt dat dit een onafhankelijke redactionele inschatting is.
-
----
-
-# 25. Besluiten die met versie 0.1 wél vaststaan
-
-1. **Entities en relaties worden de primaire kennisstructuur.**
-2. **Lessen/narratives blijven bestaan als curated views.**
-3. **Geografie wordt niet generatief verzonnen wanneer nauwkeurigheid wordt gesuggereerd.**
-4. **Sources, validiteit en last-verified metadata zijn first-class voor veranderlijke claims.**
-5. **Internal depth staat los van externe opleidingsframeworks.**
-6. **Nederlands en Engels delen dezelfde feitelijke data.**
-7. **Tekst in rasterillustraties wordt voor nieuwe platformassets zo veel mogelijk vermeden.**
-8. **Bordeaux wordt de eerste vertical slice.**
-9. **Migratie is niet destructief: legacy blijft totdat de vervanger is gecontroleerd.**
-10. **We ontwerpen niet eerst de hele wijnwereld; we bewijzen het model volledig met Bordeaux.**
+Tot die tijd blijft de uitbreiding roadmap, ook als er al een ontwerpvoorbeeld of lege directory voor bestaat.
