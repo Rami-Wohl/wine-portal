@@ -43,6 +43,18 @@ Link entities in Markdown without application routes:
 
 The first form lets the renderer choose a localized label later. The second supplies the displayed label. Both forms are validated and generate narrative backlinks.
 
+## Write Markdown bodies
+
+Canonical entity overviews and narratives follow `content-blocks.md`. That
+contract defines the accepted top-level directives, stable block IDs, heading
+rules, block depth, entity links, citations, and NL/EN parity.
+
+The block syntax has been accepted for v1, but its parser, renderer, and strict
+block validation are still pending. Until those land, `content:check` validates
+the locale files and existing entity links but does not prove that block
+structure or citations are valid. Do not use that temporary gap to introduce
+unstructured canonical content.
+
 ## Localization
 
 Canonical facts and relations exist once in `entity.yaml`. Dutch and English names, slugs, and Markdown are localized presentation fields. Both locale files are required in v1 so missing translations are visible during validation rather than silently hidden.

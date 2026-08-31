@@ -21,6 +21,8 @@ document relevant to a task before editing, and apply them together:
   work.
 - `docs/knowledge-architecture.md` — content models, entities, relations,
   backlinks, routing, search, indexes, pipelines, and migrations.
+- `docs/content-blocks.md` — canonical Markdown structure, semantic blocks,
+  block metadata, entity links, citations, and renderer behavior.
 - `docs/geography-policy.md` — places, maps, coordinates, boundaries,
   geographic hierarchy, geometry, and Atlas.
 - `docs/visual-language.md` — UI, responsive behavior, imagery, illustration,

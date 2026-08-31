@@ -487,9 +487,13 @@ framework_alignment:
 
 Ondersteunde relaties zijn `prerequisite`, `core-overlap`, `extension` en `beyond`. Een extern opleidingskader is metadata en bepaalt de ontologie niet.
 
-### Roadmap: depth per section of block
+### Besloten conventie, implementatie pending: depth per block
 
-Een lang document kan secties met verschillende diepte hebben. Metadata zoals `block_id`, `depth`, `entity_mentions`, `source_refs` en `framework_alignment` per zelfstandig contentblok is gewenst, maar nog niet door het huidige Markdownformaat of de pipeline ondersteund. Het is daarom geen v1-authoringcontract.
+Een lang document kan blocks met verschillende diepte hebben. De authoringsyntax
+voor stabiele block-IDs, blocktypen, `depth`, `source_refs`, entitylinks en
+citations is vastgelegd in `content-blocks.md`. Parser, validator, gegenereerde
+blockmetadata en rendering zijn nog niet geïmplementeerd. Block-level
+`framework_alignment` blijft bewust uitgesteld.
 
 ---
 
@@ -729,7 +733,7 @@ De architectuur wordt vóór grootschalige regiomigratie aangepast als deze slic
 
 ### Open roadmapontwerp
 
-- Markdown/MDX- of directivesyntax voor section-/blockmetadata;
+- implementatie van de besloten Markdown-directives, blockvalidator en renderer;
 - learning-pathschema en voortgangsmodel;
 - geography storage, import en mogelijke PostGIS-runtime;
 - mediaschema en platformbrede assetcatalogus;

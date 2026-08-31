@@ -19,4 +19,6 @@ content/
 
 YAML contains shared identity, relations, assertions, and provenance references. Markdown contains localized presentation. Reusable sources and verified geography remain under `data/`.
 
-See `docs/content-authoring.md` for the authoring workflow and `scripts/content/README.md` for validation and generated output.
+See `docs/content-authoring.md` for the package workflow,
+`docs/content-blocks.md` for the accepted Markdown and semantic-block contract,
+and `scripts/content/README.md` for current validation and generated output.
