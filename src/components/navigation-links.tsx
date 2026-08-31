@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { NavigationItem } from "@/config/navigation";
+import {
+  isNavigationItemCurrent,
+  type NavigationItem,
+} from "@/config/navigation";
 
 interface NavigationLinksProps {
   items: NavigationItem[];
@@ -13,14 +16,12 @@ export function NavigationLinks({ items, onNavigate }: NavigationLinksProps) {
   const pathname = usePathname();
 
   return items.map((item) => {
-    const isCurrent = item.activePrefixes.some(
-      (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
-    );
+    const isCurrent = isNavigationItemCurrent(item, pathname);
 
     return (
       <Link
         aria-current={isCurrent ? "page" : undefined}
-        className={isCurrent ? "nav-link-active" : undefined}
+        className={`nav-link${isCurrent ? " nav-link-active" : ""}`}
         href={item.href}
         key={item.href}
         onClick={onNavigate}

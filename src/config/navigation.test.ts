@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { ENTITY_ROUTE_SEGMENTS } from "@/content/routing";
-import { PRIMARY_NAVIGATION, UTILITY_NAVIGATION } from "./navigation";
+import {
+  isNavigationItemCurrent,
+  PRIMARY_NAVIGATION,
+  SEARCH_NAVIGATION_ITEM,
+  UTILITY_NAVIGATION,
+} from "./navigation";
 
 describe("site navigation", () => {
   it("keeps destinations unique and ordered without a promoted learning link", () => {
@@ -20,5 +25,11 @@ describe("site navigation", () => {
     for (const segment of Object.values(ENTITY_ROUTE_SEGMENTS)) {
       expect(explore?.activePrefixes).toContain(`/${segment}`);
     }
+  });
+
+  it("matches exact destinations and their nested routes without partial-prefix matches", () => {
+    expect(isNavigationItemCurrent(SEARCH_NAVIGATION_ITEM, "/search")).toBe(true);
+    expect(isNavigationItemCurrent(SEARCH_NAVIGATION_ITEM, "/search/results")).toBe(true);
+    expect(isNavigationItemCurrent(SEARCH_NAVIGATION_ITEM, "/searching")).toBe(false);
   });
 });

@@ -4,6 +4,12 @@ export interface NavigationItem {
   activePrefixes: string[];
 }
 
+export function isNavigationItemCurrent(item: NavigationItem, pathname: string) {
+  return item.activePrefixes.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+}
+
 export const PRIMARY_NAVIGATION: NavigationItem[] = [
   {
     href: "/explore",
@@ -24,7 +30,13 @@ export const PRIMARY_NAVIGATION: NavigationItem[] = [
   { href: "/atlas", label: "Atlas", activePrefixes: ["/atlas"] },
 ];
 
+export const SEARCH_NAVIGATION_ITEM: NavigationItem = {
+  href: "/search",
+  label: "Zoeken",
+  activePrefixes: ["/search"],
+};
+
 export const UTILITY_NAVIGATION: NavigationItem[] = [
-  { href: "/search", label: "Zoeken", activePrefixes: ["/search"] },
+  SEARCH_NAVIGATION_ITEM,
   { href: "/about", label: "Over Oenocademy", activePrefixes: ["/about"] },
 ];
