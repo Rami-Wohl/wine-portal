@@ -14,8 +14,8 @@ export default function AtlasPage() {
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Atlas" title="Wijnkennis in geografische context">
         <p>
-          De Atlas wordt de geografische ingang tot dezelfde canonical entities
-          die je via Ontdekken, Leren en Zoeken bereikt.
+          De Atlas wordt de geografische ingang tot dezelfde wijnkennis die je
+          via Ontdekken, Leren en Zoeken bereikt.
         </p>
       </PageIntro>
 
@@ -32,7 +32,7 @@ export default function AtlasPage() {
         </div>
         <div className="atlas-layout">
           <div className="map-empty-state">
-            <p className="eyebrow">Verified GIS required</p>
+            <p className="eyebrow">Gecontroleerde kaartgegevens</p>
             <h2 id="atlas-status-title">De kaart blijft bewust leeg.</h2>
             <p>
               Appellationgrenzen, regio’s en producentlocaties worden pas
@@ -46,10 +46,10 @@ export default function AtlasPage() {
             aria-label="Geselecteerde kaartentiteit"
           >
             <p className="eyebrow">Selectie</p>
-            <h3>Nog geen entiteit geselecteerd</h3>
+            <h3>Nog geen onderwerp geselecteerd</h3>
             <p>
-              Een toekomstige kaartselectie verwijst altijd naar de canonical
-              entitypagina buiten de Atlas-namespace.
+              Een toekomstige kaartselectie opent aanvullende kennis over de
+              gekozen regio, appellatie, wijngaard of producent.
             </p>
           </aside>
         </div>

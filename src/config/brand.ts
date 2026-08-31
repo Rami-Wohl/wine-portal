@@ -5,8 +5,8 @@ export const BRAND = {
     en: "Navigate the world of wine.",
   },
   description: {
-    nl: "Oenocademy is een meertalig, entity-first kennisplatform voor wijn, gericht op zowel gestructureerd leren als vrij verkennen.",
-    en: "Oenocademy is a multilingual, entity-first wine knowledge platform for structured learning and free exploration.",
+    nl: "Oenocademy is een meertalig kennisplatform voor wijn, met gestructureerde leerpaden en ruimte om vrij te verkennen.",
+    en: "Oenocademy is a multilingual wine knowledge platform for structured learning and free exploration.",
   },
 } as const;
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main id="main-content" className="page-shell">
-      <PageIntro eyebrow="Over Oenocademy" title="Eén kennisnetwerk, verschillende manieren om te navigeren">
+      <PageIntro eyebrow="Over Oenocademy" title="Vind je eigen weg door de wereld van wijn">
         <p>
           Oenocademy helpt wijnstudenten en nieuwsgierige liefhebbers verder na
           een eerste opleiding of introductie, zonder kennis op te sluiten in
@@ -25,45 +25,44 @@ export default function AboutPage() {
           <p>
             Na een formele of informele basis ontbreekt vaak een heldere route
             voor verdere verdieping. Informatie bestaat wel, maar is verspreid,
-            wisselend onderbouwd en zelden verbonden. Oenocademy organiseert die
-            kennis rond gedeelde entities, relaties, narratives en bronnen.
+            wisselend onderbouwd en zelden met elkaar verbonden. Oenocademy
+            brengt onderwerpen, uitleg en bronnen samen in één kennisbank.
           </p>
         </section>
         <section>
           <h2>Ontdekken, Leren en Atlas</h2>
           <p>
             Ontdekken ondersteunt vrije kennisnavigatie. Leren ordent delen van
-            hetzelfde netwerk tot pedagogische routes. Atlas toont uiteindelijk
-            de geografische dimensie via geverifieerde GIS-data. Geen van deze
-            modi bezit een afzonderlijke versie van de feiten.
+            dezelfde kennis tot doordachte leerroutes. Atlas voegt daar
+            uiteindelijk een geografische manier van verkennen aan toe, op basis
+            van gecontroleerde kaartgegevens.
           </p>
         </section>
         <section>
           <h2>Diepte zonder dubbele pagina’s</h2>
           <p>
-            Kennis kan lopen van foundation tot specialist. Die niveaus zijn
-            metadata voor progressieve verdieping, geen reden om hetzelfde
-            onderwerp in meerdere los onderhouden pagina’s te dupliceren.
+            Je kunt beginnen bij de basis en later steeds verder verdiepen. Zo
+            blijft één onderwerp bruikbaar voor zowel nieuwsgierige liefhebbers
+            als ervaren wijnstudenten, zonder kennis onnodig te verdubbelen.
           </p>
         </section>
         <section>
           <h2>Talen, bronnen en geografische nauwkeurigheid</h2>
           <p>
-            Nederlands en Engels delen canonical feiten, relaties en geografie;
-            uitleg en labels worden gelokaliseerd. Veranderlijke claims moeten
-            naar herbruikbare bronnen verwijzen. Grenzen en locaties verschijnen
-            alleen wanneer gecontroleerde geografische data beschikbaar is.
+            Nederlands en Engels delen dezelfde zorgvuldig beheerde kennis;
+            uitleg en labels worden per taal geschreven. Veranderlijke informatie
+            krijgt een duidelijke bronvermelding. Grenzen en locaties verschijnen
+            alleen wanneer betrouwbare geografische gegevens beschikbaar zijn.
           </p>
         </section>
         <section>
           <h2>Onafhankelijk en corrigeerbaar</h2>
           <p>
-            Oenocademy is redactioneel onafhankelijk. Opleidingsniveaus zoals die
-            van WSET kunnen uitsluitend als zelfstandig referentiepunt voor
-            voorkennis worden gebruikt; er is geen affiliatie of endorsement en
-            proprietary cursusmateriaal wordt niet gereproduceerd. Een latere
-            correctieworkflow zal voorstellen verzamelen zonder canonical data
-            rechtstreeks door gebruikers te laten overschrijven.
+            Oenocademy is redactioneel onafhankelijk en niet verbonden aan WSET
+            of een andere formele opleidingsaanbieder. Bestaande niveaus kunnen
+            alleen als referentie voor voorkennis dienen. In de toekomst kunnen
+            lezers correcties en aanvullingen voorstellen; publicatie volgt pas
+            na redactionele controle.
           </p>
         </section>
       </article>

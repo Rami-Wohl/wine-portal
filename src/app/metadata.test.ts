@@ -57,6 +57,7 @@ describe("application metadata", () => {
 
     expect(metadata.alternates).toEqual({ canonical: "/producers/chateau-latour" });
     expect(metadata.robots).toEqual({ index: false, follow: true });
+    expect(metadata.description).not.toMatch(/canonical|fixture|entity/i);
     await expect(generateEntityMetadata({
       params: Promise.resolve({ entityType: "producers", slug: "unknown" }),
     })).resolves.toEqual({});
@@ -75,6 +76,7 @@ describe("application metadata", () => {
       canonical: "/learn/regional-deep-dives/bordeaux-pipeline-proef",
     });
     expect(metadata.robots).toEqual({ index: false, follow: true });
+    expect(metadata.title).toBe("Bordeaux: verdieping in voorbereiding");
     await expect(generateNarrativeMetadata({
       params: Promise.resolve({ path: "lessons", lesson: "unknown" }),
     })).resolves.toEqual({});

@@ -2,16 +2,31 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
+import type { Entity, GeneratedNarrative } from "@/content/model";
 import {
   getEntityById,
   getNarrativeByRoute,
   getNarratives,
 } from "@/content/repository";
-import { NARRATIVE_ROUTE_SEGMENTS, narrativeHref } from "@/content/routing";
-import type { Entity } from "@/content/model";
+import {
+  DEPTH_LABELS_NL,
+  NARRATIVE_ROUTE_SEGMENTS,
+  NARRATIVE_TYPE_LABELS_NL,
+  narrativeHref,
+} from "@/content/routing";
 
 interface NarrativePageProps {
   params: Promise<{ path: string; lesson: string }>;
+}
+
+function publicNarrativeTitle(narrative: GeneratedNarrative): string {
+  if (narrative.status === "active") return narrative.title.nl;
+  const primaryEntity = narrative.primary_entity
+    ? getEntityById(narrative.primary_entity)
+    : undefined;
+  return primaryEntity
+    ? `${primaryEntity.names.nl}: verdieping in voorbereiding`
+    : "Verdieping in voorbereiding";
 }
 
 export function generateStaticParams() {
@@ -25,11 +40,15 @@ export async function generateMetadata({ params }: NarrativePageProps): Promise<
   const { path, lesson } = await params;
   const narrative = getNarrativeByRoute(path, lesson);
   if (!narrative) return {};
-  const canonical = narrativeHref(narrative);
+  const title = publicNarrativeTitle(narrative);
+
   return {
-    title: narrative.title.nl,
-    description: `Lees ${narrative.title.nl} als onderdeel van de leeromgeving van Oenocademy.`,
-    alternates: { canonical },
+    title,
+    description:
+      narrative.status === "active"
+        ? `Lees ${title} in de leeromgeving van Oenocademy.`
+        : "Deze verdieping wordt voorbereid voor de leeromgeving van Oenocademy.",
+    alternates: { canonical: narrativeHref(narrative) },
     robots: narrative.status === "active" ? undefined : { index: false, follow: true },
   };
 }
@@ -43,65 +62,63 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
     new Set([
       ...(narrative.primary_entity ? [narrative.primary_entity] : []),
       ...narrative.related_entities,
-      ...narrative.mentions.filter((mention) => mention.locale === "nl").map((mention) => mention.entity_id),
+      ...narrative.mentions
+        .filter((mention) => mention.locale === "nl")
+        .map((mention) => mention.entity_id),
     ]),
-  ).map(getEntityById).filter((entity): entity is Entity => Boolean(entity));
+  )
+    .map(getEntityById)
+    .filter((entity): entity is Entity => Boolean(entity));
+  const title = publicNarrativeTitle(narrative);
 
   return (
     <main id="main-content" className="page-shell lesson-page">
       <nav className="breadcrumbs" aria-label="Broodkruimelpad">
         <Link href="/learn">Leren</Link>
         <span aria-hidden="true">/</span>
-        <span>{path.replaceAll("-", " ")}</span>
+        <span>{NARRATIVE_TYPE_LABELS_NL[narrative.type]}</span>
         <span aria-hidden="true">/</span>
-        <span aria-current="page">{narrative.title.nl}</span>
+        <span aria-current="page">{title}</span>
       </nav>
 
       <header className="lesson-page-header">
-        <p className="eyebrow">{narrative.type.replaceAll("-", " ")}</p>
-        <h1>{narrative.title.nl}</h1>
-        <div className="lesson-metadata">
-          <span>Diepte: {narrative.depth ?? "nog niet toegekend"}</span>
-          <span>Status: {narrative.status}</span>
-        </div>
+        <p className="eyebrow">{NARRATIVE_TYPE_LABELS_NL[narrative.type]}</p>
+        <h1>{title}</h1>
+        {narrative.depth ? (
+          <div className="lesson-metadata">
+            <span>Kennisniveau: {DEPTH_LABELS_NL[narrative.depth]}</span>
+          </div>
+        ) : null}
       </header>
 
       <div className="lesson-layout">
         <article className="lesson-body">
-          {narrative.status === "active" ? (
-            <p>De narrative-renderer wordt gekoppeld zodra beoordeelde content beschikbaar is.</p>
-          ) : (
+          {narrative.status === "active" ? null : (
             <div className="empty-state">
-              <p className="eyebrow">Technische fixture</p>
-              <h2>Deze narrative is nog niet gepubliceerd.</h2>
+              <p className="eyebrow">In voorbereiding</p>
+              <h2>Deze verdieping wordt zorgvuldig opgebouwd.</h2>
               <p>
-                De route bewijst canonical metadata, entitymentions en
-                backlinks. De technische proefttekst wordt niet als volwaardige
-                les gepresenteerd.
+                Zodra de inhoud en bronnen zijn beoordeeld, verschijnt de volledige
+                verdieping hier. Verken intussen de kennisbank via Ontdekken.
               </p>
+              <Link className="text-link" href="/explore">
+                Ga naar Ontdekken →
+              </Link>
             </div>
           )}
-
-          <section className="media-slot" aria-labelledby="lesson-media-title">
-            <p className="eyebrow">Educatieve media</p>
-            <h2 id="lesson-media-title">Illustraties krijgen een inhoudelijke rol</h2>
-            <p>
-              Een toekomstige narrative kan hier gecontroleerde illustraties,
-              diagrammen, captions en gelokaliseerde alt-tekst plaatsen.
-            </p>
-          </section>
         </article>
 
-        <aside className="lesson-context" aria-labelledby="lesson-context-title">
-          <p className="eyebrow">In deze narrative</p>
-          <h2 id="lesson-context-title">Verbonden kennis</h2>
-          <div className="entity-link-list">
-            {mentionedEntities.map((entity) => <EntityLink entity={entity} key={entity.id} />)}
-          </div>
-          <p className="quiet-note">
-            Entitylinks openen altijd de context-onafhankelijke canonical pagina.
-          </p>
-        </aside>
+        {mentionedEntities.length > 0 ? (
+          <aside className="lesson-context" aria-labelledby="lesson-context-title">
+            <p className="eyebrow">In deze verdieping</p>
+            <h2 id="lesson-context-title">Verbonden onderwerpen</h2>
+            <div className="entity-link-list">
+              {mentionedEntities.map((entity) => (
+                <EntityLink entity={entity} key={entity.id} />
+              ))}
+            </div>
+          </aside>
+        ) : null}
       </div>
     </main>
   );

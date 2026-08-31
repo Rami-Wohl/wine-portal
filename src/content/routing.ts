@@ -1,4 +1,4 @@
-import type { Entity, EntityType, Narrative } from "./model";
+import type { Depth, Entity, EntityType, Narrative } from "./model";
 
 export const ENTITY_ROUTE_SEGMENTS = {
   region: "regions",
@@ -31,6 +31,34 @@ export const ENTITY_TYPE_LABELS_NL = {
   classification: "Classificatie",
   concept: "Concept",
 } as const satisfies Record<EntityType, string>;
+
+export const ENTITY_TYPE_PLURAL_LABELS_NL = {
+  region: "Regio's",
+  appellation: "Appellaties",
+  site: "Wijngaardsites",
+  producer: "Producenten",
+  grape: "Druiven",
+  vintage: "Jaargangen",
+  classification: "Classificaties",
+  concept: "Concepten",
+} as const satisfies Record<EntityType, string>;
+
+export const DEPTH_LABELS_NL = {
+  foundation: "Basis",
+  intermediate: "Verdieping",
+  advanced: "Gevorderd",
+  specialist: "Specialistisch",
+} as const satisfies Record<Depth, string>;
+
+export const NARRATIVE_TYPE_LABELS_NL = {
+  lesson: "Les",
+  "regional-deep-dive": "Regionale verdieping",
+  "producer-profile": "Producentenprofiel",
+  comparison: "Vergelijking",
+  "tasting-guide": "Proefgids",
+  "historical-essay": "Historisch essay",
+  explainer: "Uitleg",
+} as const satisfies Record<Narrative["type"], string>;
 
 export function entityHref(entity: Entity): string {
   return `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.nl}`;

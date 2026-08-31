@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { BRAND } from "@/config/brand";
+import { PRIMARY_NAVIGATION, UTILITY_NAVIGATION } from "@/config/navigation";
 import { LogoMark } from "./logo-mark";
-
-const primaryNavigation = [
-  { href: "/explore", label: "Ontdekken" },
-  { href: "/learn", label: "Leren" },
-  { href: "/atlas", label: "Atlas" },
-];
+import { MobileNavigation } from "./mobile-navigation";
+import { NavigationLinks } from "./navigation-links";
 
 export function SiteHeader() {
   return (
@@ -16,16 +13,12 @@ export function SiteHeader() {
         <span>{BRAND.name}</span>
       </Link>
       <nav className="site-nav" aria-label="Hoofdnavigatie">
-        {primaryNavigation.map((item) => (
-          <Link href={item.href} key={item.href}>
-            {item.label}
-          </Link>
-        ))}
+        <NavigationLinks items={PRIMARY_NAVIGATION} />
       </nav>
       <nav className="utility-nav" aria-label="Aanvullende navigatie">
-        <Link href="/search">Zoeken</Link>
-        <Link href="/about">Over Oenocademy</Link>
+        <NavigationLinks items={UTILITY_NAVIGATION} />
       </nav>
+      <MobileNavigation />
     </header>
   );
 }

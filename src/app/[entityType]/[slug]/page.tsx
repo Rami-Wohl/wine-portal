@@ -2,38 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
+import type { Entity } from "@/content/model";
+import { relationLabel, type RelationDirection } from "@/content/relations";
 import {
   getEntities,
   getEntityById,
   getEntityByRoute,
   getNarrativeBacklinks,
   getRelationsForEntity,
+  getSourcesByIds,
 } from "@/content/repository";
 import {
+  DEPTH_LABELS_NL,
   ENTITY_ROUTE_SEGMENTS,
   ENTITY_TYPE_LABELS_NL,
   entityHref,
   narrativeHref,
 } from "@/content/routing";
-import type { Entity } from "@/content/model";
 
 interface EntityPageProps {
   params: Promise<{ entityType: string; slug: string }>;
 }
-
-const relationLabels: Record<string, string> = {
-  part_of: "Onderdeel van",
-  contains: "Bevat",
-  located_in: "Gelegen in",
-  produces_in: "Produceert in",
-  associated_with: "Gerelateerd aan",
-  important_grape: "Belangrijke druif",
-  parent_appellation: "Bovenliggende appellatie",
-  classified_under: "Geclassificeerd onder",
-  related_to: "Gerelateerd aan",
-  contrasts_with: "Te vergelijken met",
-  scope: "Geografische scope",
-};
 
 export function generateStaticParams() {
   return getEntities().map((entity) => ({
@@ -47,12 +36,13 @@ export async function generateMetadata({ params }: EntityPageProps): Promise<Met
   const entity = getEntityByRoute(entityType, slug);
   if (!entity) return {};
   const canonical = entityHref(entity);
+
   return {
     title: `${entity.names.nl}: ${ENTITY_TYPE_LABELS_NL[entity.type].toLocaleLowerCase("nl")}`,
     description:
       entity.status === "active"
-        ? `Ontdek ${entity.names.nl} en de relaties binnen de verbonden wijnkennis van Oenocademy.`
-        : `${entity.names.nl} is als ${ENTITY_TYPE_LABELS_NL[entity.type].toLocaleLowerCase("nl")} geregistreerd in de kennisbank van Oenocademy.`,
+        ? `Ontdek ${entity.names.nl} en de verbonden onderwerpen in de kennisbank van Oenocademy.`
+        : `De pagina over ${entity.names.nl} wordt voorbereid voor de kennisbank van Oenocademy.`,
     alternates: { canonical },
     robots: entity.status === "active" ? undefined : { index: false, follow: true },
     openGraph: {
@@ -68,21 +58,30 @@ export default async function EntityPage({ params }: EntityPageProps) {
   const entity = getEntityByRoute(entityType, slug);
   if (!entity) notFound();
 
-  const relations = getRelationsForEntity(entity.id).map((relation) => {
-    const isForward = relation.source === entity.id;
-    return {
-      relation,
-      direction: isForward ? "forward" : "inverse",
-      related: getEntityById(isForward ? relation.target : relation.source),
-    };
-  }).filter((item): item is typeof item & { related: Entity } => Boolean(item.related));
+  const relations = getRelationsForEntity(entity.id)
+    .map((relation) => {
+      const isForward = relation.source === entity.id;
+      return {
+        relation,
+        direction: (isForward ? "forward" : "inverse") as RelationDirection,
+        related: getEntityById(isForward ? relation.target : relation.source),
+      };
+    })
+    .filter((item): item is typeof item & { related: Entity } => Boolean(item.related));
   const parent = relations.find(
     ({ direction, relation }) =>
-      direction === "forward" && ["part_of", "located_in", "parent_appellation"].includes(relation.type),
+      direction === "forward" &&
+      ["part_of", "located_in", "parent_appellation"].includes(relation.type),
   )?.related;
   const relatedNarratives = getNarrativeBacklinks(entity.id).filter(
     (narrative) => narrative.status === "active",
   );
+  const sources = getSourcesByIds(Array.from(new Set([
+    ...entity.source_refs,
+    ...entity.assertions.flatMap((assertion) => assertion.sources),
+  ])));
+  const hasRelatedKnowledge = relations.length > 0 || relatedNarratives.length > 0;
+  const hasSupportingInformation = hasRelatedKnowledge || sources.length > 0;
 
   return (
     <main id="main-content" className="page-shell entity-page">
@@ -98,79 +97,74 @@ export default async function EntityPage({ params }: EntityPageProps) {
         <span aria-current="page">{entity.names.nl}</span>
       </nav>
 
-      <header className="entity-header">
+      <header className={`entity-header${entity.depth ? "" : " entity-header-compact"}`}>
         <div>
           <p className="eyebrow">{ENTITY_TYPE_LABELS_NL[entity.type]}</p>
           <h1>{entity.names.nl}</h1>
-          <p className="entity-summary">
-            {entity.status === "active"
-              ? "Canonical kenniscontent voor deze entiteit."
-              : "Deze canonical entity is geregistreerd; inhoudelijke redactie en broncontrole volgen nog."}
-          </p>
+          {entity.status !== "active" ? (
+            <p className="entity-summary">
+              De inhoud van deze pagina wordt zorgvuldig voorbereid.
+            </p>
+          ) : null}
         </div>
-        <aside className="depth-control" aria-label="Kennisdiepte">
-          <span>Kennisdiepte</span>
-          <strong>{entity.depth ?? "Nog niet toegekend"}</strong>
-          <p>Dezelfde pagina zal later secties progressief kunnen tonen.</p>
-        </aside>
+        {entity.depth ? (
+          <aside className="depth-control" aria-label="Kennisdiepte">
+            <span>Kennisdiepte</span>
+            <strong>{DEPTH_LABELS_NL[entity.depth]}</strong>
+          </aside>
+        ) : null}
       </header>
 
-      <div className="entity-layout">
-        <article className="entity-content">
-          <section aria-labelledby="overview-title">
-            <p className="eyebrow">Overzicht</p>
-            <h2 id="overview-title">Canonical content in voorbereiding</h2>
-            <p>
-              De huidige fixture bewijst identiteit, routing en relaties. Er
-              wordt geen wijninhoud toegevoegd voordat tekst en bronnen zijn
-              beoordeeld.
-            </p>
-          </section>
-          <section className="media-slot" aria-labelledby="media-title">
-            <p className="eyebrow">Media</p>
-            <h2 id="media-title">Ruimte voor inhoudelijke media</h2>
-            <p>
-              Toekomstige illustraties, diagrammen en captions horen bij een
-              gecontroleerde entity of sectie. Geografie komt uitsluitend uit
-              geverifieerde data.
-            </p>
-          </section>
-          <section aria-labelledby="sources-title">
-            <p className="eyebrow">Bronnen</p>
-            <h2 id="sources-title">Provenance</h2>
-            <p>
-              {entity.source_refs.length > 0
-                ? `${entity.source_refs.length} bronreferentie(s) geregistreerd.`
-                : "Voor deze technische fixture zijn nog geen bronrecords geregistreerd."}
-            </p>
-          </section>
-        </article>
-
-        <aside className="relations-panel" aria-labelledby="relations-title">
-          <p className="eyebrow">Kennisrelaties</p>
-          <h2 id="relations-title">Ga verder vanuit {entity.names.nl}</h2>
-          {relations.length > 0 ? (
-            <ul>
-              {relations.map(({ direction, related, relation }) => (
-                <li key={`${relation.source}-${relation.type}-${relation.target}`}>
-                  <span>
-                    {direction === "forward" ? relationLabels[relation.type] : `Via ${relationLabels[relation.type].toLocaleLowerCase("nl")}`}
-                  </span>
-                  <EntityLink entity={related} />
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="empty-inline">Nog geen relaties geregistreerd.</p>
-          )}
-          <div className="related-learning">
-            <h3>Gerelateerde leercontent</h3>
-            {relatedNarratives.length > 0 ? relatedNarratives.map((narrative) => (
-              <Link href={narrativeHref(narrative)} key={narrative.id}>{narrative.title.nl}</Link>
-            )) : <p>Er is nog geen beoordeelde leercontent gekoppeld.</p>}
-          </div>
-        </aside>
-      </div>
+      {hasSupportingInformation ? (
+        <div className="entity-support-layout">
+          {hasRelatedKnowledge ? (
+            <section className="relations-panel" aria-labelledby="relations-title">
+              <p className="eyebrow">Gerelateerde onderwerpen</p>
+              <h2 id="relations-title">Ga verder vanuit {entity.names.nl}</h2>
+              {relations.length > 0 ? (
+                <ul>
+                  {relations.map(({ direction, related, relation }) => (
+                    <li key={`${relation.source}-${relation.type}-${relation.target}`}>
+                      <span>{relationLabel(relation.type, direction, "nl")}</span>
+                      <EntityLink entity={related} />
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+              {relatedNarratives.length > 0 ? (
+                <div className="related-learning">
+                  <h3>Verder leren</h3>
+                  {relatedNarratives.map((narrative) => (
+                    <Link href={narrativeHref(narrative)} key={narrative.id}>
+                      {narrative.title.nl}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+            </section>
+          ) : null}
+          {sources.length > 0 ? (
+            <section className="sources-panel" aria-labelledby="sources-title">
+              <p className="eyebrow">Bronnen</p>
+              <h2 id="sources-title">Verder lezen</h2>
+              <ul>
+                {sources.map((source) => (
+                  <li key={source.id}>
+                    {source.url ? (
+                      <a href={source.url} rel="noreferrer" target="_blank">
+                        {source.title}
+                      </a>
+                    ) : (
+                      <span>{source.title}</span>
+                    )}
+                    <small>{source.publisher}</small>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+        </div>
+      ) : null}
     </main>
   );
 }

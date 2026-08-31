@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/page-intro";
 import { getNarratives } from "@/content/repository";
-import { narrativeHref } from "@/content/routing";
+import { DEPTH_LABELS_NL, narrativeHref } from "@/content/routing";
 
 export const metadata: Metadata = {
   title: "Leer wijn op jouw niveau",
@@ -20,9 +20,8 @@ export default function LearnPage() {
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Leren" title="Leer in een doordachte volgorde">
         <p>
-          Leerpaden verbinden geselecteerde entities en narratives tot een
-          duidelijke route. Kennisdiepte blijft daarbij onafhankelijk van de
-          pagina waarop je leest.
+          Leerpaden brengen onderwerpen en verdiepende verhalen samen in een
+          heldere volgorde, van basiskennis tot specialistische verdieping.
         </p>
       </PageIntro>
 
@@ -35,7 +34,9 @@ export default function LearnPage() {
           <div className="learning-list">
             {publishedNarratives.map((narrative) => (
               <Link href={narrativeHref(narrative)} key={narrative.id}>
-                <span>{narrative.depth ?? "Niveau volgt"}</span>
+                {narrative.depth ? (
+                  <span>Kennisniveau: {DEPTH_LABELS_NL[narrative.depth]}</span>
+                ) : null}
                 <strong>{narrative.title.nl}</strong>
               </Link>
             ))}
@@ -43,11 +44,10 @@ export default function LearnPage() {
         ) : (
           <div className="empty-state">
             <p className="eyebrow">In redactie</p>
-            <h3>De eerste leerroute wordt zorgvuldig opgebouwd.</h3>
+            <h3>De eerste leerpaden zijn in voorbereiding.</h3>
             <p>
-              De huidige content is nog een technische architectuurproef. We
-              publiceren hier pas een leerpad wanneer inhoud, volgorde en
-              bronnen zijn beoordeeld.
+              We publiceren een leerpad zodra de inhoud, volgorde en bronnen
+              zorgvuldig zijn beoordeeld.
             </p>
             <Link className="text-link" href="/explore">
               Verken intussen de kennisbank →

@@ -5,6 +5,7 @@ import type {
   GeneratedKnowledgeBase,
   GeneratedNarrative,
   ResolvedRelation,
+  Source,
 } from "./model";
 import {
   NARRATIVE_ROUTE_SEGMENTS,
@@ -17,6 +18,9 @@ const entitiesById = new Map(
 );
 const narrativesById = new Map(
   knowledgeBase.narratives.map((narrative) => [narrative.id, narrative]),
+);
+const sourcesById = new Map(
+  knowledgeBase.sources.map((source) => [source.id, source]),
 );
 const narrativesByRoute = new Map(
   knowledgeBase.narratives.map((narrative) => [
@@ -61,6 +65,12 @@ export function getNarratives(): GeneratedNarrative[] {
 
 export function getNarrativeById(id: string): GeneratedNarrative | undefined {
   return narrativesById.get(id);
+}
+
+export function getSourcesByIds(ids: string[]): Source[] {
+  return ids
+    .map((id) => sourcesById.get(id))
+    .filter((source): source is Source => Boolean(source));
 }
 
 export function getNarrativeByRoute(

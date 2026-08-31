@@ -7,7 +7,7 @@ export default function NotFound() {
         <p className="eyebrow">Niet gevonden</p>
         <h1>Deze pagina bestaat niet.</h1>
         <div className="page-intro-copy">
-          <p>De route verwijst niet naar een bekende pagina of canonical entity.</p>
+          <p>We kunnen de pagina die je zoekt niet vinden.</p>
           <Link className="text-link" href="/explore">Ga naar Ontdekken →</Link>
         </div>
       </div>

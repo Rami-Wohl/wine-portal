@@ -23,7 +23,7 @@ const categories: Array<{
   { type: "producer", title: "Producenten", description: "Châteaux, domeinen, estates en andere producenten." },
   { type: "grape", title: "Druiven", description: "Druivenrassen, synoniemen en relevante relaties." },
   { type: "vintage", title: "Jaargangen", description: "Jaargangen binnen een expliciete regionale scope." },
-  { type: "classification", title: "Classificaties", description: "Classificatiesystemen met tijdigheid en provenance." },
+  { type: "classification", title: "Classificaties", description: "Classificatiesystemen met duidelijke geldigheid en bronvermelding." },
   { type: "concept", title: "Concepten", description: "Wijnbouw, vinificatie, geologie, chemie en sensoriek." },
 ];
 
@@ -32,8 +32,8 @@ export default function ExplorePage() {
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Ontdekken" title="Waar ben je nieuwsgierig naar?">
         <p>
-          Verken Oenocademy vrij via onderwerpen en hun onderlinge relaties.
-          Je hoeft de structuur van de kennisbank niet te kennen om te beginnen.
+          Verken onderwerpen en ontdek hoe regio&apos;s, producenten, druiven en
+          wijnbegrippen met elkaar samenhangen.
         </p>
       </PageIntro>
 
@@ -59,15 +59,27 @@ export default function ExplorePage() {
           const available = getEntitiesByType(category.type);
           return (
             <article className="category-row" key={category.type}>
-              <div>
-                <h3>{category.title}</h3>
+              <div className="category-heading">
+                {available.length > 0 ? (
+                  <Link className="category-title-link" href={`/search?type=${category.type}`}>
+                    <h3>{category.title}</h3>
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                ) : (
+                  <h3>{category.title}</h3>
+                )}
                 <p>{category.description}</p>
+                {available.length > 0 ? (
+                  <span className="category-count">
+                    {available.length} {available.length === 1 ? "onderwerp" : "onderwerpen"}
+                  </span>
+                ) : null}
               </div>
               <div className="entity-link-list">
                 {available.length > 0 ? (
                   available.map((entity) => <EntityLink entity={entity} key={entity.id} />)
                 ) : (
-                  <span className="empty-inline">Nog geen gecontroleerde content beschikbaar</span>
+                  <span className="empty-inline">Binnenkort beschikbaar</span>
                 )}
               </div>
             </article>
