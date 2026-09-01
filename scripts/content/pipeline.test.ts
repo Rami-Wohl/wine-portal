@@ -112,7 +112,11 @@ async function addNarrative(root: string, options: AddNarrativeOptions = {}): Pr
   );
 }
 
-async function addSource(root: string, id = "source.example"): Promise<void> {
+async function addSource(
+  root: string,
+  id = "source.example",
+  options: { url?: string } = {},
+): Promise<void> {
   const directory = path.join(root, "data", "sources");
   await mkdir(directory, { recursive: true });
   await writeFile(
@@ -122,6 +126,7 @@ async function addSource(root: string, id = "source.example"): Promise<void> {
       source_type: "book",
       publisher: "Example Publisher",
       title: "Example source",
+      ...(options.url ? { url: options.url } : {}),
       language: "en",
       status: "active",
     }),
@@ -130,7 +135,7 @@ async function addSource(root: string, id = "source.example"): Promise<void> {
 
 async function addMedia(
   root: string,
-  options: { checksum?: string; writeAsset?: boolean } = {},
+  options: { checksum?: string; sourceUrl?: string; writeAsset?: boolean } = {},
 ): Promise<void> {
   const bytes = Buffer.from("test image bytes");
   const metadataDirectory = path.join(root, "data", "media", "example");
@@ -157,7 +162,7 @@ async function addMedia(
       rights: {
         status: "open-licensed",
         creator: "Example Photographer",
-        source_url: "https://example.com/photo",
+        source_url: options.sourceUrl ?? "https://example.com/photo",
         license_name: "CC BY 4.0",
         license_url: "https://creativecommons.org/licenses/by/4.0/",
         credit_line: "Example Photographer",
@@ -475,6 +480,44 @@ describe("content pipeline derivation", () => {
       englishMarkdown: ":::summary{#orientation}\nEnglish.\n:::\n",
     });
     await expect(buildContent({ root: parityRoot, write: false })).rejects.toThrow(/differs in id/);
+  });
+
+  it("rejects bracketed citation locators", async () => {
+    const root = await temporaryRoot();
+    await addSource(root);
+    const markdown =
+      ':::summary{#orientatie source_refs="source.example"}\nClaim. [@source.example; fig. [A]]\n:::\n';
+    await addNarrative(root, {
+      markdown,
+      sourceRefs: ["source.example"],
+    });
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(/invalid citation/);
+  });
+
+  it("rejects headings nested inside semantic block content", async () => {
+    const root = await temporaryRoot();
+    const markdown =
+      ":::section{#uitleg}\n## Uitleg\n\n- Een punt\n\n  ### Verborgen tussenkop\n:::\n";
+    await addNarrative(root, { markdown });
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /must keep headings at the top level/,
+    );
+  });
+
+  it("rejects non-http URLs in source and media metadata", async () => {
+    const sourceRoot = await temporaryRoot();
+    await addSource(sourceRoot, "source.example", { url: "javascript:alert(1)" });
+    await expect(buildContent({ root: sourceRoot, write: false })).rejects.toThrow(
+      /must use an http or https URL/,
+    );
+
+    const mediaRoot = await temporaryRoot();
+    await addMedia(mediaRoot, { sourceUrl: "data:text/plain,example" });
+    await expect(buildContent({ root: mediaRoot, write: false })).rejects.toThrow(
+      /must use an http or https URL/,
+    );
   });
 
   it("requires citations in both block and package source inventories", async () => {

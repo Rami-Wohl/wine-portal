@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
-import { getEntitiesByType } from "@/content/repository";
+import { getPublishedEntitiesByType } from "@/content/repository";
 import type { EntityType } from "@/content/model";
 
 export const metadata: Metadata = {
@@ -88,7 +88,7 @@ export default function ExplorePage() {
           <h2 id="categories-title">Begin bij een categorie</h2>
         </div>
         {categories.map((category) => {
-          const available = getEntitiesByType(category.type);
+          const available = getPublishedEntitiesByType(category.type);
           return (
             <article className="category-row" key={category.type}>
               <div className="category-heading">

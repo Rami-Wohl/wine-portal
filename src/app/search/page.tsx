@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
-import { getEntities } from "@/content/repository";
+import { getPublishedEntities } from "@/content/repository";
 import { filterEntities, firstSearchParam, parseEntityTypeFilter } from "@/content/search";
 import { ENTITY_TYPE_LABELS_NL, ENTITY_TYPE_PLURAL_LABELS_NL } from "@/content/routing";
 import type { EntityType } from "@/content/model";
@@ -29,7 +29,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const hasQuery = q.trim().length > 0;
   const hasTypeFilter = selectedType !== "all";
   const hasSearchIntent = hasQuery || hasTypeFilter;
-  const results = hasSearchIntent ? filterEntities(getEntities(), q, selectedType) : [];
+  const results = hasSearchIntent ? filterEntities(getPublishedEntities(), q, selectedType) : [];
 
   return (
     <main id="main-content" className="page-shell">

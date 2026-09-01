@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test("draft narrative degrades honestly and keeps its knowledge context", async ({ page }) => {
-  await page.goto("/learn/regional-deep-dives/bordeaux-pipeline-proef");
+  await page.goto("/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef");
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Bordeaux: verdieping in voorbereiding",
@@ -99,4 +99,29 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
   await depthControl.getByRole("button", { name: "Basis" }).click();
   await expect(intermediateHeading).toBeHidden();
   await expect(advancedHeading).toBeHidden();
+});
+
+test("a deep block anchor reveals the required knowledge depth", async ({ page }) => {
+  await page.goto("/regions/bordeaux#assemblage-op-drie-schalen");
+
+  await expect(
+    page.getByRole("heading", { level: 2, name: "Een cuvée lezen op drie schalen" }),
+  ).toBeVisible();
+  await expect(page.getByRole("button", { name: "Gevorderd" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+});
+
+test("the full document remains readable without JavaScript", async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto("/regions/bordeaux");
+
+  await expect(
+    page.getByRole("heading", { level: 2, name: "Een cuvée lezen op drie schalen" }),
+  ).toBeVisible();
+  await expect(page.getByRole("group", { name: "Kies hoeveel detail je wilt zien" })).toBeHidden();
+
+  await context.close();
 });

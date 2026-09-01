@@ -88,7 +88,8 @@ describe("ContentDocumentView", () => {
     expect(html).toContain('id="orientatie"');
     expect(html).toContain("<h2>Uitleg</h2>");
     expect(html).toContain('href="/regions/bordeaux"');
-    expect(html).toContain('aria-label="Example source, p. 42"');
+    expect(html).toContain('href="#source-1"');
+    expect(html).toContain('aria-label="Bron 1: Example source, p. 42"');
     expect(html).not.toContain("source.example");
   });
 

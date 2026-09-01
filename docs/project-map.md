@@ -25,7 +25,7 @@ generated en vervangbaar
                          v
 applicatie
 
-  repository -> routes -> React-renderer -> Explore / Learn / Atlas
+  repository -> routes -> React-renderer -> Explore / Verdiepingen / Learn / Atlas
 ```
 
 YAML beschrijft wat iets is en hoe het verbonden is. Markdown legt dezelfde
@@ -60,8 +60,16 @@ Een narrative is een les, verdieping of verhaal dat door meerdere entities
 heen loopt. Het verwijst met stable IDs naar entities. De pipeline leidt daar
 mentions en backlinks uit af; auteurs hardcoderen geen applicatieroutes.
 
+Narratives wonen canoniek onder `/verdiepingen/<type>/<slug>`. Alleen narratives
+van type `lesson` worden in Learn aangeboden. Een toekomstig learning path is een
+geordende route langs bestaande content en wordt niet de eigenaar van die content.
+
 Learning paths worden later geordende routes door bestaande entities en
 narratives. Ze worden geen aparte opslagplaats voor gekopieerde wijnkennis.
+
+NL en EN zijn beide verplichte, gevalideerde authoringlagen. De huidige publieke
+interface en routes zijn uitsluitend Nederlands. Engelse presentatie is een
+bewuste volgende productstap, geen al werkende feature of automatische fallback.
 
 ## Dagelijkse contentworkflow
 
@@ -77,6 +85,10 @@ narratives. Ze worden geen aparte opslagplaats voor gekopieerde wijnkennis.
 8. Draai relevante unit- en browsertests wanneer routes, rendering of layouts
    zijn geraakt.
 9. Review inhoud, bronnen, mediarechten, onzekerheid, responsive presentatie en publicatiestatus.
+
+`draft` blijft beschikbaar voor redactionele review, maar verschijnt niet in
+Explore, search, publieke backlinks of de sitemap. Alleen `active` content wordt
+via die publieke overzichten ontdekt.
 
 Lokaal wordt een storage key als `/media/<key>` geleverd. Bij een latere CDN
 stelt deployment `MEDIA_BASE_URL` in en synchroniseert een provideradapter

@@ -65,7 +65,7 @@ export function entityHref(entity: Entity): string {
 }
 
 export function narrativeHref(narrative: Narrative): string {
-  return `/learn/${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}/${narrative.slugs.nl}`;
+  return `/verdiepingen/${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}/${narrative.slugs.nl}`;
 }
 
 export function entityTypeFromRouteSegment(segment: string): EntityType | undefined {

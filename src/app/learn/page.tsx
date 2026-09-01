@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/page-intro";
-import { getNarratives } from "@/content/repository";
+import { getPublishedNarratives } from "@/content/repository";
 import { DEPTH_LABELS_NL, narrativeHref } from "@/content/routing";
 
 export const metadata: Metadata = {
@@ -12,25 +12,27 @@ export const metadata: Metadata = {
 };
 
 export default function LearnPage() {
-  const publishedNarratives = getNarratives().filter((narrative) => narrative.status === "active");
+  const publishedLessons = getPublishedNarratives().filter(
+    (narrative) => narrative.type === "lesson",
+  );
 
   return (
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Leren" title="Leer in een doordachte volgorde">
         <p>
-          Leerpaden brengen onderwerpen en verdiepende verhalen samen in een heldere volgorde, van
-          basiskennis tot specialistische verdieping.
+          Hier komen zelfstandige lessen en samengestelde leerpaden die kennis stap voor stap
+          opbouwen. Verdiepende essays en profielen blijven ook buiten een leerpad leesbaar.
         </p>
       </PageIntro>
 
       <section className="learning-overview" aria-labelledby="paths-title">
         <div className="section-heading-compact">
-          <p className="eyebrow">Leerpaden</p>
-          <h2 id="paths-title">Beschikbare routes</h2>
+          <p className="eyebrow">Lessen en leerpaden</p>
+          <h2 id="paths-title">Beschikbaar om te leren</h2>
         </div>
-        {publishedNarratives.length > 0 ? (
+        {publishedLessons.length > 0 ? (
           <div className="learning-list">
-            {publishedNarratives.map((narrative) => (
+            {publishedLessons.map((narrative) => (
               <Link href={narrativeHref(narrative)} key={narrative.id}>
                 {narrative.depth ? (
                   <span>Kennisniveau: {DEPTH_LABELS_NL[narrative.depth]}</span>
@@ -42,13 +44,13 @@ export default function LearnPage() {
         ) : (
           <div className="empty-state">
             <p className="eyebrow">In redactie</p>
-            <h3>De eerste leerpaden zijn in voorbereiding.</h3>
+            <h3>De eerste lessen en leerpaden zijn in voorbereiding.</h3>
             <p>
-              We publiceren een leerpad zodra de inhoud, volgorde en bronnen zorgvuldig zijn
-              beoordeeld.
+              We publiceren een les zodra inhoud, didactische opbouw en bronnen zorgvuldig zijn
+              beoordeeld. Een leerpad ontstaat daarna als een geordende reeks van zulke onderdelen.
             </p>
-            <Link className="text-link" href="/explore">
-              Verken intussen de kennisbank →
+            <Link className="text-link" href="/verdiepingen">
+              Lees intussen de verdiepingen →
             </Link>
           </div>
         )}

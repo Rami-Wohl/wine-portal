@@ -100,10 +100,16 @@ function parseText(value: string, state: ParseState): ContentInlineNode[] {
     const separator = body.indexOf(";");
     const sourceId = (separator < 0 ? body : body.slice(0, separator)).trim();
     const locator = separator < 0 ? null : body.slice(separator + 1).trim();
+    const hasUnsupportedLocatorBrackets = locator?.includes("[") ?? false;
+    const citationEnd = hasUnsupportedLocatorBrackets && value[end + 1] === "]" ? end + 2 : end + 1;
     const sourceResult = sourceIdSchema.safeParse(sourceId);
-    if (!sourceResult.success || (separator >= 0 && locator?.length === 0)) {
+    if (
+      !sourceResult.success ||
+      (separator >= 0 && locator?.length === 0) ||
+      hasUnsupportedLocatorBrackets
+    ) {
       issue(state, `invalid citation '[@${body}]'; use [@source.id] or [@source.id; locator]`);
-      pushText(value.slice(start, end + 1));
+      pushText(value.slice(start, citationEnd));
     } else {
       const citation: ContentCitationNode = {
         type: "citation",
@@ -113,7 +119,7 @@ function parseText(value: string, state: ParseState): ContentInlineNode[] {
       nodes.push(citation);
       state.citations.push(citation);
     }
-    cursor = end + 1;
+    cursor = citationEnd;
   }
 
   return nodes;
@@ -234,8 +240,28 @@ function hasCitation(nodes: ContentBlockNode[]): boolean {
   });
 }
 
+function containsHeading(nodes: ContentBlockNode[]): boolean {
+  return nodes.some((node) => {
+    if (node.type === "heading") return true;
+    if (node.type === "blockquote") return containsHeading(node.children);
+    if (node.type === "list") {
+      return node.children.some((item) => containsHeading(item.children));
+    }
+    return false;
+  });
+}
+
+function containsNestedHeading(nodes: ContentBlockNode[]): boolean {
+  return nodes.some((node) => {
+    if (node.type === "blockquote") return containsHeading(node.children);
+    if (node.type === "list") {
+      return node.children.some((item) => containsHeading(item.children));
+    }
+    return false;
+  });
+}
+
 function validateBlockShape(block: ContentBlock, state: ParseState): void {
-  const headings = block.nodes.filter((node) => node.type === "heading");
   if (block.type === "summary") {
     if (
       block.nodes.length < 1 ||
@@ -256,8 +282,11 @@ function validateBlockShape(block: ContentBlock, state: ParseState): void {
     if (!first || first.type !== "heading" || first.depth !== 2) {
       issue(state, `${block.type} '${block.id}' must start with an H2`);
     }
-  } else if (headings.length > 0) {
+  } else if (containsHeading(block.nodes)) {
     issue(state, `${block.type} '${block.id}' must not contain headings`);
+  }
+  if (containsNestedHeading(block.nodes)) {
+    issue(state, `${block.type} '${block.id}' must keep headings at the top level`);
   }
   if (block.type === "caveat" && block.variant === null) {
     issue(state, `caveat '${block.id}' requires a variant`);

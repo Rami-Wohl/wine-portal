@@ -8,11 +8,11 @@ import { DEPTHS, type Depth, type Entity, type GeneratedEntity } from "@/content
 import { mediaIdsForDocument } from "@/content/media";
 import { relationLabel, type RelationDirection } from "@/content/relations";
 import {
-  getEntities,
+  getAllEntities,
   getEntityById,
   getEntityByRoute,
   getMediaByIds,
-  getNarrativeBacklinks,
+  getPublishedNarrativeBacklinks,
   getRelationsForEntity,
   getSourcesByIds,
 } from "@/content/repository";
@@ -39,7 +39,7 @@ function highestDocumentDepth(entity: GeneratedEntity): Depth | null {
 }
 
 export function generateStaticParams() {
-  return getEntities().map((entity) => ({
+  return getAllEntities().map((entity) => ({
     entityType: ENTITY_ROUTE_SEGMENTS[entity.type],
     slug: entity.slugs.nl,
   }));
@@ -87,9 +87,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
       direction === "forward" &&
       ["part_of", "located_in", "parent_appellation"].includes(relation.type),
   )?.related;
-  const relatedNarratives = getNarrativeBacklinks(entity.id).filter(
-    (narrative) => narrative.status === "active",
-  );
+  const relatedNarratives = getPublishedNarrativeBacklinks(entity.id);
   const sources = getSourcesByIds(
     Array.from(
       new Set([
@@ -183,9 +181,9 @@ export default async function EntityPage({ params }: EntityPageProps) {
             <section className="sources-panel" aria-labelledby="sources-title">
               <p className="eyebrow">Bronnen</p>
               <h2 id="sources-title">Verder lezen</h2>
-              <ul>
-                {sources.map((source) => (
-                  <li key={source.id}>
+              <ol>
+                {sources.map((source, index) => (
+                  <li id={`source-${index + 1}`} key={source.id}>
                     {source.url ? (
                       <a href={source.url} rel="noreferrer" target="_blank">
                         {source.title}
@@ -196,7 +194,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
                     <small>{source.publisher}</small>
                   </li>
                 ))}
-              </ul>
+              </ol>
             </section>
           ) : null}
         </div>

@@ -21,6 +21,9 @@ De v1-contentarchitectuur is geïmplementeerd:
 - gelokaliseerde slug-, zoek-, type- en geography-indexes worden opgebouwd;
 - één deterministische runtimebundle wordt gegenereerd in `src/generated/content/knowledge-base.json`;
 - `npm run content:new` genereert een leeg entitypackage zonder wijnfeiten toe te voegen.
+- de publieke repositoryviews, Explore, search, sitemaps en backlinks tonen alleen
+  packages met status `active`; draft-routes blijven afzonderlijk bereikbaar voor
+  review, met `noindex` en een eerlijke incomplete state.
 
 Op 1 september 2026 valideert `npm run content:check`:
 
@@ -105,7 +108,9 @@ Relaties voeden afgeleide backlinks, gerelateerde onderwerpen, navigatie en zoek
 
 #### Entities
 
-Zelfstandig adresseerbare kennisobjecten met een stabiele ID, gedeelde metadata en NL/EN-presentatie.
+Zelfstandig adresseerbare kennisobjecten met een stabiele ID, gedeelde metadata en
+verplichte NL/EN-authoring. De huidige applicatie presenteert alleen Nederlands;
+Engelse routes en interface zijn nog niet geïmplementeerd.
 
 #### Relations en assertions
 
@@ -137,7 +142,6 @@ Een entity kan een gevalideerde `geography_id` dragen en de bundle bouwt daar ee
 
 - een volwaardige, geverifieerde geography-datalaag;
 - learning-pathpackages die gedeelde kennis rangschikken;
-- section-/blockmetadata voor fijnmazige depth en provenance;
 - rijkere search, compare en bronweergave boven op de gegenereerde graph.
 
 ---
@@ -227,7 +231,11 @@ Een ID verandert niet door vertaling of een kleine naamswijziging.
 
 ### Slugs zijn presentatie; IDs zijn identiteit
 
-NL- en EN-routes mogen verschillende slugs hebben en toch naar dezelfde entity wijzen. De pipeline valideert slugbotsingen per entity- of narrativetype en locale en genereert een `localized_slugs`-index.
+Het datacontract ondersteunt verschillende NL- en EN-slugs die naar dezelfde
+entity wijzen. De pipeline valideert slugbotsingen per entity- of narrativetype en
+locale en genereert een `localized_slugs`-index. Alleen de Nederlandse routes en
+presentatielaag zijn momenteel in de applicatie geïmplementeerd; een Engelse slug
+is dus nog geen publieke Engelse URL.
 
 ### Gedeeld en gelokaliseerd
 
@@ -462,6 +470,12 @@ Markdown gebruikt definitief deze vormen:
 
 De eerste vorm laat de renderer later een gelokaliseerd label kiezen; de tweede legt het zichtbare label vast. De parser valideert syntax en entity-ID, bouwt locale-aware mentions en genereert narrativebacklinks. Routes worden niet in Markdown hardgecodeerd.
 
+Narratives hebben een modus-neutrale canonical route onder
+`/verdiepingen/<narrative-type>/<slug>`. Alleen narratives van type `lesson` horen
+als zelfstandige items thuis in Learn. Een toekomstig learning path kan naar
+iedere geschikte entity of narrative verwijzen zonder de canonical URL of het
+eigenaarschap daarvan te veranderen.
+
 ### Learning paths
 
 Een learning path is conceptueel een geordende view op bestaande narratives en entities:
@@ -513,6 +527,10 @@ hoeveel detail zichtbaar is. `foundation` toont alleen de basis;
 het gekozen niveau toe. De selectie verandert uitsluitend de presentatie van
 hetzelfde canonical document en maakt geen aparte pagina, feitenlaag of
 gebruikersprofiel.
+
+Een anchor naar een dieper block verhoogt de zichtbare diepte automatisch. Zonder
+JavaScript blijft het volledige document zichtbaar en verdwijnt de niet-werkende
+keuzebediening; kennis wordt dus niet door client-side scripting ontoegankelijk.
 
 ---
 
@@ -676,7 +694,10 @@ De bundle bevat:
 - geographylookups waar `geography_id` bestaat;
 - forward/inverse relations en narrativebacklinks voor discovery.
 
-Dit is indexing-infrastructuur. Welke routes en zoekinterfaces de applicatie publiek aanbiedt, blijft een applicatiebeslissing boven op deze graph.
+Dit is indexing-infrastructuur. Publieke repository-accessors selecteren uitsluitend
+`active` content; expliciete `getAll…`-accessors zijn bedoeld voor static params,
+draftreviews en ontwikkelcontroles. Welke routes en zoekinterfaces de applicatie
+publiek aanbiedt, blijft een applicatiebeslissing boven op deze graph.
 
 ### Roadmap
 
@@ -749,7 +770,7 @@ assertion en geen geverifieerde geografie.
 - inhoudelijk volwaardige NL- en EN-narratives;
 - geverifieerde boundaries, punten en Atlasdata met volledige provenance;
 - verdere selectie en review van foto's, illustraties en diagrammen;
-- publieke bronweergave en menselijk leesbare relaties;
+- verdere verfijning van publieke bronweergave en menselijk leesbare relaties;
 - Explore-, Learn- en Atlaspresentaties uit dezelfde canonical graph;
 - end-to-end routing, search, related content en accessibility review.
 
@@ -765,7 +786,7 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - file-backed canonical content;
 - acht entitytypen en de gevalideerde relation vocabulary;
 - entity-, narrative-, relation-, assertion- en sourceschema's;
-- NL/EN als verplichte gelokaliseerde presentatielagen;
+- NL/EN als verplichte gelokaliseerde authoringlagen met structurele pariteitsvalidatie;
 - stable entitylinks met mentions en backlinks;
 - veilige semantic content blocks met citations en NL/EN-pariteitsvalidatie;
 - mediaregister, stable media-ID's, figures, rights/alt-metadata en lokale checksumvalidatie;
@@ -779,6 +800,7 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - verified-data-only geography en Atlas;
 - reusable provenance en claim-level support in echte content;
 - learning paths als curated views in plaats van contentopslag;
+- een Engelse applicatiepresentatie en locale-aware publieke routing;
 - niet-destructieve import en vervanging wanneer later externe of bestaande content in scope komt.
 
 ### Open roadmapontwerp

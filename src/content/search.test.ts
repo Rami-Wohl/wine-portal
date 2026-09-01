@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { getEntities } from "./repository";
+import { getAllEntities } from "./repository";
 import { filterEntities, firstSearchParam, parseEntityTypeFilter } from "./search";
 
 describe("entity search", () => {
   it("matches IDs, localized names, slugs, case, and diacritics", () => {
-    const entities = getEntities();
+    const entities = getAllEntities();
 
     expect(filterEntities(entities, "PRODUCER.CHATEAU-LATOUR")[0]?.id).toBe(
       "producer.chateau-latour",
@@ -14,7 +14,7 @@ describe("entity search", () => {
   });
 
   it("combines text and entity-type filters", () => {
-    const entities = getEntities();
+    const entities = getAllEntities();
 
     expect(filterEntities(entities, "bordeaux", "region").map((entity) => entity.id)).toEqual([
       "region.bordeaux",

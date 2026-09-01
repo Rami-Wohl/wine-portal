@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { EntityLink } from "@/components/entity-link";
 import { ContentDocumentView } from "@/components/content-document";
-import type { GeneratedEntity, GeneratedNarrative } from "@/content/model";
+import { EntityLink } from "@/components/entity-link";
 import { mediaIdsForDocument } from "@/content/media";
+import type { GeneratedEntity, GeneratedNarrative } from "@/content/model";
 import {
+  getAllNarratives,
   getEntityById,
   getMediaByIds,
   getNarrativeByRoute,
-  getNarratives,
   getSourcesByIds,
 } from "@/content/repository";
 import {
@@ -20,7 +20,7 @@ import {
 } from "@/content/routing";
 
 interface NarrativePageProps {
-  params: Promise<{ path: string; lesson: string }>;
+  params: Promise<{ narrativeType: string; slug: string }>;
 }
 
 function publicNarrativeTitle(narrative: GeneratedNarrative): string {
@@ -34,15 +34,15 @@ function publicNarrativeTitle(narrative: GeneratedNarrative): string {
 }
 
 export function generateStaticParams() {
-  return getNarratives().map((narrative) => ({
-    path: NARRATIVE_ROUTE_SEGMENTS[narrative.type],
-    lesson: narrative.slugs.nl,
+  return getAllNarratives().map((narrative) => ({
+    narrativeType: NARRATIVE_ROUTE_SEGMENTS[narrative.type],
+    slug: narrative.slugs.nl,
   }));
 }
 
 export async function generateMetadata({ params }: NarrativePageProps): Promise<Metadata> {
-  const { path, lesson } = await params;
-  const narrative = getNarrativeByRoute(path, lesson);
+  const { narrativeType, slug } = await params;
+  const narrative = getNarrativeByRoute(narrativeType, slug);
   if (!narrative) return {};
   const title = publicNarrativeTitle(narrative);
 
@@ -50,16 +50,16 @@ export async function generateMetadata({ params }: NarrativePageProps): Promise<
     title,
     description:
       narrative.status === "active"
-        ? `Lees ${title} in de leeromgeving van Oenocademy.`
-        : "Deze verdieping wordt voorbereid voor de leeromgeving van Oenocademy.",
+        ? `Lees ${title} als verdieping bij de kennisbank van Oenocademy.`
+        : "Deze verdieping wordt voorbereid voor de kennisbank van Oenocademy.",
     alternates: { canonical: narrativeHref(narrative) },
     robots: narrative.status === "active" ? undefined : { index: false, follow: true },
   };
 }
 
 export default async function NarrativePage({ params }: NarrativePageProps) {
-  const { path, lesson } = await params;
-  const narrative = getNarrativeByRoute(path, lesson);
+  const { narrativeType, slug } = await params;
+  const narrative = getNarrativeByRoute(narrativeType, slug);
   if (!narrative) notFound();
 
   const mentionedEntities = Array.from(
@@ -80,7 +80,7 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
   return (
     <main id="main-content" className="page-shell lesson-page">
       <nav className="breadcrumbs" aria-label="Broodkruimelpad">
-        <Link href="/learn">Leren</Link>
+        <Link href="/verdiepingen">Verdiepingen</Link>
         <span aria-hidden="true">/</span>
         <span>{NARRATIVE_TYPE_LABELS_NL[narrative.type]}</span>
         <span aria-hidden="true">/</span>
@@ -140,8 +140,8 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
               <div className="content-source-list">
                 {mentionedEntities.length > 0 ? <h3>Bronnen</h3> : null}
                 <ol>
-                  {sources.map((source) => (
-                    <li key={source.id}>
+                  {sources.map((source, index) => (
+                    <li id={`source-${index + 1}`} key={source.id}>
                       {source.url ? (
                         <a href={source.url} rel="noreferrer" target="_blank">
                           {source.title}

@@ -30,18 +30,26 @@ for (const relation of knowledgeBase.relations.forward) {
   forwardRelationsByEntity.set(relation.source, relations);
 }
 
-export function getEntities(): GeneratedEntity[] {
+export function getAllEntities(): GeneratedEntity[] {
   return knowledgeBase.entities;
+}
+
+export function getPublishedEntities(): GeneratedEntity[] {
+  return knowledgeBase.entities.filter((entity) => entity.status === "active");
 }
 
 export function getEntityById(id: string): GeneratedEntity | undefined {
   return entitiesById.get(id);
 }
 
-export function getEntitiesByType(type: EntityType): GeneratedEntity[] {
+export function getAllEntitiesByType(type: EntityType): GeneratedEntity[] {
   return knowledgeBase.indexes.entities_by_type[type]
     .map(getEntityById)
     .filter((entity): entity is GeneratedEntity => Boolean(entity));
+}
+
+export function getPublishedEntitiesByType(type: EntityType): GeneratedEntity[] {
+  return getAllEntitiesByType(type).filter((entity) => entity.status === "active");
 }
 
 export function getEntityByRoute(routeSegment: string, slug: string): GeneratedEntity | undefined {
@@ -51,8 +59,12 @@ export function getEntityByRoute(routeSegment: string, slug: string): GeneratedE
   return id ? getEntityById(id) : undefined;
 }
 
-export function getNarratives(): GeneratedNarrative[] {
+export function getAllNarratives(): GeneratedNarrative[] {
   return knowledgeBase.narratives;
+}
+
+export function getPublishedNarratives(): GeneratedNarrative[] {
+  return knowledgeBase.narratives.filter((narrative) => narrative.status === "active");
 }
 
 export function getNarrativeById(id: string): GeneratedNarrative | undefined {
@@ -80,8 +92,12 @@ export function getRelationsForEntity(entityId: string): ResolvedRelation[] {
   return [...forward, ...inverse];
 }
 
-export function getNarrativeBacklinks(entityId: string): GeneratedNarrative[] {
+export function getAllNarrativeBacklinks(entityId: string): GeneratedNarrative[] {
   return (knowledgeBase.backlinks[entityId] ?? [])
     .map(getNarrativeById)
     .filter((narrative): narrative is GeneratedNarrative => Boolean(narrative));
+}
+
+export function getPublishedNarrativeBacklinks(entityId: string): GeneratedNarrative[] {
+  return getAllNarrativeBacklinks(entityId).filter((narrative) => narrative.status === "active");
 }

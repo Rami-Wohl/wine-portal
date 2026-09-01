@@ -1,11 +1,15 @@
 import { describe, expect, it } from "vitest";
 import {
-  getEntities,
-  getEntitiesByType,
+  getAllEntities,
+  getAllEntitiesByType,
+  getAllNarrativeBacklinks,
+  getAllNarratives,
   getEntityByRoute,
-  getNarrativeBacklinks,
   getNarrativeByRoute,
-  getNarratives,
+  getPublishedEntities,
+  getPublishedEntitiesByType,
+  getPublishedNarrativeBacklinks,
+  getPublishedNarratives,
   getRelationsForEntity,
 } from "./repository";
 import {
@@ -18,7 +22,7 @@ import {
 
 describe("canonical content routing", () => {
   it("derives context-independent entity URLs", () => {
-    const latour = getEntities().find((entity) => entity.id === "producer.chateau-latour");
+    const latour = getAllEntities().find((entity) => entity.id === "producer.chateau-latour");
     expect(latour && entityHref(latour)).toBe("/producers/chateau-latour");
   });
 
@@ -28,7 +32,7 @@ describe("canonical content routing", () => {
   });
 
   it("resolves every generated entity route and rejects mismatched routes", () => {
-    for (const entity of getEntities()) {
+    for (const entity of getAllEntities()) {
       expect(getEntityByRoute(ENTITY_ROUTE_SEGMENTS[entity.type], entity.slugs.nl)).toBe(entity);
     }
     expect(getEntityByRoute("producers", "bordeaux")).toBeUndefined();
@@ -36,10 +40,27 @@ describe("canonical content routing", () => {
   });
 
   it("uses the generated type index for category lookups", () => {
-    expect(getEntitiesByType("producer").map((entity) => entity.id)).toEqual([
+    expect(getAllEntitiesByType("producer").map((entity) => entity.id)).toEqual([
       "producer.chateau-latour",
     ]);
-    expect(getEntitiesByType("site")).toEqual([]);
+    expect(getAllEntitiesByType("site")).toEqual([]);
+  });
+
+  it("keeps draft content out of every published repository view", () => {
+    expect(getPublishedEntities()).toEqual(
+      getAllEntities().filter((entity) => entity.status === "active"),
+    );
+    expect(getPublishedEntitiesByType("producer")).toEqual(
+      getAllEntitiesByType("producer").filter((entity) => entity.status === "active"),
+    );
+    expect(getPublishedNarratives()).toEqual(
+      getAllNarratives().filter((narrative) => narrative.status === "active"),
+    );
+    expect(getPublishedNarrativeBacklinks("region.bordeaux")).toEqual(
+      getAllNarrativeBacklinks("region.bordeaux").filter(
+        (narrative) => narrative.status === "active",
+      ),
+    );
   });
 
   it("resolves forward, inverse, and narrative relationships", () => {
@@ -58,22 +79,22 @@ describe("canonical content routing", () => {
       ]),
     );
     expect(getRelationsForEntity("region.unknown")).toEqual([]);
-    expect(getNarrativeBacklinks("region.bordeaux").map((item) => item.id)).toEqual([
+    expect(getAllNarrativeBacklinks("region.bordeaux").map((item) => item.id)).toEqual([
       "narrative.regional.bordeaux-proof",
     ]);
   });
 
-  it("derives Learn narrative routes from canonical metadata", () => {
-    const narrative = getNarratives().find(
+  it("derives mode-neutral narrative routes from canonical metadata", () => {
+    const narrative = getAllNarratives().find(
       (item) => item.id === "narrative.regional.bordeaux-proof",
     );
     expect(narrative && narrativeHref(narrative)).toBe(
-      "/learn/regional-deep-dives/bordeaux-pipeline-proef",
+      "/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef",
     );
   });
 
   it("resolves every generated narrative route and rejects unknown families", () => {
-    for (const narrative of getNarratives()) {
+    for (const narrative of getAllNarratives()) {
       expect(
         getNarrativeByRoute(NARRATIVE_ROUTE_SEGMENTS[narrative.type], narrative.slugs.nl),
       ).toBe(narrative);
@@ -82,7 +103,7 @@ describe("canonical content routing", () => {
   });
 
   it("keeps all canonical generated routes unique", () => {
-    const routes = [...getEntities().map(entityHref), ...getNarratives().map(narrativeHref)];
+    const routes = [...getAllEntities().map(entityHref), ...getAllNarratives().map(narrativeHref)];
     expect(new Set(routes).size).toBe(routes.length);
   });
 });

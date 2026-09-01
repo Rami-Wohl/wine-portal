@@ -1,61 +1,59 @@
-# Design system plan
+# Design system status
 
-Status: implemented as the first UI vertical slice.
+Status: actieve implementatienotities voor de huidige UI.
 
-## Product character
+## Productkarakter
 
-Oenocademy should feel calm, thoughtful and trustworthy. It should not imitate a
-wine shop, luxury label or exam portal. The interface gives long-form learning
-room to breathe and makes depth optional instead of intimidating.
+Oenocademy voelt rustig, aandachtig en betrouwbaar, zonder een wijnwinkel,
+luxelabel of examenportaal te imiteren. De interface geeft lange inhoud ruimte en
+maakt extra kennisdiepte optioneel zonder die informatie in een aparte feitenlaag
+te veranderen.
 
-## System layers
+## Geïmplementeerde lagen
 
-1. **Foundations** — semantic color, typography, spacing, radius and shadow
-   tokens live in `src/app/globals.css`.
-2. **Primitives** — links, buttons, cards, callouts, labels and progress
-   indicators use semantic classes and never introduce one-off colors.
-3. **Learning patterns** — lesson cards, objectives, diagrams, depth notes,
-   simplifications and the “in the glass” summary are reusable editorial
-   patterns.
-4. **Page compositions** — Learn, Explore, Atlas, entity pages and comparisons
-   compose those patterns without redefining their visual language.
+1. **Fundamenten** — semantische kleur-, typografie-, spacing-, radius- en
+   shadowtokens staan in `src/app/globals.css`.
+2. **Primitieven** — links, knoppen, cards, labels, callouts en navigatie gebruiken
+   gedeelde componenten en semantische classes.
+3. **Contentpatronen** — summaries, sections, kernideeën, caveats, figures,
+   citations, bronnen en kennisdiepte worden uit canonical content blocks
+   gerenderd.
+4. **Paginasamenstellingen** — Explore, Verdiepingen, Learn, Atlas en entitypagina's
+   gebruiken dezelfde visuele taal. Entity- en narrative-routing is actief;
+   learning paths en Atlasdata zijn nog roadmap.
 
-## Responsive principles
+## Responsive en toegankelijkheidsbasis
 
-- Start with a narrow reading measure and mobile content order.
-- Enhance to multi-column navigation only when there is enough room.
-- Never require hover for meaning or interaction.
-- Test at 375, 768, 1024 and 1440 CSS pixels.
-- Use fluid type and spacing within deliberate minimum and maximum bounds.
+- Een smalle leesmaat en mobiele contentvolgorde zijn het uitgangspunt.
+- Meerkoloms layout verschijnt alleen wanneer daar voldoende ruimte voor is.
+- Betekenis of bediening vereist nooit hover.
+- Kernlayouts worden beoordeeld rond 375, 768, 1024 en 1440 CSS-pixels.
+- Typografie en spacing schalen binnen bewuste minima en maxima.
+- Semantische landmarks, logische headings, zichtbare focus en een skiplink zijn
+  de basis.
+- Kleur is nooit de enige informatiedrager; reduced motion wordt gerespecteerd.
+- De depthselector onthult cumulatief meer inhoud, reageert op anchors en laat
+  zonder JavaScript het volledige document beschikbaar.
 
-## Accessibility baseline
+## Contentcontract voor lessen
 
-- Semantic landmarks and heading order.
-- Visible keyboard focus and a skip link.
-- Text alternatives for educational diagrams.
-- WCAG-aware contrast; color is never the only carrier of meaning.
-- Reduced-motion support.
-- Interactive targets around 40–44 pixels where possible.
+Een actieve canonical narrative van type `lesson` volgt het uitvoerbare contract
+uit `content-blocks.md`: een summary, leerdoelen, ten minste één section, één
+kernidee en één zorgvuldig begrensde koppeling naar het glas. Titel, depth,
+bronnen, stable block-IDs en eventuele caveats komen uit het contentmodel.
 
-## Content contract
+Er bestaat geen `wine relevance score` in schema of interface. Nieuwe metadata
+wordt pas toegevoegd wanneer echte content een herhaalde, geteste use-case toont.
 
-Every canonical lesson should eventually provide:
+## Volgende UI-stappen
 
-- title, summary, estimated duration and depth;
-- learning objectives;
-- content blocks with stable IDs and depth metadata;
-- at least one “Kernidee”;
-- honest simplifications or caveats where needed;
-- a short “Waarom doet dit ertoe in het glas?” section;
-- wine relevance score;
-- sources and last-reviewed metadata.
-
-## Next implementation steps
-
-1. Extract repeated UI patterns into components when a second page needs them.
-2. Add lesson routing and previous/next navigation.
-3. Add persisted progress only after the anonymous reading flow works well.
-4. Test keyboard, screen-reader, zoom, mobile and long-content edge cases.
-5. Add screenshot regression tests for the four target viewport widths.
-6. Build Bordeaux as the first entity/narrative vertical slice only after the
-   lesson content model is proven.
+1. Bouw pas learning-pathnavigatie en previous/next-logica nadat het pathschema en
+   een eerste echte reeks lessen zijn ontworpen.
+2. Voeg persisted progress pas toe nadat anoniem lezen en navigeren inhoudelijk
+   werken.
+3. Blijf keyboard, screenreader, zoom, mobiele en lange-content-edge-cases testen
+   bij relevante wijzigingen.
+4. Voeg screenshotregressie toe wanneer de visuele basis stabiel genoeg is om de
+   onderhoudslast te rechtvaardigen.
+5. Laat nieuwe Bordeaux-content de volgende concrete patronen en componenten
+   afdwingen, in plaats van hypothetische UI vooraf te ontwerpen.

@@ -921,15 +921,20 @@ h3 {
 .sources-panel h2 {
   font: 500 2rem/1.05 var(--font-display);
 }
-.sources-panel ul {
+.sources-panel ol {
   display: grid;
   gap: 1rem;
   margin: 1.5rem 0 0;
-  padding: 0;
-  list-style: none;
+  padding-left: 1.35rem;
 }
 .sources-panel li {
   display: grid;
+  padding-left: 0.25rem;
+  scroll-margin-top: 110px;
+}
+.sources-panel li::marker {
+  color: var(--brand);
+  font-weight: 750;
 }
 .sources-panel a,
 .sources-panel span {
@@ -971,12 +976,19 @@ h3 {
   gap: clamp(2.25rem, 4.5vw, 3.5rem);
   min-width: 0;
 }
-.knowledge-depth-content[data-visible-depth="foundation"]
-  :is(.content-depth-intermediate, .content-depth-advanced, .content-depth-specialist),
-.knowledge-depth-content[data-visible-depth="intermediate"]
-  :is(.content-depth-advanced, .content-depth-specialist),
-.knowledge-depth-content[data-visible-depth="advanced"] .content-depth-specialist {
-  display: none;
+@media (scripting: enabled) {
+  .knowledge-depth-content[data-visible-depth="foundation"]
+    :is(.content-depth-intermediate, .content-depth-advanced, .content-depth-specialist),
+  .knowledge-depth-content[data-visible-depth="intermediate"]
+    :is(.content-depth-advanced, .content-depth-specialist),
+  .knowledge-depth-content[data-visible-depth="advanced"] .content-depth-specialist {
+    display: none;
+  }
+}
+@media (scripting: none) {
+  .knowledge-depth-control {
+    display: none;
+  }
 }
 .content-block {
   min-width: 0;

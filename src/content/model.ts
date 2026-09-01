@@ -72,8 +72,8 @@ export type CaveatVariant = (typeof CAVEAT_VARIANTS)[number];
 export type MediaKind = (typeof MEDIA_KINDS)[number];
 export type MediaRole = (typeof MEDIA_ROLES)[number];
 
-export const entityIdPattern =
-  /^(region|appellation|site|producer|grape|classification|vintage|concept)\.[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const entityTypePattern = ENTITY_TYPES.join("|");
+export const entityIdPattern = new RegExp(`^(?:${entityTypePattern})\\.[a-z0-9]+(?:-[a-z0-9]+)*$`);
 export const entityIdSchema = z
   .string()
   .regex(entityIdPattern, "must be '<entity-type>.<canonical-slug>'");
@@ -104,6 +104,10 @@ const localizedFileSchema = z
   .strict();
 const dateSchema = z.iso.date();
 const scalarSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
+const httpUrlSchema = z.url().refine((value) => {
+  const protocol = new URL(value).protocol;
+  return protocol === "http:" || protocol === "https:";
+}, "must use an http or https URL");
 
 export const relationSchema = z
   .object({
@@ -203,7 +207,7 @@ export const sourceSchema = z
     ]),
     publisher: z.string().min(1),
     title: z.string().min(1),
-    url: z.url().optional(),
+    url: httpUrlSchema.optional(),
     published_at: dateSchema.optional(),
     accessed_at: dateSchema.optional(),
     language: z.string().regex(/^[a-z]{2,3}$/),
@@ -235,9 +239,9 @@ export const mediaAssetSchema = z
       .object({
         status: z.enum(MEDIA_RIGHTS_STATUSES),
         creator: z.string().min(1),
-        source_url: z.url().optional(),
+        source_url: httpUrlSchema.optional(),
         license_name: z.string().min(1),
-        license_url: z.url().optional(),
+        license_url: httpUrlSchema.optional(),
         credit_line: z.string().min(1),
       })
       .strict(),

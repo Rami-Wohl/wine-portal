@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { BRAND, SITE_URL } from "@/config/brand";
-import { getEntities, getNarratives } from "@/content/repository";
+import { getAllEntities, getAllNarratives } from "@/content/repository";
 import { entityHref, narrativeHref } from "@/content/routing";
 import {
   generateMetadata as generateEntityMetadata,
@@ -10,7 +10,7 @@ import { metadata as rootMetadata } from "./layout";
 import {
   generateMetadata as generateNarrativeMetadata,
   generateStaticParams as generateNarrativeStaticParams,
-} from "./learn/[path]/[lesson]/page";
+} from "./verdiepingen/[narrativeType]/[slug]/page";
 import robots from "./robots";
 import sitemap from "./sitemap";
 
@@ -34,21 +34,21 @@ describe("application metadata", () => {
   it("includes static and active content routes in the sitemap only", () => {
     const paths = new Set(sitemap().map((item) => new URL(item.url).pathname));
 
-    for (const path of ["/", "/about", "/explore", "/learn"]) {
+    for (const path of ["/", "/about", "/explore", "/verdiepingen", "/learn"]) {
       expect(paths.has(path)).toBe(true);
     }
     expect(paths.has("/search")).toBe(false);
     expect(paths.has("/atlas")).toBe(false);
-    for (const entity of getEntities()) {
+    for (const entity of getAllEntities()) {
       expect(paths.has(entityHref(entity))).toBe(entity.status === "active");
     }
-    for (const narrative of getNarratives()) {
+    for (const narrative of getAllNarratives()) {
       expect(paths.has(narrativeHref(narrative))).toBe(narrative.status === "active");
     }
   });
 
   it("generates params and noindex metadata for draft entity routes", async () => {
-    expect(generateEntityStaticParams()).toHaveLength(getEntities().length);
+    expect(generateEntityStaticParams()).toHaveLength(getAllEntities().length);
     const metadata = await generateEntityMetadata({
       params: Promise.resolve({ entityType: "producers", slug: "chateau-latour" }),
     });
@@ -64,22 +64,22 @@ describe("application metadata", () => {
   });
 
   it("generates params and noindex metadata for draft narrative routes", async () => {
-    expect(generateNarrativeStaticParams()).toHaveLength(getNarratives().length);
+    expect(generateNarrativeStaticParams()).toHaveLength(getAllNarratives().length);
     const metadata = await generateNarrativeMetadata({
       params: Promise.resolve({
-        path: "regional-deep-dives",
-        lesson: "bordeaux-pipeline-proef",
+        narrativeType: "regional-deep-dives",
+        slug: "bordeaux-pipeline-proef",
       }),
     });
 
     expect(metadata.alternates).toEqual({
-      canonical: "/learn/regional-deep-dives/bordeaux-pipeline-proef",
+      canonical: "/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef",
     });
     expect(metadata.robots).toEqual({ index: false, follow: true });
     expect(metadata.title).toBe("Bordeaux: verdieping in voorbereiding");
     await expect(
       generateNarrativeMetadata({
-        params: Promise.resolve({ path: "lessons", lesson: "unknown" }),
+        params: Promise.resolve({ narrativeType: "lessons", slug: "unknown" }),
       }),
     ).resolves.toEqual({});
   });

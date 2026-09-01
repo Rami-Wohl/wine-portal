@@ -101,21 +101,13 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
         const marker = <span aria-hidden="true">[{number}]</span>;
         return (
           <sup className="content-citation" key={key}>
-            {source.url ? (
-              <a
-                href={source.url}
-                rel="noreferrer"
-                target="_blank"
-                aria-label={label}
-                title={label}
-              >
-                {marker}
-              </a>
-            ) : (
-              <span aria-label={label} title={label}>
-                {marker}
-              </span>
-            )}
+            <a
+              href={`#source-${number}`}
+              aria-label={`${context.locale === "nl" ? "Bron" : "Source"} ${number}: ${label}`}
+              title={label}
+            >
+              {marker}
+            </a>
           </sup>
         );
       }

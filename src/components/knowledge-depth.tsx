@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import type { Depth } from "@/content/model";
 import { DEPTH_LABELS_NL } from "@/content/routing";
 
@@ -26,6 +26,29 @@ export function KnowledgeDepth({
   const options = DEPTH_ORDER.slice(0, maxDepthIndex + 1);
   const safeInitialDepth = options.includes(initialDepth) ? initialDepth : options[0];
   const [selectedDepth, setSelectedDepth] = useState<Depth>(safeInitialDepth);
+
+  useEffect(() => {
+    const revealHashTarget = () => {
+      const targetId = decodeURIComponent(window.location.hash.slice(1));
+      if (!targetId) return;
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      const targetDepth = DEPTH_ORDER.find((depth) =>
+        target.classList.contains(`content-depth-${depth}`),
+      );
+      if (!targetDepth) return;
+
+      setSelectedDepth((currentDepth) =>
+        DEPTH_ORDER.indexOf(targetDepth) > DEPTH_ORDER.indexOf(currentDepth)
+          ? targetDepth
+          : currentDepth,
+      );
+    };
+
+    revealHashTarget();
+    window.addEventListener("hashchange", revealHashTarget);
+    return () => window.removeEventListener("hashchange", revealHashTarget);
+  }, []);
 
   return (
     <div className="knowledge-depth">

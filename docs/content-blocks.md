@@ -320,6 +320,8 @@ Regels:
 - de source staat in `source_refs` van de block én de package-YAML;
 - citations staan direct na de claim die zij ondersteunen;
 - een letterlijk citaat heeft altijd een precieze locator;
+- een locator bevat geen vierkante haken; gebruik bijvoorbeeld `fig. A` in plaats
+  van `[A]`, zodat het citationanker ondubbelzinnig blijft;
 - citationnummers en bibliografische presentatie worden door de renderer afgeleid;
 - een kale URL of Markdownlink geldt niet als provenance;
 - AI-output is nooit een citation target.
@@ -403,7 +405,10 @@ De implementatie:
 9. tabellen, links, citations en callouts toegankelijk en responsive presenteren;
 10. media-ID, lokale asset, checksum, rechtenmetadata en gelokaliseerde alttekst valideren;
 11. blockdiepte op entitypagina's cumulatief laten tonen tot en met het door de lezer gekozen niveau;
-12. draft/incomplete content eerlijk blijven afhandelen.
+12. bij een anchor naar een dieper block dat niveau automatisch zichtbaar maken;
+13. zonder JavaScript het volledige document tonen en de niet-werkende depthselector verbergen;
+14. citations naar een genummerd bronanker op dezelfde pagina laten springen;
+15. draft/incomplete content eerlijk blijven afhandelen.
 
 Presentatie volgt `visual-language.md`; de renderer verzint geen inhoud, headings, captions, labels met feitelijke betekenis of ontbrekende vertalingen.
 
