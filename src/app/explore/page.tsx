@@ -17,14 +17,46 @@ const categories: Array<{
   title: string;
   description: string;
 }> = [
-  { type: "region", title: "Regio's", description: "Wijngebieden als geografische en culturele context." },
-  { type: "appellation", title: "Appellaties", description: "Beschermde herkomsten en hun plaats in het grotere geheel." },
-  { type: "site", title: "Wijngaardsites", description: "Afgebakende wijngaarden en lieux-dits binnen hun geografische context." },
-  { type: "producer", title: "Producenten", description: "Châteaux, domeinen, estates en andere producenten." },
-  { type: "grape", title: "Druiven", description: "Druivenrassen, synoniemen en relevante relaties." },
-  { type: "vintage", title: "Jaargangen", description: "Jaargangen binnen een expliciete regionale scope." },
-  { type: "classification", title: "Classificaties", description: "Classificatiesystemen met duidelijke geldigheid en bronvermelding." },
-  { type: "concept", title: "Concepten", description: "Wijnbouw, vinificatie, geologie, chemie en sensoriek." },
+  {
+    type: "region",
+    title: "Regio's",
+    description: "Wijngebieden als geografische en culturele context.",
+  },
+  {
+    type: "appellation",
+    title: "Appellaties",
+    description: "Beschermde herkomsten en hun plaats in het grotere geheel.",
+  },
+  {
+    type: "site",
+    title: "Wijngaardsites",
+    description: "Afgebakende wijngaarden en lieux-dits binnen hun geografische context.",
+  },
+  {
+    type: "producer",
+    title: "Producenten",
+    description: "Châteaux, domeinen, estates en andere producenten.",
+  },
+  {
+    type: "grape",
+    title: "Druiven",
+    description: "Druivenrassen, synoniemen en relevante relaties.",
+  },
+  {
+    type: "vintage",
+    title: "Jaargangen",
+    description: "Jaargangen binnen een expliciete regionale scope.",
+  },
+  {
+    type: "classification",
+    title: "Classificaties",
+    description: "Classificatiesystemen met duidelijke geldigheid en bronvermelding.",
+  },
+  {
+    type: "concept",
+    title: "Concepten",
+    description: "Wijnbouw, vinificatie, geologie, chemie en sensoriek.",
+  },
 ];
 
 export default function ExplorePage() {
@@ -32,8 +64,8 @@ export default function ExplorePage() {
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Ontdekken" title="Waar ben je nieuwsgierig naar?">
         <p>
-          Verken onderwerpen en ontdek hoe regio&apos;s, producenten, druiven en
-          wijnbegrippen met elkaar samenhangen.
+          Verken onderwerpen en ontdek hoe regio&apos;s, producenten, druiven en wijnbegrippen met
+          elkaar samenhangen.
         </p>
       </PageIntro>
 

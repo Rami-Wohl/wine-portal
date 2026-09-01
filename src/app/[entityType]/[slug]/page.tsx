@@ -79,10 +79,14 @@ export default async function EntityPage({ params }: EntityPageProps) {
   const relatedNarratives = getNarrativeBacklinks(entity.id).filter(
     (narrative) => narrative.status === "active",
   );
-  const sources = getSourcesByIds(Array.from(new Set([
-    ...entity.source_refs,
-    ...entity.assertions.flatMap((assertion) => assertion.sources),
-  ])));
+  const sources = getSourcesByIds(
+    Array.from(
+      new Set([
+        ...entity.source_refs,
+        ...entity.assertions.flatMap((assertion) => assertion.sources),
+      ]),
+    ),
+  );
   const media = getMediaByIds(mediaIdsForDocument(entity.content.nl));
   const hasRelatedKnowledge = relations.length > 0 || relatedNarratives.length > 0;
   const hasSupportingInformation = hasRelatedKnowledge || sources.length > 0;
@@ -106,9 +110,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
           <p className="eyebrow">{ENTITY_TYPE_LABELS_NL[entity.type]}</p>
           <h1>{entity.names.nl}</h1>
           {entity.status !== "active" ? (
-            <p className="entity-summary">
-              De inhoud van deze pagina wordt zorgvuldig voorbereid.
-            </p>
+            <p className="entity-summary">De inhoud van deze pagina wordt zorgvuldig voorbereid.</p>
           ) : null}
         </div>
         {entity.depth ? (

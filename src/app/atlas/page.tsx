@@ -14,8 +14,8 @@ export default function AtlasPage() {
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Atlas" title="Wijnkennis in geografische context">
         <p>
-          De Atlas wordt de geografische ingang tot dezelfde wijnkennis die je
-          via Ontdekken, Leren en Zoeken bereikt.
+          De Atlas wordt de geografische ingang tot dezelfde wijnkennis die je via Ontdekken, Leren
+          en Zoeken bereikt.
         </p>
       </PageIntro>
 
@@ -35,21 +35,17 @@ export default function AtlasPage() {
             <p className="eyebrow">Gecontroleerde kaartgegevens</p>
             <h2 id="atlas-status-title">De kaart blijft bewust leeg.</h2>
             <p>
-              Appellationgrenzen, regio’s en producentlocaties worden pas
-              weergegeven wanneer bron, licentie, precisie en betekenis zijn
-              gecontroleerd. Oenocademy tekent geen benaderde geografie om deze
-              ruimte op te vullen.
+              Appellationgrenzen, regio’s en producentlocaties worden pas weergegeven wanneer bron,
+              licentie, precisie en betekenis zijn gecontroleerd. Oenocademy tekent geen benaderde
+              geografie om deze ruimte op te vullen.
             </p>
           </div>
-          <aside
-            className="atlas-detail"
-            aria-label="Geselecteerde kaartentiteit"
-          >
+          <aside className="atlas-detail" aria-label="Geselecteerde kaartentiteit">
             <p className="eyebrow">Selectie</p>
             <h3>Nog geen onderwerp geselecteerd</h3>
             <p>
-              Een toekomstige kaartselectie opent aanvullende kennis over de
-              gekozen regio, appellatie, wijngaard of producent.
+              Een toekomstige kaartselectie opent aanvullende kennis over de gekozen regio,
+              appellatie, wijngaard of producent.
             </p>
           </aside>
         </div>

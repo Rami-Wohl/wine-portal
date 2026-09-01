@@ -43,9 +43,7 @@ describe("application metadata", () => {
       expect(paths.has(entityHref(entity))).toBe(entity.status === "active");
     }
     for (const narrative of getNarratives()) {
-      expect(paths.has(narrativeHref(narrative))).toBe(
-        narrative.status === "active",
-      );
+      expect(paths.has(narrativeHref(narrative))).toBe(narrative.status === "active");
     }
   });
 
@@ -58,9 +56,11 @@ describe("application metadata", () => {
     expect(metadata.alternates).toEqual({ canonical: "/producers/chateau-latour" });
     expect(metadata.robots).toEqual({ index: false, follow: true });
     expect(metadata.description).not.toMatch(/canonical|fixture|entity/i);
-    await expect(generateEntityMetadata({
-      params: Promise.resolve({ entityType: "producers", slug: "unknown" }),
-    })).resolves.toEqual({});
+    await expect(
+      generateEntityMetadata({
+        params: Promise.resolve({ entityType: "producers", slug: "unknown" }),
+      }),
+    ).resolves.toEqual({});
   });
 
   it("generates params and noindex metadata for draft narrative routes", async () => {
@@ -77,8 +77,10 @@ describe("application metadata", () => {
     });
     expect(metadata.robots).toEqual({ index: false, follow: true });
     expect(metadata.title).toBe("Bordeaux: verdieping in voorbereiding");
-    await expect(generateNarrativeMetadata({
-      params: Promise.resolve({ path: "lessons", lesson: "unknown" }),
-    })).resolves.toEqual({});
+    await expect(
+      generateNarrativeMetadata({
+        params: Promise.resolve({ path: "lessons", lesson: "unknown" }),
+      }),
+    ).resolves.toEqual({});
   });
 });

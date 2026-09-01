@@ -29,7 +29,9 @@ import {
 
 export class ContentValidationError extends Error {
   constructor(public readonly issues: string[]) {
-    super(`Content validation failed with ${issues.length} issue${issues.length === 1 ? "" : "s"}:\n\n${issues.map((issue) => `- ${issue}`).join("\n")}`);
+    super(
+      `Content validation failed with ${issues.length} issue${issues.length === 1 ? "" : "s"}:\n\n${issues.map((issue) => `- ${issue}`).join("\n")}`,
+    );
     this.name = "ContentValidationError";
   }
 }
@@ -65,11 +67,13 @@ const RETIRED_GENERATED_FILENAMES = [
 async function discoverFiles(directory: string, filename: string): Promise<string[]> {
   try {
     const entries = await readdir(directory, { withFileTypes: true });
-    const nested = await Promise.all(entries.map(async (entry) => {
-      const entryPath = path.join(directory, entry.name);
-      if (entry.isDirectory()) return discoverFiles(entryPath, filename);
-      return entry.isFile() && entry.name === filename ? [entryPath] : [];
-    }));
+    const nested = await Promise.all(
+      entries.map(async (entry) => {
+        const entryPath = path.join(directory, entry.name);
+        if (entry.isDirectory()) return discoverFiles(entryPath, filename);
+        return entry.isFile() && entry.name === filename ? [entryPath] : [];
+      }),
+    );
     return nested.flat().sort();
   } catch (error) {
     if (isNodeError(error) && error.code === "ENOENT") return [];
@@ -80,11 +84,18 @@ async function discoverFiles(directory: string, filename: string): Promise<strin
 async function discoverYamlFiles(directory: string): Promise<string[]> {
   try {
     const entries = await readdir(directory, { withFileTypes: true });
-    const nested = await Promise.all(entries.map(async (entry) => {
-      const entryPath = path.join(directory, entry.name);
-      if (entry.isDirectory()) return discoverYamlFiles(entryPath);
-      return entry.isFile() && /\.ya?ml$/.test(entry.name) && entry.name !== "entity.yaml" && entry.name !== "narrative.yaml" ? [entryPath] : [];
-    }));
+    const nested = await Promise.all(
+      entries.map(async (entry) => {
+        const entryPath = path.join(directory, entry.name);
+        if (entry.isDirectory()) return discoverYamlFiles(entryPath);
+        return entry.isFile() &&
+          /\.ya?ml$/.test(entry.name) &&
+          entry.name !== "entity.yaml" &&
+          entry.name !== "narrative.yaml"
+          ? [entryPath]
+          : [];
+      }),
+    );
     return nested.flat().sort();
   } catch (error) {
     if (isNodeError(error) && error.code === "ENOENT") return [];
@@ -97,10 +108,17 @@ function isNodeError(error: unknown): error is NodeJS.ErrnoException {
 }
 
 function formatZodIssues(file: string, error: z.ZodError): string[] {
-  return error.issues.map((issue) => `${file}: ${issue.path.join(".") || "record"} ${issue.message}`);
+  return error.issues.map(
+    (issue) => `${file}: ${issue.path.join(".") || "record"} ${issue.message}`,
+  );
 }
 
-async function loadYamlRecords<T>(files: string[], schema: z.ZodType<T>, root: string, issues: string[]): Promise<Array<LoadedRecord<T>>> {
+async function loadYamlRecords<T>(
+  files: string[],
+  schema: z.ZodType<T>,
+  root: string,
+  issues: string[],
+): Promise<Array<LoadedRecord<T>>> {
   const records: Array<LoadedRecord<T>> = [];
   for (const file of files) {
     const relativeFile = path.relative(root, file);
@@ -113,7 +131,9 @@ async function loadYamlRecords<T>(files: string[], schema: z.ZodType<T>, root: s
       }
       records.push({ file: relativeFile, directory: path.dirname(file), value: result.data });
     } catch (error) {
-      issues.push(`${relativeFile}: invalid YAML (${error instanceof Error ? error.message : String(error)})`);
+      issues.push(
+        `${relativeFile}: invalid YAML (${error instanceof Error ? error.message : String(error)})`,
+      );
     }
   }
   return records;
@@ -143,7 +163,10 @@ function unknownReferenceMessage(reference: string, knownIds: string[]): string 
   return `Unknown entity reference '${reference}'.${hint}`;
 }
 
-async function validateLocaleFiles<T extends Entity | Narrative>(record: LoadedRecord<T>, issues: string[]): Promise<Record<Locale, string>> {
+async function validateLocaleFiles<T extends Entity | Narrative>(
+  record: LoadedRecord<T>,
+  issues: string[],
+): Promise<Record<Locale, string>> {
   const markdownByLocale = {} as Record<Locale, string>;
   for (const locale of LOCALES) {
     const configuredPath = record.value.locales[locale];
@@ -156,7 +179,9 @@ async function validateLocaleFiles<T extends Entity | Narrative>(record: LoadedR
       markdownByLocale[locale] = await readFile(contentPath, "utf8");
     } catch (error) {
       if (isNodeError(error) && error.code === "ENOENT") {
-        issues.push(`${record.file}: locales.${locale} references missing file '${configuredPath}'`);
+        issues.push(
+          `${record.file}: locales.${locale} references missing file '${configuredPath}'`,
+        );
       } else {
         throw error;
       }
@@ -210,12 +235,14 @@ function parseLocalizedContent<T extends Entity | Narrative>(
       }
     }
     if (record.value.status === "active") {
-      issues.push(...validatePublicationStructure(
-        parsed.document,
-        file,
-        kind,
-        kind === "narrative" ? (record.value as Narrative).type : undefined,
-      ));
+      issues.push(
+        ...validatePublicationStructure(
+          parsed.document,
+          file,
+          kind,
+          kind === "narrative" ? (record.value as Narrative).type : undefined,
+        ),
+      );
     }
   }
 
@@ -230,30 +257,34 @@ async function validateMediaFiles(
   issues: string[],
 ): Promise<void> {
   if (!requireLocalMedia) return;
-  await Promise.all(records.map(async ({ file, value }) => {
-    const assetPath = path.join(root, "public", "media", value.storage_key);
-    try {
-      const bytes = await readFile(assetPath);
-      const checksum = createHash("sha256").update(bytes).digest("hex");
-      if (checksum !== value.checksum_sha256) {
-        issues.push(
-          `${file}: checksum_sha256 does not match public/media/${value.storage_key}`,
-        );
+  await Promise.all(
+    records.map(async ({ file, value }) => {
+      const assetPath = path.join(root, "public", "media", value.storage_key);
+      try {
+        const bytes = await readFile(assetPath);
+        const checksum = createHash("sha256").update(bytes).digest("hex");
+        if (checksum !== value.checksum_sha256) {
+          issues.push(`${file}: checksum_sha256 does not match public/media/${value.storage_key}`);
+        }
+      } catch (error) {
+        if (isNodeError(error) && error.code === "ENOENT") {
+          issues.push(
+            `${file}: storage_key '${value.storage_key}' is missing under public/media; ` +
+              "set MEDIA_BASE_URL only when the same key exists in remote storage",
+          );
+          return;
+        }
+        throw error;
       }
-    } catch (error) {
-      if (isNodeError(error) && error.code === "ENOENT") {
-        issues.push(
-          `${file}: storage_key '${value.storage_key}' is missing under public/media; ` +
-          "set MEDIA_BASE_URL only when the same key exists in remote storage",
-        );
-        return;
-      }
-      throw error;
-    }
-  }));
+    }),
+  );
 }
 
-function findDuplicates(values: Array<{ key: string; file: string }>, label: string, issues: string[]): void {
+function findDuplicates(
+  values: Array<{ key: string; file: string }>,
+  label: string,
+  issues: string[],
+): void {
   const firstByKey = new Map<string, string>();
   for (const { key, file } of values) {
     const first = firstByKey.get(key);
@@ -280,22 +311,22 @@ function findDuplicateRelations(record: LoadedRecord<Entity>, issues: string[]):
   for (const relation of record.value.relations) {
     const key = JSON.stringify(relation);
     if (seen.has(key)) {
-      issues.push(
-        `${record.file}: Duplicate relation '${relation.type}' to '${relation.target}'`,
-      );
+      issues.push(`${record.file}: Duplicate relation '${relation.type}' to '${relation.target}'`);
     }
     seen.add(key);
   }
 }
 
 async function removeRetiredGeneratedFiles(outputDirectory: string): Promise<void> {
-  await Promise.all(RETIRED_GENERATED_FILENAMES.map(async (filename) => {
-    try {
-      await unlink(path.join(outputDirectory, filename));
-    } catch (error) {
-      if (!isNodeError(error) || error.code !== "ENOENT") throw error;
-    }
-  }));
+  await Promise.all(
+    RETIRED_GENERATED_FILENAMES.map(async (filename) => {
+      try {
+        await unlink(path.join(outputDirectory, filename));
+      } catch (error) {
+        if (!isNodeError(error) || error.code !== "ENOENT") throw error;
+      }
+    }),
+  );
 }
 
 function stableJson(value: object): string {
@@ -318,35 +349,66 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     loadYamlRecords(mediaFiles, mediaAssetSchema, root, issues),
   ]);
 
-  findDuplicates(entityRecords.map(({ file, value }) => ({ key: value.id, file })), "entity ID", issues);
-  findDuplicates(narrativeRecords.map(({ file, value }) => ({ key: value.id, file })), "narrative ID", issues);
-  findDuplicates(sourceRecords.map(({ file, value }) => ({ key: value.id, file })), "source ID", issues);
-  findDuplicates(mediaRecords.map(({ file, value }) => ({ key: value.id, file })), "media ID", issues);
-  findDuplicates(mediaRecords.map(({ file, value }) => ({ key: value.storage_key, file })), "media storage key", issues);
-  await validateMediaFiles(
-    mediaRecords,
-    root,
-    options.requireLocalMedia ?? true,
+  findDuplicates(
+    entityRecords.map(({ file, value }) => ({ key: value.id, file })),
+    "entity ID",
     issues,
   );
   findDuplicates(
-    entityRecords.flatMap(({ file, value }) => value.assertions.map((assertion) => ({
-      key: assertion.id,
-      file,
-    }))),
+    narrativeRecords.map(({ file, value }) => ({ key: value.id, file })),
+    "narrative ID",
+    issues,
+  );
+  findDuplicates(
+    sourceRecords.map(({ file, value }) => ({ key: value.id, file })),
+    "source ID",
+    issues,
+  );
+  findDuplicates(
+    mediaRecords.map(({ file, value }) => ({ key: value.id, file })),
+    "media ID",
+    issues,
+  );
+  findDuplicates(
+    mediaRecords.map(({ file, value }) => ({ key: value.storage_key, file })),
+    "media storage key",
+    issues,
+  );
+  await validateMediaFiles(mediaRecords, root, options.requireLocalMedia ?? true, issues);
+  findDuplicates(
+    entityRecords.flatMap(({ file, value }) =>
+      value.assertions.map((assertion) => ({
+        key: assertion.id,
+        file,
+      })),
+    ),
     "assertion ID",
     issues,
   );
   findDuplicates(
-    entityRecords.flatMap(({ file, value }) => value.geography_id
-      ? [{ key: value.geography_id, file }]
-      : []),
+    entityRecords.flatMap(({ file, value }) =>
+      value.geography_id ? [{ key: value.geography_id, file }] : [],
+    ),
     "geography ID",
     issues,
   );
   for (const locale of LOCALES) {
-    findDuplicates(entityRecords.map(({ file, value }) => ({ key: `${value.type}:${locale}:${value.slugs[locale]}`, file })), `${locale} entity slug`, issues);
-    findDuplicates(narrativeRecords.map(({ file, value }) => ({ key: `${value.type}:${locale}:${value.slugs[locale]}`, file })), `${locale} narrative slug`, issues);
+    findDuplicates(
+      entityRecords.map(({ file, value }) => ({
+        key: `${value.type}:${locale}:${value.slugs[locale]}`,
+        file,
+      })),
+      `${locale} entity slug`,
+      issues,
+    );
+    findDuplicates(
+      narrativeRecords.map(({ file, value }) => ({
+        key: `${value.type}:${locale}:${value.slugs[locale]}`,
+        file,
+      })),
+      `${locale} narrative slug`,
+      issues,
+    );
   }
 
   const entityIds = entityRecords.map(({ value }) => value.id).sort();
@@ -359,18 +421,18 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
 
   for (const record of entityRecords) {
     if (!record.value.id.startsWith(`${record.value.type}.`)) {
-      issues.push(`${record.file}: ID '${record.value.id}' does not match entity type '${record.value.type}'`);
+      issues.push(
+        `${record.file}: ID '${record.value.id}' does not match entity type '${record.value.type}'`,
+      );
     }
     const markdownByLocale = await validateLocaleFiles(record, issues);
-    findDuplicatesWithinRecord(
-      record.value.source_refs,
-      "source reference",
-      record.file,
-      issues,
-    );
+    findDuplicatesWithinRecord(record.value.source_refs, "source reference", record.file, issues);
     findDuplicateRelations(record, issues);
     for (const relation of record.value.relations) {
-      if (!entityIdSet.has(relation.target)) issues.push(`${record.file}: relation '${relation.type}': ${unknownReferenceMessage(relation.target, entityIds)}`);
+      if (!entityIdSet.has(relation.target))
+        issues.push(
+          `${record.file}: relation '${relation.type}': ${unknownReferenceMessage(relation.target, entityIds)}`,
+        );
     }
     for (const assertion of record.value.assertions) {
       findDuplicatesWithinRecord(
@@ -380,8 +442,12 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
         issues,
       );
     }
-    for (const sourceRef of [...record.value.source_refs, ...record.value.assertions.flatMap((assertion) => assertion.sources)]) {
-      if (!sourceIdSet.has(sourceRef)) issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
+    for (const sourceRef of [
+      ...record.value.source_refs,
+      ...record.value.assertions.flatMap((assertion) => assertion.sources),
+    ]) {
+      if (!sourceIdSet.has(sourceRef))
+        issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
     }
     const parsed = parseLocalizedContent(
       record,
@@ -404,12 +470,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       record.file,
       issues,
     );
-    findDuplicatesWithinRecord(
-      record.value.source_refs,
-      "source reference",
-      record.file,
-      issues,
-    );
+    findDuplicatesWithinRecord(record.value.source_refs, "source reference", record.file, issues);
     if (
       record.value.primary_entity &&
       record.value.related_entities.includes(record.value.primary_entity)
@@ -418,12 +479,16 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
         `${record.file}: primary entity '${record.value.primary_entity}' must not be repeated in related_entities`,
       );
     }
-    const references = [record.value.primary_entity, ...record.value.related_entities].filter((id): id is string => Boolean(id));
+    const references = [record.value.primary_entity, ...record.value.related_entities].filter(
+      (id): id is string => Boolean(id),
+    );
     for (const reference of references) {
-      if (!entityIdSet.has(reference)) issues.push(`${record.file}: ${unknownReferenceMessage(reference, entityIds)}`);
+      if (!entityIdSet.has(reference))
+        issues.push(`${record.file}: ${unknownReferenceMessage(reference, entityIds)}`);
     }
     for (const sourceRef of record.value.source_refs) {
-      if (!sourceIdSet.has(sourceRef)) issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
+      if (!sourceIdSet.has(sourceRef))
+        issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
     }
     const parsed = parseLocalizedContent(
       record,
@@ -437,30 +502,86 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     );
     const mentions = parsed.mentions;
     narrativeContentMap.set(record.value.id, parsed.content);
-    mentionMap.set(record.value.id, mentions.sort((left, right) => left.locale.localeCompare(right.locale) || left.entity_id.localeCompare(right.entity_id)));
+    mentionMap.set(
+      record.value.id,
+      mentions.sort(
+        (left, right) =>
+          left.locale.localeCompare(right.locale) || left.entity_id.localeCompare(right.entity_id),
+      ),
+    );
   }
 
   if (issues.length > 0) throw new ContentValidationError(issues.sort());
 
-  const entities: GeneratedEntity[] = entityRecords.map(({ value }) => ({
-    ...value,
-    content: entityContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
-  })).sort((left, right) => left.id.localeCompare(right.id));
-  const sources = sourceRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
-  const media = mediaRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
-  const narratives = narrativeRecords.map(({ value }) => ({
-    ...value,
-    mentions: mentionMap.get(value.id) ?? [],
-    content: narrativeContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
-  })).sort((left, right) => left.id.localeCompare(right.id));
-  const forward: ResolvedRelation[] = entities.flatMap((entity) => entity.relations.map((relation) => ({ source: entity.id, ...relation })))
-    .sort((left, right) => left.source.localeCompare(right.source) || left.type.localeCompare(right.type) || left.target.localeCompare(right.target));
-  const inverse = Object.fromEntries(entityIds.map((id) => [id, forward.filter((relation) => relation.target === id)]));
-  const backlinks = Object.fromEntries(entityIds.map((id) => [id, narratives.filter((narrative) => narrative.mentions.some((mention) => mention.entity_id === id) || narrative.primary_entity === id || narrative.related_entities.includes(id)).map((narrative) => narrative.id)]));
-  const entitiesByType = Object.fromEntries(ENTITY_TYPES.map((type) => [type, entities.filter((entity) => entity.type === type).map((entity) => entity.id)])) as Record<EntityType, string[]>;
-  const localizedSlugs = Object.fromEntries(LOCALES.map((locale) => [locale, Object.fromEntries(entities.map((entity) => [`${entity.type}:${entity.slugs[locale]}`, entity.id]))])) as Record<Locale, Record<string, string>>;
-  const geography = Object.fromEntries(entities.filter((entity) => entity.geography_id).map((entity) => [entity.geography_id as string, entity.id]));
-  const search = entities.map(({ id, type, canonical_name, names, slugs }) => ({ id, type, canonical_name, names, slugs }));
+  const entities: GeneratedEntity[] = entityRecords
+    .map(({ value }) => ({
+      ...value,
+      content: entityContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
+    }))
+    .sort((left, right) => left.id.localeCompare(right.id));
+  const sources = sourceRecords
+    .map(({ value }) => value)
+    .sort((left, right) => left.id.localeCompare(right.id));
+  const media = mediaRecords
+    .map(({ value }) => value)
+    .sort((left, right) => left.id.localeCompare(right.id));
+  const narratives = narrativeRecords
+    .map(({ value }) => ({
+      ...value,
+      mentions: mentionMap.get(value.id) ?? [],
+      content: narrativeContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
+    }))
+    .sort((left, right) => left.id.localeCompare(right.id));
+  const forward: ResolvedRelation[] = entities
+    .flatMap((entity) => entity.relations.map((relation) => ({ source: entity.id, ...relation })))
+    .sort(
+      (left, right) =>
+        left.source.localeCompare(right.source) ||
+        left.type.localeCompare(right.type) ||
+        left.target.localeCompare(right.target),
+    );
+  const inverse = Object.fromEntries(
+    entityIds.map((id) => [id, forward.filter((relation) => relation.target === id)]),
+  );
+  const backlinks = Object.fromEntries(
+    entityIds.map((id) => [
+      id,
+      narratives
+        .filter(
+          (narrative) =>
+            narrative.mentions.some((mention) => mention.entity_id === id) ||
+            narrative.primary_entity === id ||
+            narrative.related_entities.includes(id),
+        )
+        .map((narrative) => narrative.id),
+    ]),
+  );
+  const entitiesByType = Object.fromEntries(
+    ENTITY_TYPES.map((type) => [
+      type,
+      entities.filter((entity) => entity.type === type).map((entity) => entity.id),
+    ]),
+  ) as Record<EntityType, string[]>;
+  const localizedSlugs = Object.fromEntries(
+    LOCALES.map((locale) => [
+      locale,
+      Object.fromEntries(
+        entities.map((entity) => [`${entity.type}:${entity.slugs[locale]}`, entity.id]),
+      ),
+    ]),
+  ) as Record<Locale, Record<string, string>>;
+  const geography = Object.fromEntries(
+    entities
+      .filter((entity) => entity.geography_id)
+      .map((entity) => [entity.geography_id as string, entity.id]),
+  );
+  const search = entities.map(({ id, type, canonical_name, names, slugs }) => ({
+    id,
+    type,
+    canonical_name,
+    names,
+    slugs,
+  }));
   const knowledgeBase: GeneratedKnowledgeBase = {
     entities,
     narratives,
@@ -468,16 +589,28 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     media,
     relations: { forward, inverse },
     backlinks,
-    indexes: { entity_ids: entityIds, entities_by_type: entitiesByType, localized_slugs: localizedSlugs, geography, search },
+    indexes: {
+      entity_ids: entityIds,
+      entities_by_type: entitiesByType,
+      localized_slugs: localizedSlugs,
+      geography,
+      search,
+    },
   };
   const outputs = {
     [GENERATED_BUNDLE_FILENAME]: stableJson(knowledgeBase),
   };
   if (options.write !== false) {
-    const outputDirectory = path.resolve(options.outputDirectory ?? path.join(root, "src", "generated", "content"));
+    const outputDirectory = path.resolve(
+      options.outputDirectory ?? path.join(root, "src", "generated", "content"),
+    );
     await mkdir(outputDirectory, { recursive: true });
     await removeRetiredGeneratedFiles(outputDirectory);
-    await Promise.all(Object.entries(outputs).map(([filename, contents]) => writeFile(path.join(outputDirectory, filename), contents, "utf8")));
+    await Promise.all(
+      Object.entries(outputs).map(([filename, contents]) =>
+        writeFile(path.join(outputDirectory, filename), contents, "utf8"),
+      ),
+    );
   }
   return { knowledgeBase, outputs };
 }

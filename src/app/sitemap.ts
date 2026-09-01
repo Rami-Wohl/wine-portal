@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((narrative) => narrative.status === "active")
     .map(narrativeHref);
 
-  return [...staticPaths, ...indexableEntityPaths, ...indexableNarrativePaths].map(
-    (pathname) => ({ url: new URL(pathname, SITE_URL).toString() }),
-  );
+  return [...staticPaths, ...indexableEntityPaths, ...indexableNarrativePaths].map((pathname) => ({
+    url: new URL(pathname, SITE_URL).toString(),
+  }));
 }

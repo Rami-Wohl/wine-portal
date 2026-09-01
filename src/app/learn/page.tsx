@@ -12,16 +12,14 @@ export const metadata: Metadata = {
 };
 
 export default function LearnPage() {
-  const publishedNarratives = getNarratives().filter(
-    (narrative) => narrative.status === "active",
-  );
+  const publishedNarratives = getNarratives().filter((narrative) => narrative.status === "active");
 
   return (
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Leren" title="Leer in een doordachte volgorde">
         <p>
-          Leerpaden brengen onderwerpen en verdiepende verhalen samen in een
-          heldere volgorde, van basiskennis tot specialistische verdieping.
+          Leerpaden brengen onderwerpen en verdiepende verhalen samen in een heldere volgorde, van
+          basiskennis tot specialistische verdieping.
         </p>
       </PageIntro>
 
@@ -46,8 +44,8 @@ export default function LearnPage() {
             <p className="eyebrow">In redactie</p>
             <h3>De eerste leerpaden zijn in voorbereiding.</h3>
             <p>
-              We publiceren een leerpad zodra de inhoud, volgorde en bronnen
-              zorgvuldig zijn beoordeeld.
+              We publiceren een leerpad zodra de inhoud, volgorde en bronnen zorgvuldig zijn
+              beoordeeld.
             </p>
             <Link className="text-link" href="/explore">
               Verken intussen de kennisbank →

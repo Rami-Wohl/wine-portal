@@ -8,24 +8,15 @@ import type {
   ResolvedRelation,
   Source,
 } from "./model";
-import {
-  NARRATIVE_ROUTE_SEGMENTS,
-  entityTypeFromRouteSegment,
-} from "./routing";
+import { NARRATIVE_ROUTE_SEGMENTS, entityTypeFromRouteSegment } from "./routing";
 
 const knowledgeBase = knowledgeBaseJson as GeneratedKnowledgeBase;
-const entitiesById = new Map(
-  knowledgeBase.entities.map((entity) => [entity.id, entity]),
-);
+const entitiesById = new Map(knowledgeBase.entities.map((entity) => [entity.id, entity]));
 const narrativesById = new Map(
   knowledgeBase.narratives.map((narrative) => [narrative.id, narrative]),
 );
-const sourcesById = new Map(
-  knowledgeBase.sources.map((source) => [source.id, source]),
-);
-const mediaById = new Map(
-  knowledgeBase.media.map((asset) => [asset.id, asset]),
-);
+const sourcesById = new Map(knowledgeBase.sources.map((source) => [source.id, source]));
+const mediaById = new Map(knowledgeBase.media.map((asset) => [asset.id, asset]));
 const narrativesByRoute = new Map(
   knowledgeBase.narratives.map((narrative) => [
     `${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}:${narrative.slugs.nl}`,
@@ -53,10 +44,7 @@ export function getEntitiesByType(type: EntityType): GeneratedEntity[] {
     .filter((entity): entity is GeneratedEntity => Boolean(entity));
 }
 
-export function getEntityByRoute(
-  routeSegment: string,
-  slug: string,
-): GeneratedEntity | undefined {
+export function getEntityByRoute(routeSegment: string, slug: string): GeneratedEntity | undefined {
   const type = entityTypeFromRouteSegment(routeSegment);
   if (!type) return undefined;
   const id = knowledgeBase.indexes.localized_slugs.nl[`${type}:${slug}`];
@@ -72,15 +60,11 @@ export function getNarrativeById(id: string): GeneratedNarrative | undefined {
 }
 
 export function getSourcesByIds(ids: string[]): Source[] {
-  return ids
-    .map((id) => sourcesById.get(id))
-    .filter((source): source is Source => Boolean(source));
+  return ids.map((id) => sourcesById.get(id)).filter((source): source is Source => Boolean(source));
 }
 
 export function getMediaByIds(ids: string[]): MediaAsset[] {
-  return ids
-    .map((id) => mediaById.get(id))
-    .filter((asset): asset is MediaAsset => Boolean(asset));
+  return ids.map((id) => mediaById.get(id)).filter((asset): asset is MediaAsset => Boolean(asset));
 }
 
 export function getNarrativeByRoute(

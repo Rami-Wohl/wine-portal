@@ -2,10 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  isNavigationItemCurrent,
-  type NavigationItem,
-} from "@/config/navigation";
+import { isNavigationItemCurrent, type NavigationItem } from "@/config/navigation";
 
 interface NavigationLinksProps {
   items: NavigationItem[];

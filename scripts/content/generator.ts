@@ -12,7 +12,10 @@ export interface GenerateEntityOptions {
 }
 
 function titleFromSlug(slug: string): string {
-  return slug.split("-").map((part) => `${part.charAt(0).toUpperCase()}${part.slice(1)}`).join(" ");
+  return slug
+    .split("-")
+    .map((part) => `${part.charAt(0).toUpperCase()}${part.slice(1)}`)
+    .join(" ");
 }
 
 async function pathExists(target: string): Promise<boolean> {
@@ -27,13 +30,23 @@ async function pathExists(target: string): Promise<boolean> {
 
 export async function generateEntityPackage(options: GenerateEntityOptions): Promise<string> {
   if (!ENTITY_TYPES.includes(options.type as EntityType)) {
-    throw new Error(`Unknown entity type '${options.type}'. Allowed types: ${ENTITY_TYPES.join(", ")}`);
+    throw new Error(
+      `Unknown entity type '${options.type}'. Allowed types: ${ENTITY_TYPES.join(", ")}`,
+    );
   }
-  if (!slugPattern.test(options.slug)) throw new Error(`Invalid slug '${options.slug}'. Use lowercase kebab-case.`);
+  if (!slugPattern.test(options.slug))
+    throw new Error(`Invalid slug '${options.slug}'. Use lowercase kebab-case.`);
   const type = options.type as EntityType;
   const root = path.resolve(options.root ?? process.cwd());
-  const packageDirectory = path.join(root, "content", "entities", ENTITY_TYPE_DIRECTORIES[type], options.slug);
-  if (await pathExists(packageDirectory)) throw new Error(`Content package already exists: ${path.relative(root, packageDirectory)}`);
+  const packageDirectory = path.join(
+    root,
+    "content",
+    "entities",
+    ENTITY_TYPE_DIRECTORIES[type],
+    options.slug,
+  );
+  if (await pathExists(packageDirectory))
+    throw new Error(`Content package already exists: ${path.relative(root, packageDirectory)}`);
   const starterName = titleFromSlug(options.slug);
   const metadata = {
     id: `${type}.${options.slug}`,

@@ -40,9 +40,9 @@ export default function Home() {
         <h1>{BRAND.name}</h1>
         <p className="home-tagline">{BRAND.tagline.nl}</p>
         <p className="home-description">
-          Oenocademy brengt verbonden wijnkennis, gestructureerd leren, vrije
-          verkenning en geografische ontdekking samen. Kies hoe je vandaag door
-          hetzelfde kennisnetwerk wilt navigeren.
+          Oenocademy brengt verbonden wijnkennis, gestructureerd leren, vrije verkenning en
+          geografische ontdekking samen. Kies hoe je vandaag door hetzelfde kennisnetwerk wilt
+          navigeren.
         </p>
       </section>
 

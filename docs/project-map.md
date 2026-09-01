@@ -95,12 +95,19 @@ geconverteerd.
 | `npm run content:new -- <type> <slug>` | Maakt een leeg entitypackage zonder wijnfeiten |
 | `npm run content:check` | Valideert authored content en schrijft niets |
 | `npm run content:build` | Valideert en genereert de runtimebundle |
+| `npm run format` | Format code, CSS, JSON en YAML met de vastgepinde Prettier-versie |
+| `npm run format:check` | Controleert die formatting zonder bestanden te wijzigen |
+| `npm run check` | Draait formattingcheck, lint, typecheck en unit-tests |
 | `npm test` | Test parser, graph, routing, search en rendererlogica snel |
 | `npm run test:e2e` | Test een kleine kritieke keten in een echte browser |
 
 Browsertests zijn bedoeld voor integratiegrenzen zoals routing, gelokaliseerde
 content, draftgedrag, links, rendering en responsive overflow. Ze controleren
 niet ieder wijnfeit en hoeven niet na iedere kleine tekstwijziging te draaien.
+
+Markdown valt bewust buiten Prettier: de eigen contentblock-directives worden
+door de contentpipeline gevalideerd en mogen niet door een algemene
+Markdownformatter worden herschreven.
 
 ## Welke documentatie heb je wanneer nodig?
 

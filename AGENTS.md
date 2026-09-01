@@ -56,6 +56,6 @@ choosing or inventing a resolution.
 
 Before completing work:
 
-- run lint
-- run typecheck
-- run tests where relevant
+- run `npm run format` (Markdown is intentionally excluded)
+- run `npm run check`
+- run end-to-end tests where browser behavior is relevant

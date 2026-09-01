@@ -65,7 +65,11 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
       case "link": {
         const children = renderInline(node.children, context);
         if (node.url.startsWith("/") || node.url.startsWith("#")) {
-          return <Link href={node.url} key={key} title={node.title ?? undefined}>{children}</Link>;
+          return (
+            <Link href={node.url} key={key} title={node.title ?? undefined}>
+              {children}
+            </Link>
+          );
         }
         return (
           <a
@@ -98,11 +102,19 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
         return (
           <sup className="content-citation" key={key}>
             {source.url ? (
-              <a href={source.url} rel="noreferrer" target="_blank" aria-label={label} title={label}>
+              <a
+                href={source.url}
+                rel="noreferrer"
+                target="_blank"
+                aria-label={label}
+                title={label}
+              >
                 {marker}
               </a>
             ) : (
-              <span aria-label={label} title={label}>{marker}</span>
+              <span aria-label={label} title={label}>
+                {marker}
+              </span>
             )}
           </sup>
         );
@@ -118,29 +130,45 @@ function renderBlockNodes(nodes: ContentBlockNode[], context: RenderContext): Re
       case "paragraph":
         return <p key={key}>{renderInline(node.children, context)}</p>;
       case "heading":
-        return node.depth === 2
-          ? <h2 key={key}>{renderInline(node.children, context)}</h2>
-          : <h3 key={key}>{renderInline(node.children, context)}</h3>;
+        return node.depth === 2 ? (
+          <h2 key={key}>{renderInline(node.children, context)}</h2>
+        ) : (
+          <h3 key={key}>{renderInline(node.children, context)}</h3>
+        );
       case "list": {
         const items = node.children.map((item, itemIndex) => (
           <li key={`item-${itemIndex}`}>{renderBlockNodes(item.children, context)}</li>
         ));
-        return node.ordered
-          ? <ol key={key} start={node.start ?? undefined}>{items}</ol>
-          : <ul key={key}>{items}</ul>;
+        return node.ordered ? (
+          <ol key={key} start={node.start ?? undefined}>
+            {items}
+          </ol>
+        ) : (
+          <ul key={key}>{items}</ul>
+        );
       }
       case "blockquote":
         return <blockquote key={key}>{renderBlockNodes(node.children, context)}</blockquote>;
       case "table": {
         const [header, ...body] = node.rows;
         return (
-          <div className="content-table-scroll" key={key} role="region" aria-label={context.locale === "nl" ? "Tabel" : "Table"} tabIndex={0}>
+          <div
+            className="content-table-scroll"
+            key={key}
+            role="region"
+            aria-label={context.locale === "nl" ? "Tabel" : "Table"}
+            tabIndex={0}
+          >
             <table>
               {header ? (
                 <thead>
                   <tr>
                     {header.map((cell, cellIndex) => (
-                      <th key={`header-${cellIndex}`} scope="col" style={{ textAlign: node.align[cellIndex] ?? undefined }}>
+                      <th
+                        key={`header-${cellIndex}`}
+                        scope="col"
+                        style={{ textAlign: node.align[cellIndex] ?? undefined }}
+                      >
                         {renderInline(cell, context)}
                       </th>
                     ))}
@@ -151,7 +179,10 @@ function renderBlockNodes(nodes: ContentBlockNode[], context: RenderContext): Re
                 {body.map((row, rowIndex) => (
                   <tr key={`row-${rowIndex}`}>
                     {row.map((cell, cellIndex) => (
-                      <td key={`cell-${cellIndex}`} style={{ textAlign: node.align[cellIndex] ?? undefined }}>
+                      <td
+                        key={`cell-${cellIndex}`}
+                        style={{ textAlign: node.align[cellIndex] ?? undefined }}
+                      >
                         {renderInline(cell, context)}
                       </td>
                     ))}
@@ -171,7 +202,9 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
     "content-block",
     `content-block-${block.type}`,
     block.depth ? `content-depth-${block.depth}` : null,
-  ].filter(Boolean).join(" ");
+  ]
+    .filter(Boolean)
+    .join(" ");
   const content = renderBlockNodes(block.nodes, context);
   const common = { id: block.id, className, tabIndex: -1 };
 
@@ -194,10 +227,20 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
             {caption ? <span>{caption}</span> : null}
             <small>
               {asset.rights.source_url ? (
-                <a href={asset.rights.source_url} rel="noreferrer" target="_blank">{credit}</a>
-              ) : credit}
+                <a href={asset.rights.source_url} rel="noreferrer" target="_blank">
+                  {credit}
+                </a>
+              ) : (
+                credit
+              )}
               {asset.rights.license_url ? (
-                <> · <a href={asset.rights.license_url} rel="noreferrer" target="_blank">{asset.rights.license_name}</a></>
+                <>
+                  {" "}
+                  ·{" "}
+                  <a href={asset.rights.license_url} rel="noreferrer" target="_blank">
+                    {asset.rights.license_name}
+                  </a>
+                </>
               ) : null}
             </small>
           </figcaption>
@@ -213,7 +256,9 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
       const titleId = `${block.id}-title`;
       return (
         <section {...common} aria-labelledby={titleId}>
-          <h2 className="content-block-title" id={titleId}>{BLOCK_LABELS[context.locale].objectives}</h2>
+          <h2 className="content-block-title" id={titleId}>
+            {BLOCK_LABELS[context.locale].objectives}
+          </h2>
           {content}
         </section>
       );
@@ -228,7 +273,9 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
     case "caveat": {
       const label = block.variant
         ? CAVEAT_LABELS[context.locale][block.variant]
-        : context.locale === "nl" ? "Nuance" : "Nuance";
+        : context.locale === "nl"
+          ? "Nuance"
+          : "Nuance";
       return (
         <aside {...common} aria-label={label}>
           <p className="content-block-label">{label}</p>
@@ -240,7 +287,9 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
       const titleId = `${block.id}-title`;
       return (
         <section {...common} aria-labelledby={titleId}>
-          <h2 className="content-block-title" id={titleId}>{BLOCK_LABELS[context.locale]["in-the-glass"]}</h2>
+          <h2 className="content-block-title" id={titleId}>
+            {BLOCK_LABELS[context.locale]["in-the-glass"]}
+          </h2>
           {content}
         </section>
       );

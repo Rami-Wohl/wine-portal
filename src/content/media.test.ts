@@ -18,9 +18,7 @@ describe("media delivery", () => {
 
   it("keeps the storage key stable when delivery moves to a CDN", () => {
     vi.stubEnv("MEDIA_BASE_URL", "https://cdn.example.com/oenocademy/");
-    expect(mediaUrl(asset)).toBe(
-      "https://cdn.example.com/oenocademy/bordeaux/saint-emilion.jpg",
-    );
+    expect(mediaUrl(asset)).toBe("https://cdn.example.com/oenocademy/bordeaux/saint-emilion.jpg");
   });
 
   it("collects unique media IDs from a localized document", () => {
@@ -33,9 +31,6 @@ describe("media delivery", () => {
       ],
     } as ContentDocument;
 
-    expect(mediaIdsForDocument(document)).toEqual([
-      "media.example.first",
-      "media.example.second",
-    ]);
+    expect(mediaIdsForDocument(document)).toEqual(["media.example.first", "media.example.second"]);
   });
 });

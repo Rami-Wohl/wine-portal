@@ -111,8 +111,8 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
               <p className="eyebrow">In voorbereiding</p>
               <h2>Deze verdieping wordt zorgvuldig opgebouwd.</h2>
               <p>
-                Zodra de inhoud en bronnen zijn beoordeeld, verschijnt de volledige
-                verdieping hier. Verken intussen de kennisbank via Ontdekken.
+                Zodra de inhoud en bronnen zijn beoordeeld, verschijnt de volledige verdieping hier.
+                Verken intussen de kennisbank via Ontdekken.
               </p>
               <Link className="text-link" href="/explore">
                 Ga naar Ontdekken →
@@ -143,8 +143,12 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
                   {sources.map((source) => (
                     <li key={source.id}>
                       {source.url ? (
-                        <a href={source.url} rel="noreferrer" target="_blank">{source.title}</a>
-                      ) : <span>{source.title}</span>}
+                        <a href={source.url} rel="noreferrer" target="_blank">
+                          {source.title}
+                        </a>
+                      ) : (
+                        <span>{source.title}</span>
+                      )}
                       <small>{source.publisher}</small>
                     </li>
                   ))}

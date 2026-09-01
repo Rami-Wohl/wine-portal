@@ -1,11 +1,4 @@
-import {
-  mkdtemp,
-  mkdir,
-  readFile,
-  readdir,
-  rm,
-  writeFile,
-} from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import os from "node:os";
 import path from "node:path";
@@ -63,22 +56,25 @@ async function addEntity(root: string, options: AddEntityOptions): Promise<strin
     en: "overview.en.md",
   };
   await mkdir(directory, { recursive: true });
-  await writeFile(path.join(directory, "entity.yaml"), stringifyYaml({
-    id: options.id,
-    type,
-    status: "draft",
-    canonical_name: slug,
-    names: { nl: slug, en: slug },
-    slugs: {
-      nl: options.nlSlug ?? slug,
-      en: options.enSlug ?? slug,
-    },
-    locales,
-    relations: options.relations ?? [],
-    assertions: options.assertions ?? [],
-    source_refs: options.sourceRefs ?? [],
-    ...(options.geographyId ? { geography_id: options.geographyId } : {}),
-  }));
+  await writeFile(
+    path.join(directory, "entity.yaml"),
+    stringifyYaml({
+      id: options.id,
+      type,
+      status: "draft",
+      canonical_name: slug,
+      names: { nl: slug, en: slug },
+      slugs: {
+        nl: options.nlSlug ?? slug,
+        en: options.enSlug ?? slug,
+      },
+      locales,
+      relations: options.relations ?? [],
+      assertions: options.assertions ?? [],
+      source_refs: options.sourceRefs ?? [],
+      ...(options.geographyId ? { geography_id: options.geographyId } : {}),
+    }),
+  );
   if (options.omitLocale !== "nl" && path.basename(locales.nl) === locales.nl) {
     await writeFile(path.join(directory, locales.nl), "");
   }
@@ -88,37 +84,28 @@ async function addEntity(root: string, options: AddEntityOptions): Promise<strin
   return directory;
 }
 
-async function addNarrative(
-  root: string,
-  options: AddNarrativeOptions = {},
-): Promise<void> {
-  const directory = path.join(
-    root,
-    "content",
-    "narratives",
-    "explainers",
-    "proof",
-  );
+async function addNarrative(root: string, options: AddNarrativeOptions = {}): Promise<void> {
+  const directory = path.join(root, "content", "narratives", "explainers", "proof");
   await mkdir(directory, { recursive: true });
-  await writeFile(path.join(directory, "narrative.yaml"), stringifyYaml({
-    id: "narrative.proof",
-    type: options.type ?? "explainer",
-    status: options.status ?? "draft",
-    title: { nl: "Proef", en: "Proof" },
-    slugs: { nl: "proef", en: "proof" },
-    locales: { nl: "article.nl.md", en: "article.en.md" },
-    ...(options.primaryEntity ? { primary_entity: options.primaryEntity } : {}),
-    related_entities: options.relatedEntities ?? [],
-    source_refs: options.sourceRefs ?? [],
-  }));
+  await writeFile(
+    path.join(directory, "narrative.yaml"),
+    stringifyYaml({
+      id: "narrative.proof",
+      type: options.type ?? "explainer",
+      status: options.status ?? "draft",
+      title: { nl: "Proef", en: "Proof" },
+      slugs: { nl: "proef", en: "proof" },
+      locales: { nl: "article.nl.md", en: "article.en.md" },
+      ...(options.primaryEntity ? { primary_entity: options.primaryEntity } : {}),
+      related_entities: options.relatedEntities ?? [],
+      source_refs: options.sourceRefs ?? [],
+    }),
+  );
   const wrap = (body: string) => {
     if (body.trimStart().startsWith(":::")) return body;
     return body.length > 0 ? `:::summary{#test-content}\n${body}\n:::\n` : "";
   };
-  await writeFile(
-    path.join(directory, "article.nl.md"),
-    wrap(options.markdown ?? ""),
-  );
+  await writeFile(path.join(directory, "article.nl.md"), wrap(options.markdown ?? ""));
   await writeFile(
     path.join(directory, "article.en.md"),
     wrap(options.englishMarkdown ?? options.markdown ?? ""),
@@ -128,14 +115,17 @@ async function addNarrative(
 async function addSource(root: string, id = "source.example"): Promise<void> {
   const directory = path.join(root, "data", "sources");
   await mkdir(directory, { recursive: true });
-  await writeFile(path.join(directory, `${id.slice("source.".length)}.yaml`), stringifyYaml({
-    id,
-    source_type: "book",
-    publisher: "Example Publisher",
-    title: "Example source",
-    language: "en",
-    status: "active",
-  }));
+  await writeFile(
+    path.join(directory, `${id.slice("source.".length)}.yaml`),
+    stringifyYaml({
+      id,
+      source_type: "book",
+      publisher: "Example Publisher",
+      title: "Example source",
+      language: "en",
+      status: "active",
+    }),
+  );
 }
 
 async function addMedia(
@@ -150,28 +140,31 @@ async function addMedia(
   if (options.writeAsset !== false) {
     await writeFile(path.join(assetDirectory, "photo.jpg"), bytes);
   }
-  await writeFile(path.join(metadataDirectory, "photo.yaml"), stringifyYaml({
-    id: "media.example.photo",
-    kind: "photo",
-    role: "documentary",
-    status: "active",
-    storage_key: "example/photo.jpg",
-    mime_type: "image/jpeg",
-    width: 1200,
-    height: 800,
-    checksum_sha256: options.checksum ?? createHash("sha256").update(bytes).digest("hex"),
-    alt: { nl: "Voorbeeldfoto", en: "Example photo" },
-    caption: { nl: "Een onderschrift.", en: "A caption." },
-    rights: {
-      status: "open-licensed",
-      creator: "Example Photographer",
-      source_url: "https://example.com/photo",
-      license_name: "CC BY 4.0",
-      license_url: "https://creativecommons.org/licenses/by/4.0/",
-      credit_line: "Example Photographer",
-    },
-    acquired_at: "2026-09-01",
-  }));
+  await writeFile(
+    path.join(metadataDirectory, "photo.yaml"),
+    stringifyYaml({
+      id: "media.example.photo",
+      kind: "photo",
+      role: "documentary",
+      status: "active",
+      storage_key: "example/photo.jpg",
+      mime_type: "image/jpeg",
+      width: 1200,
+      height: 800,
+      checksum_sha256: options.checksum ?? createHash("sha256").update(bytes).digest("hex"),
+      alt: { nl: "Voorbeeldfoto", en: "Example photo" },
+      caption: { nl: "Een onderschrift.", en: "A caption." },
+      rights: {
+        status: "open-licensed",
+        creator: "Example Photographer",
+        source_url: "https://example.com/photo",
+        license_name: "CC BY 4.0",
+        license_url: "https://creativecommons.org/licenses/by/4.0/",
+        credit_line: "Example Photographer",
+      },
+      acquired_at: "2026-09-01",
+    }),
+  );
 }
 
 afterEach(async () => {
@@ -296,13 +289,15 @@ describe("content pipeline validation", () => {
     const root = await temporaryRoot();
     await addEntity(root, {
       id: "region.example",
-      assertions: [{
-        id: "assertion.example.fact",
-        predicate: "example_fact",
-        value: "Example",
-        status: "verified",
-        sources: ["source.missing"],
-      }],
+      assertions: [
+        {
+          id: "assertion.example.fact",
+          predicate: "example_fact",
+          value: "Example",
+          status: "verified",
+          sources: ["source.missing"],
+        },
+      ],
     });
 
     await expect(buildContent({ root, write: false })).rejects.toThrow(
@@ -341,7 +336,7 @@ describe("content pipeline validation", () => {
     const root = await temporaryRoot();
     const directory = await addEntity(root, { id: "region.example" });
     await addMedia(root);
-    const markdown = ":::figure{#voorbeeldfoto media_id=\"media.example.photo\"}\n:::\n";
+    const markdown = ':::figure{#voorbeeldfoto media_id="media.example.photo"}\n:::\n';
     await writeFile(path.join(directory, "overview.nl.md"), markdown);
     await writeFile(path.join(directory, "overview.en.md"), markdown);
 
@@ -358,7 +353,7 @@ describe("content pipeline validation", () => {
   it("rejects unknown, missing, and changed media assets", async () => {
     const unknownRoot = await temporaryRoot();
     const unknownDirectory = await addEntity(unknownRoot, { id: "region.example" });
-    const markdown = ":::figure{#voorbeeldfoto media_id=\"media.example.photo\"}\n:::\n";
+    const markdown = ':::figure{#voorbeeldfoto media_id="media.example.photo"}\n:::\n';
     await writeFile(path.join(unknownDirectory, "overview.nl.md"), markdown);
     await writeFile(path.join(unknownDirectory, "overview.en.md"), markdown);
     await expect(buildContent({ root: unknownRoot, write: false })).rejects.toThrow(
@@ -413,9 +408,7 @@ describe("content pipeline derivation", () => {
       { entity_id: "producer.example", label: null, locale: "en" },
       { entity_id: "producer.example", label: "Voorbeeld", locale: "nl" },
     ]);
-    expect(knowledgeBase.backlinks["producer.example"]).toEqual([
-      "narrative.proof",
-    ]);
+    expect(knowledgeBase.backlinks["producer.example"]).toEqual(["narrative.proof"]);
   });
 
   it("rejects unknown and malformed narrative entity links", async () => {
@@ -463,9 +456,7 @@ describe("content pipeline derivation", () => {
       depth: "intermediate",
       source_refs: ["source.example"],
     });
-    expect(JSON.stringify(knowledgeBase.narratives[0].content.nl)).toContain(
-      '"type":"citation"',
-    );
+    expect(JSON.stringify(knowledgeBase.narratives[0].content.nl)).toContain('"type":"citation"');
   });
 
   it("rejects unsafe Markdown and mismatched locale block structures", async () => {
@@ -483,9 +474,7 @@ describe("content pipeline derivation", () => {
       markdown: ":::summary{#orientatie}\nNederlands.\n:::\n",
       englishMarkdown: ":::summary{#orientation}\nEnglish.\n:::\n",
     });
-    await expect(buildContent({ root: parityRoot, write: false })).rejects.toThrow(
-      /differs in id/,
-    );
+    await expect(buildContent({ root: parityRoot, write: false })).rejects.toThrow(/differs in id/);
   });
 
   it("requires citations in both block and package source inventories", async () => {
@@ -501,7 +490,8 @@ describe("content pipeline derivation", () => {
 
   it("enforces active lesson block requirements", async () => {
     const root = await temporaryRoot();
-    const markdown = ":::summary{#orientatie}\nSamenvatting.\n:::\n\n:::section{#uitleg}\n## Uitleg\n\nTekst.\n:::\n";
+    const markdown =
+      ":::summary{#orientatie}\nSamenvatting.\n:::\n\n:::section{#uitleg}\n## Uitleg\n\nTekst.\n:::\n";
     await addNarrative(root, {
       markdown,
       status: "active",
@@ -550,10 +540,7 @@ describe("content pipeline derivation", () => {
 
     await buildContent({ root, outputDirectory });
 
-    expect(await readdir(outputDirectory)).toEqual([
-      "knowledge-base.json",
-      "notes.txt",
-    ]);
+    expect(await readdir(outputDirectory)).toEqual(["knowledge-base.json", "notes.txt"]);
   });
 });
 
@@ -566,18 +553,21 @@ describe("entity package generator", () => {
       slug: "example-estate",
     });
 
-    expect(await readFile(path.join(packageDirectory, "entity.yaml"), "utf8"))
-      .toContain("id: producer.example-estate");
+    expect(await readFile(path.join(packageDirectory, "entity.yaml"), "utf8")).toContain(
+      "id: producer.example-estate",
+    );
     const result = await buildContent({ root, write: false });
     expect(result.knowledgeBase.entities[0].id).toBe("producer.example-estate");
   });
 
   it("rejects unknown types and unsafe slugs", async () => {
     const root = await temporaryRoot();
-    await expect(generateEntityPackage({ root, type: "estate", slug: "example" }))
-      .rejects.toThrow(/Unknown entity type/);
-    await expect(generateEntityPackage({ root, type: "producer", slug: "../Example" }))
-      .rejects.toThrow(/Invalid slug/);
+    await expect(generateEntityPackage({ root, type: "estate", slug: "example" })).rejects.toThrow(
+      /Unknown entity type/,
+    );
+    await expect(
+      generateEntityPackage({ root, type: "producer", slug: "../Example" }),
+    ).rejects.toThrow(/Invalid slug/);
   });
 
   it("does not overwrite an existing content package", async () => {
@@ -585,8 +575,6 @@ describe("entity package generator", () => {
     const options = { root, type: "producer", slug: "example-estate" };
     await generateEntityPackage(options);
 
-    await expect(generateEntityPackage(options)).rejects.toThrow(
-      /Content package already exists/,
-    );
+    await expect(generateEntityPackage(options)).rejects.toThrow(/Content package already exists/);
   });
 });

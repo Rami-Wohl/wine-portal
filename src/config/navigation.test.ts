@@ -11,11 +11,7 @@ describe("site navigation", () => {
   it("keeps destinations unique and ordered without a promoted learning link", () => {
     const items = [...PRIMARY_NAVIGATION, ...UTILITY_NAVIGATION];
     expect(new Set(items.map((item) => item.href)).size).toBe(items.length);
-    expect(PRIMARY_NAVIGATION.map((item) => item.label)).toEqual([
-      "Ontdekken",
-      "Leren",
-      "Atlas",
-    ]);
+    expect(PRIMARY_NAVIGATION.map((item) => item.label)).toEqual(["Ontdekken", "Leren", "Atlas"]);
   });
 
   it("marks every entity route as part of Explore", () => {

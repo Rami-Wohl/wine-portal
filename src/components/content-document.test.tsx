@@ -45,10 +45,12 @@ const document: ContentDocument = {
       source_refs: [],
       variant: null,
       media_id: null,
-      nodes: [{
-        type: "paragraph",
-        children: [{ type: "text", value: "Een heldere introductie." }],
-      }],
+      nodes: [
+        {
+          type: "paragraph",
+          children: [{ type: "text", value: "Een heldere introductie." }],
+        },
+      ],
     },
     {
       id: "uitleg",
@@ -84,7 +86,7 @@ describe("ContentDocumentView", () => {
     );
 
     expect(html).toContain('id="orientatie"');
-    expect(html).toContain('<h2>Uitleg</h2>');
+    expect(html).toContain("<h2>Uitleg</h2>");
     expect(html).toContain('href="/regions/bordeaux"');
     expect(html).toContain('aria-label="Example source, p. 42"');
     expect(html).not.toContain("source.example");
@@ -92,19 +94,26 @@ describe("ContentDocumentView", () => {
 
   it("renders registered media with localized text and rights information", () => {
     const figureDocument: ContentDocument = {
-      blocks: [{
-        id: "voorbeeldfoto",
-        type: "figure",
-        depth: null,
-        source_refs: [],
-        variant: null,
-        media_id: mediaAsset.id,
-        nodes: [],
-      }],
+      blocks: [
+        {
+          id: "voorbeeldfoto",
+          type: "figure",
+          depth: null,
+          source_refs: [],
+          variant: null,
+          media_id: mediaAsset.id,
+          nodes: [],
+        },
+      ],
     };
 
     const html = renderToStaticMarkup(
-      <ContentDocumentView document={figureDocument} locale="nl" media={[mediaAsset]} sources={[]} />,
+      <ContentDocumentView
+        document={figureDocument}
+        locale="nl"
+        media={[mediaAsset]}
+        sources={[]}
+      />,
     );
 
     expect(html).toContain("Een voorbeeldwijngaard");

@@ -29,12 +29,7 @@ describe("canonical content routing", () => {
 
   it("resolves every generated entity route and rejects mismatched routes", () => {
     for (const entity of getEntities()) {
-      expect(
-        getEntityByRoute(
-          ENTITY_ROUTE_SEGMENTS[entity.type],
-          entity.slugs.nl,
-        ),
-      ).toBe(entity);
+      expect(getEntityByRoute(ENTITY_ROUTE_SEGMENTS[entity.type], entity.slugs.nl)).toBe(entity);
     }
     expect(getEntityByRoute("producers", "bordeaux")).toBeUndefined();
     expect(getEntityByRoute("unknown", "bordeaux")).toBeUndefined();
@@ -63,8 +58,9 @@ describe("canonical content routing", () => {
       ]),
     );
     expect(getRelationsForEntity("region.unknown")).toEqual([]);
-    expect(getNarrativeBacklinks("region.bordeaux").map((item) => item.id))
-      .toEqual(["narrative.regional.bordeaux-proof"]);
+    expect(getNarrativeBacklinks("region.bordeaux").map((item) => item.id)).toEqual([
+      "narrative.regional.bordeaux-proof",
+    ]);
   });
 
   it("derives Learn narrative routes from canonical metadata", () => {
@@ -79,22 +75,14 @@ describe("canonical content routing", () => {
   it("resolves every generated narrative route and rejects unknown families", () => {
     for (const narrative of getNarratives()) {
       expect(
-        getNarrativeByRoute(
-          NARRATIVE_ROUTE_SEGMENTS[narrative.type],
-          narrative.slugs.nl,
-        ),
+        getNarrativeByRoute(NARRATIVE_ROUTE_SEGMENTS[narrative.type], narrative.slugs.nl),
       ).toBe(narrative);
     }
-    expect(
-      getNarrativeByRoute("lessons", "bordeaux-pipeline-proef"),
-    ).toBeUndefined();
+    expect(getNarrativeByRoute("lessons", "bordeaux-pipeline-proef")).toBeUndefined();
   });
 
   it("keeps all canonical generated routes unique", () => {
-    const routes = [
-      ...getEntities().map(entityHref),
-      ...getNarratives().map(narrativeHref),
-    ];
+    const routes = [...getEntities().map(entityHref), ...getNarratives().map(narrativeHref)];
     expect(new Set(routes).size).toBe(routes.length);
   });
 });

@@ -34,7 +34,13 @@ Zie daarna `docs/content-authoring.md`, `docs/content-blocks.md` en
 ## Validation
 
 ```bash
-npm run typecheck
-npm run lint
-npm test
+npm run format
+npm run check
 ```
+
+Prettier is de repositoryformatter voor code, CSS, JSON en YAML. Markdown is
+uitgesloten omdat canonical content eigen directives gebruikt die een algemene
+Markdownformatter niet veilig begrijpt. De meegeleverde VS Code-instellingen
+gebruiken dezelfde formatter automatisch bij opslaan. `npm run check` controleert
+formatting, lint, types en unit-tests; draai daarnaast `npm run test:e2e` wanneer
+een wijziging routing, rendering, responsive gedrag of een andere browserflow raakt.

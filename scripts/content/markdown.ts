@@ -1,10 +1,4 @@
-import type {
-  BlockContent,
-  ListItem,
-  PhrasingContent,
-  RootContent,
-  Table,
-} from "mdast";
+import type { BlockContent, ListItem, PhrasingContent, RootContent, Table } from "mdast";
 import remarkDirective from "remark-directive";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
@@ -86,10 +80,7 @@ function parseText(value: string, state: ParseState): ContentInlineNode[] {
         !entityIdPattern.test(entityId) ||
         (label !== null && label.trim().length === 0)
       ) {
-        issue(
-          state,
-          `invalid entity link '[[${body}]]'; use [[entity.id]] or [[entity.id|Label]]`,
-        );
+        issue(state, `invalid entity link '[[${body}]]'; use [[entity.id]] or [[entity.id|Label]]`);
         pushText(value.slice(start, end + 2));
       } else {
         nodes.push({ type: "entity-link", entity_id: entityId, label });
@@ -111,10 +102,7 @@ function parseText(value: string, state: ParseState): ContentInlineNode[] {
     const locator = separator < 0 ? null : body.slice(separator + 1).trim();
     const sourceResult = sourceIdSchema.safeParse(sourceId);
     if (!sourceResult.success || (separator >= 0 && locator?.length === 0)) {
-      issue(
-        state,
-        `invalid citation '[@${body}]'; use [@source.id] or [@source.id; locator]`,
-      );
+      issue(state, `invalid citation '[@${body}]'; use [@source.id] or [@source.id; locator]`);
       pushText(value.slice(start, end + 1));
     } else {
       const citation: ContentCitationNode = {
@@ -131,10 +119,7 @@ function parseText(value: string, state: ParseState): ContentInlineNode[] {
   return nodes;
 }
 
-function normalizeInline(
-  nodes: PhrasingContent[],
-  state: ParseState,
-): ContentInlineNode[] {
+function normalizeInline(nodes: PhrasingContent[], state: ParseState): ContentInlineNode[] {
   return nodes.flatMap((node): ContentInlineNode[] => {
     switch (node.type) {
       case "text":
@@ -149,15 +134,20 @@ function normalizeInline(
       case "link": {
         const allowed = /^(?:https?:|mailto:|\/|#)/.test(node.url);
         if (!allowed) {
-          issue(state, `link URL '${node.url}' must be http(s), mailto, root-relative, or an anchor`);
+          issue(
+            state,
+            `link URL '${node.url}' must be http(s), mailto, root-relative, or an anchor`,
+          );
           return normalizeInline(node.children, state);
         }
-        return [{
-          type: "link",
-          url: node.url,
-          title: node.title ?? null,
-          children: normalizeInline(node.children, state),
-        }];
+        return [
+          {
+            type: "link",
+            url: node.url,
+            title: node.title ?? null,
+            children: normalizeInline(node.children, state),
+          },
+        ];
       }
       default:
         issue(state, `unsupported inline Markdown node '${node.type}'`);
@@ -196,18 +186,22 @@ function normalizeBlocks(
           issue(state, `heading level H${node.depth} is not allowed; use H2 or H3`);
           return [];
         }
-        return [{
-          type: "heading",
-          depth: node.depth,
-          children: normalizeInline(node.children, state),
-        }];
+        return [
+          {
+            type: "heading",
+            depth: node.depth,
+            children: normalizeInline(node.children, state),
+          },
+        ];
       case "list":
-        return [{
-          type: "list",
-          ordered: node.ordered ?? false,
-          start: node.start ?? null,
-          children: node.children.map((child) => normalizeListItem(child, state)),
-        }];
+        return [
+          {
+            type: "list",
+            ordered: node.ordered ?? false,
+            start: node.start ?? null,
+            children: node.children.map((child) => normalizeListItem(child, state)),
+          },
+        ];
       case "blockquote":
         return [{ type: "blockquote", children: normalizeBlocks(node.children, state) }];
       case "table":
@@ -221,10 +215,11 @@ function normalizeBlocks(
 
 function hasCitation(nodes: ContentBlockNode[]): boolean {
   const inlineHasCitation = (inline: ContentInlineNode[]): boolean =>
-    inline.some((node) =>
-      node.type === "citation" ||
-      ((node.type === "emphasis" || node.type === "strong" || node.type === "link") &&
-        inlineHasCitation(node.children)),
+    inline.some(
+      (node) =>
+        node.type === "citation" ||
+        ((node.type === "emphasis" || node.type === "strong" || node.type === "link") &&
+          inlineHasCitation(node.children)),
     );
 
   return nodes.some((node) => {
@@ -252,12 +247,7 @@ function validateBlockShape(block: ContentBlock, state: ParseState): void {
   }
   if (block.type === "objectives") {
     const [list] = block.nodes;
-    if (
-      block.nodes.length !== 1 ||
-      !list ||
-      list.type !== "list" ||
-      list.ordered
-    ) {
+    if (block.nodes.length !== 1 || !list || list.type !== "list" || list.ordered) {
       issue(state, `objectives '${block.id}' must contain one unordered list`);
     }
   }
@@ -295,17 +285,16 @@ export function parseContentDocument(
   locale: Locale,
 ): ParsedContentDocument {
   const state: ParseState = { file, locale, issues: [], mentions: [], citations: [] };
-  const root = unified()
-    .use(remarkParse)
-    .use(remarkDirective)
-    .use(remarkGfm)
-    .parse(markdown);
+  const root = unified().use(remarkParse).use(remarkDirective).use(remarkGfm).parse(markdown);
   const blocks: ContentBlock[] = [];
   const seenIds = new Set<string>();
 
   for (const child of root.children) {
     if (child.type !== "containerDirective") {
-      issue(state, `content must consist only of top-level container directives; found '${child.type}'`);
+      issue(
+        state,
+        `content must consist only of top-level container directives; found '${child.type}'`,
+      );
       continue;
     }
     if (!CONTENT_BLOCK_TYPES.includes(child.name as ContentBlockType)) {
@@ -330,16 +319,12 @@ export function parseContentDocument(
     seenIds.add(id);
 
     const depthValue = attributes.depth ?? null;
-    const depth = depthValue && DEPTHS.includes(depthValue as Depth)
-      ? depthValue as Depth
-      : null;
+    const depth = depthValue && DEPTHS.includes(depthValue as Depth) ? (depthValue as Depth) : null;
     if (depthValue && depth === null) {
       issue(state, `${type} '${id}' has unsupported depth '${depthValue}'`);
     }
 
-    const sourceRefs = (attributes.source_refs ?? "")
-      .split(/\s+/)
-      .filter(Boolean);
+    const sourceRefs = (attributes.source_refs ?? "").split(/\s+/).filter(Boolean);
     for (const sourceRef of sourceRefs) {
       if (!sourceIdSchema.safeParse(sourceRef).success) {
         issue(state, `${type} '${id}' has invalid source reference '${sourceRef}'`);
@@ -350,9 +335,10 @@ export function parseContentDocument(
     }
 
     const variantValue = attributes.variant ?? null;
-    const variant = variantValue && CAVEAT_VARIANTS.includes(variantValue as CaveatVariant)
-      ? variantValue as CaveatVariant
-      : null;
+    const variant =
+      variantValue && CAVEAT_VARIANTS.includes(variantValue as CaveatVariant)
+        ? (variantValue as CaveatVariant)
+        : null;
     if (variantValue && variant === null) {
       issue(state, `${type} '${id}' has unsupported caveat variant '${variantValue}'`);
     }
@@ -361,9 +347,8 @@ export function parseContentDocument(
     }
 
     const mediaIdValue = attributes.media_id ?? null;
-    const mediaId = mediaIdValue && mediaIdSchema.safeParse(mediaIdValue).success
-      ? mediaIdValue
-      : null;
+    const mediaId =
+      mediaIdValue && mediaIdSchema.safeParse(mediaIdValue).success ? mediaIdValue : null;
     if (mediaIdValue && mediaId === null) {
       issue(state, `${type} '${id}' has invalid media ID '${mediaIdValue}'`);
     }
@@ -433,8 +418,7 @@ export function validatePublicationStructure(
 ): string[] {
   const blocks = document.blocks;
   const issues: string[] = [];
-  const count = (type: ContentBlockType) =>
-    blocks.filter((block) => block.type === type).length;
+  const count = (type: ContentBlockType) => blocks.filter((block) => block.type === type).length;
 
   if (count("summary") !== 1 || blocks[0]?.type !== "summary") {
     issues.push(`${file}: active ${kind} must start with exactly one summary block`);

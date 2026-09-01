@@ -4,9 +4,7 @@ import { RELATION_PRESENTATIONS, relationLabel } from "./relations";
 
 describe("relationship presentation", () => {
   it("defines localized forward and inverse labels for every relationship", () => {
-    expect(Object.keys(RELATION_PRESENTATIONS).sort()).toEqual(
-      [...RELATION_TYPES].sort(),
-    );
+    expect(Object.keys(RELATION_PRESENTATIONS).sort()).toEqual([...RELATION_TYPES].sort());
 
     for (const type of RELATION_TYPES) {
       expect(RELATION_PRESENTATIONS[type].forward.nl).not.toBe("");

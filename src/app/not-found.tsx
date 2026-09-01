@@ -8,7 +8,9 @@ export default function NotFound() {
         <h1>Deze pagina bestaat niet.</h1>
         <div className="page-intro-copy">
           <p>We kunnen de pagina die je zoekt niet vinden.</p>
-          <Link className="text-link" href="/explore">Ga naar Ontdekken →</Link>
+          <Link className="text-link" href="/explore">
+            Ga naar Ontdekken →
+          </Link>
         </div>
       </div>
     </main>
