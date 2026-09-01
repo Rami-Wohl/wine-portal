@@ -1,6 +1,6 @@
 id: classification.bordeaux-1855
 type: classification
-status: draft
+status: active
 canonical_name: Bordeaux 1855
 names:
   nl: Bordeaux 1855
@@ -13,4 +13,7 @@ locales:
   en: overview.en.md
 relations: []
 assertions: []
-source_refs: []
+source_refs:
+  - source.gcc1855-classification-overview
+depth: foundation
+last_reviewed: 2026-09-01

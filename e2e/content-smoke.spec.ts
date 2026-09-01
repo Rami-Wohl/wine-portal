@@ -43,7 +43,7 @@ test("active entity content flows comfortably across desktop and mobile", async 
   await expect(
     page.getByRole("heading", {
       level: 2,
-      name: "Regio en appellation zijn niet hetzelfde",
+      name: "Een haven met een wijnland erachter",
     }),
   ).toBeVisible();
   await expect(page.getByRole("link", { name: "cabernet sauvignon" })).toHaveAttribute(
@@ -62,7 +62,7 @@ test("active entity content flows comfortably across desktop and mobile", async 
   });
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
   expect(dimensions.headerHeight).toBeLessThan(260);
-  expect(dimensions.figureTop).toBeLessThan(800);
+  expect(dimensions.figureTop).toBeLessThan(1000);
 });
 
 test("knowledge depth progressively reveals additional Bordeaux content", async ({ page }) => {
@@ -73,40 +73,35 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
   });
   const intermediateHeading = page.getByRole("heading", {
     level: 2,
-    name: "Assemblage: bouwen met losse delen",
+    name: "Wanneer losse partijen één wijn worden",
   });
-  const advancedHeading = page.getByRole("heading", {
-    level: 2,
-    name: "Een cuvée lezen op drie schalen",
-  });
+  const advancedBlock = page.locator("#waar-vuistregels-breken");
 
   await expect(depthControl.getByRole("button", { name: "Basis" })).toHaveAttribute(
     "aria-pressed",
     "true",
   );
   await expect(intermediateHeading).toBeHidden();
-  await expect(advancedHeading).toBeHidden();
+  await expect(advancedBlock).toBeHidden();
 
   await depthControl.getByRole("button", { name: "Verdieping" }).click();
   await expect(intermediateHeading).toBeVisible();
-  await expect(advancedHeading).toBeHidden();
+  await expect(advancedBlock).toBeHidden();
 
   await depthControl.getByRole("button", { name: "Gevorderd" }).click();
   await expect(intermediateHeading).toBeVisible();
-  await expect(advancedHeading).toBeVisible();
-  await expect(page.getByText("Belangrijke uitzondering")).toBeVisible();
+  await expect(advancedBlock).toBeVisible();
+  await expect(advancedBlock.getByText("Bewuste vereenvoudiging")).toBeVisible();
 
   await depthControl.getByRole("button", { name: "Basis" }).click();
   await expect(intermediateHeading).toBeHidden();
-  await expect(advancedHeading).toBeHidden();
+  await expect(advancedBlock).toBeHidden();
 });
 
 test("a deep block anchor reveals the required knowledge depth", async ({ page }) => {
-  await page.goto("/regions/bordeaux#assemblage-op-drie-schalen");
+  await page.goto("/regions/bordeaux#waar-vuistregels-breken");
 
-  await expect(
-    page.getByRole("heading", { level: 2, name: "Een cuvée lezen op drie schalen" }),
-  ).toBeVisible();
+  await expect(page.locator("#waar-vuistregels-breken")).toBeVisible();
   await expect(page.getByRole("button", { name: "Gevorderd" })).toHaveAttribute(
     "aria-pressed",
     "true",
@@ -118,9 +113,7 @@ test("the full document remains readable without JavaScript", async ({ browser }
   const page = await context.newPage();
   await page.goto("/regions/bordeaux");
 
-  await expect(
-    page.getByRole("heading", { level: 2, name: "Een cuvée lezen op drie schalen" }),
-  ).toBeVisible();
+  await expect(page.locator("#waar-vuistregels-breken")).toBeVisible();
   await expect(page.getByRole("group", { name: "Kies hoeveel detail je wilt zien" })).toBeHidden();
 
   await context.close();

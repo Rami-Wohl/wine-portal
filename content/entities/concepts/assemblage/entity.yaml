@@ -1,0 +1,21 @@
+id: concept.assemblage
+type: concept
+status: active
+canonical_name: Assemblage
+names:
+  nl: Assemblage
+  en: Blending
+slugs:
+  nl: assemblage
+  en: blending
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.oiv-blending-code
+  - source.eu-wine-coupage-regulation-2019
+  - source.civb-bordeaux-blending
+depth: foundation
+last_reviewed: 2026-09-01

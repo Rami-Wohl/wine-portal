@@ -2,6 +2,83 @@
 
 Canonical content lives in self-contained packages. Generated indexes live under `src/generated/content/` and must never be edited manually.
 
+## Begin met een contentbrief, niet met proza
+
+Een nieuwe entity, narrative of ingrijpende herschrijving begint met een tijdelijke
+contentbrief onder `editorial/briefs/<package-id>.md`. Kleine correcties en zuivere
+bronupdates hebben geen nieuwe brief nodig. De brief is een reviewdocument: hij
+wordt niet door de applicatie gelezen en is nooit een tweede canonical feitenbron.
+
+De brief wordt goedgekeurd voordat de Nederlandse Markdownbody wordt geschreven.
+Hij bevat minimaal:
+
+1. **Veronderstelde voorkennis** — wat mag de pagina bij binnenkomst wel en niet
+   bekend veronderstellen?
+2. **Paginabelofte en scope** — wat moet een lezer na afloop begrijpen, en wat
+   hoort bewust op een andere entity of narrative?
+3. **Lezersvragen** — de concrete vragen waarop de pagina antwoord moet geven.
+4. **Dekkingsmatrix** — per noodzakelijke dimensie: op deze pagina behandelen,
+   via een andere entity ontsluiten, bewust weglaten of nog onderzoeken.
+5. **Sectie-outline** — per block een werktitel, hoofdgedachte, kennisdiepte,
+   reden voor die diepte, benodigde bronnen, begrippen/links en eventuele visual.
+6. **Dependencyplan** — wat vóór publicatie echt moet bestaan en welke child
+   entities, narratives of visuals zonder kwaliteitsverlies later mogen volgen.
+7. **Begrippenplan** — jargon bij eerste gebruik in gewone taal uitleggen en
+   alleen een entity maken wanneer het begrip zelfstandig vindbaar en herbruikbaar
+   moet zijn.
+8. **Bronnenplan** — welk soort bron iedere claimfamilie nodig heeft en welke
+   onderzoeksgaten nog openstaan.
+9. **Claimplan** — per block de twee tot vier centrale uitspraken die onderzoek
+   moet kunnen dragen, hun passende bronsoort en hun status (`open`, `supported`
+   of `omit`). Dit staat los van de lijst met gevonden bronnen.
+10. **Visualvragen** — welke concrete informatie ieder voorgesteld beeld sneller
+    of duidelijker moet overbrengen dan tekst alleen.
+11. **Publication gate** — de controle waaraan outline, research, dependencies,
+    NL/EN en uiteindelijke presentatie vóór publicatie moeten voldoen.
+
+Een brief mag niet uitgroeien tot een tweede knowledge base. Researchnotities,
+citaten en verzamelingen geverifieerde feiten blijven er niet langdurig in staan.
+Zodra een claim is onderbouwd, verhuist de bron naar `data/sources/` en de kennis
+naar assertions, relaties of canonical Markdown. De brief bewaart alleen de
+argumentatiestructuur, beslissingen, statussen en nog open vragen.
+
+### Kennisdiepte toekennen
+
+Diepte beschrijft de functie van informatie voor de lezer, niet hoe technisch een
+woord klinkt:
+
+- `foundation`: zonder dit punt begrijpt of herkent de lezer het onderwerp
+  verkeerd, of kan die niet zinvol verder navigeren;
+- `intermediate`: verklaart waarom hoofdpatronen ontstaan of binnen het onderwerp
+  verschillen;
+- `advanced`: onderzoekt uitzonderingen, grenzen van bekende modellen en
+  historische, juridische of technische wisselwerking;
+- `specialist`: vraagt primaire vakdocumenten, precieze methoden of een debat
+  tussen deskundigen en hoort alleen op de overzichtspagina als dat werkelijk
+  nodig is.
+
+Een essentieel vakwoord kan dus `foundation` zijn, mits het direct wordt uitgelegd.
+Een detail wordt niet automatisch waardevol doordat het `advanced` heet.
+
+### Wanneer is een outline volledig genoeg?
+
+“Volledig” betekent niet dat alle feiten over het onderwerp op één pagina staan.
+De outline is klaar wanneer iedere kernvraag van de beoogde lezer:
+
+- op de pagina wordt beantwoord;
+- bewust naar een concrete entity of narrative wordt uitbesteed; of
+- als zichtbaar onderzoeksgat is gemarkeerd.
+
+Daarnaast mag geen deelonderwerp de pagina domineren voordat identiteit, plaats,
+historische betekenis, interne verscheidenheid en relevantie zijn afgedekt. Iedere
+sectie heeft een eigen taak; herhaling en tekst die alleen volledigheid simuleert
+worden geschrapt.
+
+Na goedkeuring volgt de volgorde: bronnen verifiëren en registreren, benodigde
+claims als `supported` of `omit` besluiten, verplichte dependencies aanmaken,
+Nederlandse tekst schrijven en reviewen, de Engelse
+lokalisatie schrijven en reviewen, daarna pas buildvalidatie en publicatie.
+
 ## Add an entity
 
 Generate a package:

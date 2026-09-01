@@ -1,66 +1,95 @@
-:::summary{#orientatie depth="foundation" source_refs="source.inao-bordeaux-product-page source.civb-bordeaux-grape-varieties"}
-Bordeaux begins with water. In the French department of Gironde, the wine region unfolds around the Dordogne, the Garonne, and the broad estuary formed where the rivers meet. [@source.inao-bordeaux-product-page] Behind that one name lies not a single wine, but a landscape of different appellations, colours, grape combinations, and approaches to winemaking.
+:::summary{#orientatie depth="foundation" source_refs="source.gironde-estuary-landscape-atlas source.lavaud-bordeaux-vineyard-landscape-2014"}
+Trying to memorise Bordeaux as one red wine is the quickest way to lose the thread. Bordeaux is a broad wine landscape in which city, vineyards and water have drawn towards one another for centuries. The Garonne and Dordogne meet at the Bec d’Ambès; there the Gironde estuary begins, opening farther downstream towards the Atlantic Ocean. [@source.gironde-estuary-landscape-atlas]
+
+Those waterways are no footnote. They make the region easier to read, and they connected its vineyards to the port city that carried their name around the world. [@source.lavaud-bordeaux-vineyard-landscape-2014]
 :::
 
 :::figure{#saint-emilion-panorama media_id="media.bordeaux.saint-emilion-panorama"}
 :::
 
-:::section{#regio-en-appellation depth="foundation" source_refs="source.inao-bordeaux-product-page"}
-## Region and appellation are not the same
+:::section{#waarom-bordeaux-geschiedenis-maakte depth="foundation" source_refs="source.boutoulle-bordelais-wine-trade-2000 source.lavaud-bordeaux-vineyard-landscape-2014"}
+## A port with wine country behind it
 
-The name **Bordeaux** does double duty. On this page it means the wider wine region; it is also the name of the individual protected designation AOP Bordeaux. INAO describes that AOP as an appellation for still red, white, and rosé wines, with its own geographical and legal product specification. [@source.inao-bordeaux-product-page]
+Bordeaux’s history does not begin with a ranking of famous châteaux. By the late eleventh and early thirteenth centuries, winegrowing, urban power and trade were already closely intertwined here. Connections with England gave the wine trade an important direction, while the port linked the city and its surrounding countryside to wider commercial networks. [@source.boutoulle-bordelais-wine-trade-2000]
 
-The distinction matters: a rule for AOP Bordeaux does not automatically apply to every other appellation within the wider Bordeaux region. Appellation rules therefore belong to their own entities; this regional page provides shared orientation.
+That does not make Bordeaux a simple success story in which the port explains everything. The region’s identity grew from a long interaction between city, river traffic, trade, vineyards and the people who shaped that landscape. [@source.lavaud-bordeaux-vineyard-landscape-2014] The 1855 classification is a much later chapter, not the beginning.
 :::
 
-:::section{#rivieren-als-orientatie depth="foundation" source_refs="source.inao-bordeaux-product-page"}
-## Rivers as a first orientation
+:::section{#een-naam-veel-wijnen depth="foundation" source_refs="source.inao-aop-overview source.boagri-bordeaux-specification-2025 source.civb-bordeaux-wine-styles"}
+## One name, many Bordeaux wines
 
-The Dordogne drains the northern basin and the Garonne the southern basin. They meet at the Bec d’Ambès and form the Gironde estuary. [@source.inao-bordeaux-product-page] This water system helps situate many familiar subregions.
+On this page, **Bordeaux** means the broad wine region. On a label, Bordeaux can also be the name of a specific PDO: a legally protected designation of origin with a defined area and its own production rules. [@source.inao-aop-overview] The rules of Bordeaux PDO therefore do not automatically apply to Pauillac, Sauternes or another appellation within the wider region.
 
-It is an orientation model, not a legal boundary description. Legal production areas are defined per appellation. Oenocademy will publish a factual map only when verified geometry with traceable provenance is available.
+Bordeaux is not a single kind of wine in the glass either. The regional family includes red, dry and sweet white, rosé and the deeper-coloured rosé style clairet, as well as sparkling Crémant de Bordeaux. [@source.boagri-bordeaux-specification-2025] [@source.civb-bordeaux-wine-styles] The type of wine is therefore a better first question than: “What does Bordeaux taste like?”
 :::
 
-:::section{#druiven-en-assemblage depth="foundation" source_refs="source.civb-bordeaux-grape-varieties"}
-## Grapes and blending
+:::section{#wegwijs-tussen-de-wateren depth="foundation" source_refs="source.civb-bordeaux-designations source.gironde-estuary-landscape-atlas"}
+## Finding your way by the water
 
-The Bordeaux wine council identifies six principal grapes as foundations of the region’s wine production: merlot, [[grape.cabernet-sauvignon|cabernet sauvignon]], and cabernet franc for red wines; sauvignon blanc, sémillon, and muscadelle for white wines. Smaller amounts of supplementary varieties are also grown. [@source.civb-bordeaux-grape-varieties]
+Some names — Bordeaux, Bordeaux Supérieur and Crémant de Bordeaux — stretch as broad origin layers across the region. Five families are more useful for spatial orientation:
 
-Many Bordeaux wines are blends of several grape varieties. [@source.civb-bordeaux-grape-varieties] The permitted or important grapes still vary by appellation and wine. The regional list is therefore a starting point, not a recipe for every bottle.
+- **Médoc** lies north-west of the city, between the Atlantic coast and the Gironde estuary.
+- **Graves and Sauternes** lie farther south, along the Garonne.
+- **Entre-deux-Mers and the neighbouring slopes** occupy the land between the Garonne and Dordogne.
+- **Saint-Émilion, Pomerol and Fronsac** lie around the Dordogne east of Bordeaux.
+- **Blaye and Bourg** look out over the estuary from its north-eastern side.
+
+The Bordeaux wine council uses similar groups to make its appellations easier to navigate. [@source.civb-bordeaux-designations] Treat them as signposts, not five legal compartments. Even “left bank” and “right bank” only become meaningful when it is clear which river or part of the estuary is being discussed.
 :::
 
-:::section{#assemblage-als-keuzes depth="intermediate" source_refs="source.civb-bordeaux-grape-varieties source.civb-bordeaux-blending"}
-## Blending: building with separate parts
+:::section{#druiven-met-verschillende-rollen depth="foundation" source_refs="source.civb-bordeaux-grape-varieties source.boagri-bordeaux-specification-2025"}
+## Grapes in red and white
 
-A blend does not begin with percentages on a label, but with components that have each followed their own course. The CIVB describes grapes generally being fermented separately before they are tasted and brought together. A cuvée may combine not only different varieties, but also lots from different parcels or terroirs. [@source.civb-bordeaux-blending]
+For red Bordeaux, Merlot, [[grape.cabernet-sauvignon|Cabernet Sauvignon]] and Cabernet Franc are the three most useful names to learn first. For white Bordeaux, they are Sauvignon Blanc, Sémillon and Muscadelle. [@source.civb-bordeaux-grape-varieties] That division immediately corrects a stubbornly narrow picture: Bordeaux is not just red Cabernet wine.
 
-That makes the six principal regional grapes a palette rather than a fixed recipe. According to the Bordeaux wine council, every grape has its own characteristics and preferences for terroir and microclimate; the final wine emerges from choosing which components complement one another in that particular cuvée. [@source.civb-bordeaux-grape-varieties]
+The six are a memory aid, not a closed legal list. The current Bordeaux PDO specification also names supplementary varieties and others permitted under conditions. [@source.boagri-bordeaux-specification-2025] Which grape is actually permitted, planted or decisive only becomes clear at the level of the particular appellation and wine.
 :::
 
-:::section{#assemblage-op-drie-schalen depth="advanced" source_refs="source.civb-bordeaux-blending"}
-## Reading a cuvée at three scales
+:::section{#zo-lees-je-een-bordeaux depth="foundation" source_refs="source.dgccrf-wine-labels-2025"}
+## Begin with what makes the bottle specific
 
-To understand a Bordeaux blend in depth, look beyond the names of the grapes. Three scales interact:
+First find the protected origin and the type of wine on the label. Then look at the name under which the wine is sold and who bottled it. Vintage and grape variety are useful when shown, but they are not compulsory on every bottle. [@source.dgccrf-wine-labels-2025]
 
-1. **Variety:** each grape offers its own structural and aromatic possibilities.
-2. **Lot:** separately vinified grapes or parcels give the winemaker material from which to select.
-3. **Vintage:** differences in ripeness and expression change which combination proves convincing in a given year.
-
-The CIVB therefore presents blending as a yearly process of tasting, selecting, and adjusting. [@source.civb-bordeaux-blending] Seen this way, a blend percentage is the outcome of decisions; it is not by itself a complete explanation of style or quality.
-:::
-
-:::caveat{#assemblage-is-geen-universele-regel depth="advanced" variant="exception" source_refs="source.civb-bordeaux-blending"}
-Blending is characteristic of Bordeaux, but not every Bordeaux wine is a blend. The CIVB itself notes that the region also produces single-varietal cuvées. [@source.civb-bordeaux-blending] The appellation and the specific wine therefore remain more useful than a broad regional rule of thumb.
+Each step makes “Bordeaux” more concrete: from region to appellation, from appellation to a particular wine and maker, and from there to the vintage. A classification is another layer again; it replaces none of those steps.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
-Bordeaux is not one wine style or one appellation but a connected wine region. Understanding begins by separating region, appellation, grapes, and producer.
+Understanding Bordeaux is not about memorising one profile. It is about finding the next, more precise name: which kind of wine, which appellation, which wine, which maker and which vintage?
 :::
 
-:::caveat{#reikwijdte-van-dit-overzicht depth="foundation" variant="simplification"}
-This overview deliberately provides only the regional frame. It does not claim to define the precise boundaries, rules, soils, or style of every appellation, and it does not fill gaps in geographic data.
+:::section{#landschap-klimaat-en-bodem depth="intermediate" source_refs="source.brgm-bordeaux-geology-2022 source.gironde-estuary-landscape-atlas"}
+## A maritime background, not one uniform soil
+
+The nearby Atlantic gives Bordeaux a predominantly oceanic setting. Beneath that shared climate, however, lies a geological mosaic. France’s geological survey distinguishes, in broad terms, limestone and more or less clay-rich rocks on plateaux, alongside river terraces containing gravel, pebbles and sand. The ocean, the Garonne, the Dordogne and their tributaries left different sediments over time. [@source.brgm-bordeaux-geology-2022]
+
+This is why a simple formula such as “gravel on the left, clay on the right” falls short. Soil, position and water vary within both banks and even within appellations. They help us ask more focused questions, but they do not directly predict aroma, quality or the best grape.
 :::
 
-:::in-the-glass{#etiket-als-startpunt depth="foundation" source_refs="source.inao-bordeaux-product-page source.civb-bordeaux-grape-varieties"}
-The name Bordeaux alone does not predict how a wine will taste. Start with the specific appellation and wine colour, then consider the grape composition, producer, and vintage. This uses the region as context without treating regional patterns as a guarantee for one glass.
+:::section{#wijn-samenstellen depth="intermediate" source_refs="source.oiv-blending-code source.civb-bordeaux-blending source.boagri-bordeaux-specification-2025"}
+## When separate lots become one wine
+
+A winemaker can bring separately made wines or lots together into the final composition. Only after that plain explanation does the technical word help: this is called [[concept.assemblage|blending]]. [@source.oiv-blending-code]
+
+In Bordeaux, such components may differ by grape variety or parcel, but a blend need not contain several varieties. [@source.civb-bordeaux-blending] Each appellation also sets its own room for manoeuvre; the Bordeaux PDO specification, for example, contains concrete blending rules for certain kinds of wine. [@source.boagri-bordeaux-specification-2025] The written ratio is therefore the outcome of choices, not a complete flavour recipe.
+:::
+
+:::comparison{#appellations-zijn-geen-classificaties depth="intermediate" source_refs="source.inao-aop-overview source.gcc1855-classification-overview"}
+## Appellation and classification side by side
+
+| | Appellation | Classification |
+| --- | --- | --- |
+| Central question | Where does this wine come from, under which production rules? | Which wine or estate belongs to this particular ranking or recognition system? |
+| Basis | Protected name, defined area and product specification | A list with its own scope, criteria, levels and history |
+| Bordeaux example | Bordeaux PDO, Pauillac or Sauternes | [[classification.bordeaux-1855]] |
+| Does not automatically tell you | How good or enjoyable one particular bottle will be | That all Bordeaux wines or appellations have been ranked |
+
+The 1855 classification covers a defined group of red growths, chiefly from the Médoc, and sweet white growths from Sauternes and Barsac. [@source.gcc1855-classification-overview] Other parts of Bordeaux do not simply fall under it and may have systems of their own.
+:::
+
+:::caveat{#waar-vuistregels-breken depth="advanced" variant="simplification" source_refs="source.civb-bordeaux-designations source.brgm-bordeaux-geology-2022 source.civb-bordeaux-grape-varieties source.gcc1855-classification-overview"}
+Banks, grapes, soils and classifications are excellent ways in, but poor final conclusions. None independently predicts the style or quality of a bottle. For precise rules, look to the appellation; for choices, to the wine and maker; for conditions, to place and vintage; and for rank, to the specific classification system.
+:::
+
+:::in-the-glass{#etiket-als-startpunt depth="foundation" source_refs="source.dgccrf-wine-labels-2025"}
+Treat “Bordeaux” on a bottle as the start of an investigation, not as a tasting note. Find the more precise origin, the kind of wine, the maker and — when it is shown — the vintage. A large, famous name then becomes information you can use to choose, compare and keep learning.
 :::

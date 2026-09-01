@@ -14,8 +14,18 @@ locales:
 relations: []
 assertions: []
 source_refs:
-  - source.inao-bordeaux-product-page
+  - source.gironde-estuary-landscape-atlas
+  - source.boutoulle-bordelais-wine-trade-2000
+  - source.lavaud-bordeaux-vineyard-landscape-2014
+  - source.inao-aop-overview
+  - source.boagri-bordeaux-specification-2025
+  - source.civb-bordeaux-wine-styles
+  - source.civb-bordeaux-designations
   - source.civb-bordeaux-grape-varieties
+  - source.dgccrf-wine-labels-2025
+  - source.brgm-bordeaux-geology-2022
+  - source.oiv-blending-code
   - source.civb-bordeaux-blending
+  - source.gcc1855-classification-overview
 depth: foundation
 last_reviewed: 2026-09-01
