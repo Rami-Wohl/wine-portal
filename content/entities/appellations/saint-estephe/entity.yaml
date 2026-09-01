@@ -1,0 +1,16 @@
+id: appellation.saint-estephe
+type: appellation
+status: draft
+canonical_name: Saint-Estèphe
+names:
+  nl: Saint-Estèphe
+  en: Saint-Estèphe
+slugs:
+  nl: saint-estephe
+  en: saint-estephe
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

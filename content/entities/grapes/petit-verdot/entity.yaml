@@ -1,0 +1,16 @@
+id: grape.petit-verdot
+type: grape
+status: draft
+canonical_name: Petit Verdot
+names:
+  nl: Petit Verdot
+  en: Petit Verdot
+slugs:
+  nl: petit-verdot
+  en: petit-verdot
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

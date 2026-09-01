@@ -1,0 +1,16 @@
+id: concept.courtier
+type: concept
+status: draft
+canonical_name: Courtier
+names:
+  nl: Courtier
+  en: Courtier
+slugs:
+  nl: courtier
+  en: courtier
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

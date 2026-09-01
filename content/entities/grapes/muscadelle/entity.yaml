@@ -1,0 +1,16 @@
+id: grape.muscadelle
+type: grape
+status: draft
+canonical_name: Muscadelle
+names:
+  nl: Muscadelle
+  en: Muscadelle
+slugs:
+  nl: muscadelle
+  en: muscadelle
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

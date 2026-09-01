@@ -976,6 +976,11 @@ h3 {
   gap: clamp(2.25rem, 4.5vw, 3.5rem);
   min-width: 0;
 }
+.content-section-group {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  min-width: 0;
+}
 @media (scripting: enabled) {
   .knowledge-depth-content[data-visible-depth="foundation"]
     :is(.content-depth-intermediate, .content-depth-advanced, .content-depth-specialist),
@@ -993,6 +998,14 @@ h3 {
 .content-block {
   min-width: 0;
   scroll-margin-top: 110px;
+}
+.content-block-detail {
+  padding-left: clamp(1rem, 3vw, 1.8rem);
+  border-left: 1px solid color-mix(in srgb, var(--brand) 24%, var(--line));
+}
+.content-block-detail h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
 }
 .content-block:target {
   outline: 2px solid color-mix(in srgb, var(--brand) 45%, transparent);

@@ -1,0 +1,16 @@
+id: grape.malbec
+type: grape
+status: draft
+canonical_name: Malbec
+names:
+  nl: Malbec
+  en: Malbec
+slugs:
+  nl: malbec
+  en: malbec
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

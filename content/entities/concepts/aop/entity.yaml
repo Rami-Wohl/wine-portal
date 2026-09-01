@@ -1,0 +1,16 @@
+id: concept.aop
+type: concept
+status: draft
+canonical_name: Protected designation of origin (PDO)
+names:
+  nl: Appellation d’origine protégée (AOP)
+  en: Protected designation of origin (PDO)
+slugs:
+  nl: aop
+  en: protected-designation-of-origin
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

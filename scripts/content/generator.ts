@@ -9,6 +9,9 @@ export interface GenerateEntityOptions {
   root?: string;
   type: string;
   slug: string;
+  canonicalName?: string;
+  names?: { nl: string; en: string };
+  slugs?: { nl: string; en: string };
 }
 
 function titleFromSlug(slug: string): string {
@@ -47,14 +50,16 @@ export async function generateEntityPackage(options: GenerateEntityOptions): Pro
   );
   if (await pathExists(packageDirectory))
     throw new Error(`Content package already exists: ${path.relative(root, packageDirectory)}`);
-  const starterName = titleFromSlug(options.slug);
+  const starterName = options.canonicalName ?? titleFromSlug(options.slug);
+  const names = options.names ?? { nl: starterName, en: starterName };
+  const slugs = options.slugs ?? { nl: options.slug, en: options.slug };
   const metadata = {
     id: `${type}.${options.slug}`,
     type,
     status: "draft",
     canonical_name: starterName,
-    names: { nl: starterName, en: starterName },
-    slugs: { nl: options.slug, en: options.slug },
+    names,
+    slugs,
     locales: { nl: "overview.nl.md", en: "overview.en.md" },
     relations: [],
     assertions: [],

@@ -42,6 +42,7 @@ const document: ContentDocument = {
       id: "orientatie",
       type: "summary",
       depth: "foundation",
+      parent: null,
       source_refs: [],
       variant: null,
       media_id: null,
@@ -55,7 +56,8 @@ const document: ContentDocument = {
     {
       id: "uitleg",
       type: "section",
-      depth: "intermediate",
+      depth: "foundation",
+      parent: null,
       source_refs: ["source.example"],
       variant: null,
       media_id: null,
@@ -76,6 +78,26 @@ const document: ContentDocument = {
         },
       ],
     },
+    {
+      id: "uitleg-detail",
+      type: "detail",
+      depth: "intermediate",
+      parent: "uitleg",
+      source_refs: [],
+      variant: null,
+      media_id: null,
+      nodes: [
+        {
+          type: "heading",
+          depth: 3,
+          children: [{ type: "text", value: "Meer uitleg" }],
+        },
+        {
+          type: "paragraph",
+          children: [{ type: "text", value: "Een verdiepende toelichting." }],
+        },
+      ],
+    },
   ],
 };
 
@@ -87,6 +109,9 @@ describe("ContentDocumentView", () => {
 
     expect(html).toContain('id="orientatie"');
     expect(html).toContain("<h2>Uitleg</h2>");
+    expect(html).toContain('class="content-section-group"');
+    expect(html).toContain('data-parent="uitleg"');
+    expect(html).toContain("<h3>Meer uitleg</h3>");
     expect(html).toContain('href="/regions/bordeaux"');
     expect(html).toContain('href="#source-1"');
     expect(html).toContain('aria-label="Bron 1: Example source, p. 42"');
@@ -100,6 +125,7 @@ describe("ContentDocumentView", () => {
           id: "voorbeeldfoto",
           type: "figure",
           depth: null,
+          parent: null,
           source_refs: [],
           variant: null,
           media_id: mediaAsset.id,

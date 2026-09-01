@@ -1,0 +1,16 @@
+id: concept.cuvee
+type: concept
+status: draft
+canonical_name: Cuvée
+names:
+  nl: Cuvée
+  en: Cuvée
+slugs:
+  nl: cuvee
+  en: cuvee
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

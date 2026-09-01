@@ -1,0 +1,16 @@
+id: appellation.graves
+type: appellation
+status: draft
+canonical_name: Graves
+names:
+  nl: Graves
+  en: Graves
+slugs:
+  nl: graves
+  en: graves
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

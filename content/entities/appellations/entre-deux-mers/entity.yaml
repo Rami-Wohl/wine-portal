@@ -1,0 +1,16 @@
+id: appellation.entre-deux-mers
+type: appellation
+status: draft
+canonical_name: Entre-deux-Mers AOP
+names:
+  nl: AOP Entre-deux-Mers
+  en: Entre-deux-Mers AOP
+slugs:
+  nl: entre-deux-mers-aop
+  en: entre-deux-mers-aop
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

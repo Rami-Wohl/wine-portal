@@ -1,0 +1,16 @@
+id: classification.crus-bourgeois-du-medoc
+type: classification
+status: draft
+canonical_name: Crus Bourgeois du Médoc
+names:
+  nl: Crus Bourgeois du Médoc
+  en: Crus Bourgeois du Médoc
+slugs:
+  nl: crus-bourgeois-du-medoc
+  en: crus-bourgeois-du-medoc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: region.medoc
+type: region
+status: draft
+canonical_name: Médoc
+names:
+  nl: Médoc
+  en: Médoc
+slugs:
+  nl: medoc
+  en: medoc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,678 @@
+schema_version: 1
+package_id: region.bordeaux
+archetype: region-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids:
+      - orientatie
+      - identiteit-en-schaal
+      - identiteit-wettelijke-lagen
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer Bordeaux als regio, rivierlandschap en verzameling verschillende herkomstnamen?
+      - Is het verschil tussen regio, AOP, appellation en individuele wijn vanaf het begin helder?
+    layers:
+      foundation:
+        - Plaats Bordeaux rond stad, Garonne, Dordogne, Gironde-estuarium en Atlantische invloed.
+      intermediate:
+        - Leg uit hoe culturele regio en wettelijke herkomstlagen over elkaar heen liggen.
+      advanced:
+        - Benoem waarom eenvoudige linker- en rechteroevermodellen nuttig maar begrensd zijn.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Regionale identiteit, waterwegen en ruimtelijke oriëntatie.
+        source_refs:
+          - source.gironde-estuary-landscape-atlas
+      specific_claims:
+        - claim: Een AOP is een beschermde naam met een afgebakend gebied en productieregels.
+          status: supported
+          source_refs:
+            - source.inao-aop-overview
+    review: &complete_section_review
+      outline: complete
+      nl: complete
+      en: complete
+
+  - key: historical-development
+    disposition: on-page
+    block_ids:
+      - geschiedenis-in-beweging
+      - geschiedenis-engeland-en-haven
+      - geschiedenis-water-en-medoc
+      - geschiedenis-handel-en-slavernij
+      - geschiedenis-crises-en-herstel
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk hoe stad, haven, handel en wijngaarden elkaar door de eeuwen heen vormden?
+      - Komen de Anglo-Gasconse periode, Nederlandse invloed, ontwikkeling van de Médoc, negentiende-eeuwse crises en het AOC-stelsel aan bod?
+      - Wordt de achttiende-eeuwse welvaart niet losgemaakt van koloniale handel en slavernij?
+    layers:
+      foundation:
+        - Geef de grote historische boog van handelsstad en wijnland.
+      intermediate:
+        - Verbind Engelse en Nederlandse markten met veranderingen in productie en landschap.
+      advanced:
+        - Behandel drooglegging, koloniale handelscontext, phylloxera en juridische herordening zonder oorsprongsmythen.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Middeleeuwse en vroegmoderne handelsontwikkeling.
+          - Wisselwerking tussen stad, kapitaal, landschap en wijngaarden.
+        source_refs:
+          - source.msha-bordeaux-wine-history
+          - source.lavaud-bordeaux-vineyard-landscape-2014
+      specific_claims:
+        - claim: Nederlandse ondernemers en technici speelden een gedocumenteerde rol in het droogleggen van delen van de Bas-Médoc.
+          status: supported
+          source_refs:
+            - source.medoc-marsh-drainage-1957
+        - claim: Phylloxera en fraudecrises vormden een belangrijke context voor het Franse AOC-stelsel.
+          status: supported
+          source_refs:
+            - source.inao-aoc-history
+        - claim: De achttiende-eeuwse Bordeauxse welvaart was verbonden met het koloniale en slavernijsysteem.
+          status: supported
+          source_refs:
+            - source.musee-aquitaine-bordeaux-slavery
+    review: *complete_section_review
+
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - landschap-van-water
+      - landschap-klimaat
+      - landschap-bodem-en-drainage
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer de rol van oceaan, estuarium, rivieren, reliëf en afwatering in samenhang begrijpen?
+      - Worden grind, zand, klei en kalk als gevarieerd mozaïek uitgelegd in plaats van als smaaksjabloon?
+    layers:
+      foundation:
+        - Maak het door water gevormde landschap voorstelbaar.
+      intermediate:
+        - Leg het oceanische klimaat en de betekenis van drainage en ligging uit.
+      advanced:
+        - Doorbreek de formule grind links en klei rechts met geologische variatie binnen beide oevers.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Estuariumlandschap en oceanische achtergrond.
+          - Regionale geologische variatie.
+        source_refs:
+          - source.gironde-estuary-landscape-atlas
+          - source.brgm-bordeaux-geology-2022
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: wine-families
+    disposition: on-page
+    block_ids:
+      - wijnfamilies
+      - wijnfamilies-productie
+    target_ids: []
+    completeness_questions:
+      - Komen rood, droog wit, zoet wit, rosé, clairet en mousserend als onderscheiden families aan bod?
+      - Begrijpt de lezer dat Bordeaux niet één rode stijl of één appellation is?
+    layers:
+      foundation:
+        - Introduceer alle grote wijnfamilies.
+      intermediate:
+        - Leg uit hoe herkomst, druiven en productiekeuzes binnen iedere familie variëren.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - De regionale familie van wijnkleuren en stijlen.
+        source_refs:
+          - source.civb-bordeaux-wine-styles
+      specific_claims:
+        - claim: De productspecificatie van AOP Bordeaux onderscheidt concrete toegestane wijnsoorten en regels.
+          status: supported
+          source_refs:
+            - source.boagri-bordeaux-specification-2025
+    review: *complete_section_review
+
+  - key: grape-varieties
+    disposition: on-page
+    block_ids:
+      - druiven-en-rollen
+      - druiven-keuzes-en-minderheden
+    target_ids: []
+    completeness_questions:
+      - Zijn de belangrijkste rode en witte rassen met hun regionale functie begrijpelijk gemaakt?
+      - Is duidelijk dat hoofd- en minderheidsrassen geen universeel recept voor iedere appellation vormen?
+    layers:
+      foundation:
+        - Introduceer de zes belangrijkste rode en witte rassen.
+      intermediate:
+        - Leg aanvullende rassen, rijpingsverschillen en lokale keuzes uit.
+      advanced:
+        - Plaats nieuwe aanpassingsrassen binnen juridische en klimatologische verandering zonder ze als nieuwe norm voor te stellen.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoofd- en aanvullende druivenrassen van Bordeaux.
+        source_refs:
+          - source.civb-bordeaux-grape-varieties
+      specific_claims:
+        - claim: De actuele AOP-specificatie bepaalt welke rassen en aanpassingsrassen onder voorwaarden zijn toegestaan.
+          status: supported
+          source_refs:
+            - source.boagri-bordeaux-specification-2025
+    review: *complete_section_review
+
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids:
+      - van-wijngaard-tot-kelder
+      - assemblage-en-elevage
+      - zoete-wijn-en-botrytis
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer welke keuzes regionaal herkenbaar zijn zonder één methode aan alle Bordeaux toe te schrijven?
+      - Zijn assemblage, élevage en de productie van zoete wijn in gewone taal uitgelegd en gelinkt?
+    layers:
+      foundation:
+        - Leg uit dat Bordeaux vele productiepraktijken omvat en dat appellation en maker doorslaggevend zijn.
+      intermediate:
+        - Behandel assemblage en élevage als opeenvolgende keuzes, niet als smaakformule.
+      advanced:
+        - Leg de bijzondere rol van botrytis en selectieve oogst voor zoete wijn uit.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Regionale assemblagepraktijk en de historische ontwikkeling van zoete wijn.
+        source_refs:
+          - source.civb-bordeaux-blending
+          - source.msha-bordeaux-wine-history
+      specific_claims:
+        - claim: Assemblage heeft een formele oenologische betekenis en appellations kunnen concrete mengregels stellen.
+          status: supported
+          source_refs:
+            - source.oiv-blending-code
+            - source.boagri-bordeaux-specification-2025
+    review: *complete_section_review
+
+  - key: appellation-structure
+    disposition: on-page
+    block_ids:
+      - appellations-als-navigatie
+      - appellationfamilies
+      - appellations-en-regels
+    target_ids: []
+    completeness_questions:
+      - Kan een lezer van brede regionale namen naar subregionale en gemeentelijke appellations navigeren?
+      - Wordt voorkomen dat ruimtelijke families worden voorgesteld als één uniforme wettelijke hiërarchie?
+    layers:
+      foundation:
+        - Leg het verschil uit tussen brede en preciezere herkomstnamen.
+      intermediate:
+        - Orden belangrijke appellations in herkenbare ruimtelijke families.
+      advanced:
+        - Leg uit dat iedere appellation een eigen dossier, scope en uitzonderingen heeft.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Toegankelijke groepering van Bordeaux-appellations.
+        source_refs:
+          - source.civb-bordeaux-designations
+      specific_claims:
+        - claim: Een AOP is juridisch gekoppeld aan een afgebakend gebied en productdossier.
+          status: supported
+          source_refs:
+            - source.inao-aop-overview
+    review: *complete_section_review
+
+  - key: classification-systems
+    disposition: on-page
+    block_ids:
+      - classificaties-zijn-meervoud
+      - classificatiesystemen
+      - classificaties-veranderen
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer dat Bordeaux meerdere classificaties met verschillende scopes kent?
+      - Zijn 1855, Graves, Saint-Émilion, Crus Bourgeois en Crus Artisans van elkaar onderscheiden?
+      - Is duidelijk dat classificatie niet hetzelfde is als appellation of garantie voor iedere fles?
+    layers:
+      foundation:
+        - Scheid classificatie van appellation en producentennaam.
+      intermediate:
+        - Introduceer de belangrijkste systemen en hun geografische scope.
+      advanced:
+        - Vergelijk historische fixatie, periodieke herziening en erkenningsmodellen.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Overzicht van de belangrijkste Bordeaux-classificaties.
+        source_refs:
+          - source.civb-bordeaux-classifications
+      specific_claims:
+        - claim: De classificatie van 1855 heeft een specifieke historische en geografische scope.
+          status: supported
+          source_refs:
+            - source.gcc1855-classification-overview
+        - claim: Het Saint-Émilionklassement van 2022 werd via een formele INAO-procedure vastgesteld.
+          status: supported
+          source_refs:
+            - source.inao-saint-emilion-classification-2022
+    review: *complete_section_review
+
+  - key: trade-and-institutions
+    disposition: on-page
+    block_ids:
+      - handel-en-place
+      - negociants-en-primeur
+      - wereldmarkt-en-reputatie
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer wat négociants, courtiers en de Place de Bordeaux doen?
+      - Is en primeur uitgelegd zonder te suggereren dat alle Bordeaux zo wordt verkocht?
+      - Wordt reputatie historisch gekoppeld aan handel zonder commerciële prestigeclaims te herhalen?
+    layers:
+      foundation:
+        - Verbind de havenstad met het blijvende handelsnetwerk rond wijn.
+      intermediate:
+        - Leg de rol van négociants en en-primeurverkoop uit.
+      advanced:
+        - Laat zien hoe handel, classificatie, eigendom en reputatie elkaar beïnvloedden zonder ze gelijk te stellen.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Historische handelsfunctie en het hedendaagse négocesysteem.
+        source_refs:
+          - source.msha-bordeaux-wine-history
+          - source.civb-bordeaux-wine-trade
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: labels-and-terminology
+    disposition: on-page
+    block_ids:
+      - etiket-lezen
+      - etiket-naam-en-rang
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer herkomstnaam, producent of cuvée, bottelaar, jaargang en classificatie uit elkaar houden?
+      - Worden château, cru, grand cru en classé niet als onderling verwisselbare kwaliteitstermen behandeld?
+    layers:
+      foundation:
+        - Geef een betrouwbare leesvolgorde voor een Bordeaux-etiket.
+      intermediate:
+        - Leg uit hoe namen en rangtermen van systeem tot systeem verschillen.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Praktische etiketoriëntatie.
+        source_refs:
+          - source.dgccrf-wine-labels-2025
+      specific_claims:
+        - claim: Niet iedere facultatieve vermelding staat op iedere fles en wettelijke betekenissen hangen van de precieze term af.
+          status: supported
+          source_refs:
+            - source.inao-aop-overview
+    review: *complete_section_review
+
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids:
+      - bordeaux-in-het-glas
+      - stijlpatronen-en-grenzen
+      - jaargang-en-maker
+      - etiket-als-startpunt
+    target_ids: []
+    completeness_questions:
+      - Krijgt de lezer bruikbare stijlverwachtingen per wijnfamilie zonder smaakgarantie?
+      - Zijn druif, herkomst, maker, élevage en jaargang als samenwerkende factoren gepresenteerd?
+    layers:
+      foundation:
+        - Geef per wijnfamilie een voorzichtige sensorische oriëntatie.
+      intermediate:
+        - Verbind stijl aan meerdere keuzes en omstandigheden.
+      advanced:
+        - Leg uit waarom simpele oever-, bodem- en druifregels individuele flessen niet voorspellen.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Voorzichtige regionale stijloriëntatie.
+        source_refs:
+          - source.civb-bordeaux-wine-styles
+          - source.civb-bordeaux-grape-varieties
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - bordeaux-vandaag
+      - klimaat-en-aanpassing
+    target_ids: []
+    completeness_questions:
+      - Wordt Bordeaux als levende, veranderende regio beschreven zonder snel verouderende marktstatistieken?
+      - Komen klimaatadaptatie, materiaalkeuze en veranderende praktijken met passende onzekerheid aan bod?
+    layers:
+      foundation:
+        - Maak duidelijk dat Bordeaux geen stilgezet historisch monument is.
+      intermediate:
+        - Introduceer onderzoek en verandering in wijngaard en regelgeving.
+      advanced:
+        - Bespreek de spanning tussen aanpassing, wettelijke identiteit en herkenbaarheid.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Onderzoek naar klimaatadaptatie in Bordeaux.
+        source_refs:
+          - source.inrae-bordeaux-climate-adaptation
+      specific_claims:
+        - claim: De actuele Bordeaux-specificatie bevat onder voorwaarden rassen voor klimaatadaptatie.
+          status: supported
+          source_refs:
+            - source.boagri-bordeaux-specification-2025
+    review: *complete_section_review
+
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - saint-emilion-panorama
+    target_ids: []
+    completeness_questions:
+      - Geeft ieder beeld plaatsgevoel of uitleg die de tekst niet even efficiënt levert?
+      - Wordt ontbrekende geverifieerde kaartinformatie eerlijk onderscheiden van beschikbare fotografie?
+    layers:
+      foundation:
+        - Gebruik de Saint-Émilionfoto als concrete plaatsindruk binnen het grotere Bordeauxverhaal.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: child-knowledge
+    disposition: on-page
+    block_ids:
+      - verder-vanuit-bordeaux
+    target_ids: []
+    completeness_questions:
+      - Zijn alle genoemde zelfstandige druiven, appellations, classificaties en begrippen als entity geïdentificeerd?
+      - Kan de lezer vanuit de overzichtspagina logisch naar detailonderwerpen doorstromen?
+    layers:
+      foundation:
+        - Bied gerichte vervolgroutes naar de belangrijkste onderdelen van Bordeaux.
+      intermediate:
+        - Maak ook institutionele en wijnmaaktechnische vervolgonderwerpen bereikbaar.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims: []
+    review: *complete_section_review
+
+entity_dependencies:
+  - &region_medoc
+    id: region.medoc
+    names: { nl: Médoc, en: Médoc }
+    slugs: { nl: medoc, en: medoc }
+    disposition: link
+  - id: region.graves-sauternais
+    names: { nl: Graves en Sauternais, en: Graves and Sauternais }
+    slugs: { nl: graves-sauternais, en: graves-and-sauternais }
+    disposition: link
+  - id: region.entre-deux-mers
+    names: { nl: Entre-deux-Mers, en: Entre-deux-Mers }
+    slugs: { nl: entre-deux-mers, en: entre-deux-mers }
+    disposition: link
+  - id: region.libournais
+    names: { nl: Libournais, en: Libournais }
+    slugs: { nl: libournais, en: libournais }
+    disposition: link
+  - id: region.blayais-bourgeais
+    names: { nl: Blayais en Bourgeais, en: Blayais and Bourgeais }
+    slugs: { nl: blayais-bourgeais, en: blayais-and-bourgeais }
+    disposition: link
+
+  - id: appellation.bordeaux
+    names: { nl: AOP Bordeaux, en: Bordeaux AOP }
+    slugs: { nl: bordeaux-aop, en: bordeaux-aop }
+    disposition: link
+  - id: appellation.bordeaux-superieur
+    names: { nl: Bordeaux Supérieur, en: Bordeaux Supérieur }
+    slugs: { nl: bordeaux-superieur, en: bordeaux-superieur }
+    disposition: link
+  - id: appellation.cremant-de-bordeaux
+    names: { nl: Crémant de Bordeaux, en: Crémant de Bordeaux }
+    slugs: { nl: cremant-de-bordeaux, en: cremant-de-bordeaux }
+    disposition: link
+  - id: appellation.medoc
+    names: { nl: AOP Médoc, en: Médoc AOP }
+    slugs: { nl: medoc-aop, en: medoc-aop }
+    disposition: link
+  - id: appellation.haut-medoc
+    names: { nl: Haut-Médoc, en: Haut-Médoc }
+    slugs: { nl: haut-medoc, en: haut-medoc }
+    disposition: link
+  - id: appellation.pauillac
+    names: { nl: Pauillac, en: Pauillac }
+    slugs: { nl: pauillac, en: pauillac }
+    disposition: link
+  - id: appellation.margaux
+    names: { nl: Margaux, en: Margaux }
+    slugs: { nl: margaux, en: margaux }
+    disposition: link
+  - id: appellation.saint-julien
+    names: { nl: Saint-Julien, en: Saint-Julien }
+    slugs: { nl: saint-julien, en: saint-julien }
+    disposition: link
+  - id: appellation.saint-estephe
+    names: { nl: Saint-Estèphe, en: Saint-Estèphe }
+    slugs: { nl: saint-estephe, en: saint-estephe }
+    disposition: link
+  - id: appellation.graves
+    names: { nl: Graves, en: Graves }
+    slugs: { nl: graves, en: graves }
+    disposition: link
+  - id: appellation.pessac-leognan
+    names: { nl: Pessac-Léognan, en: Pessac-Léognan }
+    slugs: { nl: pessac-leognan, en: pessac-leognan }
+    disposition: link
+  - id: appellation.sauternes
+    names: { nl: Sauternes, en: Sauternes }
+    slugs: { nl: sauternes, en: sauternes }
+    disposition: link
+  - id: appellation.barsac
+    names: { nl: Barsac, en: Barsac }
+    slugs: { nl: barsac, en: barsac }
+    disposition: link
+  - id: appellation.entre-deux-mers
+    names: { nl: AOP Entre-deux-Mers, en: Entre-deux-Mers AOP }
+    slugs: { nl: entre-deux-mers-aop, en: entre-deux-mers-aop }
+    disposition: link
+  - id: appellation.saint-emilion
+    names: { nl: Saint-Émilion, en: Saint-Émilion }
+    slugs: { nl: saint-emilion, en: saint-emilion }
+    disposition: link
+  - id: appellation.pomerol
+    names: { nl: Pomerol, en: Pomerol }
+    slugs: { nl: pomerol, en: pomerol }
+    disposition: link
+  - id: appellation.fronsac
+    names: { nl: Fronsac, en: Fronsac }
+    slugs: { nl: fronsac, en: fronsac }
+    disposition: link
+  - id: appellation.blaye-cotes-de-bordeaux
+    names: { nl: Blaye Côtes de Bordeaux, en: Blaye Côtes de Bordeaux }
+    slugs: { nl: blaye-cotes-de-bordeaux, en: blaye-cotes-de-bordeaux }
+    disposition: link
+  - id: appellation.cotes-de-bourg
+    names: { nl: Côtes de Bourg, en: Côtes de Bourg }
+    slugs: { nl: cotes-de-bourg, en: cotes-de-bourg }
+    disposition: link
+
+  - id: grape.merlot
+    names: { nl: Merlot, en: Merlot }
+    slugs: { nl: merlot, en: merlot }
+    disposition: link
+  - id: grape.cabernet-sauvignon
+    names: { nl: Cabernet Sauvignon, en: Cabernet Sauvignon }
+    slugs: { nl: cabernet-sauvignon, en: cabernet-sauvignon }
+    disposition: link
+  - id: grape.cabernet-franc
+    names: { nl: Cabernet Franc, en: Cabernet Franc }
+    slugs: { nl: cabernet-franc, en: cabernet-franc }
+    disposition: link
+  - id: grape.petit-verdot
+    names: { nl: Petit Verdot, en: Petit Verdot }
+    slugs: { nl: petit-verdot, en: petit-verdot }
+    disposition: link
+  - id: grape.malbec
+    names: { nl: Malbec, en: Malbec }
+    slugs: { nl: malbec, en: malbec }
+    disposition: link
+  - id: grape.carmenere
+    names: { nl: Carménère, en: Carménère }
+    slugs: { nl: carmenere, en: carmenere }
+    disposition: link
+  - id: grape.sauvignon-blanc
+    names: { nl: Sauvignon Blanc, en: Sauvignon Blanc }
+    slugs: { nl: sauvignon-blanc, en: sauvignon-blanc }
+    disposition: link
+  - id: grape.semillon
+    names: { nl: Sémillon, en: Sémillon }
+    slugs: { nl: semillon, en: semillon }
+    disposition: link
+  - id: grape.muscadelle
+    names: { nl: Muscadelle, en: Muscadelle }
+    slugs: { nl: muscadelle, en: muscadelle }
+    disposition: link
+
+  - id: classification.bordeaux-1855
+    names: { nl: Bordeaux 1855, en: Bordeaux 1855 }
+    slugs: { nl: bordeaux-1855, en: bordeaux-1855 }
+    disposition: link
+  - id: classification.graves
+    names: { nl: Classificatie van Graves, en: Graves Classification }
+    slugs: { nl: classificatie-graves, en: graves-classification }
+    disposition: link
+  - id: classification.saint-emilion
+    names: { nl: Classificatie van Saint-Émilion, en: Saint-Émilion Classification }
+    slugs: { nl: classificatie-saint-emilion, en: saint-emilion-classification }
+    disposition: link
+  - id: classification.crus-bourgeois-du-medoc
+    names: { nl: Crus Bourgeois du Médoc, en: Crus Bourgeois du Médoc }
+    slugs: { nl: crus-bourgeois-du-medoc, en: crus-bourgeois-du-medoc }
+    disposition: link
+  - id: classification.crus-artisans-du-medoc
+    names: { nl: Crus Artisans du Médoc, en: Crus Artisans du Médoc }
+    slugs: { nl: crus-artisans-du-medoc, en: crus-artisans-du-medoc }
+    disposition: link
+
+  - id: concept.assemblage
+    names: { nl: Assemblage, en: Blending }
+    slugs: { nl: assemblage, en: blending }
+    disposition: link
+  - id: concept.aop
+    names: { nl: Appellation d’origine protégée (AOP), en: Protected designation of origin (PDO) }
+    slugs: { nl: aop, en: protected-designation-of-origin }
+    disposition: link
+  - id: concept.negociant
+    names: { nl: Négociant, en: Négociant }
+    slugs: { nl: negociant, en: negociant }
+    disposition: link
+  - id: concept.place-de-bordeaux
+    names: { nl: Place de Bordeaux, en: Place de Bordeaux }
+    slugs: { nl: place-de-bordeaux, en: place-de-bordeaux }
+    disposition: link
+  - id: concept.en-primeur
+    names: { nl: En primeur, en: En primeur }
+    slugs: { nl: en-primeur, en: en-primeur }
+    disposition: link
+  - id: concept.elevage
+    names: { nl: Élevage, en: Maturation }
+    slugs: { nl: elevage, en: maturation }
+    disposition: link
+  - id: concept.botrytis
+    names: { nl: Botrytis en edele rotting, en: Botrytis and noble rot }
+    slugs: { nl: botrytis-edele-rotting, en: botrytis-noble-rot }
+    disposition: link
+  - id: concept.phylloxera
+    names: { nl: Druifluis (phylloxera), en: Phylloxera }
+    slugs: { nl: druifluis-phylloxera, en: phylloxera }
+    disposition: link
+  - id: concept.clairet
+    names: { nl: Clairet, en: Clairet }
+    slugs: { nl: clairet, en: clairet }
+    disposition: link
+  - id: concept.cru
+    names: { nl: Cru, en: Cru }
+    slugs: { nl: cru, en: cru }
+    disposition: link
+  - id: concept.chateau
+    names: { nl: Château als wijnnaam, en: Château as a wine term }
+    slugs: { nl: chateau-wijnterm, en: chateau-wine-term }
+    disposition: link
+  - id: concept.terroir
+    names: { nl: Terroir, en: Terroir }
+    slugs: { nl: terroir, en: terroir }
+    disposition: link
+  - id: concept.rootstock
+    names: { nl: Onderstam, en: Rootstock }
+    slugs: { nl: onderstam, en: rootstock }
+    disposition: link
+  - id: concept.courtier
+    names: { nl: Courtier, en: Courtier }
+    slugs: { nl: courtier, en: courtier }
+    disposition: link
+  - id: concept.vintage
+    names: { nl: Jaargang, en: Vintage }
+    slugs: { nl: jaargang, en: vintage }
+    disposition: link
+  - id: concept.tannin
+    names: { nl: Tannine, en: Tannin }
+    slugs: { nl: tannine, en: tannin }
+    disposition: link
+  - id: concept.acidity
+    names: { nl: Zuur in wijn, en: Acidity in wine }
+    slugs: { nl: zuur-in-wijn, en: acidity-in-wine }
+    disposition: link
+  - id: concept.fermentation
+    names: { nl: Alcoholische vergisting, en: Alcoholic fermentation }
+    slugs: { nl: alcoholische-vergisting, en: alcoholic-fermentation }
+    disposition: link
+  - id: concept.maceration
+    names: { nl: Schilinweking, en: Maceration }
+    slugs: { nl: schilinweking, en: maceration }
+    disposition: link
+  - id: concept.extraction
+    names: { nl: Extractie, en: Extraction }
+    slugs: { nl: extractie, en: extraction }
+    disposition: link
+  - id: concept.cuvee
+    names: { nl: Cuvée, en: Cuvée }
+    slugs: { nl: cuvee, en: cuvee }
+    disposition: link
+
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

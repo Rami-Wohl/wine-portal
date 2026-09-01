@@ -20,6 +20,8 @@
     "content:check": "node --import tsx scripts/content/cli.ts check",
     "content:build": "node --import tsx scripts/content/cli.ts build",
     "content:new": "node --import tsx scripts/content/cli.ts new",
+    "content:deps": "node --import tsx scripts/content/cli.ts deps",
+    "content:link-audit": "node --import tsx scripts/content/cli.ts link-audit",
     "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
   },
   "dependencies": {

@@ -1,0 +1,16 @@
+id: concept.en-primeur
+type: concept
+status: draft
+canonical_name: En primeur
+names:
+  nl: En primeur
+  en: En primeur
+slugs:
+  nl: en-primeur
+  en: en-primeur
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: concept.negociant
+type: concept
+status: draft
+canonical_name: Négociant
+names:
+  nl: Négociant
+  en: Négociant
+slugs:
+  nl: negociant
+  en: negociant
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

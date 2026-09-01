@@ -1,0 +1,16 @@
+id: appellation.cotes-de-bourg
+type: appellation
+status: draft
+canonical_name: Côtes de Bourg
+names:
+  nl: Côtes de Bourg
+  en: Côtes de Bourg
+slugs:
+  nl: cotes-de-bourg
+  en: cotes-de-bourg
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

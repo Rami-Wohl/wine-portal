@@ -1,9 +1,10 @@
 import path from "node:path";
 import { buildContent, ContentValidationError } from "./pipeline";
 import { generateEntityPackage } from "./generator";
+import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
 
 async function main(): Promise<void> {
-  const [command, type, slug] = process.argv.slice(2);
+  const [command, first, second] = process.argv.slice(2);
   if (command === "check") {
     const result = await buildContent({ write: false });
     console.log(
@@ -19,13 +20,33 @@ async function main(): Promise<void> {
     return;
   }
   if (command === "new") {
-    if (!type || !slug) throw new Error("Usage: npm run content:new -- <entity-type> <slug>");
-    const generatedPath = await generateEntityPackage({ type, slug });
+    if (!first || !second) throw new Error("Usage: npm run content:new -- <entity-type> <slug>");
+    const generatedPath = await generateEntityPackage({ type: first, slug: second });
     console.log(`Created ${path.relative(process.cwd(), generatedPath)}`);
     return;
   }
+  if (command === "deps") {
+    if (first !== "scaffold" || !second) {
+      throw new Error("Usage: npm run content:deps -- scaffold <entity-id>");
+    }
+    const result = await scaffoldPlanDependencies(second);
+    console.log(
+      `Dependency scaffold complete: ${result.created.length} created, ${result.existing.length} already existed.`,
+    );
+    for (const id of result.created) console.log(`Created ${id}`);
+    return;
+  }
+  if (command === "link-audit") {
+    const findings = await auditEntityLinks();
+    if (findings.length === 0) console.log("Link audit found no unlinked known entity names.");
+    else {
+      console.log(`Link audit found ${findings.length} candidate mention(s):`);
+      for (const finding of findings) console.log(`- ${finding}`);
+    }
+    return;
+  }
   throw new Error(
-    "Usage: npm run content:check | npm run content:build | npm run content:new -- <entity-type> <slug>",
+    "Usage: npm run content:check | npm run content:build | npm run content:new -- <entity-type> <slug> | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit",
   );
 }
 

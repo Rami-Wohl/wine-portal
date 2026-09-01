@@ -1,0 +1,16 @@
+id: appellation.pessac-leognan
+type: appellation
+status: draft
+canonical_name: Pessac-Léognan
+names:
+  nl: Pessac-Léognan
+  en: Pessac-Léognan
+slugs:
+  nl: pessac-leognan
+  en: pessac-leognan
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

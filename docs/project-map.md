@@ -12,7 +12,7 @@ details en blijven leidend wanneer een taak meer precisie nodig heeft.
 ```text
 authored en canonical
 
-  entity.yaml + overview.nl.md + overview.en.md
+  entity.yaml + content-plan.yaml + overview.nl.md + overview.en.md
   narrative.yaml + article.nl.md + article.en.md
   source records + media records + verified geography
                          |
@@ -37,6 +37,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Onderwerp | Canonical locatie | Rol |
 | --- | --- | --- |
 | Entity-identiteit, relaties en assertions | `content/entities/**/entity.yaml` | Gedeelde, taaloverstijgende kennis |
+| Dekkingsplan en dependency-inventaris | `content/entities/**/content-plan.yaml` | Afdwingbaar redactioneel contract voor grote overzichten; niet in de runtimebundle |
 | Entity-uitleg | `content/entities/**/overview.<locale>.md` | Gelokaliseerde presentatie |
 | Narrative-metadata en entitykoppelingen | `content/narratives/**/narrative.yaml` | Identiteit, scope en relaties van een verhaal |
 | Narrative-artikel | `content/narratives/**/article.<locale>.md` | Gelokaliseerde uitleg over meerdere entities |
@@ -73,18 +74,22 @@ bewuste volgende productstap, geen al werkende feature of automatische fallback.
 
 ## Dagelijkse contentworkflow
 
-1. Kies een afgebakend onderwerp en bepaal welke entities en narrative nodig
-   zijn.
-2. Verzamel geschikte bronnen en registreer herbruikbare bronnen onder
+1. Maak voor een grote overzichtspagina eerst de contentbrief, dekkingsmatrix en
+   sectievragen; leg de goedgekeurde uitkomst vast in `content-plan.yaml`.
+2. Inventariseer alle zelfstandig vindbare, herbruikbare dependencies en maak de
+   ontbrekende draftpackages in één batch aan.
+3. Verzamel geschikte bronnen en registreer herbruikbare bronnen onder
    `data/sources/`.
-3. Leg identiteit, relaties, assertions en provenance in YAML vast.
-4. Schrijf de Nederlandse Markdown volgens `content-blocks.md`.
-5. Schrijf en review de Engelse lokalisatie met dezelfde kennis en blockstructuur.
-6. Registreer beelden onder `data/media/` en verwijs vanuit Markdown alleen met `media_id`.
-7. Draai `npm run content:check` tijdens het authoren.
-8. Draai relevante unit- en browsertests wanneer routes, rendering of layouts
+4. Leg identiteit, relaties, assertions en provenance in YAML vast.
+5. Schrijf de Nederlandse Markdown volgens `content-blocks.md` en herhaal per
+   sectie de volledigheidscontrole totdat alle scopevragen zijn beantwoord of
+   expliciet zijn uitbesteed.
+6. Schrijf en review de Engelse lokalisatie met dezelfde kennis en blockstructuur.
+7. Registreer beelden onder `data/media/` en verwijs vanuit Markdown alleen met `media_id`.
+8. Draai `npm run content:check` en `npm run content:link-audit` tijdens het authoren.
+9. Draai relevante unit- en browsertests wanneer routes, rendering of layouts
    zijn geraakt.
-9. Review inhoud, bronnen, mediarechten, onzekerheid, responsive presentatie en publicatiestatus.
+10. Review inhoud, bronnen, mediarechten, onzekerheid, responsive presentatie en publicatiestatus.
 
 `draft` blijft beschikbaar voor redactionele review, maar verschijnt niet in
 Explore, search, publieke backlinks of de sitemap. Alleen `active` content wordt
@@ -95,17 +100,19 @@ stelt deployment `MEDIA_BASE_URL` in en synchroniseert een provideradapter
 dezelfde keys automatisch. Contentbestanden en mediarecords bevatten daarom
 nooit provider-URL's en hoeven bij die overgang niet te worden herschreven.
 
-`region.bordeaux` is de eerste actieve, onderzochte entity. De overige
-Bordeauxpackages blijven draft technische fixtures en worden stapsgewijs door
-onderzochte canonical content vervangen; zij worden niet uit een oud curriculum
-geconverteerd.
+`region.bordeaux` is de eerste actieve, onderzochte overzichtsentity. De gelinkte
+Bordeauxpackages vormen bewuste draftbestemmingen voor volgende authoringrondes:
+hun identiteit en routes bestaan al, hun inhoud wordt pas actief na eigen
+onderzoek en review. Zij worden niet uit een oud curriculum geconverteerd.
 
 ## Welk commando doet wat?
 
 | Commando | Gebruik |
 | --- | --- |
 | `npm run content:new -- <type> <slug>` | Maakt een leeg entitypackage zonder wijnfeiten |
+| `npm run content:deps -- scaffold <entity-id>` | Maakt alle ontbrekende dependencies uit het contentplan als lege drafts |
 | `npm run content:check` | Valideert authored content en schrijft niets |
+| `npm run content:link-audit` | Zoekt bekende entitynamen die in proza staan maar nog niet zijn gelinkt |
 | `npm run content:build` | Valideert en genereert de runtimebundle |
 | `npm run format` | Format code, CSS, JSON en YAML met de vastgepinde Prettier-versie |
 | `npm run format:check` | Controleert die formatting zonder bestanden te wijzigen |

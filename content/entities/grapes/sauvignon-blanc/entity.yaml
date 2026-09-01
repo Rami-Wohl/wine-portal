@@ -1,0 +1,16 @@
+id: grape.sauvignon-blanc
+type: grape
+status: draft
+canonical_name: Sauvignon Blanc
+names:
+  nl: Sauvignon Blanc
+  en: Sauvignon Blanc
+slugs:
+  nl: sauvignon-blanc
+  en: sauvignon-blanc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

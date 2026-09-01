@@ -1,0 +1,16 @@
+id: appellation.pomerol
+type: appellation
+status: draft
+canonical_name: Pomerol
+names:
+  nl: Pomerol
+  en: Pomerol
+slugs:
+  nl: pomerol
+  en: pomerol
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

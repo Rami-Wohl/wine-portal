@@ -1,0 +1,16 @@
+id: grape.merlot
+type: grape
+status: draft
+canonical_name: Merlot
+names:
+  nl: Merlot
+  en: Merlot
+slugs:
+  nl: merlot
+  en: merlot
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

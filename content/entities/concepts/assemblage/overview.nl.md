@@ -7,7 +7,7 @@ Bij een **assemblage** brengt een wijnmaker verschillende wijnen samen tot een n
 
 De onderdelen van een assemblage kunnen om allerlei redenen apart zijn gebleven. Ze kunnen afkomstig zijn van verschillende druivenrassen, plekken of oogstjaren. Europese wijnregels gebruiken juist die verschillen om bepaalde vormen van mengen te omschrijven. [@source.eu-wine-coupage-regulation-2019]
 
-Ook binnen één jaargang en één domein kunnen afzonderlijke partijen ontstaan. In Bordeaux worden druiven of percelen bijvoorbeeld geregeld los van elkaar vergist en pas later naast elkaar geproefd. [@source.civb-bordeaux-blending] Een assemblage kan daardoor uit meerdere druiven bestaan, maar ook uit verschillende partijen van hetzelfde druivenras.
+Ook binnen één [[concept.vintage|jaargang]] en één domein kunnen afzonderlijke partijen ontstaan. In [[region.bordeaux|Bordeaux]] worden druiven of percelen bijvoorbeeld geregeld los van elkaar vergist en pas later naast elkaar geproefd. [@source.civb-bordeaux-blending] Een assemblage kan daardoor uit meerdere druiven bestaan, maar ook uit verschillende partijen van hetzelfde druivenras.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
@@ -25,7 +25,7 @@ Dat maakt assemblage tot meer dan het optellen van percentages. De verhouding is
 :::section{#wat-percentages-niet-vertellen depth="advanced" source_refs="source.eu-wine-coupage-regulation-2019 source.civb-bordeaux-blending"}
 ## Wat percentages niet vertellen
 
-Een verhouding als 70% merlot en 30% cabernet sauvignon noemt alleen de druivenverdeling. Ze vertelt niet van welke percelen de componenten kwamen, hoe iedere partij is gemaakt, wanneer ze zijn samengebracht of welke selectie eraan voorafging.
+Een verhouding als 70% [[grape.merlot|merlot]] en 30% [[grape.cabernet-sauvignon|cabernet sauvignon]] noemt alleen de druivenverdeling. Ze vertelt niet van welke percelen de componenten kwamen, hoe iedere partij is gemaakt, wanneer ze zijn samengebracht of welke selectie eraan voorafging.
 
 Omgekeerd hoeft een wijn van één druivenras niet uit één enkele partij te bestaan. Ook afzonderlijke percelen of kelderpartijen van hetzelfde ras kunnen later worden verenigd. [@source.civb-bordeaux-blending] Druivenpercentages zijn daarom nuttige informatie, maar geen volledige verklaring voor stijl of kwaliteit.
 :::

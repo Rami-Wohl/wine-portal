@@ -1,0 +1,16 @@
+id: concept.maceration
+type: concept
+status: draft
+canonical_name: Maceration
+names:
+  nl: Schilinweking
+  en: Maceration
+slugs:
+  nl: schilinweking
+  en: maceration
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

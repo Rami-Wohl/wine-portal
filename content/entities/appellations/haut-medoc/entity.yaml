@@ -1,0 +1,16 @@
+id: appellation.haut-medoc
+type: appellation
+status: draft
+canonical_name: Haut-Médoc
+names:
+  nl: Haut-Médoc
+  en: Haut-Médoc
+slugs:
+  nl: haut-medoc
+  en: haut-medoc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -591,6 +591,12 @@ npm run content:new -- producer example-estate
 
 maakt een schema-geldig draftpackage met metadata en NL/EN-Markdown. De generator voegt bewust geen feiten, bronnen, relaties, media of vertalingen met inhoud toe.
 
+Grote overzichtsentities gebruiken daarnaast een package-lokaal
+`content-plan.yaml`. Dit bestand is duurzame redactionele metadata: het legt
+page-archetype, dekkingsbeslissingen, sectievragen, evidencecategorieën en
+entitydependencies vast, maar bevat geen canonical wijnfeiten. De contentpipeline
+valideert het plan en neemt het niet op in de publieke runtimebundle.
+
 ---
 
 ## 12. Repositorystructuur voor v1
@@ -734,45 +740,34 @@ gecontroleerd is.
 
 ---
 
-## 17. Bordeaux: huidige proof en roadmap
+## 17. Bordeaux: eerste volledige authoringslice
 
 ### Huidige repositorystatus
 
-De Bordeaux-slice bevat één actieve entity en vier draftfixtures:
+`region.bordeaux` is de eerste actieve region-overview met een gevalideerd
+contentplan, cumulatieve kennisdiepte, tweetalige prose, block-level citations,
+geregistreerde media en vooraf aangelegde routes naar de genoemde subregio's,
+appellations, druiven, classificaties en begrippen. Die bestemmingen zijn bewust
+lege draftpackages totdat hun eigen research- en authoringcyclus voltooid is.
 
-| Entity | Huidige rol |
-| --- | --- |
-| `region.bordeaux` | actieve regionale root en eerste onderzochte content |
-| `appellation.pauillac` | onderdeel van Bordeaux; koppelt Cabernet Sauvignon |
-| `producer.chateau-latour` | ligt in Pauillac; tijdsbewuste classificatierelatie |
-| `grape.cabernet-sauvignon` | druifentity voor relationele proof |
-| `classification.bordeaux-1855` | target van `classified_under` |
+Exacte aantallen entities, bronnen, media en relaties worden hier niet handmatig
+bijgehouden. `npm run content:check` rapporteert de actuele repositorystatus en
+`npm run content:link-audit` controleert of bekende entities in oude of nieuwe
+prose ongekoppeld zijn gebleven. De graph bevat daarnaast nog enkele technische
+fixtures voor relationele en narrative-tests. Er is nog geen geverifieerde
+geografie voor Atlas.
 
-Daarnaast bestaat één draft `regional-deep-dive`:
+### Vervolg na deze vertical slice
 
-```text
-narrative.regional.bordeaux-proof
-```
-
-De vier forward relations bewijzen `part_of`, `important_grape`, `located_in` en `classified_under`. De classificatierelatie bevat `tier: premier-cru` en top-level `valid_from: 1855`.
-
-De regiopagina is een eerste publiceerbare contentslice met drie officiële
-bronrecords, block-level citations en één geregistreerde CC0-foto met
-gelokaliseerde alttekst en volledige herkomstmetadata. De overige packages bewijzen vooral de
-pipeline en het model. Er is nog geen `vintage.bordeaux-2016`, geen brongebonden
-assertion en geen geverifieerde geografie.
-
-### Pending voor een echte vertical slice
-
-- research en authoring van de overige canonical entitycontent;
-- de geplande scoped vintage-entity;
+- research en authoring van de aangelegde draftbestemmingen;
+- relevante scoped vintage-entities wanneer een concrete use-case dat vraagt;
 - brongebonden assertions waar de use-case daarom vraagt;
 - inhoudelijk volwaardige NL- en EN-narratives;
 - geverifieerde boundaries, punten en Atlasdata met volledige provenance;
 - verdere selectie en review van foto's, illustraties en diagrammen;
 - verdere verfijning van publieke bronweergave en menselijk leesbare relaties;
 - Explore-, Learn- en Atlaspresentaties uit dezelfde canonical graph;
-- end-to-end routing, search, related content en accessibility review.
+- verdere end-to-enddekking voor routing, search, related content en accessibility.
 
 De architectuur wordt vóór grootschalige regio-authoring aangepast als deze slice alleen met grote uitzonderingen kan worden gebouwd.
 

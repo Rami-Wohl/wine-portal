@@ -1,0 +1,16 @@
+id: grape.carmenere
+type: grape
+status: draft
+canonical_name: Carménère
+names:
+  nl: Carménère
+  en: Carménère
+slugs:
+  nl: carmenere
+  en: carmenere
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

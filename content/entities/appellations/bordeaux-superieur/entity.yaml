@@ -1,0 +1,16 @@
+id: appellation.bordeaux-superieur
+type: appellation
+status: draft
+canonical_name: Bordeaux Supérieur
+names:
+  nl: Bordeaux Supérieur
+  en: Bordeaux Supérieur
+slugs:
+  nl: bordeaux-superieur
+  en: bordeaux-superieur
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

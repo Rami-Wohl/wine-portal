@@ -1,0 +1,16 @@
+id: concept.cru
+type: concept
+status: draft
+canonical_name: Cru
+names:
+  nl: Cru
+  en: Cru
+slugs:
+  nl: cru
+  en: cru
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

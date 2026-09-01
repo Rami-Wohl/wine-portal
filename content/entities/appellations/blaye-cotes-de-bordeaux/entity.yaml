@@ -1,0 +1,16 @@
+id: appellation.blaye-cotes-de-bordeaux
+type: appellation
+status: draft
+canonical_name: Blaye Côtes de Bordeaux
+names:
+  nl: Blaye Côtes de Bordeaux
+  en: Blaye Côtes de Bordeaux
+slugs:
+  nl: blaye-cotes-de-bordeaux
+  en: blaye-cotes-de-bordeaux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

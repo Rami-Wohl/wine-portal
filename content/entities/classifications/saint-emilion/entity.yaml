@@ -1,0 +1,16 @@
+id: classification.saint-emilion
+type: classification
+status: draft
+canonical_name: Saint-Émilion Classification
+names:
+  nl: Classificatie van Saint-Émilion
+  en: Saint-Émilion Classification
+slugs:
+  nl: classificatie-saint-emilion
+  en: saint-emilion-classification
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

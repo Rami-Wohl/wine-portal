@@ -1,0 +1,16 @@
+id: concept.acidity
+type: concept
+status: draft
+canonical_name: Acidity in wine
+names:
+  nl: Zuur in wijn
+  en: Acidity in wine
+slugs:
+  nl: zuur-in-wijn
+  en: acidity-in-wine
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

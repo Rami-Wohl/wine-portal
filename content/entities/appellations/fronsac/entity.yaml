@@ -1,0 +1,16 @@
+id: appellation.fronsac
+type: appellation
+status: draft
+canonical_name: Fronsac
+names:
+  nl: Fronsac
+  en: Fronsac
+slugs:
+  nl: fronsac
+  en: fronsac
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

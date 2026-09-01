@@ -23,7 +23,8 @@ import {
 } from "../../src/content/model";
 
 const blockIdPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const allowedAttributes = new Set(["id", "depth", "source_refs", "variant", "media_id"]);
+const allowedAttributes = new Set(["id", "depth", "parent", "source_refs", "variant", "media_id"]);
+const depthOrder = new Map(DEPTHS.map((depth, index) => [depth, index]));
 
 export interface ParsedContentDocument {
   document: ContentDocument;
@@ -282,6 +283,11 @@ function validateBlockShape(block: ContentBlock, state: ParseState): void {
     if (!first || first.type !== "heading" || first.depth !== 2) {
       issue(state, `${block.type} '${block.id}' must start with an H2`);
     }
+  } else if (block.type === "detail") {
+    const [first] = block.nodes;
+    if (!first || first.type !== "heading" || first.depth !== 3) {
+      issue(state, `detail '${block.id}' must start with an H3`);
+    }
   } else if (containsHeading(block.nodes)) {
     issue(state, `${block.type} '${block.id}' must not contain headings`);
   }
@@ -353,6 +359,18 @@ export function parseContentDocument(
       issue(state, `${type} '${id}' has unsupported depth '${depthValue}'`);
     }
 
+    const parentValue = attributes.parent ?? null;
+    const parent = parentValue && blockIdPattern.test(parentValue) ? parentValue : null;
+    if (parentValue && parent === null) {
+      issue(state, `${type} '${id}' has invalid parent block ID '${parentValue}'`);
+    }
+    if (type === "detail" && parent === null) {
+      issue(state, `detail '${id}' requires a parent block ID`);
+    }
+    if (type !== "detail" && parentValue) {
+      issue(state, `only detail blocks may use the parent attribute`);
+    }
+
     const sourceRefs = (attributes.source_refs ?? "").split(/\s+/).filter(Boolean);
     for (const sourceRef of sourceRefs) {
       if (!sourceIdSchema.safeParse(sourceRef).success) {
@@ -397,6 +415,7 @@ export function parseContentDocument(
       id,
       type,
       depth,
+      parent,
       source_refs: sourceRefs,
       variant,
       media_id: mediaId,
@@ -404,6 +423,37 @@ export function parseContentDocument(
     };
     validateBlockShape(block, state);
     blocks.push(block);
+  }
+
+  const blocksById = new Map(blocks.map((block) => [block.id, block]));
+  for (let index = 0; index < blocks.length; index += 1) {
+    const block = blocks[index];
+    if (block.type !== "detail" || block.parent === null) continue;
+    const parent = blocksById.get(block.parent);
+    if (!parent) {
+      issue(state, `detail '${block.id}' refers to unknown parent '${block.parent}'`);
+      continue;
+    }
+    if (parent.type !== "section") {
+      issue(state, `detail '${block.id}' parent '${block.parent}' must be a section block`);
+    }
+    if (parent.depth === null || block.depth === null) {
+      issue(
+        state,
+        `detail '${block.id}' and parent '${block.parent}' require explicit depth values`,
+      );
+    } else if ((depthOrder.get(block.depth) ?? -1) <= (depthOrder.get(parent.depth) ?? -1)) {
+      issue(state, `detail '${block.id}' must be deeper than parent '${block.parent}'`);
+    }
+    const previous = blocks[index - 1];
+    const followsParent = previous?.id === block.parent;
+    const followsSibling = previous?.type === "detail" && previous.parent === block.parent;
+    if (!followsParent && !followsSibling) {
+      issue(
+        state,
+        `detail '${block.id}' must immediately follow parent '${block.parent}' or another detail for that parent`,
+      );
+    }
   }
 
   return {
@@ -428,7 +478,7 @@ export function validateLocaleParity(
   for (let index = 0; index < left.length; index += 1) {
     const nl = left[index];
     const en = right[index];
-    for (const field of ["id", "type", "depth", "variant", "media_id"] as const) {
+    for (const field of ["id", "type", "depth", "parent", "variant", "media_id"] as const) {
       if (nl[field] !== en[field]) {
         issues.push(
           `${file}: NL/EN block ${index + 1} differs in ${field} ('${String(nl[field])}' vs '${String(en[field])}')`,

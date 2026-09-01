@@ -1,0 +1,16 @@
+id: appellation.saint-emilion
+type: appellation
+status: draft
+canonical_name: Saint-Émilion
+names:
+  nl: Saint-Émilion
+  en: Saint-Émilion
+slugs:
+  nl: saint-emilion
+  en: saint-emilion
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

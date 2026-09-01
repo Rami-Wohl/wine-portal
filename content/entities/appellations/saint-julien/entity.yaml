@@ -1,0 +1,16 @@
+id: appellation.saint-julien
+type: appellation
+status: draft
+canonical_name: Saint-Julien
+names:
+  nl: Saint-Julien
+  en: Saint-Julien
+slugs:
+  nl: saint-julien
+  en: saint-julien
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

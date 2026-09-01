@@ -1,0 +1,16 @@
+id: concept.botrytis
+type: concept
+status: draft
+canonical_name: Botrytis and noble rot
+names:
+  nl: Botrytis en edele rotting
+  en: Botrytis and noble rot
+slugs:
+  nl: botrytis-edele-rotting
+  en: botrytis-noble-rot
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

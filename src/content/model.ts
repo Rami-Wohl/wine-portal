@@ -42,6 +42,7 @@ export const CONTENT_BLOCK_TYPES = [
   "summary",
   "objectives",
   "section",
+  "detail",
   "key-idea",
   "caveat",
   "in-the-glass",
@@ -62,6 +63,22 @@ export const MEDIA_RIGHTS_STATUSES = [
   "public-domain",
   "owned",
   "generated",
+] as const;
+export const REGION_OVERVIEW_DIMENSIONS = [
+  "identity-and-orientation",
+  "historical-development",
+  "landscape-climate-and-soils",
+  "wine-families",
+  "grape-varieties",
+  "viticulture-and-winemaking",
+  "appellation-structure",
+  "classification-systems",
+  "trade-and-institutions",
+  "labels-and-terminology",
+  "style-and-glass-context",
+  "modern-developments",
+  "visuals",
+  "child-knowledge",
 ] as const;
 
 export type EntityType = (typeof ENTITY_TYPES)[number];
@@ -96,6 +113,9 @@ const slugSchema = z
   .string()
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "must be a lowercase kebab-case slug");
 const localizedTextSchema = z.object({ nl: z.string().min(1), en: z.string().min(1) }).strict();
+const localizedStringListSchema = z
+  .object({ nl: z.array(z.string().min(1)), en: z.array(z.string().min(1)) })
+  .strict();
 const localizedFileSchema = z
   .object({
     nl: z.string().regex(/\.nl\.md$/),
@@ -147,6 +167,7 @@ export const entitySchema = z
     status: z.enum(["draft", "active", "deprecated"]),
     canonical_name: z.string().min(1),
     names: localizedTextSchema,
+    aliases: localizedStringListSchema.optional(),
     slugs: z.object({ nl: slugSchema, en: slugSchema }).strict(),
     locales: localizedFileSchema,
     relations: z.array(relationSchema).default([]),
@@ -267,11 +288,100 @@ export const mediaAssetSchema = z
     }
   });
 
+const contentPlanBlockIdSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+const contentPlanReviewSchema = z.enum(["open", "complete"]);
+const contentPlanTargetIdSchema = z.union([entityIdSchema, narrativeIdSchema]);
+
+export const contentPlanSchema = z
+  .object({
+    schema_version: z.literal(1),
+    package_id: entityIdSchema,
+    archetype: z.literal("region-overview"),
+    coverage: z
+      .array(
+        z
+          .object({
+            key: z.enum(REGION_OVERVIEW_DIMENSIONS),
+            disposition: z.enum([
+              "on-page",
+              "child-entity",
+              "dated-narrative",
+              "omitted-with-reason",
+              "research-gap",
+            ]),
+            reason: z.string().min(1).optional(),
+            block_ids: z.array(contentPlanBlockIdSchema).default([]),
+            target_ids: z.array(contentPlanTargetIdSchema).default([]),
+            completeness_questions: z.array(z.string().min(1)).min(1),
+            layers: z
+              .object({
+                foundation: z.array(z.string().min(1)).default([]),
+                intermediate: z.array(z.string().min(1)).default([]),
+                advanced: z.array(z.string().min(1)).default([]),
+                specialist: z.array(z.string().min(1)).default([]),
+              })
+              .strict(),
+            evidence: z
+              .object({
+                general_synthesis: z
+                  .object({
+                    topics: z.array(z.string().min(1)).default([]),
+                    source_refs: z.array(sourceIdSchema).default([]),
+                  })
+                  .strict(),
+                specific_claims: z
+                  .array(
+                    z
+                      .object({
+                        claim: z.string().min(1),
+                        status: z.enum(["open", "supported", "omit"]),
+                        source_refs: z.array(sourceIdSchema).default([]),
+                      })
+                      .strict(),
+                  )
+                  .default([]),
+              })
+              .strict(),
+            review: z
+              .object({
+                outline: contentPlanReviewSchema,
+                nl: contentPlanReviewSchema,
+                en: contentPlanReviewSchema,
+              })
+              .strict(),
+          })
+          .strict(),
+      )
+      .min(1),
+    entity_dependencies: z
+      .array(
+        z
+          .object({
+            id: entityIdSchema,
+            names: localizedTextSchema,
+            slugs: z.object({ nl: slugSchema, en: slugSchema }).strict(),
+            disposition: z.enum(["link", "relation", "link-and-relation"]),
+          })
+          .strict(),
+      )
+      .default([]),
+    review: z
+      .object({
+        outline: contentPlanReviewSchema,
+        dependencies: contentPlanReviewSchema,
+        nl: contentPlanReviewSchema,
+        en: contentPlanReviewSchema,
+      })
+      .strict(),
+  })
+  .strict();
+
 export type Entity = z.infer<typeof entitySchema>;
 export type Relation = z.infer<typeof relationSchema>;
 export type Narrative = z.infer<typeof narrativeSchema>;
 export type Source = z.infer<typeof sourceSchema>;
 export type MediaAsset = z.infer<typeof mediaAssetSchema>;
+export type ContentPlan = z.infer<typeof contentPlanSchema>;
 
 export interface ResolvedRelation extends Relation {
   source: string;
@@ -375,6 +485,7 @@ export interface ContentBlock {
   id: string;
   type: ContentBlockType;
   depth: Depth | null;
+  parent: string | null;
   source_refs: string[];
   variant: CaveatVariant | null;
   media_id: string | null;

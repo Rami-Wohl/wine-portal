@@ -1,0 +1,16 @@
+id: grape.cabernet-franc
+type: grape
+status: draft
+canonical_name: Cabernet Franc
+names:
+  nl: Cabernet Franc
+  en: Cabernet Franc
+slugs:
+  nl: cabernet-franc
+  en: cabernet-franc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

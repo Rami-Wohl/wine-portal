@@ -1,0 +1,16 @@
+id: classification.crus-artisans-du-medoc
+type: classification
+status: draft
+canonical_name: Crus Artisans du Médoc
+names:
+  nl: Crus Artisans du Médoc
+  en: Crus Artisans du Médoc
+slugs:
+  nl: crus-artisans-du-medoc
+  en: crus-artisans-du-medoc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: concept.place-de-bordeaux
+type: concept
+status: draft
+canonical_name: Place de Bordeaux
+names:
+  nl: Place de Bordeaux
+  en: Place de Bordeaux
+slugs:
+  nl: place-de-bordeaux
+  en: place-de-bordeaux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

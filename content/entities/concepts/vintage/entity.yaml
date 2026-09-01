@@ -1,0 +1,16 @@
+id: concept.vintage
+type: concept
+status: draft
+canonical_name: Vintage
+names:
+  nl: Jaargang
+  en: Vintage
+slugs:
+  nl: jaargang
+  en: vintage
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

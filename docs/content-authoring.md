@@ -42,6 +42,71 @@ Zodra een claim is onderbouwd, verhuist de bron naar `data/sources/` en de kenni
 naar assertions, relaties of canonical Markdown. De brief bewaart alleen de
 argumentatiestructuur, beslissingen, statussen en nog open vragen.
 
+Na goedkeuring krijgt iedere grote overzichtsentity een duurzaam, machineleesbaar
+`content-plan.yaml` in hetzelfde package als `entity.yaml`. Het plan bevat geen
+wijnfeiten en wordt niet naar de runtimebundle gekopieerd. Het bewaart uitsluitend:
+
+- het page-archetype;
+- de verplichte inhoudsdimensies en hun bestemming;
+- de block- en detailstructuur per kennisniveau;
+- de vragen waarmee sectievolledigheid wordt beoordeeld;
+- het onderscheid tussen algemene synthese en specifieke claims;
+- de geplande entitydependencies en hun redactionele bestemming; en
+- de status van outline-, dependency-, NL- en EN-review.
+
+Het contentplan vervangt de verkennende brief zodra scope en outline zijn
+goedgekeurd. De brief mag daarna worden gearchiveerd; het contentplan blijft naast
+de canonical content bestaan als afdwingbaar publicatiecontract, niet als tweede
+feitenbron.
+
+### Harde regel: een sectie is pas klaar wanneer haar onderwerp compleet is
+
+Gegenereerd of handgeschreven proza wordt nooit na één concept als voltooid
+beschouwd. Voor iedere sectie en ieder zichtbaar kennisniveau geldt dezelfde
+iteratieve controle:
+
+1. benoem vooraf de lezersvragen die binnen de afgesproken sectiescope vallen;
+2. schrijf de sectie vanuit die vragen en de geverifieerde kennis;
+3. controleer na het schrijven welke noodzakelijke verklaring, samenhang,
+   uitzondering, term of vervolglink nog ontbreekt;
+4. vul de sectie aan of besteed het ontbrekende punt expliciet uit aan een
+   concrete entity of narrative; en
+5. herhaal de controle totdat geen relevante vraag onbeantwoord of ongemotiveerd
+   buiten scope blijft.
+
+Een sectie is niet compleet omdat hij lang is, veel feiten noemt of aan zijn
+woordbudget voldoet. Hij is compleet wanneer hij zijn beloofde onderwerp zonder
+kennishiaten uitlegt, de grenzen van die uitleg zichtbaar maakt en de lezer naar
+het juiste detailniveau of vervolgobject kan brengen. `content-plan.yaml` legt de
+volledigheidsvragen en de reviewstatus per sectie vast. Een actieve grote
+overzichtspagina mag geen sectie als compleet markeren zolang een vraag nog
+`open`, een noodzakelijke dependency nog afwezig of een specifieke claim nog
+onvoldoende ondersteund is.
+
+### Proportionele provenance: algemene synthese versus specifieke feiten
+
+Brongebruik is proportioneel aan het soort uitspraak, niet aan het aantal zinnen.
+Het contentplan onderscheidt daarom per sectie:
+
+- **algemene synthese** — breed aanvaarde, stabiele context die door één of enkele
+  geschikte overzichtsbronnen voor de gehele claimfamilie kan worden gedragen;
+- **specifieke claims** — onder meer precieze data, cijfers, juridische regels,
+  classificatiescopes, historische prioriteitsclaims, causale verklaringen,
+  veranderlijke situaties en precieze geografische uitspraken.
+
+Algemene synthese krijgt een compacte, herbruikbare bronbasis op blockniveau. Er
+wordt niet voor iedere aangrenzende algemeen aanvaarde zin een nieuwe externe bron
+toegevoegd. Specifieke claims krijgen wel een directe citation en waar nodig een
+locator, datum, versie of afzonderlijke officiële bron. Een bron mag meerdere
+blocks ondersteunen wanneer scope en autoriteit passen. Bronminimalisatie mag
+nooit worden gebruikt om een specifieke of betwistbare claim zonder passende
+steun te publiceren; omgekeerd is een groot aantal bronnen geen bewijs van
+inhoudelijke volledigheid.
+
+Deze proportionaliteitscontrole is een harde stap in iedere sectiereview. AI mag
+algemene kennis helpen synthetiseren, maar is nooit de bron en mag het onderscheid
+tussen algemene context en een specifieke claim niet zelf stilzwijgend vervagen.
+
 ### Kennisdiepte toekennen
 
 Diepte beschrijft de functie van informatie voor de lezer, niet hoe technisch een
@@ -79,6 +144,32 @@ claims als `supported` of `omit` besluiten, verplichte dependencies aanmaken,
 Nederlandse tekst schrijven en reviewen, de Engelse
 lokalisatie schrijven en reviewen, daarna pas buildvalidatie en publicatie.
 
+### Page-archetype: `region-overview`
+
+Een grote regiopagina is een kennis-hub en behandelt of ontsluit minimaal deze
+dimensies:
+
+1. identiteit, scope, ligging en ruimtelijke oriëntatie;
+2. historische ontwikkeling en betekenis;
+3. landschap, water, klimaat en bodems;
+4. wijnfamilies en producttypen;
+5. druivenrassen en hun regionale rollen;
+6. regionale viticultuur en wijnmaakpatronen;
+7. appellationstructuur, subregio's en geografische woordenschat;
+8. classificatiesystemen en hun onderlinge scopes;
+9. handel, distributie en andere kenmerkende regionale instituties;
+10. etiketten, terminologie en praktische navigatie;
+11. bruikbare stijl- of glascontext zonder deterministische smaakgaranties;
+12. moderne ontwikkelingen, waarbij vluchtige gegevens naar een gedateerde
+    narrative of assertion mogen worden uitbesteed;
+13. relevante visuals en hun concrete leertaak; en
+14. child entities en narratives waarmee de lezer verder kan.
+
+De volgorde is redactioneel, niet schematisch. Een dimensie mag `on-page`,
+`child-entity`, `dated-narrative`, `omitted-with-reason` of `research-gap` zijn.
+Alleen de eerste drie gelden als publiceerbaar afgedekt; een research-gap blokkeert
+activatie wanneer de dimensie essentieel is voor de paginabelofte.
+
 ## Add an entity
 
 Generate a package:
@@ -96,6 +187,10 @@ content/entities/producers/example-estate/
 └── overview.en.md
 ```
 
+Een actieve grote overzichtsentity krijgt daarnaast handmatig een
+`content-plan.yaml`; de generieke packagegenerator maakt dit archetypespecifieke
+redactiecontract niet zelf aan.
+
 Review every generated name, then add only verified canonical relations to `entity.yaml`. Reference other entities by stable ID:
 
 ```yaml
@@ -105,6 +200,16 @@ relations:
 ```
 
 Do not add the inverse relation to the target entity. The pipeline derives it.
+
+Wanneer een goedgekeurd contentplan dependencies bevat, maak de ontbrekende
+packages in één idempotente batch aan:
+
+```bash
+npm run content:deps -- scaffold region.example
+```
+
+De generator neemt alleen identiteit, namen en slugs uit het plan over. Nieuwe
+packages blijven leeg en `draft`; relaties en wijnfeiten worden nooit geraden.
 
 ## Add a narrative
 
@@ -155,8 +260,14 @@ the same keys on a CDN without rewriting authored content.
 
 ```bash
 npm run content:check
+npm run content:link-audit
 npm run content:build
 ```
+
+`content:link-audit` controleert de genormaliseerde Markdown op bekende namen die
+als gewone tekst zijn blijven staan. Zo worden nieuwe entities ook teruggevonden
+in eerder geschreven content. De audit maakt geen links en bedenkt geen nieuwe
+entities; de auteur beslist of een kandidaat werkelijk een verwijzing is.
 
 `npm run dev` and `npm run build` run content generation first. The generated `knowledge-base.json` bundle includes entity indexes, forward relations, inverse relations, backlinks, localized slug lookups, geography references, and search metadata.
 

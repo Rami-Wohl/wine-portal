@@ -244,6 +244,12 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
     case "section":
     case "comparison":
       return <section {...common}>{content}</section>;
+    case "detail":
+      return (
+        <div {...common} data-parent={block.parent ?? undefined}>
+          {content}
+        </div>
+      );
     case "objectives": {
       const titleId = `${block.id}-title`;
       return (
@@ -305,11 +311,35 @@ export function ContentDocumentView({
   const mediaMap = new Map(media.map((asset) => [asset.id, asset]));
   const context: RenderContext = { locale, media: mediaMap, sources: sourceMap, sourceNumbers };
 
-  return (
-    <div className="content-document">
-      {document.blocks.map((block) => (
-        <Fragment key={block.id}>{renderContentBlock(block, context)}</Fragment>
-      ))}
-    </div>
-  );
+  const contentItems: ReactNode[] = [];
+  for (let index = 0; index < document.blocks.length; index += 1) {
+    const block = document.blocks[index];
+    if (block.type !== "section") {
+      contentItems.push(<Fragment key={block.id}>{renderContentBlock(block, context)}</Fragment>);
+      continue;
+    }
+
+    const details: ContentBlock[] = [];
+    while (
+      document.blocks[index + 1]?.type === "detail" &&
+      document.blocks[index + 1]?.parent === block.id
+    ) {
+      details.push(document.blocks[index + 1]);
+      index += 1;
+    }
+    if (details.length === 0) {
+      contentItems.push(<Fragment key={block.id}>{renderContentBlock(block, context)}</Fragment>);
+      continue;
+    }
+    contentItems.push(
+      <div className="content-section-group" key={block.id}>
+        {renderContentBlock(block, context)}
+        {details.map((detail) => (
+          <Fragment key={detail.id}>{renderContentBlock(detail, context)}</Fragment>
+        ))}
+      </div>,
+    );
+  }
+
+  return <div className="content-document">{contentItems}</div>;
 }

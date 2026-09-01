@@ -43,7 +43,7 @@ test("active entity content flows comfortably across desktop and mobile", async 
   await expect(
     page.getByRole("heading", {
       level: 2,
-      name: "Een haven met een wijnland erachter",
+      name: "Een streek gevormd door beweging",
     }),
   ).toBeVisible();
   await expect(page.getByRole("link", { name: "cabernet sauvignon" })).toHaveAttribute(
@@ -72,10 +72,10 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
     name: "Kies hoeveel detail je wilt zien",
   });
   const intermediateHeading = page.getByRole("heading", {
-    level: 2,
-    name: "Wanneer losse partijen één wijn worden",
+    level: 3,
+    name: "Samenstellen en opvoeden",
   });
-  const advancedBlock = page.locator("#waar-vuistregels-breken");
+  const advancedBlock = page.locator("#landschap-bodem-en-drainage");
 
   await expect(depthControl.getByRole("button", { name: "Basis" })).toHaveAttribute(
     "aria-pressed",
@@ -91,7 +91,12 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
   await depthControl.getByRole("button", { name: "Gevorderd" }).click();
   await expect(intermediateHeading).toBeVisible();
   await expect(advancedBlock).toBeVisible();
-  await expect(advancedBlock.getByText("Bewuste vereenvoudiging")).toBeVisible();
+  await expect(
+    advancedBlock.getByRole("heading", {
+      level: 3,
+      name: "Grind, klei, kalk — en wat daartussen ligt",
+    }),
+  ).toBeVisible();
 
   await depthControl.getByRole("button", { name: "Basis" }).click();
   await expect(intermediateHeading).toBeHidden();
@@ -99,9 +104,9 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
 });
 
 test("a deep block anchor reveals the required knowledge depth", async ({ page }) => {
-  await page.goto("/regions/bordeaux#waar-vuistregels-breken");
+  await page.goto("/regions/bordeaux#landschap-bodem-en-drainage");
 
-  await expect(page.locator("#waar-vuistregels-breken")).toBeVisible();
+  await expect(page.locator("#landschap-bodem-en-drainage")).toBeVisible();
   await expect(page.getByRole("button", { name: "Gevorderd" })).toHaveAttribute(
     "aria-pressed",
     "true",
@@ -113,7 +118,7 @@ test("the full document remains readable without JavaScript", async ({ browser }
   const page = await context.newPage();
   await page.goto("/regions/bordeaux");
 
-  await expect(page.locator("#waar-vuistregels-breken")).toBeVisible();
+  await expect(page.locator("#landschap-bodem-en-drainage")).toBeVisible();
   await expect(page.getByRole("group", { name: "Kies hoeveel detail je wilt zien" })).toBeHidden();
 
   await context.close();

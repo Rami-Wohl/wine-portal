@@ -1,0 +1,16 @@
+id: region.graves-sauternais
+type: region
+status: draft
+canonical_name: Graves and Sauternais
+names:
+  nl: Graves en Sauternais
+  en: Graves and Sauternais
+slugs:
+  nl: graves-sauternais
+  en: graves-and-sauternais
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

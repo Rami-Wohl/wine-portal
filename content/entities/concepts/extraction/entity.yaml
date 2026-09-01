@@ -1,0 +1,16 @@
+id: concept.extraction
+type: concept
+status: draft
+canonical_name: Extraction
+names:
+  nl: Extractie
+  en: Extraction
+slugs:
+  nl: extractie
+  en: extraction
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

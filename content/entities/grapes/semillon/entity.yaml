@@ -1,0 +1,16 @@
+id: grape.semillon
+type: grape
+status: draft
+canonical_name: Sémillon
+names:
+  nl: Sémillon
+  en: Sémillon
+slugs:
+  nl: semillon
+  en: semillon
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

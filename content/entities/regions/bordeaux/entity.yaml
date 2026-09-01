@@ -27,5 +27,13 @@ source_refs:
   - source.oiv-blending-code
   - source.civb-bordeaux-blending
   - source.gcc1855-classification-overview
+  - source.msha-bordeaux-wine-history
+  - source.medoc-marsh-drainage-1957
+  - source.inao-aoc-history
+  - source.civb-bordeaux-classifications
+  - source.inao-saint-emilion-classification-2022
+  - source.civb-bordeaux-wine-trade
+  - source.inrae-bordeaux-climate-adaptation
+  - source.musee-aquitaine-bordeaux-slavery
 depth: foundation
 last_reviewed: 2026-09-01

@@ -6,6 +6,8 @@ import { z } from "zod";
 import {
   ENTITY_TYPES,
   LOCALES,
+  REGION_OVERVIEW_DIMENSIONS,
+  contentPlanSchema,
   entitySchema,
   mediaAssetSchema,
   narrativeSchema,
@@ -13,6 +15,7 @@ import {
   type Entity,
   type EntityType,
   type ContentDocument,
+  type ContentPlan,
   type GeneratedEntity,
   type GeneratedKnowledgeBase,
   type Locale,
@@ -317,6 +320,196 @@ function findDuplicateRelations(record: LoadedRecord<Entity>, issues: string[]):
   }
 }
 
+function validateContentPlans(
+  planRecords: Array<LoadedRecord<ContentPlan>>,
+  entityRecords: Array<LoadedRecord<Entity>>,
+  narrativeRecords: Array<LoadedRecord<Narrative>>,
+  entityContentMap: Map<string, Record<Locale, ContentDocument>>,
+  entityMentionMap: Map<string, NarrativeMention[]>,
+  sourceIdSet: Set<string>,
+  issues: string[],
+): void {
+  const entitiesById = new Map(entityRecords.map((record) => [record.value.id, record]));
+  const plansByEntityId = new Map(planRecords.map((record) => [record.value.package_id, record]));
+  const knownTargets = new Set([
+    ...entityRecords.map((record) => record.value.id),
+    ...narrativeRecords.map((record) => record.value.id),
+  ]);
+
+  findDuplicates(
+    planRecords.map(({ file, value }) => ({ key: value.package_id, file })),
+    "content plan package ID",
+    issues,
+  );
+
+  for (const entityRecord of entityRecords) {
+    if (
+      entityRecord.value.status === "active" &&
+      entityRecord.value.type === "region" &&
+      !plansByEntityId.has(entityRecord.value.id)
+    ) {
+      issues.push(`${entityRecord.file}: active region requires a package-local content-plan.yaml`);
+    }
+  }
+
+  for (const planRecord of planRecords) {
+    const plan = planRecord.value;
+    const entityRecord = entitiesById.get(plan.package_id);
+    if (!entityRecord) {
+      issues.push(
+        `${planRecord.file}: package_id '${plan.package_id}' does not match a known entity`,
+      );
+      continue;
+    }
+    if (path.resolve(planRecord.directory) !== path.resolve(entityRecord.directory)) {
+      issues.push(`${planRecord.file}: content plan must live beside ${entityRecord.file}`);
+    }
+
+    const coverageKeys = plan.coverage.map((item) => item.key);
+    findDuplicatesWithinRecord(coverageKeys, "coverage key", planRecord.file, issues);
+    for (const dimension of REGION_OVERVIEW_DIMENSIONS) {
+      if (!coverageKeys.includes(dimension)) {
+        issues.push(`${planRecord.file}: region-overview is missing coverage '${dimension}'`);
+      }
+    }
+
+    const isActive = entityRecord.value.status === "active";
+    if (isActive) {
+      for (const [field, status] of Object.entries(plan.review)) {
+        if (status !== "complete") {
+          issues.push(`${planRecord.file}: active entity requires review.${field} to be complete`);
+        }
+      }
+    }
+
+    const content = entityContentMap.get(plan.package_id);
+    const blockIds = new Set(content?.nl.blocks.map((block) => block.id) ?? []);
+    for (const item of plan.coverage) {
+      if (
+        isActive &&
+        (item.disposition === "research-gap" || item.disposition === "omitted-with-reason")
+      ) {
+        issues.push(
+          `${planRecord.file}: active region cannot leave required coverage '${item.key}' as '${item.disposition}'`,
+        );
+      }
+      if (
+        (item.disposition === "research-gap" || item.disposition === "omitted-with-reason") &&
+        !item.reason
+      ) {
+        issues.push(`${planRecord.file}: coverage '${item.key}' requires a reason`);
+      }
+      if (item.disposition === "on-page" && item.block_ids.length === 0) {
+        issues.push(`${planRecord.file}: on-page coverage '${item.key}' requires block_ids`);
+      }
+      if (
+        (item.disposition === "child-entity" || item.disposition === "dated-narrative") &&
+        item.target_ids.length === 0
+      ) {
+        issues.push(`${planRecord.file}: coverage '${item.key}' requires target_ids`);
+      }
+      for (const blockId of item.block_ids) {
+        if (!blockIds.has(blockId)) {
+          issues.push(
+            `${planRecord.file}: coverage '${item.key}' references unknown block '${blockId}'`,
+          );
+        }
+      }
+      for (const targetId of item.target_ids) {
+        if (!knownTargets.has(targetId)) {
+          issues.push(
+            `${planRecord.file}: coverage '${item.key}' references unknown target '${targetId}'`,
+          );
+        }
+      }
+      if (isActive) {
+        for (const [field, status] of Object.entries(item.review)) {
+          if (status !== "complete") {
+            issues.push(
+              `${planRecord.file}: active coverage '${item.key}' requires review.${field} to be complete`,
+            );
+          }
+        }
+      }
+
+      const evidenceSourceRefs = [
+        ...item.evidence.general_synthesis.source_refs,
+        ...item.evidence.specific_claims.flatMap((claim) => claim.source_refs),
+      ];
+      findDuplicatesWithinRecord(
+        evidenceSourceRefs,
+        `evidence source reference for coverage '${item.key}'`,
+        planRecord.file,
+        issues,
+      );
+      for (const sourceRef of evidenceSourceRefs) {
+        if (!sourceIdSet.has(sourceRef)) {
+          issues.push(`${planRecord.file}: Unknown source reference '${sourceRef}'.`);
+        }
+        if (!entityRecord.value.source_refs.includes(sourceRef)) {
+          issues.push(
+            `${planRecord.file}: evidence source '${sourceRef}' must appear in ${entityRecord.file} source_refs`,
+          );
+        }
+      }
+      for (const claim of item.evidence.specific_claims) {
+        if (claim.status === "supported" && claim.source_refs.length === 0) {
+          issues.push(
+            `${planRecord.file}: supported specific claim '${claim.claim}' requires source_refs`,
+          );
+        }
+        if (isActive && claim.status === "open") {
+          issues.push(`${planRecord.file}: active coverage '${item.key}' contains an open claim`);
+        }
+      }
+    }
+
+    const dependencyIds = plan.entity_dependencies.map((dependency) => dependency.id);
+    findDuplicatesWithinRecord(dependencyIds, "entity dependency", planRecord.file, issues);
+    const mentions = entityMentionMap.get(plan.package_id) ?? [];
+    for (const dependency of plan.entity_dependencies) {
+      const targetRecord = entitiesById.get(dependency.id);
+      if (!targetRecord) {
+        issues.push(`${planRecord.file}: Unknown entity dependency '${dependency.id}'.`);
+        continue;
+      }
+      for (const locale of LOCALES) {
+        if (targetRecord.value.names[locale] !== dependency.names[locale]) {
+          issues.push(
+            `${planRecord.file}: dependency '${dependency.id}' ${locale} name differs from its entity`,
+          );
+        }
+        if (targetRecord.value.slugs[locale] !== dependency.slugs[locale]) {
+          issues.push(
+            `${planRecord.file}: dependency '${dependency.id}' ${locale} slug differs from its entity`,
+          );
+        }
+      }
+      if (dependency.disposition === "link" || dependency.disposition === "link-and-relation") {
+        for (const locale of LOCALES) {
+          if (
+            !mentions.some(
+              (mention) => mention.entity_id === dependency.id && mention.locale === locale,
+            )
+          ) {
+            issues.push(
+              `${planRecord.file}: dependency '${dependency.id}' must be linked in ${locale} content`,
+            );
+          }
+        }
+      }
+      if (
+        (dependency.disposition === "relation" || dependency.disposition === "link-and-relation") &&
+        !entityRecord.value.relations.some((relation) => relation.target === dependency.id)
+      ) {
+        issues.push(
+          `${planRecord.file}: dependency '${dependency.id}' requires an explicit relation`,
+        );
+      }
+    }
+  }
+}
+
 async function removeRetiredGeneratedFiles(outputDirectory: string): Promise<void> {
   await Promise.all(
     RETIRED_GENERATED_FILENAMES.map(async (filename) => {
@@ -336,18 +529,21 @@ function stableJson(value: object): string {
 export async function buildContent(options: BuildOptions = {}): Promise<BuildResult> {
   const root = path.resolve(options.root ?? process.cwd());
   const issues: string[] = [];
-  const [entityFiles, narrativeFiles, sourceFiles, mediaFiles] = await Promise.all([
+  const [entityFiles, narrativeFiles, planFiles, sourceFiles, mediaFiles] = await Promise.all([
     discoverFiles(path.join(root, "content", "entities"), "entity.yaml"),
     discoverFiles(path.join(root, "content", "narratives"), "narrative.yaml"),
+    discoverFiles(path.join(root, "content", "entities"), "content-plan.yaml"),
     discoverYamlFiles(path.join(root, "data", "sources")),
     discoverYamlFiles(path.join(root, "data", "media")),
   ]);
-  const [entityRecords, narrativeRecords, sourceRecords, mediaRecords] = await Promise.all([
-    loadYamlRecords(entityFiles, entitySchema, root, issues),
-    loadYamlRecords(narrativeFiles, narrativeSchema, root, issues),
-    loadYamlRecords(sourceFiles, sourceSchema, root, issues),
-    loadYamlRecords(mediaFiles, mediaAssetSchema, root, issues),
-  ]);
+  const [entityRecords, narrativeRecords, planRecords, sourceRecords, mediaRecords] =
+    await Promise.all([
+      loadYamlRecords(entityFiles, entitySchema, root, issues),
+      loadYamlRecords(narrativeFiles, narrativeSchema, root, issues),
+      loadYamlRecords(planFiles, contentPlanSchema, root, issues),
+      loadYamlRecords(sourceFiles, sourceSchema, root, issues),
+      loadYamlRecords(mediaFiles, mediaAssetSchema, root, issues),
+    ]);
 
   findDuplicates(
     entityRecords.map(({ file, value }) => ({ key: value.id, file })),
@@ -416,6 +612,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
   const sourceIdSet = new Set(sourceRecords.map(({ value }) => value.id));
   const mediaIdSet = new Set(mediaRecords.map(({ value }) => value.id));
   const mentionMap = new Map<string, NarrativeMention[]>();
+  const entityMentionMap = new Map<string, NarrativeMention[]>();
   const entityContentMap = new Map<string, Record<Locale, ContentDocument>>();
   const narrativeContentMap = new Map<string, Record<Locale, ContentDocument>>();
 
@@ -460,6 +657,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       issues,
     );
     entityContentMap.set(record.value.id, parsed.content);
+    entityMentionMap.set(record.value.id, parsed.mentions);
   }
 
   for (const record of narrativeRecords) {
@@ -510,6 +708,16 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       ),
     );
   }
+
+  validateContentPlans(
+    planRecords,
+    entityRecords,
+    narrativeRecords,
+    entityContentMap,
+    entityMentionMap,
+    sourceIdSet,
+    issues,
+  );
 
   if (issues.length > 0) throw new ContentValidationError(issues.sort());
 

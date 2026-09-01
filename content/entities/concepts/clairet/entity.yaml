@@ -1,0 +1,16 @@
+id: concept.clairet
+type: concept
+status: draft
+canonical_name: Clairet
+names:
+  nl: Clairet
+  en: Clairet
+slugs:
+  nl: clairet
+  en: clairet
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

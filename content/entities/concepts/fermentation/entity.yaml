@@ -1,0 +1,16 @@
+id: concept.fermentation
+type: concept
+status: draft
+canonical_name: Alcoholic fermentation
+names:
+  nl: Alcoholische vergisting
+  en: Alcoholic fermentation
+slugs:
+  nl: alcoholische-vergisting
+  en: alcoholic-fermentation
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

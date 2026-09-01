@@ -1,0 +1,16 @@
+id: concept.tannin
+type: concept
+status: draft
+canonical_name: Tannin
+names:
+  nl: Tannine
+  en: Tannin
+slugs:
+  nl: tannine
+  en: tannin
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: appellation.barsac
+type: appellation
+status: draft
+canonical_name: Barsac
+names:
+  nl: Barsac
+  en: Barsac
+slugs:
+  nl: barsac
+  en: barsac
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

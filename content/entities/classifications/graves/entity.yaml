@@ -1,0 +1,16 @@
+id: classification.graves
+type: classification
+status: draft
+canonical_name: Graves Classification
+names:
+  nl: Classificatie van Graves
+  en: Graves Classification
+slugs:
+  nl: classificatie-graves
+  en: graves-classification
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

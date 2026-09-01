@@ -1,0 +1,16 @@
+id: region.entre-deux-mers
+type: region
+status: draft
+canonical_name: Entre-deux-Mers
+names:
+  nl: Entre-deux-Mers
+  en: Entre-deux-Mers
+slugs:
+  nl: entre-deux-mers
+  en: entre-deux-mers
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: concept.rootstock
+type: concept
+status: draft
+canonical_name: Rootstock
+names:
+  nl: Onderstam
+  en: Rootstock
+slugs:
+  nl: onderstam
+  en: rootstock
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

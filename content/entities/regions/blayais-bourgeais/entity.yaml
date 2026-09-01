@@ -1,0 +1,16 @@
+id: region.blayais-bourgeais
+type: region
+status: draft
+canonical_name: Blayais and Bourgeais
+names:
+  nl: Blayais en Bourgeais
+  en: Blayais and Bourgeais
+slugs:
+  nl: blayais-bourgeais
+  en: blayais-and-bourgeais
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

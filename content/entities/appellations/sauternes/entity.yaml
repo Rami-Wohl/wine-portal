@@ -1,0 +1,16 @@
+id: appellation.sauternes
+type: appellation
+status: draft
+canonical_name: Sauternes
+names:
+  nl: Sauternes
+  en: Sauternes
+slugs:
+  nl: sauternes
+  en: sauternes
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: concept.terroir
+type: concept
+status: draft
+canonical_name: Terroir
+names:
+  nl: Terroir
+  en: Terroir
+slugs:
+  nl: terroir
+  en: terroir
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

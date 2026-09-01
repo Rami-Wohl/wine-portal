@@ -7,7 +7,7 @@ In **blending**, a winemaker brings different wines together into a new, final c
 
 Components may have been kept separate for many reasons. They can come from different grape varieties, places or harvest years. European wine rules use precisely those differences to define certain forms of mixing. [@source.eu-wine-coupage-regulation-2019]
 
-Separate lots can also arise within a single vintage and estate. In Bordeaux, grapes or parcels are regularly fermented apart and tasted side by side later. [@source.civb-bordeaux-blending] A blend can therefore contain several varieties, but it can also unite different lots of the same variety.
+Separate lots can also arise within a single [[concept.vintage|vintage]] and estate. In [[region.bordeaux|Bordeaux]], grapes or parcels are regularly fermented apart and tasted side by side later. [@source.civb-bordeaux-blending] A blend can therefore contain several varieties, but it can also unite different lots of the same variety.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
@@ -25,7 +25,7 @@ This makes blending more than adding up percentages. The ratio is the visible re
 :::section{#wat-percentages-niet-vertellen depth="advanced" source_refs="source.eu-wine-coupage-regulation-2019 source.civb-bordeaux-blending"}
 ## What percentages leave unsaid
 
-A ratio such as 70% Merlot and 30% Cabernet Sauvignon states only the division between grape varieties. It does not say which parcels supplied the components, how each lot was made, when they were brought together or what selection preceded the final blend.
+A ratio such as 70% [[grape.merlot|Merlot]] and 30% [[grape.cabernet-sauvignon|Cabernet Sauvignon]] states only the division between grape varieties. It does not say which parcels supplied the components, how each lot was made, when they were brought together or what selection preceded the final blend.
 
 Conversely, a single-variety wine need not come from one single lot. Separate parcels or cellar lots of the same variety can also be united later. [@source.civb-bordeaux-blending] Grape percentages are useful information, but they are not a complete explanation of style or quality.
 :::

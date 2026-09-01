@@ -1,0 +1,16 @@
+id: appellation.cremant-de-bordeaux
+type: appellation
+status: draft
+canonical_name: Crémant de Bordeaux
+names:
+  nl: Crémant de Bordeaux
+  en: Crémant de Bordeaux
+slugs:
+  nl: cremant-de-bordeaux
+  en: cremant-de-bordeaux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

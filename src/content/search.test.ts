@@ -22,6 +22,10 @@ describe("entity search", () => {
     expect(filterEntities(entities, "bordeaux", "producer")).toEqual([]);
     expect(filterEntities(entities, "", "classification").map((entity) => entity.id)).toEqual([
       "classification.bordeaux-1855",
+      "classification.crus-artisans-du-medoc",
+      "classification.crus-bourgeois-du-medoc",
+      "classification.graves",
+      "classification.saint-emilion",
     ]);
   });
 

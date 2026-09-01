@@ -1,0 +1,16 @@
+id: concept.elevage
+type: concept
+status: draft
+canonical_name: Maturation
+names:
+  nl: Élevage
+  en: Maturation
+slugs:
+  nl: elevage
+  en: maturation
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

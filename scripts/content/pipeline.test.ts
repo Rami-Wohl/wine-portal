@@ -4,7 +4,8 @@ import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { stringify as stringifyYaml } from "yaml";
-import type { Entity } from "../../src/content/model";
+import { REGION_OVERVIEW_DIMENSIONS, type ContentPlan, type Entity } from "../../src/content/model";
+import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
 import { generateEntityPackage } from "./generator";
 import { buildContent, ContentValidationError } from "./pipeline";
 
@@ -22,6 +23,7 @@ interface AddEntityOptions {
   sourceRefs?: string[];
   locales?: { nl: string; en: string };
   omitLocale?: "nl" | "en";
+  status?: "draft" | "active";
 }
 
 interface AddNarrativeOptions {
@@ -61,7 +63,7 @@ async function addEntity(root: string, options: AddEntityOptions): Promise<strin
     stringifyYaml({
       id: options.id,
       type,
-      status: "draft",
+      status: options.status ?? "draft",
       canonical_name: slug,
       names: { nl: slug, en: slug },
       slugs: {
@@ -82,6 +84,53 @@ async function addEntity(root: string, options: AddEntityOptions): Promise<strin
     await writeFile(path.join(directory, locales.en), "");
   }
   return directory;
+}
+
+function regionPlan(
+  packageId: string,
+  dependencies: ContentPlan["entity_dependencies"] = [],
+): ContentPlan {
+  return {
+    schema_version: 1,
+    package_id: packageId,
+    archetype: "region-overview",
+    coverage: REGION_OVERVIEW_DIMENSIONS.map((key) => ({
+      key,
+      disposition: "on-page" as const,
+      block_ids: ["orientatie"],
+      target_ids: [],
+      completeness_questions: [`Is ${key} voldoende afgedekt?`],
+      layers: {
+        foundation: ["De noodzakelijke hoofdlijn."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      },
+      evidence: {
+        general_synthesis: { topics: [], source_refs: [] },
+        specific_claims: [],
+      },
+      review: { outline: "complete", nl: "complete", en: "complete" },
+    })),
+    entity_dependencies: dependencies,
+    review: {
+      outline: "complete",
+      dependencies: "complete",
+      nl: "complete",
+      en: "complete",
+    },
+  };
+}
+
+async function addRegionPlan(
+  directory: string,
+  packageId: string,
+  dependencies: ContentPlan["entity_dependencies"] = [],
+): Promise<void> {
+  await writeFile(
+    path.join(directory, "content-plan.yaml"),
+    stringifyYaml(regionPlan(packageId, dependencies)),
+  );
 }
 
 async function addNarrative(root: string, options: AddNarrativeOptions = {}): Promise<void> {
@@ -337,6 +386,41 @@ describe("content pipeline validation", () => {
     );
   });
 
+  it("requires and validates a complete plan for an active region", async () => {
+    const missingRoot = await temporaryRoot();
+    const missingDirectory = await addEntity(missingRoot, {
+      id: "region.example",
+      status: "active",
+    });
+    const summary = ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n';
+    await writeFile(path.join(missingDirectory, "overview.nl.md"), summary);
+    await writeFile(path.join(missingDirectory, "overview.en.md"), summary);
+    await expect(buildContent({ root: missingRoot, write: false })).rejects.toThrow(
+      /active region requires a package-local content-plan\.yaml/,
+    );
+
+    await addRegionPlan(missingDirectory, "region.example");
+    await expect(buildContent({ root: missingRoot, write: false })).resolves.toBeDefined();
+  });
+
+  it("requires planned link dependencies in both locales", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "region.example" });
+    await addEntity(root, { id: "grape.merlot" });
+    await addRegionPlan(directory, "region.example", [
+      {
+        id: "grape.merlot",
+        names: { nl: "merlot", en: "Merlot" },
+        slugs: { nl: "merlot", en: "merlot" },
+        disposition: "link",
+      },
+    ]);
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /dependency 'grape\.merlot' must be linked in en content/,
+    );
+  });
+
   it("registers media and resolves figure blocks by stable media ID", async () => {
     const root = await temporaryRoot();
     const directory = await addEntity(root, { id: "region.example" });
@@ -376,6 +460,47 @@ describe("content pipeline validation", () => {
     await expect(buildContent({ root: changedRoot, write: false })).rejects.toThrow(
       /checksum_sha256 does not match/,
     );
+  });
+});
+
+describe("content dependency tooling", () => {
+  it("scaffolds every missing planned entity without overwriting existing packages", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "region.example" });
+    await addRegionPlan(directory, "region.example", [
+      {
+        id: "grape.merlot",
+        names: { nl: "Merlot", en: "Merlot" },
+        slugs: { nl: "merlot", en: "merlot" },
+        disposition: "link",
+      },
+    ]);
+
+    const first = await scaffoldPlanDependencies("region.example", root);
+    const second = await scaffoldPlanDependencies("region.example", root);
+
+    expect(first.created).toEqual(["grape.merlot"]);
+    expect(second.existing).toEqual(["grape.merlot"]);
+    const generated = await readFile(
+      path.join(root, "content", "entities", "grapes", "merlot", "entity.yaml"),
+      "utf8",
+    );
+    expect(generated).toContain("id: grape.merlot");
+    expect(generated).toContain("status: draft");
+  });
+
+  it("reports known entity names that appear without a canonical link", async () => {
+    const root = await temporaryRoot();
+    const regionDirectory = await addEntity(root, { id: "region.example" });
+    await addEntity(root, { id: "grape.merlot" });
+    const plain = ":::summary{#orientatie}\nMerlot speelt hier een rol.\n:::\n";
+    await writeFile(path.join(regionDirectory, "overview.nl.md"), plain);
+    await writeFile(path.join(regionDirectory, "overview.en.md"), plain);
+
+    const findings = await auditEntityLinks(root);
+
+    expect(findings).toContain("region.example:en mentions 'merlot' without linking grape.merlot");
+    expect(findings).toContain("region.example:nl mentions 'merlot' without linking grape.merlot");
   });
 });
 
@@ -462,6 +587,44 @@ describe("content pipeline derivation", () => {
       source_refs: ["source.example"],
     });
     expect(JSON.stringify(knowledgeBase.narratives[0].content.nl)).toContain('"type":"citation"');
+  });
+
+  it("keeps deeper detail blocks attached to a foundation section", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "region.example" });
+    const dutch = `:::summary{#orientatie depth="foundation"}\nKorte oriëntatie.\n:::\n\n:::section{#geschiedenis depth="foundation"}\n## Geschiedenis\n\nDe hoofdlijn.\n:::\n\n:::detail{#geschiedenis-handel parent="geschiedenis" depth="intermediate"}\n### Handel\n\nMeer samenhang.\n:::\n`;
+    const english = `:::summary{#orientatie depth="foundation"}\nShort orientation.\n:::\n\n:::section{#geschiedenis depth="foundation"}\n## History\n\nThe main line.\n:::\n\n:::detail{#geschiedenis-handel parent="geschiedenis" depth="intermediate"}\n### Trade\n\nMore context.\n:::\n`;
+    await writeFile(path.join(directory, "overview.nl.md"), dutch);
+    await writeFile(path.join(directory, "overview.en.md"), english);
+
+    const { knowledgeBase } = await buildContent({ root, write: false });
+
+    expect(knowledgeBase.entities[0].content.nl.blocks[2]).toMatchObject({
+      id: "geschiedenis-handel",
+      type: "detail",
+      depth: "intermediate",
+      parent: "geschiedenis",
+    });
+  });
+
+  it("rejects orphaned, misplaced, and non-progressive detail blocks", async () => {
+    const orphanRoot = await temporaryRoot();
+    const orphanDirectory = await addEntity(orphanRoot, { id: "region.example" });
+    const orphan = `:::detail{#handel parent="geschiedenis" depth="intermediate"}\n### Handel\n\nTekst.\n:::\n`;
+    await writeFile(path.join(orphanDirectory, "overview.nl.md"), orphan);
+    await writeFile(path.join(orphanDirectory, "overview.en.md"), orphan);
+    await expect(buildContent({ root: orphanRoot, write: false })).rejects.toThrow(
+      /refers to unknown parent 'geschiedenis'/,
+    );
+
+    const shallowRoot = await temporaryRoot();
+    const shallowDirectory = await addEntity(shallowRoot, { id: "region.example" });
+    const shallow = `:::section{#geschiedenis depth="intermediate"}\n## Geschiedenis\n\nTekst.\n:::\n\n:::detail{#handel parent="geschiedenis" depth="foundation"}\n### Handel\n\nTekst.\n:::\n`;
+    await writeFile(path.join(shallowDirectory, "overview.nl.md"), shallow);
+    await writeFile(path.join(shallowDirectory, "overview.en.md"), shallow);
+    await expect(buildContent({ root: shallowRoot, write: false })).rejects.toThrow(
+      /must be deeper than parent 'geschiedenis'/,
+    );
   });
 
   it("rejects unsafe Markdown and mismatched locale block structures", async () => {

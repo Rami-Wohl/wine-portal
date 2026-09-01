@@ -1,0 +1,16 @@
+id: appellation.margaux
+type: appellation
+status: draft
+canonical_name: Margaux
+names:
+  nl: Margaux
+  en: Margaux
+slugs:
+  nl: margaux
+  en: margaux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

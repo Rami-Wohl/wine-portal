@@ -97,6 +97,7 @@ Iedere block ondersteunt uitsluitend deze gemeenschappelijke attributen:
 | `#id` | ja | Stabiele documentlokale identiteit |
 | `depth` | nee | `foundation`, `intermediate`, `advanced` of `specialist` |
 | `source_refs` | nee | Door spaties gescheiden `source.*`-IDs die de block ondersteunen |
+| `parent` | alleen `detail` | Stable block-ID van de hoofdsectie die wordt uitgebreid |
 
 Een `figure` gebruikt daarnaast verplicht `media_id`. Dit is geen URL maar een
 stabiele `media.*`-ID uit `data/media/`.
@@ -153,6 +154,40 @@ Verdere uitleg staat hier.
 ```
 
 Een section is de default. Maak geen callout wanneer gewone uitleg voldoende is.
+
+### `detail`
+
+Een `detail` breidt een bestaande `section` uit wanneer een hoger kennisniveau
+meer uitleg binnen hetzelfde onderwerp nodig heeft. Het block blijft top-level in
+Markdown, verwijst met `parent` naar de hoofdsectie en begint met een H3:
+
+```md
+:::section{#geschiedenis depth="foundation"}
+## Hoe de streek zich ontwikkelde
+
+De noodzakelijke historische hoofdlijn.
+:::
+
+:::detail{#geschiedenis-handel parent="geschiedenis" depth="intermediate"}
+### Handel als vormende kracht
+
+De uitgebreidere verklaring.
+:::
+```
+
+Regels:
+
+- `parent` verwijst naar een bestaande `section` in hetzelfde document;
+- hoofdsectie en detail hebben een expliciete `depth`;
+- een detail is altijd dieper dan zijn hoofdsectie;
+- details volgen direct op hun hoofdsectie of op een ander detail met dezelfde
+  parent;
+- een detail begint met H3 en vormt visueel en semantisch één groep met de
+  hoofdsectie; en
+- stabiele detail-IDs ondersteunen directe anchors en automatische depth-reveal.
+
+Gebruik geen detail om een los nieuw onderwerp onder een bestaande heading te
+verstoppen. Maak daarvoor een zelfstandige `section`.
 
 ### `key-idea`
 

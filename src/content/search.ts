@@ -34,6 +34,8 @@ export function filterEntities(
       entity.canonical_name,
       entity.names.nl,
       entity.names.en,
+      ...(entity.aliases?.nl ?? []),
+      ...(entity.aliases?.en ?? []),
       entity.slugs.nl,
       entity.slugs.en,
     ];

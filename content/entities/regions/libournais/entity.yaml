@@ -1,0 +1,16 @@
+id: region.libournais
+type: region
+status: draft
+canonical_name: Libournais
+names:
+  nl: Libournais
+  en: Libournais
+slugs:
+  nl: libournais
+  en: libournais
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

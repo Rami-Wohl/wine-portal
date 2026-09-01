@@ -1,0 +1,16 @@
+id: appellation.medoc
+type: appellation
+status: draft
+canonical_name: Médoc AOP
+names:
+  nl: AOP Médoc
+  en: Médoc AOP
+slugs:
+  nl: medoc-aop
+  en: medoc-aop
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: concept.phylloxera
+type: concept
+status: draft
+canonical_name: Phylloxera
+names:
+  nl: Druifluis (phylloxera)
+  en: Phylloxera
+slugs:
+  nl: druifluis-phylloxera
+  en: phylloxera
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []
