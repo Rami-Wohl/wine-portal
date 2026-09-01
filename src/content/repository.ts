@@ -1,7 +1,7 @@
 import knowledgeBaseJson from "../generated/content/knowledge-base.json";
 import type {
-  Entity,
   EntityType,
+  GeneratedEntity,
   GeneratedKnowledgeBase,
   GeneratedNarrative,
   ResolvedRelation,
@@ -35,24 +35,24 @@ for (const relation of knowledgeBase.relations.forward) {
   forwardRelationsByEntity.set(relation.source, relations);
 }
 
-export function getEntities(): Entity[] {
+export function getEntities(): GeneratedEntity[] {
   return knowledgeBase.entities;
 }
 
-export function getEntityById(id: string): Entity | undefined {
+export function getEntityById(id: string): GeneratedEntity | undefined {
   return entitiesById.get(id);
 }
 
-export function getEntitiesByType(type: EntityType): Entity[] {
+export function getEntitiesByType(type: EntityType): GeneratedEntity[] {
   return knowledgeBase.indexes.entities_by_type[type]
     .map(getEntityById)
-    .filter((entity): entity is Entity => Boolean(entity));
+    .filter((entity): entity is GeneratedEntity => Boolean(entity));
 }
 
 export function getEntityByRoute(
   routeSegment: string,
   slug: string,
-): Entity | undefined {
+): GeneratedEntity | undefined {
   const type = entityTypeFromRouteSegment(routeSegment);
   if (!type) return undefined;
   const id = knowledgeBase.indexes.localized_slugs.nl[`${type}:${slug}`];

@@ -49,11 +49,11 @@ Canonical entity overviews and narratives follow `content-blocks.md`. That
 contract defines the accepted top-level directives, stable block IDs, heading
 rules, block depth, entity links, citations, and NL/EN parity.
 
-The block syntax has been accepted for v1, but its parser, renderer, and strict
-block validation are still pending. Until those land, `content:check` validates
-the locale files and existing entity links but does not prove that block
-structure or citations are valid. Do not use that temporary gap to introduce
-unstructured canonical content.
+The parser, renderer, and strict block validation are implemented.
+`content:check` validates block structure, citations, entity links, source
+inventories, publication requirements, and hard NL/EN parity. The generated
+bundle contains the normalized safe content tree consumed by the server-side
+renderer.
 
 ## Localization
 

@@ -50,8 +50,8 @@ export async function generateEntityPackage(options: GenerateEntityOptions): Pro
   await mkdir(path.join(packageDirectory, "media"), { recursive: true });
   await Promise.all([
     writeFile(path.join(packageDirectory, "entity.yaml"), stringifyYaml(metadata), "utf8"),
-    writeFile(path.join(packageDirectory, "overview.nl.md"), `# ${starterName}\n\n<!-- Voeg gecontroleerde Nederlandse content toe. -->\n`, "utf8"),
-    writeFile(path.join(packageDirectory, "overview.en.md"), `# ${starterName}\n\n<!-- Add verified English content. -->\n`, "utf8"),
+    writeFile(path.join(packageDirectory, "overview.nl.md"), "", "utf8"),
+    writeFile(path.join(packageDirectory, "overview.en.md"), "", "utf8"),
     writeFile(path.join(packageDirectory, "media", ".gitkeep"), "", "utf8"),
   ]);
   return packageDirectory;

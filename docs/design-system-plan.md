@@ -52,12 +52,10 @@ Every canonical lesson should eventually provide:
 
 ## Next implementation steps
 
-1. Implement the safe Markdown directive renderer and validator defined in
-   `content-blocks.md`; canonical content remains `.md`, not executable MDX.
-2. Extract repeated UI patterns into components when a second page needs them.
-3. Add lesson routing and previous/next navigation.
-4. Add persisted progress only after the anonymous reading flow works well.
-5. Test keyboard, screen-reader, zoom, mobile and long-content edge cases.
-6. Add screenshot regression tests for the four target viewport widths.
-7. Build Bordeaux as the first entity/narrative vertical slice only after the
+1. Extract repeated UI patterns into components when a second page needs them.
+2. Add lesson routing and previous/next navigation.
+3. Add persisted progress only after the anonymous reading flow works well.
+4. Test keyboard, screen-reader, zoom, mobile and long-content edge cases.
+5. Add screenshot regression tests for the four target viewport widths.
+6. Build Bordeaux as the first entity/narrative vertical slice only after the
    lesson content model is proven.

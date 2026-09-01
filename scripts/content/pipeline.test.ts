@@ -36,6 +36,8 @@ interface AddNarrativeOptions {
   primaryEntity?: string;
   relatedEntities?: string[];
   sourceRefs?: string[];
+  status?: "draft" | "active";
+  type?: "lesson" | "explainer";
 }
 
 async function temporaryRoot(): Promise<string> {
@@ -77,10 +79,10 @@ async function addEntity(root: string, options: AddEntityOptions): Promise<strin
     ...(options.geographyId ? { geography_id: options.geographyId } : {}),
   }));
   if (options.omitLocale !== "nl" && path.basename(locales.nl) === locales.nl) {
-    await writeFile(path.join(directory, locales.nl), `# ${slug}\n`);
+    await writeFile(path.join(directory, locales.nl), "");
   }
   if (options.omitLocale !== "en" && path.basename(locales.en) === locales.en) {
-    await writeFile(path.join(directory, locales.en), `# ${slug}\n`);
+    await writeFile(path.join(directory, locales.en), "");
   }
   return directory;
 }
@@ -99,8 +101,8 @@ async function addNarrative(
   await mkdir(directory, { recursive: true });
   await writeFile(path.join(directory, "narrative.yaml"), stringifyYaml({
     id: "narrative.proof",
-    type: "explainer",
-    status: "draft",
+    type: options.type ?? "explainer",
+    status: options.status ?? "draft",
     title: { nl: "Proef", en: "Proof" },
     slugs: { nl: "proef", en: "proof" },
     locales: { nl: "article.nl.md", en: "article.en.md" },
@@ -108,10 +110,17 @@ async function addNarrative(
     related_entities: options.relatedEntities ?? [],
     source_refs: options.sourceRefs ?? [],
   }));
-  await writeFile(path.join(directory, "article.nl.md"), options.markdown ?? "# Proef\n");
+  const wrap = (body: string) => {
+    if (body.trimStart().startsWith(":::")) return body;
+    return body.length > 0 ? `:::summary{#test-content}\n${body}\n:::\n` : "";
+  };
+  await writeFile(
+    path.join(directory, "article.nl.md"),
+    wrap(options.markdown ?? ""),
+  );
   await writeFile(
     path.join(directory, "article.en.md"),
-    options.englishMarkdown ?? options.markdown ?? "# Proof\n",
+    wrap(options.englishMarkdown ?? options.markdown ?? ""),
   );
 }
 
@@ -351,6 +360,81 @@ describe("content pipeline derivation", () => {
     await addNarrative(unclosedRoot, { markdown: "Lees [[producer.example." });
     await expect(buildContent({ root: unclosedRoot, write: false })).rejects.toThrow(
       /unclosed entity link/,
+    );
+  });
+
+  it("parses semantic blocks, citations, and entity links into generated content", async () => {
+    const root = await temporaryRoot();
+    await addEntity(root, { id: "region.example" });
+    await addSource(root);
+    const dutch = `:::summary{#orientatie depth="foundation"}\nKorte oriëntatie.\n:::\n\n:::section{#uitleg depth="intermediate" source_refs="source.example"}\n## Uitleg\n\nLees [[region.example|de regio]]. [@source.example; p. 42]\n:::\n`;
+    const english = `:::summary{#orientatie depth="foundation"}\nShort orientation.\n:::\n\n:::section{#uitleg depth="intermediate" source_refs="source.example"}\n## Explanation\n\nRead [[region.example|the region]]. [@source.example; p. 42]\n:::\n`;
+    await addNarrative(root, {
+      markdown: dutch,
+      englishMarkdown: english,
+      sourceRefs: ["source.example"],
+      status: "active",
+    });
+
+    const { knowledgeBase } = await buildContent({ root, write: false });
+
+    expect(knowledgeBase.narratives[0].content.nl.blocks).toHaveLength(2);
+    expect(knowledgeBase.narratives[0].content.nl.blocks[1]).toMatchObject({
+      id: "uitleg",
+      type: "section",
+      depth: "intermediate",
+      source_refs: ["source.example"],
+    });
+    expect(JSON.stringify(knowledgeBase.narratives[0].content.nl)).toContain(
+      '"type":"citation"',
+    );
+  });
+
+  it("rejects unsafe Markdown and mismatched locale block structures", async () => {
+    const unsafeRoot = await temporaryRoot();
+    await addNarrative(unsafeRoot, {
+      markdown: ":::section{#uitleg}\n## Uitleg\n\n<div>Niet toegestaan</div>\n:::\n",
+      englishMarkdown: ":::section{#uitleg}\n## Explanation\n\nSafe text.\n:::\n",
+    });
+    await expect(buildContent({ root: unsafeRoot, write: false })).rejects.toThrow(
+      /unsupported Markdown node 'html'/,
+    );
+
+    const parityRoot = await temporaryRoot();
+    await addNarrative(parityRoot, {
+      markdown: ":::summary{#orientatie}\nNederlands.\n:::\n",
+      englishMarkdown: ":::summary{#orientation}\nEnglish.\n:::\n",
+    });
+    await expect(buildContent({ root: parityRoot, write: false })).rejects.toThrow(
+      /differs in id/,
+    );
+  });
+
+  it("requires citations in both block and package source inventories", async () => {
+    const root = await temporaryRoot();
+    await addSource(root);
+    const markdown = ":::summary{#orientatie}\nClaim. [@source.example]\n:::\n";
+    await addNarrative(root, { markdown });
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /without listing it in source_refs/,
+    );
+  });
+
+  it("enforces active lesson block requirements", async () => {
+    const root = await temporaryRoot();
+    const markdown = ":::summary{#orientatie}\nSamenvatting.\n:::\n\n:::section{#uitleg}\n## Uitleg\n\nTekst.\n:::\n";
+    await addNarrative(root, {
+      markdown,
+      status: "active",
+      type: "lesson",
+    });
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /requires one objectives block/,
+    );
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /requires at least one key-idea block/,
     );
   });
 

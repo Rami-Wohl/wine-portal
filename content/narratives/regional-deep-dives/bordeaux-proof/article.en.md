@@ -1,3 +1,9 @@
-# Bordeaux pipeline proof
+:::summary{#fixture-status}
+This is a technical pipeline fixture, not migrated lesson content.
+:::
 
-This technical fixture links [[region.bordeaux|Bordeaux]], [[appellation.pauillac|Pauillac]], and [[producer.chateau-latour|Château Latour]] through stable IDs. It is not migrated lesson content.
+:::section{#stabiele-links}
+## Stable links
+
+This fixture links [[region.bordeaux|Bordeaux]], [[appellation.pauillac|Pauillac]], and [[producer.chateau-latour|Château Latour]] through stable IDs.
+:::

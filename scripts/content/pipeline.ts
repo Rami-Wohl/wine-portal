@@ -5,18 +5,24 @@ import { z } from "zod";
 import {
   ENTITY_TYPES,
   LOCALES,
-  entityIdPattern,
   entitySchema,
   narrativeSchema,
   sourceSchema,
   type Entity,
   type EntityType,
+  type ContentDocument,
+  type GeneratedEntity,
   type GeneratedKnowledgeBase,
   type Locale,
   type Narrative,
   type NarrativeMention,
   type ResolvedRelation,
 } from "../../src/content/model";
+import {
+  parseContentDocument,
+  validateLocaleParity,
+  validatePublicationStructure,
+} from "./markdown";
 
 export class ContentValidationError extends Error {
   constructor(public readonly issues: string[]) {
@@ -133,27 +139,6 @@ function unknownReferenceMessage(reference: string, knownIds: string[]): string 
   return `Unknown entity reference '${reference}'.${hint}`;
 }
 
-export function parseEntityLinks(markdown: string, file: string): NarrativeMention[] {
-  const mentions: NarrativeMention[] = [];
-  let cursor = 0;
-  while (cursor < markdown.length) {
-    const start = markdown.indexOf("[[", cursor);
-    if (start === -1) break;
-    const end = markdown.indexOf("]]", start + 2);
-    if (end === -1) throw new ContentValidationError([`${file}: unclosed entity link starting at character ${start + 1}`]);
-    const body = markdown.slice(start + 2, end);
-    const parts = body.split("|");
-    const id = parts[0];
-    const label = parts.length === 2 ? parts[1] : null;
-    if (parts.length > 2 || !entityIdPattern.test(id) || (label !== null && label.trim().length === 0)) {
-      throw new ContentValidationError([`${file}: invalid entity link '[[${body}]]'; use [[entity.id]] or [[entity.id|Label]]`]);
-    }
-    mentions.push({ entity_id: id, label, locale: file.includes(".nl.md") ? "nl" : "en" });
-    cursor = end + 2;
-  }
-  return mentions;
-}
-
 async function validateLocaleFiles<T extends Entity | Narrative>(record: LoadedRecord<T>, issues: string[]): Promise<Record<Locale, string>> {
   const markdownByLocale = {} as Record<Locale, string>;
   for (const locale of LOCALES) {
@@ -174,6 +159,60 @@ async function validateLocaleFiles<T extends Entity | Narrative>(record: LoadedR
     }
   }
   return markdownByLocale;
+}
+
+function parseLocalizedContent<T extends Entity | Narrative>(
+  record: LoadedRecord<T>,
+  markdownByLocale: Record<Locale, string>,
+  kind: "entity" | "narrative",
+  entityIds: string[],
+  entityIdSet: Set<string>,
+  sourceIdSet: Set<string>,
+  issues: string[],
+): { content: Record<Locale, ContentDocument>; mentions: NarrativeMention[] } {
+  const content: Record<Locale, ContentDocument> = {
+    nl: { blocks: [] },
+    en: { blocks: [] },
+  };
+  const mentions: NarrativeMention[] = [];
+
+  for (const locale of LOCALES) {
+    if (!(locale in markdownByLocale)) continue;
+    const file = `${record.file}:${record.value.locales[locale]}`;
+    const parsed = parseContentDocument(markdownByLocale[locale], file, locale);
+    content[locale] = parsed.document;
+    mentions.push(...parsed.mentions);
+    issues.push(...parsed.issues);
+
+    for (const mention of parsed.mentions) {
+      if (!entityIdSet.has(mention.entity_id)) {
+        issues.push(`${file}: ${unknownReferenceMessage(mention.entity_id, entityIds)}`);
+      }
+    }
+    for (const block of parsed.document.blocks) {
+      for (const sourceRef of block.source_refs) {
+        if (!sourceIdSet.has(sourceRef)) {
+          issues.push(`${file}: Unknown source reference '${sourceRef}'.`);
+        }
+        if (!record.value.source_refs.includes(sourceRef)) {
+          issues.push(
+            `${file}: block '${block.id}' source '${sourceRef}' must also appear in package source_refs`,
+          );
+        }
+      }
+    }
+    if (record.value.status === "active") {
+      issues.push(...validatePublicationStructure(
+        parsed.document,
+        file,
+        kind,
+        kind === "narrative" ? (record.value as Narrative).type : undefined,
+      ));
+    }
+  }
+
+  issues.push(...validateLocaleParity(content, record.file));
+  return { content, mentions };
 }
 
 function findDuplicates(values: Array<{ key: string; file: string }>, label: string, issues: string[]): void {
@@ -266,12 +305,14 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
   const entityIdSet = new Set(entityIds);
   const sourceIdSet = new Set(sourceRecords.map(({ value }) => value.id));
   const mentionMap = new Map<string, NarrativeMention[]>();
+  const entityContentMap = new Map<string, Record<Locale, ContentDocument>>();
+  const narrativeContentMap = new Map<string, Record<Locale, ContentDocument>>();
 
   for (const record of entityRecords) {
     if (!record.value.id.startsWith(`${record.value.type}.`)) {
       issues.push(`${record.file}: ID '${record.value.id}' does not match entity type '${record.value.type}'`);
     }
-    await validateLocaleFiles(record, issues);
+    const markdownByLocale = await validateLocaleFiles(record, issues);
     findDuplicatesWithinRecord(
       record.value.source_refs,
       "source reference",
@@ -293,6 +334,16 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     for (const sourceRef of [...record.value.source_refs, ...record.value.assertions.flatMap((assertion) => assertion.sources)]) {
       if (!sourceIdSet.has(sourceRef)) issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
     }
+    const parsed = parseLocalizedContent(
+      record,
+      markdownByLocale,
+      "entity",
+      entityIds,
+      entityIdSet,
+      sourceIdSet,
+      issues,
+    );
+    entityContentMap.set(record.value.id, parsed.content);
   }
 
   for (const record of narrativeRecords) {
@@ -324,28 +375,32 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     for (const sourceRef of record.value.source_refs) {
       if (!sourceIdSet.has(sourceRef)) issues.push(`${record.file}: Unknown source reference '${sourceRef}'.`);
     }
-    const mentions: NarrativeMention[] = [];
-    for (const locale of LOCALES) {
-      if (!(locale in markdownByLocale)) continue;
-      try {
-        const parsed = parseEntityLinks(markdownByLocale[locale], `${record.file}:${record.value.locales[locale]}`);
-        mentions.push(...parsed);
-        for (const mention of parsed) {
-          if (!entityIdSet.has(mention.entity_id)) issues.push(`${record.file}:${record.value.locales[locale]}: ${unknownReferenceMessage(mention.entity_id, entityIds)}`);
-        }
-      } catch (error) {
-        if (error instanceof ContentValidationError) issues.push(...error.issues);
-        else throw error;
-      }
-    }
+    const parsed = parseLocalizedContent(
+      record,
+      markdownByLocale,
+      "narrative",
+      entityIds,
+      entityIdSet,
+      sourceIdSet,
+      issues,
+    );
+    const mentions = parsed.mentions;
+    narrativeContentMap.set(record.value.id, parsed.content);
     mentionMap.set(record.value.id, mentions.sort((left, right) => left.locale.localeCompare(right.locale) || left.entity_id.localeCompare(right.entity_id)));
   }
 
   if (issues.length > 0) throw new ContentValidationError(issues.sort());
 
-  const entities = entityRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
+  const entities: GeneratedEntity[] = entityRecords.map(({ value }) => ({
+    ...value,
+    content: entityContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
+  })).sort((left, right) => left.id.localeCompare(right.id));
   const sources = sourceRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
-  const narratives = narrativeRecords.map(({ value }) => ({ ...value, mentions: mentionMap.get(value.id) ?? [] })).sort((left, right) => left.id.localeCompare(right.id));
+  const narratives = narrativeRecords.map(({ value }) => ({
+    ...value,
+    mentions: mentionMap.get(value.id) ?? [],
+    content: narrativeContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
+  })).sort((left, right) => left.id.localeCompare(right.id));
   const forward: ResolvedRelation[] = entities.flatMap((entity) => entity.relations.map((relation) => ({ source: entity.id, ...relation })))
     .sort((left, right) => left.source.localeCompare(right.source) || left.type.localeCompare(right.type) || left.target.localeCompare(right.target));
   const inverse = Object.fromEntries(entityIds.map((id) => [id, forward.filter((relation) => relation.target === id)]));

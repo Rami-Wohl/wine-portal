@@ -25,7 +25,8 @@ npm run content:build
 npm run content:new -- producer example-estate
 ```
 
-Zie `docs/content-authoring.md` en `scripts/content/README.md` voor de authoringworkflow.
+Zie `docs/content-authoring.md`, `docs/content-blocks.md` en
+`scripts/content/README.md` voor de authoringworkflow.
 
 ## Validation
 

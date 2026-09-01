@@ -4,7 +4,7 @@ purpose: "Actieve content-, data-, provenance- en migratiearchitectuur voor Oeno
 status: "active"
 version: "1.0"
 created: "2026-08-25"
-last_updated: "2026-08-31"
+last_updated: "2026-09-01"
 ---
 
 # Knowledge architecture
@@ -487,13 +487,13 @@ framework_alignment:
 
 Ondersteunde relaties zijn `prerequisite`, `core-overlap`, `extension` en `beyond`. Een extern opleidingskader is metadata en bepaalt de ontologie niet.
 
-### Besloten conventie, implementatie pending: depth per block
+### Geïmplementeerd: depth per block
 
 Een lang document kan blocks met verschillende diepte hebben. De authoringsyntax
 voor stabiele block-IDs, blocktypen, `depth`, `source_refs`, entitylinks en
-citations is vastgelegd in `content-blocks.md`. Parser, validator, gegenereerde
-blockmetadata en rendering zijn nog niet geïmplementeerd. Block-level
-`framework_alignment` blijft bewust uitgesteld.
+citations staat in `content-blocks.md`. Parser, validator, genormaliseerde
+content-AST, gegenereerde blockmetadata en server-side rendering zijn
+geïmplementeerd. Block-level `framework_alignment` blijft bewust uitgesteld.
 
 ---
 
@@ -718,6 +718,7 @@ De architectuur wordt vóór grootschalige regiomigratie aangepast als deze slic
 - entity-, narrative-, relation-, assertion- en sourceschema's;
 - NL/EN als verplichte gelokaliseerde presentatielagen;
 - stable entitylinks met mentions en backlinks;
+- veilige semantic content blocks met citations en NL/EN-pariteitsvalidatie;
 - entity/narrative depth en framework alignment;
 - inverse relations, localized slug/search/geography-indexes;
 - één deterministische gegenereerde runtimebundle;
@@ -733,7 +734,6 @@ De architectuur wordt vóór grootschalige regiomigratie aangepast als deze slic
 
 ### Open roadmapontwerp
 
-- implementatie van de besloten Markdown-directives, blockvalidator en renderer;
 - learning-pathschema en voortgangsmodel;
 - geography storage, import en mogelijke PostGIS-runtime;
 - mediaschema en platformbrede assetcatalogus;

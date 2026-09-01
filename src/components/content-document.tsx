@@ -1,0 +1,239 @@
+import { Fragment, type ReactNode } from "react";
+import Link from "next/link";
+import type {
+  CaveatVariant,
+  ContentBlock,
+  ContentBlockNode,
+  ContentDocument,
+  ContentInlineNode,
+  Locale,
+  Source,
+} from "@/content/model";
+import { getEntityById } from "@/content/repository";
+import { entityHref } from "@/content/routing";
+
+const BLOCK_LABELS: Record<Locale, Record<"objectives" | "key-idea" | "in-the-glass", string>> = {
+  nl: {
+    objectives: "Leerdoelen",
+    "key-idea": "Kernidee",
+    "in-the-glass": "Waarom doet dit ertoe in het glas?",
+  },
+  en: {
+    objectives: "Learning objectives",
+    "key-idea": "Key idea",
+    "in-the-glass": "Why does this matter in the glass?",
+  },
+};
+
+const CAVEAT_LABELS: Record<Locale, Record<CaveatVariant, string>> = {
+  nl: {
+    simplification: "Bewuste vereenvoudiging",
+    uncertainty: "Onzekerheid",
+    exception: "Belangrijke uitzondering",
+  },
+  en: {
+    simplification: "Deliberate simplification",
+    uncertainty: "Uncertainty",
+    exception: "Important exception",
+  },
+};
+
+interface RenderContext {
+  locale: Locale;
+  sources: Map<string, Source>;
+  sourceNumbers: Map<string, number>;
+}
+
+function renderInline(nodes: ContentInlineNode[], context: RenderContext): ReactNode {
+  return nodes.map((node, index) => {
+    const key = `${node.type}-${index}`;
+    switch (node.type) {
+      case "text":
+        return <Fragment key={key}>{node.value}</Fragment>;
+      case "inline-code":
+        return <code key={key}>{node.value}</code>;
+      case "break":
+        return <br key={key} />;
+      case "emphasis":
+        return <em key={key}>{renderInline(node.children, context)}</em>;
+      case "strong":
+        return <strong key={key}>{renderInline(node.children, context)}</strong>;
+      case "link": {
+        const children = renderInline(node.children, context);
+        if (node.url.startsWith("/") || node.url.startsWith("#")) {
+          return <Link href={node.url} key={key} title={node.title ?? undefined}>{children}</Link>;
+        }
+        return (
+          <a
+            href={node.url}
+            key={key}
+            rel={node.url.startsWith("http") ? "noreferrer" : undefined}
+            target={node.url.startsWith("http") ? "_blank" : undefined}
+            title={node.title ?? undefined}
+          >
+            {children}
+          </a>
+        );
+      }
+      case "entity-link": {
+        const entity = getEntityById(node.entity_id);
+        if (!entity) return null;
+        return (
+          <Link className="content-entity-link" href={entityHref(entity)} key={key}>
+            {node.label ?? entity.names[context.locale]}
+          </Link>
+        );
+      }
+      case "citation": {
+        const source = context.sources.get(node.source_id);
+        const number = context.sourceNumbers.get(node.source_id);
+        if (!source || !number) return null;
+        const locator = node.locator ? `, ${node.locator}` : "";
+        const label = `${source.title}${locator}`;
+        const marker = <span aria-hidden="true">[{number}]</span>;
+        return (
+          <sup className="content-citation" key={key}>
+            {source.url ? (
+              <a href={source.url} rel="noreferrer" target="_blank" aria-label={label} title={label}>
+                {marker}
+              </a>
+            ) : (
+              <span aria-label={label} title={label}>{marker}</span>
+            )}
+          </sup>
+        );
+      }
+    }
+  });
+}
+
+function renderBlockNodes(nodes: ContentBlockNode[], context: RenderContext): ReactNode {
+  return nodes.map((node, index) => {
+    const key = `${node.type}-${index}`;
+    switch (node.type) {
+      case "paragraph":
+        return <p key={key}>{renderInline(node.children, context)}</p>;
+      case "heading":
+        return node.depth === 2
+          ? <h2 key={key}>{renderInline(node.children, context)}</h2>
+          : <h3 key={key}>{renderInline(node.children, context)}</h3>;
+      case "list": {
+        const items = node.children.map((item, itemIndex) => (
+          <li key={`item-${itemIndex}`}>{renderBlockNodes(item.children, context)}</li>
+        ));
+        return node.ordered
+          ? <ol key={key} start={node.start ?? undefined}>{items}</ol>
+          : <ul key={key}>{items}</ul>;
+      }
+      case "blockquote":
+        return <blockquote key={key}>{renderBlockNodes(node.children, context)}</blockquote>;
+      case "table": {
+        const [header, ...body] = node.rows;
+        return (
+          <div className="content-table-scroll" key={key} role="region" aria-label={context.locale === "nl" ? "Tabel" : "Table"} tabIndex={0}>
+            <table>
+              {header ? (
+                <thead>
+                  <tr>
+                    {header.map((cell, cellIndex) => (
+                      <th key={`header-${cellIndex}`} scope="col" style={{ textAlign: node.align[cellIndex] ?? undefined }}>
+                        {renderInline(cell, context)}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+              ) : null}
+              <tbody>
+                {body.map((row, rowIndex) => (
+                  <tr key={`row-${rowIndex}`}>
+                    {row.map((cell, cellIndex) => (
+                      <td key={`cell-${cellIndex}`} style={{ textAlign: node.align[cellIndex] ?? undefined }}>
+                        {renderInline(cell, context)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
+    }
+  });
+}
+
+function renderContentBlock(block: ContentBlock, context: RenderContext): ReactNode {
+  const className = [
+    "content-block",
+    `content-block-${block.type}`,
+    block.depth ? `content-depth-${block.depth}` : null,
+  ].filter(Boolean).join(" ");
+  const content = renderBlockNodes(block.nodes, context);
+  const common = { id: block.id, className, tabIndex: -1 };
+
+  switch (block.type) {
+    case "summary":
+      return <div {...common}>{content}</div>;
+    case "section":
+    case "comparison":
+      return <section {...common}>{content}</section>;
+    case "objectives": {
+      const titleId = `${block.id}-title`;
+      return (
+        <section {...common} aria-labelledby={titleId}>
+          <h2 className="content-block-title" id={titleId}>{BLOCK_LABELS[context.locale].objectives}</h2>
+          {content}
+        </section>
+      );
+    }
+    case "key-idea":
+      return (
+        <aside {...common} aria-label={BLOCK_LABELS[context.locale]["key-idea"]}>
+          <p className="content-block-label">{BLOCK_LABELS[context.locale]["key-idea"]}</p>
+          {content}
+        </aside>
+      );
+    case "caveat": {
+      const label = block.variant
+        ? CAVEAT_LABELS[context.locale][block.variant]
+        : context.locale === "nl" ? "Nuance" : "Nuance";
+      return (
+        <aside {...common} aria-label={label}>
+          <p className="content-block-label">{label}</p>
+          {content}
+        </aside>
+      );
+    }
+    case "in-the-glass": {
+      const titleId = `${block.id}-title`;
+      return (
+        <section {...common} aria-labelledby={titleId}>
+          <h2 className="content-block-title" id={titleId}>{BLOCK_LABELS[context.locale]["in-the-glass"]}</h2>
+          {content}
+        </section>
+      );
+    }
+  }
+}
+
+export function ContentDocumentView({
+  document,
+  locale,
+  sources,
+}: {
+  document: ContentDocument;
+  locale: Locale;
+  sources: Source[];
+}) {
+  const sourceMap = new Map(sources.map((source) => [source.id, source]));
+  const sourceNumbers = new Map(sources.map((source, index) => [source.id, index + 1]));
+  const context: RenderContext = { locale, sources: sourceMap, sourceNumbers };
+
+  return (
+    <div className="content-document">
+      {document.blocks.map((block) => (
+        <Fragment key={block.id}>{renderContentBlock(block, context)}</Fragment>
+      ))}
+    </div>
+  );
+}

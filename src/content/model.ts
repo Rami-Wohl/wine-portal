@@ -38,10 +38,22 @@ export const RELATION_TYPES = [
 
 export const LOCALES = ["nl", "en"] as const;
 export const DEPTHS = ["foundation", "intermediate", "advanced", "specialist"] as const;
+export const CONTENT_BLOCK_TYPES = [
+  "summary",
+  "objectives",
+  "section",
+  "key-idea",
+  "caveat",
+  "in-the-glass",
+  "comparison",
+] as const;
+export const CAVEAT_VARIANTS = ["simplification", "uncertainty", "exception"] as const;
 
 export type EntityType = (typeof ENTITY_TYPES)[number];
 export type Locale = (typeof LOCALES)[number];
 export type Depth = (typeof DEPTHS)[number];
+export type ContentBlockType = (typeof CONTENT_BLOCK_TYPES)[number];
+export type CaveatVariant = (typeof CAVEAT_VARIANTS)[number];
 
 export const entityIdPattern = /^(region|appellation|site|producer|grape|classification|vintage|concept)\.[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const entityIdSchema = z.string().regex(entityIdPattern, "must be '<entity-type>.<canonical-slug>'");
@@ -142,12 +154,118 @@ export interface NarrativeMention {
   locale: Locale;
 }
 
+export interface ContentTextNode {
+  type: "text";
+  value: string;
+}
+
+export interface ContentInlineCodeNode {
+  type: "inline-code";
+  value: string;
+}
+
+export interface ContentEntityLinkNode {
+  type: "entity-link";
+  entity_id: string;
+  label: string | null;
+}
+
+export interface ContentCitationNode {
+  type: "citation";
+  source_id: string;
+  locator: string | null;
+}
+
+export interface ContentInlineContainerNode {
+  type: "emphasis" | "strong";
+  children: ContentInlineNode[];
+}
+
+export interface ContentLinkNode {
+  type: "link";
+  url: string;
+  title: string | null;
+  children: ContentInlineNode[];
+}
+
+export interface ContentBreakNode {
+  type: "break";
+}
+
+export type ContentInlineNode =
+  | ContentTextNode
+  | ContentInlineCodeNode
+  | ContentEntityLinkNode
+  | ContentCitationNode
+  | ContentInlineContainerNode
+  | ContentLinkNode
+  | ContentBreakNode;
+
+export interface ContentParagraphNode {
+  type: "paragraph";
+  children: ContentInlineNode[];
+}
+
+export interface ContentHeadingNode {
+  type: "heading";
+  depth: 2 | 3;
+  children: ContentInlineNode[];
+}
+
+export interface ContentListItemNode {
+  type: "list-item";
+  children: ContentBlockNode[];
+}
+
+export interface ContentListNode {
+  type: "list";
+  ordered: boolean;
+  start: number | null;
+  children: ContentListItemNode[];
+}
+
+export interface ContentBlockquoteNode {
+  type: "blockquote";
+  children: ContentBlockNode[];
+}
+
+export interface ContentTableNode {
+  type: "table";
+  align: Array<"left" | "right" | "center" | null>;
+  rows: ContentInlineNode[][][];
+}
+
+export type ContentBlockNode =
+  | ContentParagraphNode
+  | ContentHeadingNode
+  | ContentListNode
+  | ContentBlockquoteNode
+  | ContentTableNode;
+
+export interface ContentBlock {
+  id: string;
+  type: ContentBlockType;
+  depth: Depth | null;
+  source_refs: string[];
+  variant: CaveatVariant | null;
+  nodes: ContentBlockNode[];
+}
+
+export interface ContentDocument {
+  blocks: ContentBlock[];
+}
+
+export type GeneratedEntity = Entity & {
+  content: Record<Locale, ContentDocument>;
+};
+
 export type GeneratedNarrative = Narrative & {
   mentions: NarrativeMention[];
+  content: Record<Locale, ContentDocument>;
 };
 
 export interface GeneratedKnowledgeBase {
-  entities: Entity[];
+  entities: GeneratedEntity[];
   narratives: GeneratedNarrative[];
   sources: Source[];
   relations: {

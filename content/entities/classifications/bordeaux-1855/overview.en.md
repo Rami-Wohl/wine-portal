@@ -1,3 +1,3 @@
-# Bordeaux 1855
-
+:::summary{#fixture-status}
 This minimal fixture does not yet contain migrated content.
+:::

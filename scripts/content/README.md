@@ -18,7 +18,9 @@ Relationships and narrative links use stable IDs such as `producer.chateau-latou
 npm run content:check
 ```
 
-Validates schemas, IDs, slugs, locale files, relations, source references, and Markdown entity links without writing generated files.
+Validates schemas, IDs, slugs, locale files, relations, semantic content blocks,
+hard NL/EN block parity, source inventories, citations, and Markdown entity
+links without writing generated files.
 
 ```bash
 npm run content:build
@@ -34,6 +36,9 @@ Creates a starter entity package with YAML metadata, Dutch and English Markdown 
 
 ## Output
 
-The generated bundle contains normalized entities and narratives, forward and inverse relations, narrative backlinks, source data, and application indexes for lookup, localized slugs, search, and geography references.
+The generated bundle contains normalized entities and narratives with their safe
+content trees, forward and inverse relations, narrative backlinks, source data,
+and application indexes for lookup, localized slugs, search, and geography
+references.
 
 `src/generated/content/` is ignored by Git and must not be edited manually. Change the canonical content and run `npm run content:build` again instead.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
+import { ContentDocumentView } from "@/components/content-document";
 import type { Entity } from "@/content/model";
 import { relationLabel, type RelationDirection } from "@/content/relations";
 import {
@@ -114,6 +115,16 @@ export default async function EntityPage({ params }: EntityPageProps) {
           </aside>
         ) : null}
       </header>
+
+      {entity.status === "active" && entity.content.nl.blocks.length > 0 ? (
+        <article className="entity-body">
+          <ContentDocumentView
+            document={entity.content.nl}
+            locale="nl"
+            sources={sources}
+          />
+        </article>
+      ) : null}
 
       {hasSupportingInformation ? (
         <div className="entity-support-layout">

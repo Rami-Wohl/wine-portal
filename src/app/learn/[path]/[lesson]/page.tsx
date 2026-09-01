@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
-import type { Entity, GeneratedNarrative } from "@/content/model";
+import { ContentDocumentView } from "@/components/content-document";
+import type { GeneratedEntity, GeneratedNarrative } from "@/content/model";
 import {
   getEntityById,
   getNarrativeByRoute,
   getNarratives,
+  getSourcesByIds,
 } from "@/content/repository";
 import {
   DEPTH_LABELS_NL,
@@ -68,8 +70,9 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
     ]),
   )
     .map(getEntityById)
-    .filter((entity): entity is Entity => Boolean(entity));
+    .filter((entity): entity is GeneratedEntity => Boolean(entity));
   const title = publicNarrativeTitle(narrative);
+  const sources = getSourcesByIds(narrative.source_refs);
 
   return (
     <main id="main-content" className="page-shell lesson-page">
@@ -93,7 +96,13 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
 
       <div className="lesson-layout">
         <article className="lesson-body">
-          {narrative.status === "active" ? null : (
+          {narrative.status === "active" ? (
+            <ContentDocumentView
+              document={narrative.content.nl}
+              locale="nl"
+              sources={sources}
+            />
+          ) : (
             <div className="empty-state">
               <p className="eyebrow">In voorbereiding</p>
               <h2>Deze verdieping wordt zorgvuldig opgebouwd.</h2>
@@ -108,15 +117,36 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
           )}
         </article>
 
-        {mentionedEntities.length > 0 ? (
+        {mentionedEntities.length > 0 || sources.length > 0 ? (
           <aside className="lesson-context" aria-labelledby="lesson-context-title">
-            <p className="eyebrow">In deze verdieping</p>
-            <h2 id="lesson-context-title">Verbonden onderwerpen</h2>
-            <div className="entity-link-list">
-              {mentionedEntities.map((entity) => (
-                <EntityLink entity={entity} key={entity.id} />
-              ))}
-            </div>
+            {mentionedEntities.length > 0 ? (
+              <>
+                <p className="eyebrow">In deze verdieping</p>
+                <h2 id="lesson-context-title">Verbonden onderwerpen</h2>
+                <div className="entity-link-list">
+                  {mentionedEntities.map((entity) => (
+                    <EntityLink entity={entity} key={entity.id} />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <h2 id="lesson-context-title">Bronnen</h2>
+            )}
+            {sources.length > 0 ? (
+              <div className="content-source-list">
+                {mentionedEntities.length > 0 ? <h3>Bronnen</h3> : null}
+                <ol>
+                  {sources.map((source) => (
+                    <li key={source.id}>
+                      {source.url ? (
+                        <a href={source.url} rel="noreferrer" target="_blank">{source.title}</a>
+                      ) : <span>{source.title}</span>}
+                      <small>{source.publisher}</small>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ) : null}
           </aside>
         ) : null}
       </div>

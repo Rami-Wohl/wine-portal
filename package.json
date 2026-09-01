@@ -11,9 +11,10 @@
     "start": "next start",
     "lint": "eslint",
     "pretypecheck": "npm run content:build",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "pretest": "npm run content:build",
     "test": "vitest run",
+    "test:e2e": "npm run content:build && next build --webpack && playwright test",
     "content:check": "node --import tsx scripts/content/cli.ts check",
     "content:build": "node --import tsx scripts/content/cli.ts build",
     "content:new": "node --import tsx scripts/content/cli.ts new"
@@ -22,10 +23,15 @@
     "next": "16.3.3",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "remark-directive": "^4.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
     "yaml": "^2.9.0",
     "zod": "^4.5.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

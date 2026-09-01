@@ -3,13 +3,13 @@ title: "Markdown- en content-blockconventies"
 status: "accepted"
 version: "1.0"
 created: "2026-08-31"
-last_updated: "2026-08-31"
-implementation: "pending-renderer"
+last_updated: "2026-09-01"
+implementation: "implemented"
 ---
 
 # Markdown- en content-blockconventies
 
-Dit document is het authoring- en renderercontract voor canonical entity-overviews en narratives. De syntax is besloten voor v1; parser, blockvalidatie en rendering worden in de volgende implementatiestap toegevoegd. Tot die tijd valideert `npm run content:check` alleen de bestaande pakketmetadata, localebestanden en entitylinks.
+Dit document is het geïmplementeerde authoring- en renderercontract voor canonical entity-overviews en narratives. `npm run content:check` valideert de blockstructuur, NL/EN-pariteit, entitylinks, citations en bronreferenties; `npm run content:build` neemt de genormaliseerde content-AST op in de runtimebundle.
 
 De conventions houden content portable en controleerbaar:
 
@@ -98,7 +98,7 @@ Iedere block ondersteunt uitsluitend deze gemeenschappelijke attributen:
 | `depth` | nee | `foundation`, `intermediate`, `advanced` of `specialist` |
 | `source_refs` | nee | Door spaties gescheiden `source.*`-IDs die de block ondersteunen |
 
-Wanneer `depth` ontbreekt, erft de block conceptueel de depth van de entity of narrative. Ontbreekt ook daar depth, dan doet de renderer geen niveauclaim. De toekomstige validator materialiseert die overerving niet terug naar canonical Markdown.
+Wanneer `depth` ontbreekt, erft de block conceptueel de depth van de entity of narrative. Ontbreekt ook daar depth, dan doet de renderer geen niveauclaim. De validator materialiseert die overerving niet terug naar canonical Markdown.
 
 `source_refs` is een blockinventaris, geen vervanging voor een citation bij een specifieke betwistbare, juridische, numerieke, historische of geciteerde claim. Iedere genoemde source moet ook voorkomen in `source_refs` van de package-YAML. De pipeline blijft daarmee de volledige packageprovenance kennen.
 
@@ -333,7 +333,7 @@ Redactioneel contract:
 - alle gebruikte sources staan in de gedeelde package-YAML;
 - ontbrekende vertaling wordt een expliciete incomplete state, geen fallbacktekst.
 
-De toekomstige validator controleert het harde contract automatisch en rapporteert verschillen tussen mentions en sourcegebruik ter review zonder daar automatisch feitelijke conclusies uit te trekken.
+De validator controleert het harde structurele contract automatisch. Verschillen tussen mentions en sourcegebruik blijven een redactionele reviewtaak; de software trekt daar niet automatisch feitelijke conclusies uit.
 
 ## 11. Volledig structureel voorbeeld
 
@@ -370,9 +370,9 @@ Hier staat een zorgvuldig begrensde koppeling naar mogelijke waarneming.
 
 `concept.example` is uitsluitend een syntaxplaceholder en geen bestaande entity. Een echt contentbestand zou daarom pas valideren nadat een echte target is gekozen.
 
-## 12. Renderer- en validatorcontract voor stap C
+## 12. Geïmplementeerd renderer- en validatorcontract
 
-De implementatie van stap C moet:
+De implementatie:
 
 1. Markdown en directives tijdens build/server rendering naar een veilige AST parsen;
 2. raw HTML, uitvoerbare code, onbekende directives en onbekende attributen weigeren;

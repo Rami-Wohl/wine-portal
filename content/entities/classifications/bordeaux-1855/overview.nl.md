@@ -1,3 +1,3 @@
-# Bordeaux 1855
-
+:::summary{#fixture-status}
 Deze minimale fixture bevat nog geen gemigreerde inhoud.
+:::
