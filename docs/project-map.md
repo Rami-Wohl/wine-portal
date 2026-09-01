@@ -14,7 +14,7 @@ authored en canonical
 
   entity.yaml + overview.nl.md + overview.en.md
   narrative.yaml + article.nl.md + article.en.md
-  source records + verified geography
+  source records + media records + verified geography
                          |
                          | content:check / content:build
                          v
@@ -41,6 +41,8 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Narrative-metadata en entitykoppelingen | `content/narratives/**/narrative.yaml` | Identiteit, scope en relaties van een verhaal |
 | Narrative-artikel | `content/narratives/**/article.<locale>.md` | Gelokaliseerde uitleg over meerdere entities |
 | Herbruikbare bronnen | `data/sources/` | Provenance voor claims en contentblocks |
+| Mediametadata | `data/media/` | Stabiele media-ID, opslagkey, afmetingen, alttekst en rechten |
+| Lokale mediabytes | `public/media/` | Huidige opslagadapter; later vervangbaar door object storage/CDN |
 | Geverifieerde geografie | `data/geography/` | Toekomstige factual Atlasdata |
 | Runtimebundle | `src/generated/content/knowledge-base.json` | Afgeleid buildresultaat, niet canonical |
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
@@ -70,14 +72,21 @@ narratives. Ze worden geen aparte opslagplaats voor gekopieerde wijnkennis.
 3. Leg identiteit, relaties, assertions en provenance in YAML vast.
 4. Schrijf de Nederlandse Markdown volgens `content-blocks.md`.
 5. Schrijf en review de Engelse lokalisatie met dezelfde kennis en blockstructuur.
-6. Draai `npm run content:check` tijdens het authoren.
-7. Draai relevante unit- en browsertests wanneer routes, rendering of layouts
+6. Registreer beelden onder `data/media/` en verwijs vanuit Markdown alleen met `media_id`.
+7. Draai `npm run content:check` tijdens het authoren.
+8. Draai relevante unit- en browsertests wanneer routes, rendering of layouts
    zijn geraakt.
-8. Review inhoud, bronnen, onzekerheid, responsive presentatie en publicatiestatus.
+9. Review inhoud, bronnen, mediarechten, onzekerheid, responsive presentatie en publicatiestatus.
 
-De huidige Bordeauxpackages zijn draft technische fixtures. De eerste echte
-contentslice vervangt hun fixturetekst stapsgewijs door onderzochte canonical
-content; zij wordt niet uit een oud curriculum geconverteerd.
+Lokaal wordt een storage key als `/media/<key>` geleverd. Bij een latere CDN
+stelt deployment `MEDIA_BASE_URL` in en synchroniseert een provideradapter
+dezelfde keys automatisch. Contentbestanden en mediarecords bevatten daarom
+nooit provider-URL's en hoeven bij die overgang niet te worden herschreven.
+
+`region.bordeaux` is de eerste actieve, onderzochte entity. De overige
+Bordeauxpackages blijven draft technische fixtures en worden stapsgewijs door
+onderzochte canonical content vervangen; zij worden niet uit een oud curriculum
+geconverteerd.
 
 ## Welk commando doet wat?
 
@@ -100,6 +109,8 @@ niet ieder wijnfeit en hoeven niet na iedere kleine tekstwijziging te draaien.
 - Gebruik `content-blocks.md` voor Markdownsyntax en rendererconventies.
 - Gebruik `../editorial/research-policy.md` voor iedere feitelijke claim, bron,
   vertaling of correctie.
+- Gebruik `../editorial/writing-style.md` voor stem, regiopagina's en levendige
+  maar precieze redactie.
 - Gebruik `knowledge-architecture.md` wanneer het model, relaties, routing,
   indexing of canonical ownership verandert.
 - Gebruik `geography-policy.md` voor plaatsen, coördinaten, grenzen en Atlas.

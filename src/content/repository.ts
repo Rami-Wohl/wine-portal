@@ -4,6 +4,7 @@ import type {
   GeneratedEntity,
   GeneratedKnowledgeBase,
   GeneratedNarrative,
+  MediaAsset,
   ResolvedRelation,
   Source,
 } from "./model";
@@ -21,6 +22,9 @@ const narrativesById = new Map(
 );
 const sourcesById = new Map(
   knowledgeBase.sources.map((source) => [source.id, source]),
+);
+const mediaById = new Map(
+  knowledgeBase.media.map((asset) => [asset.id, asset]),
 );
 const narrativesByRoute = new Map(
   knowledgeBase.narratives.map((narrative) => [
@@ -71,6 +75,12 @@ export function getSourcesByIds(ids: string[]): Source[] {
   return ids
     .map((id) => sourcesById.get(id))
     .filter((source): source is Source => Boolean(source));
+}
+
+export function getMediaByIds(ids: string[]): MediaAsset[] {
+  return ids
+    .map((id) => mediaById.get(id))
+    .filter((asset): asset is MediaAsset => Boolean(asset));
 }
 
 export function getNarrativeByRoute(

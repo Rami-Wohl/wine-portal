@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
@@ -6,6 +7,7 @@ import {
   ENTITY_TYPES,
   LOCALES,
   entitySchema,
+  mediaAssetSchema,
   narrativeSchema,
   sourceSchema,
   type Entity,
@@ -14,6 +16,7 @@ import {
   type GeneratedEntity,
   type GeneratedKnowledgeBase,
   type Locale,
+  type MediaAsset,
   type Narrative,
   type NarrativeMention,
   type ResolvedRelation,
@@ -41,6 +44,7 @@ export interface BuildOptions {
   root?: string;
   write?: boolean;
   outputDirectory?: string;
+  requireLocalMedia?: boolean;
 }
 
 export interface BuildResult {
@@ -168,6 +172,7 @@ function parseLocalizedContent<T extends Entity | Narrative>(
   entityIds: string[],
   entityIdSet: Set<string>,
   sourceIdSet: Set<string>,
+  mediaIdSet: Set<string>,
   issues: string[],
 ): { content: Record<Locale, ContentDocument>; mentions: NarrativeMention[] } {
   const content: Record<Locale, ContentDocument> = {
@@ -190,6 +195,9 @@ function parseLocalizedContent<T extends Entity | Narrative>(
       }
     }
     for (const block of parsed.document.blocks) {
+      if (block.media_id && !mediaIdSet.has(block.media_id)) {
+        issues.push(`${file}: Unknown media reference '${block.media_id}'.`);
+      }
       for (const sourceRef of block.source_refs) {
         if (!sourceIdSet.has(sourceRef)) {
           issues.push(`${file}: Unknown source reference '${sourceRef}'.`);
@@ -213,6 +221,36 @@ function parseLocalizedContent<T extends Entity | Narrative>(
 
   issues.push(...validateLocaleParity(content, record.file));
   return { content, mentions };
+}
+
+async function validateMediaFiles(
+  records: Array<LoadedRecord<MediaAsset>>,
+  root: string,
+  requireLocalMedia: boolean,
+  issues: string[],
+): Promise<void> {
+  if (!requireLocalMedia) return;
+  await Promise.all(records.map(async ({ file, value }) => {
+    const assetPath = path.join(root, "public", "media", value.storage_key);
+    try {
+      const bytes = await readFile(assetPath);
+      const checksum = createHash("sha256").update(bytes).digest("hex");
+      if (checksum !== value.checksum_sha256) {
+        issues.push(
+          `${file}: checksum_sha256 does not match public/media/${value.storage_key}`,
+        );
+      }
+    } catch (error) {
+      if (isNodeError(error) && error.code === "ENOENT") {
+        issues.push(
+          `${file}: storage_key '${value.storage_key}' is missing under public/media; ` +
+          "set MEDIA_BASE_URL only when the same key exists in remote storage",
+        );
+        return;
+      }
+      throw error;
+    }
+  }));
 }
 
 function findDuplicates(values: Array<{ key: string; file: string }>, label: string, issues: string[]): void {
@@ -267,20 +305,30 @@ function stableJson(value: object): string {
 export async function buildContent(options: BuildOptions = {}): Promise<BuildResult> {
   const root = path.resolve(options.root ?? process.cwd());
   const issues: string[] = [];
-  const [entityFiles, narrativeFiles, sourceFiles] = await Promise.all([
+  const [entityFiles, narrativeFiles, sourceFiles, mediaFiles] = await Promise.all([
     discoverFiles(path.join(root, "content", "entities"), "entity.yaml"),
     discoverFiles(path.join(root, "content", "narratives"), "narrative.yaml"),
     discoverYamlFiles(path.join(root, "data", "sources")),
+    discoverYamlFiles(path.join(root, "data", "media")),
   ]);
-  const [entityRecords, narrativeRecords, sourceRecords] = await Promise.all([
+  const [entityRecords, narrativeRecords, sourceRecords, mediaRecords] = await Promise.all([
     loadYamlRecords(entityFiles, entitySchema, root, issues),
     loadYamlRecords(narrativeFiles, narrativeSchema, root, issues),
     loadYamlRecords(sourceFiles, sourceSchema, root, issues),
+    loadYamlRecords(mediaFiles, mediaAssetSchema, root, issues),
   ]);
 
   findDuplicates(entityRecords.map(({ file, value }) => ({ key: value.id, file })), "entity ID", issues);
   findDuplicates(narrativeRecords.map(({ file, value }) => ({ key: value.id, file })), "narrative ID", issues);
   findDuplicates(sourceRecords.map(({ file, value }) => ({ key: value.id, file })), "source ID", issues);
+  findDuplicates(mediaRecords.map(({ file, value }) => ({ key: value.id, file })), "media ID", issues);
+  findDuplicates(mediaRecords.map(({ file, value }) => ({ key: value.storage_key, file })), "media storage key", issues);
+  await validateMediaFiles(
+    mediaRecords,
+    root,
+    options.requireLocalMedia ?? true,
+    issues,
+  );
   findDuplicates(
     entityRecords.flatMap(({ file, value }) => value.assertions.map((assertion) => ({
       key: assertion.id,
@@ -304,6 +352,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
   const entityIds = entityRecords.map(({ value }) => value.id).sort();
   const entityIdSet = new Set(entityIds);
   const sourceIdSet = new Set(sourceRecords.map(({ value }) => value.id));
+  const mediaIdSet = new Set(mediaRecords.map(({ value }) => value.id));
   const mentionMap = new Map<string, NarrativeMention[]>();
   const entityContentMap = new Map<string, Record<Locale, ContentDocument>>();
   const narrativeContentMap = new Map<string, Record<Locale, ContentDocument>>();
@@ -341,6 +390,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       entityIds,
       entityIdSet,
       sourceIdSet,
+      mediaIdSet,
       issues,
     );
     entityContentMap.set(record.value.id, parsed.content);
@@ -382,6 +432,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       entityIds,
       entityIdSet,
       sourceIdSet,
+      mediaIdSet,
       issues,
     );
     const mentions = parsed.mentions;
@@ -396,6 +447,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     content: entityContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
   })).sort((left, right) => left.id.localeCompare(right.id));
   const sources = sourceRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
+  const media = mediaRecords.map(({ value }) => value).sort((left, right) => left.id.localeCompare(right.id));
   const narratives = narrativeRecords.map(({ value }) => ({
     ...value,
     mentions: mentionMap.get(value.id) ?? [],
@@ -413,6 +465,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     entities,
     narratives,
     sources,
+    media,
     relations: { forward, inverse },
     backlinks,
     indexes: { entity_ids: entityIds, entities_by_type: entitiesByType, localized_slugs: localizedSlugs, geography, search },

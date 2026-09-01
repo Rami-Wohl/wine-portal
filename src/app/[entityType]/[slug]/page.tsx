@@ -4,11 +4,13 @@ import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
 import { ContentDocumentView } from "@/components/content-document";
 import type { Entity } from "@/content/model";
+import { mediaIdsForDocument } from "@/content/media";
 import { relationLabel, type RelationDirection } from "@/content/relations";
 import {
   getEntities,
   getEntityById,
   getEntityByRoute,
+  getMediaByIds,
   getNarrativeBacklinks,
   getRelationsForEntity,
   getSourcesByIds,
@@ -81,6 +83,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
     ...entity.source_refs,
     ...entity.assertions.flatMap((assertion) => assertion.sources),
   ])));
+  const media = getMediaByIds(mediaIdsForDocument(entity.content.nl));
   const hasRelatedKnowledge = relations.length > 0 || relatedNarratives.length > 0;
   const hasSupportingInformation = hasRelatedKnowledge || sources.length > 0;
 
@@ -121,6 +124,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
           <ContentDocumentView
             document={entity.content.nl}
             locale="nl"
+            media={media}
             sources={sources}
           />
         </article>

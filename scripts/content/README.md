@@ -9,6 +9,7 @@ The pipeline reads canonical content from:
 - `content/entities/**/entity.yaml` and their localized Markdown files;
 - `content/narratives/**/narrative.yaml` and their localized Markdown files;
 - reusable source records under `data/sources/`.
+- media records under `data/media/`, with local assets under `public/media/`.
 
 Relationships and narrative links use stable IDs such as `producer.chateau-latour`. Authors store forward relationships once; inverse relationships and backlinks are derived automatically.
 
@@ -19,7 +20,8 @@ npm run content:check
 ```
 
 Validates schemas, IDs, slugs, locale files, relations, semantic content blocks,
-hard NL/EN block parity, source inventories, citations, and Markdown entity
+hard NL/EN block parity, source inventories, citations, media references,
+local asset checksums, and Markdown entity
 links without writing generated files.
 
 ```bash
@@ -32,12 +34,12 @@ Runs the same validation, then writes the deterministic runtime bundle `src/gene
 npm run content:new -- producer example-estate
 ```
 
-Creates a starter entity package with YAML metadata, Dutch and English Markdown files, and a local `media/` directory. It does not add wine facts.
+Creates a starter entity package with YAML metadata and Dutch and English Markdown files. It does not add wine facts or media.
 
 ## Output
 
 The generated bundle contains normalized entities and narratives with their safe
-content trees, forward and inverse relations, narrative backlinks, source data,
+content trees, forward and inverse relations, narrative backlinks, source and media data,
 and application indexes for lookup, localized slugs, search, and geography
 references.
 

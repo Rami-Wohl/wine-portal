@@ -14,6 +14,7 @@ import {
   CONTENT_BLOCK_TYPES,
   DEPTHS,
   entityIdPattern,
+  mediaIdSchema,
   sourceIdSchema,
   type CaveatVariant,
   type ContentBlock,
@@ -28,7 +29,7 @@ import {
 } from "../../src/content/model";
 
 const blockIdPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const allowedAttributes = new Set(["id", "depth", "source_refs", "variant"]);
+const allowedAttributes = new Set(["id", "depth", "source_refs", "variant", "media_id"]);
 
 export interface ParsedContentDocument {
   document: ContentDocument;
@@ -271,6 +272,16 @@ function validateBlockShape(block: ContentBlock, state: ParseState): void {
   if (block.type === "caveat" && block.variant === null) {
     issue(state, `caveat '${block.id}' requires a variant`);
   }
+  if (block.type === "figure") {
+    if (block.media_id === null) {
+      issue(state, `figure '${block.id}' requires a media_id`);
+    }
+    if (block.nodes.length > 0) {
+      issue(state, `figure '${block.id}' must not contain Markdown content`);
+    }
+  } else if (block.media_id !== null) {
+    issue(state, `only figure blocks may use media_id`);
+  }
   for (const node of block.nodes) {
     if (node.type === "blockquote" && !hasCitation(node.children)) {
       issue(state, `blockquote in '${block.id}' requires a citation`);
@@ -349,6 +360,14 @@ export function parseContentDocument(
       issue(state, `only caveat blocks may use the variant attribute`);
     }
 
+    const mediaIdValue = attributes.media_id ?? null;
+    const mediaId = mediaIdValue && mediaIdSchema.safeParse(mediaIdValue).success
+      ? mediaIdValue
+      : null;
+    if (mediaIdValue && mediaId === null) {
+      issue(state, `${type} '${id}' has invalid media ID '${mediaIdValue}'`);
+    }
+
     const citationStart = state.citations.length;
     const nodes = normalizeBlocks(child.children, state);
     for (const citation of state.citations.slice(citationStart)) {
@@ -366,6 +385,7 @@ export function parseContentDocument(
       depth,
       source_refs: sourceRefs,
       variant,
+      media_id: mediaId,
       nodes,
     };
     validateBlockShape(block, state);
@@ -394,7 +414,7 @@ export function validateLocaleParity(
   for (let index = 0; index < left.length; index += 1) {
     const nl = left[index];
     const en = right[index];
-    for (const field of ["id", "type", "depth", "variant"] as const) {
+    for (const field of ["id", "type", "depth", "variant", "media_id"] as const) {
       if (nl[field] !== en[field]) {
         issues.push(
           `${file}: NL/EN block ${index + 1} differs in ${field} ('${String(nl[field])}' vs '${String(en[field])}')`,

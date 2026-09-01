@@ -32,6 +32,8 @@ document relevant to a task before editing, and apply them together:
   diagrams, maps as presentation, and other visual output.
 - `editorial/research-policy.md` — factual content, sources, provenance,
   translation, corrections, imports, and editorial work.
+- `editorial/writing-style.md` — voice, regional introductions, readable
+  factual prose, localization, and the editorial relationship between text and imagery.
 
 A task can require more than one policy. For example, an Atlas UI change must
 follow the product, knowledge architecture, geography, and visual guidance;

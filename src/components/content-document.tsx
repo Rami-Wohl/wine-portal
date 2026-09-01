@@ -1,4 +1,5 @@
 import { Fragment, type ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type {
   CaveatVariant,
@@ -7,8 +8,10 @@ import type {
   ContentDocument,
   ContentInlineNode,
   Locale,
+  MediaAsset,
   Source,
 } from "@/content/model";
+import { mediaUrl } from "@/content/media";
 import { getEntityById } from "@/content/repository";
 import { entityHref } from "@/content/routing";
 
@@ -42,6 +45,7 @@ interface RenderContext {
   locale: Locale;
   sources: Map<string, Source>;
   sourceNumbers: Map<string, number>;
+  media: Map<string, MediaAsset>;
 }
 
 function renderInline(nodes: ContentInlineNode[], context: RenderContext): ReactNode {
@@ -172,6 +176,34 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
   const common = { id: block.id, className, tabIndex: -1 };
 
   switch (block.type) {
+    case "figure": {
+      const asset = block.media_id ? context.media.get(block.media_id) : undefined;
+      if (!asset) return null;
+      const caption = asset.caption?.[context.locale];
+      const credit = asset.rights.credit_line;
+      return (
+        <figure {...common}>
+          <Image
+            alt={asset.alt[context.locale]}
+            height={asset.height}
+            sizes="(max-width: 620px) calc(100vw - 32px), 760px"
+            src={mediaUrl(asset)}
+            width={asset.width}
+          />
+          <figcaption>
+            {caption ? <span>{caption}</span> : null}
+            <small>
+              {asset.rights.source_url ? (
+                <a href={asset.rights.source_url} rel="noreferrer" target="_blank">{credit}</a>
+              ) : credit}
+              {asset.rights.license_url ? (
+                <> · <a href={asset.rights.license_url} rel="noreferrer" target="_blank">{asset.rights.license_name}</a></>
+              ) : null}
+            </small>
+          </figcaption>
+        </figure>
+      );
+    }
     case "summary":
       return <div {...common}>{content}</div>;
     case "section":
@@ -219,15 +251,18 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
 export function ContentDocumentView({
   document,
   locale,
+  media,
   sources,
 }: {
   document: ContentDocument;
   locale: Locale;
+  media: MediaAsset[];
   sources: Source[];
 }) {
   const sourceMap = new Map(sources.map((source) => [source.id, source]));
   const sourceNumbers = new Map(sources.map((source, index) => [source.id, index + 1]));
-  const context: RenderContext = { locale, sources: sourceMap, sourceNumbers };
+  const mediaMap = new Map(media.map((asset) => [asset.id, asset]));
+  const context: RenderContext = { locale, media: mediaMap, sources: sourceMap, sourceNumbers };
 
   return (
     <div className="content-document">

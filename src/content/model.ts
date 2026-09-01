@@ -46,18 +46,25 @@ export const CONTENT_BLOCK_TYPES = [
   "caveat",
   "in-the-glass",
   "comparison",
+  "figure",
 ] as const;
 export const CAVEAT_VARIANTS = ["simplification", "uncertainty", "exception"] as const;
+export const MEDIA_KINDS = ["photo", "illustration", "diagram", "map"] as const;
+export const MEDIA_ROLES = ["documentary", "representative", "educational", "schematic", "decorative"] as const;
+export const MEDIA_RIGHTS_STATUSES = ["open-licensed", "public-domain", "owned", "generated"] as const;
 
 export type EntityType = (typeof ENTITY_TYPES)[number];
 export type Locale = (typeof LOCALES)[number];
 export type Depth = (typeof DEPTHS)[number];
 export type ContentBlockType = (typeof CONTENT_BLOCK_TYPES)[number];
 export type CaveatVariant = (typeof CAVEAT_VARIANTS)[number];
+export type MediaKind = (typeof MEDIA_KINDS)[number];
+export type MediaRole = (typeof MEDIA_ROLES)[number];
 
 export const entityIdPattern = /^(region|appellation|site|producer|grape|classification|vintage|concept)\.[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const entityIdSchema = z.string().regex(entityIdPattern, "must be '<entity-type>.<canonical-slug>'");
 export const sourceIdSchema = z.string().regex(/^source\.[a-z0-9]+(?:-[a-z0-9]+)*$/, "must be 'source.<canonical-slug>'");
+export const mediaIdSchema = z.string().regex(/^media\.[a-z0-9]+(?:[.-][a-z0-9]+)*$/, "must start with 'media.' and contain canonical slugs");
 export const narrativeIdSchema = z.string().regex(/^narrative\.[a-z0-9]+(?:-[a-z0-9]+)*(?:\.[a-z0-9]+(?:-[a-z0-9]+)*)?$/, "must start with 'narrative.' and contain canonical slugs");
 const slugSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "must be a lowercase kebab-case slug");
 const localizedTextSchema = z.object({ nl: z.string().min(1), en: z.string().min(1) }).strict();
@@ -139,10 +146,56 @@ export const sourceSchema = z.object({
   status: z.enum(["active", "unavailable", "deprecated"]),
 }).strict();
 
+const localizedMediaTextSchema = z.object({ nl: z.string(), en: z.string() }).strict();
+
+export const mediaAssetSchema = z.object({
+  id: mediaIdSchema,
+  kind: z.enum(MEDIA_KINDS),
+  role: z.enum(MEDIA_ROLES),
+  status: z.enum(["draft", "active", "deprecated"]),
+  storage_key: z.string().regex(
+    /^[a-z0-9]+(?:[/-][a-z0-9]+)*(?:\.[a-z0-9]+)+$/,
+    "must be a lowercase relative storage key with a file extension",
+  ),
+  mime_type: z.enum(["image/jpeg", "image/png", "image/webp", "image/avif", "image/svg+xml"]),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  checksum_sha256: z.string().regex(/^[a-f0-9]{64}$/, "must be a lowercase SHA-256 checksum"),
+  alt: localizedMediaTextSchema,
+  caption: localizedMediaTextSchema.optional(),
+  rights: z.object({
+    status: z.enum(MEDIA_RIGHTS_STATUSES),
+    creator: z.string().min(1),
+    source_url: z.url().optional(),
+    license_name: z.string().min(1),
+    license_url: z.url().optional(),
+    credit_line: z.string().min(1),
+  }).strict(),
+  acquired_at: dateSchema,
+  changes: z.string().min(1).optional(),
+}).strict().superRefine((asset, context) => {
+  const altValues = [asset.alt.nl, asset.alt.en];
+  if (asset.role === "decorative" && altValues.some((value) => value.length > 0)) {
+    context.addIssue({
+      code: "custom",
+      path: ["alt"],
+      message: "decorative media must use empty alt text in every locale",
+    });
+  }
+  if (asset.role !== "decorative" && altValues.some((value) => value.trim().length === 0)) {
+    context.addIssue({
+      code: "custom",
+      path: ["alt"],
+      message: "non-decorative media requires alt text in every locale",
+    });
+  }
+});
+
 export type Entity = z.infer<typeof entitySchema>;
 export type Relation = z.infer<typeof relationSchema>;
 export type Narrative = z.infer<typeof narrativeSchema>;
 export type Source = z.infer<typeof sourceSchema>;
+export type MediaAsset = z.infer<typeof mediaAssetSchema>;
 
 export interface ResolvedRelation extends Relation {
   source: string;
@@ -248,6 +301,7 @@ export interface ContentBlock {
   depth: Depth | null;
   source_refs: string[];
   variant: CaveatVariant | null;
+  media_id: string | null;
   nodes: ContentBlockNode[];
 }
 
@@ -268,6 +322,7 @@ export interface GeneratedKnowledgeBase {
   entities: GeneratedEntity[];
   narratives: GeneratedNarrative[];
   sources: Source[];
+  media: MediaAsset[];
   relations: {
     forward: ResolvedRelation[];
     inverse: Record<string, ResolvedRelation[]>;

@@ -1,5 +1,11 @@
-# Reusable media
+# Media working files
 
-Reusable illustrations, diagrams, and generated map exports belong here when multiple entities or narratives consume them. Assets that are specific to one content package may stay beside that package.
+This directory is for editable illustration/diagram source files and generated
+map exports, not for assets referenced directly by content.
 
-`generated-map-exports/` is output only. Verified coordinates and boundaries belong under `data/geography/`, never in a rendered image.
+Canonical media metadata lives under `data/media/`. The current local delivery
+adapter reads registered bytes from `public/media/<storage_key>`. Markdown uses
+only the stable media ID, so a later CDN migration does not change content.
+
+`generated-map-exports/` is output only. Verified coordinates and boundaries
+belong under `data/geography/`, never in a rendered image.

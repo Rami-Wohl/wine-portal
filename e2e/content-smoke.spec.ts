@@ -17,12 +17,23 @@ test("draft narrative degrades honestly and keeps its knowledge context", async 
   await expect(page.getByRole("link", { name: /Pauillac/ })).toBeVisible();
 });
 
-test("entity route remains readable without horizontal overflow on mobile", async ({ page }) => {
+test("active entity content and links remain readable on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto("/regions/bordeaux");
 
   await expect(page.getByRole("heading", { level: 1, name: "Bordeaux" })).toBeVisible();
-  await expect(page.getByText("De inhoud van deze pagina wordt zorgvuldig voorbereid.")).toBeVisible();
+  const regionPhoto = page.getByRole("img", { name: /Panoramisch uitzicht over/ });
+  await expect(regionPhoto).toBeVisible();
+  await expect(regionPhoto).toHaveJSProperty("complete", true);
+  await expect(page.getByText(/Varvac via Wikimedia Commons/)).toBeVisible();
+  await expect(page.getByRole("heading", {
+    level: 2,
+    name: "Regio en appellation zijn niet hetzelfde",
+  })).toBeVisible();
+  await expect(page.getByRole("link", { name: "cabernet sauvignon" })).toHaveAttribute(
+    "href",
+    "/grapes/cabernet-sauvignon",
+  );
   const dimensions = await page.evaluate(() => ({
     documentWidth: document.documentElement.scrollWidth,
     viewportWidth: document.documentElement.clientWidth,

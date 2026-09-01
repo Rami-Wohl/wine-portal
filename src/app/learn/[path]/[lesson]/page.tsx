@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
 import { ContentDocumentView } from "@/components/content-document";
 import type { GeneratedEntity, GeneratedNarrative } from "@/content/model";
+import { mediaIdsForDocument } from "@/content/media";
 import {
   getEntityById,
+  getMediaByIds,
   getNarrativeByRoute,
   getNarratives,
   getSourcesByIds,
@@ -73,6 +75,7 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
     .filter((entity): entity is GeneratedEntity => Boolean(entity));
   const title = publicNarrativeTitle(narrative);
   const sources = getSourcesByIds(narrative.source_refs);
+  const media = getMediaByIds(mediaIdsForDocument(narrative.content.nl));
 
   return (
     <main id="main-content" className="page-shell lesson-page">
@@ -100,6 +103,7 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
             <ContentDocumentView
               document={narrative.content.nl}
               locale="nl"
+              media={media}
               sources={sources}
             />
           ) : (

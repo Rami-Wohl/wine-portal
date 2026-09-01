@@ -16,8 +16,7 @@ This creates:
 content/entities/producers/example-estate/
 ├── entity.yaml
 ├── overview.nl.md
-├── overview.en.md
-└── media/
+└── overview.en.md
 ```
 
 Review every generated name, then add only verified canonical relations to `entity.yaml`. Reference other entities by stable ID:
@@ -66,6 +65,15 @@ Canonical facts and relations exist once in `entity.yaml`. Dutch and English nam
 - `geography_id` may reference future verified geography data. Never invent coordinates or boundaries.
 - `depth` supports `foundation`, `intermediate`, `advanced`, or `specialist` independently of routes and UI.
 
+## Add media
+
+Create one metadata record under `data/media/` and place its current local file
+at `public/media/<storage_key>`. In Markdown, add a bodyless `figure` block that
+uses only the stable `media.*` ID. Do not copy paths, URLs, captions or credits
+into content. `content:check` verifies the reference, rights metadata, local
+file, and SHA-256 checksum. Setting `MEDIA_BASE_URL` later switches delivery to
+the same keys on a CDN without rewriting authored content.
+
 ## Validate and build
 
 ```bash
@@ -84,5 +92,7 @@ Authors edit:
 - `content/entities/**`
 - `content/narratives/**`
 - `data/sources/**`
+- `data/media/**`
+- `public/media/**` while the local storage adapter is in use
 
 Authors never edit `src/generated/content/**`. Rebuild it with `npm run content:build`; canonical content is not stored there. The generator also removes retired split JSON fragments that were previously emitted beside the runtime bundle.

@@ -1,0 +1,24 @@
+id: media.bordeaux.saint-emilion-panorama
+kind: photo
+role: documentary
+status: active
+storage_key: bordeaux/saint-emilion-panorama.jpg
+mime_type: image/jpeg
+width: 1920
+height: 959
+checksum_sha256: 5af1ac61469eef379f1c3de68f50e0a20dc56966efe58ed8679da4064f34cabf
+alt:
+  nl: Panoramisch uitzicht over de kalkstenen daken, kerktorens en het omliggende landschap van Saint-Émilion
+  en: Panoramic view over the limestone roofs, church towers, and surrounding landscape of Saint-Émilion
+caption:
+  nl: Saint-Émilion laat een andere kant van Bordeaux zien dan de stad en de grote riviermonding — een historisch wijnlandschap van steen, hellingen en wijngaarden.
+  en: Saint-Émilion shows another side of Bordeaux beyond the city and the great estuary — a historic wine landscape of stone, slopes, and vineyards.
+rights:
+  status: public-domain
+  creator: Varvac
+  source_url: https://commons.wikimedia.org/wiki/File:Saint-%C3%89milion_(Panorama).jpg
+  license_name: CC0 1.0 Universal
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Varvac via Wikimedia Commons
+acquired_at: 2026-09-01
+changes: Wikimedia thumbnail service used to resize the original to 1920 pixels wide; no editorial crop or colour alteration.

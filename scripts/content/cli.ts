@@ -6,12 +6,12 @@ async function main(): Promise<void> {
   const [command, type, slug] = process.argv.slice(2);
   if (command === "check") {
     const result = await buildContent({ write: false });
-    console.log(`Content is valid: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.sources.length} sources.`);
+    console.log(`Content is valid: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.sources.length} sources, ${result.knowledgeBase.media.length} media assets.`);
     return;
   }
   if (command === "build") {
     const result = await buildContent();
-    console.log(`Generated content graph: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.relations.forward.length} forward relations.`);
+    console.log(`Generated content graph: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.media.length} media assets, ${result.knowledgeBase.relations.forward.length} forward relations.`);
     return;
   }
   if (command === "new") {

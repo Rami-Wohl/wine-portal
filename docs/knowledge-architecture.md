@@ -22,16 +22,19 @@ De v1-contentarchitectuur is geïmplementeerd:
 - één deterministische runtimebundle wordt gegenereerd in `src/generated/content/knowledge-base.json`;
 - `npm run content:new` genereert een leeg entitypackage zonder wijnfeiten toe te voegen.
 
-Op 31 augustus 2026 valideert `npm run content:check`:
+Op 1 september 2026 valideert `npm run content:check`:
 
 ```text
 5 entities
 1 narrative
-0 sources
+2 sources
 4 forward relations
 ```
 
-Alle vijf entities en de narrative zijn prototypes met status `draft`. Deze getallen beschrijven de huidige repository, niet de beoogde uiteindelijke dekking.
+`region.bordeaux` is de eerste actieve, onderzochte entity. De vier andere
+entities en de narrative blijven technische fixtures met status `draft`. Deze
+getallen beschrijven de huidige repository, niet de beoogde uiteindelijke
+dekking.
 
 ## Samenhang met bindend beleid
 
@@ -114,7 +117,17 @@ Gelokaliseerde redactionele documenten die entities expliciet kunnen noemen en d
 
 #### Sources
 
-Herbruikbare bronrecords onder `data/sources/`. Het schema en de validatie zijn geïmplementeerd; de repository bevat momenteel nog geen echt bronrecord.
+Herbruikbare bronrecords onder `data/sources/`. Het schema en de validatie zijn
+geïmplementeerd; twee officiële bronrecords ondersteunen de eerste actieve
+Bordeaux-entity.
+
+#### Media
+
+Platformbrede mediarecords onder `data/media/` bezitten een stable asset-ID,
+storage key, type, rol, afmetingen, checksum, gelokaliseerde alttekst/caption en
+rechtenmetadata. Markdownfigures verwijzen uitsluitend naar de asset-ID. De
+huidige lokale adapter levert bytes uit `public/media/`; `MEDIA_BASE_URL` kan
+dezelfde keys later via object storage of een CDN leveren.
 
 #### Geography references
 
@@ -123,7 +136,6 @@ Een entity kan een gevalideerde `geography_id` dragen en de bundle bouwt daar ee
 ### Roadmap
 
 - een volwaardige, geverifieerde geography-datalaag;
-- een platformbreed mediaregister met stabiele asset-IDs;
 - learning-pathpackages die gedeelde kennis rangschikken;
 - section-/blockmetadata voor fijnmazige depth en provenance;
 - rijkere search, compare en bronweergave boven op de gegenereerde graph.
@@ -230,7 +242,7 @@ Gelokaliseerd:
 
 - namen, titels en slugs;
 - entity-overviews en narrativeartikelen;
-- toekomstige captions, alt-teksten, aliases en UI-copy.
+- captions, alt-teksten, toekomstige aliases en UI-copy.
 
 Beide localebestanden zijn in v1 verplicht. Ontbrekende vertalingen worden niet stilzwijgend gegenereerd of vervangen door de andere taal.
 
@@ -244,8 +256,7 @@ Canonical entities staan in:
 content/entities/<entity-type-directory>/<slug>/
 ├── entity.yaml
 ├── overview.nl.md
-├── overview.en.md
-└── media/              # alleen package-specifiek en optioneel
+└── overview.en.md
 ```
 
 Een schema-geldig voorbeeld:
@@ -369,7 +380,9 @@ historical
 deprecated
 ```
 
-`sources` bevat minimaal één bekende `source.*`-ID. De pipeline valideert bronreferenties en dubbele assertion-IDs. Het huidige prototype heeft nog geen sources en daarom ook geen brongebonden assertions.
+`sources` bevat minimaal één bekende `source.*`-ID. De pipeline valideert
+bronreferenties en dubbele assertion-IDs. De huidige Bordeaux-entity gebruikt
+block-level citations; er zijn nog geen brongebonden assertions.
 
 ### Sourceregister
 
@@ -411,8 +424,7 @@ Een schema-geldig package bevat:
 content/narratives/<type-directory>/<slug>/
 ├── narrative.yaml
 ├── article.nl.md
-├── article.en.md
-└── media/              # alleen package-specifiek en optioneel
+└── article.en.md
 ```
 
 Voorbeeldmetadata:
@@ -506,6 +518,7 @@ De pipeline leest:
 - `content/entities/**/entity.yaml` plus hun package-relative NL/EN-Markdown;
 - `content/narratives/**/narrative.yaml` plus hun package-relative NL/EN-Markdown;
 - herbruikbare YAML-bronrecords onder `data/sources/`.
+- herbruikbare YAML-mediarecords onder `data/media/` plus lokale bytes onder `public/media/`.
 
 Canonical content staat niet in `src/generated/content/`.
 
@@ -518,6 +531,8 @@ Canonical content staat niet in `src/generated/content/`.
 - gelokaliseerde slugs en routebotsingen;
 - vereiste package-relative localebestanden;
 - bekende entity- en sourceverwijzingen;
+- bekende media-ID's, unieke storage keys, rechtenmetadata en gelokaliseerde alttekst;
+- bestaan en SHA-256-integriteit van lokale media-assets;
 - dubbele relaties en bronverwijzingen;
 - inline entitylinksyntax, mentions en targets.
 
@@ -533,7 +548,7 @@ src/generated/content/knowledge-base.json
 
 Die bundle bevat:
 
-- genormaliseerde entities, narratives en sources;
+- genormaliseerde entities, narratives, sources en mediarecords;
 - forward relations en afgeleide inverse relations;
 - locale-aware narrative mentions en entitybacklinks;
 - entity-ID- en entity-type-indexes;
@@ -549,7 +564,7 @@ De generator verwijdert oude gesplitste JSON-outputs. De gegenereerde directory 
 npm run content:new -- producer example-estate
 ```
 
-maakt een schema-geldig draftpackage met metadata, NL/EN-Markdown en een lokale `media/`-directory. De generator voegt bewust geen feiten, bronnen, relaties of vertalingen met inhoud toe.
+maakt een schema-geldig draftpackage met metadata en NL/EN-Markdown. De generator voegt bewust geen feiten, bronnen, relaties, media of vertalingen met inhoud toe.
 
 ---
 
@@ -562,17 +577,17 @@ project/
 │   │   └── <entity-type-directory>/<slug>/
 │   │       ├── entity.yaml
 │   │       ├── overview.nl.md
-│   │       ├── overview.en.md
-│   │       └── media/
+│   │       └── overview.en.md
 │   └── narratives/
 │       └── <type-directory>/<slug>/
 │           ├── narrative.yaml
 │           ├── article.nl.md
-│           ├── article.en.md
-│           └── media/
+│           └── article.en.md
 ├── data/
 │   ├── sources/
+│   ├── media/
 │   └── geography/                  # roadmap zodra verified data is gekozen
+├── public/media/                   # huidige lokale storage adapter
 ├── docs/
 │   ├── content-authoring.md
 │   ├── geography-policy.md
@@ -615,9 +630,27 @@ Een kaartafbeelding, screenshot, generatieve vorm of geocoded postadres wordt ni
 
 ## 14. Media
 
-Package-specifieke `media/`-directories worden door de packagestructuur ondersteund. Een platformbreed mediaschema, stable media IDs, reviewstatussen en automatische media-indexing zijn nog niet geïmplementeerd.
+Het platformbrede mediaregister is geïmplementeerd. Ieder beeld heeft één YAML-record onder `data/media/` met:
 
-Roadmapmedia kunnen onder meer conceptillustraties, wetenschappelijke diagrammen, data-driven kaarten, hybrid maps, charts, foto's en historische beelden omvatten. Hun nauwkeurigheid, rechten, credits, lokalisatie en toegankelijkheid volgen `visual-language.md` en het researchbeleid.
+- een stable `media.*`-ID die content gebruikt;
+- een provider-onafhankelijke `storage_key`;
+- soort en semantische rol;
+- MIME-type, breedte, hoogte en SHA-256-checksum;
+- NL/EN-alttekst en optionele caption;
+- maker, bron, rechtenstatus, licentie en creditregel;
+- acquisitiedatum en eventuele wijzigingen.
+
+De huidige bytes staan onder `public/media/<storage_key>`. De renderer bouwt
+lokaal `/media/<storage_key>` en met `MEDIA_BASE_URL` een remote URL met exact
+dezelfde key. Een toekomstige providerintegratie synchroniseert assets op key en
+checksum in CI of een ingestworkflow; auteurs kopiëren geen URL's en wijzigen
+geen Markdown bij een storage- of CDN-wissel. Tot die adapter is gekozen blijft
+de repo de gecontroleerde lokale bron van de bytes.
+
+Media omvat onder meer conceptillustraties, wetenschappelijke diagrammen,
+data-driven kaarten, hybrid maps, charts, foto's en historische beelden. Hun
+nauwkeurigheid, rechten, credits, lokalisatie en toegankelijkheid volgen
+`visual-language.md` en het researchbeleid.
 
 Nieuwe herbruikbare visuals bevatten bij voorkeur geen permanent ingebakken taalafhankelijke labels. Factual maps en charts komen uit geverifieerde data; een beeldmodel verzint geen grenzen, coördinaten, assen of waarden.
 
@@ -677,11 +710,11 @@ gecontroleerd is.
 
 ### Huidige repositorystatus
 
-De Bordeaux proof bevat vijf draftentities:
+De Bordeaux-slice bevat één actieve entity en vier draftfixtures:
 
 | Entity | Huidige rol |
 | --- | --- |
-| `region.bordeaux` | regionale root van de proof |
+| `region.bordeaux` | actieve regionale root en eerste onderzochte content |
 | `appellation.pauillac` | onderdeel van Bordeaux; koppelt Cabernet Sauvignon |
 | `producer.chateau-latour` | ligt in Pauillac; tijdsbewuste classificatierelatie |
 | `grape.cabernet-sauvignon` | druifentity voor relationele proof |
@@ -695,17 +728,20 @@ narrative.regional.bordeaux-proof
 
 De vier forward relations bewijzen `part_of`, `important_grape`, `located_in` en `classified_under`. De classificatierelatie bevat `tier: premier-cru` en top-level `valid_from: 1855`.
 
-Dit is een pipeline- en modelproof, geen inhoudelijk complete of publiceerbare Bordeauxvertical slice. Er is nog geen `vintage.bordeaux-2016`, geen echt `source.*`-record, geen brongebonden assertion en geen geverifieerde geografie.
+De regiopagina is een eerste publiceerbare contentslice met twee officiële
+bronrecords, block-level citations en één geregistreerde CC0-foto met
+gelokaliseerde alttekst en volledige herkomstmetadata. De overige packages bewijzen vooral de
+pipeline en het model. Er is nog geen `vintage.bordeaux-2016`, geen brongebonden
+assertion en geen geverifieerde geografie.
 
 ### Pending voor een echte vertical slice
 
-- research en authoring van rijke canonical entitycontent;
+- research en authoring van de overige canonical entitycontent;
 - de geplande scoped vintage-entity;
-- minimaal één echt herbruikbaar bronrecord en claim-level ondersteuning;
+- brongebonden assertions waar de use-case daarom vraagt;
 - inhoudelijk volwaardige NL- en EN-narratives;
 - geverifieerde boundaries, punten en Atlasdata met volledige provenance;
-- onderzoek, selectie en review van geschikte media;
-- echte block-level bronreferenties en citations;
+- verdere selectie en review van foto's, illustraties en diagrammen;
 - publieke bronweergave en menselijk leesbare relaties;
 - Explore-, Learn- en Atlaspresentaties uit dezelfde canonical graph;
 - end-to-end routing, search, related content en accessibility review.
@@ -725,6 +761,7 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - NL/EN als verplichte gelokaliseerde presentatielagen;
 - stable entitylinks met mentions en backlinks;
 - veilige semantic content blocks met citations en NL/EN-pariteitsvalidatie;
+- mediaregister, stable media-ID's, figures, rights/alt-metadata en lokale checksumvalidatie;
 - entity/narrative depth en framework alignment;
 - inverse relations, localized slug/search/geography-indexes;
 - één deterministische gegenereerde runtimebundle;
@@ -735,14 +772,13 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - verified-data-only geography en Atlas;
 - reusable provenance en claim-level support in echte content;
 - learning paths als curated views in plaats van contentopslag;
-- media met controleerbare accuracy, rights en localization;
 - niet-destructieve import en vervanging wanneer later externe of bestaande content in scope komt.
 
 ### Open roadmapontwerp
 
 - learning-pathschema en voortgangsmodel;
 - geography storage, import en mogelijke PostGIS-runtime;
-- mediaschema en platformbrede assetcatalogus;
+- provideradapter en geautomatiseerde object-storage/CDN-sync op storage key en checksum;
 - aliasmodel, full-text search, ranking en facetten;
 - provenance- en uncertaintypresentatie in de UI;
 - correctie- en community suggestionworkflow;

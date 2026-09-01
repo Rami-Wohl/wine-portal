@@ -98,6 +98,9 @@ Iedere block ondersteunt uitsluitend deze gemeenschappelijke attributen:
 | `depth` | nee | `foundation`, `intermediate`, `advanced` of `specialist` |
 | `source_refs` | nee | Door spaties gescheiden `source.*`-IDs die de block ondersteunen |
 
+Een `figure` gebruikt daarnaast verplicht `media_id`. Dit is geen URL maar een
+stabiele `media.*`-ID uit `data/media/`.
+
 Wanneer `depth` ontbreekt, erft de block conceptueel de depth van de entity of narrative. Ontbreekt ook daar depth, dan doet de renderer geen niveauclaim. De validator materialiseert die overerving niet terug naar canonical Markdown.
 
 `source_refs` is een blockinventaris, geen vervanging voor een citation bij een specifieke betwistbare, juridische, numerieke, historische of geciteerde claim. Iedere genoemde source moet ook voorkomen in `source_refs` van de package-YAML. De pipeline blijft daarmee de volledige packageprovenance kennen.
@@ -207,6 +210,20 @@ Een expliciete vergelijking. De eerste node is een H2. Gebruik daarna korte para
 
 Vergelijk alleen werkelijk vergelijkbare scopes en definities. Een tabel is geen excuus om ontbrekende cellen te verzinnen.
 
+### `figure`
+
+Plaatst één geregistreerd beeld tussen de inhoudsblocks:
+
+```md
+:::figure{#saint-emilion-panorama media_id="media.bordeaux.saint-emilion-panorama"}
+:::
+```
+
+Een figure heeft geen Markdownbody. Alttekst, caption, afmetingen, maker, bron,
+licentie en storage key staan één keer in het mediarecord. De renderer kiest de
+gelokaliseerde tekst en toont de credits. Auteurs plaatsen geen bestandspad,
+CDN-URL of handgeschreven credit in Markdown.
+
 ## 6. Welke blocks zijn vereist?
 
 De publicatiestatus bepaalt hoe volledig een document moet zijn.
@@ -265,7 +282,7 @@ Niet ondersteund in canonical content:
 - layoutinstructies, CSS-classes of presentatietokens;
 - iframes of embedded third-party widgets;
 - handgeschreven voetnootnummers;
-- afbeeldingen zolang het media- en creditscontract nog niet is geïmplementeerd.
+- inline Markdownafbeeldingen (`![alt](url)`); beelden gebruiken altijd een `figure` en media-ID.
 
 Fenced codeblocks horen normaal niet in wijncontent. Als een toekomstige inhoudelijke use-case ze werkelijk nodig heeft, wordt dat bewust aan het contract toegevoegd.
 
@@ -324,6 +341,7 @@ Hard contract:
 - dezelfde blockvolgorde;
 - dezelfde `depth` per block;
 - dezelfde `variant` voor caveats.
+- dezelfde `media_id` voor figures.
 
 Redactioneel contract:
 
@@ -379,11 +397,12 @@ De implementatie:
 3. top-level structuur, block-IDs, typevereisten en NL/EN-pariteit valideren;
 4. entitylinks via de canonical routinglaag oplossen;
 5. citations en `source_refs` tegen het sourceregister valideren;
-6. mentions, blockmetadata en sourcegebruik in de gegenereerde bundle opnemen;
+6. mentions, blockmetadata, sourcegebruik en geregistreerde media in de gegenereerde bundle opnemen;
 7. semantische HTML met één pagina-H1 en een logische headingstructuur renderen;
 8. stabiele, focusbare anchors voor blocks leveren zonder technische IDs als hoofdlabel te tonen;
 9. tabellen, links, citations en callouts toegankelijk en responsive presenteren;
-10. draft/incomplete content eerlijk blijven afhandelen.
+10. media-ID, lokale asset, checksum, rechtenmetadata en gelokaliseerde alttekst valideren;
+11. draft/incomplete content eerlijk blijven afhandelen.
 
 Presentatie volgt `visual-language.md`; de renderer verzint geen inhoud, headings, captions, labels met feitelijke betekenis of ontbrekende vertalingen.
 
@@ -391,7 +410,7 @@ Presentatie volgt `visual-language.md`; de renderer verzint geen inhoud, heading
 
 Niet onderdeel van deze v1-conventions:
 
-- images, galleries, audio en video totdat media-ID, rights, credits en alt-textmetadata zijn besloten;
+- galleries, audio en video;
 - data-driven kaarten en geografische embeds;
 - interactieve quizzes of exercises;
 - willekeurige componentembedding;

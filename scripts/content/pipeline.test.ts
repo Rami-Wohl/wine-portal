@@ -6,6 +6,7 @@ import {
   rm,
   writeFile,
 } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -134,6 +135,42 @@ async function addSource(root: string, id = "source.example"): Promise<void> {
     title: "Example source",
     language: "en",
     status: "active",
+  }));
+}
+
+async function addMedia(
+  root: string,
+  options: { checksum?: string; writeAsset?: boolean } = {},
+): Promise<void> {
+  const bytes = Buffer.from("test image bytes");
+  const metadataDirectory = path.join(root, "data", "media", "example");
+  const assetDirectory = path.join(root, "public", "media", "example");
+  await mkdir(metadataDirectory, { recursive: true });
+  await mkdir(assetDirectory, { recursive: true });
+  if (options.writeAsset !== false) {
+    await writeFile(path.join(assetDirectory, "photo.jpg"), bytes);
+  }
+  await writeFile(path.join(metadataDirectory, "photo.yaml"), stringifyYaml({
+    id: "media.example.photo",
+    kind: "photo",
+    role: "documentary",
+    status: "active",
+    storage_key: "example/photo.jpg",
+    mime_type: "image/jpeg",
+    width: 1200,
+    height: 800,
+    checksum_sha256: options.checksum ?? createHash("sha256").update(bytes).digest("hex"),
+    alt: { nl: "Voorbeeldfoto", en: "Example photo" },
+    caption: { nl: "Een onderschrift.", en: "A caption." },
+    rights: {
+      status: "open-licensed",
+      creator: "Example Photographer",
+      source_url: "https://example.com/photo",
+      license_name: "CC BY 4.0",
+      license_url: "https://creativecommons.org/licenses/by/4.0/",
+      credit_line: "Example Photographer",
+    },
+    acquired_at: "2026-09-01",
   }));
 }
 
@@ -297,6 +334,47 @@ describe("content pipeline validation", () => {
 
     await expect(buildContent({ root, write: false })).rejects.toThrow(
       /entity\.yaml: invalid YAML/,
+    );
+  });
+
+  it("registers media and resolves figure blocks by stable media ID", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "region.example" });
+    await addMedia(root);
+    const markdown = ":::figure{#voorbeeldfoto media_id=\"media.example.photo\"}\n:::\n";
+    await writeFile(path.join(directory, "overview.nl.md"), markdown);
+    await writeFile(path.join(directory, "overview.en.md"), markdown);
+
+    const { knowledgeBase } = await buildContent({ root, write: false });
+
+    expect(knowledgeBase.media).toHaveLength(1);
+    expect(knowledgeBase.entities[0].content.nl.blocks[0]).toMatchObject({
+      type: "figure",
+      media_id: "media.example.photo",
+      nodes: [],
+    });
+  });
+
+  it("rejects unknown, missing, and changed media assets", async () => {
+    const unknownRoot = await temporaryRoot();
+    const unknownDirectory = await addEntity(unknownRoot, { id: "region.example" });
+    const markdown = ":::figure{#voorbeeldfoto media_id=\"media.example.photo\"}\n:::\n";
+    await writeFile(path.join(unknownDirectory, "overview.nl.md"), markdown);
+    await writeFile(path.join(unknownDirectory, "overview.en.md"), markdown);
+    await expect(buildContent({ root: unknownRoot, write: false })).rejects.toThrow(
+      /Unknown media reference 'media\.example\.photo'/,
+    );
+
+    const missingRoot = await temporaryRoot();
+    await addMedia(missingRoot, { writeAsset: false });
+    await expect(buildContent({ root: missingRoot, write: false })).rejects.toThrow(
+      /is missing under public\/media/,
+    );
+
+    const changedRoot = await temporaryRoot();
+    await addMedia(changedRoot, { checksum: "0".repeat(64) });
+    await expect(buildContent({ root: changedRoot, write: false })).rejects.toThrow(
+      /checksum_sha256 does not match/,
     );
   });
 });

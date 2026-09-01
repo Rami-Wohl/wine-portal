@@ -1,6 +1,6 @@
 id: region.bordeaux
 type: region
-status: draft
+status: active
 canonical_name: Bordeaux
 names:
   nl: Bordeaux
@@ -13,4 +13,8 @@ locales:
   en: overview.en.md
 relations: []
 assertions: []
-source_refs: []
+source_refs:
+  - source.inao-bordeaux-product-page
+  - source.civb-bordeaux-grape-varieties
+depth: foundation
+last_reviewed: 2026-09-01

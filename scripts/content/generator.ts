@@ -47,12 +47,11 @@ export async function generateEntityPackage(options: GenerateEntityOptions): Pro
     assertions: [],
     source_refs: [],
   };
-  await mkdir(path.join(packageDirectory, "media"), { recursive: true });
+  await mkdir(packageDirectory, { recursive: true });
   await Promise.all([
     writeFile(path.join(packageDirectory, "entity.yaml"), stringifyYaml(metadata), "utf8"),
     writeFile(path.join(packageDirectory, "overview.nl.md"), "", "utf8"),
     writeFile(path.join(packageDirectory, "overview.en.md"), "", "utf8"),
-    writeFile(path.join(packageDirectory, "media", ".gitkeep"), "", "utf8"),
   ]);
   return packageDirectory;
 }
