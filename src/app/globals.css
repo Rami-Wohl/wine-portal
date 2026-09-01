@@ -792,12 +792,17 @@ h3 {
   color: var(--muted);
   font: clamp(1.15rem, 2vw, 1.45rem)/1.45 var(--font-display);
 }
-.depth-control {
-  padding: 1rem 1.1rem;
-  border-radius: var(--radius-sm);
-  background: var(--leaf-soft);
+.knowledge-depth-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--leaf) 22%, var(--line));
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--leaf-soft), var(--surface));
 }
-.depth-control span {
+.knowledge-depth-summary span {
   display: block;
   color: var(--leaf);
   font-size: 0.68rem;
@@ -805,10 +810,40 @@ h3 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.depth-control strong {
+.knowledge-depth-summary strong {
   display: block;
-  margin: 0.3rem 0;
-  font: 1.2rem var(--font-display);
+  margin-top: 0.18rem;
+  font: 1.3rem var(--font-display);
+}
+.knowledge-depth-summary p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.knowledge-depth-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+.knowledge-depth-options button {
+  min-height: 44px;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--leaf) 28%, var(--line));
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--leaf);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 720;
+}
+.knowledge-depth-options button:hover {
+  border-color: var(--leaf);
+}
+.knowledge-depth-options button[aria-pressed="true"] {
+  border-color: var(--leaf);
+  background: var(--leaf);
+  color: white;
 }
 .entity-layout,
 .lesson-layout {
@@ -935,6 +970,13 @@ h3 {
   display: grid;
   gap: clamp(2.25rem, 4.5vw, 3.5rem);
   min-width: 0;
+}
+.knowledge-depth-content[data-visible-depth="foundation"]
+  :is(.content-depth-intermediate, .content-depth-advanced, .content-depth-specialist),
+.knowledge-depth-content[data-visible-depth="intermediate"]
+  :is(.content-depth-advanced, .content-depth-specialist),
+.knowledge-depth-content[data-visible-depth="advanced"] .content-depth-specialist {
+  display: none;
 }
 .content-block {
   min-width: 0;
@@ -1170,9 +1212,6 @@ h3 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .depth-control {
-    max-width: 420px;
-  }
   .atlas-layout {
     grid-template-columns: 1fr;
     min-height: 0;
@@ -1281,22 +1320,12 @@ h3 {
   .lesson-page-header h1 {
     font-size: clamp(2.5rem, 13vw, 3.6rem);
   }
-  .depth-control {
-    display: flex;
-    gap: 0.65rem;
-    align-items: baseline;
-    justify-self: start;
-    width: auto;
-    max-width: none;
-    padding: 0.7rem 0.85rem;
+  .knowledge-depth-control {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  .depth-control span {
-    display: inline;
-  }
-  .depth-control strong {
-    display: inline;
-    margin: 0;
-    font-size: 1rem;
+  .knowledge-depth-options {
+    justify-content: flex-start;
   }
   .entity-layout,
   .lesson-layout,

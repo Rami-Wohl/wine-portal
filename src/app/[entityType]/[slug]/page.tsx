@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
 import { ContentDocumentView } from "@/components/content-document";
-import type { Entity } from "@/content/model";
+import { KnowledgeDepth } from "@/components/knowledge-depth";
+import { DEPTHS, type Depth, type Entity, type GeneratedEntity } from "@/content/model";
 import { mediaIdsForDocument } from "@/content/media";
 import { relationLabel, type RelationDirection } from "@/content/relations";
 import {
@@ -16,7 +17,6 @@ import {
   getSourcesByIds,
 } from "@/content/repository";
 import {
-  DEPTH_LABELS_NL,
   ENTITY_ROUTE_SEGMENTS,
   ENTITY_TYPE_LABELS_NL,
   entityHref,
@@ -25,6 +25,17 @@ import {
 
 interface EntityPageProps {
   params: Promise<{ entityType: string; slug: string }>;
+}
+
+function highestDocumentDepth(entity: GeneratedEntity): Depth | null {
+  const depths = entity.content.nl.blocks
+    .map((block) => block.depth ?? entity.depth)
+    .filter((depth): depth is Depth => Boolean(depth));
+
+  return depths.reduce<Depth | null>((highest, depth) => {
+    if (!highest) return depth;
+    return DEPTHS.indexOf(depth) > DEPTHS.indexOf(highest) ? depth : highest;
+  }, null);
 }
 
 export function generateStaticParams() {
@@ -88,6 +99,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
     ),
   );
   const media = getMediaByIds(mediaIdsForDocument(entity.content.nl));
+  const maxContentDepth = highestDocumentDepth(entity);
   const hasRelatedKnowledge = relations.length > 0 || relatedNarratives.length > 0;
   const hasSupportingInformation = hasRelatedKnowledge || sources.length > 0;
 
@@ -105,7 +117,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
         <span aria-current="page">{entity.names.nl}</span>
       </nav>
 
-      <header className={`entity-header${entity.depth ? "" : " entity-header-compact"}`}>
+      <header className="entity-header entity-header-compact">
         <div>
           <p className="eyebrow">{ENTITY_TYPE_LABELS_NL[entity.type]}</p>
           <h1>{entity.names.nl}</h1>
@@ -113,23 +125,30 @@ export default async function EntityPage({ params }: EntityPageProps) {
             <p className="entity-summary">De inhoud van deze pagina wordt zorgvuldig voorbereid.</p>
           ) : null}
         </div>
-        {entity.depth ? (
-          <aside className="depth-control" aria-label="Kennisdiepte">
-            <span>Kennisdiepte</span>
-            <strong>{DEPTH_LABELS_NL[entity.depth]}</strong>
-          </aside>
-        ) : null}
       </header>
 
       {entity.status === "active" && entity.content.nl.blocks.length > 0 ? (
-        <article className="entity-body">
-          <ContentDocumentView
-            document={entity.content.nl}
-            locale="nl"
-            media={media}
-            sources={sources}
-          />
-        </article>
+        entity.depth && maxContentDepth ? (
+          <KnowledgeDepth initialDepth={entity.depth} maxDepth={maxContentDepth}>
+            <article className="entity-body">
+              <ContentDocumentView
+                document={entity.content.nl}
+                locale="nl"
+                media={media}
+                sources={sources}
+              />
+            </article>
+          </KnowledgeDepth>
+        ) : (
+          <article className="entity-body">
+            <ContentDocumentView
+              document={entity.content.nl}
+              locale="nl"
+              media={media}
+              sources={sources}
+            />
+          </article>
+        )
       ) : null}
 
       {hasSupportingInformation ? (

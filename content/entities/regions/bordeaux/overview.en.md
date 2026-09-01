@@ -29,6 +29,30 @@ The Bordeaux wine council identifies six principal grapes as foundations of the 
 Many Bordeaux wines are blends of several grape varieties. [@source.civb-bordeaux-grape-varieties] The permitted or important grapes still vary by appellation and wine. The regional list is therefore a starting point, not a recipe for every bottle.
 :::
 
+:::section{#assemblage-als-keuzes depth="intermediate" source_refs="source.civb-bordeaux-grape-varieties source.civb-bordeaux-blending"}
+## Blending: building with separate parts
+
+A blend does not begin with percentages on a label, but with components that have each followed their own course. The CIVB describes grapes generally being fermented separately before they are tasted and brought together. A cuvée may combine not only different varieties, but also lots from different parcels or terroirs. [@source.civb-bordeaux-blending]
+
+That makes the six principal regional grapes a palette rather than a fixed recipe. According to the Bordeaux wine council, every grape has its own characteristics and preferences for terroir and microclimate; the final wine emerges from choosing which components complement one another in that particular cuvée. [@source.civb-bordeaux-grape-varieties]
+:::
+
+:::section{#assemblage-op-drie-schalen depth="advanced" source_refs="source.civb-bordeaux-blending"}
+## Reading a cuvée at three scales
+
+To understand a Bordeaux blend in depth, look beyond the names of the grapes. Three scales interact:
+
+1. **Variety:** each grape offers its own structural and aromatic possibilities.
+2. **Lot:** separately vinified grapes or parcels give the winemaker material from which to select.
+3. **Vintage:** differences in ripeness and expression change which combination proves convincing in a given year.
+
+The CIVB therefore presents blending as a yearly process of tasting, selecting, and adjusting. [@source.civb-bordeaux-blending] Seen this way, a blend percentage is the outcome of decisions; it is not by itself a complete explanation of style or quality.
+:::
+
+:::caveat{#assemblage-is-geen-universele-regel depth="advanced" variant="exception" source_refs="source.civb-bordeaux-blending"}
+Blending is characteristic of Bordeaux, but not every Bordeaux wine is a blend. The CIVB itself notes that the region also produces single-varietal cuvées. [@source.civb-bordeaux-blending] The appellation and the specific wine therefore remain more useful than a broad regional rule of thumb.
+:::
+
 :::key-idea{#centraal-inzicht depth="foundation"}
 Bordeaux is not one wine style or one appellation but a connected wine region. Understanding begins by separating region, appellation, grapes, and producer.
 :::

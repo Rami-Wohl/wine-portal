@@ -31,7 +31,7 @@ test("active entity content flows comfortably across desktop and mobile", async 
     return { headerHeight: header?.height ?? 0, bodyTop: body?.top ?? Infinity };
   });
   expect(desktopFlow.headerHeight).toBeLessThan(320);
-  expect(desktopFlow.bodyTop).toBeLessThan(460);
+  expect(desktopFlow.bodyTop).toBeLessThan(500);
 
   await page.setViewportSize({ width: 375, height: 812 });
 
@@ -62,5 +62,41 @@ test("active entity content flows comfortably across desktop and mobile", async 
   });
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
   expect(dimensions.headerHeight).toBeLessThan(260);
-  expect(dimensions.figureTop).toBeLessThan(720);
+  expect(dimensions.figureTop).toBeLessThan(800);
+});
+
+test("knowledge depth progressively reveals additional Bordeaux content", async ({ page }) => {
+  await page.goto("/regions/bordeaux");
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const intermediateHeading = page.getByRole("heading", {
+    level: 2,
+    name: "Assemblage: bouwen met losse delen",
+  });
+  const advancedHeading = page.getByRole("heading", {
+    level: 2,
+    name: "Een cuvée lezen op drie schalen",
+  });
+
+  await expect(depthControl.getByRole("button", { name: "Basis" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await expect(intermediateHeading).toBeHidden();
+  await expect(advancedHeading).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(intermediateHeading).toBeVisible();
+  await expect(advancedHeading).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(intermediateHeading).toBeVisible();
+  await expect(advancedHeading).toBeVisible();
+  await expect(page.getByText("Belangrijke uitzondering")).toBeVisible();
+
+  await depthControl.getByRole("button", { name: "Basis" }).click();
+  await expect(intermediateHeading).toBeHidden();
+  await expect(advancedHeading).toBeHidden();
 });

@@ -27,7 +27,7 @@ Op 1 september 2026 valideert `npm run content:check`:
 ```text
 5 entities
 1 narrative
-2 sources
+3 sources
 4 forward relations
 ```
 
@@ -118,7 +118,7 @@ Gelokaliseerde redactionele documenten die entities expliciet kunnen noemen en d
 #### Sources
 
 Herbruikbare bronrecords onder `data/sources/`. Het schema en de validatie zijn
-geïmplementeerd; twee officiële bronrecords ondersteunen de eerste actieve
+geïmplementeerd; drie officiële bronrecords ondersteunen de eerste actieve
 Bordeaux-entity.
 
 #### Media
@@ -507,6 +507,13 @@ citations staat in `content-blocks.md`. Parser, validator, genormaliseerde
 content-AST, gegenereerde blockmetadata en server-side rendering zijn
 geïmplementeerd. Block-level `framework_alignment` blijft bewust uitgesteld.
 
+Op entitypagina's met meerdere blockdieptes kan de lezer cumulatief kiezen
+hoeveel detail zichtbaar is. `foundation` toont alleen de basis;
+`intermediate`, `advanced` en `specialist` voegen telkens alle blocks tot en met
+het gekozen niveau toe. De selectie verandert uitsluitend de presentatie van
+hetzelfde canonical document en maakt geen aparte pagina, feitenlaag of
+gebruikersprofiel.
+
 ---
 
 ## 11. Contentpipeline
@@ -728,7 +735,7 @@ narrative.regional.bordeaux-proof
 
 De vier forward relations bewijzen `part_of`, `important_grape`, `located_in` en `classified_under`. De classificatierelatie bevat `tier: premier-cru` en top-level `valid_from: 1855`.
 
-De regiopagina is een eerste publiceerbare contentslice met twee officiële
+De regiopagina is een eerste publiceerbare contentslice met drie officiële
 bronrecords, block-level citations en één geregistreerde CC0-foto met
 gelokaliseerde alttekst en volledige herkomstmetadata. De overige packages bewijzen vooral de
 pipeline en het model. Er is nog geen `vintage.bordeaux-2016`, geen brongebonden

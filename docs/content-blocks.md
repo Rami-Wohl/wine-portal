@@ -402,7 +402,8 @@ De implementatie:
 8. stabiele, focusbare anchors voor blocks leveren zonder technische IDs als hoofdlabel te tonen;
 9. tabellen, links, citations en callouts toegankelijk en responsive presenteren;
 10. media-ID, lokale asset, checksum, rechtenmetadata en gelokaliseerde alttekst valideren;
-11. draft/incomplete content eerlijk blijven afhandelen.
+11. blockdiepte op entitypagina's cumulatief laten tonen tot en met het door de lezer gekozen niveau;
+12. draft/incomplete content eerlijk blijven afhandelen.
 
 Presentatie volgt `visual-language.md`; de renderer verzint geen inhoud, headings, captions, labels met feitelijke betekenis of ontbrekende vertalingen.
 
@@ -415,7 +416,7 @@ Niet onderdeel van deze v1-conventions:
 - interactieve quizzes of exercises;
 - willekeurige componentembedding;
 - block-level framework alignment;
-- conditionele content per gebruiker of opleidingskader;
+- automatisch gepersonaliseerde content per gebruiker of opleidingskader;
 - automatisch gegenereerde samenvattingen;
 - layoutvarianten die auteurs visueel kunnen kiezen.
 

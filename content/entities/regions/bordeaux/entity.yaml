@@ -16,5 +16,6 @@ assertions: []
 source_refs:
   - source.inao-bordeaux-product-page
   - source.civb-bordeaux-grape-varieties
+  - source.civb-bordeaux-blending
 depth: foundation
 last_reviewed: 2026-09-01

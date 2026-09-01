@@ -29,6 +29,30 @@ De Bordeaux-wijnorganisatie noemt zes hoofddruiven als basis van de regionale wi
 Veel Bordeauxwijnen zijn assemblages van meerdere druiven. [@source.civb-bordeaux-grape-varieties] Welke rassen zijn toegestaan of belangrijk zijn, verschilt echter per appellation en wijn. De regionale druivenlijst is dus een vertrekpunt, geen recept voor iedere fles.
 :::
 
+:::section{#assemblage-als-keuzes depth="intermediate" source_refs="source.civb-bordeaux-grape-varieties source.civb-bordeaux-blending"}
+## Assemblage: bouwen met losse delen
+
+Een assemblage begint niet met percentages op een etiket, maar met componenten die ieder hun eigen verloop hebben gehad. De CIVB beschrijft hoe druiven doorgaans afzonderlijk worden vergist en pas daarna worden geproefd en samengebracht. Daarbij kan een cuvée niet alleen verschillende druivenrassen verbinden, maar ook partijen uit verschillende percelen of terroirs. [@source.civb-bordeaux-blending]
+
+Dat maakt de zes regionale hoofddruiven tot een palet, niet tot een vast recept. Iedere druif heeft volgens de Bordeaux-wijnorganisatie eigen eigenschappen en voorkeuren voor terroir en microklimaat; de uiteindelijke wijn ontstaat uit de keuze welke componenten elkaar in die specifieke cuvée aanvullen. [@source.civb-bordeaux-grape-varieties]
+:::
+
+:::section{#assemblage-op-drie-schalen depth="advanced" source_refs="source.civb-bordeaux-blending"}
+## Een cuvée lezen op drie schalen
+
+Wie een Bordeaux-assemblage werkelijk wil doorgronden, kijkt verder dan de namen van de druiven. Drie schalen lopen door elkaar:
+
+1. **Druivenras:** ieder ras brengt eigen structurele en aromatische mogelijkheden mee.
+2. **Partij:** afzonderlijk gevinifieerde druiven of percelen geven de wijnmaker materiaal om mee te selecteren.
+3. **Jaargang:** verschillen in rijpheid en expressie veranderen welke combinatie in een bepaald jaar overtuigt.
+
+De CIVB presenteert assemblage daarom als een jaarlijks proces van proeven, selecteren en bijsturen. [@source.civb-bordeaux-blending] Een blendpercentage is in dat licht de uitkomst van beslissingen; het is niet op zichzelf de volledige verklaring van stijl of kwaliteit.
+:::
+
+:::caveat{#assemblage-is-geen-universele-regel depth="advanced" variant="exception" source_refs="source.civb-bordeaux-blending"}
+Assemblage is kenmerkend voor Bordeaux, maar niet iedere Bordeauxwijn is een blend. De CIVB wijst er zelf op dat de regio ook monocépage-cuvées voortbrengt. [@source.civb-bordeaux-blending] De appellation en de concrete wijn blijven dus belangrijker dan een algemene regionale vuistregel.
+:::
+
 :::key-idea{#centraal-inzicht depth="foundation"}
 Bordeaux is niet één wijnstijl of één appellation, maar een verbonden wijnregio. Begrip begint bij het uit elkaar houden van regio, appellation, druiven en producent.
 :::
