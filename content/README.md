@@ -14,11 +14,11 @@ content/
 │   ├── article.nl.md
 │   ├── article.en.md
 │   └── media/                 # only when specific to this narrative
-└── legacy/modules/            # non-canonical migration input
 ```
 
 YAML contains shared identity, relations, assertions, and provenance references. Markdown contains localized presentation. Reusable sources and verified geography remain under `data/`.
 
-See `docs/content-authoring.md` for the package workflow,
+Start with `docs/project-map.md` for the system overview. See
+`docs/content-authoring.md` for the package workflow,
 `docs/content-blocks.md` for the accepted Markdown and semantic-block contract,
 and `scripts/content/README.md` for current validation and generated output.

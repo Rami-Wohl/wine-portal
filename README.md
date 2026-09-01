@@ -19,13 +19,16 @@ Open daarna [http://localhost:3000](http://localhost:3000).
 
 Canonical content staat in `content/`. De contentpipeline valideert stable IDs en relaties en genereert afgeleide indexes zonder handmatig onderhouden backlinks.
 
+Begin bij `docs/project-map.md` voor de korte mentale kaart van authored content,
+generated output en applicatiecode.
+
 ```bash
 npm run content:check
 npm run content:build
 npm run content:new -- producer example-estate
 ```
 
-Zie `docs/content-authoring.md`, `docs/content-blocks.md` en
+Zie daarna `docs/content-authoring.md`, `docs/content-blocks.md` en
 `scripts/content/README.md` voor de authoringworkflow.
 
 ## Validation

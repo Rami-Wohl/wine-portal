@@ -1,5 +1,5 @@
 :::summary{#fixture-status}
-This is a technical pipeline fixture, not migrated lesson content.
+This is a technical pipeline fixture, not authored lesson content.
 :::
 
 :::section{#stabiele-links}

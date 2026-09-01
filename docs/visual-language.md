@@ -26,7 +26,7 @@ recognizable without exposing internal schemas or pipeline vocabulary.
 
 Use human-readable, localized labels. Turn relation types into natural phrases
 appropriate to context. Never show stable IDs, field names, relation enums,
-migration terminology, or raw validation messages as finished public copy.
+internal workflow terminology, or raw validation messages as finished public copy.
 Labels must distinguish concepts such as region versus appellation and current
 versus historical state when that difference matters.
 

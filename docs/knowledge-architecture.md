@@ -1,6 +1,6 @@
 ---
 title: "Knowledge architecture"
-purpose: "Actieve content-, data-, provenance- en migratiearchitectuur voor Oenocademy"
+purpose: "Actieve content-, data- en provenancearchitectuur voor Oenocademy"
 status: "active"
 version: "1.0"
 created: "2026-08-25"
@@ -35,12 +35,12 @@ Alle vijf entities en de narrative zijn prototypes met status `draft`. Deze geta
 
 ## Samenhang met bindend beleid
 
-Dit document definieert eigendom, structuur, relaties, indexing en migratie van kennis. Aanvullende bindende regels staan in:
+Dit document definieert eigendom, structuur, relaties en indexing van kennis. Aanvullende bindende regels staan in:
 
 - `product-principles.md` voor productrollen, lokalisatie, kwaliteit en interfaceprincipes;
 - `geography-policy.md` voor plaatsen, coördinaten, geometrie en Atlas;
 - `visual-language.md` voor UI, responsive gedrag, kaarten, media en toegankelijkheid;
-- `../editorial/research-policy.md` voor onderzoek, provenance, claims, vertaling, correcties en redactionele migratie.
+- `../editorial/research-policy.md` voor onderzoek, provenance, claims, vertaling, correcties, imports en vervanging.
 
 De concrete authoringworkflow staat in `content-authoring.md`. Bij verschil tussen een voorbeeld in dit document en het strikte schema is `../src/content/model.ts` het uitvoerbare v1-contract; dit document moet daarna worden gecorrigeerd.
 
@@ -90,7 +90,7 @@ Relaties voeden afgeleide backlinks, gerelateerde onderwerpen, navigatie en zoek
 5. **Geografie komt uit geverifieerde data.** Grenzen, coördinaten en containment worden nooit gegokt of generatief verzonnen.
 6. **Concepten mogen educatief worden geïllustreerd.** Illustratie mag vereenvoudigen, maar geen documentaire, wetenschappelijke of geografische bewijsrol veinzen.
 7. **Kennisdiepte staat los van routes en opleidingen.** Het interne depth-model is niet hetzelfde als WSET of een andere externe indeling.
-8. **Migratie is niet-destructief.** Legacy-input blijft herstelbaar totdat een gecontroleerde vervanger bestaat.
+8. **Imports en vervangingen zijn niet-destructief.** Broninput blijft herstelbaar totdat een gecontroleerde vervanger bestaat.
 9. **Geen filler of verzonnen feiten.** Onbekend, afwezig of expliciet draft is beter dan schijnbare volledigheid.
 10. **Het model groeit vanuit aangetoonde use-cases.** Nieuwe typen en velden worden niet toegevoegd om hypothetische volledigheid na te streven.
 
@@ -577,6 +577,7 @@ project/
 │   ├── content-authoring.md
 │   ├── geography-policy.md
 │   ├── knowledge-architecture.md
+│   ├── project-map.md
 │   ├── product-principles.md
 │   └── visual-language.md
 ├── editorial/
@@ -590,9 +591,7 @@ project/
     └── knowledge-base.json         # afgeleid, deterministisch, niet canonical
 ```
 
-Eventuele lege legacy-directoryremnants zijn geen onderdeel van het canonical v1-contract. Legacy-materiaal is uitsluitend migratie-input en wordt niet door de huidige canonical pipeline gelezen.
-
-YAML-metadata plus gelokaliseerde Markdownpackages en file-backed canonical content met build-time indexing zijn voor v1 besloten en geïmplementeerd. Een latere database of PostGIS-runtime kan nuttig worden bij schaal, querying of geografie, maar is geen open keuze die huidige authoring of canonical ownership blokkeert. Zo'n verandering vereist een expliciet, niet-destructief migratieontwerp.
+YAML-metadata plus gelokaliseerde Markdownpackages en file-backed canonical content met build-time indexing zijn voor v1 besloten en geïmplementeerd. Een latere database of PostGIS-runtime kan nuttig worden bij schaal, querying of geografie, maar is geen open keuze die huidige authoring of canonical ownership blokkeert. Zo'n verandering vereist een expliciet, niet-destructief overgangsontwerp.
 
 ---
 
@@ -649,21 +648,28 @@ Dit is indexing-infrastructuur. Welke routes en zoekinterfaces de applicatie pub
 
 ---
 
-## 16. Correcties en migratie
+## 16. Correcties, imports en vervanging
 
 Gebruikers wijzigen canonical data niet rechtstreeks. Een toekomstige correction flow kan change proposals gebruiken, maar het reviewproces is nog niet als applicatiefunctie geïmplementeerd.
 
-Voor iedere migratie gelden deze stappen:
+Oenocademy heeft geen ouder curriculum dat nog moet worden omgezet. Nieuwe
+wijnkennis wordt direct volgens het huidige canonical authoringcontract
+onderzocht en geschreven.
 
-1. inventariseer legacyfeiten, narratief, assets en bronverwijzingen;
+Als later externe datasets, bestaand gepubliceerd materiaal of canonical
+storage worden geïmporteerd of vervangen, gelden deze stappen:
+
+1. inventariseer bronfeiten, narratief, assets en bronverwijzingen;
 2. wijs stabiele feiten toe aan entities en assertions;
 3. schrijf relaties eenmaal als canonical forward relation;
 4. registreer en verifieer bronnen volgens het researchbeleid;
-5. migreer uitleg naar NL/EN-narratives zonder feiten te dupliceren;
+5. schrijf uitleg als NL/EN-narratives zonder feiten te dupliceren;
 6. valideer packages en afgeleide graph;
-7. controleer inhoud, provenance, lokalisatie en media vóór legacyverwijdering.
+7. controleer inhoud, provenance, lokalisatie en media vóór broninput wordt verwijderd.
 
-Een schema-geldige migratie is nog niet automatisch inhoudelijk geverifieerd. Legacy-input blijft herstelbaar totdat de vervanger volledig gecontroleerd is.
+Een schema-geldige import of vervanging is nog niet automatisch inhoudelijk
+geverifieerd. Broninput blijft herstelbaar totdat de vervanger volledig
+gecontroleerd is.
 
 ---
 
@@ -693,18 +699,18 @@ Dit is een pipeline- en modelproof, geen inhoudelijk complete of publiceerbare B
 
 ### Pending voor een echte vertical slice
 
-- research en migratie van rijke canonical entitycontent;
+- research en authoring van rijke canonical entitycontent;
 - de geplande scoped vintage-entity;
 - minimaal één echt herbruikbaar bronrecord en claim-level ondersteuning;
 - inhoudelijk volwaardige NL- en EN-narratives;
 - geverifieerde boundaries, punten en Atlasdata met volledige provenance;
-- vervanging of review van legacy media;
-- section-/block-level depth en provenance;
+- onderzoek, selectie en review van geschikte media;
+- echte block-level bronreferenties en citations;
 - publieke bronweergave en menselijk leesbare relaties;
 - Explore-, Learn- en Atlaspresentaties uit dezelfde canonical graph;
 - end-to-end routing, search, related content en accessibility review.
 
-De architectuur wordt vóór grootschalige regiomigratie aangepast als deze slice alleen met grote uitzonderingen kan worden gebouwd.
+De architectuur wordt vóór grootschalige regio-authoring aangepast als deze slice alleen met grote uitzonderingen kan worden gebouwd.
 
 ---
 
@@ -730,7 +736,7 @@ De architectuur wordt vóór grootschalige regiomigratie aangepast als deze slic
 - reusable provenance en claim-level support in echte content;
 - learning paths als curated views in plaats van contentopslag;
 - media met controleerbare accuracy, rights en localization;
-- niet-destructieve migratie van legacycontent.
+- niet-destructieve import en vervanging wanneer later externe of bestaande content in scope komt.
 
 ### Open roadmapontwerp
 
@@ -743,7 +749,7 @@ De architectuur wordt vóór grootschalige regiomigratie aangepast als deze slic
 - de fijnmazigheid en UI van externe framework alignment;
 - criteria voor een mogelijk toekomstig `wine_style`-type.
 
-Open roadmapkeuzes veranderen het huidige v1-authoringcontract niet stilzwijgend. Iedere schema- of canonical-storagewijziging vereist documentatie, validatie, migratie en behoud van bestaande provenance.
+Open roadmapkeuzes veranderen het huidige v1-authoringcontract niet stilzwijgend. Iedere schema- of canonical-storagewijziging vereist documentatie, validatie, een compatibele overgang en behoud van bestaande provenance.
 
 ---
 
@@ -754,7 +760,7 @@ Een uitbreiding is pas onderdeel van het actieve contract wanneer:
 - het schema en de canonical authoringvorm expliciet zijn;
 - validatie en relevante afleidingen zijn geïmplementeerd en getest;
 - NL/EN-eigendom en routinggedrag duidelijk zijn;
-- provenance, onzekerheid en migratie-effecten zijn beoordeeld;
+- provenance, onzekerheid en effecten op bestaande canonical content zijn beoordeeld;
 - geography en media aan hun bindende beleid voldoen;
 - generated output reproduceerbaar en niet handmatig authored blijft;
 - documentatie current state en roadmap opnieuw correct scheidt.

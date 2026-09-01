@@ -14,13 +14,16 @@ Oenocademy is a multilingual, entity-first wine knowledge platform for structure
 
 ## Binding repository guidance
 
+Start with `docs/project-map.md` for the current system overview and to select
+the relevant policies. It is a navigation aid and does not override them.
+
 The following policies are sources of truth, not optional background. Read every
 document relevant to a task before editing, and apply them together:
 
 - `docs/product-principles.md` — product, content, design, UI, and application
   work.
 - `docs/knowledge-architecture.md` — content models, entities, relations,
-  backlinks, routing, search, indexes, pipelines, and migrations.
+  backlinks, routing, search, indexes, and pipelines.
 - `docs/content-blocks.md` — canonical Markdown structure, semantic blocks,
   block metadata, entity links, citations, and renderer behavior.
 - `docs/geography-policy.md` — places, maps, coordinates, boundaries,
@@ -28,14 +31,14 @@ document relevant to a task before editing, and apply them together:
 - `docs/visual-language.md` — UI, responsive behavior, imagery, illustration,
   diagrams, maps as presentation, and other visual output.
 - `editorial/research-policy.md` — factual content, sources, provenance,
-  migration, translation, corrections, and editorial work.
+  translation, corrections, imports, and editorial work.
 
 A task can require more than one policy. For example, an Atlas UI change must
 follow the product, knowledge architecture, geography, and visual guidance;
-migrating a regional article also requires the research policy. When guidance
+writing a regional article also requires the research policy. When guidance
 appears to conflict, preserve verified facts and provenance, avoid destructive
-migration, and raise the conflict rather than silently choosing or inventing a
-resolution.
+replacement of canonical material, and raise the conflict rather than silently
+choosing or inventing a resolution.
 
 ## Core principles
 

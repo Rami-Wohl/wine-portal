@@ -3,7 +3,7 @@
 Status: binding repository policy
 
 This policy governs factual research, provenance, editorial writing,
-translation, corrections, and content migration. It applies to entities,
+translation, corrections, imports, and replacement. It applies to entities,
 relations, assertions, narratives, learning material, captions, labels, maps,
 charts, and media metadata. The canonical storage and assertion model is
 defined in `../docs/knowledge-architecture.md`.
@@ -141,7 +141,7 @@ search summary.
 
 Use the architecture's statuses consistently: `verified`, `provisional`,
 `contested`, `historical`, or `deprecated` for assertions, and the appropriate
-review status for media and migration. Draft language must not leak into public
+review status for media and imported material. Draft language must not leak into public
 presentation as confirmed fact.
 
 When credible sources conflict, check whether they differ in date, definition,
@@ -158,11 +158,15 @@ rewrite history by deleting valid historical values or provenance. Urgent
 removal of harmful or legally risky material may precede full replacement, but
 the editorial record should still explain the action.
 
-## 9. Migration
+## 9. Imports and replacement
 
-Migration is research and editorial work, not mechanical copying. Legacy
-content remains a recoverable source until its replacement has been mapped,
-fact-checked, localized, and reviewed. For each migrated item:
+Oenocademy currently authors its wine knowledge as new canonical content; it
+does not maintain a workflow for converting an older curriculum. If external
+datasets, donated material, or existing published content are imported or
+replaced later, that work is research and editorial work, not mechanical
+copying. Original input remains recoverable until its replacement has been
+mapped, fact-checked, localized, and reviewed. For each imported or replaced
+item:
 
 - separate stable entity facts from narrative explanation and learning order;
 - map references to stable entity and source IDs;
@@ -170,11 +174,11 @@ fact-checked, localized, and reviewed. For each migrated item:
 - preserve useful provenance and mark unsupported claims for omission or review;
 - check image rights, credits, factual role, and localization;
 - keep NL and EN aligned without generating missing content; and
-- record migration status without treating `migrated` as equivalent to
-  `verified`.
+- record review status without treating `imported` as equivalent to `verified`.
 
-Do not delete legacy input merely because a schema-valid replacement exists.
-Follow the non-destructive migration rules in the knowledge architecture.
+Do not delete source input merely because a schema-valid replacement exists.
+Follow the non-destructive import and replacement rules in the knowledge
+architecture.
 
 ## 10. AI-assisted work
 

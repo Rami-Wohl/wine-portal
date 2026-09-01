@@ -400,4 +400,4 @@ Niet onderdeel van deze v1-conventions:
 - automatisch gegenereerde samenvattingen;
 - layoutvarianten die auteurs visueel kunnen kiezen.
 
-Nieuwe blocktypen worden pas toegevoegd wanneer Bordeaux of een volgende echte contentmigratie een terugkerende use-case oplevert die niet helder met de bestaande blocks kan worden geschreven.
+Nieuwe blocktypen worden pas toegevoegd wanneer Bordeaux of een volgende echte contentslice een terugkerende use-case oplevert die niet helder met de bestaande blocks kan worden geschreven.

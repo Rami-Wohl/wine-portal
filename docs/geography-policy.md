@@ -5,7 +5,7 @@ Status: binding repository policy
 This policy applies to places, geographic hierarchy, addresses, coordinates,
 centroids, boundaries, map layers, spatial relations, geographic imports, and
 every Atlas experience. It supplements `knowledge-architecture.md`; it does not
-replace that document's entity, relation, source, or migration contracts.
+replace that document's entity, relation, source, or import contracts.
 
 ## 1. Geography is verified data
 
@@ -114,10 +114,11 @@ spatial relationships.
 
 ## 8. Import and correction workflow
 
-Geographic imports are migrations: validate them in reviewable batches,
-preserve provenance, and keep prior data recoverable until the replacement is
-verified. A correction must record what changed, why, the supporting source,
-and whether dependent containment or display outputs need regeneration.
+Geographic imports require a controlled transition: validate them in reviewable
+batches, preserve provenance, and keep prior data recoverable until the
+replacement is verified. A correction must record what changed, why, the
+supporting source, and whether dependent containment or display outputs need
+regeneration.
 
 Before publishing geography, confirm:
 

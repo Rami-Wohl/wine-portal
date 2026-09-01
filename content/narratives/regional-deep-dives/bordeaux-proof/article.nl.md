@@ -1,5 +1,5 @@
 :::summary{#fixture-status}
-Dit is een technische pipelinefixture, geen gemigreerde lesinhoud.
+Dit is een technische pipelinefixture, geen geschreven lesinhoud.
 :::
 
 :::section{#stabiele-links}

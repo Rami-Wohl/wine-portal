@@ -63,8 +63,8 @@ routes are presentation; stable entity IDs are identity.
 Factual claims must be traceable to appropriate sources, with freshness,
 scope, and uncertainty represented when relevant. Passing schema validation
 proves only structural validity; it does not make content verified. Apply
-`../editorial/research-policy.md` to research, writing, translation, and
-migration, and `geography-policy.md` to every geographic claim or asset.
+`../editorial/research-policy.md` to research, writing, translation, imports,
+and replacement, and `geography-policy.md` to every geographic claim or asset.
 
 Never manufacture facts, citations, quotations, sources, relations, dates,
 figures, classifications, legal claims, tasting guarantees, geography,
@@ -76,7 +76,7 @@ unknown value, or a useful empty state is better than false confidence.
 
 Public copy describes wine knowledge in recognizable human language. Translate
 structured relations into contextual labels and sentences. Never expose raw
-IDs, schema field names, relation enums, pipeline terms, migration states, or
+IDs, schema field names, relation enums, pipeline terms, internal review states, or
 other developer language as the user experience.
 
 Interfaces should be calm, clear, contemporary, educational, responsive, and
@@ -98,8 +98,8 @@ show the limitation or withhold the claim; do not smooth it away in copy or UI.
 Prefer coherent vertical slices that strengthen the shared system. Add a new
 entity type, relation, mode, filter, or abstraction only when concrete use cases
 cannot be served by the existing model. Avoid redesigning the information
-architecture to solve a local presentation problem. Migrations remain
-reviewable and non-destructive until replacements are verified.
+architecture to solve a local presentation problem. Imports and replacements
+remain reviewable and non-destructive until their results are verified.
 
 ## Decision test
 
