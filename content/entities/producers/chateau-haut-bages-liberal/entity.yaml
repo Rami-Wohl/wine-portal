@@ -1,0 +1,21 @@
+id: producer.chateau-haut-bages-liberal
+type: producer
+status: draft
+canonical_name: Château Haut-Bages Libéral
+names:
+  nl: Château Haut-Bages Libéral
+  en: Château Haut-Bages Libéral
+slugs:
+  nl: chateau-haut-bages-liberal
+  en: chateau-haut-bages-liberal
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: cinquieme-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

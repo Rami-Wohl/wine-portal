@@ -1,0 +1,21 @@
+id: producer.chateau-pichon-longueville-comtesse-de-lalande
+type: producer
+status: draft
+canonical_name: Château Pichon Longueville Comtesse de Lalande
+names:
+  nl: Château Pichon Longueville Comtesse de Lalande
+  en: Château Pichon Longueville Comtesse de Lalande
+slugs:
+  nl: chateau-pichon-longueville-comtesse-de-lalande
+  en: chateau-pichon-longueville-comtesse-de-lalande
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: deuxieme-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

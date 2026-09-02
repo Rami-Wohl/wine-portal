@@ -6,7 +6,7 @@ import { ContentDocumentView } from "@/components/content-document";
 import { KnowledgeDepth } from "@/components/knowledge-depth";
 import { DEPTHS, type Depth, type Entity, type GeneratedEntity } from "@/content/model";
 import { mediaIdsForDocument } from "@/content/media";
-import { relationLabel, type RelationDirection } from "@/content/relations";
+import { groupRelationsByLabel, type RelationDirection } from "@/content/relations";
 import {
   getAllEntities,
   getEntityById,
@@ -87,6 +87,12 @@ export default async function EntityPage({ params }: EntityPageProps) {
       direction === "forward" &&
       ["part_of", "located_in", "parent_appellation"].includes(relation.type),
   )?.related;
+  const relationGroups = groupRelationsByLabel(relations, "nl").map((group) => ({
+    ...group,
+    items: [...group.items].sort((left, right) =>
+      left.related.names.nl.localeCompare(right.related.names.nl, "nl"),
+    ),
+  }));
   const relatedNarratives = getPublishedNarrativeBacklinks(entity.id);
   const sources = getSourcesByIds(
     Array.from(
@@ -155,15 +161,24 @@ export default async function EntityPage({ params }: EntityPageProps) {
             <section className="relations-panel" aria-labelledby="relations-title">
               <p className="eyebrow">Gerelateerde onderwerpen</p>
               <h2 id="relations-title">Ga verder vanuit {entity.names.nl}</h2>
-              {relations.length > 0 ? (
-                <ul>
-                  {relations.map(({ direction, related, relation }) => (
-                    <li key={`${relation.source}-${relation.type}-${relation.target}`}>
-                      <span>{relationLabel(relation.type, direction, "nl")}</span>
-                      <EntityLink entity={related} />
-                    </li>
-                  ))}
-                </ul>
+              {relationGroups.length > 0 ? (
+                <div className="relation-groups">
+                  {relationGroups.map((group, index) => {
+                    const titleId = `relation-group-${index + 1}`;
+                    return (
+                      <div className="relation-group" key={group.label}>
+                        <h3 id={titleId}>{group.label}</h3>
+                        <ul aria-labelledby={titleId}>
+                          {group.items.map(({ related, relation }) => (
+                            <li key={`${relation.source}-${relation.type}-${relation.target}`}>
+                              <EntityLink entity={related} />
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </div>
               ) : null}
               {relatedNarratives.length > 0 ? (
                 <div className="related-learning">

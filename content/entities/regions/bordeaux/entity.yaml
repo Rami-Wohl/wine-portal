@@ -11,7 +11,29 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: important_grape
+    target: grape.merlot
+  - type: important_grape
+    target: grape.cabernet-sauvignon
+  - type: important_grape
+    target: grape.cabernet-franc
+  - type: important_grape
+    target: grape.sauvignon-blanc
+  - type: important_grape
+    target: grape.semillon
+  - type: important_grape
+    target: grape.muscadelle
+  - type: associated_with
+    target: classification.bordeaux-1855
+  - type: associated_with
+    target: classification.graves
+  - type: associated_with
+    target: classification.saint-emilion
+  - type: associated_with
+    target: classification.crus-bourgeois-du-medoc
+  - type: associated_with
+    target: classification.crus-artisans-du-medoc
 assertions: []
 source_refs:
   - source.gironde-estuary-landscape-atlas
@@ -36,4 +58,4 @@ source_refs:
   - source.inrae-bordeaux-climate-adaptation
   - source.musee-aquitaine-bordeaux-slavery
 depth: foundation
-last_reviewed: 2026-09-01
+last_reviewed: 2026-09-02

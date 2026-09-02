@@ -2,6 +2,7 @@ import path from "node:path";
 import { buildContent, ContentValidationError } from "./pipeline";
 import { generateEntityPackage } from "./generator";
 import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
+import { writeEntityStatus } from "./status";
 
 async function main(): Promise<void> {
   const [command, first, second] = process.argv.slice(2);
@@ -14,9 +15,16 @@ async function main(): Promise<void> {
   }
   if (command === "build") {
     const result = await buildContent();
+    await writeEntityStatus(result.knowledgeBase.entities);
     console.log(
       `Generated content graph: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.media.length} media assets, ${result.knowledgeBase.relations.forward.length} forward relations.`,
     );
+    return;
+  }
+  if (command === "status") {
+    const result = await buildContent({ write: false });
+    const outputPath = await writeEntityStatus(result.knowledgeBase.entities);
+    console.log(`Updated ${path.relative(process.cwd(), outputPath)}`);
     return;
   }
   if (command === "new") {
@@ -46,7 +54,7 @@ async function main(): Promise<void> {
     return;
   }
   throw new Error(
-    "Usage: npm run content:check | npm run content:build | npm run content:new -- <entity-type> <slug> | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit",
+    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit",
   );
 }
 

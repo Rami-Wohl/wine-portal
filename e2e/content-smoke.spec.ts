@@ -46,7 +46,7 @@ test("active entity content flows comfortably across desktop and mobile", async 
       name: "Een streek gevormd door beweging",
     }),
   ).toBeVisible();
-  await expect(page.getByRole("link", { name: "cabernet sauvignon" })).toHaveAttribute(
+  await expect(page.getByRole("link", { name: "cabernet sauvignon", exact: true })).toHaveAttribute(
     "href",
     "/grapes/cabernet-sauvignon",
   );
@@ -101,6 +101,61 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
   await depthControl.getByRole("button", { name: "Basis" }).click();
   await expect(intermediateHeading).toBeHidden();
   await expect(advancedBlock).toBeHidden();
+});
+
+test("entity relationships are grouped by their meaning", async ({ page }) => {
+  await page.goto("/appellations/pauillac");
+
+  const panel = page.getByRole("region", { name: "Ga verder vanuit Pauillac" });
+  await expect(panel.getByRole("heading", { level: 3, name: "Onderdeel van" })).toBeVisible();
+  await expect(panel.getByRole("heading", { level: 3, name: "Belangrijke druif" })).toBeVisible();
+  await expect(panel.getByRole("heading", { level: 3, name: "Hier gevestigd" })).toBeVisible();
+  await expect(panel.getByText("Belangrijke druif", { exact: true })).toHaveCount(1);
+
+  await page.goto("/regions/bordeaux");
+  const bordeauxPanel = page.getByRole("region", { name: "Ga verder vanuit Bordeaux" });
+  await expect(bordeauxPanel.getByRole("heading", { level: 3, name: "Bevat" })).toBeVisible();
+  await expect(
+    bordeauxPanel.getByRole("heading", { level: 3, name: "Belangrijke druif" }),
+  ).toBeVisible();
+  await expect(bordeauxPanel.getByRole("link", { name: "Médoc Regio" })).toBeVisible();
+  await expect(bordeauxPanel.getByRole("link", { name: "Sémillon Druif" })).toBeVisible();
+});
+
+test("Pauillac media and appellation details follow the knowledge-depth contract", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/appellations/pauillac");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Pauillac" })).toBeVisible();
+  await expect(page.getByRole("img", { name: /Wijngaarden van Pauillac/ })).toBeVisible();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const intermediateBlock = page.locator("#wettelijke-grens");
+  const advancedBlock = page.locator("#drie-landschappen");
+
+  await expect(depthControl.getByRole("button", { name: "Basis" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await expect(intermediateBlock).toBeHidden();
+  await expect(advancedBlock).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(intermediateBlock).toBeVisible();
+  await expect(advancedBlock).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(advancedBlock).toBeVisible();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
 test("a deep block anchor reveals the required knowledge depth", async ({ page }) => {

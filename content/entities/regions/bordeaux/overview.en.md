@@ -8,7 +8,7 @@ The best way into Bordeaux is therefore not a list of famous estates. Begin with
 :::
 
 :::section{#identiteit-en-schaal depth="foundation" source_refs="source.gironde-estuary-landscape-atlas source.civb-bordeaux-designations"}
-## A wine country, not a single wine
+## Overview — a wine country, not a single wine
 
 The name Bordeaux works at several scales. It can mean the full wine region around the city, but also [[appellation.bordeaux|Bordeaux AOP]], one broad protected designation inside that region. More precise appellations, subregions and individual wines sit beneath and beside it. These layers resemble a geographical family tree, not a simple ladder from ordinary to superior.
 
@@ -24,7 +24,7 @@ A [[concept.aop|protected designation of origin]], known in French as an AOP, pr
 :::
 
 :::section{#geschiedenis-in-beweging depth="foundation" source_refs="source.msha-bordeaux-wine-history source.lavaud-bordeaux-vineyard-landscape-2014"}
-## A region shaped by movement
+## History — a region shaped by movement
 
 Winegrowing in Aquitaine reaches back to Roman times, but recognisable Bordeaux emerged above all because vineyards and trading city continually shaped one another. Ships carried barrels to foreign markets; demand in those markets influenced what was made; ownership, capital and technique then altered the landscape. Bordeaux was never a timeless terroir that happened to become famous. It repeatedly adapted to new connections. [@source.msha-bordeaux-wine-history]
 
@@ -64,7 +64,7 @@ These crises helped drive an increasingly strict system of delimitation and cont
 :::
 
 :::section{#landschap-van-water depth="foundation" source_refs="source.gironde-estuary-landscape-atlas source.lavaud-bordeaux-vineyard-landscape-2014"}
-## Water draws the map
+## Landscape, climate and soils — water draws the map
 
 The sea is often invisible from the vineyards, yet its influence is everywhere. The Atlantic gives Bordeaux a temperate, humid climate. The Garonne, Dordogne and Gironde cut through the region and deposited gravel, sand, clay and silt over long periods. The estuary is at once drainage channel, tidal landscape and historic shipping route. [@source.gironde-estuary-landscape-atlas]
 
@@ -88,7 +88,7 @@ More important than one ingredient's name is how the soil functions as a whole. 
 :::
 
 :::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2025"}
-## Bordeaux comes in more than one colour
+## Wine styles — Bordeaux comes in more than one colour
 
 Red wine accounts for much of the production and international image, but the region makes far more. Dry white can be brisk and immediate or broad and barrel-matured. Sweet white ranges from gently sweet to intense and ageworthy. Bordeaux also produces rosé, the historically deeper-coloured [[concept.clairet|clairet]], and sparkling [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles]
 
@@ -104,7 +104,7 @@ Sweet Bordeaux is not merely dry white with residual sugar. Ripe grapes, often c
 :::
 
 :::section{#druiven-en-rollen depth="foundation" source_refs="source.civb-bordeaux-grape-varieties"}
-## Grapes as an ensemble
+## Grape varieties — grapes as an ensemble
 
 For red wine, [[grape.merlot|Merlot]], [[grape.cabernet-sauvignon|Cabernet Sauvignon]] and [[grape.cabernet-franc|Cabernet Franc]] play the leading roles. Merlot generally ripens earlier and can bring roundness and plum-like fruit. Cabernet Sauvignon ripens later, naturally carries more tannin and acidity, and can provide structure. Cabernet Franc can contribute perfume, freshness and fine herbal notes. These are directions, not fixed flavour controls. [@source.civb-bordeaux-grape-varieties]
 
@@ -120,7 +120,7 @@ Under limited conditions, the broad Bordeaux AOP also permits a small group of a
 :::
 
 :::section{#van-wijngaard-tot-kelder depth="foundation" source_refs="source.civb-bordeaux-blending source.boagri-bordeaux-specification-2025"}
-## The maker writes part of the story
+## Viticulture and winemaking — the maker writes part of the story
 
 An appellation sets outer limits, but many choices remain within them. In the vineyard these include variety, rootstock, planting density, pruning, soil management, disease control, yield and harvest date. Selection, pressing, fermentation, [[concept.extraction|extraction]] — how much colour, tannin and flavour is drawn from solid grape material — composition and maturation follow in the cellar. Two neighbours can consequently make recognisably different wines.
 
@@ -144,7 +144,7 @@ Pickers may therefore pass through the same vineyard several times, selecting su
 :::
 
 :::section{#appellations-als-navigatie depth="foundation" source_refs="source.inao-aop-overview source.civb-bordeaux-designations"}
-## Appellations are the region's contents page
+## Appellations — the region's contents page
 
 An appellation states where a wine comes from under a particular production specification. Broad names such as [[appellation.bordeaux|Bordeaux AOP]], [[appellation.bordeaux-superieur|Bordeaux Supérieur]] and Crémant de Bordeaux can come from large parts of the region. Other appellations delimit a subregion, commune or group of communes and set their own conditions for matters such as grapes, yields and wine styles. [@source.inao-aop-overview]
 
@@ -172,7 +172,7 @@ Similar-looking terms can also work differently in law. A geographical district 
 :::
 
 :::section{#classificaties-zijn-meervoud depth="foundation" source_refs="source.civb-bordeaux-classifications source.inao-aop-overview"}
-## Classification is not the same as origin
+## Classifications — not the same as origin
 
 An appellation does not rank quality; it protects an origin and its rules. A classification or recognition system selects particular estates, wines or *crus* within its own scope. A [[concept.cru|cru]] literally refers to a growth or growing place, but the term's precise meaning depends on region and system. “Grand cru” therefore does not mean the same thing everywhere.
 
@@ -200,7 +200,7 @@ Every rank term therefore needs a second question: under which system, for what 
 :::
 
 :::section{#handel-en-place depth="foundation" source_refs="source.msha-bordeaux-wine-history source.civb-bordeaux-wine-trade"}
-## Wine travels through a network
+## Trade and institutions — wine travels through a network
 
 Bordeaux is a production region and a trading centre. For centuries, growers supplied merchants who selected and stored lots, sometimes blended or bottled them, and moved wine to distant customers. Many estates now bottle their own wine, yet specialist merchants remain an important bridge to importers and markets worldwide. [@source.civb-bordeaux-wine-trade]
 
@@ -224,7 +224,7 @@ Market price is therefore not meaningless, but neither is it identical to intrin
 :::
 
 :::section{#etiket-lezen depth="foundation" source_refs="source.dgccrf-wine-labels-2025"}
-## Read the bottle from large to small
+## Labels and terminology — read the bottle from large to small
 
 Begin with the exact appellation: does the label say only Bordeaux, or a name such as Pessac-Léognan, Saint-Émilion or Barsac? Then identify colour or wine type, producer or [[concept.cuvee|cuvée]], bottler and [[concept.vintage|vintage]]. Alcohol, volume and country of origin also belong to formal label information. Grape varieties are not always displayed prominently. [@source.dgccrf-wine-labels-2025]
 
@@ -240,7 +240,7 @@ A [[concept.chateau|château as a wine term]] may identify an estate or brand; i
 :::
 
 :::section{#bordeaux-in-het-glas depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.civb-bordeaux-grape-varieties"}
-## What might you expect in the glass?
+## In the glass — what might you expect?
 
 Red Bordeaux often moves among dark or red fruit, savoury notes, fresh acidity and tannin, yet may be supple and juicy or firm and reserved. Dry white can be citrus-led, herbal and taut, or riper, creamier and supported by oak. Sweet white combines ripe and dried fruit, honeyed notes and spice, ideally with enough [[concept.acidity|acidity]] to remain vivid. Rosé and clairet emphasise direct red fruit; Crémant freshness and mousse. [@source.civb-bordeaux-wine-styles]
 
@@ -268,7 +268,7 @@ Treat “Bordeaux” on a bottle as the beginning of an investigation, not a tas
 :::
 
 :::section{#bordeaux-vandaag depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2025"}
-## Not a museum behind a label
+## Contemporary developments — not a museum behind a label
 
 Bordeaux carries abundant history but does not stand still. Producers work at very different scales and with different approaches to farming. Some seek lighter extraction or earlier drinkability; others continue to build for long maturation and ageing. Dry white, sparkling wine, clairet and less familiar origins receive renewed attention alongside classic red.
 
@@ -288,7 +288,7 @@ Understanding Bordeaux means seeing connections. Water and trade shaped the land
 :::
 
 :::section{#verder-vanuit-bordeaux depth="foundation"}
-## Choose your next route
+## Explore further — choose your next route
 
 To refine the map, continue to a regional family such as the Médoc, Graves and Sauternais, Entre-deux-Mers, Libournais or Blayais and Bourgeais, and from there to an appellation. To understand the glass, follow a grape or winemaking concept. To decode labels and reputation, continue to AOP, château, cru, the individual classifications, négociant, Place de Bordeaux and en primeur.
 

@@ -1,0 +1,24 @@
+id: media.pauillac.vineyard-estuary
+kind: photo
+role: documentary
+status: active
+storage_key: pauillac/vineyard-estuary.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1079
+checksum_sha256: d0fcee93ef6b299bce285bb6910f6e4c574e5d369c1a0aa33347091756645793
+alt:
+  nl: Wijngaarden van Pauillac gezien vanaf de Gironde, met Château Pichon Longueville Comtesse de Lalande links en Château Pichon Baron rechts
+  en: Pauillac vineyards seen from the Gironde, with Château Pichon Longueville Comtesse de Lalande on the left and Château Pichon Baron on the right
+caption:
+  nl: Vanaf de Gironde wordt Pauillac leesbaar als wijnlandschap — rijen wijnstokken op lage grindkoppen, met de twee Pichon-domeinen als bakens.
+  en: From the Gironde, Pauillac reads as a wine landscape — rows of vines on low gravel rises, with the two Pichon estates as landmarks.
+rights:
+  status: open-licensed
+  creator: Anthony Baratier
+  source_url: https://commons.wikimedia.org/wiki/File:Pauillac_vignoble.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Anthony Baratier via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-02
+changes: Original Wikimedia file resized to 1920 pixels wide; no crop or editorial colour alteration.

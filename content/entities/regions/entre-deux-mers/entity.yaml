@@ -11,6 +11,8 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: part_of
+    target: region.bordeaux
 assertions: []
 source_refs: []

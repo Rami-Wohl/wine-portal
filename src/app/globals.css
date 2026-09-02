@@ -877,25 +877,34 @@ h3 {
 .relations-panel > h2 {
   font: 500 2rem/1.05 var(--font-display);
 }
-.relations-panel ul {
+.relation-groups {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 1.5rem 0 0;
+}
+.relation-group {
+  min-width: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.relation-group h3 {
+  margin-bottom: 0.75rem;
+  color: var(--faint);
+  font: 720 0.7rem/1.2 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.relation-group ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
-.entity-support-layout .relations-panel ul {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.relations-panel li {
+.relation-group li {
+  min-width: 0;
   margin: 0;
-}
-.relations-panel li > span {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: var(--faint);
-  font-size: 0.68rem;
-  text-transform: uppercase;
 }
 .related-learning {
   margin-top: 2rem;
@@ -1025,7 +1034,7 @@ h3 {
 }
 .content-block h2 {
   margin-bottom: 1.25rem;
-  font: 500 clamp(2rem, 4vw, 3rem)/1.08 var(--font-display);
+  font: 500 clamp(1.75rem, 2.6vw, 2.25rem)/1.12 var(--font-display);
   letter-spacing: -0.025em;
 }
 .content-block h3 {
@@ -1370,14 +1379,14 @@ h3 {
   .content-block-in-the-glass {
     padding: 1.2rem;
   }
-  .entity-support-layout .relations-panel ul {
+  .relation-group ul {
     grid-template-columns: 1fr;
   }
   .relations-panel,
   .lesson-context {
     padding: 1.2rem;
   }
-  .relations-panel li {
+  .relation-group li {
     margin-top: 0;
   }
   .map-empty-state {

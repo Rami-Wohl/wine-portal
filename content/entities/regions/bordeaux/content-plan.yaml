@@ -531,15 +531,15 @@ entity_dependencies:
   - id: grape.merlot
     names: { nl: Merlot, en: Merlot }
     slugs: { nl: merlot, en: merlot }
-    disposition: link
+    disposition: link-and-relation
   - id: grape.cabernet-sauvignon
     names: { nl: Cabernet Sauvignon, en: Cabernet Sauvignon }
     slugs: { nl: cabernet-sauvignon, en: cabernet-sauvignon }
-    disposition: link
+    disposition: link-and-relation
   - id: grape.cabernet-franc
     names: { nl: Cabernet Franc, en: Cabernet Franc }
     slugs: { nl: cabernet-franc, en: cabernet-franc }
-    disposition: link
+    disposition: link-and-relation
   - id: grape.petit-verdot
     names: { nl: Petit Verdot, en: Petit Verdot }
     slugs: { nl: petit-verdot, en: petit-verdot }
@@ -555,36 +555,36 @@ entity_dependencies:
   - id: grape.sauvignon-blanc
     names: { nl: Sauvignon Blanc, en: Sauvignon Blanc }
     slugs: { nl: sauvignon-blanc, en: sauvignon-blanc }
-    disposition: link
+    disposition: link-and-relation
   - id: grape.semillon
     names: { nl: Sémillon, en: Sémillon }
     slugs: { nl: semillon, en: semillon }
-    disposition: link
+    disposition: link-and-relation
   - id: grape.muscadelle
     names: { nl: Muscadelle, en: Muscadelle }
     slugs: { nl: muscadelle, en: muscadelle }
-    disposition: link
+    disposition: link-and-relation
 
   - id: classification.bordeaux-1855
     names: { nl: Bordeaux 1855, en: Bordeaux 1855 }
     slugs: { nl: bordeaux-1855, en: bordeaux-1855 }
-    disposition: link
+    disposition: link-and-relation
   - id: classification.graves
     names: { nl: Classificatie van Graves, en: Graves Classification }
     slugs: { nl: classificatie-graves, en: graves-classification }
-    disposition: link
+    disposition: link-and-relation
   - id: classification.saint-emilion
     names: { nl: Classificatie van Saint-Émilion, en: Saint-Émilion Classification }
     slugs: { nl: classificatie-saint-emilion, en: saint-emilion-classification }
-    disposition: link
+    disposition: link-and-relation
   - id: classification.crus-bourgeois-du-medoc
     names: { nl: Crus Bourgeois du Médoc, en: Crus Bourgeois du Médoc }
     slugs: { nl: crus-bourgeois-du-medoc, en: crus-bourgeois-du-medoc }
-    disposition: link
+    disposition: link-and-relation
   - id: classification.crus-artisans-du-medoc
     names: { nl: Crus Artisans du Médoc, en: Crus Artisans du Médoc }
     slugs: { nl: crus-artisans-du-medoc, en: crus-artisans-du-medoc }
-    disposition: link
+    disposition: link-and-relation
 
   - id: concept.assemblage
     names: { nl: Assemblage, en: Blending }

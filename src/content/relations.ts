@@ -9,6 +9,16 @@ export interface RelationPresentation {
   inverse: LocalizedLabel;
 }
 
+export interface GroupableRelation {
+  relation: Relation;
+  direction: RelationDirection;
+}
+
+export interface RelationGroup<T extends GroupableRelation> {
+  label: string;
+  items: T[];
+}
+
 export const RELATION_PRESENTATIONS = {
   part_of: {
     forward: { nl: "Onderdeel van", en: "Part of" },
@@ -62,4 +72,68 @@ export function relationLabel(
   locale: Locale,
 ): string {
   return RELATION_PRESENTATIONS[type][direction][locale];
+}
+
+const RELATION_GROUP_LABEL_ORDER: Record<Locale, string[]> = {
+  nl: [
+    "Onderdeel van",
+    "Gelegen in",
+    "Bovenliggende appellatie",
+    "Bevat",
+    "Onderliggende appellatie",
+    "Belangrijke druif",
+    "Belangrijk in",
+    "Produceert in",
+    "Producenten in dit gebied",
+    "Hier gevestigd",
+    "Geclassificeerd onder",
+    "Binnen deze classificatie",
+    "Geografisch bereik",
+    "Binnen dit gebied",
+    "Verbonden met",
+    "Vergelijk met",
+    "Gerelateerd aan",
+  ],
+  en: [
+    "Part of",
+    "Located in",
+    "Parent appellation",
+    "Contains",
+    "Sub-appellation",
+    "Important grape",
+    "Important in",
+    "Produces in",
+    "Producers in this area",
+    "Based here",
+    "Classified under",
+    "Within this classification",
+    "Geographic scope",
+    "Within this area",
+    "Associated with",
+    "Compare with",
+    "Related to",
+  ],
+};
+
+export function groupRelationsByLabel<T extends GroupableRelation>(
+  relations: T[],
+  locale: Locale,
+): RelationGroup<T>[] {
+  const groups = new Map<string, T[]>();
+  for (const item of relations) {
+    const label = relationLabel(item.relation.type, item.direction, locale);
+    const group = groups.get(label) ?? [];
+    group.push(item);
+    groups.set(label, group);
+  }
+
+  const preferredOrder = RELATION_GROUP_LABEL_ORDER[locale];
+  return Array.from(groups, ([label, items]) => ({ label, items })).sort((left, right) => {
+    const leftIndex = preferredOrder.indexOf(left.label);
+    const rightIndex = preferredOrder.indexOf(right.label);
+    if (leftIndex < 0 && rightIndex < 0) return left.label.localeCompare(right.label, locale);
+    if (leftIndex < 0) return 1;
+    if (rightIndex < 0) return -1;
+    return leftIndex - rightIndex;
+  });
 }

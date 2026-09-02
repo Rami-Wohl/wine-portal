@@ -20,4 +20,4 @@ relations:
       tier: premier-cru
     valid_from: 1855
 assertions: []
-source_refs: []
+source_refs: [source.gcc1855-classification-overview]

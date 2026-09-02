@@ -155,6 +155,20 @@ Verdere uitleg staat hier.
 
 Een section is de default. Maak geen callout wanneer gewone uitleg voldoende is.
 
+Voor overzichtsentities met een `content-plan.yaml` is de H2 semigestandaardiseerd
+via de `coverage.key` van de sectie. De kop bestaat uit het gelokaliseerde vaste
+categorielabel, eventueel gevolgd door ` — ` en een vrije redactionele toevoeging:
+
+```md
+## Geschiedenis
+
+## Geschiedenis — de haven kwam vóór de wereldfaam
+```
+
+Een uitsluitend metaforische of redactionele H2 zonder categorielabel is daar
+ongeldig. Deze regel geldt alleen voor `section`-blocks. De H3 van een `detail`
+blijft vrij, inhoudelijk en ondergeschikt aan de hoofdsectie.
+
 ### `detail`
 
 Een `detail` breidt een bestaande `section` uit wanneer een hoger kennisniveau

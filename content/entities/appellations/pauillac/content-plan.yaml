@@ -1,0 +1,376 @@
+schema_version: 1
+package_id: appellation.pauillac
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [orientatie, plaats-en-naam, wettelijke-grens]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer Pauillac als plaats, rode-wijn-AOP en onderdeel van de Médoc, zonder die lagen te verwarren?
+    layers:
+      foundation:
+        [Plaats Pauillac aan de Gironde in de centrale Médoc en definieer de beschermde naam.]
+      intermediate:
+        [Leg uit dat de juridische productiezone niet exact ophoudt bij de gemeentegrens.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Ruimtelijke oriëntatie en appellationidentiteit.]
+        source_refs: [source.civb-pauillac-overview]
+      specific_claims:
+        - claim: De AOP is uitsluitend voor stille rode wijn en omvat naast Pauillac bepaalde percelen in drie buurgemeenten.
+          status: supported
+          source_refs: [source.inao-pauillac-specification-2026]
+    review: &complete_section_review { outline: complete, nl: complete, en: complete }
+
+  - key: historical-development
+    disposition: on-page
+    block_ids: [haven-en-wijngaard, landgoederen-en-handel, van-reputatie-naar-aop]
+    target_ids: []
+    completeness_questions:
+      - Verbindt de geschiedenis haven, wijngaardontwikkeling, drainage, investeringen, 1855 en juridische herkomstbescherming zonder oorsprongsmythe?
+    layers:
+      foundation: [Vertel hoe haven en wijnland elkaar vormden.]
+      intermediate: [Volg de groei van middeleeuwse wijnkernen naar grote landgoederen en handel.]
+      advanced: [Plaats classificatie, rechterlijke afbakening en AOC in hun historische volgorde.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Historische wisselwerking tussen haven, handel en wijnbezit.]
+        source_refs: [source.pauillac-quays-2017, source.medoc-wine-council-history]
+      specific_claims:
+        - claim: De AOC Pauillac werd aanvankelijk erkend op 14 november 1936 na een rechterlijke afbakening in 1926.
+          status: supported
+          source_refs: [source.inao-pauillac-specification-2026]
+    review: *complete_section_review
+
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [grindkoppen-aan-het-water, bodem-en-afwatering, drie-landschappen]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer terrassen, croupes, estuarium, zandlaagten en afwatering als samenhangend maar gevarieerd systeem begrijpen?
+    layers:
+      foundation: [Maak de grindkoppen en nabijheid van het estuarium voorstelbaar.]
+      intermediate:
+        [Leg bodemfunctie uit zonder aroma’s rechtstreeks aan gesteente toe te schrijven.]
+      advanced: [Introduceer de drie door waterlopen gescheiden landschapszones.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Bodemfunctie, drainage en relatie tussen geologie en wijnbouw.]
+        source_refs: [source.brgm-bordeaux-geology-2022]
+      specific_claims:
+        - claim: Kwartaire grindterrassen liggen ongeveer 3 tot 30 meter hoog en bedekken grotendeels oudere mergel en kalksteen.
+          status: supported
+          source_refs: [source.inao-pauillac-specification-2026]
+    review: *complete_section_review
+
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [cabernet-en-zijn-gezelschap, druif-plaats-en-jaar]
+    target_ids: []
+    completeness_questions:
+      - Zijn alle toegestane rassen genoemd en zijn hun lokale rollen als richtingaanwijzers in plaats van recept uitgelegd?
+    layers:
+      foundation:
+        [Leg de hoofdrol van cabernet sauvignon en de belangrijke aanvulling van merlot uit.]
+      intermediate: [Laat zien hoe perceel, seizoen en producent de assemblage verschuiven.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Lokale rollen van de Bordeauxse rode druiven.]
+        source_refs: [source.civb-pauillac-overview]
+      specific_claims:
+        - claim: Zes rode druivenrassen zijn toegestaan in de actuele productspecificatie.
+          status: supported
+          source_refs: [source.inao-pauillac-specification-2026]
+    review: *complete_section_review
+
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [van-rank-tot-vat, extractie-en-elevage]
+    target_ids: []
+    completeness_questions:
+      - Zijn appellationregels, gangbare productiepatronen en vrije producentenkeuzes duidelijk van elkaar gescheiden?
+    layers:
+      foundation: [Volg de belangrijkste keuzes van rijping en selectie naar assemblage en vat.]
+      intermediate: [Leg extractie en élevage uit in relatie tot tanninestructuur en stijl.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode-wijnproductie, assemblage en opvoeding in Pauillac.]
+        source_refs: [source.inao-pauillac-specification-2026, source.civb-pauillac-overview]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [regels-als-ondergrens, wat-de-regels-niet-bepalen]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer enkele bepalende actuele regels noemen én uitleggen waarom ze geen château-recept vormen?
+    layers:
+      foundation: [Leg het verschil uit tussen herkomstgarantie en smaakgarantie.]
+      intermediate: []
+      advanced: [Geef een proportionele selectie van plantdichtheid, rendement en minimale élevage.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Functie van een appellationdossier.]
+        source_refs: [source.inao-aop-overview]
+      specific_claims:
+        - claim: De actuele regels vereisen minimaal 7000 stokken per hectare, stellen het basisrendement op 57 hl/ha en schrijven élevage tot minstens 1 juni na de oogst voor.
+          status: supported
+          source_refs:
+            [source.inao-pauillac-specification-2026, source.legifrance-pauillac-order-2026]
+    review: *complete_section_review
+
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [achttien-namen-een-geschiedenis, drie-premiers, alle-achttien, meer-dan-1855]
+    target_ids: []
+    completeness_questions:
+      - Zijn de drie premiers crus en alle achttien Pauillac-crus in de actuele 1855-lijst correct ontsloten zonder classificatie gelijk te stellen aan huidige fleskwaliteit?
+    layers:
+      foundation: [Gebruik de drie premiers crus als eerste producentenankers.]
+      intermediate: [Maak alle achttien geclassificeerde Pauillac-crus navigeerbaar per rang.]
+      advanced: [Leg scope, historische verstarring en producenten buiten de lijst uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rol en begrenzing van de classificatie van 1855.]
+        source_refs: []
+      specific_claims:
+        - claim: De actuele 1855-lijst telt in Pauillac achttien crus, waaronder drie premiers crus.
+          status: supported
+          source_refs: [source.gcc1855-classification-overview]
+    review: *complete_section_review
+
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [pauillac-in-het-glas, tijd-in-de-fles, stijl-is-geen-uniform]
+    target_ids: []
+    completeness_questions:
+      - Geeft de pagina een bruikbaar stijlbeeld inclusief flesontwikkeling en uitzonderingen, zonder smaakgarantie?
+    layers:
+      foundation: [Beschrijf structuur, donker fruit, frisheid en tannine als bandbreedte.]
+      intermediate: [Leg uit hoe primaire vruchtenaroma’s met flesrijping kunnen verschuiven.]
+      advanced: [Doorbreek het idee dat rang of cabernet-aandeel één uniforme stijl oplevert.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Stijlbandbreedte en ontwikkeling van rode Pauillac.]
+        source_refs: [source.inao-pauillac-specification-2026, source.civb-pauillac-overview]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-lezen, tweede-wijn-en-rang]
+    target_ids: []
+    completeness_questions:
+      - Kan een lezer appellation, château, jaargang, classificatie en tweede wijn op het etiket uit elkaar houden?
+    layers:
+      foundation: [Lees eerst herkomst, producent en jaargang.]
+      intermediate:
+        [
+          Leg uit dat château-rang en cuvée niet hetzelfde zijn en dat een tweede wijn apart beoordeeld wordt.,
+        ]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Praktische etiket- en koopnavigatie.]
+        source_refs: [source.dgccrf-wine-labels-2025, source.gcc1855-classification-overview]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [een-appellation-in-beweging, klimaat-en-keuzes]
+    target_ids: []
+    completeness_questions:
+      - Worden hedendaagse veranderingen als keuzes en drukpunten behandeld zonder vluchtige ranglijst of ongefundeerde toekomstvoorspelling?
+    layers:
+      foundation: [Laat zien dat Pauillac geen bevroren museumlandschap is.]
+      intermediate: [Verbind klimaatdruk met canopy, bodem, oogstmoment en assemblage.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatadaptatie in de Bordeauxse wijngaard.]
+        source_refs: [source.inrae-bordeaux-climate-adaptation]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [pauillac-vanaf-het-estuarium]
+    target_ids: []
+    completeness_questions:
+      - Laat de foto de relatie tussen estuarium, wijngaarden en château-landschap zien zonder als kaart of appellationgrens te dienen?
+    layers:
+      foundation:
+        [Toon Pauillac vanaf de estuariumzijde met wijngaarden en de twee Pichon-domeinen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair beeld van het wijnlandschap.], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - classification.bordeaux-1855
+      - producer.chateau-lafite-rothschild
+      - producer.chateau-latour
+      - producer.chateau-mouton-rothschild
+    completeness_questions:
+      - Brengen links de lezer naar classificatie, producenten, druiven en begrippen zonder dat hun volledige detail op Pauillac wordt gedupliceerd?
+    layers:
+      foundation: [Ontsluit classificatie en kernproducenten.]
+      intermediate: [Ontsluit druiven, productiebegrippen en alle geclassificeerde producenten.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+entity_dependencies:
+  - &lafite {
+      id: producer.chateau-lafite-rothschild,
+      names: { nl: Château Lafite Rothschild, en: Château Lafite Rothschild },
+      slugs: { nl: chateau-lafite-rothschild, en: chateau-lafite-rothschild },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-latour,
+      names: { nl: Château Latour, en: Château Latour },
+      slugs: { nl: chateau-latour, en: chateau-latour },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-mouton-rothschild,
+      names: { nl: Château Mouton Rothschild, en: Château Mouton Rothschild },
+      slugs: { nl: chateau-mouton-rothschild, en: chateau-mouton-rothschild },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-pichon-baron,
+      names: { nl: Château Pichon Baron, en: Château Pichon Baron },
+      slugs: { nl: chateau-pichon-baron, en: chateau-pichon-baron },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-pichon-longueville-comtesse-de-lalande,
+      names:
+        {
+          nl: Château Pichon Longueville Comtesse de Lalande,
+          en: Château Pichon Longueville Comtesse de Lalande,
+        },
+      slugs:
+        {
+          nl: chateau-pichon-longueville-comtesse-de-lalande,
+          en: chateau-pichon-longueville-comtesse-de-lalande,
+        },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-duhart-milon,
+      names: { nl: Château Duhart-Milon, en: Château Duhart-Milon },
+      slugs: { nl: chateau-duhart-milon, en: chateau-duhart-milon },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-pontet-canet,
+      names: { nl: Château Pontet-Canet, en: Château Pontet-Canet },
+      slugs: { nl: chateau-pontet-canet, en: chateau-pontet-canet },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-batailley,
+      names: { nl: Château Batailley, en: Château Batailley },
+      slugs: { nl: chateau-batailley, en: chateau-batailley },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-haut-batailley,
+      names: { nl: Château Haut-Batailley, en: Château Haut-Batailley },
+      slugs: { nl: chateau-haut-batailley, en: chateau-haut-batailley },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-grand-puy-lacoste,
+      names: { nl: Château Grand-Puy-Lacoste, en: Château Grand-Puy-Lacoste },
+      slugs: { nl: chateau-grand-puy-lacoste, en: chateau-grand-puy-lacoste },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-grand-puy-ducasse,
+      names: { nl: Château Grand-Puy Ducasse, en: Château Grand-Puy Ducasse },
+      slugs: { nl: chateau-grand-puy-ducasse, en: chateau-grand-puy-ducasse },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-lynch-bages,
+      names: { nl: Château Lynch-Bages, en: Château Lynch-Bages },
+      slugs: { nl: chateau-lynch-bages, en: chateau-lynch-bages },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-lynch-moussas,
+      names: { nl: Château Lynch-Moussas, en: Château Lynch-Moussas },
+      slugs: { nl: chateau-lynch-moussas, en: chateau-lynch-moussas },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-darmailhac,
+      names: { nl: Château d’Armailhac, en: Château d’Armailhac },
+      slugs: { nl: chateau-darmailhac, en: chateau-darmailhac },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-haut-bages-liberal,
+      names: { nl: Château Haut-Bages Libéral, en: Château Haut-Bages Libéral },
+      slugs: { nl: chateau-haut-bages-liberal, en: chateau-haut-bages-liberal },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-pedesclaux,
+      names: { nl: Château Pédesclaux, en: Château Pédesclaux },
+      slugs: { nl: chateau-pedesclaux, en: chateau-pedesclaux },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-clerc-milon,
+      names: { nl: Château Clerc Milon, en: Château Clerc Milon },
+      slugs: { nl: chateau-clerc-milon, en: chateau-clerc-milon },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-croizet-bages,
+      names: { nl: Château Croizet-Bages, en: Château Croizet-Bages },
+      slugs: { nl: chateau-croizet-bages, en: chateau-croizet-bages },
+      disposition: link,
+    }
+  - {
+      id: concept.second-wine,
+      names: { nl: Tweede wijn, en: Second wine },
+      slugs: { nl: tweede-wijn, en: second-wine },
+      disposition: link,
+    }
+
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

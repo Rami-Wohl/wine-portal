@@ -40,9 +40,13 @@ describe("canonical content routing", () => {
   });
 
   it("uses the generated type index for category lookups", () => {
-    expect(getAllEntitiesByType("producer").map((entity) => entity.id)).toEqual([
-      "producer.chateau-latour",
-    ]);
+    const producers = getAllEntitiesByType("producer");
+    expect(producers).not.toHaveLength(0);
+    expect(producers.every((entity) => entity.type === "producer")).toBe(true);
+    expect(producers.map((entity) => entity.id)).toContain("producer.chateau-latour");
+    expect(producers.map((entity) => entity.id)).toEqual(
+      producers.map((entity) => entity.id).toSorted(),
+    );
     expect(getAllEntitiesByType("site")).toEqual([]);
   });
 

@@ -1,0 +1,21 @@
+id: producer.chateau-lafite-rothschild
+type: producer
+status: draft
+canonical_name: Château Lafite Rothschild
+names:
+  nl: Château Lafite Rothschild
+  en: Château Lafite Rothschild
+slugs:
+  nl: chateau-lafite-rothschild
+  en: chateau-lafite-rothschild
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: premier-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

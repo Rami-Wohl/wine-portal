@@ -1,6 +1,6 @@
 id: appellation.pauillac
 type: appellation
-status: draft
+status: active
 canonical_name: Pauillac
 names:
   nl: Pauillac
@@ -14,7 +14,47 @@ locales:
 relations:
   - type: part_of
     target: region.bordeaux
+  - type: part_of
+    target: region.medoc
   - type: important_grape
     target: grape.cabernet-sauvignon
-assertions: []
-source_refs: []
+  - type: important_grape
+    target: grape.merlot
+  - type: important_grape
+    target: grape.cabernet-franc
+  - type: important_grape
+    target: grape.petit-verdot
+  - type: associated_with
+    target: classification.bordeaux-1855
+assertions:
+  - id: assertion.pauillac.wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.inao-pauillac-specification-2026]
+    last_verified: 2026-09-02
+  - id: assertion.pauillac.aoc-recognition
+    predicate: aoc_recognition_date
+    value: 1936-11-14
+    status: verified
+    sources: [source.inao-pauillac-specification-2026]
+    last_verified: 2026-09-02
+  - id: assertion.pauillac.classified-growth-count
+    predicate: classified_growth_count_1855
+    value: 18
+    status: verified
+    sources: [source.gcc1855-classification-overview]
+    last_verified: 2026-09-02
+source_refs:
+  - source.inao-pauillac-specification-2026
+  - source.legifrance-pauillac-order-2026
+  - source.civb-pauillac-overview
+  - source.medoc-wine-council-history
+  - source.pauillac-quays-2017
+  - source.brgm-bordeaux-geology-2022
+  - source.gcc1855-classification-overview
+  - source.inao-aop-overview
+  - source.dgccrf-wine-labels-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-02

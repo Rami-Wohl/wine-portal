@@ -170,6 +170,72 @@ De volgorde is redactioneel, niet schematisch. Een dimensie mag `on-page`,
 Alleen de eerste drie gelden als publiceerbaar afgedekt; een research-gap blokkeert
 activatie wanneer de dimensie essentieel is voor de paginabelofte.
 
+### Page-archetype: `appellation-overview`
+
+Een appellation-overview zoomt verder in dan een regiopagina. Hij behandelt of
+ontsluit minimaal:
+
+1. identiteit, wettelijke scope, ligging en verhouding tot bovenliggende regio's;
+2. historische ontwikkeling en wijnhistorische betekenis;
+3. landschap, klimaat, bodemvariatie en afwatering;
+4. toegestane druiven en hun lokale rollen;
+5. herkenbare viticultuur- en wijnmaakkeuzes zonder één producentenrecept te
+   suggereren;
+6. de actuele appellationregels, met juridische details proportioneel aan hun
+   leerwaarde;
+7. toepasselijke classificaties, producenten en de grenzen van hun
+   representativiteit;
+8. stijl, ontwikkeling op fles en bruikbare context in het glas;
+9. etiket-, koop- en serveernavigatie zonder prijs- of jaargangadvies te
+   vereeuwigen;
+10. moderne ontwikkelingen, waarbij veranderlijke gegevens naar gedateerde
+    assertions of narratives mogen;
+11. visuals met een concrete geografische, historische of wijnbouwkundige
+    leertaak; en
+12. child entities en narratives voor verdere verdieping.
+
+Een actieve appellation gebruikt dit archetype in een package-lokaal
+`content-plan.yaml`. Dezelfde harde volledigheids-, dependency- en
+proportionaliteitsreviews als voor een regio-overview gelden per dimensie.
+
+### Semigestandaardiseerde titels van hoofdsecties
+
+De H2 van iedere `section` in een region- of appellation-overview begint met een
+vaste, gelokaliseerde categorie. Een auteur mag daarna met ` — ` een vrije,
+levendige toevoeging schrijven. Zo blijft een pagina scanbaar en onderling
+vergelijkbaar zonder de redactionele stem uit de koppen te verwijderen.
+
+Voorbeeld:
+
+```md
+## Geschiedenis — de haven kwam vóór de wereldfaam
+```
+
+De `coverage.key` in `content-plan.yaml` bepaalt het label; er komt geen tweede
+headingveld in YAML. De pipeline valideert beide talen. Stable block-ID's blijven
+ongewijzigd wanneer een zichtbare kop wordt herschreven. De regel geldt niet voor
+de H3-koppen van `detail`-blocks.
+
+| Coverage | Regio NL / EN | Appellation NL / EN |
+| --- | --- | --- |
+| `identity-and-orientation` | Overzicht / Overview | Ligging en afbakening / Location and boundaries |
+| `historical-development` | Geschiedenis / History | Geschiedenis / History |
+| `landscape-climate-and-soils` | Landschap, klimaat en bodem / Landscape, climate and soils | Landschap, klimaat en bodem / Landscape, climate and soils |
+| `wine-families` | Wijnstijlen / Wine styles | — |
+| `grape-varieties` | Druivenrassen / Grape varieties | Druivenrassen / Grape varieties |
+| `viticulture-and-winemaking` | Wijnbouw en wijnmaken / Viticulture and winemaking | Wijnbouw en wijnmaken / Viticulture and winemaking |
+| `appellation-structure` | Appellations / Appellations | — |
+| `appellation-rules` | — | Appellationregels / Appellation rules |
+| `classification-systems` | Classificaties / Classifications | — |
+| `classification-and-producers` | — | Classificatie en producenten / Classification and producers |
+| `trade-and-institutions` | Handel en instituties / Trade and institutions | — |
+| `labels-and-terminology` | Etiketten en begrippen / Labels and terminology | — |
+| `labels-and-buying` | — | Etiket en aankoop / Labels and buying |
+| `style-and-glass-context` | In het glas / In the glass | Wijnstijl en flesontwikkeling / Wine style and bottle development |
+| `modern-developments` | Hedendaagse ontwikkelingen / Contemporary developments | Hedendaagse ontwikkelingen / Contemporary developments |
+| `visuals` | Beeld / Visuals | Beeld / Visuals |
+| `child-knowledge` | Verder ontdekken / Explore further | Verder ontdekken / Explore further |
+
 ## Add an entity
 
 Generate a package:

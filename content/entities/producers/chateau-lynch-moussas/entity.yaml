@@ -1,0 +1,21 @@
+id: producer.chateau-lynch-moussas
+type: producer
+status: draft
+canonical_name: Château Lynch-Moussas
+names:
+  nl: Château Lynch-Moussas
+  en: Château Lynch-Moussas
+slugs:
+  nl: chateau-lynch-moussas
+  en: chateau-lynch-moussas
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: cinquieme-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

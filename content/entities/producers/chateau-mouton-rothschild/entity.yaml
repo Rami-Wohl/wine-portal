@@ -1,0 +1,21 @@
+id: producer.chateau-mouton-rothschild
+type: producer
+status: draft
+canonical_name: Château Mouton Rothschild
+names:
+  nl: Château Mouton Rothschild
+  en: Château Mouton Rothschild
+slugs:
+  nl: chateau-mouton-rothschild
+  en: chateau-mouton-rothschild
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: premier-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

@@ -4,6 +4,8 @@ import path from "node:path";
 import { parse as parseYaml } from "yaml";
 import { z } from "zod";
 import {
+  APPELLATION_OVERVIEW_DIMENSIONS,
+  CONTENT_PLAN_SECTION_HEADINGS,
   ENTITY_TYPES,
   LOCALES,
   REGION_OVERVIEW_DIMENSIONS,
@@ -15,6 +17,7 @@ import {
   type Entity,
   type EntityType,
   type ContentDocument,
+  type ContentInlineNode,
   type ContentPlan,
   type GeneratedEntity,
   type GeneratedKnowledgeBase,
@@ -24,6 +27,40 @@ import {
   type NarrativeMention,
   type ResolvedRelation,
 } from "../../src/content/model";
+
+const CONTENT_PLAN_REQUIREMENTS = {
+  "region-overview": {
+    entityType: "region",
+    dimensions: REGION_OVERVIEW_DIMENSIONS,
+  },
+  "appellation-overview": {
+    entityType: "appellation",
+    dimensions: APPELLATION_OVERVIEW_DIMENSIONS,
+  },
+} as const;
+
+function inlineText(nodes: ContentInlineNode[]): string {
+  return nodes
+    .map((node) => {
+      switch (node.type) {
+        case "text":
+        case "inline-code":
+          return node.value;
+        case "entity-link":
+          return node.label ?? node.entity_id;
+        case "citation":
+          return "";
+        case "emphasis":
+        case "strong":
+        case "link":
+          return inlineText(node.children);
+        case "break":
+          return " ";
+      }
+    })
+    .join("")
+    .trim();
+}
 import {
   parseContentDocument,
   validateLocaleParity,
@@ -345,10 +382,12 @@ function validateContentPlans(
   for (const entityRecord of entityRecords) {
     if (
       entityRecord.value.status === "active" &&
-      entityRecord.value.type === "region" &&
+      (entityRecord.value.type === "region" || entityRecord.value.type === "appellation") &&
       !plansByEntityId.has(entityRecord.value.id)
     ) {
-      issues.push(`${entityRecord.file}: active region requires a package-local content-plan.yaml`);
+      issues.push(
+        `${entityRecord.file}: active ${entityRecord.value.type} requires a package-local content-plan.yaml`,
+      );
     }
   }
 
@@ -365,11 +404,25 @@ function validateContentPlans(
       issues.push(`${planRecord.file}: content plan must live beside ${entityRecord.file}`);
     }
 
+    const requirements = CONTENT_PLAN_REQUIREMENTS[plan.archetype];
+    if (entityRecord.value.type !== requirements.entityType) {
+      issues.push(
+        `${planRecord.file}: archetype '${plan.archetype}' requires entity type '${requirements.entityType}'`,
+      );
+    }
+
     const coverageKeys = plan.coverage.map((item) => item.key);
     findDuplicatesWithinRecord(coverageKeys, "coverage key", planRecord.file, issues);
-    for (const dimension of REGION_OVERVIEW_DIMENSIONS) {
+    for (const dimension of requirements.dimensions) {
       if (!coverageKeys.includes(dimension)) {
-        issues.push(`${planRecord.file}: region-overview is missing coverage '${dimension}'`);
+        issues.push(`${planRecord.file}: ${plan.archetype} is missing coverage '${dimension}'`);
+      }
+    }
+    for (const coverageKey of coverageKeys) {
+      if (!(requirements.dimensions as readonly string[]).includes(coverageKey)) {
+        issues.push(
+          `${planRecord.file}: ${plan.archetype} does not allow coverage '${coverageKey}'`,
+        );
       }
     }
 
@@ -384,13 +437,17 @@ function validateContentPlans(
 
     const content = entityContentMap.get(plan.package_id);
     const blockIds = new Set(content?.nl.blocks.map((block) => block.id) ?? []);
+    const sectionHeadingLabels = CONTENT_PLAN_SECTION_HEADINGS[plan.archetype] as Record<
+      string,
+      Record<Locale, string>
+    >;
     for (const item of plan.coverage) {
       if (
         isActive &&
         (item.disposition === "research-gap" || item.disposition === "omitted-with-reason")
       ) {
         issues.push(
-          `${planRecord.file}: active region cannot leave required coverage '${item.key}' as '${item.disposition}'`,
+          `${planRecord.file}: active ${entityRecord.value.type} cannot leave required coverage '${item.key}' as '${item.disposition}'`,
         );
       }
       if (
@@ -413,6 +470,21 @@ function validateContentPlans(
           issues.push(
             `${planRecord.file}: coverage '${item.key}' references unknown block '${blockId}'`,
           );
+        }
+      }
+      for (const locale of LOCALES) {
+        const expectedLabel = sectionHeadingLabels[item.key][locale];
+        for (const blockId of item.block_ids) {
+          const block = content?.[locale].blocks.find((candidate) => candidate.id === blockId);
+          if (block?.type !== "section") continue;
+          const heading = block.nodes[0];
+          if (heading?.type !== "heading") continue;
+          const title = inlineText(heading.children);
+          if (title !== expectedLabel && !title.startsWith(`${expectedLabel} — `)) {
+            issues.push(
+              `${planRecord.file}: ${locale} section '${blockId}' for coverage '${item.key}' must use '${expectedLabel}' or start with '${expectedLabel} — '`,
+            );
+          }
         }
       }
       for (const targetId of item.target_ids) {

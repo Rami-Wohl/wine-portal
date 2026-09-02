@@ -8,7 +8,7 @@ Wie Bordeaux wil begrijpen, moet daarom niet beginnen met een lijst beroemde kas
 :::
 
 :::section{#identiteit-en-schaal depth="foundation" source_refs="source.gironde-estuary-landscape-atlas source.civb-bordeaux-designations"}
-## Een wijnland, geen enkele wijn
+## Overzicht — een wijnland, geen enkele wijn
 
 De naam Bordeaux werkt op verschillende schalen. Hij kan slaan op het complete wijngebied rond de stad, maar ook op [[appellation.bordeaux|AOP Bordeaux]]: één specifieke, brede herkomstbenaming binnen dat gebied. Daarnaast bestaan er preciezere appellations, subregio's en individuele wijnen. Die lagen liggen als een geografische stamboom in elkaar, maar vormen geen simpele ladder van gewoon naar goed.
 
@@ -24,7 +24,7 @@ Een [[concept.aop|appellation d'origine protégée]], afgekort AOP, beschermt ee
 :::
 
 :::section{#geschiedenis-in-beweging depth="foundation" source_refs="source.msha-bordeaux-wine-history source.lavaud-bordeaux-vineyard-landscape-2014"}
-## Een streek gevormd door beweging
+## Geschiedenis — een streek gevormd door beweging
 
 De wijnbouw in Aquitanië gaat terug tot de Romeinse tijd, maar Bordeaux kreeg zijn herkenbare historische kracht vooral doordat wijnland en handelsstad elkaar bleven voeden. Schepen brachten vaten naar buitenlandse markten; vraag uit die markten beïnvloedde wat men maakte; bezit, kapitaal en techniek veranderden vervolgens het landschap. Bordeaux werd zo geen tijdloos terroir dat toevallig beroemd raakte, maar een regio die zich voortdurend aan nieuwe verbindingen aanpaste. [@source.msha-bordeaux-wine-history]
 
@@ -64,7 +64,7 @@ Die crises droegen bij aan een steeds strakker systeem van afbakening en control
 :::
 
 :::section{#landschap-van-water depth="foundation" source_refs="source.gironde-estuary-landscape-atlas source.lavaud-bordeaux-vineyard-landscape-2014"}
-## Water tekent de kaart
+## Landschap, klimaat en bodem — water tekent de kaart
 
 Vanaf de wijngaarden is de zee vaak niet zichtbaar, maar haar invloed is overal. De Atlantische Oceaan brengt een gematigd, vochtig klimaat; Garonne, Dordogne en Gironde doorsnijden het gebied en hebben over lange tijd grind, zand, klei en slib afgezet. Het estuarium is tegelijk afvoer, getijdenlandschap en historische vaarroute. [@source.gironde-estuary-landscape-atlas]
 
@@ -88,7 +88,7 @@ Belangrijker dan de naam van één bestanddeel is hoe een bodem als geheel funct
 :::
 
 :::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2025"}
-## Bordeaux heeft meer dan één kleur
+## Wijnstijlen — Bordeaux heeft meer dan één kleur
 
 Rode wijn beslaat een groot deel van de productie en van het internationale beeld, maar de regio maakt veel meer. Droog wit kan fris en direct zijn of breder en op vat opgevoed. Zoete witte wijn varieert van licht zoet tot intens en langlevend. Daarnaast bestaan rosé, de historisch donkere roséstijl [[concept.clairet|clairet]], en mousserende [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles]
 
@@ -104,7 +104,7 @@ Zoete Bordeaux is niet simpelweg droge witte wijn met restsuiker. Rijpe, vaak do
 :::
 
 :::section{#druiven-en-rollen depth="foundation" source_refs="source.civb-bordeaux-grape-varieties"}
-## Druiven als ensemble
+## Druivenrassen — druiven als ensemble
 
 Bij rood vormen [[grape.merlot|merlot]], [[grape.cabernet-sauvignon|cabernet sauvignon]] en [[grape.cabernet-franc|cabernet franc]] de hoofdrollen. Merlot rijpt doorgaans eerder en kan rondheid en pruimachtig fruit brengen. Cabernet sauvignon rijpt later, heeft van nature meer tannine en zuur en kan structuur geven. Cabernet franc kan geur, frisheid en fijne kruidigheid bijdragen. Het zijn richtingaanwijzers, geen vaste smaakknoppen. [@source.civb-bordeaux-grape-varieties]
 
@@ -120,7 +120,7 @@ De regels van de brede AOP Bordeaux laten onder voorwaarden ook een beperkte gro
 :::
 
 :::section{#van-wijngaard-tot-kelder depth="foundation" source_refs="source.civb-bordeaux-blending source.boagri-bordeaux-specification-2025"}
-## De maker schrijft mee
+## Wijnbouw en wijnmaken — de maker schrijft mee
 
 Een herkomstnaam bepaalt de buitengrenzen, maar binnen die grenzen blijven veel keuzes over. In de wijngaard gaat het onder meer om ras, onderstam, plantdichtheid, snoei, bodembeheer, ziektebestrijding, opbrengst en plukmoment. In de kelder volgen selectie, persen, vergisting, [[concept.extraction|extractie]] — hoeveel kleur, tannine en smaak uit vaste druivendelen wordt gehaald — samenstelling en rijping. Twee buren kunnen daardoor herkenbaar verschillende wijnen maken.
 
@@ -144,7 +144,7 @@ Plukkers gaan daarom vaak meerdere keren door dezelfde wijngaard om geschikte dr
 :::
 
 :::section{#appellations-als-navigatie depth="foundation" source_refs="source.inao-aop-overview source.civb-bordeaux-designations"}
-## Appellations zijn de inhoudsopgave van de streek
+## Appellations — de inhoudsopgave van de streek
 
 Een appellation vertelt waar een wijn volgens een bepaald productiedossier vandaan komt. Brede namen als [[appellation.bordeaux|AOP Bordeaux]], [[appellation.bordeaux-superieur|Bordeaux Supérieur]] en Crémant de Bordeaux kunnen uit grote delen van de streek komen. Andere appellations bakenen een subregio, gemeente of combinatie van gemeenten af en stellen eigen voorwaarden aan bijvoorbeeld druiven, opbrengst en wijnstijl. [@source.inao-aop-overview]
 
@@ -172,7 +172,7 @@ Ook termen die hetzelfde ogen kunnen juridisch anders werken. Een geografische s
 :::
 
 :::section{#classificaties-zijn-meervoud depth="foundation" source_refs="source.civb-bordeaux-classifications source.inao-aop-overview"}
-## Classificatie is niet hetzelfde als herkomst
+## Classificaties — niet hetzelfde als herkomst
 
 Een appellation classificeert geen kwaliteit; zij beschermt een herkomstnaam en regels. Een classificatie of erkenningssysteem selecteert binnen zijn eigen bereik bepaalde domeinen, wijnen of *crus*. Een [[concept.cru|cru]] is letterlijk een groei- of wijngaardplaats, maar de precieze betekenis van het woord hangt af van streek en systeem. “Grand cru” betekent daarom niet overal hetzelfde.
 
@@ -200,7 +200,7 @@ Daarom moet bij iedere rangterm de vervolgvraag luiden: volgens welk systeem, vo
 :::
 
 :::section{#handel-en-place depth="foundation" source_refs="source.msha-bordeaux-wine-history source.civb-bordeaux-wine-trade"}
-## De wijn reist via een netwerk
+## Handel en instituties — wijn reist via een netwerk
 
 Bordeaux is zowel een productieregio als een handelscentrum. Eeuwenlang brachten producenten wijn naar kooplieden die partijen selecteerden, opsloegen, soms mengden, bottelden en naar klanten elders vervoerden. Tegenwoordig bottelen veel châteaux zelf, maar gespecialiseerde handelshuizen blijven een belangrijke brug naar importeurs en markten over de wereld. [@source.civb-bordeaux-wine-trade]
 
@@ -224,7 +224,7 @@ Dat mechanisme maakt marktprijs niet waardeloos, maar ook niet gelijk aan intrin
 :::
 
 :::section{#etiket-lezen depth="foundation" source_refs="source.dgccrf-wine-labels-2025"}
-## Lees de fles van groot naar klein
+## Etiketten en begrippen — lees de fles van groot naar klein
 
 Begin met de exacte appellation: staat er alleen Bordeaux, of een naam als Pessac-Léognan, Saint-Émilion of Barsac? Bepaal daarna kleur of wijntype, producent of [[concept.cuvee|cuvée]], bottelaar en [[concept.vintage|jaargang]]. Het alcoholpercentage, volume en land van herkomst behoren eveneens tot de formele etiketinformatie. Druivenrassen worden lang niet altijd prominent vermeld. [@source.dgccrf-wine-labels-2025]
 
@@ -240,7 +240,7 @@ Ook *cru*, *grand cru* en *classé* vragen context. Saint-Émilion Grand Cru is 
 :::
 
 :::section{#bordeaux-in-het-glas depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.civb-bordeaux-grape-varieties"}
-## Wat kun je ongeveer verwachten?
+## In het glas — wat kun je ongeveer verwachten?
 
 Rode Bordeaux beweegt vaak rond donker of rood fruit, kruidigheid, frisse zuren en tannine, maar kan soepel en sappig of juist stevig en gereserveerd zijn. Droog wit kan citrusachtig, groen-kruidig en strak smaken, of rijper, romiger en door hout ondersteund. Zoet wit combineert rijp en gedroogd fruit, honingachtige tonen en specerijen idealiter met genoeg [[concept.acidity|zuur]] om levendig te blijven. Rosé en clairet leggen meer nadruk op direct rood fruit; Crémant op frisheid en mousse. [@source.civb-bordeaux-wine-styles]
 
@@ -268,7 +268,7 @@ Zie “Bordeaux” op een fles als het begin van een speurtocht, niet als een pr
 :::
 
 :::section{#bordeaux-vandaag depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2025"}
-## Geen museum achter een etiket
+## Hedendaagse ontwikkelingen — geen museum achter een etiket
 
 Bordeaux draagt veel geschiedenis, maar staat niet stil. Producenten werken op uiteenlopende schaal en met verschillende landbouwvisies. Sommige zoeken lichtere extractie of een vroeger drinkbare stijl, andere blijven bouwen op lange opvoeding en bewaarpotentieel. Droge witte wijn, mousserend, clairet en minder bekende herkomsten krijgen naast klassiek rood opnieuw aandacht.
 
@@ -288,7 +288,7 @@ Bordeaux begrijpen betekent verbanden leggen. Water en handel vormden het landsc
 :::
 
 :::section{#verder-vanuit-bordeaux depth="foundation"}
-## Kies je volgende route
+## Verder ontdekken — kies je volgende route
 
 Wil je de kaart verfijnen, ga dan naar een streekfamilie zoals Médoc, Graves en Sauternais, Entre-deux-Mers, Libournais of Blayais en Bourgeais en vandaar naar een appellation. Wil je het glas beter begrijpen, volg dan een druif of een wijnmaakbegrip. Wie etiketten en reputatie wil doorgronden, kan verder naar AOP, château, cru, de afzonderlijke classificaties, négociant, Place de Bordeaux en en primeur.
 

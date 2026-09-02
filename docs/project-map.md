@@ -114,6 +114,7 @@ onderzoek en review. Zij worden niet uit een oud curriculum geconverteerd.
 | `npm run content:check` | Valideert authored content en schrijft niets |
 | `npm run content:link-audit` | Zoekt bekende entitynamen die in proza staan maar nog niet zijn gelinkt |
 | `npm run content:build` | Valideert en genereert de runtimebundle |
+| `npm run content:status` | Vernieuwt `docs/entity-status.md` vanuit alle canonical entity-YAML |
 | `npm run format` | Format code, CSS, JSON en YAML met de vastgepinde Prettier-versie |
 | `npm run format:check` | Controleert die formatting zonder bestanden te wijzigen |
 | `npm run check` | Draait formattingcheck, lint, typecheck en unit-tests |

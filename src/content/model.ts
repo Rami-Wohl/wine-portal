@@ -80,6 +80,90 @@ export const REGION_OVERVIEW_DIMENSIONS = [
   "visuals",
   "child-knowledge",
 ] as const;
+export const APPELLATION_OVERVIEW_DIMENSIONS = [
+  "identity-and-orientation",
+  "historical-development",
+  "landscape-climate-and-soils",
+  "grape-varieties",
+  "viticulture-and-winemaking",
+  "appellation-rules",
+  "classification-and-producers",
+  "style-and-glass-context",
+  "labels-and-buying",
+  "modern-developments",
+  "visuals",
+  "child-knowledge",
+] as const;
+export const CONTENT_PLAN_DIMENSIONS = [
+  ...REGION_OVERVIEW_DIMENSIONS,
+  ...APPELLATION_OVERVIEW_DIMENSIONS,
+] as const;
+
+export const CONTENT_PLAN_SECTION_HEADINGS = {
+  "region-overview": {
+    "identity-and-orientation": { nl: "Overzicht", en: "Overview" },
+    "historical-development": { nl: "Geschiedenis", en: "History" },
+    "landscape-climate-and-soils": {
+      nl: "Landschap, klimaat en bodem",
+      en: "Landscape, climate and soils",
+    },
+    "wine-families": { nl: "Wijnstijlen", en: "Wine styles" },
+    "grape-varieties": { nl: "Druivenrassen", en: "Grape varieties" },
+    "viticulture-and-winemaking": {
+      nl: "Wijnbouw en wijnmaken",
+      en: "Viticulture and winemaking",
+    },
+    "appellation-structure": { nl: "Appellations", en: "Appellations" },
+    "classification-systems": { nl: "Classificaties", en: "Classifications" },
+    "trade-and-institutions": {
+      nl: "Handel en instituties",
+      en: "Trade and institutions",
+    },
+    "labels-and-terminology": {
+      nl: "Etiketten en begrippen",
+      en: "Labels and terminology",
+    },
+    "style-and-glass-context": { nl: "In het glas", en: "In the glass" },
+    "modern-developments": {
+      nl: "Hedendaagse ontwikkelingen",
+      en: "Contemporary developments",
+    },
+    visuals: { nl: "Beeld", en: "Visuals" },
+    "child-knowledge": { nl: "Verder ontdekken", en: "Explore further" },
+  },
+  "appellation-overview": {
+    "identity-and-orientation": {
+      nl: "Ligging en afbakening",
+      en: "Location and boundaries",
+    },
+    "historical-development": { nl: "Geschiedenis", en: "History" },
+    "landscape-climate-and-soils": {
+      nl: "Landschap, klimaat en bodem",
+      en: "Landscape, climate and soils",
+    },
+    "grape-varieties": { nl: "Druivenrassen", en: "Grape varieties" },
+    "viticulture-and-winemaking": {
+      nl: "Wijnbouw en wijnmaken",
+      en: "Viticulture and winemaking",
+    },
+    "appellation-rules": { nl: "Appellationregels", en: "Appellation rules" },
+    "classification-and-producers": {
+      nl: "Classificatie en producenten",
+      en: "Classification and producers",
+    },
+    "style-and-glass-context": {
+      nl: "Wijnstijl en flesontwikkeling",
+      en: "Wine style and bottle development",
+    },
+    "labels-and-buying": { nl: "Etiket en aankoop", en: "Labels and buying" },
+    "modern-developments": {
+      nl: "Hedendaagse ontwikkelingen",
+      en: "Contemporary developments",
+    },
+    visuals: { nl: "Beeld", en: "Visuals" },
+    "child-knowledge": { nl: "Verder ontdekken", en: "Explore further" },
+  },
+} as const;
 
 export type EntityType = (typeof ENTITY_TYPES)[number];
 export type Locale = (typeof LOCALES)[number];
@@ -296,12 +380,12 @@ export const contentPlanSchema = z
   .object({
     schema_version: z.literal(1),
     package_id: entityIdSchema,
-    archetype: z.literal("region-overview"),
+    archetype: z.enum(["region-overview", "appellation-overview"]),
     coverage: z
       .array(
         z
           .object({
-            key: z.enum(REGION_OVERVIEW_DIMENSIONS),
+            key: z.enum(CONTENT_PLAN_DIMENSIONS),
             disposition: z.enum([
               "on-page",
               "child-entity",

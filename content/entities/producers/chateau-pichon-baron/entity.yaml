@@ -1,0 +1,21 @@
+id: producer.chateau-pichon-baron
+type: producer
+status: draft
+canonical_name: Château Pichon Baron
+names:
+  nl: Château Pichon Baron
+  en: Château Pichon Baron
+slugs:
+  nl: chateau-pichon-baron
+  en: chateau-pichon-baron
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: deuxieme-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

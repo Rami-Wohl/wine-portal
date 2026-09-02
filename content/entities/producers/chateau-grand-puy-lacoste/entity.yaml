@@ -1,0 +1,21 @@
+id: producer.chateau-grand-puy-lacoste
+type: producer
+status: draft
+canonical_name: Château Grand-Puy-Lacoste
+names:
+  nl: Château Grand-Puy-Lacoste
+  en: Château Grand-Puy-Lacoste
+slugs:
+  nl: chateau-grand-puy-lacoste
+  en: chateau-grand-puy-lacoste
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: cinquieme-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

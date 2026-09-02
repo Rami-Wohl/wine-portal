@@ -1,0 +1,21 @@
+id: producer.chateau-croizet-bages
+type: producer
+status: draft
+canonical_name: Château Croizet-Bages
+names:
+  nl: Château Croizet-Bages
+  en: Château Croizet-Bages
+slugs:
+  nl: chateau-croizet-bages
+  en: chateau-croizet-bages
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: cinquieme-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

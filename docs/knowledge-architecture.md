@@ -25,19 +25,10 @@ De v1-contentarchitectuur is geïmplementeerd:
   packages met status `active`; draft-routes blijven afzonderlijk bereikbaar voor
   review, met `noindex` en een eerlijke incomplete state.
 
-Op 1 september 2026 valideert `npm run content:check`:
-
-```text
-5 entities
-1 narrative
-3 sources
-4 forward relations
-```
-
-`region.bordeaux` is de eerste actieve, onderzochte entity. De vier andere
-entities en de narrative blijven technische fixtures met status `draft`. Deze
-getallen beschrijven de huidige repository, niet de beoogde uiteindelijke
-dekking.
+De actuele entity-inventaris wordt niet handmatig in dit architectuurdocument
+gekopieerd. Iedere `content:build` vernieuwt `entity-status.md`, gesorteerd op
+publicatiestatus; `npm run content:check` rapporteert daarnaast de actuele
+aantallen entities, narratives, bronnen en media.
 
 ## Samenhang met bindend beleid
 

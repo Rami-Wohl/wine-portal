@@ -4,7 +4,12 @@ import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { stringify as stringifyYaml } from "yaml";
-import { REGION_OVERVIEW_DIMENSIONS, type ContentPlan, type Entity } from "../../src/content/model";
+import {
+  APPELLATION_OVERVIEW_DIMENSIONS,
+  REGION_OVERVIEW_DIMENSIONS,
+  type ContentPlan,
+  type Entity,
+} from "../../src/content/model";
 import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
 import { generateEntityPackage } from "./generator";
 import { buildContent, ContentValidationError } from "./pipeline";
@@ -119,6 +124,31 @@ function regionPlan(
       nl: "complete",
       en: "complete",
     },
+  };
+}
+
+function appellationPlan(packageId: string): ContentPlan {
+  return {
+    ...regionPlan(packageId),
+    archetype: "appellation-overview",
+    coverage: APPELLATION_OVERVIEW_DIMENSIONS.map((key) => ({
+      key,
+      disposition: "on-page" as const,
+      block_ids: ["orientatie"],
+      target_ids: [],
+      completeness_questions: [`Is ${key} voldoende afgedekt?`],
+      layers: {
+        foundation: ["De noodzakelijke hoofdlijn."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      },
+      evidence: {
+        general_synthesis: { topics: [], source_refs: [] },
+        specific_claims: [],
+      },
+      review: { outline: "complete", nl: "complete", en: "complete" },
+    })),
   };
 }
 
@@ -401,6 +431,54 @@ describe("content pipeline validation", () => {
 
     await addRegionPlan(missingDirectory, "region.example");
     await expect(buildContent({ root: missingRoot, write: false })).resolves.toBeDefined();
+  });
+
+  it("requires and validates an appellation plan for an active appellation", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, {
+      id: "appellation.example",
+      status: "active",
+    });
+    const summary = ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n';
+    await writeFile(path.join(directory, "overview.nl.md"), summary);
+    await writeFile(path.join(directory, "overview.en.md"), summary);
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /active appellation requires a package-local content-plan\.yaml/,
+    );
+
+    await writeFile(
+      path.join(directory, "content-plan.yaml"),
+      stringifyYaml(appellationPlan("appellation.example")),
+    );
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+  });
+
+  it("requires planned overview section headings to use their localized category label", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "region.example" });
+    const plan = regionPlan("region.example");
+    const history = plan.coverage.find((item) => item.key === "historical-development");
+    if (!history) throw new Error("history coverage missing from test plan");
+    history.block_ids = ["geschiedenis"];
+    await writeFile(path.join(directory, "content-plan.yaml"), stringifyYaml(plan));
+
+    await writeFile(
+      path.join(directory, "overview.nl.md"),
+      ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n\n:::section{#geschiedenis depth="foundation"}\n## Geschiedenis\n\nDe hoofdlijn.\n:::\n',
+    );
+    await writeFile(
+      path.join(directory, "overview.en.md"),
+      ':::summary{#orientatie depth="foundation"}\nOrientation.\n:::\n\n:::section{#geschiedenis depth="foundation"}\n## History — a free editorial addition\n\nThe main line.\n:::\n',
+    );
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+
+    await writeFile(
+      path.join(directory, "overview.nl.md"),
+      ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n\n:::section{#geschiedenis depth="foundation"}\n## Een streek in beweging\n\nDe hoofdlijn.\n:::\n',
+    );
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /nl section 'geschiedenis'.*must use 'Geschiedenis'/,
+    );
   });
 
   it("requires planned link dependencies in both locales", async () => {

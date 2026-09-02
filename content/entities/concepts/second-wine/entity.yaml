@@ -1,0 +1,16 @@
+id: concept.second-wine
+type: concept
+status: draft
+canonical_name: Second wine
+names:
+  nl: Tweede wijn
+  en: Second wine
+slugs:
+  nl: tweede-wijn
+  en: second-wine
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

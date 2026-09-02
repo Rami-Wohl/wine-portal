@@ -1,0 +1,21 @@
+id: producer.chateau-batailley
+type: producer
+status: draft
+canonical_name: Château Batailley
+names:
+  nl: Château Batailley
+  en: Château Batailley
+slugs:
+  nl: chateau-batailley
+  en: chateau-batailley
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: located_in
+    target: appellation.pauillac
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: cinquieme-cru }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]
