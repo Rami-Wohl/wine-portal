@@ -92,7 +92,7 @@ Variety descriptions therefore indicate functions that *may* emerge; they are no
 
 Planting density, pruning, canopy, soil management, disease control and harvest date shape which grapes reach the cellar. Lots are selected, fermented separately, and colour and tannin drawn from the skins.
 
-After fermentation, the maker tastes barrels and tanks to assemble the grand vin. Blending is not a way to hide faults, but to balance parcels, varieties and vessels. The result may be stern and deep or approachable early; appellation and tradition set the field without writing the composition. [@source.civb-pauillac-overview]
+After fermentation, the maker tastes barrels and tanks to assemble the [[concept.grand-vin|grand vin]]. Blending is not a way to hide faults, but to balance parcels, varieties and vessels. The result may be stern and deep or approachable early; appellation and tradition set the field without writing the composition. [@source.civb-pauillac-overview]
 :::
 
 :::detail{#extractie-en-elevage parent="van-rank-tot-vat" depth="intermediate" source_refs="source.inao-pauillac-specification-2026"}

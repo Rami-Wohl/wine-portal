@@ -1,0 +1,16 @@
+id: concept.grand-vin
+type: concept
+status: draft
+canonical_name: Grand vin
+names:
+  nl: Grand vin
+  en: Grand vin
+slugs:
+  nl: grand-vin
+  en: grand-vin
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

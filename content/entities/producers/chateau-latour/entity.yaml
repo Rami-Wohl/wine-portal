@@ -28,6 +28,8 @@ relations:
   - type: related_to
     target: concept.second-wine
   - type: related_to
+    target: concept.grand-vin
+  - type: related_to
     target: concept.en-primeur
 assertions:
   - id: assertion.chateau-latour.first-documentary-mention

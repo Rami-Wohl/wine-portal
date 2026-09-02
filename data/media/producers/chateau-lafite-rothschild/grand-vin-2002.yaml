@@ -1,0 +1,24 @@
+id: media.producer.chateau-lafite-rothschild.grand-vin-2002
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-lafite-rothschild/grand-vin-2002.jpg
+mime_type: image/jpeg
+width: 3840
+height: 2555
+checksum_sha256: b90c6c6b4c83e27c24952f4f821cee060f71768eaa59c161c6bea528d4a582ec
+alt:
+  nl: Close-up van een fles Château Lafite Rothschild 2002 met een tweede fles onscherp op de achtergrond
+  en: Close-up of a bottle of Château Lafite Rothschild 2002 with a second bottle out of focus behind it
+caption:
+  nl: Een fles Grand Vin uit 2002. De gegraveerde voorstelling van het château maakt het historische landgoed zelf tot herkenningsteken van de wijn.
+  en: A bottle of the 2002 Grand Vin. The engraved view of the château turns the historic estate itself into the wine's identifying mark.
+rights:
+  status: open-licensed
+  creator: MaT-WiKi1 (Mathieu Gaultier)
+  source_url: https://commons.wikimedia.org/wiki/File:Bouteille_de_ch%C3%A2teau_Lafite_Rothschild_2002..jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: MaT-WiKi1 (Mathieu Gaultier) via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-02
+changes: Wikimedia-generated scaled version used without crop or editorial colour alteration.

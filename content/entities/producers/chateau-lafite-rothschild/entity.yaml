@@ -1,6 +1,6 @@
 id: producer.chateau-lafite-rothschild
 type: producer
-status: draft
+status: active
 canonical_name: Château Lafite Rothschild
 names:
   nl: Château Lafite Rothschild
@@ -16,6 +16,67 @@ relations:
     target: appellation.pauillac
   - type: classified_under
     target: classification.bordeaux-1855
-    properties: { tier: premier-cru }
-assertions: []
-source_refs: [source.gcc1855-classification-overview]
+    properties:
+      tier: premier-cru
+    valid_from: 1855
+  - type: important_grape
+    target: grape.cabernet-sauvignon
+  - type: important_grape
+    target: grape.merlot
+  - type: important_grape
+    target: grape.cabernet-franc
+  - type: important_grape
+    target: grape.petit-verdot
+  - type: related_to
+    target: concept.second-wine
+  - type: related_to
+    target: concept.grand-vin
+  - type: related_to
+    target: concept.en-primeur
+  - type: related_to
+    target: concept.phylloxera
+  - type: related_to
+    target: concept.massal-selection
+  - type: related_to
+    target: concept.malolactic-fermentation
+  - type: associated_with
+    target: producer.chateau-duhart-milon
+assertions:
+  - id: assertion.chateau-lafite-rothschild.first-documentary-mention
+    predicate: first_documentary_mention
+    value: 1234
+    status: historical
+    sources: [source.chateau-lafite-history]
+    last_verified: 2026-09-02
+  - id: assertion.chateau-lafite-rothschild.rothschild-ownership
+    predicate: owner
+    value: Domaines Barons de Rothschild (Lafite)
+    status: verified
+    sources: [source.chateau-lafite-history, source.decanter-bordeaux-first-growths]
+    last_verified: 2026-09-02
+    valid_from: 1868
+  - id: assertion.chateau-lafite-rothschild.vineyard-area
+    predicate: vineyard_area_hectares
+    value: 112
+    status: verified
+    sources: [source.chateau-lafite-estate]
+    last_verified: 2026-09-02
+  - id: assertion.chateau-lafite-rothschild.saint-estephe-parcel-area
+    predicate: saint_estephe_parcel_area_hectares
+    value: 4.5
+    status: verified
+    sources: [source.chateau-lafite-estate]
+    last_verified: 2026-09-02
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.inao-pauillac-specification-2026
+  - source.chateau-lafite-estate
+  - source.chateau-lafite-history
+  - source.chateau-lafite-hard-graft
+  - source.chateau-lafite-blending-notes
+  - source.chateau-lafite-primeurs
+  - source.decanter-lafite-profile
+  - source.decanter-bordeaux-first-growths
+  - source.decanter-lafite-vertical
+depth: foundation
+last_reviewed: 2026-09-02

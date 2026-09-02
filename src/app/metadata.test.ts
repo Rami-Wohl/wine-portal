@@ -52,12 +52,12 @@ describe("application metadata", () => {
     const metadata = await generateEntityMetadata({
       params: Promise.resolve({
         entityType: "producers",
-        slug: "chateau-lafite-rothschild",
+        slug: "chateau-mouton-rothschild",
       }),
     });
 
     expect(metadata.alternates).toEqual({
-      canonical: "/producers/chateau-lafite-rothschild",
+      canonical: "/producers/chateau-mouton-rothschild",
     });
     expect(metadata.robots).toEqual({ index: false, follow: true });
     expect(metadata.description).not.toMatch(/canonical|fixture|entity/i);

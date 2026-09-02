@@ -1,0 +1,24 @@
+id: media.producer.chateau-lafite-rothschild.estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-lafite-rothschild/estate.jpg
+mime_type: image/jpeg
+width: 2048
+height: 1365
+checksum_sha256: 0b03d4eb79a127de7aa96e4a472d32ab3bbd4b063bbac7be38d8f9ef3cc016b8
+alt:
+  nl: Château Lafite Rothschild achter de tuinen en een langgerekte vijver
+  en: Château Lafite Rothschild beyond its gardens and a long pond
+caption:
+  nl: Het château gezien over de tuinen. De lage ligging naast water en moeras contrasteert met de lichte grindruggen waarop de wijnstokken staan.
+  en: The château seen across its gardens. Its low waterside setting contrasts with the slight gravel rises on which the vines grow.
+rights:
+  status: open-licensed
+  creator: Gilles Messian
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Lafite_Rothschild,_Pauillac,_France_(48029770801).jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Gilles Messian via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-02
+changes: Original Wikimedia file used without crop or editorial colour alteration.

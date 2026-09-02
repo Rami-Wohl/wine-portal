@@ -181,7 +181,7 @@ Ook bodem is geen aroma-automaat. Grind beïnvloedt vooral water en warmte; “g
 :::section{#etiket-lezen depth="foundation" source_refs="source.dgccrf-wine-labels-2025 source.gcc1855-classification-overview"}
 ## Etiket en aankoop — lees eerst wat de fles werkelijk belooft
 
-Zoek eerst de volledige herkomstnaam Pauillac, daarna producent, jaargang en bottelaar. Controleer vervolgens of een classificatieterm echt bij het château hoort. “Grand vin”, “vieilles vignes” of een imposant gebouw vervangt geen officiële rang. Verplichte gegevens en beschermde herkomst bieden houvast; vormgeving vertelt vooral hoe de wijn zich presenteert. [@source.dgccrf-wine-labels-2025]
+Zoek eerst de volledige herkomstnaam Pauillac, daarna producent, jaargang en bottelaar. Controleer vervolgens of een classificatieterm echt bij het château hoort. “[[concept.grand-vin|Grand vin]]”, “vieilles vignes” of een imposant gebouw vervangt geen officiële rang. Verplichte gegevens en beschermde herkomst bieden houvast; vormgeving vertelt vooral hoe de wijn zich presenteert. [@source.dgccrf-wine-labels-2025]
 
 Vraag bij kopen of het de hoofdwijn, een andere [[concept.cuvee|cuvée]] of een oudere fles met bekende bewaring is. Actuele prijs hoort niet als blijvend feit op deze pagina; [[concept.en-primeur|en-primeurverkoop]] voegt bovendien markt- en leveringsrisico toe aan nog niet gebottelde wijn.
 :::

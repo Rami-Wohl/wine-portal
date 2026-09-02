@@ -1,0 +1,16 @@
+id: concept.massal-selection
+type: concept
+status: draft
+canonical_name: Massal selection
+names:
+  nl: Massale selectie
+  en: Massal selection
+slugs:
+  nl: massale-selectie
+  en: massal-selection
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

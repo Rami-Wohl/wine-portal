@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 79 entities — 5 active, 74 draft, 0 deprecated.
+**Totaal:** 82 entities — 6 active, 76 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (5)
+## Actief — publiek vindbaar (6)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -13,10 +13,11 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-02 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
+| [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (74)
+## Draft — nog uit te werken (76)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -56,7 +57,10 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | `concept.elevage` | Nee — reviewroute | `/concepts/elevage` | — |
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | `concept.en-primeur` | Nee — reviewroute | `/concepts/en-primeur` | — |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | `concept.extraction` | Nee — reviewroute | `/concepts/extractie` | — |
+| [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | `concept.grand-vin` | Nee — reviewroute | `/concepts/grand-vin` | — |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
+| [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | `concept.malolactic-fermentation` | Nee — reviewroute | `/concepts/malolactische-omzetting` | — |
+| [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | `concept.negociant` | Nee — reviewroute | `/concepts/negociant` | — |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | `concept.rootstock` | Nee — reviewroute | `/concepts/onderstam` | — |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | `concept.place-de-bordeaux` | Nee — reviewroute | `/concepts/place-de-bordeaux` | — |
@@ -83,7 +87,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Grand-Puy-Lacoste](../content/entities/producers/chateau-grand-puy-lacoste/entity.yaml) | Producent | `producer.chateau-grand-puy-lacoste` | Nee — reviewroute | `/producers/chateau-grand-puy-lacoste` | — |
 | [Château Haut-Bages Libéral](../content/entities/producers/chateau-haut-bages-liberal/entity.yaml) | Producent | `producer.chateau-haut-bages-liberal` | Nee — reviewroute | `/producers/chateau-haut-bages-liberal` | — |
 | [Château Haut-Batailley](../content/entities/producers/chateau-haut-batailley/entity.yaml) | Producent | `producer.chateau-haut-batailley` | Nee — reviewroute | `/producers/chateau-haut-batailley` | — |
-| [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Nee — reviewroute | `/producers/chateau-lafite-rothschild` | — |
 | [Château Lynch-Bages](../content/entities/producers/chateau-lynch-bages/entity.yaml) | Producent | `producer.chateau-lynch-bages` | Nee — reviewroute | `/producers/chateau-lynch-bages` | — |
 | [Château Lynch-Moussas](../content/entities/producers/chateau-lynch-moussas/entity.yaml) | Producent | `producer.chateau-lynch-moussas` | Nee — reviewroute | `/producers/chateau-lynch-moussas` | — |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Nee — reviewroute | `/producers/chateau-mouton-rothschild` | — |

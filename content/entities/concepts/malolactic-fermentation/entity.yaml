@@ -1,0 +1,16 @@
+id: concept.malolactic-fermentation
+type: concept
+status: draft
+canonical_name: Malolactic fermentation
+names:
+  nl: Malolactische omzetting
+  en: Malolactic fermentation
+slugs:
+  nl: malolactische-omzetting
+  en: malolactic-fermentation
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []
