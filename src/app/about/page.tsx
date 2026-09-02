@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageIntro } from "@/components/page-intro";
 
 export const metadata: Metadata = {
   title: "Over Oenocademy",
@@ -11,55 +10,36 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main id="main-content" className="page-shell">
-      <PageIntro eyebrow="Over Oenocademy" title="Vind je eigen weg door de wereld van wijn">
-        <p>
-          Oenocademy helpt wijnstudenten en nieuwsgierige liefhebbers verder na een eerste opleiding
-          of introductie, zonder kennis op te sluiten in één vast curriculum.
-        </p>
-      </PageIntro>
-
       <article className="about-copy">
         <section>
-          <h2>Waarom dit platform bestaat</h2>
+          <h2>Waarom bestaat Oenocademy?</h2>
+          <p className="mb-4">
+            Ik ben een wijnenthousiast met een achtergrond in software development. De afgelopen
+            jaren is mijn passie voor wijn zo sterk toegenomen dat ik de opleidingen in ben gegaan.
+            Na het halen van WSET 3 merkte ik dat ik niet zo makkelijk een goede, complete bron van
+            informatie kon vinden om door te leren op het niveau waar ik op zat. Dus besloot ik om
+            iets voor mezelf te bouwen, dat is Oenocademy geworden.
+          </p>
           <p>
-            Na een formele of informele basis ontbreekt vaak een heldere route voor verdere
-            verdieping. Informatie bestaat wel, maar is verspreid, wisselend onderbouwd en zelden
-            met elkaar verbonden. Oenocademy brengt onderwerpen, uitleg en bronnen samen in één
-            kennisbank.
+            Initieel was mijn idee om een specifiek curriculum op te zetten voor mezelf, met alleen
+            de onderwerpen waar ik me op dat moment verder in wilde verdiepen. Maar gaandeweg leek
+            het me een steeds mooier idee om een vollediger platform te bouwen waarin zoveel
+            mogelijk wijnkennis beschikbaar is, en je op verschillende manieren door de kennis heen
+            kan navigeren.
           </p>
         </section>
         <section>
-          <h2>Ontdekken, Leren en Atlas</h2>
+          <h2>AI disclaimer</h2>
           <p>
-            Ontdekken ondersteunt vrije kennisnavigatie. Leren ordent delen van dezelfde kennis tot
-            doordachte leerroutes. Atlas voegt daar uiteindelijk een geografische manier van
-            verkennen aan toe, op basis van gecontroleerde kaartgegevens.
-          </p>
-        </section>
-        <section>
-          <h2>Diepte zonder dubbele pagina’s</h2>
-          <p>
-            Je kunt beginnen bij de basis en later steeds verder verdiepen. Zo blijft één onderwerp
-            bruikbaar voor zowel nieuwsgierige liefhebbers als ervaren wijnstudenten, zonder kennis
-            onnodig te verdubbelen.
-          </p>
-        </section>
-        <section>
-          <h2>Talen, bronnen en geografische nauwkeurigheid</h2>
-          <p>
-            Nederlands en Engels delen dezelfde zorgvuldig beheerde kennis; uitleg en labels worden
-            per taal geschreven. Veranderlijke informatie krijgt een duidelijke bronvermelding.
-            Grenzen en locaties verschijnen alleen wanneer betrouwbare geografische gegevens
-            beschikbaar zijn.
-          </p>
-        </section>
-        <section>
-          <h2>Onafhankelijk en corrigeerbaar</h2>
-          <p>
-            Oenocademy is redactioneel onafhankelijk en niet verbonden aan WSET of een andere
-            formele opleidingsaanbieder. Bestaande niveaus kunnen alleen als referentie voor
-            voorkennis dienen. In de toekomst kunnen lezers correcties en aanvullingen voorstellen;
-            publicatie volgt pas na redactionele controle.
+            Het is je vast niet ontgaan: AI is al een paar jaar de wereld in rap tempo aan het
+            veranderen. Ik zou dit platform niet in mijn eentje kunnen maken zonder de mogelijkheid
+            om verschillende AI modellen aan het werk te zetten om informatie te zoeken, te
+            valideren, teksten te schrijven en allerlei andere taken uit te voeren die anders vele
+            malen zo lang zouden duren. Hoewel alles voor publicatie eerst door mij en andere
+            wijnfanaten gelezen wordt, weet dus dat ik de teksten niet zelf heb geschreven. Ik heb
+            de AI werkprocessen zo opgezet dat alle tekst meerdere keren tegen externe bronnen
+            gecheckt wordt, dus als leerplatform heb ik vertrouwen in de correctheid van het
+            materiaal. Mocht je toch iets zien dat niet klopt, laat het dan vooral weten!
           </p>
         </section>
       </article>

@@ -24,8 +24,6 @@ relations:
     target: grape.cabernet-franc
   - type: important_grape
     target: grape.petit-verdot
-  - type: associated_with
-    target: classification.bordeaux-1855
 assertions:
   - id: assertion.pauillac.wine-type
     predicate: permitted_wine_type

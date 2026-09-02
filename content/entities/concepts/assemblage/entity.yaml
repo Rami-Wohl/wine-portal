@@ -11,11 +11,21 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.cuvee
+  - type: related_to
+    target: concept.vintage
+  - type: related_to
+    target: concept.extraction
 assertions: []
 source_refs:
   - source.oiv-blending-code
   - source.eu-wine-coupage-regulation-2019
   - source.civb-bordeaux-blending
 depth: foundation
-last_reviewed: 2026-09-01
+last_reviewed: 2026-09-02

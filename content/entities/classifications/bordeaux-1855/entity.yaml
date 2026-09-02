@@ -11,9 +11,46 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
+relations:
+  - type: scope
+    target: region.medoc
+  - type: scope
+    target: appellation.haut-medoc
+  - type: scope
+    target: appellation.margaux
+  - type: scope
+    target: appellation.saint-julien
+  - type: scope
+    target: appellation.pauillac
+  - type: scope
+    target: appellation.saint-estephe
+  - type: scope
+    target: appellation.pessac-leognan
+  - type: scope
+    target: appellation.sauternes
+  - type: scope
+    target: appellation.barsac
+assertions:
+  - id: assertion.bordeaux-1855.red-growth-count
+    predicate: current_red_growth_count
+    value: 61
+    status: verified
+    sources: [source.gcc1855-classification-overview]
+    last_verified: 2026-09-02
+  - id: assertion.bordeaux-1855.sweet-growth-count
+    predicate: current_sweet_growth_count
+    value: 27
+    status: verified
+    sources: [source.gcc1855-classification-overview]
+    last_verified: 2026-09-02
+  - id: assertion.bordeaux-1855.publication-date
+    predicate: publication_date
+    value: 1855-04-18
+    status: historical
+    sources: [source.gcc1855-classification-history]
+    last_verified: 2026-09-02
 source_refs:
   - source.gcc1855-classification-overview
+  - source.gcc1855-classification-history
 depth: foundation
-last_reviewed: 2026-09-01
+last_reviewed: 2026-09-02
