@@ -234,7 +234,7 @@ Deze volgorde voorkomt dat één opvallend woord alle betekenis krijgt. De preci
 :::detail{#etiket-naam-en-rang parent="etiket-lezen" depth="intermediate" source_refs="source.dgccrf-wine-labels-2025 source.inao-aop-overview"}
 ### Château, cru en rangwoorden
 
-Een [[concept.chateau|château als wijnnaam]] kan naar een wijngoed of merk verwijzen; er hoeft geen sprookjeskasteel op het erf te staan. De naam van het château is evenmin automatisch de appellation. *Mis en bouteille au château* zegt waar de wijn werd gebotteld, niet dat hij geclassificeerd is.
+Een [[concept.chateau|château als wijnnaam]] kan naar een wijngoed of merk verwijzen; er hoeft geen sprookjeskasteel op het erf te staan. De naam van het château is evenmin automatisch de appellation. [[concept.estate-bottling|Mis en bouteille au château]] zegt waar de wijn werd gebotteld, niet dat hij geclassificeerd is.
 
 Ook *cru*, *grand cru* en *classé* vragen context. Saint-Émilion Grand Cru is een appellation met eigen regels, terwijl *Grand Cru Classé* daar naar een classificatieniveau kan verwijzen. In de Médoc werkt de terminologie weer anders. Lees zulke woorden nooit los: zoek de volledige formule en het bijbehorende systeem.
 :::

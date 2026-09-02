@@ -234,7 +234,7 @@ This order stops one striking word from carrying all the meaning. Precise origin
 :::detail{#etiket-naam-en-rang parent="etiket-lezen" depth="intermediate" source_refs="source.dgccrf-wine-labels-2025 source.inao-aop-overview"}
 ### Château, cru and rank words
 
-A [[concept.chateau|château as a wine term]] may identify an estate or brand; it need not have a fairytale castle. The château name is not automatically the appellation. *Mis en bouteille au château* tells you where the wine was bottled, not that it is classified.
+A [[concept.chateau|château as a wine term]] may identify an estate or brand; it need not have a fairytale castle. The château name is not automatically the appellation. [[concept.estate-bottling|Mis en bouteille au château]] tells you where the wine was bottled, not that it is classified.
 
 *Cru*, *grand cru* and *classé* also demand context. Saint-Émilion Grand Cru is an appellation with its own rules, while *Grand Cru Classé* can indicate a classification level there. Médoc terminology works differently again. Never read these words alone: find the complete phrase and the system behind it.
 :::

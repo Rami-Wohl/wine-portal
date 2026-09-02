@@ -1,6 +1,6 @@
 id: producer.chateau-mouton-rothschild
 type: producer
-status: draft
+status: active
 canonical_name: Château Mouton Rothschild
 names:
   nl: Château Mouton Rothschild
@@ -16,6 +16,81 @@ relations:
     target: appellation.pauillac
   - type: classified_under
     target: classification.bordeaux-1855
-    properties: { tier: premier-cru }
-assertions: []
-source_refs: [source.gcc1855-classification-overview]
+    properties:
+      tier: premier-cru
+    valid_from: 1973
+  - type: important_grape
+    target: grape.cabernet-sauvignon
+  - type: important_grape
+    target: grape.merlot
+  - type: important_grape
+    target: grape.cabernet-franc
+  - type: important_grape
+    target: grape.petit-verdot
+  - type: important_grape
+    target: grape.sauvignon-blanc
+  - type: important_grape
+    target: grape.sauvignon-gris
+  - type: important_grape
+    target: grape.semillon
+  - type: important_grape
+    target: grape.muscadelle
+  - type: related_to
+    target: concept.grand-vin
+  - type: related_to
+    target: concept.second-wine
+  - type: related_to
+    target: concept.estate-bottling
+  - type: related_to
+    target: concept.en-primeur
+  - type: related_to
+    target: concept.assemblage
+  - type: related_to
+    target: concept.malolactic-fermentation
+  - type: related_to
+    target: concept.terroir
+  - type: related_to
+    target: concept.vintage
+  - type: related_to
+    target: concept.tannin
+  - type: related_to
+    target: concept.extraction
+  - type: associated_with
+    target: producer.chateau-darmailhac
+  - type: associated_with
+    target: producer.chateau-clerc-milon
+assertions:
+  - id: assertion.chateau-mouton-rothschild.rothschild-ownership
+    predicate: owner
+    value: Camille Sereys de Rothschild, Philippe Sereys de Rothschild and Julien de Beaumarchais de Rothschild
+    status: verified
+    sources: [source.chateau-mouton-current-ownership]
+    last_verified: 2026-09-02
+    valid_from: 2014
+  - id: assertion.chateau-mouton-rothschild.vineyard-area
+    predicate: vineyard_area_hectares
+    value: 90
+    status: verified
+    sources: [source.chateau-mouton-terroir, source.decanter-mouton-profile]
+    last_verified: 2026-09-02
+  - id: assertion.chateau-mouton-rothschild.estate-bottling
+    predicate: estate_bottling_since
+    value: 1924
+    status: historical
+    sources: [source.chateau-mouton-baron-philippe]
+    last_verified: 2026-09-02
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.gcc1855-classification-history
+  - source.inao-pauillac-specification-2026
+  - source.chateau-mouton-history
+  - source.chateau-mouton-baron-philippe
+  - source.chateau-mouton-current-ownership
+  - source.chateau-mouton-terroir
+  - source.chateau-mouton-winemaking
+  - source.chateau-mouton-wines
+  - source.chateau-mouton-label-art
+  - source.decanter-mouton-profile
+  - source.decanter-mouton-vertical
+depth: foundation
+last_reviewed: 2026-09-02

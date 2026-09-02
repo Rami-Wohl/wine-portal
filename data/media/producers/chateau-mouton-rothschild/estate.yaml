@@ -1,0 +1,24 @@
+id: media.producer.chateau-mouton-rothschild.estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-mouton-rothschild/estate.jpg
+mime_type: image/jpeg
+width: 1200
+height: 900
+checksum_sha256: 08434b096eb3a744e82e64c3aa2be87a01f278bddc513afa197ab3457f023254
+alt:
+  nl: De gebouwen van Château Mouton Rothschild achter een formele tuin met gras en gesnoeide struiken
+  en: The buildings of Château Mouton Rothschild beyond a formal garden with lawns and clipped shrubs
+caption:
+  nl: Het landgoed achter zijn formele tuin. De foto toont de representatieve zijde van Mouton; de wijngaard ligt buiten dit kader.
+  en: The estate beyond its formal garden. The photograph shows Mouton's ceremonial side; the vineyard lies outside the frame.
+rights:
+  status: open-licensed
+  creator: Jack ma
+  source_url: https://commons.wikimedia.org/wiki/File:Jardin_de_Ch%C3%A2teau_de_Mouton-Rothschild,_Pauillac._2012.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Jack ma via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-02
+changes: Original Wikimedia file used without crop or editorial colour alteration.

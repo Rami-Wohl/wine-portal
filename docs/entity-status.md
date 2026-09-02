@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 82 entities — 6 active, 76 draft, 0 deprecated.
+**Totaal:** 84 entities — 7 active, 77 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (6)
+## Actief — publiek vindbaar (7)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -15,9 +15,10 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
+| [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (76)
+## Draft — nog uit te werken (77)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -48,6 +49,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | `concept.fermentation` | Nee — reviewroute | `/concepts/alcoholische-vergisting` | — |
 | [Appellation d’origine protégée (AOP)](../content/entities/concepts/aop/entity.yaml) | Concept | `concept.aop` | Nee — reviewroute | `/concepts/aop` | — |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | `concept.botrytis` | Nee — reviewroute | `/concepts/botrytis-edele-rotting` | — |
+| [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | `concept.estate-bottling` | Nee — reviewroute | `/concepts/botteling-op-het-chateau` | — |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | `concept.chateau` | Nee — reviewroute | `/concepts/chateau-wijnterm` | — |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | `concept.clairet` | Nee — reviewroute | `/concepts/clairet` | — |
 | [Courtier](../content/entities/concepts/courtier/entity.yaml) | Concept | `concept.courtier` | Nee — reviewroute | `/concepts/courtier` | — |
@@ -77,6 +79,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Muscadelle](../content/entities/grapes/muscadelle/entity.yaml) | Druif | `grape.muscadelle` | Nee — reviewroute | `/grapes/muscadelle` | — |
 | [Petit Verdot](../content/entities/grapes/petit-verdot/entity.yaml) | Druif | `grape.petit-verdot` | Nee — reviewroute | `/grapes/petit-verdot` | — |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Nee — reviewroute | `/grapes/sauvignon-blanc` | — |
+| [Sauvignon gris](../content/entities/grapes/sauvignon-gris/entity.yaml) | Druif | `grape.sauvignon-gris` | Nee — reviewroute | `/grapes/sauvignon-gris` | — |
 | [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Nee — reviewroute | `/grapes/semillon` | — |
 | [Château Batailley](../content/entities/producers/chateau-batailley/entity.yaml) | Producent | `producer.chateau-batailley` | Nee — reviewroute | `/producers/chateau-batailley` | — |
 | [Château Clerc Milon](../content/entities/producers/chateau-clerc-milon/entity.yaml) | Producent | `producer.chateau-clerc-milon` | Nee — reviewroute | `/producers/chateau-clerc-milon` | — |
@@ -89,7 +92,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Haut-Batailley](../content/entities/producers/chateau-haut-batailley/entity.yaml) | Producent | `producer.chateau-haut-batailley` | Nee — reviewroute | `/producers/chateau-haut-batailley` | — |
 | [Château Lynch-Bages](../content/entities/producers/chateau-lynch-bages/entity.yaml) | Producent | `producer.chateau-lynch-bages` | Nee — reviewroute | `/producers/chateau-lynch-bages` | — |
 | [Château Lynch-Moussas](../content/entities/producers/chateau-lynch-moussas/entity.yaml) | Producent | `producer.chateau-lynch-moussas` | Nee — reviewroute | `/producers/chateau-lynch-moussas` | — |
-| [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Nee — reviewroute | `/producers/chateau-mouton-rothschild` | — |
 | [Château Pédesclaux](../content/entities/producers/chateau-pedesclaux/entity.yaml) | Producent | `producer.chateau-pedesclaux` | Nee — reviewroute | `/producers/chateau-pedesclaux` | — |
 | [Château Pichon Baron](../content/entities/producers/chateau-pichon-baron/entity.yaml) | Producent | `producer.chateau-pichon-baron` | Nee — reviewroute | `/producers/chateau-pichon-baron` | — |
 | [Château Pichon Longueville Comtesse de Lalande](../content/entities/producers/chateau-pichon-longueville-comtesse-de-lalande/entity.yaml) | Producent | `producer.chateau-pichon-longueville-comtesse-de-lalande` | Nee — reviewroute | `/producers/chateau-pichon-longueville-comtesse-de-lalande` | — |

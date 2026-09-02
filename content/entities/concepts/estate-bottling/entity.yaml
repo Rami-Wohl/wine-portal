@@ -1,0 +1,16 @@
+id: concept.estate-bottling
+type: concept
+status: draft
+canonical_name: Estate bottling
+names:
+  nl: Botteling op het château
+  en: Estate bottling
+slugs:
+  nl: botteling-op-het-chateau
+  en: estate-bottling
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -210,6 +210,7 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
         <figure {...common}>
           <Image
             alt={asset.alt[context.locale]}
+            className={asset.height / asset.width >= 2 ? "content-media-tall" : undefined}
             height={asset.height}
             sizes="(max-width: 620px) calc(100vw - 32px), 760px"
             src={mediaUrl(asset)}

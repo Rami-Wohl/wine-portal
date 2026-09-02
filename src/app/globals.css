@@ -1034,7 +1034,7 @@ h3 {
 }
 .content-block h2 {
   margin-bottom: 1.25rem;
-  font: 500 clamp(1.75rem, 2.6vw, 2.25rem)/1.12 var(--font-display);
+  font: 500 clamp(1.5rem, 2.6vw, 2rem)/1.12 var(--font-display);
   letter-spacing: -0.025em;
 }
 .content-block h3 {
@@ -1177,6 +1177,13 @@ h3 {
   border-radius: var(--radius-md);
   background: var(--line);
   object-fit: cover;
+}
+.content-block-figure img.content-media-tall {
+  width: auto;
+  max-width: 100%;
+  max-height: min(75vh, 48rem);
+  margin-inline: auto;
+  object-fit: contain;
 }
 .content-block-figure figcaption {
   display: grid;

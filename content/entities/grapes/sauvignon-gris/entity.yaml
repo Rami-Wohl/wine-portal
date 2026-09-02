@@ -1,0 +1,16 @@
+id: grape.sauvignon-gris
+type: grape
+status: draft
+canonical_name: Sauvignon gris
+names:
+  nl: Sauvignon gris
+  en: Sauvignon Gris
+slugs:
+  nl: sauvignon-gris
+  en: sauvignon-gris
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

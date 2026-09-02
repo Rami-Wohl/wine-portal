@@ -1,0 +1,24 @@
+id: media.producer.chateau-mouton-rothschild.grand-vin-1975
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-mouton-rothschild/grand-vin-1975.jpg
+mime_type: image/jpeg
+width: 633
+height: 2129
+checksum_sha256: 89e484308a0ea82d900317c436a34fa347c085fd2885ffad60571e3f714838be
+alt:
+  nl: Fles Château Mouton Rothschild 1975 met het kunstenaarslabel van Andy Warhol
+  en: Bottle of Château Mouton Rothschild 1975 with the artist label by Andy Warhol
+caption:
+  nl: Een fles Grand Vin uit 1975 met het kunstenaarslabel van Andy Warhol. De zichtbare ouderdom herinnert eraan dat label, jaargang en flesconditie samen moeten worden gelezen.
+  en: A bottle of the 1975 Grand Vin with the artist label by Andy Warhol. Its visible age is a reminder that label, vintage and bottle condition must be read together.
+rights:
+  status: open-licensed
+  creator: BerndB
+  source_url: https://commons.wikimedia.org/wiki/File:Mouton-1975.JPG
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: BerndB via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-02
+changes: Wikimedia's current losslessly cropped version used without further crop or editorial colour alteration.
