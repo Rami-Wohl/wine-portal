@@ -21,7 +21,7 @@ Prijs fungeerde daarbij als aanwijzing voor de waardering die een cru over meerd
 :::detail{#een-lijst-die-bevroor parent="oorsprong" depth="advanced" source_refs="source.gcc1855-classification-history"}
 ### Twee officiële wijzigingen
 
-Juist doordat de lijst vrijwel niet meer werd herzien, kreeg zij haar uitzonderlijke historische gewicht. Sinds april 1855 zijn slechts twee officiële wijzigingen doorgevoerd: Château Cantemerle werd op 16 september 1855 alsnog in de vijfde klasse (Cinquième Cru) opgenomen en Château Mouton Rothschild promoveerde in juni 1973 van de tweede naar de eerste klasse. [@source.gcc1855-classification-history]
+Juist doordat de lijst vrijwel niet meer werd herzien, kreeg zij haar uitzonderlijke historische gewicht. Sinds april 1855 zijn slechts twee officiële wijzigingen doorgevoerd: Château Cantemerle werd op 16 september 1855 alsnog in de vijfde klasse (Cinquième Cru) opgenomen en [[producer.chateau-mouton-rothschild|Château Mouton Rothschild]] promoveerde in juni 1973 van de tweede naar de eerste klasse. [@source.gcc1855-classification-history]
 
 Intussen bleven domeinen, eigendom, prestaties en marktprijzen wel veranderen. De vaste lijst en de levende wijnmarkt lopen daardoor naast elkaar, niet altijd in dezelfde volgorde.
 :::

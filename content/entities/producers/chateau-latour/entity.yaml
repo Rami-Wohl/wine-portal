@@ -1,6 +1,6 @@
 id: producer.chateau-latour
 type: producer
-status: draft
+status: active
 canonical_name: Château Latour
 names:
   nl: Château Latour
@@ -19,5 +19,51 @@ relations:
     properties:
       tier: premier-cru
     valid_from: 1855
-assertions: []
-source_refs: [source.gcc1855-classification-overview]
+  - type: important_grape
+    target: grape.cabernet-sauvignon
+  - type: important_grape
+    target: grape.merlot
+  - type: important_grape
+    target: grape.petit-verdot
+  - type: related_to
+    target: concept.second-wine
+  - type: related_to
+    target: concept.en-primeur
+assertions:
+  - id: assertion.chateau-latour.first-documentary-mention
+    predicate: first_documentary_mention
+    value: 1331
+    status: historical
+    sources: [source.chateau-latour-history]
+    last_verified: 2026-09-02
+  - id: assertion.chateau-latour.artemis-ownership
+    predicate: owner
+    value: Artémis under François Pinault
+    status: verified
+    sources: [source.chateau-latour-history]
+    last_verified: 2026-09-02
+    valid_from: 1993
+  - id: assertion.chateau-latour.vineyard-area
+    predicate: vineyard_area_hectares
+    value: 96.5
+    status: verified
+    sources: [source.chateau-latour-land]
+    last_verified: 2026-09-02
+  - id: assertion.chateau-latour.enclos-area
+    predicate: enclos_area_hectares
+    value: 47
+    status: verified
+    sources: [source.chateau-latour-land]
+    last_verified: 2026-09-02
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.chateau-latour-history
+  - source.chateau-latour-land
+  - source.chateau-latour-grand-vin
+  - source.chateau-latour-winemaking
+  - source.chateau-latour-les-forts
+  - source.chateau-latour-pauillac
+  - source.decanter-chateau-latour-profile
+  - source.decanter-latour-tasting
+depth: foundation
+last_reviewed: 2026-09-02

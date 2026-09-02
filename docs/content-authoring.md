@@ -198,9 +198,30 @@ Een actieve appellation gebruikt dit archetype in een package-lokaal
 `content-plan.yaml`. Dezelfde harde volledigheids-, dependency- en
 proportionaliteitsreviews als voor een regio-overview gelden per dimensie.
 
+### Page-archetype: `producer-overview`
+
+Een producentenoverzicht behandelt of ontsluit minimaal identiteit en plaats,
+geschiedenis en eigendom, wijngaard en terroir, de hoofdwijn, overige wijnen,
+werkwijze en de bruikbare grenzen van een stijlbeeld. Veranderlijke personen,
+arealen en commerciële werkwijzen krijgen een verificatiedatum. Een
+producentenbron mag de eigen praktijk en visie documenteren, maar niet als
+onafhankelijke kwaliteitstoets worden opgevoerd.
+
+De basislaag bevat minimaal een korte geschiedenis, de actuele eigenaar of
+eigendomscontext, de Grand Vin — de hoofdwijn van het domein — en het karakter
+waarmee die wijn zorgvuldig wordt geassocieerd. Overige wijnen zoals een tweede
+wijn horen in beginsel bij `intermediate`. Exacte percentages, selectiegrenzen,
+technische uitzonderingen en veranderlijke commerciële details horen bij
+`advanced`, tenzij zij onmisbaar zijn om de producent überhaupt te begrijpen.
+
+Voor iedere actieve producent worden waar mogelijk twee documentaire beelden
+gepland: het landgoed in zijn wijnbouwkundige context en de Grand Vin als fles.
+Beide vereisen expliciete rechten en een inhoudelijke caption; een generieke
+châteaufoto of los etiket zonder betrouwbare identificatie is onvoldoende.
+
 ### Semigestandaardiseerde titels van hoofdsecties
 
-De H2 van iedere `section` in een region- of appellation-overview begint met een
+De H2 van iedere `section` in een region-, appellation- of producer-overview begint met een
 vaste, gelokaliseerde categorie. Een auteur mag daarna met ` — ` een vrije,
 levendige toevoeging schrijven. Zo blijft een pagina scanbaar en onderling
 vergelijkbaar zonder de redactionele stem uit de koppen te verwijderen.
@@ -235,6 +256,13 @@ de H3-koppen van `detail`-blocks.
 | `modern-developments` | Hedendaagse ontwikkelingen / Contemporary developments | Hedendaagse ontwikkelingen / Contemporary developments |
 | `visuals` | Beeld / Visuals | Beeld / Visuals |
 | `child-knowledge` | Verder ontdekken / Explore further | Verder ontdekken / Explore further |
+
+Producenten gebruiken dezelfde vorm met deze vaste categorieën: `Geschiedenis en
+eigendom / History and ownership`, `Wijngaard en terroir / Vineyard and terroir`,
+`Grand Vin / Grand Vin`, `Overige wijnen / Other wines` en `Werkwijze en uitgifte
+/ Working methods and release`. Alleen de tekst na ` — ` is vrij. Een categorie
+mag worden weggelaten wanneer de contentbrief haar aantoonbaar uitbesteedt of als
+niet relevant motiveert.
 
 ## Add an entity
 

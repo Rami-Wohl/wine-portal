@@ -21,7 +21,7 @@ Price served as evidence of the standing a growth had accumulated over several y
 :::detail{#een-lijst-die-bevroor parent="oorsprong" depth="advanced" source_refs="source.gcc1855-classification-history"}
 ### Two official changes
 
-The list gained its extraordinary historical weight precisely because it was scarcely revised. Only two official changes have been made since April 1855: Château Cantemerle was added to the fifth class (Cinquième Cru) on 16 September 1855, and Château Mouton Rothschild was promoted from the second to the first class in June 1973. [@source.gcc1855-classification-history]
+The list gained its extraordinary historical weight precisely because it was scarcely revised. Only two official changes have been made since April 1855: Château Cantemerle was added to the fifth class (Cinquième Cru) on 16 September 1855, and [[producer.chateau-mouton-rothschild|Château Mouton Rothschild]] was promoted from the second to the first class in June 1973. [@source.gcc1855-classification-history]
 
 Estates, ownership, performance and market prices continued to change in the meantime. The fixed list and the living wine market therefore run alongside one another, not always in the same order.
 :::

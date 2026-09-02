@@ -1,0 +1,24 @@
+id: media.producer.chateau-latour.estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-latour/estate.jpg
+mime_type: image/jpeg
+width: 1280
+height: 960
+checksum_sha256: 962d8d9e37441bb1ad398fc977b802c1f74f3a477276f343575f8d50e94922e5
+alt:
+  nl: De ronde toren en het hoofdgebouw van Château Latour achter rijen groene wijnstokken
+  en: The round tower and main building of Château Latour behind rows of green vines
+caption:
+  nl: De ronde toren gaf het domein zijn herkenningsteken, maar is jonger dan de middeleeuwse vesting waarmee de geschiedenis van Latour begon.
+  en: The round tower became the estate's emblem, but it is younger than the medieval fortress with which Latour's history began.
+rights:
+  status: open-licensed
+  creator: BillBl
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_Latour_01.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: BillBl via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-02
+changes: Original Wikimedia file used without crop or editorial colour alteration.

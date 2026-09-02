@@ -69,7 +69,7 @@ Een wisselende blend hoeft dus geen koerswijziging te betekenen. Zij kan juist l
 :::detail{#geen-rekensom parent="percentages-lezen" depth="advanced" source_refs="source.civb-bordeaux-blending"}
 ### Dezelfde verhouding, een andere wijn
 
-Twee wijnen met exact dezelfde druivenpercentages kunnen sterk verschillen. Rijpheid, opbrengst, perceel, selectie, [[concept.extraction|extractie]] — hoeveel kleur, tannine en andere stoffen uit de druivenschillen worden gehaald —, vaten en duur van élevage veranderen wat ieder onderdeel in de blend meebrengt. Ook de kwaliteit en onderlinge verhouding van afzonderlijke partijen binnen hetzelfde druivenras blijven onzichtbaar in het getal.
+Twee wijnen met exact dezelfde druivenpercentages kunnen sterk verschillen. Rijpheid, opbrengst, perceel, selectie, [[concept.extraction|extractie]] — hoeveel kleur, [[concept.tannin|tannine]] en andere stoffen uit de druivenschillen worden gehaald —, vaten en duur van élevage veranderen wat ieder onderdeel in de blend meebrengt. Ook de kwaliteit en onderlinge verhouding van afzonderlijke partijen binnen hetzelfde druivenras blijven onzichtbaar in het getal.
 
 Een assemblage is daarom geen rekenkundige voorspelling van smaak. De percentages worden pas betekenisvol naast herkomst, jaargang, producent en wijnmaakkeuzes.
 :::

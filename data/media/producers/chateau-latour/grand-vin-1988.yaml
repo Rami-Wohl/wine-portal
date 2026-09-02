@@ -1,0 +1,24 @@
+id: media.producer.chateau-latour.grand-vin-1988
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-latour/grand-vin-1988.jpg
+mime_type: image/jpeg
+width: 1536
+height: 2048
+checksum_sha256: 71fcd384eb818a6c0523fade60f2511e90e0f2beb635c711a8f8474c6faf09d3
+alt:
+  nl: Fles Grand Vin de Château Latour uit 1988 met het torenmotief op etiket en capsule
+  en: Bottle of 1988 Grand Vin de Château Latour with the tower motif on its label and capsule
+caption:
+  nl: Een fles Grand Vin uit 1988. De toren op het etiket verbindt de wijnnaam zichtbaar met de geschiedenis van het domein.
+  en: A bottle of 1988 Grand Vin. The tower on the label visibly connects the wine's name with the estate's history.
+rights:
+  status: open-licensed
+  creator: Renzo Grosso
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Latour_-_bottle.jpg
+  license_name: Creative Commons Attribution 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by/3.0/
+  credit_line: Renzo Grosso via Wikimedia Commons, CC BY 3.0
+acquired_at: 2026-09-02
+changes: Original Wikimedia file used without crop or editorial colour alteration.

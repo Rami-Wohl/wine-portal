@@ -69,7 +69,7 @@ A changing blend does not necessarily signal a change of direction. It can show 
 :::detail{#geen-rekensom parent="percentages-lezen" depth="advanced" source_refs="source.civb-bordeaux-blending"}
 ### The same ratio, a different wine
 
-Two wines with exactly the same grape percentages can be markedly different. Ripeness, yield, parcel, selection, [[concept.extraction|extraction]] — how much colour, tannin and other material is drawn from the grape skins —, vessels and the duration of élevage alter what each component brings to the blend. The quality and relative weight of separate lots within one variety also remain invisible in the number.
+Two wines with exactly the same grape percentages can be markedly different. Ripeness, yield, parcel, selection, [[concept.extraction|extraction]] — how much colour, [[concept.tannin|tannin]] and other material is drawn from the grape skins —, vessels and the duration of élevage alter what each component brings to the blend. The quality and relative weight of separate lots within one variety also remain invisible in the number.
 
 A blend is therefore not an arithmetic prediction of taste. Its percentages become meaningful only alongside origin, vintage, producer and winemaking choices.
 :::
