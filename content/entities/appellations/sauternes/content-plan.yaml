@@ -1,0 +1,322 @@
+package_id: appellation.sauternes
+archetype: appellation-overview
+schema_version: 1
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, vijf-gemeenten]
+    target_ids: [region.bordeaux, appellation.barsac]
+    completeness_questions: [Kan de lezer wijn, dorp en juridische zone uit elkaar houden?]
+    layers:
+      foundation:
+        [
+          Definieer Sauternes als zoete witte appellation van vijf gemeenten ten zuiden van Bordeaux.,
+        ]
+      intermediate: [Leg de bijzondere positie van Barsac uit.]
+      advanced: [Begrens tekstuele oriëntatie tegenover officiële perceelkaarten.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Ligging en appellationidentiteit.],
+          source_refs: [source.inao-sauternes-overview],
+        }
+      specific_claims:
+        - {
+            claim: De zone omvat Barsac Bommes Fargues Preignac en Sauternes.,
+            status: supported,
+            source_refs: [source.inao-sauternes-specification-2026],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, handel-en-selectieve-oogst, van-1855-naar-aoc]
+    target_ids: [classification.bordeaux-1855]
+    completeness_questions:
+      [
+        Verbindt de geschiedenis middeleeuwse wijnbouw handel selectieve oogst 1855 en AOC zonder oorsprongsmythe?,
+      ]
+    layers:
+      foundation: [Vertel hoe een oude wijnstreek beroemd werd om geconcentreerde zoete wijn.]
+      intermediate: [Verbind handel en gedocumenteerde achttiende-eeuwse oogstpraktijk.]
+      advanced: [Plaats 1855 en 1936 in verschillende historische functies.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling en handelsreputatie.],
+          source_refs: [source.msha-bordeaux-wine-history],
+        }
+      specific_claims:
+        - {
+            claim: Selectieve late oogst is in 1741 beschreven en de AOC werd in 1936 erkend.,
+            status: supported,
+            source_refs: [source.inao-sauternes-specification-2026],
+          }
+    review: *complete
+
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, ciron-en-botrytis, bodems-en-afwatering]
+    target_ids: [concept.botrytis]
+    completeness_questions:
+      [Begrijpt de lezer de samenhang én onzekerheid tussen water mist droging bodems en botrytis?]
+    layers:
+      foundation: [Maak Ciron Garonne ochtendvocht en drogende middagen voorstelbaar.]
+      intermediate: [Leg de omstandigheden voor edele rotting en het risico van grijze rot uit.]
+      advanced:
+        [Beschrijf grind klei kalk zand en alios als waterhuishouding zonder aromadeterminisme.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap klimaat bodem en water.],
+          source_refs: [source.brgm-bordeaux-geology-2022],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, semillon-sauvignon-en-muscadelle]
+    target_ids: [grape.semillon, grape.sauvignon-blanc, grape.sauvignon-gris, grape.muscadelle]
+    completeness_questions:
+      [Zijn alle toegestane rassen en hun lokale rollen uitgelegd zonder vast blendrecept?]
+    layers:
+      foundation: [Leg Sémillons hoofdrol en Sauvignons frisheid uit en noem Muscadelle.]
+      intermediate: [Verbind druifeigenschappen met botrytis selectie en balans.]
+      advanced: [Noem Sauvignon Gris en begrens wettelijke toelating tegenover werkelijk aandeel.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Lokale rollen van witte Bordeauxrassen.],
+          source_refs: [source.inao-sauternes-overview],
+        }
+      specific_claims:
+        - {
+            claim: Vier rassen zijn wettelijk toegestaan.,
+            status: supported,
+            source_refs: [source.inao-sauternes-specification-2026],
+          }
+    review: *complete
+
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, tries-successives, van-pers-tot-vat]
+    target_ids: [concept.botrytis, concept.elevage]
+    completeness_questions:
+      [Volgt de lezer druif voor druif van botrytisselectie via persing vergisting tot opvoeding?]
+    layers:
+      foundation: [Leg edele rotting en handmatige opeenvolgende selectierondes volledig uit.]
+      intermediate: [Verklaar lage sapopbrengst moeilijke vergisting en balans.]
+      advanced: [Begrens vatkeuzes en gistingsstop als producentenpraktijk niet wettelijk recept.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Botrytis oogst vergisting en opvoeding.],
+          source_refs: [source.inao-sauternes-specification-2026],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, wat-sauternes-juridisch-belooft, cijfers-en-grenzen]
+    target_ids: []
+    completeness_questions:
+      [
+        Kan de lezer de bepalende regels noemen zonder ze voor een kwaliteits- of smaakgarantie aan te zien?,
+      ]
+    layers:
+      foundation: [Leg beschermde herkomst wijnsoort edele rotting en handoogst uit.]
+      intermediate: [Maak het verschil tussen appellationregel en producentenkeuze duidelijk.]
+      advanced: [Geef actuele suiker plantdichtheid en rendementsdrempels.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Functie van appellationregels.], source_refs: [source.inao-sauternes-overview] }
+      specific_claims:
+        - {
+            claim: De regels eisen 6500 stokken per hectare 221 gram suiker per liter most 25 hl per hectare en minstens 45 gram restsuiker per liter.,
+            status: supported,
+            source_refs: [source.inao-sauternes-specification-2026],
+          }
+    review: *complete
+
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      [classificatie-en-producenten, yquem-en-de-twee-rangen, reputatie-is-geen-volledigheid]
+    target_ids:
+      [
+        classification.bordeaux-1855,
+        producer.chateau-d-yquem,
+        producer.chateau-guiraud,
+        producer.chateau-rieussec,
+        producer.chateau-suduiraut,
+      ]
+    completeness_questions:
+      [
+        Is de volledige structuur van 1855 duidelijk en zijn producentenankers representatief zonder koopranglijst?,
+      ]
+    layers:
+      foundation: [Introduceer Yquem en de aparte zoete classificatie van 1855.]
+      intermediate: [Leg één Premier Cru Supérieur elf Premiers en vijftien Deuxièmes uit.]
+      advanced:
+        [
+          Begrens de historische lijst tegenover huidige kwaliteit en niet-geclassificeerde producenten.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatiescope en producentennavigatie.],
+          source_refs: [source.gcc1855-classification-history],
+        }
+      specific_claims:
+        - {
+            claim: De zoete lijst telt 27 crus in drie niveaus.,
+            status: supported,
+            source_refs: [source.gcc1855-classification-overview],
+          }
+    review: *complete
+
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, zoetheid-met-spanning, tijd-in-de-fles]
+    target_ids: [concept.acidity]
+    completeness_questions:
+      [Geeft de pagina een bruikbaar stijlbeeld met balans flesontwikkeling en variatie?]
+    layers:
+      foundation: [Beschrijf zoetheid zuur aroma en textuur als samenhangend stijlbeeld.]
+      intermediate: [Leg ontwikkeling van citrus en steenfruit naar honing kruiden en noten uit.]
+      advanced: [Doorbreek uniforme aroma- en levensduurclaims.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Stijl en flesontwikkeling.], source_refs: [source.inao-sauternes-overview] }
+      specific_claims: []
+    review: *complete
+
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, droog-wit-is-geen-sauternes, serveren-en-combineren]
+    target_ids: [appellation.barsac]
+    completeness_questions:
+      [
+        Kan de lezer Sauternes Barsac producent classificatie flesformaat en droge domeinwijn uit elkaar houden?,
+      ]
+    layers:
+      foundation:
+        [Lees herkomst producent jaargang en inhoud en maak duidelijk dat Sauternes zoet is.]
+      intermediate: [Leg Barsac en droge witte domeinwijnen uit en geef brede serveercontext.]
+      advanced: [Waarschuw voor herkomst conditie en veranderlijke marktinformatie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiket koop en serveernavigatie.],
+          source_refs: [source.dgccrf-wine-labels-2025],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, klimaat-arbeid-en-markt]
+    target_ids: []
+    completeness_questions:
+      [
+        Worden klimaat arbeid opbrengstrisico en veranderende drinkcontext behandeld zonder vluchtige marktclaim?,
+      ]
+    layers:
+      foundation: [Laat zien dat de wijn veel handwerk en seizoensrisico vraagt.]
+      intermediate: [Verbind klimaatschommelingen met botrytistiming selectie en opbrengst.]
+      advanced:
+        [
+          Plaats adaptatie als afweging tussen druifgezondheid concentratie zuur en economische haalbaarheid.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaatadaptatie en productierisico.],
+          source_refs: [source.inrae-bordeaux-climate-adaptation],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [sauternes-wijngaard, edele-rotting-in-de-wijngaard]
+    target_ids: []
+    completeness_questions:
+      [Tonen de beelden landschap en edele rotting met controleerbare rechten en passende captions?]
+    layers:
+      foundation: [Toon het wijngaardlandschap en botrytisdruiven.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair wijnlandschap en oogstbeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        region.bordeaux,
+        appellation.barsac,
+        classification.bordeaux-1855,
+        grape.semillon,
+        grape.sauvignon-blanc,
+        grape.muscadelle,
+        concept.botrytis,
+        producer.chateau-d-yquem,
+        producer.chateau-guiraud,
+        producer.chateau-rieussec,
+        producer.chateau-suduiraut,
+      ]
+    completeness_questions:
+      [Zijn de noodzakelijke vervolgentiteiten vindbaar en minstens als entity aanwezig?]
+    layers:
+      foundation: [Bied routes via plaats druif proces classificatie en producent.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+
+entity_dependencies:
+  - {
+      id: producer.chateau-d-yquem,
+      names: { nl: Château d'Yquem, en: Château d'Yquem },
+      slugs: { nl: chateau-d-yquem, en: chateau-d-yquem },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-guiraud,
+      names: { nl: Château Guiraud, en: Château Guiraud },
+      slugs: { nl: chateau-guiraud, en: chateau-guiraud },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-rieussec,
+      names: { nl: Château Rieussec, en: Château Rieussec },
+      slugs: { nl: chateau-rieussec, en: chateau-rieussec },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-suduiraut,
+      names: { nl: Château Suduiraut, en: Château Suduiraut },
+      slugs: { nl: chateau-suduiraut, en: chateau-suduiraut },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

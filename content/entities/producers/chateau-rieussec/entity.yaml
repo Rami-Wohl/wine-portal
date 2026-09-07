@@ -1,0 +1,15 @@
+id: producer.chateau-rieussec
+type: producer
+status: draft
+canonical_name: Château Rieussec
+names: { nl: Château Rieussec, en: Château Rieussec }
+slugs: { nl: chateau-rieussec, en: chateau-rieussec }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations:
+  - { type: located_in, target: appellation.sauternes }
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: premier-cru }
+    valid_from: 1855
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

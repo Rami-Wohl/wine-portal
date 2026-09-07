@@ -1,0 +1,24 @@
+id: media.sauternes.noble-rot
+kind: photo
+role: documentary
+status: active
+storage_key: sauternes/noble-rot.jpg
+mime_type: image/jpeg
+width: 1600
+height: 1200
+checksum_sha256: fe3f48e14e80e6d605e8e695b28fd619225f2601562e3a44d8cd5ff8c2244073
+alt:
+  nl: Witte druiventrossen in een Sauternes-wijngaard met bessen in verschillende stadia van edele rotting
+  en: White grape bunches in a Sauternes vineyard with berries at different stages of noble rot
+caption:
+  nl: Binnen één tros zijn gave, verkleurde en verschrompelde bessen tegelijk zichtbaar. Die ongelijke ontwikkeling verklaart waarom plukkers in opeenvolgende selectierondes terugkeren.
+  en: Sound, darkening and shrivelled berries are visible within the same bunch. That uneven development explains why pickers return in successive selective passes.
+rights:
+  status: open-licensed
+  creator: David Lytle (davitydave)
+  source_url: https://commons.wikimedia.org/wiki/File:Vineyard_in_Sauternes_with_grapes_showing_noble_rot.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: David Lytle via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons file resized to 1600 pixels wide; no crop or editorial colour alteration.

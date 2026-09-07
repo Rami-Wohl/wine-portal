@@ -1,0 +1,24 @@
+id: media.sauternes.vineyard
+kind: photo
+role: documentary
+status: active
+storage_key: sauternes/vineyard.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1280
+checksum_sha256: ab0dc2d6cce2855fd442f154df4c9bdab9b5a327462f0e92cb8da8f35755d373
+alt:
+  nl: Rijen wijnstokken op de zacht glooiende wijngaarden van Château d'Yquem in Sauternes
+  en: Rows of vines across the gently rolling vineyards of Château d'Yquem in Sauternes
+caption:
+  nl: Het Sauternais is geen vlak mistbassin maar een landschap van lage croupes. Dit uitzicht over de wijngaarden van Château d'Yquem toont het reliëf; één landgoed staat niet model voor iedere bodem in de appellation.
+  en: The Sauternais is not a flat basin of mist but a landscape of low rises. This view across Château d'Yquem's vineyards shows the relief; one estate does not represent every soil in the appellation.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Vineyards_of_Ch%C3%A2teau_d%E2%80%99Yquem%2C_Sauternes.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons file resized to 1920 pixels wide; no crop or editorial colour alteration.

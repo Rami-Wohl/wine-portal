@@ -1,0 +1,15 @@
+id: producer.chateau-suduiraut
+type: producer
+status: draft
+canonical_name: Château Suduiraut
+names: { nl: Château Suduiraut, en: Château Suduiraut }
+slugs: { nl: chateau-suduiraut, en: chateau-suduiraut }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations:
+  - { type: located_in, target: appellation.sauternes }
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: premier-cru }
+    valid_from: 1855
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

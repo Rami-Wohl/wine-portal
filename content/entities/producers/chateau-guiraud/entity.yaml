@@ -1,0 +1,15 @@
+id: producer.chateau-guiraud
+type: producer
+status: draft
+canonical_name: Château Guiraud
+names: { nl: Château Guiraud, en: Château Guiraud }
+slugs: { nl: chateau-guiraud, en: chateau-guiraud }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations:
+  - { type: located_in, target: appellation.sauternes }
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: premier-cru }
+    valid_from: 1855
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

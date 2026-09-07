@@ -2,15 +2,16 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 111 entities — 19 active, 92 draft, 0 deprecated.
+**Totaal:** 115 entities — 20 active, 95 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (19)
+## Actief — publiek vindbaar (20)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
 | Naam | Type | ID | Publiek | Nederlandse route | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
+| [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-07 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-02 |
 | [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
@@ -30,7 +31,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (92)
+## Draft — nog uit te werken (95)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -64,7 +65,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Saint-Nicolas-de-Bourgueil](../content/entities/appellations/saint-nicolas-de-bourgueil/entity.yaml) | Appellatie | `appellation.saint-nicolas-de-bourgueil` | Nee — reviewroute | `/appellations/saint-nicolas-de-bourgueil` | — |
 | [Sancerre](../content/entities/appellations/sancerre/entity.yaml) | Appellatie | `appellation.sancerre` | Nee — reviewroute | `/appellations/sancerre` | — |
 | [Saumur-Champigny](../content/entities/appellations/saumur-champigny/entity.yaml) | Appellatie | `appellation.saumur-champigny` | Nee — reviewroute | `/appellations/saumur-champigny` | — |
-| [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Nee — reviewroute | `/appellations/sauternes` | — |
 | [Stellenbosch](../content/entities/appellations/stellenbosch/entity.yaml) | Appellatie | `appellation.stellenbosch` | Nee — reviewroute | `/appellations/stellenbosch` | — |
 | [Classificatie van Graves](../content/entities/classifications/graves/entity.yaml) | Classificatie | `classification.graves` | Nee — reviewroute | `/classifications/classificatie-graves` | — |
 | [Classificatie van Saint-Émilion](../content/entities/classifications/saint-emilion/entity.yaml) | Classificatie | `classification.saint-emilion` | Nee — reviewroute | `/classifications/classificatie-saint-emilion` | — |
@@ -109,9 +109,11 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Clerc Milon](../content/entities/producers/chateau-clerc-milon/entity.yaml) | Producent | `producer.chateau-clerc-milon` | Nee — reviewroute | `/producers/chateau-clerc-milon` | — |
 | [Château Croizet-Bages](../content/entities/producers/chateau-croizet-bages/entity.yaml) | Producent | `producer.chateau-croizet-bages` | Nee — reviewroute | `/producers/chateau-croizet-bages` | — |
 | [Château d’Armailhac](../content/entities/producers/chateau-darmailhac/entity.yaml) | Producent | `producer.chateau-darmailhac` | Nee — reviewroute | `/producers/chateau-darmailhac` | — |
+| [Château d'Yquem](../content/entities/producers/chateau-d-yquem/entity.yaml) | Producent | `producer.chateau-d-yquem` | Nee — reviewroute | `/producers/chateau-d-yquem` | — |
 | [Château Duhart-Milon](../content/entities/producers/chateau-duhart-milon/entity.yaml) | Producent | `producer.chateau-duhart-milon` | Nee — reviewroute | `/producers/chateau-duhart-milon` | — |
 | [Château Grand-Puy Ducasse](../content/entities/producers/chateau-grand-puy-ducasse/entity.yaml) | Producent | `producer.chateau-grand-puy-ducasse` | Nee — reviewroute | `/producers/chateau-grand-puy-ducasse` | — |
 | [Château Grand-Puy-Lacoste](../content/entities/producers/chateau-grand-puy-lacoste/entity.yaml) | Producent | `producer.chateau-grand-puy-lacoste` | Nee — reviewroute | `/producers/chateau-grand-puy-lacoste` | — |
+| [Château Guiraud](../content/entities/producers/chateau-guiraud/entity.yaml) | Producent | `producer.chateau-guiraud` | Nee — reviewroute | `/producers/chateau-guiraud` | — |
 | [Château Haut-Bages Libéral](../content/entities/producers/chateau-haut-bages-liberal/entity.yaml) | Producent | `producer.chateau-haut-bages-liberal` | Nee — reviewroute | `/producers/chateau-haut-bages-liberal` | — |
 | [Château Haut-Batailley](../content/entities/producers/chateau-haut-batailley/entity.yaml) | Producent | `producer.chateau-haut-batailley` | Nee — reviewroute | `/producers/chateau-haut-batailley` | — |
 | [Château Lynch-Bages](../content/entities/producers/chateau-lynch-bages/entity.yaml) | Producent | `producer.chateau-lynch-bages` | Nee — reviewroute | `/producers/chateau-lynch-bages` | — |
@@ -120,6 +122,8 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Pichon Baron](../content/entities/producers/chateau-pichon-baron/entity.yaml) | Producent | `producer.chateau-pichon-baron` | Nee — reviewroute | `/producers/chateau-pichon-baron` | — |
 | [Château Pichon Longueville Comtesse de Lalande](../content/entities/producers/chateau-pichon-longueville-comtesse-de-lalande/entity.yaml) | Producent | `producer.chateau-pichon-longueville-comtesse-de-lalande` | Nee — reviewroute | `/producers/chateau-pichon-longueville-comtesse-de-lalande` | — |
 | [Château Pontet-Canet](../content/entities/producers/chateau-pontet-canet/entity.yaml) | Producent | `producer.chateau-pontet-canet` | Nee — reviewroute | `/producers/chateau-pontet-canet` | — |
+| [Château Rieussec](../content/entities/producers/chateau-rieussec/entity.yaml) | Producent | `producer.chateau-rieussec` | Nee — reviewroute | `/producers/chateau-rieussec` | — |
+| [Château Suduiraut](../content/entities/producers/chateau-suduiraut/entity.yaml) | Producent | `producer.chateau-suduiraut` | Nee — reviewroute | `/producers/chateau-suduiraut` | — |
 | [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | `region.blayais-bourgeais` | Nee — reviewroute | `/regions/blayais-bourgeais` | — |
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | `region.entre-deux-mers` | Nee — reviewroute | `/regions/entre-deux-mers` | — |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | `region.graves-sauternais` | Nee — reviewroute | `/regions/graves-sauternais` | — |

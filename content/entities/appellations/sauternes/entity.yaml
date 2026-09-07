@@ -1,6 +1,6 @@
 id: appellation.sauternes
 type: appellation
-status: draft
+status: active
 canonical_name: Sauternes
 names:
   nl: Sauternes
@@ -11,6 +11,41 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: important_grape, target: grape.semillon }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: important_grape, target: grape.muscadelle }
+  - { type: important_grape, target: grape.sauvignon-gris }
+  - { type: related_to, target: appellation.barsac }
+  - { type: related_to, target: concept.botrytis }
+assertions:
+  - id: assertion.sauternes.wine-type
+    predicate: permitted_wine_type
+    value: still-white-with-residual-sugar
+    status: verified
+    sources: [source.inao-sauternes-specification-2026]
+    last_verified: 2026-09-07
+  - id: assertion.sauternes.aoc-recognition
+    predicate: aoc_recognition_date
+    value: 1936-09-30
+    status: verified
+    sources: [source.inao-sauternes-specification-2026]
+    last_verified: 2026-09-07
+  - id: assertion.sauternes.communes
+    predicate: geographic_area_communes
+    value: Barsac, Bommes, Fargues, Preignac and Sauternes
+    status: verified
+    sources: [source.inao-sauternes-specification-2026]
+    last_verified: 2026-09-07
+source_refs:
+  - source.inao-sauternes-overview
+  - source.inao-sauternes-specification-2026
+  - source.gcc1855-classification-overview
+  - source.gcc1855-classification-history
+  - source.msha-bordeaux-wine-history
+  - source.brgm-bordeaux-geology-2022
+  - source.dgccrf-wine-labels-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-07

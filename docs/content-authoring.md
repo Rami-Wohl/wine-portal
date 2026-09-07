@@ -122,6 +122,31 @@ woord klinkt:
   tussen deskundigen en hoort alleen op de overzichtspagina als dat werkelijk
   nodig is.
 
+Gebruik bij de toekenning van deze niveaus voortaan ook de WSET-leerlijn als
+praktische externe graadmeter, zonder de inhoud of terminologie van het WSET-
+curriculum te kopiëren:
+
+- `foundation` ligt ongeveer op WSET Level 2: de lezer moet het onderwerp, zijn
+  belangrijkste plaatsen en stijlen, en de bepalende factoren kunnen herkennen en
+  in gewone taal beschrijven;
+- `intermediate` ligt ongeveer op WSET Level 3: de lezer moet kunnen verklaren hoe
+  plaats, wijnbouw, wijnmaken en rijping de stijl, kwaliteit en onderlinge
+  verschillen veroorzaken;
+- `advanced` begint pas duidelijk boven Level 3: nuances, uitzonderingen,
+  historische of juridische wisselwerking, technische mechanismen en de grenzen
+  van gangbare verklaringsmodellen; en
+- `specialist` blijft bestemd voor vakonderzoek, primaire methoden en werkelijke
+  expertendebatten.
+
+Dit is een kalibratiehulpmiddel, geen examenmapping en geen reden om kennis op een
+hoger niveau te verbergen. Informatie die noodzakelijk is om een hoofdrol of
+hoofdstijl van de entity te begrijpen blijft `foundation`, ook wanneer het
+onderliggende mechanisme technisch is. Botrytis bij Sémillon, koolzuurmaceratie bij
+Beaujolais of de tweede gisting bij traditionele mousserende wijn zijn voorbeelden
+van zulke fundamentele kennis. De basislaag introduceert dan het verschijnsel en
+zijn betekenis; `intermediate` verklaart de causale keten; `advanced` behandelt
+uitzonderingen, grensgevallen en technisch of juridisch detail.
+
 Een essentieel vakwoord kan dus `foundation` zijn, mits het direct wordt uitgelegd.
 Een detail wordt niet automatisch waardevol doordat het `advanced` heet.
 
