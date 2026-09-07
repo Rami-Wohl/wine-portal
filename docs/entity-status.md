@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 84 entities — 7 active, 77 draft, 0 deprecated.
+**Totaal:** 93 entities — 8 active, 85 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (7)
+## Actief — publiek vindbaar (8)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -13,12 +13,13 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-02 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
+| [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (77)
+## Draft — nog uit te werken (85)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -29,24 +30,31 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [AOP Médoc](../content/entities/appellations/medoc/entity.yaml) | Appellatie | `appellation.medoc` | Nee — reviewroute | `/appellations/medoc-aop` | — |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | `appellation.barsac` | Nee — reviewroute | `/appellations/barsac` | — |
 | [Blaye Côtes de Bordeaux](../content/entities/appellations/blaye-cotes-de-bordeaux/entity.yaml) | Appellatie | `appellation.blaye-cotes-de-bordeaux` | Nee — reviewroute | `/appellations/blaye-cotes-de-bordeaux` | — |
+| [Bolgheri](../content/entities/appellations/bolgheri/entity.yaml) | Appellatie | `appellation.bolgheri` | Nee — reviewroute | `/appellations/bolgheri` | — |
 | [Bordeaux Supérieur](../content/entities/appellations/bordeaux-superieur/entity.yaml) | Appellatie | `appellation.bordeaux-superieur` | Nee — reviewroute | `/appellations/bordeaux-superieur` | — |
+| [Coonawarra](../content/entities/appellations/coonawarra/entity.yaml) | Appellatie | `appellation.coonawarra` | Nee — reviewroute | `/appellations/coonawarra` | — |
 | [Côtes de Bourg](../content/entities/appellations/cotes-de-bourg/entity.yaml) | Appellatie | `appellation.cotes-de-bourg` | Nee — reviewroute | `/appellations/cotes-de-bourg` | — |
 | [Crémant de Bordeaux](../content/entities/appellations/cremant-de-bordeaux/entity.yaml) | Appellatie | `appellation.cremant-de-bordeaux` | Nee — reviewroute | `/appellations/cremant-de-bordeaux` | — |
 | [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | `appellation.fronsac` | Nee — reviewroute | `/appellations/fronsac` | — |
 | [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | `appellation.graves` | Nee — reviewroute | `/appellations/graves` | — |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | `appellation.haut-medoc` | Nee — reviewroute | `/appellations/haut-medoc` | — |
+| [Maipo Valley](../content/entities/appellations/maipo-valley/entity.yaml) | Appellatie | `appellation.maipo-valley` | Nee — reviewroute | `/appellations/maipo-valley` | — |
+| [Margaret River](../content/entities/appellations/margaret-river/entity.yaml) | Appellatie | `appellation.margaret-river` | Nee — reviewroute | `/appellations/margaret-river` | — |
 | [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | `appellation.margaux` | Nee — reviewroute | `/appellations/margaux` | — |
+| [Napa Valley](../content/entities/appellations/napa-valley/entity.yaml) | Appellatie | `appellation.napa-valley` | Nee — reviewroute | `/appellations/napa-valley` | — |
 | [Pessac-Léognan](../content/entities/appellations/pessac-leognan/entity.yaml) | Appellatie | `appellation.pessac-leognan` | Nee — reviewroute | `/appellations/pessac-leognan` | — |
 | [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | `appellation.pomerol` | Nee — reviewroute | `/appellations/pomerol` | — |
 | [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | `appellation.saint-emilion` | Nee — reviewroute | `/appellations/saint-emilion` | — |
 | [Saint-Estèphe](../content/entities/appellations/saint-estephe/entity.yaml) | Appellatie | `appellation.saint-estephe` | Nee — reviewroute | `/appellations/saint-estephe` | — |
 | [Saint-Julien](../content/entities/appellations/saint-julien/entity.yaml) | Appellatie | `appellation.saint-julien` | Nee — reviewroute | `/appellations/saint-julien` | — |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Nee — reviewroute | `/appellations/sauternes` | — |
+| [Stellenbosch](../content/entities/appellations/stellenbosch/entity.yaml) | Appellatie | `appellation.stellenbosch` | Nee — reviewroute | `/appellations/stellenbosch` | — |
 | [Classificatie van Graves](../content/entities/classifications/graves/entity.yaml) | Classificatie | `classification.graves` | Nee — reviewroute | `/classifications/classificatie-graves` | — |
 | [Classificatie van Saint-Émilion](../content/entities/classifications/saint-emilion/entity.yaml) | Classificatie | `classification.saint-emilion` | Nee — reviewroute | `/classifications/classificatie-saint-emilion` | — |
 | [Crus Artisans du Médoc](../content/entities/classifications/crus-artisans-du-medoc/entity.yaml) | Classificatie | `classification.crus-artisans-du-medoc` | Nee — reviewroute | `/classifications/crus-artisans-du-medoc` | — |
 | [Crus Bourgeois du Médoc](../content/entities/classifications/crus-bourgeois-du-medoc/entity.yaml) | Classificatie | `classification.crus-bourgeois-du-medoc` | Nee — reviewroute | `/classifications/crus-bourgeois-du-medoc` | — |
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | `concept.fermentation` | Nee — reviewroute | `/concepts/alcoholische-vergisting` | — |
+| [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Nee — reviewroute | `/concepts/ampelografie` | — |
 | [Appellation d’origine protégée (AOP)](../content/entities/concepts/aop/entity.yaml) | Concept | `concept.aop` | Nee — reviewroute | `/concepts/aop` | — |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | `concept.botrytis` | Nee — reviewroute | `/concepts/botrytis-edele-rotting` | — |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | `concept.estate-bottling` | Nee — reviewroute | `/concepts/botteling-op-het-chateau` | — |
@@ -61,8 +69,10 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | `concept.extraction` | Nee — reviewroute | `/concepts/extractie` | — |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | `concept.grand-vin` | Nee — reviewroute | `/concepts/grand-vin` | — |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
+| [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | `concept.clonal-selection` | Nee — reviewroute | `/concepts/klonale-selectie` | — |
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | `concept.malolactic-fermentation` | Nee — reviewroute | `/concepts/malolactische-omzetting` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |
+| [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | `concept.methoxypyrazines` | Nee — reviewroute | `/concepts/methoxypyrazinen` | — |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | `concept.negociant` | Nee — reviewroute | `/concepts/negociant` | — |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | `concept.rootstock` | Nee — reviewroute | `/concepts/onderstam` | — |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | `concept.place-de-bordeaux` | Nee — reviewroute | `/concepts/place-de-bordeaux` | — |
@@ -72,7 +82,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | `concept.second-wine` | Nee — reviewroute | `/concepts/tweede-wijn` | — |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | `concept.acidity` | Nee — reviewroute | `/concepts/zuur-in-wijn` | — |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | `grape.cabernet-franc` | Nee — reviewroute | `/grapes/cabernet-franc` | — |
-| [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Nee — reviewroute | `/grapes/cabernet-sauvignon` | — |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | `grape.carmenere` | Nee — reviewroute | `/grapes/carmenere` | — |
 | [Malbec](../content/entities/grapes/malbec/entity.yaml) | Druif | `grape.malbec` | Nee — reviewroute | `/grapes/malbec` | — |
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Nee — reviewroute | `/grapes/merlot` | — |

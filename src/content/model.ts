@@ -94,9 +94,24 @@ export const APPELLATION_OVERVIEW_DIMENSIONS = [
   "visuals",
   "child-knowledge",
 ] as const;
+export const GRAPE_OVERVIEW_DIMENSIONS = [
+  "identity-and-origins",
+  "vine-and-growing-cycle",
+  "site-climate-and-soils",
+  "regions-and-appellations",
+  "wine-styles-and-sensory-profile",
+  "viticulture-and-risks",
+  "winemaking-and-ageing",
+  "synonyms-clones-and-relatives",
+  "labels-and-recognition",
+  "modern-developments",
+  "visuals",
+  "child-knowledge",
+] as const;
 export const CONTENT_PLAN_DIMENSIONS = [
   ...REGION_OVERVIEW_DIMENSIONS,
   ...APPELLATION_OVERVIEW_DIMENSIONS,
+  ...GRAPE_OVERVIEW_DIMENSIONS,
 ] as const;
 
 export const CONTENT_PLAN_SECTION_HEADINGS = {
@@ -156,6 +171,50 @@ export const CONTENT_PLAN_SECTION_HEADINGS = {
       en: "Wine style and bottle development",
     },
     "labels-and-buying": { nl: "Etiket en aankoop", en: "Labels and buying" },
+    "modern-developments": {
+      nl: "Hedendaagse ontwikkelingen",
+      en: "Contemporary developments",
+    },
+    visuals: { nl: "Beeld", en: "Visuals" },
+    "child-knowledge": { nl: "Verder ontdekken", en: "Explore further" },
+  },
+  "grape-overview": {
+    "identity-and-origins": {
+      nl: "Identiteit en oorsprong",
+      en: "Identity and origins",
+    },
+    "vine-and-growing-cycle": {
+      nl: "Wijnstok en groeicyclus",
+      en: "Vine and growing cycle",
+    },
+    "site-climate-and-soils": {
+      nl: "Klimaat, ligging en bodem",
+      en: "Climate, site and soils",
+    },
+    "regions-and-appellations": {
+      nl: "Regio's en appellations",
+      en: "Regions and appellations",
+    },
+    "wine-styles-and-sensory-profile": {
+      nl: "Wijnstijlen en smaakprofiel",
+      en: "Wine styles and sensory profile",
+    },
+    "viticulture-and-risks": {
+      nl: "Wijnbouw en gevoeligheden",
+      en: "Viticulture and vulnerabilities",
+    },
+    "winemaking-and-ageing": {
+      nl: "Wijnmaken en rijping",
+      en: "Winemaking and ageing",
+    },
+    "synonyms-clones-and-relatives": {
+      nl: "Synoniemen, klonen en verwantschap",
+      en: "Synonyms, clones and relationships",
+    },
+    "labels-and-recognition": {
+      nl: "Etiket en herkenning",
+      en: "Labels and recognition",
+    },
     "modern-developments": {
       nl: "Hedendaagse ontwikkelingen",
       en: "Contemporary developments",
@@ -380,7 +439,7 @@ export const contentPlanSchema = z
   .object({
     schema_version: z.literal(1),
     package_id: entityIdSchema,
-    archetype: z.enum(["region-overview", "appellation-overview"]),
+    archetype: z.enum(["region-overview", "appellation-overview", "grape-overview"]),
     coverage: z
       .array(
         z

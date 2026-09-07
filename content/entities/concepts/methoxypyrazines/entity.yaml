@@ -1,0 +1,16 @@
+id: concept.methoxypyrazines
+type: concept
+status: draft
+canonical_name: Methoxypyrazines
+names:
+  nl: Methoxypyrazinen
+  en: Methoxypyrazines
+slugs:
+  nl: methoxypyrazinen
+  en: methoxypyrazines
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

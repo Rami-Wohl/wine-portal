@@ -219,12 +219,70 @@ gepland: het landgoed in zijn wijnbouwkundige context en de Grand Vin als fles.
 Beide vereisen expliciete rechten en een inhoudelijke caption; een generieke
 châteaufoto of los etiket zonder betrouwbare identificatie is onvoldoende.
 
+### Page-archetype: `grape-overview`
+
+Een druivenraspagina maakt een ras herkenbaar zonder het tot een vast smaakrecept
+te reduceren. Zij behandelt of ontsluit minimaal:
+
+1. identiteit, belang, gedocumenteerde oorsprong en de grens tussen zekerheid en
+   overlevering;
+2. de wijnstok en groeicyclus, waaronder knopvorming, bloei, rijping en oogstmoment
+   voor zover die het ras helpen verklaren;
+3. de verhouding tot klimaat, ligging, water en bodem, zonder terroir tot één
+   oorzaak te versimpelen;
+4. de belangrijkste regio's en appellations en de verschillende rollen die het
+   ras daar speelt;
+5. wijnstijlen, structuur en herkenningspunten in het glas, steeds als tendensen
+   die mede door herkomst, oogstjaar en wijnmaken worden gevormd;
+6. wijnbouwkundige sterktes, gevoeligheden en relevante ziekterisico's;
+7. wijnmaak- en rijpingskeuzes die de expressie aantoonbaar beïnvloeden, inclusief
+   de rol in assemblages wanneer die wezenlijk is;
+8. relevante synoniemen, klonen en genetische verwantschappen;
+9. herkenning op etiket en de vraag waar een ras wel of juist niet wordt genoemd;
+10. hedendaagse ontwikkelingen, waarbij veranderlijke aanplantcijfers en trends
+    naar gedateerde assertions of narratives mogen;
+11. visuals met een concrete ampelografische, wijnbouwkundige, geografische of
+    stilistische leertaak; en
+12. verwante entities en narratives voor verdere verdieping.
+
+De basislaag beantwoordt in gewone taal wat het ras is, waarom het ertoe doet,
+waar het zijn belangrijkste rollen speelt en welke brede structuur of stijl het
+kan bijdragen. `Intermediate` verklaart de hoofdpatronen: groeicyclus,
+klimaatreactie, regionale verschillen, wijnbouw, wijnmaken en gebruik als
+wijn van één ras of in een assemblage. `Advanced` behandelt onderbouwde oorsprong en
+verwantschap, klonale variatie, fysiologische of ziektegerelateerde nuances,
+historische verspreiding, juridische details en belangrijke uitzonderingen.
+`Specialist` blijft gereserveerd voor vakdebatten, onderzoeksmethoden of
+technische details die werkelijk nodig zijn voor de paginabelofte.
+
+Volledigheid betekent hier niet dat iedere kloon, ieder synoniem en ieder land
+wordt opgesomd. De pagina is compleet wanneer zij de bepalende eigenschappen,
+variatie en grenzen uitlegt en het resterende detail bewust naar concrete
+entities of narratives uitbesteedt. Oorsprongs-, ouderschaps- en genetische
+claims vragen een gezaghebbende druivendatabase of wetenschappelijke bron;
+producentenoverlevering alleen is daarvoor onvoldoende.
+
+Voor beeld is een goed geïdentificeerde documentaire opname van tros, blad of
+wijnstok het voorkeursanker. Een educatief diagram kan groei, anatomie of een
+vergelijking uitleggen. Een gegenereerde illustratie mag een concept verhelderen,
+maar geldt niet als bewijs voor rasidentificatie. Verspreidingskaarten gebruiken
+uitsluitend geverifieerde geografische data en worden niet uit proza afgeleid.
+
+Een actieve druivenrasentity gebruikt `grape-overview` in een package-lokaal
+`content-plan.yaml`. De vaste dimensies zijn het startpunt, niet een dwangmatige
+inhoudsopgave: categorieën mogen met een gemotiveerde scopebeslissing worden
+samengevoegd of uitbesteed. Een ras-specifieke extra H2 mag worden toegevoegd
+wanneer die noodzakelijk is voor het volledige narratief; de brief legt dan vast
+waarom het onderwerp niet helder onder een standaardcategorie past. Verplichte
+dimensies verdwijnen daardoor niet stilzwijgend.
+
 ### Semigestandaardiseerde titels van hoofdsecties
 
-De H2 van iedere `section` in een region-, appellation- of producer-overview begint met een
-vaste, gelokaliseerde categorie. Een auteur mag daarna met ` — ` een vrije,
-levendige toevoeging schrijven. Zo blijft een pagina scanbaar en onderling
-vergelijkbaar zonder de redactionele stem uit de koppen te verwijderen.
+De H2 van iedere `section` in een region-, appellation-, producer- of
+grape-overview begint met een vaste, gelokaliseerde categorie. Een auteur mag
+daarna met ` — ` een vrije, levendige toevoeging schrijven. Zo blijft een pagina
+scanbaar en onderling vergelijkbaar zonder de redactionele stem uit de koppen te
+verwijderen.
 
 Voorbeeld:
 
@@ -263,6 +321,23 @@ eigendom / History and ownership`, `Wijngaard en terroir / Vineyard and terroir`
 / Working methods and release`. Alleen de tekst na ` — ` is vrij. Een categorie
 mag worden weggelaten wanneer de contentbrief haar aantoonbaar uitbesteedt of als
 niet relevant motiveert.
+
+Druivenrassen gebruiken deze vaste categorieën:
+
+| Coverage | Druivenras NL / EN |
+| --- | --- |
+| `identity-and-origins` | Identiteit en oorsprong / Identity and origins |
+| `vine-and-growing-cycle` | Wijnstok en groeicyclus / Vine and growing cycle |
+| `site-climate-and-soils` | Klimaat, ligging en bodem / Climate, site and soils |
+| `regions-and-appellations` | Regio's en appellations / Regions and appellations |
+| `wine-styles-and-sensory-profile` | Wijnstijlen en smaakprofiel / Wine styles and sensory profile |
+| `viticulture-and-risks` | Wijnbouw en gevoeligheden / Viticulture and vulnerabilities |
+| `winemaking-and-ageing` | Wijnmaken en rijping / Winemaking and ageing |
+| `synonyms-clones-and-relatives` | Synoniemen, klonen en verwantschap / Synonyms, clones and relationships |
+| `labels-and-recognition` | Etiket en herkenning / Labels and recognition |
+| `modern-developments` | Hedendaagse ontwikkelingen / Contemporary developments |
+| `visuals` | Beeld / Visuals |
+| `child-knowledge` | Verder ontdekken / Explore further |
 
 ## Add an entity
 

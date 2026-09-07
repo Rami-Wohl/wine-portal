@@ -1,0 +1,16 @@
+id: appellation.maipo-valley
+type: appellation
+status: draft
+canonical_name: Maipo Valley
+names:
+  nl: Maipo Valley
+  en: Maipo Valley
+slugs:
+  nl: maipo-valley
+  en: maipo-valley
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

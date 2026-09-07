@@ -1,0 +1,24 @@
+id: media.grape.cabernet-sauvignon.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/cabernet-sauvignon/bunch.jpg
+mime_type: image/jpeg
+width: 1800
+height: 2700
+checksum_sha256: 89f06b23a23b5134a457f8f0d27795be0f3b365aad648d5769dbbe5a03cb0014
+alt:
+  nl: Compacte tros rijpe Cabernet Sauvignon-druiven tussen groene bladeren in Lalande-de-Pomerol
+  en: Compact bunch of ripe Cabernet Sauvignon grapes among green leaves in Lalande-de-Pomerol
+caption:
+  nl: Cabernet Sauvignon vormt doorgaans kleine, donkere bessen in compacte trossen. Beeld alleen is niet genoeg voor zekere rasidentificatie.
+  en: Cabernet Sauvignon generally forms small, dark berries in compact bunches. An image alone is not enough for reliable variety identification.
+rights:
+  status: open-licensed
+  creator: Christophe Eyquem
+  source_url: https://commons.wikimedia.org/wiki/File:Grappe_de_raisin_cabernet_sauvignon.jpg
+  license_name: Creative Commons Attribution 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by/3.0/
+  credit_line: Christophe Eyquem via Wikimedia Commons, CC BY 3.0
+acquired_at: 2026-09-07
+changes: Original Wikimedia file used without crop or editorial colour alteration.

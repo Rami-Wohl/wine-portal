@@ -6,6 +6,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { stringify as stringifyYaml } from "yaml";
 import {
   APPELLATION_OVERVIEW_DIMENSIONS,
+  GRAPE_OVERVIEW_DIMENSIONS,
   REGION_OVERVIEW_DIMENSIONS,
   type ContentPlan,
   type Entity,
@@ -132,6 +133,31 @@ function appellationPlan(packageId: string): ContentPlan {
     ...regionPlan(packageId),
     archetype: "appellation-overview",
     coverage: APPELLATION_OVERVIEW_DIMENSIONS.map((key) => ({
+      key,
+      disposition: "on-page" as const,
+      block_ids: ["orientatie"],
+      target_ids: [],
+      completeness_questions: [`Is ${key} voldoende afgedekt?`],
+      layers: {
+        foundation: ["De noodzakelijke hoofdlijn."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      },
+      evidence: {
+        general_synthesis: { topics: [], source_refs: [] },
+        specific_claims: [],
+      },
+      review: { outline: "complete", nl: "complete", en: "complete" },
+    })),
+  };
+}
+
+function grapePlan(packageId: string): ContentPlan {
+  return {
+    ...regionPlan(packageId),
+    archetype: "grape-overview",
+    coverage: GRAPE_OVERVIEW_DIMENSIONS.map((key) => ({
       key,
       disposition: "on-page" as const,
       block_ids: ["orientatie"],
@@ -453,6 +479,26 @@ describe("content pipeline validation", () => {
     await expect(buildContent({ root, write: false })).resolves.toBeDefined();
   });
 
+  it("requires and validates a grape plan for an active grape", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, {
+      id: "grape.example",
+      status: "active",
+    });
+    const summary = ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n';
+    await writeFile(path.join(directory, "overview.nl.md"), summary);
+    await writeFile(path.join(directory, "overview.en.md"), summary);
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /active grape requires a package-local content-plan\.yaml/,
+    );
+
+    await writeFile(
+      path.join(directory, "content-plan.yaml"),
+      stringifyYaml(grapePlan("grape.example")),
+    );
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+  });
+
   it("requires planned overview section headings to use their localized category label", async () => {
     const root = await temporaryRoot();
     const directory = await addEntity(root, { id: "region.example" });
@@ -479,6 +525,27 @@ describe("content pipeline validation", () => {
     await expect(buildContent({ root, write: false })).rejects.toThrow(
       /nl section 'geschiedenis'.*must use 'Geschiedenis'/,
     );
+  });
+
+  it("validates the localized category labels of grape sections", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "grape.example" });
+    const plan = grapePlan("grape.example");
+    const styles = plan.coverage.find((item) => item.key === "wine-styles-and-sensory-profile");
+    if (!styles) throw new Error("style coverage missing from grape test plan");
+    styles.block_ids = ["wijnstijlen"];
+    await writeFile(path.join(directory, "content-plan.yaml"), stringifyYaml(plan));
+
+    await writeFile(
+      path.join(directory, "overview.nl.md"),
+      ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n\n:::section{#wijnstijlen depth="foundation"}\n## Wijnstijlen en smaakprofiel — geen vast recept\n\nDe hoofdlijn.\n:::\n',
+    );
+    await writeFile(
+      path.join(directory, "overview.en.md"),
+      ':::summary{#orientatie depth="foundation"}\nOrientation.\n:::\n\n:::section{#wijnstijlen depth="foundation"}\n## Wine styles and sensory profile — no fixed recipe\n\nThe main line.\n:::\n',
+    );
+
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
   });
 
   it("requires planned link dependencies in both locales", async () => {

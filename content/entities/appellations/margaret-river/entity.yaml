@@ -1,0 +1,16 @@
+id: appellation.margaret-river
+type: appellation
+status: draft
+canonical_name: Margaret River
+names:
+  nl: Margaret River
+  en: Margaret River
+slugs:
+  nl: margaret-river
+  en: margaret-river
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

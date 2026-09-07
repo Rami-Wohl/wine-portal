@@ -1,0 +1,16 @@
+id: appellation.stellenbosch
+type: appellation
+status: draft
+canonical_name: Stellenbosch
+names:
+  nl: Stellenbosch
+  en: Stellenbosch
+slugs:
+  nl: stellenbosch
+  en: stellenbosch
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

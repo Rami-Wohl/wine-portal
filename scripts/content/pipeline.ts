@@ -7,6 +7,7 @@ import {
   APPELLATION_OVERVIEW_DIMENSIONS,
   CONTENT_PLAN_SECTION_HEADINGS,
   ENTITY_TYPES,
+  GRAPE_OVERVIEW_DIMENSIONS,
   LOCALES,
   REGION_OVERVIEW_DIMENSIONS,
   contentPlanSchema,
@@ -36,6 +37,10 @@ const CONTENT_PLAN_REQUIREMENTS = {
   "appellation-overview": {
     entityType: "appellation",
     dimensions: APPELLATION_OVERVIEW_DIMENSIONS,
+  },
+  "grape-overview": {
+    entityType: "grape",
+    dimensions: GRAPE_OVERVIEW_DIMENSIONS,
   },
 } as const;
 
@@ -382,7 +387,9 @@ function validateContentPlans(
   for (const entityRecord of entityRecords) {
     if (
       entityRecord.value.status === "active" &&
-      (entityRecord.value.type === "region" || entityRecord.value.type === "appellation") &&
+      (entityRecord.value.type === "region" ||
+        entityRecord.value.type === "appellation" ||
+        entityRecord.value.type === "grape") &&
       !plansByEntityId.has(entityRecord.value.id)
     ) {
       issues.push(

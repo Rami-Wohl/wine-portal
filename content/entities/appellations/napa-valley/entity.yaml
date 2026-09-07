@@ -1,0 +1,16 @@
+id: appellation.napa-valley
+type: appellation
+status: draft
+canonical_name: Napa Valley
+names:
+  nl: Napa Valley
+  en: Napa Valley
+slugs:
+  nl: napa-valley
+  en: napa-valley
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

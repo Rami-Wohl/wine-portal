@@ -1,0 +1,16 @@
+id: appellation.bolgheri
+type: appellation
+status: draft
+canonical_name: Bolgheri
+names:
+  nl: Bolgheri
+  en: Bolgheri
+slugs:
+  nl: bolgheri
+  en: bolgheri
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

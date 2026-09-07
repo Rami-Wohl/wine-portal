@@ -1,0 +1,444 @@
+schema_version: 1
+package_id: grape.cabernet-sauvignon
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids: [identiteit-en-oorsprong, van-bordeaux-naar-de-wereld, genetische-ouders]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer wat Cabernet Sauvignon is, waarom het ras belangrijk werd en wat wel en niet zeker is over zijn oorsprong?
+    layers:
+      foundation: [Introduceer het ras als Bordeauxs blauw druivenras met wereldwijde betekenis.]
+      intermediate:
+        [Plaats zijn opkomst en internationale verspreiding in de wijnhistorische hoofdlijn.]
+      advanced:
+        [Leg de genetisch aangetoonde ouderschap van Cabernet Franc en Sauvignon Blanc precies uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Identiteit, historische betekenis en Bordeauxse oorsprong.]
+        source_refs:
+          [source.wine-grapes-cabernet-sauvignon, source.uc-davis-bordeaux-grape-varieties]
+      specific_claims:
+        - claim: Microsatellietonderzoek identificeerde Cabernet Franc en Sauvignon Blanc als ouders van Cabernet Sauvignon.
+          status: supported
+          source_refs: [source.bowers-meredith-cabernet-parentage-1997]
+    review: &complete_section_review { outline: complete, nl: complete, en: complete }
+
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids: [wijnstok-en-groeicyclus, lezen-aan-de-stok, variatie-binnen-het-ras]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer late knopvorming, late rijping, groeikracht, tros en bes als één samenhangend groeiprofiel begrijpen?
+    layers:
+      foundation: [Leg de lange groeicyclus en kleine bessen uit.]
+      intermediate:
+        [Introduceer ampelografische herkenningspunten zonder visuele zekerheid te suggereren.]
+      advanced:
+        [Leg uit waarom klonen en plantmateriaal prestaties binnen hetzelfde ras laten variëren.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Fenologie, groeikracht, tros-, bes- en bladkenmerken.]
+        source_refs: [source.plantgrape-cabernet-sauvignon]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids: [klimaat-ligging-en-bodem, smal-rijpheidsvenster, bodem-is-geen-aroma]
+    target_ids: []
+    completeness_questions:
+      - Verklaart de pagina waarom warmte, seizoenslengte, water en afwatering belangrijk zijn zonder één ideaal klimaat of bodemtype uit te roepen?
+    layers:
+      foundation: [Verbind de late rijping met voldoende warmte en een passende waterhuishouding.]
+      intermediate: [Laat zien hoe te koel en te heet beide het evenwicht kunnen verstoren.]
+      advanced: [Begrens beroemde bodemassociaties en scheid bodemfunctie van aroma.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatgeschiktheid, afwatering, waterbeschikbaarheid en rijpheid.]
+        source_refs:
+          [source.plantgrape-cabernet-sauvignon, source.wine-australia-cabernet-sauvignon]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids: [regios-en-appellations, zes-wereldankers, geen-wereldranglijst]
+    target_ids: []
+    completeness_questions:
+      - Plaatst de pagina Bordeaux en de belangrijkste internationale stijlankers zonder een uitputtende of hiërarchische wereldlijst te suggereren?
+    layers:
+      foundation:
+        [
+          Begin bij Bordeaux en maak duidelijk dat het ras wereldwijd zowel solo als in blends voorkomt.,
+        ]
+      intermediate:
+        [
+          Vergelijk Napa Valley,
+          Coonawarra,
+          Margaret River,
+          Maipo Valley,
+          Stellenbosch en Bolgheri als navigatieankers.,
+        ]
+      advanced:
+        [Leg uit waarom regioprofielen intern variëren en actuele aanplantcijfers apart horen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Bordeauxse en internationale verspreiding en regionale rollen.]
+        source_refs:
+          [
+            source.wine-grapes-cabernet-sauvignon,
+            source.civb-bordeaux-grape-varieties,
+            source.wine-australia-cabernet-sauvignon,
+          ]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids: [wijnstijlen-en-smaakprofiel, groen-is-een-spectrum, tijd-verandert-de-taal]
+    target_ids: []
+    completeness_questions:
+      - Geeft de pagina een bruikbaar beeld van kleur, fruit, zuur, tannine, groene tonen en flesontwikkeling als bandbreedte in plaats van recept?
+    layers:
+      foundation: [Beschrijf de structurele ruggengraat en klassieke aromatische aanknopingspunten.]
+      intermediate: [Leg groene aroma's, rijpheid en methoxypyrazinen proportioneel uit.]
+      advanced:
+        [
+          Verbind flesontwikkeling met fruit,
+          tannine,
+          zuur,
+          zuurstof en hout zonder universeel drinkvenster.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Stijlbandbreedte, structuur en flesontwikkeling.]
+        source_refs: [source.plantgrape-cabernet-sauvignon, source.wine-grapes-cabernet-sauvignon]
+      specific_claims:
+        - claim: Methoxypyrazinen behoren tot de verbindingen die paprika-, sperzieboon- en plantaardige associaties in Cabernet Sauvignon kunnen geven.
+          status: supported
+          source_refs: [source.awri-green-flavour-cabernet-sauvignon]
+    review: *complete_section_review
+
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids: [wijnbouw-en-gevoeligheden, bladerdek-en-oogstmoment, warmte-water-en-hout]
+    target_ids: []
+    completeness_questions:
+      - Zijn de belangrijkste kansen, ziekterisico's en beheerafwegingen uitgelegd zonder te veranderen in teeltadvies?
+    layers:
+      foundation: [Leg de afweging tussen late cyclus en betrouwbare rijpheid uit.]
+      intermediate: [Verbind groeikracht, bladerdek, licht en oogstmoment.]
+      advanced:
+        [Behandel water- en hittestress en de gevoeligheid voor echte meeldauw en houtziekten.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Groei, rijping, ziekten en vineyard management.]
+        source_refs:
+          [source.plantgrape-cabernet-sauvignon, source.wine-australia-cabernet-sauvignon]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids: [wijnmaken-en-rijping, solo-of-samen, extractie-hout-en-hele-trossen]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer hoe schilcontact, extractie, assemblage, vat en fles het ras vormen zonder één correcte methode te suggereren?
+    layers:
+      foundation:
+        [Volg de druif van kneuzen en vergisting via extractie naar assemblage en rijping.]
+      intermediate: [Vergelijk cépagewijn met Bordeauxse en Australische blendrollen.]
+      advanced: [Begrens extractie, nieuw hout en hele-trosvergisting als stijlkeuzes met risico's.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode-wijnbereiding, assemblage, extractie en vatrijping.]
+        source_refs:
+          [source.plantgrape-cabernet-sauvignon, source.wine-australia-cabernet-sauvignon]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids: [synoniemen-klonen-en-verwantschap, selectie-is-geen-nieuw-ras]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer officiële naam, lokaal synoniem, verkorte etikettering, kloon en genetische ouder uit elkaar houden?
+    layers:
+      foundation: [Maak het onderscheid tussen rasnaam, verwante druif en kloon begrijpelijk.]
+      intermediate: []
+      advanced: [Leg selectienummers, sanitaire status en regionale klonale tradities uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Synoniemen, klonale selectie en plantmateriaal.]
+        source_refs: [source.uc-davis-bordeaux-grape-varieties]
+      specific_claims:
+        - claim: Plantgrape vermeldt geen officieel erkend synoniem in Frankrijk of elders in de Europese Unie.
+          status: supported
+          source_refs: [source.plantgrape-cabernet-sauvignon]
+    review: *complete_section_review
+
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids:
+      [etiket-en-herkenning, vijfentachtig-procent-is-niet-honderd, kijken-is-niet-bewijzen]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer een druifnaam, herkomstnaam en blendclaim op een etiket onderscheiden en begrijpt die de grens van visuele rasherkenning?
+    layers:
+      foundation:
+        [Leg uit waarom Bordeaux vaak herkomst toont en andere wijnlanden vaker de druif noemen.]
+      intermediate: [Geef de Europese 85%-regel als concreet maar jurisdictiegebonden voorbeeld.]
+      advanced: [Begrens historische ampelografie tegenover gecertificeerd plantmateriaal en DNA.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Herkomst- en druifetikettering en ampelografische herkenning.]
+        source_refs: [source.plantgrape-cabernet-sauvignon, source.civb-bordeaux-grape-varieties]
+      specific_claims:
+        - claim: In de EU moet een wijn die één druivenras op het etiket noemt voor ten minste 85 procent uit dat ras bestaan, behoudens de omschreven uitzonderingen.
+          status: supported
+          source_refs: [source.eu-wine-variety-labelling-2019]
+    review: *complete_section_review
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, aanpassen-zonder-een-recept, cijfers-horen-een-datum]
+    target_ids: []
+    completeness_questions:
+      - Behandelt de pagina klimaatverandering, plantmateriaal en veranderlijke aanplant als actuele vraagstukken zonder ongefundeerde voorspelling?
+    layers:
+      foundation:
+        [
+          Leg uit waarom een laatrijpend ras tegelijk kansen en nieuwe risico's onder opwarming kent.,
+        ]
+      intermediate:
+        [
+          Toon adaptatie als combinatie van site,
+          bladerdek,
+          bodem,
+          onderstam,
+          oogstmoment en wijnmaken.,
+        ]
+      advanced: [Scheid duurzame rassenkennis van gedateerde statistiek en marktrang.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatdruk, adaptatie en veranderlijke verspreiding.]
+        source_refs:
+          [source.wine-australia-cabernet-sauvignon, source.plantgrape-cabernet-sauvignon]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [cabernet-tros, historische-ampelografie]
+    target_ids: []
+    completeness_questions:
+      - Tonen de beelden tros, bes en historische herkenningskenmerken met heldere grenzen aan wat uit beeld kan worden afgeleid?
+    layers:
+      foundation: [Toon een gedocumenteerde tros Cabernet Sauvignon aan de wijnstok.]
+      intermediate: [Toon blad, tros en bes samen in een historische ampelografische plaat.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair en educatief rassenbeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - grape.cabernet-franc
+      - grape.sauvignon-blanc
+      - grape.merlot
+      - region.bordeaux
+      - region.medoc
+      - appellation.pauillac
+      - appellation.graves
+      - appellation.napa-valley
+      - appellation.coonawarra
+      - appellation.margaret-river
+      - appellation.maipo-valley
+      - appellation.stellenbosch
+      - appellation.bolgheri
+      - concept.assemblage
+      - concept.maceration
+      - concept.ampelography
+      - concept.methoxypyrazines
+      - concept.clonal-selection
+    completeness_questions:
+      - Brengen links de lezer naar ouders, regio's en kernbegrippen zonder hun detail op deze overzichtspagina te dupliceren?
+    layers:
+      foundation: [Ontsluit ouders, Bordeaux, Pauillac en assemblage.]
+      intermediate: [Ontsluit internationale ankerregio's en ampelografie.]
+      advanced: [Ontsluit methoxypyrazinen en klonale selectie.]
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+entity_dependencies:
+  - {
+      id: grape.cabernet-franc,
+      names: { nl: Cabernet Franc, en: Cabernet Franc },
+      slugs: { nl: cabernet-franc, en: cabernet-franc },
+      disposition: link-and-relation,
+    }
+  - {
+      id: grape.sauvignon-blanc,
+      names: { nl: Sauvignon Blanc, en: Sauvignon Blanc },
+      slugs: { nl: sauvignon-blanc, en: sauvignon-blanc },
+      disposition: link-and-relation,
+    }
+  - {
+      id: grape.merlot,
+      names: { nl: Merlot, en: Merlot },
+      slugs: { nl: merlot, en: merlot },
+      disposition: link-and-relation,
+    }
+  - {
+      id: region.bordeaux,
+      names: { nl: Bordeaux, en: Bordeaux },
+      slugs: { nl: bordeaux, en: bordeaux },
+      disposition: link-and-relation,
+    }
+  - {
+      id: region.medoc,
+      names: { nl: Médoc, en: Médoc },
+      slugs: { nl: medoc, en: medoc },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.pauillac,
+      names: { nl: Pauillac, en: Pauillac },
+      slugs: { nl: pauillac, en: pauillac },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.graves,
+      names: { nl: Graves, en: Graves },
+      slugs: { nl: graves, en: graves },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.napa-valley,
+      names: { nl: Napa Valley, en: Napa Valley },
+      slugs: { nl: napa-valley, en: napa-valley },
+      disposition: link,
+    }
+  - {
+      id: appellation.coonawarra,
+      names: { nl: Coonawarra, en: Coonawarra },
+      slugs: { nl: coonawarra, en: coonawarra },
+      disposition: link,
+    }
+  - {
+      id: appellation.margaret-river,
+      names: { nl: Margaret River, en: Margaret River },
+      slugs: { nl: margaret-river, en: margaret-river },
+      disposition: link,
+    }
+  - {
+      id: appellation.maipo-valley,
+      names: { nl: Maipo Valley, en: Maipo Valley },
+      slugs: { nl: maipo-valley, en: maipo-valley },
+      disposition: link,
+    }
+  - {
+      id: appellation.stellenbosch,
+      names: { nl: Stellenbosch, en: Stellenbosch },
+      slugs: { nl: stellenbosch, en: stellenbosch },
+      disposition: link,
+    }
+  - {
+      id: appellation.bolgheri,
+      names: { nl: Bolgheri, en: Bolgheri },
+      slugs: { nl: bolgheri, en: bolgheri },
+      disposition: link,
+    }
+  - {
+      id: concept.assemblage,
+      names: { nl: Assemblage, en: Blending },
+      slugs: { nl: assemblage, en: blending },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.tannin,
+      names: { nl: Tannine, en: Tannin },
+      slugs: { nl: tannine, en: tannin },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.acidity,
+      names: { nl: Zuur in wijn, en: Acidity in wine },
+      slugs: { nl: zuur-in-wijn, en: acidity-in-wine },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.terroir,
+      names: { nl: Terroir, en: Terroir },
+      slugs: { nl: terroir, en: terroir },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.vintage,
+      names: { nl: Jaargang, en: Vintage },
+      slugs: { nl: jaargang, en: vintage },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.extraction,
+      names: { nl: Extractie, en: Extraction },
+      slugs: { nl: extractie, en: extraction },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.maceration,
+      names: { nl: Schilinweking, en: Maceration },
+      slugs: { nl: schilinweking, en: maceration },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.elevage,
+      names: { nl: Élevage, en: Maturation },
+      slugs: { nl: elevage, en: maturation },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.rootstock,
+      names: { nl: Onderstam, en: Rootstock },
+      slugs: { nl: onderstam, en: rootstock },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.ampelography,
+      names: { nl: Ampelografie, en: Ampelography },
+      slugs: { nl: ampelografie, en: ampelography },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.methoxypyrazines,
+      names: { nl: Methoxypyrazinen, en: Methoxypyrazines },
+      slugs: { nl: methoxypyrazinen, en: methoxypyrazines },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.clonal-selection,
+      names: { nl: Klonale selectie, en: Clonal selection },
+      slugs: { nl: klonale-selectie, en: clonal-selection },
+      disposition: link-and-relation,
+    }
+
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

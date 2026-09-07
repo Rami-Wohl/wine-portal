@@ -1,0 +1,24 @@
+id: media.grape.cabernet-sauvignon.ampelography
+kind: illustration
+role: educational
+status: active
+storage_key: grapes/cabernet-sauvignon/ampelography.jpg
+mime_type: image/jpeg
+width: 1920
+height: 2819
+checksum_sha256: 5d438881d77394ba6fc8d97db972b2b0aa46a65727da768676e1db455b783f47
+alt:
+  nl: Historische botanische plaat van Cabernet Sauvignon met scheut, blad, tros, bes en doorsnede
+  en: Historical botanical plate of Cabernet Sauvignon showing shoot, leaf, bunch, berry and cross-section
+caption:
+  nl: Jules Troncy bracht rond 1901–1910 de herkenningskenmerken van Cabernet Sauvignon samen voor Viala en Vermorels L’Ampélographie.
+  en: Around 1901–1910, Jules Troncy brought Cabernet Sauvignon's identifying features together for Viala and Vermorel's L’Ampélographie.
+rights:
+  status: public-domain
+  creator: Jules Troncy
+  source_url: https://commons.wikimedia.org/wiki/File:Cabernet_sauvignon_Viala_Vermorel.jpg
+  license_name: Public Domain Mark 1.0
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  credit_line: Jules Troncy via Wikimedia Commons, public domain
+acquired_at: 2026-09-07
+changes: Wikimedia thumbnail used without crop or editorial colour alteration.

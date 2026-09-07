@@ -1,6 +1,6 @@
 id: grape.cabernet-sauvignon
 type: grape
-status: draft
+status: active
 canonical_name: Cabernet Sauvignon
 names:
   nl: Cabernet Sauvignon
@@ -11,6 +11,66 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - type: related_to
+    target: grape.cabernet-franc
+  - type: related_to
+    target: grape.sauvignon-blanc
+  - type: related_to
+    target: grape.merlot
+  - type: associated_with
+    target: region.bordeaux
+  - type: associated_with
+    target: region.medoc
+  - type: associated_with
+    target: appellation.pauillac
+  - type: associated_with
+    target: appellation.graves
+  - type: related_to
+    target: concept.assemblage
+  - type: related_to
+    target: concept.tannin
+  - type: related_to
+    target: concept.acidity
+  - type: related_to
+    target: concept.terroir
+  - type: related_to
+    target: concept.vintage
+  - type: related_to
+    target: concept.extraction
+  - type: related_to
+    target: concept.maceration
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.rootstock
+  - type: related_to
+    target: concept.ampelography
+  - type: related_to
+    target: concept.methoxypyrazines
+  - type: related_to
+    target: concept.clonal-selection
+assertions:
+  - id: assertion.cabernet-sauvignon.genetic-parentage
+    predicate: genetic_parentage
+    value: Cabernet Franc × Sauvignon Blanc
+    status: verified
+    sources: [source.bowers-meredith-cabernet-parentage-1997]
+    last_verified: 2026-09-07
+  - id: assertion.cabernet-sauvignon.official-eu-synonyms
+    predicate: officially_recognized_eu_synonyms
+    value: none
+    status: verified
+    sources: [source.plantgrape-cabernet-sauvignon]
+    last_verified: 2026-09-07
+source_refs:
+  - source.plantgrape-cabernet-sauvignon
+  - source.bowers-meredith-cabernet-parentage-1997
+  - source.wine-grapes-cabernet-sauvignon
+  - source.uc-davis-bordeaux-grape-varieties
+  - source.wine-australia-cabernet-sauvignon
+  - source.awri-green-flavour-cabernet-sauvignon
+  - source.eu-wine-variety-labelling-2019
+  - source.civb-bordeaux-grape-varieties
+depth: foundation
+last_reviewed: 2026-09-07

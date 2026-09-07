@@ -37,7 +37,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Onderwerp | Canonical locatie | Rol |
 | --- | --- | --- |
 | Entity-identiteit, relaties en assertions | `content/entities/**/entity.yaml` | Gedeelde, taaloverstijgende kennis |
-| Dekkingsplan en dependency-inventaris | `content/entities/**/content-plan.yaml` | Afdwingbaar redactioneel contract voor grote overzichten; niet in de runtimebundle |
+| Dekkingsplan en dependency-inventaris | `content/entities/**/content-plan.yaml` | Afdwingbaar redactioneel contract voor regio-, appellation- en druivenrasoverzichten; niet in de runtimebundle |
 | Entity-uitleg | `content/entities/**/overview.<locale>.md` | Gelokaliseerde presentatie |
 | Narrative-metadata en entitykoppelingen | `content/narratives/**/narrative.yaml` | Identiteit, scope en relaties van een verhaal |
 | Narrative-artikel | `content/narratives/**/article.<locale>.md` | Gelokaliseerde uitleg over meerdere entities |
