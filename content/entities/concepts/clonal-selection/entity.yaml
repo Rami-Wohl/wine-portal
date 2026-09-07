@@ -1,6 +1,6 @@
 id: concept.clonal-selection
 type: concept
-status: draft
+status: active
 canonical_name: Clonal selection
 names:
   nl: Klonale selectie
@@ -11,6 +11,13 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.massal-selection }
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-clonal-selection-2017
+  - source.oiv-grape-variety-identification-2019
+  - source.plantgrape-cabernet-franc
+  - source.plantgrape-cabernet-sauvignon
+depth: foundation
+last_reviewed: 2026-09-07
