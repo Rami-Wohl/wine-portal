@@ -1,0 +1,16 @@
+id: appellation.bourgueil
+type: appellation
+status: draft
+canonical_name: Bourgueil
+names:
+  nl: Bourgueil
+  en: Bourgueil
+slugs:
+  nl: bourgueil
+  en: bourgueil
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

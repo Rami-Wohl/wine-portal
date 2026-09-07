@@ -1,0 +1,16 @@
+id: appellation.saumur-champigny
+type: appellation
+status: draft
+canonical_name: Saumur-Champigny
+names:
+  nl: Saumur-Champigny
+  en: Saumur-Champigny
+slugs:
+  nl: saumur-champigny
+  en: saumur-champigny
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

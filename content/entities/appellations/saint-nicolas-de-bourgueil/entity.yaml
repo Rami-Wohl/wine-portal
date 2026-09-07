@@ -1,0 +1,16 @@
+id: appellation.saint-nicolas-de-bourgueil
+type: appellation
+status: draft
+canonical_name: Saint-Nicolas-de-Bourgueil
+names:
+  nl: Saint-Nicolas-de-Bourgueil
+  en: Saint-Nicolas-de-Bourgueil
+slugs:
+  nl: saint-nicolas-de-bourgueil
+  en: saint-nicolas-de-bourgueil
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

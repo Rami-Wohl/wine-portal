@@ -1,0 +1,16 @@
+id: region.loire-valley
+type: region
+status: draft
+canonical_name: Loire Valley
+names:
+  nl: Loirevallei
+  en: Loire Valley
+slugs:
+  nl: loirevallei
+  en: loire-valley
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,6 +1,6 @@
 id: grape.cabernet-franc
 type: grape
-status: draft
+status: active
 canonical_name: Cabernet Franc
 names:
   nl: Cabernet Franc
@@ -11,6 +11,60 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: related_to, target: grape.merlot }
+  - { type: related_to, target: grape.sauvignon-blanc }
+  - { type: associated_with, target: region.loire-valley }
+  - { type: associated_with, target: region.bordeaux }
+  - { type: associated_with, target: appellation.chinon }
+  - { type: associated_with, target: appellation.bourgueil }
+  - { type: associated_with, target: appellation.saint-nicolas-de-bourgueil }
+  - { type: associated_with, target: appellation.saumur-champigny }
+  - { type: associated_with, target: appellation.saint-emilion }
+  - { type: associated_with, target: appellation.pomerol }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.tannin }
+  - { type: related_to, target: concept.acidity }
+  - { type: related_to, target: concept.terroir }
+  - { type: related_to, target: concept.vintage }
+  - { type: related_to, target: concept.extraction }
+  - { type: related_to, target: concept.maceration }
+  - { type: related_to, target: concept.elevage }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.ampelography }
+  - { type: related_to, target: concept.methoxypyrazines }
+  - { type: related_to, target: concept.clonal-selection }
+  - { type: related_to, target: concept.massal-selection }
+assertions:
+  - id: assertion.cabernet-franc.cabernet-sauvignon-parentage
+    predicate: genetic_parent_of
+    value: grape.cabernet-sauvignon
+    status: verified
+    sources: [source.bowers-meredith-cabernet-parentage-1997]
+    last_verified: 2026-09-07
+  - id: assertion.cabernet-franc.merlot-parentage
+    predicate: genetic_parent_of
+    value: grape.merlot
+    status: verified
+    sources: [source.boursiquot-merlot-parentage-2009]
+    last_verified: 2026-09-07
+  - id: assertion.cabernet-franc.official-eu-synonyms
+    predicate: officially_recognized_eu_synonyms
+    value: none
+    status: verified
+    sources: [source.plantgrape-cabernet-franc]
+    last_verified: 2026-09-07
+source_refs:
+  - source.plantgrape-cabernet-franc
+  - source.bowers-meredith-cabernet-parentage-1997
+  - source.boursiquot-merlot-parentage-2009
+  - source.wine-grapes-cabernet-franc
+  - source.inao-loire-cabernet-franc-appellations
+  - source.inao-bourgueil-rouge
+  - source.inao-saint-nicolas-de-bourgueil-rouge
+  - source.inao-saumur-champigny
+  - source.civb-bordeaux-grape-varieties
+  - source.uc-davis-bordeaux-grape-varieties
+  - source.eu-wine-variety-labelling-2019
+depth: foundation
+last_reviewed: 2026-09-07

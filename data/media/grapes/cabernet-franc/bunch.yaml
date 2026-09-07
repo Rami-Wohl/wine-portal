@@ -1,0 +1,24 @@
+id: media.grape.cabernet-franc.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/cabernet-franc/bunch.jpg
+mime_type: image/jpeg
+width: 1920
+height: 2050
+checksum_sha256: 3933579e2ff0eb9fddf7e92a47170ea58273a9f48f2b2ac4b8c2d7fcf44dfa0e
+alt:
+  nl: Trossen rijpe Cabernet Franc-druiven tussen de bladeren in Cucamonga Valley
+  en: Bunches of ripe Cabernet Franc grapes among the leaves in Cucamonga Valley
+caption:
+  nl: Cabernet Franc aan de stok. Trosvorm en besgrootte geven aanwijzingen, maar bewijzen op zichzelf het ras niet.
+  en: Cabernet Franc on the vine. Bunch shape and berry size offer clues, but do not identify the variety on their own.
+rights:
+  status: open-licensed
+  creator: Gino L. Filippi
+  source_url: https://commons.wikimedia.org/wiki/File:Cabernet_Franc,_Hippard_Ranch_Etiwanda,_Cucamonga_Valley.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Gino L. Filippi via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-07
+changes: Wikimedia thumbnail resized to 1920 pixels wide without crop or editorial colour alteration.

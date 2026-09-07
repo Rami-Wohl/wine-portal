@@ -1,0 +1,24 @@
+id: media.grape.cabernet-franc.ampelography
+kind: illustration
+role: educational
+status: active
+storage_key: grapes/cabernet-franc/ampelography.jpg
+mime_type: image/jpeg
+width: 1920
+height: 2930
+checksum_sha256: 34017f03fc1cd2a2d5c298d33ac133550c9fb7f28e6491f0388d03fe4d60c621
+alt:
+  nl: Historische botanische plaat van Cabernet Franc met scheut, blad, tros, bes en doorsnede
+  en: Historical botanical plate of Cabernet Franc showing shoot, leaf, bunch, berry and cross-section
+caption:
+  nl: Een historische plaat uit Viala en Vermorels L’Ampélographie brengt blad, tros en bes samen als herkenningskenmerken.
+  en: A historical plate from Viala and Vermorel's L’Ampélographie brings leaf, bunch and berry together as identifying features.
+rights:
+  status: public-domain
+  creator: Viala and Vermorel
+  source_url: https://commons.wikimedia.org/wiki/File:Cabernet-franc.jpg
+  license_name: Public Domain Mark 1.0
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  credit_line: Viala and Vermorel via Wikimedia Commons, public domain
+acquired_at: 2026-09-07
+changes: Wikimedia thumbnail resized to 1920 pixels wide without crop or editorial colour alteration.

@@ -1,0 +1,363 @@
+schema_version: 1
+package_id: grape.cabernet-franc
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids:
+      [identiteit-en-oorsprong, ouder-dan-zijn-beroemdste-kind, wat-dna-wel-en-niet-vertelt]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer wat Cabernet Franc is, waar zijn wortels vermoedelijk liggen en waarom het ras historisch en genetisch belangrijk is?
+    layers:
+      foundation: [Introduceer het ras als zelfstandige Loire-ster en Bordeauxse bouwsteen.]
+      intermediate: [Plaats zijn lange geschiedenis vóór Cabernet Sauvignon.]
+      advanced:
+        [Leg het genetische ouderschap van Cabernet Sauvignon en Merlot precies en begrensd uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Identiteit, Franse oorsprong en historische betekenis.]
+        source_refs: [source.plantgrape-cabernet-franc, source.wine-grapes-cabernet-franc]
+      specific_claims:
+        - claim: Cabernet Franc en Sauvignon Blanc zijn de genetische ouders van Cabernet Sauvignon.
+          status: supported
+          source_refs: [source.bowers-meredith-cabernet-parentage-1997]
+        - claim: Cabernet Franc is een genetische ouder van Merlot.
+          status: supported
+          source_refs: [source.boursiquot-merlot-parentage-2009]
+    review: &complete_section_review { outline: complete, nl: complete, en: complete }
+
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids: [wijnstok-en-groeicyclus, lezen-aan-de-stok, variatie-binnen-het-ras]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer groeikracht, rijptijd, tros, bes en blad als één samenhangend groeiprofiel begrijpen?
+    layers:
+      foundation:
+        [Leg de vrij krachtige groei, middelgrote tros, kleine bes en middentijdse rijping uit.]
+      intermediate:
+        [Introduceer ampelografische herkenningspunten zonder visuele zekerheid te suggereren.]
+      advanced: [Leg klonen, conservatoria en variatie in plantmateriaal uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Fenologie, groeikracht, tros-, bes- en bladkenmerken.]
+        source_refs: [source.plantgrape-cabernet-franc]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids: [klimaat-ligging-en-bodem, kalk-klei-zand-en-grind, rijp-zonder-zwaar-te-worden]
+    target_ids: []
+    completeness_questions:
+      - Verklaart de pagina de rol van temperatuur, water en bodemfunctie zonder één ideale grond of stijl uit te roepen?
+    layers:
+      foundation:
+        [
+          Verbind de relatief vroege rijping met gematigde klimaten en een beheerste waterhuishouding.,
+        ]
+      intermediate: [Vergelijk kalk-klei, zand en grind als functionele groeiplaatsen.]
+      advanced: [Leg het spanningsveld tussen volledige rijpheid, frisheid en hitte uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatgeschiktheid, bodemfunctie, afwatering en waterstress.]
+        source_refs: [source.plantgrape-cabernet-franc, source.wine-grapes-cabernet-franc]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids: [regios-en-appellations, de-loire-in-vier-ankers, bordeaux-en-de-wereld]
+    target_ids: []
+    completeness_questions:
+      - Geeft de pagina Loire en Bordeaux beide voldoende gewicht en opent zij de internationale verspreiding zonder catalogus te worden?
+    layers:
+      foundation: [Introduceer Loire en Bordeaux als twee verschillende klassieke rollen.]
+      intermediate: [Plaats Chinon, Bourgueil, Saint-Nicolas-de-Bourgueil en Saumur-Champigny.]
+      advanced: [Leg de Bordeauxse en internationale rollen uit zonder vaste regiostereotypen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Franse hoofdgebieden en internationale verspreiding.]
+        source_refs:
+          [
+            source.inao-loire-cabernet-franc-appellations,
+            source.inao-bourgueil-rouge,
+            source.inao-saint-nicolas-de-bourgueil-rouge,
+            source.inao-saumur-champigny,
+            source.civb-bordeaux-grape-varieties,
+            source.wine-grapes-cabernet-franc,
+          ]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids: [wijnstijlen-en-smaakprofiel, groen-kan-fris-of-rauw-zijn, tijd-en-textuur]
+    target_ids: []
+    completeness_questions:
+      - Geeft de pagina een bruikbare bandbreedte van fruit, kruiden, zuur, tannine, groene tonen en flesontwikkeling?
+    layers:
+      foundation:
+        [Beschrijf rood en donker fruit, fris zuur, middelmatige tannine en aromatische helderheid.]
+      intermediate: [Leg groene aroma's en methoxypyrazinen proportioneel uit.]
+      advanced: [Verbind concentratie en flesontwikkeling met plek, opbrengst en bereiding.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Stijlbandbreedte, structuur, aroma en flesontwikkeling.]
+        source_refs: [source.plantgrape-cabernet-franc, source.wine-grapes-cabernet-franc]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids: [wijnbouw-en-gevoeligheden, bladerdek-en-oogstmoment, ziekten-water-en-hitte]
+    target_ids: []
+    completeness_questions:
+      - Zijn groeikracht, snoei, oogstkeuze, waterstress en belangrijkste gevoeligheden als afwegingen uitgelegd?
+    layers:
+      foundation: [Leg groeikracht, rijpheid en beheersing van het bladerdek uit.]
+      intermediate: [Verbind licht, lucht, opbrengst en oogstmoment met stijl.]
+      advanced: [Behandel grijze rot, houtziekten, cicaden, waterstress en hitte.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Groei, snoei, rijping, ziekten en klimaatrisico.]
+        source_refs: [source.plantgrape-cabernet-franc]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids: [wijnmaken-en-rijping, solo-of-in-assemblage, hele-trossen-extractie-en-hout]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer hoe rode-wijnbereiding, assemblage, hele trossen, vat en fles verschillende kanten van het ras tonen?
+    layers:
+      foundation: [Volg het ras van vergisting met schillen naar opvoeding en fles.]
+      intermediate: [Vergelijk zelfstandige Loirewijn met de Bordeauxse blendrol.]
+      advanced: [Begrens hele trossen, extractie en nieuw hout als stijlkeuzes met risico's.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode-wijnbereiding, assemblage, extractie en rijping.]
+        source_refs: [source.wine-grapes-cabernet-franc, source.civb-bordeaux-grape-varieties]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids: [synoniemen-klonen-en-verwantschap, een-knooppunt-in-de-stamboom]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer officiële naam, historische bijnaam, kloon en genetische verwant uit elkaar houden?
+    layers:
+      foundation: [Scheid rasnaam, kloon en verwante druif.]
+      intermediate: []
+      advanced: [Leg de genetische familie en Franse klonale bewaring uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Synoniemen, klonen, conservatoria en verwantschap.]
+        source_refs: [source.uc-davis-bordeaux-grape-varieties]
+      specific_claims:
+        - claim: Plantgrape noemt geen officieel erkend synoniem in Frankrijk of elders in de Europese Unie.
+          status: supported
+          source_refs: [source.plantgrape-cabernet-franc]
+    review: *complete_section_review
+
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids: [etiket-en-herkenning, druif-of-herkomst-op-de-voorgrond, kijken-is-geen-bewijs]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer een druifnaam, Loire- of Bordeauxherkomst en blendclaim onderscheiden en begrijpt die de grens van visuele herkenning?
+    layers:
+      foundation: [Leg uit wanneer Cabernet Franc wel en niet zichtbaar op het etiket staat.]
+      intermediate: [Vergelijk druifetiket met appellationetiket.]
+      advanced: [Begrens historische ampelografie tegenover certificering en DNA.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Druif- en herkomstetikettering en veldherkenning.]
+        source_refs:
+          [
+            source.inao-loire-cabernet-franc-appellations,
+            source.civb-bordeaux-grape-varieties,
+            source.plantgrape-cabernet-franc,
+          ]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      [hedendaagse-ontwikkelingen, aanpassen-zonder-identiteit-te-fixeren, cijfers-horen-een-datum]
+    target_ids: []
+    completeness_questions:
+      - Behandelt de pagina herwaardering, klimaatadaptatie en veranderlijke aanplant zonder hype of ongefundeerde voorspelling?
+    layers:
+      foundation: [Leg uit waarom vroege rijping en frisheid het ras opnieuw aandacht geven.]
+      intermediate:
+        [Toon adaptatie als combinatie van site, bladerdek, water, onderstam, pluk en kelder.]
+      advanced: [Scheid duurzame rassenkennis van gedateerde hectare- en marktclaims.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Herwaardering, klimaatdruk, adaptatie en veranderlijke verspreiding.]
+        source_refs: [source.plantgrape-cabernet-franc, source.wine-grapes-cabernet-franc]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [cabernet-franc-tros, historische-ampelografie]
+    target_ids: []
+    completeness_questions:
+      - Tonen de beelden tros, blad en bes met heldere grenzen aan wat uit beeld kan worden afgeleid?
+    layers:
+      foundation: [Toon gedocumenteerde Cabernet Franc-trossen aan de stok.]
+      intermediate: [Toon blad, tros en bes samen in een historische ampelografische plaat.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair en educatief rassenbeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - grape.cabernet-sauvignon
+      - grape.merlot
+      - grape.sauvignon-blanc
+      - region.loire-valley
+      - region.bordeaux
+      - appellation.chinon
+      - appellation.bourgueil
+      - appellation.saint-nicolas-de-bourgueil
+      - appellation.saumur-champigny
+      - appellation.saint-emilion
+      - appellation.pomerol
+      - concept.assemblage
+      - concept.ampelography
+      - concept.methoxypyrazines
+      - concept.clonal-selection
+      - concept.massal-selection
+    completeness_questions:
+      - Brengen links de lezer naar familie, plaatsen en kernbegrippen zonder hun detail hier te dupliceren?
+    layers:
+      foundation: [Ontsluit Loire, Bordeaux, Cabernet Sauvignon, Merlot en assemblage.]
+      intermediate: [Ontsluit vier Loire-appellations en ampelografie.]
+      advanced: [Ontsluit genetische familie, methoxypyrazinen en klonale selectie.]
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+entity_dependencies:
+  - {
+      id: grape.cabernet-sauvignon,
+      names: { nl: Cabernet Sauvignon, en: Cabernet Sauvignon },
+      slugs: { nl: cabernet-sauvignon, en: cabernet-sauvignon },
+      disposition: link,
+    }
+  - {
+      id: grape.merlot,
+      names: { nl: Merlot, en: Merlot },
+      slugs: { nl: merlot, en: merlot },
+      disposition: link-and-relation,
+    }
+  - {
+      id: grape.sauvignon-blanc,
+      names: { nl: Sauvignon Blanc, en: Sauvignon Blanc },
+      slugs: { nl: sauvignon-blanc, en: sauvignon-blanc },
+      disposition: link-and-relation,
+    }
+  - {
+      id: region.loire-valley,
+      names: { nl: Loirevallei, en: Loire Valley },
+      slugs: { nl: loirevallei, en: loire-valley },
+      disposition: link-and-relation,
+    }
+  - {
+      id: region.bordeaux,
+      names: { nl: Bordeaux, en: Bordeaux },
+      slugs: { nl: bordeaux, en: bordeaux },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.chinon,
+      names: { nl: Chinon, en: Chinon },
+      slugs: { nl: chinon, en: chinon },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.bourgueil,
+      names: { nl: Bourgueil, en: Bourgueil },
+      slugs: { nl: bourgueil, en: bourgueil },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.saint-nicolas-de-bourgueil,
+      names: { nl: Saint-Nicolas-de-Bourgueil, en: Saint-Nicolas-de-Bourgueil },
+      slugs: { nl: saint-nicolas-de-bourgueil, en: saint-nicolas-de-bourgueil },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.saumur-champigny,
+      names: { nl: Saumur-Champigny, en: Saumur-Champigny },
+      slugs: { nl: saumur-champigny, en: saumur-champigny },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.saint-emilion,
+      names: { nl: Saint-Émilion, en: Saint-Émilion },
+      slugs: { nl: saint-emilion, en: saint-emilion },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.pomerol,
+      names: { nl: Pomerol, en: Pomerol },
+      slugs: { nl: pomerol, en: pomerol },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.assemblage,
+      names: { nl: Assemblage, en: Blending },
+      slugs: { nl: assemblage, en: blending },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.ampelography,
+      names: { nl: Ampelografie, en: Ampelography },
+      slugs: { nl: ampelografie, en: ampelography },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.methoxypyrazines,
+      names: { nl: Methoxypyrazinen, en: Methoxypyrazines },
+      slugs: { nl: methoxypyrazinen, en: methoxypyrazines },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.clonal-selection,
+      names: { nl: Klonale selectie, en: Clonal selection },
+      slugs: { nl: klonale-selectie, en: clonal-selection },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.massal-selection,
+      names: { nl: Massale selectie, en: Massal selection },
+      slugs: { nl: massale-selectie, en: massal-selection },
+      disposition: link-and-relation,
+    }
+
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

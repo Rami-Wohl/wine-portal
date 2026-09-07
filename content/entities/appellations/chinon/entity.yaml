@@ -1,0 +1,16 @@
+id: appellation.chinon
+type: appellation
+status: draft
+canonical_name: Chinon
+names:
+  nl: Chinon
+  en: Chinon
+slugs:
+  nl: chinon
+  en: chinon
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []
