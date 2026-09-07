@@ -1,0 +1,354 @@
+package_id: appellation.barsac
+archetype: appellation-overview
+schema_version: 1
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, twee-namen-een-wijngaard]
+    target_ids: [region.bordeaux, appellation.sauternes]
+    completeness_questions:
+      [Begrijpt de lezer Barsac als gemeente eigen AOC en deel van de Sauterneszone?]
+    layers:
+      foundation: [Plaats Barsac ten noorden van de Ciron en leg de dubbele naamvoering uit.]
+      intermediate: [Scheid gemeentegrens productiepercelen en nabijheidszone.]
+      advanced: [Begrens tekstuele oriëntatie tegenover officiële geografie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Ligging en juridische identiteit.], source_refs: [source.inao-barsac-overview] }
+      specific_claims:
+        - {
+            claim: De geografische zone is de gemeente Barsac en wijn mag onder voorwaarden ook Sauternes heten.,
+            status: supported,
+            source_refs: [source.inao-barsac-specification-2026],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, haven-handel-en-zoete-wijn, van-prevote-naar-aoc]
+    target_ids: [classification.bordeaux-1855]
+    completeness_questions:
+      [Verbindt de geschiedenis haven handel zoete stijl 1855 en AOC zonder oorsprongsmythe?]
+    layers:
+      foundation: [Introduceer middeleeuwse wijnbouw haven en oude zelfstandige naam.]
+      intermediate: [Leg de handelscontext en ontwikkeling van tries uit.]
+      advanced: [Plaats prévôté 1855 en 1936 als verschillende instituties.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische handel en wijngaardontwikkeling.],
+          source_refs: [source.msha-bordeaux-wine-history],
+        }
+      specific_claims:
+        [
+          {
+            claim: Barsac werd op 11 september 1936 als AOC erkend.,
+            status: supported,
+            source_refs: [source.inao-barsac-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, kalkplateau-en-grind, water-mist-en-muren]
+    target_ids: [concept.botrytis]
+    completeness_questions:
+      [
+        Kan de lezer plateau grind Garonne Ciron water en muren als één gevarieerd landschap begrijpen?,
+      ]
+    layers:
+      foundation: [Maak het vlakke gebied ten noorden van de Ciron en het kalkplateau voorstelbaar.]
+      intermediate: [Vergelijk Haut-Barsac met de grindzone richting Garonne.]
+      advanced: [Leg geologie en waterwerking uit zonder mineraliteit als letterlijke bodemsmaak.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap geologie en waterhuishouding.],
+          source_refs: [source.brgm-bordeaux-geology-2022],
+        }
+      specific_claims:
+        [
+          {
+            claim: Het plateau ligt rond 20 meter en helt af tot circa 5 meter bij moderne alluvia.,
+            status: supported,
+            source_refs: [source.inao-barsac-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, vier-rassen-geen-vast-recept]
+    target_ids: [grape.semillon, grape.sauvignon-blanc, grape.sauvignon-gris, grape.muscadelle]
+    completeness_questions:
+      [Zijn alle rassen en hun rollen uitgelegd zonder vaste blend of bodemkarikatuur?]
+    layers:
+      foundation: [Leg de hoofdrol van Sémillon en aanvullende rollen uit.]
+      intermediate: [Verbind rassen met rijpheid botrytis zuur en assemblage.]
+      advanced: [Noem Sauvignon Gris en de grens tussen toelating en werkelijk gebruik.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Lokale druivenrollen.], source_refs: [source.inao-barsac-overview] }
+      specific_claims:
+        [
+          {
+            claim: Vier witte rassen zijn toegestaan.,
+            status: supported,
+            source_refs: [source.inao-barsac-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, tries-als-lezen-van-de-wijngaard, kelderkeuzes]
+    target_ids: [concept.botrytis, concept.assemblage, concept.elevage]
+    completeness_questions: [Volgt de lezer de causale keten van botrytisselectie tot zoete wijn?]
+    layers:
+      foundation: [Leg edele rotting en handmatige opeenvolgende tries volledig uit.]
+      intermediate: [Verklaar weinig sap trage vergisting en balans.]
+      advanced: [Begrens vat en gistingsstop als praktijk in plaats van uniform recept.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Oogst vinificatie en opvoeding.],
+          source_refs: [source.inao-barsac-specification-2026],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, dezelfde-kernregels-andere-naam, actuele-drempels]
+    target_ids: [appellation.sauternes]
+    completeness_questions:
+      [Begrijpt de lezer de gedeelde Sauternesregels én het zelfstandige Barsacrecht?]
+    layers:
+      foundation: [Leg wijnsoort botrytis tries en herkomstbescherming uit.]
+      intermediate: [Vergelijk regelkader met Sauternes zonder beide namen gelijk te stellen.]
+      advanced: [Geef actuele dichtheid suiker rendement en opvoeding.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Functie van het appellationdossier.],
+          source_refs: [source.inao-barsac-overview],
+        }
+      specific_claims:
+        [
+          {
+            claim: De huidige productiedrempels zijn inhoudelijk gelijk aan Sauternes.,
+            status: supported,
+            source_refs:
+              [source.inao-barsac-specification-2026, source.inao-sauternes-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten, twee-premiers-acht-deuxiemes, rang-en-huidige-wijn]
+    target_ids:
+      [
+        classification.bordeaux-1855,
+        producer.chateau-climens,
+        producer.chateau-coutet,
+        producer.chateau-doisy-daene,
+        producer.chateau-doisy-dubroca,
+        producer.chateau-doisy-vedrines,
+        producer.chateau-broustet,
+        producer.chateau-nairac,
+        producer.chateau-caillou,
+        producer.chateau-de-myrat,
+        producer.chateau-suau-barsac,
+      ]
+    completeness_questions:
+      [Zijn alle tien Barsac-crus correct ontsloten en de grenzen van 1855 zichtbaar?]
+    layers:
+      foundation: [Introduceer Climens Coutet en de tien Barsac-crus.]
+      intermediate: [Maak de twee Premiers en acht Deuxièmes navigeerbaar.]
+      advanced: [Begrens historische rang tegenover huidige producenten en flessen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatiescope en producentennavigatie.],
+          source_refs: [source.gcc1855-classification-history],
+        }
+      specific_claims:
+        [
+          {
+            claim: Barsac telt twee Premiers Crus en acht Deuxièmes Crus in 1855.,
+            status: supported,
+            source_refs:
+              [source.inao-barsac-specification-2026, source.gcc1855-classification-overview],
+          },
+        ]
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, barsac-is-geen-smaakgarantie, tijd-in-de-fles]
+    target_ids: [concept.acidity]
+    completeness_questions:
+      [
+        Geeft de pagina een Barsacprofiel met variatie balans en flesontwikkeling zonder bodemdeterminisme?,
+      ]
+    layers:
+      foundation: [Beschrijf zoetheid frisheid fruit botrytis en textuur.]
+      intermediate: [Vergelijk Barsac voorzichtig met bredere Sauternesverwachtingen.]
+      advanced: [Begrens mineraliteit levensduur en perceelclaims.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Stijl en flesontwikkeling.], source_refs: [source.inao-barsac-overview] }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, barsac-of-sauternes, serveren-en-bewaren]
+    target_ids: [appellation.sauternes]
+    completeness_questions:
+      [Kan de lezer dubbele naam classificatie cuvée flesmaat en conditie uit elkaar houden?]
+    layers:
+      foundation: [Lees exacte appellation producent cuvée jaargang en inhoud.]
+      intermediate: [Leg de keuze Barsac of Sauternes op het etiket uit.]
+      advanced: [Behandel bewaring serveren en oude flesconditie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiket aankoop en serveernavigatie.],
+          source_refs: [source.dgccrf-wine-labels-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, klimaat-arbeid-en-keuze]
+    target_ids: []
+    completeness_questions:
+      [Worden klimaat arbeid markt en naamkeuze behandeld zonder vluchtige cijfers te vereeuwigen?]
+    layers:
+      foundation: [Laat de kwetsbaarheid van botrytis en handwerk zien.]
+      intermediate: [Verbind klimaatdruk aan druifgezondheid timing zuur en selectie.]
+      advanced: [Plaats naam- en marktkeuzes als gedateerde producentenbeslissingen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaatadaptatie en productierisico.],
+          source_refs: [source.inrae-bordeaux-climate-adaptation],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [barsac-botrytis, barsac-geclassificeerde-flessen]
+    target_ids: []
+    completeness_questions:
+      [Hebben beide beelden een Barsac-specifieke leertaak en volledige rechten?]
+    layers:
+      foundation: [Toon botrytisdruiven in Barsac en een reeks geclassificeerde flessen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair oogst- en classificatiebeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        region.bordeaux,
+        appellation.sauternes,
+        classification.bordeaux-1855,
+        grape.semillon,
+        concept.botrytis,
+        producer.chateau-climens,
+        producer.chateau-coutet,
+        producer.chateau-doisy-daene,
+        producer.chateau-doisy-dubroca,
+        producer.chateau-doisy-vedrines,
+        producer.chateau-broustet,
+        producer.chateau-nairac,
+        producer.chateau-caillou,
+        producer.chateau-de-myrat,
+        producer.chateau-suau-barsac,
+      ]
+    completeness_questions:
+      [Zijn alle genoemde vervolgobjecten vindbaar en minstens als entity aanwezig?]
+    layers:
+      {
+        foundation: [Bied routes via Sauternes druif proces classificatie en producent.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-climens,
+      names: { nl: Château Climens, en: Château Climens },
+      slugs: { nl: chateau-climens, en: chateau-climens },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-coutet,
+      names: { nl: Château Coutet, en: Château Coutet },
+      slugs: { nl: chateau-coutet, en: chateau-coutet },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-doisy-daene,
+      names: { nl: Château Doisy Daëne, en: Château Doisy Daëne },
+      slugs: { nl: chateau-doisy-daene, en: chateau-doisy-daene },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-doisy-dubroca,
+      names: { nl: Château Doisy-Dubroca, en: Château Doisy-Dubroca },
+      slugs: { nl: chateau-doisy-dubroca, en: chateau-doisy-dubroca },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-doisy-vedrines,
+      names: { nl: Château Doisy-Védrines, en: Château Doisy-Védrines },
+      slugs: { nl: chateau-doisy-vedrines, en: chateau-doisy-vedrines },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-broustet,
+      names: { nl: Château Broustet, en: Château Broustet },
+      slugs: { nl: chateau-broustet, en: chateau-broustet },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-nairac,
+      names: { nl: Château Nairac, en: Château Nairac },
+      slugs: { nl: chateau-nairac, en: chateau-nairac },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-caillou,
+      names: { nl: Château Caillou, en: Château Caillou },
+      slugs: { nl: chateau-caillou, en: chateau-caillou },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-de-myrat,
+      names: { nl: Château de Myrat, en: Château de Myrat },
+      slugs: { nl: chateau-de-myrat, en: chateau-de-myrat },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-suau-barsac,
+      names: { nl: Château Suau, en: Château Suau },
+      slugs: { nl: chateau-suau-barsac, en: chateau-suau-barsac },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

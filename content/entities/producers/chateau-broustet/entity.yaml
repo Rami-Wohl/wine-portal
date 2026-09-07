@@ -1,0 +1,15 @@
+id: producer.chateau-broustet
+type: producer
+status: draft
+canonical_name: Château Broustet
+names: { nl: Château Broustet, en: Château Broustet }
+slugs: { nl: chateau-broustet, en: chateau-broustet }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations:
+  - { type: located_in, target: appellation.barsac }
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: deuxieme-cru }
+    valid_from: 1855
+assertions: []
+source_refs: [source.gcc1855-classification-overview]

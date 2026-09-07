@@ -14,7 +14,6 @@ locales:
 relations:
   - { type: associated_with, target: region.hunter-valley }
   - { type: associated_with, target: appellation.sauternes }
-  - { type: associated_with, target: appellation.barsac }
   - { type: associated_with, target: appellation.pessac-leognan }
   - { type: associated_with, target: appellation.margaret-river }
   - { type: related_to, target: grape.muscadelle }

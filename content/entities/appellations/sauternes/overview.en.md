@@ -149,7 +149,7 @@ That simple structure belongs to foundation knowledge because it shapes how Saut
 :::detail{#yquem-en-de-twee-rangen parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview"}
 ### A route through producers, not a buying chart
 
-Alongside Yquem, Premiers Crus such as [[producer.chateau-guiraud|Château Guiraud]], [[producer.chateau-rieussec|Château Rieussec]] and [[producer.chateau-suduiraut|Château Suduiraut]] offer different entry points to Sauternes. In Barsac, Château Climens and Château Coutet are important anchors. The full list belongs with the [[classification.bordeaux-1855|1855 entity]].
+Alongside Yquem, Premiers Crus such as [[producer.chateau-guiraud|Château Guiraud]], [[producer.chateau-rieussec|Château Rieussec]] and [[producer.chateau-suduiraut|Château Suduiraut]] offer different entry points to Sauternes. In Barsac, [[producer.chateau-climens|Château Climens]] and [[producer.chateau-coutet|Château Coutet]] are important anchors. The full list belongs with the [[classification.bordeaux-1855|1855 entity]].
 
 Producers differ in site, grape proportions, strictness of selection, barrel regime and desired balance. Rank records historical position; the concrete bottle shows how place, season and decisions came together.
 :::

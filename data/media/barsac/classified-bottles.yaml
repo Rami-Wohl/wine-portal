@@ -1,0 +1,24 @@
+id: media.barsac.classified-bottles
+kind: photo
+role: documentary
+status: active
+storage_key: barsac/classified-bottles.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1285
+checksum_sha256: d6edcdf1d68be4f2eb87a0efabef5a8f31e72c4a80e428d765411afb244d2cfd
+alt:
+  nl: Een reeks flessen van geclassificeerde zoete wijn uit Sauternes en Barsac
+  en: A group of bottles of classified sweet wine from Sauternes and Barsac
+caption:
+  nl: De classificatie van 1855 behandelt Sauternes en Barsac in één lijst. Deze selectie flessen verbeeldt die gedeelde geschiedenis; zij is geen volledige opsomming en de rang voorspelt niet automatisch de kwaliteit van een actuele fles.
+  en: The 1855 classification treats Sauternes and Barsac in a single list. This selection of bottles illustrates that shared history; it is not a complete inventory, and rank does not automatically predict the quality of a current bottle.
+rights:
+  status: open-licensed
+  creator: Pascal MOULIN
+  source_url: https://commons.wikimedia.org/wiki/File:Sauternes_2.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Pascal MOULIN via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons file resized to 1920 pixels wide; no crop or editorial colour alteration.

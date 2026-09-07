@@ -1,0 +1,24 @@
+id: media.barsac.noble-rot
+kind: photo
+role: documentary
+status: active
+storage_key: barsac/noble-rot.jpg
+mime_type: image/jpeg
+width: 1600
+height: 1066
+checksum_sha256: 924fdb152e41be1bcc28bede58297005b1479b7611ead8d492f45606851e4e1f
+alt:
+  nl: Trossen witte druiven bij Château Doisy-Védrines in Barsac met bessen die door edele rotting verschrompelen
+  en: White grape bunches at Château Doisy-Védrines in Barsac with berries shrivelling through noble rot
+caption:
+  nl: Gave, aangetaste en verschrompelde bessen rijpen niet tegelijk. Deze trossen bij Château Doisy-Védrines maken zichtbaar waarom Barsac met meerdere selectieve plukrondes wordt geoogst.
+  en: Sound, affected and shrivelled berries do not ripen at the same time. These bunches at Château Doisy-Védrines show why Barsac is harvested in repeated selective passes.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Doisy-V%C3%A9drines,_Barsac,_Sauternes_noble_rot_grapes.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons file resized to 1600 pixels wide; no crop or editorial colour alteration.

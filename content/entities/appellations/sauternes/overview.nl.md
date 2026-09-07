@@ -149,7 +149,7 @@ Die eenvoudige structuur hoort bij basiskennis omdat ze bepaalt hoe Sauternes we
 :::detail{#yquem-en-de-twee-rangen parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview"}
 ### Een route door producenten, geen koopranglijst
 
-Naast Yquem bieden premiers crus als [[producer.chateau-guiraud|Château Guiraud]], [[producer.chateau-rieussec|Château Rieussec]] en [[producer.chateau-suduiraut|Château Suduiraut]] verschillende ingangen tot Sauternes. In Barsac vormen onder meer Château Climens en Château Coutet belangrijke ankers. De volledige lijst hoort bij de [[classification.bordeaux-1855|entity over 1855]].
+Naast Yquem bieden premiers crus als [[producer.chateau-guiraud|Château Guiraud]], [[producer.chateau-rieussec|Château Rieussec]] en [[producer.chateau-suduiraut|Château Suduiraut]] verschillende ingangen tot Sauternes. In Barsac vormen onder meer [[producer.chateau-climens|Château Climens]] en [[producer.chateau-coutet|Château Coutet]] belangrijke ankers. De volledige lijst hoort bij de [[classification.bordeaux-1855|entity over 1855]].
 
 Producenten verschillen in ligging, druivenverhouding, selectiestrengheid, vatregime en gewenste balans. De rang vertelt historische positie; de concrete fles vertelt hoe plaats, jaar en keuzes samenkwamen.
 :::
