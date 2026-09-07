@@ -1,0 +1,24 @@
+id: media.grape.merlot.ampelography
+kind: illustration
+role: educational
+status: active
+storage_key: grapes/merlot/ampelography.jpg
+mime_type: image/jpeg
+width: 825
+height: 1167
+checksum_sha256: 756b1fec759a76f26893631676371bb7db7e7c63fd1e5b239bbe468a1d815444
+alt:
+  nl: Historische botanische plaat van Merlot met scheut, bladeren, tros en bes
+  en: Historical botanical plate of Merlot showing a shoot, leaves, bunch and berry
+caption:
+  nl: Een historische plaat uit Viala en Vermorels L’Ampélographie brengt meerdere herkenningskenmerken samen. Ampelografie vergelijkt een patroon van kenmerken en steunt nooit op één tekening alleen.
+  en: A historical plate from Viala and Vermorel's L’Ampélographie brings several identifying features together. Ampelography compares a pattern of traits and never relies on one drawing alone.
+rights:
+  status: public-domain
+  creator: Viala and Vermorel
+  source_url: https://commons.wikimedia.org/wiki/File:Merlot_-_Ampl%C3%A9lographie.jpg
+  license_name: Public Domain Mark 1.0
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  credit_line: Viala and Vermorel via Wikimedia Commons, public domain
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons scan used without crop or editorial colour alteration.

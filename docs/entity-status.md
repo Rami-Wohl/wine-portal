@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 98 entities — 11 active, 87 draft, 0 deprecated.
+**Totaal:** 102 entities — 12 active, 90 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (11)
+## Actief — publiek vindbaar (12)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -17,12 +17,13 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
+| [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-07 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (87)
+## Draft — nog uit te werken (90)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -66,6 +67,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | `concept.estate-bottling` | Nee — reviewroute | `/concepts/botteling-op-het-chateau` | — |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | `concept.chateau` | Nee — reviewroute | `/concepts/chateau-wijnterm` | — |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | `concept.clairet` | Nee — reviewroute | `/concepts/clairet` | — |
+| [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | `concept.coulure` | Nee — reviewroute | `/concepts/coulure` | — |
 | [Courtier](../content/entities/concepts/courtier/entity.yaml) | Concept | `concept.courtier` | Nee — reviewroute | `/concepts/courtier` | — |
 | [Cru](../content/entities/concepts/cru/entity.yaml) | Concept | `concept.cru` | Nee — reviewroute | `/concepts/cru` | — |
 | [Cuvée](../content/entities/concepts/cuvee/entity.yaml) | Concept | `concept.cuvee` | Nee — reviewroute | `/concepts/cuvee` | — |
@@ -87,8 +89,10 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | `concept.second-wine` | Nee — reviewroute | `/concepts/tweede-wijn` | — |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | `concept.acidity` | Nee — reviewroute | `/concepts/zuur-in-wijn` | — |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | `grape.carmenere` | Nee — reviewroute | `/grapes/carmenere` | — |
+| [Folle Blanche](../content/entities/grapes/folle-blanche/entity.yaml) | Druif | `grape.folle-blanche` | Nee — reviewroute | `/grapes/folle-blanche` | — |
+| [Magdeleine Noire des Charentes](../content/entities/grapes/magdeleine-noire-des-charentes/entity.yaml) | Druif | `grape.magdeleine-noire-des-charentes` | Nee — reviewroute | `/grapes/magdeleine-noire-des-charentes` | — |
 | [Malbec](../content/entities/grapes/malbec/entity.yaml) | Druif | `grape.malbec` | Nee — reviewroute | `/grapes/malbec` | — |
-| [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Nee — reviewroute | `/grapes/merlot` | — |
+| [Merlot Blanc](../content/entities/grapes/merlot-blanc/entity.yaml) | Druif | `grape.merlot-blanc` | Nee — reviewroute | `/grapes/merlot-blanc` | — |
 | [Muscadelle](../content/entities/grapes/muscadelle/entity.yaml) | Druif | `grape.muscadelle` | Nee — reviewroute | `/grapes/muscadelle` | — |
 | [Petit Verdot](../content/entities/grapes/petit-verdot/entity.yaml) | Druif | `grape.petit-verdot` | Nee — reviewroute | `/grapes/petit-verdot` | — |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Nee — reviewroute | `/grapes/sauvignon-blanc` | — |

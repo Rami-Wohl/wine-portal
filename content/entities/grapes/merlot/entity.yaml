@@ -1,6 +1,6 @@
 id: grape.merlot
 type: grape
-status: draft
+status: active
 canonical_name: Merlot
 names:
   nl: Merlot
@@ -11,6 +11,44 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: related_to, target: grape.malbec }
+  - { type: related_to, target: grape.carmenere }
+  - { type: related_to, target: grape.folle-blanche }
+  - { type: associated_with, target: appellation.pomerol }
+  - { type: associated_with, target: appellation.saint-emilion }
+  - { type: associated_with, target: appellation.fronsac }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.tannin }
+  - { type: related_to, target: concept.acidity }
+  - { type: related_to, target: concept.terroir }
+  - { type: related_to, target: concept.vintage }
+  - { type: related_to, target: concept.extraction }
+  - { type: related_to, target: concept.elevage }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.ampelography }
+  - { type: related_to, target: concept.clonal-selection }
+assertions:
+  - id: assertion.merlot.genetic-parentage
+    predicate: genetic_parentage
+    value: Cabernet Franc × Magdeleine Noire des Charentes
+    status: verified
+    sources: [source.boursiquot-merlot-parentage-2009]
+    last_verified: 2026-09-07
+  - id: assertion.merlot.official-eu-synonyms
+    predicate: officially_recognized_eu_synonyms
+    value: none
+    status: verified
+    sources: [source.plantgrape-merlot]
+    last_verified: 2026-09-07
+source_refs:
+  - source.plantgrape-merlot
+  - source.boursiquot-merlot-parentage-2009
+  - source.frontiers-merlot-review-2025
+  - source.civb-merlot
+  - source.eu-wine-variety-labelling-2019
+  - source.inao-pomerol-overview
+  - source.inao-saint-emilion-overview
+  - source.inao-fronsac-overview
+depth: foundation
+last_reviewed: 2026-09-07

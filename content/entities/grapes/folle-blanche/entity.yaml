@@ -1,0 +1,18 @@
+id: grape.folle-blanche
+type: grape
+status: draft
+canonical_name: Folle Blanche
+names:
+  nl: Folle Blanche
+  en: Folle Blanche
+slugs:
+  nl: folle-blanche
+  en: folle-blanche
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: grape.merlot-blanc }
+assertions: []
+source_refs: [source.boursiquot-merlot-parentage-2009]
+depth: foundation

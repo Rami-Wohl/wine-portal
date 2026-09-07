@@ -1,0 +1,18 @@
+id: concept.coulure
+type: concept
+status: draft
+canonical_name: Coulure
+names:
+  nl: Coulure
+  en: Coulure
+slugs:
+  nl: coulure
+  en: coulure
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: grape.merlot }
+assertions: []
+source_refs: [source.plantgrape-merlot]
+depth: foundation

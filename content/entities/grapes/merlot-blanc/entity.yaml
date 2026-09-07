@@ -1,0 +1,19 @@
+id: grape.merlot-blanc
+type: grape
+status: draft
+canonical_name: Merlot Blanc
+names:
+  nl: Merlot Blanc
+  en: Merlot Blanc
+slugs:
+  nl: merlot-blanc
+  en: merlot-blanc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: grape.merlot }
+  - { type: related_to, target: grape.folle-blanche }
+assertions: []
+source_refs: [source.boursiquot-merlot-parentage-2009]
+depth: foundation

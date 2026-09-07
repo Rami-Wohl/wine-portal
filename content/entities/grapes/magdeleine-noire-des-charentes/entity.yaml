@@ -1,0 +1,19 @@
+id: grape.magdeleine-noire-des-charentes
+type: grape
+status: draft
+canonical_name: Magdeleine Noire des Charentes
+names:
+  nl: Magdeleine Noire des Charentes
+  en: Magdeleine Noire des Charentes
+slugs:
+  nl: magdeleine-noire-des-charentes
+  en: magdeleine-noire-des-charentes
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: grape.merlot }
+  - { type: related_to, target: grape.malbec }
+assertions: []
+source_refs: [source.boursiquot-merlot-parentage-2009]
+depth: foundation

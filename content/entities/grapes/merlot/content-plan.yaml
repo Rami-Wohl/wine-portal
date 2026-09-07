@@ -1,0 +1,347 @@
+schema_version: 1
+package_id: grape.merlot
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids: [identiteit-en-oorsprong, van-lokale-naam-naar-wereldras, genetische-ouders]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer wat Merlot is, waar het ras gedocumenteerd vandaan komt en wat DNA wel en niet over zijn identiteit vertelt?
+    layers:
+      foundation: [Introduceer Merlot als vroeg rijpend Bordeauxras met mondiale betekenis.]
+      intermediate:
+        [Plaats zijn relatief late historische naamgeving en snelle moderne verspreiding.]
+      advanced: [Leg het aangetoonde ouderschap en het onderscheid met Merlot Blanc uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Identiteit, Bordeauxse oorsprong en historische verspreiding.]
+        source_refs: [source.plantgrape-merlot, source.frontiers-merlot-review-2025]
+      specific_claims:
+        - claim: Cabernet Franc en Magdeleine Noire des Charentes zijn de genetische ouders van Merlot.
+          status: supported
+          source_refs: [source.boursiquot-merlot-parentage-2009]
+    review: &complete_section_review { outline: complete, nl: complete, en: complete }
+
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids: [wijnstok-en-groeicyclus, herkennen-is-vergelijken, klonen-bewaren-variatie]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer vroege knopvorming, middentijdse rijping, groeikracht, tros en bes als één groeiprofiel begrijpen?
+    layers:
+      foundation: [Leg de relatief vroege cyclus en vruchtbare groeikracht uit.]
+      intermediate: [Introduceer ampelografische kenmerken zonder schijnzekerheid.]
+      advanced: [Leg uit waarom klonen en plantmateriaal binnen het ras verschillen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Fenologie, groei en ampelografische kenmerken.]
+        source_refs: [source.plantgrape-merlot]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids: [klimaat-ligging-en-bodem, klei-en-water, vroeg-is-geen-vrijbrief]
+    target_ids: []
+    completeness_questions:
+      - Verklaart de pagina de rol van warmte, vorst, bodemwater en droogte zonder klei tot een smaakrecept te maken?
+    layers:
+      foundation: [Verbind vroege ontwikkeling met vorstrisico en betrouwbare rijpheid.]
+      intermediate: [Leg uit waarom vochtbuffer en afwatering beide tellen.]
+      advanced: [Begrens vroege rijping onder hitte en droogte.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatgeschiktheid, bodemfunctie, vorst en droogte.]
+        source_refs: [source.plantgrape-merlot, source.frontiers-merlot-review-2025]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids: [regios-en-appellations, rechteroever-in-detail, buiten-bordeaux]
+    target_ids: []
+    completeness_questions:
+      - Plaatst de pagina Bordeauxs rechteroever en belangrijke internationale rollen zonder een uitputtende wereldranglijst te suggereren?
+    layers:
+      foundation: [Begin bij Pomerol en Saint-Émilion en benoem de rol elders in Bordeaux.]
+      intermediate:
+        [Vergelijk Merlots rol binnen de rechteroever zonder appellations uniform te maken.]
+      advanced: [Toon mondiale stijlankers als navigatie, niet als vaste landprofielen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Bordeauxse en mondiale verspreiding.]
+        source_refs:
+          - source.civb-merlot
+          - source.frontiers-merlot-review-2025
+          - source.inao-pomerol-overview
+          - source.inao-saint-emilion-overview
+          - source.inao-fronsac-overview
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids:
+      [wijnstijlen-en-smaakprofiel, soepel-is-geen-synoniem-voor-eenvoudig, tijd-in-de-fles]
+    target_ids: []
+    completeness_questions:
+      - Geeft de pagina een bruikbare bandbreedte van fruit, zuur, tannine, alcohol, textuur en flesontwikkeling zonder proefgarantie?
+    layers:
+      foundation: [Beschrijf fruit, ronde textuur en gematigde zuren als tendensen.]
+      intermediate: [Doorbreek de gelijkstelling van Merlot met alleen zachte eenvoudige wijn.]
+      advanced: [Leg uit hoe concentratie, tannine, zuur en opvoeding bewaarpotentieel vormen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Stijlbandbreedte, structuur en aromatische ontwikkeling.]
+        source_refs: [source.plantgrape-merlot, source.frontiers-merlot-review-2025]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids: [wijnbouw-en-gevoeligheden, bladerdek-opbrengst-en-bloei, ziekten-vorst-en-droogte]
+    target_ids: []
+    completeness_questions:
+      - Zijn groeikracht, vruchtbaarheid, coulure, valse meeldauw, rot, vorst en droogte als samenhangende beheerafwegingen uitgelegd?
+    layers:
+      foundation: [Leg uit waarom groeikracht en vroege cyclus actief beheer vragen.]
+      intermediate: [Verbind snoei, bladerdek, vruchtzetting en opbrengst.]
+      advanced: [Behandel de belangrijkste kwetsbaarheden zonder teeltadvies te simuleren.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Groei, opbrengstvorming, ziekten en abiotische risico's.]
+        source_refs: [source.plantgrape-merlot, source.frontiers-merlot-review-2025]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids: [wijnmaken-en-rijping, solo-of-in-assemblage, extractie-zuur-en-hout]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer hoe extractie, assemblage, zuurbeheer, vat en fles Merlots textuur en balans vormen?
+    layers:
+      foundation: [Volg Merlot door rode-wijnbereiding, assemblage en opvoeding.]
+      intermediate: [Vergelijk cépagewijn en blendrol zonder vaste ingrediëntenformule.]
+      advanced: [Leg de risico's van overrijpheid, overextractie en overheersend hout uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode-wijnbereiding, assemblage, extractie en rijping.]
+        source_refs: [source.plantgrape-merlot, source.frontiers-merlot-review-2025]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids: [synoniemen-klonen-en-verwantschap, merlot-blanc-is-geen-kleurmutatie]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer rasnaam, historische bijnaam, kloon, ouderras en Merlot Blanc uit elkaar houden?
+    layers:
+      foundation: [Maak het verschil tussen ras, verwant ras en kloon duidelijk.]
+      intermediate: []
+      advanced: [Leg officiële synonymie en de afzonderlijke identiteit van Merlot Blanc uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Naamgebruik, klonale selectie en verwantschap.]
+        source_refs: [source.frontiers-merlot-review-2025]
+      specific_claims:
+        - claim: Plantgrape vermeldt geen officieel erkende synoniemen in Frankrijk of elders in de Europese Unie.
+          status: supported
+          source_refs: [source.plantgrape-merlot]
+        - claim: Merlot Blanc is geen kleurmutatie van Merlot maar een afzonderlijke nakomeling van Merlot en Folle Blanche.
+          status: supported
+          source_refs: [source.boursiquot-merlot-parentage-2009]
+    review: *complete_section_review
+
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids: [etiket-en-herkenning, druif-of-herkomst, kijken-is-geen-dna-test]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer waarom Merlot soms groot op het etiket staat en in Bordeaux vaak achter de herkomstnaam verdwijnt?
+    layers:
+      foundation: [Vergelijk druifetiket met Bordeauxs herkomstetiket.]
+      intermediate: [Leg de Europese 85%-regel als begrensd voorbeeld uit.]
+      advanced:
+        [Begrens visuele en sensorische herkenning tegenover gecertificeerd materiaal en DNA.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Etikettering en herkenning.]
+        source_refs: [source.civb-merlot, source.plantgrape-merlot]
+      specific_claims:
+        - claim: In de EU vereist het noemen van één druivenras in beginsel dat ten minste 85 procent van de wijn daarvan afkomstig is.
+          status: supported
+          source_refs: [source.eu-wine-variety-labelling-2019]
+    review: *complete_section_review
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      [hedendaagse-ontwikkelingen, aanpassen-aan-warmte-en-water, cijfers-horen-bij-een-jaar]
+    target_ids: []
+    completeness_questions:
+      - Behandelt de pagina klimaatdruk, adaptatie en veranderlijke verspreiding zonder voorspelling of verouderde ranglijst?
+    layers:
+      foundation: [Leg uit waarom vroege rijping onder opwarming zowel voordeel als risico is.]
+      intermediate:
+        [Toon adaptatie als samenhang tussen plek, plantmateriaal, bladerdek, water en oogst.]
+      advanced: [Scheid duurzame uitleg van gedateerde areaalcijfers.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatverandering, adaptatie en mondiale verspreiding.]
+        source_refs: [source.frontiers-merlot-review-2025, source.plantgrape-merlot]
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [merlot-tros, historische-ampelografie]
+    target_ids: []
+    completeness_questions:
+      - Tonen de beelden rijpe trossen in Pomerol en historische herkenningskenmerken met een duidelijke bewijsgrens?
+    layers:
+      foundation: [Toon een gedocumenteerde rijpe Merlot-tros in wijngaardcontext.]
+      intermediate: [Toon blad, tros en bes samen in een historische botanische plaat.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair en educatief rassenbeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - grape.cabernet-franc
+      - grape.magdeleine-noire-des-charentes
+      - grape.cabernet-sauvignon
+      - grape.malbec
+      - grape.carmenere
+      - grape.merlot-blanc
+      - grape.folle-blanche
+      - region.bordeaux
+      - appellation.pomerol
+      - appellation.saint-emilion
+      - appellation.fronsac
+      - concept.assemblage
+      - concept.ampelography
+      - concept.clonal-selection
+      - concept.coulure
+    completeness_questions:
+      - Brengen links de lezer naar ouders, verwanten, kernregio's en begrippen zonder hun volledige inhoud hier te dupliceren?
+    layers:
+      foundation: [Ontsluit ouders, Bordeaux, Pomerol, Saint-Émilion en assemblage.]
+      intermediate: [Ontsluit Fronsac, ampelografie en klonale selectie.]
+      advanced: [Ontsluit verdere familieleden en de grensgevallen rond naam en identiteit.]
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [], source_refs: [] }
+      specific_claims: []
+    review: *complete_section_review
+
+entity_dependencies:
+  - {
+      id: grape.cabernet-franc,
+      names: { nl: Cabernet Franc, en: Cabernet Franc },
+      slugs: { nl: cabernet-franc, en: cabernet-franc },
+      disposition: link,
+    }
+  - {
+      id: grape.magdeleine-noire-des-charentes,
+      names: { nl: Magdeleine Noire des Charentes, en: Magdeleine Noire des Charentes },
+      slugs: { nl: magdeleine-noire-des-charentes, en: magdeleine-noire-des-charentes },
+      disposition: link,
+    }
+  - {
+      id: grape.cabernet-sauvignon,
+      names: { nl: Cabernet Sauvignon, en: Cabernet Sauvignon },
+      slugs: { nl: cabernet-sauvignon, en: cabernet-sauvignon },
+      disposition: link,
+    }
+  - {
+      id: grape.malbec,
+      names: { nl: Malbec, en: Malbec },
+      slugs: { nl: malbec, en: malbec },
+      disposition: link-and-relation,
+    }
+  - {
+      id: grape.carmenere,
+      names: { nl: Carménère, en: Carménère },
+      slugs: { nl: carmenere, en: carmenere },
+      disposition: link-and-relation,
+    }
+  - {
+      id: grape.merlot-blanc,
+      names: { nl: Merlot Blanc, en: Merlot Blanc },
+      slugs: { nl: merlot-blanc, en: merlot-blanc },
+      disposition: link,
+    }
+  - {
+      id: grape.folle-blanche,
+      names: { nl: Folle Blanche, en: Folle Blanche },
+      slugs: { nl: folle-blanche, en: folle-blanche },
+      disposition: link-and-relation,
+    }
+  - {
+      id: region.bordeaux,
+      names: { nl: Bordeaux, en: Bordeaux },
+      slugs: { nl: bordeaux, en: bordeaux },
+      disposition: link,
+    }
+  - {
+      id: appellation.pomerol,
+      names: { nl: Pomerol, en: Pomerol },
+      slugs: { nl: pomerol, en: pomerol },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.saint-emilion,
+      names: { nl: Saint-Émilion, en: Saint-Émilion },
+      slugs: { nl: saint-emilion, en: saint-emilion },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.fronsac,
+      names: { nl: Fronsac, en: Fronsac },
+      slugs: { nl: fronsac, en: fronsac },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.assemblage,
+      names: { nl: Assemblage, en: Blending },
+      slugs: { nl: assemblage, en: blending },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.ampelography,
+      names: { nl: Ampelografie, en: Ampelography },
+      slugs: { nl: ampelografie, en: ampelography },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.clonal-selection,
+      names: { nl: Klonale selectie, en: Clonal selection },
+      slugs: { nl: klonale-selectie, en: clonal-selection },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.coulure,
+      names: { nl: Coulure, en: Coulure },
+      slugs: { nl: coulure, en: coulure },
+      disposition: link,
+    }
+
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

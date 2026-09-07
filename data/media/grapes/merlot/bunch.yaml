@@ -1,0 +1,24 @@
+id: media.grape.merlot.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/merlot/bunch.jpg
+mime_type: image/jpeg
+width: 1920
+height: 2880
+checksum_sha256: d4a195b8813a90b36ff9b2d7277d410ba91447231447f491a496205790bdebcd
+alt:
+  nl: Rijpe Merlot-trossen tussen de bladeren bij Château Le Bon Pasteur in Pomerol
+  en: Ripe Merlot bunches among the leaves at Château Le Bon Pasteur in Pomerol
+caption:
+  nl: Merlot aan de stok in Pomerol. De losse opname toont tros en bessen in hun wijngaardcontext, maar bewijst op zichzelf de rasidentiteit niet.
+  en: Merlot on the vine in Pomerol. The documentary image shows bunch and berries in their vineyard context, but does not prove varietal identity on its own.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Merlot_grapes_at_Ch%C3%A2teau_Le_Bon_Pasteur,_Pomerol.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-07
+changes: Wikimedia thumbnail resized to 1920 pixels wide without crop or editorial colour alteration.
