@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 108 entities — 13 active, 95 draft, 0 deprecated.
+**Totaal:** 108 entities — 16 active, 92 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (13)
+## Actief — publiek vindbaar (16)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -15,6 +15,9 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
+| [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
+| [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | `concept.lees-ageing` | Ja | `/concepts/rijping-op-de-lies` | 2026-09-07 |
+| [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | `concept.volatile-thiols` | Ja | `/concepts/vluchtige-thiolen` | 2026-09-07 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-07 |
@@ -24,7 +27,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (95)
+## Draft — nog uit te werken (92)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -82,16 +85,13 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | `concept.malolactic-fermentation` | Nee — reviewroute | `/concepts/malolactische-omzetting` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |
-| [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | `concept.methoxypyrazines` | Nee — reviewroute | `/concepts/methoxypyrazinen` | — |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | `concept.negociant` | Nee — reviewroute | `/concepts/negociant` | — |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | `concept.rootstock` | Nee — reviewroute | `/concepts/onderstam` | — |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | `concept.place-de-bordeaux` | Nee — reviewroute | `/concepts/place-de-bordeaux` | — |
-| [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | `concept.lees-ageing` | Nee — reviewroute | `/concepts/rijping-op-de-lies` | — |
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | `concept.maceration` | Nee — reviewroute | `/concepts/schilinweking` | — |
 | [Tannine](../content/entities/concepts/tannin/entity.yaml) | Concept | `concept.tannin` | Nee — reviewroute | `/concepts/tannine` | — |
 | [Terroir](../content/entities/concepts/terroir/entity.yaml) | Concept | `concept.terroir` | Nee — reviewroute | `/concepts/terroir` | — |
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | `concept.second-wine` | Nee — reviewroute | `/concepts/tweede-wijn` | — |
-| [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | `concept.volatile-thiols` | Nee — reviewroute | `/concepts/vluchtige-thiolen` | — |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | `concept.acidity` | Nee — reviewroute | `/concepts/zuur-in-wijn` | — |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | `grape.carmenere` | Nee — reviewroute | `/grapes/carmenere` | — |
 | [Folle Blanche](../content/entities/grapes/folle-blanche/entity.yaml) | Druif | `grape.folle-blanche` | Nee — reviewroute | `/grapes/folle-blanche` | — |

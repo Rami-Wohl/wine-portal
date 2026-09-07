@@ -1,6 +1,6 @@
 id: concept.volatile-thiols
 type: concept
-status: draft
+status: active
 canonical_name: Volatile thiols
 names:
   nl: Vluchtige thiolen
@@ -12,6 +12,10 @@ locales:
   nl: overview.nl.md
   en: overview.en.md
 relations:
-  - { type: related_to, target: grape.sauvignon-blanc }
+  - { type: related_to, target: concept.fermentation }
 assertions: []
-source_refs: [source.coetzee-du-toit-sauvignon-aroma-2012]
+source_refs:
+  - source.coetzee-du-toit-sauvignon-aroma-2012
+  - source.degryse-sauvignon-thiols-2008
+depth: foundation
+last_reviewed: 2026-09-07

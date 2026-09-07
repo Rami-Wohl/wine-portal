@@ -1,6 +1,6 @@
 id: concept.methoxypyrazines
 type: concept
-status: draft
+status: active
 canonical_name: Methoxypyrazines
 names:
   nl: Methoxypyrazinen
@@ -11,6 +11,12 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: grape.carmenere }
 assertions: []
-source_refs: []
+source_refs:
+  - source.zhao-methoxypyrazines-review-2019
+  - source.awri-green-flavour-cabernet-sauvignon
+  - source.coetzee-du-toit-sauvignon-aroma-2012
+depth: foundation
+last_reviewed: 2026-09-07
