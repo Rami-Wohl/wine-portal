@@ -21,7 +21,7 @@ In de kelder wordt vaak onderscheid gemaakt tussen grover bezinksel met meer dru
 :::section{#tijd-en-autolyse depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Tijd en autolyse — gistcellen verdwijnen niet plotseling
 
-Na de vergisting sterven veel gistcellen af. Langzaam kunnen onderdelen uit hun celwand en binnenste in de wijn terechtkomen, een proces dat met **autolyse** wordt verbonden. Daarnaast kan levende of afstervende gist zuurstof en andere wijncomponenten beïnvloeden. De veranderingen beginnen niet allemaal tegelijk en zijn sterk afhankelijk van duur en omstandigheden. [@source.awri-lees-contact-2020]
+Na de vergisting sterven veel gistcellen af. Langzaam kunnen onderdelen uit hun celwand en binnenste in de wijn terechtkomen, een proces dat met [[concept.autolysis|autolyse]] wordt verbonden. Daarnaast kan levende of afstervende gist zuurstof en andere wijncomponenten beïnvloeden. De veranderingen beginnen niet allemaal tegelijk en zijn sterk afhankelijk van duur en omstandigheden. [@source.awri-lees-contact-2020]
 
 Mogelijke resultaten zijn een voller mondgevoel, andere integratie van fruit en hout en meer aromatische complexiteit. “Mogelijk” is essentieel: proeven en onderzoek laten geen automatische romigheid of kwaliteitswinst voor iedere wijn zien.
 :::

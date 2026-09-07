@@ -1,0 +1,21 @@
+id: concept.autolysis
+type: concept
+status: active
+canonical_name: Autolysis
+names:
+  nl: Autolyse
+  en: Autolysis
+slugs:
+  nl: autolyse
+  en: autolysis
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.lees-ageing }
+  - { type: related_to, target: concept.fermentation }
+assertions: []
+source_refs:
+  - source.awri-lees-contact-2020
+depth: foundation
+last_reviewed: 2026-09-07

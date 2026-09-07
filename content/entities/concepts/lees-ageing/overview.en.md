@@ -21,7 +21,7 @@ Cellars often distinguish coarser deposits containing more grape material from c
 :::section{#tijd-en-autolyse depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Time and autolysis — yeast cells do not vanish at once
 
-Many yeast cells die after fermentation. Components from their cell walls and interiors may slowly enter the wine, a process associated with **autolysis**. Living or dying yeast can also influence oxygen and other wine components. These changes do not all begin together and depend strongly on duration and conditions. [@source.awri-lees-contact-2020]
+Many yeast cells die after fermentation. Components from their cell walls and interiors may slowly enter the wine, a process associated with [[concept.autolysis|autolysis]]. Living or dying yeast can also influence oxygen and other wine components. These changes do not all begin together and depend strongly on duration and conditions. [@source.awri-lees-contact-2020]
 
 Possible outcomes include fuller mouthfeel, different integration of fruit and oak, and greater aromatic complexity. “Possible” matters: tasting and research do not show automatic creaminess or a quality gain for every wine.
 :::
