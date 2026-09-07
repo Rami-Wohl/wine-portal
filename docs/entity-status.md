@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 98 entities — 9 active, 89 draft, 0 deprecated.
+**Totaal:** 98 entities — 10 active, 88 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (9)
+## Actief — publiek vindbaar (10)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -12,6 +12,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | --- | --- | --- | --- | --- | --- |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-02 |
+| [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
@@ -20,7 +21,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (89)
+## Draft — nog uit te werken (88)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -59,7 +60,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Crus Artisans du Médoc](../content/entities/classifications/crus-artisans-du-medoc/entity.yaml) | Classificatie | `classification.crus-artisans-du-medoc` | Nee — reviewroute | `/classifications/crus-artisans-du-medoc` | — |
 | [Crus Bourgeois du Médoc](../content/entities/classifications/crus-bourgeois-du-medoc/entity.yaml) | Classificatie | `classification.crus-bourgeois-du-medoc` | Nee — reviewroute | `/classifications/crus-bourgeois-du-medoc` | — |
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | `concept.fermentation` | Nee — reviewroute | `/concepts/alcoholische-vergisting` | — |
-| [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Nee — reviewroute | `/concepts/ampelografie` | — |
 | [Appellation d’origine protégée (AOP)](../content/entities/concepts/aop/entity.yaml) | Concept | `concept.aop` | Nee — reviewroute | `/concepts/aop` | — |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | `concept.botrytis` | Nee — reviewroute | `/concepts/botrytis-edele-rotting` | — |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | `concept.estate-bottling` | Nee — reviewroute | `/concepts/botteling-op-het-chateau` | — |

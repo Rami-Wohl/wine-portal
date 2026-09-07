@@ -1,6 +1,6 @@
 id: concept.ampelography
 type: concept
-status: draft
+status: active
 canonical_name: Ampelography
 names:
   nl: Ampelografie
@@ -11,6 +11,13 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.clonal-selection }
+  - { type: related_to, target: concept.massal-selection }
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-grape-variety-identification-2019
+  - source.oiv-grape-descriptors-2023
+  - source.inrae-vassal-ampelography
+depth: foundation
+last_reviewed: 2026-09-07
