@@ -1,0 +1,22 @@
+id: media.concept.grand-vin.selection
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/grand-vin/selection.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 6aee02f57a3213c32e425318b2da6486c2fc46c26f608903e99ccdad9a97f69a
+alt:
+  nl: Illustratie van proefmonsters en drie merkloze wijnflessen waarbij één fles als hoofdselectie centraal staat
+  en: Illustration of tasting samples and three unbranded wine bottles with one bottle placed centrally as the principal selection
+caption:
+  nl: Een grand vin ontstaat door selectie en assemblage binnen het domein. De centrale fles verbeeldt de hoofdwijn; de andere flessen zijn geen vaste lagere rangen en de route van ieder vat kan per jaargang veranderen.
+  en: A grand vin takes shape through selection and blending within the estate. The central bottle represents the principal wine; the others are not fixed lower ranks, and the destination of each lot may change by vintage.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-07
+changes: Original generated 1536 by 1024 pixel PNG used without crop or colour alteration.

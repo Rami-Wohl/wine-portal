@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 125 entities — 21 active, 104 draft, 0 deprecated.
+**Totaal:** 125 entities — 22 active, 103 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (21)
+## Actief — publiek vindbaar (22)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -18,6 +18,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
 | [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | `concept.autolysis` | Ja | `/concepts/autolyse` | 2026-09-07 |
 | [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-07 |
+| [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | `concept.lees-ageing` | Ja | `/concepts/rijping-op-de-lies` | 2026-09-07 |
@@ -32,7 +33,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (104)
+## Draft — nog uit te werken (103)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -84,7 +85,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | `concept.elevage` | Nee — reviewroute | `/concepts/elevage` | — |
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | `concept.en-primeur` | Nee — reviewroute | `/concepts/en-primeur` | — |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | `concept.extraction` | Nee — reviewroute | `/concepts/extractie` | — |
-| [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | `concept.grand-vin` | Nee — reviewroute | `/concepts/grand-vin` | — |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | `concept.malolactic-fermentation` | Nee — reviewroute | `/concepts/malolactische-omzetting` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |

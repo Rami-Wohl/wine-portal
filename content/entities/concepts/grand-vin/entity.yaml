@@ -1,6 +1,6 @@
 id: concept.grand-vin
 type: concept
-status: draft
+status: active
 canonical_name: Grand vin
 names:
   nl: Grand vin
@@ -11,6 +11,18 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.second-wine }
+  - { type: related_to, target: concept.cuvee }
+  - { type: related_to, target: concept.assemblage }
+  - { type: contrasts_with, target: classification.bordeaux-1855 }
 assertions: []
-source_refs: []
+source_refs:
+  - source.chateau-latour-grand-vin
+  - source.chateau-latour-les-forts
+  - source.chateau-mouton-wines
+  - source.dgccrf-wine-labels-2025
+  - source.boagri-bordeaux-specification-2025
+  - source.gcc1855-classification-overview
+depth: foundation
+last_reviewed: 2026-09-08
