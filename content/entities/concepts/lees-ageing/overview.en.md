@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.awri-lees-contact-2020"}
-During **lees ageing**, wine remains in contact after [[concept.fermentation|fermentation]] with sediment made chiefly of yeast cells and fine particles. That contact can change texture, aroma and stability. The French *sur lie* literally means “on the lees”; **bâtonnage** is something else: deliberately stirring the sediment through the wine. [@source.awri-lees-contact-2020]
+During **lees ageing**, wine remains in contact after [[concept.fermentation|fermentation]] with sediment made chiefly of yeast cells and fine particles. That contact can change texture, aroma and stability. The French *sur lie* literally means “on the lees”; [[concept.batonnage|bâtonnage]] is something else: deliberately stirring the sediment through the wine. [@source.awri-lees-contact-2020]
 :::
 
 :::section{#betekenis-en-materiaal depth="foundation" source_refs="source.awri-lees-contact-2020"}
@@ -37,7 +37,7 @@ That mechanism does not justify a simple formula in which more lees means more b
 :::section{#batonnage-en-risico depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Bâtonnage and risk — stirring changes contact and oxygen
 
-During **bâtonnage**, lees are brought back into suspension. A larger part of the wine then temporarily meets the sediment and components may be exchanged more rapidly or differently. Stirring is not required for lees ageing: wine can rest undisturbed on its sediment without regular bâtonnage. [@source.awri-lees-contact-2020]
+During [[concept.batonnage|bâtonnage]], lees are brought back into suspension. A larger part of the wine then temporarily meets the sediment and components may be exchanged more rapidly or differently. Stirring is not required for lees ageing: wine can rest undisturbed on its sediment without regular bâtonnage. [@source.awri-lees-contact-2020]
 
 Barrel and tank behave differently. Wood gradually admits oxygen; opening, topping and stirring add their own oxygen events. A closed tank may instead become more reductive. The producer monitors aroma, flavour, microbial health and protection.
 :::

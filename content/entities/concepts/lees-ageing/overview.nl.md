@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.awri-lees-contact-2020"}
-Bij **rijping op de lies** blijft wijn na de [[concept.fermentation|vergisting]] in contact met het bezinksel van vooral gistcellen en kleine deeltjes. Dat contact kan textuur, geur en stabiliteit veranderen. Het Franse *sur lie* betekent letterlijk “op de lies”; **bâtonnage** is iets anders: het bezinksel bewust door de wijn roeren. [@source.awri-lees-contact-2020]
+Bij **rijping op de lies** blijft wijn na de [[concept.fermentation|vergisting]] in contact met het bezinksel van vooral gistcellen en kleine deeltjes. Dat contact kan textuur, geur en stabiliteit veranderen. Het Franse *sur lie* betekent letterlijk “op de lies”; [[concept.batonnage|bâtonnage]] is iets anders: het bezinksel bewust door de wijn roeren. [@source.awri-lees-contact-2020]
 :::
 
 :::section{#betekenis-en-materiaal depth="foundation" source_refs="source.awri-lees-contact-2020"}
@@ -37,7 +37,7 @@ Dat mechanisme rechtvaardigt geen eenvoudige formule “meer lies is meer body�
 :::section{#batonnage-en-risico depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Bâtonnage en risico — roeren verandert contact én zuurstof
 
-Bij **bâtonnage** wordt de lies opnieuw in suspensie gebracht. Daardoor raakt een groter deel van de wijn tijdelijk het bezinksel en kunnen bestanddelen sneller of anders worden uitgewisseld. Roeren is echter geen voorwaarde voor liesrijping: een wijn kan rustig op zijn bezinksel blijven zonder regelmatige bâtonnage. [@source.awri-lees-contact-2020]
+Bij [[concept.batonnage|bâtonnage]] wordt de lies opnieuw in suspensie gebracht. Daardoor raakt een groter deel van de wijn tijdelijk het bezinksel en kunnen bestanddelen sneller of anders worden uitgewisseld. Roeren is echter geen voorwaarde voor liesrijping: een wijn kan rustig op zijn bezinksel blijven zonder regelmatige bâtonnage. [@source.awri-lees-contact-2020]
 
 Vat en tank gedragen zich verschillend. Een houten vat laat geleidelijk zuurstof toe; openen, bijvullen en roeren voegen eigen zuurstofmomenten toe. Een gesloten tank kan juist sterker reductief worden. De maker bewaakt geur, smaak, microbiële gezondheid en beschermingsniveau.
 :::

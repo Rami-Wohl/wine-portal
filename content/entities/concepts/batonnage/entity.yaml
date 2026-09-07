@@ -1,0 +1,21 @@
+id: concept.batonnage
+type: concept
+status: active
+canonical_name: Bâtonnage
+names:
+  nl: Bâtonnage
+  en: Bâtonnage
+slugs:
+  nl: batonnage
+  en: batonnage
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.lees-ageing }
+  - { type: related_to, target: concept.elevage }
+assertions: []
+source_refs:
+  - source.awri-lees-contact-2020
+depth: foundation
+last_reviewed: 2026-09-07
