@@ -1,0 +1,17 @@
+id: region.marlborough
+type: region
+status: draft
+canonical_name: Marlborough
+names:
+  nl: Marlborough
+  en: Marlborough
+slugs:
+  nl: marlborough
+  en: marlborough
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: associated_with, target: grape.sauvignon-blanc }
+assertions: []
+source_refs: [source.nzwine-marlborough]

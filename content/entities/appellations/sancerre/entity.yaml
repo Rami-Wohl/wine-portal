@@ -1,0 +1,18 @@
+id: appellation.sancerre
+type: appellation
+status: draft
+canonical_name: Sancerre
+names:
+  nl: Sancerre
+  en: Sancerre
+slugs:
+  nl: sancerre
+  en: sancerre
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: region.loire-valley }
+  - { type: associated_with, target: grape.sauvignon-blanc }
+assertions: []
+source_refs: [source.inao-sancerre-overview]

@@ -1,0 +1,24 @@
+id: media.grape.sauvignon-blanc.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/sauvignon-blanc/bunch.jpg
+mime_type: image/jpeg
+width: 2423
+height: 1783
+checksum_sha256: 602fdd0dc6ec2e4f4e25bee7a7c1e12a5ec63d8fb54a50457cfe8b3f1c30a105
+alt:
+  nl: Tros en blad van Sauvignon Blanc aan een wijnstok
+  en: Sauvignon Blanc bunch and leaf on a vine
+caption:
+  nl: Een documentaire opname van tros en blad brengt meerdere herkenningspunten samen. Een foto alleen is nooit voldoende om een druivenras met zekerheid vast te stellen.
+  en: A documentary image of bunch and leaf brings several identifying traits together. A photograph alone can never establish a grape variety with certainty.
+rights:
+  status: open-licensed
+  creator: Karl Bauer
+  source_url: https://commons.wikimedia.org/wiki/File:Sauvignon_Blanc_DSC_4417.JPG
+  license_name: Creative Commons Attribution 3.0 Austria
+  license_url: https://creativecommons.org/licenses/by/3.0/at/deed.en
+  credit_line: Karl Bauer via Wikimedia Commons, CC BY 3.0 AT
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons file used without crop or editorial colour alteration.

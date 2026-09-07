@@ -1,6 +1,6 @@
 id: grape.sauvignon-blanc
 type: grape
-status: draft
+status: active
 canonical_name: Sauvignon Blanc
 names:
   nl: Sauvignon Blanc
@@ -11,6 +11,65 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: related_to, target: grape.cabernet-sauvignon }
+  - { type: related_to, target: grape.savagnin }
+  - { type: related_to, target: grape.semillon }
+  - { type: related_to, target: grape.sauvignon-gris }
+  - { type: associated_with, target: region.bordeaux }
+  - { type: associated_with, target: region.loire-valley }
+  - { type: associated_with, target: region.marlborough }
+  - { type: associated_with, target: appellation.sancerre }
+  - { type: associated_with, target: appellation.pouilly-fume }
+  - { type: associated_with, target: appellation.pessac-leognan }
+  - { type: associated_with, target: appellation.sauternes }
+  - { type: related_to, target: concept.acidity }
+  - { type: related_to, target: concept.tannin }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.methoxypyrazines }
+  - { type: related_to, target: concept.volatile-thiols }
+  - { type: related_to, target: concept.lees-ageing }
+  - { type: related_to, target: concept.elevage }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.vintage }
+  - { type: related_to, target: concept.terroir }
+  - { type: related_to, target: concept.ampelography }
+  - { type: related_to, target: concept.clonal-selection }
+assertions:
+  - id: assertion.sauvignon-blanc.possible-origins
+    predicate: possible_geographic_origins
+    value: central France or south-west France
+    status: verified
+    sources: [source.plantgrape-sauvignon]
+    last_verified: 2026-09-07
+  - id: assertion.sauvignon-blanc.savagnin-relationship
+    predicate: genetic_relationship
+    value: closely related to Savagnin
+    status: verified
+    sources: [source.plantgrape-sauvignon]
+    last_verified: 2026-09-07
+  - id: assertion.sauvignon-blanc.cabernet-parentage
+    predicate: genetic_parent_of
+    value: Cabernet Sauvignon, with Cabernet Franc
+    status: verified
+    sources: [source.bowers-meredith-cabernet-parentage-1997]
+    last_verified: 2026-09-07
+  - id: assertion.sauvignon-blanc.official-eu-synonyms
+    predicate: officially_recognized_eu_synonyms
+    value: Sauvignon blanc and Zeleni sauvignon
+    status: verified
+    sources: [source.plantgrape-sauvignon]
+    last_verified: 2026-09-07
+source_refs:
+  - source.plantgrape-sauvignon
+  - source.bowers-meredith-cabernet-parentage-1997
+  - source.civb-sauvignon-blanc
+  - source.coetzee-du-toit-sauvignon-aroma-2012
+  - source.coetzee-du-toit-sauvignon-ageing-2015
+  - source.inao-sancerre-overview
+  - source.inao-pouilly-fume-overview
+  - source.inao-pessac-leognan-blanc
+  - source.nzwine-marlborough
+  - source.eu-wine-variety-labelling-2019
+depth: foundation
+last_reviewed: 2026-09-07

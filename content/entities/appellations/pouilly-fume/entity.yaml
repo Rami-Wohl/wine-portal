@@ -1,0 +1,18 @@
+id: appellation.pouilly-fume
+type: appellation
+status: draft
+canonical_name: Pouilly-Fumé
+names:
+  nl: Pouilly-Fumé
+  en: Pouilly-Fumé
+slugs:
+  nl: pouilly-fume
+  en: pouilly-fume
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: region.loire-valley }
+  - { type: associated_with, target: grape.sauvignon-blanc }
+assertions: []
+source_refs: [source.inao-pouilly-fume-overview]

@@ -1,0 +1,326 @@
+schema_version: 1
+package_id: grape.sauvignon-blanc
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids: [identiteit-en-oorsprong, twee-franse-thuishavens, familie-zonder-geboorteakte]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer de onzekere geografische oorsprong, de twee Franse historische kernen en de aangetoonde genetische relaties zonder overclaim?
+    layers:
+      foundation: [Introduceer Sauvignon Blanc als aromatisch wit Frans wereldras.]
+      intermediate:
+        [Vergelijk de publieke rollen in Loire, Bordeaux en de internationale verspreiding.]
+      advanced: [Begrens de relatie met Savagnin en leg het ouderschap van Cabernet Sauvignon uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Identiteit, Franse geschiedenis en betekenis.]
+        source_refs: [source.civb-sauvignon-blanc]
+      specific_claims:
+        - {
+            claim: Plantgrape houdt centraal en zuidwestelijk Frankrijk open als mogelijke oorsprong.,
+            status: supported,
+            source_refs: [source.plantgrape-sauvignon],
+          }
+        - {
+            claim: Sauvignon Blanc en Cabernet Franc zijn de genetische ouders van Cabernet Sauvignon.,
+            status: supported,
+            source_refs: [source.bowers-meredith-cabernet-parentage-1997],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids:
+      [
+        wijnstok-en-groeicyclus,
+        een-kalender-met-een-vergelijkingspunt,
+        blad-tros-en-bes-als-patroon,
+      ]
+    target_ids: []
+    completeness_questions:
+      - Vormt groeikracht, kleine compacte tros, fenologie en ampelografische herkenning één begrijpelijk groeiprofiel?
+    layers:
+      foundation: [Leg groeikracht en de noodzaak van een open maar beschermd bladerdek uit.]
+      intermediate: [Plaats fenologiedata als relatieve referentie, niet als oogstvoorschrift.]
+      advanced: [Leg patroonherkenning en de grens van ampelografie uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Fenologie, groei en ampelografie.], source_refs: [source.plantgrape-sauvignon] }
+      specific_claims: []
+    review: *complete
+
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids: [klimaat-ligging-en-bodem, licht-rond-de-tros, de-val-van-mineraliteit]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer hoe temperatuur, licht, water en bodem indirect stijl vormen en waarom mineraliteit geen letterlijke bodemoverdracht bewijst?
+    layers:
+      foundation: [Verbind klimaat en water met zuur, groei en rijpheid.]
+      intermediate: [Leg het microklimaat rond de tros uit.]
+      advanced: [Begrens bodem- en mineraliteitstaal met Loirevoorbeelden.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaatreactie, trosmicroklimaat en bodemfunctie.],
+          source_refs: [source.plantgrape-sauvignon, source.coetzee-du-toit-sauvignon-aroma-2012],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids: [regios-en-appellations, loire-en-bordeaux, marlborough-en-de-wereld]
+    target_ids:
+      [
+        appellation.sancerre,
+        appellation.pouilly-fume,
+        appellation.pessac-leognan,
+        appellation.sauternes,
+        region.marlborough,
+      ]
+    completeness_questions:
+      - Tonen Loire, Bordeaux en Marlborough de drie bepalende rollen zonder andere landen of interne regionale variatie weg te drukken?
+    layers:
+      foundation: [Gebruik Loire, Bordeaux en Marlborough als kompas, niet als ranglijst.]
+      intermediate: [Vergelijk Loirese solist met droge en zoete Bordeauxse blendrollen.]
+      advanced: [Plaats Marlboroughs doorbraak en internationale stijlverscheidenheid.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Belangrijkste regionale rollen.], source_refs: [source.civb-sauvignon-blanc] }
+      specific_claims:
+        - {
+            claim: Witte Sancerre en Pouilly-Fumé zijn op Sauvignon gebaseerd.,
+            status: supported,
+            source_refs: [source.inao-sancerre-overview, source.inao-pouilly-fume-overview],
+          }
+        - {
+            claim: Marlborough zette Nieuw-Zeeland in de jaren tachtig internationaal op de wijnkaart.,
+            status: supported,
+            source_refs: [source.nzwine-marlborough],
+          }
+    review: *complete
+
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids: [wijnstijlen-en-smaakprofiel, twee-aromafamilies, fris-jong-en-toch-houdbaar]
+    target_ids: [concept.methoxypyrazines, concept.volatile-thiols]
+    completeness_questions:
+      - Kan de lezer zuur, textuur, groene en tropische aroma's en flesontwikkeling als variabel spectrum begrijpen?
+    layers:
+      foundation: [Geef een bruikbaar geur- en structuurbeeld zonder proefgarantie.]
+      intermediate: [Introduceer methoxypyrazinen en vluchtige thiolen in gewone taal.]
+      advanced: [Leg uit waarom jonge aromatiek en bewaarpotentieel niet hetzelfde zijn.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijlbandbreedte en aromafamilies.],
+          source_refs: [source.plantgrape-sauvignon, source.coetzee-du-toit-sauvignon-aroma-2012],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids: [wijnbouw-en-gevoeligheden, rot-meeldauw-en-houtziekten]
+    target_ids: []
+    completeness_questions:
+      - Zijn groeikracht, troscompactheid, rot, meeldauw, houtziekten, zon en water als samenhangende beheervraag uitgelegd?
+    layers:
+      foundation: [Leg uit waarom krachtige groei om plaatsgebonden bladerdekbeheer vraagt.]
+      intermediate: [Behandel de belangrijkste ziekterisico's proportioneel.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Groeibeheer en ziekterisico's.], source_refs: [source.plantgrape-sauvignon] }
+      specific_claims: []
+    review: *complete
+
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids: [wijnmaken-en-rijping, van-voorloper-naar-geur, lies-hout-en-zuurstof]
+    target_ids: [concept.volatile-thiols, concept.lees-ageing]
+    completeness_questions:
+      - Begrijpt de lezer hoe sapbehandeling, gist, temperatuur, lies, hout en zuurstof gezamenlijk geur en textuur vormen?
+    layers:
+      foundation: [Schets de routes van beschermde tankwijn tot textuurrijke vatwijn.]
+      intermediate: [Leg het vrijmaken van thiolen uit geurloze voorlopers door gist uit.]
+      advanced: [Plaats lies, hout en zuurstof in één rijpingsgeschiedenis.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Witte-wijnbereiding, aroma en rijping.],
+          source_refs:
+            [
+              source.coetzee-du-toit-sauvignon-aroma-2012,
+              source.coetzee-du-toit-sauvignon-ageing-2015,
+            ],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids: [synoniemen-klonen-en-verwantschap, klonen-zijn-geen-stijlknoppen]
+    target_ids: [grape.savagnin, grape.cabernet-sauvignon, grape.sauvignon-gris]
+    completeness_questions:
+      - Houdt de pagina officiële naam, lokale naam, kleurvariant, kloon en genetische verwant duidelijk uit elkaar?
+    layers:
+      foundation: [Introduceer de relevante namen en categorieën.]
+      intermediate: []
+      advanced: [Leg de functie en begrenzing van klonale selectie en conservatoria uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Naamgeving, verwantschap en klonale variatie.], source_refs: [] }
+      specific_claims:
+        - {
+            claim: Sauvignon blanc en Zeleni sauvignon zijn officieel gebruikte EU-synoniemen volgens Plantgrape.,
+            status: supported,
+            source_refs: [source.plantgrape-sauvignon],
+          }
+    review: *complete
+
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids:
+      [etiket-en-herkenning, de-vijfentachtig-procent-regel, proeven-is-geen-identificatietest]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer druifetiket, herkomstetiket, de begrensde EU-regel en sensorische herkenning uit elkaar houden?
+    layers:
+      foundation: [Vergelijk internationale druifetiketten met Loire- en Bordeauxherkomst.]
+      intermediate: [Leg de Europese 85%-regel als jurisdictiegebonden voorbeeld uit.]
+      advanced: [Begrens proeven en fotografie tegenover botanische identificatie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etikettering en herkenning.],
+          source_refs: [source.inao-sancerre-overview, source.inao-pouilly-fume-overview],
+        }
+      specific_claims:
+        - {
+            claim: Eén druifvermelding vereist in de EU in beginsel minimaal 85 procent van die druif.,
+            status: supported,
+            source_refs: [source.eu-wine-variety-labelling-2019],
+          }
+    review: *complete
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      [hedendaagse-ontwikkelingen, van-aromawedloop-naar-herkomst, cijfers-horen-bij-een-meetjaar]
+    target_ids: []
+    completeness_questions:
+      - Behandelt de pagina klimaatadaptatie, stijlverbreding en veranderlijke areaalcijfers zonder voorspelling of marketingtaal?
+    layers:
+      foundation: [Leg de tegengestelde klimaatdruk in warme en vochtige omstandigheden uit.]
+      intermediate: [Plaats de beweging van maximale geur naar herkomst en textuur.]
+      advanced: [Verwijs vluchtige cijfers naar gedateerde datasets.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaatadaptatie en stijlontwikkeling.],
+          source_refs: [source.plantgrape-sauvignon, source.nzwine-marlborough],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [sauvignon-tros, historische-ampelografie]
+    target_ids: []
+    completeness_questions:
+      - Tonen de beelden tros, blad en historische herkenningskenmerken met volledige rechten en een zichtbare bewijsgrens?
+    layers:
+      foundation: [Toon een gedocumenteerde tros en blad samen.]
+      intermediate: [Toon meerdere kenmerken in een historische botanische plaat.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair en educatief rassenbeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: [verder-ontdekken]
+    target_ids:
+      [
+        appellation.sancerre,
+        appellation.pouilly-fume,
+        appellation.pessac-leognan,
+        appellation.sauternes,
+        region.marlborough,
+        grape.semillon,
+        grape.sauvignon-gris,
+        grape.savagnin,
+        concept.methoxypyrazines,
+        concept.volatile-thiols,
+        concept.lees-ageing,
+      ]
+    completeness_questions:
+      - Zijn alle noodzakelijke vervolgobjecten vindbaar, gekoppeld en als bestaande entity aangelegd?
+    layers:
+      foundation: [Bied routes via plaats, aroma, familie en kelder.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+
+entity_dependencies:
+  - {
+      id: appellation.sancerre,
+      names: { nl: Sancerre, en: Sancerre },
+      slugs: { nl: sancerre, en: sancerre },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.pouilly-fume,
+      names: { nl: Pouilly-Fumé, en: Pouilly-Fumé },
+      slugs: { nl: pouilly-fume, en: pouilly-fume },
+      disposition: link-and-relation,
+    }
+  - {
+      id: region.marlborough,
+      names: { nl: Marlborough, en: Marlborough },
+      slugs: { nl: marlborough, en: marlborough },
+      disposition: link-and-relation,
+    }
+  - {
+      id: grape.savagnin,
+      names: { nl: Savagnin, en: Savagnin },
+      slugs: { nl: savagnin, en: savagnin },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.volatile-thiols,
+      names: { nl: Vluchtige thiolen, en: Volatile thiols },
+      slugs: { nl: vluchtige-thiolen, en: volatile-thiols },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.lees-ageing,
+      names: { nl: Rijping op de lies, en: Lees ageing },
+      slugs: { nl: rijping-op-de-lies, en: lees-ageing },
+      disposition: link-and-relation,
+    }
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

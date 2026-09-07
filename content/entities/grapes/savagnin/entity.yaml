@@ -1,0 +1,17 @@
+id: grape.savagnin
+type: grape
+status: draft
+canonical_name: Savagnin
+names:
+  nl: Savagnin
+  en: Savagnin
+slugs:
+  nl: savagnin
+  en: savagnin
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: grape.sauvignon-blanc }
+assertions: []
+source_refs: []

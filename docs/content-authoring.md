@@ -255,6 +255,15 @@ historische verspreiding, juridische details en belangrijke uitzonderingen.
 `Specialist` blijft gereserveerd voor vakdebatten, onderzoeksmethoden of
 technische details die werkelijk nodig zijn voor de paginabelofte.
 
+De geografische nadruk van een druivenpagina volgt het wereldwijde verhaal van
+het ras zelf. De regio waarmee het project op dat moment wordt uitgebreid, een
+beschikbare cluster van bestaande entities of een eerder gekozen ingang mag de
+weging niet scheeftrekken. Het bronnen- en outlineplan bepaalt vooraf welke
+herkomsten historisch, kwalitatief, stilistisch en hedendaags werkelijk
+bepalend zijn; de hoeveelheid tekst en de kennisdiepte volgen die relevantie.
+Een regio die voor één ras centraal staat, kan voor een ander slechts een
+secundaire blend- of navigatierol hebben.
+
 Volledigheid betekent hier niet dat iedere kloon, ieder synoniem en ieder land
 wordt opgesomd. De pagina is compleet wanneer zij de bepalende eigenschappen,
 variatie en grenzen uitlegt en het resterende detail bewust naar concrete

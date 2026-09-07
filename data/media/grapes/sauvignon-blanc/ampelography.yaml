@@ -1,0 +1,24 @@
+id: media.grape.sauvignon-blanc.ampelography
+kind: illustration
+role: educational
+status: active
+storage_key: grapes/sauvignon-blanc/ampelography.jpg
+mime_type: image/jpeg
+width: 789
+height: 1173
+checksum_sha256: e2985cc9efcdf5ad15ccf5cddf16e87999a543de04f71b902ea7691a0bd634f6
+alt:
+  nl: Historische botanische plaat van Sauvignon met scheut, bladeren, tros en bes
+  en: Historical botanical plate of Sauvignon showing shoot, leaves, bunch and berry
+caption:
+  nl: Jules Troncy bracht voor Viala en Vermorel meerdere kenmerken van Sauvignon samen. De historische plaat leert kijken, maar vervangt moderne identificatie niet.
+  en: Jules Troncy brought several Sauvignon traits together for Viala and Vermorel. The historical plate trains the eye but does not replace modern identification.
+rights:
+  status: public-domain
+  creator: Jules Troncy
+  source_url: https://commons.wikimedia.org/wiki/File:Sauvignon_-_Amp%C3%A9lographie.jpg
+  license_name: Creative Commons Zero 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Jules Troncy via Wikimedia Commons, CC0
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons scan used without crop or editorial colour alteration.

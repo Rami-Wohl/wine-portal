@@ -1,0 +1,17 @@
+id: concept.lees-ageing
+type: concept
+status: draft
+canonical_name: Lees ageing
+names:
+  nl: Rijping op de lies
+  en: Lees ageing
+slugs:
+  nl: rijping-op-de-lies
+  en: lees-ageing
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: grape.sauvignon-blanc }
+assertions: []
+source_refs: []
