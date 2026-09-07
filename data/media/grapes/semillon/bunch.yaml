@@ -1,0 +1,24 @@
+id: media.grape.semillon.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/semillon/bunch.jpg
+mime_type: image/jpeg
+width: 2048
+height: 1536
+checksum_sha256: 3ace8c4b92feac4050091635d8912d22a7e00856d8e42383db1907d1e99558bf
+alt:
+  nl: Trossen Sémillondruiven tussen de bladeren in een Bordeauxwijngaard
+  en: Bunches of Sémillon grapes among leaves in a Bordeaux vineyard
+caption:
+  nl: Een documentaire foto toont ronde bessen en de tros in zijn bladerdek. Omstandigheden en kloon beïnvloeden het uiterlijk; een foto alleen bewijst nooit de rasidentiteit.
+  en: A documentary photograph shows rounded berries and the bunch within its canopy. Conditions and clone affect appearance; a photograph alone never proves varietal identity.
+rights:
+  status: open-licensed
+  creator: Chateau La Tour de Chollet
+  source_url: https://commons.wikimedia.org/wiki/File:Semillon_grapes.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Chateau La Tour de Chollet via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons file used without crop or editorial colour alteration.

@@ -1,0 +1,24 @@
+id: media.grape.semillon.ampelography
+kind: illustration
+role: educational
+status: active
+storage_key: grapes/semillon/ampelography.jpg
+mime_type: image/jpeg
+width: 789
+height: 1173
+checksum_sha256: 9fe0393d7247995c828ac63640bae61780681eddbed7d46380b96c34da626082
+alt:
+  nl: Historische botanische plaat van Sémillon met scheut, bladeren, tros en bes
+  en: Historical botanical plate of Sémillon showing shoot, leaves, bunch and berry
+caption:
+  nl: Jules Troncy bracht voor Viala en Vermorel meerdere kenmerken van Sémillon samen. De plaat leert een patroon bekijken, maar vervangt moderne identificatie niet.
+  en: Jules Troncy brought several Sémillon traits together for Viala and Vermorel. The plate teaches pattern recognition but does not replace modern identification.
+rights:
+  status: public-domain
+  creator: Jules Troncy
+  source_url: https://commons.wikimedia.org/wiki/File:S%C3%A9millon_-_Amp%C3%A9lographie.jpg
+  license_name: Creative Commons Zero 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Jules Troncy via Wikimedia Commons, CC0
+acquired_at: 2026-09-07
+changes: Original Wikimedia Commons scan used without crop or editorial colour alteration.

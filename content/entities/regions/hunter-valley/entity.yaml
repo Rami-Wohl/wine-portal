@@ -1,0 +1,17 @@
+id: region.hunter-valley
+type: region
+status: draft
+canonical_name: Hunter Valley
+names:
+  nl: Hunter Valley
+  en: Hunter Valley
+slugs:
+  nl: hunter-valley
+  en: hunter-valley
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.wine-australia-hunter-valley

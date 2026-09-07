@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 110 entities — 18 active, 92 draft, 0 deprecated.
+**Totaal:** 111 entities — 19 active, 92 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (18)
+## Actief — publiek vindbaar (19)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -24,6 +24,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-07 |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Ja | `/grapes/sauvignon-blanc` | 2026-09-07 |
+| [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Ja | `/grapes/semillon` | 2026-09-07 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
@@ -104,7 +105,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Petit Verdot](../content/entities/grapes/petit-verdot/entity.yaml) | Druif | `grape.petit-verdot` | Nee — reviewroute | `/grapes/petit-verdot` | — |
 | [Sauvignon gris](../content/entities/grapes/sauvignon-gris/entity.yaml) | Druif | `grape.sauvignon-gris` | Nee — reviewroute | `/grapes/sauvignon-gris` | — |
 | [Savagnin](../content/entities/grapes/savagnin/entity.yaml) | Druif | `grape.savagnin` | Nee — reviewroute | `/grapes/savagnin` | — |
-| [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Nee — reviewroute | `/grapes/semillon` | — |
 | [Château Batailley](../content/entities/producers/chateau-batailley/entity.yaml) | Producent | `producer.chateau-batailley` | Nee — reviewroute | `/producers/chateau-batailley` | — |
 | [Château Clerc Milon](../content/entities/producers/chateau-clerc-milon/entity.yaml) | Producent | `producer.chateau-clerc-milon` | Nee — reviewroute | `/producers/chateau-clerc-milon` | — |
 | [Château Croizet-Bages](../content/entities/producers/chateau-croizet-bages/entity.yaml) | Producent | `producer.chateau-croizet-bages` | Nee — reviewroute | `/producers/chateau-croizet-bages` | — |
@@ -123,6 +123,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | `region.blayais-bourgeais` | Nee — reviewroute | `/regions/blayais-bourgeais` | — |
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | `region.entre-deux-mers` | Nee — reviewroute | `/regions/entre-deux-mers` | — |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | `region.graves-sauternais` | Nee — reviewroute | `/regions/graves-sauternais` | — |
+| [Hunter Valley](../content/entities/regions/hunter-valley/entity.yaml) | Regio | `region.hunter-valley` | Nee — reviewroute | `/regions/hunter-valley` | — |
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | `region.libournais` | Nee — reviewroute | `/regions/libournais` | — |
 | [Loirevallei](../content/entities/regions/loire-valley/entity.yaml) | Regio | `region.loire-valley` | Nee — reviewroute | `/regions/loirevallei` | — |
 | [Marlborough](../content/entities/regions/marlborough/entity.yaml) | Regio | `region.marlborough` | Nee — reviewroute | `/regions/marlborough` | — |

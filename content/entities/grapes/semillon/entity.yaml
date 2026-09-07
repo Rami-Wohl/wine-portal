@@ -1,6 +1,6 @@
 id: grape.semillon
 type: grape
-status: draft
+status: active
 canonical_name: Sémillon
 names:
   nl: Sémillon
@@ -11,6 +11,40 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: associated_with, target: region.hunter-valley }
+  - { type: associated_with, target: appellation.sauternes }
+  - { type: associated_with, target: appellation.barsac }
+  - { type: associated_with, target: appellation.pessac-leognan }
+  - { type: associated_with, target: appellation.margaret-river }
+  - { type: related_to, target: grape.muscadelle }
+  - { type: related_to, target: concept.botrytis }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.acidity }
+  - { type: related_to, target: concept.lees-ageing }
+  - { type: related_to, target: concept.elevage }
+  - { type: related_to, target: concept.ampelography }
+  - { type: related_to, target: concept.clonal-selection }
+assertions:
+  - id: assertion.semillon.origin
+    predicate: geographic_origin
+    value: Bordeaux vineyards, France
+    status: verified
+    sources: [source.plantgrape-semillon]
+    last_verified: 2026-09-07
+  - id: assertion.semillon.eu-synonyms
+    predicate: officially_recognized_eu_synonyms
+    value: none
+    status: verified
+    sources: [source.plantgrape-semillon]
+    last_verified: 2026-09-07
+source_refs:
+  - source.plantgrape-semillon
+  - source.civb-semillon
+  - source.wine-australia-semillon
+  - source.wine-australia-hunter-valley
+  - source.inao-sauternes-overview
+  - source.inao-pessac-leognan-blanc
+  - source.eu-wine-variety-labelling-2019
+depth: foundation
+last_reviewed: 2026-09-07

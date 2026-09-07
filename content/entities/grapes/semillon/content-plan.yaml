@@ -1,0 +1,304 @@
+schema_version: 1
+package_id: grape.semillon
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids: [identiteit-en-geschiedenis, oorsprong-zonder-mythe]
+    target_ids: [region.bordeaux]
+    completeness_questions:
+      - Begrijpt de lezer de gedocumenteerde Bordeauxoorsprong, historische betekenis en grens tussen bron en overlevering?
+    layers:
+      foundation: [Introduceer Sémillon als historisch Bordeauxras met wereldwijde betekenis.]
+      intermediate: [Plaats verspreiding tegenover de drie bepalende stijlfamilies.]
+      advanced: [Begrens precieze geboorte- en verwantschapsverhalen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Identiteit en geschiedenis.], source_refs: [source.civb-semillon] }
+      specific_claims:
+        - {
+            claim: Plantgrape noemt de Bordeauxwijngaard als oorsprong.,
+            status: supported,
+            source_refs: [source.plantgrape-semillon],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids: [wijnstok-en-groeicyclus, tros-blad-en-fenologie]
+    target_ids: [concept.ampelography]
+    completeness_questions:
+      - Vormt groeikracht, productiviteit, knopvorming, rijping, blad, tros en bes één begrijpelijk groeiprofiel?
+    layers:
+      foundation: [Leg middelmatige groeikracht, productiviteit en ronde bessen uit.]
+      intermediate: [Plaats fenologie als vergelijkingskader.]
+      advanced: [Begrens ampelografische herkenning.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Groei, fenologie en morfologie.], source_refs: [source.plantgrape-semillon] }
+      specific_claims: []
+    review: *complete
+
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids: [klimaat-bodem-en-wijngaard, vruchtbaarheid-water-en-opbrengst]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      - Begrijpt de lezer hoe warmte, water, vruchtbaarheid, bodem en opbrengst gezamenlijk rijpheid en stijl beïnvloeden?
+    layers:
+      foundation: [Verbind plaats en water met rijping, zuur en druifgezondheid.]
+      intermediate: [Leg de sterke opbrengstreactie op bodemvruchtbaarheid uit.]
+      advanced: [Voorkom een deterministische bodem-stijlformule.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Standplaats en opbrengst.], source_refs: [source.plantgrape-semillon] }
+      specific_claims: []
+    review: *complete
+
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids: [regios-en-appellations, bordeaux-drie-rollen, hunter-valley-en-de-wereld]
+    target_ids:
+      [
+        region.bordeaux,
+        region.hunter-valley,
+        appellation.sauternes,
+        appellation.barsac,
+        appellation.pessac-leognan,
+        appellation.margaret-river,
+      ]
+    completeness_questions:
+      - Krijgen droge Bordeaux, zoete Bordeaux en Hunter Valley gelijkwaardige uitleg en blijft de rest van de wereld zichtbaar?
+    layers:
+      foundation: [Gebruik Bordeaux en Hunter Valley als twee hoofdassen.]
+      intermediate: [Splits Bordeaux in droge blend, droge vatwijn en edelzoete rol.]
+      advanced:
+        [
+          Plaats andere Australische en internationale expressies zonder encyclopedische landenlijst.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Regionale rollen.],
+          source_refs: [source.civb-semillon, source.wine-australia-semillon],
+        }
+      specific_claims:
+        - {
+            claim: Sauternes omvat Barsac Bommes Fargues Preignac en Sauternes.,
+            status: supported,
+            source_refs: [source.inao-sauternes-overview],
+          }
+        - {
+            claim: Hunter Valley geldt bij Wine Australia als wereldreferentie voor Sémillon.,
+            status: supported,
+            source_refs: [source.wine-australia-hunter-valley],
+          }
+    review: *complete
+
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids: [wijnstijlen-en-smaakprofiel, drie-stijlfamilies, flesrijping-zonder-hout]
+    target_ids: [concept.acidity]
+    completeness_questions:
+      - Kan de lezer structuur, aroma en rijping binnen drie stijlfamilies begrijpen zonder smaakgarantie?
+    layers:
+      foundation: [Schets droge frisse, droge brede en zoete geconcentreerde stijlen.]
+      intermediate: [Leg de rol van oogstmoment en assemblage uit.]
+      advanced:
+        [
+          Verklaar hoe ongehoute Hunterwijn toastachtige flesaroma's kan ontwikkelen zonder houtclaim.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijl en ontwikkeling.],
+          source_refs:
+            [
+              source.civb-semillon,
+              source.wine-australia-semillon,
+              source.wine-australia-hunter-valley,
+            ],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids: [wijnbouw-en-risicos, dunne-schil-en-ziektedruk]
+    target_ids: []
+    completeness_questions:
+      - Zijn opbrengstbeheersing, rot, black rot, mijten en cicaden proportioneel en in samenhang behandeld?
+    layers:
+      foundation: [Leg uit waarom opbrengst en druifgezondheid actieve keuzes vragen.]
+      intermediate: [Behandel de belangrijkste gevoeligheden.]
+      advanced: [Maak duidelijk dat botrytis niet overal of altijd gewenst is.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Wijnbouw en ziekterisico.], source_refs: [source.plantgrape-semillon] }
+      specific_claims: []
+    review: *complete
+
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids: [wijnmaken-en-rijping, oogstmoment-als-stijlkeuze, vat-lies-en-assemblage]
+    target_ids: [concept.assemblage, concept.lees-ageing, concept.elevage, grape.sauvignon-blanc]
+    completeness_questions:
+      - Begrijpt de lezer hoe oogstmoment, persing, vergisting, vat, lies, assemblage en flesrijping verschillende routes vormen?
+    layers:
+      foundation: [Leg uit dat kelderkeuzes het ras niet één vaste vorm geven.]
+      intermediate: [Vergelijk vroege Hunteroogst met rijpere droge Bordeaux en botrytisdruiven.]
+      advanced: [Plaats vat, lies en assemblage als samenhangend opvoedingsregime.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnmaken en rijping.],
+          source_refs: [source.plantgrape-semillon, source.wine-australia-semillon],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids: [synoniemen-klonen-en-verwantschap, officiele-naam-en-historische-bijnamen]
+    target_ids: [concept.clonal-selection, concept.ampelography]
+    completeness_questions:
+      - Houdt de pagina officiële naam, historische bijnaam, kloon, etiket en visuele herkenning duidelijk uit elkaar?
+    layers:
+      foundation: [Leg rasnaam en herkomstetiket uit.]
+      intermediate: [Vergelijk variëteitsvermelding met appellationetiket.]
+      advanced: [Plaats officiële synonymie en Franse kloonselectie.]
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Naamgeving en herkenning.], source_refs: [] }
+      specific_claims:
+        - {
+            claim: Plantgrape registreert geen officieel EU-synoniem voor Semillon.,
+            status: supported,
+            source_refs: [source.plantgrape-semillon],
+          }
+    review: *complete
+
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids: [etiket-en-herkenning, herkennen-zonder-raden]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer een variëteitsetiket van een Bordeauxs herkomstetiket onderscheiden en de grenzen van sensorische en visuele herkenning uitleggen?
+    layers:
+      foundation: [Vergelijk Semillon op het etiket met appellationnamen.]
+      intermediate: [Begrens herkenning in glas en wijngaard.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Etikettering en herkenning.], source_refs: [source.inao-sauternes-overview] }
+      specific_claims: []
+    review: *complete
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-context, veelzijdigheid-zonder-modewoord]
+    target_ids: []
+    completeness_questions:
+      - Worden klimaatdruk, stijlherwaardering en veranderlijke areaalcijfers behandeld zonder voorspelling of modeclaim?
+    layers:
+      foundation: [Leg uit waarom vroeg oogsten, water en druifgezondheid belangrijker worden.]
+      intermediate: [Plaats hernieuwde aandacht voor droge en oudere-wijnstijlen.]
+      advanced: [Verwijs cijfers naar gedateerde bronnen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Hedendaagse context.],
+          source_refs: [source.plantgrape-semillon, source.wine-australia-semillon],
+        }
+      specific_claims: []
+    review: *complete
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [semillon-tros, historische-ampelografie]
+    target_ids: []
+    completeness_questions:
+      - Tonen foto en plaat meerdere herkenningskenmerken met volledige rechten en een zichtbare bewijsgrens?
+    layers:
+      foundation: [Toon een documentaire tros in het bladerdek.]
+      intermediate: [Toon meerdere kenmerken in een historische botanische plaat.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair en educatief rassenbeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        region.bordeaux,
+        region.hunter-valley,
+        appellation.sauternes,
+        appellation.barsac,
+        appellation.pessac-leognan,
+        grape.sauvignon-blanc,
+        grape.muscadelle,
+        appellation.margaret-river,
+        concept.botrytis,
+        concept.lees-ageing,
+      ]
+    completeness_questions:
+      - Zijn alle noodzakelijke vervolgobjecten vindbaar en als entity aangelegd?
+    layers:
+      foundation: [Bied routes via plaats, stijl, wijngaard en kelder.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+
+entity_dependencies:
+  - {
+      id: region.hunter-valley,
+      names: { nl: Hunter Valley, en: Hunter Valley },
+      slugs: { nl: hunter-valley, en: hunter-valley },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.sauternes,
+      names: { nl: Sauternes, en: Sauternes },
+      slugs: { nl: sauternes, en: sauternes },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.botrytis,
+      names: { nl: Botrytis en edele rotting, en: Botrytis and noble rot },
+      slugs: { nl: botrytis-edele-rotting, en: botrytis-noble-rot },
+      disposition: link-and-relation,
+    }
+  - {
+      id: appellation.margaret-river,
+      names: { nl: Margaret River, en: Margaret River },
+      slugs: { nl: margaret-river, en: margaret-river },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.lees-ageing,
+      names: { nl: Rijping op de lies, en: Lees ageing },
+      slugs: { nl: rijping-op-de-lies, en: lees-ageing },
+      disposition: link-and-relation,
+    }
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete
