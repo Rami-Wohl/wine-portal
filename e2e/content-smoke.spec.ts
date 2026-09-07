@@ -168,6 +168,23 @@ test("a deep block anchor reveals the required knowledge depth", async ({ page }
   );
 });
 
+test("the chosen knowledge depth persists across navigation and refresh", async ({ page }) => {
+  await page.goto("/regions/bordeaux");
+  await page.getByRole("button", { name: "Verdieping" }).click();
+
+  await page.goto("/appellations/pauillac");
+  await expect(page.getByRole("button", { name: "Verdieping" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+
+  await page.reload();
+  await expect(page.getByRole("button", { name: "Verdieping" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+});
+
 test("the full document remains readable without JavaScript", async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();

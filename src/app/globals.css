@@ -793,18 +793,35 @@ h3 {
   font: clamp(1.15rem, 2vw, 1.45rem)/1.45 var(--font-display);
 }
 .knowledge-depth-control {
+  --depth-accent: var(--leaf);
+  --depth-soft: var(--leaf-soft);
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1.5rem;
   align-items: center;
   padding: 1.1rem 1.25rem;
-  border: 1px solid color-mix(in srgb, var(--leaf) 22%, var(--line));
+  border: 1px solid color-mix(in srgb, var(--depth-accent) 55%, var(--line));
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--leaf-soft), var(--surface));
+  background: linear-gradient(135deg, var(--depth-soft), var(--surface));
+  transition:
+    border-color var(--motion-fast) ease,
+    background var(--motion-fast) ease;
+}
+.knowledge-depth-control[data-selected-depth="intermediate"] {
+  --depth-accent: #91603d;
+  --depth-soft: color-mix(in srgb, #a2714c 14%, var(--surface));
+}
+.knowledge-depth-control[data-selected-depth="advanced"] {
+  --depth-accent: var(--brand);
+  --depth-soft: var(--brand-soft);
+}
+.knowledge-depth-control[data-selected-depth="specialist"] {
+  --depth-accent: var(--brand-dark);
+  --depth-soft: color-mix(in srgb, var(--brand) 16%, var(--surface));
 }
 .knowledge-depth-summary span {
   display: block;
-  color: var(--leaf);
+  color: var(--depth-accent);
   font-size: 0.68rem;
   font-weight: 750;
   letter-spacing: 0.1em;
@@ -827,22 +844,32 @@ h3 {
   justify-content: flex-end;
 }
 .knowledge-depth-options button {
+  --option-accent: var(--leaf);
   min-height: 44px;
   padding: 0.55rem 0.9rem;
-  border: 1px solid color-mix(in srgb, var(--leaf) 28%, var(--line));
+  border: 1px solid color-mix(in srgb, var(--option-accent) 42%, var(--line));
   border-radius: 999px;
   background: var(--surface);
-  color: var(--leaf);
+  color: var(--option-accent);
   cursor: pointer;
   font-size: 0.78rem;
   font-weight: 720;
 }
+.knowledge-depth-options button[data-depth="intermediate"] {
+  --option-accent: #91603d;
+}
+.knowledge-depth-options button[data-depth="advanced"] {
+  --option-accent: var(--brand);
+}
+.knowledge-depth-options button[data-depth="specialist"] {
+  --option-accent: var(--brand-dark);
+}
 .knowledge-depth-options button:hover {
-  border-color: var(--leaf);
+  border-color: var(--option-accent);
 }
 .knowledge-depth-options button[aria-pressed="true"] {
-  border-color: var(--leaf);
-  background: var(--leaf);
+  border-color: var(--option-accent);
+  background: var(--option-accent);
   color: white;
 }
 .entity-layout,
@@ -1009,10 +1036,51 @@ h3 {
   scroll-margin-top: 110px;
 }
 .content-block-detail {
+  --detail-accent: color-mix(in srgb, var(--brand) 24%, var(--line));
   padding-left: clamp(1rem, 3vw, 1.8rem);
-  border-left: 1px solid color-mix(in srgb, var(--brand) 24%, var(--line));
+  border-left: 2px solid var(--detail-accent);
+}
+.content-block-detail.content-depth-intermediate {
+  --detail-accent: color-mix(in srgb, #a2714c 72%, var(--line));
+}
+.content-block-detail.content-depth-advanced {
+  --detail-accent: color-mix(in srgb, var(--brand) 76%, var(--line));
+}
+.content-depth-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  width: fit-content;
+  margin-bottom: 0.55rem;
+  color: var(--detail-accent);
+  font-size: 0.64rem;
+  font-weight: 760;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.content-depth-marker-symbol,
+.content-depth-marker-symbol::before {
+  width: 0.38rem;
+  height: 0.38rem;
+  transform: rotate(45deg);
+  border: 1.5px solid currentcolor;
+  border-radius: 1px;
+  background: currentcolor;
+}
+.content-depth-marker-symbol {
+  position: relative;
+  display: block;
+  margin-right: 0.12rem;
+}
+.content-depth-advanced .content-depth-marker-symbol::before {
+  position: absolute;
+  top: 0.37rem;
+  left: -0.18rem;
+  content: "";
 }
 .content-block-detail h3 {
+  margin-top: 0;
   margin-bottom: 0.8rem;
   font-size: clamp(1.3rem, 2.5vw, 1.7rem);
 }

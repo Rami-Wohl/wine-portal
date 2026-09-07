@@ -41,6 +41,17 @@ const CAVEAT_LABELS: Record<Locale, Record<CaveatVariant, string>> = {
   },
 };
 
+const DETAIL_DEPTH_LABELS: Record<Locale, Record<"intermediate" | "advanced", string>> = {
+  nl: {
+    intermediate: "Verdieping",
+    advanced: "Gevorderd",
+  },
+  en: {
+    intermediate: "Intermediate",
+    advanced: "Advanced",
+  },
+};
+
 interface RenderContext {
   locale: Locale;
   sources: Map<string, Source>;
@@ -248,6 +259,12 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
     case "detail":
       return (
         <div {...common} data-parent={block.parent ?? undefined}>
+          {block.depth === "intermediate" || block.depth === "advanced" ? (
+            <span className="content-depth-marker">
+              <span aria-hidden="true" className="content-depth-marker-symbol" />
+              {DETAIL_DEPTH_LABELS[context.locale][block.depth]}
+            </span>
+          ) : null}
           {content}
         </div>
       );

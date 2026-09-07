@@ -111,6 +111,8 @@ describe("ContentDocumentView", () => {
     expect(html).toContain("<h2>Uitleg</h2>");
     expect(html).toContain('class="content-section-group"');
     expect(html).toContain('data-parent="uitleg"');
+    expect(html).toContain('class="content-depth-marker"');
+    expect(html).toContain("Verdieping");
     expect(html).toContain("<h3>Meer uitleg</h3>");
     expect(html).toContain('href="/regions/bordeaux"');
     expect(html).toContain('href="#source-1"');

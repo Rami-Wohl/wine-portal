@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useMemo, type ReactNode } from "react";
 import type { Depth } from "@/content/model";
 import { DEPTH_LABELS_NL } from "@/content/routing";
+import { usePersistedKnowledgeDepth } from "@/hooks/use-persisted-knowledge-depth";
 
 const DEPTH_ORDER: Depth[] = ["foundation", "intermediate", "advanced", "specialist"];
 
@@ -23,36 +24,13 @@ export function KnowledgeDepth({
   maxDepth: Depth;
 }) {
   const maxDepthIndex = Math.max(0, DEPTH_ORDER.indexOf(maxDepth));
-  const options = DEPTH_ORDER.slice(0, maxDepthIndex + 1);
+  const options = useMemo(() => DEPTH_ORDER.slice(0, maxDepthIndex + 1), [maxDepthIndex]);
   const safeInitialDepth = options.includes(initialDepth) ? initialDepth : options[0];
-  const [selectedDepth, setSelectedDepth] = useState<Depth>(safeInitialDepth);
-
-  useEffect(() => {
-    const revealHashTarget = () => {
-      const targetId = decodeURIComponent(window.location.hash.slice(1));
-      if (!targetId) return;
-      const target = document.getElementById(targetId);
-      if (!target) return;
-      const targetDepth = DEPTH_ORDER.find((depth) =>
-        target.classList.contains(`content-depth-${depth}`),
-      );
-      if (!targetDepth) return;
-
-      setSelectedDepth((currentDepth) =>
-        DEPTH_ORDER.indexOf(targetDepth) > DEPTH_ORDER.indexOf(currentDepth)
-          ? targetDepth
-          : currentDepth,
-      );
-    };
-
-    revealHashTarget();
-    window.addEventListener("hashchange", revealHashTarget);
-    return () => window.removeEventListener("hashchange", revealHashTarget);
-  }, []);
+  const [selectedDepth, selectDepth] = usePersistedKnowledgeDepth(options, safeInitialDepth);
 
   return (
     <div className="knowledge-depth">
-      <div className="knowledge-depth-control">
+      <div className="knowledge-depth-control" data-selected-depth={selectedDepth}>
         <div className="knowledge-depth-summary">
           <span>Kennisdiepte</span>
           <strong aria-live="polite">{DEPTH_LABELS_NL[selectedDepth]}</strong>
@@ -67,8 +45,9 @@ export function KnowledgeDepth({
             <button
               aria-controls="entity-knowledge-content"
               aria-pressed={selectedDepth === depth}
+              data-depth={depth}
               key={depth}
-              onClick={() => setSelectedDepth(depth)}
+              onClick={() => selectDepth(depth)}
               type="button"
             >
               {DEPTH_LABELS_NL[depth]}
