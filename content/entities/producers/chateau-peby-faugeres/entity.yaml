@@ -1,0 +1,22 @@
+id: producer.chateau-peby-faugeres
+type: producer
+status: draft
+canonical_name: Château Peby Faugères
+names:
+  nl: Château Peby Faugères
+  en: Château Peby Faugères
+slugs:
+  nl: chateau-peby-faugeres
+  en: chateau-peby-faugeres
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.saint-emilion-grand-cru }
+  - type: classified_under
+    target: classification.saint-emilion
+    properties:
+      tier: grand-cru-classe
+    valid_from: 2022
+assertions: []
+source_refs: [source.inao-saint-emilion-classification-2022]

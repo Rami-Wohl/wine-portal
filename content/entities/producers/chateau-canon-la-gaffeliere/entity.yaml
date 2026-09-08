@@ -1,0 +1,22 @@
+id: producer.chateau-canon-la-gaffeliere
+type: producer
+status: draft
+canonical_name: Château Canon la Gaffelière
+names:
+  nl: Château Canon la Gaffelière
+  en: Château Canon la Gaffelière
+slugs:
+  nl: chateau-canon-la-gaffeliere
+  en: chateau-canon-la-gaffeliere
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.saint-emilion-grand-cru }
+  - type: classified_under
+    target: classification.saint-emilion
+    properties:
+      tier: premier-grand-cru-classe
+    valid_from: 2022
+assertions: []
+source_refs: [source.inao-saint-emilion-classification-2022]

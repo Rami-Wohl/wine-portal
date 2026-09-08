@@ -1,0 +1,22 @@
+id: producer.chateau-cote-de-baleau
+type: producer
+status: draft
+canonical_name: Château Côte de Baleau
+names:
+  nl: Château Côte de Baleau
+  en: Château Côte de Baleau
+slugs:
+  nl: chateau-cote-de-baleau
+  en: chateau-cote-de-baleau
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.saint-emilion-grand-cru }
+  - type: classified_under
+    target: classification.saint-emilion
+    properties:
+      tier: grand-cru-classe
+    valid_from: 2022
+assertions: []
+source_refs: [source.inao-saint-emilion-classification-2022]

@@ -1,0 +1,22 @@
+id: producer.la-mondotte
+type: producer
+status: draft
+canonical_name: La Mondotte
+names:
+  nl: La Mondotte
+  en: La Mondotte
+slugs:
+  nl: la-mondotte
+  en: la-mondotte
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.saint-emilion-grand-cru }
+  - type: classified_under
+    target: classification.saint-emilion
+    properties:
+      tier: premier-grand-cru-classe
+    valid_from: 2022
+assertions: []
+source_refs: [source.inao-saint-emilion-classification-2022]

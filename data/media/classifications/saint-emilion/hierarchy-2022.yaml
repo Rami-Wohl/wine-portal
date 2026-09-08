@@ -1,0 +1,22 @@
+id: media.classification.saint-emilion.hierarchy-2022
+kind: diagram
+role: educational
+status: active
+storage_key: classifications/saint-emilion/hierarchy-2022.svg
+mime_type: image/svg+xml
+width: 1536
+height: 1024
+checksum_sha256: d9cbd4ca3d4f3c0e682359a591c833a6e69bf8de1c20ef7523f222db661a9306
+alt:
+  nl: Diagram van de classificatie van Saint-Émilion in 2022 met twee Premiers Grands Crus Classés met onderscheiding A, twaalf overige Premiers Grands Crus Classés en 71 Grands Crus Classés
+  en: Diagram of the 2022 Saint-Émilion Classification with two Premiers Grands Crus Classés holding distinction A, twelve other Premiers Grands Crus Classés and 71 Grands Crus Classés
+caption:
+  nl: De editie van 2022 telt 85 crus. Twee van de veertien Premiers dragen onderscheiding A; daaronder staan 71 Grands Crus Classés. De pijlen herinneren eraan dat dit systeem periodiek wordt herzien.
+  en: The 2022 edition contains 85 growths. Two of its fourteen Premiers hold distinction A; below them are 71 Grands Crus Classés. The arrows indicate that the system is periodically revised.
+rights:
+  status: owned
+  creator: Oenocademy editorial
+  license_name: Project-owned original SVG
+  credit_line: Oenocademy
+acquired_at: 2026-09-08
+changes: Original language-neutral SVG diagram. Counts derive from source.inao-saint-emilion-classification-2022 as verified on 2026-09-08.

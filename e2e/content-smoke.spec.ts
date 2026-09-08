@@ -103,6 +103,37 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
   await expect(advancedBlock).toBeHidden();
 });
 
+test("Saint-Émilion classification reveals its current ranks progressively", async ({ page }) => {
+  await page.goto("/classifications/classificatie-saint-emilion");
+
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Classificatie van Saint-Émilion" }),
+  ).toBeVisible();
+  await expect(page.getByRole("img", { name: /Diagram van de classificatie/ })).toBeVisible();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const premiers = page.locator("#premiers-2022");
+  const grands = page.locator("#grands-2022");
+
+  await expect(premiers).toBeHidden();
+  await expect(grands).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(premiers).toBeVisible();
+  await expect(premiers.getByRole("link")).toHaveCount(14);
+  await expect(grands).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(grands).toBeVisible();
+  await expect(grands.getByRole("link")).toHaveCount(71);
+  await expect(premiers.getByRole("link", { name: "Château Figeac (A)" })).toHaveAttribute(
+    "href",
+    "/producers/chateau-figeac",
+  );
+});
+
 test("entity relationships are grouped by their meaning", async ({ page }) => {
   await page.goto("/appellations/pauillac");
 

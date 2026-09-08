@@ -1,0 +1,22 @@
+id: producer.chateau-balestard-la-tonnelle
+type: producer
+status: draft
+canonical_name: Château Balestard la Tonnelle
+names:
+  nl: Château Balestard la Tonnelle
+  en: Château Balestard la Tonnelle
+slugs:
+  nl: chateau-balestard-la-tonnelle
+  en: chateau-balestard-la-tonnelle
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.saint-emilion-grand-cru }
+  - type: classified_under
+    target: classification.saint-emilion
+    properties:
+      tier: grand-cru-classe
+    valid_from: 2022
+assertions: []
+source_refs: [source.inao-saint-emilion-classification-2022]

@@ -1,0 +1,22 @@
+id: producer.chateau-destieux
+type: producer
+status: draft
+canonical_name: Château Destieux
+names:
+  nl: Château Destieux
+  en: Château Destieux
+slugs:
+  nl: chateau-destieux
+  en: chateau-destieux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.saint-emilion-grand-cru }
+  - type: classified_under
+    target: classification.saint-emilion
+    properties:
+      tier: grand-cru-classe
+    valid_from: 2022
+assertions: []
+source_refs: [source.inao-saint-emilion-classification-2022]

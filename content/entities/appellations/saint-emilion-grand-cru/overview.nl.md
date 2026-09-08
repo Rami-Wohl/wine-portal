@@ -114,7 +114,7 @@ De classificatie wordt periodiek herzien en is daarmee beweeglijker dan [[classi
 :::detail{#de-editie-van-2022 parent="classificatie-en-producenten" depth="advanced" source_refs="source.inao-saint-emilion-classification-2022 source.decanter-cheval-blanc-ausone-withdrawal-2021"}
 ### Vijfentachtig geklasseerde crus, plus beroemde afwezigen
 
-De editie van 2022 telt 14 Premiers Grands Crus Classés, waaronder Château Figeac en Château Pavie met onderscheiding A, en 71 Grands Crus Classés: 85 in totaal. [@source.inao-saint-emilion-classification-2022]
+De editie van 2022 telt 14 Premiers Grands Crus Classés, waaronder [[producer.chateau-figeac|Château Figeac]] en [[producer.chateau-pavie|Château Pavie]] met onderscheiding A, en 71 Grands Crus Classés: 85 in totaal. [@source.inao-saint-emilion-classification-2022]
 
 [[producer.chateau-cheval-blanc|Château Cheval Blanc]] en [[producer.chateau-ausone|Château Ausone]], historische iconen van de hoogste rang, dienden voor 2022 geen kandidatuur in. [@source.decanter-cheval-blanc-ausone-withdrawal-2021] Hun wijnen kunnen Saint-Émilion Grand Cru blijven; alleen de actuele classificatievermelding ontbreekt.
 :::

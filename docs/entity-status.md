@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 132 entities — 25 active, 107 draft, 0 deprecated.
+**Totaal:** 217 entities — 26 active, 191 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (25)
+## Actief — publiek vindbaar (26)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -16,6 +16,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Saint-Émilion Grand Cru](../content/entities/appellations/saint-emilion-grand-cru/entity.yaml) | Appellatie | `appellation.saint-emilion-grand-cru` | Ja | `/appellations/saint-emilion-grand-cru` | 2026-09-08 |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-08 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-08 |
+| [Classificatie van Saint-Émilion](../content/entities/classifications/saint-emilion/entity.yaml) | Classificatie | `classification.saint-emilion` | Ja | `/classifications/classificatie-saint-emilion` | 2026-09-08 |
 | [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-08 |
 | [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | `concept.autolysis` | Ja | `/concepts/autolyse` | 2026-09-07 |
@@ -36,7 +37,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (107)
+## Draft — nog uit te werken (191)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -74,7 +75,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Saumur-Champigny](../content/entities/appellations/saumur-champigny/entity.yaml) | Appellatie | `appellation.saumur-champigny` | Nee — reviewroute | `/appellations/saumur-champigny` | — |
 | [Stellenbosch](../content/entities/appellations/stellenbosch/entity.yaml) | Appellatie | `appellation.stellenbosch` | Nee — reviewroute | `/appellations/stellenbosch` | — |
 | [Classificatie van Graves](../content/entities/classifications/graves/entity.yaml) | Classificatie | `classification.graves` | Nee — reviewroute | `/classifications/classificatie-graves` | — |
-| [Classificatie van Saint-Émilion](../content/entities/classifications/saint-emilion/entity.yaml) | Classificatie | `classification.saint-emilion` | Nee — reviewroute | `/classifications/classificatie-saint-emilion` | — |
 | [Crus Artisans du Médoc](../content/entities/classifications/crus-artisans-du-medoc/entity.yaml) | Classificatie | `classification.crus-artisans-du-medoc` | Nee — reviewroute | `/classifications/crus-artisans-du-medoc` | — |
 | [Crus Bourgeois du Médoc](../content/entities/classifications/crus-bourgeois-du-medoc/entity.yaml) | Classificatie | `classification.crus-bourgeois-du-medoc` | Nee — reviewroute | `/classifications/crus-bourgeois-du-medoc` | — |
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | `concept.fermentation` | Nee — reviewroute | `/concepts/alcoholische-vergisting` | — |
@@ -112,35 +112,120 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Sauvignon gris](../content/entities/grapes/sauvignon-gris/entity.yaml) | Druif | `grape.sauvignon-gris` | Nee — reviewroute | `/grapes/sauvignon-gris` | — |
 | [Savagnin](../content/entities/grapes/savagnin/entity.yaml) | Druif | `grape.savagnin` | Nee — reviewroute | `/grapes/savagnin` | — |
 | [Château Ausone](../content/entities/producers/chateau-ausone/entity.yaml) | Producent | `producer.chateau-ausone` | Nee — reviewroute | `/producers/chateau-ausone` | — |
+| [Château Badette](../content/entities/producers/chateau-badette/entity.yaml) | Producent | `producer.chateau-badette` | Nee — reviewroute | `/producers/chateau-badette` | — |
+| [Château Balestard la Tonnelle](../content/entities/producers/chateau-balestard-la-tonnelle/entity.yaml) | Producent | `producer.chateau-balestard-la-tonnelle` | Nee — reviewroute | `/producers/chateau-balestard-la-tonnelle` | — |
+| [Château Barde-Haut](../content/entities/producers/chateau-barde-haut/entity.yaml) | Producent | `producer.chateau-barde-haut` | Nee — reviewroute | `/producers/chateau-barde-haut` | — |
 | [Château Batailley](../content/entities/producers/chateau-batailley/entity.yaml) | Producent | `producer.chateau-batailley` | Nee — reviewroute | `/producers/chateau-batailley` | — |
+| [Château Beau-Séjour Bécot](../content/entities/producers/chateau-beau-sejour-becot/entity.yaml) | Producent | `producer.chateau-beau-sejour-becot` | Nee — reviewroute | `/producers/chateau-beau-sejour-becot` | — |
+| [Château Beauséjour Duffau-Lagarrosse](../content/entities/producers/chateau-beausejour-duffau-lagarrosse/entity.yaml) | Producent | `producer.chateau-beausejour-duffau-lagarrosse` | Nee — reviewroute | `/producers/chateau-beausejour-duffau-lagarrosse` | — |
+| [Château Bélair-Monange](../content/entities/producers/chateau-belair-monange/entity.yaml) | Producent | `producer.chateau-belair-monange` | Nee — reviewroute | `/producers/chateau-belair-monange` | — |
+| [Château Bellefont Belcier](../content/entities/producers/chateau-bellefont-belcier/entity.yaml) | Producent | `producer.chateau-bellefont-belcier` | Nee — reviewroute | `/producers/chateau-bellefont-belcier` | — |
+| [Château Bellevue](../content/entities/producers/chateau-bellevue/entity.yaml) | Producent | `producer.chateau-bellevue` | Nee — reviewroute | `/producers/chateau-bellevue` | — |
+| [Château Berliquet](../content/entities/producers/chateau-berliquet/entity.yaml) | Producent | `producer.chateau-berliquet` | Nee — reviewroute | `/producers/chateau-berliquet` | — |
+| [Château Boutisse](../content/entities/producers/chateau-boutisse/entity.yaml) | Producent | `producer.chateau-boutisse` | Nee — reviewroute | `/producers/chateau-boutisse` | — |
 | [Château Broustet](../content/entities/producers/chateau-broustet/entity.yaml) | Producent | `producer.chateau-broustet` | Nee — reviewroute | `/producers/chateau-broustet` | — |
+| [Château Cadet-Bon](../content/entities/producers/chateau-cadet-bon/entity.yaml) | Producent | `producer.chateau-cadet-bon` | Nee — reviewroute | `/producers/chateau-cadet-bon` | — |
 | [Château Caillou](../content/entities/producers/chateau-caillou/entity.yaml) | Producent | `producer.chateau-caillou` | Nee — reviewroute | `/producers/chateau-caillou` | — |
+| [Château Canon](../content/entities/producers/chateau-canon/entity.yaml) | Producent | `producer.chateau-canon` | Nee — reviewroute | `/producers/chateau-canon` | — |
+| [Château Canon la Gaffelière](../content/entities/producers/chateau-canon-la-gaffeliere/entity.yaml) | Producent | `producer.chateau-canon-la-gaffeliere` | Nee — reviewroute | `/producers/chateau-canon-la-gaffeliere` | — |
+| [Château Cap de Mourlin](../content/entities/producers/chateau-cap-de-mourlin/entity.yaml) | Producent | `producer.chateau-cap-de-mourlin` | Nee — reviewroute | `/producers/chateau-cap-de-mourlin` | — |
+| [Château Chauvin](../content/entities/producers/chateau-chauvin/entity.yaml) | Producent | `producer.chateau-chauvin` | Nee — reviewroute | `/producers/chateau-chauvin` | — |
 | [Château Cheval Blanc](../content/entities/producers/chateau-cheval-blanc/entity.yaml) | Producent | `producer.chateau-cheval-blanc` | Nee — reviewroute | `/producers/chateau-cheval-blanc` | — |
 | [Château Clerc Milon](../content/entities/producers/chateau-clerc-milon/entity.yaml) | Producent | `producer.chateau-clerc-milon` | Nee — reviewroute | `/producers/chateau-clerc-milon` | — |
 | [Château Climens](../content/entities/producers/chateau-climens/entity.yaml) | Producent | `producer.chateau-climens` | Nee — reviewroute | `/producers/chateau-climens` | — |
+| [Château Clos de Sarpe](../content/entities/producers/chateau-clos-de-sarpe/entity.yaml) | Producent | `producer.chateau-clos-de-sarpe` | Nee — reviewroute | `/producers/chateau-clos-de-sarpe` | — |
+| [Château Corbin](../content/entities/producers/chateau-corbin/entity.yaml) | Producent | `producer.chateau-corbin` | Nee — reviewroute | `/producers/chateau-corbin` | — |
+| [Château Corbin Michotte](../content/entities/producers/chateau-corbin-michotte/entity.yaml) | Producent | `producer.chateau-corbin-michotte` | Nee — reviewroute | `/producers/chateau-corbin-michotte` | — |
+| [Château Côte de Baleau](../content/entities/producers/chateau-cote-de-baleau/entity.yaml) | Producent | `producer.chateau-cote-de-baleau` | Nee — reviewroute | `/producers/chateau-cote-de-baleau` | — |
 | [Château Coutet](../content/entities/producers/chateau-coutet/entity.yaml) | Producent | `producer.chateau-coutet` | Nee — reviewroute | `/producers/chateau-coutet` | — |
+| [Château Croix de Labrie](../content/entities/producers/chateau-croix-de-labrie/entity.yaml) | Producent | `producer.chateau-croix-de-labrie` | Nee — reviewroute | `/producers/chateau-croix-de-labrie` | — |
 | [Château Croizet-Bages](../content/entities/producers/chateau-croizet-bages/entity.yaml) | Producent | `producer.chateau-croizet-bages` | Nee — reviewroute | `/producers/chateau-croizet-bages` | — |
 | [Château d’Armailhac](../content/entities/producers/chateau-darmailhac/entity.yaml) | Producent | `producer.chateau-darmailhac` | Nee — reviewroute | `/producers/chateau-darmailhac` | — |
+| [Château Dassault](../content/entities/producers/chateau-dassault/entity.yaml) | Producent | `producer.chateau-dassault` | Nee — reviewroute | `/producers/chateau-dassault` | — |
+| [Château de Ferrand](../content/entities/producers/chateau-de-ferrand/entity.yaml) | Producent | `producer.chateau-de-ferrand` | Nee — reviewroute | `/producers/chateau-de-ferrand` | — |
 | [Château de Myrat](../content/entities/producers/chateau-de-myrat/entity.yaml) | Producent | `producer.chateau-de-myrat` | Nee — reviewroute | `/producers/chateau-de-myrat` | — |
+| [Château de Pressac](../content/entities/producers/chateau-de-pressac/entity.yaml) | Producent | `producer.chateau-de-pressac` | Nee — reviewroute | `/producers/chateau-de-pressac` | — |
+| [Château Destieux](../content/entities/producers/chateau-destieux/entity.yaml) | Producent | `producer.chateau-destieux` | Nee — reviewroute | `/producers/chateau-destieux` | — |
 | [Château Doisy Daëne](../content/entities/producers/chateau-doisy-daene/entity.yaml) | Producent | `producer.chateau-doisy-daene` | Nee — reviewroute | `/producers/chateau-doisy-daene` | — |
 | [Château Doisy-Dubroca](../content/entities/producers/chateau-doisy-dubroca/entity.yaml) | Producent | `producer.chateau-doisy-dubroca` | Nee — reviewroute | `/producers/chateau-doisy-dubroca` | — |
 | [Château Doisy-Védrines](../content/entities/producers/chateau-doisy-vedrines/entity.yaml) | Producent | `producer.chateau-doisy-vedrines` | Nee — reviewroute | `/producers/chateau-doisy-vedrines` | — |
 | [Château Duhart-Milon](../content/entities/producers/chateau-duhart-milon/entity.yaml) | Producent | `producer.chateau-duhart-milon` | Nee — reviewroute | `/producers/chateau-duhart-milon` | — |
+| [Château Faugères](../content/entities/producers/chateau-faugeres/entity.yaml) | Producent | `producer.chateau-faugeres` | Nee — reviewroute | `/producers/chateau-faugeres` | — |
+| [Château Figeac](../content/entities/producers/chateau-figeac/entity.yaml) | Producent | `producer.chateau-figeac` | Nee — reviewroute | `/producers/chateau-figeac` | — |
+| [Château Fleur Cardinale](../content/entities/producers/chateau-fleur-cardinale/entity.yaml) | Producent | `producer.chateau-fleur-cardinale` | Nee — reviewroute | `/producers/chateau-fleur-cardinale` | — |
+| [Château Fombrauge](../content/entities/producers/chateau-fombrauge/entity.yaml) | Producent | `producer.chateau-fombrauge` | Nee — reviewroute | `/producers/chateau-fombrauge` | — |
+| [Château Fonplégade](../content/entities/producers/chateau-fonplegade/entity.yaml) | Producent | `producer.chateau-fonplegade` | Nee — reviewroute | `/producers/chateau-fonplegade` | — |
+| [Château Fonroque](../content/entities/producers/chateau-fonroque/entity.yaml) | Producent | `producer.chateau-fonroque` | Nee — reviewroute | `/producers/chateau-fonroque` | — |
+| [Château Franc Mayne](../content/entities/producers/chateau-franc-mayne/entity.yaml) | Producent | `producer.chateau-franc-mayne` | Nee — reviewroute | `/producers/chateau-franc-mayne` | — |
+| [Château Grand Corbin](../content/entities/producers/chateau-grand-corbin/entity.yaml) | Producent | `producer.chateau-grand-corbin` | Nee — reviewroute | `/producers/chateau-grand-corbin` | — |
+| [Château Grand Corbin-Despagne](../content/entities/producers/chateau-grand-corbin-despagne/entity.yaml) | Producent | `producer.chateau-grand-corbin-despagne` | Nee — reviewroute | `/producers/chateau-grand-corbin-despagne` | — |
+| [Château Grand Mayne](../content/entities/producers/chateau-grand-mayne/entity.yaml) | Producent | `producer.chateau-grand-mayne` | Nee — reviewroute | `/producers/chateau-grand-mayne` | — |
 | [Château Grand-Puy Ducasse](../content/entities/producers/chateau-grand-puy-ducasse/entity.yaml) | Producent | `producer.chateau-grand-puy-ducasse` | Nee — reviewroute | `/producers/chateau-grand-puy-ducasse` | — |
 | [Château Grand-Puy-Lacoste](../content/entities/producers/chateau-grand-puy-lacoste/entity.yaml) | Producent | `producer.chateau-grand-puy-lacoste` | Nee — reviewroute | `/producers/chateau-grand-puy-lacoste` | — |
+| [Château Guadet](../content/entities/producers/chateau-guadet/entity.yaml) | Producent | `producer.chateau-guadet` | Nee — reviewroute | `/producers/chateau-guadet` | — |
 | [Château Guiraud](../content/entities/producers/chateau-guiraud/entity.yaml) | Producent | `producer.chateau-guiraud` | Nee — reviewroute | `/producers/chateau-guiraud` | — |
 | [Château Haut-Bages Libéral](../content/entities/producers/chateau-haut-bages-liberal/entity.yaml) | Producent | `producer.chateau-haut-bages-liberal` | Nee — reviewroute | `/producers/chateau-haut-bages-liberal` | — |
 | [Château Haut-Batailley](../content/entities/producers/chateau-haut-batailley/entity.yaml) | Producent | `producer.chateau-haut-batailley` | Nee — reviewroute | `/producers/chateau-haut-batailley` | — |
+| [Château Haut-Sarpe](../content/entities/producers/chateau-haut-sarpe/entity.yaml) | Producent | `producer.chateau-haut-sarpe` | Nee — reviewroute | `/producers/chateau-haut-sarpe` | — |
+| [Château Jean Faure](../content/entities/producers/chateau-jean-faure/entity.yaml) | Producent | `producer.chateau-jean-faure` | Nee — reviewroute | `/producers/chateau-jean-faure` | — |
+| [Château la Commanderie](../content/entities/producers/chateau-la-commanderie/entity.yaml) | Producent | `producer.chateau-la-commanderie` | Nee — reviewroute | `/producers/chateau-la-commanderie` | — |
+| [Château la Confession](../content/entities/producers/chateau-la-confession/entity.yaml) | Producent | `producer.chateau-la-confession` | Nee — reviewroute | `/producers/chateau-la-confession` | — |
+| [Château la Couspaude](../content/entities/producers/chateau-la-couspaude/entity.yaml) | Producent | `producer.chateau-la-couspaude` | Nee — reviewroute | `/producers/chateau-la-couspaude` | — |
+| [Château la Croizille](../content/entities/producers/chateau-la-croizille/entity.yaml) | Producent | `producer.chateau-la-croizille` | Nee — reviewroute | `/producers/chateau-la-croizille` | — |
+| [Château la Dominique](../content/entities/producers/chateau-la-dominique/entity.yaml) | Producent | `producer.chateau-la-dominique` | Nee — reviewroute | `/producers/chateau-la-dominique` | — |
+| [Château La Fleur Morange](../content/entities/producers/chateau-la-fleur-morange/entity.yaml) | Producent | `producer.chateau-la-fleur-morange` | Nee — reviewroute | `/producers/chateau-la-fleur-morange` | — |
+| [Château la Marzelle](../content/entities/producers/chateau-la-marzelle/entity.yaml) | Producent | `producer.chateau-la-marzelle` | Nee — reviewroute | `/producers/chateau-la-marzelle` | — |
+| [Château la Serre](../content/entities/producers/chateau-la-serre/entity.yaml) | Producent | `producer.chateau-la-serre` | Nee — reviewroute | `/producers/chateau-la-serre` | — |
+| [Château la Tour Figeac](../content/entities/producers/chateau-la-tour-figeac/entity.yaml) | Producent | `producer.chateau-la-tour-figeac` | Nee — reviewroute | `/producers/chateau-la-tour-figeac` | — |
+| [Château Laniote](../content/entities/producers/chateau-laniote/entity.yaml) | Producent | `producer.chateau-laniote` | Nee — reviewroute | `/producers/chateau-laniote` | — |
+| [Château Larcis Ducasse](../content/entities/producers/chateau-larcis-ducasse/entity.yaml) | Producent | `producer.chateau-larcis-ducasse` | Nee — reviewroute | `/producers/chateau-larcis-ducasse` | — |
+| [Château Larmande](../content/entities/producers/chateau-larmande/entity.yaml) | Producent | `producer.chateau-larmande` | Nee — reviewroute | `/producers/chateau-larmande` | — |
+| [Château Laroque](../content/entities/producers/chateau-laroque/entity.yaml) | Producent | `producer.chateau-laroque` | Nee — reviewroute | `/producers/chateau-laroque` | — |
+| [Château Laroze](../content/entities/producers/chateau-laroze/entity.yaml) | Producent | `producer.chateau-laroze` | Nee — reviewroute | `/producers/chateau-laroze` | — |
+| [Château le Chatelet](../content/entities/producers/chateau-le-chatelet/entity.yaml) | Producent | `producer.chateau-le-chatelet` | Nee — reviewroute | `/producers/chateau-le-chatelet` | — |
+| [Château Le Prieuré](../content/entities/producers/chateau-le-prieure/entity.yaml) | Producent | `producer.chateau-le-prieure` | Nee — reviewroute | `/producers/chateau-le-prieure` | — |
 | [Château Lynch-Bages](../content/entities/producers/chateau-lynch-bages/entity.yaml) | Producent | `producer.chateau-lynch-bages` | Nee — reviewroute | `/producers/chateau-lynch-bages` | — |
 | [Château Lynch-Moussas](../content/entities/producers/chateau-lynch-moussas/entity.yaml) | Producent | `producer.chateau-lynch-moussas` | Nee — reviewroute | `/producers/chateau-lynch-moussas` | — |
+| [Château Mangot](../content/entities/producers/chateau-mangot/entity.yaml) | Producent | `producer.chateau-mangot` | Nee — reviewroute | `/producers/chateau-mangot` | — |
+| [Château Monbousquet](../content/entities/producers/chateau-monbousquet/entity.yaml) | Producent | `producer.chateau-monbousquet` | Nee — reviewroute | `/producers/chateau-monbousquet` | — |
+| [Château Montlabert](../content/entities/producers/chateau-montlabert/entity.yaml) | Producent | `producer.chateau-montlabert` | Nee — reviewroute | `/producers/chateau-montlabert` | — |
+| [Château Montlisse](../content/entities/producers/chateau-montlisse/entity.yaml) | Producent | `producer.chateau-montlisse` | Nee — reviewroute | `/producers/chateau-montlisse` | — |
+| [Château Moulin du Cadet](../content/entities/producers/chateau-moulin-du-cadet/entity.yaml) | Producent | `producer.chateau-moulin-du-cadet` | Nee — reviewroute | `/producers/chateau-moulin-du-cadet` | — |
 | [Château Nairac](../content/entities/producers/chateau-nairac/entity.yaml) | Producent | `producer.chateau-nairac` | Nee — reviewroute | `/producers/chateau-nairac` | — |
+| [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Nee — reviewroute | `/producers/chateau-pavie` | — |
+| [Château Pavie Macquin](../content/entities/producers/chateau-pavie-macquin/entity.yaml) | Producent | `producer.chateau-pavie-macquin` | Nee — reviewroute | `/producers/chateau-pavie-macquin` | — |
+| [Château Peby Faugères](../content/entities/producers/chateau-peby-faugeres/entity.yaml) | Producent | `producer.chateau-peby-faugeres` | Nee — reviewroute | `/producers/chateau-peby-faugeres` | — |
 | [Château Pédesclaux](../content/entities/producers/chateau-pedesclaux/entity.yaml) | Producent | `producer.chateau-pedesclaux` | Nee — reviewroute | `/producers/chateau-pedesclaux` | — |
+| [Château Petit Faurie de Soutard](../content/entities/producers/chateau-petit-faurie-de-soutard/entity.yaml) | Producent | `producer.chateau-petit-faurie-de-soutard` | Nee — reviewroute | `/producers/chateau-petit-faurie-de-soutard` | — |
 | [Château Pichon Baron](../content/entities/producers/chateau-pichon-baron/entity.yaml) | Producent | `producer.chateau-pichon-baron` | Nee — reviewroute | `/producers/chateau-pichon-baron` | — |
 | [Château Pichon Longueville Comtesse de Lalande](../content/entities/producers/chateau-pichon-longueville-comtesse-de-lalande/entity.yaml) | Producent | `producer.chateau-pichon-longueville-comtesse-de-lalande` | Nee — reviewroute | `/producers/chateau-pichon-longueville-comtesse-de-lalande` | — |
 | [Château Pontet-Canet](../content/entities/producers/chateau-pontet-canet/entity.yaml) | Producent | `producer.chateau-pontet-canet` | Nee — reviewroute | `/producers/chateau-pontet-canet` | — |
 | [Château Rieussec](../content/entities/producers/chateau-rieussec/entity.yaml) | Producent | `producer.chateau-rieussec` | Nee — reviewroute | `/producers/chateau-rieussec` | — |
+| [Château Ripeau](../content/entities/producers/chateau-ripeau/entity.yaml) | Producent | `producer.chateau-ripeau` | Nee — reviewroute | `/producers/chateau-ripeau` | — |
+| [Château Rochebelle](../content/entities/producers/chateau-rochebelle/entity.yaml) | Producent | `producer.chateau-rochebelle` | Nee — reviewroute | `/producers/chateau-rochebelle` | — |
+| [Château Rol Valentin](../content/entities/producers/chateau-rol-valentin/entity.yaml) | Producent | `producer.chateau-rol-valentin` | Nee — reviewroute | `/producers/chateau-rol-valentin` | — |
+| [Château Saint-Georges-Cote-Pavie](../content/entities/producers/chateau-saint-georges-cote-pavie/entity.yaml) | Producent | `producer.chateau-saint-georges-cote-pavie` | Nee — reviewroute | `/producers/chateau-saint-georges-cote-pavie` | — |
+| [Château Sansonnet](../content/entities/producers/chateau-sansonnet/entity.yaml) | Producent | `producer.chateau-sansonnet` | Nee — reviewroute | `/producers/chateau-sansonnet` | — |
+| [Château Soutard](../content/entities/producers/chateau-soutard/entity.yaml) | Producent | `producer.chateau-soutard` | Nee — reviewroute | `/producers/chateau-soutard` | — |
 | [Château Suau](../content/entities/producers/chateau-suau-barsac/entity.yaml) | Producent | `producer.chateau-suau-barsac` | Nee — reviewroute | `/producers/chateau-suau-barsac` | — |
 | [Château Suduiraut](../content/entities/producers/chateau-suduiraut/entity.yaml) | Producent | `producer.chateau-suduiraut` | Nee — reviewroute | `/producers/chateau-suduiraut` | — |
+| [Château Tour Baladoz](../content/entities/producers/chateau-tour-baladoz/entity.yaml) | Producent | `producer.chateau-tour-baladoz` | Nee — reviewroute | `/producers/chateau-tour-baladoz` | — |
+| [Château Tour Saint-Christophe](../content/entities/producers/chateau-tour-saint-christophe/entity.yaml) | Producent | `producer.chateau-tour-saint-christophe` | Nee — reviewroute | `/producers/chateau-tour-saint-christophe` | — |
+| [Château Trolong Mondot](../content/entities/producers/chateau-trolong-mondot/entity.yaml) | Producent | `producer.chateau-trolong-mondot` | Nee — reviewroute | `/producers/chateau-trolong-mondot` | — |
+| [Château Trottevieille](../content/entities/producers/chateau-trottevieille/entity.yaml) | Producent | `producer.chateau-trottevieille` | Nee — reviewroute | `/producers/chateau-trottevieille` | — |
+| [Château Valandraud](../content/entities/producers/chateau-valandraud/entity.yaml) | Producent | `producer.chateau-valandraud` | Nee — reviewroute | `/producers/chateau-valandraud` | — |
+| [Château Villemaurine](../content/entities/producers/chateau-villemaurine/entity.yaml) | Producent | `producer.chateau-villemaurine` | Nee — reviewroute | `/producers/chateau-villemaurine` | — |
+| [Château Yon-Figeac](../content/entities/producers/chateau-yon-figeac/entity.yaml) | Producent | `producer.chateau-yon-figeac` | Nee — reviewroute | `/producers/chateau-yon-figeac` | — |
+| [Clos Badon Thunevin](../content/entities/producers/clos-badon-thunevin/entity.yaml) | Producent | `producer.clos-badon-thunevin` | Nee — reviewroute | `/producers/clos-badon-thunevin` | — |
+| [Clos de l'Oratoire](../content/entities/producers/clos-de-loratoire/entity.yaml) | Producent | `producer.clos-de-loratoire` | Nee — reviewroute | `/producers/clos-de-loratoire` | — |
+| [Clos des Jacobins](../content/entities/producers/clos-des-jacobins/entity.yaml) | Producent | `producer.clos-des-jacobins` | Nee — reviewroute | `/producers/clos-des-jacobins` | — |
+| [Clos Dubreuil](../content/entities/producers/clos-dubreuil/entity.yaml) | Producent | `producer.clos-dubreuil` | Nee — reviewroute | `/producers/clos-dubreuil` | — |
+| [Clos Fourtet](../content/entities/producers/clos-fourtet/entity.yaml) | Producent | `producer.clos-fourtet` | Nee — reviewroute | `/producers/clos-fourtet` | — |
+| [Clos Saint-Julien](../content/entities/producers/clos-saint-julien/entity.yaml) | Producent | `producer.clos-saint-julien` | Nee — reviewroute | `/producers/clos-saint-julien` | — |
+| [Clos Saint-Martin](../content/entities/producers/clos-saint-martin/entity.yaml) | Producent | `producer.clos-saint-martin` | Nee — reviewroute | `/producers/clos-saint-martin` | — |
+| [Couvent des Jacobins](../content/entities/producers/couvent-des-jacobins/entity.yaml) | Producent | `producer.couvent-des-jacobins` | Nee — reviewroute | `/producers/couvent-des-jacobins` | — |
+| [La Mondotte](../content/entities/producers/la-mondotte/entity.yaml) | Producent | `producer.la-mondotte` | Nee — reviewroute | `/producers/la-mondotte` | — |
+| [Lassègue](../content/entities/producers/lassegue/entity.yaml) | Producent | `producer.lassegue` | Nee — reviewroute | `/producers/lassegue` | — |
 | [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | `region.blayais-bourgeais` | Nee — reviewroute | `/regions/blayais-bourgeais` | — |
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | `region.entre-deux-mers` | Nee — reviewroute | `/regions/entre-deux-mers` | — |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | `region.graves-sauternais` | Nee — reviewroute | `/regions/graves-sauternais` | — |

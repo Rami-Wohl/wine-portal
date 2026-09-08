@@ -1,6 +1,6 @@
 id: classification.saint-emilion
 type: classification
-status: draft
+status: active
 canonical_name: Saint-Émilion Classification
 names:
   nl: Classificatie van Saint-Émilion
@@ -11,6 +11,40 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: scope, target: appellation.saint-emilion-grand-cru }
+  - { type: related_to, target: appellation.saint-emilion }
+  - { type: related_to, target: producer.chateau-cheval-blanc }
+  - { type: related_to, target: producer.chateau-ausone }
+assertions:
+  - id: assertion.saint-emilion-classification.first-edition
+    predicate: first_classification_year
+    value: 1955
+    status: historical
+    sources: [source.inao-saint-emilion-classification-2022]
+    last_verified: 2026-09-08
+  - id: assertion.saint-emilion-classification.current-edition
+    predicate: current_classification_year
+    value: 2022
+    status: verified
+    sources: [source.inao-saint-emilion-classification-2022]
+    last_verified: 2026-09-08
+  - id: assertion.saint-emilion-classification.premier-count
+    predicate: current_premier_grand_cru_classe_count
+    value: 14
+    status: verified
+    sources: [source.inao-saint-emilion-classification-2022]
+    last_verified: 2026-09-08
+  - id: assertion.saint-emilion-classification.grand-count
+    predicate: current_grand_cru_classe_count
+    value: 71
+    status: verified
+    sources: [source.inao-saint-emilion-classification-2022]
+    last_verified: 2026-09-08
+source_refs:
+  - source.inao-saint-emilion-classification-2022
+  - source.saint-emilion-grand-cru-specification-2023
+  - source.inao-saint-emilion-grand-cru-overview
+  - source.decanter-cheval-blanc-ausone-withdrawal-2021
+depth: foundation
+last_reviewed: 2026-09-08
