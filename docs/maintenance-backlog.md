@@ -25,14 +25,14 @@ Peildatum: 2026-09-08.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 8 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012` |
+| Open | 9 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012`, `MNT-020` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
 | Afgerond | 8 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zes
+Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zeven
 prioriteit `middel`. De drie geblokkeerde acties zijn afhankelijk van een
 betrouwbare Atlas- en geographydatalaag.
 
@@ -196,6 +196,26 @@ betrouwbare Atlas- en geographydatalaag.
 - **Blokkade:** officiële geometrie, schaalbetekenis en Atlasweergave zijn nog
   niet als betrouwbare keten beschikbaar.
 - **Log:** 2026-09-08 — geregistreerd; uitvoering wacht op Atlas.
+
+### `MNT-020` — Ideale beeldparen voor Ausone, Angélus en Canon
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** media, content
+- **Scope:** `producer.chateau-ausone`, `producer.chateau-angelus`,
+  `producer.chateau-canon`
+- **Herkomst:** contentauthoring 2026-09-08
+- **Bevinding:** alle drie actieve pagina's hebben rechtenveilig documentair
+  beeld, maar de gewenste combinatie van een herkenbaar châteaubeeld én een
+  Grand Vin-fles is nog niet compleet. Ausone en Canon missen een geschikte
+  open-gelicentieerde flesfoto; Angélus mist een geschikte open-gelicentieerde
+  opname van het château.
+- **Klaar wanneer:** iedere pagina het ontbrekende complementaire beeld lokaal
+  of via de beheerde mediaketen toont, met volledige rechtenmetadata,
+  gelokaliseerde alttekst en een caption met een andere didactische functie dan
+  het bestaande beeld.
+- **Log:** 2026-09-08 — geregistreerd nadat Wikimedia wel bruikbare historische
+  en wijngaardbeelden opleverde, maar niet alle drie gewenste beeldparen.
 
 ## Historie
 

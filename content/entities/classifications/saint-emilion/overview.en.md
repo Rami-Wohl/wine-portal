@@ -184,10 +184,12 @@ A rank says that an estate met the system's requirements in a particular edition
 Producer, site, blend, [[concept.vintage|vintage]], cellar choices and bottle condition remain separate layers of information. The classification orders estates; it does not replace critical observation.
 :::
 
-:::detail{#beroemde-afwezigen parent="betekenis-en-grenzen" depth="advanced" source_refs="source.decanter-cheval-blanc-ausone-withdrawal-2021 source.inao-saint-emilion-classification-2022"}
+:::detail{#beroemde-afwezigen parent="betekenis-en-grenzen" depth="advanced" source_refs="source.decanter-cheval-blanc-ausone-withdrawal-2021 source.chateau-angelus-withdrawal-2022 source.inao-saint-emilion-classification-2022"}
 ### Not taking part is not the same as being demoted
 
 [[producer.chateau-cheval-blanc|Château Cheval Blanc]] and [[producer.chateau-ausone|Château Ausone]] were historically Premiers Grands Crus Classés A, but did not apply in 2022 because they did not recognize themselves in the criteria. [@source.decanter-cheval-blanc-ausone-withdrawal-2021]
+
+[[producer.chateau-angelus|Château Angélus]], which had been promoted to category A in 2012, also withdrew its application in early 2022. It likewise does not appear on the current list. [@source.chateau-angelus-withdrawal-2022]
 
 Their absence from the list does not mean that a jury demoted their wines in 2022. It does show that a voluntary, revisable classification also depends on participation, trust and agreement about what it measures.
 :::

@@ -1,0 +1,24 @@
+id: media.producer.chateau-angelus.crate-1992
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-angelus/crate-1992.jpg
+mime_type: image/jpeg
+width: 3840
+height: 2055
+checksum_sha256: a2df02b5d4d2558844ef05fb57a8102170097489fa0cb218d4435e707e8eaa71
+alt:
+  nl: Detail van een houten kist Château Angélus 1992 met merknaam en jaargang
+  en: Detail of a wooden Château Angélus 1992 case showing the name and vintage
+caption:
+  nl: Een houten kist uit 1992. Dit beeld documenteert de historische presentatie van de wijn, niet het château of de huidige verpakking.
+  en: A wooden case from 1992. This image documents the wine's historic presentation, not the château or its current packaging.
+rights:
+  status: open-licensed
+  creator: Jamain
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Ang%C3%A9lus_J1_1992.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Jamain via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-08
+changes: Wikimedia's current cropped version resized proportionally to 3840 × 2055 pixels; no further crop or colour alteration.

@@ -1,0 +1,24 @@
+id: media.producer.chateau-ausone.estate-1985
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-ausone/estate-1985.jpg
+mime_type: image/jpeg
+width: 3231
+height: 2088
+checksum_sha256: 7d4867e75dafe608a4e4bd18ba37ce8ab4bd2e780e0222f0f679409052789296
+alt:
+  nl: Château Ausone tegen de kalkstenen helling van Saint-Émilion in 1985
+  en: Château Ausone against Saint-Émilion's limestone slope in 1985
+caption:
+  nl: Château Ausone in 1985. Het historische beeld laat zien hoe compact het domein tegen de helling ligt; het bewijst geen huidige inrichting of perceelgrens.
+  en: Château Ausone in 1985. The historic view shows how compactly the estate sits against the slope; it does not establish the present layout or plot boundary.
+rights:
+  status: open-licensed
+  creator: Michael Wittwer
+  source_url: https://commons.wikimedia.org/wiki/File:Saint-%C3%89milion_1985_-_Ch%C3%A2teau_Ausone_(NF0516).jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Michael Wittwer via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-08
+changes: Original Wikimedia file used without crop or editorial colour alteration.

@@ -1,6 +1,6 @@
 id: producer.chateau-ausone
 type: producer
-status: draft
+status: active
 canonical_name: Château Ausone
 names:
   nl: Château Ausone
@@ -11,6 +11,47 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: located_in, target: appellation.saint-emilion-grand-cru }
+  - type: classified_under
+    target: classification.saint-emilion
+    properties: { tier: premier-grand-cru-classe, distinction: A }
+    valid_from: 1955
+    valid_to: 2021
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.merlot }
+  - { type: related_to, target: appellation.saint-emilion }
+  - { type: related_to, target: region.bordeaux }
+  - { type: related_to, target: producer.chateau-cheval-blanc }
+  - { type: related_to, target: concept.grand-vin }
+  - { type: related_to, target: concept.second-wine }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.terroir }
+  - { type: related_to, target: concept.tannin }
+  - { type: related_to, target: concept.vintage }
+  - { type: related_to, target: concept.elevage }
+assertions:
+  - id: assertion.chateau-ausone.ownership
+    predicate: owner
+    value: Vauthier family
+    status: verified
+    sources: [source.chateau-ausone-practices]
+    last_verified: 2026-09-08
+    valid_from: 1690
+  - id: assertion.chateau-ausone.estate-area
+    predicate: estate_area_hectares
+    value: 7
+    status: verified
+    sources: [source.chateau-ausone-terroir]
+    last_verified: 2026-09-08
+source_refs:
+  - source.chateau-ausone-history
+  - source.chateau-ausone-terroir
+  - source.chateau-ausone-practices
+  - source.chateau-ausone-cellars
+  - source.decanter-chateau-ausone-profile
+  - source.decanter-chateau-ausone-travel
+  - source.decanter-cheval-blanc-ausone-withdrawal-2021
+  - source.inao-saint-emilion-classification-2022
+depth: foundation
+last_reviewed: 2026-09-08

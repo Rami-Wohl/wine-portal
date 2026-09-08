@@ -204,6 +204,58 @@ test("Château Cheval Blanc separates its historic rank from current status", as
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
+test("new Saint-Émilion producer pages remain layered and readable on mobile", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const producers = [
+    {
+      slug: "chateau-ausone",
+      name: "Château Ausone",
+      status: /historisch, niet actueel/i,
+      advancedBlock: "#romeinse-verleiding",
+    },
+    {
+      slug: "chateau-angelus",
+      name: "Château Angélus",
+      status: /A-rang is dus historisch/i,
+      advancedBlock: "#ligging-is-geen-recept",
+    },
+    {
+      slug: "chateau-canon",
+      name: "Château Canon",
+      status: /zonder onderscheiding A/i,
+      advancedBlock: "#canon-als-plateaureferentie",
+    },
+  ];
+
+  for (const producer of producers) {
+    await page.goto(`/producers/${producer.slug}`);
+    const heading = page.getByRole("heading", { level: 1, name: producer.name });
+    await expect(heading).toBeVisible();
+    await expect(page.getByText(producer.status).first()).toBeVisible();
+    await expect(page.locator("article img").first()).toHaveJSProperty("complete", true);
+
+    const layout = await page.evaluate(() => {
+      const eyebrow = document.querySelector<HTMLElement>(".entity-header .eyebrow");
+      const heading = document.querySelector<HTMLElement>(".entity-header h1");
+      return {
+        documentWidth: document.documentElement.scrollWidth,
+        viewportWidth: document.documentElement.clientWidth,
+        eyebrowBottom: eyebrow?.getBoundingClientRect().bottom ?? 0,
+        headingTop: heading?.getBoundingClientRect().top ?? 0,
+      };
+    });
+    expect(layout.documentWidth).toBeLessThanOrEqual(layout.viewportWidth);
+    expect(layout.headingTop).toBeGreaterThanOrEqual(layout.eyebrowBottom);
+
+    const depthControl = page.getByRole("group", {
+      name: "Kies hoeveel detail je wilt zien",
+    });
+    await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+    await expect(page.locator(producer.advancedBlock)).toBeVisible();
+  }
+});
+
 test("Château Pavie presents its vineyard, historic bottle and layered producer knowledge", async ({
   page,
 }) => {

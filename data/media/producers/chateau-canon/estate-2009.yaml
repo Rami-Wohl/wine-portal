@@ -1,0 +1,24 @@
+id: media.producer.chateau-canon.estate-2009
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-canon/estate-2009.jpg
+mime_type: image/jpeg
+width: 2304
+height: 963
+checksum_sha256: 406a34f3c7e86efa8a42a3906d2bd6d8f45b58c91c39f163127bab4abf700f00
+alt:
+  nl: Kale wijnranken van Château Canon op het kalksteenplateau in 2009
+  en: Dormant Château Canon vines on the limestone plateau in 2009
+caption:
+  nl: De wijngaard van Château Canon op het kalksteenplateau in 2009. De opname is later door een Wikimedia-bewerker in helderheid en contrast aangepast.
+  en: Château Canon's vineyard on the limestone plateau in 2009. A Wikimedia editor later adjusted the photograph's brightness and contrast.
+rights:
+  status: open-licensed
+  creator: Maïelr
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_Canon.JPG
+  license_name: Creative Commons Attribution 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by/3.0/
+  credit_line: Maïelr via Wikimedia Commons, CC BY 3.0
+acquired_at: 2026-09-08
+changes: Wikimedia version with brightness and contrast adjusted in 2018; no further crop or editorial alteration.

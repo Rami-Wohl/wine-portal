@@ -16,6 +16,7 @@ relations:
   - { type: related_to, target: appellation.saint-emilion }
   - { type: related_to, target: producer.chateau-cheval-blanc }
   - { type: related_to, target: producer.chateau-ausone }
+  - { type: related_to, target: producer.chateau-angelus }
 assertions:
   - id: assertion.saint-emilion-classification.first-edition
     predicate: first_classification_year
@@ -46,5 +47,6 @@ source_refs:
   - source.saint-emilion-grand-cru-specification-2023
   - source.inao-saint-emilion-grand-cru-overview
   - source.decanter-cheval-blanc-ausone-withdrawal-2021
+  - source.chateau-angelus-withdrawal-2022
 depth: foundation
 last_reviewed: 2026-09-08

@@ -184,10 +184,12 @@ Een rang vertelt dat een domein in een bepaalde editie aan de vereisten van het 
 Producent, perceel, blend, [[concept.vintage|jaargang]], kelderkeuzes en flesconditie blijven afzonderlijke informatielagen. De classificatie ordent domeinen; zij vervangt geen kritische waarneming.
 :::
 
-:::detail{#beroemde-afwezigen parent="betekenis-en-grenzen" depth="advanced" source_refs="source.decanter-cheval-blanc-ausone-withdrawal-2021 source.inao-saint-emilion-classification-2022"}
+:::detail{#beroemde-afwezigen parent="betekenis-en-grenzen" depth="advanced" source_refs="source.decanter-cheval-blanc-ausone-withdrawal-2021 source.chateau-angelus-withdrawal-2022 source.inao-saint-emilion-classification-2022"}
 ### Niet deelnemen is iets anders dan zakken
 
 [[producer.chateau-cheval-blanc|Château Cheval Blanc]] en [[producer.chateau-ausone|Château Ausone]] waren historische Premiers Grands Crus Classés A, maar dienden voor 2022 geen kandidatuur in omdat zij zich niet in de criteria herkenden. [@source.decanter-cheval-blanc-ausone-withdrawal-2021]
+
+Ook [[producer.chateau-angelus|Château Angélus]], dat in 2012 naar de A-categorie was gepromoveerd, trok begin 2022 zijn kandidatuur in. Het staat daardoor evenmin op de actuele lijst. [@source.chateau-angelus-withdrawal-2022]
 
 Hun afwezigheid uit de lijst betekent dus niet dat een jury hun wijn in 2022 degradeerde. Het laat wel zien dat een vrijwillig en herzienbaar classificatiesysteem mede afhankelijk is van deelname, vertrouwen en overeenstemming over wat het meet.
 :::

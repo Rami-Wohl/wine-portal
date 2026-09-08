@@ -1,0 +1,24 @@
+id: media.producer.chateau-angelus.grand-vin-1990
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-angelus/grand-vin-1990.jpg
+mime_type: image/jpeg
+width: 673
+height: 2107
+checksum_sha256: d853aa327eee79cf3e9d730e5e987cc517e84300c98b3d13b000e3e74db0a98d
+alt:
+  nl: Fles Château Angélus 1990 met het goudkleurige klokkenmotief op het etiket
+  en: Bottle of Château Angélus 1990 with the gold bell motif on its label
+caption:
+  nl: De Grand Vin uit 1990 draagt de klok die naam en visuele identiteit van Angélus verbindt. De classificatievermelding op historische flessen moet altijd binnen haar jaargang worden gelezen.
+  en: The 1990 Grand Vin carries the bell that connects Angélus's name and visual identity. Classification wording on historic bottles must always be read in the context of their vintage.
+rights:
+  status: open-licensed
+  creator: BerndB
+  source_url: https://commons.wikimedia.org/wiki/File:Angelus-1990.JPG
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: BerndB via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-08
+changes: Original Wikimedia file used without crop or editorial colour alteration.

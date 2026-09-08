@@ -1428,7 +1428,9 @@ h3 {
   }
   .entity-header h1,
   .lesson-page-header h1 {
-    font-size: clamp(2.5rem, 13vw, 3.6rem);
+    font-size: clamp(2.3rem, 11vw, 3.2rem);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
   }
   .knowledge-depth-control {
     grid-template-columns: 1fr;

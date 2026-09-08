@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 217 entities — 30 active, 187 draft, 0 deprecated.
+**Totaal:** 218 entities — 33 active, 185 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (30)
+## Actief — publiek vindbaar (33)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -32,6 +32,9 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-08 |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Ja | `/grapes/sauvignon-blanc` | 2026-09-07 |
 | [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Ja | `/grapes/semillon` | 2026-09-07 |
+| [Château Angélus](../content/entities/producers/chateau-angelus/entity.yaml) | Producent | `producer.chateau-angelus` | Ja | `/producers/chateau-angelus` | 2026-09-08 |
+| [Château Ausone](../content/entities/producers/chateau-ausone/entity.yaml) | Producent | `producer.chateau-ausone` | Ja | `/producers/chateau-ausone` | 2026-09-08 |
+| [Château Canon](../content/entities/producers/chateau-canon/entity.yaml) | Producent | `producer.chateau-canon` | Ja | `/producers/chateau-canon` | 2026-09-08 |
 | [Château Cheval Blanc](../content/entities/producers/chateau-cheval-blanc/entity.yaml) | Producent | `producer.chateau-cheval-blanc` | Ja | `/producers/chateau-cheval-blanc` | 2026-09-08 |
 | [Château d'Yquem](../content/entities/producers/chateau-d-yquem/entity.yaml) | Producent | `producer.chateau-d-yquem` | Ja | `/producers/chateau-d-yquem` | 2026-09-08 |
 | [Château Figeac](../content/entities/producers/chateau-figeac/entity.yaml) | Producent | `producer.chateau-figeac` | Ja | `/producers/chateau-figeac` | 2026-09-08 |
@@ -41,7 +44,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Ja | `/producers/chateau-pavie` | 2026-09-08 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (187)
+## Draft — nog uit te werken (185)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -114,7 +117,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Petit Verdot](../content/entities/grapes/petit-verdot/entity.yaml) | Druif | `grape.petit-verdot` | Nee — reviewroute | `/grapes/petit-verdot` | — |
 | [Sauvignon gris](../content/entities/grapes/sauvignon-gris/entity.yaml) | Druif | `grape.sauvignon-gris` | Nee — reviewroute | `/grapes/sauvignon-gris` | — |
 | [Savagnin](../content/entities/grapes/savagnin/entity.yaml) | Druif | `grape.savagnin` | Nee — reviewroute | `/grapes/savagnin` | — |
-| [Château Ausone](../content/entities/producers/chateau-ausone/entity.yaml) | Producent | `producer.chateau-ausone` | Nee — reviewroute | `/producers/chateau-ausone` | — |
 | [Château Badette](../content/entities/producers/chateau-badette/entity.yaml) | Producent | `producer.chateau-badette` | Nee — reviewroute | `/producers/chateau-badette` | — |
 | [Château Balestard la Tonnelle](../content/entities/producers/chateau-balestard-la-tonnelle/entity.yaml) | Producent | `producer.chateau-balestard-la-tonnelle` | Nee — reviewroute | `/producers/chateau-balestard-la-tonnelle` | — |
 | [Château Barde-Haut](../content/entities/producers/chateau-barde-haut/entity.yaml) | Producent | `producer.chateau-barde-haut` | Nee — reviewroute | `/producers/chateau-barde-haut` | — |
@@ -129,7 +131,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Broustet](../content/entities/producers/chateau-broustet/entity.yaml) | Producent | `producer.chateau-broustet` | Nee — reviewroute | `/producers/chateau-broustet` | — |
 | [Château Cadet-Bon](../content/entities/producers/chateau-cadet-bon/entity.yaml) | Producent | `producer.chateau-cadet-bon` | Nee — reviewroute | `/producers/chateau-cadet-bon` | — |
 | [Château Caillou](../content/entities/producers/chateau-caillou/entity.yaml) | Producent | `producer.chateau-caillou` | Nee — reviewroute | `/producers/chateau-caillou` | — |
-| [Château Canon](../content/entities/producers/chateau-canon/entity.yaml) | Producent | `producer.chateau-canon` | Nee — reviewroute | `/producers/chateau-canon` | — |
 | [Château Canon la Gaffelière](../content/entities/producers/chateau-canon-la-gaffeliere/entity.yaml) | Producent | `producer.chateau-canon-la-gaffeliere` | Nee — reviewroute | `/producers/chateau-canon-la-gaffeliere` | — |
 | [Château Cap de Mourlin](../content/entities/producers/chateau-cap-de-mourlin/entity.yaml) | Producent | `producer.chateau-cap-de-mourlin` | Nee — reviewroute | `/producers/chateau-cap-de-mourlin` | — |
 | [Château Chauvin](../content/entities/producers/chateau-chauvin/entity.yaml) | Producent | `producer.chateau-chauvin` | Nee — reviewroute | `/producers/chateau-chauvin` | — |
