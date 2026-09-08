@@ -1,0 +1,266 @@
+package_id: appellation.saint-emilion-grand-cru
+archetype: appellation-overview
+schema_version: 1
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, dezelfde-zone-een-andere-aop]
+    target_ids: [appellation.saint-emilion, region.bordeaux]
+    completeness_questions:
+      [Kan de lezer twee AOP's op hetzelfde geografische gebied uit elkaar houden?]
+    layers:
+      foundation: [Definieer Grand Cru als zelfstandige rode AOP rond Saint-Émilion.]
+      intermediate: [Leg gedeelde geografie en afzonderlijke regels uit.]
+      advanced: [Begrens geografische zone tegenover perceeltoelating.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Ligging en identiteit.],
+          source_refs: [source.inao-saint-emilion-grand-cru-overview],
+        }
+      specific_claims:
+        [
+          {
+            claim: De geografische zone is identiek aan die van Saint-Émilion.,
+            status: supported,
+            source_refs: [source.saint-emilion-grand-cru-specification-2023],
+          },
+        ]
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, van-vier-naar-twee-appellations]
+    target_ids: [appellation.saint-emilion, classification.saint-emilion]
+    completeness_questions: [Is het ontstaan in 1954 en de herschikking van 1984 helder?]
+    layers:
+      foundation: [Plaats Grand Cru in de lange geschiedenis van Saint-Émilion.]
+      intermediate: [Leg de juridische ontwikkeling vanaf 1954 uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.unesco-saint-emilion-jurisdiction],
+        }
+      specific_claims:
+        [
+          {
+            claim: Grand Cru werd in 1954 erkend en sinds 1984 zijn er twee appellations.,
+            status: supported,
+            source_refs: [source.saint-emilion-grand-cru-specification-2023],
+          },
+        ]
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, een-mozaiek-geen-grand-cru-bodem]
+    target_ids: [appellation.saint-emilion]
+    completeness_questions: [Wordt duidelijk dat Grand Cru geen afzonderlijk bodemvak is?]
+    layers:
+      foundation: [Beschrijf plateau hellingen vlaktes en bodemmozaïek.]
+      intermediate: [Ontkracht het idee van één Grand Cru-bodem.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap en bodem.],
+          source_refs: [source.saint-emilion-grand-cru-specification-2023],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, dezelfde-familie-meer-selectieruimte]
+    target_ids:
+      [
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.cabernet-sauvignon,
+        grape.carmenere,
+        grape.malbec,
+        grape.petit-verdot,
+      ]
+    completeness_questions: [Zijn alle rassen en hun praktische rollen behandeld?]
+    layers:
+      foundation: [Introduceer Merlot Cabernet Franc en Cabernet Sauvignon.]
+      intermediate: [Leg selectie en assemblage uit.]
+      advanced: [Noem de minder gebruikte toegestane rassen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Druivenrollen.], source_refs: [source.inao-saint-emilion-grand-cru-overview] }
+      specific_claims:
+        [
+          {
+            claim: Petit Verdot is accessoir en maximaal tien procent.,
+            status: supported,
+            source_refs: [source.saint-emilion-grand-cru-specification-2023],
+          },
+        ]
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, langere-opvoeding-is-geen-vatrecept]
+    target_ids: [concept.assemblage, concept.extraction, concept.elevage]
+    completeness_questions:
+      [Zijn selectie extractie assemblage en opvoeding van wettelijke minima gescheiden?]
+    layers:
+      foundation: [Volg rode vinificatie en opvoeding.]
+      intermediate: [Leg stijlkeuzes en langere rijping uit.]
+      advanced: [Scheid vatkeuze van wettelijke duur.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Vinificatie en opvoeding.],
+          source_refs: [source.saint-emilion-grand-cru-specification-2023],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, de-verschillen-in-cijfers]
+    target_ids: [appellation.saint-emilion]
+    completeness_questions:
+      [Kan de lezer de bepalende verschillen noemen zonder ze als kwaliteitsgarantie te zien?]
+    layers:
+      foundation: [Leg lagere opbrengst hogere rijpheid en langere opvoeding uit.]
+      intermediate: [Verbind regels met selectieruimte.]
+      advanced: [Geef de actuele drempels en vergelijk ze met Saint-Émilion.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Functie van de strengere regels.],
+          source_refs: [source.inao-saint-emilion-grand-cru-overview],
+        }
+      specific_claims:
+        [
+          {
+            claim: Het basisrendement is 46 hl/ha en opvoeding loopt tot 1 februari van het tweede jaar.,
+            status: supported,
+            source_refs: [source.saint-emilion-grand-cru-specification-2023],
+          },
+        ]
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten, de-editie-van-2022]
+    target_ids:
+      [classification.saint-emilion, producer.chateau-cheval-blanc, producer.chateau-ausone]
+    completeness_questions: [Is het verschil tussen appellation en rang ondubbelzinnig?]
+    layers:
+      foundation: [Scheid Grand Cru van Grand Cru Classé.]
+      intermediate: [Introduceer de periodieke classificatie.]
+      advanced: [Geef de structuur van 2022 en plaats bekende afwezigen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatiescope.],
+          source_refs: [source.saint-emilion-grand-cru-specification-2023],
+        }
+      specific_claims:
+        [
+          {
+            claim: De editie van 2022 telt 14 Premiers waarvan twee A en 71 Grands Crus Classés.,
+            status: supported,
+            source_refs: [source.inao-saint-emilion-classification-2022],
+          },
+        ]
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, concentratie-zonder-uniformiteit]
+    target_ids: [concept.tannin, concept.vintage]
+    completeness_questions: [Is een stijlbandbreedte met flesontwikkeling en variatie gegeven?]
+    layers:
+      foundation: [Beschrijf rijp fruit structuur en bewaarpotentieel als bandbreedte.]
+      intermediate: [Leg variatie door plaats druif jaar en kelder uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijl en flesontwikkeling.],
+          source_refs: [source.inao-saint-emilion-grand-cru-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, vier-regels-op-het-etiket]
+    target_ids: [appellation.saint-emilion, classification.saint-emilion]
+    completeness_questions: [Kan de lezer de volledige appellation en eventuele rang correct lezen?]
+    layers:
+      foundation: [Lees appellation producent cuvée en jaargang.]
+      intermediate: [Scheid classificatieterm van appellationnaam.]
+      advanced: [Waarschuw voor editie conditie en herkomst.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiket en aankoop.],
+          source_refs: [source.saint-emilion-grand-cru-specification-2023],
+        }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, meer-tijd-meer-afwegingen]
+    target_ids: []
+    completeness_questions:
+      [Zijn klimaat water en langere opvoeding als actuele afweging behandeld?]
+    layers:
+      foundation: [Plaats rijpheid en frisheid onder veranderende omstandigheden.]
+      intermediate: [Verbind langere opvoeding met energie kapitaal en stijlkeuze.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Hedendaagse productieafwegingen.],
+          source_refs: [source.saint-emilion-grand-cru-specification-2023],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [saint-emilion-panorama]
+    target_ids: []
+    completeness_questions:
+      [Toont het beeld het gedeelde historische landschap zonder aparte grens te suggereren?]
+    layers:
+      foundation: [Toon stad hellingen en wijngaard.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair landschap.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        appellation.saint-emilion,
+        classification.saint-emilion,
+        producer.chateau-cheval-blanc,
+        producer.chateau-ausone,
+      ]
+    completeness_questions:
+      [Zijn appellation classificatie en producenten als vervolgroutes beschikbaar?]
+    layers:
+      foundation: [Bied routes naar gedeeld gebied rangorde en iconen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

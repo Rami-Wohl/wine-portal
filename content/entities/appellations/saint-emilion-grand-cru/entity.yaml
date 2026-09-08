@@ -1,6 +1,6 @@
 id: appellation.saint-emilion-grand-cru
 type: appellation
-status: draft
+status: active
 canonical_name: Saint-Émilion Grand Cru
 names:
   nl: Saint-Émilion Grand Cru
@@ -11,6 +11,39 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: related_to, target: appellation.saint-emilion }
+  - { type: related_to, target: classification.saint-emilion }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+assertions:
+  - id: assertion.saint-emilion-grand-cru.wine-type
+    predicate: permitted_wine_type
+    value: still-dry-red
+    status: verified
+    sources: [source.saint-emilion-grand-cru-specification-2023]
+    last_verified: 2026-09-08
+  - id: assertion.saint-emilion-grand-cru.base-yield
+    predicate: base_yield_hl_per_ha
+    value: 46
+    status: verified
+    sources: [source.saint-emilion-grand-cru-specification-2023]
+    last_verified: 2026-09-08
+  - id: assertion.saint-emilion-grand-cru.minimum-ageing
+    predicate: minimum_ageing_until
+    value: 1 February of the second year after harvest
+    status: verified
+    sources: [source.saint-emilion-grand-cru-specification-2023]
+    last_verified: 2026-09-08
+source_refs:
+  - source.inao-saint-emilion-grand-cru-overview
+  - source.saint-emilion-grand-cru-specification-2023
+  - source.inao-saint-emilion-overview
+  - source.saint-emilion-specification-2023
+  - source.unesco-saint-emilion-jurisdiction
+  - source.inao-saint-emilion-classification-2022
+  - source.decanter-cheval-blanc-ausone-withdrawal-2021
+depth: foundation
+last_reviewed: 2026-09-08

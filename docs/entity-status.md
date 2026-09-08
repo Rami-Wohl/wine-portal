@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 132 entities — 24 active, 108 draft, 0 deprecated.
+**Totaal:** 132 entities — 25 active, 107 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (24)
+## Actief — publiek vindbaar (25)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -13,6 +13,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
 | [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | `appellation.saint-emilion` | Ja | `/appellations/saint-emilion` | 2026-09-08 |
+| [Saint-Émilion Grand Cru](../content/entities/appellations/saint-emilion-grand-cru/entity.yaml) | Appellatie | `appellation.saint-emilion-grand-cru` | Ja | `/appellations/saint-emilion-grand-cru` | 2026-09-08 |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-08 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-08 |
 | [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
@@ -35,7 +36,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (108)
+## Draft — nog uit te werken (107)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -65,7 +66,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | `appellation.pomerol` | Nee — reviewroute | `/appellations/pomerol` | — |
 | [Pouilly-Fumé](../content/entities/appellations/pouilly-fume/entity.yaml) | Appellatie | `appellation.pouilly-fume` | Nee — reviewroute | `/appellations/pouilly-fume` | — |
 | [Puisseguin-Saint-Émilion](../content/entities/appellations/puisseguin-saint-emilion/entity.yaml) | Appellatie | `appellation.puisseguin-saint-emilion` | Nee — reviewroute | `/appellations/puisseguin-saint-emilion` | — |
-| [Saint-Émilion Grand Cru](../content/entities/appellations/saint-emilion-grand-cru/entity.yaml) | Appellatie | `appellation.saint-emilion-grand-cru` | Nee — reviewroute | `/appellations/saint-emilion-grand-cru` | — |
 | [Saint-Estèphe](../content/entities/appellations/saint-estephe/entity.yaml) | Appellatie | `appellation.saint-estephe` | Nee — reviewroute | `/appellations/saint-estephe` | — |
 | [Saint-Georges-Saint-Émilion](../content/entities/appellations/saint-georges-saint-emilion/entity.yaml) | Appellatie | `appellation.saint-georges-saint-emilion` | Nee — reviewroute | `/appellations/saint-georges-saint-emilion` | — |
 | [Saint-Julien](../content/entities/appellations/saint-julien/entity.yaml) | Appellatie | `appellation.saint-julien` | Nee — reviewroute | `/appellations/saint-julien` | — |
