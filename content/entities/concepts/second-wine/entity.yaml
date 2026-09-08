@@ -1,6 +1,6 @@
 id: concept.second-wine
 type: concept
-status: draft
+status: active
 canonical_name: Second wine
 names:
   nl: Tweede wijn
@@ -11,6 +11,18 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.grand-vin }
+  - { type: related_to, target: concept.cuvee }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.elevage }
+  - { type: related_to, target: concept.vintage }
 assertions: []
-source_refs: []
+source_refs:
+  - source.chateau-latour-les-forts
+  - source.chateau-mouton-wines
+  - source.chateau-figeac-wine
+  - source.decanter-chateau-pavie-profile-2025
+  - source.dgccrf-wine-labels-2025
+depth: foundation
+last_reviewed: 2026-09-08

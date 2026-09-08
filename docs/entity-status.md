@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 217 entities — 28 active, 189 draft, 0 deprecated.
+**Totaal:** 217 entities — 29 active, 188 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (28)
+## Actief — publiek vindbaar (29)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -25,6 +25,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | `concept.lees-ageing` | Ja | `/concepts/rijping-op-de-lies` | 2026-09-07 |
+| [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | `concept.second-wine` | Ja | `/concepts/tweede-wijn` | 2026-09-08 |
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | `concept.volatile-thiols` | Ja | `/concepts/vluchtige-thiolen` | 2026-09-07 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
@@ -39,7 +40,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Ja | `/producers/chateau-pavie` | 2026-09-08 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (189)
+## Draft — nog uit te werken (188)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -102,7 +103,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | `concept.maceration` | Nee — reviewroute | `/concepts/schilinweking` | — |
 | [Tannine](../content/entities/concepts/tannin/entity.yaml) | Concept | `concept.tannin` | Nee — reviewroute | `/concepts/tannine` | — |
 | [Terroir](../content/entities/concepts/terroir/entity.yaml) | Concept | `concept.terroir` | Nee — reviewroute | `/concepts/terroir` | — |
-| [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | `concept.second-wine` | Nee — reviewroute | `/concepts/tweede-wijn` | — |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | `concept.acidity` | Nee — reviewroute | `/concepts/zuur-in-wijn` | — |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | `grape.carmenere` | Nee — reviewroute | `/grapes/carmenere` | — |
 | [Folle Blanche](../content/entities/grapes/folle-blanche/entity.yaml) | Druif | `grape.folle-blanche` | Nee — reviewroute | `/grapes/folle-blanche` | — |
