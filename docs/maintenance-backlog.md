@@ -25,33 +25,18 @@ Peildatum: 2026-09-08.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 11 | `MNT-001`, `MNT-003` t/m `MNT-012` |
+| Open | 8 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 5 | `MNT-015` t/m `MNT-019` |
+| Afgerond | 8 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben vijf acties prioriteit `hoog` en zes
+Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zes
 prioriteit `middel`. De drie geblokkeerde acties zijn afhankelijk van een
 betrouwbare Atlas- en geographydatalaag.
 
 ## Open werk
-
-### `MNT-001` — Assemblage wereldwijd verbreden
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Categorie:** content, research
-- **Scope:** `concept.assemblage`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de uitleg is bruikbaar, maar voorbeelden en bronbasis leunen te
-  sterk op Bordeaux voor een algemeen wijnbouwkundig concept.
-- **Klaar wanneer:** de NL- en EN-pagina's behandelen representatieve
-  toepassingen buiten Bordeaux, waaronder waar passend multi-vintage,
-  mousserende wijn en assemblage van rassen, percelen of partijen; de bronbasis
-  ondersteunt die bredere scope en beide talen blijven inhoudelijk gelijk.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
 
@@ -69,20 +54,6 @@ betrouwbare Atlas- en geographydatalaag.
   beschikbaar.
 - **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
   generatief verzonnen grenzen.
-
-### `MNT-003` — Classificatievisual voor Bordeaux 1855
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Categorie:** media, accessibility
-- **Scope:** `classification.bordeaux-1855`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de classificatiepagina heeft geen beeld terwijl de hiërarchie
-  zich goed leent voor visuele uitleg.
-- **Klaar wanneer:** de pagina een rechtenveilige, toegankelijke visual of
-  historische documentweergave bevat die de classificatie verduidelijkt zonder
-  betekenis uitsluitend via kleur over te brengen.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-004` — Educatieve ampelografievisual
 
@@ -109,20 +80,6 @@ betrouwbare Atlas- en geographydatalaag.
 - **Klaar wanneer:** één samenhangend, herbruikbaar beeldsysteem de verschillen
   en samenhang correct uitlegt en op de relevante pagina's met passende
   gelokaliseerde context wordt ingezet.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
-
-### `MNT-006` — Verdwenen officiële Yquem-bronnen vervangen
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Categorie:** research, content
-- **Scope:** `producer.chateau-d-yquem`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** vier eerder gebruikte officiële deelpagina's zijn niet meer
-  rechtstreeks toegankelijk.
-- **Klaar wanneer:** de betrokken claims opnieuw zijn gecontroleerd tegen
-  toegankelijke primaire bronnen of gecontroleerde archiefkopieën, nieuwe
-  bronrecords zijn gekoppeld waar nodig en de oude provenance bewaard blijft.
 - **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-007` — Tweede appellationbeeld voor Pauillac
@@ -241,6 +198,62 @@ betrouwbare Atlas- en geographydatalaag.
 - **Log:** 2026-09-08 — geregistreerd; uitvoering wacht op Atlas.
 
 ## Historie
+
+### `MNT-001` — Assemblage wereldwijd verbreden
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** content, research
+- **Scope:** `concept.assemblage`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** de uitleg was bruikbaar, maar voorbeelden en bronbasis leunden
+  te sterk op Bordeaux voor een algemeen wijnbouwkundig concept.
+- **Klaar wanneer:** de NL- en EN-pagina's behandelen representatieve
+  toepassingen buiten Bordeaux, waaronder waar passend multi-vintage,
+  mousserende wijn en assemblage van rassen, percelen of partijen; de bronbasis
+  ondersteunt die bredere scope en beide talen blijven inhoudelijk gelijk.
+- **Log:** 2026-09-08 — afgerond. De algemene definitie is losgemaakt van het
+  Bordeauxvoorbeeld; Champagne verduidelijkt nu assemblage naar druif, cru,
+  perceel en oogstjaar, reservewijnen en het moment vóór de tweede gisting. Twee
+  geopende Comité Champagne-bronnen zijn geregistreerd en NL/EN-pariteit en
+  linkaudit zijn gecontroleerd.
+
+### `MNT-003` — Classificatievisual voor Bordeaux 1855
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** media, accessibility
+- **Scope:** `classification.bordeaux-1855`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** de classificatiepagina had geen beeld terwijl de hiërarchie
+  zich goed leent voor visuele uitleg.
+- **Klaar wanneer:** de pagina een rechtenveilige, toegankelijke visual of
+  historische documentweergave bevat die de classificatie verduidelijkt zonder
+  betekenis uitsluitend via kleur over te brengen.
+- **Log:** 2026-09-08 — afgerond met een project-eigen SVG-diagram. Vijf tegenover
+  drie niveaus, Romeinse rangnummers, exacte aantallen en verschillende posities
+  dragen de betekenis naast kleur. De officiële classificatiebron is aan het
+  figure-block en de mediaherkomst gekoppeld; gelokaliseerde alttekst en captions
+  bieden de volledige tekstuele uitleg. De gerenderde SVG is visueel
+  gecontroleerd.
+
+### `MNT-006` — Verdwenen officiële Yquem-bronnen vervangen
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** research, content
+- **Scope:** `producer.chateau-d-yquem`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** vier eerder gebruikte officiële deelpagina's waren niet meer
+  rechtstreeks toegankelijk.
+- **Klaar wanneer:** de betrokken claims opnieuw zijn gecontroleerd tegen
+  toegankelijke primaire bronnen of gecontroleerde archiefkopieën, nieuwe
+  bronrecords zijn gekoppeld waar nodig en de oude provenance bewaard blijft.
+- **Log:** 2026-09-08 — afgerond. Werkende Internet Archive-snapshots van de
+  officiële history-, estate-, expertise- en Y-pagina's zijn afzonderlijk
+  geopend en als actieve bronrecords geregistreerd. Alle betrokken NL- en
+  EN-blocks verwijzen naar deze archiefrecords. De oorspronkelijke vier records
+  en URL's blijven met status `unavailable` in het sourceregister staan.
 
 ### `MNT-015` — Botrytiskennis op Bordeaux opnieuw kalibreren
 

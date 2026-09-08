@@ -1,0 +1,16 @@
+id: appellation.puisseguin-saint-emilion
+type: appellation
+status: draft
+canonical_name: Puisseguin-Saint-Émilion
+names:
+  nl: Puisseguin-Saint-Émilion
+  en: Puisseguin-Saint-Émilion
+slugs:
+  nl: puisseguin-saint-emilion
+  en: puisseguin-saint-emilion
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

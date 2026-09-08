@@ -1,0 +1,16 @@
+id: appellation.montagne-saint-emilion
+type: appellation
+status: draft
+canonical_name: Montagne-Saint-Émilion
+names:
+  nl: Montagne-Saint-Émilion
+  en: Montagne-Saint-Émilion
+slugs:
+  nl: montagne-saint-emilion
+  en: montagne-saint-emilion
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

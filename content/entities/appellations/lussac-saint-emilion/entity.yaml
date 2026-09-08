@@ -1,0 +1,16 @@
+id: appellation.lussac-saint-emilion
+type: appellation
+status: draft
+canonical_name: Lussac-Saint-Émilion
+names:
+  nl: Lussac-Saint-Émilion
+  en: Lussac-Saint-Émilion
+slugs:
+  nl: lussac-saint-emilion
+  en: lussac-saint-emilion
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

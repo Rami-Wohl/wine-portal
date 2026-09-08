@@ -1,6 +1,6 @@
 id: appellation.saint-emilion
 type: appellation
-status: draft
+status: active
 canonical_name: Saint-Émilion
 names:
   nl: Saint-Émilion
@@ -11,6 +11,44 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: related_to, target: appellation.saint-emilion-grand-cru }
+  - { type: related_to, target: classification.saint-emilion }
+  - { type: related_to, target: appellation.lussac-saint-emilion }
+  - { type: related_to, target: appellation.montagne-saint-emilion }
+  - { type: related_to, target: appellation.puisseguin-saint-emilion }
+  - { type: related_to, target: appellation.saint-georges-saint-emilion }
+assertions:
+  - id: assertion.saint-emilion.wine-type
+    predicate: permitted_wine_type
+    value: still-dry-red
+    status: verified
+    sources: [source.saint-emilion-specification-2023]
+    last_verified: 2026-09-08
+  - id: assertion.saint-emilion.aoc-recognition
+    predicate: aoc_recognition_year
+    value: 1936
+    status: verified
+    sources: [source.inao-saint-emilion-overview]
+    last_verified: 2026-09-08
+  - id: assertion.saint-emilion.communes
+    predicate: geographic_area_commune_count
+    value: 9
+    status: verified
+    sources: [source.saint-emilion-specification-2023]
+    last_verified: 2026-09-08
+source_refs:
+  - source.inao-saint-emilion-overview
+  - source.saint-emilion-specification-2023
+  - source.inao-saint-emilion-grand-cru-overview
+  - source.unesco-saint-emilion-jurisdiction
+  - source.saint-emilion-grapes
+  - source.saint-emilion-terroir
+  - source.inao-saint-emilion-classification-2022
+  - source.decanter-cheval-blanc-ausone-withdrawal-2021
+depth: foundation
+last_reviewed: 2026-09-08

@@ -1,0 +1,16 @@
+id: producer.chateau-ausone
+type: producer
+status: draft
+canonical_name: Château Ausone
+names:
+  nl: Château Ausone
+  en: Château Ausone
+slugs:
+  nl: chateau-ausone
+  en: chateau-ausone
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -50,6 +50,9 @@ The red growths include one famous geographical exception: Château Haut-Brion, 
 That single château does not extend the list into a classification of all Graves. Instead, it highlights just how historical and selective its boundaries are.
 :::
 
+:::figure{#twee-rangorden media_id="media.classification.bordeaux-1855.hierarchy" source_refs="source.gcc1855-classification-overview"}
+:::
+
 :::section{#etiket-en-betekenis depth="foundation" source_refs="source.gcc1855-classification-overview"}
 ## Label and meaning — what the rank really tells you
 

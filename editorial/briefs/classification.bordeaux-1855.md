@@ -63,10 +63,13 @@ Benodigde links bestaan voor Bordeaux, Médoc, de betrokken appellations,
 ontbrekende producentenpagina's blokkeren deze systeemuitleg niet; zij mogen later
 structureel aan de classificatie worden gekoppeld.
 
-Er is voor deze conceptuele uitleg geen visual die nu noodzakelijker is dan een
-toekomstig structureel overzicht van rangen en domeinen. Een historische
-documentafbeelding wordt pas toegevoegd met verifieerbare rechten en een concrete
-leertaak.
+Op 2026-09-08 is een structureel overzicht toegevoegd dat de vijf rode en drie
+zoete rangen met hun exacte aantallen naast elkaar zet. Het diagram gebruikt
+vorm, positie, Romeinse rangnummers en aantallen naast kleur, blijft zonder
+taalgebonden labels herbruikbaar in NL en EN en wordt door gelokaliseerde alttekst
+en caption volledig uitgelegd. De data komen uit
+`source.gcc1855-classification-overview`; de visual is geen actuele
+kwaliteitsranglijst.
 
 ## Publication gate
 

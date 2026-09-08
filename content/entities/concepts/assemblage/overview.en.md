@@ -1,8 +1,8 @@
-:::summary{#wat-is-assemblage depth="foundation" source_refs="source.oiv-blending-code source.civb-bordeaux-blending"}
+:::summary{#wat-is-assemblage depth="foundation" source_refs="source.oiv-blending-code"}
 In **blending**, a winemaker brings separate lots of wine together into one final composition. [@source.oiv-blending-code] This may be a blend of different grape varieties, but it need not be: lots from a single variety, vineyard or [[concept.vintage|vintage]] can also be made separately and united later.
 :::
 
-:::section{#bouwstenen depth="foundation" source_refs="source.civb-bordeaux-blending source.eu-wine-coupage-regulation-2019"}
+:::section{#bouwstenen depth="foundation" source_refs="source.oiv-blending-code source.champagne-blending"}
 ## Building blocks — separate lots become one wine
 
 During winemaking, grapes or young wines may remain separate because they come from different varieties, parcels or selections. This leaves the winemaker with several building blocks. The blend takes shape when the maker decides which lots will form the final wine together.
@@ -10,12 +10,14 @@ During winemaking, grapes or young wines may remain separate because they come f
 The term therefore describes a cellar operation above all. “Blend” is not simply a grander word for “wine made from several grapes”: a wine labelled as one hundred per cent [[grape.merlot|Merlot]] can still unite several lots that were made separately.
 :::
 
-:::detail{#meer-dan-druivenrassen parent="bouwstenen" depth="intermediate" source_refs="source.civb-bordeaux-blending"}
+:::detail{#meer-dan-druivenrassen parent="bouwstenen" depth="intermediate" source_refs="source.civb-bordeaux-blending source.champagne-blending"}
 ### Why lots remain separate
 
 Working separately preserves differences until the maker knows what each component can contribute. Varieties and parcels may ripen at different times. Lots may also [[concept.fermentation|ferment]] separately, undergo different selections or spend their [[concept.elevage|élevage]] — the period of maturation after fermentation — in different vessels. [@source.civb-bordeaux-blending]
 
 Separation is not an end in itself. It keeps choices open: a lot can play the leading role, make a small contribution, go into another [[concept.cuvee|cuvée]] — a separately composed wine —, or stay out of the final wine altogether.
+
+That principle belongs to no single region or wine type. In Champagne, still base wines can differ by grape variety, cru — here a village or vineyard origin within the appellation —, parcel and harvest year. Blending there takes place before bottling and the second fermentation that makes the wine sparkling. [@source.champagne-blending]
 :::
 
 :::detail{#juridische-definities parent="bouwstenen" depth="advanced" source_refs="source.oiv-blending-code source.eu-wine-coupage-regulation-2019"}
@@ -26,12 +28,12 @@ Separation is not an end in itself. It keeps choices open: a lot can play the le
 The terms overlap, but are not interchangeable in every context. When precise legal status matters, the applicable EU rules and the official product specification containing the origin and production rules are decisive — not the informal word chosen by a writer or winemaker.
 :::
 
-:::section{#proeven-en-samenstellen depth="foundation" source_refs="source.oiv-blending-code source.civb-bordeaux-blending"}
+:::section{#proeven-en-samenstellen depth="foundation" source_refs="source.oiv-blending-code source.civb-bordeaux-blending source.champagne-blending"}
 ## Composition — tasting with a destination
 
 Blending begins with a question: which combination will become the wine the maker has in mind? Separate lots are tasted and compared for the way they work together. One may contribute structure, another freshness, aroma, ripe fruit or length; sometimes a component proves to add nothing to this particular composition.
 
-The aim is not to use as many components as possible, but to build a balanced wine with a recognisable purpose. A wine with a protected origin must also fit the character and rules of that origin. [@source.oiv-blending-code]
+The aim is not to use as many components as possible, but to build a coherent wine with a recognisable purpose. That purpose can differ: continuing a house signature, allowing one harvest to speak, joining differences between parcels or creating a new cuvée. A wine with a protected origin must also keep its composition within the rules of that origin. [@source.oiv-blending-code] [@source.champagne-blending]
 :::
 
 :::detail{#proefblends parent="proeven-en-samenstellen" depth="intermediate" source_refs="source.civb-bordeaux-blending"}
@@ -58,12 +60,14 @@ A statement such as 70% Merlot and 30% [[grape.cabernet-sauvignon|Cabernet Sauvi
 Read percentages as one layer of information. They describe the ratio, not automatically the taste, quality or work behind the bottle.
 :::
 
-:::detail{#jaargang-en-huisstijl parent="percentages-lezen" depth="intermediate" source_refs="source.civb-bordeaux-blending"}
+:::detail{#jaargang-en-huisstijl parent="percentages-lezen" depth="intermediate" source_refs="source.civb-bordeaux-blending source.champagne-non-vintage-brut"}
 ### Vintage and house style at the same table
 
 The available building blocks change with every harvest. A variety or parcel may ripen more convincingly in one season than another, shifting the chosen ratio. At the same time, a producer may use selection and blending to pursue a recognisable house style. [@source.civb-bordeaux-blending]
 
 A changing blend does not necessarily signal a change of direction. It can show how a maker uses different ingredients to seek a familiar balance again.
+
+Champagne makes this time dimension especially visible. A non-vintage Champagne can combine wine from the new harvest with **reserve wines** from earlier years. The cuvée therefore brings together not only grape and place, but different moments in time. A vintage Champagne, by contrast, is made exclusively from wine from the stated harvest year. [@source.champagne-non-vintage-brut]
 :::
 
 :::detail{#geen-rekensom parent="percentages-lezen" depth="advanced" source_refs="source.civb-bordeaux-blending"}

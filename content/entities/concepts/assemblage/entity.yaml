@@ -27,5 +27,7 @@ source_refs:
   - source.oiv-blending-code
   - source.eu-wine-coupage-regulation-2019
   - source.civb-bordeaux-blending
+  - source.champagne-blending
+  - source.champagne-non-vintage-brut
 depth: foundation
-last_reviewed: 2026-09-02
+last_reviewed: 2026-09-08

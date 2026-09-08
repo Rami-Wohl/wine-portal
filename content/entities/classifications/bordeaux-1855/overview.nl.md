@@ -50,6 +50,9 @@ Onder de rode crus staat één beroemde geografische uitzondering: Château Haut
 Dat ene château verruimt de lijst niet tot een classificatie van heel Graves. Het onderstreept juist hoe historisch en selectief de afbakening is.
 :::
 
+:::figure{#twee-rangorden media_id="media.classification.bordeaux-1855.hierarchy" source_refs="source.gcc1855-classification-overview"}
+:::
+
 :::section{#etiket-en-betekenis depth="foundation" source_refs="source.gcc1855-classification-overview"}
 ## Etiket en betekenis — wat de rang je werkelijk vertelt
 

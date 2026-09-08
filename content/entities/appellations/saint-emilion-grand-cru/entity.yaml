@@ -1,0 +1,16 @@
+id: appellation.saint-emilion-grand-cru
+type: appellation
+status: draft
+canonical_name: Saint-Émilion Grand Cru
+names:
+  nl: Saint-Émilion Grand Cru
+  en: Saint-Émilion Grand Cru
+slugs:
+  nl: saint-emilion-grand-cru
+  en: saint-emilion-grand-cru
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

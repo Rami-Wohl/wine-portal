@@ -1,0 +1,22 @@
+id: media.classification.bordeaux-1855.hierarchy
+kind: diagram
+role: educational
+status: active
+storage_key: classifications/bordeaux-1855/hierarchy.svg
+mime_type: image/svg+xml
+width: 1536
+height: 1024
+checksum_sha256: c851e603043bfddfcaa482a58a2bb398775e7f4a82237affb5e91864f05f66e0
+alt:
+  nl: Diagram met links vijf rode-wijnklassen met respectievelijk 5, 14, 14, 10 en 18 crus, en rechts drie zoete-wijnklassen met 1 premier cru supérieur, 11 premiers crus en 15 deuxièmes crus
+  en: Diagram with five red-wine classes containing 5, 14, 14, 10 and 18 growths on the left, and three sweet-wine classes containing 1 superior first growth, 11 first growths and 15 second growths on the right
+caption:
+  nl: De classificatie gebruikt twee aparte ladders. De 61 rode crus zijn verdeeld over vijf klassen; de 27 zoete crus over één premier cru supérieur, elf premiers crus en vijftien deuxièmes crus. De treden tonen historische rang, geen actuele proefscore.
+  en: The classification uses two separate ladders. Its 61 red growths occupy five classes; its 27 sweet growths comprise one superior first growth, eleven first growths and fifteen second growths. The steps show historical rank, not a current tasting score.
+rights:
+  status: owned
+  creator: Oenocademy editorial
+  license_name: Project-owned original SVG
+  credit_line: Oenocademy
+acquired_at: 2026-09-08
+changes: Original language-neutral SVG diagram. Class counts derive from source.gcc1855-classification-overview as verified on 2026-09-08.

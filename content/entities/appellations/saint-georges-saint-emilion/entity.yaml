@@ -1,0 +1,16 @@
+id: appellation.saint-georges-saint-emilion
+type: appellation
+status: draft
+canonical_name: Saint-Georges-Saint-Émilion
+names:
+  nl: Saint-Georges-Saint-Émilion
+  en: Saint-Georges-Saint-Émilion
+slugs:
+  nl: saint-georges-saint-emilion
+  en: saint-georges-saint-emilion
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 125 entities — 23 active, 102 draft, 0 deprecated.
+**Totaal:** 132 entities — 24 active, 108 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (23)
+## Actief — publiek vindbaar (24)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -12,10 +12,11 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | --- | --- | --- | --- | --- | --- |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
+| [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | `appellation.saint-emilion` | Ja | `/appellations/saint-emilion` | 2026-09-08 |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-08 |
-| [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-02 |
+| [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-08 |
 | [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
-| [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
+| [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-08 |
 | [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | `concept.autolysis` | Ja | `/concepts/autolyse` | 2026-09-07 |
 | [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-07 |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
@@ -34,7 +35,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (102)
+## Draft — nog uit te werken (108)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -54,15 +55,19 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | `appellation.fronsac` | Nee — reviewroute | `/appellations/fronsac` | — |
 | [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | `appellation.graves` | Nee — reviewroute | `/appellations/graves` | — |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | `appellation.haut-medoc` | Nee — reviewroute | `/appellations/haut-medoc` | — |
+| [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | `appellation.lussac-saint-emilion` | Nee — reviewroute | `/appellations/lussac-saint-emilion` | — |
 | [Maipo Valley](../content/entities/appellations/maipo-valley/entity.yaml) | Appellatie | `appellation.maipo-valley` | Nee — reviewroute | `/appellations/maipo-valley` | — |
 | [Margaret River](../content/entities/appellations/margaret-river/entity.yaml) | Appellatie | `appellation.margaret-river` | Nee — reviewroute | `/appellations/margaret-river` | — |
 | [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | `appellation.margaux` | Nee — reviewroute | `/appellations/margaux` | — |
+| [Montagne-Saint-Émilion](../content/entities/appellations/montagne-saint-emilion/entity.yaml) | Appellatie | `appellation.montagne-saint-emilion` | Nee — reviewroute | `/appellations/montagne-saint-emilion` | — |
 | [Napa Valley](../content/entities/appellations/napa-valley/entity.yaml) | Appellatie | `appellation.napa-valley` | Nee — reviewroute | `/appellations/napa-valley` | — |
 | [Pessac-Léognan](../content/entities/appellations/pessac-leognan/entity.yaml) | Appellatie | `appellation.pessac-leognan` | Nee — reviewroute | `/appellations/pessac-leognan` | — |
 | [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | `appellation.pomerol` | Nee — reviewroute | `/appellations/pomerol` | — |
 | [Pouilly-Fumé](../content/entities/appellations/pouilly-fume/entity.yaml) | Appellatie | `appellation.pouilly-fume` | Nee — reviewroute | `/appellations/pouilly-fume` | — |
-| [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | `appellation.saint-emilion` | Nee — reviewroute | `/appellations/saint-emilion` | — |
+| [Puisseguin-Saint-Émilion](../content/entities/appellations/puisseguin-saint-emilion/entity.yaml) | Appellatie | `appellation.puisseguin-saint-emilion` | Nee — reviewroute | `/appellations/puisseguin-saint-emilion` | — |
+| [Saint-Émilion Grand Cru](../content/entities/appellations/saint-emilion-grand-cru/entity.yaml) | Appellatie | `appellation.saint-emilion-grand-cru` | Nee — reviewroute | `/appellations/saint-emilion-grand-cru` | — |
 | [Saint-Estèphe](../content/entities/appellations/saint-estephe/entity.yaml) | Appellatie | `appellation.saint-estephe` | Nee — reviewroute | `/appellations/saint-estephe` | — |
+| [Saint-Georges-Saint-Émilion](../content/entities/appellations/saint-georges-saint-emilion/entity.yaml) | Appellatie | `appellation.saint-georges-saint-emilion` | Nee — reviewroute | `/appellations/saint-georges-saint-emilion` | — |
 | [Saint-Julien](../content/entities/appellations/saint-julien/entity.yaml) | Appellatie | `appellation.saint-julien` | Nee — reviewroute | `/appellations/saint-julien` | — |
 | [Saint-Nicolas-de-Bourgueil](../content/entities/appellations/saint-nicolas-de-bourgueil/entity.yaml) | Appellatie | `appellation.saint-nicolas-de-bourgueil` | Nee — reviewroute | `/appellations/saint-nicolas-de-bourgueil` | — |
 | [Sancerre](../content/entities/appellations/sancerre/entity.yaml) | Appellatie | `appellation.sancerre` | Nee — reviewroute | `/appellations/sancerre` | — |
@@ -106,9 +111,11 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Petit Verdot](../content/entities/grapes/petit-verdot/entity.yaml) | Druif | `grape.petit-verdot` | Nee — reviewroute | `/grapes/petit-verdot` | — |
 | [Sauvignon gris](../content/entities/grapes/sauvignon-gris/entity.yaml) | Druif | `grape.sauvignon-gris` | Nee — reviewroute | `/grapes/sauvignon-gris` | — |
 | [Savagnin](../content/entities/grapes/savagnin/entity.yaml) | Druif | `grape.savagnin` | Nee — reviewroute | `/grapes/savagnin` | — |
+| [Château Ausone](../content/entities/producers/chateau-ausone/entity.yaml) | Producent | `producer.chateau-ausone` | Nee — reviewroute | `/producers/chateau-ausone` | — |
 | [Château Batailley](../content/entities/producers/chateau-batailley/entity.yaml) | Producent | `producer.chateau-batailley` | Nee — reviewroute | `/producers/chateau-batailley` | — |
 | [Château Broustet](../content/entities/producers/chateau-broustet/entity.yaml) | Producent | `producer.chateau-broustet` | Nee — reviewroute | `/producers/chateau-broustet` | — |
 | [Château Caillou](../content/entities/producers/chateau-caillou/entity.yaml) | Producent | `producer.chateau-caillou` | Nee — reviewroute | `/producers/chateau-caillou` | — |
+| [Château Cheval Blanc](../content/entities/producers/chateau-cheval-blanc/entity.yaml) | Producent | `producer.chateau-cheval-blanc` | Nee — reviewroute | `/producers/chateau-cheval-blanc` | — |
 | [Château Clerc Milon](../content/entities/producers/chateau-clerc-milon/entity.yaml) | Producent | `producer.chateau-clerc-milon` | Nee — reviewroute | `/producers/chateau-clerc-milon` | — |
 | [Château Climens](../content/entities/producers/chateau-climens/entity.yaml) | Producent | `producer.chateau-climens` | Nee — reviewroute | `/producers/chateau-climens` | — |
 | [Château Coutet](../content/entities/producers/chateau-coutet/entity.yaml) | Producent | `producer.chateau-coutet` | Nee — reviewroute | `/producers/chateau-coutet` | — |

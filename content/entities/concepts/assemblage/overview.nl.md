@@ -1,8 +1,8 @@
-:::summary{#wat-is-assemblage depth="foundation" source_refs="source.oiv-blending-code source.civb-bordeaux-blending"}
+:::summary{#wat-is-assemblage depth="foundation" source_refs="source.oiv-blending-code"}
 Bij een **assemblage** brengt een wijnmaker afzonderlijke wijnpartijen samen tot één uiteindelijke compositie. [@source.oiv-blending-code] Dat kan een blend van verschillende druivenrassen zijn, maar dat hoeft niet: ook partijen van één ras, wijngaard of [[concept.vintage|jaargang]] kunnen apart zijn gemaakt en later samenkomen.
 :::
 
-:::section{#bouwstenen depth="foundation" source_refs="source.civb-bordeaux-blending source.eu-wine-coupage-regulation-2019"}
+:::section{#bouwstenen depth="foundation" source_refs="source.oiv-blending-code source.champagne-blending"}
 ## Bouwstenen — verschillende partijen worden één wijn
 
 Tijdens het wijnmaken kunnen druiven of jonge wijnen gescheiden blijven omdat zij van verschillende rassen, percelen of selecties komen. Zo houdt de wijnmaker meerdere bouwstenen over. Pas wanneer is gekozen welke partijen samen de uiteindelijke wijn vormen, ontstaat de assemblage.
@@ -10,12 +10,14 @@ Tijdens het wijnmaken kunnen druiven of jonge wijnen gescheiden blijven omdat zi
 Het begrip beschrijft dus vooral een kelderhandeling. “Assemblage” is niet simpelweg een deftiger woord voor “wijn van meerdere druiven”: een wijn van honderd procent [[grape.merlot|merlot]] kan nog steeds uit verscheidene afzonderlijk gemaakte partijen bestaan.
 :::
 
-:::detail{#meer-dan-druivenrassen parent="bouwstenen" depth="intermediate" source_refs="source.civb-bordeaux-blending"}
+:::detail{#meer-dan-druivenrassen parent="bouwstenen" depth="intermediate" source_refs="source.civb-bordeaux-blending source.champagne-blending"}
 ### Waarom partijen apart blijven
 
 Afzonderlijk werken geeft ruimte om verschil te bewaren tot de maker weet wat ieder onderdeel kan bijdragen. Druivenrassen en percelen kunnen op andere momenten rijp zijn. Partijen kunnen bovendien afzonderlijk [[concept.fermentation|vergisten]], anders worden geselecteerd of tijdens de [[concept.elevage|élevage]] — de periode van opvoeding na de gisting — in verschillende vaten verblijven. [@source.civb-bordeaux-blending]
 
 Die scheiding is geen doel op zichzelf. Zij houdt keuzes open: een partij kan een hoofdrol krijgen, slechts een kleine aanvulling leveren, naar een andere [[concept.cuvee|cuvée]] — een afzonderlijk samengestelde wijn — gaan of helemaal niet in de uiteindelijke wijn terechtkomen.
+
+Dat principe is niet gebonden aan één streek of één type wijn. In Champagne kunnen stille basiswijnen verschillen naar druivenras, cru — hier een dorp of wijngaardherkomst binnen de appellation —, perceel en oogstjaar. De assemblage vindt daar plaats vóór het bottelen en de tweede gisting die de wijn mousserend maakt. [@source.champagne-blending]
 :::
 
 :::detail{#juridische-definities parent="bouwstenen" depth="advanced" source_refs="source.oiv-blending-code source.eu-wine-coupage-regulation-2019"}
@@ -26,12 +28,12 @@ In dagelijks wijngebruik is “assemblage” een ruim begrip. De OIV, de interna
 De woorden overlappen, maar zijn niet in iedere context uitwisselbaar. Wanneer de precieze wettelijke status ertoe doet, zijn de geldende EU-regels en het officiële productdossier met de herkomst- en productieregels bepalend — niet het losse woord dat een schrijver of wijnmaker kiest.
 :::
 
-:::section{#proeven-en-samenstellen depth="foundation" source_refs="source.oiv-blending-code source.civb-bordeaux-blending"}
+:::section{#proeven-en-samenstellen depth="foundation" source_refs="source.oiv-blending-code source.civb-bordeaux-blending source.champagne-blending"}
 ## Samenstellen — proeven met een bestemming
 
 Assemblage begint met een vraag: welke combinatie wordt de wijn die de maker voor ogen heeft? Afzonderlijke partijen worden geproefd en vergeleken op hun onderlinge samenhang. De ene kan structuur geven, een andere frisheid, geur, rijp fruit of lengte; soms blijkt een onderdeel juist niets aan deze compositie toe te voegen.
 
-Het doel is niet om zo veel mogelijk componenten te gebruiken, maar om een evenwichtige wijn met een herkenbare bedoeling te bouwen. Voor een wijn met beschermde herkomst moet die samenstelling bovendien passen bij het karakter en de regels van die herkomst. [@source.oiv-blending-code]
+Het doel is niet om zo veel mogelijk componenten te gebruiken, maar om een wijn met samenhang en een herkenbare bedoeling te bouwen. Die bedoeling kan per wijn verschillen: de signatuur van een huis voortzetten, één oogstjaar laten spreken, verschillen tussen percelen verbinden of juist een nieuwe cuvée vormen. Voor een wijn met beschermde herkomst moet de samenstelling bovendien binnen de regels van die herkomst blijven. [@source.oiv-blending-code] [@source.champagne-blending]
 :::
 
 :::detail{#proefblends parent="proeven-en-samenstellen" depth="intermediate" source_refs="source.civb-bordeaux-blending"}
@@ -58,12 +60,14 @@ Een vermelding als 70% merlot en 30% [[grape.cabernet-sauvignon|cabernet sauvign
 Lees percentages daarom als één laag informatie. Zij beschrijven de verdeling, niet automatisch de smaak, kwaliteit of werkwijze achter de fles.
 :::
 
-:::detail{#jaargang-en-huisstijl parent="percentages-lezen" depth="intermediate" source_refs="source.civb-bordeaux-blending"}
+:::detail{#jaargang-en-huisstijl parent="percentages-lezen" depth="intermediate" source_refs="source.civb-bordeaux-blending source.champagne-non-vintage-brut"}
 ### Jaargang en huisstijl aan dezelfde tafel
 
 De beschikbare bouwstenen veranderen ieder oogstjaar. Een ras of perceel kan in het ene seizoen overtuigender rijpen dan in het andere, waardoor de gekozen verhouding verschuift. Tegelijk kan een producent met selectie en assemblage proberen een herkenbare huisstijl vast te houden. [@source.civb-bordeaux-blending]
 
 Een wisselende blend hoeft dus geen koerswijziging te betekenen. Zij kan juist laten zien hoe een maker met andere ingrediënten opnieuw naar een vertrouwd evenwicht zoekt.
+
+Champagne maakt die tijdsdimensie bijzonder zichtbaar. Een champagne zonder jaartal kan wijn van de nieuwe oogst combineren met **reservewijnen** uit eerdere jaren. Zo worden niet alleen druif en plaats, maar ook verschillende momenten in één cuvée samengebracht. Een champagne mét jaartal bestaat daarentegen uitsluitend uit wijn van het vermelde oogstjaar. [@source.champagne-non-vintage-brut]
 :::
 
 :::detail{#geen-rekensom parent="percentages-lezen" depth="advanced" source_refs="source.civb-bordeaux-blending"}

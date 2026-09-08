@@ -236,7 +236,7 @@ Deze volgorde voorkomt dat één opvallend woord alle betekenis krijgt. De preci
 
 Een [[concept.chateau|château als wijnnaam]] kan naar een wijngoed of merk verwijzen; er hoeft geen sprookjeskasteel op het erf te staan. De naam van het château is evenmin automatisch de appellation. [[concept.estate-bottling|Mis en bouteille au château]] zegt waar de wijn werd gebotteld, niet dat hij geclassificeerd is.
 
-Ook *cru*, *grand cru* en *classé* vragen context. Saint-Émilion Grand Cru is een appellation met eigen regels, terwijl *Grand Cru Classé* daar naar een classificatieniveau kan verwijzen. In de Médoc werkt de terminologie weer anders. Lees zulke woorden nooit los: zoek de volledige formule en het bijbehorende systeem.
+Ook *cru*, *grand cru* en *classé* vragen context. [[appellation.saint-emilion-grand-cru|Saint-Émilion Grand Cru]] is een appellation met eigen regels, terwijl *Grand Cru Classé* daar naar een classificatieniveau kan verwijzen. In de Médoc werkt de terminologie weer anders. Lees zulke woorden nooit los: zoek de volledige formule en het bijbehorende systeem.
 :::
 
 :::section{#bordeaux-in-het-glas depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.civb-bordeaux-grape-varieties"}

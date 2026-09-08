@@ -1,0 +1,16 @@
+id: producer.chateau-cheval-blanc
+type: producer
+status: draft
+canonical_name: Château Cheval Blanc
+names:
+  nl: Château Cheval Blanc
+  en: Château Cheval Blanc
+slugs:
+  nl: chateau-cheval-blanc
+  en: chateau-cheval-blanc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

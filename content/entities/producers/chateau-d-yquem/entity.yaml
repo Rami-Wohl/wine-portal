@@ -49,7 +49,7 @@ assertions:
     predicate: vineyard_area_hectares
     value: 113
     status: verified
-    sources: [source.yquem-estate]
+    sources: [source.yquem-estate, source.yquem-estate-archive]
     last_verified: 2026-09-08
 source_refs:
   - source.gcc1855-classification-overview
@@ -57,9 +57,13 @@ source_refs:
   - source.inao-sauternes-specification-2026
   - source.yquem-homepage
   - source.yquem-history
+  - source.yquem-history-archive
   - source.yquem-estate
+  - source.yquem-estate-archive
   - source.yquem-expertise
+  - source.yquem-expertise-archive
   - source.yquem-y
+  - source.yquem-y-archive
   - source.lvmh-yquem
   - source.decanter-yquem-profile
   - source.lemonde-yquem-2025

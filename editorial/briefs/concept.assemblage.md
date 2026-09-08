@@ -1,6 +1,6 @@
 # Contentbrief — Assemblage
 
-Status: uitgevoerd op 2026-09-02.
+Status: uitgevoerd op 2026-09-02; wereldwijd verbreed op 2026-09-08.
 
 ## Voorkennis, paginabelofte en scope
 
@@ -23,6 +23,8 @@ recepten van één producent en alle mogelijke mengscenario's horen elders.
 | Grenzen: fouten verbergen en geldende productspecificatie | Op de pagina | Gevorderd |
 | Betekenis en beperkingen van percentages | Op de pagina | Basis en verdieping |
 | OIV-definitie tegenover EU-`coupage`/`versnijding` | Op de pagina | Gevorderd |
+| Assemblage over plaatsen en oogstjaren | Op de pagina, met Champagne als begrensd voorbeeld | Verdieping |
+| Assemblage vóór de tweede gisting van mousserende wijn | Op de pagina, met Champagne als begrensd voorbeeld | Verdieping |
 | Exacte Bordeauxblend of producentenrecept | Eigen regio- of producententity | Uitbesteed |
 
 De secties zijn compleet wanneer de lezer assemblage als selectieproces kan
@@ -50,13 +52,23 @@ taaluitleg.
 De OIV draagt de technische definitie, doelen en kwaliteitsgrens. De actuele
 EU-verordening draagt de specifieke juridische definitie en beperkingen van
 `coupage`. De Bordeauxbranche ondersteunt het regionale praktijkvoorbeeld van
-apart vinifiëren, proeven en samenbrengen. Algemene kelderuitleg wordt
+apart vinifiëren, proeven en samenbrengen. Comité Champagne ondersteunt als
+tweede, wezenlijk andere praktijkcontext de assemblage van basiswijnen naar
+druif, cru, perceel en jaar, inclusief reservewijnen en het moment vóór de tweede
+gisting. Algemene kelderuitleg wordt
 proportioneel uit deze bronnen gesynthetiseerd; juridische uitspraken krijgen een
 directe citation.
 
 Alle benodigde concept- en druivenentities bestaan. Er is geen verplichte visual:
 een toekomstige interactieve proefblend zou het keuzeproces beter kunnen tonen,
 maar een decoratief vatbeeld voegt hier onvoldoende kennis toe.
+
+De wereldwijde verbreding is compleet wanneer Bordeaux nog als één herkenbaar
+praktijkvoorbeeld functioneert, maar definitie, doelen en mogelijke assen van
+assemblage niet langer vanuit Bordeaux worden gegeneraliseerd. Champagne bewijst
+op de pagina concreet dat assemblage ook over oogstjaren loopt en vóór een tweede
+gisting een bepalend moment kan zijn; een encyclopedische rondgang langs alle
+wijnregio's is daarvoor niet nodig.
 
 ## Publication gate
 

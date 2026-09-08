@@ -236,7 +236,7 @@ This order stops one striking word from carrying all the meaning. Precise origin
 
 A [[concept.chateau|château as a wine term]] may identify an estate or brand; it need not have a fairytale castle. The château name is not automatically the appellation. [[concept.estate-bottling|Mis en bouteille au château]] tells you where the wine was bottled, not that it is classified.
 
-*Cru*, *grand cru* and *classé* also demand context. Saint-Émilion Grand Cru is an appellation with its own rules, while *Grand Cru Classé* can indicate a classification level there. Médoc terminology works differently again. Never read these words alone: find the complete phrase and the system behind it.
+*Cru*, *grand cru* and *classé* also demand context. [[appellation.saint-emilion-grand-cru|Saint-Émilion Grand Cru]] is an appellation with its own rules, while *Grand Cru Classé* can indicate a classification level there. Médoc terminology works differently again. Never read these words alone: find the complete phrase and the system behind it.
 :::
 
 :::section{#bordeaux-in-het-glas depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.civb-bordeaux-grape-varieties"}

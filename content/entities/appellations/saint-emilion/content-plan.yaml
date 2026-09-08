@@ -1,0 +1,319 @@
+package_id: appellation.saint-emilion
+archetype: appellation-overview
+schema_version: 1
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, unesco-is-geen-appellationgrens]
+    target_ids: [region.bordeaux, appellation.saint-emilion-grand-cru]
+    completeness_questions: [Kan de lezer plaats UNESCO-gebied en twee AOP's uit elkaar houden?]
+    layers:
+      foundation: [Plaats Saint-Émilion ten oosten van Libourne en definieer de rode AOP.]
+      intermediate: [Scheid Saint-Émilion van Saint-Émilion Grand Cru.]
+      advanced: [Begrens de acht UNESCO-gemeenten tegenover de negen appellationgemeenten.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Ligging en juridische identiteit.],
+          source_refs: [source.inao-saint-emilion-overview],
+        }
+      specific_claims:
+        - {
+            claim: De appellation omvat negen gemeenten en uitsluitend rode wijn.,
+            status: supported,
+            source_refs: [source.saint-emilion-specification-2023],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, jurade-handel-en-libourne, van-aoc-naar-twee-appellations]
+    target_ids: [classification.saint-emilion]
+    completeness_questions:
+      [
+        Verbindt de geschiedenis Romeinen middeleeuwen handel zelforganisatie AOC en classificatie zonder oorsprongsmythe?,
+      ]
+    layers:
+      foundation: [Vertel hoe wijnbouw stad geloof en landschap eeuwenlang samen groeiden.]
+      intermediate: [Leg de Jurade de Engelse periode Libourne en het syndicaat van 1884 uit.]
+      advanced: [Scheid erkenning in 1936 juridische wijzigingen vanaf 1954 en classificatie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historisch wijnlandschap.],
+          source_refs: [source.unesco-saint-emilion-jurisdiction],
+        }
+      specific_claims:
+        - {
+            claim: De AOC werd in 1936 erkend en het eerste Franse wijnsyndicaat ontstond hier in 1884.,
+            status: supported,
+            source_refs:
+              [source.inao-saint-emilion-overview, source.saint-emilion-specification-2023],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, plateau-hellingen-en-vlakte, bodem-is-geen-aromarecept]
+    target_ids: []
+    completeness_questions:
+      [Kan de lezer plateau hellingen combes vlakte en bodemmozaïek als groeifactoren voorstellen?]
+    layers:
+      foundation: [Maak kalkplateau hellingen valleien en vlakte ruimtelijk voorstelbaar.]
+      intermediate: [Leg waterhuishouding expositie en rijping uit.]
+      advanced: [Begrens bodemtypologie tegenover smaakdeterminisme en perceelprecisie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap bodem klimaat en water.],
+          source_refs: [source.saint-emilion-terroir, source.unesco-saint-emilion-jurisdiction],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, merlot-en-cabernet-franc, de-kleine-wettelijke-familie]
+    target_ids:
+      [
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.cabernet-sauvignon,
+        grape.carmenere,
+        grape.malbec,
+        grape.petit-verdot,
+      ]
+    completeness_questions:
+      [Zijn alle toegestane rassen en de lokale hoofdrollen zonder vast blendrecept uitgelegd?]
+    layers:
+      foundation: [Introduceer Merlot Cabernet Franc en Cabernet Sauvignon.]
+      intermediate: [Leg rijping structuur frisheid en assemblage uit zonder vaste stijlclaims.]
+      advanced: [Noem Carmenère Côt of Malbec en Petit Verdot met hun wettelijke positie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Lokale druivenrollen.],
+          source_refs: [source.inao-saint-emilion-overview, source.saint-emilion-grapes],
+        }
+      specific_claims:
+        - {
+            claim: Vijf hoofdrassen zijn toegestaan en Petit Verdot is accessoir met maximaal tien procent van de aanplant.,
+            status: supported,
+            source_refs: [source.saint-emilion-specification-2023],
+          }
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, extractie-en-assemblage, opvoeding-zonder-uniform-recept]
+    target_ids: [concept.assemblage, concept.elevage, concept.tannin]
+    completeness_questions:
+      [
+        Volgt de lezer rijping oogst vergisting extractie assemblage en opvoeding zonder châteaurecept als AOP-regel te zien?,
+      ]
+    layers:
+      foundation: [Volg rode druiven van wijngaard naar vergisting en assemblage.]
+      intermediate: [Leg extractie en tanninebeheer uit.]
+      advanced: [Begrens vatgebruik en opvoedingsduur als producentenkeuze binnen minimumregels.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Rode vinificatie en lokale variatie.],
+          source_refs: [source.saint-emilion-specification-2023],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, grand-cru-is-een-aparte-aop, actuele-drempels]
+    target_ids: [appellation.saint-emilion-grand-cru, classification.saint-emilion]
+    completeness_questions:
+      [Kan de lezer AOP Grand Cru en Grand Cru Classé juridisch correct onderscheiden?]
+    layers:
+      foundation: [Leg herkomst rode wijn en het verschil met Saint-Émilion Grand Cru uit.]
+      intermediate: [Scheid lagere opbrengst en langere opvoeding van classificatiestatus.]
+      advanced: [Geef actuele Saint-Émiliondrempels zonder ze als kwaliteitsformule te presenteren.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Functie en onderlinge verhouding van de appellations.],
+          source_refs:
+            [source.inao-saint-emilion-overview, source.inao-saint-emilion-grand-cru-overview],
+        }
+      specific_claims:
+        - {
+            claim: Saint-Émilion kent 5500 stokken per hectare een basisrendement van 53 hectoliter per hectare en opvoeding tot minstens 31 maart.,
+            status: supported,
+            source_refs: [source.saint-emilion-specification-2023],
+          }
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      [classificatie-en-producenten, een-beweeglijke-rangorde, iconen-en-bredere-werkelijkheid]
+    target_ids:
+      [classification.saint-emilion, producer.chateau-cheval-blanc, producer.chateau-ausone]
+    completeness_questions:
+      [
+        Is de classificatie als periodiek systeem binnen Grand Cru uitgelegd zonder producenten tot een statische ranglijst te reduceren?,
+      ]
+    layers:
+      foundation: [Introduceer de classificatie en haar relatie met Saint-Émilion Grand Cru.]
+      intermediate: [Leg periodieke herziening en niveaus uit.]
+      advanced: [Plaats Cheval Blanc en Ausone zorgvuldig tegenover de editie van 2022.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatiescope en producentennavigatie.],
+          source_refs: [source.inao-saint-emilion-classification-2022],
+        }
+      specific_claims:
+        - {
+            claim: Cheval Blanc en Ausone dienden geen kandidatuur in voor de classificatie van 2022.,
+            status: supported,
+            source_refs: [source.decanter-cheval-blanc-ausone-withdrawal-2021],
+          }
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, geen-enkele-saint-emilion, tijd-in-de-fles]
+    target_ids: [concept.vintage, concept.tannin]
+    completeness_questions:
+      [Geeft de pagina een bruikbaar stijlbeeld met variatie en flesontwikkeling?]
+    layers:
+      foundation: [Beschrijf rood en donker fruit frisheid tannine en textuur als bandbreedte.]
+      intermediate: [Verbind stijlverschil met ligging druif oogst extractie en opvoeding.]
+      advanced: [Leg flesontwikkeling en onzekerheid uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Stijl en flesontwikkeling.], source_refs: [source.inao-saint-emilion-overview] }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, drie-termen-drie-beloften, serveren-en-bewaren]
+    target_ids: [appellation.saint-emilion-grand-cru, classification.saint-emilion, concept.vintage]
+    completeness_questions:
+      [
+        Kan de lezer appellation classificatie producent cuvée jaargang en conditie uit elkaar houden?,
+      ]
+    layers:
+      foundation: [Lees eerst de exacte appellationnaam producent cuvée en jaargang.]
+      intermediate: [Leg Grand Cru tegenover Grand Cru Classé uit en geef serveercontext.]
+      advanced: [Begrens koopadvies door herkomst conditie en classificatie-editie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiket koop en serveernavigatie.],
+          source_refs: [source.inao-saint-emilion-grand-cru-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [saint-emilion-panorama]
+    target_ids: []
+    completeness_questions:
+      [Toont het beeld stad steen hoogteverschil en wijngaard met controleerbare rechten?]
+    layers:
+      foundation: [Toon het historische wijnlandschap.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair landschap.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, warmte-water-en-keuzes]
+    target_ids: []
+    completeness_questions:
+      [Worden klimaatdruk en veranderende kelderkeuzes behandeld zonder vluchtige marktclaims?]
+    layers:
+      foundation:
+        [Laat zien dat rijpheid frisheid en waterbeschikbaarheid opnieuw moeten worden afgewogen.]
+      intermediate: [Verbind warmere drogere of grillige jaren met oogsttijd bodemzorg en stijl.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Hedendaagse wijnbouwkeuzes.],
+          source_refs: [source.saint-emilion-specification-2023],
+        }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        appellation.saint-emilion-grand-cru,
+        classification.saint-emilion,
+        producer.chateau-cheval-blanc,
+        producer.chateau-ausone,
+        appellation.lussac-saint-emilion,
+        appellation.montagne-saint-emilion,
+        appellation.puisseguin-saint-emilion,
+        appellation.saint-georges-saint-emilion,
+      ]
+    completeness_questions: [Zijn de noodzakelijke vervolgentiteiten minstens als package aanwezig?]
+    layers:
+      foundation: [Bied routes via Grand Cru classificatie producenten en satellieten.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: appellation.saint-emilion-grand-cru,
+      names: { nl: Saint-Émilion Grand Cru, en: Saint-Émilion Grand Cru },
+      slugs: { nl: saint-emilion-grand-cru, en: saint-emilion-grand-cru },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-cheval-blanc,
+      names: { nl: Château Cheval Blanc, en: Château Cheval Blanc },
+      slugs: { nl: chateau-cheval-blanc, en: chateau-cheval-blanc },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-ausone,
+      names: { nl: Château Ausone, en: Château Ausone },
+      slugs: { nl: chateau-ausone, en: chateau-ausone },
+      disposition: link,
+    }
+  - {
+      id: appellation.lussac-saint-emilion,
+      names: { nl: Lussac-Saint-Émilion, en: Lussac-Saint-Émilion },
+      slugs: { nl: lussac-saint-emilion, en: lussac-saint-emilion },
+      disposition: link,
+    }
+  - {
+      id: appellation.montagne-saint-emilion,
+      names: { nl: Montagne-Saint-Émilion, en: Montagne-Saint-Émilion },
+      slugs: { nl: montagne-saint-emilion, en: montagne-saint-emilion },
+      disposition: link,
+    }
+  - {
+      id: appellation.puisseguin-saint-emilion,
+      names: { nl: Puisseguin-Saint-Émilion, en: Puisseguin-Saint-Émilion },
+      slugs: { nl: puisseguin-saint-emilion, en: puisseguin-saint-emilion },
+      disposition: link,
+    }
+  - {
+      id: appellation.saint-georges-saint-emilion,
+      names: { nl: Saint-Georges-Saint-Émilion, en: Saint-Georges-Saint-Émilion },
+      slugs: { nl: saint-georges-saint-emilion, en: saint-georges-saint-emilion },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
