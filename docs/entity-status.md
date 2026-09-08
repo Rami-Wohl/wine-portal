@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 218 entities — 33 active, 185 draft, 0 deprecated.
+**Totaal:** 218 entities — 34 active, 184 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (33)
+## Actief — publiek vindbaar (34)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -21,6 +21,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-08 |
 | [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | `concept.autolysis` | Ja | `/concepts/autolyse` | 2026-09-07 |
 | [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-07 |
+| [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | `concept.estate-bottling` | Ja | `/concepts/botteling-op-het-chateau` | 2026-09-08 |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
@@ -44,7 +45,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Ja | `/producers/chateau-pavie` | 2026-09-08 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (185)
+## Draft — nog uit te werken (184)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -87,7 +88,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | `concept.fermentation` | Nee — reviewroute | `/concepts/alcoholische-vergisting` | — |
 | [Appellation d’origine protégée (AOP)](../content/entities/concepts/aop/entity.yaml) | Concept | `concept.aop` | Nee — reviewroute | `/concepts/aop` | — |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | `concept.botrytis` | Nee — reviewroute | `/concepts/botrytis-edele-rotting` | — |
-| [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | `concept.estate-bottling` | Nee — reviewroute | `/concepts/botteling-op-het-chateau` | — |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | `concept.chateau` | Nee — reviewroute | `/concepts/chateau-wijnterm` | — |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | `concept.clairet` | Nee — reviewroute | `/concepts/clairet` | — |
 | [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | `concept.coulure` | Nee — reviewroute | `/concepts/coulure` | — |

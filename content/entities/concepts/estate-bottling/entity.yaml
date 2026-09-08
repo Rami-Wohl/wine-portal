@@ -1,6 +1,6 @@
 id: concept.estate-bottling
 type: concept
-status: draft
+status: active
 canonical_name: Estate bottling
 names:
   nl: Botteling op het château
@@ -11,6 +11,14 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.chateau }
+  - { type: related_to, target: concept.aop }
+  - { type: related_to, target: producer.chateau-angelus }
+  - { type: related_to, target: region.bordeaux }
 assertions: []
-source_refs: []
+source_refs:
+  - source.dgccrf-wine-labels-2025
+  - source.chateau-mouton-baron-philippe
+depth: foundation
+last_reviewed: 2026-09-08
