@@ -1,0 +1,24 @@
+id: media.producer.chateau-figeac.estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-figeac/estate.jpg
+mime_type: image/jpeg
+width: 2153
+height: 1418
+checksum_sha256: 626d3e0598331eb1b63b4040a654bd1ad5acaadf0dc6a576d6c8e4408f785b35
+alt:
+  nl: De lichte stenen gevel van Château Figeac gezien door de toegangspoort en omringd door bomen
+  en: The pale stone façade of Château Figeac seen through its entrance gate and surrounded by trees
+caption:
+  nl: Het bewoonde château staat midden in één aaneengesloten landgoed. Achter de klassieke gevel ligt een wijngaard waarvan juist de grindruggen en cabernets Figeac binnen Saint-Émilion onderscheiden.
+  en: The inhabited château stands within one contiguous estate. Beyond its classical façade lies a vineyard whose gravel rises and Cabernets distinguish Figeac within Saint-Émilion.
+rights:
+  status: open-licensed
+  creator: Ster3oPro
+  source_url: https://commons.wikimedia.org/wiki/File:Global_Ch%C3%A2teau_Figeac.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Ster3oPro via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-08
+changes: Original Wikimedia file used without crop or editorial colour alteration.

@@ -134,6 +134,39 @@ test("Saint-Émilion classification reveals its current ranks progressively", as
   );
 });
 
+test("Château Figeac presents both documentary images and layered producer knowledge", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/producers/chateau-figeac");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Château Figeac" })).toBeVisible();
+  await expect(page.getByRole("img", { name: /lichte stenen gevel/ })).toBeVisible();
+  await expect(page.getByRole("img", { name: /Fles Château Figeac 1995/ })).toBeVisible();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const secondWine = page.locator("#overige-wijnen");
+  const advancedHistory = page.locator("#het-oude-figeac");
+
+  await expect(secondWine).toBeHidden();
+  await expect(advancedHistory).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(secondWine).toBeVisible();
+  await expect(advancedHistory).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(advancedHistory).toBeVisible();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("entity relationships are grouped by their meaning", async ({ page }) => {
   await page.goto("/appellations/pauillac");
 

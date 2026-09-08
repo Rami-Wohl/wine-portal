@@ -1,0 +1,24 @@
+id: media.producer.chateau-figeac.grand-vin-1995
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-figeac/grand-vin-1995.jpg
+mime_type: image/jpeg
+width: 676
+height: 2094
+checksum_sha256: 6c0c154c1bfbe6b0f0a7865fb5a7ec00c65d59b98458bccadfe4d50ffae98b34
+alt:
+  nl: Fles Château Figeac 1995 met het crèmekleurige etiket, rode letters en het zegel van het domein
+  en: Bottle of Château Figeac 1995 with its cream label, red lettering and estate seal
+caption:
+  nl: De Grand Vin uit 1995 draagt een speciaal etiket voor de vijftigste oogst van Thierry Manoncourt. De fles dateert van vóór Figeacs promotie naar onderscheiding A in 2022 en toont dus terecht alleen Premier Grand Cru Classé.
+  en: The 1995 Grand Vin bears a special label for Thierry Manoncourt's fiftieth harvest. The bottle predates Figeac's promotion to distinction A in 2022 and therefore correctly states only Premier Grand Cru Classé.
+rights:
+  status: open-licensed
+  creator: BerndB
+  source_url: https://commons.wikimedia.org/wiki/File:Figeac-1995.JPG
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: BerndB via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-08
+changes: Original Wikimedia file used without crop or editorial colour alteration.

@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 217 entities — 26 active, 191 draft, 0 deprecated.
+**Totaal:** 217 entities — 27 active, 190 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (26)
+## Actief — publiek vindbaar (27)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -32,12 +32,13 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Ja | `/grapes/sauvignon-blanc` | 2026-09-07 |
 | [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Ja | `/grapes/semillon` | 2026-09-07 |
 | [Château d'Yquem](../content/entities/producers/chateau-d-yquem/entity.yaml) | Producent | `producer.chateau-d-yquem` | Ja | `/producers/chateau-d-yquem` | 2026-09-08 |
+| [Château Figeac](../content/entities/producers/chateau-figeac/entity.yaml) | Producent | `producer.chateau-figeac` | Ja | `/producers/chateau-figeac` | 2026-09-08 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (191)
+## Draft — nog uit te werken (190)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -151,7 +152,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Doisy-Védrines](../content/entities/producers/chateau-doisy-vedrines/entity.yaml) | Producent | `producer.chateau-doisy-vedrines` | Nee — reviewroute | `/producers/chateau-doisy-vedrines` | — |
 | [Château Duhart-Milon](../content/entities/producers/chateau-duhart-milon/entity.yaml) | Producent | `producer.chateau-duhart-milon` | Nee — reviewroute | `/producers/chateau-duhart-milon` | — |
 | [Château Faugères](../content/entities/producers/chateau-faugeres/entity.yaml) | Producent | `producer.chateau-faugeres` | Nee — reviewroute | `/producers/chateau-faugeres` | — |
-| [Château Figeac](../content/entities/producers/chateau-figeac/entity.yaml) | Producent | `producer.chateau-figeac` | Nee — reviewroute | `/producers/chateau-figeac` | — |
 | [Château Fleur Cardinale](../content/entities/producers/chateau-fleur-cardinale/entity.yaml) | Producent | `producer.chateau-fleur-cardinale` | Nee — reviewroute | `/producers/chateau-fleur-cardinale` | — |
 | [Château Fombrauge](../content/entities/producers/chateau-fombrauge/entity.yaml) | Producent | `producer.chateau-fombrauge` | Nee — reviewroute | `/producers/chateau-fombrauge` | — |
 | [Château Fonplégade](../content/entities/producers/chateau-fonplegade/entity.yaml) | Producent | `producer.chateau-fonplegade` | Nee — reviewroute | `/producers/chateau-fonplegade` | — |
