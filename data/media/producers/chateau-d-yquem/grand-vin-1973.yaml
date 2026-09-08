@@ -1,0 +1,24 @@
+id: media.producer.chateau-d-yquem.grand-vin-1973
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-d-yquem/grand-vin-1973.jpg
+mime_type: image/jpeg
+width: 683
+height: 1024
+checksum_sha256: 4be01eda37d1e928fd802c061efd6006a779aa015b9079e76f05d786bec2e502
+alt:
+  nl: Fles Château d'Yquem 1973 met amberkleurige wijn en het historische Lur-Saluces-etiket
+  en: Bottle of Château d'Yquem 1973 with amber-coloured wine and the historic Lur-Saluces label
+caption:
+  nl: Een fles Grand Vin uit 1973. De diepe amberkleur laat zien hoe sterk het uiterlijk van gerijpte Yquem kan verschillen van dat van een jonge fles.
+  en: A bottle of the 1973 Grand Vin. Its deep amber colour shows how markedly mature Yquem can differ in appearance from a young bottle.
+rights:
+  status: open-licensed
+  creator: Monster1000
+  source_url: https://commons.wikimedia.org/wiki/File:Yquem_73.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Monster1000 via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-08
+changes: Original Wikimedia file used without crop or editorial colour alteration.

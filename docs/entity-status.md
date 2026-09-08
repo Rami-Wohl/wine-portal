@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 125 entities — 22 active, 103 draft, 0 deprecated.
+**Totaal:** 125 entities — 23 active, 102 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (22)
+## Actief — publiek vindbaar (23)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -28,12 +28,13 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-07 |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Ja | `/grapes/sauvignon-blanc` | 2026-09-07 |
 | [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Ja | `/grapes/semillon` | 2026-09-07 |
+| [Château d'Yquem](../content/entities/producers/chateau-d-yquem/entity.yaml) | Producent | `producer.chateau-d-yquem` | Ja | `/producers/chateau-d-yquem` | 2026-09-08 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
 
-## Draft — nog uit te werken (103)
+## Draft — nog uit te werken (102)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -113,7 +114,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Coutet](../content/entities/producers/chateau-coutet/entity.yaml) | Producent | `producer.chateau-coutet` | Nee — reviewroute | `/producers/chateau-coutet` | — |
 | [Château Croizet-Bages](../content/entities/producers/chateau-croizet-bages/entity.yaml) | Producent | `producer.chateau-croizet-bages` | Nee — reviewroute | `/producers/chateau-croizet-bages` | — |
 | [Château d’Armailhac](../content/entities/producers/chateau-darmailhac/entity.yaml) | Producent | `producer.chateau-darmailhac` | Nee — reviewroute | `/producers/chateau-darmailhac` | — |
-| [Château d'Yquem](../content/entities/producers/chateau-d-yquem/entity.yaml) | Producent | `producer.chateau-d-yquem` | Nee — reviewroute | `/producers/chateau-d-yquem` | — |
 | [Château de Myrat](../content/entities/producers/chateau-de-myrat/entity.yaml) | Producent | `producer.chateau-de-myrat` | Nee — reviewroute | `/producers/chateau-de-myrat` | — |
 | [Château Doisy Daëne](../content/entities/producers/chateau-doisy-daene/entity.yaml) | Producent | `producer.chateau-doisy-daene` | Nee — reviewroute | `/producers/chateau-doisy-daene` | — |
 | [Château Doisy-Dubroca](../content/entities/producers/chateau-doisy-dubroca/entity.yaml) | Producent | `producer.chateau-doisy-dubroca` | Nee — reviewroute | `/producers/chateau-doisy-dubroca` | — |

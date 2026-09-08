@@ -1,0 +1,24 @@
+id: media.producer.chateau-d-yquem.estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-d-yquem/estate.jpg
+mime_type: image/jpeg
+width: 1800
+height: 1117
+checksum_sha256: cec50e62bab97ba3448a7e66555d9218d29e7d3ebff5505c77dcc09a2019c67d
+alt:
+  nl: Château d'Yquem met zijn ronde toren, binnenplaats en tuin onder een blauwe lucht
+  en: Château d'Yquem with its round tower, courtyard and garden beneath a blue sky
+caption:
+  nl: Het château op zijn hoogte in Sauternes. De representatieve gevel is zichtbaar; de wijngaard strekt zich buiten het beeld uit.
+  en: The château on its rise in Sauternes. The ceremonial façade is visible; the vineyard extends beyond the frame.
+rights:
+  status: open-licensed
+  creator: Benjamin Zingg
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_d%27Yquem.jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.5 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.5
+  credit_line: Benjamin Zingg via Wikimedia Commons, CC BY-SA 2.5
+acquired_at: 2026-09-08
+changes: Original Wikimedia file resized proportionally to 1800 pixels wide; no crop or editorial colour alteration.
