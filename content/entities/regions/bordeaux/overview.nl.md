@@ -90,7 +90,7 @@ Belangrijker dan de naam van één bestanddeel is hoe een bodem als geheel funct
 :::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2025"}
 ## Wijnstijlen — Bordeaux heeft meer dan één kleur
 
-Rode wijn beslaat een groot deel van de productie en van het internationale beeld, maar de regio maakt veel meer. Droog wit kan fris en direct zijn of breder en op vat opgevoed. Zoete witte wijn varieert van licht zoet tot intens en langlevend. Daarnaast bestaan rosé, de historisch donkere roséstijl [[concept.clairet|clairet]], en mousserende [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles]
+Rode wijn beslaat een groot deel van de productie en van het internationale beeld, maar de regio maakt veel meer. Droog wit kan fris en direct zijn of breder en op vat opgevoed. Bij de bekendste zoete witte wijnen concentreert [[concept.botrytis|edele rotting]] de druiven voordat selectieve pluk weinig, suikerrijk sap oplevert. Daarnaast bestaan rosé, de historisch donkere roséstijl [[concept.clairet|clairet]], en mousserende [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles] [@source.boagri-bordeaux-specification-2025]
 
 Zelfs “rode Bordeaux” is geen enkele stijl. Een soepele, fruitgedreven regionale wijn voor jonge consumptie en een geconcentreerde, lang gerijpte wijn uit een kleine appellation kunnen dezelfde streeknaam delen, maar verschillen in druiven, opbrengst, selectie, kelderwerk, prijs en bedoeling. De wijnfamilie is daarom de eerste vertakking, niet het eindantwoord.
 :::
@@ -135,7 +135,7 @@ Wanneer afzonderlijke partijen worden samengebracht tot een uiteindelijke wijn h
 Daarna — en deels daarvoor — volgt de [[concept.elevage|élevage]], letterlijk de opvoeding van de jonge wijn tussen vergisting en botteling. Dat kan in tank, vat, amfora of een combinatie gebeuren. Nieuw eiken kan geur, tannine en zuurstofuitwisseling beïnvloeden, maar is geen verplicht Bordeauxkeurmerk en evenmin automatisch een kwaliteitsbewijs. Tijd, overhevelen, klaring en keuze van het vat zijn onderdelen van hetzelfde traject.
 :::
 
-:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="advanced" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2025"}
+:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2025"}
 ### Wanneer rotting edel wordt
 
 In Sauternes en omgeving kunnen ochtendmist en drogere middagen de ontwikkeling van [[concept.botrytis|botrytis, of edele rotting]], bevorderen. De schimmel maakt de druivenschil poreus, waardoor water verdampt en suiker, zuren en smaakstoffen geconcentreerd raken. Alleen gezonde, gunstig aangetaste druiven zijn gewenst; grijze rot bij aanhoudend nat weer is iets heel anders.

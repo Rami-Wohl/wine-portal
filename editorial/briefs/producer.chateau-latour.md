@@ -2,6 +2,8 @@
 
 Status: uitgevoerd op 2026-09-02.
 
+Redactionele schaal: `iconisch`.
+
 ## Voorkennis, paginabelofte en scope
 
 De lezer hoeft alleen te weten dat Château Latour een wijnproducent in Bordeaux

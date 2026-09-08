@@ -211,8 +211,11 @@ coverage:
       [Kan de lezer dubbele naam classificatie cuvée flesmaat en conditie uit elkaar houden?]
     layers:
       foundation: [Lees exacte appellation producent cuvée jaargang en inhoud.]
-      intermediate: [Leg de keuze Barsac of Sauternes op het etiket uit.]
-      advanced: [Behandel bewaring serveren en oude flesconditie.]
+      intermediate:
+        [
+          Leg de keuze Barsac of Sauternes op het etiket uit en geef praktische serveer- en bewaarcontext.,
+        ]
+      advanced: []
       specialist: []
     evidence:
       general_synthesis:

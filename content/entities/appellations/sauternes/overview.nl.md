@@ -202,7 +202,7 @@ Verschillende domeinen maken ook droge witte wijn. Die kan dezelfde eigenaar, dr
 Barsac kan op zijn beurt als Barsac of Sauternes verschijnen wanneer de wijn en herkomst aan de voorwaarden voldoen. Wie vergelijkt, noteert daarom altijd de precieze appellation én cuvée, niet alleen het domein.
 :::
 
-:::detail{#serveren-en-combineren parent="etiket-en-aankoop" depth="advanced" source_refs="source.inao-sauternes-overview"}
+:::detail{#serveren-en-combineren parent="etiket-en-aankoop" depth="intermediate" source_refs="source.inao-sauternes-overview"}
 ### Verder dan dessert en foie gras
 
 Koel maar niet ijskoud schenken — grofweg rond 10–12 °C als beginpunt — laat frisheid en geur naast elkaar bestaan. Een klein witwijnglas werkt vaak beter dan een piepklein likeurglas, omdat aroma ruimte nodig heeft.

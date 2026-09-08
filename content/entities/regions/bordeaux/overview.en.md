@@ -90,7 +90,7 @@ More important than one ingredient's name is how the soil functions as a whole. 
 :::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2025"}
 ## Wine styles — Bordeaux comes in more than one colour
 
-Red wine accounts for much of the production and international image, but the region makes far more. Dry white can be brisk and immediate or broad and barrel-matured. Sweet white ranges from gently sweet to intense and ageworthy. Bordeaux also produces rosé, the historically deeper-coloured [[concept.clairet|clairet]], and sparkling [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles]
+Red wine accounts for much of the production and international image, but the region makes far more. Dry white can be brisk and immediate or broad and barrel-matured. In the best-known sweet whites, [[concept.botrytis|noble rot]] concentrates the grapes before selective picking yields a little sugar-rich juice. Bordeaux also produces rosé, the historically deeper-coloured [[concept.clairet|clairet]], and sparkling [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles] [@source.boagri-bordeaux-specification-2025]
 
 Even “red Bordeaux” is not one style. A supple, fruit-led regional bottle made for early drinking and a concentrated wine from a small appellation may share the regional name while differing in grapes, yield, selection, cellar work, price and purpose. Wine family is the first branch, not the final answer.
 :::
@@ -135,7 +135,7 @@ Bringing separate lots together into a finished composition is called [[concept.
 Afterwards — and partly before — comes [[concept.elevage|maturation]], the period between fermentation and bottling in which the young wine is raised. It may take place in tank, barrel, amphora or a combination. New oak can affect aroma, tannin and oxygen exchange, but it is neither compulsory Bordeaux branding nor automatic proof of quality. Time, racking, clarification and vessel choice belong to the same process.
 :::
 
-:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="advanced" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2025"}
+:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2025"}
 ### When rot becomes noble
 
 In Sauternes and its surroundings, morning mist followed by drier afternoons can favour [[concept.botrytis|botrytis, or noble rot]]. The fungus makes berry skins porous so water evaporates and sugar, acidity and flavour become concentrated. Only sound, beneficially affected grapes are wanted; destructive grey rot in persistently wet weather is different.

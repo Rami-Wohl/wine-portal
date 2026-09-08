@@ -52,7 +52,7 @@ Ampelografen kijken bij Merlot onder meer naar een sterk behaarde jonge scheutto
 
 Frankrijk erkent meerdere Merlotklonen en bewaart in Bordeaux een conservatorium met honderden selecties. [[concept.clonal-selection|Klonale selectie]] kan verschillen in opbrengst, trosbouw, rijpheid en gezondheid vasthouden zonder dat een nieuw druivenras ontstaat. [@source.plantgrape-merlot]
 
-Een kloonnummer is geen kwaliteitsrang. Onderstam, virusstatus, vermeerdering, bodem, leeftijd en beheer bepalen mede hoe een selectie presteert. Een brede collectie is juist belangrijk omdat de beste keuze voor een vochtige twintigste-eeuwse wijngaard niet automatisch de beste keuze voor een warmer en droger toekomstig seizoen is.
+Een kloonnummer is geen kwaliteitsrang. [[concept.rootstock|Onderstam]], virusstatus, vermeerdering, bodem, leeftijd en beheer bepalen mede hoe een selectie presteert. Een brede collectie is juist belangrijk omdat de beste keuze voor een vochtige twintigste-eeuwse wijngaard niet automatisch de beste keuze voor een warmer en droger toekomstig seizoen is.
 :::
 
 :::figure{#historische-ampelografie media_id="media.grape.merlot.ampelography"}

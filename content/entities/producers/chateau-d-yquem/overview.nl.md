@@ -56,7 +56,7 @@ Drainage maakt de wijngaard niet uniform. Een grindkop kan sneller drogen dan ee
 :::
 
 :::section{#druiven-en-botrytis depth="foundation" source_refs="source.inao-sauternes-specification-2026 source.yquem-expertise source.decanter-yquem-profile"}
-## Druiven en botrytis — oogsten in tientallen kleine beslissingen
+## Druivenrassen en botrytis — oogsten in tientallen kleine beslissingen
 
 Een tros wordt niet automatisch edel omdat er botrytis op zit. Bij gunstig weer maakt de schimmel microscopische openingen in de schil, waarna water verdampt en de bes verschrompelt. Suiker en zuren worden geconcentreerd, terwijl nieuwe aroma’s ontstaan. Bij ongunstig, langdurig nat weer kan dezelfde schimmel tot grijze rotting en smaakverlies leiden. [[concept.botrytis|Botrytis]] is dus geen ingrediënt dat de wijnmaker simpelweg toevoegt, maar een kans die per bes moet worden beoordeeld.
 

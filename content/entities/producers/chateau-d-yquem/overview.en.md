@@ -56,7 +56,7 @@ Drainage does not make the vineyard uniform. A gravel crest may dry more quickly
 :::
 
 :::section{#druiven-en-botrytis depth="foundation" source_refs="source.inao-sauternes-specification-2026 source.yquem-expertise source.decanter-yquem-profile"}
-## Grapes and botrytis — a harvest made of countless small decisions
+## Grape varieties and botrytis — a harvest made of countless small decisions
 
 A bunch does not automatically become noble because it carries botrytis. In favourable weather, the fungus makes microscopic openings in the skin, allowing water to evaporate and the berry to shrivel. Sugar and acidity become concentrated while new aromas develop. In unfavourable, persistently wet conditions, the same fungus can produce grey rot and loss of flavour. [[concept.botrytis|Botrytis]] is therefore not an ingredient a winemaker simply adds, but an opportunity judged berry by berry.
 

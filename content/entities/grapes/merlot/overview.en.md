@@ -52,7 +52,7 @@ In Merlot, ampelographers look among other things for a densely hairy young shoo
 
 France recognises several Merlot clones and maintains a Bordeaux conservation collection containing hundreds of selections. [[concept.clonal-selection|Clonal selection]] can preserve differences in yield, bunch form, ripening and health without creating a new grape variety. [@source.plantgrape-merlot]
 
-A clone number is not a quality ranking. Rootstock, virus status, propagation, soil, age and management also shape performance. A broad collection matters precisely because the best choice for a damp twentieth-century vineyard is not automatically the best choice for a warmer and drier future season.
+A clone number is not a quality ranking. [[concept.rootstock|Rootstock]], virus status, propagation, soil, age and management also shape performance. A broad collection matters precisely because the best choice for a damp twentieth-century vineyard is not automatically the best choice for a warmer and drier future season.
 :::
 
 :::figure{#historische-ampelografie media_id="media.grape.merlot.ampelography"}

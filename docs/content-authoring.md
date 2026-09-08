@@ -244,6 +244,53 @@ gepland: het landgoed in zijn wijnbouwkundige context en de Grand Vin als fles.
 Beide vereisen expliciete rechten en een inhoudelijke caption; een generieke
 châteaufoto of los etiket zonder betrouwbare identificatie is onvoldoende.
 
+### Redactionele schaal van producenten
+
+Niet iedere producent krijgt dezelfde lengte of historische detaillering. Iedere
+nieuwe producentenbrief kiest daarom één **redactionele schaal**. Dit is een
+interne scopebeslissing, geen nieuwe entity-eigenschap, publieke kwaliteitsrang of
+bewering dat de ene producent objectief beter is dan de andere. De schaal bepaalt
+hoe breed de pagina belooft te gaan; de kennisdieptelagen bepalen vervolgens wat
+binnen die pagina bij basis, verdieping en gevorderd zichtbaar is.
+
+| Schaal | Wanneer passend | Verwachte dekking |
+| --- | --- | --- |
+| `iconisch` | De producent is onmisbaar voor het begrijpen van een belangrijke wijnregio, classificatie, stijl of historische ontwikkeling en er bestaan voldoende sterke bronnen voor een monografisch overzicht. | Een brede maar begrensde pagina met geschiedenis, eigendom, plaats, wijngaard, hoofdwijn, overige relevante wijnen, werkwijze, classificatie of institutionele betekenis, stijlgrenzen en hedendaagse context. Gewoonlijk twee documentaire beelden en waar nuttig een extra verklarende visual. |
+| `kernproducent` | De producent is een belangrijke referentie binnen een appellation of stijl, maar hoeft niet als zelfstandig historisch hoofdstuk te functioneren. | Identiteit en plaats, actuele eigendomscontext, een korte geschiedenis, wijngaard, Grand Vin of kernassortiment, stijl en de belangrijkste afwijkende wijn of werkwijze. Meestal vier tot zes hoofdsecties en één of twee beelden. |
+| `referentieproducent` | De naam is nodig voor betrouwbare navigatie, classificatiedekking of vergelijking, maar een lange biografie levert weinig extra leerwaarde. | Een compacte, volwaardige entity met identiteit, plaats, eventuele rang, eigenaar voor zover relevant, hoofdwijn en een begrensd stijlbeeld. Geschiedenis blijft bij de enkele ontwikkeling die de huidige identiteit werkelijk verklaart. Een inhoudelijk beeld is wenselijk, maar filler is niet toegestaan. |
+
+De schaal volgt leerwaarde en beschikbare onderbouwing, niet alleen prijs,
+bekendheid of classificatierang. Een hoge rang maakt een château niet automatisch
+`iconisch`; omgekeerd kan een producent zonder formele rang door historische,
+technische of stilistische invloed wel iconisch zijn. Een select deel van de
+tweede tot en met vijfde crus krijgt pas de iconische schaal wanneer de brief dat
+per naam motiveert. De rest wordt niet kunstmatig verlengd om dezelfde omvang te
+halen.
+
+Voor de huidige Bordeaux-opbouw geldt als eerste, bewust beperkte iconische kern:
+de vijf premiers crus classés Château Haut-Brion, Château Lafite Rothschild,
+Château Latour, Château Margaux en Château Mouton Rothschild, plus Château
+d'Yquem, Pétrus, Château Ausone, Château Cheval Blanc en Liber Pater. Dit is een
+redactionele startlijst, geen canon voor de hele wijnwereld. Buiten Bordeaux wordt
+dezelfde toets toegepast vanuit het wereldwijde verhaal van regio, stijl en
+producent; Bordeaux is de eerste ingang van het project, niet de maatstaf voor
+alle producenten.
+
+Voor alle drie schalen blijft de basislaag menselijk bruikbaar: wie is dit, waar
+ligt of werkt de producent, welke wijn staat centraal, wie is de actuele eigenaar
+of wat is de relevante eigendomscontext, en welk zorgvuldig begrensd karakter
+helpt de wijn herkennen? `Iconisch` is geen toestemming voor trivia, een volledige
+familiekroniek, een jaargangencatalogus of prestigeproza. `Referentieproducent` is
+evenmin toestemming voor een kaal gegevenskaartje. Iedere pagina moet haar
+kleinere of grotere belofte volledig nakomen.
+
+De contentbrief motiveert de gekozen schaal en noemt expliciet welke dimensies
+daardoor op de pagina komen of naar een appellation, classificatie, concept,
+narrative of andere producent worden uitbesteed. Bij iedere onderhoudsreview
+wordt gecontroleerd of de feitelijke omvang nog bij die schaal past. Een schaal
+mag veranderen wanneer de leerwaarde of bronbasis verandert; bestaande tekst
+wordt nooit alleen behouden omdat er al veel werk in zit.
+
 ### Page-archetype: `grape-overview`
 
 Een druivenraspagina maakt een ras herkenbaar zonder het tot een vast smaakrecept
@@ -349,12 +396,18 @@ de H3-koppen van `detail`-blocks.
 | `visuals` | Beeld / Visuals | Beeld / Visuals |
 | `child-knowledge` | Verder ontdekken / Explore further | Verder ontdekken / Explore further |
 
-Producenten gebruiken dezelfde vorm met deze vaste categorieën: `Geschiedenis en
+Producenten gebruiken dezelfde vorm met deze kerncategorieën: `Geschiedenis en
 eigendom / History and ownership`, `Wijngaard en terroir / Vineyard and terroir`,
 `Grand Vin / Grand Vin`, `Overige wijnen / Other wines` en `Werkwijze en uitgifte
-/ Working methods and release`. Alleen de tekst na ` — ` is vrij. Een categorie
-mag worden weggelaten wanneer de contentbrief haar aantoonbaar uitbesteedt of als
-niet relevant motiveert.
+/ Working methods and release`. Wanneer de inhoud dat beter beschrijft mag de
+laatste categorie `Wijnmaken en opvoeding / Winemaking and maturation` heten.
+Iconische producenten mogen daarnaast de scanbare categorieën `Druivenrassen /
+Grape varieties`, `Classificatie en reputatie / Classification and reputation`,
+`Etiket, serveren en bewaren / Label, serving and storage` en `Hedendaagse
+ontwikkelingen / Contemporary developments` gebruiken. Alleen de tekst na ` — `
+is vrij. Een categorie mag worden weggelaten wanneer de contentbrief haar
+aantoonbaar uitbesteedt of als niet relevant motiveert; een kleinere schaal wordt
+niet met lege standaardsecties opgevuld.
 
 Druivenrassen gebruiken deze vaste categorieën:
 

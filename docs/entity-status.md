@@ -10,9 +10,9 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 
 | Naam | Type | ID | Publiek | Nederlandse route | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- |
-| [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-07 |
+| [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
-| [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-07 |
+| [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-08 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-02 |
 | [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-02 |
@@ -25,14 +25,14 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | `concept.volatile-thiols` | Ja | `/concepts/vluchtige-thiolen` | 2026-09-07 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
-| [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-07 |
+| [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-08 |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Ja | `/grapes/sauvignon-blanc` | 2026-09-07 |
 | [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Ja | `/grapes/semillon` | 2026-09-07 |
 | [Château d'Yquem](../content/entities/producers/chateau-d-yquem/entity.yaml) | Producent | `producer.chateau-d-yquem` | Ja | `/producers/chateau-d-yquem` | 2026-09-08 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
-| [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-02 |
+| [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
 ## Draft — nog uit te werken (102)
 

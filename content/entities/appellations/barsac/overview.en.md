@@ -203,7 +203,7 @@ The choice between Barsac and Sauternes can differ by producer and wine. Do not 
 Dry white wine from a Barsac estate falls outside the sweet Barsac rules and carries another permitted origin. Estate name and appellation remain separate layers of information.
 :::
 
-:::detail{#serveren-en-bewaren parent="etiket-en-aankoop" depth="advanced" source_refs="source.inao-barsac-overview"}
+:::detail{#serveren-en-bewaren parent="etiket-en-aankoop" depth="intermediate" source_refs="source.inao-barsac-overview"}
 ### Serve cool, with enough room for aroma
 
 Around 10–12°C is a useful starting point: cool enough for tension, not so cold that aroma disappears. A small white-wine glass offers more space than a liqueur glass. Blue cheese, salty or spicy dishes and fruit desserts that are not excessively sweet can work, but pairings are not laws.

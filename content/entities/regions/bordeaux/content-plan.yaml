@@ -180,11 +180,11 @@ coverage:
       - Zijn assemblage, élevage en de productie van zoete wijn in gewone taal uitgelegd en gelinkt?
     layers:
       foundation:
-        - Leg uit dat Bordeaux vele productiepraktijken omvat en dat appellation en maker doorslaggevend zijn.
+        - Leg uit dat Bordeaux vele productiepraktijken omvat, dat appellation en maker doorslaggevend zijn en dat botrytis fundamenteel is voor de bekendste zoete stijl.
       intermediate:
         - Behandel assemblage en élevage als opeenvolgende keuzes, niet als smaakformule.
-      advanced:
         - Leg de bijzondere rol van botrytis en selectieve oogst voor zoete wijn uit.
+      advanced: []
       specialist: []
     evidence:
       general_synthesis:

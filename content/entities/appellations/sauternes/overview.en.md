@@ -202,7 +202,7 @@ Several estates also make dry white wine. It may share an owner, grapes or viney
 Barsac, in turn, may appear as Barsac or Sauternes when wine and origin meet the conditions. When comparing, always record the precise appellation and cuvée rather than the estate alone.
 :::
 
-:::detail{#serveren-en-combineren parent="etiket-en-aankoop" depth="advanced" source_refs="source.inao-sauternes-overview"}
+:::detail{#serveren-en-combineren parent="etiket-en-aankoop" depth="intermediate" source_refs="source.inao-sauternes-overview"}
 ### Beyond dessert and foie gras
 
 Serving cool but not icy — roughly 10–12 °C as a starting point — lets fragrance and freshness coexist. A small white-wine glass often works better than a tiny liqueur glass because aroma needs room.

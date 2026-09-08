@@ -203,7 +203,7 @@ De keuze voor Barsac of Sauternes kan per producent en wijn verschillen. Neem da
 Droge witte wijn van een Barsacdomein valt buiten de zoete Barsacregels en draagt een andere toegestane herkomst. Domeinnaam en appellation blijven afzonderlijke informatielagen.
 :::
 
-:::detail{#serveren-en-bewaren parent="etiket-en-aankoop" depth="advanced" source_refs="source.inao-barsac-overview"}
+:::detail{#serveren-en-bewaren parent="etiket-en-aankoop" depth="intermediate" source_refs="source.inao-barsac-overview"}
 ### Koel schenken, ruim genoeg ruiken
 
 Ongeveer 10–12 °C is een bruikbaar beginpunt: koel genoeg voor spanning, niet zo koud dat aroma verdwijnt. Een klein witwijnglas geeft meer ruimte dan een likeurglas. Blauwe kaas, zoute of kruidige gerechten en niet te zoete fruitdesserts kunnen werken, maar combinaties zijn geen wet.

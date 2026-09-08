@@ -47,6 +47,8 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Geverifieerde geografie | `data/geography/` | Toekomstige factual Atlasdata |
 | Runtimebundle | `src/generated/content/knowledge-base.json` | Afgeleid buildresultaat, niet canonical |
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
+| Kwaliteitsreviews | `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
+| Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
 
 Een stabiel feit heeft één canonical eigenaar. Narratives en pagina's mogen dat
 feit uitleggen, maar onderhouden geen parallelle structurele kopie.
@@ -142,6 +144,10 @@ Markdownformatter worden herschreven.
   indexing of canonical ownership verandert.
 - Gebruik `geography-policy.md` voor plaatsen, coördinaten, grenzen en Atlas.
 - Gebruik `visual-language.md` voor UI, responsive gedrag en visuals.
+- Gebruik `quality-assurance.md` voor het uitvoeren en registreren van periodieke
+  kwaliteitschecks.
+- Gebruik `maintenance-backlog.md` om actiepunten uit reviews te volgen tot en
+  met afronding of een gemotiveerd vervalbesluit.
 
 Lees dus niet standaard ieder beleidsdocument voor iedere taak. Kies de
 documenten die daadwerkelijk door de wijziging worden geraakt.
