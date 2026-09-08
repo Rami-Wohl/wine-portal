@@ -1,0 +1,24 @@
+id: media.producer.chateau-cheval-blanc.grand-vin-1989
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-cheval-blanc/grand-vin-1989.jpg
+mime_type: image/jpeg
+width: 682
+height: 2400
+checksum_sha256: 1750abbbbce5b58d962f7044dae799e346631331c876aadfbd2e62f8d5b04f60
+alt:
+  nl: Fles Château Cheval Blanc 1989 met crèmekleurig etiket, gouden letters en twee medaillons
+  en: Bottle of Château Cheval Blanc 1989 with a cream label, gold lettering and two medallions
+caption:
+  nl: Op de Grand Vin uit 1989 staan de twee negentiende-eeuwse tentoonstellingsmedailles en de toen geldige vermelding Premier Grand Cru Classé. Cheval Blanc behoorde historisch tot de A-categorie, maar nam niet deel aan de classificatie van 2022.
+  en: The 1989 Grand Vin displays two nineteenth-century exhibition medals and the then-valid Premier Grand Cru Classé wording. Cheval Blanc historically belonged to category A but did not enter the 2022 classification.
+rights:
+  status: open-licensed
+  creator: Jamain
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Cheval_Blanc_1989_J1.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Jamain via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-08
+changes: Original Wikimedia file resized proportionally to 682 × 2400 pixels; no crop or editorial colour alteration.

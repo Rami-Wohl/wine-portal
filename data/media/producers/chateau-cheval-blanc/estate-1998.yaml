@@ -1,0 +1,24 @@
+id: media.producer.chateau-cheval-blanc.estate-1998
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-cheval-blanc/estate-1998.jpg
+mime_type: image/jpeg
+width: 3280
+height: 1956
+checksum_sha256: 7f767edebc869c0a46da5abe5a7cecba881ad8838274bee4d9966b597057d6bf
+alt:
+  nl: De lichte stenen gevel, toren en tuin van Château Cheval Blanc in 1998
+  en: The pale stone façade, tower and garden of Château Cheval Blanc in 1998
+caption:
+  nl: Het château in 1998, het jaar waarin Bernard Arnault en Albert Frère het landgoed kochten. Deze foto dateert van vóór de golvende witte kelder van Christian de Portzamparc, die in 2011 naast het historische gebouw werd geopend.
+  en: The château in 1998, the year Bernard Arnault and Albert Frère acquired the estate. This photograph predates Christian de Portzamparc's undulating white winery, which opened beside the historic building in 2011.
+rights:
+  status: open-licensed
+  creator: Benjamin Zingg
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Cheval-Blanc.jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.5 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.5/
+  credit_line: Benjamin Zingg via Wikimedia Commons, CC BY-SA 2.5
+acquired_at: 2026-09-08
+changes: Original Wikimedia file used without crop or editorial colour alteration.

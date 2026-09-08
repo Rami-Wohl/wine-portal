@@ -1248,6 +1248,7 @@ h3 {
 }
 .content-block-figure img.content-media-tall {
   width: auto;
+  height: min(75vh, 48rem);
   max-width: 100%;
   max-height: min(75vh, 48rem);
   margin-inline: auto;

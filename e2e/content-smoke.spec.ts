@@ -167,6 +167,43 @@ test("Château Figeac presents both documentary images and layered producer know
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
+test("Château Cheval Blanc separates its historic rank from current status", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/producers/chateau-cheval-blanc");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Château Cheval Blanc" })).toBeVisible();
+  await expect(page.getByRole("img", { name: /lichte stenen gevel/ })).toBeVisible();
+  const bottle = page.getByRole("img", { name: /Fles Château Cheval Blanc 1989/ });
+  await bottle.scrollIntoViewIfNeeded();
+  await expect(bottle).toBeVisible();
+  await expect
+    .poll(() => bottle.evaluate((image: HTMLImageElement) => image.naturalWidth))
+    .toBeGreaterThan(0);
+  await expect(page.getByText(/historisch A, momenteel ongeklasseerd/i)).toBeVisible();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const otherWines = page.locator("#overige-wijnen");
+  const institutionalSignal = page.locator("#de-keuze-als-institutioneel-signaal");
+
+  await expect(otherWines).toBeHidden();
+  await expect(institutionalSignal).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(otherWines).toBeVisible();
+  await expect(institutionalSignal).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(institutionalSignal).toBeVisible();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("Château Pavie presents its vineyard, historic bottle and layered producer knowledge", async ({
   page,
 }) => {

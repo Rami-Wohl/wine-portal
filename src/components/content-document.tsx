@@ -217,13 +217,18 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
       if (!asset) return null;
       const caption = asset.caption?.[context.locale];
       const credit = asset.rights.credit_line;
+      const isTall = asset.height / asset.width >= 2;
       return (
         <figure {...common}>
           <Image
             alt={asset.alt[context.locale]}
-            className={asset.height / asset.width >= 2 ? "content-media-tall" : undefined}
+            className={isTall ? "content-media-tall" : undefined}
             height={asset.height}
-            sizes="(max-width: 620px) calc(100vw - 32px), 760px"
+            sizes={
+              isTall
+                ? "(max-width: 620px) 50vw, 220px"
+                : "(max-width: 620px) calc(100vw - 32px), 760px"
+            }
             src={mediaUrl(asset)}
             width={asset.width}
           />

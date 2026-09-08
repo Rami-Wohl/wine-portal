@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 217 entities — 29 active, 188 draft, 0 deprecated.
+**Totaal:** 217 entities — 30 active, 187 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (29)
+## Actief — publiek vindbaar (30)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -32,6 +32,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-08 |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | `grape.sauvignon-blanc` | Ja | `/grapes/sauvignon-blanc` | 2026-09-07 |
 | [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | `grape.semillon` | Ja | `/grapes/semillon` | 2026-09-07 |
+| [Château Cheval Blanc](../content/entities/producers/chateau-cheval-blanc/entity.yaml) | Producent | `producer.chateau-cheval-blanc` | Ja | `/producers/chateau-cheval-blanc` | 2026-09-08 |
 | [Château d'Yquem](../content/entities/producers/chateau-d-yquem/entity.yaml) | Producent | `producer.chateau-d-yquem` | Ja | `/producers/chateau-d-yquem` | 2026-09-08 |
 | [Château Figeac](../content/entities/producers/chateau-figeac/entity.yaml) | Producent | `producer.chateau-figeac` | Ja | `/producers/chateau-figeac` | 2026-09-08 |
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
@@ -40,7 +41,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Ja | `/producers/chateau-pavie` | 2026-09-08 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (188)
+## Draft — nog uit te werken (187)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -132,7 +133,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Canon la Gaffelière](../content/entities/producers/chateau-canon-la-gaffeliere/entity.yaml) | Producent | `producer.chateau-canon-la-gaffeliere` | Nee — reviewroute | `/producers/chateau-canon-la-gaffeliere` | — |
 | [Château Cap de Mourlin](../content/entities/producers/chateau-cap-de-mourlin/entity.yaml) | Producent | `producer.chateau-cap-de-mourlin` | Nee — reviewroute | `/producers/chateau-cap-de-mourlin` | — |
 | [Château Chauvin](../content/entities/producers/chateau-chauvin/entity.yaml) | Producent | `producer.chateau-chauvin` | Nee — reviewroute | `/producers/chateau-chauvin` | — |
-| [Château Cheval Blanc](../content/entities/producers/chateau-cheval-blanc/entity.yaml) | Producent | `producer.chateau-cheval-blanc` | Nee — reviewroute | `/producers/chateau-cheval-blanc` | — |
 | [Château Clerc Milon](../content/entities/producers/chateau-clerc-milon/entity.yaml) | Producent | `producer.chateau-clerc-milon` | Nee — reviewroute | `/producers/chateau-clerc-milon` | — |
 | [Château Climens](../content/entities/producers/chateau-climens/entity.yaml) | Producent | `producer.chateau-climens` | Nee — reviewroute | `/producers/chateau-climens` | — |
 | [Château Clos de Sarpe](../content/entities/producers/chateau-clos-de-sarpe/entity.yaml) | Producent | `producer.chateau-clos-de-sarpe` | Nee — reviewroute | `/producers/chateau-clos-de-sarpe` | — |
