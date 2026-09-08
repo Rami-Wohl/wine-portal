@@ -167,6 +167,41 @@ test("Château Figeac presents both documentary images and layered producer know
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
+test("Château Pavie presents its vineyard, historic bottle and layered producer knowledge", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/producers/chateau-pavie");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Château Pavie" })).toBeVisible();
+  await expect(
+    page.getByRole("img", { name: /Rijen wijnstokken van Château Pavie/ }),
+  ).toBeVisible();
+  await expect(page.getByRole("img", { name: /Fles Château Pavie 1990/ })).toBeVisible();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const secondWine = page.locator("#overige-wijnen");
+  const estateExpansion = page.locator("#een-groeiend-domein");
+
+  await expect(secondWine).toBeHidden();
+  await expect(estateExpansion).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(secondWine).toBeVisible();
+  await expect(estateExpansion).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(estateExpansion).toBeVisible();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("entity relationships are grouped by their meaning", async ({ page }) => {
   await page.goto("/appellations/pauillac");
 

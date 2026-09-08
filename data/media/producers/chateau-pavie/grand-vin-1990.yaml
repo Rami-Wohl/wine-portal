@@ -1,0 +1,24 @@
+id: media.producer.chateau-pavie.grand-vin-1990
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-pavie/grand-vin-1990.jpg
+mime_type: image/jpeg
+width: 1280
+height: 2157
+checksum_sha256: 9f6690605ed9a15d96f91637e3bf656f5c64d08b10d09e264b7201ec0152f16d
+alt:
+  nl: Fles Château Pavie 1990 met crèmekleurig etiket, rode capsule en de naam Valette
+  en: Bottle of Château Pavie 1990 with a cream label, red capsule and the Valette name
+caption:
+  nl: Deze Grand Vin uit 1990 behoort tot het tijdvak vóór de familie Perse en vóór de promotie naar onderscheiding A. Het etiket bewaart die geschiedenis in de namen Valette en Premier Grand Cru Classé.
+  en: This 1990 Grand Vin belongs to the period before the Perse family and before promotion to distinction A. The Valette name and Premier Grand Cru Classé wording preserve that history on the label.
+rights:
+  status: open-licensed
+  creator: Jamain
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Pavie_1990_J1.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Jamain via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-08
+changes: Wikimedia thumbnail resized to 1280 pixels wide; no crop or editorial colour alteration.

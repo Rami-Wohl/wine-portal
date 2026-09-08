@@ -1,0 +1,24 @@
+id: media.producer.chateau-pavie.vineyard
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-pavie/vineyard.jpg
+mime_type: image/jpeg
+width: 3456
+height: 2304
+checksum_sha256: 88b7a1ba6a2dc7d189497ea9b7c99be4c721dc06bd4571d425276aee918745bd
+alt:
+  nl: Rijen wijnstokken van Château Pavie op de zonnige helling boven de vallei
+  en: Rows of Château Pavie vines on the sunlit slope above the valley
+caption:
+  nl: De wijngaard volgt de zuidgerichte helling van de Côte Pavie. Het beeld toont reliëf en ligging, maar vormt geen perceelkaart of bewijs van een exacte eigendomsgrens.
+  en: The vineyard follows the south-facing Côte Pavie slope. The image shows relief and setting, but is not a parcel map or evidence of an exact property boundary.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Vineyards_of_Ch%C3%A2teau_Pavie,_Saint-%C3%89milion.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-08
+changes: Original Wikimedia file used without crop or editorial colour alteration.

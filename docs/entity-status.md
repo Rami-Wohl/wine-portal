@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 217 entities — 27 active, 190 draft, 0 deprecated.
+**Totaal:** 217 entities — 28 active, 189 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (27)
+## Actief — publiek vindbaar (28)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -36,9 +36,10 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Lafite Rothschild](../content/entities/producers/chateau-lafite-rothschild/entity.yaml) | Producent | `producer.chateau-lafite-rothschild` | Ja | `/producers/chateau-lafite-rothschild` | 2026-09-02 |
 | [Château Latour](../content/entities/producers/chateau-latour/entity.yaml) | Producent | `producer.chateau-latour` | Ja | `/producers/chateau-latour` | 2026-09-02 |
 | [Château Mouton Rothschild](../content/entities/producers/chateau-mouton-rothschild/entity.yaml) | Producent | `producer.chateau-mouton-rothschild` | Ja | `/producers/chateau-mouton-rothschild` | 2026-09-02 |
+| [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Ja | `/producers/chateau-pavie` | 2026-09-08 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (190)
+## Draft — nog uit te werken (189)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -192,7 +193,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Montlisse](../content/entities/producers/chateau-montlisse/entity.yaml) | Producent | `producer.chateau-montlisse` | Nee — reviewroute | `/producers/chateau-montlisse` | — |
 | [Château Moulin du Cadet](../content/entities/producers/chateau-moulin-du-cadet/entity.yaml) | Producent | `producer.chateau-moulin-du-cadet` | Nee — reviewroute | `/producers/chateau-moulin-du-cadet` | — |
 | [Château Nairac](../content/entities/producers/chateau-nairac/entity.yaml) | Producent | `producer.chateau-nairac` | Nee — reviewroute | `/producers/chateau-nairac` | — |
-| [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Nee — reviewroute | `/producers/chateau-pavie` | — |
 | [Château Pavie Macquin](../content/entities/producers/chateau-pavie-macquin/entity.yaml) | Producent | `producer.chateau-pavie-macquin` | Nee — reviewroute | `/producers/chateau-pavie-macquin` | — |
 | [Château Peby Faugères](../content/entities/producers/chateau-peby-faugeres/entity.yaml) | Producent | `producer.chateau-peby-faugeres` | Nee — reviewroute | `/producers/chateau-peby-faugeres` | — |
 | [Château Pédesclaux](../content/entities/producers/chateau-pedesclaux/entity.yaml) | Producent | `producer.chateau-pedesclaux` | Nee — reviewroute | `/producers/chateau-pedesclaux` | — |
