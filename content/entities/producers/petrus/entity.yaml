@@ -1,0 +1,17 @@
+id: producer.petrus
+type: producer
+status: draft
+canonical_name: Petrus
+names:
+  nl: Petrus
+  en: Petrus
+slugs:
+  nl: petrus
+  en: petrus
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.pomerol }
+assertions: []
+source_refs: []

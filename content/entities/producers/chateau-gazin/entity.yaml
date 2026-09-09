@@ -1,0 +1,17 @@
+id: producer.chateau-gazin
+type: producer
+status: draft
+canonical_name: Château Gazin
+names:
+  nl: Château Gazin
+  en: Château Gazin
+slugs:
+  nl: chateau-gazin
+  en: chateau-gazin
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.pomerol }
+assertions: []
+source_refs: []

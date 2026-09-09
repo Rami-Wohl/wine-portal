@@ -1,0 +1,357 @@
+package_id: appellation.pomerol
+archetype: appellation-overview
+schema_version: 1
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, pomerol-libourne-en-lalande, grens-is-geen-stijl]
+    target_ids:
+      [
+        region.bordeaux,
+        region.libournais,
+        appellation.saint-emilion,
+        appellation.lalande-de-pomerol,
+      ]
+    completeness_questions:
+      [Kan de lezer Pomerol plaatsen en gemeente streek en AOP uit elkaar houden?]
+    layers:
+      foundation:
+        [Plaats de kleine rode appellation op de rechteroever direct ten noordoosten van Libourne.]
+      intermediate: [Leg de verhouding tot Libournais Saint-Émilion en Lalande-de-Pomerol uit.]
+      advanced:
+        [
+          Benoem dat de juridische grens delen en uitzonderingspercelen omvat zonder zelf een kaart te tekenen.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Ligging en identiteit.], source_refs: [source.inao-pomerol-overview] }
+      specific_claims:
+        - {
+            claim: Pomerol is uitsluitend bestemd voor stille rode wijn.,
+            status: supported,
+            source_refs: [source.inao-pomerol-specification-2021],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, hospitaliers-handel-en-spoor, van-laatkomer-tot-wereldnaam]
+    target_ids: [concept.phylloxera]
+    completeness_questions:
+      [
+        Verbindt het verhaal Hospitaliers oorlog herstel handel phylloxera AOC en twintigste-eeuwse reputatie zonder oorsprongsmythe?,
+      ]
+    layers:
+      foundation:
+        [Volg de wijngaard vanaf de middeleeuwse Hospitaliers tot de AOC en moderne reputatie.]
+      intermediate: [Verklaar de rol van Libourne spoorhandel Corrèze en België.]
+      advanced: [Leg uit waarom Pomerols wereldstatus jonger is dan zijn wijnbouwgeschiedenis.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Historische ontwikkeling.], source_refs: [source.pomerol-syndicate-history] }
+      specific_claims:
+        - {
+            claim: De AOC werd op 8 december 1936 erkend.,
+            status: supported,
+            source_refs: [source.inao-pomerol-overview],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids:
+      [landschap-klimaat-en-bodem, plateau-terrassen-en-water, crasse-de-fer-zonder-mystiek]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      [
+        Kan de lezer plateau terrassen grind zand klei ijzer en waterhuishouding zonder bodemdeterminisme begrijpen?,
+      ]
+    layers:
+      foundation: [Maak het zacht aflopende plateau en de bodemvariatie voorstelbaar.]
+      intermediate:
+        [Verbind textuur en ondergrond met drainage waterbuffering beworteling en rijping.]
+      advanced:
+        [Ontmythologiseer crasse de fer en begrens perceelclaims zonder geverifieerde kaart.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap bodem en water.],
+          source_refs: [source.inao-pomerol-specification-2021, source.pomerol-syndicate-terroir],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, merlot-en-cabernet-franc, de-volledige-wettelijke-set]
+    target_ids:
+      [
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.cabernet-sauvignon,
+        grape.malbec,
+        grape.petit-verdot,
+      ]
+    completeness_questions:
+      [
+        Zijn dominante en wettelijk toegestane rassen met hun lokale rol zonder vast blendrecept uitgelegd?,
+      ]
+    layers:
+      foundation: [Introduceer Merlot als hoofdrol en Cabernet Franc als voornaamste partner.]
+      intermediate: [Leg rijpingsverschil structuur geur en jaargangskeuze uit.]
+      advanced: [Noem Cabernet Sauvignon Côt of Malbec en Petit Verdot als toegestane minderheden.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Lokale druivenrollen.], source_refs: [source.pomerol-syndicate-terroir] }
+      specific_claims:
+        - {
+            claim: Vijf blauwe rassen zijn toegestaan.,
+            status: supported,
+            source_refs: [source.inao-pomerol-specification-2021],
+          }
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids:
+      [wijnbouw-en-wijnmaken, oogst-extractie-en-assemblage, opvoeding-zonder-pomerol-recept]
+    target_ids: [concept.maceration, concept.assemblage, concept.elevage, concept.tannin]
+    completeness_questions:
+      [
+        Volgt de lezer druif tot fles zonder de werkwijze van één beroemd domein als appellationrecept te zien?,
+      ]
+    layers:
+      foundation: [Volg rijping selectie rode vergisting assemblage en opvoeding.]
+      intermediate: [Verklaar oogsttiming extractie en Merlot-Cabernetbalans.]
+      advanced: [Begrens vat en opvoeding als producentenkeuze.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Rode vinificatie en lokale variatie.],
+          source_refs: [source.inao-pomerol-specification-2021],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, actuele-drempels]
+    target_ids: [concept.aop]
+    completeness_questions:
+      [
+        Kan de lezer juridische herkomst minimale productieregels en producentenkeuzes onderscheiden?,
+      ]
+    layers:
+      foundation: [Leg uit dat Pomerol een beschermde herkomst voor stille rode wijn is.]
+      intermediate: []
+      advanced: [Geef actuele plantdichtheid rendement en analytische grenzen proportioneel weer.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Functie van de AOP-regels.], source_refs: [source.inao-pomerol-overview] }
+      specific_claims:
+        - {
+            claim: De regels noemen minimaal 5500 stokken per hectare een basisrendement van 49 en een rendement butoir van 60 hectoliter per hectare.,
+            status: supported,
+            source_refs:
+              [source.inao-pomerol-specification-2021, source.legifrance-pomerol-order-2021],
+          }
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten, reputatie-is-geen-rang, namen-als-orientatie]
+    target_ids:
+      [
+        producer.petrus,
+        producer.le-pin,
+        producer.vieux-chateau-certan,
+        producer.chateau-lafleur,
+        producer.chateau-la-conseillante,
+        producer.chateau-levangile,
+        producer.chateau-trotanoy,
+        producer.chateau-clinet,
+        producer.chateau-gazin,
+      ]
+    completeness_questions:
+      [
+        Is het ontbreken van een officiële classificatie helder en biedt de producentenselectie oriëntatie zonder een eigen ranglijst te veinzen?,
+      ]
+    layers:
+      foundation: [Leg uit dat Pomerol geen officiële cruclassificatie kent.]
+      intermediate: [Scheid marktstatus reputatie en prijs van wettelijke rang.]
+      advanced: [Toon meerdere producententypen zonder een pseudo-classificatie te maken.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatieafwezigheid en producentennavigatie.],
+          source_refs: [source.inao-pomerol-overview, source.civb-pomerol-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, waar-verschillen-ontstaan, tijd-in-de-fles]
+    target_ids: [concept.vintage, concept.tannin]
+    completeness_questions:
+      [Geeft de pagina een bruikbare stijlbandbreedte en ontwikkeling zonder proefgarantie?]
+    layers:
+      foundation: [Beschrijf fruit textuur frisheid en tannine als bandbreedte.]
+      intermediate: [Verbind stijlverschil met bodem druif jaar oogst extractie en opvoeding.]
+      advanced: [Leg flesontwikkeling en onzekerheid uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijl en flesontwikkeling.],
+          source_refs: [source.inao-pomerol-overview, source.civb-pomerol-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, pomerol-is-niet-lalande, serveren-en-bewaren]
+    target_ids: [appellation.lalande-de-pomerol, concept.estate-bottling, concept.vintage]
+    completeness_questions:
+      [
+        Kan de lezer herkomst producent cuvée jaargang en conditie lezen zonder prijs of reputatie als garantie?,
+      ]
+    layers:
+      foundation: [Lees de exacte appellationnaam producent cuvée jaargang en bottelaar.]
+      intermediate: [Scheid Pomerol van Lalande-de-Pomerol en geef serveercontext.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiket koop en serveernavigatie.],
+          source_refs: [source.dgccrf-wine-labels-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, warmte-water-en-merlot]
+    target_ids: []
+    completeness_questions:
+      [Worden klimaat water en investeringsverschillen behandeld zonder vluchtige marktclaims?]
+    layers:
+      foundation: [Laat zien dat een beroemd gebied agronomisch en economisch blijft veranderen.]
+      intermediate:
+        [Verbind warmere drogere en grillige jaren met Merlot waterbeheer en plukbeslissingen.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaatadaptatie in Bordeaux.],
+          source_refs: [source.inrae-bordeaux-climate-adaptation],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [wijngaard-en-kerk, merlot-in-pomerol]
+    target_ids: []
+    completeness_questions:
+      [
+        Tonen de beelden zowel landschap als druif met controleerbare rechten en zonder één château als heel Pomerol te presenteren?,
+      ]
+    layers:
+      foundation: [Toon open landschap subtiel reliëf en Merlot in de wijngaard.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair landschap en druif.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        appellation.lalande-de-pomerol,
+        producer.petrus,
+        producer.le-pin,
+        producer.vieux-chateau-certan,
+        producer.chateau-lafleur,
+        producer.chateau-la-conseillante,
+        producer.chateau-levangile,
+        producer.chateau-trotanoy,
+        producer.chateau-clinet,
+        producer.chateau-gazin,
+      ]
+    completeness_questions:
+      [Zijn alle genoemde vervolgentiteiten minstens als gelinkte package aanwezig?]
+    layers:
+      foundation: [Bied routes naar de buurappellation en verschillende producenten.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: appellation.lalande-de-pomerol,
+      names: { nl: Lalande-de-Pomerol, en: Lalande-de-Pomerol },
+      slugs: { nl: lalande-de-pomerol, en: lalande-de-pomerol },
+      disposition: link,
+    }
+  - {
+      id: producer.petrus,
+      names: { nl: Petrus, en: Petrus },
+      slugs: { nl: petrus, en: petrus },
+      disposition: link,
+    }
+  - {
+      id: producer.le-pin,
+      names: { nl: Le Pin, en: Le Pin },
+      slugs: { nl: le-pin, en: le-pin },
+      disposition: link,
+    }
+  - {
+      id: producer.vieux-chateau-certan,
+      names: { nl: Vieux Château Certan, en: Vieux Château Certan },
+      slugs: { nl: vieux-chateau-certan, en: vieux-chateau-certan },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-lafleur,
+      names: { nl: Château Lafleur, en: Château Lafleur },
+      slugs: { nl: chateau-lafleur, en: chateau-lafleur },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-la-conseillante,
+      names: { nl: Château La Conseillante, en: Château La Conseillante },
+      slugs: { nl: chateau-la-conseillante, en: chateau-la-conseillante },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-levangile,
+      names: { nl: Château L’Évangile, en: Château L’Évangile },
+      slugs: { nl: chateau-levangile, en: chateau-levangile },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-trotanoy,
+      names: { nl: Château Trotanoy, en: Château Trotanoy },
+      slugs: { nl: chateau-trotanoy, en: chateau-trotanoy },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-clinet,
+      names: { nl: Château Clinet, en: Château Clinet },
+      slugs: { nl: chateau-clinet, en: chateau-clinet },
+      disposition: link,
+    }
+  - {
+      id: producer.chateau-gazin,
+      names: { nl: Château Gazin, en: Château Gazin },
+      slugs: { nl: chateau-gazin, en: chateau-gazin },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

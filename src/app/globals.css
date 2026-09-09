@@ -624,6 +624,7 @@ h3 {
 }
 .entity-link small {
   color: var(--faint);
+  text-wrap: nowrap;
 }
 .empty-inline,
 .quiet-note {

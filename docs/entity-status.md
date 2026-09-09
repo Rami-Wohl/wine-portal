@@ -2,9 +2,9 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 218 entities — 34 active, 184 draft, 0 deprecated.
+**Totaal:** 228 entities — 35 active, 193 draft, 0 deprecated.
 
-## Actief — publiek vindbaar (34)
+## Actief — publiek vindbaar (35)
 
 Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.
 
@@ -12,6 +12,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | --- | --- | --- | --- | --- | --- |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
+| [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | `appellation.pomerol` | Ja | `/appellations/pomerol` | 2026-09-09 |
 | [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | `appellation.saint-emilion` | Ja | `/appellations/saint-emilion` | 2026-09-08 |
 | [Saint-Émilion Grand Cru](../content/entities/appellations/saint-emilion-grand-cru/entity.yaml) | Appellatie | `appellation.saint-emilion-grand-cru` | Ja | `/appellations/saint-emilion-grand-cru` | 2026-09-08 |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-08 |
@@ -45,7 +46,7 @@ Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitema
 | [Château Pavie](../content/entities/producers/chateau-pavie/entity.yaml) | Producent | `producer.chateau-pavie` | Ja | `/producers/chateau-pavie` | 2026-09-08 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 
-## Draft — nog uit te werken (184)
+## Draft — nog uit te werken (193)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -65,6 +66,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | `appellation.fronsac` | Nee — reviewroute | `/appellations/fronsac` | — |
 | [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | `appellation.graves` | Nee — reviewroute | `/appellations/graves` | — |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | `appellation.haut-medoc` | Nee — reviewroute | `/appellations/haut-medoc` | — |
+| [Lalande-de-Pomerol](../content/entities/appellations/lalande-de-pomerol/entity.yaml) | Appellatie | `appellation.lalande-de-pomerol` | Nee — reviewroute | `/appellations/lalande-de-pomerol` | — |
 | [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | `appellation.lussac-saint-emilion` | Nee — reviewroute | `/appellations/lussac-saint-emilion` | — |
 | [Maipo Valley](../content/entities/appellations/maipo-valley/entity.yaml) | Appellatie | `appellation.maipo-valley` | Nee — reviewroute | `/appellations/maipo-valley` | — |
 | [Margaret River](../content/entities/appellations/margaret-river/entity.yaml) | Appellatie | `appellation.margaret-river` | Nee — reviewroute | `/appellations/margaret-river` | — |
@@ -72,7 +74,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Montagne-Saint-Émilion](../content/entities/appellations/montagne-saint-emilion/entity.yaml) | Appellatie | `appellation.montagne-saint-emilion` | Nee — reviewroute | `/appellations/montagne-saint-emilion` | — |
 | [Napa Valley](../content/entities/appellations/napa-valley/entity.yaml) | Appellatie | `appellation.napa-valley` | Nee — reviewroute | `/appellations/napa-valley` | — |
 | [Pessac-Léognan](../content/entities/appellations/pessac-leognan/entity.yaml) | Appellatie | `appellation.pessac-leognan` | Nee — reviewroute | `/appellations/pessac-leognan` | — |
-| [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | `appellation.pomerol` | Nee — reviewroute | `/appellations/pomerol` | — |
 | [Pouilly-Fumé](../content/entities/appellations/pouilly-fume/entity.yaml) | Appellatie | `appellation.pouilly-fume` | Nee — reviewroute | `/appellations/pouilly-fume` | — |
 | [Puisseguin-Saint-Émilion](../content/entities/appellations/puisseguin-saint-emilion/entity.yaml) | Appellatie | `appellation.puisseguin-saint-emilion` | Nee — reviewroute | `/appellations/puisseguin-saint-emilion` | — |
 | [Saint-Estèphe](../content/entities/appellations/saint-estephe/entity.yaml) | Appellatie | `appellation.saint-estephe` | Nee — reviewroute | `/appellations/saint-estephe` | — |
@@ -136,6 +137,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Chauvin](../content/entities/producers/chateau-chauvin/entity.yaml) | Producent | `producer.chateau-chauvin` | Nee — reviewroute | `/producers/chateau-chauvin` | — |
 | [Château Clerc Milon](../content/entities/producers/chateau-clerc-milon/entity.yaml) | Producent | `producer.chateau-clerc-milon` | Nee — reviewroute | `/producers/chateau-clerc-milon` | — |
 | [Château Climens](../content/entities/producers/chateau-climens/entity.yaml) | Producent | `producer.chateau-climens` | Nee — reviewroute | `/producers/chateau-climens` | — |
+| [Château Clinet](../content/entities/producers/chateau-clinet/entity.yaml) | Producent | `producer.chateau-clinet` | Nee — reviewroute | `/producers/chateau-clinet` | — |
 | [Château Clos de Sarpe](../content/entities/producers/chateau-clos-de-sarpe/entity.yaml) | Producent | `producer.chateau-clos-de-sarpe` | Nee — reviewroute | `/producers/chateau-clos-de-sarpe` | — |
 | [Château Corbin](../content/entities/producers/chateau-corbin/entity.yaml) | Producent | `producer.chateau-corbin` | Nee — reviewroute | `/producers/chateau-corbin` | — |
 | [Château Corbin Michotte](../content/entities/producers/chateau-corbin-michotte/entity.yaml) | Producent | `producer.chateau-corbin-michotte` | Nee — reviewroute | `/producers/chateau-corbin-michotte` | — |
@@ -159,6 +161,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Fonplégade](../content/entities/producers/chateau-fonplegade/entity.yaml) | Producent | `producer.chateau-fonplegade` | Nee — reviewroute | `/producers/chateau-fonplegade` | — |
 | [Château Fonroque](../content/entities/producers/chateau-fonroque/entity.yaml) | Producent | `producer.chateau-fonroque` | Nee — reviewroute | `/producers/chateau-fonroque` | — |
 | [Château Franc Mayne](../content/entities/producers/chateau-franc-mayne/entity.yaml) | Producent | `producer.chateau-franc-mayne` | Nee — reviewroute | `/producers/chateau-franc-mayne` | — |
+| [Château Gazin](../content/entities/producers/chateau-gazin/entity.yaml) | Producent | `producer.chateau-gazin` | Nee — reviewroute | `/producers/chateau-gazin` | — |
 | [Château Grand Corbin](../content/entities/producers/chateau-grand-corbin/entity.yaml) | Producent | `producer.chateau-grand-corbin` | Nee — reviewroute | `/producers/chateau-grand-corbin` | — |
 | [Château Grand Corbin-Despagne](../content/entities/producers/chateau-grand-corbin-despagne/entity.yaml) | Producent | `producer.chateau-grand-corbin-despagne` | Nee — reviewroute | `/producers/chateau-grand-corbin-despagne` | — |
 | [Château Grand Mayne](../content/entities/producers/chateau-grand-mayne/entity.yaml) | Producent | `producer.chateau-grand-mayne` | Nee — reviewroute | `/producers/chateau-grand-mayne` | — |
@@ -170,8 +173,10 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Haut-Batailley](../content/entities/producers/chateau-haut-batailley/entity.yaml) | Producent | `producer.chateau-haut-batailley` | Nee — reviewroute | `/producers/chateau-haut-batailley` | — |
 | [Château Haut-Sarpe](../content/entities/producers/chateau-haut-sarpe/entity.yaml) | Producent | `producer.chateau-haut-sarpe` | Nee — reviewroute | `/producers/chateau-haut-sarpe` | — |
 | [Château Jean Faure](../content/entities/producers/chateau-jean-faure/entity.yaml) | Producent | `producer.chateau-jean-faure` | Nee — reviewroute | `/producers/chateau-jean-faure` | — |
+| [Château L’Évangile](../content/entities/producers/chateau-levangile/entity.yaml) | Producent | `producer.chateau-levangile` | Nee — reviewroute | `/producers/chateau-levangile` | — |
 | [Château la Commanderie](../content/entities/producers/chateau-la-commanderie/entity.yaml) | Producent | `producer.chateau-la-commanderie` | Nee — reviewroute | `/producers/chateau-la-commanderie` | — |
 | [Château la Confession](../content/entities/producers/chateau-la-confession/entity.yaml) | Producent | `producer.chateau-la-confession` | Nee — reviewroute | `/producers/chateau-la-confession` | — |
+| [Château La Conseillante](../content/entities/producers/chateau-la-conseillante/entity.yaml) | Producent | `producer.chateau-la-conseillante` | Nee — reviewroute | `/producers/chateau-la-conseillante` | — |
 | [Château la Couspaude](../content/entities/producers/chateau-la-couspaude/entity.yaml) | Producent | `producer.chateau-la-couspaude` | Nee — reviewroute | `/producers/chateau-la-couspaude` | — |
 | [Château la Croizille](../content/entities/producers/chateau-la-croizille/entity.yaml) | Producent | `producer.chateau-la-croizille` | Nee — reviewroute | `/producers/chateau-la-croizille` | — |
 | [Château la Dominique](../content/entities/producers/chateau-la-dominique/entity.yaml) | Producent | `producer.chateau-la-dominique` | Nee — reviewroute | `/producers/chateau-la-dominique` | — |
@@ -179,6 +184,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château la Marzelle](../content/entities/producers/chateau-la-marzelle/entity.yaml) | Producent | `producer.chateau-la-marzelle` | Nee — reviewroute | `/producers/chateau-la-marzelle` | — |
 | [Château la Serre](../content/entities/producers/chateau-la-serre/entity.yaml) | Producent | `producer.chateau-la-serre` | Nee — reviewroute | `/producers/chateau-la-serre` | — |
 | [Château la Tour Figeac](../content/entities/producers/chateau-la-tour-figeac/entity.yaml) | Producent | `producer.chateau-la-tour-figeac` | Nee — reviewroute | `/producers/chateau-la-tour-figeac` | — |
+| [Château Lafleur](../content/entities/producers/chateau-lafleur/entity.yaml) | Producent | `producer.chateau-lafleur` | Nee — reviewroute | `/producers/chateau-lafleur` | — |
 | [Château Laniote](../content/entities/producers/chateau-laniote/entity.yaml) | Producent | `producer.chateau-laniote` | Nee — reviewroute | `/producers/chateau-laniote` | — |
 | [Château Larcis Ducasse](../content/entities/producers/chateau-larcis-ducasse/entity.yaml) | Producent | `producer.chateau-larcis-ducasse` | Nee — reviewroute | `/producers/chateau-larcis-ducasse` | — |
 | [Château Larmande](../content/entities/producers/chateau-larmande/entity.yaml) | Producent | `producer.chateau-larmande` | Nee — reviewroute | `/producers/chateau-larmande` | — |
@@ -213,6 +219,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Tour Baladoz](../content/entities/producers/chateau-tour-baladoz/entity.yaml) | Producent | `producer.chateau-tour-baladoz` | Nee — reviewroute | `/producers/chateau-tour-baladoz` | — |
 | [Château Tour Saint-Christophe](../content/entities/producers/chateau-tour-saint-christophe/entity.yaml) | Producent | `producer.chateau-tour-saint-christophe` | Nee — reviewroute | `/producers/chateau-tour-saint-christophe` | — |
 | [Château Trolong Mondot](../content/entities/producers/chateau-trolong-mondot/entity.yaml) | Producent | `producer.chateau-trolong-mondot` | Nee — reviewroute | `/producers/chateau-trolong-mondot` | — |
+| [Château Trotanoy](../content/entities/producers/chateau-trotanoy/entity.yaml) | Producent | `producer.chateau-trotanoy` | Nee — reviewroute | `/producers/chateau-trotanoy` | — |
 | [Château Trottevieille](../content/entities/producers/chateau-trottevieille/entity.yaml) | Producent | `producer.chateau-trottevieille` | Nee — reviewroute | `/producers/chateau-trottevieille` | — |
 | [Château Valandraud](../content/entities/producers/chateau-valandraud/entity.yaml) | Producent | `producer.chateau-valandraud` | Nee — reviewroute | `/producers/chateau-valandraud` | — |
 | [Château Villemaurine](../content/entities/producers/chateau-villemaurine/entity.yaml) | Producent | `producer.chateau-villemaurine` | Nee — reviewroute | `/producers/chateau-villemaurine` | — |
@@ -227,6 +234,9 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Couvent des Jacobins](../content/entities/producers/couvent-des-jacobins/entity.yaml) | Producent | `producer.couvent-des-jacobins` | Nee — reviewroute | `/producers/couvent-des-jacobins` | — |
 | [La Mondotte](../content/entities/producers/la-mondotte/entity.yaml) | Producent | `producer.la-mondotte` | Nee — reviewroute | `/producers/la-mondotte` | — |
 | [Lassègue](../content/entities/producers/lassegue/entity.yaml) | Producent | `producer.lassegue` | Nee — reviewroute | `/producers/lassegue` | — |
+| [Le Pin](../content/entities/producers/le-pin/entity.yaml) | Producent | `producer.le-pin` | Nee — reviewroute | `/producers/le-pin` | — |
+| [Petrus](../content/entities/producers/petrus/entity.yaml) | Producent | `producer.petrus` | Nee — reviewroute | `/producers/petrus` | — |
+| [Vieux Château Certan](../content/entities/producers/vieux-chateau-certan/entity.yaml) | Producent | `producer.vieux-chateau-certan` | Nee — reviewroute | `/producers/vieux-chateau-certan` | — |
 | [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | `region.blayais-bourgeais` | Nee — reviewroute | `/regions/blayais-bourgeais` | — |
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | `region.entre-deux-mers` | Nee — reviewroute | `/regions/entre-deux-mers` | — |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | `region.graves-sauternais` | Nee — reviewroute | `/regions/graves-sauternais` | — |

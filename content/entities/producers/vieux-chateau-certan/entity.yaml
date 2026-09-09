@@ -1,0 +1,17 @@
+id: producer.vieux-chateau-certan
+type: producer
+status: draft
+canonical_name: Vieux Château Certan
+names:
+  nl: Vieux Château Certan
+  en: Vieux Château Certan
+slugs:
+  nl: vieux-chateau-certan
+  en: vieux-chateau-certan
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.pomerol }
+assertions: []
+source_refs: []

@@ -1,6 +1,6 @@
 id: appellation.pomerol
 type: appellation
-status: draft
+status: active
 canonical_name: Pomerol
 names:
   nl: Pomerol
@@ -11,6 +11,42 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: related_to, target: region.libournais }
+  - { type: related_to, target: appellation.saint-emilion }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.malbec }
+  - { type: important_grape, target: grape.petit-verdot }
+assertions:
+  - id: assertion.pomerol.wine-type
+    predicate: permitted_wine_type
+    value: still-dry-red
+    status: verified
+    sources: [source.inao-pomerol-specification-2021]
+    last_verified: 2026-09-09
+  - id: assertion.pomerol.aoc-recognition
+    predicate: aoc_recognition_year
+    value: 1936
+    status: verified
+    sources: [source.inao-pomerol-overview]
+    last_verified: 2026-09-09
+  - id: assertion.pomerol.minimum-planting-density
+    predicate: minimum_planting_density_per_hectare
+    value: 5500
+    status: verified
+    sources: [source.inao-pomerol-specification-2021]
+    last_verified: 2026-09-09
+source_refs:
+  - source.inao-pomerol-overview
+  - source.inao-pomerol-specification-2021
+  - source.legifrance-pomerol-order-2021
+  - source.pomerol-syndicate-history
+  - source.pomerol-syndicate-terroir
+  - source.civb-pomerol-overview
+  - source.inrae-bordeaux-climate-adaptation
+  - source.dgccrf-wine-labels-2025
+depth: foundation
+last_reviewed: 2026-09-09

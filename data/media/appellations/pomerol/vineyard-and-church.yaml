@@ -1,0 +1,24 @@
+id: media.appellation.pomerol.vineyard-and-church
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/pomerol/vineyard-and-church.jpg
+mime_type: image/jpeg
+width: 1632
+height: 1090
+checksum_sha256: 6ba6255aec1b245eafd14b00b47651e13406f5da59e149212fd44cbfacb26aad
+alt:
+  nl: Lage rijen wijnstokken in Pomerol met de kerktoren boven het groene landschap
+  en: Low rows of vines in Pomerol with the church tower rising above the green landscape
+caption:
+  nl: De kerktoren geeft het open wijngaardlandschap van Pomerol een middelpunt. Hier bepalen lage wijnstokken, kleine domeinen en subtiele hoogteverschillen het beeld, niet monumentale kastelen.
+  en: The church tower gives Pomerol’s open vineyard landscape a focal point. Low vines, small estates and subtle changes in elevation shape this view rather than monumental châteaux.
+rights:
+  status: open-licensed
+  creator: Pascal3012
+  source_url: https://commons.wikimedia.org/wiki/File:Pomerol_(cropped).jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Pascal3012 via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-09
+changes: Existing Wikimedia crop used without further crop or editorial colour alteration.

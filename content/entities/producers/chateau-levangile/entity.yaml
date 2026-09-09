@@ -1,0 +1,17 @@
+id: producer.chateau-levangile
+type: producer
+status: draft
+canonical_name: Château L’Évangile
+names:
+  nl: Château L’Évangile
+  en: Château L’Évangile
+slugs:
+  nl: chateau-levangile
+  en: chateau-levangile
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.pomerol }
+assertions: []
+source_refs: []

@@ -1,0 +1,17 @@
+id: producer.chateau-lafleur
+type: producer
+status: draft
+canonical_name: Château Lafleur
+names:
+  nl: Château Lafleur
+  en: Château Lafleur
+slugs:
+  nl: chateau-lafleur
+  en: chateau-lafleur
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.pomerol }
+assertions: []
+source_refs: []

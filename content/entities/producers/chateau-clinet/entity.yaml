@@ -1,0 +1,17 @@
+id: producer.chateau-clinet
+type: producer
+status: draft
+canonical_name: Château Clinet
+names:
+  nl: Château Clinet
+  en: Château Clinet
+slugs:
+  nl: chateau-clinet
+  en: chateau-clinet
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: located_in, target: appellation.pomerol }
+assertions: []
+source_refs: []

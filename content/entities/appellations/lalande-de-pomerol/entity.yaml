@@ -1,0 +1,18 @@
+id: appellation.lalande-de-pomerol
+type: appellation
+status: draft
+canonical_name: Lalande-de-Pomerol
+names:
+  nl: Lalande-de-Pomerol
+  en: Lalande-de-Pomerol
+slugs:
+  nl: lalande-de-pomerol
+  en: lalande-de-pomerol
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: related_to, target: appellation.pomerol }
+assertions: []
+source_refs: []

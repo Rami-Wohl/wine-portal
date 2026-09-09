@@ -1,0 +1,24 @@
+id: media.appellation.pomerol.merlot-grapes
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/pomerol/merlot-grapes.jpg
+mime_type: image/jpeg
+width: 1200
+height: 1800
+checksum_sha256: 5653870bebcbc87d0e829bee2af976589ef14b5658a3ef3e04200995865c6a6e
+alt:
+  nl: Rijpe donkerblauwe Merlotdruiven tussen groene bladeren in een wijngaard in Pomerol
+  en: Ripe dark-blue Merlot grapes among green leaves in a vineyard in Pomerol
+caption:
+  nl: Merlot bij Château Le Bon Pasteur in Pomerol. De druif domineert de appellation, maar rijpheid, waterbeschikbaarheid, selectie en de bijdrage van Cabernet Franc blijven bepalend voor het resultaat.
+  en: Merlot at Château Le Bon Pasteur in Pomerol. The variety dominates the appellation, but ripeness, water availability, selection and the contribution of Cabernet Franc still shape the result.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Merlot_grapes_at_Ch%C3%A2teau_Le_Bon_Pasteur,_Pomerol.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-09
+changes: Original Wikimedia file resized to 1200 by 1800 pixels for web delivery; no crop or editorial colour alteration.
