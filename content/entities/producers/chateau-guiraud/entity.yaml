@@ -5,6 +5,10 @@ canonical_name: Château Guiraud
 names: { nl: Château Guiraud, en: Château Guiraud }
 slugs: { nl: chateau-guiraud, en: chateau-guiraud }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: collection-profile
+  owner: appellation.sauternes
+  anchor: producent-chateau-guiraud
 relations:
   - { type: located_in, target: appellation.sauternes }
   - type: classified_under

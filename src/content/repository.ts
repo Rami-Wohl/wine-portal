@@ -1,6 +1,7 @@
 import knowledgeBaseJson from "../generated/content/knowledge-base.json";
 import type {
   EntityType,
+  Entity,
   GeneratedEntity,
   GeneratedKnowledgeBase,
   GeneratedNarrative,
@@ -8,7 +9,9 @@ import type {
   ResolvedRelation,
   Source,
 } from "./model";
+import { entityPresentationMode } from "./model";
 import { NARRATIVE_ROUTE_SEGMENTS, entityTypeFromRouteSegment } from "./routing";
+import { entityHref } from "./routing";
 
 const knowledgeBase = knowledgeBaseJson as GeneratedKnowledgeBase;
 const entitiesById = new Map(knowledgeBase.entities.map((entity) => [entity.id, entity]));
@@ -38,6 +41,10 @@ export function getPublishedEntities(): GeneratedEntity[] {
   return knowledgeBase.entities.filter((entity) => entity.status === "active");
 }
 
+export function getPublishedStandaloneEntities(): GeneratedEntity[] {
+  return getPublishedEntities().filter((entity) => entityPresentationMode(entity) === "monograph");
+}
+
 export function getEntityById(id: string): GeneratedEntity | undefined {
   return entitiesById.get(id);
 }
@@ -50,6 +57,21 @@ export function getAllEntitiesByType(type: EntityType): GeneratedEntity[] {
 
 export function getPublishedEntitiesByType(type: EntityType): GeneratedEntity[] {
   return getAllEntitiesByType(type).filter((entity) => entity.status === "active");
+}
+
+export function getPublishedStandaloneEntitiesByType(type: EntityType): GeneratedEntity[] {
+  return getPublishedEntitiesByType(type).filter(
+    (entity) => entityPresentationMode(entity) === "monograph",
+  );
+}
+
+export function getEntityPublicHref(entity: Entity): string {
+  const presentation = entity.presentation;
+  if (entity.status === "active" && presentation && presentation.mode !== "monograph") {
+    const owner = getEntityById(presentation.owner);
+    if (owner) return `${entityHref(owner)}#${presentation.anchor}`;
+  }
+  return entityHref(entity);
 }
 
 export function getEntityByRoute(routeSegment: string, slug: string): GeneratedEntity | undefined {

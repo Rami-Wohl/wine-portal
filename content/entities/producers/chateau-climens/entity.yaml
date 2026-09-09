@@ -5,6 +5,10 @@ canonical_name: Château Climens
 names: { nl: Château Climens, en: Château Climens }
 slugs: { nl: chateau-climens, en: chateau-climens }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: collection-profile
+  owner: appellation.barsac
+  anchor: producent-chateau-climens
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

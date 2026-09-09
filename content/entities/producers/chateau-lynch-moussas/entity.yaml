@@ -11,6 +11,10 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-lynch-moussas
 relations:
   - type: located_in
     target: appellation.pauillac

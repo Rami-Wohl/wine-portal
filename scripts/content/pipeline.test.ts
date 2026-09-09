@@ -10,8 +10,9 @@ import {
   REGION_OVERVIEW_DIMENSIONS,
   type ContentPlan,
   type Entity,
+  type EntityPresentation,
 } from "../../src/content/model";
-import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
+import { auditEntityLinks, loadContentPlans, scaffoldPlanDependencies } from "./dependencies";
 import { generateEntityPackage } from "./generator";
 import { buildContent, ContentValidationError } from "./pipeline";
 
@@ -30,6 +31,7 @@ interface AddEntityOptions {
   locales?: { nl: string; en: string };
   omitLocale?: "nl" | "en";
   status?: "draft" | "active";
+  presentation?: EntityPresentation;
 }
 
 interface AddNarrativeOptions {
@@ -80,6 +82,9 @@ async function addEntity(root: string, options: AddEntityOptions): Promise<strin
       relations: options.relations ?? [],
       assertions: options.assertions ?? [],
       source_refs: options.sourceRefs ?? [],
+      ...(type === "producer"
+        ? { presentation: options.presentation ?? { mode: "monograph" as const } }
+        : {}),
       ...(options.geographyId ? { geography_id: options.geographyId } : {}),
     }),
   );
@@ -97,7 +102,7 @@ function regionPlan(
   dependencies: ContentPlan["entity_dependencies"] = [],
 ): ContentPlan {
   return {
-    schema_version: 1,
+    schema_version: 2,
     package_id: packageId,
     archetype: "region-overview",
     coverage: REGION_OVERVIEW_DIMENSIONS.map((key) => ({
@@ -330,6 +335,109 @@ describe("content pipeline validation", () => {
 
     await expect(buildContent({ root, write: false })).rejects.toThrow(
       /does not match entity type 'producer'/,
+    );
+  });
+
+  it("validates lightweight producer presentations and their canonical owner relation", async () => {
+    const root = await temporaryRoot();
+    await addEntity(root, { id: "appellation.example" });
+    await addEntity(root, {
+      id: "producer.example-estate",
+      presentation: {
+        mode: "collection-profile",
+        owner: "appellation.example",
+        anchor: "producent-example-estate",
+      },
+      relations: [{ type: "located_in", target: "appellation.example" }],
+    });
+
+    const result = await buildContent({ root, write: false });
+    expect(
+      result.knowledgeBase.entities.find((entity) => entity.type === "producer")?.presentation,
+    ).toEqual({
+      mode: "collection-profile",
+      owner: "appellation.example",
+      anchor: "producent-example-estate",
+    });
+
+    const invalidRoot = await temporaryRoot();
+    await addEntity(invalidRoot, { id: "appellation.example" });
+    await addEntity(invalidRoot, {
+      id: "producer.example-estate",
+      presentation: {
+        mode: "collection-profile",
+        owner: "appellation.example",
+        anchor: "producent-example-estate",
+      },
+    });
+    await expect(buildContent({ root: invalidRoot, write: false })).rejects.toThrow(
+      /requires a canonical relation to owner 'appellation\.example'/,
+    );
+  });
+
+  it("rejects a producer record without an explicit presentation", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "producer.undecided-estate" });
+    const entityPath = path.join(directory, "entity.yaml");
+    const metadata = await readFile(entityPath, "utf8");
+    await writeFile(entityPath, metadata.replace("presentation:\n  mode: monograph\n", ""));
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /presentation is required for every producer entity/,
+    );
+  });
+
+  it("requires an active embedded producer to target a localized owner block", async () => {
+    const root = await temporaryRoot();
+    const ownerDirectory = await addEntity(root, {
+      id: "appellation.example",
+      status: "active",
+    });
+    const ownerContent =
+      ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n\n:::section{#producent-example-estate depth="foundation"}\n## Producent\n\nProfiel.\n:::\n';
+    await writeFile(path.join(ownerDirectory, "overview.nl.md"), ownerContent);
+    await writeFile(path.join(ownerDirectory, "overview.en.md"), ownerContent);
+    await writeFile(
+      path.join(ownerDirectory, "content-plan.yaml"),
+      stringifyYaml(appellationPlan("appellation.example")),
+    );
+    await addEntity(root, {
+      id: "producer.example-estate",
+      status: "active",
+      presentation: {
+        mode: "collection-profile",
+        owner: "appellation.example",
+        anchor: "producent-example-estate",
+      },
+      relations: [{ type: "located_in", target: "appellation.example" }],
+    });
+
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+
+    const missingAnchorRoot = await temporaryRoot();
+    const missingOwnerDirectory = await addEntity(missingAnchorRoot, {
+      id: "appellation.example",
+      status: "active",
+    });
+    const summary = ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n';
+    await writeFile(path.join(missingOwnerDirectory, "overview.nl.md"), summary);
+    await writeFile(path.join(missingOwnerDirectory, "overview.en.md"), summary);
+    await writeFile(
+      path.join(missingOwnerDirectory, "content-plan.yaml"),
+      stringifyYaml(appellationPlan("appellation.example")),
+    );
+    await addEntity(missingAnchorRoot, {
+      id: "producer.example-estate",
+      status: "active",
+      presentation: {
+        mode: "register-entry",
+        owner: "appellation.example",
+        anchor: "producent-example-estate",
+      },
+      relations: [{ type: "located_in", target: "appellation.example" }],
+    });
+    await expect(buildContent({ root: missingAnchorRoot, write: false })).rejects.toThrow(
+      /requires block 'producent-example-estate'/,
     );
   });
 
@@ -609,6 +717,61 @@ describe("content pipeline validation", () => {
 });
 
 describe("content dependency tooling", () => {
+  it("requires producer publication decisions in schema-v2 plans", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "region.example" });
+    const plan = regionPlan("region.example", [
+      {
+        id: "producer.example-estate",
+        names: { nl: "Example Estate", en: "Example Estate" },
+        slugs: { nl: "example-estate", en: "example-estate" },
+        disposition: "link",
+      },
+    ]);
+    await writeFile(path.join(directory, "content-plan.yaml"), stringifyYaml(plan));
+
+    await expect(loadContentPlans(root)).rejects.toThrow(
+      /requires a publication decision for every producer dependency/,
+    );
+  });
+
+  it("rejects schema-v1 plans and producer targets outside the dependency decision", async () => {
+    const legacyRoot = await temporaryRoot();
+    const legacyDirectory = await addEntity(legacyRoot, { id: "region.legacy" });
+    await writeFile(
+      path.join(legacyDirectory, "content-plan.yaml"),
+      stringifyYaml(regionPlan("region.legacy")).replace("schema_version: 2", "schema_version: 1"),
+    );
+    await expect(loadContentPlans(legacyRoot)).rejects.toThrow(
+      /schema_version Invalid input: expected 2/,
+    );
+
+    const targetRoot = await temporaryRoot();
+    const targetDirectory = await addEntity(targetRoot, { id: "region.example" });
+    const plan = regionPlan("region.example");
+    plan.coverage[0].target_ids = ["producer.example-estate"];
+    await writeFile(path.join(targetDirectory, "content-plan.yaml"), stringifyYaml(plan));
+
+    await expect(loadContentPlans(targetRoot)).rejects.toThrow(
+      /producer targets must also be declared in entity_dependencies/,
+    );
+  });
+
+  it("rejects a linked producer outside the content-plan dependency decision", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "region.example" });
+    await addEntity(root, { id: "producer.example-estate" });
+    const markdown =
+      ':::summary{#orientatie depth="foundation"}\nLees [[producer.example-estate|Example Estate]].\n:::\n';
+    await writeFile(path.join(directory, "overview.nl.md"), markdown);
+    await writeFile(path.join(directory, "overview.en.md"), markdown);
+    await addRegionPlan(directory, "region.example");
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /linked producer 'producer\.example-estate' must be declared in entity_dependencies/,
+    );
+  });
+
   it("scaffolds every missing planned entity without overwriting existing packages", async () => {
     const root = await temporaryRoot();
     const directory = await addEntity(root, { id: "region.example" });
@@ -902,6 +1065,7 @@ describe("entity package generator", () => {
       root,
       type: "producer",
       slug: "example-estate",
+      presentation: { mode: "monograph" },
     });
 
     expect(await readFile(path.join(packageDirectory, "entity.yaml"), "utf8")).toContain(
@@ -909,6 +1073,31 @@ describe("entity package generator", () => {
     );
     const result = await buildContent({ root, write: false });
     expect(result.knowledgeBase.entities[0].id).toBe("producer.example-estate");
+  });
+
+  it("rejects producer generation without an explicit presentation", async () => {
+    const root = await temporaryRoot();
+    await expect(
+      generateEntityPackage({ root, type: "producer", slug: "undecided-estate" }),
+    ).rejects.toThrow(/requires an explicit presentation mode/);
+  });
+
+  it("preserves a planned producer presentation in a generated package", async () => {
+    const root = await temporaryRoot();
+    const packageDirectory = await generateEntityPackage({
+      root,
+      type: "producer",
+      slug: "example-estate",
+      presentation: {
+        mode: "collection-profile",
+        owner: "appellation.example",
+        anchor: "producent-example-estate",
+      },
+    });
+
+    const generated = await readFile(path.join(packageDirectory, "entity.yaml"), "utf8");
+    expect(generated).toContain("mode: collection-profile");
+    expect(generated).toContain("owner: appellation.example");
   });
 
   it("rejects unknown types and unsafe slugs", async () => {
@@ -923,7 +1112,12 @@ describe("entity package generator", () => {
 
   it("does not overwrite an existing content package", async () => {
     const root = await temporaryRoot();
-    const options = { root, type: "producer", slug: "example-estate" };
+    const options = {
+      root,
+      type: "producer",
+      slug: "example-estate",
+      presentation: { mode: "monograph" as const },
+    };
     await generateEntityPackage(options);
 
     await expect(generateEntityPackage(options)).rejects.toThrow(/Content package already exists/);

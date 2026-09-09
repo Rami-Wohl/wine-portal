@@ -11,6 +11,8 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
+presentation:
+  mode: monograph
 relations:
   - type: located_in
     target: appellation.sauternes

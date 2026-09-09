@@ -5,6 +5,10 @@ canonical_name: Château Suau
 names: { nl: Château Suau, en: Château Suau }
 slugs: { nl: chateau-suau-barsac, en: chateau-suau-barsac }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-suau-barsac
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

@@ -5,6 +5,10 @@ canonical_name: Château Nairac
 names: { nl: Château Nairac, en: Château Nairac }
 slugs: { nl: chateau-nairac, en: chateau-nairac }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-nairac
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

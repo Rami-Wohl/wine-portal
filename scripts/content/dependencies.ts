@@ -95,6 +95,7 @@ export async function scaffoldPlanDependencies(
       canonicalName: dependency.names.en,
       names: dependency.names,
       slugs: dependency.slugs,
+      presentation: dependency.presentation,
     });
     existingIds.add(dependency.id);
     created.push(dependency.id);

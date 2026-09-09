@@ -80,6 +80,8 @@ classificatie-1855
 Regels:
 
 - IDs zijn uniek binnen een entity- of narrativepackage;
+- een actief `collection-profile` of `register-entry` gebruikt zijn afgesproken
+  owner-block-ID ook als publieke anchor;
 - dezelfde inhoudelijke block heeft in NL en EN exact dezelfde ID;
 - IDs worden niet vertaald;
 - IDs beschrijven het onderwerp, niet de positie (`bodem` in plaats van `blok-3`);
@@ -349,6 +351,9 @@ De bestaande, geïmplementeerde syntax blijft ongewijzigd:
 - De target is altijd een bekende stable entity-ID.
 - Auteurs hardcoderen geen applicatieroutes.
 - Mentions en backlinks worden uit deze links afgeleid.
+- De renderer bepaalt of een producer-ID naar een zelfstandige monografie of
+  naar zijn vaste collectie-anchor wijst. De linksyntax verandert bij promotie
+  of terugplaatsing dus niet.
 
 Een custom label mag grammaticaal helpen, maar mag de identiteit of aard van de target niet verdraaien.
 

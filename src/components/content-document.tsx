@@ -12,8 +12,7 @@ import type {
   Source,
 } from "@/content/model";
 import { mediaUrl } from "@/content/media";
-import { getEntityById } from "@/content/repository";
-import { entityHref } from "@/content/routing";
+import { getEntityById, getEntityPublicHref } from "@/content/repository";
 
 const BLOCK_LABELS: Record<Locale, Record<"objectives" | "key-idea" | "in-the-glass", string>> = {
   nl: {
@@ -98,7 +97,7 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
         const entity = getEntityById(node.entity_id);
         if (!entity) return null;
         return (
-          <Link className="content-entity-link" href={entityHref(entity)} key={key}>
+          <Link className="content-entity-link" href={getEntityPublicHref(entity)} key={key}>
             {node.label ?? entity.names[context.locale]}
           </Link>
         );

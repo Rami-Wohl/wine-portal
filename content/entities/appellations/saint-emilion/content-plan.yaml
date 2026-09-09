@@ -1,6 +1,6 @@
 package_id: appellation.saint-emilion
 archetype: appellation-overview
-schema_version: 1
+schema_version: 2
 coverage:
   - key: identity-and-orientation
     disposition: on-page
@@ -285,12 +285,14 @@ entity_dependencies:
       names: { nl: Château Cheval Blanc, en: Château Cheval Blanc },
       slugs: { nl: chateau-cheval-blanc, en: chateau-cheval-blanc },
       disposition: link,
+      presentation: { mode: monograph },
     }
   - {
       id: producer.chateau-ausone,
       names: { nl: Château Ausone, en: Château Ausone },
       slugs: { nl: chateau-ausone, en: chateau-ausone },
       disposition: link,
+      presentation: { mode: monograph },
     }
   - {
       id: appellation.lussac-saint-emilion,

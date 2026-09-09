@@ -1,6 +1,6 @@
 package_id: appellation.barsac
 archetype: appellation-overview
-schema_version: 1
+schema_version: 2
 coverage:
   - key: identity-and-orientation
     disposition: on-page
@@ -299,59 +299,111 @@ entity_dependencies:
       names: { nl: Château Climens, en: Château Climens },
       slugs: { nl: chateau-climens, en: chateau-climens },
       disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.barsac, anchor: producent-chateau-climens },
     }
   - {
       id: producer.chateau-coutet,
       names: { nl: Château Coutet, en: Château Coutet },
       slugs: { nl: chateau-coutet, en: chateau-coutet },
       disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.barsac, anchor: producent-chateau-coutet },
     }
   - {
       id: producer.chateau-doisy-daene,
       names: { nl: Château Doisy Daëne, en: Château Doisy Daëne },
       slugs: { nl: chateau-doisy-daene, en: chateau-doisy-daene },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-doisy-daene,
+        },
     }
   - {
       id: producer.chateau-doisy-dubroca,
       names: { nl: Château Doisy-Dubroca, en: Château Doisy-Dubroca },
       slugs: { nl: chateau-doisy-dubroca, en: chateau-doisy-dubroca },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-doisy-dubroca,
+        },
     }
   - {
       id: producer.chateau-doisy-vedrines,
       names: { nl: Château Doisy-Védrines, en: Château Doisy-Védrines },
       slugs: { nl: chateau-doisy-vedrines, en: chateau-doisy-vedrines },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-doisy-vedrines,
+        },
     }
   - {
       id: producer.chateau-broustet,
       names: { nl: Château Broustet, en: Château Broustet },
       slugs: { nl: chateau-broustet, en: chateau-broustet },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-broustet,
+        },
     }
   - {
       id: producer.chateau-nairac,
       names: { nl: Château Nairac, en: Château Nairac },
       slugs: { nl: chateau-nairac, en: chateau-nairac },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-nairac,
+        },
     }
   - {
       id: producer.chateau-caillou,
       names: { nl: Château Caillou, en: Château Caillou },
       slugs: { nl: chateau-caillou, en: chateau-caillou },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-caillou,
+        },
     }
   - {
       id: producer.chateau-de-myrat,
       names: { nl: Château de Myrat, en: Château de Myrat },
       slugs: { nl: chateau-de-myrat, en: chateau-de-myrat },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-de-myrat,
+        },
     }
   - {
       id: producer.chateau-suau-barsac,
       names: { nl: Château Suau, en: Château Suau },
       slugs: { nl: chateau-suau-barsac, en: chateau-suau-barsac },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-suau-barsac,
+        },
     }
 review: { outline: complete, dependencies: complete, nl: complete, en: complete }

@@ -5,6 +5,10 @@ canonical_name: Château Rieussec
 names: { nl: Château Rieussec, en: Château Rieussec }
 slugs: { nl: chateau-rieussec, en: chateau-rieussec }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: collection-profile
+  owner: appellation.sauternes
+  anchor: producent-chateau-rieussec
 relations:
   - { type: located_in, target: appellation.sauternes }
   - type: classified_under

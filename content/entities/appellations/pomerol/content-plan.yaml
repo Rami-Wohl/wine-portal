@@ -1,6 +1,6 @@
 package_id: appellation.pomerol
 archetype: appellation-overview
-schema_version: 1
+schema_version: 2
 coverage:
   - key: identity-and-orientation
     disposition: on-page
@@ -305,53 +305,86 @@ entity_dependencies:
       names: { nl: Petrus, en: Petrus },
       slugs: { nl: petrus, en: petrus },
       disposition: link,
+      presentation: { mode: monograph },
     }
   - {
       id: producer.le-pin,
       names: { nl: Le Pin, en: Le Pin },
       slugs: { nl: le-pin, en: le-pin },
       disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.pomerol, anchor: producent-le-pin },
     }
   - {
       id: producer.vieux-chateau-certan,
       names: { nl: Vieux Château Certan, en: Vieux Château Certan },
       slugs: { nl: vieux-chateau-certan, en: vieux-chateau-certan },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pomerol,
+          anchor: producent-vieux-chateau-certan,
+        },
     }
   - {
       id: producer.chateau-lafleur,
       names: { nl: Château Lafleur, en: Château Lafleur },
       slugs: { nl: chateau-lafleur, en: chateau-lafleur },
       disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.pomerol, anchor: producent-chateau-lafleur },
     }
   - {
       id: producer.chateau-la-conseillante,
       names: { nl: Château La Conseillante, en: Château La Conseillante },
       slugs: { nl: chateau-la-conseillante, en: chateau-la-conseillante },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pomerol,
+          anchor: producent-chateau-la-conseillante,
+        },
     }
   - {
       id: producer.chateau-levangile,
       names: { nl: Château L’Évangile, en: Château L’Évangile },
       slugs: { nl: chateau-levangile, en: chateau-levangile },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pomerol,
+          anchor: producent-chateau-levangile,
+        },
     }
   - {
       id: producer.chateau-trotanoy,
       names: { nl: Château Trotanoy, en: Château Trotanoy },
       slugs: { nl: chateau-trotanoy, en: chateau-trotanoy },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pomerol,
+          anchor: producent-chateau-trotanoy,
+        },
     }
   - {
       id: producer.chateau-clinet,
       names: { nl: Château Clinet, en: Château Clinet },
       slugs: { nl: chateau-clinet, en: chateau-clinet },
       disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.pomerol, anchor: producent-chateau-clinet },
     }
   - {
       id: producer.chateau-gazin,
       names: { nl: Château Gazin, en: Château Gazin },
       slugs: { nl: chateau-gazin, en: chateau-gazin },
       disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.pomerol, anchor: producent-chateau-gazin },
     }
 review: { outline: complete, dependencies: complete, nl: complete, en: complete }

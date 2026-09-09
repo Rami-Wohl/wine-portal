@@ -5,6 +5,10 @@ canonical_name: Château de Myrat
 names: { nl: Château de Myrat, en: Château de Myrat }
 slugs: { nl: chateau-de-myrat, en: chateau-de-myrat }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-de-myrat
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

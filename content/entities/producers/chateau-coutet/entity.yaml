@@ -5,6 +5,10 @@ canonical_name: Château Coutet
 names: { nl: Château Coutet, en: Château Coutet }
 slugs: { nl: chateau-coutet, en: chateau-coutet }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: collection-profile
+  owner: appellation.barsac
+  anchor: producent-chateau-coutet
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

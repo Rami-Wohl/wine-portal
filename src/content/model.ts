@@ -267,6 +267,7 @@ const localizedFileSchema = z
   .strict();
 const dateSchema = z.iso.date();
 const scalarSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
+const contentAnchorSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 const httpUrlSchema = z.url().refine((value) => {
   const protocol = new URL(value).protocol;
   return protocol === "http:" || protocol === "https:";
@@ -295,6 +296,17 @@ export const assertionSchema = z
   })
   .strict();
 
+export const entityPresentationSchema = z.discriminatedUnion("mode", [
+  z.object({ mode: z.literal("monograph") }).strict(),
+  z
+    .object({
+      mode: z.enum(["collection-profile", "register-entry"]),
+      owner: entityIdSchema,
+      anchor: contentAnchorSchema,
+    })
+    .strict(),
+]);
+
 const frameworkAlignmentSchema = z
   .object({
     framework: z.string().min(1),
@@ -316,6 +328,7 @@ export const entitySchema = z
     relations: z.array(relationSchema).default([]),
     assertions: z.array(assertionSchema).default([]),
     source_refs: z.array(sourceIdSchema).default([]),
+    presentation: entityPresentationSchema.optional(),
     geography_id: z
       .string()
       .regex(/^(?:geo|geometry)\.[a-z0-9]+(?:[.-][a-z0-9]+)*$/)
@@ -324,7 +337,23 @@ export const entitySchema = z
     framework_alignment: z.array(frameworkAlignmentSchema).optional(),
     last_reviewed: dateSchema.optional(),
   })
-  .strict();
+  .strict()
+  .superRefine((entity, context) => {
+    if (entity.type === "producer" && !entity.presentation) {
+      context.addIssue({
+        code: "custom",
+        path: ["presentation"],
+        message: "is required for every producer entity",
+      });
+    }
+    if (entity.type !== "producer" && entity.presentation) {
+      context.addIssue({
+        code: "custom",
+        path: ["presentation"],
+        message: "is only supported for producer entities",
+      });
+    }
+  });
 
 export const narrativeSchema = z
   .object({
@@ -437,7 +466,7 @@ const contentPlanTargetIdSchema = z.union([entityIdSchema, narrativeIdSchema]);
 
 export const contentPlanSchema = z
   .object({
-    schema_version: z.literal(1),
+    schema_version: z.literal(2),
     package_id: entityIdSchema,
     archetype: z.enum(["region-overview", "appellation-overview", "grape-overview"]),
     coverage: z
@@ -504,6 +533,7 @@ export const contentPlanSchema = z
             names: localizedTextSchema,
             slugs: z.object({ nl: slugSchema, en: slugSchema }).strict(),
             disposition: z.enum(["link", "relation", "link-and-relation"]),
+            presentation: entityPresentationSchema.optional(),
           })
           .strict(),
       )
@@ -517,9 +547,40 @@ export const contentPlanSchema = z
       })
       .strict(),
   })
-  .strict();
+  .strict()
+  .superRefine((plan, context) => {
+    const dependencyIds = new Set(plan.entity_dependencies.map((dependency) => dependency.id));
+    for (const [index, dependency] of plan.entity_dependencies.entries()) {
+      if (dependency.id.startsWith("producer.") && !dependency.presentation) {
+        context.addIssue({
+          code: "custom",
+          path: ["entity_dependencies", index, "presentation"],
+          message: "schema v2 requires a publication decision for every producer dependency",
+        });
+      }
+      if (!dependency.id.startsWith("producer.") && dependency.presentation) {
+        context.addIssue({
+          code: "custom",
+          path: ["entity_dependencies", index, "presentation"],
+          message: "publication decisions are only supported for producer dependencies",
+        });
+      }
+    }
+    for (const [coverageIndex, coverage] of plan.coverage.entries()) {
+      for (const [targetIndex, targetId] of coverage.target_ids.entries()) {
+        if (targetId.startsWith("producer.") && !dependencyIds.has(targetId)) {
+          context.addIssue({
+            code: "custom",
+            path: ["coverage", coverageIndex, "target_ids", targetIndex],
+            message: "producer targets must also be declared in entity_dependencies",
+          });
+        }
+      }
+    }
+  });
 
 export type Entity = z.infer<typeof entitySchema>;
+export type EntityPresentation = z.infer<typeof entityPresentationSchema>;
 export type Relation = z.infer<typeof relationSchema>;
 export type Narrative = z.infer<typeof narrativeSchema>;
 export type Source = z.infer<typeof sourceSchema>;
@@ -642,6 +703,16 @@ export interface ContentDocument {
 export type GeneratedEntity = Entity & {
   content: Record<Locale, ContentDocument>;
 };
+
+export function entityPresentationMode(
+  entity: Pick<Entity, "type" | "presentation">,
+): "monograph" | "collection-profile" | "register-entry" {
+  if (entity.type !== "producer") return "monograph";
+  if (!entity.presentation) {
+    throw new Error("Producer entity has no explicit presentation mode");
+  }
+  return entity.presentation.mode;
+}
 
 export type GeneratedNarrative = Narrative & {
   mentions: NarrativeMention[];

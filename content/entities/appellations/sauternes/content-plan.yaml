@@ -1,6 +1,6 @@
 package_id: appellation.sauternes
 archetype: appellation-overview
-schema_version: 1
+schema_version: 2
 coverage:
   - key: identity-and-orientation
     disposition: on-page
@@ -300,23 +300,58 @@ entity_dependencies:
       names: { nl: Château d'Yquem, en: Château d'Yquem },
       slugs: { nl: chateau-d-yquem, en: chateau-d-yquem },
       disposition: link,
+      presentation: { mode: monograph },
     }
   - {
       id: producer.chateau-guiraud,
       names: { nl: Château Guiraud, en: Château Guiraud },
       slugs: { nl: chateau-guiraud, en: chateau-guiraud },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.sauternes,
+          anchor: producent-chateau-guiraud,
+        },
     }
   - {
       id: producer.chateau-rieussec,
       names: { nl: Château Rieussec, en: Château Rieussec },
       slugs: { nl: chateau-rieussec, en: chateau-rieussec },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.sauternes,
+          anchor: producent-chateau-rieussec,
+        },
     }
   - {
       id: producer.chateau-suduiraut,
       names: { nl: Château Suduiraut, en: Château Suduiraut },
       slugs: { nl: chateau-suduiraut, en: chateau-suduiraut },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.sauternes,
+          anchor: producent-chateau-suduiraut,
+        },
+    }
+  - {
+      id: producer.chateau-climens,
+      names: { nl: Château Climens, en: Château Climens },
+      slugs: { nl: chateau-climens, en: chateau-climens },
+      disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.barsac, anchor: producent-chateau-climens },
+    }
+  - {
+      id: producer.chateau-coutet,
+      names: { nl: Château Coutet, en: Château Coutet },
+      slugs: { nl: chateau-coutet, en: chateau-coutet },
+      disposition: link,
+      presentation:
+        { mode: collection-profile, owner: appellation.barsac, anchor: producent-chateau-coutet },
     }
 review: { outline: complete, dependencies: complete, nl: complete, en: complete }

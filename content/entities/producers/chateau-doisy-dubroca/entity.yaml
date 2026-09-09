@@ -5,6 +5,10 @@ canonical_name: Château Doisy-Dubroca
 names: { nl: Château Doisy-Dubroca, en: Château Doisy-Dubroca }
 slugs: { nl: chateau-doisy-dubroca, en: chateau-doisy-dubroca }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-doisy-dubroca
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

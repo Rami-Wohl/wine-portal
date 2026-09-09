@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { BRAND, SITE_URL } from "@/config/brand";
 import { getAllEntities, getAllNarratives } from "@/content/repository";
+import { entityPresentationMode } from "@/content/model";
 import { entityHref, narrativeHref } from "@/content/routing";
 import {
   generateMetadata as generateEntityMetadata,
@@ -40,7 +41,9 @@ describe("application metadata", () => {
     expect(paths.has("/search")).toBe(false);
     expect(paths.has("/atlas")).toBe(false);
     for (const entity of getAllEntities()) {
-      expect(paths.has(entityHref(entity))).toBe(entity.status === "active");
+      expect(paths.has(entityHref(entity))).toBe(
+        entity.status === "active" && entityPresentationMode(entity) === "monograph",
+      );
     }
     for (const narrative of getAllNarratives()) {
       expect(paths.has(narrativeHref(narrative))).toBe(narrative.status === "active");

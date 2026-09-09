@@ -11,6 +11,10 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
+presentation:
+  mode: register-entry
+  owner: classification.saint-emilion
+  anchor: producent-chateau-haut-sarpe
 relations:
   - { type: located_in, target: appellation.saint-emilion-grand-cru }
   - type: classified_under

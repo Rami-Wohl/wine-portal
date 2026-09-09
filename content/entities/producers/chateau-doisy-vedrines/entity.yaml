@@ -5,6 +5,10 @@ canonical_name: Château Doisy-Védrines
 names: { nl: Château Doisy-Védrines, en: Château Doisy-Védrines }
 slugs: { nl: chateau-doisy-vedrines, en: chateau-doisy-vedrines }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-doisy-vedrines
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

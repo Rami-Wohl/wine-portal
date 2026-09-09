@@ -5,9 +5,12 @@ import {
   getAllNarrativeBacklinks,
   getAllNarratives,
   getEntityByRoute,
+  getEntityPublicHref,
   getNarrativeByRoute,
   getPublishedEntities,
   getPublishedEntitiesByType,
+  getPublishedStandaloneEntities,
+  getPublishedStandaloneEntitiesByType,
   getPublishedNarrativeBacklinks,
   getPublishedNarratives,
   getRelationsForEntity,
@@ -24,6 +27,17 @@ describe("canonical content routing", () => {
   it("derives context-independent entity URLs", () => {
     const latour = getAllEntities().find((entity) => entity.id === "producer.chateau-latour");
     expect(latour && entityHref(latour)).toBe("/producers/chateau-latour");
+  });
+
+  it("routes active collection profiles to their stable owner anchor", () => {
+    const lePin = getAllEntities().find((entity) => entity.id === "producer.le-pin");
+    expect(lePin).toBeDefined();
+    if (!lePin) return;
+
+    expect(getEntityPublicHref(lePin)).toBe("/producers/le-pin");
+    expect(getEntityPublicHref({ ...lePin, status: "active" })).toBe(
+      "/appellations/pomerol#producent-le-pin",
+    );
   });
 
   it("maps only known route families to entity types", () => {
@@ -56,6 +70,16 @@ describe("canonical content routing", () => {
     );
     expect(getPublishedEntitiesByType("producer")).toEqual(
       getAllEntitiesByType("producer").filter((entity) => entity.status === "active"),
+    );
+    expect(getPublishedStandaloneEntities()).toEqual(
+      getPublishedEntities().filter(
+        (entity) => !entity.presentation || entity.presentation.mode === "monograph",
+      ),
+    );
+    expect(getPublishedStandaloneEntitiesByType("producer")).toEqual(
+      getPublishedEntitiesByType("producer").filter(
+        (entity) => !entity.presentation || entity.presentation.mode === "monograph",
+      ),
     );
     expect(getPublishedNarratives()).toEqual(
       getAllNarratives().filter((narrative) => narrative.status === "active"),

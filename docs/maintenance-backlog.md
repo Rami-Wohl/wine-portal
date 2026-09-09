@@ -21,20 +21,21 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-09-08.
+Peildatum: 2026-09-09.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
 | Open | 9 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012`, `MNT-020` |
-| Gepland | 0 | — |
+| Gepland | 1 | `MNT-023` |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 8 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019` |
+| Afgerond | 11 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019`, `MNT-021`, `MNT-022`, `MNT-024` |
 | Vervallen | 0 | — |
 
 Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zeven
-prioriteit `middel`. De drie geblokkeerde acties zijn afhankelijk van een
-betrouwbare Atlas- en geographydatalaag.
+prioriteit `middel`. Eén producentenactie is concreet gepland. De drie
+geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
+geographydatalaag.
 
 ## Open werk
 
@@ -217,7 +218,84 @@ betrouwbare Atlas- en geographydatalaag.
 - **Log:** 2026-09-08 — geregistreerd nadat Wikimedia wel bruikbare historische
   en wijngaardbeelden opleverde, maar niet alle drie gewenste beeldparen.
 
+### `MNT-023` — Pomerol-producentenverzameling als end-to-end pilot
+
+- **Status:** gepland
+- **Prioriteit:** hoog
+- **Categorie:** content, research, product-ux, testing
+- **Scope:** `appellation.pomerol` en de acht gekoppelde collectieprofielen
+- **Herkomst:** `QCR-2026-09-09-01`
+- **Bevinding:** de plannings- en routingstructuur is aanwezig, maar een actief
+  cohort moet nog bewijzen dat meerdere producenten helder, beeldrijk en
+  proportioneel op één ownerpagina kunnen functioneren.
+- **Klaar wanneer:** de selectiegrond is uitgelegd, ieder profiel in NL en EN
+  volledig en onderbouwd is, anchors en kennisdiepte bruikbaar zijn, producerlinks
+  en oude routes naar de juiste sectie wijzen en desktop plus mobiel geen
+  scanbaarheids- of overflowproblemen tonen.
+- **Log:** 2026-09-09 — Petrus blijft buiten de verzameling als geplande
+  monografie; Le Pin, Vieux Château Certan, Lafleur, La Conseillante, L’Évangile,
+  Trotanoy, Clinet en Gazin vormen de eerste profielpilot.
+
 ## Historie
+
+### `MNT-024` — Actieve producentenmonografieën opnieuw toetsen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** content, product-ux
+- **Scope:** de tien actieve producentenpagina's op 2026-09-09
+- **Herkomst:** `QCR-2026-09-09-01`, afgesloten in `QCR-2026-09-09-02`
+- **Bevinding:** deze pagina's zijn onder het eerdere drieschalenmodel geschreven.
+  Hun inhoud was niet ongeldig, maar hun zelfstandige positie moest tegen de
+  strengere monografietoets worden gemotiveerd.
+- **Klaar wanneer:** iedere actieve producent een vastgelegde monografiemotivatie
+  of gecontroleerd consolidatieplan heeft.
+- **Log:** 2026-09-09 — afgerond. Alle tien actieve records zijn expliciet als
+  monografie vastgelegd. De zes eerder benoemde iconen dragen evident een
+  zelfstandig historisch en regionaal verhaal; Angélus, Canon, Figeac en Pavie
+  blijven zelfstandig vanwege hun onderscheiden leerdoelen rond positionering
+  en classificatie, kalksteenplateau, cabernetgedreven terroir en de relatie
+  tussen helling en stijlontwikkeling. Geen bestaande proza, bronnen, media of
+  routes zijn verwijderd.
+
+### `MNT-022` — Legacy draftproducenten per cohort classificeren
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** knowledge-data, content
+- **Scope:** alle 119 draftproducenten op 2026-09-09
+- **Herkomst:** `QCR-2026-09-09-01`, afgesloten in `QCR-2026-09-09-02`
+- **Bevinding:** oudere dependencyrondes maakten ieder producentenrecord als
+  impliciete monografie aan. Daardoor was de werkvoorraad groter dan de
+  pedagogische paginabehoefte.
+- **Klaar wanneer:** ieder bestaand draftrecord gemotiveerd is ingedeeld,
+  embedded owners en anchors zijn vastgesteld en geen legacy-default resteert.
+- **Log:** 2026-09-09 — afgerond voor Pomerol, Pauillac/1855,
+  Sauternes–Barsac/1855 en Saint-Émilion. De volledige inventaris telt nu 11
+  monografieën, 29 collectieprofielen en 89 registervermeldingen. Alle producer-
+  records hebben een expliciete keuze; de volledige cohortmatrix en methode staan
+  in `QCR-2026-09-09-02`.
+
+### `MNT-021` — Schaalbaar producentenpublicatiemodel invoeren
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** knowledge-data, engineering, content, testing
+- **Scope:** producentenschema, dependencyplanning, routing, discovery,
+  statusrapportage en authoringrichtlijnen
+- **Herkomst:** `QCR-2026-09-09-01`
+- **Bevinding:** een producerrecord en een zelfstandige producentenpagina waren
+  technisch en procesmatig hetzelfde, waardoor volledige werelddekking niet
+  haalbaar schaalde.
+- **Klaar wanneer:** identiteit en publicatievorm losstaan, nieuwe plannen een
+  keuze afdwingen, embedded profielen één canonical prose-owner hebben, links en
+  routes stabiel blijven en de werkvoorraad zichtbaar per publicatievorm wordt
+  gerapporteerd.
+- **Log:** 2026-09-09 — afgerond. `monograph`, `collection-profile` en
+  `register-entry` zijn schema-geldig; ownerrelatie, gelokaliseerde anchor,
+  lege embedded overviewbestanden, publicatierouting, Explore/sitemapgedrag en
+  schema-v2-dependencies worden gevalideerd. Documentatie, unit-tests en de
+  Pomerol-planningspilot zijn toegevoegd.
 
 ### `MNT-001` — Assemblage wereldwijd verbreden
 

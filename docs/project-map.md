@@ -36,7 +36,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 
 | Onderwerp | Canonical locatie | Rol |
 | --- | --- | --- |
-| Entity-identiteit, relaties en assertions | `content/entities/**/entity.yaml` | Gedeelde, taaloverstijgende kennis |
+| Entity-identiteit, relaties, assertions en producentenpublicatievorm | `content/entities/**/entity.yaml` | Gedeelde, taaloverstijgende kennis en de stabiele bestemming van producentenrecords |
 | Dekkingsplan en dependency-inventaris | `content/entities/**/content-plan.yaml` | Afdwingbaar redactioneel contract voor regio-, appellation- en druivenrasoverzichten; niet in de runtimebundle |
 | Entity-uitleg | `content/entities/**/overview.<locale>.md` | Gelokaliseerde presentatie |
 | Narrative-metadata en entitykoppelingen | `content/narratives/**/narrative.yaml` | Identiteit, scope en relaties van een verhaal |
@@ -78,8 +78,10 @@ bewuste volgende productstap, geen al werkende feature of automatische fallback.
 
 1. Maak voor een grote overzichtspagina eerst de contentbrief, dekkingsmatrix en
    sectievragen; leg de goedgekeurde uitkomst vast in `content-plan.yaml`.
-2. Inventariseer alle zelfstandig vindbare, herbruikbare dependencies en maak de
-   ontbrekende draftpackages in één batch aan.
+2. Inventariseer alle zelfstandig vindbare, herbruikbare dependencies. Kies voor
+   iedere producent eerst `monograph`, `collection-profile` of `register-entry`;
+   maak daarna de ontbrekende draftrecords in één batch aan. Een genoemde naam
+   wordt niet automatisch een zelfstandige pagina.
 3. Verzamel geschikte bronnen en registreer herbruikbare bronnen onder
    `data/sources/`.
 4. Leg identiteit, relaties, assertions en provenance in YAML vast.
@@ -111,8 +113,8 @@ onderzoek en review. Zij worden niet uit een oud curriculum geconverteerd.
 
 | Commando | Gebruik |
 | --- | --- |
-| `npm run content:new -- <type> <slug>` | Maakt een leeg entitypackage zonder wijnfeiten |
-| `npm run content:deps -- scaffold <entity-id>` | Maakt alle ontbrekende dependencies uit het contentplan als lege drafts |
+| `npm run content:new -- <type> <slug>` | Maakt een leeg entitypackage zonder wijnfeiten; een producer vereist daarnaast zijn expliciete publicatievorm |
+| `npm run content:deps -- scaffold <entity-id>` | Maakt ontbrekende dependencies als lege drafts en neemt verplichte producentenbestemmingen uit het contentplan over |
 | `npm run content:check` | Valideert authored content en schrijft niets |
 | `npm run content:link-audit` | Zoekt bekende entitynamen die in proza staan maar nog niet zijn gelinkt |
 | `npm run content:build` | Valideert en genereert de runtimebundle |

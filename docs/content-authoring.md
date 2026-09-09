@@ -239,57 +239,129 @@ wijn horen in beginsel bij `intermediate`. Exacte percentages, selectiegrenzen,
 technische uitzonderingen en veranderlijke commerciële details horen bij
 `advanced`, tenzij zij onmisbaar zijn om de producent überhaupt te begrijpen.
 
-Voor iedere actieve producent worden waar mogelijk twee documentaire beelden
-gepland: het landgoed in zijn wijnbouwkundige context en de Grand Vin als fles.
+Voor iedere actieve producentenmonografie worden waar mogelijk twee documentaire
+beelden gepland: het landgoed in zijn wijnbouwkundige context en de Grand Vin als fles.
 Beide vereisen expliciete rechten en een inhoudelijke caption; een generieke
 châteaufoto of los etiket zonder betrouwbare identificatie is onvoldoende.
 
-### Redactionele schaal van producenten
+### Publicatievormen van producenten
 
-Niet iedere producent krijgt dezelfde lengte of historische detaillering. Iedere
-nieuwe producentenbrief kiest daarom één **redactionele schaal**. Dit is een
-interne scopebeslissing, geen nieuwe entity-eigenschap, publieke kwaliteitsrang of
-bewering dat de ene producent objectief beter is dan de andere. De schaal bepaalt
-hoe breed de pagina belooft te gaan; de kennisdieptelagen bepalen vervolgens wat
-binnen die pagina bij basis, verdieping en gevorderd zichtbaar is.
+Een genoemde producent is niet automatisch een zelfstandige contentpagina.
+Iedere producentdependency krijgt vóór scaffolding één expliciete
+**publicatievorm**. Deze keuze beschrijft redactionele leerwaarde en presentatie;
+zij is geen publieke kwaliteitsrang.
 
-| Schaal | Wanneer passend | Verwachte dekking |
+| Publicatievorm | Wanneer passend | Publieke presentatie |
 | --- | --- | --- |
-| `iconisch` | De producent is onmisbaar voor het begrijpen van een belangrijke wijnregio, classificatie, stijl of historische ontwikkeling en er bestaan voldoende sterke bronnen voor een monografisch overzicht. | Een brede maar begrensde pagina met geschiedenis, eigendom, plaats, wijngaard, hoofdwijn, overige relevante wijnen, werkwijze, classificatie of institutionele betekenis, stijlgrenzen en hedendaagse context. Gewoonlijk twee documentaire beelden en waar nuttig een extra verklarende visual. |
-| `kernproducent` | De producent is een belangrijke referentie binnen een appellation of stijl, maar hoeft niet als zelfstandig historisch hoofdstuk te functioneren. | Identiteit en plaats, actuele eigendomscontext, een korte geschiedenis, wijngaard, Grand Vin of kernassortiment, stijl en de belangrijkste afwijkende wijn of werkwijze. Meestal vier tot zes hoofdsecties en één of twee beelden. |
-| `referentieproducent` | De naam is nodig voor betrouwbare navigatie, classificatiedekking of vergelijking, maar een lange biografie levert weinig extra leerwaarde. | Een compacte, volwaardige entity met identiteit, plaats, eventuele rang, eigenaar voor zover relevant, hoofdwijn en een begrensd stijlbeeld. Geschiedenis blijft bij de enkele ontwikkeling die de huidige identiteit werkelijk verklaart. Een inhoudelijk beeld is wenselijk, maar filler is niet toegestaan. |
+| `monograph` | De producent is onmisbaar voor het begrijpen van een belangrijke regio, stijl, innovatie of historische ontwikkeling en heeft een zelfstandig pedagogisch verhaal met voldoende onafhankelijke bronnen. | Een zelfstandige producentenpagina volgens `producer-overview`, met een eigen route, bronnen en doorgaans twee documentaire beelden. |
+| `collection-profile` | De producent is een belangrijke regionale, classificatoire of stilistische referentie, maar het verhaal krijgt meer betekenis naast vergelijkbare producenten. | Een eigen sectie op een regio-, appellation- of classificatiepagina. Het producerrecord houdt zijn stabiele ID; links en zoeken verwijzen naar de vaste block-anchor op de eigenaarpagina. |
+| `register-entry` | De naam is nodig voor volledige classificatiedekking, navigatie of een controleerbaar register, maar een profiel zou weinig extra leerwaarde leveren. | Een compacte, geïdentificeerde vermelding op de relevante eigenaarpagina, eveneens met stabiele anchor. Geen biografische filler. |
 
-De schaal volgt leerwaarde en beschikbare onderbouwing, niet alleen prijs,
-bekendheid of classificatierang. Een hoge rang maakt een château niet automatisch
-`iconisch`; omgekeerd kan een producent zonder formele rang door historische,
-technische of stilistische invloed wel iconisch zijn. Een select deel van de
-tweede tot en met vijfde crus krijgt pas de iconische schaal wanneer de brief dat
-per naam motiveert. De rest wordt niet kunstmatig verlengd om dezelfde omvang te
-halen.
+Het `presentation`-veld is verplicht op ieder producerrecord, ook wanneer het
+record nog `draft` is. Een impliciete standaard bestaat niet. Alle
+contentplannen gebruiken `schema_version: 2`; iedere producerdependency herhaalt
+daar exact dezelfde publicatievorm. Daardoor kan scaffolding, review of latere
+authoring nooit ongemerkt van “genoemde producent” naar “zelfstandige pagina”
+springen. Iedere producer die in `coverage.target_ids` of via een entitylink in
+de geplande content voorkomt, moet daarom ook als `entity_dependency` met die
+keuze zijn opgenomen. Het entityrecord legt de canonical keuze vast:
 
-Voor de huidige Bordeaux-opbouw geldt als eerste, bewust beperkte iconische kern:
-de vijf premiers crus classés Château Haut-Brion, Château Lafite Rothschild,
-Château Latour, Château Margaux en Château Mouton Rothschild, plus Château
-d'Yquem, Pétrus, Château Ausone, Château Cheval Blanc en Liber Pater. Dit is een
-redactionele startlijst, geen canon voor de hele wijnwereld. Buiten Bordeaux wordt
-dezelfde toets toegepast vanuit het wereldwijde verhaal van regio, stijl en
-producent; Bordeaux is de eerste ingang van het project, niet de maatstaf voor
-alle producenten.
+```yaml
+presentation:
+  mode: collection-profile
+  owner: appellation.pomerol
+  anchor: producent-chateau-lafleur
+```
 
-Voor alle drie schalen blijft de basislaag menselijk bruikbaar: wie is dit, waar
-ligt of werkt de producent, welke wijn staat centraal, wie is de actuele eigenaar
-of wat is de relevante eigendomscontext, en welk zorgvuldig begrensd karakter
-helpt de wijn herkennen? `Iconisch` is geen toestemming voor trivia, een volledige
-familiekroniek, een jaargangencatalogus of prestigeproza. `Referentieproducent` is
-evenmin toestemming voor een kaal gegevenskaartje. Iedere pagina moet haar
-kleinere of grotere belofte volledig nakomen.
+Alleen een `producer` mag een producentenpublicatievorm dragen. Ontbreekt de
+keuze of wijkt een contentplan af van het entityrecord, dan faalt de build. Een collectie- of
+registerrecord heeft een canonical relation naar zijn `owner`. Activering vereist
+dat die eigenaar actief is en in beide talen een contentblock met exact dezelfde
+anchor bezit. De eigen `overview.nl.md` en `overview.en.md` blijven leeg: het
+profielproza heeft één eigenaar en wordt niet parallel gekopieerd. Een directe
+oude producentenroute verwijst na activatie permanent naar de owner-anchor.
 
-De contentbrief motiveert de gekozen schaal en noemt expliciet welke dimensies
-daardoor op de pagina komen of naar een appellation, classificatie, concept,
-narrative of andere producent worden uitbesteed. Bij iedere onderhoudsreview
-wordt gecontroleerd of de feitelijke omvang nog bij die schaal past. Een schaal
-mag veranderen wanneer de leerwaarde of bronbasis verandert; bestaande tekst
-wordt nooit alleen behouden omdat er al veel werk in zit.
+#### Beslissen over een monografie
+
+Een producent krijgt alleen `monograph` wanneer de contentbrief aantoont dat:
+
+1. er een zelfstandig leerdoel bestaat dat niet goed door appellation-,
+   classificatie- of regiocontent wordt gedragen;
+2. de historische, technische of stilistische invloed verder reikt dan louter
+   lokale bekendheid, prijs of rang;
+3. meerdere belangrijke pagina's de producent inhoudelijk nodig hebben; en
+4. voldoende onafhankelijke bronnen en betekenisvol documentair beeld bestaan.
+
+Prijs, reputatie, classificatierang of het toevallig beschikbaar zijn van veel
+producentencopy zijn afzonderlijk onvoldoende. Bij twijfel is
+`collection-profile` de veilige standaard. Een record kan later promoveren of
+worden teruggebracht zonder ID-wijziging; alleen de publicatievorm en bestemming
+veranderen.
+
+#### Collectieprofielen schrijven
+
+Een producentenverzameling begint met een korte uitleg van haar selectiegrond en
+grenzen. Een officiële classificatie volgt de gedateerde officiële cohortindeling;
+een informele appellationselectie noemt zichzelf nooit een ranglijst. Grote
+cohorten worden op een inhoudelijke, controleerbare grond gegroepeerd, bijvoorbeeld
+formele klasse, deelgebied of alfabet, niet via een verzonnen kwaliteitshiërarchie.
+
+Een `collection-profile` beslaat gewoonlijk 150–300 woorden en beantwoordt in
+lopende tekst: waar ligt of werkt deze producent, welke wijn of rol staat
+centraal, welke ene historische of eigendomsontwikkeling verklaart de huidige
+identiteit, welk kenmerk maakt de producent leerzaam en waar eindigt dat
+stijlbeeld? Alleen relevante afwijkende wijnen of werkwijzen worden toegevoegd.
+Veranderlijke eigendom, areaal en commerciële praktijk krijgen een datum en bron.
+
+De eigenaarpagina beheert de citations en media. Een verzameling mag algemene
+bronnen delen, maar een specifieke producentenclaim vraagt passende
+onderbouwing. Beeld wordt op paginaniveau gepland: een hero, kaart of diagram en
+een beperkte selectie echte landgoed- of flesbeelden kunnen de hele verzameling
+dragen. Er geldt geen quotum van twee beelden per collectieprofiel; filler en
+onzekere identificatie blijven verboden.
+
+Een `register-entry` is nog compacter en beperkt zich tot de gegevens die de
+reden voor opname aantonen. Het is geen samengeperste monografie.
+
+#### Balans bewaken
+
+Het statusrapport telt producentenrecords per publicatievorm. Als
+redactionele guardrail bestaat op een volwassen platform bij voorkeur hoogstens
+circa 15–20% van de actieve zelfstandige kennispagina's uit
+producentenmonografieën. Dit is geen inhoudelijke wet, maar een signaal om eerst
+ontbrekende regio's, appellations, druiven, stijlen, geschiedenis en technieken
+af te dekken. Een nieuwe monografie wordt niet gestart zolang haar eigen
+leerwaarde niet expliciet is gemotiveerd.
+
+Producentenwerk wordt waar mogelijk in cohorten gepland: één selectie- en
+bronreview, daarna meerdere korte profielen op dezelfde owner. Zo blijft volledige
+dekking haalbaar zonder dat iedere naam een afzonderlijke onderzoeks-, beeld- en
+publicatiecyclus veroorzaakt.
+
+De gemigreerde Bordeaux-inventaris bevat elf bewuste monografieën: de tien reeds
+actieve pagina's Château Angélus, Château Ausone, Château Canon, Château Cheval
+Blanc, Château d'Yquem, Château Figeac, Château Lafite Rothschild, Château Latour,
+Château Mouton Rothschild en Château Pavie, plus de geplande monografie Pétrus.
+De vier Saint-Émilionnamen buiten de eerder benoemde iconische kern blijven niet
+alleen wegens hun rang zelfstandig: hun bestaande pagina's dragen elk een eigen
+leerbaar verhaal over respectievelijk positionering en classificatie, het
+kalksteenplateau, een cabernetgedreven uitzondering en de relatie tussen
+hellingterroir en stijlontwikkeling. Nieuwe kandidaten, waaronder Château
+Haut-Brion, Château Margaux en Liber Pater, krijgen niet automatisch dezelfde
+vorm wanneer hun record ontstaat; ook zij doorlopen eerst de monografietoets.
+
+Dit is een redactionele momentopname, geen canon of publieke kwaliteitsrang.
+Buiten Bordeaux wordt dezelfde toets toegepast vanuit het wereldwijde verhaal
+van regio, stijl en producent; Bordeaux is de eerste ingang van het project,
+niet de maatstaf voor alle producenten.
+
+Voor een monografie blijft de basislaag menselijk bruikbaar: wie is dit, waar ligt
+of werkt de producent, welke wijn staat centraal, wie is de actuele eigenaar of
+wat is de relevante eigendomscontext, en welk zorgvuldig begrensd karakter helpt
+de wijn herkennen? `Monograph` is geen toestemming voor trivia, een volledige
+familiekroniek, een jaargangencatalogus of prestigeproza. De contentbrief noemt
+expliciet wat op de pagina komt en wat naar een appellation, classificatie,
+concept of narrative wordt uitbesteed.
 
 ### Page-archetype: `grape-overview`
 
@@ -431,8 +503,13 @@ Druivenrassen gebruiken deze vaste categorieën:
 Generate a package:
 
 ```bash
-npm run content:new -- producer example-estate
+npm run content:new -- producer example-estate monograph
 ```
+
+Gebruik dit directe producentencommando alleen nadat de monografietoets is
+vastgelegd. `collection-profile` en `register-entry` worden normaal vanuit een
+contentplan met `content:deps scaffold` aangemaakt, zodat owner en
+anchor niet los van de dekkingsbeslissing kunnen ontstaan.
 
 This creates:
 

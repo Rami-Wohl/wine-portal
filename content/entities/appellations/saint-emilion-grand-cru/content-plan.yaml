@@ -1,6 +1,6 @@
 package_id: appellation.saint-emilion-grand-cru
 archetype: appellation-overview
-schema_version: 1
+schema_version: 2
 coverage:
   - key: identity-and-orientation
     disposition: on-page
@@ -263,4 +263,33 @@ coverage:
       general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
       specific_claims: []
     review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-figeac,
+      names: { nl: Château Figeac, en: Château Figeac },
+      slugs: { nl: chateau-figeac, en: chateau-figeac },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+  - {
+      id: producer.chateau-pavie,
+      names: { nl: Château Pavie, en: Château Pavie },
+      slugs: { nl: chateau-pavie, en: chateau-pavie },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+  - {
+      id: producer.chateau-cheval-blanc,
+      names: { nl: Château Cheval Blanc, en: Château Cheval Blanc },
+      slugs: { nl: chateau-cheval-blanc, en: chateau-cheval-blanc },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+  - {
+      id: producer.chateau-ausone,
+      names: { nl: Château Ausone, en: Château Ausone },
+      slugs: { nl: chateau-ausone, en: chateau-ausone },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
 review: { outline: complete, dependencies: complete, nl: complete, en: complete }

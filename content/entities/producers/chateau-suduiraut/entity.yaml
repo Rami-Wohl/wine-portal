@@ -5,6 +5,10 @@ canonical_name: Château Suduiraut
 names: { nl: Château Suduiraut, en: Château Suduiraut }
 slugs: { nl: chateau-suduiraut, en: chateau-suduiraut }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: collection-profile
+  owner: appellation.sauternes
+  anchor: producent-chateau-suduiraut
 relations:
   - { type: located_in, target: appellation.sauternes }
   - type: classified_under

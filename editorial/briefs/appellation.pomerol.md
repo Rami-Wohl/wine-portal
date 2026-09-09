@@ -12,8 +12,9 @@ classificatie onderscheiden van de sterke informele reputatiehiërarchie.
 
 De pagina is een volledig appellation-overzicht. Producentengeschiedenissen,
 actuele prijzen, jaargangtabellen en perceelkaarten horen niet hier. De belangrijkste
-producenten en Lalande-de-Pomerol zijn wel als entities voorbereid, zodat de pagina
-nu al duurzaam linkt en latere uitbreiding geen herstelronde door oude proza vraagt.
+producenten en Lalande-de-Pomerol zijn wel als stable records voorbereid, zodat de
+pagina nu al duurzaam linkt en latere uitbreiding geen herstelronde door oude proza
+vraagt. Een producerrecord belooft daarbij niet automatisch een zelfstandige pagina.
 
 ## Lezersvragen en volledigheidsgrens
 
@@ -41,6 +42,10 @@ scheiding tussen algemene synthese en precieze bronplichtige feiten.
 - Pomerol wordt niet gereduceerd tot Petrus. De beroemdste namen bieden navigatie,
   terwijl het proza nadrukkelijk kleine familiebedrijven en uiteenlopende stijlen
   zichtbaar houdt.
+- Petrus is wegens zijn uitzonderlijke historische en internationale leerwaarde als
+  toekomstige monografie gepland. Le Pin, Vieux Château Certan, Lafleur, La
+  Conseillante, L’Évangile, Trotanoy, Clinet en Gazin worden collectieprofielen op
+  deze ownerpagina. Die selectie is een leerroute, geen Pomerolclassificatie.
 - *Crasse de fer* wordt als lokale bodemterm uitgelegd, niet als magisch ingrediënt
   of universele oorzaak van een aroma.
 - De circa-aandelen voor druiven dienen alleen als oriëntatie en niet als eeuwige

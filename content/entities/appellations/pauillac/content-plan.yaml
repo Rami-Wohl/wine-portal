@@ -1,4 +1,4 @@
-schema_version: 1
+schema_version: 2
 package_id: appellation.pauillac
 archetype: appellation-overview
 coverage:
@@ -251,24 +251,33 @@ entity_dependencies:
       names: { nl: Château Lafite Rothschild, en: Château Lafite Rothschild },
       slugs: { nl: chateau-lafite-rothschild, en: chateau-lafite-rothschild },
       disposition: link,
+      presentation: { mode: monograph },
     }
   - {
       id: producer.chateau-latour,
       names: { nl: Château Latour, en: Château Latour },
       slugs: { nl: chateau-latour, en: chateau-latour },
       disposition: link,
+      presentation: { mode: monograph },
     }
   - {
       id: producer.chateau-mouton-rothschild,
       names: { nl: Château Mouton Rothschild, en: Château Mouton Rothschild },
       slugs: { nl: chateau-mouton-rothschild, en: chateau-mouton-rothschild },
       disposition: link,
+      presentation: { mode: monograph },
     }
   - {
       id: producer.chateau-pichon-baron,
       names: { nl: Château Pichon Baron, en: Château Pichon Baron },
       slugs: { nl: chateau-pichon-baron, en: chateau-pichon-baron },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pauillac,
+          anchor: producent-chateau-pichon-baron,
+        },
     }
   - {
       id: producer.chateau-pichon-longueville-comtesse-de-lalande,
@@ -283,84 +292,168 @@ entity_dependencies:
           en: chateau-pichon-longueville-comtesse-de-lalande,
         },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pauillac,
+          anchor: producent-chateau-pichon-longueville-comtesse-de-lalande,
+        },
     }
   - {
       id: producer.chateau-duhart-milon,
       names: { nl: Château Duhart-Milon, en: Château Duhart-Milon },
       slugs: { nl: chateau-duhart-milon, en: chateau-duhart-milon },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-duhart-milon,
+        },
     }
   - {
       id: producer.chateau-pontet-canet,
       names: { nl: Château Pontet-Canet, en: Château Pontet-Canet },
       slugs: { nl: chateau-pontet-canet, en: chateau-pontet-canet },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pauillac,
+          anchor: producent-chateau-pontet-canet,
+        },
     }
   - {
       id: producer.chateau-batailley,
       names: { nl: Château Batailley, en: Château Batailley },
       slugs: { nl: chateau-batailley, en: chateau-batailley },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-batailley,
+        },
     }
   - {
       id: producer.chateau-haut-batailley,
       names: { nl: Château Haut-Batailley, en: Château Haut-Batailley },
       slugs: { nl: chateau-haut-batailley, en: chateau-haut-batailley },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-haut-batailley,
+        },
     }
   - {
       id: producer.chateau-grand-puy-lacoste,
       names: { nl: Château Grand-Puy-Lacoste, en: Château Grand-Puy-Lacoste },
       slugs: { nl: chateau-grand-puy-lacoste, en: chateau-grand-puy-lacoste },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pauillac,
+          anchor: producent-chateau-grand-puy-lacoste,
+        },
     }
   - {
       id: producer.chateau-grand-puy-ducasse,
       names: { nl: Château Grand-Puy Ducasse, en: Château Grand-Puy Ducasse },
       slugs: { nl: chateau-grand-puy-ducasse, en: chateau-grand-puy-ducasse },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-grand-puy-ducasse,
+        },
     }
   - {
       id: producer.chateau-lynch-bages,
       names: { nl: Château Lynch-Bages, en: Château Lynch-Bages },
       slugs: { nl: chateau-lynch-bages, en: chateau-lynch-bages },
       disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pauillac,
+          anchor: producent-chateau-lynch-bages,
+        },
     }
   - {
       id: producer.chateau-lynch-moussas,
       names: { nl: Château Lynch-Moussas, en: Château Lynch-Moussas },
       slugs: { nl: chateau-lynch-moussas, en: chateau-lynch-moussas },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-lynch-moussas,
+        },
     }
   - {
       id: producer.chateau-darmailhac,
       names: { nl: Château d’Armailhac, en: Château d’Armailhac },
       slugs: { nl: chateau-darmailhac, en: chateau-darmailhac },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-darmailhac,
+        },
     }
   - {
       id: producer.chateau-haut-bages-liberal,
       names: { nl: Château Haut-Bages Libéral, en: Château Haut-Bages Libéral },
       slugs: { nl: chateau-haut-bages-liberal, en: chateau-haut-bages-liberal },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-haut-bages-liberal,
+        },
     }
   - {
       id: producer.chateau-pedesclaux,
       names: { nl: Château Pédesclaux, en: Château Pédesclaux },
       slugs: { nl: chateau-pedesclaux, en: chateau-pedesclaux },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-pedesclaux,
+        },
     }
   - {
       id: producer.chateau-clerc-milon,
       names: { nl: Château Clerc Milon, en: Château Clerc Milon },
       slugs: { nl: chateau-clerc-milon, en: chateau-clerc-milon },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-clerc-milon,
+        },
     }
   - {
       id: producer.chateau-croizet-bages,
       names: { nl: Château Croizet-Bages, en: Château Croizet-Bages },
       slugs: { nl: chateau-croizet-bages, en: chateau-croizet-bages },
       disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-croizet-bages,
+        },
     }
   - {
       id: concept.second-wine,

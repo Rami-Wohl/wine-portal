@@ -1,6 +1,10 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { ENTITY_TYPE_DIRECTORIES, type GeneratedEntity } from "../../src/content/model";
+import {
+  ENTITY_TYPE_DIRECTORIES,
+  entityPresentationMode,
+  type GeneratedEntity,
+} from "../../src/content/model";
 import { ENTITY_ROUTE_SEGMENTS, ENTITY_TYPE_LABELS_NL } from "../../src/content/routing";
 
 const STATUS_ORDER = ["active", "draft", "deprecated"] as const;
@@ -9,7 +13,7 @@ const STATUS_COPY = {
   active: {
     heading: "Actief — publiek vindbaar",
     explanation:
-      "Deze entities horen zichtbaar te zijn in Explore, zoeken, backlinks en de sitemap.",
+      "Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.",
     visibility: "Ja",
   },
   draft: {
@@ -26,8 +30,27 @@ const STATUS_COPY = {
   },
 } as const;
 
-function entityRoute(entity: GeneratedEntity): string {
-  return `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.nl}`;
+function entityRoute(entity: GeneratedEntity, entitiesById: Map<string, GeneratedEntity>): string {
+  const directRoute = `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.nl}`;
+  if (entity.presentation && entity.presentation.mode !== "monograph") {
+    const owner = entitiesById.get(entity.presentation.owner);
+    if (owner) {
+      const target = `/${ENTITY_ROUTE_SEGMENTS[owner.type]}/${owner.slugs.nl}#${entity.presentation.anchor}`;
+      return entity.status === "active" ? target : `${directRoute} → gepland: ${target}`;
+    }
+  }
+  return directRoute;
+}
+
+function presentationLabel(entity: GeneratedEntity): string {
+  switch (entityPresentationMode(entity)) {
+    case "monograph":
+      return entity.type === "producer" ? "Monografie" : "Zelfstandige pagina";
+    case "collection-profile":
+      return "Collectieprofiel";
+    case "register-entry":
+      return "Registervermelding";
+  }
 }
 
 function entitySourcePath(entity: GeneratedEntity): string {
@@ -37,12 +60,16 @@ function entitySourcePath(entity: GeneratedEntity): string {
 
 export function renderEntityStatus(entities: GeneratedEntity[]): string {
   const collator = new Intl.Collator("nl", { sensitivity: "base" });
+  const entitiesById = new Map(entities.map((entity) => [entity.id, entity]));
+  const producers = entities.filter((entity) => entity.type === "producer");
   const lines = [
     "# Entiteitenstatus",
     "",
     "Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.",
     "",
     `**Totaal:** ${entities.length} entities — ${STATUS_ORDER.map((status) => `${entities.filter((entity) => entity.status === status).length} ${status}`).join(", ")}.`,
+    "",
+    `**Producentenrecords:** ${producers.length} — ${producers.filter((entity) => entityPresentationMode(entity) === "monograph").length} monografie, ${producers.filter((entity) => entityPresentationMode(entity) === "collection-profile").length} collectieprofiel, ${producers.filter((entity) => entityPresentationMode(entity) === "register-entry").length} registervermelding.`,
     "",
   ];
 
@@ -62,12 +89,12 @@ export function renderEntityStatus(entities: GeneratedEntity[]): string {
       continue;
     }
     lines.push(
-      "| Naam | Type | ID | Publiek | Nederlandse route | Laatst beoordeeld |",
-      "| --- | --- | --- | --- | --- | --- |",
+      "| Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |",
+      "| --- | --- | --- | --- | --- | --- | --- |",
     );
     for (const entity of entitiesWithStatus) {
       lines.push(
-        `| [${entity.names.nl}](${entitySourcePath(entity)}) | ${ENTITY_TYPE_LABELS_NL[entity.type]} | \`${entity.id}\` | ${copy.visibility} | \`${entityRoute(entity)}\` | ${entity.last_reviewed ?? "—"} |`,
+        `| [${entity.names.nl}](${entitySourcePath(entity)}) | ${ENTITY_TYPE_LABELS_NL[entity.type]} | ${presentationLabel(entity)} | \`${entity.id}\` | ${copy.visibility} | \`${entityRoute(entity, entitiesById)}\` | ${entity.last_reviewed ?? "—"} |`,
       );
     }
     lines.push("");

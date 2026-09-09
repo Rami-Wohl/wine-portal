@@ -11,6 +11,10 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.pomerol
+  anchor: producent-le-pin
 relations:
   - { type: located_in, target: appellation.pomerol }
 assertions: []

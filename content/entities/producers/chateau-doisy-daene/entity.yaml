@@ -5,6 +5,10 @@ canonical_name: Château Doisy Daëne
 names: { nl: Château Doisy Daëne, en: Château Doisy Daëne }
 slugs: { nl: chateau-doisy-daene, en: chateau-doisy-daene }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-doisy-daene
 relations:
   - { type: located_in, target: appellation.barsac }
   - type: classified_under

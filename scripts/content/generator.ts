@@ -1,7 +1,12 @@
 import { mkdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { stringify as stringifyYaml } from "yaml";
-import { ENTITY_TYPE_DIRECTORIES, ENTITY_TYPES, type EntityType } from "../../src/content/model";
+import {
+  ENTITY_TYPE_DIRECTORIES,
+  ENTITY_TYPES,
+  type EntityPresentation,
+  type EntityType,
+} from "../../src/content/model";
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
@@ -12,6 +17,7 @@ export interface GenerateEntityOptions {
   canonicalName?: string;
   names?: { nl: string; en: string };
   slugs?: { nl: string; en: string };
+  presentation?: EntityPresentation;
 }
 
 function titleFromSlug(slug: string): string {
@@ -40,6 +46,12 @@ export async function generateEntityPackage(options: GenerateEntityOptions): Pro
   if (!slugPattern.test(options.slug))
     throw new Error(`Invalid slug '${options.slug}'. Use lowercase kebab-case.`);
   const type = options.type as EntityType;
+  if (type === "producer" && !options.presentation) {
+    throw new Error("Producer creation requires an explicit presentation mode.");
+  }
+  if (type !== "producer" && options.presentation) {
+    throw new Error("Presentation is only supported for producer entities.");
+  }
   const root = path.resolve(options.root ?? process.cwd());
   const packageDirectory = path.join(
     root,
@@ -61,6 +73,7 @@ export async function generateEntityPackage(options: GenerateEntityOptions): Pro
     names,
     slugs,
     locales: { nl: "overview.nl.md", en: "overview.en.md" },
+    ...(options.presentation ? { presentation: options.presentation } : {}),
     relations: [],
     assertions: [],
     source_refs: [],

@@ -5,6 +5,8 @@ canonical_name: Château Angélus
 names: { nl: Château Angélus, en: Château Angélus }
 slugs: { nl: chateau-angelus, en: chateau-angelus }
 locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: monograph
 relations:
   - { type: located_in, target: appellation.saint-emilion-grand-cru }
   - type: classified_under

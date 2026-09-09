@@ -170,6 +170,14 @@ Een betekenisvolle kleinere wijnbouwsite, bijvoorbeeld een climat, lieu-dit of i
 
 Een château, domaine, Weingut, estate, coöperatie of andere producerende organisatie. Een producer kan meerdere relevante plaatsen en appellations hebben; een adres is niet automatisch een wijnbouwlocatie.
 
+Een producerrecord staat niet automatisch gelijk aan een zelfstandige publieke
+pagina. Het verplichte `presentation`-veld kiest expliciet `monograph`,
+`collection-profile` of `register-entry`; er bestaat geen legacy-default of
+achterwaartse terugval. De laatste twee vormen bewaren stable ID, relaties,
+assertions en zoekbaarheid, maar wijzen na activatie naar een vaste contentblock-anchor op een actieve regio-,
+appellation- of classificatie-owner. Hun eigen locale overviewbestanden blijven
+leeg om parallel canonical proza te voorkomen.
+
 #### `grape`
 
 Een druivenras of cultivar. Lokale namen en synoniemen zijn presentatie- en zoekvraagstukken, niet automatisch afzonderlijke cultivars.
@@ -274,6 +282,10 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.example
+  anchor: producent-example-estate
 relations:
   - type: located_in
     target: appellation.example
@@ -577,7 +589,7 @@ De generator verwijdert oude gesplitste JSON-outputs. De gegenereerde directory 
 ### Packagegenerator
 
 ```bash
-npm run content:new -- producer example-estate
+npm run content:new -- producer example-estate monograph
 ```
 
 maakt een schema-geldig draftpackage met metadata en NL/EN-Markdown. De generator voegt bewust geen feiten, bronnen, relaties, media of vertalingen met inhoud toe.
@@ -587,6 +599,14 @@ Grote overzichtsentities gebruiken daarnaast een package-lokaal
 page-archetype, dekkingsbeslissingen, sectievragen, evidencecategorieën en
 entitydependencies vast, maar bevat geen canonical wijnfeiten. De contentpipeline
 valideert het plan en neemt het niet op in de publieke runtimebundle.
+
+Alle plannen gebruiken `schema_version: 2`; versie 1 wordt niet meer
+geaccepteerd. Iedere producerdependency legt daarin zijn `presentation` vast
+voordat `content:deps scaffold` wordt uitgevoerd. Het plan en producerrecord
+moeten exact overeenkomen, anders stopt de contentbuild. Een producer in
+`coverage.target_ids` of in een contentlink moet tevens als
+`entity_dependency` zijn gedeclareerd; producerverwijzingen buiten het
+publicatiebesluit om zijn niet schema-geldig.
 
 ---
 

@@ -1,11 +1,12 @@
 import path from "node:path";
+import type { EntityPresentation } from "../../src/content/model";
 import { buildContent, ContentValidationError } from "./pipeline";
 import { generateEntityPackage } from "./generator";
 import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
 import { writeEntityStatus } from "./status";
 
 async function main(): Promise<void> {
-  const [command, first, second] = process.argv.slice(2);
+  const [command, first, second, third, fourth, fifth] = process.argv.slice(2);
   if (command === "check") {
     const result = await buildContent({ write: false });
     console.log(
@@ -28,8 +29,32 @@ async function main(): Promise<void> {
     return;
   }
   if (command === "new") {
-    if (!first || !second) throw new Error("Usage: npm run content:new -- <entity-type> <slug>");
-    const generatedPath = await generateEntityPackage({ type: first, slug: second });
+    if (!first || !second) {
+      throw new Error(
+        "Usage: npm run content:new -- <entity-type> <slug> [monograph | <collection-profile|register-entry> <owner-id> <anchor>]",
+      );
+    }
+    let presentation: EntityPresentation | undefined;
+    if (first === "producer") {
+      if (third === "monograph") presentation = { mode: "monograph" };
+      else if (third === "collection-profile" || third === "register-entry") {
+        if (!fourth || !fifth) {
+          throw new Error(
+            `Producer ${third} requires an owner entity ID and stable content anchor.`,
+          );
+        }
+        presentation = { mode: third, owner: fourth, anchor: fifth };
+      } else {
+        throw new Error(
+          "Producer creation requires an explicit presentation. Prefer content:deps scaffolding from a validated content plan, or pass 'monograph'.",
+        );
+      }
+    }
+    const generatedPath = await generateEntityPackage({
+      type: first,
+      slug: second,
+      presentation,
+    });
     console.log(`Created ${path.relative(process.cwd(), generatedPath)}`);
     return;
   }
@@ -54,7 +79,7 @@ async function main(): Promise<void> {
     return;
   }
   throw new Error(
-    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit",
+    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> [producer-presentation] | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit",
   );
 }
 

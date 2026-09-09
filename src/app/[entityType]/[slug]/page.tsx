@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { EntityLink } from "@/components/entity-link";
 import { ContentDocumentView } from "@/components/content-document";
 import { KnowledgeDepth } from "@/components/knowledge-depth";
@@ -10,18 +10,14 @@ import { groupRelationsByLabel, type RelationDirection } from "@/content/relatio
 import {
   getAllEntities,
   getEntityById,
+  getEntityPublicHref,
   getEntityByRoute,
   getMediaByIds,
   getPublishedNarrativeBacklinks,
   getRelationsForEntity,
   getSourcesByIds,
 } from "@/content/repository";
-import {
-  ENTITY_ROUTE_SEGMENTS,
-  ENTITY_TYPE_LABELS_NL,
-  entityHref,
-  narrativeHref,
-} from "@/content/routing";
+import { ENTITY_ROUTE_SEGMENTS, ENTITY_TYPE_LABELS_NL, narrativeHref } from "@/content/routing";
 
 interface EntityPageProps {
   params: Promise<{ entityType: string; slug: string }>;
@@ -49,7 +45,7 @@ export async function generateMetadata({ params }: EntityPageProps): Promise<Met
   const { entityType, slug } = await params;
   const entity = getEntityByRoute(entityType, slug);
   if (!entity) return {};
-  const canonical = entityHref(entity);
+  const canonical = getEntityPublicHref(entity);
 
   return {
     title: `${entity.names.nl}: ${ENTITY_TYPE_LABELS_NL[entity.type].toLocaleLowerCase("nl")}`,
@@ -71,6 +67,13 @@ export default async function EntityPage({ params }: EntityPageProps) {
   const { entityType, slug } = await params;
   const entity = getEntityByRoute(entityType, slug);
   if (!entity) notFound();
+  if (
+    entity.status === "active" &&
+    entity.presentation &&
+    entity.presentation.mode !== "monograph"
+  ) {
+    permanentRedirect(getEntityPublicHref(entity));
+  }
 
   const relations = getRelationsForEntity(entity.id)
     .map((relation) => {
@@ -114,7 +117,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
         <span aria-hidden="true">/</span>
         {parent ? (
           <>
-            <Link href={entityHref(parent)}>{parent.names.nl}</Link>
+            <Link href={getEntityPublicHref(parent)}>{parent.names.nl}</Link>
             <span aria-hidden="true">/</span>
           </>
         ) : null}
