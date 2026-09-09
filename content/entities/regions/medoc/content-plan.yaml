@@ -1,0 +1,353 @@
+schema_version: 2
+package_id: region.medoc
+archetype: region-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [medoc-in-het-kort, overzicht, regio-aop-en-linkeroever, geen-eenvoudige-strook]
+    target_ids: []
+    completeness_questions:
+      [Kan de lezer regio AOP Médoc Haut-Médoc en linkeroever direct uit elkaar houden?]
+    layers:
+      foundation: [Plaats de wijnregio tussen oceaan estuarium en Bordeaux.]
+      intermediate: [Scheid geografische wijn- en juridische kaarten.]
+      advanced: [Begrens het strook- en linkeroevermodel.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Regionale identiteit en ruimtelijke oriëntatie.]
+        source_refs: [source.civb-medoc-region, source.gironde-estuary-landscape-atlas]
+      specific_claims: []
+    review: &complete { outline: complete, nl: complete, en: complete }
+
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, handel-drainage-en-landgoederen, landschap-is-mensenwerk]
+    target_ids: []
+    completeness_questions:
+      [Verbindt de geschiedenis oudere bewoning drainage handel domeinvorming crises en AOC?]
+    layers:
+      foundation: [Vertel de boog van moeilijk land naar internationale wijnnaam.]
+      intermediate: [Leg drainage en havenhandel als verbonden ontwikkelingen uit.]
+      advanced: [Plaats classificatie crises herplant en juridisch herstel in context.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Historische ontwikkeling van landschap handel en wijngaard.]
+        source_refs: [source.medoc-wine-council-history, source.msha-bordeaux-wine-history]
+      specific_claims:
+        - claim: Nederlandse ondernemers en technici speelden een gedocumenteerde rol in de drooglegging van delen van de Bas-Médoc.
+          status: supported
+          source_refs: [source.medoc-marsh-drainage-1957]
+    review: *complete
+
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, grind-klei-zand-en-kalk, jalles-croupes-en-water]
+    target_ids: []
+    completeness_questions:
+      [Zijn oceaan bos estuarium reliëf bodem en water als samenhangend systeem uitgelegd?]
+    layers:
+      foundation: [Maak het maritieme landschap en de lage croupes voorstelbaar.]
+      intermediate: [Leg functies van grind klei zand kalk en drainage uit.]
+      advanced: [Verbind waterbeheer met ecologie en droogterisico.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Estuariumlandschap geologie en waterhuishouding.]
+        source_refs: [source.gironde-estuary-landscape-atlas, source.brgm-bordeaux-geology-2022]
+      specific_claims: []
+    review: *complete
+
+  - key: wine-families
+    disposition: on-page
+    block_ids: [wijnstijlen, structuur-en-variatie, wit-in-de-medoc]
+    target_ids: []
+    completeness_questions:
+      [Is rood als diverse kernstijl helder en is nieuw wit historisch en juridisch juist begrensd?]
+    layers:
+      foundation: [Introduceer de bandbreedte van rode Médoc.]
+      intermediate: [Ontleed structuur zonder kracht met zwaarte gelijk te stellen.]
+      advanced: [Leg de recente toelating van witte AOP Médoc uit zonder terugprojectie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode wijnstijlen van de Médoc.]
+        source_refs: [source.civb-medoc-region]
+      specific_claims:
+        - claim: De in 2025 gehomologeerde AOP Médoc-specificatie voegde witte stille wijn toe.
+          status: supported
+          source_refs: [source.inao-medoc-overview]
+    review: *complete
+
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, ras-is-geen-recept]
+    target_ids: []
+    completeness_questions:
+      [Zijn Cabernet Sauvignon Merlot en kleinere rassen als plaatsafhankelijke rollen uitgelegd?]
+    layers:
+      foundation: [Introduceer Cabernet Sauvignon en Merlot met vier partners.]
+      intermediate: [Leg uit dat de assemblage bij perceel en rijping begint.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Regionale druivenrassen en assemblagerollen.]
+        source_refs: [source.civb-bordeaux-grape-varieties, source.civb-bordeaux-blending]
+      specific_claims: []
+    review: *complete
+
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, selectie-extractie-en-elevage]
+    target_ids: []
+    completeness_questions:
+      [Volgt de lezer de keuzes van wijngaard via extractie en assemblage naar élevage?]
+    layers:
+      foundation: [Volg perceel oogst gisting assemblage en opvoeding.]
+      intermediate: [Begrens selectie extractie hout en tweede wijn als producentenkeuzes.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode vinificatie en assemblagepraktijk.]
+        source_refs: [source.civb-bordeaux-blending]
+      specific_claims: []
+    review: *complete
+
+  - key: appellation-structure
+    disposition: on-page
+    block_ids: [appellations, medoc-en-haut-medoc, zes-gemeentelijke-namen]
+    target_ids:
+      [
+        appellation.medoc,
+        appellation.haut-medoc,
+        appellation.margaux,
+        appellation.moulis-en-medoc,
+        appellation.listrac-medoc,
+        appellation.saint-julien,
+        appellation.pauillac,
+        appellation.saint-estephe,
+      ]
+    completeness_questions:
+      [Kan de lezer alle acht appellations navigeren zonder ze als kwaliteitsladder te zien?]
+    layers:
+      foundation: [Noem en orden de acht appellations.]
+      intermediate: [Onderscheid Médoc Haut-Médoc en gemeentelijke namen.]
+      advanced: [Leg de grenzen van stijl- en kwaliteitsvoorspellingen uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Appellationstructuur van de Médoc.]
+        source_refs:
+          [source.civb-medoc-region, source.inao-medoc-overview, source.inao-haut-medoc-overview]
+      specific_claims: []
+    review: *complete
+
+  - key: classification-systems
+    disposition: on-page
+    block_ids: [classificaties, 1855-en-zijn-grenzen, bourgeois-en-artisans]
+    target_ids:
+      [
+        classification.bordeaux-1855,
+        classification.crus-bourgeois-du-medoc,
+        classification.crus-artisans-du-medoc,
+      ]
+    completeness_questions:
+      [Zijn 1855 Crus Bourgeois en Crus Artisans naar scope werking en tijd uit elkaar gehouden?]
+    layers:
+      foundation: [Introduceer drie afzonderlijke classificatiesystemen.]
+      intermediate: [Leg handelsbasis invloed en grenzen van 1855 uit.]
+      advanced: [Plaats de veranderlijke erkenningen buiten 1855.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Classificaties van Médocproducenten.]
+        source_refs: [source.civb-bordeaux-classifications, source.gcc1855-classification-overview]
+      specific_claims:
+        - claim: De classificatie van 1855 kwam voort uit bestaande marktprijzen en reputaties.
+          status: supported
+          source_refs: [source.gcc1855-classification-history]
+    review: *complete
+
+  - key: trade-and-institutions
+    disposition: on-page
+    block_ids: [handel-en-instituties, reputatie-voorraad-en-prijs]
+    target_ids: []
+    completeness_questions:
+      [Zijn château courtier négociant distributie prijs en reputatie als netwerk uitgelegd?]
+    layers:
+      foundation: [Volg wijn van château via bemiddeling en handel naar de markt.]
+      intermediate: [Scheid prijs reputatie schaarste en proefkwaliteit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Historische en moderne Médoc-handel.]
+        source_refs: [source.boutoulle-bordelais-wine-trade-2000, source.medoc-wine-council-history]
+      specific_claims: []
+    review: *complete
+
+  - key: labels-and-terminology
+    disposition: on-page
+    block_ids: [etiketten-en-begrippen, wit-en-actuele-regels]
+    target_ids: []
+    completeness_questions:
+      [Kan de lezer herkomst producent cuvée botteling en classificatie apart lezen?]
+    layers:
+      foundation: [Leer de volledige appellationnaam eerst lezen.]
+      intermediate: []
+      advanced: [Gebruik witte Médoc als voorbeeld van veranderende regels.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Etiketinterpretatie en beschermde termen.]
+        source_refs: [source.dgccrf-wine-labels-2025]
+      specific_claims:
+        - claim: Médoc op het etiket verwijst als appellation naar AOP Médoc en niet naar iedere wijn uit de regio.
+          status: supported
+          source_refs: [source.inao-medoc-overview]
+    review: *complete
+
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [in-het-glas, proeven-met-context]
+    target_ids: []
+    completeness_questions:
+      [Geeft de pagina nuttige proef serveer bewaar en vergelijkingscontext zonder garantie?]
+    layers:
+      foundation: [Geef genuanceerd serveer tafel- en bewaarperspectief.]
+      intermediate: [Stel vergelijkend proeven boven aroma-afvinken.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Proef- en serveercontext voor rode Médoc.]
+        source_refs: [source.civb-medoc-region]
+      specific_claims: []
+    review: *complete
+
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, water-biodiversiteit-en-arbeid]
+    target_ids: []
+    completeness_questions:
+      [Zijn warmte droogte vocht ziektedruk water biodiversiteit en arbeid in samenhang behandeld?]
+    layers:
+      foundation: [Introduceer veranderende rijpheid en seizoenrisico's.]
+      intermediate: []
+      advanced: [Leg afwegingen rond water bodem biodiversiteit en uitvoerbaarheid uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatadaptatie in Bordeaux en Médoc.]
+        source_refs: [source.inrae-bordeaux-climate-adaptation]
+      specific_claims: []
+    review: *complete
+
+  - key: visuals
+    disposition: on-page
+    block_ids: [medoc-wijngaard-aan-het-estuarium, medoc-werkend-estuarium]
+    target_ids: []
+    completeness_questions:
+      [
+        Tonen de beelden zowel wijnlandschap als werkend estuarium zonder één château als hele regio te presenteren?,
+      ]
+    layers:
+      foundation: [Verbind wijngaard en estuarium visueel.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Vineyard and estuary as complementary landscapes.]
+        source_refs: []
+      specific_claims: []
+    review: *complete
+
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: [grape.cabernet-sauvignon, grape.merlot, grape.cabernet-franc, grape.petit-verdot]
+    completeness_questions:
+      [Zijn appellations classificaties druiven en begrippen als navigeerbare entiteiten aanwezig?]
+    layers:
+      foundation:
+        [Verwijs door naar alle kernentiteiten en maak ontbrekende appellationboilerplates.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Entiteitsnavigatie.]
+        source_refs: []
+      specific_claims: []
+    review: *complete
+
+entity_dependencies:
+  - id: appellation.medoc
+    names: { nl: AOP Médoc, en: Médoc AOP }
+    slugs: { nl: medoc-aop, en: medoc-aop }
+    disposition: link
+  - id: appellation.haut-medoc
+    names: { nl: Haut-Médoc, en: Haut-Médoc }
+    slugs: { nl: haut-medoc, en: haut-medoc }
+    disposition: link
+  - id: appellation.margaux
+    names: { nl: Margaux, en: Margaux }
+    slugs: { nl: margaux, en: margaux }
+    disposition: link
+  - id: appellation.moulis-en-medoc
+    names: { nl: Moulis-en-Médoc, en: Moulis-en-Médoc }
+    slugs: { nl: moulis-en-medoc, en: moulis-en-medoc }
+    disposition: link
+  - id: appellation.listrac-medoc
+    names: { nl: Listrac-Médoc, en: Listrac-Médoc }
+    slugs: { nl: listrac-medoc, en: listrac-medoc }
+    disposition: link
+  - id: appellation.saint-julien
+    names: { nl: Saint-Julien, en: Saint-Julien }
+    slugs: { nl: saint-julien, en: saint-julien }
+    disposition: link
+  - id: appellation.pauillac
+    names: { nl: Pauillac, en: Pauillac }
+    slugs: { nl: pauillac, en: pauillac }
+    disposition: link
+  - id: appellation.saint-estephe
+    names: { nl: Saint-Estèphe, en: Saint-Estèphe }
+    slugs: { nl: saint-estephe, en: saint-estephe }
+    disposition: link
+  - id: classification.bordeaux-1855
+    names: { nl: Bordeaux 1855, en: Bordeaux 1855 }
+    slugs: { nl: bordeaux-1855, en: bordeaux-1855 }
+    disposition: link
+  - id: classification.crus-bourgeois-du-medoc
+    names: { nl: Crus Bourgeois du Médoc, en: Crus Bourgeois du Médoc }
+    slugs: { nl: crus-bourgeois-du-medoc, en: crus-bourgeois-du-medoc }
+    disposition: link
+  - id: classification.crus-artisans-du-medoc
+    names: { nl: Crus Artisans du Médoc, en: Crus Artisans du Médoc }
+    slugs: { nl: crus-artisans-du-medoc, en: crus-artisans-du-medoc }
+    disposition: link
+  - id: grape.cabernet-sauvignon
+    names: { nl: Cabernet Sauvignon, en: Cabernet Sauvignon }
+    slugs: { nl: cabernet-sauvignon, en: cabernet-sauvignon }
+    disposition: link
+  - id: grape.merlot
+    names: { nl: Merlot, en: Merlot }
+    slugs: { nl: merlot, en: merlot }
+    disposition: link
+  - id: grape.cabernet-franc
+    names: { nl: Cabernet Franc, en: Cabernet Franc }
+    slugs: { nl: cabernet-franc, en: cabernet-franc }
+    disposition: link
+  - id: grape.petit-verdot
+    names: { nl: Petit Verdot, en: Petit Verdot }
+    slugs: { nl: petit-verdot, en: petit-verdot }
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

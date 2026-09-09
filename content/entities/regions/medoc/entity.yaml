@@ -1,6 +1,6 @@
 id: region.medoc
 type: region
-status: draft
+status: active
 canonical_name: Médoc
 names:
   nl: Médoc
@@ -14,5 +14,54 @@ locales:
 relations:
   - type: part_of
     target: region.bordeaux
+  - type: associated_with
+    target: appellation.medoc
+  - type: associated_with
+    target: appellation.haut-medoc
+  - type: associated_with
+    target: appellation.margaux
+  - type: associated_with
+    target: appellation.moulis-en-medoc
+  - type: associated_with
+    target: appellation.listrac-medoc
+  - type: associated_with
+    target: appellation.saint-julien
+  - type: associated_with
+    target: appellation.pauillac
+  - type: associated_with
+    target: appellation.saint-estephe
+  - type: important_grape
+    target: grape.cabernet-sauvignon
+  - type: important_grape
+    target: grape.merlot
+  - type: important_grape
+    target: grape.cabernet-franc
+  - type: important_grape
+    target: grape.petit-verdot
+  - type: associated_with
+    target: classification.bordeaux-1855
+  - type: associated_with
+    target: classification.crus-bourgeois-du-medoc
+  - type: associated_with
+    target: classification.crus-artisans-du-medoc
 assertions: []
-source_refs: []
+source_refs:
+  - source.civb-medoc-region
+  - source.inao-medoc-overview
+  - source.inao-haut-medoc-overview
+  - source.medoc-wine-council-history
+  - source.medoc-marsh-drainage-1957
+  - source.msha-bordeaux-wine-history
+  - source.boutoulle-bordelais-wine-trade-2000
+  - source.lavaud-bordeaux-vineyard-landscape-2014
+  - source.gironde-estuary-landscape-atlas
+  - source.brgm-bordeaux-geology-2022
+  - source.civb-bordeaux-grape-varieties
+  - source.civb-bordeaux-blending
+  - source.civb-bordeaux-classifications
+  - source.gcc1855-classification-history
+  - source.gcc1855-classification-overview
+  - source.dgccrf-wine-labels-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-09

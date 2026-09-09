@@ -1,0 +1,18 @@
+id: appellation.listrac-medoc
+type: appellation
+status: draft
+canonical_name: Listrac-Médoc
+names:
+  nl: Listrac-Médoc
+  en: Listrac-Médoc
+slugs:
+  nl: listrac-medoc
+  en: listrac-medoc
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: part_of
+    target: region.medoc
+assertions: []
+source_refs: []

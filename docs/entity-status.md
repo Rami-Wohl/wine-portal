@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 229 entities — 46 active, 183 draft, 0 deprecated.
+**Totaal:** 231 entities — 47 active, 184 draft, 0 deprecated.
 
 **Producentenrecords:** 129 — 11 monografie, 29 collectieprofiel, 89 registervermelding.
 
-## Actief — publiek vindbaar (46)
+## Actief — publiek vindbaar (47)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -58,8 +58,9 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Vieux Château Certan](../content/entities/producers/vieux-chateau-certan/entity.yaml) | Producent | Collectieprofiel | `producer.vieux-chateau-certan` | Ja | `/appellations/pomerol#producent-vieux-chateau-certan` | 2026-09-09 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | Zelfstandige pagina | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
+| [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (183)
+## Draft — nog uit te werken (184)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -81,11 +82,13 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves` | Nee — reviewroute | `/appellations/graves` | — |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.haut-medoc` | Nee — reviewroute | `/appellations/haut-medoc` | — |
 | [Lalande-de-Pomerol](../content/entities/appellations/lalande-de-pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lalande-de-pomerol` | Nee — reviewroute | `/appellations/lalande-de-pomerol` | — |
+| [Listrac-Médoc](../content/entities/appellations/listrac-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.listrac-medoc` | Nee — reviewroute | `/appellations/listrac-medoc` | — |
 | [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lussac-saint-emilion` | Nee — reviewroute | `/appellations/lussac-saint-emilion` | — |
 | [Maipo Valley](../content/entities/appellations/maipo-valley/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.maipo-valley` | Nee — reviewroute | `/appellations/maipo-valley` | — |
 | [Margaret River](../content/entities/appellations/margaret-river/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaret-river` | Nee — reviewroute | `/appellations/margaret-river` | — |
 | [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaux` | Nee — reviewroute | `/appellations/margaux` | — |
 | [Montagne-Saint-Émilion](../content/entities/appellations/montagne-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.montagne-saint-emilion` | Nee — reviewroute | `/appellations/montagne-saint-emilion` | — |
+| [Moulis-en-Médoc](../content/entities/appellations/moulis-en-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.moulis-en-medoc` | Nee — reviewroute | `/appellations/moulis-en-medoc` | — |
 | [Napa Valley](../content/entities/appellations/napa-valley/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.napa-valley` | Nee — reviewroute | `/appellations/napa-valley` | — |
 | [Pessac-Léognan](../content/entities/appellations/pessac-leognan/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pessac-leognan` | Nee — reviewroute | `/appellations/pessac-leognan` | — |
 | [Pouilly-Fumé](../content/entities/appellations/pouilly-fume/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pouilly-fume` | Nee — reviewroute | `/appellations/pouilly-fume` | — |
@@ -247,7 +250,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Hunter Valley](../content/entities/regions/hunter-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.hunter-valley` | Nee — reviewroute | `/regions/hunter-valley` | — |
 | [Loirevallei](../content/entities/regions/loire-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.loire-valley` | Nee — reviewroute | `/regions/loirevallei` | — |
 | [Marlborough](../content/entities/regions/marlborough/entity.yaml) | Regio | Zelfstandige pagina | `region.marlborough` | Nee — reviewroute | `/regions/marlborough` | — |
-| [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Nee — reviewroute | `/regions/medoc` | — |
 
 ## Vervallen — niet publiek (0)
 

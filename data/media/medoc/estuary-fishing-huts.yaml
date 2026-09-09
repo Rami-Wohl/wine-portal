@@ -1,0 +1,24 @@
+id: media.medoc.estuary-fishing-huts
+kind: photo
+role: documentary
+status: active
+storage_key: medoc/estuary-fishing-huts.jpg
+mime_type: image/jpeg
+width: 1920
+height: 991
+checksum_sha256: 5c484626233653b044c972fa271066aa92a1cb5044bef9289cfe29003561108b
+alt:
+  nl: Vissershutten op palen langs het brede Gironde-estuarium bij Pauillac
+  en: Fishing huts on stilts along the broad Gironde estuary near Pauillac
+caption:
+  nl: "Het estuarium is meer dan achtergrond: het bracht handel, tempert het klimaat en bepaalt de oostelijke horizon van de Médoc."
+  en: "The estuary is more than a backdrop: it carried trade, moderates the climate and defines the Médoc's eastern horizon."
+rights:
+  status: open-licensed
+  creator: Grand Parc - Bordeaux, France
+  source_url: https://commons.wikimedia.org/wiki/File:Pauillac_-_Gironde_-_Cabanes_de_p%C3%AAcheurs_sur_l%27estuaire_de_la_Garonne_-_Picture_Image_Photography_%2813915746131%29.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Grand Parc - Bordeaux, France via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-09
+changes: Original Wikimedia file resized to 1920 pixels wide; no crop or editorial colour alteration.

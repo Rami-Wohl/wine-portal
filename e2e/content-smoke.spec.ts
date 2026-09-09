@@ -183,6 +183,46 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
   await expect(advancedBlock).toBeHidden();
 });
 
+test("Médoc keeps its regional distinctions, imagery and depth layers usable on mobile", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/regions/medoc");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Médoc" })).toBeVisible();
+  await expect(
+    page.getByRole("img", { name: /Wijngaarden van Pauillac gezien vanaf de Gironde/ }),
+  ).toHaveJSProperty("complete", true);
+  await expect(
+    page.getByRole("img", { name: /Vissershutten op palen langs het brede Gironde-estuarium/ }),
+  ).toHaveJSProperty("complete", true);
+  await expect(
+    page.locator("#overzicht").getByRole("link", { name: "Moulis-en-Médoc", exact: true }),
+  ).toHaveAttribute("href", "/appellations/moulis-en-medoc");
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const intermediate = page.locator("#regio-aop-en-linkeroever");
+  const advanced = page.locator("#wit-in-de-medoc");
+  await expect(intermediate).toBeHidden();
+  await expect(advanced).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(intermediate).toBeVisible();
+  await expect(advanced).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(intermediate).toBeVisible();
+  await expect(advanced).toBeVisible();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("Saint-Émilion classification reveals its current ranks progressively", async ({ page }) => {
   await page.goto("/classifications/classificatie-saint-emilion");
 
