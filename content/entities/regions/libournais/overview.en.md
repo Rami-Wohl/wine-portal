@@ -203,7 +203,7 @@ Local syndicates and appellation bodies oversee rules and promotion; the INAO re
 :::detail{#libourne-en-place-de-bordeaux parent="handel-en-instituties" depth="intermediate"}
 ### Libourne and the Place de Bordeaux
 
-Some of the most famous wines are distributed through the [[concept.place-de-bordeaux|Place de Bordeaux]]: a network of château, courtier and négociant. That network is not confined to the physical city of Bordeaux, nor does every Libournais wine use it in the same way.
+Some of the most famous wines are distributed through the [[concept.place-de-bordeaux|Place de Bordeaux]]: a network of château, [[concept.courtier|courtier]] and négociant. That network is not confined to the physical city of Bordeaux, nor does every Libournais wine use it in the same way.
 
 Smaller producers also sell directly, through importers, restaurants, retailers or visitors. “Through the Place” describes a route to market, not a wine style.
 :::

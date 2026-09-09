@@ -203,7 +203,7 @@ Lokale syndicaten en appellationorganisaties bewaken regels en promotie; INAO er
 :::detail{#libourne-en-place-de-bordeaux parent="handel-en-instituties" depth="intermediate"}
 ### Libourne en de Place de Bordeaux
 
-Een deel van de beroemdste wijnen wordt via de [[concept.place-de-bordeaux|Place de Bordeaux]] verdeeld: een netwerk van château, courtier en négociant. Dat netwerk is niet beperkt tot de fysieke stad Bordeaux en ook niet iedere Libournais-wijn gebruikt het op dezelfde manier.
+Een deel van de beroemdste wijnen wordt via de [[concept.place-de-bordeaux|Place de Bordeaux]] verdeeld: een netwerk van château, [[concept.courtier|courtier]] en négociant. Dat netwerk is niet beperkt tot de fysieke stad Bordeaux en ook niet iedere Libournais-wijn gebruikt het op dezelfde manier.
 
 Kleinere producenten verkopen daarnaast direct, via importeurs, horeca, winkels of bezoekers. “Via de Place” beschrijft een distributieroute, geen wijnstijl.
 :::

@@ -1,6 +1,6 @@
 id: concept.courtier
 type: concept
-status: draft
+status: active
 canonical_name: Courtier
 names:
   nl: Courtier
@@ -11,6 +11,16 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.place-de-bordeaux }
+  - { type: related_to, target: concept.negociant }
+  - { type: related_to, target: concept.en-primeur }
+  - { type: related_to, target: classification.bordeaux-1855 }
+  - { type: related_to, target: region.bordeaux }
 assertions: []
-source_refs: []
+source_refs:
+  - source.civb-courtier
+  - source.fnscvsf-bordeaux-courtiers
+  - source.gcc1855-classification-history
+depth: foundation
+last_reviewed: 2026-09-09
