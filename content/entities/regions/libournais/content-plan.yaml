@@ -1,0 +1,278 @@
+schema_version: 2
+package_id: region.libournais
+archetype: region-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [libournais-in-het-kort, overzicht, libournais-geen-aop, rechteroever-als-verkorting]
+    target_ids: []
+    completeness_questions:
+      [Kan de lezer het Libournais plaatsen zonder het voor een AOP aan te zien?]
+    layers:
+      foundation: [Plaats het wijnland rond Libourne binnen Bordeaux.]
+      intermediate: [Scheid historische regio en beschermde herkomstnamen.]
+      advanced: [Begrens de term rechteroever als leerhulp.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Regionale identiteit en oriëntatie.]
+        source_refs: [source.civb-libournais-overview]
+      specific_claims: []
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, bastide-haven-en-privileges, correzien-handelshuizen]
+    target_ids: []
+    completeness_questions:
+      [Verbindt de geschiedenis haven bastide handel en wijngaard zonder oorsprongsmythe?]
+    layers:
+      foundation: [Introduceer Libourne als historische rivierhaven.]
+      intermediate: [Leg bastide handelsprivileges en buitenlandse markten uit.]
+      advanced: [Volg de handel naar negentiende-eeuwse huizen en moderne domeinreputatie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Geschiedenis van Libourne als wijnhandelsstad.]
+        source_refs: [source.libourne-wine-trade]
+      specific_claims:
+        - claim: De bastide Libourne werd in 1270 gesticht.
+          status: supported
+          source_refs: [source.libourne-city-history]
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids:
+      [landschap-klimaat-en-bodem, kalk-klei-grind-en-zand, water-en-relief-geen-smaakkaart]
+    target_ids: []
+    completeness_questions:
+      [Zijn klimaat reliëf bodem en water uitgelegd zonder een smaakkaart te veinzen?]
+    layers:
+      foundation: [Maak plateaus hellingen terrassen en dalen voorstelbaar.]
+      intermediate: [Leg de functies van kalk klei grind en zand uit.]
+      advanced: [Begrens bodemdeterminisme en perceelclaims.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Geologische en landschappelijke variatie.]
+        source_refs: [source.brgm-bordeaux-geology-2022, source.civb-libournais-overview]
+      specific_claims: []
+    review: *complete
+  - key: wine-families
+    disposition: on-page
+    block_ids: [wijnstijlen, verschil-binnen-merlot, meer-dan-zachtheid]
+    target_ids: []
+    completeness_questions:
+      [Geeft de stijlbandbreedte meer houvast dan het cliché van zachte rechteroeverwijn?]
+    layers:
+      foundation: [Introduceer de rode stijlbandbreedte.]
+      intermediate: [Leg variatie binnen merlotgedomineerde wijn uit.]
+      advanced: [Doorbreek de zachte-rechteroeverformule.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode wijnstijlen van Saint-Émilion Pomerol en Fronsac.]
+        source_refs: [source.civb-libournais-overview]
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, cabernet-franc-als-partner, kleinere-rassen]
+    target_ids: []
+    completeness_questions:
+      [Zijn Merlot Cabernet Franc en kleinere rassen met hun lokale rollen uitgelegd?]
+    layers:
+      foundation: [Introduceer Merlot en Cabernet Franc.]
+      intermediate: [Geef Cabernet Franc een zelfstandige lokale rol.]
+      advanced: [Plaats Cabernet Sauvignon Malbec en Petit Verdot als minderheden.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Belangrijkste druivenrassen.]
+        source_refs: [source.civb-merlot, source.civb-libournais-overview]
+      specific_claims: []
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, oogst-en-extractie, opvoeding]
+    target_ids: []
+    completeness_questions:
+      [Volgt de lezer rijping oogst extractie assemblage en opvoeding zonder regionaal recept?]
+    layers:
+      foundation: [Volg druif tot jonge rode wijn.]
+      intermediate: [Leg selectie en precieze extractie uit.]
+      advanced: [Begrens vat opvoeding en grand-vinselectie als producentenkeuze.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rode vinificatie en producentenkeuzes.]
+        source_refs: []
+      specific_claims: []
+    review: *complete
+  - key: appellation-structure
+    disposition: on-page
+    block_ids: [appellations, saint-emilion-familie, pomerol-en-fronsac]
+    target_ids: []
+    completeness_questions:
+      [Kan de lezer de drie appellationfamilies en Saint-Émilions satellieten navigeren?]
+    layers:
+      foundation: [Orden Saint-Émilion Pomerol en Fronsac als drie families.]
+      intermediate: [Leg Saint-Émilion Grand Cru en de vier satellieten uit.]
+      advanced: [Vergelijk Pomerol Lalande-de-Pomerol en Fronsac zonder kwaliteitsladder.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Appellationstructuur.]
+        source_refs:
+          [
+            source.inao-saint-emilion-overview,
+            source.inao-pomerol-overview,
+            source.inao-fronsac-overview,
+          ]
+      specific_claims: []
+    review: *complete
+  - key: classification-systems
+    disposition: on-page
+    block_ids: [classificaties, saint-emilion-is-niet-heel-libournais]
+    target_ids: []
+    completeness_questions: [Is duidelijk waar de Saint-Émilionclassificatie wel en niet geldt?]
+    layers:
+      foundation: [Leg uit dat er geen Libournaisbreed klassement bestaat.]
+      intermediate: [Scheid Saint-Émilion Grand Cru van Grand Cru Classé.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Scope van de Saint-Émilionclassificatie.]
+        source_refs: [source.inao-saint-emilion-grand-cru-overview]
+      specific_claims: []
+    review: *complete
+  - key: trade-and-institutions
+    disposition: on-page
+    block_ids: [handel-en-instituties, libourne-en-place-de-bordeaux, reputatie-netwerk]
+    target_ids: []
+    completeness_questions:
+      [Zijn lokale havenhandel moderne distributie en reputatie van elkaar onderscheiden?]
+    layers:
+      foundation: [Plaats Libourne als commercieel scharnier.]
+      intermediate: [Leg de verhouding tot de Place de Bordeaux uit.]
+      advanced: [Scheid reputatie marktwaarde en proefkwaliteit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Historische en moderne wijnhandel.]
+        source_refs: [source.libourne-wine-trade, source.libourne-city-history]
+      specific_claims: []
+    review: *complete
+  - key: labels-and-terminology
+    disposition: on-page
+    block_ids: [etiketten-en-begrippen, rechteroever-geen-herkomst, grand-cru-valkuil]
+    target_ids: []
+    completeness_questions:
+      [Kan de lezer appellation rechteroever grand cru en grand cru classé uit elkaar houden?]
+    layers:
+      foundation: [Lees appellation producent en oogstjaar op het etiket.]
+      intermediate: [Leg uit dat rechteroever geen beschermde herkomst is.]
+      advanced: [Ontwar de verschillende grand-crutermen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Etikettermen en juridische reikwijdte.]
+        source_refs: [source.inao-saint-emilion-grand-cru-overview]
+      specific_claims: []
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [in-het-glas, serveren-en-bewaren]
+    target_ids: []
+    completeness_questions:
+      [Geeft de pagina bruikbaar proef serveer en bewaarperspectief zonder garantie?]
+    layers:
+      foundation: [Beschrijf aroma textuur en ontwikkeling als bandbreedte.]
+      intermediate: [Geef genuanceerd serveer bewaar en tafeladvies.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Proef- en serveercontext.]
+        source_refs: []
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, warmte-water-en-balans]
+    target_ids: []
+    completeness_questions:
+      [Zijn hitte droogte vocht en aanpassingskeuzes als samenhangende risico's behandeld?]
+    layers:
+      foundation: [Introduceer nieuwe rijpheids- en klimaatrisico's.]
+      intermediate: []
+      advanced: [Leg afwegingen rond bodem water bladerdek en stijl uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatadaptatie in Bordeaux.]
+        source_refs: [source.inrae-bordeaux-climate-adaptation]
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [saint-emilion-hellingen, pomerol-plateau]
+    target_ids: []
+    completeness_questions:
+      [Tonen de beelden twee contrasterende landschappen zonder de hele regio te representeren?]
+    layers:
+      foundation: [Vergelijk Saint-Émilions reliëf met het vlakkere Pomerol.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Landschappelijk contrast.]
+        source_refs: []
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        appellation.saint-emilion,
+        appellation.pomerol,
+        appellation.fronsac,
+        appellation.canon-fronsac,
+      ]
+    completeness_questions:
+      [Zijn appellations producenten druiven en begrippen via entiteiten bereikbaar?]
+    layers:
+      foundation: [Verwijs door naar bestaande detailentiteiten.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Entiteitsnavigatie.]
+        source_refs: []
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - id: appellation.saint-emilion
+    names: { nl: Saint-Émilion, en: Saint-Émilion }
+    slugs: { nl: saint-emilion, en: saint-emilion }
+    disposition: link
+  - id: appellation.pomerol
+    names: { nl: Pomerol, en: Pomerol }
+    slugs: { nl: pomerol, en: pomerol }
+    disposition: link
+  - id: appellation.fronsac
+    names: { nl: Fronsac, en: Fronsac }
+    slugs: { nl: fronsac, en: fronsac }
+    disposition: link
+  - id: appellation.canon-fronsac
+    names: { nl: Canon-Fronsac, en: Canon-Fronsac }
+    slugs: { nl: canon-fronsac, en: canon-fronsac }
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

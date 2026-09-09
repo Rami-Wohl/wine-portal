@@ -1,0 +1,22 @@
+id: appellation.canon-fronsac
+type: appellation
+status: draft
+canonical_name: Canon-Fronsac
+names:
+  nl: Canon-Fronsac
+  en: Canon-Fronsac
+slugs:
+  nl: canon-fronsac
+  en: canon-fronsac
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: related_to, target: region.libournais }
+  - { type: related_to, target: appellation.fronsac }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+assertions: []
+source_refs:
+  - source.inao-canon-fronsac-overview

@@ -1,6 +1,6 @@
 id: region.libournais
 type: region
-status: draft
+status: active
 canonical_name: Libournais
 names:
   nl: Libournais
@@ -14,5 +14,50 @@ locales:
 relations:
   - type: part_of
     target: region.bordeaux
+  - type: associated_with
+    target: appellation.saint-emilion
+  - type: associated_with
+    target: appellation.saint-emilion-grand-cru
+  - type: associated_with
+    target: appellation.pomerol
+  - type: associated_with
+    target: appellation.lalande-de-pomerol
+  - type: associated_with
+    target: appellation.fronsac
+  - type: associated_with
+    target: appellation.canon-fronsac
+  - type: associated_with
+    target: appellation.lussac-saint-emilion
+  - type: associated_with
+    target: appellation.montagne-saint-emilion
+  - type: associated_with
+    target: appellation.puisseguin-saint-emilion
+  - type: associated_with
+    target: appellation.saint-georges-saint-emilion
+  - type: important_grape
+    target: grape.merlot
+  - type: important_grape
+    target: grape.cabernet-franc
+  - type: important_grape
+    target: grape.cabernet-sauvignon
+  - type: associated_with
+    target: classification.saint-emilion
+  - type: related_to
+    target: concept.place-de-bordeaux
 assertions: []
-source_refs: []
+source_refs:
+  - source.civb-libournais-overview
+  - source.libourne-wine-trade
+  - source.libourne-city-history
+  - source.persee-libournais-wine-trade-1969
+  - source.brgm-bordeaux-geology-2022
+  - source.civb-merlot
+  - source.inao-pomerol-overview
+  - source.inao-saint-emilion-overview
+  - source.inao-saint-emilion-grand-cru-overview
+  - source.inao-fronsac-overview
+  - source.inao-canon-fronsac-overview
+  - source.unesco-saint-emilion-jurisdiction
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-09

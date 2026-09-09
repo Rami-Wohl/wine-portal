@@ -426,6 +426,43 @@ test("Pauillac media and appellation details follow the knowledge-depth contract
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
+test("Libournais orients the region with contrasting landscapes and progressive depth", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/regions/libournais");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Libournais" })).toBeVisible();
+  await expect(
+    page.getByRole("img", { name: /Panoramisch uitzicht over de kalkstenen daken/ }),
+  ).toBeVisible();
+  await expect(page.getByRole("img", { name: /Lage rijen wijnstokken in Pomerol/ })).toBeVisible();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const intermediateBlock = page.locator("#libournais-geen-aop");
+  const advancedBlock = page.locator("#rechteroever-als-verkorting");
+
+  await expect(intermediateBlock).toBeHidden();
+  await expect(advancedBlock).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(intermediateBlock).toBeVisible();
+  await expect(advancedBlock).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(advancedBlock).toBeVisible();
+  await expect(page.getByRole("link", { name: "Saint-Émilion" }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Pomerol" }).first()).toBeVisible();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("a deep block anchor reveals the required knowledge depth", async ({ page }) => {
   await page.goto("/regions/bordeaux#landschap-bodem-en-drainage");
 

@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 228 entities — 44 active, 184 draft, 0 deprecated.
+**Totaal:** 229 entities — 45 active, 184 draft, 0 deprecated.
 
 **Producentenrecords:** 129 — 11 monografie, 29 collectieprofiel, 89 registervermelding.
 
-## Actief — publiek vindbaar (44)
+## Actief — publiek vindbaar (45)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -56,6 +56,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Petrus](../content/entities/producers/petrus/entity.yaml) | Producent | Monografie | `producer.petrus` | Ja | `/producers/petrus` | 2026-09-09 |
 | [Vieux Château Certan](../content/entities/producers/vieux-chateau-certan/entity.yaml) | Producent | Collectieprofiel | `producer.vieux-chateau-certan` | Ja | `/appellations/pomerol#producent-vieux-chateau-certan` | 2026-09-09 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | Zelfstandige pagina | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
+| [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 
 ## Draft — nog uit te werken (184)
 
@@ -70,6 +71,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Bolgheri](../content/entities/appellations/bolgheri/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bolgheri` | Nee — reviewroute | `/appellations/bolgheri` | — |
 | [Bordeaux Supérieur](../content/entities/appellations/bordeaux-superieur/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux-superieur` | Nee — reviewroute | `/appellations/bordeaux-superieur` | — |
 | [Bourgueil](../content/entities/appellations/bourgueil/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bourgueil` | Nee — reviewroute | `/appellations/bourgueil` | — |
+| [Canon-Fronsac](../content/entities/appellations/canon-fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.canon-fronsac` | Nee — reviewroute | `/appellations/canon-fronsac` | — |
 | [Chinon](../content/entities/appellations/chinon/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.chinon` | Nee — reviewroute | `/appellations/chinon` | — |
 | [Coonawarra](../content/entities/appellations/coonawarra/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.coonawarra` | Nee — reviewroute | `/appellations/coonawarra` | — |
 | [Côtes de Bourg](../content/entities/appellations/cotes-de-bourg/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bourg` | Nee — reviewroute | `/appellations/cotes-de-bourg` | — |
@@ -243,7 +245,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | Zelfstandige pagina | `region.entre-deux-mers` | Nee — reviewroute | `/regions/entre-deux-mers` | — |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | Zelfstandige pagina | `region.graves-sauternais` | Nee — reviewroute | `/regions/graves-sauternais` | — |
 | [Hunter Valley](../content/entities/regions/hunter-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.hunter-valley` | Nee — reviewroute | `/regions/hunter-valley` | — |
-| [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Nee — reviewroute | `/regions/libournais` | — |
 | [Loirevallei](../content/entities/regions/loire-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.loire-valley` | Nee — reviewroute | `/regions/loirevallei` | — |
 | [Marlborough](../content/entities/regions/marlborough/entity.yaml) | Regio | Zelfstandige pagina | `region.marlborough` | Nee — reviewroute | `/regions/marlborough` | — |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Nee — reviewroute | `/regions/medoc` | — |
