@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
 import { getPublishedEntities } from "@/content/repository";
 import { filterEntities, firstSearchParam, parseEntityTypeFilter } from "@/content/search";
 import { ENTITY_TYPE_LABELS_NL, ENTITY_TYPE_PLURAL_LABELS_NL } from "@/content/routing";
 import type { EntityType } from "@/content/model";
+
+const PAGE_SIZE = 48;
 
 export const metadata: Metadata = {
   title: "Zoeken",
@@ -17,19 +20,38 @@ interface SearchPageProps {
   searchParams: Promise<{
     q?: string | string[];
     type?: string | string[];
+    page?: string | string[];
   }>;
+}
+
+function pageHref(query: string, type: string, page: number): string {
+  const params = new URLSearchParams();
+  if (query) params.set("q", query);
+  if (type !== "all") params.set("type", type);
+  if (page > 1) params.set("page", String(page));
+  return `/search?${params.toString()}`;
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const rawSearchParams = await searchParams;
   const q = firstSearchParam(rawSearchParams.q);
   const type = firstSearchParam(rawSearchParams.type, "all");
+  const requestedPage = Number.parseInt(firstSearchParam(rawSearchParams.page, "1"), 10);
   const validTypes = Object.keys(ENTITY_TYPE_LABELS_NL) as EntityType[];
   const selectedType = parseEntityTypeFilter(type);
   const hasQuery = q.trim().length > 0;
   const hasTypeFilter = selectedType !== "all";
   const hasSearchIntent = hasQuery || hasTypeFilter;
-  const results = hasSearchIntent ? filterEntities(getPublishedEntities(), q, selectedType) : [];
+  const allResults = hasSearchIntent
+    ? filterEntities(getPublishedEntities(), q, selectedType).toSorted((left, right) =>
+        left.names.nl.localeCompare(right.names.nl, "nl", { sensitivity: "base" }),
+      )
+    : [];
+  const pageCount = Math.max(1, Math.ceil(allResults.length / PAGE_SIZE));
+  const currentPage = Number.isFinite(requestedPage)
+    ? Math.min(Math.max(requestedPage, 1), pageCount)
+    : 1;
+  const results = allResults.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
 
   return (
     <main id="main-content" className="page-shell">
@@ -67,7 +89,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       {hasSearchIntent ? (
         <section className="search-results" aria-live="polite" aria-labelledby="results-title">
           <div className="section-heading-compact">
-            <p className="eyebrow">{results.length} resultaten</p>
+            <p className="eyebrow">
+              {allResults.length} {allResults.length === 1 ? "resultaat" : "resultaten"}
+            </p>
             <h2 id="results-title">
               {hasQuery
                 ? `Voor “${q.trim()}”`
@@ -83,6 +107,23 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               <p>Geen passende onderwerpen gevonden. Probeer een andere zoekterm of filter.</p>
             )}
           </div>
+          {pageCount > 1 ? (
+            <nav className="result-pagination" aria-label="Pagina's met zoekresultaten">
+              {currentPage > 1 ? (
+                <Link href={pageHref(q.trim(), selectedType, currentPage - 1)}>← Vorige</Link>
+              ) : (
+                <span />
+              )}
+              <span aria-current="page">
+                Pagina {currentPage} van {pageCount}
+              </span>
+              {currentPage < pageCount ? (
+                <Link href={pageHref(q.trim(), selectedType, currentPage + 1)}>Volgende →</Link>
+              ) : (
+                <span />
+              )}
+            </nav>
+          ) : null}
         </section>
       ) : (
         <section className="search-start-state" aria-labelledby="search-start-title">

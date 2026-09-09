@@ -26,14 +26,14 @@ Peildatum: 2026-09-09.
 | Status | Aantal | Acties |
 | --- | ---: | --- |
 | Open | 9 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012`, `MNT-020` |
-| Gepland | 1 | `MNT-023` |
+| Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 11 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019`, `MNT-021`, `MNT-022`, `MNT-024` |
+| Afgerond | 12 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024` |
 | Vervallen | 0 | — |
 
 Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zeven
-prioriteit `middel`. Eén producentenactie is concreet gepland. De drie
+prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
 
@@ -218,25 +218,26 @@ geographydatalaag.
 - **Log:** 2026-09-08 — geregistreerd nadat Wikimedia wel bruikbare historische
   en wijngaardbeelden opleverde, maar niet alle drie gewenste beeldparen.
 
+## Historie
+
 ### `MNT-023` — Pomerol-producentenverzameling als end-to-end pilot
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Prioriteit:** hoog
 - **Categorie:** content, research, product-ux, testing
 - **Scope:** `appellation.pomerol` en de acht gekoppelde collectieprofielen
 - **Herkomst:** `QCR-2026-09-09-01`
-- **Bevinding:** de plannings- en routingstructuur is aanwezig, maar een actief
-  cohort moet nog bewijzen dat meerdere producenten helder, beeldrijk en
+- **Bevinding:** de plannings- en routingstructuur was aanwezig, maar een actief
+  cohort moest nog bewijzen dat meerdere producenten helder, beeldrijk en
   proportioneel op één ownerpagina kunnen functioneren.
 - **Klaar wanneer:** de selectiegrond is uitgelegd, ieder profiel in NL en EN
   volledig en onderbouwd is, anchors en kennisdiepte bruikbaar zijn, producerlinks
   en oude routes naar de juiste sectie wijzen en desktop plus mobiel geen
   scanbaarheids- of overflowproblemen tonen.
-- **Log:** 2026-09-09 — Petrus blijft buiten de verzameling als geplande
-  monografie; Le Pin, Vieux Château Certan, Lafleur, La Conseillante, L’Évangile,
-  Trotanoy, Clinet en Gazin vormen de eerste profielpilot.
-
-## Historie
+- **Log:** 2026-09-09 — afgerond in `QCR-2026-09-09-03`. Acht tweetalige
+  profielen zijn actief; routing, anchors, diepte en responsive gedrag zijn
+  getest. Een apart collectiecomponent bleek vooralsnog niet nodig. Petrus is
+  parallel als zelfstandige monografie gepubliceerd.
 
 ### `MNT-024` — Actieve producentenmonografieën opnieuw toetsen
 

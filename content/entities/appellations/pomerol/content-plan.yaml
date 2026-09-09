@@ -159,7 +159,20 @@ coverage:
     review: *complete
   - key: classification-and-producers
     disposition: on-page
-    block_ids: [classificatie-en-producenten, reputatie-is-geen-rang, namen-als-orientatie]
+    block_ids:
+      [
+        classificatie-en-producenten,
+        reputatie-is-geen-rang,
+        namen-als-orientatie,
+        producent-le-pin,
+        producent-vieux-chateau-certan,
+        producent-chateau-lafleur,
+        producent-chateau-la-conseillante,
+        producent-chateau-levangile,
+        producent-chateau-trotanoy,
+        producent-chateau-clinet,
+        producent-chateau-gazin,
+      ]
     target_ids:
       [
         producer.petrus,
@@ -178,14 +191,32 @@ coverage:
       ]
     layers:
       foundation: [Leg uit dat Pomerol geen officiële cruclassificatie kent.]
-      intermediate: [Scheid marktstatus reputatie en prijs van wettelijke rang.]
+      intermediate:
+        [
+          Scheid marktstatus reputatie en prijs van wettelijke rang.,
+          Profileer acht producenten als contrasterende leerreferenties met geschiedenis plek druiven en actuele context.,
+        ]
       advanced: [Toon meerdere producententypen zonder een pseudo-classificatie te maken.]
       specialist: []
     evidence:
       general_synthesis:
         {
           topics: [Classificatieafwezigheid en producentennavigatie.],
-          source_refs: [source.inao-pomerol-overview, source.civb-pomerol-overview],
+          source_refs:
+            [
+              source.inao-pomerol-overview,
+              source.civb-pomerol-overview,
+              source.le-pin-francois-thienpont,
+              source.vieux-chateau-certan-estate,
+              source.vieux-chateau-certan-vineyard,
+              source.lafleur-official,
+              source.decanter-lafleur-vin-de-france-2026,
+              source.la-conseillante-history,
+              source.lafite-levangile,
+              source.moueix-trotanoy,
+              source.chateau-clinet-history,
+              source.chateau-gazin-estate,
+            ],
         }
       specific_claims: []
     review: *complete

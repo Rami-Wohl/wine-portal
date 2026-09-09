@@ -34,10 +34,8 @@ describe("canonical content routing", () => {
     expect(lePin).toBeDefined();
     if (!lePin) return;
 
-    expect(getEntityPublicHref(lePin)).toBe("/producers/le-pin");
-    expect(getEntityPublicHref({ ...lePin, status: "active" })).toBe(
-      "/appellations/pomerol#producent-le-pin",
-    );
+    expect(getEntityPublicHref(lePin)).toBe("/appellations/pomerol#producent-le-pin");
+    expect(getEntityPublicHref({ ...lePin, status: "draft" })).toBe("/producers/le-pin");
   });
 
   it("maps only known route families to entity types", () => {

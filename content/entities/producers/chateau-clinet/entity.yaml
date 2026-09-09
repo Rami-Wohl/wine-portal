@@ -1,6 +1,6 @@
 id: producer.chateau-clinet
 type: producer
-status: draft
+status: active
 canonical_name: Château Clinet
 names:
   nl: Château Clinet
@@ -17,5 +17,9 @@ presentation:
   anchor: producent-chateau-clinet
 relations:
   - { type: located_in, target: appellation.pomerol }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
 assertions: []
-source_refs: []
+source_refs: [source.chateau-clinet-history]
+depth: intermediate
+last_reviewed: 2026-09-09

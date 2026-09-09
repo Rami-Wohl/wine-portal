@@ -1,6 +1,6 @@
 id: producer.le-pin
 type: producer
-status: draft
+status: active
 canonical_name: Le Pin
 names:
   nl: Le Pin
@@ -17,5 +17,8 @@ presentation:
   anchor: producent-le-pin
 relations:
   - { type: located_in, target: appellation.pomerol }
+  - { type: important_grape, target: grape.merlot }
 assertions: []
-source_refs: []
+source_refs: [source.le-pin-francois-thienpont]
+depth: intermediate
+last_reviewed: 2026-09-09

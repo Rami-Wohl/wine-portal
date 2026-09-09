@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
-import { getPublishedStandaloneEntitiesByType } from "@/content/repository";
+import { getPublishedEntitiesByType } from "@/content/repository";
 import type { EntityType } from "@/content/model";
 
 export const metadata: Metadata = {
@@ -59,7 +59,16 @@ const categories: Array<{
   },
 ];
 
+const CATEGORY_PREVIEW_LIMIT = 5;
+
 export default function ExplorePage() {
+  const categoryGroups = categories.map((category) => {
+    const available = getPublishedEntitiesByType(category.type).toSorted((left, right) =>
+      left.names.nl.localeCompare(right.names.nl, "nl", { sensitivity: "base" }),
+    );
+    return { ...category, available, preview: available.slice(0, CATEGORY_PREVIEW_LIMIT) };
+  });
+
   return (
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Ontdekken" title="Waar ben je nieuwsgierig naar?">
@@ -85,38 +94,59 @@ export default function ExplorePage() {
       <section className="category-list" aria-labelledby="categories-title">
         <div className="section-heading-compact">
           <p className="eyebrow">Kennisgebieden</p>
-          <h2 id="categories-title">Begin bij een categorie</h2>
+          <h2 id="categories-title">Kies je ingang</h2>
+          <p>
+            Iedere categorie toont een kleine voorproef. Open de categorie om de volledige,
+            doorzoekbare verzameling te bekijken.
+          </p>
         </div>
-        {categories.map((category) => {
-          const available = getPublishedStandaloneEntitiesByType(category.type);
-          return (
-            <article className="category-row" key={category.type}>
-              <div className="category-heading">
-                {available.length > 0 ? (
-                  <Link className="category-title-link" href={`/search?type=${category.type}`}>
+        <div className="category-grid">
+          {categoryGroups.map((category) => {
+            const categoryHref = `/search?type=${category.type}`;
+            const remaining = category.available.length - category.preview.length;
+            return (
+              <article className="category-card" key={category.type}>
+                <div className="category-card-heading">
+                  <div>
+                    <p className="category-count">
+                      {category.available.length}{" "}
+                      {category.available.length === 1 ? "onderwerp" : "onderwerpen"}
+                    </p>
                     <h3>{category.title}</h3>
+                  </div>
+                  {category.available.length > 0 ? (
+                    <Link
+                      className="category-arrow-link"
+                      href={categoryHref}
+                      aria-label={`Bekijk alle onderwerpen in ${category.title}`}
+                    >
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  ) : null}
+                </div>
+                <p>{category.description}</p>
+                <div className="category-preview">
+                  {category.preview.length > 0 ? (
+                    category.preview.map((entity) => <EntityLink entity={entity} key={entity.id} />)
+                  ) : (
+                    <span className="empty-inline">Binnenkort beschikbaar</span>
+                  )}
+                </div>
+                {category.available.length > 0 ? (
+                  <Link className="category-browse-link" href={categoryHref}>
+                    Bekijk {category.available.length === 1 ? "het onderwerp" : "alle onderwerpen"}
+                    {remaining > 0 ? ` · nog ${remaining}` : ""}
                     <span aria-hidden="true">→</span>
                   </Link>
                 ) : (
-                  <h3>{category.title}</h3>
-                )}
-                <p>{category.description}</p>
-                {available.length > 0 ? (
-                  <span className="category-count">
-                    {available.length} {available.length === 1 ? "onderwerp" : "onderwerpen"}
+                  <span className="category-browse-link category-browse-link-disabled">
+                    Nog geen gepubliceerde onderwerpen
                   </span>
-                ) : null}
-              </div>
-              <div className="entity-link-list">
-                {available.length > 0 ? (
-                  available.map((entity) => <EntityLink entity={entity} key={entity.id} />)
-                ) : (
-                  <span className="empty-inline">Binnenkort beschikbaar</span>
                 )}
-              </div>
-            </article>
-          );
-        })}
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <p className="quiet-note">

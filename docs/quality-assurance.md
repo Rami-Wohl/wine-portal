@@ -103,6 +103,7 @@ Nieuwste review eerst.
 
 | Review-ID | Datum | Type en scope | Rapport | Resultaat | Acties |
 | --- | --- | --- | --- | --- | --- |
+| `QCR-2026-09-09-03` | 2026-09-09 | End-to-end Pomerol-producentenpilot, Pétrus en schaalbare Ontdekken-pagina | [Pomerol-producentenpilot 2026-09-09](../editorial/pomerol-producer-pilot-review-2026-09-09.md) | Acht actieve collectieprofielen, één nieuwe monografie en een begrensde categorie-ingang | `MNT-023` afgerond |
 | `QCR-2026-09-09-02` | 2026-09-09 | Volledige migratie van 129 producentenrecords en alle contentplannen | [Producentenpresentatiemigratie 2026-09-09](../editorial/producer-presentation-migration-2026-09-09.md) | 11 monografieën, 29 collectieprofielen en 89 registervermeldingen; geen legacy-defaults | `MNT-022`, `MNT-024` afgerond |
 | `QCR-2026-09-09-01` | 2026-09-09 | Architectuur- en schaalreview van 129 producentenrecords | [Producentenarchitectuur-review 2026-09-09](../editorial/producer-architecture-review-2026-09-09.md) | Drie publicatievormen ingevoerd; Pomerol als planningspilot; legacy-migratie vastgelegd | `MNT-021` t/m `MNT-024` |
 | `QCR-2026-09-08-01` | 2026-09-08 | Content-health-review van alle 23 actieve entities | [Content-health-audit 2026-09-08](../editorial/content-health-audit-2026-09-08.md) | 14 open vervolgacties; 5 correcties direct afgerond | `MNT-001` t/m `MNT-019` |

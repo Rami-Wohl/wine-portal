@@ -1,6 +1,6 @@
 id: producer.chateau-la-conseillante
 type: producer
-status: draft
+status: active
 canonical_name: Château La Conseillante
 names:
   nl: Château La Conseillante
@@ -18,4 +18,6 @@ presentation:
 relations:
   - { type: located_in, target: appellation.pomerol }
 assertions: []
-source_refs: []
+source_refs: [source.la-conseillante-history]
+depth: intermediate
+last_reviewed: 2026-09-09

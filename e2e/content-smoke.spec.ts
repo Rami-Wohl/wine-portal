@@ -1,5 +1,85 @@
 import { expect, test } from "@playwright/test";
 
+test("Explore remains compact and delegates large categories to browse results", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/explore");
+
+  const categories = page.locator(".category-card");
+  await expect(categories).toHaveCount(8);
+  for (let index = 0; index < (await categories.count()); index += 1) {
+    expect(
+      await categories.nth(index).locator(".category-preview .entity-link").count(),
+    ).toBeLessThanOrEqual(5);
+  }
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+
+  const concepts = categories.filter({ hasText: "Concepten" });
+  const browseConcepts = concepts.locator(".category-browse-link");
+  await expect(browseConcepts).toBeVisible();
+  await browseConcepts.click();
+  await expect(page).toHaveURL(/\/search\?type=concept/);
+  await expect(page.getByRole("heading", { name: "Concepten" })).toBeVisible();
+});
+
+test("Pomerol collection profiles reveal together and producer routes target stable anchors", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/appellations/pomerol");
+
+  const lePin = page.locator("#producent-le-pin");
+  const gazin = page.locator("#producent-chateau-gazin");
+  await expect(lePin).toBeHidden();
+  await expect(gazin).toBeHidden();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(lePin).toBeVisible();
+  await expect(gazin).toBeVisible();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+
+  await page.goto("/producers/le-pin");
+  await expect(page).toHaveURL(/\/appellations\/pomerol#producent-le-pin$/);
+  await expect(page.locator("#producent-le-pin")).toBeVisible();
+});
+
+test("Petrus presents documentary images and progressive producer knowledge", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/producers/petrus");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Petrus" })).toBeVisible();
+  await expect(page.getByRole("img", { name: /Rijen wijnstokken van Petrus/ })).toBeVisible();
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const intermediate = page.locator("#mensen-achter-de-naam");
+  const advanced = page.locator("#marktstatus-zonder-rang");
+  await expect(intermediate).toBeHidden();
+  await expect(advanced).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping" }).click();
+  await expect(intermediate).toBeVisible();
+  await expect(advanced).toBeHidden();
+  await expect(page.getByRole("img", { name: /Fles Petrus 1973/ })).toBeVisible();
+
+  await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(advanced).toBeVisible();
+});
+
 test("draft narrative degrades honestly and keeps its knowledge context", async ({ page }) => {
   await page.goto("/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef");
 

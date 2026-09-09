@@ -1,0 +1,24 @@
+id: media.producer.petrus.vineyard
+kind: photo
+role: documentary
+status: active
+storage_key: producers/petrus/vineyard.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1440
+checksum_sha256: 427f938ddf2233bbd5b0b6025dbd3f33e3f786bfed27fb068dbed358c5149367
+alt:
+  nl: Rijen wijnstokken van Petrus langs een onverharde weg op het vlakke plateau van Pomerol
+  en: Rows of vines at Petrus beside an unpaved road on Pomerol's level plateau
+caption:
+  nl: Petrus ontleent zijn status niet aan monumentale architectuur, maar aan een compact wijngaardblok op het Pomerolplateau.
+  en: Petrus derives its status not from monumental architecture but from a compact vineyard block on the Pomerol plateau.
+rights:
+  status: public-domain
+  creator: Hullie
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_Petrus_wijngaard.jpg
+  license_name: Public domain dedication by creator
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  credit_line: Hullie via Wikimedia Commons, public domain
+acquired_at: 2026-09-09
+changes: Wikimedia thumbnail used without crop or editorial colour alteration.

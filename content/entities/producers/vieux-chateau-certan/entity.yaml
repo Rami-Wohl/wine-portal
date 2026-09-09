@@ -1,6 +1,6 @@
 id: producer.vieux-chateau-certan
 type: producer
-status: draft
+status: active
 canonical_name: Vieux Château Certan
 names:
   nl: Vieux Château Certan
@@ -17,5 +17,10 @@ presentation:
   anchor: producent-vieux-chateau-certan
 relations:
   - { type: located_in, target: appellation.pomerol }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
 assertions: []
-source_refs: []
+source_refs: [source.vieux-chateau-certan-estate, source.vieux-chateau-certan-vineyard]
+depth: intermediate
+last_reviewed: 2026-09-09

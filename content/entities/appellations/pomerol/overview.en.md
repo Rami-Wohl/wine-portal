@@ -170,6 +170,70 @@ Alongside Petrus and Le Pin, [[producer.vieux-chateau-certan|Vieux Château Cert
 This selection is a learning route, not a complete list or ranking. Pomerol also includes less familiar family estates. An overview that names only icons mistakes visibility for the whole area.
 :::
 
+:::detail{#producent-le-pin parent="classificatie-en-producenten" depth="intermediate" source_refs="source.le-pin-francois-thienpont"}
+### Le Pin — small estate, large contrast
+
+[[producer.le-pin|Le Pin]] shows how recently Pomerol’s map of reputations could still change. Jacques Thienpont bought the first parcel in 1979; the estate grew to seven parcels covering about two hectares. It is planted entirely with Merlot on a mixture of gravel, clay and sand. Production is tiny and the wine, according to the producer, matures for eighteen months in new barrels. [@source.le-pin-francois-thienpont]
+
+That combination made Le Pin the model of a young cult estate, but “small” and “expensive” are not tasting notes. As a learning reference it contrasts above all with older, larger properties: concentrated Merlot, parcel precision and scarcity created a global reputation without a grand château history or official rank.
+:::
+
+:::detail{#producent-vieux-chateau-certan parent="classificatie-en-producenten" depth="intermediate" source_refs="source.vieux-chateau-certan-estate source.vieux-chateau-certan-vineyard"}
+### Vieux Château Certan — three varieties in one historic block
+
+[[producer.vieux-chateau-certan|Vieux Château Certan]] is among Pomerol’s earliest documented estates. The present house took shape under Charles de Bousquet after 1858; wine merchant Georges Thienpont bought the property in 1924. That began a family chapter which continues a century later. [@source.vieux-chateau-certan-estate]
+
+Its contiguous fourteen hectares are divided into 23 parcels. The current planting — about 70% Merlot, 25% Cabernet Franc and 5% Cabernet Sauvignon — is unusually plural for Pomerol. [@source.vieux-chateau-certan-vineyard] Merlot can supply roundness while the Cabernets add aroma, freshness and structure. The exact blend changes with the year; that interplay makes Vieux Château Certan a useful counterweight to the idea that great Pomerol must always be almost pure Merlot.
+:::
+
+:::detail{#producent-chateau-lafleur parent="classificatie-en-producenten" depth="intermediate" source_refs="source.lafleur-official source.decanter-lafleur-vin-de-france-2026"}
+### Château Lafleur — Pomerol history with a present-day break
+
+[[producer.chateau-lafleur|Château Lafleur]] is a very small Guinaudeau family property, historically associated with an individual balance of Merlot and Cabernet Franc. The latter can give the wine a taut, aromatic and long-lived profile that differs markedly from the cliché of merely soft Merlot. [@source.lafleur-official]
+
+From the 2025 harvest, the estate releases Lafleur as **Vin de France**, not AOC Pomerol. The family cites the room needed to adapt to climate change. [@source.decanter-lafleur-vin-de-france-2026] Lafleur remains geographically and historically essential to Pomerol, but new bottles no longer legally carry the appellation. This is exactly why a producer, a place and an appellation must remain separate entities.
+:::
+
+:::detail{#producent-chateau-la-conseillante parent="classificatie-en-producenten" depth="intermediate" source_refs="source.la-conseillante-history"}
+### Château La Conseillante — family continuity on the eastern edge
+
+[[producer.chateau-la-conseillante|Château La Conseillante]] lies towards Saint-Émilion and takes its name from Catherine Conseillan, who expanded the property to twelve hectares in the eighteenth century. The Nicolas family bought it in 1871. Louis Nicolas helped found Pomerol’s growers’ union in 1900 and gave the bottle and label their recognisable violet and silver details. [@source.la-conseillante-history]
+
+The fifth family generation manages the estate today. Since 2012, a vat room designed for separate parcel vinification has allowed finer selection. [@source.la-conseillante-history] La Conseillante is therefore more than a famous name: it shows how a stable surface area, family continuity and increasingly precise parcel work can coexist within one estate.
+:::
+
+:::detail{#producent-chateau-levangile parent="classificatie-en-producenten" depth="intermediate" source_refs="source.lafite-levangile"}
+### Château L’Évangile — between Petrus and Saint-Émilion
+
+[[producer.chateau-levangile|Château L’Évangile]] lies in south-eastern Pomerol: Petrus borders it to the north, while a road separates the estate from Saint-Émilion to the south. Its present 22 hectares contain 43 parcels across clay, gravel and sand; Merlot dominates alongside Cabernet Franc and a little Cabernet Sauvignon. [@source.lafite-levangile]
+
+The Léglise family established the foundations in the eighteenth century. After the Chaperon and Ducasse families, Domaines Barons de Rothschild Lafite acquired the estate in 1990. Organic farming, biodiversity and adaptation to heat and water stress are now explicit parts of management. [@source.lafite-levangile] L’Évangile thus connects a historic border position with a contemporary search for resilience.
+:::
+
+:::detail{#producent-chateau-trotanoy parent="classificatie-en-producenten" depth="intermediate" source_refs="source.moueix-trotanoy"}
+### Château Trotanoy — powerful Merlot on heavy clay
+
+[[producer.chateau-trotanoy|Château Trotanoy]] was acquired by Jean-Pierre Moueix in 1953. The present estate covers about 7.2 hectares and is planted with Merlot. Gravel over clay and, in places, dark clay above iron-rich layers create different water and root environments within the property. [@source.moueix-trotanoy]
+
+The producer describes Trotanoy as dense, powerful and intended for long bottle ageing. That style image is useful as long as it is not treated as a guarantee for every bottle: vintage, selection and storage still matter. Within this collection, Trotanoy represents the compact, structured face of Merlot and shows that “velvety Pomerol” can also mean considerable tannin and patience.
+:::
+
+:::detail{#producent-chateau-clinet parent="classificatie-en-producenten" depth="intermediate" source_refs="source.chateau-clinet-history"}
+### Château Clinet — Merlot with Cabernet Sauvignon
+
+[[producer.chateau-clinet|Château Clinet]] stands on the plateau near Pomerol’s church. According to the estate, the Clinet name has been attached to the vineyard since at least 1595. The Laborde family has owned it since 1999 and Ronan Laborde has led it since 2004. [@source.chateau-clinet-history]
+
+Its 11.5 hectares are currently planted to 75% Merlot and 25% Cabernet Sauvignon. The latter is striking in an appellation where Cabernet Franc is usually Merlot’s principal partner. [@source.chateau-clinet-history] Clinet therefore broadens the varietal story: warmth and flesh can be complemented by Cabernet Sauvignon’s later ripening and structure.
+:::
+
+:::detail{#producent-chateau-gazin parent="classificatie-en-producenten" depth="intermediate" source_refs="source.chateau-gazin-estate"}
+### Château Gazin — scale on the Pomerol plateau
+
+[[producer.chateau-gazin|Château Gazin]] covers about 26 contiguous hectares on Pomerol’s high terrace. [@source.chateau-gazin-estate] That makes it large in an appellation so often described through tiny estates. Its position and extent provide an important counterexample: Pomerol is not a collection of micro-properties alone.
+
+The estate connects its history with land once associated with the Hospitallers and is managed by descendants of Louis Soualle. Such continuity matters, but is not proof of quality by itself. For this learning route, scale is the principal lesson: a larger contiguous property offers more internal variation in soil and selection than the simple image of one château, one parcel and one style suggests.
+:::
+
 :::section{#wijnstijl-en-flesontwikkeling depth="foundation" source_refs="source.inao-pomerol-overview source.civb-pomerol-overview"}
 ## Wine style and bottle development — enveloping, but not shapeless
 

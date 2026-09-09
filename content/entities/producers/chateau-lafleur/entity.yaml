@@ -1,6 +1,6 @@
 id: producer.chateau-lafleur
 type: producer
-status: draft
+status: active
 canonical_name: Château Lafleur
 names:
   nl: Château Lafleur
@@ -17,5 +17,9 @@ presentation:
   anchor: producent-chateau-lafleur
 relations:
   - { type: located_in, target: appellation.pomerol }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
 assertions: []
-source_refs: []
+source_refs: [source.lafleur-official, source.decanter-lafleur-vin-de-france-2026]
+depth: intermediate
+last_reviewed: 2026-09-09

@@ -170,6 +170,70 @@ Naast Petrus en Le Pin helpen [[producer.vieux-chateau-certan|Vieux Château Cer
 Deze selectie is een leerroute, geen volledige lijst en geen rangorde. Pomerol omvat ook minder bekende familiebedrijven. Een overzicht dat alleen iconen noemt, verwart zichtbaarheid met het gehele gebied.
 :::
 
+:::detail{#producent-le-pin parent="classificatie-en-producenten" depth="intermediate" source_refs="source.le-pin-francois-thienpont"}
+### Le Pin — klein domein, groot contrast
+
+[[producer.le-pin|Le Pin]] laat zien hoe snel Pomerols reputatiekaart nog kon veranderen. Jacques Thienpont kocht het eerste perceel in 1979; het domein groeide uit tot zeven percelen van samen ongeveer twee hectare. Er staat uitsluitend Merlot op een menging van grind, klei en zand. De wijn wordt in zeer kleine hoeveelheden gemaakt en rijpt volgens de producent achttien maanden in nieuwe vaten. [@source.le-pin-francois-thienpont]
+
+Die combinatie maakte Le Pin tot het schoolvoorbeeld van een jonge cultnaam, maar “klein” en “duur” zijn geen smaakprofiel. Als leerreferentie contrasteert Le Pin vooral met oudere, grotere bezittingen: geconcentreerde Merlot, perceelprecisie en schaarste brachten hier zonder châteaugeschiedenis of officiële rang een wereldreputatie voort.
+:::
+
+:::detail{#producent-vieux-chateau-certan parent="classificatie-en-producenten" depth="intermediate" source_refs="source.vieux-chateau-certan-estate source.vieux-chateau-certan-vineyard"}
+### Vieux Château Certan — drie druiven op één historisch blok
+
+[[producer.vieux-chateau-certan|Vieux Château Certan]] behoort tot de vroegst gedocumenteerde domeinen van Pomerol. Het huidige huis kreeg vorm onder Charles de Bousquet na 1858; wijnhandelaar Georges Thienpont kocht het bezit in 1924. Daarmee begon een familiehoofdstuk dat een eeuw later nog voortduurt. [@source.vieux-chateau-certan-estate]
+
+De aaneengesloten veertien hectare zijn verdeeld over 23 percelen. De actuele aanplant — circa 70% Merlot, 25% Cabernet Franc en 5% Cabernet Sauvignon — is voor Pomerol opvallend veelstemmig. [@source.vieux-chateau-certan-vineyard] Merlot kan rondheid leveren, terwijl de cabernets geur, frisheid en structuur toevoegen. De precieze assemblage wisselt per jaar; juist dat samenspel maakt Vieux Château Certan een nuttige tegenstem bij het idee dat grote Pomerol altijd bijna pure Merlot moet zijn.
+:::
+
+:::detail{#producent-chateau-lafleur parent="classificatie-en-producenten" depth="intermediate" source_refs="source.lafleur-official source.decanter-lafleur-vin-de-france-2026"}
+### Château Lafleur — Pomerolgeschiedenis met een actuele breuk
+
+[[producer.chateau-lafleur|Château Lafleur]] is een zeer klein familiebezit van de familie Guinaudeau, historisch verbonden aan een eigenzinnige balans tussen Merlot en Cabernet Franc. Die laatste druif kan de wijn een gespannen, geurig en langlevend profiel geven dat duidelijk afwijkt van het cliché van uitsluitend zachte Merlot. [@source.lafleur-official]
+
+Vanaf de oogst 2025 brengt het domein Lafleur niet meer als AOC Pomerol maar als **Vin de France** uit. De familie noemt ruimte voor aanpassing aan klimaatverandering als reden. [@source.decanter-lafleur-vin-de-france-2026] Lafleur blijft geografisch en historisch essentieel voor Pomerol, maar nieuwe flessen dragen juridisch niet langer die appellation. Dit is precies waarom een producent, een plek en de herkomstbenaming afzonderlijke entiteiten moeten blijven.
+:::
+
+:::detail{#producent-chateau-la-conseillante parent="classificatie-en-producenten" depth="intermediate" source_refs="source.la-conseillante-history"}
+### Château La Conseillante — familiecontinuïteit aan de oostrand
+
+[[producer.chateau-la-conseillante|Château La Conseillante]] ligt aan de kant van Saint-Émilion en draagt de naam van Catherine Conseillan, die het bezit in de achttiende eeuw uitbreidde tot twaalf hectare. De familie Nicolas kocht het in 1871. Louis Nicolas hielp in 1900 de wijnbouwersvereniging van Pomerol oprichten en gaf fles en etiket herkenbare paarse en zilveren accenten. [@source.la-conseillante-history]
+
+De vijfde familiegeneratie beheert het domein tegenwoordig. Sinds 2012 maakt een kelder met afzonderlijke vaten per perceel fijnere selectie mogelijk. [@source.la-conseillante-history] La Conseillante is daarmee niet alleen een beroemde naam, maar ook een voorbeeld van hoe vaste oppervlakte, familiecontinuïteit en steeds preciezer perceelwerk binnen hetzelfde domein kunnen samengaan.
+:::
+
+:::detail{#producent-chateau-levangile parent="classificatie-en-producenten" depth="intermediate" source_refs="source.lafite-levangile"}
+### Château L’Évangile — tussen Petrus en Saint-Émilion
+
+[[producer.chateau-levangile|Château L’Évangile]] ligt in het zuidoosten van Pomerol: Petrus grenst noordelijk, terwijl een weg het domein aan de zuidkant van Saint-Émilion scheidt. De huidige 22 hectare omvatten 43 percelen met klei, grind en zand; Merlot domineert naast Cabernet Franc en een klein aandeel Cabernet Sauvignon. [@source.lafite-levangile]
+
+De Léglise-familie legde in de achttiende eeuw de basis. Na de families Chaperon en Ducasse nam Domaines Barons de Rothschild Lafite het domein in 1990 over. Tegenwoordig zijn biologische landbouw, biodiversiteit en aanpassing aan hitte en waterstress nadrukkelijke onderdelen van het beheer. [@source.lafite-levangile] L’Évangile verbindt zo een historische grenspositie met een actuele zoektocht naar veerkracht.
+:::
+
+:::detail{#producent-chateau-trotanoy parent="classificatie-en-producenten" depth="intermediate" source_refs="source.moueix-trotanoy"}
+### Château Trotanoy — krachtige Merlot op zware klei
+
+[[producer.chateau-trotanoy|Château Trotanoy]] kwam in 1953 in bezit van Jean-Pierre Moueix. Het huidige domein omvat ongeveer 7,2 hectare en is met Merlot beplant. Grind over klei en plaatselijk donkere klei boven ijzerrijke lagen maken waterhuishouding en wortelomgeving binnen het bezit verschillend. [@source.moueix-trotanoy]
+
+De producent beschrijft Trotanoy als dicht, krachtig en bestemd voor lange flesrijping. Dat stijlbeeld is bruikbaar zolang het geen proefgarantie wordt: jaar, selectie en bewaring blijven bepalend. Binnen deze collectie vertegenwoordigt Trotanoy de compacte, gestructureerde kant van Merlot en laat het zien dat “fluwelig Pomerol” ook veel tannine en geduld kan betekenen.
+:::
+
+:::detail{#producent-chateau-clinet parent="classificatie-en-producenten" depth="intermediate" source_refs="source.chateau-clinet-history"}
+### Château Clinet — Merlot met Cabernet Sauvignon
+
+[[producer.chateau-clinet|Château Clinet]] ligt op het plateau bij de kerk van Pomerol. De naam Clinet is volgens het domein al sinds ten minste 1595 met de wijngaard verbonden. De familie Laborde bezit het sinds 1999; Ronan Laborde leidt het vanaf 2004. [@source.chateau-clinet-history]
+
+De 11,5 hectare zijn momenteel voor 75% met Merlot en voor 25% met Cabernet Sauvignon beplant. Dat laatste aandeel is opvallend in een appellation waar Cabernet Franc doorgaans de voornaamste partner van Merlot is. [@source.chateau-clinet-history] Clinet verbreedt daarom het druivenverhaal: warmte en vlezigheid kunnen hier worden aangevuld door de latere rijping en structuur van Cabernet Sauvignon.
+:::
+
+:::detail{#producent-chateau-gazin parent="classificatie-en-producenten" depth="intermediate" source_refs="source.chateau-gazin-estate"}
+### Château Gazin — schaal op het Pomerolplateau
+
+[[producer.chateau-gazin|Château Gazin]] beslaat ongeveer 26 aaneengesloten hectare op het hoge terras van Pomerol. [@source.chateau-gazin-estate] Daarmee is het groot binnen een appellation die vaak via piepkleine domeinen wordt voorgesteld. Zijn ligging en omvang maken Gazin een belangrijk tegenvoorbeeld: Pomerol is geen verzameling van uitsluitend microbezittingen.
+
+Het domein verbindt zijn geschiedenis met land van de Hospitaliers en wordt door nakomelingen van Louis Soualle beheerd. Zulke continuïteit is relevant, maar geen kwaliteitsbewijs op zichzelf. Voor de leerroute is vooral de schaal leerzaam: een groter aaneengesloten bezit biedt meer interne variatie in bodem en selectie dan het eenvoudige beeld van één château, één perceel en één stijl suggereert.
+:::
+
 :::section{#wijnstijl-en-flesontwikkeling depth="foundation" source_refs="source.inao-pomerol-overview source.civb-pomerol-overview"}
 ## Wijnstijl en flesontwikkeling — omhullend, maar niet vormloos
 

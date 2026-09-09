@@ -1,6 +1,6 @@
 id: producer.chateau-trotanoy
 type: producer
-status: draft
+status: active
 canonical_name: Château Trotanoy
 names:
   nl: Château Trotanoy
@@ -17,5 +17,8 @@ presentation:
   anchor: producent-chateau-trotanoy
 relations:
   - { type: located_in, target: appellation.pomerol }
+  - { type: important_grape, target: grape.merlot }
 assertions: []
-source_refs: []
+source_refs: [source.moueix-trotanoy]
+depth: intermediate
+last_reviewed: 2026-09-09

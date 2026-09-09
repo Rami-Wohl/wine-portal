@@ -1,0 +1,24 @@
+id: media.producer.petrus.bottle-1973
+kind: photo
+role: documentary
+status: active
+storage_key: producers/petrus/bottle-1973.jpg
+mime_type: image/jpeg
+width: 1280
+height: 4130
+checksum_sha256: ec09fc5538be5e4db9d14f9bf0bf57b65786e129ecb6d48de168f6efe4fa1513
+alt:
+  nl: Fles Petrus 1973 met het historische etiket waarop Petrus en Pomerol staan
+  en: Bottle of 1973 Petrus with the historic label bearing Petrus and Pomerol
+caption:
+  nl: Het etiket toont Sint-Petrus met zijn sleutels; de domeinnaam wordt zonder het woord château gevoerd.
+  en: The label shows Saint Peter with his keys; the estate name is presented without the word château.
+rights:
+  status: open-licensed
+  creator: Jamain
+  source_url: https://commons.wikimedia.org/wiki/File:Petrus_1973_J1.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Jamain via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-09
+changes: Wikimedia thumbnail used without crop or editorial colour alteration.
