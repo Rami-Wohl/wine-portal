@@ -1,0 +1,24 @@
+id: media.haut-medoc.chateau-la-lagune
+kind: photo
+role: documentary
+status: active
+storage_key: haut-medoc/chateau-la-lagune.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1137
+checksum_sha256: 99d3b51274cf47e2ffd109f28ceaa9353a18d16befad42745119436c967c60e3
+alt:
+  nl: Château La Lagune in Ludon-Médoc, een derde cru classé binnen de AOP Haut-Médoc
+  en: Château La Lagune in Ludon-Médoc, a third growth within the Haut-Médoc AOP
+caption:
+  nl: Château La Lagune bij de zuidelijke toegang tot de appellation laat zien hoe architectuur, domeinnaam en wijngaardbezit samen het publieke beeld van Haut-Médoc vormen.
+  en: Château La Lagune near the appellation’s southern entrance shows how architecture, estate name and vineyard ownership shape the public image of Haut-Médoc.
+rights:
+  status: open-licensed
+  creator: PA
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_La_Lagune.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: PA via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-09
+changes: Original Wikimedia file resized to 1920 pixels wide; no crop or editorial colour alteration.

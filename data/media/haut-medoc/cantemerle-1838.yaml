@@ -1,0 +1,24 @@
+id: media.haut-medoc.cantemerle-1838
+kind: illustration
+role: documentary
+status: active
+storage_key: haut-medoc/cantemerle-1838.jpg
+mime_type: image/jpeg
+width: 1600
+height: 975
+checksum_sha256: 2c72a3cb1308b7f99b863f34d4dc07ad8fc748e8cf5aa2237af19f93bad1c787
+alt:
+  nl: Historische illustratie uit 1838 van Château Cantemerle, met gebouw, wijngaard en arbeiders
+  en: Historical 1838 illustration of Château Cantemerle, showing the building, vineyard and workers
+caption:
+  nl: Charles Lallemands beeld van Cantemerle uit 1838 herinnert eraan dat het château-landschap al vóór de classificatie van 1855 als herkenbare wijnwereld werd gepubliceerd.
+  en: Charles Lallemand’s 1838 view of Cantemerle recalls that the château landscape was already presented as a recognisable wine world before the 1855 classification.
+rights:
+  status: public-domain
+  creator: Charles Lallemand
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Cantemerle_-_Charles_Lallemand.jpg
+  license_name: Creative Commons Zero 1.0 Universal
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Charles Lallemand via Wikimedia Commons, CC0
+acquired_at: 2026-09-09
+changes: Original Wikimedia scan resized to 1600 pixels wide; no crop or editorial colour alteration.

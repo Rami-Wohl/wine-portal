@@ -1,0 +1,328 @@
+package_id: appellation.haut-medoc
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, een-kaart-met-enclaves]
+    target_ids:
+      [
+        region.medoc,
+        appellation.medoc,
+        appellation.margaux,
+        appellation.saint-julien,
+        appellation.pauillac,
+        appellation.saint-estephe,
+      ]
+    completeness_questions:
+      [Kan de lezer Haut-Médoc van regio AOP Médoc en gemeentelijke appellations onderscheiden?]
+    layers:
+      foundation: [Plaats de lange appellation en haar beroemde buren.]
+      intermediate: [Scheid gemeente appellation en perceel.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Ligging en identiteit.], source_refs: [source.inao-haut-medoc-overview] }
+      specific_claims:
+        - {
+            claim: De zone loopt circa vijftig kilometer door 28 gemeenten.,
+            status: supported,
+            source_refs: [source.inao-haut-medoc-specification-2025],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, new-french-clarets, van-reputatie-naar-aoc]
+    target_ids: [region.medoc, classification.bordeaux-1855]
+    completeness_questions:
+      [Verbindt de tekst bourdieux handel ontginning ziekten classificatie en AOC?]
+    layers:
+      foundation: [Vertel de ontwikkeling vanuit Bordeaux naar château-land.]
+      intermediate: [Leg marktgroei ziekten en wederopbouw uit.]
+      advanced: [Scheid classificatie van appellationwetgeving.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.msha-bordeaux-wine-history, source.medoc-wine-council-history],
+        }
+      specific_claims:
+        - {
+            claim: De AOC werd op 14 november 1936 erkend.,
+            status: supported,
+            source_refs: [source.inao-haut-medoc-specification-2025],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, grind-klei-en-kalk, jalles-en-jaargang]
+    target_ids: [concept.vintage]
+    completeness_questions: [Legt de pagina grind klei kalk reliëf water en jaargang causaal uit?]
+    layers:
+      foundation: [Maak terrassen bos rivier en zacht reliëf voorstelbaar.]
+      intermediate: [Leg bodem via warmte water en rijping uit.]
+      advanced: [Verbind drainage met jaargangvariatie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Geologie en water.],
+          source_refs:
+            [source.brgm-bordeaux-geology-2022, source.inao-haut-medoc-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, ras-per-perceel, aanpassingsrassen]
+    target_ids:
+      [
+        grape.cabernet-sauvignon,
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.petit-verdot,
+        grape.malbec,
+        grape.carmenere,
+        grape.arinarnoa,
+        grape.castets,
+        grape.marselan,
+        grape.touriga-nacional,
+      ]
+    completeness_questions:
+      [Zijn alle traditionele en adaptatierassen met rol en wettelijke status uitgelegd?]
+    layers:
+      foundation: [Introduceer het rode palet en Cabernets spilfunctie.]
+      intermediate: [Verbind ras perceel oogst en assemblage.]
+      advanced: [Geef aanpassingsrassen en plafonds.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Druivenrollen.], source_refs: [source.inao-haut-medoc-overview] }
+      specific_claims:
+        - {
+            claim: Vier adaptatierassen mogen maximaal vijf procent aanplant en tien procent blend vormen.,
+            status: supported,
+            source_refs: [source.inao-haut-medoc-specification-2025],
+          }
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, extractie-en-opvoeding]
+    target_ids: [concept.assemblage, concept.malolactic-fermentation, concept.elevage]
+    completeness_questions:
+      [Volgt de lezer van bladerdek en oogst naar extractie assemblage en opvoeding?]
+    layers:
+      foundation: [Leg rijpheid extractie en opvoeding uit.]
+      intermediate: [Begrens extractie en hout als keuzes.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnbouw en vinificatie.],
+          source_refs: [source.inao-haut-medoc-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, actuele-drempels, bodem-en-certificering]
+    target_ids: []
+    completeness_questions:
+      [Scheidt de pagina juridische minima overgangsrecht en producentenambitie?]
+    layers:
+      foundation: [Leg de regels als collectieve ondergrens uit.]
+      intermediate: []
+      advanced: [Geef actuele dichtheid rendement rijpheid en milieueisen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Functie productiedossier.], source_refs: [source.inao-haut-medoc-overview] }
+      specific_claims:
+        - {
+            claim: Nieuwe aanplant vraagt minimaal 6500 stokken per hectare.,
+            status: supported,
+            source_refs: [source.inao-haut-medoc-specification-2025],
+          }
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten, vijf-crus-in-context, crus-bourgeois-als-route]
+    target_ids:
+      [
+        classification.bordeaux-1855,
+        classification.crus-bourgeois-du-medoc,
+        classification.crus-artisans-du-medoc,
+        producer.chateau-la-lagune,
+        producer.chateau-la-tour-carnet,
+        producer.chateau-belgrave,
+        producer.chateau-camensac,
+        producer.chateau-cantemerle,
+      ]
+    completeness_questions:
+      [
+        Zijn vijf lokale 1855-crus compleet en proportioneel naast de bredere producentenlaag geplaatst?,
+      ]
+    layers:
+      foundation: [Noem alle vijf en de andere classificatieroutes.]
+      intermediate: [Plaats rang en ligging in context.]
+      advanced: [Routeer brede producentendekking naar collecties.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Classificatiescope.], source_refs: [source.gcc1855-classification-history] }
+      specific_claims:
+        - {
+            claim: Haut-Médoc telt vijf crus classés uit 1855.,
+            status: supported,
+            source_refs: [source.gcc1855-classification-overview],
+          }
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, tijd-in-de-fles]
+    target_ids: [concept.tannin, concept.vintage]
+    completeness_questions: [Geeft de pagina stijlbandbreedte en voorwaardelijke flesontwikkeling?]
+    layers:
+      foundation: [Beschrijf fruit structuur zuur tannine en variatie.]
+      intermediate: [Leg flesontwikkeling zonder bewaargarantie uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Stijl en ontwikkeling.], source_refs: [source.inao-haut-medoc-overview] }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, kopen-serveren-en-bewaren]
+    target_ids: [concept.cuvee]
+    completeness_questions: [Kan de lezer appellation rang cuvée jaargang en conditie los lezen?]
+    layers:
+      foundation: [Lees het etiket zonder Haut-Médoc als rang te behandelen.]
+      intermediate: [Geef koop serveer en bewaarcontext.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Etiket en aankoop.], source_refs: [source.dgccrf-wine-labels-2025] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, adaptatie-zonder-eindpunt]
+    target_ids: []
+    completeness_questions:
+      [Verbindt de tekst stad klimaat bodem en economie zonder voorspellingen?]
+    layers:
+      foundation: [Toon ruimtelijke en klimatologische druk.]
+      intermediate: [Leg adaptatie als doorlopend proces uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Klimaatadaptatie.], source_refs: [source.inrae-bordeaux-climate-adaptation] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        appellation.margaux,
+        appellation.saint-julien,
+        appellation.pauillac,
+        appellation.saint-estephe,
+        classification.bordeaux-1855,
+        classification.crus-bourgeois-du-medoc,
+      ]
+    completeness_questions:
+      [Zijn gemeentelijke appellations classificaties en producenten duurzaam ontsloten?]
+    layers:
+      foundation: [Link noodzakelijke vervolgonderwerpen.]
+      intermediate: [Routeer brede producentendekking via collecties.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [chateau-la-lagune, cantemerle-in-1838]
+    target_ids: []
+    completeness_questions:
+      [Tonen beide beelden verschillende actuele en historische aspecten met correcte rechten?]
+    layers:
+      foundation: [Toon hedendaagse architectuur en historisch château-landschap.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-la-lagune,
+      names: { nl: Château La Lagune, en: Château La Lagune },
+      slugs: { nl: chateau-la-lagune, en: chateau-la-lagune },
+      disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-la-lagune,
+        },
+    }
+  - {
+      id: producer.chateau-la-tour-carnet,
+      names: { nl: Château La Tour Carnet, en: Château La Tour Carnet },
+      slugs: { nl: chateau-la-tour-carnet, en: chateau-la-tour-carnet },
+      disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-la-tour-carnet,
+        },
+    }
+  - {
+      id: producer.chateau-belgrave,
+      names: { nl: Château Belgrave, en: Château Belgrave },
+      slugs: { nl: chateau-belgrave, en: chateau-belgrave },
+      disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-belgrave,
+        },
+    }
+  - {
+      id: producer.chateau-camensac,
+      names: { nl: Château de Camensac, en: Château de Camensac },
+      slugs: { nl: chateau-camensac, en: chateau-camensac },
+      disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-de-camensac,
+        },
+    }
+  - {
+      id: producer.chateau-cantemerle,
+      names: { nl: Château Cantemerle, en: Château Cantemerle },
+      slugs: { nl: chateau-cantemerle, en: chateau-cantemerle },
+      disposition: link,
+      presentation:
+        {
+          mode: register-entry,
+          owner: classification.bordeaux-1855,
+          anchor: producent-chateau-cantemerle,
+        },
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

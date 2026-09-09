@@ -1,0 +1,23 @@
+id: producer.chateau-cantemerle
+type: producer
+status: draft
+canonical_name: Château Cantemerle
+names:
+  nl: Château Cantemerle
+  en: Château Cantemerle
+slugs:
+  nl: chateau-cantemerle
+  en: chateau-cantemerle
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-cantemerle
+relations:
+  - { type: located_in, target: appellation.haut-medoc }
+  - { type: classified_under, target: classification.bordeaux-1855 }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]
+depth: foundation

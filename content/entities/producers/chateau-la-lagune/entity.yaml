@@ -1,0 +1,23 @@
+id: producer.chateau-la-lagune
+type: producer
+status: draft
+canonical_name: Château La Lagune
+names:
+  nl: Château La Lagune
+  en: Château La Lagune
+slugs:
+  nl: chateau-la-lagune
+  en: chateau-la-lagune
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-la-lagune
+relations:
+  - { type: located_in, target: appellation.haut-medoc }
+  - { type: classified_under, target: classification.bordeaux-1855 }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]
+depth: foundation

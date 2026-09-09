@@ -1,0 +1,23 @@
+id: producer.chateau-camensac
+type: producer
+status: draft
+canonical_name: Château de Camensac
+names:
+  nl: Château de Camensac
+  en: Château de Camensac
+slugs:
+  nl: chateau-camensac
+  en: chateau-camensac
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-de-camensac
+relations:
+  - { type: located_in, target: appellation.haut-medoc }
+  - { type: classified_under, target: classification.bordeaux-1855 }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]
+depth: foundation

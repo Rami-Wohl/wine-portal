@@ -1,0 +1,23 @@
+id: producer.chateau-la-tour-carnet
+type: producer
+status: draft
+canonical_name: Château La Tour Carnet
+names:
+  nl: Château La Tour Carnet
+  en: Château La Tour Carnet
+slugs:
+  nl: chateau-la-tour-carnet
+  en: chateau-la-tour-carnet
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: register-entry
+  owner: classification.bordeaux-1855
+  anchor: producent-chateau-la-tour-carnet
+relations:
+  - { type: located_in, target: appellation.haut-medoc }
+  - { type: classified_under, target: classification.bordeaux-1855 }
+assertions: []
+source_refs: [source.gcc1855-classification-overview]
+depth: foundation
