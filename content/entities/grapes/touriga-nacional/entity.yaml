@@ -1,0 +1,17 @@
+id: grape.touriga-nacional
+type: grape
+status: draft
+canonical_name: Touriga Nacional
+names:
+  nl: Touriga Nacional
+  en: Touriga Nacional
+slugs:
+  nl: touriga-nacional
+  en: touriga-nacional
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: [source.inao-medoc-specification-2025]
+depth: foundation

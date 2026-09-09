@@ -1,0 +1,17 @@
+id: grape.arinarnoa
+type: grape
+status: draft
+canonical_name: Arinarnoa
+names:
+  nl: Arinarnoa
+  en: Arinarnoa
+slugs:
+  nl: arinarnoa
+  en: arinarnoa
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: [source.inao-medoc-specification-2025]
+depth: foundation

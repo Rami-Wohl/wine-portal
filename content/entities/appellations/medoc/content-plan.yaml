@@ -1,0 +1,318 @@
+package_id: appellation.medoc
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, een-naam-twee-schalen]
+    target_ids: [region.medoc, region.bordeaux, appellation.haut-medoc]
+    completeness_questions: [Kan de lezer appellation schiereiland en Haut-Médoc onderscheiden?]
+    layers:
+      foundation: [Definieer AOP Médoc en plaats haar in het noorden van de regio.]
+      intermediate: [Scheid streeknaam appellation en afgebakende wijnbouwgrond.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Ligging en juridische identiteit.], source_refs: [source.inao-medoc-overview] }
+      specific_claims: []
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, water-handel-en-wijngaarden, van-rode-reputatie-naar-witte-erkenning]
+    target_ids: [region.medoc]
+    completeness_questions:
+      [
+        Verbindt het verhaal drainage handel rode reputatie AOC en witte erkenning zonder de regiopagina te dupliceren?,
+      ]
+    layers:
+      foundation: [Vertel hoe waterbeheer handel en AOC de appellation vormden.]
+      intermediate: [Verbind noordelijke havens ziekten en wederopbouw.]
+      advanced: [Plaats historische witte productie en de wijziging van 2025.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.medoc-wine-council-history, source.msha-bordeaux-wine-history],
+        }
+      specific_claims:
+        - {
+            claim: De AOC werd op 14 november 1936 erkend.,
+            status: supported,
+            source_refs: [source.inao-medoc-specification-2025],
+          }
+        - {
+            claim: Het nieuwe dossier werd op 31 juli 2025 gehomologeerd.,
+            status: supported,
+            source_refs: [source.legifrance-medoc-order-2025],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, meer-dan-grind, jalles-en-waterbeheer]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      [Krijgt de lezer een causale uitleg van reliëf bodem water estuarium en oceaan?]
+    layers:
+      foundation: [Maak het lage schiereiland tussen estuarium en bos voorstelbaar.]
+      intermediate: [Leg grind klei kalk zand en afwatering uit zonder smaakkarikatuur.]
+      advanced: [Verbind jalles drainage en klimaatadaptatie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap geologie en water.],
+          source_refs: [source.brgm-bordeaux-geology-2022, source.inao-medoc-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, twee-paletten, aanpassingsrassen]
+    target_ids:
+      [
+        grape.cabernet-sauvignon,
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.carmenere,
+        grape.malbec,
+        grape.petit-verdot,
+        grape.semillon,
+        grape.sauvignon-blanc,
+        grape.sauvignon-gris,
+        grape.muscadelle,
+        grape.arinarnoa,
+        grape.castets,
+        grape.marselan,
+        grape.touriga-nacional,
+        grape.alvarinho,
+        grape.floreal,
+        grape.liliorila,
+        grape.sauvignac,
+        grape.souvignier-gris,
+      ]
+    completeness_questions: [Zijn rode en witte rassen in rol en wettelijke status begrijpelijk?]
+    layers:
+      foundation: [Introduceer beide druivenpaletten en de hoofdrollen.]
+      intermediate: [Leg assemblage als reactie op plaats en jaar uit.]
+      advanced: [Noem aanpassingsrassen en hun wettelijke grenzen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Druivenrollen en assemblage.], source_refs: [source.inao-medoc-overview] }
+      specific_claims:
+        - {
+            claim: De specificatie bevat afzonderlijke rode en witte rassenlijsten.,
+            status: supported,
+            source_refs: [source.inao-medoc-specification-2025],
+          }
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, rode-wijn-bouwen, witte-wijn-bewaren]
+    target_ids: [concept.assemblage, concept.elevage, concept.malolactic-fermentation]
+    completeness_questions:
+      [Volgt de lezer de verschillende routes van rode en witte druif tot wijn?]
+    layers:
+      foundation: [Vergelijk de hoofdlijnen van rode en witte vinificatie.]
+      intermediate: [Leg extractie hout zuurstof en temperatuur uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Vinificatie en opvoeding.], source_refs: [source.inao-medoc-specification-2025] }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, actuele-drempels, milieuregels]
+    target_ids: []
+    completeness_questions: [Scheidt de pagina juridische minima van producentenambitie?]
+    layers:
+      foundation: [Leg regels als collectieve ondergrens uit.]
+      intermediate: []
+      advanced: [Geef actuele technische en milieudrempels.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Functie van het productiedossier.], source_refs: [source.inao-medoc-overview] }
+      specific_claims:
+        - {
+            claim: Minimaal 5000 stokken per hectare rendement 55 hectoliter per hectare en minimaal 11 procent natuurlijke alcohol.,
+            status: supported,
+            source_refs: [source.inao-medoc-specification-2025],
+          }
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten, crus-bourgeois-2025, geen-rang-is-geen-oordeel]
+    target_ids:
+      [
+        classification.crus-bourgeois-du-medoc,
+        classification.crus-artisans-du-medoc,
+        classification.bordeaux-1855,
+      ]
+    completeness_questions:
+      [Begrijpt de lezer welke classificaties relevant zijn en wat ze niet bewijzen?]
+    layers:
+      foundation: [Plaats Crus Bourgeois en Crus Artisans naast de appellation.]
+      intermediate: [Geef de actuele Cru Bourgeois-schaal.]
+      advanced: [Begrens classificatie als producentensysteem en tijdvak.]
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Classificatiescope.], source_refs: [] }
+      specific_claims:
+        - {
+            claim: De classificatie van 2025 noemt 91 châteaux in AOP Médoc.,
+            status: supported,
+            source_refs: [source.crus-bourgeois-medoc-classification-2025],
+          }
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, rood-in-ontwikkeling, wit-in-ontwikkeling]
+    target_ids: []
+    completeness_questions:
+      [Krijgt de lezer bruikbare profielen en voorwaardelijke ontwikkeling voor beide kleuren?]
+    layers:
+      foundation: [Beschrijf de bandbreedte van rood en wit.]
+      intermediate: [Leg flesontwikkeling conditioneel uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijl en ontwikkeling.],
+          source_refs: [source.inao-medoc-overview, source.inao-medoc-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, medoc-is-niet-haut-medoc, serveren-en-bewaren]
+    target_ids: [appellation.haut-medoc]
+    completeness_questions:
+      [Kan de lezer appellation kleur classificatie producent en conditie afzonderlijk lezen?]
+    layers:
+      foundation: [Lees precieze appellation kleur producent cuvée en jaargang.]
+      intermediate: [Geef serveer bewaar en koopcontext zonder prijsadvies.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Etiket en aankoop.], source_refs: [source.dgccrf-wine-labels-2025] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, wit-als-aanpassing-en-ambitie]
+    target_ids: []
+    completeness_questions:
+      [Verbindt de pagina klimaat bodemzorg nieuwe rassen en witte wijn zonder voorspellingen?]
+    layers:
+      foundation: [Toon klimaatdruk en de zoektocht naar veerkracht.]
+      intermediate: [Plaats wit als historische herneming en actuele verbreding.]
+      advanced: [Leg aanpassingsrassen als begrensde proefruimte uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaatadaptatie en categorieverandering.],
+          source_refs:
+            [source.inrae-bordeaux-climate-adaptation, source.inao-medoc-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        classification.crus-bourgeois-du-medoc,
+        classification.crus-artisans-du-medoc,
+        appellation.haut-medoc,
+      ]
+    completeness_questions:
+      [
+        Zijn classificaties producenten en naburige appellations naar duurzame vervolgcontent gerouteerd?,
+      ]
+    layers:
+      foundation: [Link de noodzakelijke vervolgonderwerpen.]
+      intermediate: [Routeer producentendekking via classificatiecollecties.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [wijngaard-in-begadan, sauvignon-blanc-als-witte-basis]
+    target_ids: []
+    completeness_questions: [Hebben beide beelden een concrete leertaak en correcte rechten?]
+    layers:
+      foundation: [Toon een echte noordelijke wijngaard en een witte basisdruif.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair landschap en druivenbeeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: grape.arinarnoa,
+      names: { nl: Arinarnoa, en: Arinarnoa },
+      slugs: { nl: arinarnoa, en: arinarnoa },
+      disposition: link,
+    }
+  - {
+      id: grape.castets,
+      names: { nl: Castets, en: Castets },
+      slugs: { nl: castets, en: castets },
+      disposition: link,
+    }
+  - {
+      id: grape.marselan,
+      names: { nl: Marselan, en: Marselan },
+      slugs: { nl: marselan, en: marselan },
+      disposition: link,
+    }
+  - {
+      id: grape.touriga-nacional,
+      names: { nl: Touriga Nacional, en: Touriga Nacional },
+      slugs: { nl: touriga-nacional, en: touriga-nacional },
+      disposition: link,
+    }
+  - {
+      id: grape.alvarinho,
+      names: { nl: Alvarinho, en: Alvarinho },
+      slugs: { nl: alvarinho, en: alvarinho },
+      disposition: link,
+    }
+  - {
+      id: grape.floreal,
+      names: { nl: Floréal, en: Floréal },
+      slugs: { nl: floreal, en: floreal },
+      disposition: link,
+    }
+  - {
+      id: grape.liliorila,
+      names: { nl: Liliorila, en: Liliorila },
+      slugs: { nl: liliorila, en: liliorila },
+      disposition: link,
+    }
+  - {
+      id: grape.sauvignac,
+      names: { nl: Sauvignac, en: Sauvignac },
+      slugs: { nl: sauvignac, en: sauvignac },
+      disposition: link,
+    }
+  - {
+      id: grape.souvignier-gris,
+      names: { nl: Souvignier Gris, en: Souvignier Gris },
+      slugs: { nl: souvignier-gris, en: souvignier-gris },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

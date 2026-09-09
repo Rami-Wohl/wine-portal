@@ -1,0 +1,24 @@
+id: media.medoc-aop.vineyard-tour-de-by
+kind: photo
+role: documentary
+status: active
+storage_key: medoc-aop/vineyard-tour-de-by.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1440
+checksum_sha256: c917b15fd24d229725534195ad4326a32d47324b437a6a2bdbfc23a7bce69570
+alt:
+  nl: Wijngaardrijen en de oude toren van Château La Tour de By in Bégadan in de AOP Médoc
+  en: Vineyard rows and the old tower of Château La Tour de By in Bégadan in the Médoc AOP
+caption:
+  nl: Bij Château La Tour de By in Bégadan krijgt de noordelijke Médoc een gezicht — een open wijngaard, lage horizon en een toren die herinnert aan de nabijheid van de Gironde.
+  en: At Château La Tour de By in Bégadan, the northern Médoc acquires a face — open vineyards, a low horizon and a tower recalling the nearby Gironde.
+rights:
+  status: open-licensed
+  creator: Slywire
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_La_Tour_de_By_Vignoble.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Slywire via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-09
+changes: Original Wikimedia file resized to 1920 pixels wide; no crop or editorial colour alteration.

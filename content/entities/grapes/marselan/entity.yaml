@@ -1,0 +1,17 @@
+id: grape.marselan
+type: grape
+status: draft
+canonical_name: Marselan
+names:
+  nl: Marselan
+  en: Marselan
+slugs:
+  nl: marselan
+  en: marselan
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: [source.inao-medoc-specification-2025]
+depth: foundation

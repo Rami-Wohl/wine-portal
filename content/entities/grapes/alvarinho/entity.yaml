@@ -1,0 +1,17 @@
+id: grape.alvarinho
+type: grape
+status: draft
+canonical_name: Alvarinho
+names:
+  nl: Alvarinho
+  en: Alvarinho
+slugs:
+  nl: alvarinho
+  en: alvarinho
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: [source.inao-medoc-specification-2025]
+depth: foundation

@@ -1,0 +1,17 @@
+id: grape.souvignier-gris
+type: grape
+status: draft
+canonical_name: Souvignier Gris
+names:
+  nl: Souvignier Gris
+  en: Souvignier Gris
+slugs:
+  nl: souvignier-gris
+  en: souvignier-gris
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: [source.inao-medoc-specification-2025]
+depth: foundation

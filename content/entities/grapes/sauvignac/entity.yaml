@@ -1,0 +1,17 @@
+id: grape.sauvignac
+type: grape
+status: draft
+canonical_name: Sauvignac
+names:
+  nl: Sauvignac
+  en: Sauvignac
+slugs:
+  nl: sauvignac
+  en: sauvignac
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: [source.inao-medoc-specification-2025]
+depth: foundation

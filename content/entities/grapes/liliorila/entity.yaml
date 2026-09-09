@@ -1,0 +1,17 @@
+id: grape.liliorila
+type: grape
+status: draft
+canonical_name: Liliorila
+names:
+  nl: Liliorila
+  en: Liliorila
+slugs:
+  nl: liliorila
+  en: liliorila
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: [source.inao-medoc-specification-2025]
+depth: foundation
