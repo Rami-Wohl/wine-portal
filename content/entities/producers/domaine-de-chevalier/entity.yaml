@@ -17,5 +17,8 @@ presentation:
   anchor: producent-domaine-de-chevalier
 relations:
   - { type: located_in, target: appellation.pessac-leognan }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: red-and-white }
 assertions: []
-source_refs: []
+source_refs: [source.pessac-leognan-classified-growths]

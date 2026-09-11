@@ -1,0 +1,18 @@
+id: producer.chateau-olivier
+type: producer
+status: draft
+canonical_name: Château Olivier
+names: { nl: Château Olivier, en: Château Olivier }
+slugs: { nl: chateau-olivier, en: chateau-olivier }
+locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.graves
+  anchor: producent-chateau-olivier
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: red-and-white }
+assertions: []
+source_refs: [source.pessac-leognan-classified-growths]

@@ -1,0 +1,294 @@
+package_id: region.entre-deux-mers
+archetype: region-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [geografie, geen-eiland]
+    target_ids: [region.bordeaux, appellation.entre-deux-mers]
+    completeness_questions: [Kan de lezer de streek van de appellation onderscheiden?]
+    layers:
+      {
+        foundation: [Plaats het gebied tussen de rivieren.],
+        intermediate: [Leg verbindingen en interne variatie uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Ligging en identiteit.],
+          source_refs: [source.gironde-landscape-atlas-entre-deux-mers],
+        }
+      specific_claims: []
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, volume-en-identiteit]
+    target_ids: [concept.phylloxera]
+    completeness_questions:
+      [Verbindt de tekst kloosters handel uitbreiding ziekten en appellationvorming?]
+    layers:
+      {
+        foundation: [Vertel de historische ontwikkeling.],
+        intermediate: [],
+        advanced: [Geef schaal en verandering zonder continuïteitsmythe.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Historische ontwikkeling.], source_refs: [source.msha-bordeaux-wine-history] }
+      specific_claims:
+        - {
+            claim: Het wijngaardareaal groeide volgens het dossier van circa 42000 hectare in 1850 tot meer dan 70000 in 1870.,
+            status: supported,
+            source_refs: [source.inao-entre-deux-mers-specification-2025],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, bodem-en-keuze]
+    target_ids: []
+    completeness_questions:
+      [Zijn reliëf kalk bodemvariatie water en klimaat zonder determinisme uitgelegd?]
+    layers:
+      {
+        foundation: [Maak het heuvelachtige mozaïek zichtbaar.],
+        intermediate: [Leg mogelijkheden en begrenzing uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap klimaat en bodem.],
+          source_refs:
+            [
+              source.gironde-landscape-atlas-entre-deux-mers,
+              source.inao-entre-deux-mers-specification-2025,
+            ],
+        }
+      specific_claims: []
+    review: *complete
+  - key: wine-families
+    disposition: on-page
+    block_ids: [wijnstijlen-en-appellations]
+    target_ids: [appellation.entre-deux-mers]
+    completeness_questions:
+      [Zijn wit rood rosé en zoet in hun verschillende herkomstkaders geplaatst?]
+    layers:
+      {
+        foundation: [Toon dat de streek meer dan droge witte AOP omvat.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Regionale wijnstijlen.],
+          source_refs:
+            [source.civb-bordeaux-wine-styles, source.inao-entre-deux-mers-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids:
+      [
+        grape.sauvignon-blanc,
+        grape.semillon,
+        grape.muscadelle,
+        grape.merlot,
+        grape.cabernet-sauvignon,
+        grape.cabernet-franc,
+      ]
+    completeness_questions: [Zijn de kernrassen van wit en rood met hun rollen aanwezig?]
+    layers:
+      {
+        foundation: [Introduceer beide druivenfamilies.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Druivenrollen.],
+          source_refs:
+            [source.civb-bordeaux-grape-varieties, source.inao-entre-deux-mers-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-huidige-opgaven]
+    target_ids: []
+    completeness_questions: [Zijn wijngaard- en kelderkeuzes voor wit en rood begrijpelijk?]
+    layers:
+      {
+        foundation: [Vergelijk wit en rood.],
+        intermediate: [Verbind keuzes aan plaats en klimaat.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnbouw en wijnmaken.],
+          source_refs: [source.inao-entre-deux-mers-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-structure
+    disposition: on-page
+    block_ids: [appellations]
+    target_ids: [appellation.entre-deux-mers, region.bordeaux]
+    completeness_questions:
+      [Is duidelijk dat meerdere Bordeaux-herkomsten binnen de streek bestaan?]
+    layers:
+      {
+        foundation: [Scheid streek en wijnnaam.],
+        intermediate: [Geef etikettencontext.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Appellationstructuur.],
+          source_refs: [source.inao-entre-deux-mers-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: classification-systems
+    disposition: on-page
+    block_ids: [classificaties]
+    target_ids: []
+    completeness_questions: [Is afwezigheid van een officiële producentenrang uitgelegd?]
+    layers:
+      {
+        foundation: [],
+        intermediate: [Scheid reputatie en officiële rang.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatiecontext.],
+          source_refs: [source.inao-entre-deux-mers-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: trade-and-institutions
+    disposition: on-page
+    block_ids: [handel-en-instituties]
+    target_ids: [region.bordeaux]
+    completeness_questions: [Zijn rivierhandel coöperaties en gemengde bedrijfsstructuur zichtbaar?]
+    layers:
+      {
+        foundation: [Verbind de streek met de haven.],
+        intermediate: [Noem verschillende producentenstructuren.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Handel en organisatie.],
+          source_refs:
+            [source.msha-bordeaux-wine-history, source.inao-entre-deux-mers-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-terminology
+    disposition: on-page
+    block_ids: [etiket-en-bezoek]
+    target_ids: [appellation.entre-deux-mers]
+    completeness_questions: [Kan de lezer de naam in reis- en etiketcontext juist lezen?]
+    layers:
+      {
+        foundation: [Leg het dubbele naamgebruik uit.],
+        intermediate: [Gebruik jaargang voor recente rode wijn.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Etiket en terminologie.], source_refs: [source.dgccrf-wine-labels-2025] }
+      specific_claims: []
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [in-het-glas]
+    target_ids: []
+    completeness_questions:
+      [Biedt de pagina stijloriëntatie zonder de regio tot één smaak te reduceren?]
+    layers:
+      {
+        foundation: [Introduceer bekende witte en nieuwe rode stijl.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Wijnstijl.], source_refs: [source.civb-bordeaux-wine-styles] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: [appellation.entre-deux-mers]
+    completeness_questions:
+      [Zijn klimaat en rode AOP-uitbreiding als afzonderlijke ontwikkelingen behandeld?]
+    layers:
+      {
+        foundation: [Toon de actuele opgaven.],
+        intermediate: [Verbind economie en herkomst.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaat en appellationontwikkeling.],
+          source_refs:
+            [
+              source.inrae-bordeaux-climate-adaptation,
+              source.inao-entre-deux-mers-specification-2025,
+            ],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [la-sauve-landschap, grand-verdus]
+    target_ids: []
+    completeness_questions:
+      [Tonen de beelden landschap en menselijke schaal met begrensde captions?]
+    layers:
+      {
+        foundation: [Toon cultuurlandschap en domein.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: [appellation.entre-deux-mers, region.bordeaux]
+    completeness_questions: [Is de kernappellation duurzaam ontsloten?]
+    layers:
+      { foundation: [Link naar de appellation.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

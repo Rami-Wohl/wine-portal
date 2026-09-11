@@ -1,0 +1,18 @@
+id: producer.chateau-pape-clement
+type: producer
+status: draft
+canonical_name: Château Pape Clément
+names: { nl: Château Pape Clément, en: Château Pape Clément }
+slugs: { nl: chateau-pape-clement, en: chateau-pape-clement }
+locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.graves
+  anchor: producent-chateau-pape-clement
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: red }
+assertions: []
+source_refs: [source.pessac-leognan-classified-growths]

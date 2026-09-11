@@ -1,0 +1,18 @@
+id: producer.chateau-bouscaut
+type: producer
+status: draft
+canonical_name: Château Bouscaut
+names: { nl: Château Bouscaut, en: Château Bouscaut }
+slugs: { nl: chateau-bouscaut, en: chateau-bouscaut }
+locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.graves
+  anchor: producent-chateau-bouscaut
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: red-and-white }
+assertions: []
+source_refs: [source.pessac-leognan-classified-growths]

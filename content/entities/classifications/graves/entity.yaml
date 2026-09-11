@@ -1,6 +1,6 @@
 id: classification.graves
 type: classification
-status: draft
+status: active
 canonical_name: Graves Classification
 names:
   nl: Classificatie van Graves
@@ -13,6 +13,24 @@ locales:
   en: overview.en.md
 relations:
   - { type: scope, target: appellation.pessac-leognan }
-  - { type: associated_with, target: producer.chateau-haut-brion }
-assertions: []
-source_refs: [source.pessac-leognan-classified-growths]
+assertions:
+  - id: assertion.graves-classification-current-estates
+    predicate: current_estate_count
+    value: 14
+    status: verified
+    sources: [source.bordeaux-graves-classification, source.pessac-leognan-classified-growths]
+    last_verified: 2026-09-11
+  - id: assertion.graves-classification-last-revision
+    predicate: last_revision_year
+    value: 1959
+    status: verified
+    sources: [source.legifrance-graves-classification-1959]
+    last_verified: 2026-09-11
+source_refs:
+  - source.bordeaux-graves-classification
+  - source.pessac-leognan-classified-growths
+  - source.legifrance-graves-classification-1959
+  - source.gcc1855-classification-overview
+  - source.dgccrf-wine-labels-2025
+depth: foundation
+last_reviewed: 2026-09-11

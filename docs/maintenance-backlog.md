@@ -21,18 +21,18 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-09-09.
+Peildatum: 2026-09-11.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 9 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012`, `MNT-020` |
+| Open | 10 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012`, `MNT-020`, `MNT-025` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
 | Afgerond | 12 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zeven
+Van het uitvoerbare open werk hebben drie acties prioriteit `hoog` en zeven
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -217,6 +217,24 @@ geographydatalaag.
   het bestaande beeld.
 - **Log:** 2026-09-08 — geregistreerd nadat Wikimedia wel bruikbare historische
   en wijngaardbeelden opleverde, maar niet alle drie gewenste beeldparen.
+
+### `MNT-025` — Europese status Graves Supérieures opnieuw verifiëren
+
+- **Status:** open
+- **Prioriteit:** hoog
+- **Categorie:** content, research, regelgeving
+- **Scope:** `appellation.graves-superieures`, `appellation.graves`
+- **Herkomst:** contentauthoring 2026-09-11
+- **Bevinding:** Frankrijk heeft een nieuw Graves-dossier met uitgestelde
+  inwerkingtreding vastgesteld en de EU publiceerde op 3 juni 2026 het verzoek om
+  de BOB Graves Supérieures te annuleren. Op 11 september 2026 was in de
+  gecontroleerde officiële bronnen nog geen definitieve goedkeuring vastgesteld.
+- **Klaar wanneer:** na publicatie van een definitief EU-besluit de assertions,
+  samenvattingen, juridische uitleg, relaties en etiketcontext in beide talen zijn
+  bijgewerkt; bij uitblijven van een besluit wordt de status uiterlijk bij de
+  volgende periodieke contentreview opnieuw gecontroleerd en gedateerd.
+- **Log:** 2026-09-11 — geregistreerd; de huidige pagina gebruikt bewust de
+  voorlopige assertion `cancellation-request-published-not-confirmed`.
 
 ## Historie
 

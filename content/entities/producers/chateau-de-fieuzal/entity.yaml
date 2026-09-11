@@ -1,0 +1,18 @@
+id: producer.chateau-de-fieuzal
+type: producer
+status: draft
+canonical_name: Château de Fieuzal
+names: { nl: Château de Fieuzal, en: Château de Fieuzal }
+slugs: { nl: chateau-de-fieuzal, en: chateau-de-fieuzal }
+locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.graves
+  anchor: producent-chateau-de-fieuzal
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: red }
+assertions: []
+source_refs: [source.pessac-leognan-classified-growths]

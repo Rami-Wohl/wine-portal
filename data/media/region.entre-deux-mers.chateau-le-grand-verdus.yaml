@@ -1,0 +1,24 @@
+id: media.region.entre-deux-mers.chateau-le-grand-verdus
+kind: photo
+role: documentary
+status: active
+storage_key: regions/entre-deux-mers/chateau-le-grand-verdus.jpg
+mime_type: image/jpeg
+width: 3129
+height: 2004
+checksum_sha256: 9ca6eb714dfb703d6dc44e6eb488c5aea99be431185c7b4715883bd4dc944c9d
+alt:
+  nl: Château Le Grand Verdus tussen bomen en wijngaarden in Entre-deux-Mers
+  en: Château Le Grand Verdus among trees and vineyards in Entre-deux-Mers
+caption:
+  nl: Château Le Grand Verdus geeft de wijnbouw van Entre-deux-Mers een menselijk anker. Eén domein vertegenwoordigt niet het volledige landschap, de hele appellation of alle producenten.
+  en: Château Le Grand Verdus gives Entre-deux-Mers winegrowing a human anchor. One estate does not represent the entire landscape, appellation or producer community.
+rights:
+  status: open-licensed
+  creator: Jefunky
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Le_Grand_Verdus,_janvier_2024_(1).jpg
+  license_name: Creative Commons CC0 1.0 Universal
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Jefunky via Wikimedia Commons, CC0 1.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

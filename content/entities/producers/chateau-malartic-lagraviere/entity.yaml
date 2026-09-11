@@ -1,0 +1,18 @@
+id: producer.chateau-malartic-lagraviere
+type: producer
+status: draft
+canonical_name: Château Malartic-Lagravière
+names: { nl: Château Malartic-Lagravière, en: Château Malartic-Lagravière }
+slugs: { nl: chateau-malartic-lagraviere, en: chateau-malartic-lagraviere }
+locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.graves
+  anchor: producent-chateau-malartic-lagraviere
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: red-and-white }
+assertions: []
+source_refs: [source.pessac-leognan-classified-growths]

@@ -1,0 +1,306 @@
+package_id: region.graves-sauternais
+archetype: region-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [geografie, rivier-en-overgangen]
+    target_ids: [region.bordeaux, appellation.graves, appellation.sauternes]
+    completeness_questions: [Kan de lezer streek en wettelijke appellations onderscheiden?]
+    layers:
+      {
+        foundation: [Plaats de streek langs de Garonne.],
+        intermediate: [Leg geleidelijke overgangen uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Ligging en identiteit.],
+          source_refs: [source.graves-winegrowers-terroir, source.inao-sauternes-overview],
+        }
+      specific_claims: []
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, droog-en-zoet-in-de-handel]
+    target_ids: [producer.chateau-haut-brion, concept.phylloxera]
+    completeness_questions: [Verbindt de tekst handel verstedelijking ziekten en AOC-vorming?]
+    layers:
+      {
+        foundation: [Vertel de ontwikkeling van de oude Bordeaux-wijngaard.],
+        intermediate: [Verbind droge en zoete handel.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.graves-winegrowers-history, source.msha-bordeaux-wine-history],
+        }
+      specific_claims: []
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, bodem-is-geen-smaakmachine]
+    target_ids: [concept.terroir, concept.botrytis]
+    completeness_questions:
+      [Zijn grind bodemvariatie klimaat Ciron en de grens aan determinisme uitgelegd?]
+    layers:
+      {
+        foundation: [Leg grind water en mist uit.],
+        intermediate: [],
+        advanced: [Begrens bodem- en botrytisversimpeling.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap klimaat en bodem.],
+          source_refs:
+            [
+              source.graves-winegrowers-terroir,
+              source.brgm-bordeaux-geology-2022,
+              source.inao-sauternes-specification-2026,
+            ],
+        }
+      specific_claims: []
+    review: *complete
+  - key: wine-families
+    disposition: on-page
+    block_ids: [wijnstijlen-en-glas]
+    target_ids: [appellation.graves, appellation.sauternes]
+    completeness_questions: [Zijn rood droog wit en zoet wit herkenbaar zonder vaste smaakbelofte?]
+    layers:
+      {
+        foundation: [Introduceer drie wijnfamilies.],
+        intermediate: [Geef serveer- en rijpingscontext.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnstijlen.],
+          source_refs: [source.graves-winegrowers-wines, source.inao-sauternes-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids: [grape.cabernet-sauvignon, grape.merlot, grape.semillon, grape.sauvignon-blanc]
+    completeness_questions: [Zijn de belangrijkste blauwe en witte rassen met hun rollen aanwezig?]
+    layers:
+      {
+        foundation: [Introduceer beide druivenfamilies.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Druivenrollen.],
+          source_refs: [source.graves-winegrowers-wines, source.inao-sauternes-specification-2026],
+        }
+      specific_claims: []
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, keuzes-per-stijl]
+    target_ids: [concept.botrytis]
+    completeness_questions:
+      [Volgt de lezer de afzonderlijke routes voor rood droog wit en zoet wit?]
+    layers:
+      {
+        foundation: [Vergelijk de drie productieroutes.],
+        intermediate: [Leg verschillende rijpheidsdoelen uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnbouw en wijnmaken.],
+          source_refs: [source.graves-winegrowers-wines, source.inao-sauternes-specification-2026],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-structure
+    disposition: on-page
+    block_ids: [appellations-en-classificaties]
+    target_ids:
+      [
+        appellation.pessac-leognan,
+        appellation.graves,
+        appellation.graves-superieures,
+        appellation.sauternes,
+        appellation.barsac,
+      ]
+    completeness_questions: [Zijn alle kernappellations en hun kleuren correct onderscheiden?]
+    layers:
+      {
+        foundation: [Geef de juridische structuur.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Appellationstructuur.],
+          source_refs: [source.inao-graves-overview, source.inao-sauternes-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: classification-systems
+    disposition: on-page
+    block_ids: [classificaties, geen-verticale-ladder]
+    target_ids: [classification.graves, classification.bordeaux-1855]
+    completeness_questions: [Zijn Graves en 1855 als verschillende systemen uitgelegd?]
+    layers:
+      {
+        foundation: [Introduceer beide classificaties.],
+        intermediate: [],
+        advanced: [Scheid herkomst en rang.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificaties.],
+          source_refs:
+            [source.bordeaux-graves-classification, source.gcc1855-classification-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: trade-and-institutions
+    disposition: on-page
+    block_ids: [handel-en-instituties]
+    target_ids: [region.bordeaux]
+    completeness_questions: [Is de rol van haven markt en domeinnaam zichtbaar?]
+    layers:
+      {
+        foundation: [Verbind de streek met Bordeauxhandel.],
+        intermediate: [Toon veranderende markten per stijl.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Handel.], source_refs: [source.msha-bordeaux-wine-history] }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-terminology
+    disposition: on-page
+    block_ids: [etiket-en-huidige-opgaven]
+    target_ids: [appellation.graves-superieures]
+    completeness_questions: [Kan de lezer de streeknaam van appellationnamen scheiden?]
+    layers:
+      {
+        foundation: [Lees de exacte appellation.],
+        intermediate: [Markeer de overgangsnaam.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiketten en terminologie.],
+          source_refs: [source.dgccrf-wine-labels-2025, source.legifrance-graves-transition-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [in-het-glas]
+    target_ids: []
+    completeness_questions: [Biedt de pagina herkenning serveren en rijping voor alle stijlen?]
+    layers:
+      {
+        foundation: [Geef glascontext.],
+        intermediate: [Begrens vaste bewaartermijnen.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Proeven en serveren.],
+          source_refs: [source.graves-winegrowers-wines, source.inao-sauternes-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: [appellation.graves-superieures]
+    completeness_questions: [Zijn klimaatdruk en actuele juridische overgang beide aanwezig?]
+    layers:
+      {
+        foundation: [Toon actuele opgaven per wijnstijl.],
+        intermediate: [Verbind bodem oogst en selectie.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaat en juridische verandering.],
+          source_refs:
+            [source.inrae-bordeaux-climate-adaptation, source.legifrance-graves-transition-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [graves-domein, sauternes-wijngaard]
+    target_ids: []
+    completeness_questions:
+      [Tonen de beelden droge en zoete context zonder representativiteitsclaim?]
+    layers:
+      {
+        foundation: [Toon twee landschappelijke ankers.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        appellation.pessac-leognan,
+        appellation.graves,
+        appellation.graves-superieures,
+        appellation.sauternes,
+        appellation.barsac,
+        classification.graves,
+      ]
+    completeness_questions: [Zijn alle zelfstandige kernonderwerpen duurzaam ontsloten?]
+    layers:
+      {
+        foundation: [Link naar appellations en classificatie.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-haut-brion,
+      names: { nl: Château Haut-Brion, en: Château Haut-Brion },
+      slugs: { nl: chateau-haut-brion, en: chateau-haut-brion },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

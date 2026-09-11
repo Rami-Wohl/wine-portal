@@ -1,6 +1,6 @@
 id: appellation.graves-superieures
 type: appellation
-status: draft
+status: active
 canonical_name: Graves Supérieures
 names:
   nl: Graves Supérieures
@@ -14,5 +14,29 @@ locales:
 relations:
   - { type: part_of, target: region.graves-sauternais }
   - { type: part_of, target: region.bordeaux }
-assertions: []
-source_refs: [source.inao-graves-specification-2025]
+  - { type: important_grape, target: grape.semillon }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: important_grape, target: grape.muscadelle }
+assertions:
+  - id: assertion.graves-superieures.wine-type
+    predicate: permitted_wine_type
+    value: still-white-with-residual-sugar
+    status: verified
+    sources: [source.inao-graves-specification-2025]
+    last_verified: 2026-09-11
+  - id: assertion.graves-superieures.registration-transition
+    predicate: registration_status
+    value: cancellation-request-published-not-confirmed
+    status: provisional
+    sources:
+      [source.legifrance-graves-transition-2025, source.eurlex-graves-superieures-cancellation-2026]
+    last_verified: 2026-09-11
+source_refs:
+  - source.inao-graves-specification-2025
+  - source.inao-graves-overview
+  - source.graves-winegrowers-wines
+  - source.legifrance-graves-transition-2025
+  - source.eurlex-graves-superieures-cancellation-2026
+  - source.dgccrf-wine-labels-2025
+depth: foundation
+last_reviewed: 2026-09-11

@@ -2,19 +2,21 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 259 entities — 57 active, 202 draft, 0 deprecated.
+**Totaal:** 267 entities — 62 active, 205 draft, 0 deprecated.
 
-**Producentenrecords:** 147 — 17 monografie, 36 collectieprofiel, 94 registervermelding.
+**Producentenrecords:** 155 — 17 monografie, 36 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (57)
+## Actief — publiek vindbaar (62)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
 | Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- | --- |
+| [AOP Entre-deux-Mers](../content/entities/appellations/entre-deux-mers/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.entre-deux-mers` | Ja | `/appellations/entre-deux-mers-aop` | 2026-09-11 |
 | [AOP Médoc](../content/entities/appellations/medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.medoc` | Ja | `/appellations/medoc-aop` | 2026-09-09 |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
 | [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves` | Ja | `/appellations/graves` | 2026-09-11 |
+| [Graves Supérieures](../content/entities/appellations/graves-superieures/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves-superieures` | Ja | `/appellations/graves-superieures` | 2026-09-11 |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.haut-medoc` | Ja | `/appellations/haut-medoc` | 2026-09-09 |
 | [Listrac-Médoc](../content/entities/appellations/listrac-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.listrac-medoc` | Ja | `/appellations/listrac-medoc` | 2026-09-11 |
 | [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaux` | Ja | `/appellations/margaux` | 2026-09-11 |
@@ -28,6 +30,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Saint-Julien](../content/entities/appellations/saint-julien/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-julien` | Ja | `/appellations/saint-julien` | 2026-09-11 |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-08 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-08 |
+| [Classificatie van Graves](../content/entities/classifications/graves/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.graves` | Ja | `/classifications/classificatie-graves` | 2026-09-11 |
 | [Classificatie van Saint-Émilion](../content/entities/classifications/saint-emilion/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.saint-emilion` | Ja | `/classifications/classificatie-saint-emilion` | 2026-09-08 |
 | [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | Zelfstandige pagina | `concept.ampelography` | Ja | `/concepts/ampelografie` | 2026-09-07 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | Zelfstandige pagina | `concept.assemblage` | Ja | `/concepts/assemblage` | 2026-09-08 |
@@ -67,17 +70,18 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Petrus](../content/entities/producers/petrus/entity.yaml) | Producent | Monografie | `producer.petrus` | Ja | `/producers/petrus` | 2026-09-09 |
 | [Vieux Château Certan](../content/entities/producers/vieux-chateau-certan/entity.yaml) | Producent | Collectieprofiel | `producer.vieux-chateau-certan` | Ja | `/appellations/pomerol#producent-vieux-chateau-certan` | 2026-09-09 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | Zelfstandige pagina | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
+| [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | Zelfstandige pagina | `region.entre-deux-mers` | Ja | `/regions/entre-deux-mers` | 2026-09-11 |
+| [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | Zelfstandige pagina | `region.graves-sauternais` | Ja | `/regions/graves-sauternais` | 2026-09-11 |
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (202)
+## Draft — nog uit te werken (205)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
 | Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- | --- |
 | [AOP Bordeaux](../content/entities/appellations/bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux` | Nee — reviewroute | `/appellations/bordeaux-aop` | — |
-| [AOP Entre-deux-Mers](../content/entities/appellations/entre-deux-mers/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.entre-deux-mers` | Nee — reviewroute | `/appellations/entre-deux-mers-aop` | — |
 | [Blaye Côtes de Bordeaux](../content/entities/appellations/blaye-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.blaye-cotes-de-bordeaux` | Nee — reviewroute | `/appellations/blaye-cotes-de-bordeaux` | — |
 | [Bolgheri](../content/entities/appellations/bolgheri/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bolgheri` | Nee — reviewroute | `/appellations/bolgheri` | — |
 | [Bordeaux Supérieur](../content/entities/appellations/bordeaux-superieur/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux-superieur` | Nee — reviewroute | `/appellations/bordeaux-superieur` | — |
@@ -88,7 +92,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Côtes de Bourg](../content/entities/appellations/cotes-de-bourg/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bourg` | Nee — reviewroute | `/appellations/cotes-de-bourg` | — |
 | [Crémant de Bordeaux](../content/entities/appellations/cremant-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cremant-de-bordeaux` | Nee — reviewroute | `/appellations/cremant-de-bordeaux` | — |
 | [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.fronsac` | Nee — reviewroute | `/appellations/fronsac` | — |
-| [Graves Supérieures](../content/entities/appellations/graves-superieures/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves-superieures` | Nee — reviewroute | `/appellations/graves-superieures` | — |
 | [Lalande-de-Pomerol](../content/entities/appellations/lalande-de-pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lalande-de-pomerol` | Nee — reviewroute | `/appellations/lalande-de-pomerol` | — |
 | [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lussac-saint-emilion` | Nee — reviewroute | `/appellations/lussac-saint-emilion` | — |
 | [Maipo Valley](../content/entities/appellations/maipo-valley/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.maipo-valley` | Nee — reviewroute | `/appellations/maipo-valley` | — |
@@ -102,7 +105,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Sancerre](../content/entities/appellations/sancerre/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sancerre` | Nee — reviewroute | `/appellations/sancerre` | — |
 | [Saumur-Champigny](../content/entities/appellations/saumur-champigny/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saumur-champigny` | Nee — reviewroute | `/appellations/saumur-champigny` | — |
 | [Stellenbosch](../content/entities/appellations/stellenbosch/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.stellenbosch` | Nee — reviewroute | `/appellations/stellenbosch` | — |
-| [Classificatie van Graves](../content/entities/classifications/graves/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.graves` | Nee — reviewroute | `/classifications/classificatie-graves` | — |
 | [Crus Artisans du Médoc](../content/entities/classifications/crus-artisans-du-medoc/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.crus-artisans-du-medoc` | Nee — reviewroute | `/classifications/crus-artisans-du-medoc` | — |
 | [Crus Bourgeois du Médoc](../content/entities/classifications/crus-bourgeois-du-medoc/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.crus-bourgeois-du-medoc` | Nee — reviewroute | `/classifications/crus-bourgeois-du-medoc` | — |
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.fermentation` | Nee — reviewroute | `/concepts/alcoholische-vergisting` | — |
@@ -155,6 +157,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Bellefont Belcier](../content/entities/producers/chateau-bellefont-belcier/entity.yaml) | Producent | Registervermelding | `producer.chateau-bellefont-belcier` | Nee — reviewroute | `/producers/chateau-bellefont-belcier → gepland: /classifications/classificatie-saint-emilion#producent-chateau-bellefont-belcier` | — |
 | [Château Bellevue](../content/entities/producers/chateau-bellevue/entity.yaml) | Producent | Registervermelding | `producer.chateau-bellevue` | Nee — reviewroute | `/producers/chateau-bellevue → gepland: /classifications/classificatie-saint-emilion#producent-chateau-bellevue` | — |
 | [Château Berliquet](../content/entities/producers/chateau-berliquet/entity.yaml) | Producent | Registervermelding | `producer.chateau-berliquet` | Nee — reviewroute | `/producers/chateau-berliquet → gepland: /classifications/classificatie-saint-emilion#producent-chateau-berliquet` | — |
+| [Château Bouscaut](../content/entities/producers/chateau-bouscaut/entity.yaml) | Producent | Registervermelding | `producer.chateau-bouscaut` | Nee — reviewroute | `/producers/chateau-bouscaut → gepland: /classifications/classificatie-graves#producent-chateau-bouscaut` | — |
 | [Château Boutisse](../content/entities/producers/chateau-boutisse/entity.yaml) | Producent | Registervermelding | `producer.chateau-boutisse` | Nee — reviewroute | `/producers/chateau-boutisse → gepland: /classifications/classificatie-saint-emilion#producent-chateau-boutisse` | — |
 | [Château Broustet](../content/entities/producers/chateau-broustet/entity.yaml) | Producent | Registervermelding | `producer.chateau-broustet` | Nee — reviewroute | `/producers/chateau-broustet → gepland: /classifications/bordeaux-1855#producent-chateau-broustet` | — |
 | [Château Cadet-Bon](../content/entities/producers/chateau-cadet-bon/entity.yaml) | Producent | Registervermelding | `producer.chateau-cadet-bon` | Nee — reviewroute | `/producers/chateau-cadet-bon → gepland: /classifications/classificatie-saint-emilion#producent-chateau-cadet-bon` | — |
@@ -172,6 +175,8 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Corbin Michotte](../content/entities/producers/chateau-corbin-michotte/entity.yaml) | Producent | Registervermelding | `producer.chateau-corbin-michotte` | Nee — reviewroute | `/producers/chateau-corbin-michotte → gepland: /classifications/classificatie-saint-emilion#producent-chateau-corbin-michotte` | — |
 | [Château Cos d’Estournel](../content/entities/producers/chateau-cos-d-estournel/entity.yaml) | Producent | Monografie | `producer.chateau-cos-d-estournel` | Nee — reviewroute | `/producers/chateau-cos-d-estournel` | — |
 | [Château Côte de Baleau](../content/entities/producers/chateau-cote-de-baleau/entity.yaml) | Producent | Registervermelding | `producer.chateau-cote-de-baleau` | Nee — reviewroute | `/producers/chateau-cote-de-baleau → gepland: /classifications/classificatie-saint-emilion#producent-chateau-cote-de-baleau` | — |
+| [Château Couhins](../content/entities/producers/chateau-couhins/entity.yaml) | Producent | Registervermelding | `producer.chateau-couhins` | Nee — reviewroute | `/producers/chateau-couhins → gepland: /classifications/classificatie-graves#producent-chateau-couhins` | — |
+| [Château Couhins-Lurton](../content/entities/producers/chateau-couhins-lurton/entity.yaml) | Producent | Registervermelding | `producer.chateau-couhins-lurton` | Nee — reviewroute | `/producers/chateau-couhins-lurton → gepland: /classifications/classificatie-graves#producent-chateau-couhins-lurton` | — |
 | [Château Coutet](../content/entities/producers/chateau-coutet/entity.yaml) | Producent | Collectieprofiel | `producer.chateau-coutet` | Nee — reviewroute | `/producers/chateau-coutet → gepland: /appellations/barsac#producent-chateau-coutet` | — |
 | [Château Croix de Labrie](../content/entities/producers/chateau-croix-de-labrie/entity.yaml) | Producent | Registervermelding | `producer.chateau-croix-de-labrie` | Nee — reviewroute | `/producers/chateau-croix-de-labrie → gepland: /classifications/classificatie-saint-emilion#producent-chateau-croix-de-labrie` | — |
 | [Château Croizet-Bages](../content/entities/producers/chateau-croizet-bages/entity.yaml) | Producent | Registervermelding | `producer.chateau-croizet-bages` | Nee — reviewroute | `/producers/chateau-croizet-bages → gepland: /classifications/bordeaux-1855#producent-chateau-croizet-bages` | — |
@@ -179,6 +184,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Dassault](../content/entities/producers/chateau-dassault/entity.yaml) | Producent | Registervermelding | `producer.chateau-dassault` | Nee — reviewroute | `/producers/chateau-dassault → gepland: /classifications/classificatie-saint-emilion#producent-chateau-dassault` | — |
 | [Château de Camensac](../content/entities/producers/chateau-camensac/entity.yaml) | Producent | Registervermelding | `producer.chateau-camensac` | Nee — reviewroute | `/producers/chateau-camensac → gepland: /classifications/bordeaux-1855#producent-chateau-de-camensac` | — |
 | [Château de Ferrand](../content/entities/producers/chateau-de-ferrand/entity.yaml) | Producent | Registervermelding | `producer.chateau-de-ferrand` | Nee — reviewroute | `/producers/chateau-de-ferrand → gepland: /classifications/classificatie-saint-emilion#producent-chateau-de-ferrand` | — |
+| [Château de Fieuzal](../content/entities/producers/chateau-de-fieuzal/entity.yaml) | Producent | Registervermelding | `producer.chateau-de-fieuzal` | Nee — reviewroute | `/producers/chateau-de-fieuzal → gepland: /classifications/classificatie-graves#producent-chateau-de-fieuzal` | — |
 | [Château de Myrat](../content/entities/producers/chateau-de-myrat/entity.yaml) | Producent | Registervermelding | `producer.chateau-de-myrat` | Nee — reviewroute | `/producers/chateau-de-myrat → gepland: /classifications/bordeaux-1855#producent-chateau-de-myrat` | — |
 | [Château de Pressac](../content/entities/producers/chateau-de-pressac/entity.yaml) | Producent | Registervermelding | `producer.chateau-de-pressac` | Nee — reviewroute | `/producers/chateau-de-pressac → gepland: /classifications/classificatie-saint-emilion#producent-chateau-de-pressac` | — |
 | [Château Destieux](../content/entities/producers/chateau-destieux/entity.yaml) | Producent | Registervermelding | `producer.chateau-destieux` | Nee — reviewroute | `/producers/chateau-destieux → gepland: /classifications/classificatie-saint-emilion#producent-chateau-destieux` | — |
@@ -223,11 +229,13 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Larmande](../content/entities/producers/chateau-larmande/entity.yaml) | Producent | Registervermelding | `producer.chateau-larmande` | Nee — reviewroute | `/producers/chateau-larmande → gepland: /classifications/classificatie-saint-emilion#producent-chateau-larmande` | — |
 | [Château Laroque](../content/entities/producers/chateau-laroque/entity.yaml) | Producent | Registervermelding | `producer.chateau-laroque` | Nee — reviewroute | `/producers/chateau-laroque → gepland: /classifications/classificatie-saint-emilion#producent-chateau-laroque` | — |
 | [Château Laroze](../content/entities/producers/chateau-laroze/entity.yaml) | Producent | Registervermelding | `producer.chateau-laroze` | Nee — reviewroute | `/producers/chateau-laroze → gepland: /classifications/classificatie-saint-emilion#producent-chateau-laroze` | — |
+| [Château Latour-Martillac](../content/entities/producers/chateau-latour-martillac/entity.yaml) | Producent | Registervermelding | `producer.chateau-latour-martillac` | Nee — reviewroute | `/producers/chateau-latour-martillac → gepland: /classifications/classificatie-graves#producent-chateau-latour-martillac` | — |
 | [Château le Chatelet](../content/entities/producers/chateau-le-chatelet/entity.yaml) | Producent | Registervermelding | `producer.chateau-le-chatelet` | Nee — reviewroute | `/producers/chateau-le-chatelet → gepland: /classifications/classificatie-saint-emilion#producent-chateau-le-chatelet` | — |
 | [Château Le Prieuré](../content/entities/producers/chateau-le-prieure/entity.yaml) | Producent | Registervermelding | `producer.chateau-le-prieure` | Nee — reviewroute | `/producers/chateau-le-prieure → gepland: /classifications/classificatie-saint-emilion#producent-chateau-le-prieure` | — |
 | [Château Léoville Las Cases](../content/entities/producers/chateau-leoville-las-cases/entity.yaml) | Producent | Monografie | `producer.chateau-leoville-las-cases` | Nee — reviewroute | `/producers/chateau-leoville-las-cases` | — |
 | [Château Lynch-Bages](../content/entities/producers/chateau-lynch-bages/entity.yaml) | Producent | Collectieprofiel | `producer.chateau-lynch-bages` | Nee — reviewroute | `/producers/chateau-lynch-bages → gepland: /appellations/pauillac#producent-chateau-lynch-bages` | — |
 | [Château Lynch-Moussas](../content/entities/producers/chateau-lynch-moussas/entity.yaml) | Producent | Registervermelding | `producer.chateau-lynch-moussas` | Nee — reviewroute | `/producers/chateau-lynch-moussas → gepland: /classifications/bordeaux-1855#producent-chateau-lynch-moussas` | — |
+| [Château Malartic-Lagravière](../content/entities/producers/chateau-malartic-lagraviere/entity.yaml) | Producent | Registervermelding | `producer.chateau-malartic-lagraviere` | Nee — reviewroute | `/producers/chateau-malartic-lagraviere → gepland: /classifications/classificatie-graves#producent-chateau-malartic-lagraviere` | — |
 | [Château Mangot](../content/entities/producers/chateau-mangot/entity.yaml) | Producent | Registervermelding | `producer.chateau-mangot` | Nee — reviewroute | `/producers/chateau-mangot → gepland: /classifications/classificatie-saint-emilion#producent-chateau-mangot` | — |
 | [Château Margaux](../content/entities/producers/chateau-margaux/entity.yaml) | Producent | Monografie | `producer.chateau-margaux` | Nee — reviewroute | `/producers/chateau-margaux` | — |
 | [Château Monbousquet](../content/entities/producers/chateau-monbousquet/entity.yaml) | Producent | Registervermelding | `producer.chateau-monbousquet` | Nee — reviewroute | `/producers/chateau-monbousquet → gepland: /classifications/classificatie-saint-emilion#producent-chateau-monbousquet` | — |
@@ -236,6 +244,8 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Montrose](../content/entities/producers/chateau-montrose/entity.yaml) | Producent | Monografie | `producer.chateau-montrose` | Nee — reviewroute | `/producers/chateau-montrose` | — |
 | [Château Moulin du Cadet](../content/entities/producers/chateau-moulin-du-cadet/entity.yaml) | Producent | Registervermelding | `producer.chateau-moulin-du-cadet` | Nee — reviewroute | `/producers/chateau-moulin-du-cadet → gepland: /classifications/classificatie-saint-emilion#producent-chateau-moulin-du-cadet` | — |
 | [Château Nairac](../content/entities/producers/chateau-nairac/entity.yaml) | Producent | Registervermelding | `producer.chateau-nairac` | Nee — reviewroute | `/producers/chateau-nairac → gepland: /classifications/bordeaux-1855#producent-chateau-nairac` | — |
+| [Château Olivier](../content/entities/producers/chateau-olivier/entity.yaml) | Producent | Registervermelding | `producer.chateau-olivier` | Nee — reviewroute | `/producers/chateau-olivier → gepland: /classifications/classificatie-graves#producent-chateau-olivier` | — |
+| [Château Pape Clément](../content/entities/producers/chateau-pape-clement/entity.yaml) | Producent | Registervermelding | `producer.chateau-pape-clement` | Nee — reviewroute | `/producers/chateau-pape-clement → gepland: /classifications/classificatie-graves#producent-chateau-pape-clement` | — |
 | [Château Pavie Macquin](../content/entities/producers/chateau-pavie-macquin/entity.yaml) | Producent | Collectieprofiel | `producer.chateau-pavie-macquin` | Nee — reviewroute | `/producers/chateau-pavie-macquin → gepland: /classifications/classificatie-saint-emilion#producent-chateau-pavie-macquin` | — |
 | [Château Peby Faugères](../content/entities/producers/chateau-peby-faugeres/entity.yaml) | Producent | Registervermelding | `producer.chateau-peby-faugeres` | Nee — reviewroute | `/producers/chateau-peby-faugeres → gepland: /classifications/classificatie-saint-emilion#producent-chateau-peby-faugeres` | — |
 | [Château Pédesclaux](../content/entities/producers/chateau-pedesclaux/entity.yaml) | Producent | Registervermelding | `producer.chateau-pedesclaux` | Nee — reviewroute | `/producers/chateau-pedesclaux → gepland: /classifications/bordeaux-1855#producent-chateau-pedesclaux` | — |
@@ -273,8 +283,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [La Mondotte](../content/entities/producers/la-mondotte/entity.yaml) | Producent | Collectieprofiel | `producer.la-mondotte` | Nee — reviewroute | `/producers/la-mondotte → gepland: /classifications/classificatie-saint-emilion#producent-la-mondotte` | — |
 | [Lassègue](../content/entities/producers/lassegue/entity.yaml) | Producent | Registervermelding | `producer.lassegue` | Nee — reviewroute | `/producers/lassegue → gepland: /classifications/classificatie-saint-emilion#producent-lassegue` | — |
 | [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | Zelfstandige pagina | `region.blayais-bourgeais` | Nee — reviewroute | `/regions/blayais-bourgeais` | — |
-| [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | Zelfstandige pagina | `region.entre-deux-mers` | Nee — reviewroute | `/regions/entre-deux-mers` | — |
-| [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | Zelfstandige pagina | `region.graves-sauternais` | Nee — reviewroute | `/regions/graves-sauternais` | — |
 | [Hunter Valley](../content/entities/regions/hunter-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.hunter-valley` | Nee — reviewroute | `/regions/hunter-valley` | — |
 | [Loirevallei](../content/entities/regions/loire-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.loire-valley` | Nee — reviewroute | `/regions/loirevallei` | — |
 | [Marlborough](../content/entities/regions/marlborough/entity.yaml) | Regio | Zelfstandige pagina | `region.marlborough` | Nee — reviewroute | `/regions/marlborough` | — |

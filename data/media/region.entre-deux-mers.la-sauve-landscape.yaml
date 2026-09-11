@@ -1,0 +1,24 @@
+id: media.region.entre-deux-mers.la-sauve-landscape
+kind: photo
+role: documentary
+status: active
+storage_key: regions/entre-deux-mers/la-sauve-landscape.jpg
+mime_type: image/jpeg
+width: 2592
+height: 3872
+checksum_sha256: 2d62a618cb8992fef2cedc52cabcdf288f81c843208d53e8e66b2594b5a50410
+alt:
+  nl: Heuvelachtig landschap rond La Sauve in Entre-deux-Mers
+  en: Rolling landscape around La Sauve in Entre-deux-Mers
+caption:
+  nl: Vanaf de abdijtoren van La Sauve wordt zichtbaar hoe dorpen, bos, akkers en wijngaarden elkaar in Entre-deux-Mers afwisselen. Het uitzicht toont geen juridische appellationgrens.
+  en: From the abbey tower at La Sauve, villages, woodland, fields and vineyards can be seen alternating across Entre-deux-Mers. The view does not depict a legal appellation boundary.
+rights:
+  status: open-licensed
+  creator: JLPC
+  source_url: https://commons.wikimedia.org/wiki/File:La_Sauve_Majeure12_Village_est..jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: JLPC via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

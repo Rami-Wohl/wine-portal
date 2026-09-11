@@ -12,6 +12,7 @@ locales:
   nl: overview.nl.md
   en: overview.en.md
 relations:
+  - { type: part_of, target: region.graves-sauternais }
   - { type: part_of, target: region.bordeaux }
   - { type: important_grape, target: grape.semillon }
   - { type: important_grape, target: grape.sauvignon-blanc }

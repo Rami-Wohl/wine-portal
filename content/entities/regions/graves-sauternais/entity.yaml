@@ -1,6 +1,6 @@
 id: region.graves-sauternais
 type: region
-status: draft
+status: active
 canonical_name: Graves and Sauternais
 names:
   nl: Graves en Sauternais
@@ -14,5 +14,28 @@ locales:
 relations:
   - type: part_of
     target: region.bordeaux
-assertions: []
-source_refs: []
+assertions:
+  - id: assertion.graves-sauternais.educational-region
+    predicate: region_kind
+    value: educational-and-historical-region
+    status: verified
+    sources: [source.graves-winegrowers-history, source.inao-sauternes-overview]
+    last_verified: 2026-09-11
+source_refs:
+  - source.graves-winegrowers-history
+  - source.graves-winegrowers-terroir
+  - source.graves-winegrowers-wines
+  - source.inao-graves-overview
+  - source.inao-graves-specification-2025
+  - source.inao-pessac-leognan-specification-2024
+  - source.inao-sauternes-overview
+  - source.inao-sauternes-specification-2026
+  - source.brgm-bordeaux-geology-2022
+  - source.msha-bordeaux-wine-history
+  - source.bordeaux-graves-classification
+  - source.gcc1855-classification-overview
+  - source.dgccrf-wine-labels-2025
+  - source.legifrance-graves-transition-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-11

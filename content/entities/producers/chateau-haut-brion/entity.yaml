@@ -15,7 +15,9 @@ presentation:
   mode: monograph
 relations:
   - { type: located_in, target: appellation.pessac-leognan }
-  - { type: classified_under, target: classification.graves }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: red }
   - { type: classified_under, target: classification.bordeaux-1855 }
 assertions: []
 source_refs:

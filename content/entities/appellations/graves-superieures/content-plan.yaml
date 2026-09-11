@@ -1,0 +1,241 @@
+package_id: appellation.graves-superieures
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening]
+    target_ids: [region.graves-sauternais, appellation.graves, appellation.sauternes]
+    completeness_questions:
+      [Kan de lezer Graves Supérieures onderscheiden van Graves Sauternes en een kwaliteitsrang?]
+    layers:
+      {
+        foundation: [Definieer herkomst en wijnstijl.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Identiteit en ligging.],
+          source_refs: [source.inao-graves-specification-2025, source.inao-graves-overview],
+        }
+      specific_claims: []
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis-en-juridische-status, waarom-de-overgang-telt]
+    target_ids: [appellation.graves]
+    completeness_questions:
+      [
+        Zijn erkenning overgang uitgestelde werking en controledatum volledig en voorzichtig uitgelegd?,
+      ]
+    layers:
+      {
+        foundation: [Vertel de geschiedenis en lopende samenvoeging.],
+        intermediate: [],
+        advanced: [Leg uitgestelde inwerkingtreding en bronstatus uit.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische en juridische ontwikkeling.],
+          source_refs: [source.inao-graves-specification-2025],
+        }
+      specific_claims:
+        - {
+            claim: Het Franse besluit geldt pas na Europese goedkeuring van de annulering.,
+            status: supported,
+            source_refs: [source.legifrance-graves-transition-2025],
+          }
+        - {
+            claim: De EU publiceerde het annuleringsverzoek op 3 juni 2026.,
+            status: supported,
+            source_refs: [source.eurlex-graves-superieures-cancellation-2026],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem]
+    target_ids: [appellation.graves, appellation.sauternes]
+    completeness_questions:
+      [Is rijpheid in Graves uitgelegd zonder Ciron of botrytis als vereiste te claimen?]
+    layers:
+      {
+        foundation: [Plaats grind bodemvariatie en najaarsrisico.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap en klimaat.],
+          source_refs: [source.inao-graves-specification-2025, source.graves-winegrowers-wines],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids: [grape.semillon, grape.sauvignon-blanc, grape.muscadelle]
+    completeness_questions: [Zijn toegestane druiven en hun rollen uitgelegd?]
+    layers:
+      { foundation: [Introduceer de witte blend.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      general_synthesis:
+        { topics: [Druivenrollen.], source_refs: [source.inao-graves-specification-2025] }
+      specific_claims: []
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, wettelijke-drempels]
+    target_ids: []
+    completeness_questions:
+      [Zijn handmatige tries concentratie vergisting balans en actuele drempels aanwezig?]
+    layers:
+      {
+        foundation: [Leg selectieve oogst en restsuiker uit.],
+        intermediate: [],
+        advanced: [Geef juridische drempels.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Wijnbouw en wijnmaken.], source_refs: [] }
+      specific_claims:
+        - {
+            claim: Het bestaande dossier verlangt handmatige opeenvolgende selecties en 221 gram suiker per liter most.,
+            status: supported,
+            source_refs: [source.inao-graves-specification-2025],
+          }
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, wettelijke-drempels]
+    target_ids: [appellation.graves]
+    completeness_questions: [Zijn huidige en toekomstige regels strikt van elkaar gescheiden?]
+    layers:
+      {
+        foundation: [Leg huidige productidentiteit uit.],
+        intermediate: [],
+        advanced: [Dateer de overgang en cijfers.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Appellationregels.], source_refs: [source.inao-graves-specification-2025] }
+      specific_claims: []
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten]
+    target_ids: []
+    completeness_questions:
+      [
+        Voorkomt de pagina dat Supérieures als kwaliteitsrang of producentenclassificatie wordt gelezen?,
+      ]
+    layers:
+      { foundation: [Ontkracht de rangbetekenis.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      general_synthesis:
+        { topics: [Classificatiecontext.], source_refs: [source.inao-graves-overview] }
+      specific_claims: []
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-glas]
+    target_ids: []
+    completeness_questions: [Zijn herkenning balans serveren combineren en marktpositie aanwezig?]
+    layers:
+      {
+        foundation: [Geef praktische glascontext.],
+        intermediate: [Begrens verwachtingen door producent en jaar.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijl en glas.],
+          source_refs: [source.graves-winegrowers-wines, source.inao-graves-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop]
+    target_ids: [appellation.graves]
+    completeness_questions:
+      [Kan de lezer historische en toekomstige etiketten in de overgang begrijpen?]
+    layers:
+      {
+        foundation: [Lees de naam als herkomst en stijl.],
+        intermediate: [Leg voortbestaan van oude flessen uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiket en aankoop.],
+          source_refs:
+            [source.dgccrf-wine-labels-2025, source.eurlex-graves-superieures-cancellation-2026],
+        }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, waarom-de-overgang-telt]
+    target_ids: [appellation.graves]
+    completeness_questions:
+      [Is de lopende registratiewijziging het actuele hoofdonderwerp zonder voorspelling?]
+    layers:
+      {
+        foundation: [Beschrijf de samenvoegingsroute.],
+        intermediate: [],
+        advanced: [Leg processtatus uit.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Juridische overgang.],
+          source_refs:
+            [
+              source.legifrance-graves-transition-2025,
+              source.eurlex-graves-superieures-cancellation-2026,
+            ],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [graves-landschap]
+    target_ids: []
+    completeness_questions:
+      [Geeft het beeld Graves-context zonder de zoete stijl visueel te bewijzen?]
+    layers:
+      {
+        foundation: [Gebruik een begrensd documentair anker.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: [appellation.graves, appellation.sauternes, region.graves-sauternais]
+    completeness_questions: [Zijn vergelijkbare en bovenliggende onderwerpen ontsloten?]
+    layers: { foundation: [Link naar kerncontext.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

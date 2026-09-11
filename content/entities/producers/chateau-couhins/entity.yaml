@@ -1,0 +1,18 @@
+id: producer.chateau-couhins
+type: producer
+status: draft
+canonical_name: Château Couhins
+names: { nl: Château Couhins, en: Château Couhins }
+slugs: { nl: chateau-couhins, en: chateau-couhins }
+locales: { nl: overview.nl.md, en: overview.en.md }
+presentation:
+  mode: register-entry
+  owner: classification.graves
+  anchor: producent-chateau-couhins
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+  - type: classified_under
+    target: classification.graves
+    properties: { colours: white }
+assertions: []
+source_refs: [source.pessac-leognan-classified-growths]
