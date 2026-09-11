@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 245 entities — 49 active, 196 draft, 0 deprecated.
+**Totaal:** 245 entities — 50 active, 195 draft, 0 deprecated.
 
 **Producentenrecords:** 134 — 11 monografie, 29 collectieprofiel, 94 registervermelding.
 
-## Actief — publiek vindbaar (49)
+## Actief — publiek vindbaar (50)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -28,6 +28,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | Zelfstandige pagina | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-07 |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.estate-bottling` | Ja | `/concepts/botteling-op-het-chateau` | 2026-09-08 |
 | [Courtier](../content/entities/concepts/courtier/entity.yaml) | Concept | Zelfstandige pagina | `concept.courtier` | Ja | `/concepts/courtier` | 2026-09-09 |
+| [Cru](../content/entities/concepts/cru/entity.yaml) | Concept | Zelfstandige pagina | `concept.cru` | Ja | `/concepts/cru` | 2026-09-09 |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
@@ -62,7 +63,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (196)
+## Draft — nog uit te werken (195)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -109,7 +110,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Nee — reviewroute | `/concepts/chateau-wijnterm` | — |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Nee — reviewroute | `/concepts/clairet` | — |
 | [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | Zelfstandige pagina | `concept.coulure` | Nee — reviewroute | `/concepts/coulure` | — |
-| [Cru](../content/entities/concepts/cru/entity.yaml) | Concept | Zelfstandige pagina | `concept.cru` | Nee — reviewroute | `/concepts/cru` | — |
 | [Cuvée](../content/entities/concepts/cuvee/entity.yaml) | Concept | Zelfstandige pagina | `concept.cuvee` | Nee — reviewroute | `/concepts/cuvee` | — |
 | [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Nee — reviewroute | `/concepts/druifluis-phylloxera` | — |
 | [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | Zelfstandige pagina | `concept.elevage` | Nee — reviewroute | `/concepts/elevage` | — |

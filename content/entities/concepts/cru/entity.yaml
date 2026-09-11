@@ -1,6 +1,6 @@
 id: concept.cru
 type: concept
-status: draft
+status: active
 canonical_name: Cru
 names:
   nl: Cru
@@ -11,6 +11,20 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.grand-vin }
+  - { type: related_to, target: concept.aop }
+  - { type: related_to, target: classification.bordeaux-1855 }
+  - { type: related_to, target: classification.saint-emilion }
+  - { type: related_to, target: classification.crus-bourgeois-du-medoc }
+  - { type: related_to, target: classification.crus-artisans-du-medoc }
 assertions: []
-source_refs: []
+source_refs:
+  - source.bivb-burgundy-aoc-levels
+  - source.champagne-cru-faq
+  - source.gcc1855-classification-overview
+  - source.inao-saint-emilion-classification-2022
+  - source.inao-saint-emilion-grand-cru-overview
+  - source.saint-emilion-grand-cru-specification-2023
+depth: foundation
+last_reviewed: 2026-09-09
