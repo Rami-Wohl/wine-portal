@@ -1,0 +1,24 @@
+id: producer.chateau-montrose
+type: producer
+status: draft
+canonical_name: Château Montrose
+names:
+  nl: Château Montrose
+  en: Château Montrose
+slugs:
+  nl: chateau-montrose
+  en: chateau-montrose
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: monograph
+relations:
+  - { type: located_in, target: appellation.saint-estephe }
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: deuxieme-cru }
+    valid_from: 1855
+assertions: []
+source_refs: [source.gcc1855-classification-overview]
+depth: foundation

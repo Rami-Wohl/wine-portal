@@ -1,0 +1,24 @@
+id: producer.chateau-cos-d-estournel
+type: producer
+status: draft
+canonical_name: Château Cos d’Estournel
+names:
+  nl: Château Cos d’Estournel
+  en: Château Cos d’Estournel
+slugs:
+  nl: chateau-cos-d-estournel
+  en: chateau-cos-d-estournel
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: monograph
+relations:
+  - { type: located_in, target: appellation.saint-estephe }
+  - type: classified_under
+    target: classification.bordeaux-1855
+    properties: { tier: deuxieme-cru }
+    valid_from: 1855
+assertions: []
+source_refs: [source.gcc1855-classification-overview]
+depth: foundation

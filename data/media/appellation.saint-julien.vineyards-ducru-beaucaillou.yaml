@@ -1,0 +1,24 @@
+id: media.appellation.saint-julien.vineyards-ducru-beaucaillou
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/saint-julien/vineyards-ducru-beaucaillou.jpg
+mime_type: image/jpeg
+width: 3451
+height: 1545
+checksum_sha256: 0cba3760db2c3a4ec8d11995dd3febaba2f204e60e1d140a56ec8db71086b1df
+alt:
+  nl: Brede rijen groene wijnstokken bij Château Ducru-Beaucaillou in Saint-Julien
+  en: Broad rows of green vines at Château Ducru-Beaucaillou in Saint-Julien
+caption:
+  nl: Wijngaarden bij Château Ducru-Beaucaillou laten het zacht golvende wijnland van Saint-Julien zien. Dit is één domein, geen compleet beeld van alle bodems of producenten in de appellation.
+  en: Vineyards at Château Ducru-Beaucaillou show Saint-Julien’s gently rolling wine country. This is one estate, not a complete portrait of every soil or producer in the appellation.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Vineyards_at_Chateau_Ducru_Beaucaillou,_Saint_Julien.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

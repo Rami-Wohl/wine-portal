@@ -1,0 +1,309 @@
+package_id: appellation.saint-estephe
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, een-gemeente-een-appellation]
+    target_ids: [region.medoc, region.bordeaux, appellation.pauillac]
+    completeness_questions:
+      [Kan de lezer regio gemeente appellation en perceelgrens uit elkaar houden?]
+    layers:
+      {
+        foundation: [Plaats Saint-Estèphe als noordelijkste gemeentelijke Médoc-appellation.],
+        intermediate: [Leg gemeentelijke en perceelsgrens uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Ligging en identiteit.], source_refs: [source.inao-saint-estephe-overview] }
+      specific_claims:
+        [
+          {
+            claim: De geografische productiezone valt binnen de gemeente Saint-Estèphe.,
+            status: supported,
+            source_refs: [source.inao-saint-estephe-specification-2026],
+          },
+        ]
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, rivier-handel-en-domeinen, reputatie-classificatie-en-aoc]
+    target_ids: [region.bordeaux, classification.bordeaux-1855, concept.cru, concept.phylloxera]
+    completeness_questions:
+      [Verbindt de tekst middeleeuwse wijnbouw handel domeinvorming classificatie en AOC?]
+    layers:
+      {
+        foundation: [Vertel hoe handel en domeinen Saint-Estèphe vormden.],
+        intermediate: [Leg de rol van Bordeauxhandelaren uit.],
+        advanced: [Scheid oude reputatie classificatie en AOC.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Historische ontwikkeling.], source_refs: [source.msha-bordeaux-wine-history] }
+      specific_claims:
+        [
+          {
+            claim: Het officiële dossier noemt goede wijngaarden in de dertiende eeuw en AOC-erkenning in 1936.,
+            status: supported,
+            source_refs: [source.inao-saint-estephe-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, grind-klei-kalk-en-water, bodem-is-geen-smaakrecept]
+    target_ids: [concept.terroir, concept.vintage]
+    completeness_questions:
+      [Zijn terrassen grind klei kalk water klimaat en variatie zonder determinisme uitgelegd?]
+    layers:
+      {
+        foundation: [Maak de noordelijke grindruggen en natte laagten voorstelbaar.],
+        intermediate: [Leg drainage en watervoorraad uit.],
+        advanced: [Leg officiële perceelselectie en grenzen van bodemverklaring uit.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap klimaat en bodem.],
+          source_refs:
+            [
+              source.inao-saint-estephe-specification-2026,
+              source.saint-estephe-winegrowers-vineyard,
+            ],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, cabernet-en-merlot-in-samenspel]
+    target_ids:
+      [
+        grape.cabernet-sauvignon,
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.petit-verdot,
+        grape.malbec,
+        grape.carmenere,
+        concept.assemblage,
+      ]
+    completeness_questions: [Zijn hoofdrassen en historische rassen met hun rollen uitgelegd?]
+    layers:
+      {
+        foundation: [Introduceer de klassieke rode assemblage.],
+        intermediate: [Verbind druif aan plek rijping en jaar.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Druivenrollen.], source_refs: [source.inao-saint-estephe-overview] }
+      specific_claims:
+        [
+          {
+            claim: Zes blauwe druivenrassen zijn toegestaan.,
+            status: supported,
+            source_refs: [source.inao-saint-estephe-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, rijpheid-extractie-en-opvoeding]
+    target_ids:
+      [
+        concept.fermentation,
+        concept.extraction,
+        concept.maceration,
+        concept.malolactic-fermentation,
+        concept.elevage,
+        concept.second-wine,
+        concept.cuvee,
+      ]
+    completeness_questions:
+      [Volgt de lezer van perceelrijping naar selectie extractie assemblage en opvoeding?]
+    layers:
+      {
+        foundation: [Leg de rode wijnroute uit.],
+        intermediate: [Verbind keuzes aan structuur en jaargang.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnbouw en wijnmaken.],
+          source_refs: [source.inao-saint-estephe-specification-2026],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, actuele-drempels-van-2026]
+    target_ids: []
+    completeness_questions: [Scheidt de pagina wettelijke ondergrens van producentenambitie?]
+    layers:
+      {
+        foundation: [Leg uit dat Saint-Estèphe stille rode wijn beschermt.],
+        intermediate: [],
+        advanced: [Geef actuele dichtheid rendement rijpheid en opvoeding.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Functie productiedossier.], source_refs: [source.inao-saint-estephe-overview] }
+      specific_claims:
+        [
+          {
+            claim: Het dossier van 2026 vereist 7000 stokken per hectare 57 hl per hectare en opvoeding tot 1 juni.,
+            status: supported,
+            source_refs: [source.inao-saint-estephe-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      [classificatie-en-producenten, vijf-crus-over-vier-rangen, twee-richtinggevende-domeinen]
+    target_ids:
+      [classification.bordeaux-1855, producer.chateau-cos-d-estournel, producer.chateau-montrose]
+    completeness_questions: [Zijn vijf crus rang appellation en producent duidelijk gescheiden?]
+    layers:
+      {
+        foundation: [Plaats de vijf crus classés naast andere producenten.],
+        intermediate: [Leg spreiding over vier rangen uit.],
+        advanced: [Gebruik twee producenten als ijkpunt zonder catalogus.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatie en producenten.],
+          source_refs: [source.gcc1855-classification-overview],
+        }
+      specific_claims:
+        [
+          {
+            claim: Saint-Estèphe telt vijf crus classés uit 1855.,
+            status: supported,
+            source_refs: [source.inao-saint-estephe-specification-2026],
+          },
+        ]
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, kracht-zonder-karikatuur]
+    target_ids: [concept.tannin, concept.acidity, concept.vintage]
+    completeness_questions:
+      [Geeft de tekst herkenning variatie en ontwikkeling zonder stereotype of smaakgarantie?]
+    layers:
+      {
+        foundation: [Beschrijf structuur donker fruit en bewaarpotentieel als bandbreedte.],
+        intermediate: [Leg flesontwikkeling en variatie uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijl en ontwikkeling.],
+          source_refs:
+            [source.inao-saint-estephe-overview, source.inao-saint-estephe-specification-2026],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, appellation-rang-en-maker]
+    target_ids: [concept.cru, concept.grand-vin, concept.cuvee, concept.vintage]
+    completeness_questions: [Kan de lezer appellation château rang cuvée en jaargang los lezen?]
+    layers:
+      {
+        foundation: [Lees Saint-Estèphe als herkomstnaam.],
+        intermediate: [Geef koop serveer en bewaarcontext.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Etiket en aankoop.], source_refs: [source.dgccrf-wine-labels-2025] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, water-als-kans-en-risico]
+    target_ids: [concept.rootstock]
+    completeness_questions:
+      [Verbindt de tekst klimaat water bodem en beslissingen zonder voorspelling?]
+    layers:
+      {
+        foundation: [Toon klimaatadaptatie als actuele opgave.],
+        intermediate: [Leg tegengestelde waterproblemen en opties uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Klimaatadaptatie.], source_refs: [source.inrae-bordeaux-climate-adaptation] }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [chateau-cos-d-estournel]
+    target_ids: []
+    completeness_questions:
+      [Geeft het beeld historische sfeer zonder één domein als hele appellation voor te stellen?]
+    layers:
+      {
+        foundation: [Toon architectuur en wijngaard van één domein.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        region.medoc,
+        appellation.pauillac,
+        classification.bordeaux-1855,
+        producer.chateau-cos-d-estournel,
+        producer.chateau-montrose,
+      ]
+    completeness_questions:
+      [Zijn regio buur classificatie en richtinggevende producenten ontsloten?]
+    layers:
+      {
+        foundation: [Link naar vervolgonderwerpen.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-cos-d-estournel,
+      names: { nl: Château Cos d’Estournel, en: Château Cos d’Estournel },
+      slugs: { nl: chateau-cos-d-estournel, en: chateau-cos-d-estournel },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+  - {
+      id: producer.chateau-montrose,
+      names: { nl: Château Montrose, en: Château Montrose },
+      slugs: { nl: chateau-montrose, en: chateau-montrose },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

@@ -1,0 +1,24 @@
+id: media.appellation.saint-estephe.chateau-cos-d-estournel
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/saint-estephe/chateau-cos-d-estournel.jpg
+mime_type: image/jpeg
+width: 4224
+height: 2724
+checksum_sha256: 0daf49c62e78a621b785f72ee93534b8ce2d035ce9817f82353fe5f2ccbf2176
+alt:
+  nl: De opvallende pagodes van Château Cos d’Estournel achter de wijnstokken
+  en: The distinctive pagodas of Château Cos d’Estournel beyond the vines
+caption:
+  nl: De negentiende-eeuwse architectuur van Château Cos d’Estournel verbeeldt de handelsambitie van één beroemd domein. Zij vertegenwoordigt niet alle producenten of landschappen van Saint-Estèphe.
+  en: Château Cos d’Estournel’s nineteenth-century architecture evokes the trading ambition of one celebrated estate. It does not represent every producer or landscape in Saint-Estèphe.
+rights:
+  status: open-licensed
+  creator: Bulo78
+  source_url: https://commons.wikimedia.org/wiki/File:Cos_d_estournel.jpg
+  license_name: Creative Commons Attribution 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by/3.0/
+  credit_line: Bulo78 via Wikimedia Commons, CC BY 3.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

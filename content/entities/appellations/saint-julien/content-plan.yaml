@@ -1,0 +1,291 @@
+package_id: appellation.saint-julien
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, grenzen-buiten-het-dorp]
+    target_ids:
+      [
+        region.medoc,
+        region.bordeaux,
+        appellation.pauillac,
+        appellation.margaux,
+        appellation.haut-medoc,
+      ]
+    completeness_questions:
+      [Kan de lezer regio gemeente appellation en perceelgrens uit elkaar houden?]
+    layers:
+      foundation: [Plaats Saint-Julien als compacte gemeentelijke Médoc-appellation.]
+      intermediate: [Leg de beperkte percelen buiten Saint-Julien-Beychevelle uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Ligging en identiteit.], source_refs: [source.inao-saint-julien-overview] }
+      specific_claims:
+        [
+          {
+            claim: De productiezone omvat Saint-Julien-Beychevelle en afgebakende percelen in twee buurgemeenten.,
+            status: supported,
+            source_refs: [source.legifrance-saint-julien-specification-2011],
+          },
+        ]
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, water-handel-en-domeinen, van-reputatie-naar-aoc]
+    target_ids: [classification.bordeaux-1855, concept.cru, concept.phylloxera, concept.rootstock]
+    completeness_questions: [Verbindt de tekst drainage handel domeinvorming 1855 en AOC?]
+    layers:
+      foundation: [Vertel hoe waterwerken en handel het wijnland vormden.]
+      intermediate: [Leg eigendom en châteauvorming uit.]
+      advanced: [Scheid oude reputatie van juridische bescherming.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.msha-bordeaux-wine-history, source.medoc-marsh-drainage-1957],
+        }
+      specific_claims:
+        [
+          {
+            claim: Saint-Julien werd als AOC erkend op 14 november 1936.,
+            status: supported,
+            source_refs: [source.inao-saint-julien-overview],
+          },
+        ]
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, grindruggen-en-water, compact-maar-niet-uniform]
+    target_ids: [concept.terroir, concept.vintage]
+    completeness_questions:
+      [Zijn grind ondergrond water klimaat en interne variatie zonder smaakdeterminisme uitgelegd?]
+    layers:
+      foundation: [Maak het lage estuariumlandschap voorstelbaar.]
+      intermediate: [Leg drainage warmte en beworteling uit.]
+      advanced: [Begrens de gedachte van één Saint-Julienbodem.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap klimaat en bodem.],
+          source_refs: [source.inao-saint-julien-overview, source.brgm-bordeaux-geology-2022],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, cabernet-merlot-en-plaats]
+    target_ids:
+      [
+        grape.cabernet-sauvignon,
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.petit-verdot,
+        grape.malbec,
+        grape.carmenere,
+        concept.assemblage,
+      ]
+    completeness_questions: [Zijn hoofdrassen en historische rassen met hun rollen uitgelegd?]
+    layers:
+      foundation: [Introduceer de klassieke rode assemblage.]
+      intermediate: [Verbind druif aan rijping plek en jaargang.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Druivenrollen.], source_refs: [source.inao-saint-julien-overview] }
+      specific_claims:
+        [
+          {
+            claim: Zes blauwe druivenrassen zijn toegestaan.,
+            status: supported,
+            source_refs: [source.legifrance-saint-julien-specification-2011],
+          },
+        ]
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, selectie-extractie-en-opvoeding]
+    target_ids:
+      [
+        concept.fermentation,
+        concept.extraction,
+        concept.maceration,
+        concept.malolactic-fermentation,
+        concept.elevage,
+        concept.second-wine,
+      ]
+    completeness_questions:
+      [Volgt de lezer van perceelrijping naar selectie extractie assemblage en opvoeding?]
+    layers:
+      foundation: [Leg de rode wijnroute uit.]
+      intermediate: [Leg keuzes per perceel en jaar uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnbouw en wijnmaken.],
+          source_refs: [source.legifrance-saint-julien-specification-2011],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, wettelijke-drempels]
+    target_ids: []
+    completeness_questions: [Scheidt de pagina wettelijke ondergrens van producentenambitie?]
+    layers:
+      foundation: [Leg uit dat Saint-Julien stille rode wijn beschermt.]
+      intermediate: []
+      advanced: [Geef de bruikbare wettelijke drempels.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Functie productiedossier.], source_refs: [source.inao-saint-julien-overview] }
+      specific_claims:
+        [
+          {
+            claim: Nieuwe aanplant vereist 7000 stokken per hectare en minimaal 11 procent natuurlijke alcohol.,
+            status: supported,
+            source_refs: [source.legifrance-saint-julien-specification-2011],
+          },
+        ]
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten, elf-crus-in-drie-rangen, twee-ijkpunten]
+    target_ids:
+      [
+        classification.bordeaux-1855,
+        producer.chateau-leoville-las-cases,
+        producer.chateau-ducru-beaucaillou,
+      ]
+    completeness_questions: [Zijn elf crus rang appellation en producent duidelijk gescheiden?]
+    layers:
+      foundation: [Plaats de uitzonderlijke concentratie van crus classés.]
+      intermediate: [Leg de verdeling over drie rangen uit.]
+      advanced: [Gebruik twee producenten als ijkpunt zonder catalogus.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatie en producenten.],
+          source_refs: [source.gcc1855-classification-overview],
+        }
+      specific_claims:
+        [
+          {
+            claim: Saint-Julien telt elf crus classés uit 1855.,
+            status: supported,
+            source_refs: [source.inao-saint-julien-overview],
+          },
+        ]
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, balans-is-geen-middenweg]
+    target_ids: [concept.tannin, concept.acidity, concept.vintage]
+    completeness_questions:
+      [Geeft de tekst herkenning variatie en ontwikkeling zonder smaakgarantie?]
+    layers:
+      foundation: [Beschrijf structuur finesse en bewaarpotentieel als bandbreedte.]
+      intermediate: [Leg flesontwikkeling en variatie uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Stijl en ontwikkeling.], source_refs: [source.inao-saint-julien-overview] }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, naam-rang-en-jaargang]
+    target_ids: [concept.cru, concept.grand-vin, concept.cuvee, concept.vintage]
+    completeness_questions: [Kan de lezer appellation château rang cuvée en jaargang los lezen?]
+    layers:
+      foundation: [Lees Saint-Julien als herkomstnaam.]
+      intermediate: [Geef koop serveer en bewaarcontext.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Etiket en aankoop.], source_refs: [source.dgccrf-wine-labels-2025] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, aanpassen-op-perceelsniveau]
+    target_ids: []
+    completeness_questions: [Verbindt de tekst klimaat water en bodemzorg zonder voorspelling?]
+    layers:
+      foundation: [Toon klimaatadaptatie als actuele opgave.]
+      intermediate: [Leg meerdere aanpassingsroutes uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Klimaatadaptatie.], source_refs: [source.inrae-bordeaux-climate-adaptation] }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [wijngaarden-ducru-beaucaillou]
+    target_ids: []
+    completeness_questions:
+      [Geeft het beeld plaatsgevoel zonder één domein als hele appellation voor te stellen?]
+    layers:
+      {
+        foundation: [Toon het zacht golvende wijngaardland.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        region.medoc,
+        appellation.pauillac,
+        classification.bordeaux-1855,
+        producer.chateau-leoville-las-cases,
+        producer.chateau-ducru-beaucaillou,
+      ]
+    completeness_questions:
+      [Zijn regio buren classificatie en richtinggevende producenten ontsloten?]
+    layers:
+      {
+        foundation: [Link naar vervolgonderwerpen.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-leoville-las-cases,
+      names: { nl: Château Léoville Las Cases, en: Château Léoville Las Cases },
+      slugs: { nl: chateau-leoville-las-cases, en: chateau-leoville-las-cases },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+  - {
+      id: producer.chateau-ducru-beaucaillou,
+      names: { nl: Château Ducru-Beaucaillou, en: Château Ducru-Beaucaillou },
+      slugs: { nl: chateau-ducru-beaucaillou, en: chateau-ducru-beaucaillou },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

@@ -1,6 +1,6 @@
 id: appellation.saint-julien
 type: appellation
-status: draft
+status: active
 canonical_name: Saint-Julien
 names:
   nl: Saint-Julien
@@ -11,6 +11,37 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.medoc }
+  - { type: part_of, target: region.bordeaux }
+  - { type: contrasts_with, target: appellation.pauillac }
+  - { type: contrasts_with, target: appellation.haut-medoc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.petit-verdot }
+  - { type: associated_with, target: classification.bordeaux-1855 }
+assertions:
+  - id: assertion.saint-julien.wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.legifrance-saint-julien-specification-2011]
+    last_verified: 2026-09-11
+  - id: assertion.saint-julien.aoc-recognition
+    predicate: aoc_recognition_date
+    value: 1936-11-14
+    status: verified
+    sources: [source.inao-saint-julien-overview]
+    last_verified: 2026-09-11
+source_refs:
+  - source.inao-saint-julien-overview
+  - source.legifrance-saint-julien-specification-2011
+  - source.gcc1855-classification-overview
+  - source.msha-bordeaux-wine-history
+  - source.medoc-marsh-drainage-1957
+  - source.brgm-bordeaux-geology-2022
+  - source.dgccrf-wine-labels-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-11
