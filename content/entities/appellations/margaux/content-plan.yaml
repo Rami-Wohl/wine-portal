@@ -1,0 +1,260 @@
+package_id: appellation.margaux
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, vier-gemeenten-en-een-perceelgrens]
+    target_ids: [region.medoc, region.bordeaux, appellation.haut-medoc]
+    completeness_questions: [Kan de lezer appellation dorp château en perceelgrens onderscheiden?]
+    layers:
+      foundation: [Plaats Margaux als zuidelijke gemeentelijke Médoc-appellation.]
+      intermediate: [Leg gemeentegebied tegenover toegelaten percelen uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Ligging en identiteit.], source_refs: [source.inao-margaux-overview] }
+      specific_claims:
+        - {
+            claim: De geografische zone omvat vier huidige gemeenten.,
+            status: supported,
+            source_refs: [source.inao-margaux-specification-2023],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, van-bourdieu-naar-chateau, grens-en-aoc]
+    target_ids: [classification.bordeaux-1855, concept.cru, concept.phylloxera, concept.rootstock]
+    completeness_questions:
+      [Verbindt de tekst handel drainage domeinvorming afbakening 1855 en AOC?]
+    layers:
+      foundation: [Vertel hoe handel ontginning en châteaux Margaux vormden.]
+      intermediate: [Leg de vroege marktpositie en domeinvorming uit.]
+      advanced: [Scheid gebruiksnaam gerechtelijke grens en AOC.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Historische ontwikkeling.], source_refs: [source.msha-bordeaux-wine-history] }
+      specific_claims:
+        - {
+            claim: De eerste gerechtelijke contour kwam in 1923 en AOC-erkenning in 1954.,
+            status: supported,
+            source_refs: [source.inao-margaux-specification-2023],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, terrassen-en-water, geen-enkele-margauxbodem]
+    target_ids: [concept.terroir, concept.vintage]
+    completeness_questions:
+      [Legt de pagina terrassen grind ondergrond water en jaargang uit zonder smaakdeterminisme?]
+    layers:
+      foundation: [Maak grindruggen en waterlopen voorstelbaar.]
+      intermediate: [Leg drainage warmte en beworteling uit.]
+      advanced: [Begrens de versimpeling van één Margauxbodem.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap bodem en klimaat.],
+          source_refs:
+            [source.inao-margaux-specification-2023, source.margaux-winegrowers-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, druif-per-plek, castets-als-aanpassingsras]
+    target_ids:
+      [
+        grape.cabernet-sauvignon,
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.petit-verdot,
+        grape.malbec,
+        grape.carmenere,
+        grape.castets,
+      ]
+    completeness_questions:
+      [Zijn hoofdrassen historische rassen en Castets met hun verschillende rollen uitgelegd?]
+    layers:
+      foundation: [Introduceer Cabernet Sauvignon Merlot Cabernet Franc en Petit Verdot.]
+      intermediate: [Verbind ras aan rijping bodem en assemblage.]
+      advanced: [Leg de actuele wettelijke plaats van Castets uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Druivenrollen.], source_refs: [source.margaux-winegrowers-overview] }
+      specific_claims:
+        - {
+            claim: Castets is als aanpassingsras begrensd tot vijf procent aanplant en tien procent assemblage.,
+            status: supported,
+            source_refs: [source.inao-margaux-specification-2023],
+          }
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, selectie-extractie-en-opvoeding]
+    target_ids:
+      [
+        concept.assemblage,
+        concept.fermentation,
+        concept.extraction,
+        concept.malolactic-fermentation,
+        concept.elevage,
+        concept.second-wine,
+        concept.cuvee,
+      ]
+    completeness_questions:
+      [Volgt de lezer van perceelrijping naar selectie extractie assemblage en opvoeding?]
+    layers:
+      foundation: [Leg de klassieke rode wijnroute uit.]
+      intermediate: [Verbind keuzes aan perceel en jaargang.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Wijnbouw en wijnmaken.], source_refs: [source.inao-margaux-specification-2023] }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, actuele-drempels]
+    target_ids: []
+    completeness_questions: [Scheidt de pagina juridische minima van producentenambitie?]
+    layers:
+      foundation: [Leg uit dat Margaux alleen stille rode wijn beschermt.]
+      intermediate: []
+      advanced: [Geef actuele dichtheid rendement rijpheid en opvoeding.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Functie productiedossier.], source_refs: [source.inao-margaux-overview] }
+      specific_claims:
+        - {
+            claim: Nieuwe aanplant vraagt 7000 stokken per hectare en het basisrendement is 57 hl per hectare.,
+            status: supported,
+            source_refs: [source.inao-margaux-specification-2023],
+          }
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      [classificatie-en-producenten, eenentwintig-crus-vijf-rangen, chateau-margaux-in-context]
+    target_ids: [classification.bordeaux-1855, producer.chateau-margaux]
+    completeness_questions:
+      [Zijn 21 crus alle vijf rangen en de verhouding tussen appellation en producent helder?]
+    layers:
+      foundation:
+        [Plaats 1855 en Château Margaux zonder de appellation tot één domein te reduceren.]
+      intermediate: [Leg de uitzonderlijke breedte van de lokale classificatie uit.]
+      advanced: [Scheid historische rang actuele producent en appellationregels.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Classificatie en producenten.],
+          source_refs: [source.gcc1855-classification-overview, source.inao-margaux-overview],
+        }
+      specific_claims:
+        - {
+            claim: Margaux telt 21 crus classés uit 1855 over alle vijf rode rangen.,
+            status: supported,
+            source_refs: [source.inao-margaux-specification-2023],
+          }
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, finesse-is-geen-recept]
+    target_ids: [concept.tannin, concept.acidity, concept.vintage]
+    completeness_questions:
+      [Geeft de pagina herkenning variatie en ontwikkeling zonder smaakgarantie?]
+    layers:
+      foundation: [Beschrijf finesse fruit structuur en bewaarpotentieel als bandbreedte.]
+      intermediate: [Leg flesontwikkeling en producentvariatie uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijl en ontwikkeling.],
+          source_refs:
+            [source.inao-margaux-specification-2023, source.margaux-winegrowers-overview],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, margaux-is-niet-altijd-chateau-margaux]
+    target_ids: [concept.cru, concept.grand-vin, concept.vintage]
+    completeness_questions: [Kan de lezer appellation château cuvée rang en jaargang los lezen?]
+    layers:
+      foundation: [Lees Margaux als herkomstnaam.]
+      intermediate: [Geef koop serveer en bewaarcontext.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Etiket en aankoop.], source_refs: [source.dgccrf-wine-labels-2025] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, aanpassen-zonder-stijlgarantie]
+    target_ids: []
+    completeness_questions:
+      [Verbindt de tekst klimaat bodemzorg en regelgeving zonder voorspelling?]
+    layers:
+      foundation: [Toon klimaat en bodemzorg als actuele opgave.]
+      intermediate: [Leg meerdere aanpassingsroutes uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaatadaptatie.],
+          source_refs:
+            [source.inrae-bordeaux-climate-adaptation, source.inao-margaux-specification-2023],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [wijngaard-chateau-margaux]
+    target_ids: []
+    completeness_questions:
+      [Geeft het beeld plaatsgevoel zonder één domein als hele appellation voor te stellen?]
+    layers:
+      foundation: [Toon wijnstokken op een lichte grindverheffing.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [region.medoc, appellation.haut-medoc, classification.bordeaux-1855, producer.chateau-margaux]
+    completeness_questions: [Zijn regio classificatie en iconische producent duurzaam ontsloten?]
+    layers:
+      foundation: [Link naar de juiste vervolgonderwerpen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-margaux,
+      names: { nl: Château Margaux, en: Château Margaux },
+      slugs: { nl: chateau-margaux, en: chateau-margaux },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

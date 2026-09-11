@@ -1,6 +1,6 @@
 id: appellation.margaux
 type: appellation
-status: draft
+status: active
 canonical_name: Margaux
 names:
   nl: Margaux
@@ -11,6 +11,36 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.medoc }
+  - { type: part_of, target: region.bordeaux }
+  - { type: contrasts_with, target: appellation.haut-medoc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.petit-verdot }
+  - { type: associated_with, target: classification.bordeaux-1855 }
+assertions:
+  - id: assertion.margaux.wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.inao-margaux-specification-2023]
+    last_verified: 2026-09-11
+  - id: assertion.margaux.aoc-recognition
+    predicate: aoc_recognition_date
+    value: 1954-08-10
+    status: verified
+    sources: [source.inao-margaux-specification-2023]
+    last_verified: 2026-09-11
+source_refs:
+  - source.inao-margaux-overview
+  - source.inao-margaux-specification-2023
+  - source.margaux-winegrowers-overview
+  - source.chateau-margaux-history
+  - source.gcc1855-classification-overview
+  - source.msha-bordeaux-wine-history
+  - source.dgccrf-wine-labels-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-11

@@ -1,0 +1,24 @@
+id: media.appellation.margaux.vineyards-chateau-margaux
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/margaux/vineyards-chateau-margaux.jpg
+mime_type: image/jpeg
+width: 2073
+height: 3110
+checksum_sha256: 73e97a9b17fcdce88d831a5083a0beab14d21509d64ae73a176ef5b87d84ba75
+alt:
+  nl: Rijen wijnstokken bij Château Margaux, met het château achter de wijngaard
+  en: Rows of vines at Château Margaux, with the château beyond the vineyard
+caption:
+  nl: De wijngaard van Château Margaux maakt de lichte verheffing van een grindrug zichtbaar. Het beeld toont één domein binnen de veel grotere appellation en is geen kaart of compleet stijlbeeld van Margaux.
+  en: The vineyard at Château Margaux makes the slight rise of a gravel terrace visible. It shows one estate within the much larger appellation and is neither a map nor a complete portrait of Margaux’s styles.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Vineyards_of_Chateau_Margaux.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-09
+changes: Original Wikimedia file used without crop or editorial colour alteration.

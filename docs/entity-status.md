@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 245 entities — 50 active, 195 draft, 0 deprecated.
+**Totaal:** 246 entities — 51 active, 195 draft, 0 deprecated.
 
-**Producentenrecords:** 134 — 11 monografie, 29 collectieprofiel, 94 registervermelding.
+**Producentenrecords:** 135 — 12 monografie, 29 collectieprofiel, 94 registervermelding.
 
-## Actief — publiek vindbaar (50)
+## Actief — publiek vindbaar (51)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -15,6 +15,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [AOP Médoc](../content/entities/appellations/medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.medoc` | Ja | `/appellations/medoc-aop` | 2026-09-09 |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.haut-medoc` | Ja | `/appellations/haut-medoc` | 2026-09-09 |
+| [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaux` | Ja | `/appellations/margaux` | 2026-09-11 |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
 | [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pomerol` | Ja | `/appellations/pomerol` | 2026-09-09 |
 | [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-emilion` | Ja | `/appellations/saint-emilion` | 2026-09-08 |
@@ -87,7 +88,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lussac-saint-emilion` | Nee — reviewroute | `/appellations/lussac-saint-emilion` | — |
 | [Maipo Valley](../content/entities/appellations/maipo-valley/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.maipo-valley` | Nee — reviewroute | `/appellations/maipo-valley` | — |
 | [Margaret River](../content/entities/appellations/margaret-river/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaret-river` | Nee — reviewroute | `/appellations/margaret-river` | — |
-| [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaux` | Nee — reviewroute | `/appellations/margaux` | — |
 | [Montagne-Saint-Émilion](../content/entities/appellations/montagne-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.montagne-saint-emilion` | Nee — reviewroute | `/appellations/montagne-saint-emilion` | — |
 | [Moulis-en-Médoc](../content/entities/appellations/moulis-en-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.moulis-en-medoc` | Nee — reviewroute | `/appellations/moulis-en-medoc` | — |
 | [Napa Valley](../content/entities/appellations/napa-valley/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.napa-valley` | Nee — reviewroute | `/appellations/napa-valley` | — |
@@ -220,6 +220,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Château Lynch-Bages](../content/entities/producers/chateau-lynch-bages/entity.yaml) | Producent | Collectieprofiel | `producer.chateau-lynch-bages` | Nee — reviewroute | `/producers/chateau-lynch-bages → gepland: /appellations/pauillac#producent-chateau-lynch-bages` | — |
 | [Château Lynch-Moussas](../content/entities/producers/chateau-lynch-moussas/entity.yaml) | Producent | Registervermelding | `producer.chateau-lynch-moussas` | Nee — reviewroute | `/producers/chateau-lynch-moussas → gepland: /classifications/bordeaux-1855#producent-chateau-lynch-moussas` | — |
 | [Château Mangot](../content/entities/producers/chateau-mangot/entity.yaml) | Producent | Registervermelding | `producer.chateau-mangot` | Nee — reviewroute | `/producers/chateau-mangot → gepland: /classifications/classificatie-saint-emilion#producent-chateau-mangot` | — |
+| [Château Margaux](../content/entities/producers/chateau-margaux/entity.yaml) | Producent | Monografie | `producer.chateau-margaux` | Nee — reviewroute | `/producers/chateau-margaux` | — |
 | [Château Monbousquet](../content/entities/producers/chateau-monbousquet/entity.yaml) | Producent | Registervermelding | `producer.chateau-monbousquet` | Nee — reviewroute | `/producers/chateau-monbousquet → gepland: /classifications/classificatie-saint-emilion#producent-chateau-monbousquet` | — |
 | [Château Montlabert](../content/entities/producers/chateau-montlabert/entity.yaml) | Producent | Registervermelding | `producer.chateau-montlabert` | Nee — reviewroute | `/producers/chateau-montlabert → gepland: /classifications/classificatie-saint-emilion#producent-chateau-montlabert` | — |
 | [Château Montlisse](../content/entities/producers/chateau-montlisse/entity.yaml) | Producent | Registervermelding | `producer.chateau-montlisse` | Nee — reviewroute | `/producers/chateau-montlisse → gepland: /classifications/classificatie-saint-emilion#producent-chateau-montlisse` | — |
