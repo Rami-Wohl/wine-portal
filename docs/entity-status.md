@@ -2,16 +2,17 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 267 entities — 62 active, 205 draft, 0 deprecated.
+**Totaal:** 268 entities — 63 active, 205 draft, 0 deprecated.
 
 **Producentenrecords:** 155 — 17 monografie, 36 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (62)
+## Actief — publiek vindbaar (63)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
 | Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- | --- |
+| [AOP Bordeaux](../content/entities/appellations/bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux` | Ja | `/appellations/bordeaux-aop` | 2026-09-11 |
 | [AOP Entre-deux-Mers](../content/entities/appellations/entre-deux-mers/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.entre-deux-mers` | Ja | `/appellations/entre-deux-mers-aop` | 2026-09-11 |
 | [AOP Médoc](../content/entities/appellations/medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.medoc` | Ja | `/appellations/medoc-aop` | 2026-09-09 |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
@@ -81,7 +82,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 
 | Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- | --- |
-| [AOP Bordeaux](../content/entities/appellations/bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux` | Nee — reviewroute | `/appellations/bordeaux-aop` | — |
 | [Blaye Côtes de Bordeaux](../content/entities/appellations/blaye-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.blaye-cotes-de-bordeaux` | Nee — reviewroute | `/appellations/blaye-cotes-de-bordeaux` | — |
 | [Bolgheri](../content/entities/appellations/bolgheri/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bolgheri` | Nee — reviewroute | `/appellations/bolgheri` | — |
 | [Bordeaux Supérieur](../content/entities/appellations/bordeaux-superieur/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux-superieur` | Nee — reviewroute | `/appellations/bordeaux-superieur` | — |
@@ -112,6 +112,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | Zelfstandige pagina | `concept.botrytis` | Nee — reviewroute | `/concepts/botrytis-edele-rotting` | — |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Nee — reviewroute | `/concepts/chateau-wijnterm` | — |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Nee — reviewroute | `/concepts/clairet` | — |
+| [Claret](../content/entities/concepts/claret/entity.yaml) | Concept | Zelfstandige pagina | `concept.claret` | Nee — reviewroute | `/concepts/claret` | — |
 | [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | Zelfstandige pagina | `concept.coulure` | Nee — reviewroute | `/concepts/coulure` | — |
 | [Cuvée](../content/entities/concepts/cuvee/entity.yaml) | Concept | Zelfstandige pagina | `concept.cuvee` | Nee — reviewroute | `/concepts/cuvee` | — |
 | [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Nee — reviewroute | `/concepts/druifluis-phylloxera` | — |

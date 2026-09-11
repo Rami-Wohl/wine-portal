@@ -1,0 +1,22 @@
+id: media.appellation.bordeaux.style-spectrum
+kind: diagram
+role: educational
+status: active
+storage_key: appellations/bordeaux/style-spectrum.svg
+mime_type: image/svg+xml
+width: 1536
+height: 960
+checksum_sha256: 1fc65f31927f0d2787c191d227ef83cc39401b4194cc2a5f7052c8aa68459fd5
+alt:
+  nl: Zes genummerde wijnglazen van donkerrood via lichtrood, donker rosé en bleek rosé naar droog wit en zoeter wit
+  en: Six numbered wine glasses progressing from deep red through light red, dark rosé and pale rosé to dry white and sweeter white
+caption:
+  nl: "Eén appellation, zes verschijningsvormen: 1 rood, 2 claret, 3 clairet, 4 rosé, 5 droog wit en 6 wit met restsuiker. Kleur alleen vertelt niet hoe de wijn precies zal smaken."
+  en: "One appellation, six expressions: 1 red, 2 claret, 3 clairet, 4 rosé, 5 dry white and 6 white with residual sugar. Colour alone does not determine exactly how a wine will taste."
+rights:
+  status: owned
+  creator: Oenocademy editorial
+  license_name: Project-owned original SVG
+  credit_line: Oenocademy
+acquired_at: 2026-09-11
+changes: Original language-light SVG diagram based on the wine categories in source.boagri-bordeaux-specification-2025.

@@ -1,0 +1,317 @@
+package_id: appellation.bordeaux
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, breed-betekent-niet-grenzeloos]
+    target_ids: [region.bordeaux, appellation.bordeaux-superieur]
+    completeness_questions:
+      [Kan de lezer regio appellation gemeente en afgebakend perceel van elkaar onderscheiden?]
+    layers:
+      foundation: [Plaats AOP Bordeaux als de brede stille-wijnherkomst binnen de regio Bordeaux.]
+      intermediate:
+        [Leg uit dat brede beschikbaarheid nog steeds perceelafbakening en regels vereist.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Identiteit en schaal.], source_refs: [source.civb-bordeaux-aop] }
+      specific_claims:
+        - {
+            claim: Alleen goedgekeurde percelen binnen de geografische zone komen in aanmerking.,
+            status: supported,
+            source_refs: [source.boagri-bordeaux-specification-2025],
+          }
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, van-claret-naar-meer-kleur, bescherming-van-de-naam]
+    target_ids: [concept.claret, concept.clairet]
+    completeness_questions:
+      [
+        Verbindt de tekst handel claret kleurverandering en AOC-bescherming zonder een lineair succesverhaal te maken?,
+      ]
+    layers:
+      foundation: [Vertel hoe haven handel en lichte rode wijn de naam Bordeaux verspreidden.]
+      intermediate: [Leg uit hoe stijl en kleur door de eeuwen veranderden.]
+      advanced: [Plaats de erkenning van 1936 in de bescherming van de brede herkomst.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Handels- en stijlgeschiedenis.],
+          source_refs:
+            [source.msha-bordeaux-wine-history, source.inao-bordeaux-clairet-product-page],
+        }
+      specific_claims:
+        - {
+            claim: De AOC Bordeaux werd op 14 november 1936 erkend.,
+            status: supported,
+            source_refs: [source.boagri-bordeaux-specification-2025],
+          }
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, geen-enkel-bordeauxterroir]
+    target_ids:
+      [
+        concept.terroir,
+        concept.vintage,
+        concept.rootstock,
+        appellation.saint-emilion,
+        appellation.fronsac,
+        region.entre-deux-mers,
+      ]
+    completeness_questions:
+      [
+        Maakt de pagina de grote landschappelijke variatie duidelijk zonder één bodem aan de hele AOP toe te schrijven?,
+      ]
+    layers:
+      foundation: [Beschrijf het Atlantische rivierlandschap en de grote bodemvariatie.]
+      intermediate: [Leg uit waarom de appellationnaam alleen geen precieze terroirvoorspelling is.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Landschap klimaat en geologie.],
+          source_refs:
+            [source.brgm-bordeaux-geology-2022, source.boagri-bordeaux-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen, twee-paletten-veel-assemblages, aanpassingsrassen]
+    target_ids:
+      [
+        grape.merlot,
+        grape.cabernet-sauvignon,
+        grape.cabernet-franc,
+        grape.malbec,
+        grape.carmenere,
+        grape.petit-verdot,
+        grape.semillon,
+        grape.sauvignon-blanc,
+        grape.sauvignon-gris,
+        grape.muscadelle,
+        grape.alvarinho,
+        grape.floreal,
+        grape.liliorila,
+        grape.sauvignac,
+        grape.souvignier-gris,
+        grape.arinarnoa,
+        grape.castets,
+        grape.marselan,
+        grape.touriga-nacional,
+      ]
+    completeness_questions:
+      [
+        Zijn rode witte aanvullende en actuele aanpassingsrassen naar rol en juridische status onderscheiden?,
+      ]
+    layers:
+      foundation: [Introduceer de voornaamste blauwe en witte rassen.]
+      intermediate: [Leg assemblage uit als reactie op plaats jaar en stijl.]
+      advanced: [Benoem de begrensde actuele plaats van aanpassingsrassen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: [Druiven en assemblage.], source_refs: [source.civb-bordeaux-grape-varieties] }
+      specific_claims:
+        - {
+            claim: Het actuele dossier laat verschillende aanpassingsrassen onder overeenkomst en met kwantitatieve grenzen toe.,
+            status: supported,
+            source_refs: [source.boagri-bordeaux-specification-2025],
+          }
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, zes-routes-uit-een-dossier]
+    target_ids:
+      [
+        concept.assemblage,
+        concept.maceration,
+        concept.fermentation,
+        concept.extraction,
+        concept.tannin,
+      ]
+    completeness_questions:
+      [
+        Kan de lezer de technische verschillen tussen rood claret clairet rosé droog wit en wit met restsuiker volgen?,
+      ]
+    layers:
+      foundation: [Leg uit dat kleur en zoetheid verschillende kelderroutes vragen.]
+      intermediate:
+        [
+          Vergelijk schilcontact extractie zuurstofbescherming en stoppen of voortzetten van vergisting.,
+        ]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnbouw en vinificatie per kleur.],
+          source_refs:
+            [source.boagri-bordeaux-specification-2025, source.civb-bordeaux-wine-styles],
+        }
+      specific_claims: []
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, zes-wettelijke-verschijningsvormen, actuele-drempels]
+    target_ids: [concept.claret, concept.clairet, concept.cuvee]
+    completeness_questions:
+      [
+        Zijn toegestane wijnsoorten aanvullende vermeldingen en actuele cijfers correct maar niet dominant uitgelegd?,
+      ]
+    layers:
+      foundation: [Maak duidelijk wat de gedeelde regels wel en niet garanderen.]
+      intermediate: [Scheid claret clairet en Haut-Benauge juridisch.]
+      advanced: [Geef actuele dichtheids alcohol- en rendementsdrempels in context.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Functie en reikwijdte van het productiedossier.],
+          source_refs: [source.inao-bordeaux-product-page],
+        }
+      specific_claims:
+        - {
+            claim: De basisrendementen zijn 67 hl/ha voor wit 62 voor rosé 60 voor rood en 55 voor Haut-Benauge.,
+            status: supported,
+            source_refs: [source.boagri-bordeaux-specification-2025],
+          }
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten, herkomst-zonder-centrale-ranglijst]
+    target_ids: [concept.negociant]
+    completeness_questions:
+      [
+        Begrijpt de lezer dat Bordeaux AOP geen eigen châteauclassificatie heeft en meerdere producentenmodellen omvat?,
+      ]
+    layers:
+      foundation: [Scheid appellation producent merk en classificatie.]
+      intermediate: [Plaats domeinen coöperaties en handelshuizen naast elkaar.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Producentenstructuur en handel.],
+          source_refs: [source.msha-bordeaux-wine-history],
+        }
+      specific_claims: []
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling, rood-claret-en-clairet, rose-en-wit]
+    target_ids: [concept.claret, concept.clairet, concept.vintage, concept.elevage]
+    completeness_questions:
+      [
+        Geeft de pagina voor iedere wettelijke verschijningsvorm herkenning serveercontext en bewaarperspectief zonder smaakgarantie?,
+      ]
+    layers:
+      foundation: [Maak de zes stijlen praktisch herkenbaar.]
+      intermediate: [Leg variatie en flesontwikkeling per stijl uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Stijlen en gebruik.],
+          source_refs: [source.civb-bordeaux-aop, source.civb-bordeaux-wine-styles],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop, bordeaux-of-bordeaux-superieur]
+    target_ids: [appellation.bordeaux-superieur, concept.vintage]
+    completeness_questions:
+      [
+        Kan de lezer kleur aanvullende vermelding producent bottelaar jaargang en Bordeaux Supérieur correct duiden?,
+      ]
+    layers:
+      foundation: [Leer de brede herkomst samen met kleur producent en jaargang lezen.]
+      intermediate:
+        [Leg het verschil met Bordeaux Supérieur uit zonder kwaliteit automatisch te rangschikken.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Etiket lezen en kopen.],
+          source_refs: [source.dgccrf-wine-labels-2025, source.boagri-bordeaux-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen, breedte-als-proeftuin]
+    target_ids: []
+    completeness_questions:
+      [Verbindt de tekst klimaat markt stijl en aanpassing zonder marketingclaim of voorspelling?]
+    layers:
+      foundation: [Toon frisheid klimaatdruk en economische bruikbaarheid als actuele opgaven.]
+      intermediate: [Leg uit waarom de brede AOP ruimte biedt om aanpassing te testen.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Klimaat- en stijlaanpassing.],
+          source_refs:
+            [source.inrae-bordeaux-climate-adaptation, source.boagri-bordeaux-specification-2025],
+        }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [stijlspectrum, la-sauve-landschap]
+    target_ids: []
+    completeness_questions:
+      [
+        Verhelderen diagram en foto stijlbreedte en landschappelijke schaal zonder een grenskaart te veinzen?,
+      ]
+    layers:
+      foundation: [Toon de zes wijnvormen en één gedocumenteerd landschap binnen de brede zone.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Educatieve visual en documentair beeld.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        region.bordeaux,
+        appellation.bordeaux-superieur,
+        appellation.entre-deux-mers,
+        appellation.cremant-de-bordeaux,
+        concept.claret,
+        concept.clairet,
+      ]
+    completeness_questions:
+      [Zijn regio naburige brede herkomsten en beide vaak verwarde stijlen duurzaam ontsloten?]
+    layers:
+      foundation: [Link naar logische vervolgonderwerpen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - {
+      id: concept.claret,
+      names: { nl: Claret, en: Claret },
+      slugs: { nl: claret, en: claret },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
