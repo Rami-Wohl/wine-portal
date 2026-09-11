@@ -1,6 +1,6 @@
 id: appellation.pessac-leognan
 type: appellation
-status: draft
+status: active
 canonical_name: Pessac-Léognan
 names:
   nl: Pessac-Léognan
@@ -11,6 +11,44 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.graves-sauternais }
+  - { type: part_of, target: region.bordeaux }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: important_grape, target: grape.semillon }
+  - { type: associated_with, target: classification.graves }
+  - { type: associated_with, target: classification.bordeaux-1855 }
+assertions:
+  - id: assertion.pessac-leognan.red-wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.inao-pessac-leognan-specification-2024]
+    last_verified: 2026-09-11
+  - id: assertion.pessac-leognan.white-wine-type
+    predicate: permitted_wine_type
+    value: still-dry-white
+    status: verified
+    sources: [source.inao-pessac-leognan-specification-2024]
+    last_verified: 2026-09-11
+  - id: assertion.pessac-leognan.aoc-recognition
+    predicate: aoc_recognition_year
+    value: 1987
+    status: verified
+    sources: [source.inao-pessac-leognan-rouge]
+    last_verified: 2026-09-11
+source_refs:
+  - source.inao-pessac-leognan-rouge
+  - source.inao-pessac-leognan-blanc
+  - source.inao-pessac-leognan-specification-2024
+  - source.pessac-leognan-classified-growths
+  - source.graves-winegrowers-history
+  - source.brgm-bordeaux-geology-2022
+  - source.msha-bordeaux-wine-history
+  - source.gcc1855-classification-overview
+  - source.dgccrf-wine-labels-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-11

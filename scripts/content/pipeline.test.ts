@@ -490,6 +490,44 @@ describe("content pipeline validation", () => {
     );
   });
 
+  it("rejects relations that become duplicate items in a related-topics group", async () => {
+    const root = await temporaryRoot();
+    await addEntity(root, {
+      id: "concept.first",
+      relations: [{ type: "related_to", target: "concept.second" }],
+    });
+    await addEntity(root, {
+      id: "concept.second",
+      relations: [{ type: "related_to", target: "concept.first" }],
+    });
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /Related topics for 'concept\.first' would list 'concept\.second' more than once under 'Gerelateerd aan' \(nl\)/,
+    );
+  });
+
+  it("accepts an inverse symmetric relation for a planned relation dependency", async () => {
+    const root = await temporaryRoot();
+    const firstDirectory = await addEntity(root, { id: "region.first" });
+    await addEntity(root, {
+      id: "region.second",
+      relations: [{ type: "associated_with", target: "region.first" }],
+    });
+    const markdown = ':::summary{#orientatie depth="foundation"}\nA complete orientation.\n:::\n';
+    await writeFile(path.join(firstDirectory, "overview.nl.md"), markdown);
+    await writeFile(path.join(firstDirectory, "overview.en.md"), markdown);
+    await addRegionPlan(firstDirectory, "region.first", [
+      {
+        id: "region.second",
+        names: { nl: "second", en: "second" },
+        slugs: { nl: "second", en: "second" },
+        disposition: "relation",
+      },
+    ]);
+
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+  });
+
   it("rejects unknown entity references with a close-ID suggestion", async () => {
     const root = await temporaryRoot();
     await addEntity(root, { id: "region.bordeaux" });

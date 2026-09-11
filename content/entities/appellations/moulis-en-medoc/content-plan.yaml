@@ -1,0 +1,259 @@
+package_id: appellation.moulis-en-medoc
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, landinwaarts-is-niet-afgesloten]
+    target_ids: [region.medoc]
+    completeness_questions: [Kan de lezer naam ligging en juridische grens onderscheiden?]
+    layers:
+      {
+        foundation: [Plaats Moulis landinwaarts in de Médoc.],
+        intermediate: [Leg de invloed van afstand water en bos uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Ligging en identiteit.], source_refs: [source.inao-moulis-overview] },
+        specific_claims: [],
+      }
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, reputatie-zonder-1855]
+    target_ids: [concept.phylloxera]
+    completeness_questions:
+      [Verbindt de tekst molens handel wijnziekten en AOC zonder oorsprongsmythe?]
+    layers:
+      {
+        foundation: [Vertel de overgang van graanland naar wijnherkomst.],
+        intermediate: [Leg reputatie buiten 1855 uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.moulis-winegrowers-history, source.msha-bordeaux-wine-history],
+        }
+      specific_claims:
+        [
+          {
+            claim: De AOC werd in 1938 erkend.,
+            status: supported,
+            source_refs: [source.inao-moulis-overview],
+          },
+        ]
+    review: *complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, water-is-de-verborgen-draad]
+    target_ids: [concept.terroir]
+    completeness_questions: [Zijn grind klei kalksteen en water zonder smaakdeterminisme uitgelegd?]
+    layers:
+      {
+        foundation: [Maak het geologische mozaïek voorstelbaar.],
+        intermediate: [],
+        advanced: [Leg waterbalans per bodem uit.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodem klimaat en water.],
+            source_refs: [source.inao-moulis-specification-2021],
+          },
+        specific_claims: [],
+      }
+    review: *complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids: [grape.cabernet-sauvignon, grape.merlot, grape.cabernet-franc, grape.petit-verdot]
+    completeness_questions: [Zijn hoofdrassen en assemblage als variabele keuzes uitgelegd?]
+    layers:
+      {
+        foundation: [Plaats Cabernet en Merlot samen in de hoofdrol.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Druivenrollen.], source_refs: [source.inao-moulis-specification-2021] },
+        specific_claims: [],
+      }
+    review: *complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken]
+    target_ids: [concept.assemblage, concept.elevage]
+    completeness_questions: [Volgt de lezer druif tot rode wijn zonder kelderrecept?]
+    layers:
+      {
+        foundation: [Leg oogst vergisting extractie blend en opvoeding uit.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Wijnbouw en wijnmaken.],
+            source_refs: [source.inao-moulis-specification-2021],
+          },
+        specific_claims: [],
+      }
+    review: *complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, regels-als-ondergrens]
+    target_ids: [concept.aop]
+    completeness_questions: [Scheidt de tekst juridische herkomst van kwaliteit?]
+    layers:
+      {
+        foundation: [Leg één rode AOP met twee naamvormen uit.],
+        intermediate: [],
+        advanced: [Geef rendementen proportioneel.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: [Productiedossier.], source_refs: [source.inao-moulis-specification-2021] }
+      specific_claims: []
+    review: *complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      [classificatie-en-producenten, producent-chateau-chasse-spleen, producent-chateau-poujeaux]
+    target_ids: [producer.chateau-chasse-spleen, producer.chateau-poujeaux]
+    completeness_questions: [Is afwezigheid uit 1855 zonder waardeoordeel uitgelegd?]
+    layers:
+      {
+        foundation: [Plaats crus bourgeois en twee bakens.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Classificatie en producenten.], source_refs: [source.inao-moulis-overview] },
+        specific_claims: [],
+      }
+    review: *complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling]
+    target_ids: [concept.vintage]
+    completeness_questions: [Geeft de stijl bandbreedte en ontwikkeling zonder garantie?]
+    layers:
+      {
+        foundation: [Beschrijf fruit structuur en rijping.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Stijl en ontwikkeling.], source_refs: [source.inao-moulis-overview] },
+        specific_claims: [],
+      }
+    review: *complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop]
+    target_ids: []
+    completeness_questions: [Kan de lezer herkomst classificatie en producent scheiden?]
+    layers:
+      {
+        foundation: [Lees Moulis en Moulis-en-Médoc als gelijke herkomst.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Etiketlezen.], source_refs: [source.dgccrf-wine-labels-2025] },
+        specific_claims: [],
+      }
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions: [Zijn warmte droogte en ziekte als gecombineerde opgave behandeld?]
+    layers:
+      {
+        foundation: [Leg klimaatadaptatie per bodem uit.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Klimaatadaptatie.], source_refs: [source.inrae-bordeaux-climate-adaptation] },
+        specific_claims: [],
+      }
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [wijngaarden-grand-poujeaux]
+    target_ids: []
+    completeness_questions: [Geeft het beeld plaatsgevoel met begrensde claim?]
+    layers:
+      { foundation: [Toon een Mouliswijngaard.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      { general_synthesis: { topics: [Documentair beeld.], source_refs: [] }, specific_claims: [] }
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: [region.medoc, producer.chateau-chasse-spleen, producer.chateau-poujeaux]
+    completeness_questions: [Zijn vervolgonderwerpen als entiteit geïdentificeerd?]
+    layers:
+      {
+        foundation: [Ontsluit regio en producenten.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      { general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }, specific_claims: [] }
+    review: *complete
+entity_dependencies:
+  - {
+      id: producer.chateau-chasse-spleen,
+      names: { nl: Château Chasse-Spleen, en: Château Chasse-Spleen },
+      slugs: { nl: chateau-chasse-spleen, en: chateau-chasse-spleen },
+      disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.moulis-en-medoc,
+          anchor: producent-chateau-chasse-spleen,
+        },
+    }
+  - {
+      id: producer.chateau-poujeaux,
+      names: { nl: Château Poujeaux, en: Château Poujeaux },
+      slugs: { nl: chateau-poujeaux, en: chateau-poujeaux },
+      disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.moulis-en-medoc,
+          anchor: producent-chateau-poujeaux,
+        },
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

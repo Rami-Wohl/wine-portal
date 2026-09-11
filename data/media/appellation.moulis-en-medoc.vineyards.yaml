@@ -1,0 +1,24 @@
+id: media.appellation.moulis-en-medoc.vineyards
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/moulis-en-medoc/vineyards.jpg
+mime_type: image/jpeg
+width: 992
+height: 754
+checksum_sha256: 792c12bf81fdd37cdf8a343fc9d89e2d60c068113b221da302790807ae07b83b
+alt:
+  nl: Wijngaarden bij Grand-Poujeaux in Moulis-en-Médoc
+  en: Vineyards near Grand-Poujeaux in Moulis-en-Médoc
+caption:
+  nl: De wijngaarden van Grand-Poujeaux tonen het open, zacht golvende land van Moulis. Eén gezichtspunt kan de geologische variatie van de appellation niet volledig weergeven.
+  en: The vineyards of Grand-Poujeaux show Moulis’s open, gently rolling country. One viewpoint cannot capture the appellation’s full geological variety.
+rights:
+  status: open-licensed
+  creator: Berndt Fernow
+  source_url: https://commons.wikimedia.org/wiki/File:Vignes_Moulis.jpg
+  license_name: Creative Commons Attribution 2.5 Generic
+  license_url: https://creativecommons.org/licenses/by/2.5/
+  credit_line: Berndt Fernow via Wikimedia Commons, CC BY 2.5
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

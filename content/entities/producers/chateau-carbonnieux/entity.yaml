@@ -1,0 +1,21 @@
+id: producer.chateau-carbonnieux
+type: producer
+status: draft
+canonical_name: Château Carbonnieux
+names:
+  nl: Château Carbonnieux
+  en: Château Carbonnieux
+slugs:
+  nl: chateau-carbonnieux
+  en: chateau-carbonnieux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.pessac-leognan
+  anchor: producent-carbonnieux
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+assertions: []
+source_refs: []

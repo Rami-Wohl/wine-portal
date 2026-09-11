@@ -1,6 +1,6 @@
 id: appellation.graves
 type: appellation
-status: draft
+status: active
 canonical_name: Graves
 names:
   nl: Graves
@@ -11,6 +11,45 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.graves-sauternais }
+  - { type: part_of, target: region.bordeaux }
+  - { type: contrasts_with, target: appellation.pessac-leognan }
+  - { type: contrasts_with, target: appellation.graves-superieures }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.semillon }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: associated_with, target: classification.graves }
+assertions:
+  - id: assertion.graves.red-wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.inao-graves-specification-2025]
+    last_verified: 2026-09-11
+  - id: assertion.graves.white-wine-type
+    predicate: permitted_wine_type
+    value: still-dry-white
+    status: verified
+    sources: [source.inao-graves-specification-2025]
+    last_verified: 2026-09-11
+  - id: assertion.graves.aoc-recognition
+    predicate: aoc_recognition_year
+    value: 1937
+    status: verified
+    sources: [source.inao-graves-specification-2025]
+    last_verified: 2026-09-11
+source_refs:
+  - source.inao-graves-overview
+  - source.inao-graves-specification-2025
+  - source.graves-winegrowers-history
+  - source.graves-winegrowers-terroir
+  - source.graves-winegrowers-wines
+  - source.brgm-bordeaux-geology-2022
+  - source.msha-bordeaux-wine-history
+  - source.pessac-leognan-classified-growths
+  - source.dgccrf-wine-labels-2025
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-11

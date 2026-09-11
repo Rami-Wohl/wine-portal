@@ -534,6 +534,22 @@ relations:
 
 Do not add the inverse relation to the target entity. The pipeline derives it.
 
+Dit geldt ook voor relaties waarvan beide richtingen hetzelfde lezen, zoals
+`related_to`, `associated_with` en `contrasts_with`. Leg de verbinding tussen
+twee entities maar in één van beide `entity.yaml`-bestanden vast; spiegel haar
+niet nogmaals in het andere bestand. Kies bij een nieuwe symmetrische verbinding
+standaard de lexicografisch eerste entity-ID als bron, zodat latere auteurs
+dezelfde opslagplaats voorspelbaar terugvinden. Bestaande betekenisvolle
+metadata op een relatie gaat vóór deze ordeningsconventie. Een symmetrische
+verbinding die aan de andere kant staat, voldoet ook aan een relationele
+dependency in een contentplan en hoeft daarvoor dus nooit gespiegeld te worden.
+
+Controleer vóór publicatie altijd de **afgeleide** relatiegroepen, dus forward en
+inverse samen zoals het blok ‘Gerelateerde onderwerpen’ ze toont. Binnen één
+zichtbare groep mag dezelfde targetentity maximaal eenmaal voorkomen. Dit is
+een harde `npm run content:check`-controle in zowel het Nederlands als het
+Engels; alleen naar duplicaten binnen één YAML-bestand zoeken is onvoldoende.
+
 Wanneer een goedgekeurd contentplan dependencies bevat, maak de ontbrekende
 packages in één idempotente batch aan:
 

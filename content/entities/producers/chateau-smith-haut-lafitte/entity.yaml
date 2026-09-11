@@ -1,0 +1,21 @@
+id: producer.chateau-smith-haut-lafitte
+type: producer
+status: draft
+canonical_name: Château Smith Haut Lafitte
+names:
+  nl: Château Smith Haut Lafitte
+  en: Château Smith Haut Lafitte
+slugs:
+  nl: chateau-smith-haut-lafitte
+  en: chateau-smith-haut-lafitte
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.pessac-leognan
+  anchor: producent-smith-haut-lafitte
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+assertions: []
+source_refs: []

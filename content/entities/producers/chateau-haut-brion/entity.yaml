@@ -1,0 +1,23 @@
+id: producer.chateau-haut-brion
+type: producer
+status: draft
+canonical_name: Château Haut-Brion
+names:
+  nl: Château Haut-Brion
+  en: Château Haut-Brion
+slugs:
+  nl: chateau-haut-brion
+  en: chateau-haut-brion
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: monograph
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+  - { type: classified_under, target: classification.graves }
+  - { type: classified_under, target: classification.bordeaux-1855 }
+assertions: []
+source_refs:
+  - source.pessac-leognan-classified-growths
+  - source.gcc1855-classification-overview

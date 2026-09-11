@@ -1,0 +1,18 @@
+id: appellation.graves-superieures
+type: appellation
+status: draft
+canonical_name: Graves Supérieures
+names:
+  nl: Graves Supérieures
+  en: Graves Supérieures
+slugs:
+  nl: graves-superieures
+  en: graves-superieures
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: part_of, target: region.graves-sauternais }
+  - { type: part_of, target: region.bordeaux }
+assertions: []
+source_refs: [source.inao-graves-specification-2025]

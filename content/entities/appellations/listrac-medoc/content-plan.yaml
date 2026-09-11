@@ -1,0 +1,269 @@
+package_id: appellation.listrac-medoc
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - {
+      key: identity-and-orientation,
+      disposition: on-page,
+      block_ids: [ligging-en-afbakening],
+      target_ids: [region.medoc],
+      completeness_questions: [Kan de lezer Listrac geografisch en juridisch plaatsen?],
+      layers:
+        {
+          foundation: [Plaats Listrac op de landinwaartse rug.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            { topics: [Ligging en identiteit.], source_refs: [source.inao-listrac-medoc-overview] },
+          specific_claims: [],
+        },
+      review: &complete { outline: complete, nl: complete, en: complete },
+    }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, rang-en-markt]
+    target_ids: [concept.phylloxera]
+    completeness_questions: [Verbindt de tekst handel ziekte coöperatie en AOC?]
+    layers:
+      {
+        foundation: [Vertel de ontwikkeling van de wijngaard.],
+        intermediate: [Plaats de classificatie van 1932 in haar tijd.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Historische ontwikkeling.],
+            source_refs: [source.inao-listrac-medoc-overview, source.msha-bordeaux-wine-history],
+          },
+        specific_claims: [],
+      }
+    review: *complete
+  - {
+      key: landscape-climate-and-soils,
+      disposition: on-page,
+      block_ids: [landschap-klimaat-en-bodem, hoogte-en-water],
+      target_ids: [concept.terroir],
+      completeness_questions: [Zijn hoogte grind klei kalk en water zonder determinisme uitgelegd?],
+      layers:
+        {
+          foundation: [Maak rug en bodemvariatie voorstelbaar.],
+          intermediate: [],
+          advanced: [Leg hoogte via water en lucht uit.],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Landschap en bodem.],
+              source_refs: [source.inao-listrac-medoc-specification-2025],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: grape-varieties,
+      disposition: on-page,
+      block_ids: [druivenrassen],
+      target_ids:
+        [grape.merlot, grape.cabernet-sauvignon, grape.cabernet-franc, grape.petit-verdot],
+      completeness_questions: [Zijn traditionele en aanpassingsrassen in verhouding behandeld?],
+      layers:
+        {
+          foundation: [Plaats Merlot naast Cabernet.],
+          intermediate: [Noem begrensde aanpassingsrassen.],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Druivenrollen.],
+              source_refs: [source.inao-listrac-medoc-specification-2025],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: viticulture-and-winemaking,
+      disposition: on-page,
+      block_ids: [wijnbouw-en-wijnmaken],
+      target_ids: [concept.assemblage, concept.elevage],
+      completeness_questions: [Is de rode kelderroute zonder appellationrecept compleet?],
+      layers:
+        {
+          foundation: [Volg oogst extractie blend en opvoeding.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            { topics: [Wijnmaken.], source_refs: [source.inao-listrac-medoc-specification-2025] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: appellation-rules,
+      disposition: on-page,
+      block_ids: [appellationregels, actuele-drempels],
+      target_ids: [concept.aop],
+      completeness_questions: [Zijn huidige rechtsbasis en rendement proportioneel?],
+      layers:
+        {
+          foundation: [Leg de rode AOP uit.],
+          intermediate: [],
+          advanced: [Geef actuele drempels.],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Productiedossier.],
+              source_refs: [source.inao-listrac-medoc-specification-2025],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: classification-and-producers,
+      disposition: on-page,
+      block_ids: [classificatie-en-producenten],
+      target_ids: [],
+      completeness_questions:
+        [Zijn crus bourgeois en coöperatie zonder pseudo-ranglijst geplaatst?],
+      layers:
+        {
+          foundation: [Leg producentenstructuur uit.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Producenten en classificatie.],
+              source_refs: [source.inao-listrac-medoc-overview],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: style-and-glass-context,
+      disposition: on-page,
+      block_ids: [wijnstijl-en-flesontwikkeling],
+      target_ids: [concept.vintage],
+      completeness_questions: [Is stijl als bandbreedte en niet als garantie beschreven?],
+      layers:
+        {
+          foundation: [Beschrijf structuur fruit en rijping.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            { topics: [Stijl.], source_refs: [source.inao-listrac-medoc-overview] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: labels-and-buying,
+      disposition: on-page,
+      block_ids: [etiket-en-aankoop],
+      target_ids: [],
+      completeness_questions: [Kan de lezer actuele van historische status scheiden?],
+      layers:
+        {
+          foundation: [Lees herkomst producent en status.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            { topics: [Etiketlezen.], source_refs: [source.dgccrf-wine-labels-2025] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: modern-developments,
+      disposition: on-page,
+      block_ids: [hedendaagse-ontwikkelingen],
+      target_ids: [],
+      completeness_questions: [Zijn klimaatrisico en adaptatie in balans?],
+      layers:
+        {
+          foundation: [Leg gecombineerde klimaatriscio's uit.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Klimaatadaptatie.],
+              source_refs: [source.inrae-bordeaux-climate-adaptation],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: visuals,
+      disposition: on-page,
+      block_ids: [chateau-lestage-historisch],
+      target_ids: [],
+      completeness_questions:
+        [Ondersteunt het historische beeld het verhaal zonder representatieclaim?],
+      layers:
+        {
+          foundation: [Toon historisch domeinbeeld.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis: { topics: [Documentair beeld.], source_refs: [] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: child-knowledge,
+      disposition: child-entity,
+      block_ids: [],
+      target_ids: [region.medoc],
+      completeness_questions: [Is de regionale vervolgroute aanwezig?],
+      layers: { foundation: [Ontsluit de Médoc.], intermediate: [], advanced: [], specialist: [] },
+      evidence:
+        {
+          general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

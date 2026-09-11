@@ -1,0 +1,21 @@
+id: producer.chateau-chasse-spleen
+type: producer
+status: draft
+canonical_name: Château Chasse-Spleen
+names:
+  nl: Château Chasse-Spleen
+  en: Château Chasse-Spleen
+slugs:
+  nl: chateau-chasse-spleen
+  en: chateau-chasse-spleen
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.moulis-en-medoc
+  anchor: producent-chateau-chasse-spleen
+relations:
+  - { type: located_in, target: appellation.moulis-en-medoc }
+assertions: []
+source_refs: []

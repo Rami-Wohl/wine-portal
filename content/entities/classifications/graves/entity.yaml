@@ -11,6 +11,8 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: scope, target: appellation.pessac-leognan }
+  - { type: associated_with, target: producer.chateau-haut-brion }
 assertions: []
-source_refs: []
+source_refs: [source.pessac-leognan-classified-growths]

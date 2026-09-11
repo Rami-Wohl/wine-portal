@@ -13,7 +13,6 @@ locales:
   en: overview.en.md
 relations:
   - { type: scope, target: appellation.saint-emilion-grand-cru }
-  - { type: related_to, target: appellation.saint-emilion }
   - { type: related_to, target: producer.chateau-cheval-blanc }
   - { type: related_to, target: producer.chateau-ausone }
   - { type: related_to, target: producer.chateau-angelus }

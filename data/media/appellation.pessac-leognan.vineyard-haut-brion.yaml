@@ -1,0 +1,24 @@
+id: media.appellation.pessac-leognan.vineyard-haut-brion
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/pessac-leognan/vineyard-haut-brion.jpg
+mime_type: image/jpeg
+width: 3264
+height: 2448
+checksum_sha256: dbd1bf958e14f60b53a2f12e55642945987f0755a50fba8aa7eb99185903b021
+alt:
+  nl: Wijngaard van Haut-Brion in Pessac met huizen en een watertoren aan de horizon
+  en: Haut-Brion vineyard in Pessac with houses and a water tower on the horizon
+caption:
+  nl: Wijnstokken van Haut-Brion staan midden in het stedelijke landschap van Pessac. Dat contrast is kenmerkend voor de noordelijke appellation, al vertegenwoordigt één domein niet heel Pessac-Léognan.
+  en: Haut-Brion’s vines stand within the urban landscape of Pessac. That contrast characterises the northern appellation, although one estate does not represent all of Pessac-Léognan.
+rights:
+  status: open-licensed
+  creator: Gilles Guillamot
+  source_url: https://commons.wikimedia.org/wiki/File:Vignoble_de_Haut_Brion.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Gilles Guillamot via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

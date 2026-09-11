@@ -346,7 +346,14 @@ relations:
     target: appellation.pauillac
 ```
 
-De pipeline valideert de target-ID, weigert exacte duplicaten en leidt de inverse lookup af. Een targetentity hoeft dus niet handmatig dezelfde verbinding terug te schrijven.
+De pipeline valideert de target-ID, weigert exacte duplicaten en leidt de inverse
+lookup af. Een targetentity hoeft dus niet handmatig dezelfde verbinding terug
+te schrijven. Ook een semantisch symmetrische relatie (`related_to`,
+`associated_with` of `contrasts_with`) wordt slechts aan één kant vastgelegd.
+Na afleiding valideert de pipeline bovendien de feitelijke presentatie: binnen
+één gelokaliseerde relatiegroep mag een gerelateerde entity maar eenmaal
+voorkomen, ook wanneer twee verschillend geschreven relaties anders tot
+dezelfde zichtbare verwijzing zouden leiden.
 
 ### Metadata en tijd
 

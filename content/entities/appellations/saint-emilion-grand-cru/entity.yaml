@@ -13,7 +13,6 @@ locales:
   en: overview.en.md
 relations:
   - { type: part_of, target: region.bordeaux }
-  - { type: related_to, target: appellation.saint-emilion }
   - { type: related_to, target: classification.saint-emilion }
   - { type: important_grape, target: grape.merlot }
   - { type: important_grape, target: grape.cabernet-franc }

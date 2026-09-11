@@ -12,15 +12,12 @@ locales:
   nl: overview.nl.md
   en: overview.en.md
 relations:
-  - { type: related_to, target: grape.cabernet-sauvignon }
   - { type: related_to, target: grape.savagnin }
   - { type: related_to, target: grape.semillon }
   - { type: related_to, target: grape.sauvignon-gris }
   - { type: associated_with, target: region.bordeaux }
   - { type: associated_with, target: region.loire-valley }
   - { type: associated_with, target: region.marlborough }
-  - { type: associated_with, target: appellation.sancerre }
-  - { type: associated_with, target: appellation.pouilly-fume }
   - { type: associated_with, target: appellation.pessac-leognan }
   - { type: associated_with, target: appellation.sauternes }
   - { type: related_to, target: concept.acidity }

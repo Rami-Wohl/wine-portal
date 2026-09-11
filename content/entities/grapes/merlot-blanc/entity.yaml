@@ -13,7 +13,6 @@ locales:
   en: overview.en.md
 relations:
   - { type: related_to, target: grape.merlot }
-  - { type: related_to, target: grape.folle-blanche }
 assertions: []
 source_refs: [source.boursiquot-merlot-parentage-2009]
 depth: foundation

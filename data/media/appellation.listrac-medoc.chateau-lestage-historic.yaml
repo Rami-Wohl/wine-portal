@@ -1,0 +1,24 @@
+id: media.appellation.listrac-medoc.chateau-lestage-historic
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/listrac-medoc/chateau-lestage-historic.jpg
+mime_type: image/jpeg
+width: 990
+height: 631
+checksum_sha256: e9e4c338481476365a19f3936ca44d97ee1f1a2b9b1336090a85a1bb751745be
+alt:
+  nl: Historische ansichtkaart van Château Lestage in Listrac-Médoc
+  en: Historic postcard of Château Lestage in Listrac-Médoc
+caption:
+  nl: Château Lestage rond 1900–1920. De ansichtkaart toont hoe château en herkomstnaam al vroeg samen een handelsidentiteit vormden; zij vertegenwoordigt niet alle producenten van Listrac-Médoc.
+  en: Château Lestage around 1900–1920. The postcard shows how estate and place name already formed a trading identity; it does not represent every Listrac-Médoc producer.
+rights:
+  status: public-domain
+  creator: Marcel Delboy
+  source_url: https://commons.wikimedia.org/wiki/File:Listrac-M%C3%A9doc_-_ch%C3%A2teau_Lestage_1.jpg
+  license_name: Public Domain Mark 1.0
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  credit_line: Marcel Delboy via Wikimedia Commons, public domain
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

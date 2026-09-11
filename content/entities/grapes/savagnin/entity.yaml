@@ -11,7 +11,6 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations:
-  - { type: related_to, target: grape.sauvignon-blanc }
+relations: []
 assertions: []
 source_refs: []

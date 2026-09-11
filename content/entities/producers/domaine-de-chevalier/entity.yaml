@@ -1,0 +1,21 @@
+id: producer.domaine-de-chevalier
+type: producer
+status: draft
+canonical_name: Domaine de Chevalier
+names:
+  nl: Domaine de Chevalier
+  en: Domaine de Chevalier
+slugs:
+  nl: domaine-de-chevalier
+  en: domaine-de-chevalier
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.pessac-leognan
+  anchor: producent-domaine-de-chevalier
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+assertions: []
+source_refs: []

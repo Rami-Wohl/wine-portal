@@ -81,6 +81,27 @@ historische deel van de backlog. Bij een gedeeltelijke oplossing blijft de
 actie open of wordt het resterende werk als een nieuw, gekoppeld actie-ID
 vastgelegd.
 
+## Vaste controle van gerelateerde onderwerpen
+
+Neem bij iedere contentronde met nieuwe of gewijzigde relaties de afgeleide
+blokken ‘Gerelateerde onderwerpen’ mee in de kwaliteitscontrole. Beoordeel niet
+alleen de regels in het gewijzigde `entity.yaml`, maar de combinatie van forward
+en automatisch afgeleide inverse relaties voor alle betrokken entities.
+
+De minimale acceptatiecriteria zijn:
+
+- iedere verbinding is canoniek eenmaal opgeslagen;
+- dezelfde targetentity verschijnt binnen een zichtbare, gelokaliseerde groep
+  maximaal eenmaal;
+- de groepsnaam beschrijft de relatie inhoudelijk juist;
+- `npm run content:check` slaagt, omdat deze check ook spiegelrelaties en andere
+  duplicaten controleert die pas na afleiding zichtbaar worden.
+
+Controleer bij een gerichte correctie daarnaast de volledige relatiegrafiek,
+niet alleen de pagina waarop de doublure als eerste is opgemerkt. Leg bredere
+bevindingen volgens de normale review- en backlogstructuur vast wanneer ze niet
+binnen dezelfde ronde veilig kunnen worden opgelost.
+
 ## Prioriteit en categorieën
 
 Prioriteit drukt gevolg en urgentie uit, niet de geschatte hoeveelheid werk:

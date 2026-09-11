@@ -1,0 +1,386 @@
+package_id: appellation.pessac-leognan
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - {
+      key: identity-and-orientation,
+      disposition: on-page,
+      block_ids: [ligging-en-afbakening, stad-is-ook-terroircontext],
+      target_ids: [appellation.graves, region.bordeaux],
+      completeness_questions:
+        [Kan de lezer de stedelijke ligging en juridische scheiding van Graves plaatsen?],
+      layers:
+        {
+          foundation: [Plaats de tien gemeenten aan de stadsrand.],
+          intermediate: [Leg verstedelijking als context uit.],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Ligging en identiteit.],
+              source_refs: [source.inao-pessac-leognan-specification-2024],
+            },
+          specific_claims: [],
+        },
+      review: &complete { outline: complete, nl: complete, en: complete },
+    }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, een-nieuwe-naam-voor-oude-wijngaarden]
+    target_ids: [producer.chateau-haut-brion, appellation.graves]
+    completeness_questions: [Verbindt de tekst vroege handel Haut-Brion stedelijke druk en 1987?]
+    layers:
+      {
+        foundation: [Vertel de oude Gravesgeschiedenis en zelfstandige AOC.],
+        intermediate: [],
+        advanced: [Scheid oude wijngaarden van nieuwe herkomstnaam.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.graves-winegrowers-history, source.msha-bordeaux-wine-history],
+        }
+      specific_claims:
+        [
+          {
+            claim: Pessac-Léognan werd in 1987 erkend.,
+            status: supported,
+            source_refs: [source.inao-pessac-leognan-rouge],
+          },
+        ]
+    review: *complete
+  - {
+      key: landscape-climate-and-soils,
+      disposition: on-page,
+      block_ids: [landschap-klimaat-en-bodem, rook-is-geen-steen],
+      target_ids: [concept.terroir],
+      completeness_questions:
+        [Zijn terrassen ondergrond water en rokerige associaties zonder determinisme uitgelegd?],
+      layers:
+        {
+          foundation: [Maak grindeilanden tussen stad en bos voorstelbaar.],
+          intermediate: [],
+          advanced: [Begrens rokerige proefassociaties.],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Geologie klimaat en water.],
+              source_refs:
+                [source.inao-pessac-leognan-specification-2024, source.brgm-bordeaux-geology-2022],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: grape-varieties,
+      disposition: on-page,
+      block_ids: [druivenrassen, twee-kleuren-een-perceelstrategie],
+      target_ids:
+        [
+          grape.cabernet-sauvignon,
+          grape.merlot,
+          grape.cabernet-franc,
+          grape.sauvignon-blanc,
+          grape.semillon,
+          grape.muscadelle,
+        ],
+      completeness_questions: [Zijn beide kleuren en hun perceel- en oogstlogica compleet?],
+      layers:
+        {
+          foundation: [Introduceer rode en witte hoofdrassen.],
+          intermediate: [Leg de twee oogstkalenders uit.],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Druivenrollen.],
+              source_refs:
+                [source.inao-pessac-leognan-specification-2024, source.inao-pessac-leognan-blanc],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: viticulture-and-winemaking,
+      disposition: on-page,
+      block_ids: [wijnbouw-en-wijnmaken],
+      target_ids: [concept.assemblage, concept.elevage],
+      completeness_questions: [Zijn rode en witte kelderroutes compleet zonder houtrecept?],
+      layers:
+        {
+          foundation: [Volg beide kleuren door de kelder.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Wijnmaken per kleur.],
+              source_refs: [source.inao-pessac-leognan-specification-2024],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, actuele-drempels]
+    target_ids: [concept.aop]
+    completeness_questions: [Zijn kleurgebonden regels en actuele rechtsbasis correct?]
+    layers:
+      {
+        foundation: [Leg rood en droog wit onder één AOP uit.],
+        intermediate: [],
+        advanced: [Geef rendementen en status 2026.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Productiedossier.],
+            source_refs: [source.inao-pessac-leognan-specification-2024],
+          },
+        specific_claims: [],
+      }
+    review: *complete
+  - {
+      key: classification-and-producers,
+      disposition: on-page,
+      block_ids:
+        [
+          classificatie-en-producenten,
+          classificatie-volgt-de-wijn,
+          producent-la-mission-haut-brion,
+          producent-haut-bailly,
+          producent-smith-haut-lafitte,
+          producent-domaine-de-chevalier,
+          producent-carbonnieux,
+        ],
+      target_ids:
+        [
+          classification.graves,
+          classification.bordeaux-1855,
+          producer.chateau-haut-brion,
+          producer.chateau-la-mission-haut-brion,
+          producer.chateau-haut-bailly,
+          producer.chateau-smith-haut-lafitte,
+          producer.domaine-de-chevalier,
+          producer.chateau-carbonnieux,
+        ],
+      completeness_questions:
+        [Zijn classificaties kleurkoppeling en producenten als oriëntatie compleet?],
+      layers:
+        {
+          foundation: [Plaats de Gravesclassificatie en Haut-Brion.],
+          intermediate: [Leg kleurgebonden klassering uit en profileer vijf contrasterende bakens.],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Classificatie en producenten.],
+              source_refs:
+                [source.pessac-leognan-classified-growths, source.gcc1855-classification-overview],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: style-and-glass-context,
+      disposition: on-page,
+      block_ids: [wijnstijl-en-flesontwikkeling],
+      target_ids: [concept.vintage],
+      completeness_questions: [Hebben rood en wit een stijlbandbreedte en ontwikkelingsbeeld?],
+      layers:
+        {
+          foundation: [Beschrijf beide kleuren zonder smaakgarantie.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Stijl en ontwikkeling.],
+              source_refs: [source.inao-pessac-leognan-rouge, source.inao-pessac-leognan-blanc],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: labels-and-buying,
+      disposition: on-page,
+      block_ids: [etiket-en-aankoop],
+      target_ids: [classification.graves],
+      completeness_questions:
+        [Kan de lezer kleur cuvée classificatie en historische etiketten scheiden?],
+      layers:
+        {
+          foundation: [Lees herkomst kleur en classificatie apart.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            { topics: [Etiketlezen.], source_refs: [source.dgccrf-wine-labels-2025] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: modern-developments,
+      disposition: on-page,
+      block_ids: [hedendaagse-ontwikkelingen],
+      target_ids: [],
+      completeness_questions: [Zijn stedelijke druk en klimaatadaptatie samen behandeld?],
+      layers:
+        {
+          foundation: [Leg de dubbele hedendaagse opgave uit.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Stad en klimaatadaptatie.],
+              source_refs: [source.inrae-bordeaux-climate-adaptation],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: visuals,
+      disposition: on-page,
+      block_ids: [wijngaard-haut-brion],
+      target_ids: [producer.chateau-haut-brion],
+      completeness_questions:
+        [Maakt het beeld de stedelijke wijngaard zichtbaar zonder één-domeinclaim?],
+      layers:
+        {
+          foundation: [Toon wijnstokken en stadsrand samen.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis: { topics: [Documentair beeld.], source_refs: [] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: child-knowledge,
+      disposition: child-entity,
+      block_ids: [],
+      target_ids: [appellation.graves, classification.graves, producer.chateau-haut-brion],
+      completeness_questions: [Zijn herkomst classificatie en iconisch domein duurzaam ontsloten?],
+      layers:
+        {
+          foundation: [Ontsluit Graves classificatie en Haut-Brion.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+entity_dependencies:
+  - {
+      id: producer.chateau-haut-brion,
+      names: { nl: Château Haut-Brion, en: Château Haut-Brion },
+      slugs: { nl: chateau-haut-brion, en: chateau-haut-brion },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
+  - {
+      id: producer.chateau-la-mission-haut-brion,
+      names: { nl: Château La Mission Haut-Brion, en: Château La Mission Haut-Brion },
+      slugs: { nl: chateau-la-mission-haut-brion, en: chateau-la-mission-haut-brion },
+      disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pessac-leognan,
+          anchor: producent-la-mission-haut-brion,
+        },
+    }
+  - {
+      id: producer.chateau-haut-bailly,
+      names: { nl: Château Haut-Bailly, en: Château Haut-Bailly },
+      slugs: { nl: chateau-haut-bailly, en: chateau-haut-bailly },
+      disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pessac-leognan,
+          anchor: producent-haut-bailly,
+        },
+    }
+  - {
+      id: producer.chateau-smith-haut-lafitte,
+      names: { nl: Château Smith Haut Lafitte, en: Château Smith Haut Lafitte },
+      slugs: { nl: chateau-smith-haut-lafitte, en: chateau-smith-haut-lafitte },
+      disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pessac-leognan,
+          anchor: producent-smith-haut-lafitte,
+        },
+    }
+  - {
+      id: producer.domaine-de-chevalier,
+      names: { nl: Domaine de Chevalier, en: Domaine de Chevalier },
+      slugs: { nl: domaine-de-chevalier, en: domaine-de-chevalier },
+      disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pessac-leognan,
+          anchor: producent-domaine-de-chevalier,
+        },
+    }
+  - {
+      id: producer.chateau-carbonnieux,
+      names: { nl: Château Carbonnieux, en: Château Carbonnieux },
+      slugs: { nl: chateau-carbonnieux, en: chateau-carbonnieux },
+      disposition: link,
+      presentation:
+        {
+          mode: collection-profile,
+          owner: appellation.pessac-leognan,
+          anchor: producent-carbonnieux,
+        },
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

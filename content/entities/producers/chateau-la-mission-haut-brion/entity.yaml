@@ -1,0 +1,21 @@
+id: producer.chateau-la-mission-haut-brion
+type: producer
+status: draft
+canonical_name: Château La Mission Haut-Brion
+names:
+  nl: Château La Mission Haut-Brion
+  en: Château La Mission Haut-Brion
+slugs:
+  nl: chateau-la-mission-haut-brion
+  en: chateau-la-mission-haut-brion
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.pessac-leognan
+  anchor: producent-la-mission-haut-brion
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+assertions: []
+source_refs: []

@@ -10,6 +10,7 @@ import {
   GRAPE_OVERVIEW_DIMENSIONS,
   LOCALES,
   REGION_OVERVIEW_DIMENSIONS,
+  SYMMETRIC_RELATION_TYPES,
   contentPlanSchema,
   entitySchema,
   mediaAssetSchema,
@@ -29,6 +30,7 @@ import {
   type ResolvedRelation,
   entityPresentationMode,
 } from "../../src/content/model";
+import { relationLabel } from "../../src/content/relations";
 
 const CONTENT_PLAN_REQUIREMENTS = {
   "region-overview": {
@@ -436,6 +438,71 @@ function findDuplicateRelations(record: LoadedRecord<Entity>, issues: string[]):
   }
 }
 
+const symmetricRelationTypes = new Set<Entity["relations"][number]["type"]>(
+  SYMMETRIC_RELATION_TYPES,
+);
+
+function hasPlannedRelation(
+  records: Array<LoadedRecord<Entity>>,
+  source: LoadedRecord<Entity>,
+  targetId: string,
+): boolean {
+  if (source.value.relations.some((relation) => relation.target === targetId)) return true;
+
+  return records.some(
+    (record) =>
+      record.value.id === targetId &&
+      record.value.relations.some(
+        (relation) =>
+          relation.target === source.value.id && symmetricRelationTypes.has(relation.type),
+      ),
+  );
+}
+
+function validateRenderedRelationUniqueness(
+  records: Array<LoadedRecord<Entity>>,
+  issues: string[],
+): void {
+  for (const locale of LOCALES) {
+    const firstByRenderedItem = new Map<
+      string,
+      { file: string; type: Entity["relations"][number]["type"] }
+    >();
+
+    for (const record of records) {
+      for (const relation of record.value.relations) {
+        const appearances = [
+          {
+            entity: record.value.id,
+            related: relation.target,
+            label: relationLabel(relation.type, "forward", locale),
+          },
+          {
+            entity: relation.target,
+            related: record.value.id,
+            label: relationLabel(relation.type, "inverse", locale),
+          },
+        ];
+
+        for (const appearance of appearances) {
+          const key = JSON.stringify([appearance.entity, appearance.label, appearance.related]);
+          const first = firstByRenderedItem.get(key);
+          if (first) {
+            issues.push(
+              `${record.file}: Related topics for '${appearance.entity}' would list ` +
+                `'${appearance.related}' more than once under '${appearance.label}' (${locale}); ` +
+                `the overlapping '${first.type}' relation is declared in ${first.file}. ` +
+                "Store the connection once and let inverse relations be derived.",
+            );
+          } else {
+            firstByRenderedItem.set(key, { file: record.file, type: relation.type });
+          }
+        }
+      }
+    }
+  }
+}
+
 function validateContentPlans(
   planRecords: Array<LoadedRecord<ContentPlan>>,
   entityRecords: Array<LoadedRecord<Entity>>,
@@ -675,7 +742,7 @@ function validateContentPlans(
       }
       if (
         (dependency.disposition === "relation" || dependency.disposition === "link-and-relation") &&
-        !entityRecord.value.relations.some((relation) => relation.target === dependency.id)
+        !hasPlannedRelation(entityRecords, entityRecord, dependency.id)
       ) {
         issues.push(
           `${planRecord.file}: dependency '${dependency.id}' requires an explicit relation`,
@@ -834,6 +901,8 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     entityContentMap.set(record.value.id, parsed.content);
     entityMentionMap.set(record.value.id, parsed.mentions);
   }
+
+  validateRenderedRelationUniqueness(entityRecords, issues);
 
   for (const record of narrativeRecords) {
     const markdownByLocale = await validateLocaleFiles(record, issues);

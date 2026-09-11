@@ -1,0 +1,21 @@
+id: producer.chateau-haut-bailly
+type: producer
+status: draft
+canonical_name: Château Haut-Bailly
+names:
+  nl: Château Haut-Bailly
+  en: Château Haut-Bailly
+slugs:
+  nl: chateau-haut-bailly
+  en: chateau-haut-bailly
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: collection-profile
+  owner: appellation.pessac-leognan
+  anchor: producent-haut-bailly
+relations:
+  - { type: located_in, target: appellation.pessac-leognan }
+assertions: []
+source_refs: []

@@ -1,0 +1,24 @@
+id: media.appellation.graves.chateau-de-portets
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/graves/chateau-de-portets.jpg
+mime_type: image/jpeg
+width: 2576
+height: 1932
+checksum_sha256: a88f833218a002254b61f9e87251e31367e853fcebebd3b71565ef0850b71b84
+alt:
+  nl: Binnenplaats en gebouwen van Château de Portets in de Graves
+  en: Courtyard and buildings of Château de Portets in Graves
+caption:
+  nl: Château de Portets ligt in het zuidelijke deel van de Graves. Het beeld geeft een menselijk anker aan de streek, maar zegt op zichzelf niets over alle bodems, wijnkleuren of producenten.
+  en: Château de Portets lies in the southern Graves. The image gives the region a human anchor, but by itself says nothing about every soil, wine colour or producer.
+rights:
+  status: open-licensed
+  creator: Henry Salomé
+  source_url: https://commons.wikimedia.org/wiki/File:Portets_Ch%C3%A2teau.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Henry Salomé via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file used without crop or editorial colour alteration.

@@ -36,6 +36,12 @@ export const RELATION_TYPES = [
   "scope",
 ] as const;
 
+export const SYMMETRIC_RELATION_TYPES = [
+  "associated_with",
+  "related_to",
+  "contrasts_with",
+] as const satisfies readonly (typeof RELATION_TYPES)[number][];
+
 export const LOCALES = ["nl", "en"] as const;
 export const DEPTHS = ["foundation", "intermediate", "advanced", "specialist"] as const;
 export const CONTENT_BLOCK_TYPES = [

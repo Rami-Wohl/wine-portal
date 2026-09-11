@@ -1,0 +1,295 @@
+package_id: appellation.graves
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - {
+      key: identity-and-orientation,
+      disposition: on-page,
+      block_ids: [ligging-en-afbakening, drie-betekenissen-een-naam],
+      target_ids: [appellation.pessac-leognan, region.bordeaux],
+      completeness_questions: [Kan de lezer bodem historische streek en huidige AOP onderscheiden?],
+      layers:
+        {
+          foundation: [Plaats de huidige Graves ten zuiden van Pessac-Léognan.],
+          intermediate: [Scheid de drie betekenissen.],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Ligging en identiteit.],
+              source_refs: [source.inao-graves-overview, source.inao-graves-specification-2025],
+            },
+          specific_claims: [],
+        },
+      review: &complete { outline: complete, nl: complete, en: complete },
+    }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, rood-wit-en-een-veranderende-markt]
+    target_ids: [concept.phylloxera]
+    completeness_questions: [Verbindt de tekst middeleeuwse handel domeinen crises kleuren en AOC?]
+    layers:
+      {
+        foundation: [Vertel waarom Graves vroeg het handelscentrum was.],
+        intermediate: [],
+        advanced: [Nuanceer historische kleurcategorieën.],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: [Historische ontwikkeling.],
+          source_refs: [source.graves-winegrowers-history, source.msha-bordeaux-wine-history],
+        }
+      specific_claims:
+        [
+          {
+            claim: Graves werd in 1937 als AOC erkend.,
+            status: supported,
+            source_refs: [source.inao-graves-specification-2025],
+          },
+        ]
+    review: *complete
+  - {
+      key: landscape-climate-and-soils,
+      disposition: on-page,
+      block_ids: [landschap-klimaat-en-bodem, steen-maakt-geen-smaak],
+      target_ids: [concept.terroir, concept.vintage],
+      completeness_questions:
+        [Zijn rivierterrassen ondergrond water en klimaat zonder mineraliteitsmythe uitgelegd?],
+      layers:
+        {
+          foundation: [Maak de terrasmozaïek voorstelbaar.],
+          intermediate: [Leg uit hoe steen indirect werkt.],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Geologie klimaat en water.],
+              source_refs: [source.graves-winegrowers-terroir, source.brgm-bordeaux-geology-2022],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: grape-varieties,
+      disposition: on-page,
+      block_ids: [druivenrassen, wit-is-geen-bijproduct],
+      target_ids:
+        [
+          grape.merlot,
+          grape.cabernet-sauvignon,
+          grape.cabernet-franc,
+          grape.semillon,
+          grape.sauvignon-blanc,
+          grape.muscadelle,
+        ],
+      completeness_questions:
+        [Zijn rode en witte rassen en hun verschillende oogstlogica compleet?],
+      layers:
+        {
+          foundation: [Introduceer beide druivenpaletten.],
+          intermediate: [Geef droog wit een eigen productielogica.],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Druivenrollen.],
+              source_refs: [source.inao-graves-specification-2025, source.graves-winegrowers-wines],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: viticulture-and-winemaking,
+      disposition: on-page,
+      block_ids: [wijnbouw-en-wijnmaken],
+      target_ids: [concept.assemblage, concept.elevage],
+      completeness_questions: [Volgt de lezer de afzonderlijke rode en witte kelderroutes?],
+      layers:
+        {
+          foundation: [Leg beide vinificatieroutes uit.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Wijnmaken per kleur.],
+              source_refs: [source.inao-graves-specification-2025],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, verschillende-rendementen]
+    target_ids: [appellation.graves-superieures, concept.aop]
+    completeness_questions: [Zijn droog Graves en zoet Graves Supérieures helder gescheiden?]
+    layers:
+      {
+        foundation: [Leg rood en droog wit tegenover Graves Supérieures uit.],
+        intermediate: [],
+        advanced: [Geef kleurgebonden rendementen.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Productiedossier.], source_refs: [source.inao-graves-specification-2025] },
+        specific_claims: [],
+      }
+    review: *complete
+  - {
+      key: classification-and-producers,
+      disposition: on-page,
+      block_ids: [classificatie-en-producenten],
+      target_ids: [classification.graves, appellation.pessac-leognan],
+      completeness_questions: [Is duidelijk waarom alle crus classés nu in Pessac-Léognan liggen?],
+      layers:
+        {
+          foundation: [Plaats de classificatie historisch en juridisch.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Classificatie en producenten.],
+              source_refs: [source.pessac-leognan-classified-growths],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: style-and-glass-context,
+      disposition: on-page,
+      block_ids: [wijnstijl-en-flesontwikkeling],
+      target_ids: [concept.vintage],
+      completeness_questions: [Hebben rood en wit beide een bandbreedte en ontwikkelingsbeeld?],
+      layers:
+        {
+          foundation: [Beschrijf beide kleuren zonder smaakgarantie.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            { topics: [Stijl en ontwikkeling.], source_refs: [source.graves-winegrowers-wines] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: labels-and-buying,
+      disposition: on-page,
+      block_ids: [etiket-en-aankoop],
+      target_ids: [appellation.graves-superieures, appellation.pessac-leognan],
+      completeness_questions: [Kan de lezer kleur appellation en historische naam scheiden?],
+      layers:
+        {
+          foundation: [Lees de volledige herkomstnaam.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            { topics: [Etiketlezen.], source_refs: [source.dgccrf-wine-labels-2025] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: modern-developments,
+      disposition: on-page,
+      block_ids: [hedendaagse-ontwikkelingen],
+      target_ids: [],
+      completeness_questions: [Zijn de verschillende oogstvensters en klimaatrisico's behandeld?],
+      layers:
+        {
+          foundation: [Leg adaptatie over twee kleuren uit.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis:
+            {
+              topics: [Klimaatadaptatie.],
+              source_refs: [source.inrae-bordeaux-climate-adaptation],
+            },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: visuals,
+      disposition: on-page,
+      block_ids: [chateau-de-portets],
+      target_ids: [],
+      completeness_questions: [Geeft het beeld een zuidelijk Graves-anker zonder totaalclaim?],
+      layers:
+        {
+          foundation: [Toon een domein in Portets.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis: { topics: [Documentair beeld.], source_refs: [] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+  - {
+      key: child-knowledge,
+      disposition: child-entity,
+      block_ids: [],
+      target_ids:
+        [appellation.pessac-leognan, appellation.graves-superieures, classification.graves],
+      completeness_questions: [Zijn aangrenzende herkomst en classificatie duurzaam ontsloten?],
+      layers:
+        {
+          foundation: [Ontsluit Pessac-Léognan Graves Supérieures en classificatie.],
+          intermediate: [],
+          advanced: [],
+          specialist: [],
+        },
+      evidence:
+        {
+          general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] },
+          specific_claims: [],
+        },
+      review: *complete,
+    }
+entity_dependencies:
+  - {
+      id: appellation.graves-superieures,
+      names: { nl: Graves Supérieures, en: Graves Supérieures },
+      slugs: { nl: graves-superieures, en: graves-superieures },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
