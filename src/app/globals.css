@@ -1140,6 +1140,9 @@ h3 {
   margin-bottom: 0.8rem;
   font-size: clamp(1.3rem, 2.5vw, 1.7rem);
 }
+.content-block-detail:is(.content-depth-intermediate, .content-depth-advanced) h3 {
+  display: none;
+}
 .content-block:target {
   outline: 2px solid color-mix(in srgb, var(--brand) 45%, transparent);
   outline-offset: 10px;

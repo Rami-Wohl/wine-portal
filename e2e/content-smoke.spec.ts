@@ -165,18 +165,19 @@ test("knowledge depth progressively reveals additional Bordeaux content", async 
   await expect(advancedBlock).toBeHidden();
 
   await depthControl.getByRole("button", { name: "Verdieping" }).click();
-  await expect(intermediateHeading).toBeVisible();
+  await expect(intermediateHeading).toBeHidden();
+  await expect(page.locator("#assemblage-en-elevage")).toBeVisible();
   await expect(advancedBlock).toBeHidden();
 
   await depthControl.getByRole("button", { name: "Gevorderd" }).click();
-  await expect(intermediateHeading).toBeVisible();
+  await expect(intermediateHeading).toBeHidden();
   await expect(advancedBlock).toBeVisible();
   await expect(
     advancedBlock.getByRole("heading", {
       level: 3,
       name: "Grind, klei, kalk — en wat daartussen ligt",
     }),
-  ).toBeVisible();
+  ).toBeHidden();
 
   await depthControl.getByRole("button", { name: "Basis" }).click();
   await expect(intermediateHeading).toBeHidden();
