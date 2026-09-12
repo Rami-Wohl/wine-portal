@@ -1,0 +1,24 @@
+id: media.appellation.blaye-cotes-de-bordeaux.vineyard-from-citadel
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/blaye-cotes-de-bordeaux/vineyard-from-citadel.jpg
+mime_type: image/jpeg
+width: 2048
+height: 1432
+checksum_sha256: 919cc7e09707f06e7624628c8e8e4446464f9ea75a0613283cc1c9d09fea38f4
+alt:
+  nl: Wijngaarden en daken van Blaye gezien vanaf de citadel
+  en: Vineyards and rooftops of Blaye seen from the citadel
+caption:
+  nl: Rond Blaye liggen wijngaarden dicht bij stad, kalksteenhellingen en het brede estuarium.
+  en: Around Blaye, vineyards sit close to the town, limestone slopes and the broad estuary.
+rights:
+  status: open-licensed
+  creator: michael clarke stuff
+  source_url: https://commons.wikimedia.org/wiki/File:Vineyards_in_Blaye,_from_La_Citadelle.jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: michael clarke stuff via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file; no crop or editorial colour alteration.

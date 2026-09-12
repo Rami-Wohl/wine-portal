@@ -1,0 +1,320 @@
+package_id: appellation.cremant-de-bordeaux
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - &identity
+    key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, geen-enkel-terroirprofiel]
+    target_ids: [region.bordeaux, concept.traditional-method]
+    completeness_questions: [Zijn wit rosé brede herkomst en traditionele methode direct duidelijk?]
+    layers:
+      {
+        foundation: [Oriënteer kleur herkomst en methode.],
+        intermediate: [Begrens terroirclaims.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Identiteit en ligging.],
+            source_refs: [source.inao-cremant-bordeaux-specification-2026],
+          },
+        specific_claims: [],
+      }
+    review: &done { outline: complete, nl: complete, en: complete }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: historical-development
+    block_ids: [geschiedenis, cremant-als-beschermde-familie]
+    target_ids: []
+    completeness_questions: [Zijn negentiende-eeuwse praktijk 1943 en 1990 verbonden?]
+    layers:
+      {
+        foundation: [Vertel ontwikkeling en erkenning.],
+        intermediate: [],
+        advanced: [Plaats Crémant als beschermde familie.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Mousserende geschiedenis.],
+            source_refs:
+              [source.inao-cremant-bordeaux-specification-2026, source.msha-bordeaux-wine-history],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: landscape-climate-and-soils
+    block_ids: [landschap-klimaat-en-bodem]
+    target_ids: [region.bordeaux]
+    completeness_questions: [Is de zoektocht naar frisse basiswijn zonder simplificatie uitgelegd?]
+    layers:
+      {
+        foundation: [Verbind klimaat en plukmoment.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Klimaat bodem en zuur.],
+            source_refs: [source.inao-cremant-bordeaux-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: grape-varieties
+    block_ids: [druivenrassen, aanvullende-witte-rassen]
+    target_ids:
+      [
+        grape.semillon,
+        grape.sauvignon-blanc,
+        grape.merlot,
+        grape.cabernet-franc,
+        grape.colombard,
+        grape.ugni-blanc,
+      ]
+    completeness_questions: [Zijn witte blauwe en aanvullende rassen juist gepositioneerd?]
+    layers:
+      {
+        foundation: [Introduceer breed palet en blanc de noirs.],
+        intermediate: [],
+        advanced: [Noem begrensde aanvullende rassen.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Toegestane druiven.],
+            source_refs: [source.inao-cremant-bordeaux-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: viticulture-and-winemaking
+    block_ids: [wijnbouw-en-wijnmaken, persing-en-sapfractie]
+    target_ids:
+      [
+        concept.traditional-method,
+        concept.second-fermentation,
+        concept.autolysis,
+        concept.remuage,
+        concept.disgorgement,
+        concept.dosage,
+      ]
+    completeness_questions: [Kan een basislezer het volledige traditionele-methodetraject volgen?]
+    layers:
+      {
+        foundation: [Leg elke productiestap uit.],
+        intermediate: [Verdiep zachte persing.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Traditionele methode.],
+            source_refs: [source.inao-cremant-bordeaux-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: appellation-rules
+    block_ids: [appellationregels, actuele-termijnen]
+    target_ids: []
+    completeness_questions: [Zijn handoogst flesvergisting druk rijping en rendement compleet?]
+    layers:
+      {
+        foundation: [Leg niet-onderhandelbare methode uit.],
+        intermediate: [],
+        advanced: [Geef termijnen en cijfers.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Actueel productiedossier.],
+            source_refs: [source.inao-cremant-bordeaux-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: classification-and-producers
+    block_ids: [classificatie-en-producenten]
+    target_ids: []
+    completeness_questions: [Is specialisatie belangrijker gemaakt dan châteauprestige?]
+    layers:
+      {
+        foundation: [Leg ontbreken classificatie uit.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Producentenstructuur.], source_refs: [source.inao-cremant-bordeaux-overview] },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: style-and-glass-context
+    block_ids: [wijnstijl-en-flesontwikkeling, serveren-en-combineren]
+    target_ids: []
+    completeness_questions: [Zijn wit rosé mousse autolyse en serveercontext behandeld?]
+    layers:
+      {
+        foundation: [Geef stijlbanden.],
+        intermediate: [Voeg glas en tafel toe.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Stijl en serveren.], source_refs: [source.inao-cremant-bordeaux-overview] },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: labels-and-buying
+    block_ids: [etiket-en-aankoop]
+    target_ids: [concept.dosage]
+    completeness_questions: [Kan de lezer kleur zoetheid en disgorgementinformatie duiden?]
+    layers:
+      {
+        foundation: [Lees appellation kleur en zoetheid.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Etiket en aankoop.],
+            source_refs: [source.inao-cremant-bordeaux-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: modern-developments
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions: [Zijn zuurbehoud en positionering als hedendaagse opgaven zichtbaar?]
+    layers:
+      {
+        foundation: [Plaats Crémant in modern Bordeaux.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Klimaat en differentiatie.],
+            source_refs: [source.inao-cremant-bordeaux-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: visuals
+    block_ids: [traditionele-methode]
+    target_ids: []
+    completeness_questions: [Maakt de illustratie de volgorde van de methode direct zichtbaar?]
+    layers:
+      { foundation: [Toon zes productiestappen.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      { general_synthesis: { topics: [Procesillustratie.], source_refs: [] }, specific_claims: [] }
+  - disposition: child-entity
+    review: { outline: complete, nl: complete, en: complete }
+    key: child-knowledge
+    block_ids: []
+    target_ids:
+      [
+        concept.traditional-method,
+        concept.second-fermentation,
+        concept.liqueur-de-tirage,
+        concept.remuage,
+        concept.disgorgement,
+        concept.dosage,
+      ]
+    completeness_questions:
+      [Zijn alle nieuw geïntroduceerde methodebegrippen als entiteit aangelegd?]
+    layers:
+      {
+        foundation: [Link kernbegrippen.],
+        intermediate: [Ontsluit processtappen.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      { general_synthesis: { topics: [Kennisstructuur.], source_refs: [] }, specific_claims: [] }
+entity_dependencies:
+  - {
+      id: concept.traditional-method,
+      names: { nl: Traditionele methode, en: Traditional method },
+      slugs: { nl: traditionele-methode, en: traditional-method },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.second-fermentation,
+      names: { nl: Tweede vergisting, en: Second fermentation },
+      slugs: { nl: tweede-vergisting, en: second-fermentation },
+      disposition: link,
+    }
+  - {
+      id: concept.liqueur-de-tirage,
+      names: { nl: Liqueur de tirage, en: Liqueur de tirage },
+      slugs: { nl: liqueur-de-tirage, en: liqueur-de-tirage },
+      disposition: link,
+    }
+  - {
+      id: concept.remuage,
+      names: { nl: Remuage, en: Riddling },
+      slugs: { nl: remuage, en: riddling },
+      disposition: link,
+    }
+  - {
+      id: concept.disgorgement,
+      names: { nl: Dégorgement, en: Disgorgement },
+      slugs: { nl: degorgement, en: disgorgement },
+      disposition: link,
+    }
+  - {
+      id: concept.dosage,
+      names: { nl: Dosage, en: Dosage },
+      slugs: { nl: dosage, en: dosage },
+      disposition: link,
+    }
+  - {
+      id: grape.colombard,
+      names: { nl: Colombard, en: Colombard },
+      slugs: { nl: colombard, en: colombard },
+      disposition: link,
+    }
+  - {
+      id: grape.ugni-blanc,
+      names: { nl: Ugni Blanc, en: Ugni Blanc },
+      slugs: { nl: ugni-blanc, en: ugni-blanc },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

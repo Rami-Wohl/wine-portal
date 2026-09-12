@@ -1,0 +1,17 @@
+id: concept.second-fermentation
+type: concept
+status: draft
+canonical_name: Second fermentation
+names:
+  nl: Tweede vergisting
+  en: Second fermentation
+slugs:
+  nl: tweede-vergisting
+  en: second-fermentation
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.inao-cremant-bordeaux-specification-2026

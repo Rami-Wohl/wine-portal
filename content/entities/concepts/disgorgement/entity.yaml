@@ -1,0 +1,17 @@
+id: concept.disgorgement
+type: concept
+status: draft
+canonical_name: Disgorgement
+names:
+  nl: Dégorgement
+  en: Disgorgement
+slugs:
+  nl: degorgement
+  en: disgorgement
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.inao-cremant-bordeaux-specification-2026

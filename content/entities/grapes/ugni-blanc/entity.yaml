@@ -1,0 +1,10 @@
+id: grape.ugni-blanc
+type: grape
+status: draft
+canonical_name: Ugni Blanc
+names: { nl: Ugni Blanc, en: Ugni Blanc }
+slugs: { nl: ugni-blanc, en: ugni-blanc }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

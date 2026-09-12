@@ -1,0 +1,268 @@
+package_id: appellation.bordeaux-superieur
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - &identity
+    key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, zelfde-kaart-andere-regels]
+    target_ids: [appellation.bordeaux, region.bordeaux]
+    completeness_questions:
+      [Is Supérieur als juridische categorie en niet als proefscore duidelijk?]
+    layers:
+      {
+        foundation: [Oriënteer kleur herkomst en betekenis.],
+        intermediate: [Vergelijk de juridische route met Bordeaux.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Identiteit en ligging.],
+            source_refs: [source.inao-bordeaux-superieur-specification-2026],
+          },
+        specific_claims: [],
+      }
+    review: &done { outline: complete, nl: complete, en: complete }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: historical-development
+    block_ids: [geschiedenis, geen-eeuwige-kwaliteitsladder]
+    target_ids: []
+    completeness_questions: [Zijn erkenning en veranderende regelgeving historisch geplaatst?]
+    layers:
+      {
+        foundation: [Leg de beschermde concentratiecategorie uit.],
+        intermediate: [],
+        advanced: [Toon dat dossiers veranderen.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Ontwikkeling sinds 1943.],
+            source_refs:
+              [
+                source.inao-bordeaux-superieur-specification-2026,
+                source.msha-bordeaux-wine-history,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: landscape-climate-and-soils
+    block_ids: [landschap-klimaat-en-bodem, rijpheid-is-meer-dan-suiker]
+    target_ids: [region.bordeaux]
+    completeness_questions: [Is de brede bodemvariatie zonder terroirdeterminisme uitgelegd?]
+    layers:
+      {
+        foundation: [Beschrijf de Bordeauxbrede variatie.],
+        intermediate: [Leg rijpheid als meer dan suiker uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Klimaat bodem en rijpheid.],
+            source_refs: [source.inao-bordeaux-superieur-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: grape-varieties
+    block_ids: [druivenrassen, aanpassingsrassen]
+    target_ids:
+      [
+        grape.merlot,
+        grape.cabernet-sauvignon,
+        grape.cabernet-franc,
+        grape.semillon,
+        grape.sauvignon-blanc,
+        grape.muscadelle,
+      ]
+    completeness_questions: [Zijn rode witte en aanpassingsrassen proportioneel behandeld?]
+    layers:
+      {
+        foundation: [Introduceer beide druivenpaletten.],
+        intermediate: [],
+        advanced: [Begrens aanpassingsrassen.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Druiven en rollen.],
+            source_refs: [source.inao-bordeaux-superieur-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: viticulture-and-winemaking
+    block_ids: [wijnbouw-en-wijnmaken, tijd-als-onderdeel-van-de-categorie]
+    target_ids: [concept.assemblage, concept.elevage]
+    completeness_questions: [Zijn rode extractie witte restsuiker en opvoeding begrijpelijk?]
+    layers:
+      {
+        foundation: [Vergelijk rode en witte productie.],
+        intermediate: [Leg tijd voor vrijgave uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Productieroutes.],
+            source_refs: [source.inao-bordeaux-superieur-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: appellation-rules
+    block_ids: [appellationregels, actuele-drempels]
+    target_ids: []
+    completeness_questions:
+      [Zijn onderscheid en actuele drempels volledig maar niet als kwaliteit gepresenteerd?]
+    layers:
+      {
+        foundation: [Leg de drie consumentenverschillen uit.],
+        intermediate: [],
+        advanced: [Geef dichtheid rendement en termijnen.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Actueel productiedossier.],
+            source_refs: [source.inao-bordeaux-superieur-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: classification-and-producers
+    block_ids: [classificatie-en-producenten]
+    target_ids: [classification.bordeaux-1855]
+    completeness_questions: [Is het ontbreken van een officiële châteauhiërarchie duidelijk?]
+    layers:
+      {
+        foundation: [Scheid producentenreputatie en classificatie.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Producentencontext.], source_refs: [source.inao-bordeaux-superieur-overview] },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: style-and-glass-context
+    block_ids: [wijnstijl-en-flesontwikkeling, aan-tafel]
+    target_ids: []
+    completeness_questions: [Zijn rood en zoet wit herkenbaar zonder vaste proefnotitie?]
+    layers:
+      {
+        foundation: [Geef stijlbanden en ontwikkeling.],
+        intermediate: [Voeg tafelcontext toe.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Stijl en serveren.], source_refs: [source.inao-bordeaux-superieur-overview] },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: labels-and-buying
+    block_ids: [etiket-en-aankoop]
+    target_ids: [appellation.bordeaux]
+    completeness_questions: [Kan de lezer Supérieur en de witte zoetheid juist interpreteren?]
+    layers:
+      {
+        foundation: [Lees naam kleur maker en jaar.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Etiket en aankoop.],
+            source_refs: [source.inao-bordeaux-superieur-specification-2026],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: modern-developments
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions: [Zijn rijpheid hitte droogte en balans verbonden?]
+    layers:
+      {
+        foundation: [Herdefinieer ambitie in een warmer klimaat.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Klimaatadaptatie.],
+            source_refs:
+              [
+                source.inrae-bordeaux-climate-adaptation,
+                source.inao-bordeaux-superieur-specification-2026,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: visuals
+    block_ids: [regels-in-een-oogopslag]
+    target_ids: []
+    completeness_questions:
+      [Verduidelijkt het beeld het juridische verschil zonder kwaliteitsladder?]
+    layers:
+      {
+        foundation: [Vergelijk de categorieën schematisch.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis: { topics: [Educatieve vergelijking.], source_refs: [] },
+        specific_claims: [],
+      }
+  - disposition: child-entity
+    review: { outline: complete, nl: complete, en: complete }
+    key: child-knowledge
+    block_ids: []
+    target_ids: [appellation.bordeaux, region.bordeaux]
+    completeness_questions: [Zijn bovenliggende herkomst en contrast duurzaam gekoppeld?]
+    layers:
+      { foundation: [Link Bordeaux en regio.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      { general_synthesis: { topics: [Kennisstructuur.], source_refs: [] }, specific_claims: [] }
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

@@ -1,0 +1,266 @@
+package_id: appellation.cotes-de-bourg
+archetype: appellation-overview
+schema_version: 2
+coverage:
+  - &b
+    key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, drie-namen-een-aop]
+    target_ids: [region.blayais-bourgeais, region.bordeaux, appellation.blaye-cotes-de-bordeaux]
+    completeness_questions: [Is Côtes de Bourg als zelfstandige AOP met drie namen duidelijk?]
+    layers:
+      {
+        foundation: [Oriënteer plaats kleuren en identiteit.],
+        intermediate: [Leg de drie gelijkwaardige namen uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Identiteit en ligging.],
+            source_refs: [source.inao-cotes-bourg-specification-2023],
+          },
+        specific_claims: [],
+      }
+    review: &done { outline: complete, nl: complete, en: complete }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: historical-development
+    block_ids: [geschiedenis, oude-ranglijsten-geen-huidige-classificatie]
+    target_ids: []
+    completeness_questions:
+      [Zijn haven handel rode en witte erkenning plus historische ranglijsten juist?]
+    layers:
+      {
+        foundation: [Vertel haven- en erkenningsgeschiedenis.],
+        intermediate: [],
+        advanced: [Begrens oude ranglijsten.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Historische ontwikkeling.],
+            source_refs:
+              [source.inao-cotes-bourg-specification-2023, source.msha-bordeaux-wine-history],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: landscape-climate-and-soils
+    block_ids: [landschap-klimaat-en-bodem, de-paleodelta-van-pugnac]
+    target_ids: [region.blayais-bourgeais]
+    completeness_questions: [Zijn reliëf klei kalk leem grind dalen en paleodelta volledig?]
+    layers:
+      {
+        foundation: [Maak het bodemmozaïek voorstelbaar.],
+        intermediate: [],
+        advanced: [Verdiep Pugnac zonder rangclaim.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Landschap klimaat bodem.],
+            source_refs:
+              [
+                source.inao-cotes-bourg-specification-2023,
+                source.gironde-landscape-blayais-libournais,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: grape-varieties
+    block_ids: [druivenrassen, malbec-is-lokaal-maar-niet-verplicht, aanpassingsrassen]
+    target_ids:
+      [
+        grape.merlot,
+        grape.malbec,
+        grape.cabernet-sauvignon,
+        grape.cabernet-franc,
+        grape.sauvignon-blanc,
+        grape.semillon,
+      ]
+    completeness_questions: [Zijn rood wit Malbec en aanpassingsrassen proportioneel behandeld?]
+    layers:
+      {
+        foundation: [Introduceer beide paletten.],
+        intermediate: [Verdiep Malbec zonder verplichting.],
+        advanced: [Begrens aanpassingsrassen.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Druiven en lokale rollen.],
+            source_refs:
+              [source.inao-cotes-bourg-specification-2023, source.cotes-de-bourg-appellation],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: viticulture-and-winemaking
+    block_ids: [wijnbouw-en-wijnmaken, hellingen-vragen-bodembeheer]
+    target_ids: []
+    completeness_questions: [Zijn beide productieroutes en hellingbeheer begrijpelijk?]
+    layers:
+      {
+        foundation: [Vergelijk rood en wit wijnmaken.],
+        intermediate: [Leg bodembedekking en erosie uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Wijnbouw en wijnmaken.],
+            source_refs: [source.inao-cotes-bourg-specification-2023],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: appellation-rules
+    block_ids: [appellationregels, actuele-drempels]
+    target_ids: []
+    completeness_questions: [Zijn zelfstandigheid kleuren dichtheid rendement en vrijgave compleet?]
+    layers:
+      {
+        foundation: [Leg het beschermde kader uit.],
+        intermediate: [],
+        advanced: [Geef actuele cijfers.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Actueel productiedossier.],
+            source_refs: [source.inao-cotes-bourg-specification-2023],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: classification-and-producers
+    block_ids: [classificatie-en-producenten]
+    target_ids: []
+    completeness_questions: [Is ontbreken actuele classificatie en producentenproportie duidelijk?]
+    layers:
+      { foundation: [Scheid reputatie en rang.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Producentencontext.], source_refs: [source.cotes-de-bourg-appellation] },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: style-and-glass-context
+    block_ids: [wijnstijl-en-flesontwikkeling, aan-tafel-en-in-de-kelder]
+    target_ids: []
+    completeness_questions: [Zijn rood wit ontwikkeling serveren en bewaren evenwichtig?]
+    layers:
+      {
+        foundation: [Geef stijlbanden.],
+        intermediate: [Voeg tafel en kelder toe.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Stijl en glas.], source_refs: [source.cotes-de-bourg-appellation] },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: labels-and-buying
+    block_ids: [etiket-en-aankoop]
+    target_ids: [appellation.blaye-cotes-de-bordeaux]
+    completeness_questions:
+      [Kan de lezer drie namen en onafhankelijkheid van Côtes de Bordeaux duiden?]
+    layers:
+      {
+        foundation: [Leer naam kleur maker en jaar lezen.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Etiket en aankoop.],
+            source_refs: [source.inao-cotes-bourg-specification-2023],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: modern-developments
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions: [Zijn eigen stem droog wit klimaat en bodemzorg zichtbaar?]
+    layers:
+      {
+        foundation: [Beschrijf identiteit en klimaataanpassing.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Klimaat en positionering.],
+            source_refs:
+              [
+                source.inrae-bordeaux-climate-adaptation,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: visuals
+    block_ids: [bourg-boven-het-rivierlandschap]
+    target_ids: []
+    completeness_questions: [Toont de foto het reliëf zonder een producent te suggereren?]
+    layers:
+      {
+        foundation: [Toon Bourg en rivierlandschap.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      { general_synthesis: { topics: [Documentair beeld.], source_refs: [] }, specific_claims: [] }
+  - disposition: child-entity
+    review: { outline: complete, nl: complete, en: complete }
+    key: child-knowledge
+    block_ids: []
+    target_ids: [region.blayais-bourgeais, appellation.blaye-cotes-de-bordeaux]
+    completeness_questions: [Zijn streek en naburige appellation duurzaam gekoppeld?]
+    layers: { foundation: [Link streek en buur.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      { general_synthesis: { topics: [Kennisstructuur.], source_refs: [] }, specific_claims: [] }
+entity_dependencies:
+  - {
+      id: grape.colombard,
+      names: { nl: Colombard, en: Colombard },
+      slugs: { nl: colombard, en: colombard },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

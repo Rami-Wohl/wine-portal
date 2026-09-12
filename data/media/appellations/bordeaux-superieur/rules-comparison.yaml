@@ -1,0 +1,22 @@
+id: media.appellation.bordeaux-superieur.rules-comparison
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/bordeaux-superieur/bordeaux-superieur-rules.svg
+mime_type: image/svg+xml
+width: 1600
+height: 900
+checksum_sha256: 718a91f4aad03b169538da82f975af966962172a9473465971f960e4af65cb45
+alt:
+  nl: Schematische vergelijking tussen Bordeaux en Bordeaux Supérieur
+  en: Schematic comparison between Bordeaux and Bordeaux Supérieur
+caption:
+  nl: Bordeaux Supérieur deelt zijn brede herkomst met Bordeaux, maar stelt aanvullende eisen aan onder meer rijpheid, rendement en opvoeding. “Supérieur” is geen proefscore.
+  en: Bordeaux Supérieur shares Bordeaux's broad origin but adds requirements for matters including ripeness, yield and maturation. “Supérieur” is not a tasting score.
+rights:
+  status: owned
+  creator: Oenocademy
+  license_name: Project-owned original SVG
+  credit_line: Oenocademy
+acquired_at: 2026-09-11
+changes: Original educational illustration.

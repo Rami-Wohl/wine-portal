@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 268 entities — 63 active, 205 draft, 0 deprecated.
+**Totaal:** 277 entities — 68 active, 209 draft, 0 deprecated.
 
 **Producentenrecords:** 155 — 17 monografie, 36 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (63)
+## Actief — publiek vindbaar (68)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -16,6 +16,10 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [AOP Entre-deux-Mers](../content/entities/appellations/entre-deux-mers/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.entre-deux-mers` | Ja | `/appellations/entre-deux-mers-aop` | 2026-09-11 |
 | [AOP Médoc](../content/entities/appellations/medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.medoc` | Ja | `/appellations/medoc-aop` | 2026-09-09 |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-08 |
+| [Blaye Côtes de Bordeaux](../content/entities/appellations/blaye-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.blaye-cotes-de-bordeaux` | Ja | `/appellations/blaye-cotes-de-bordeaux` | 2026-09-12 |
+| [Bordeaux Supérieur](../content/entities/appellations/bordeaux-superieur/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux-superieur` | Ja | `/appellations/bordeaux-superieur` | 2026-09-12 |
+| [Côtes de Bourg](../content/entities/appellations/cotes-de-bourg/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bourg` | Ja | `/appellations/cotes-de-bourg` | 2026-09-12 |
+| [Crémant de Bordeaux](../content/entities/appellations/cremant-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cremant-de-bordeaux` | Ja | `/appellations/cremant-de-bordeaux` | 2026-09-12 |
 | [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves` | Ja | `/appellations/graves` | 2026-09-11 |
 | [Graves Supérieures](../content/entities/appellations/graves-superieures/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves-superieures` | Ja | `/appellations/graves-superieures` | 2026-09-11 |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.haut-medoc` | Ja | `/appellations/haut-medoc` | 2026-09-09 |
@@ -70,27 +74,25 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Le Pin](../content/entities/producers/le-pin/entity.yaml) | Producent | Collectieprofiel | `producer.le-pin` | Ja | `/appellations/pomerol#producent-le-pin` | 2026-09-09 |
 | [Petrus](../content/entities/producers/petrus/entity.yaml) | Producent | Monografie | `producer.petrus` | Ja | `/producers/petrus` | 2026-09-09 |
 | [Vieux Château Certan](../content/entities/producers/vieux-chateau-certan/entity.yaml) | Producent | Collectieprofiel | `producer.vieux-chateau-certan` | Ja | `/appellations/pomerol#producent-vieux-chateau-certan` | 2026-09-09 |
+| [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | Zelfstandige pagina | `region.blayais-bourgeais` | Ja | `/regions/blayais-bourgeais` | 2026-09-12 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | Zelfstandige pagina | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | Zelfstandige pagina | `region.entre-deux-mers` | Ja | `/regions/entre-deux-mers` | 2026-09-11 |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | Zelfstandige pagina | `region.graves-sauternais` | Ja | `/regions/graves-sauternais` | 2026-09-11 |
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (205)
+## Draft — nog uit te werken (209)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
 | Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Blaye Côtes de Bordeaux](../content/entities/appellations/blaye-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.blaye-cotes-de-bordeaux` | Nee — reviewroute | `/appellations/blaye-cotes-de-bordeaux` | — |
 | [Bolgheri](../content/entities/appellations/bolgheri/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bolgheri` | Nee — reviewroute | `/appellations/bolgheri` | — |
-| [Bordeaux Supérieur](../content/entities/appellations/bordeaux-superieur/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux-superieur` | Nee — reviewroute | `/appellations/bordeaux-superieur` | — |
 | [Bourgueil](../content/entities/appellations/bourgueil/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bourgueil` | Nee — reviewroute | `/appellations/bourgueil` | — |
 | [Canon-Fronsac](../content/entities/appellations/canon-fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.canon-fronsac` | Nee — reviewroute | `/appellations/canon-fronsac` | — |
 | [Chinon](../content/entities/appellations/chinon/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.chinon` | Nee — reviewroute | `/appellations/chinon` | — |
 | [Coonawarra](../content/entities/appellations/coonawarra/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.coonawarra` | Nee — reviewroute | `/appellations/coonawarra` | — |
-| [Côtes de Bourg](../content/entities/appellations/cotes-de-bourg/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bourg` | Nee — reviewroute | `/appellations/cotes-de-bourg` | — |
-| [Crémant de Bordeaux](../content/entities/appellations/cremant-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cremant-de-bordeaux` | Nee — reviewroute | `/appellations/cremant-de-bordeaux` | — |
+| [Côtes de Bordeaux](../content/entities/appellations/cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bordeaux` | Nee — reviewroute | `/appellations/cotes-de-bordeaux` | — |
 | [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.fronsac` | Nee — reviewroute | `/appellations/fronsac` | — |
 | [Lalande-de-Pomerol](../content/entities/appellations/lalande-de-pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lalande-de-pomerol` | Nee — reviewroute | `/appellations/lalande-de-pomerol` | — |
 | [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lussac-saint-emilion` | Nee — reviewroute | `/appellations/lussac-saint-emilion` | — |
@@ -115,24 +117,31 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Claret](../content/entities/concepts/claret/entity.yaml) | Concept | Zelfstandige pagina | `concept.claret` | Nee — reviewroute | `/concepts/claret` | — |
 | [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | Zelfstandige pagina | `concept.coulure` | Nee — reviewroute | `/concepts/coulure` | — |
 | [Cuvée](../content/entities/concepts/cuvee/entity.yaml) | Concept | Zelfstandige pagina | `concept.cuvee` | Nee — reviewroute | `/concepts/cuvee` | — |
+| [Dégorgement](../content/entities/concepts/disgorgement/entity.yaml) | Concept | Zelfstandige pagina | `concept.disgorgement` | Nee — reviewroute | `/concepts/degorgement` | — |
+| [Dosage](../content/entities/concepts/dosage/entity.yaml) | Concept | Zelfstandige pagina | `concept.dosage` | Nee — reviewroute | `/concepts/dosage` | — |
 | [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Nee — reviewroute | `/concepts/druifluis-phylloxera` | — |
 | [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | Zelfstandige pagina | `concept.elevage` | Nee — reviewroute | `/concepts/elevage` | — |
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | Zelfstandige pagina | `concept.en-primeur` | Nee — reviewroute | `/concepts/en-primeur` | — |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | Zelfstandige pagina | `concept.extraction` | Nee — reviewroute | `/concepts/extractie` | — |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
+| [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Nee — reviewroute | `/concepts/liqueur-de-tirage` | — |
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Nee — reviewroute | `/concepts/malolactische-omzetting` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Nee — reviewroute | `/concepts/negociant` | — |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Nee — reviewroute | `/concepts/onderstam` | — |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Nee — reviewroute | `/concepts/place-de-bordeaux` | — |
+| [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Nee — reviewroute | `/concepts/remuage` | — |
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.maceration` | Nee — reviewroute | `/concepts/schilinweking` | — |
 | [Tannine](../content/entities/concepts/tannin/entity.yaml) | Concept | Zelfstandige pagina | `concept.tannin` | Nee — reviewroute | `/concepts/tannine` | — |
 | [Terroir](../content/entities/concepts/terroir/entity.yaml) | Concept | Zelfstandige pagina | `concept.terroir` | Nee — reviewroute | `/concepts/terroir` | — |
+| [Traditionele methode](../content/entities/concepts/traditional-method/entity.yaml) | Concept | Zelfstandige pagina | `concept.traditional-method` | Nee — reviewroute | `/concepts/traditionele-methode` | — |
+| [Tweede vergisting](../content/entities/concepts/second-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-fermentation` | Nee — reviewroute | `/concepts/tweede-vergisting` | — |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Nee — reviewroute | `/concepts/zuur-in-wijn` | — |
 | [Alvarinho](../content/entities/grapes/alvarinho/entity.yaml) | Druif | Zelfstandige pagina | `grape.alvarinho` | Nee — reviewroute | `/grapes/alvarinho` | — |
 | [Arinarnoa](../content/entities/grapes/arinarnoa/entity.yaml) | Druif | Zelfstandige pagina | `grape.arinarnoa` | Nee — reviewroute | `/grapes/arinarnoa` | — |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | Zelfstandige pagina | `grape.carmenere` | Nee — reviewroute | `/grapes/carmenere` | — |
 | [Castets](../content/entities/grapes/castets/entity.yaml) | Druif | Zelfstandige pagina | `grape.castets` | Nee — reviewroute | `/grapes/castets` | — |
+| [Colombard](../content/entities/grapes/colombard/entity.yaml) | Druif | Zelfstandige pagina | `grape.colombard` | Nee — reviewroute | `/grapes/colombard` | — |
 | [Floréal](../content/entities/grapes/floreal/entity.yaml) | Druif | Zelfstandige pagina | `grape.floreal` | Nee — reviewroute | `/grapes/floreal` | — |
 | [Folle Blanche](../content/entities/grapes/folle-blanche/entity.yaml) | Druif | Zelfstandige pagina | `grape.folle-blanche` | Nee — reviewroute | `/grapes/folle-blanche` | — |
 | [Liliorila](../content/entities/grapes/liliorila/entity.yaml) | Druif | Zelfstandige pagina | `grape.liliorila` | Nee — reviewroute | `/grapes/liliorila` | — |
@@ -147,6 +156,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Savagnin](../content/entities/grapes/savagnin/entity.yaml) | Druif | Zelfstandige pagina | `grape.savagnin` | Nee — reviewroute | `/grapes/savagnin` | — |
 | [Souvignier Gris](../content/entities/grapes/souvignier-gris/entity.yaml) | Druif | Zelfstandige pagina | `grape.souvignier-gris` | Nee — reviewroute | `/grapes/souvignier-gris` | — |
 | [Touriga Nacional](../content/entities/grapes/touriga-nacional/entity.yaml) | Druif | Zelfstandige pagina | `grape.touriga-nacional` | Nee — reviewroute | `/grapes/touriga-nacional` | — |
+| [Ugni Blanc](../content/entities/grapes/ugni-blanc/entity.yaml) | Druif | Zelfstandige pagina | `grape.ugni-blanc` | Nee — reviewroute | `/grapes/ugni-blanc` | — |
 | [Château Badette](../content/entities/producers/chateau-badette/entity.yaml) | Producent | Registervermelding | `producer.chateau-badette` | Nee — reviewroute | `/producers/chateau-badette → gepland: /classifications/classificatie-saint-emilion#producent-chateau-badette` | — |
 | [Château Balestard la Tonnelle](../content/entities/producers/chateau-balestard-la-tonnelle/entity.yaml) | Producent | Registervermelding | `producer.chateau-balestard-la-tonnelle` | Nee — reviewroute | `/producers/chateau-balestard-la-tonnelle → gepland: /classifications/classificatie-saint-emilion#producent-chateau-balestard-la-tonnelle` | — |
 | [Château Barde-Haut](../content/entities/producers/chateau-barde-haut/entity.yaml) | Producent | Registervermelding | `producer.chateau-barde-haut` | Nee — reviewroute | `/producers/chateau-barde-haut → gepland: /classifications/classificatie-saint-emilion#producent-chateau-barde-haut` | — |
@@ -283,7 +293,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Domaine de Chevalier](../content/entities/producers/domaine-de-chevalier/entity.yaml) | Producent | Collectieprofiel | `producer.domaine-de-chevalier` | Nee — reviewroute | `/producers/domaine-de-chevalier → gepland: /appellations/pessac-leognan#producent-domaine-de-chevalier` | — |
 | [La Mondotte](../content/entities/producers/la-mondotte/entity.yaml) | Producent | Collectieprofiel | `producer.la-mondotte` | Nee — reviewroute | `/producers/la-mondotte → gepland: /classifications/classificatie-saint-emilion#producent-la-mondotte` | — |
 | [Lassègue](../content/entities/producers/lassegue/entity.yaml) | Producent | Registervermelding | `producer.lassegue` | Nee — reviewroute | `/producers/lassegue → gepland: /classifications/classificatie-saint-emilion#producent-lassegue` | — |
-| [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | Zelfstandige pagina | `region.blayais-bourgeais` | Nee — reviewroute | `/regions/blayais-bourgeais` | — |
 | [Hunter Valley](../content/entities/regions/hunter-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.hunter-valley` | Nee — reviewroute | `/regions/hunter-valley` | — |
 | [Loirevallei](../content/entities/regions/loire-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.loire-valley` | Nee — reviewroute | `/regions/loirevallei` | — |
 | [Marlborough](../content/entities/regions/marlborough/entity.yaml) | Regio | Zelfstandige pagina | `region.marlborough` | Nee — reviewroute | `/regions/marlborough` | — |

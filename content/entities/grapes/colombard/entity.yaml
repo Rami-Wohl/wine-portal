@@ -1,0 +1,10 @@
+id: grape.colombard
+type: grape
+status: draft
+canonical_name: Colombard
+names: { nl: Colombard, en: Colombard }
+slugs: { nl: colombard, en: colombard }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

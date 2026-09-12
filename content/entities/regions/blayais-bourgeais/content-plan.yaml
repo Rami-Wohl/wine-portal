@@ -1,0 +1,332 @@
+package_id: region.blayais-bourgeais
+archetype: region-overview
+schema_version: 2
+coverage:
+  - &base
+    key: identity-and-orientation
+    disposition: on-page
+    block_ids: [overzicht, twee-kernen-geen-halve-regio]
+    target_ids: [region.bordeaux, appellation.blaye-cotes-de-bordeaux, appellation.cotes-de-bourg]
+    completeness_questions: [Is de streek helder onderscheiden van haar appellations?]
+    layers:
+      {
+        foundation: [Oriënteer Blaye Bourg en rivieren.],
+        intermediate: [Scheid streek en wijnrecht.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Identiteit en ligging.],
+            source_refs: [source.gironde-landscape-blayais-libournais],
+          },
+        specific_claims: [],
+      }
+    review: &done { outline: complete, nl: complete, en: complete }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: historical-development
+    block_ids: [geschiedenis, citadel-en-steengroeven]
+    target_ids: []
+    completeness_questions: [Zijn havens handel citadel groeves ziekte en herstel verbonden?]
+    layers:
+      {
+        foundation: [Vertel rivier- en wijnhistorie.],
+        intermediate: [Plaats citadel en groeves.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Historische ontwikkeling.],
+            source_refs:
+              [source.msha-bordeaux-wine-history, source.gironde-landscape-blayais-libournais],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: landscape-climate-and-soils
+    block_ids: [landschap-klimaat-en-bodem, bourg-heeft-een-eigen-mozaiek]
+    target_ids: []
+    completeness_questions:
+      [Zijn kalk klei reliëf rivieren en variatie zonder determinisme behandeld?]
+    layers:
+      {
+        foundation: [Maak landschap en klimaat voorstelbaar.],
+        intermediate: [],
+        advanced: [Verdiep het Bourgse mozaïek.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Landschap klimaat bodem.],
+            source_refs:
+              [
+                source.gironde-landscape-blayais-libournais,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: wine-families
+    block_ids: [wijnstijlen]
+    target_ids: []
+    completeness_questions: [Zijn rood en droog wit beide zichtbaar?]
+    layers:
+      {
+        foundation: [Introduceer rode en witte wijnfamilies.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Wijnfamilies.],
+            source_refs:
+              [
+                source.inao-cotes-bordeaux-specification-2026,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: grape-varieties
+    block_ids: [druivenrassen]
+    target_ids:
+      [
+        grape.merlot,
+        grape.malbec,
+        grape.cabernet-sauvignon,
+        grape.cabernet-franc,
+        grape.sauvignon-blanc,
+        grape.semillon,
+      ]
+    completeness_questions: [Zijn Merlot Malbec Cabernets en witte rassen proportioneel geplaatst?]
+    layers:
+      {
+        foundation: [Introduceer druiven en rollen.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Druiven.],
+            source_refs:
+              [
+                source.inao-cotes-bordeaux-specification-2026,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: viticulture-and-winemaking
+    block_ids: [wijnbouw-en-wijnmaken]
+    target_ids: []
+    completeness_questions:
+      [Zijn de belangrijkste groei- en productiekeuzes op streekniveau begrensd?]
+    layers:
+      {
+        foundation: [Verbind vocht helling en wijnstijl.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Wijnbouw en productie.],
+            source_refs:
+              [
+                source.inao-cotes-bordeaux-specification-2026,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: appellation-structure
+    block_ids: [appellations]
+    target_ids:
+      [
+        appellation.cotes-de-bordeaux,
+        appellation.blaye-cotes-de-bordeaux,
+        appellation.cotes-de-bourg,
+      ]
+    completeness_questions: [Zijn Blaye binnen Côtes de Bordeaux en onafhankelijk Bourg correct?]
+    layers:
+      {
+        foundation: [Leg beide juridische routes uit.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Appellationstructuur.],
+            source_refs:
+              [
+                source.inao-cotes-bordeaux-specification-2026,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: classification-systems
+    block_ids: [classificaties]
+    target_ids: []
+    completeness_questions: [Is het ontbreken van actuele châteauclassificaties duidelijk?]
+    layers:
+      { foundation: [Scheid reputatie en rang.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Classificatiecontext.],
+            source_refs:
+              [
+                source.inao-cotes-bordeaux-specification-2026,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: trade-and-institutions
+    block_ids: [handel-en-instituties]
+    target_ids: []
+    completeness_questions: [Zijn rivierhandel coöperaties en familiedomeinen aanwezig?]
+    layers:
+      {
+        foundation: [Verbind haven en handel.],
+        intermediate: [Noem producentenstructuren.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Handel en organisatie.], source_refs: [source.msha-bordeaux-wine-history] },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: labels-and-terminology
+    block_ids: [etiketten-en-begrippen]
+    target_ids: [appellation.blaye-cotes-de-bordeaux, appellation.cotes-de-bourg]
+    completeness_questions: [Kan de lezer streek- en flesnamen uit elkaar houden?]
+    layers: { foundation: [Leg terminologie uit.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Namen en etiketten.],
+            source_refs:
+              [
+                source.inao-cotes-bordeaux-specification-2026,
+                source.inao-cotes-bourg-specification-2023,
+              ],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: style-and-glass-context
+    block_ids: [in-het-glas]
+    target_ids: []
+    completeness_questions: [Zijn stijlbanden zonder streekbrede smaakgarantie beschreven?]
+    layers:
+      {
+        foundation: [Geef rood wit en bezoekcontext.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Stijl en bezoek.],
+            source_refs: [source.civb-blaye-cotes-de-bordeaux, source.cotes-de-bourg-appellation],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: modern-developments
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions: [Zijn zichtbaarheid klimaat en lokaal maatwerk behandeld?]
+    layers:
+      { foundation: [Beschrijf actuele opgaven.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Klimaat en positionering.],
+            source_refs: [source.inrae-bordeaux-climate-adaptation],
+          },
+        specific_claims: [],
+      }
+  - disposition: on-page
+    review: { outline: complete, nl: complete, en: complete }
+    key: visuals
+    block_ids: [blaye-stad-en-wijngaard]
+    target_ids: []
+    completeness_questions: [Is het beeld representatief begrensd tot Blaye?]
+    layers:
+      { foundation: [Toon stad wijn en estuarium.], intermediate: [], advanced: [], specialist: [] }
+    evidence:
+      { general_synthesis: { topics: [Documentair beeld.], source_refs: [] }, specific_claims: [] }
+  - disposition: child-entity
+    review: { outline: complete, nl: complete, en: complete }
+    key: child-knowledge
+    block_ids: []
+    target_ids:
+      [
+        appellation.blaye-cotes-de-bordeaux,
+        appellation.cotes-de-bourg,
+        appellation.cotes-de-bordeaux,
+      ]
+    completeness_questions: [Zijn beide appellations en de bovenliggende structuur ontsloten?]
+    layers:
+      {
+        foundation: [Link beide appellations.],
+        intermediate: [Link bovenliggende AOP.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      { general_synthesis: { topics: [Kennisstructuur.], source_refs: [] }, specific_claims: [] }
+entity_dependencies:
+  - {
+      id: appellation.cotes-de-bordeaux,
+      names: { nl: Côtes de Bordeaux, en: Côtes de Bordeaux },
+      slugs: { nl: cotes-de-bordeaux, en: cotes-de-bordeaux },
+      disposition: link,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

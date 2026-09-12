@@ -1,0 +1,18 @@
+id: appellation.cotes-de-bordeaux
+type: appellation
+status: draft
+canonical_name: Côtes de Bordeaux
+names:
+  nl: Côtes de Bordeaux
+  en: Côtes de Bordeaux
+slugs:
+  nl: cotes-de-bordeaux
+  en: cotes-de-bordeaux
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: part_of, target: region.bordeaux }
+assertions: []
+source_refs:
+  - source.inao-cotes-bordeaux-specification-2026

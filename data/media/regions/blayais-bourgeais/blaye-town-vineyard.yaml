@@ -1,0 +1,23 @@
+id: media.region.blayais-bourgeais.blaye-town-vineyard
+kind: photo
+role: documentary
+status: active
+storage_key: regions/blayais-bourgeais/blaye-town-vineyard.jpg
+mime_type: image/jpeg
+width: 2816
+height: 2112
+checksum_sha256: 515e177835d3831c3e67b6e3b5e069f177ce1727a68fdfd26b5c578b38d878ec
+alt:
+  nl: Wijngaard bij de citadel van Blaye met de stad en Gironde in de verte
+  en: Vineyard by the citadel of Blaye with the town and Gironde in the distance
+caption:
+  nl: Vanuit Blaye raken wijngaard, havenstad en estuarium elkaar; het Bourgeais verder zuidwaarts heeft een eigen reliëf en wijnidentiteit.
+  en: At Blaye, vineyard, port town and estuary meet; the Bourgeais farther south has its own relief and wine identity.
+rights:
+  status: public-domain
+  creator: Tangopaso
+  source_url: https://commons.wikimedia.org/wiki/File:La_ville_et_le_vignoble_de_Blaye_depuis_la_citadelle.jpg
+  license_name: Public domain
+  credit_line: Tangopaso via Wikimedia Commons, public domain
+acquired_at: 2026-09-11
+changes: Original Wikimedia file; no crop or editorial colour alteration.

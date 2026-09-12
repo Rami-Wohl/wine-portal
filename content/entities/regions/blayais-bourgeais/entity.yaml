@@ -1,6 +1,6 @@
 id: region.blayais-bourgeais
 type: region
-status: draft
+status: active
 canonical_name: Blayais and Bourgeais
 names:
   nl: Blayais en Bourgeais
@@ -15,4 +15,13 @@ relations:
   - type: part_of
     target: region.bordeaux
 assertions: []
-source_refs: []
+source_refs:
+  - source.gironde-landscape-blayais-libournais
+  - source.inao-cotes-bordeaux-specification-2026
+  - source.inao-cotes-bourg-specification-2023
+  - source.msha-bordeaux-wine-history
+  - source.civb-blaye-cotes-de-bordeaux
+  - source.cotes-de-bourg-appellation
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-12

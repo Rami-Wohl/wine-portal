@@ -1,0 +1,24 @@
+id: media.appellation.cotes-de-bourg.bourg-tower
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/cotes-de-bourg/bourg-tower.jpg
+mime_type: image/jpeg
+width: 4338
+height: 3254
+checksum_sha256: 394a183b30d5ea7ce15575f2a428bb5a23362f55132a8ac0d4f31012c03da30b
+alt:
+  nl: Stenen toren en terras boven het rivierlandschap van Bourg
+  en: Stone tower and terrace above the river landscape of Bourg
+caption:
+  nl: De hoge rand bij Bourg kijkt uit over rivieren en hellingen; het beeld toont het landschap, niet een wijnproducent.
+  en: The high ground at Bourg overlooks rivers and slopes; the image shows the landscape, not a wine producer.
+rights:
+  status: open-licensed
+  creator: Michel BUZE
+  source_url: https://commons.wikimedia.org/wiki/File:Bourg_sur_Gironde_tour.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Michel BUZE via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-11
+changes: Original Wikimedia file; no crop or editorial colour alteration.

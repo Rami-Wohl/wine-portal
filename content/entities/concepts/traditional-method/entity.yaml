@@ -1,0 +1,17 @@
+id: concept.traditional-method
+type: concept
+status: draft
+canonical_name: Traditional method
+names:
+  nl: Traditionele methode
+  en: Traditional method
+slugs:
+  nl: traditionele-methode
+  en: traditional-method
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.inao-cremant-bordeaux-specification-2026

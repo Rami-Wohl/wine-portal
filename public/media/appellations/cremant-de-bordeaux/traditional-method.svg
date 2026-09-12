@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Traditional method production sequence</title>
+  <desc id="desc">Six numbered stages from hand harvest to released sparkling wine.</desc>
+  <rect width="1800" height="900" fill="#f2f0e8"/>
+  <path d="M160 450h1480" stroke="#beb7a6" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <g fill="#476253"><circle cx="180" cy="450" r="94"/><circle cx="468" cy="450" r="94"/><circle cx="756" cy="450" r="94"/><circle cx="1044" cy="450" r="94"/><circle cx="1332" cy="450" r="94"/><circle cx="1620" cy="450" r="94"/></g>
+    <g fill="#fff" font-size="50" font-weight="700"><text x="180" y="468">1</text><text x="468" y="468">2</text><text x="756" y="468">3</text><text x="1044" y="468">4</text><text x="1332" y="468">5</text><text x="1620" y="468">6</text></g>
+    <g fill="#3f3b34" font-size="25" font-weight="600"><text x="180" y="610">HARVEST</text><text x="468" y="610">PRESS</text><text x="756" y="610">TIRAGE</text><text x="1044" y="610">LEES</text><text x="1332" y="610">DISGORGE</text><text x="1620" y="610">RELEASE</text></g>
+    <text x="900" y="150" fill="#3d2724" font-family="Georgia,serif" font-size="54">TRADITIONAL METHOD</text>
+    <text x="900" y="760" fill="#6b655b" font-size="27" letter-spacing="2">THE BUBBLES FORM IN THE BOTTLE</text>
+  </g>
+</svg>

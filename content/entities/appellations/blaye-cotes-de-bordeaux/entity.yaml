@@ -1,6 +1,6 @@
 id: appellation.blaye-cotes-de-bordeaux
 type: appellation
-status: draft
+status: active
 canonical_name: Blaye Côtes de Bordeaux
 names:
   nl: Blaye Côtes de Bordeaux
@@ -11,6 +11,40 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: appellation.cotes-de-bordeaux }
+  - { type: part_of, target: region.blayais-bourgeais }
+  - { type: part_of, target: region.bordeaux }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.malbec }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: important_grape, target: grape.semillon }
+assertions:
+  - id: assertion.blaye-cotes-de-bordeaux.red-wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.inao-cotes-bordeaux-specification-2026]
+    last_verified: 2026-09-11
+  - id: assertion.blaye-cotes-de-bordeaux.white-wine-type
+    predicate: permitted_wine_type
+    value: still-dry-white
+    status: verified
+    sources: [source.inao-cotes-bordeaux-specification-2026]
+    last_verified: 2026-09-11
+  - id: assertion.blaye-cotes-de-bordeaux.recognition
+    predicate: aoc_recognition_date
+    value: 2009-10-29
+    status: verified
+    sources: [source.inao-cotes-bordeaux-specification-2026]
+    last_verified: 2026-09-11
+source_refs:
+  - source.inao-cotes-bordeaux-specification-2026
+  - source.civb-blaye-cotes-de-bordeaux
+  - source.gironde-landscape-blayais-libournais
+  - source.msha-bordeaux-wine-history
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-12

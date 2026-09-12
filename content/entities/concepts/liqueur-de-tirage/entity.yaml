@@ -1,0 +1,17 @@
+id: concept.liqueur-de-tirage
+type: concept
+status: draft
+canonical_name: Liqueur de tirage
+names:
+  nl: Liqueur de tirage
+  en: Liqueur de tirage
+slugs:
+  nl: liqueur-de-tirage
+  en: liqueur-de-tirage
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.inao-cremant-bordeaux-specification-2026

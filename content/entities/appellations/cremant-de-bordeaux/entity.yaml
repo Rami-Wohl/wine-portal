@@ -1,6 +1,6 @@
 id: appellation.cremant-de-bordeaux
 type: appellation
-status: draft
+status: active
 canonical_name: Crémant de Bordeaux
 names:
   nl: Crémant de Bordeaux
@@ -11,6 +11,37 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: important_grape, target: grape.semillon }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: associated_with, target: concept.traditional-method }
+  - { type: associated_with, target: concept.autolysis }
+  - { type: associated_with, target: concept.lees-ageing }
+assertions:
+  - id: assertion.cremant-bordeaux.white-wine-type
+    predicate: permitted_wine_type
+    value: sparkling-white
+    status: verified
+    sources: [source.inao-cremant-bordeaux-specification-2026]
+    last_verified: 2026-09-11
+  - id: assertion.cremant-bordeaux.rose-wine-type
+    predicate: permitted_wine_type
+    value: sparkling-rose
+    status: verified
+    sources: [source.inao-cremant-bordeaux-specification-2026]
+    last_verified: 2026-09-11
+  - id: assertion.cremant-bordeaux.recognition
+    predicate: aoc_recognition_date
+    value: 1990-04-03
+    status: verified
+    sources: [source.inao-cremant-bordeaux-specification-2026]
+    last_verified: 2026-09-11
+source_refs:
+  - source.inao-cremant-bordeaux-overview
+  - source.inao-cremant-bordeaux-specification-2026
+  - source.msha-bordeaux-wine-history
+depth: foundation
+last_reviewed: 2026-09-12
