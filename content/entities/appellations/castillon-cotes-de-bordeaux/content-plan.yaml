@@ -1,0 +1,253 @@
+schema_version: 2
+package_id: appellation.castillon-cotes-de-bordeaux
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: ["ligging-en-afbakening", "rivier-helling-en-plateau"]
+    target_ids: ["appellation.cotes-de-bordeaux", "region.libournais", "appellation.saint-emilion"]
+    completeness_questions:
+      [
+        "Zijn Castillons ligging, rode identiteit, hellingprofiel en stijlbandbreedte volledig en niet als klein Saint-Émilion beschreven?",
+      ]
+    layers:
+      {
+        foundation:
+          ["Oriënteer Castillon ten oosten van Saint-Émilion als uitsluitend rode benaming."],
+        intermediate: ["Leg de overgang van rivierterrassen naar kalkplateau uit."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Oriënteer identiteit, ligging en afbakening."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: &done { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: ["geschiedenis"]
+    target_ids: []
+    completeness_questions:
+      ["Is historical-development zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Verbind historische ontwikkeling aan de huidige naam."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Verbind historische ontwikkeling aan de huidige naam."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: ["landschap-klimaat-en-bodem", "water-en-rijping"]
+    target_ids: []
+    completeness_questions:
+      ["Is landscape-climate-and-soils zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Maak terrassen, kleihellingen en kalkplateau voorstelbaar."],
+        intermediate: ["Verbind waterhuishouding en rijping zonder smaakgarantie."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Leg landschap, klimaat, bodem en water zonder determinisme uit."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: ["druivenrassen"]
+    target_ids:
+      ["grape.merlot", "grape.cabernet-franc", "grape.cabernet-sauvignon", "concept.assemblage"]
+    completeness_questions:
+      ["Is grape-varieties zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Introduceer toegestane druiven en hun lokale rollen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Introduceer toegestane druiven en hun lokale rollen."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: ["wijnbouw-en-wijnmaken"]
+    target_ids: []
+    completeness_questions:
+      ["Is viticulture-and-winemaking zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Volg de relevante routes van wijngaard naar wijn."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Volg de relevante routes van wijngaard naar wijn."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: ["appellationregels", "actuele-drempels"]
+    target_ids: []
+    completeness_questions:
+      ["Is appellation-rules zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Leg de rode wettelijke scope uit."],
+        intermediate: [],
+        advanced: ["Geef dichtheid, rendement, rijpheid en opvoeding uit het actuele dossier."],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Scheid wettelijke minima van producentenambitie."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: ["classificatie-en-producenten"]
+    target_ids: []
+    completeness_questions:
+      ["Is classification-and-producers zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Leg classificatiestatus en producentencontext uit."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Leg classificatiestatus en producentencontext uit."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: ["wijnstijl-en-flesontwikkeling"]
+    target_ids: []
+    completeness_questions:
+      ["Is style-and-glass-context zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Geef stijl, ontwikkeling en serveercontext als bandbreedte."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Geef stijl, ontwikkeling en serveercontext als bandbreedte."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: ["etiket-en-aankoop"]
+    target_ids: []
+    completeness_questions:
+      ["Is labels-and-buying zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Maak het etiket praktisch leesbaar."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Maak het etiket praktisch leesbaar."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: modern-developments
+    disposition: on-page
+    block_ids: ["hedendaagse-ontwikkelingen"]
+    target_ids: []
+    completeness_questions:
+      ["Is modern-developments zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Plaats klimaat en positionering in het heden."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Plaats klimaat en positionering in het heden."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: visuals
+    disposition: on-page
+    block_ids: ["hellingprofiel"]
+    target_ids: []
+    completeness_questions: ["Is visuals zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Gebruik beeld voor één concrete leertaak."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Gebruik beeld voor één concrete leertaak."], source_refs: [] }
+      specific_claims: []
+    review: *done
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: ["appellation.cotes-de-bordeaux", "region.libournais", "appellation.saint-emilion"]
+    completeness_questions:
+      ["Is child-knowledge zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Ontsluit de logische vervolgonderwerpen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Ontsluit de logische vervolgonderwerpen."], source_refs: [] }
+      specific_claims: []
+    review: *done
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

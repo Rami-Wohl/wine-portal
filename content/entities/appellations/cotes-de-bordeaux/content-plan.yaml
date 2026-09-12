@@ -1,0 +1,256 @@
+schema_version: 2
+package_id: appellation.cotes-de-bordeaux
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: ["ligging-en-afbakening", "naam-en-plaatsnaam"]
+    target_ids: ["region.bordeaux"]
+    completeness_questions:
+      ["Is de gezamenlijke AOP zonder verlies van de vijf lokale verschillen volledig uitgelegd?"]
+    layers:
+      {
+        foundation: ["Oriënteer identiteit, ligging en afbakening."],
+        intermediate: ["Leg het verschil tussen daknaam en geografische benaming uit."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Oriënteer identiteit, ligging en afbakening."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: &done { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: ["geschiedenis", "samenwerken-zonder-gelijktrekken"]
+    target_ids: []
+    completeness_questions:
+      ["Is historical-development zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Verbind rivierhandel en afzonderlijke voorgangers aan de huidige naam."],
+        intermediate: [],
+        advanced: ["Leg samenwerking uit zonder juridische of stilistische gelijkstelling."],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Verbind historische ontwikkeling aan de huidige naam."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: ["landschap-klimaat-en-bodem", "een-familie-geen-terroirformule"]
+    target_ids: []
+    completeness_questions:
+      ["Is landscape-climate-and-soils zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Leg landschap, klimaat, bodem en water zonder determinisme uit."],
+        intermediate: ["Begrens het idee van één terroirformule voor vijf kernen."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Leg landschap, klimaat, bodem en water zonder determinisme uit."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: ["druivenrassen"]
+    target_ids: ["grape.merlot", "grape.cabernet-franc", "grape.cabernet-sauvignon", "grape.malbec"]
+    completeness_questions:
+      ["Is grape-varieties zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Introduceer toegestane druiven en hun lokale rollen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Introduceer toegestane druiven en hun lokale rollen."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: ["wijnbouw-en-wijnmaken"]
+    target_ids: ["concept.assemblage"]
+    completeness_questions:
+      ["Is viticulture-and-winemaking zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Volg de relevante routes van wijngaard naar wijn."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Volg de relevante routes van wijngaard naar wijn."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: ["appellationregels", "gedeelde-en-afwijkende-drempels"]
+    target_ids: []
+    completeness_questions:
+      ["Is appellation-rules zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Scheid wettelijke minima van producentenambitie."],
+        intermediate: [],
+        advanced: ["Vergelijk actuele rendementen, dichtheid en opvoeding met scope en datum."],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Scheid wettelijke minima van producentenambitie."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: ["classificatie-en-producenten"]
+    target_ids: []
+    completeness_questions:
+      ["Is classification-and-producers zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Leg classificatiestatus en producentencontext uit."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Leg classificatiestatus en producentencontext uit."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: ["wijnstijl-en-flesontwikkeling"]
+    target_ids: []
+    completeness_questions:
+      ["Is style-and-glass-context zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Geef stijl, ontwikkeling en serveercontext als bandbreedte."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Geef stijl, ontwikkeling en serveercontext als bandbreedte."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: ["etiket-en-aankoop"]
+    target_ids: ["appellation.cotes-de-bourg"]
+    completeness_questions:
+      ["Is labels-and-buying zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Maak het etiket praktisch leesbaar."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Maak het etiket praktisch leesbaar."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: modern-developments
+    disposition: on-page
+    block_ids: ["hedendaagse-ontwikkelingen"]
+    target_ids: []
+    completeness_questions:
+      ["Is modern-developments zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Plaats klimaat en positionering in het heden."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Plaats klimaat en positionering in het heden."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: visuals
+    disposition: on-page
+    block_ids: ["vijf-benamingen"]
+    target_ids: []
+    completeness_questions: ["Is visuals zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Gebruik beeld voor één concrete leertaak."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Gebruik beeld voor één concrete leertaak."], source_refs: [] }
+      specific_claims: []
+    review: *done
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        "appellation.blaye-cotes-de-bordeaux",
+        "appellation.cadillac-cotes-de-bordeaux",
+        "appellation.castillon-cotes-de-bordeaux",
+        "appellation.francs-cotes-de-bordeaux",
+        "appellation.sainte-foy-cotes-de-bordeaux",
+      ]
+    completeness_questions:
+      ["Is child-knowledge zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    layers:
+      {
+        foundation: ["Ontsluit de logische vervolgonderwerpen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Ontsluit de logische vervolgonderwerpen."], source_refs: [] }
+      specific_claims: []
+    review: *done
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

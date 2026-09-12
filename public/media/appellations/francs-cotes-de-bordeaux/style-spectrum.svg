@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Three wine styles from one small hillside origin</title>
+  <desc id="desc">Three glasses represent red, dry white and concentrated sweet white above a compact rolling vineyard.</desc>
+  <rect width="1600" height="900" fill="#f3eddf"/>
+  <path d="M0 720q250-210 500 0 260-300 520 0 300-225 580 0v180H0z" fill="#879764"/>
+  <g stroke="#4d4139" stroke-width="10" fill="none" stroke-linejoin="round">
+    <path d="M290 190h260l-35 220q-20 100-95 100t-95-100zM420 510v145m-95 0h190"/>
+    <path d="M670 190h260l-35 220q-20 100-95 100t-95-100zM800 510v145m-95 0h190"/>
+    <path d="M1050 190h260l-35 220q-20 100-95 100t-95-100zM1180 510v145m-95 0h190"/>
+  </g>
+  <path d="M330 360h180l-12 65q-13 65-78 65t-78-65z" fill="#6c2d39"/>
+  <path d="M710 385h180l-7 40q-13 65-83 65t-83-65z" fill="#dfcf82"/>
+  <path d="M1090 330h180l-18 95q-13 65-72 65t-72-65z" fill="#c68a2f"/>
+  <g fill="#694039"><circle cx="420" cy="735" r="24"/><circle cx="800" cy="690" r="24"/><circle cx="1180" cy="740" r="24"/></g>
+</svg>

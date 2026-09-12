@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Two similar wine labels leading to different colours</title>
+  <desc id="desc">A conceptual label-reading diagram contrasting a red bottle with a longer label and a golden sweet-wine bottle with a shorter label.</desc>
+  <rect width="1600" height="900" fill="#f3eddf"/>
+  <g stroke="#493934" stroke-width="12">
+    <path d="M420 155h190v120c0 50 65 95 65 175v310c0 55-45 100-100 100H455c-55 0-100-45-100-100V450c0-80 65-125 65-175z" fill="#5e2d36"/>
+    <path d="M990 155h190v120c0 50 65 95 65 175v310c0 55-45 100-100 100h-120c-55 0-100-45-100-100V450c0-80 65-125 65-175z" fill="#d2a64b"/>
+  </g>
+  <g fill="#f7f1e4" stroke="#493934" stroke-width="8">
+    <rect x="385" y="470" width="260" height="190" rx="8"/><rect x="955" y="470" width="260" height="190" rx="8"/>
+  </g>
+  <g stroke-linecap="round">
+    <path d="M425 520h180M425 565h180M425 610h180" stroke="#5e2d36" stroke-width="16"/>
+    <path d="M995 535h180M995 590h120" stroke="#a67428" stroke-width="16"/>
+  </g>
+  <path d="M785 330v370" stroke="#9b8d7b" stroke-width="6" stroke-dasharray="16 18"/>
+</svg>

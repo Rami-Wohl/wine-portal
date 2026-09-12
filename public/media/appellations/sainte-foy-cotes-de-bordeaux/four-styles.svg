@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Four styles of Sainte-Foy wine</title>
+  <desc id="desc">Four glasses show red, dry white, softly sweet white and concentrated sweet white beside a misty river.</desc>
+  <rect width="1600" height="900" fill="#f3eddf"/>
+  <path d="M0 730q300-90 600 0t500 0q250-75 500 0v170H0z" fill="#acc8c9"/>
+  <path d="M0 680q300-90 600 0t500 0q250-75 500 0" fill="none" stroke="#fff" stroke-width="35" opacity=".45"/>
+  <g stroke="#4d4139" stroke-width="9" fill="none" stroke-linejoin="round">
+    <path d="M150 190h260l-32 220q-18 95-98 95t-98-95zM280 505v150m-90 0h180"/>
+    <path d="M500 190h260l-32 220q-18 95-98 95t-98-95zM630 505v150m-90 0h180"/>
+    <path d="M850 190h260l-32 220q-18 95-98 95t-98-95zM980 505v150m-90 0h180"/>
+    <path d="M1200 190h260l-32 220q-18 95-98 95t-98-95zM1330 505v150m-90 0h180"/>
+  </g>
+  <path d="M190 355h180l-10 70q-10 60-80 60t-80-60z" fill="#6c2d39"/>
+  <path d="M540 395h180l-5 30q-10 60-85 60t-85-60z" fill="#e4d99c"/>
+  <path d="M890 365h180l-8 60q-10 60-82 60t-82-60z" fill="#d6ad55"/>
+  <path d="M1240 325h180l-15 100q-10 60-75 60t-75-60z" fill="#b97827"/>
+</svg>

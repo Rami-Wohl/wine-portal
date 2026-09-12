@@ -1,0 +1,18 @@
+id: appellation.cadillac
+type: appellation
+status: draft
+canonical_name: Cadillac
+names:
+  nl: Cadillac
+  en: Cadillac
+slugs:
+  nl: cadillac
+  en: cadillac
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: part_of, target: region.entre-deux-mers }
+  - { type: part_of, target: region.bordeaux }
+assertions: []
+source_refs: []

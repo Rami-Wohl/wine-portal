@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Five hillside wine areas connected by rivers</title>
+  <desc id="desc">A conceptual, non-geographic illustration of five distinct vineyard hills linked by one flowing river.</desc>
+  <rect width="1600" height="900" fill="#f3eddf"/>
+  <path d="M0 655C250 570 390 770 650 655s430-125 950 10v235H0z" fill="#b8ced0"/>
+  <path d="M0 690C250 605 390 805 650 690s430-125 950 10" fill="none" stroke="#f8faf5" stroke-width="18" opacity=".8"/>
+  <g fill="#798d5d">
+    <path d="M60 630q140-245 280 0z"/><path d="M350 645q140-330 300 0z"/><path d="M675 635q120-230 255 0z"/><path d="M950 650q135-300 290 0z"/><path d="M1240 650q135-220 300 0z"/>
+  </g>
+  <g fill="#694039" stroke="#f3eddf" stroke-width="9">
+    <circle cx="200" cy="515" r="30"/><circle cx="500" cy="480" r="30"/><circle cx="800" cy="520" r="30"/><circle cx="1100" cy="490" r="30"/><circle cx="1390" cy="530" r="30"/>
+  </g>
+  <path d="M200 515C415 345 565 635 800 520s390-95 590 10" fill="none" stroke="#694039" stroke-width="7" stroke-dasharray="15 22"/>
+  <g fill="none" stroke="#694039" stroke-width="8" stroke-linecap="round">
+    <path d="M190 330h20v105m-55 0h90"/><path d="M490 250h20v150m-55 0h90"/><path d="M790 335h20v100m-55 0h90"/><path d="M1090 265h20v135m-55 0h90"/><path d="M1380 350h20v95m-55 0h90"/>
+  </g>
+</svg>

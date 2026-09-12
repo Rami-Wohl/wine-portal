@@ -1,38 +1,28 @@
-id: appellation.cotes-de-bordeaux
+id: appellation.cadillac-cotes-de-bordeaux
 type: appellation
 status: active
-canonical_name: Côtes de Bordeaux
-names:
-  nl: Côtes de Bordeaux
-  en: Côtes de Bordeaux
-slugs:
-  nl: cotes-de-bordeaux
-  en: cotes-de-bordeaux
-locales:
-  nl: overview.nl.md
-  en: overview.en.md
+canonical_name: Cadillac Côtes de Bordeaux
+names: { nl: Cadillac Côtes de Bordeaux, en: Cadillac Côtes de Bordeaux }
+slugs: { nl: cadillac-cotes-de-bordeaux, en: cadillac-cotes-de-bordeaux }
+locales: { nl: overview.nl.md, en: overview.en.md }
 relations:
+  - { type: part_of, target: appellation.cotes-de-bordeaux }
+  - { type: part_of, target: region.entre-deux-mers }
   - { type: part_of, target: region.bordeaux }
   - { type: important_grape, target: grape.merlot }
   - { type: important_grape, target: grape.cabernet-sauvignon }
   - { type: important_grape, target: grape.cabernet-franc }
   - { type: important_grape, target: grape.malbec }
 assertions:
-  - id: assertion.cotes-de-bordeaux.red-wine-type
+  - id: assertion.cadillac-cotes-de-bordeaux.red-wine-type
     predicate: permitted_wine_type
     value: still-red
     status: verified
     sources: [source.inao-cotes-bordeaux-specification-2026]
     last_verified: 2026-09-12
-  - id: assertion.cotes-de-bordeaux.recognition
-    predicate: aoc_recognition_date
-    value: 2009-10-29
-    status: verified
-    sources: [source.inao-cotes-bordeaux-specification-2026]
-    last_verified: 2026-09-12
 source_refs:
   - source.inao-cotes-bordeaux-specification-2026
-  - source.civb-cotes-de-bordeaux
+  - source.cadillac-cotes-de-bordeaux-overview
   - source.msha-bordeaux-wine-history
   - source.inrae-bordeaux-climate-adaptation
 depth: foundation

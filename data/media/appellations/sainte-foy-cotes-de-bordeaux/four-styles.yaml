@@ -1,0 +1,24 @@
+id: media.appellation.sainte-foy-cotes-de-bordeaux.four-styles
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/sainte-foy-cotes-de-bordeaux/four-styles.svg
+mime_type: image/svg+xml
+width: 1600
+height: 900
+checksum_sha256: 7c9a5b2e9b70a89fe0277a1306e8d47398a1ea67b8432325f553e1e3da19c0ef
+alt:
+  nl: Vier wijnglazen voor rood, droog wit, moelleux en liquoreux naast een mistige rivierlijn
+  en: Four wine glasses for red, dry white, moelleux and liquoreux beside a misty river line
+caption:
+  nl: De vier stijlen delen één herkomst, maar vragen verschillende oogstmomenten en productieroutes. De riviermist is conceptueel weergegeven en vormt geen kaart.
+  en: The four styles share one origin but require different harvest timing and production routes. River mist is shown conceptually; this is not a map.
+rights:
+  {
+    status: owned,
+    creator: Oenocademy,
+    license_name: Project-owned original SVG,
+    credit_line: Oenocademy,
+  }
+acquired_at: 2026-09-12
+changes: Original language-neutral educational illustration.

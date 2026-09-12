@@ -1,0 +1,24 @@
+id: media.appellation.francs-cotes-de-bordeaux.style-spectrum
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/francs-cotes-de-bordeaux/style-spectrum.svg
+mime_type: image/svg+xml
+width: 1600
+height: 900
+checksum_sha256: 9091237acdb4b9b475a14a1269fbd1c1b7f0b18d4514ed7afc93811120f55587
+alt:
+  nl: Drie wijnglazen voor rood, droog wit en geconcentreerd zoet wit boven een klein heuvellandschap
+  en: Three wine glasses for red, dry white and concentrated sweet white above a small hilly landscape
+caption:
+  nl: "Francs is klein in oppervlakte maar breed in stijl: de regels beschermen rood, droog wit en liquoreux."
+  en: "Francs is small in area but broad in style: its rules protect red, dry white and liquoreux."
+rights:
+  {
+    status: owned,
+    creator: Oenocademy,
+    license_name: Project-owned original SVG,
+    credit_line: Oenocademy,
+  }
+acquired_at: 2026-09-12
+changes: Original language-neutral educational illustration.

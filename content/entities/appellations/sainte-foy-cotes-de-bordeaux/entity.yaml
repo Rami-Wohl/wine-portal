@@ -1,0 +1,36 @@
+id: appellation.sainte-foy-cotes-de-bordeaux
+type: appellation
+status: active
+canonical_name: Sainte-Foy Côtes de Bordeaux
+names: { nl: Sainte-Foy Côtes de Bordeaux, en: Sainte-Foy Côtes de Bordeaux }
+slugs: { nl: sainte-foy-cotes-de-bordeaux, en: sainte-foy-cotes-de-bordeaux }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations:
+  - { type: part_of, target: appellation.cotes-de-bordeaux }
+  - { type: part_of, target: region.entre-deux-mers }
+  - { type: part_of, target: region.bordeaux }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: important_grape, target: grape.semillon }
+assertions:
+  - id: assertion.sainte-foy-cotes-de-bordeaux.red-wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.inao-cotes-bordeaux-specification-2026]
+    last_verified: 2026-09-12
+  - id: assertion.sainte-foy-cotes-de-bordeaux.white-wine-types
+    predicate: permitted_wine_types
+    value: still-dry-moelleux-and-liquoreux-white
+    status: verified
+    sources: [source.inao-cotes-bordeaux-specification-2026]
+    last_verified: 2026-09-12
+source_refs:
+  - source.inao-cotes-bordeaux-specification-2026
+  - source.sainte-foy-cotes-de-bordeaux-overview
+  - source.msha-bordeaux-wine-history
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-12

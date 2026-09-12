@@ -1,0 +1,24 @@
+id: media.appellation.castillon-cotes-de-bordeaux.slope-profile
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/castillon-cotes-de-bordeaux/slope-profile.svg
+mime_type: image/svg+xml
+width: 1600
+height: 900
+checksum_sha256: 855c3850e621a03ef563ef7f3c6bb1f0cbc400293d9786d38aa41385fafd7a7c
+alt:
+  nl: Schematisch profiel van rivierterrassen via een kleihelling naar een kalkplateau met wijnstokken
+  en: Schematic profile from river terraces through a clay slope to a limestone plateau with vines
+caption:
+  nl: Schematisch, niet geografisch exact. Castillon omvat lagere grindafzettingen, kleirijke hellingen en hoger klei-kalk en kalksteen; werkelijke percelen zijn complexer.
+  en: Schematic, not geographically exact. Castillon includes lower gravel deposits, clay-rich slopes and higher clay-limestone and limestone; real parcels are more complex.
+rights:
+  {
+    status: owned,
+    creator: Oenocademy,
+    license_name: Project-owned original SVG,
+    credit_line: Oenocademy,
+  }
+acquired_at: 2026-09-12
+changes: Original language-neutral educational illustration.

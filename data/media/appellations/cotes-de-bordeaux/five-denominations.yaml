@@ -1,0 +1,24 @@
+id: media.appellation.cotes-de-bordeaux.five-denominations
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/cotes-de-bordeaux/five-denominations.svg
+mime_type: image/svg+xml
+width: 1600
+height: 900
+checksum_sha256: 13e8b655abd6529d1bdc85815408c2283fd4f8df271de22561d541b97ac49b3d
+alt:
+  nl: Vijf afzonderlijke wijngaardhellingen die door één rivierlijn als familie zijn verbonden
+  en: Five separate vineyard hills connected as a family by one river line
+caption:
+  nl: Een conceptuele oriëntatie, geen kaart. De vijf geografische benamingen delen de Côtes de Bordeaux-naam, maar liggen in afzonderlijke kernen met eigen grenzen en regels.
+  en: A conceptual orientation, not a map. The five geographical denominations share the Côtes de Bordeaux name but occupy separate centres with their own boundaries and rules.
+rights:
+  {
+    status: owned,
+    creator: Oenocademy,
+    license_name: Project-owned original SVG,
+    credit_line: Oenocademy,
+  }
+acquired_at: 2026-09-12
+changes: Original language-neutral educational illustration.

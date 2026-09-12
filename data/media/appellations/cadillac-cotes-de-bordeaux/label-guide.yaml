@@ -1,0 +1,24 @@
+id: media.appellation.cadillac-cotes-de-bordeaux.label-guide
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/cadillac-cotes-de-bordeaux/label-guide.svg
+mime_type: image/svg+xml
+width: 1600
+height: 900
+checksum_sha256: 1a22e41a0b3489b77f61048dd14c37f13c17fe38865e3ff989da2efd1db64458
+alt:
+  nl: Twee vergelijkbare etiketten op een rode en een goudkleurige wijnfles
+  en: Two similar labels on a red and a golden wine bottle
+caption:
+  nl: "De volledige naam verandert de verwachting: Cadillac Côtes de Bordeaux is rood, terwijl Cadillac zonder die toevoeging een zoete witte appellation is."
+  en: "The complete name changes the expectation: Cadillac Côtes de Bordeaux is red, whereas Cadillac without that addition is a sweet-white appellation."
+rights:
+  {
+    status: owned,
+    creator: Oenocademy,
+    license_name: Project-owned original SVG,
+    credit_line: Oenocademy,
+  }
+acquired_at: 2026-09-12
+changes: Original language-neutral educational illustration.
