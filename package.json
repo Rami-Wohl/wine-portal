@@ -23,7 +23,8 @@
     "content:new": "node --import tsx scripts/content/cli.ts new",
     "content:deps": "node --import tsx scripts/content/cli.ts deps",
     "content:link-audit": "node --import tsx scripts/content/cli.ts link-audit",
-    "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
+    "content:relation-audit": "node --import tsx scripts/content/cli.ts relation-audit",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run content:relation-audit"
   },
   "dependencies": {
     "next": "16.3.3",

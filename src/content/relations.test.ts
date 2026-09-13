@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { RELATION_TYPES } from "./model";
-import { RELATION_PRESENTATIONS, groupRelationsByLabel, relationLabel } from "./relations";
+import {
+  RELATION_PRESENTATIONS,
+  clusterRelations,
+  groupRelationsByLabel,
+  relationLabel,
+} from "./relations";
 
 describe("relationship presentation", () => {
   it("defines localized forward and inverse labels for every relationship", () => {
@@ -50,5 +55,43 @@ describe("relationship presentation", () => {
       "Hier gevestigd",
     ]);
     expect(groups[1].items).toHaveLength(2);
+  });
+
+  it("clusters detailed relationship groups into compact human themes", () => {
+    const clusters = clusterRelations(
+      [
+        {
+          relation: { type: "located_in", target: "appellation.pauillac" },
+          direction: "inverse" as const,
+        },
+        {
+          relation: { type: "classified_under", target: "classification.bordeaux-1855" },
+          direction: "forward" as const,
+        },
+        {
+          relation: { type: "important_grape", target: "grape.merlot" },
+          direction: "forward" as const,
+        },
+        {
+          relation: { type: "part_of", target: "region.bordeaux" },
+          direction: "forward" as const,
+        },
+        {
+          relation: { type: "related_to", target: "concept.assemblage" },
+          direction: "forward" as const,
+        },
+      ],
+      "nl",
+    );
+
+    expect(clusters.map(({ label }) => label)).toEqual([
+      "Plaats & indeling",
+      "Druiven & productie",
+      "Producenten",
+      "Classificatie & rang",
+      "Vergelijken & verbinden",
+    ]);
+    expect(clusters[2].groups[0].label).toBe("Hier gevestigd");
+    expect(clusters[2].itemCount).toBe(1);
   });
 });

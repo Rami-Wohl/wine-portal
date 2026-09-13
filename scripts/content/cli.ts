@@ -3,6 +3,7 @@ import type { EntityPresentation } from "../../src/content/model";
 import { buildContent, ContentValidationError } from "./pipeline";
 import { generateEntityPackage } from "./generator";
 import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
+import { auditActiveRelationCoverage } from "./relation-audit";
 import { writeEntityStatus } from "./status";
 
 async function main(): Promise<void> {
@@ -78,8 +79,27 @@ async function main(): Promise<void> {
     }
     return;
   }
+  if (command === "relation-audit") {
+    const result = await buildContent({ write: false });
+    const activeEntities = result.knowledgeBase.entities.filter(
+      ({ status }) => status === "active",
+    );
+    const findings = auditActiveRelationCoverage(result.knowledgeBase.entities);
+    if (findings.length === 0) {
+      console.log(
+        `Relation audit passed: ${activeEntities.length} active entities meet the structural coverage minimums.`,
+      );
+    } else {
+      console.log(`Relation audit found ${findings.length} issue(s):`);
+      for (const finding of findings) {
+        console.log(`- ${finding.entityId}: ${finding.message}`);
+      }
+      process.exitCode = 1;
+    }
+    return;
+  }
   throw new Error(
-    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> [producer-presentation] | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit",
+    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> [producer-presentation] | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit | npm run content:relation-audit",
   );
 }
 

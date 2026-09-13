@@ -19,6 +19,16 @@ export interface RelationGroup<T extends GroupableRelation> {
   items: T[];
 }
 
+export type RelationClusterId =
+  "place" | "production" | "producers" | "classification" | "connections";
+
+export interface RelationCluster<T extends GroupableRelation> {
+  id: RelationClusterId;
+  label: string;
+  itemCount: number;
+  groups: RelationGroup<T>[];
+}
+
 export const RELATION_PRESENTATIONS = {
   part_of: {
     forward: { nl: "Onderdeel van", en: "Part of" },
@@ -115,6 +125,30 @@ const RELATION_GROUP_LABEL_ORDER: Record<Locale, string[]> = {
   ],
 };
 
+const RELATION_CLUSTER_PRESENTATIONS: Record<
+  RelationClusterId,
+  { label: LocalizedLabel; order: number }
+> = {
+  place: { label: { nl: "Plaats & indeling", en: "Place & hierarchy" }, order: 0 },
+  production: { label: { nl: "Druiven & productie", en: "Grapes & production" }, order: 1 },
+  producers: { label: { nl: "Producenten", en: "Producers" }, order: 2 },
+  classification: {
+    label: { nl: "Classificatie & rang", en: "Classification & rank" },
+    order: 3,
+  },
+  connections: { label: { nl: "Vergelijken & verbinden", en: "Compare & connect" }, order: 4 },
+};
+
+function relationClusterId(item: GroupableRelation): RelationClusterId {
+  const { type } = item.relation;
+  if (type === "located_in") return item.direction === "inverse" ? "producers" : "place";
+  if (type === "produces_in") return item.direction === "inverse" ? "producers" : "production";
+  if (["part_of", "contains", "parent_appellation", "scope"].includes(type)) return "place";
+  if (type === "important_grape") return "production";
+  if (type === "classified_under") return "classification";
+  return "connections";
+}
+
 export function groupRelationsByLabel<T extends GroupableRelation>(
   relations: T[],
   locale: Locale,
@@ -136,4 +170,28 @@ export function groupRelationsByLabel<T extends GroupableRelation>(
     if (rightIndex < 0) return -1;
     return leftIndex - rightIndex;
   });
+}
+
+export function clusterRelations<T extends GroupableRelation>(
+  relations: T[],
+  locale: Locale,
+): RelationCluster<T>[] {
+  const clusters = new Map<RelationClusterId, T[]>();
+  for (const item of relations) {
+    const id = relationClusterId(item);
+    const cluster = clusters.get(id) ?? [];
+    cluster.push(item);
+    clusters.set(id, cluster);
+  }
+
+  return Array.from(clusters, ([id, items]) => ({
+    id,
+    label: RELATION_CLUSTER_PRESENTATIONS[id].label[locale],
+    itemCount: items.length,
+    groups: groupRelationsByLabel(items, locale),
+  })).sort(
+    (left, right) =>
+      RELATION_CLUSTER_PRESENTATIONS[left.id].order -
+      RELATION_CLUSTER_PRESENTATIONS[right.id].order,
+  );
 }

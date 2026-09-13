@@ -416,19 +416,45 @@ test("entity relationships are grouped by their meaning", async ({ page }) => {
   await page.goto("/appellations/pauillac");
 
   const panel = page.getByRole("region", { name: "Ga verder vanuit Pauillac" });
-  await expect(panel.getByRole("heading", { level: 3, name: "Onderdeel van" })).toBeVisible();
-  await expect(panel.getByRole("heading", { level: 3, name: "Belangrijke druif" })).toBeVisible();
+  await expect(panel.getByText("Plaats & indeling", { exact: true })).toBeVisible();
+  await expect(panel.getByText("Druiven & productie", { exact: true })).toBeVisible();
+  await expect(panel.getByText("Producenten", { exact: true })).toBeVisible();
+
+  const producers = panel.locator('[data-relation-cluster="producers"]');
+  await expect(producers).not.toHaveAttribute("open", "");
+  await producers.getByText("Producenten", { exact: true }).click();
   await expect(panel.getByRole("heading", { level: 3, name: "Hier gevestigd" })).toBeVisible();
-  await expect(panel.getByText("Belangrijke druif", { exact: true })).toHaveCount(1);
 
   await page.goto("/regions/bordeaux");
   const bordeauxPanel = page.getByRole("region", { name: "Ga verder vanuit Bordeaux" });
+  await bordeauxPanel.getByText("Plaats & indeling", { exact: true }).click();
   await expect(bordeauxPanel.getByRole("heading", { level: 3, name: "Bevat" })).toBeVisible();
+  await bordeauxPanel.getByText("Druiven & productie", { exact: true }).click();
   await expect(
     bordeauxPanel.getByRole("heading", { level: 3, name: "Belangrijke druif" }),
   ).toBeVisible();
   await expect(bordeauxPanel.getByRole("link", { name: "Médoc Regio" })).toBeVisible();
   await expect(bordeauxPanel.getByRole("link", { name: "Sémillon Druif" })).toBeVisible();
+
+  await page.goto("/classifications/classificatie-saint-emilion");
+  const classificationPanel = page.getByRole("region", {
+    name: "Ga verder vanuit Classificatie van Saint-Émilion",
+  });
+  const classificationCluster = classificationPanel.locator(
+    '[data-relation-cluster="classification"]',
+  );
+  await expect(classificationCluster).not.toHaveAttribute("open", "");
+  await expect(
+    classificationCluster.getByText("Classificatie & rang", { exact: true }),
+  ).toBeVisible();
+  await classificationCluster.getByText("Classificatie & rang", { exact: true }).click();
+  await expect(
+    classificationCluster.getByRole("heading", {
+      level: 3,
+      name: "Binnen deze classificatie",
+    }),
+  ).toBeVisible();
+  await expect(classificationCluster.locator(".entity-link")).toHaveCount(88);
 });
 
 test("Pauillac media and appellation details follow the knowledge-depth contract", async ({

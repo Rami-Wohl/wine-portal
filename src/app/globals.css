@@ -958,20 +958,76 @@ h3 {
   position: static;
 }
 .relations-panel > h2 {
-  font: 500 2rem/1.05 var(--font-display);
+  margin-bottom: 0.35rem;
+  font: 500 clamp(1.55rem, 3vw, 2rem) / 1.08 var(--font-display);
 }
-.relation-groups {
+.relations-intro {
+  max-width: 600px;
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.86rem;
+}
+.relation-clusters {
   display: grid;
-  gap: 1.5rem;
-  margin: 1.5rem 0 0;
+  gap: 0;
+  margin-top: 1.35rem;
+  border-bottom: 1px solid var(--line);
+}
+.relation-cluster {
+  min-width: 0;
+  border-top: 1px solid var(--line);
+}
+.relation-cluster > summary {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  color: var(--brand-dark);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 720;
+  list-style: none;
+}
+.relation-cluster > summary::-webkit-details-marker {
+  display: none;
+}
+.relation-cluster > summary::after {
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-left: auto;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: rotate(45deg) translateY(-0.12rem);
+  transition: transform 160ms ease;
+}
+.relation-cluster[open] > summary::after {
+  transform: rotate(225deg) translate(-0.12rem, -0.12rem);
+}
+.relation-cluster-count {
+  display: inline-grid;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--faint);
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+.relation-cluster-body {
+  display: grid;
+  gap: 1.2rem;
+  padding: 0.25rem 0 1.15rem;
 }
 .relation-group {
   min-width: 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
 }
 .relation-group h3 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.55rem;
   color: var(--faint);
   font: 720 0.7rem/1.2 var(--font-body);
   letter-spacing: 0.08em;
@@ -979,8 +1035,8 @@ h3 {
 }
 .relation-group ul {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.55rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 0.4rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -989,16 +1045,19 @@ h3 {
   min-width: 0;
   margin: 0;
 }
+.relation-group .entity-link {
+  gap: 0.6rem;
+  padding: 0.58rem 0.7rem;
+  background: rgb(251 250 247 / 45%);
+  font-size: 0.82rem;
+}
+.relation-group .entity-link small {
+  font-size: 0.68rem;
+}
 .related-learning {
-  margin-top: 2rem;
-  padding-top: 1.3rem;
-  border-top: 1px solid var(--line);
+  margin-top: 0;
 }
-.related-learning h3 {
-  font: 1.25rem var(--font-display);
-}
-.related-learning p,
-.related-learning a {
+.related-learning-links a {
   display: block;
   color: var(--ink);
   font-size: 0.82rem;
@@ -1511,9 +1570,6 @@ h3 {
   .content-block-caveat,
   .content-block-in-the-glass {
     padding: 1.2rem;
-  }
-  .relation-group ul {
-    grid-template-columns: 1fr;
   }
   .relations-panel,
   .lesson-context {

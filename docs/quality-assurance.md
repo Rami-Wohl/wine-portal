@@ -96,6 +96,14 @@ De minimale acceptatiecriteria zijn:
 - de groepsnaam beschrijft de relatie inhoudelijk juist;
 - `npm run content:check` slaagt, omdat deze check ook spiegelrelaties en andere
   duplicaten controleert die pas na afleiding zichtbaar worden.
+- `npm run content:relation-audit` slaagt voor de structurele ondergrens van alle
+  actieve entities.
+
+De relation-audit is nadrukkelijk geen vervanging voor redactionele beoordeling.
+Controleer in contentbrief en publicatiereview ook of de relevante parent,
+belangrijke druiven, producenten, classificaties en inhoudelijke verbindingen
+voor dit onderwerp werkelijk zijn gemodelleerd. Een technisch geldige graaf kan
+immers niet signaleren wat nooit als kandidaat-relatie is vastgelegd.
 
 Controleer bij een gerichte correctie daarnaast de volledige relatiegrafiek,
 niet alleen de pagina waarop de doublure als eerste is opgemerkt. Leg bredere
@@ -124,6 +132,7 @@ Nieuwste review eerst.
 
 | Review-ID | Datum | Type en scope | Rapport | Resultaat | Acties |
 | --- | --- | --- | --- | --- | --- |
+| `QCR-2026-09-13-01` | 2026-09-13 | Volledigheid en presentatie van gerelateerde onderwerpen op alle 81 actieve entities | [Audit gerelateerde onderwerpen 2026-09-13](../editorial/related-knowledge-audit-2026-09-13.md) | Structurele dekking schoon; compact semantisch clusterontwerp en herhaalbare audit ingevoerd | `MNT-012`, `MNT-028`, `MNT-029` afgerond; `MNT-030` open |
 | `QCR-2026-09-09-03` | 2026-09-09 | End-to-end Pomerol-producentenpilot, Pétrus en schaalbare Ontdekken-pagina | [Pomerol-producentenpilot 2026-09-09](../editorial/pomerol-producer-pilot-review-2026-09-09.md) | Acht actieve collectieprofielen, één nieuwe monografie en een begrensde categorie-ingang | `MNT-023` afgerond |
 | `QCR-2026-09-09-02` | 2026-09-09 | Volledige migratie van 129 producentenrecords en alle contentplannen | [Producentenpresentatiemigratie 2026-09-09](../editorial/producer-presentation-migration-2026-09-09.md) | 11 monografieën, 29 collectieprofielen en 89 registervermeldingen; geen legacy-defaults | `MNT-022`, `MNT-024` afgerond |
 | `QCR-2026-09-09-01` | 2026-09-09 | Architectuur- en schaalreview van 129 producentenrecords | [Producentenarchitectuur-review 2026-09-09](../editorial/producer-architecture-review-2026-09-09.md) | Drie publicatievormen ingevoerd; Pomerol als planningspilot; legacy-migratie vastgelegd | `MNT-021` t/m `MNT-024` |

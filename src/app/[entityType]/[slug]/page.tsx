@@ -6,7 +6,7 @@ import { ContentDocumentView } from "@/components/content-document";
 import { KnowledgeDepth } from "@/components/knowledge-depth";
 import { DEPTHS, type Depth, type Entity, type GeneratedEntity } from "@/content/model";
 import { mediaIdsForDocument } from "@/content/media";
-import { groupRelationsByLabel, type RelationDirection } from "@/content/relations";
+import { clusterRelations, type RelationDirection } from "@/content/relations";
 import {
   getAllEntities,
   getEntityById,
@@ -90,11 +90,14 @@ export default async function EntityPage({ params }: EntityPageProps) {
       direction === "forward" &&
       ["part_of", "located_in", "parent_appellation"].includes(relation.type),
   )?.related;
-  const relationGroups = groupRelationsByLabel(relations, "nl").map((group) => ({
-    ...group,
-    items: [...group.items].sort((left, right) =>
-      left.related.names.nl.localeCompare(right.related.names.nl, "nl"),
-    ),
+  const relationClusters = clusterRelations(relations, "nl").map((cluster) => ({
+    ...cluster,
+    groups: cluster.groups.map((group) => ({
+      ...group,
+      items: [...group.items].sort((left, right) =>
+        left.related.names.nl.localeCompare(right.related.names.nl, "nl"),
+      ),
+    })),
   }));
   const relatedNarratives = getPublishedNarrativeBacklinks(entity.id);
   const sources = getSourcesByIds(
@@ -164,34 +167,73 @@ export default async function EntityPage({ params }: EntityPageProps) {
             <section className="relations-panel" aria-labelledby="relations-title">
               <p className="eyebrow">Gerelateerde onderwerpen</p>
               <h2 id="relations-title">Ga verder vanuit {entity.names.nl}</h2>
-              {relationGroups.length > 0 ? (
-                <div className="relation-groups">
-                  {relationGroups.map((group, index) => {
-                    const titleId = `relation-group-${index + 1}`;
-                    return (
-                      <div className="relation-group" key={group.label}>
-                        <h3 id={titleId}>{group.label}</h3>
-                        <ul aria-labelledby={titleId}>
-                          {group.items.map(({ related, relation }) => (
-                            <li key={`${relation.source}-${relation.type}-${relation.target}`}>
-                              <EntityLink entity={related} />
-                            </li>
-                          ))}
-                        </ul>
+              <p className="relations-intro">
+                Open een cluster om verwante plaatsen, druiven, producenten en begrippen te
+                verkennen.
+              </p>
+              {relationClusters.length > 0 ? (
+                <div className="relation-clusters">
+                  {relationClusters.map((cluster) => (
+                    <details
+                      className="relation-cluster"
+                      data-relation-cluster={cluster.id}
+                      key={cluster.id}
+                      open={cluster.itemCount <= 4}
+                    >
+                      <summary>
+                        <span>{cluster.label}</span>
+                        <span
+                          className="relation-cluster-count"
+                          aria-label={`${cluster.itemCount} onderwerpen`}
+                        >
+                          {cluster.itemCount}
+                        </span>
+                      </summary>
+                      <div className="relation-cluster-body">
+                        {cluster.groups.map((group, index) => {
+                          const titleId = `relation-${cluster.id}-group-${index + 1}`;
+                          return (
+                            <div className="relation-group" key={group.label}>
+                              <h3 id={titleId}>{group.label}</h3>
+                              <ul aria-labelledby={titleId}>
+                                {group.items.map(({ related, relation }) => (
+                                  <li
+                                    key={`${relation.source}-${relation.type}-${relation.target}`}
+                                  >
+                                    <EntityLink entity={related} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        })}
                       </div>
-                    );
-                  })}
+                    </details>
+                  ))}
                 </div>
               ) : null}
               {relatedNarratives.length > 0 ? (
-                <div className="related-learning">
-                  <h3>Verder leren</h3>
-                  {relatedNarratives.map((narrative) => (
-                    <Link href={narrativeHref(narrative)} key={narrative.id}>
-                      {narrative.title.nl}
-                    </Link>
-                  ))}
-                </div>
+                <details
+                  className="relation-cluster related-learning"
+                  open={relatedNarratives.length <= 4}
+                >
+                  <summary>
+                    <span>Verder leren</span>
+                    <span
+                      className="relation-cluster-count"
+                      aria-label={`${relatedNarratives.length} verdiepingen`}
+                    >
+                      {relatedNarratives.length}
+                    </span>
+                  </summary>
+                  <div className="relation-cluster-body related-learning-links">
+                    {relatedNarratives.map((narrative) => (
+                      <Link href={narrativeHref(narrative)} key={narrative.id}>
+                        {narrative.title.nl}
+                      </Link>
+                    ))}
+                  </div>
+                </details>
               ) : null}
             </section>
           ) : null}

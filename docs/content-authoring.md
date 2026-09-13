@@ -548,10 +548,22 @@ verbinding die aan de andere kant staat, voldoet ook aan een relationele
 dependency in een contentplan en hoeft daarvoor dus nooit gespiegeld te worden.
 
 Controleer vóór publicatie altijd de **afgeleide** relatiegroepen, dus forward en
-inverse samen zoals het blok ‘Gerelateerde onderwerpen’ ze toont. Binnen één
-zichtbare groep mag dezelfde targetentity maximaal eenmaal voorkomen. Dit is
-een harde `npm run content:check`-controle in zowel het Nederlands als het
-Engels; alleen naar duplicaten binnen één YAML-bestand zoeken is onvoldoende.
+inverse samen zoals het blok ‘Gerelateerde onderwerpen’ ze toont. De interface
+ordent die precieze groepen onder vijf compacte clusters: plaats & indeling,
+druiven & productie, producenten, classificatie & rang en vergelijken &
+verbinden.
+Een cluster is alleen presentatie; de onderliggende relatietypen en labels
+blijven leidend. Binnen één zichtbare groep mag dezelfde targetentity maximaal
+eenmaal voorkomen. Dit is een harde `npm run content:check`-controle in zowel het
+Nederlands als het Engels; alleen naar duplicaten binnen één YAML-bestand zoeken
+is onvoldoende.
+
+Voer daarnaast `npm run content:relation-audit` uit. Deze controleert voor alle
+actieve entities de algemene en typegebonden structurele ondergrens. Beoordeel
+zelf nog steeds of de concrete lijst inhoudelijk compleet is: controleer de
+bovenliggende geografie, belangrijke druiven, relevante classificaties,
+producentencohorten en werkelijk nuttige vergelijkingen tegen contentbrief en
+onderzoek. Voeg geen relatie toe alleen om een cluster te vullen.
 
 Wanneer een goedgekeurd contentplan dependencies bevat, maak de ontbrekende
 packages in één idempotente batch aan:
@@ -660,6 +672,7 @@ corrects an existing asset.
 ```bash
 npm run content:check
 npm run content:link-audit
+npm run content:relation-audit
 npm run content:build
 ```
 
@@ -667,6 +680,11 @@ npm run content:build
 als gewone tekst zijn blijven staan. Zo worden nieuwe entities ook teruggevonden
 in eerder geschreven content. De audit maakt geen links en bedenkt geen nieuwe
 entities; de auteur beslist of een kandidaat werkelijk een verwijzing is.
+
+`content:relation-audit` controleert structurele dekking van de actieve graaf en
+faalt bij ontbrekende minimumcontext. De opdracht claimt geen semantische
+volledigheid: niet-gemodelleerde vakkennis blijft via research en menselijke
+review boven water komen.
 
 `npm run dev` and `npm run build` run content generation first. The generated `knowledge-base.json` bundle includes entity indexes, forward relations, inverse relations, backlinks, localized slug lookups, geography references, and search metadata.
 

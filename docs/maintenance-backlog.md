@@ -25,11 +25,11 @@ Peildatum: 2026-09-13.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 10 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-012`, `MNT-020`, `MNT-025` |
+| Open | 10 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 14 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026`, `MNT-027` |
+| Afgerond | 17 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029` |
 | Vervallen | 0 | — |
 
 Van het uitvoerbare open werk hebben drie acties prioriteit `hoog` en zeven
@@ -151,21 +151,6 @@ geographydatalaag.
   presenteren; NL en EN blijven gelijkwaardig.
 - **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
-### `MNT-012` — Retrospectieve contentbrief voor Grand Vin
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** content
-- **Scope:** `concept.grand-vin`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de actieve pagina is inhoudelijk op orde, maar mist het
-  procesdocument waarmee scope, vragen en bewuste uitsluitingen later kunnen
-  worden herleid.
-- **Klaar wanneer:** een compacte contentbrief de bestaande scope en
-  kennisniveaus documenteert zonder nieuwe proza of feiten als filler toe te
-  voegen.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
-
 ### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
 
 - **Status:** geblokkeerd
@@ -236,7 +221,75 @@ geographydatalaag.
 - **Log:** 2026-09-11 — geregistreerd; de huidige pagina gebruikt bewust de
   voorlopige assertion `cancellation-request-published-not-confirmed`.
 
+### `MNT-030` — Markdown-linkaudit triageerbaar maken
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** content, engineering, operations
+- **Scope:** `npm run content:link-audit` en de volledige actieve contentcorpus
+- **Herkomst:** `QCR-2026-09-13-01`
+- **Bevinding:** de audit rapporteert momenteel 579 kandidaatvermeldingen. De
+  lijst vermengt nuttige ontbrekende links met herhaling, homoniemen en contexten
+  waarin linken niet wenselijk is, en is daardoor niet efficiënt als vaste
+  publicatiecontrole.
+- **Klaar wanneer:** bevindingen per entity en term duurzaam kunnen worden
+  beoordeeld als linken, bewust overslaan of vals-positief; nieuwe kandidaten
+  duidelijk van afgehandelde gevallen zijn te onderscheiden; en de audit nooit
+  zelfstandig prose-links of graafrelaties aanmaakt.
+- **Log:** 2026-09-13 — geregistreerd vanuit de relationele corpusreview; bewust
+  losgehouden van structurele graafdekking.
+
 ## Historie
+
+### `MNT-029` — Structurele volledigheidsaudit voor relaties
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** knowledge-data, testing, operations
+- **Scope:** alle actieve entities
+- **Herkomst:** `QCR-2026-09-13-01`
+- **Bevinding:** de pipeline bewaakte geldigheid en doublures, maar rapporteerde
+  niet afzonderlijk of actieve entitytypes hun minimale relationele context
+  bezitten.
+- **Klaar wanneer:** een herhaalbare opdracht alle actieve entities controleert
+  op algemene en typegebonden minimumdekking, faalt bij bevindingen en door tests
+  wordt gedekt; de grens met menselijke inhoudelijke review is gedocumenteerd.
+- **Log:** 2026-09-13 — afgerond met `npm run content:relation-audit`, unit-tests
+  en opname in de vaste QA-workflow. De actuele run controleerde 81 actieve
+  entities en vond geen structurele lacunes.
+
+### `MNT-028` — Gerelateerde onderwerpen compact en semantisch clusteren
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** product-ux, accessibility, engineering, testing
+- **Scope:** de relatiepanelen van alle entitypagina's
+- **Herkomst:** `QCR-2026-09-13-01`
+- **Bevinding:** vlakke, volledig open relatielijsten werden bij tientallen
+  relaties lang en slecht scanbaar.
+- **Klaar wanneer:** alle relatietypen zonder dataverlies onder stabiele,
+  begrijpelijke clusters vallen; aantallen en precieze sublabels zichtbaar
+  blijven; kleine lijsten direct leesbaar zijn; grote lijsten inklapbaar zijn;
+  en toegankelijk plus responsive gedrag is getest.
+- **Log:** 2026-09-13 — afgerond met vijf semantische native-detailsclusters,
+  compacte kaarten, automatische aantallen en unit- plus Playwrightdekking.
+
+### `MNT-012` — Retrospectieve contentbrief voor Grand Vin
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** content
+- **Scope:** `concept.grand-vin`
+- **Herkomst:** `QCR-2026-09-08-01`, afgesloten in `QCR-2026-09-13-01`
+- **Bevinding:** de actieve pagina was inhoudelijk op orde, maar miste het
+  procesdocument waarmee scope, vragen en bewuste uitsluitingen later kunnen
+  worden herleid.
+- **Klaar wanneer:** een compacte contentbrief de bestaande scope en
+  kennisniveaus documenteert zonder nieuwe proza of feiten als filler toe te
+  voegen.
+- **Log:** 2026-09-13 — afgerond. De retrospectieve brief documenteert belofte,
+  begrenzing, kennisniveaus, bronnen, relaties en beeldrol zonder de actieve
+  content te veranderen.
 
 ### `MNT-026` — Reliëf in rechteroeverillustraties geografisch herijken
 
