@@ -540,6 +540,37 @@ test("a deep block anchor reveals the required knowledge depth", async ({ page }
   );
 });
 
+test("the southern Garonne sweet-wine cluster stays distinct and shares an accurate comparison", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  for (const [slug, title] of [
+    ["cadillac", "Cadillac"],
+    ["loupiac", "Loupiac"],
+    ["sainte-croix-du-mont", "Sainte-Croix-du-Mont"],
+    ["cerons", "Cérons"],
+  ] as const) {
+    await page.goto(`/appellations/${slug}`);
+    await expect(page.getByRole("heading", { level: 1, name: title })).toBeVisible();
+    await expect(
+      page.getByRole("img", { name: /Vier geschilderde Garonnelandschappen/ }),
+    ).toHaveJSProperty("complete", true);
+
+    const dimensions = await page.evaluate(() => ({
+      documentWidth: document.documentElement.scrollWidth,
+      viewportWidth: document.documentElement.clientWidth,
+    }));
+    expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+  }
+
+  const advancedRules = page.locator("#actuele-drempels");
+  await expect(advancedRules).toBeHidden();
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(advancedRules).toBeVisible();
+  await expect(advancedRules.getByRole("heading", { level: 3 })).toBeHidden();
+});
+
 test("the chosen knowledge depth persists across navigation and refresh", async ({ page }) => {
   await page.goto("/regions/bordeaux");
   await page.getByRole("button", { name: "Verdieping" }).click();

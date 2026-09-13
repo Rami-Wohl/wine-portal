@@ -19,6 +19,7 @@ relations:
   - { type: important_grape, target: grape.sauvignon-gris }
   - { type: important_grape, target: grape.muscadelle }
   - { type: related_to, target: concept.botrytis }
+  - { type: related_to, target: appellation.cerons }
 assertions:
   - id: assertion.barsac.wine-type
     predicate: permitted_wine_type

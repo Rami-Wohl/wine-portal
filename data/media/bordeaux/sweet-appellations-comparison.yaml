@@ -1,0 +1,22 @@
+id: media.bordeaux.sweet-appellations.comparison
+kind: illustration
+role: educational
+status: active
+storage_key: bordeaux/sweet-appellations-comparison.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 3d1f3c77f184aa18c080a05457ee8d2a82cf2b3ccd5915b0ad981648c2489d77
+alt:
+  nl: Vier geschilderde Garonnelandschappen met lage hellingen, wijngaarden, riviermist, een dorp op kalk en vlakke grindcroupes
+  en: Four painted Garonne landscapes with low slopes, vineyards, river mist, a village on limestone and flat gravel croupes
+caption:
+  nl: "Van links naar rechts: het lange, gevarieerde rechteroeverlandschap van Cadillac; Loupiacs bescheiden kalkplateau met beboste beekdalen; Sainte-Croix-du-Mont met een plaatselijke kalkontsluiting onder het dorp; en de lage grindcroupes en zandige kommen van Cérons op de linkeroever. De plaat vergelijkt landschapstypen en herfstomstandigheden—zij is geen kaart, doorsnede of kwaliteitsrangorde."
+  en: "From left to right: Cadillac's long, varied right-bank landscape; Loupiac's modest limestone plateau with wooded stream valleys; Sainte-Croix-du-Mont with a local limestone exposure beneath the village; and the low gravel croupes and sandy hollows of Cérons on the left bank. The plate compares landscape types and autumn conditions—it is not a map, cross-section or quality ranking."
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Refined after geographic review to reduce overall relief, remove an invented Loupiac cliff, keep the Sainte-Croix-du-Mont limestone exposure local and flatten Cérons; original 1672 by 941 pixel PNG used without crop or colour alteration.

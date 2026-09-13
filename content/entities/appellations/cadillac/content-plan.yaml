@@ -1,0 +1,268 @@
+schema_version: 2
+package_id: appellation.cadillac
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening]
+    target_ids: [region.bordeaux]
+    completeness_questions:
+      ["Kan de lezer de appellation geografisch en juridisch onderscheiden van haar buren?"]
+    layers:
+      foundation:
+        [
+          "Plaats Cadillac als lang rechteroeverlint rond de Garonne en onderscheid zoet wit van rood Cadillac Côtes de Bordeaux.",
+        ]
+      intermediate: ["Begrens gemeentelijke zone, percelen en productieplaats."]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Ligging en identiteit."],
+          source_refs: [source.boagri-cadillac-specification-2026],
+        }
+      specific_claims: []
+    review: &done { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, handel-en-erkenning]
+    target_ids: []
+    completeness_questions:
+      ["Verbindt de geschiedenis handel, zoete wijn en AOC-erkenning zonder oorsprongsmythe?"]
+    layers:
+      foundation: ["Volg zoete-wijnhandel, Premières Côtes de Bordeaux en erkenning in 1973."]
+      intermediate: ["Plaats de wijn in de vroegmoderne Noord-Europese handel."]
+      advanced: ["Scheid oudere regionale praktijk van de huidige juridische naam."]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Historische ontwikkeling."],
+          source_refs: [source.boagri-cadillac-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, water-en-mist]
+    target_ids: [concept.botrytis]
+    completeness_questions:
+      ["Zijn reliëf, bodem, water, mist en droging specifiek en niet-deterministisch uitgelegd?"]
+    layers:
+      foundation:
+        [
+          "Maak het sterk versneden maar lage reliëf van rivierzijde, helling en plateau voorstelbaar.",
+        ]
+      intermediate:
+        ["Verbind ochtendvocht en drogende omstandigheden met kansen én risico's voor botrytis."]
+      advanced: ["Leg lokale bodemvariatie uit zonder bodemsmaak of kwaliteitsgarantie."]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Landschap, bodem en mesoklimaat."],
+          source_refs: [source.boagri-cadillac-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids: [grape.semillon, grape.sauvignon-blanc, grape.sauvignon-gris, grape.muscadelle]
+    completeness_questions:
+      ["Zijn alle toegestane rassen en hun mogelijke rollen zonder vast blendrecept uitgelegd?"]
+    layers:
+      foundation:
+        ["Leg Sémillons hoofdrol en de aanvullende rollen van Sauvignon en Muscadelle uit."]
+      intermediate: ["Verbind druivenkeuze met botrytis, frisheid en aromatische variatie."]
+      advanced: ["Scheid wettelijke toelating van werkelijk aandeel."]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Druivenrassen en lokale rollen."],
+          source_refs: [source.boagri-cadillac-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken, tries-zonder-zekerheid]
+    target_ids: [concept.botrytis]
+    completeness_questions:
+      [
+        "Volgt de lezer overrijping, botrytis of passerillage, tries, persing en vergisting als één keten?",
+      ]
+    layers:
+      foundation: ["Leg handmatige opeenvolgende selectierondes en zoetebehoud volledig uit."]
+      intermediate: ["Maak arbeidsintensiteit, weersrisico en lage sapopbrengst begrijpelijk."]
+      advanced: ["Begrens kelderkeuzes als producentenpraktijk, niet als universeel recept."]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Selectieve oogst en vinificatie."],
+          source_refs: [source.boagri-cadillac-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels, actuele-drempels]
+    target_ids: []
+    completeness_questions:
+      ["Zijn wijnsoort, oogstwijze en actuele drempels exact maar begrijpelijk begrensd?"]
+    layers:
+      foundation:
+        ["Leg beschermde herkomst, witte wijn met restsuiker en verplichte handmatige tries uit."]
+      intermediate: ["Scheid appellationregel van producentenambitie."]
+      advanced:
+        [
+          "4500 stokken per hectare; 255 g/l mostsuiker; 37 hl/ha; minstens 51 g/l vergistbare suiker; rijping tot 15 maart.",
+        ]
+      specialist: []
+    evidence:
+      general_synthesis: { topics: ["Actuele appellationregels."], source_refs: [] }
+      specific_claims:
+        [
+          {
+            claim: "4500 stokken per hectare; 255 g/l mostsuiker; 37 hl/ha; minstens 51 g/l vergistbare suiker; rijping tot 15 maart.",
+            status: supported,
+            source_refs: [source.boagri-cadillac-specification-2026],
+          },
+        ]
+    review: *done
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten]
+    target_ids: []
+    completeness_questions:
+      ["Is voorkomen dat afwezigheid van classificatie als gebrek aan kwaliteit wordt gelezen?"]
+    layers:
+      {
+        foundation:
+          [
+            "Leg uit dat er geen officiële châteauclassificatie is en vermijd een willekeurige producentenranglijst.",
+          ],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Geen ranglijst als filler."], source_refs: [] }
+      specific_claims: []
+    review: *done
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling]
+    target_ids: []
+    completeness_questions:
+      ["Geeft de stijlsectie balans, variatie en ontwikkeling zonder smaak- of bewaargarantie?"]
+    layers:
+      foundation: ["Beschrijf zoetheid, zuur, fruit en textuur als bandbreedte."]
+      intermediate:
+        ["Leg mogelijke ontwikkeling naar gedroogd fruit, honing, kruiden en noten uit."]
+      advanced: ["Doorbreek vaste aromaprofielen en bewaartermijnen."]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Stijl en flesontwikkeling."],
+          source_refs: [source.boagri-cadillac-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop]
+    target_ids:
+      [
+        appellation.cadillac-cotes-de-bordeaux,
+        appellation.loupiac,
+        appellation.sainte-croix-du-mont,
+        appellation.cerons,
+      ]
+    completeness_questions:
+      ["Kan de lezer naam, producent, jaargang en naburige herkomsten uit elkaar houden?"]
+    layers:
+      foundation: ["Lees eerst de volledige appellationnaam en verwacht zoete witte wijn."]
+      intermediate: ["Vergelijk met nabijgelegen appellations zonder kwaliteitsrangorde."]
+      advanced: ["Benoem jaargang- en producentenvariatie zonder marktclaim."]
+      specialist: []
+    evidence:
+      general_synthesis:
+        { topics: ["Etiket- en aankoopnavigatie."], source_refs: [source.dgccrf-wine-labels-2025] }
+      specific_claims: []
+    review: *done
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions:
+      ["Zijn klimaat, arbeid en geringe of wisselende productie zonder voorspelling behandeld?"]
+    layers:
+      foundation: []
+      intermediate:
+        ["Leg uit waarom selectieve zoetewijnproductie elk jaar opnieuw een keuze en risico is."]
+      advanced: ["Verbind adaptatie met druifgezondheid, timing, zuur en economische haalbaarheid."]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Klimaatadaptatie en productierisico."],
+          source_refs: [source.inrae-bordeaux-climate-adaptation],
+        }
+      specific_claims: []
+    review: *done
+  - key: visuals
+    disposition: on-page
+    block_ids: [vier-zoetewijnlandschappen]
+    target_ids: []
+    completeness_questions:
+      - "Toont Cadillac een lang en gevarieerd rechteroeverlandschap met plaatselijk steile hellingen tot hoogstens circa 120 meter, zonder het als bergland af te beelden?"
+      - "Blijven Garonne, hellingen, plateaus, grindcroupes, bos en bebouwing proportioneel zonder verzonnen grenzen?"
+      - "Is de vergelijking nadrukkelijk geen kaart, schaal- of kwaliteitsrangorde?"
+      - "Kan een lokale expert ieder betekenisvol detail als correct of duidelijk conceptueel herkennen?"
+    layers:
+      {
+        foundation: ["Toon het onderscheid binnen het cluster in één vergelijkende plaat."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Vergelijkende landschapsoriëntatie."],
+          source_refs: [source.boagri-cadillac-specification-2026],
+        }
+      specific_claims: []
+    review: *done
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [
+        appellation.cadillac-cotes-de-bordeaux,
+        appellation.loupiac,
+        appellation.sainte-croix-du-mont,
+        appellation.cerons,
+        concept.botrytis,
+        grape.semillon,
+      ]
+    completeness_questions:
+      ["Zijn regio, botrytis, hoofdvariëteit en nuttige buren duurzaam ontsloten?"]
+    layers:
+      {
+        foundation: ["Bied routes naar plaats, proces, druif en vergelijking."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Vervolgkennis."], source_refs: [] }
+      specific_claims: []
+    review: *done
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

@@ -1,9 +1,9 @@
-id: appellation.cadillac
+id: appellation.sainte-croix-du-mont
 type: appellation
 status: active
-canonical_name: Cadillac
-names: { nl: Cadillac, en: Cadillac }
-slugs: { nl: cadillac, en: cadillac }
+canonical_name: Sainte-Croix-du-Mont
+names: { nl: Sainte-Croix-du-Mont, en: Sainte-Croix-du-Mont }
+slugs: { nl: sainte-croix-du-mont, en: sainte-croix-du-mont }
 locales: { nl: overview.nl.md, en: overview.en.md }
 relations:
   - { type: part_of, target: region.entre-deux-mers }
@@ -13,31 +13,29 @@ relations:
   - { type: important_grape, target: grape.sauvignon-gris }
   - { type: important_grape, target: grape.muscadelle }
   - { type: related_to, target: concept.botrytis }
-  - { type: contrasts_with, target: appellation.cadillac-cotes-de-bordeaux }
-  - { type: related_to, target: appellation.loupiac }
-  - { type: related_to, target: appellation.sainte-croix-du-mont }
-  - { type: related_to, target: appellation.cerons }
+  - { type: related_to, target: appellation.sauternes }
 assertions:
-  - id: assertion.cadillac.wine-type
+  - id: assertion.sainte-croix-du-mont.wine-type
     predicate: permitted_wine_type
     value: still-white-with-residual-sugar
     status: verified
-    sources: [source.boagri-cadillac-specification-2026]
+    sources: [source.boagri-sainte-croix-du-mont-specification-2026]
     last_verified: 2026-09-13
-  - id: assertion.cadillac.aoc-recognition
+  - id: assertion.sainte-croix-du-mont.aoc-recognition
     predicate: aoc_recognition_date
-    value: 1973-08-10
+    value: 1936-09-11
     status: historical
-    sources: [source.boagri-cadillac-specification-2026]
+    sources: [source.boagri-sainte-croix-du-mont-specification-2026]
     last_verified: 2026-09-13
-  - id: assertion.cadillac.geographic-area
+  - id: assertion.sainte-croix-du-mont.geographic-area
     predicate: geographic_area_communes
-    value: 22 communes on the right bank of the Garonne
+    value: Sainte-Croix-du-Mont
     status: verified
-    sources: [source.boagri-cadillac-specification-2026]
+    sources: [source.boagri-sainte-croix-du-mont-specification-2026]
     last_verified: 2026-09-13
 source_refs:
-  - source.boagri-cadillac-specification-2026
+  - source.inao-sainte-croix-du-mont-overview
+  - source.boagri-sainte-croix-du-mont-specification-2026
   - source.inrae-bordeaux-climate-adaptation
   - source.dgccrf-wine-labels-2025
 depth: foundation
