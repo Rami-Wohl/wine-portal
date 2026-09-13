@@ -1,0 +1,16 @@
+id: region.tokaj
+type: region
+status: draft
+canonical_name: Tokaj
+names:
+  nl: Tokaj
+  en: Tokaj
+slugs:
+  nl: tokaj
+  en: tokaj
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

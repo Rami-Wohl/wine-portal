@@ -34,7 +34,15 @@ Dutch is the primary editorial presentation. English is a reviewed
 localization, not a machine-filled fallback. Layouts must tolerate natural text
 expansion in both languages without truncating essential meaning.
 
-## 3. Illustration has a teaching job
+## 3. Photography documents; illustration explains
+
+Prefer documentary photography for real, observable subjects: named places,
+people, producers, objects, vineyard work, plant material, disease symptoms and
+other physical conditions. Use illustration when the teaching goal depends on
+showing an invisible mechanism, reconstructing a well-bounded process, or
+comparing states that suitable rights-cleared photography cannot represent
+clearly. A more attractive illustration is not a substitute for available
+photographic evidence.
 
 Use educational illustration to teach, orient, compare, or explain something
 that prose alone cannot show as efficiently. Suitable uses include processes,
@@ -164,6 +172,8 @@ Before approving visual or UI work, confirm that:
 
 - hierarchy and copy communicate the subject and scope without internal jargon;
 - every visual has a purpose and does not overstate its evidentiary role;
+- documentary photography was preferred wherever a real observable subject or
+  condition could be shown accurately with suitable rights and provenance;
 - geographic relief, physical scale, relative distance, and process proportions
   match the sources rather than the needs of a dramatic composition;
 - the visual neither beautifies the subject nor invents or suppresses material

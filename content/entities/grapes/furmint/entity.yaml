@@ -1,0 +1,16 @@
+id: grape.furmint
+type: grape
+status: draft
+canonical_name: Furmint
+names:
+  nl: Furmint
+  en: Furmint
+slugs:
+  nl: furmint
+  en: furmint
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

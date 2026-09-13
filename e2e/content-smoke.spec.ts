@@ -540,6 +540,41 @@ test("a deep block anchor reveals the required knowledge depth", async ({ page }
   );
 });
 
+test("Botrytis distinguishes noble and grey rot across knowledge depths", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/botrytis-edele-rotting");
+
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Botrytis en edele rotting" }),
+  ).toBeVisible();
+  await expect(page.locator("#gezonde-druiven img")).toHaveJSProperty("complete", true);
+  await expect(page.locator("#edele-rotting img")).toHaveJSProperty("complete", true);
+  await expect(page.locator("#grijze-rotting img")).toHaveJSProperty("complete", true);
+  await expect(page.getByRole("link", { name: "Tokaj", exact: true })).toHaveAttribute(
+    "href",
+    "/regions/tokaj",
+  );
+
+  const intermediate = page.locator("#weer-rijpheid-en-timing");
+  const advanced = page.locator("#geen-twee-soorten");
+  await expect(intermediate).toBeHidden();
+  await expect(advanced).toBeHidden();
+
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(intermediate).toBeVisible();
+  await expect(advanced).toBeHidden();
+
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(advanced).toBeVisible();
+  await expect(advanced.getByRole("heading", { level: 3 })).toBeHidden();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("the southern Garonne sweet-wine cluster stays distinct and shares an accurate comparison", async ({
   page,
 }) => {

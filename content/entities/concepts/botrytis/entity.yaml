@@ -1,6 +1,6 @@
 id: concept.botrytis
 type: concept
-status: draft
+status: active
 canonical_name: Botrytis and noble rot
 names:
   nl: Botrytis en edele rotting
@@ -11,6 +11,26 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: related_to, target: grape.furmint }
+  - { type: related_to, target: grape.riesling }
+  - { type: related_to, target: region.tokaj }
+  - { type: related_to, target: concept.passerillage }
+assertions:
+  - id: assertion.botrytis.causal-organism
+    predicate: causal_organism
+    value: Botrytis cinerea
+    status: verified
+    sources: [source.blanco-ulate-noble-rot-2015, source.vaczy-noble-grey-rot-2024]
+    last_verified: 2026-09-13
+source_refs:
+  - source.blanco-ulate-noble-rot-2015
+  - source.vaczy-noble-grey-rot-2024
+  - source.awri-managing-botrytis-fruit-2023
+  - source.inao-sauternes-specification-2026
+  - source.magyar-bor-tokaj-wine-region
+  - source.austrian-wine-key-facts-2023
+  - source.wines-germany-pradikate
+  - source.wines-germany-riesling-guide
+depth: foundation
+last_reviewed: 2026-09-13

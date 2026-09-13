@@ -1,0 +1,24 @@
+id: media.concept.botrytis.riesling-grey-rot
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/botrytis/riesling-grey-rot.jpg
+mime_type: image/jpeg
+width: 1500
+height: 2100
+checksum_sha256: fd018262685a8474e5858c9dd4271436f40d1d92a334b878a9f785dd7bd54457
+alt:
+  nl: Rieslingtros met verkleurde en opengebarsten bessen door grijze Botrytisrot
+  en: Riesling bunch with discoloured and split berries affected by Botrytis grey rot
+caption:
+  nl: Bij deze Rieslingtros heeft grijze rot bessen verkleurd en doen openbarsten. Het beeld toont dat schadelijke Botrytisaantasting niet altijd begint als een egaal grijs schimmelpluis; veldbeoordeling vraagt aandacht voor beschadiging, vocht en het verloop van afzonderlijke bessen.
+  en: Grey rot has discoloured and split berries in this Riesling bunch. The image shows that harmful Botrytis infection does not always begin as a uniform layer of grey mould; field assessment requires attention to damage, moisture and the condition of individual berries.
+rights:
+  status: open-licensed
+  creator: Rob & Lisa Meehan
+  source_url: https://commons.wikimedia.org/wiki/File:Riesling_Grapes_with_gray_rot.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Rob & Lisa Meehan via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-13
+changes: Original Wikimedia Commons file used without crop or editorial colour alteration.

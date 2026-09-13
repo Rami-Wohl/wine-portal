@@ -1,0 +1,16 @@
+id: grape.riesling
+type: grape
+status: draft
+canonical_name: Riesling
+names:
+  nl: Riesling
+  en: Riesling
+slugs:
+  nl: riesling
+  en: riesling
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []
