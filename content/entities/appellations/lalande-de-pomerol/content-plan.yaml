@@ -1,0 +1,274 @@
+schema_version: 2
+package_id: appellation.lalande-de-pomerol
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, twee-gemeenten]
+    target_ids: [region.libournais, appellation.pomerol]
+    completeness_questions:
+      [
+        "Is duidelijk waar Lalande-de-Pomerol ligt, welke twee gemeenten meetellen en hoe de appellation zich tot Pomerol verhoudt?",
+      ]
+    layers:
+      {
+        foundation: ["Oriënteer ligging en afbakening."],
+        intermediate: ["Verklaar de tweedeling tussen Lalande-de-Pomerol en Néac."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Ligging en appellationidentiteit."], source_refs: [] }
+      specific_claims: []
+    review: &done { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis]
+    target_ids: []
+    completeness_questions:
+      [
+        "Verbindt de geschiedenis middeleeuwse instellingen, herstel na phylloxera en appellationerkenning zonder oorsprongsmythe?",
+      ]
+    layers:
+      {
+        foundation: ["Leg de historische hoofdlijn uit."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Historische ontwikkeling."],
+          source_refs: [source.inao-lalande-de-pomerol-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, barbanne-geen-smaakgrens]
+    target_ids: []
+    completeness_questions:
+      [
+        "Zijn terrassen, grind, zand, klei en de Barbanne zonder bodemdeterminisme of kunstmatige smaakgrens uitgelegd?",
+      ]
+    layers:
+      {
+        foundation: ["Introduceer reliëf, klimaat en bodems."],
+        intermediate: [],
+        advanced: ["Begrens de Barbanne als administratieve en zintuiglijke scheidslijn."],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Landschap en groeiomstandigheden."],
+          source_refs:
+            [
+              source.legifrance-lalande-de-pomerol-specification-2012,
+              source.inao-lalande-de-pomerol-overview,
+            ],
+        }
+      specific_claims: []
+    review: *done
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids: [grape.merlot, grape.cabernet-franc, grape.cabernet-sauvignon, grape.malbec]
+    completeness_questions:
+      ["Zijn wettelijke rassen en hun lokale rollen begrijpelijk van elkaar gescheiden?"]
+    layers:
+      {
+        foundation: ["Introduceer hoofdrassen en accessoire rassen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Druiven en lokale rollen."],
+          source_refs: [source.legifrance-lalande-de-pomerol-specification-2012],
+        }
+      specific_claims: []
+    review: *done
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken]
+    target_ids: [concept.assemblage]
+    completeness_questions:
+      [
+        "Verklaart de pagina de hoofdkeuzes van hellingbeheer, rijpheid, extractie en opvoeding zonder producentenrecept?",
+      ]
+    layers:
+      {
+        foundation: [],
+        intermediate: ["Verbind wijngaardbeheer aan wijnmaken."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Wijnbouw en wijnmaken."],
+          source_refs: [source.legifrance-lalande-de-pomerol-specification-2012],
+        }
+      specific_claims: []
+    review: *done
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels]
+    target_ids: []
+    completeness_questions:
+      [
+        "Zijn wijnkleur, rendement en opvoeding actueel, gedateerd en als juridische minima begrensd?",
+      ]
+    layers:
+      {
+        foundation: ["Leg de dragende regels uit."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Actuele appellationregels."], source_refs: [] }
+      specific_claims:
+        - {
+            claim: "Basisrendement is 53 hl/ha.",
+            source_refs: [source.legifrance-lalande-de-pomerol-specification-2012],
+            status: supported,
+          }
+    review: *done
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten]
+    target_ids: []
+    completeness_questions:
+      [
+        "Is het ontbreken van een officiële châteauclassificatie helder zonder belangrijke producenten te rangschikken?",
+      ]
+    layers:
+      {
+        foundation: ["Geef classificatie- en producentencontext."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Producentenstructuur."],
+          source_refs: [source.inao-lalande-de-pomerol-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling]
+    target_ids: []
+    completeness_questions:
+      ["Geeft de stijlsectie een bruikbare bandbreedte zonder smaakgarantie of vast bewaartermijn?"]
+    layers:
+      {
+        foundation: ["Geef stijl- en serveercontext."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Stijl en ontwikkeling."],
+          source_refs: [source.inao-lalande-de-pomerol-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop]
+    target_ids: [appellation.pomerol]
+    completeness_questions:
+      [
+        "Kan de lezer moderne en historische namen onderscheiden en misleidende kwaliteitsassociaties vermijden?",
+      ]
+    layers:
+      {
+        foundation: ["Maak het etiket praktisch leesbaar."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Etiket en naamgebruik."],
+          source_refs: [source.legifrance-lalande-de-pomerol-specification-2012],
+        }
+      specific_claims: []
+    review: *done
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions:
+      ["Zijn klimaat- en bodemzorg als actuele opgaven uitgelegd zonder toekomstvoorspelling?"]
+    layers:
+      {
+        foundation: [],
+        intermediate: ["Verbind klimaatadaptatie en hellingbeheer."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["Klimaatadaptatie."], source_refs: [source.inrae-bordeaux-climate-adaptation] }
+      specific_claims: []
+    review: *done
+  - key: visuals
+    disposition: on-page
+    block_ids: [bodemmozaiek]
+    target_ids: []
+    completeness_questions:
+      [
+        "Blijft het landschap overwegend vlak tot zacht golvend, met alleen in Néac iets duidelijker reliëf?",
+        "Zijn grind, zand en klei-kalk als mozaïek en niet als drie abrupte, universele bodemstroken weergegeven?",
+        "Wordt de Barbanne hoogstens als bescheiden landschapselement getoond zonder een exacte grens of smaakbreuk te suggereren?",
+        "Kan een lokale gebiedsexpert alle betekenisvolle details als correct of duidelijk conceptueel herkennen?",
+      ]
+    layers:
+      {
+        foundation: ["Toon een conceptueel bodemmozaiek."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Visuele bodemvariatie en terughoudend reliëf."],
+          source_refs:
+            [
+              source.inao-lalande-de-pomerol-overview,
+              source.legifrance-lalande-de-pomerol-specification-2012,
+            ],
+        }
+      specific_claims: []
+    review: *done
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: [region.libournais, appellation.pomerol]
+    completeness_questions: ["Zijn het regionale kader en de zusteraop duurzaam ontsloten?"]
+    layers:
+      {
+        foundation: ["Ontsluit vervolgonderwerpen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Vervolgkennis."], source_refs: [] }
+      specific_claims: []
+    review: *done
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

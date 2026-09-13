@@ -226,7 +226,13 @@ coverage:
     disposition: on-page
     block_ids: ["vier-wijnstijlen"]
     target_ids: []
-    completeness_questions: ["Is visuals zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    completeness_questions:
+      [
+        "Zijn rood, droog wit, moelleux en liquoreux zichtbaar onderscheiden zonder één lineaire kwaliteits- of zoetheidsladder te maken?",
+        "Blijven Dordogneterrassen, zachte molasseplateaus en ingesneden beekdalen laag en brongetrouw?",
+        "Zijn oogstrijpheid, selectieve pluk, mist en botrytis alleen getoond waar ze mogelijke en geen verplichte routes zijn?",
+        "Kan een lokale wijnexpert alle betekenisvolle details als correct of duidelijk conceptueel herkennen?",
+      ]
     layers:
       {
         foundation: ["Gebruik beeld voor één concrete leertaak."],
@@ -235,7 +241,11 @@ coverage:
         specialist: [],
       }
     evidence:
-      general_synthesis: { topics: ["Gebruik beeld voor één concrete leertaak."], source_refs: [] }
+      general_synthesis:
+        {
+          topics: ["Vier wijnstijlen, landschap en begrensde productieroutes."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
       specific_claims: []
     review: *done
   - key: child-knowledge

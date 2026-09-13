@@ -21,6 +21,16 @@ describe("media delivery", () => {
     expect(mediaUrl(asset)).toBe("https://cdn.example.com/oenocademy/bordeaux/saint-emilion.jpg");
   });
 
+  it("versions replaced assets by their checksum", () => {
+    vi.stubEnv("MEDIA_BASE_URL", "");
+    expect(
+      mediaUrl({
+        ...asset,
+        checksum_sha256: "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
+      }),
+    ).toBe("/media/bordeaux/saint-emilion.jpg?v=abcdef123456");
+  });
+
   it("collects unique media IDs from a localized document", () => {
     const document = {
       blocks: [

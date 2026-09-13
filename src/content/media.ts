@@ -8,5 +8,8 @@ export function mediaIdsForDocument(document: ContentDocument): string[] {
 
 export function mediaUrl(asset: MediaAsset): string {
   const baseUrl = process.env.MEDIA_BASE_URL?.replace(/\/+$/, "");
-  return baseUrl ? `${baseUrl}/${asset.storage_key}` : `/media/${asset.storage_key}`;
+  const version = asset.checksum_sha256 ? `?v=${asset.checksum_sha256.slice(0, 12)}` : "";
+  return baseUrl
+    ? `${baseUrl}/${asset.storage_key}${version}`
+    : `/media/${asset.storage_key}${version}`;
 }

@@ -216,7 +216,13 @@ coverage:
     disposition: on-page
     block_ids: ["vijf-benamingen"]
     target_ids: []
-    completeness_questions: ["Is visuals zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    completeness_questions:
+      [
+        "Zijn de vijf geografische benamingen als afzonderlijke landschapsmotieven en niet als kaart, buren of identieke heuvels verbeeld?",
+        "Heeft ieder paneel alleen brongetrouwe kenmerken en blijft verschil in reliëf proportioneel?",
+        "Vermijdt het beeld een kwaliteitsrangorde, uniforme wijnstijl of volledige landschapsdekking te suggereren?",
+        "Kan een lokale gebiedsexpert alle betekenisvolle details als correct of duidelijk conceptueel herkennen?",
+      ]
     layers:
       {
         foundation: ["Gebruik beeld voor één concrete leertaak."],
@@ -225,7 +231,11 @@ coverage:
         specialist: [],
       }
     evidence:
-      general_synthesis: { topics: ["Gebruik beeld voor één concrete leertaak."], source_refs: [] }
+      general_synthesis:
+        {
+          topics: ["Vijf afzonderlijke en gevarieerde landschapskernen."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
       specific_claims: []
     review: *done
   - key: child-knowledge

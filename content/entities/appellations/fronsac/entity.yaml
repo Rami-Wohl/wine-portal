@@ -1,6 +1,6 @@
 id: appellation.fronsac
 type: appellation
-status: draft
+status: active
 canonical_name: Fronsac
 names:
   nl: Fronsac
@@ -11,6 +11,30 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.fronsadais }
+  - { type: related_to, target: appellation.canon-fronsac }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.malbec }
+assertions:
+  - id: assertion.fronsac.red-wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.inao-fronsac-specification-2024]
+    last_verified: 2026-09-12
+  - id: assertion.fronsac.recognition
+    predicate: aoc_recognition_date
+    value: 1937-03-04
+    status: verified
+    sources: [source.inao-fronsac-specification-2024]
+    last_verified: 2026-09-12
+source_refs:
+  - source.inao-fronsac-overview
+  - source.inao-fronsac-specification-2024
+  - source.vins-fronsac-vineyard
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-13

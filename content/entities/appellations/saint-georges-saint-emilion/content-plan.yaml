@@ -1,0 +1,268 @@
+schema_version: 2
+package_id: appellation.saint-georges-saint-emilion
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [ligging-en-afbakening, administratie-en-wijngebied]
+    target_ids: [region.libournais, appellation.saint-emilion, appellation.montagne-saint-emilion]
+    completeness_questions:
+      [
+        "Is duidelijk waar Saint-Georges-Saint-Émilion ligt en waarom een verdwenen gemeente toch een zelfstandige appellation kan dragen?",
+      ]
+    layers:
+      {
+        foundation: ["Oriënteer ligging en afbakening."],
+        intermediate: [],
+        advanced: ["Scheid de bestuurlijke fusie van de blijvende wijnrechtelijke grens."],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Ligging en appellationidentiteit."], source_refs: [] }
+      specific_claims: []
+    review: &done { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis]
+    target_ids: []
+    completeness_questions:
+      [
+        "Verbindt de geschiedenis lokale naamgeving, appellationerkenning en gemeentefusie zonder oorsprongsmythe?",
+      ]
+    layers:
+      {
+        foundation: ["Leg de historische hoofdlijn uit."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Historische ontwikkeling."],
+          source_refs: [source.inao-saint-georges-saint-emilion-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, expositie-en-evenwicht]
+    target_ids: []
+    completeness_questions:
+      ["Zijn kalkplateau, klei-kalkhelling en expositie zonder bodemdeterminisme uitgelegd?"]
+    layers:
+      {
+        foundation: ["Introduceer reliëf, klimaat en bodems."],
+        intermediate: ["Verbind expositie aan rijping zonder smaakgarantie."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Landschap en groeiomstandigheden."],
+          source_refs:
+            [
+              source.legifrance-saint-georges-saint-emilion-specification-2011,
+              source.inao-saint-georges-saint-emilion-overview,
+            ],
+        }
+      specific_claims: []
+    review: *done
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids: [grape.merlot, grape.cabernet-franc, grape.cabernet-sauvignon, grape.malbec]
+    completeness_questions:
+      ["Zijn wettelijke rassen en hun lokale rollen begrijpelijk van elkaar gescheiden?"]
+    layers:
+      {
+        foundation: ["Introduceer hoofdrassen en accessoire rassen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Druiven en lokale rollen."],
+          source_refs: [source.legifrance-saint-georges-saint-emilion-specification-2011],
+        }
+      specific_claims: []
+    review: *done
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken]
+    target_ids: [concept.assemblage]
+    completeness_questions:
+      [
+        "Verklaart de pagina de hoofdkeuzes van hellingbeheer, rijpheid, extractie en opvoeding zonder producentenrecept?",
+      ]
+    layers:
+      {
+        foundation: [],
+        intermediate: ["Verbind wijngaardbeheer aan wijnmaken."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Wijnbouw en wijnmaken."],
+          source_refs: [source.legifrance-saint-georges-saint-emilion-specification-2011],
+        }
+      specific_claims: []
+    review: *done
+  - key: appellation-rules
+    disposition: on-page
+    block_ids: [appellationregels]
+    target_ids: []
+    completeness_questions:
+      [
+        "Zijn wijnkleur, rendement en opvoeding actueel, gedateerd en als juridische minima begrensd?",
+      ]
+    layers:
+      {
+        foundation: ["Leg de dragende regels uit."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Actuele appellationregels."], source_refs: [] }
+      specific_claims:
+        - {
+            claim: "Basisrendement is 53 hl/ha.",
+            source_refs: [source.legifrance-saint-georges-saint-emilion-specification-2011],
+            status: supported,
+          }
+    review: *done
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids: [classificatie-en-producenten]
+    target_ids: []
+    completeness_questions:
+      [
+        "Is het ontbreken van een officiële châteauclassificatie helder zonder belangrijke producenten te rangschikken?",
+      ]
+    layers:
+      {
+        foundation: ["Geef classificatie- en producentencontext."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Producentenstructuur."],
+          source_refs: [source.inao-saint-georges-saint-emilion-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [wijnstijl-en-flesontwikkeling]
+    target_ids: []
+    completeness_questions:
+      ["Geeft de stijlsectie een bruikbare bandbreedte zonder smaakgarantie of vast bewaartermijn?"]
+    layers:
+      {
+        foundation: ["Geef stijl- en serveercontext."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Stijl en ontwikkeling."],
+          source_refs: [source.inao-saint-georges-saint-emilion-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids: [etiket-en-aankoop]
+    target_ids: [appellation.saint-emilion]
+    completeness_questions:
+      [
+        "Kan de lezer moderne en historische namen onderscheiden en misleidende kwaliteitsassociaties vermijden?",
+      ]
+    layers:
+      {
+        foundation: ["Maak het etiket praktisch leesbaar."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Etiket en naamgebruik."],
+          source_refs: [source.legifrance-saint-georges-saint-emilion-specification-2011],
+        }
+      specific_claims: []
+    review: *done
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions:
+      ["Zijn klimaat- en bodemzorg als actuele opgaven uitgelegd zonder toekomstvoorspelling?"]
+    layers:
+      {
+        foundation: [],
+        intermediate: ["Verbind klimaatadaptatie en hellingbeheer."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["Klimaatadaptatie."], source_refs: [source.inrae-bordeaux-climate-adaptation] }
+      specific_claims: []
+    review: *done
+  - key: visuals
+    disposition: on-page
+    block_ids: [satellietfamilie]
+    target_ids: []
+    completeness_questions:
+      [
+        "Toont het Saint-Georges-paneel een compact laag kalkplateau en een bescheiden helling boven de Barbanne zonder dramatisch rivierdal?",
+        "Zijn expositie, bebouwing, bosstroken en wijngaard geloofwaardig zonder één ideaal perceel als de hele appellation te presenteren?",
+        "Blijft het gedeelde vierluik vrij van verzonnen grenzen, onderlinge richting en kwaliteitsrangorde?",
+        "Kan een lokale gebiedsexpert alle betekenisvolle details als correct of duidelijk conceptueel herkennen?",
+      ]
+    layers:
+      {
+        foundation: ["Toon een conceptueel satellietfamilie."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Vergelijkende landschapslogica van de satellieten."],
+          source_refs: [source.legifrance-saint-georges-saint-emilion-specification-2011],
+        }
+      specific_claims: []
+    review: *done
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: [region.libournais, appellation.saint-emilion, appellation.montagne-saint-emilion]
+    completeness_questions: ["Zijn het regionale kader en de zusteraop duurzaam ontsloten?"]
+    layers:
+      {
+        foundation: ["Ontsluit vervolgonderwerpen."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Vervolgkennis."], source_refs: [] }
+      specific_claims: []
+    review: *done
+entity_dependencies: []
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

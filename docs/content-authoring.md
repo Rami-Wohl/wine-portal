@@ -31,8 +31,11 @@ Hij bevat minimaal:
 9. **Claimplan** — per block de twee tot vier centrale uitspraken die onderzoek
    moet kunnen dragen, hun passende bronsoort en hun status (`open`, `supported`
    of `omit`). Dit staat los van de lijst met gevonden bronnen.
-10. **Visualvragen** — welke concrete informatie ieder voorgesteld beeld sneller
-    of duidelijker moet overbrengen dan tekst alleen.
+10. **Visualvragen en feitencontract** — welke concrete informatie ieder
+    voorgesteld beeld sneller of duidelijker moet overbrengen dan tekst alleen;
+    welke bron het zichtbare reliëf, schaal, bodem, vegetatie, bebouwing,
+    werktuigen en processen ondersteunt; welke elementen verplicht of verboden
+    zijn; en welke vereenvoudiging het bijschrift moet begrenzen.
 11. **Publication gate** — de controle waaraan outline, research, dependencies,
     NL/EN en uiteindelijke presentatie vóór publicatie moeten voldoen.
 
@@ -604,6 +607,53 @@ uses only the stable `media.*` ID. Do not copy paths, URLs, captions or credits
 into content. `content:check` verifies the reference, rights metadata, local
 file, and SHA-256 checksum. Setting `MEDIA_BASE_URL` later switches delivery to
 the same keys on a CDN without rewriting authored content.
+
+New educational illustrations and captions must follow the editorial
+illustration house style and caption convention in `visual-language.md`. Treat
+geographic scale and relief as factual review points even when an image is
+conceptual; “not a map” does not permit a misleading landscape.
+
+### Visual accuracy gate
+
+Before prompting or commissioning an educational illustration, record a compact
+visual facts contract in the brief or the `visuals` entry of `content-plan.yaml`:
+
+- the exact lesson and why an illustration is the right medium;
+- source-backed required elements and their relative scale;
+- details that must not appear because they are absent, uncertain, exceptional,
+  anachronistic, or likely to imply a false location or causal relation;
+- the permitted simplifications and the limitation the caption must state; and
+- the primary sources or verified documentary references used for visual review.
+
+Review the final image independently from its beauty. It is publishable only
+when every answer below is satisfactory:
+
+1. **Relief and scale:** does the height, slope, distance, depth, size, and
+   relative prominence match the documented landscape or process?
+2. **No beautification bias:** has the image avoided making the place cleaner,
+   grander, steeper, sunnier, more uniform, more historic, more prosperous, or
+   more viticulturally perfect than the subject warrants?
+3. **No invented detail:** is every meaningful river, château, village, quarry,
+   soil layer, vine treatment, tool, vessel, grape condition, and architectural
+   feature supported or unmistakably generic?
+4. **No material omission:** are features necessary to understand the lesson
+   present, including ordinary variation, woodland, mixed land use, weathering,
+   or operational messiness where relevant?
+5. **No false relationship:** does composition avoid implying unsupported
+   adjacency, direction, boundary, chronology, causality, frequency, or quality?
+6. **Domain plausibility:** are season, light, plant development, vineyard
+   practice, cellar operation, geology, architecture, and human activity
+   mutually consistent?
+7. **Caption honesty:** does the caption teach how to read the visual and name
+   every consequential simplification without trying to repair a fundamentally
+   misleading image?
+8. **Expert test:** could a knowledgeable local or subject-matter expert inspect
+   the image and reasonably conclude that everything material shown is correct?
+
+If the expert test cannot be met, simplify or regenerate the image. Do not
+publish an attractive approximation and delegate its inaccuracies to the
+caption. Record the visual review in the content plan or maintenance log when it
+corrects an existing asset.
 
 ## Validate and build
 

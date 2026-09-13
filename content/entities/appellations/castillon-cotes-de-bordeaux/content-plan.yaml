@@ -220,7 +220,13 @@ coverage:
     disposition: on-page
     block_ids: ["hellingprofiel"]
     target_ids: []
-    completeness_questions: ["Is visuals zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    completeness_questions:
+      [
+        "Toont het beeld de overgang van lagere Dordogneterrassen via kleirijke hellingen naar hoger klei-kalk en kalksteen zonder de hoogte te overdrijven?",
+        "Zijn wijngaard, bosstroken, gemengd landgebruik en bodemvariatie geloofwaardig in plaats van geïdealiseerd?",
+        "Vermijdt de compositie een universeel perceelsprofiel, exacte ligging of smaakgarantie te suggereren?",
+        "Kan een lokale gebiedsexpert alle betekenisvolle details als correct of duidelijk conceptueel herkennen?",
+      ]
     layers:
       {
         foundation: ["Gebruik beeld voor één concrete leertaak."],
@@ -229,7 +235,11 @@ coverage:
         specialist: [],
       }
     evidence:
-      general_synthesis: { topics: ["Gebruik beeld voor één concrete leertaak."], source_refs: [] }
+      general_synthesis:
+        {
+          topics: ["Brongetrouwe overgang tussen terras, helling en plateau."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
       specific_claims: []
     review: *done
   - key: child-knowledge

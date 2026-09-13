@@ -226,7 +226,13 @@ coverage:
     disposition: on-page
     block_ids: ["kleine-appellation-veel-stijlen"]
     target_ids: []
-    completeness_questions: ["Is visuals zonder kennishiaten behandeld of duurzaam uitbesteed?"]
+    completeness_questions:
+      [
+        "Zijn rood, droog wit en liquoreux zichtbaar onderscheiden zonder vaste kleur, aroma, druif of oogstconditie te garanderen?",
+        "Blijft het kleine oostelijke landschap zacht en geloofwaardig in plaats van spectaculair of volledig met wijnstok bedekt?",
+        "Zijn rijpheid, selectieve pluk en eventuele botrytis of passerillage als mogelijke routes en niet als universeel recept verbeeld?",
+        "Kan een lokale wijnexpert alle betekenisvolle details als correct of duidelijk conceptueel herkennen?",
+      ]
     layers:
       {
         foundation: ["Gebruik beeld voor één concrete leertaak."],
@@ -235,7 +241,11 @@ coverage:
         specialist: [],
       }
     evidence:
-      general_synthesis: { topics: ["Gebruik beeld voor één concrete leertaak."], source_refs: [] }
+      general_synthesis:
+        {
+          topics: ["Drie wijnstijlen en begrensde productieroutes."],
+          source_refs: [source.inao-cotes-bordeaux-specification-2026],
+        }
       specific_claims: []
     review: *done
   - key: child-knowledge

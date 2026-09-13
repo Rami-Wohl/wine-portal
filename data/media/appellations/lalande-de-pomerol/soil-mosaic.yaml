@@ -1,0 +1,22 @@
+id: media.appellation.lalande-de-pomerol.soil-mosaic
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/lalande-de-pomerol/soil-mosaic.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: d211e25d66014b5c36f617b5de789dadaf199337bf6618a41508ce22c1c2e052
+alt:
+  nl: Geschilderd vlak tot zacht golvend wijngaardlandschap met een kleine beek en een onregelmatig bodemmozaïek van grind, zand, klei en kalkhoudend materiaal
+  en: Painted flat to gently rolling vineyard landscape with a small stream and an irregular soil mosaic of gravel, sand, clay and calcareous material
+caption:
+  nl: Het oppervlak blijft vooral vlak tot zacht golvend; de voorgrond laat grind, zand en kleirijk of kalkhoudend materiaal als lenzen en mengzones in elkaar overlopen. De kleine, begroeide beek verwijst naar de Barbanne, terwijl wijngaarden en ander boerenland aan beide zijden doorgaan. Dit is een conceptueel bodemmozaïek, geen kaart, perceelsprofiel of abrupte smaakgrens.
+  en: The surface remains predominantly flat to gently rolling; the foreground lets gravel, sand and clay-rich or calcareous material merge through lenses and mixed zones. The small vegetated stream refers to the Barbanne while vineyards and other farmland continue on both sides. This is a conceptual soil mosaic, not a map, parcel profile or abrupt flavour boundary.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Regenerated after geographic review to flatten the landscape, reduce the stream and replace three abrupt soil bands with an irregular mosaic; original 1672 by 941 pixel PNG used without crop or colour alteration.

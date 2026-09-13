@@ -2,23 +2,21 @@ id: media.appellation.castillon-cotes-de-bordeaux.slope-profile
 kind: illustration
 role: educational
 status: active
-storage_key: appellations/castillon-cotes-de-bordeaux/slope-profile.svg
-mime_type: image/svg+xml
-width: 1600
-height: 900
-checksum_sha256: 855c3850e621a03ef563ef7f3c6bb1f0cbc400293d9786d38aa41385fafd7a7c
+storage_key: appellations/castillon-cotes-de-bordeaux/slope-profile.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 923ed326f0cc02b6fee9c9bf29a7fb93c192e0d448a0be26908676f118e63bdf
 alt:
-  nl: Schematisch profiel van rivierterrassen via een kleihelling naar een kalkplateau met wijnstokken
-  en: Schematic profile from river terraces through a clay slope to a limestone plateau with vines
+  nl: Geschilderd Castillon-landschap met Dordogneterras, kleirijke wijnhelling, laag kalkplateau, bos en een onregelmatige bodemdoorsnede
+  en: Painted Castillon landscape with Dordogne terrace, clay-rich vineyard slope, low limestone plateau, woodland and an irregular soil cutaway
 caption:
-  nl: Schematisch, niet geografisch exact. Castillon omvat lagere grindafzettingen, kleirijke hellingen en hoger klei-kalk en kalksteen; werkelijke percelen zijn complexer.
-  en: Schematic, not geographically exact. Castillon includes lower gravel deposits, clay-rich slopes and higher clay-limestone and limestone; real parcels are more complex.
+  nl: "Van de lage Dordogneterrassen loopt het landschap via kleirijkere coteaux naar hoger klei-kalk en kalksteen. Akkers, bosstroken en bebouwing houden het reliëf en de mate van wijnbouw op schaal; de voorgronddoorsnede laat overgangen onregelmatig verlopen. Dit is geen werkelijk transect of kwaliteitsladder: percelen mengen en variëren veel fijner."
+  en: "From the low Dordogne terraces, the landscape rises through clay-richer coteaux toward higher clay-limestone and limestone. Fields, woodland and buildings keep both relief and vineyard coverage in scale, while the foreground cutaway lets transitions remain irregular. This is neither a real transect nor a quality ladder: parcels mix and vary much more finely."
 rights:
-  {
-    status: owned,
-    creator: Oenocademy,
-    license_name: Project-owned original SVG,
-    credit_line: Oenocademy,
-  }
-acquired_at: 2026-09-12
-changes: Original language-neutral educational illustration.
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Replaced the original SVG with a geographically reviewed 1672 by 941 pixel painted PNG; source-based mixed land use and irregular soil transitions replace the simplified three-band profile.

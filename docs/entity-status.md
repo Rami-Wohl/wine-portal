@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 282 entities — 73 active, 209 draft, 0 deprecated.
+**Totaal:** 283 entities — 81 active, 202 draft, 0 deprecated.
 
 **Producentenrecords:** 155 — 17 monografie, 36 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (73)
+## Actief — publiek vindbaar (81)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -19,23 +19,30 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Blaye Côtes de Bordeaux](../content/entities/appellations/blaye-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.blaye-cotes-de-bordeaux` | Ja | `/appellations/blaye-cotes-de-bordeaux` | 2026-09-12 |
 | [Bordeaux Supérieur](../content/entities/appellations/bordeaux-superieur/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux-superieur` | Ja | `/appellations/bordeaux-superieur` | 2026-09-12 |
 | [Cadillac Côtes de Bordeaux](../content/entities/appellations/cadillac-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cadillac-cotes-de-bordeaux` | Ja | `/appellations/cadillac-cotes-de-bordeaux` | 2026-09-12 |
+| [Canon-Fronsac](../content/entities/appellations/canon-fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.canon-fronsac` | Ja | `/appellations/canon-fronsac` | 2026-09-13 |
 | [Castillon Côtes de Bordeaux](../content/entities/appellations/castillon-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.castillon-cotes-de-bordeaux` | Ja | `/appellations/castillon-cotes-de-bordeaux` | 2026-09-12 |
 | [Côtes de Bordeaux](../content/entities/appellations/cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bordeaux` | Ja | `/appellations/cotes-de-bordeaux` | 2026-09-12 |
 | [Côtes de Bourg](../content/entities/appellations/cotes-de-bourg/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bourg` | Ja | `/appellations/cotes-de-bourg` | 2026-09-12 |
 | [Crémant de Bordeaux](../content/entities/appellations/cremant-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cremant-de-bordeaux` | Ja | `/appellations/cremant-de-bordeaux` | 2026-09-12 |
 | [Francs Côtes de Bordeaux](../content/entities/appellations/francs-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.francs-cotes-de-bordeaux` | Ja | `/appellations/francs-cotes-de-bordeaux` | 2026-09-12 |
+| [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.fronsac` | Ja | `/appellations/fronsac` | 2026-09-13 |
 | [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves` | Ja | `/appellations/graves` | 2026-09-11 |
 | [Graves Supérieures](../content/entities/appellations/graves-superieures/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves-superieures` | Ja | `/appellations/graves-superieures` | 2026-09-11 |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.haut-medoc` | Ja | `/appellations/haut-medoc` | 2026-09-09 |
+| [Lalande-de-Pomerol](../content/entities/appellations/lalande-de-pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lalande-de-pomerol` | Ja | `/appellations/lalande-de-pomerol` | 2026-09-13 |
 | [Listrac-Médoc](../content/entities/appellations/listrac-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.listrac-medoc` | Ja | `/appellations/listrac-medoc` | 2026-09-11 |
+| [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lussac-saint-emilion` | Ja | `/appellations/lussac-saint-emilion` | 2026-09-13 |
 | [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaux` | Ja | `/appellations/margaux` | 2026-09-11 |
+| [Montagne-Saint-Émilion](../content/entities/appellations/montagne-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.montagne-saint-emilion` | Ja | `/appellations/montagne-saint-emilion` | 2026-09-13 |
 | [Moulis-en-Médoc](../content/entities/appellations/moulis-en-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.moulis-en-medoc` | Ja | `/appellations/moulis-en-medoc` | 2026-09-11 |
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-02 |
 | [Pessac-Léognan](../content/entities/appellations/pessac-leognan/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pessac-leognan` | Ja | `/appellations/pessac-leognan` | 2026-09-11 |
 | [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pomerol` | Ja | `/appellations/pomerol` | 2026-09-09 |
+| [Puisseguin-Saint-Émilion](../content/entities/appellations/puisseguin-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.puisseguin-saint-emilion` | Ja | `/appellations/puisseguin-saint-emilion` | 2026-09-13 |
 | [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-emilion` | Ja | `/appellations/saint-emilion` | 2026-09-08 |
 | [Saint-Émilion Grand Cru](../content/entities/appellations/saint-emilion-grand-cru/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-emilion-grand-cru` | Ja | `/appellations/saint-emilion-grand-cru` | 2026-09-08 |
 | [Saint-Estèphe](../content/entities/appellations/saint-estephe/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-estephe` | Ja | `/appellations/saint-estephe` | 2026-09-11 |
+| [Saint-Georges-Saint-Émilion](../content/entities/appellations/saint-georges-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-georges-saint-emilion` | Ja | `/appellations/saint-georges-saint-emilion` | 2026-09-13 |
 | [Saint-Julien](../content/entities/appellations/saint-julien/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-julien` | Ja | `/appellations/saint-julien` | 2026-09-11 |
 | [Sainte-Foy Côtes de Bordeaux](../content/entities/appellations/sainte-foy-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sainte-foy-cotes-de-bordeaux` | Ja | `/appellations/sainte-foy-cotes-de-bordeaux` | 2026-09-12 |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-08 |
@@ -82,11 +89,12 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | Zelfstandige pagina | `region.blayais-bourgeais` | Ja | `/regions/blayais-bourgeais` | 2026-09-12 |
 | [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | Zelfstandige pagina | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | Zelfstandige pagina | `region.entre-deux-mers` | Ja | `/regions/entre-deux-mers` | 2026-09-11 |
+| [Fronsadais](../content/entities/regions/fronsadais/entity.yaml) | Regio | Zelfstandige pagina | `region.fronsadais` | Ja | `/regions/fronsadais` | 2026-09-13 |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | Zelfstandige pagina | `region.graves-sauternais` | Ja | `/regions/graves-sauternais` | 2026-09-11 |
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (209)
+## Draft — nog uit te werken (202)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -95,19 +103,12 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Bolgheri](../content/entities/appellations/bolgheri/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bolgheri` | Nee — reviewroute | `/appellations/bolgheri` | — |
 | [Bourgueil](../content/entities/appellations/bourgueil/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bourgueil` | Nee — reviewroute | `/appellations/bourgueil` | — |
 | [Cadillac](../content/entities/appellations/cadillac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cadillac` | Nee — reviewroute | `/appellations/cadillac` | — |
-| [Canon-Fronsac](../content/entities/appellations/canon-fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.canon-fronsac` | Nee — reviewroute | `/appellations/canon-fronsac` | — |
 | [Chinon](../content/entities/appellations/chinon/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.chinon` | Nee — reviewroute | `/appellations/chinon` | — |
 | [Coonawarra](../content/entities/appellations/coonawarra/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.coonawarra` | Nee — reviewroute | `/appellations/coonawarra` | — |
-| [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.fronsac` | Nee — reviewroute | `/appellations/fronsac` | — |
-| [Lalande-de-Pomerol](../content/entities/appellations/lalande-de-pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lalande-de-pomerol` | Nee — reviewroute | `/appellations/lalande-de-pomerol` | — |
-| [Lussac-Saint-Émilion](../content/entities/appellations/lussac-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lussac-saint-emilion` | Nee — reviewroute | `/appellations/lussac-saint-emilion` | — |
 | [Maipo Valley](../content/entities/appellations/maipo-valley/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.maipo-valley` | Nee — reviewroute | `/appellations/maipo-valley` | — |
 | [Margaret River](../content/entities/appellations/margaret-river/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaret-river` | Nee — reviewroute | `/appellations/margaret-river` | — |
-| [Montagne-Saint-Émilion](../content/entities/appellations/montagne-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.montagne-saint-emilion` | Nee — reviewroute | `/appellations/montagne-saint-emilion` | — |
 | [Napa Valley](../content/entities/appellations/napa-valley/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.napa-valley` | Nee — reviewroute | `/appellations/napa-valley` | — |
 | [Pouilly-Fumé](../content/entities/appellations/pouilly-fume/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pouilly-fume` | Nee — reviewroute | `/appellations/pouilly-fume` | — |
-| [Puisseguin-Saint-Émilion](../content/entities/appellations/puisseguin-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.puisseguin-saint-emilion` | Nee — reviewroute | `/appellations/puisseguin-saint-emilion` | — |
-| [Saint-Georges-Saint-Émilion](../content/entities/appellations/saint-georges-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-georges-saint-emilion` | Nee — reviewroute | `/appellations/saint-georges-saint-emilion` | — |
 | [Saint-Nicolas-de-Bourgueil](../content/entities/appellations/saint-nicolas-de-bourgueil/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-nicolas-de-bourgueil` | Nee — reviewroute | `/appellations/saint-nicolas-de-bourgueil` | — |
 | [Sancerre](../content/entities/appellations/sancerre/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sancerre` | Nee — reviewroute | `/appellations/sancerre` | — |
 | [Saumur-Champigny](../content/entities/appellations/saumur-champigny/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saumur-champigny` | Nee — reviewroute | `/appellations/saumur-champigny` | — |

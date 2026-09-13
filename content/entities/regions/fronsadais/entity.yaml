@@ -1,0 +1,30 @@
+id: region.fronsadais
+type: region
+status: active
+canonical_name: Fronsadais
+names:
+  nl: Fronsadais
+  en: Fronsadais
+slugs:
+  nl: fronsadais
+  en: fronsadais
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: part_of, target: region.libournais }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.malbec }
+source_refs:
+  - source.vins-fronsac-vineyard
+  - source.inao-fronsac-overview
+  - source.inao-canon-fronsac-overview
+  - source.inao-fronsac-specification-2024
+  - source.inao-canon-fronsac-specification-2024
+  - source.msha-bordeaux-wine-history
+  - source.inrae-bordeaux-climate-adaptation
+assertions: []
+depth: foundation
+last_reviewed: 2026-09-13

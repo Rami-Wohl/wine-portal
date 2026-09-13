@@ -1,6 +1,6 @@
 id: appellation.lalande-de-pomerol
 type: appellation
-status: draft
+status: active
 canonical_name: Lalande-de-Pomerol
 names:
   nl: Lalande-de-Pomerol
@@ -14,5 +14,20 @@ locales:
 relations:
   - { type: part_of, target: region.bordeaux }
   - { type: related_to, target: appellation.pomerol }
-assertions: []
-source_refs: []
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.malbec }
+assertions:
+  - id: assertion.lalande-de-pomerol.red-wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.legifrance-lalande-de-pomerol-specification-2012]
+    last_verified: 2026-09-12
+source_refs:
+  - source.inao-lalande-de-pomerol-overview
+  - source.legifrance-lalande-de-pomerol-specification-2012
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-13

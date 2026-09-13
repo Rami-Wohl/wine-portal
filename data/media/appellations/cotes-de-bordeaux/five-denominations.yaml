@@ -2,23 +2,21 @@ id: media.appellation.cotes-de-bordeaux.five-denominations
 kind: illustration
 role: educational
 status: active
-storage_key: appellations/cotes-de-bordeaux/five-denominations.svg
-mime_type: image/svg+xml
-width: 1600
-height: 900
-checksum_sha256: 13e8b655abd6529d1bdc85815408c2283fd4f8df271de22561d541b97ac49b3d
+storage_key: appellations/cotes-de-bordeaux/five-denominations.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: de345ac38623f90202fdbbe6fe130eecdfba8c4b9ec99eaf60301acd7f342687
 alt:
-  nl: Vijf afzonderlijke wijngaardhellingen die door één rivierlijn als familie zijn verbonden
-  en: Five separate vineyard hills connected as a family by one river line
+  nl: Vijf geschilderde panelen met verschillende lage rivier-, estuarium-, terras-, helling- en plateau-landschappen van de Côtes de Bordeaux
+  en: Five painted panels showing different low estuary, river, terrace, slope and plateau landscapes of the Côtes de Bordeaux
 caption:
-  nl: Een conceptuele oriëntatie, geen kaart. De vijf geografische benamingen delen de Côtes de Bordeaux-naam, maar liggen in afzonderlijke kernen met eigen grenzen en regels.
-  en: A conceptual orientation, not a map. The five geographical denominations share the Côtes de Bordeaux name but occupy separate centres with their own boundaries and rules.
+  nl: "Lees bovenaan Blaye, Cadillac en Castillon en onderaan Francs en Sainte-Foy: van estuariumcoteau en lange Garonnehelling via Dordogneterras en kalkplateau naar een kleine landinwaartse kern en zachtere plateaus met beekdalen. Bos, akkers en dorpen horen bij het landschap naast de wijnstok. De panelen tonen vijf afzonderlijke motieven met gelijk gewicht; hun volgorde is geen kaart, onderlinge ligging, oppervlakte- of kwaliteitsrangorde."
+  en: "Read Blaye, Cadillac and Castillon across the top, then Francs and Sainte-Foy below: from estuary coteau and long Garonne slope through Dordogne terrace and limestone plateau to a small inland core and gentler plateaus with stream valleys. Woodland, fields and villages belong beside the vine. The panels show five separate motifs with equal weight; their order is not a map, adjacency, area or quality ranking."
 rights:
-  {
-    status: owned,
-    creator: Oenocademy,
-    license_name: Project-owned original SVG,
-    credit_line: Oenocademy,
-  }
-acquired_at: 2026-09-12
-changes: Original language-neutral educational illustration.
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Replaced the original SVG with a geographically reviewed 1672 by 941 pixel five-panel PNG; the former generic connected hills no longer imply adjacency or uniform relief.

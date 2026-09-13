@@ -51,6 +51,55 @@ Prefer reusable visuals without baked-in language. Use HTML/SVG labels or other
 localizable overlays where practical; otherwise maintain explicit NL and EN
 variants with equivalent meaning and localized alternative text.
 
+### 3.1 Editorial illustration house style
+
+For atmospheric educational illustrations, use a painterly editorial-naturalist
+style: detailed watercolor and gouache, optionally supported by restrained fine
+ink, with believable light, vegetation, architecture, vineyard practice, soil,
+and material texture. The default palette is warm and quiet—parchment,
+limestone, clay, muted olive, vine green, and natural sky tones—without making
+every subject look nostalgic or interchangeable.
+
+An illustration must remain understandable as an image, while its caption
+completes the lesson. Prefer a legible landscape, cutaway, process scene, or
+small comparative plate over floating symbols, generic icons, vague collage, or
+decorative abstraction. Show enough physical detail to distinguish the specific
+landform, soil sequence, vineyard practice, or process being taught.
+
+Painterly illustrations are raster assets, normally PNG or WebP, and not SVG.
+Reserve SVG for interface icons and genuinely diagrammatic visuals whose value
+depends on scalable geometry, labels, or data—not as a substitute for a rich
+editorial illustration. A horizontal editorial image may default to an
+approximately 16:9 composition, but the content determines the final aspect
+ratio.
+
+Geographic character must be calibrated against verified sources. Do not
+exaggerate elevation, slope, cliffs, valleys, watercourses, quarry faces, soil
+depth, or the proximity of landmarks merely to make a composition more
+dramatic. Bordeaux in particular contains strong local changes of relief within
+a generally low landscape; an illustration must preserve that scale. Never
+arrange conceptual panels so that they imply real adjacency or direction unless
+verified geographic data supports it.
+
+Generated illustrations contain no baked-in names, legends, logos, borders, or
+map-like labels. Add localized explanation in the page layer where necessary.
+They must not imitate a photograph or present a generic château, bottle, person,
+or parcel as the named real subject.
+
+### 3.2 Caption convention for educational illustration
+
+An educational caption should normally do three jobs in this order:
+
+1. tell the reader how to read the image and identify its relevant elements;
+2. explain the relationship or contrast those elements illustrate; and
+3. state the material limitation, such as “conceptual,” “not a map,” “not a real
+   parcel,” or “not evidence of quality.”
+
+Write the caption as useful editorial prose rather than production metadata.
+Keep the creator or credit line separate. Alternative text describes the visual
+information required to understand the image; it does not repeat the complete
+caption.
+
 ## 4. Image credibility and rights
 
 Choose images because they contribute evidence, explanation, atmosphere tied to
@@ -115,6 +164,12 @@ Before approving visual or UI work, confirm that:
 
 - hierarchy and copy communicate the subject and scope without internal jargon;
 - every visual has a purpose and does not overstate its evidentiary role;
+- geographic relief, physical scale, relative distance, and process proportions
+  match the sources rather than the needs of a dramatic composition;
+- the visual neither beautifies the subject nor invents or suppresses material
+  detail, variation, ordinary land use, weathering, or operational reality;
+- a domain expert could regard every consequential visible element and
+  relationship as plausible and correctly bounded;
 - images and data visuals have suitable provenance, rights, and credits;
 - maps use verified geography or are unmistakably schematic;
 - NL and EN, long content, and missing states are supported;

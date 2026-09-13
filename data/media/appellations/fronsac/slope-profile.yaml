@@ -1,0 +1,22 @@
+id: media.appellation.fronsac.slope-profile
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/fronsac/slope-profile.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: d8e33d6de77df759abf06d4e0dc87c3ba27bd6cc5ac9c03f9b41ce3b98275624
+alt:
+  nl: Geschilderde Fronsac-coteau boven een brede riviervlakte, met wijngaarden, bos, gewone boerderijen en een terughoudende bodemdoorsnede
+  en: Painted Fronsac coteau above a broad river plain, with vineyards, woodland, ordinary farm buildings and a restrained soil cutaway
+caption:
+  nl: "De riviervlakte, bebouwing en horizon laten zien dat Fronsacs coteaux plaatselijk steil maar slechts enkele tientallen meters hoog zijn; het hoogste tertre bereikt ongeveer 76 meter. Bos en begroeiing onderbreken de wijnhelling, terwijl de smalle voorgronddoorsnede kalkhoudende bodem en molasse slechts als mogelijke opbouw toont. Dit is een samengestelde landschapsles, geen werkelijk perceel of universeel bodemprofiel."
+  en: "The river plain, buildings and horizon show that Fronsac's coteaux can be locally steep yet rise only several tens of metres; its highest tertre reaches about 76 metres. Woodland and vegetation interrupt the vineyard slope, while the narrow foreground cutaway presents calcareous soil and molasse only as one possible structure. This is a composite landscape lesson, not a real parcel or universal soil profile."
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Regenerated twice after geographic review; the final version lowers the viewpoint, halves the apparent slope, widens the river plain and keeps geology subordinate while retaining the 76 metre maximum as a captioned scale anchor; original 1672 by 941 pixel PNG used without crop or colour alteration.

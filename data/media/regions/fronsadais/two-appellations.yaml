@@ -1,0 +1,22 @@
+id: media.region.fronsadais.two-appellations
+kind: illustration
+role: educational
+status: active
+storage_key: regions/fronsadais/two-appellations.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 311de26b19aa6879905d120528a3b4e1e05aae3f0a432fcb0a892991d8914836
+alt:
+  nl: Breed geschilderd rivierlandschap met lage wijnplateaus, korte kalkhellingen, bosstroken, akkers en verspreide kalkstenen dorpen
+  en: Wide painted river landscape with low vineyard plateaus, short limestone slopes, woodland, fields and scattered limestone villages
+caption:
+  nl: "De verre horizon, dorpen en bomen houden het reliëf op schaal: lage plateaus worden plaatselijk onderbroken door korte, steilere coteaux en een bescheiden, vaak beboste kalkcorniche. Wijngaarden wisselen af met bos en ander boerenland. Het beeld vat het gedeelde Fronsadais-landschap samen, maar verdeelt Fronsac en Canon-Fronsac niet en is geen kaart of werkelijk uitzichtpunt."
+  en: "The distant horizon, villages and trees keep the relief in scale: low plateaus are locally interrupted by short, steeper coteaux and a modest, often wooded limestone cornice. Vineyards alternate with woodland and other farmland. The image summarizes the shared Fronsadais landscape but does not divide Fronsac from Canon-Fronsac and is neither a map nor a real viewpoint."
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Regenerated after geographic review to reduce apparent elevation, remove the false two-territory composition and restore mixed land use; original 1672 by 941 pixel PNG used without crop or colour alteration.

@@ -2,23 +2,21 @@ id: media.appellation.sainte-foy-cotes-de-bordeaux.four-styles
 kind: illustration
 role: educational
 status: active
-storage_key: appellations/sainte-foy-cotes-de-bordeaux/four-styles.svg
-mime_type: image/svg+xml
-width: 1600
-height: 900
-checksum_sha256: 7c9a5b2e9b70a89fe0277a1306e8d47398a1ea67b8432325f553e1e3da19c0ef
+storage_key: appellations/sainte-foy-cotes-de-bordeaux/four-styles.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: bb9e5388b83787fe96e730fd813c003d88a1e90295e82107e1306080692de813
 alt:
-  nl: Vier wijnglazen voor rood, droog wit, moelleux en liquoreux naast een mistige rivierlijn
-  en: Four wine glasses for red, dry white, moelleux and liquoreux beside a misty river line
+  nl: Vier geschilderde oogstpanelen voor rode, droge witte, moelleux en liquoreux wijn tegen lage Dordogneterrassen en zacht golvende plateaus
+  en: Four painted harvest panels for red, dry white, moelleux and liquoreux wine against low Dordogne terraces and gently rolling plateaus
 caption:
-  nl: De vier stijlen delen één herkomst, maar vragen verschillende oogstmomenten en productieroutes. De riviermist is conceptueel weergegeven en vormt geen kaart.
-  en: The four styles share one origin but require different harvest timing and production routes. River mist is shown conceptually; this is not a map.
+  nl: "Lees linksboven rood, rechtsboven droog wit, linksonder moelleux en rechtsonder liquoreux: druifkleur, rijpheid en selectiviteit van de pluk verschillen, terwijl lage Dordogneterrassen en zachte, door beekdalen gescheiden plateaus de gedeelde context vormen. De vier vakken zijn geen kwaliteitsladder. Mist, botrytis, passerillage en selectieve pluk kunnen zoete wijn helpen vormen, maar zijn niet overal of ieder jaar gelijk aanwezig."
+  en: "Read top left as red, top right as dry white, bottom left as moelleux and bottom right as liquoreux: grape colour, ripeness and picking selectivity differ while low Dordogne terraces and gentle plateaus divided by stream valleys form the shared context. The four panels are not a quality ladder. Mist, botrytis, passerillage and selective picking can help shape sweet wine but are not equally present everywhere or every year."
 rights:
-  {
-    status: owned,
-    creator: Oenocademy,
-    license_name: Project-owned original SVG,
-    credit_line: Oenocademy,
-  }
-acquired_at: 2026-09-12
-changes: Original language-neutral educational illustration.
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Replaced the original SVG with a reviewed 1672 by 941 pixel four-panel PNG that separates wine styles without turning ripeness or sweetness into a quality hierarchy.

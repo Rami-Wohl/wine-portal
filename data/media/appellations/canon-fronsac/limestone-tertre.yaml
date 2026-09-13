@@ -1,0 +1,22 @@
+id: media.appellation.canon-fronsac.limestone-tertre
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/canon-fronsac/limestone-tertre.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 63c4984798c07aec1580bd31764dad4ed80dda0797162c9891c3c969e5a230b2
+alt:
+  nl: Geschilderde lage, afgeronde wijntertre met verspreide stenen huizen, een beboste kalkcorniche, riviervlakte en een kleine bodemdoorsnede
+  en: Painted low rounded vineyard tertre with scattered stone houses, a wooded limestone cornice, river plain and a small soil cutaway
+caption:
+  nl: "Bomen, huizen en de wijde riviervlakte houden de Canon-tertre op zijn werkelijke orde van grootte: een lokaal markante hoogte van ongeveer 61 meter, geen kalkberg. Wijnstokken staan op kruin en helling; een smalle, verweerde kalkcorniche blijft grotendeels begroeid. De kleine doorsnede is conceptueel, stelt geen werkelijk perceel voor en maakt van kalk geen smaak- of kwaliteitsgarantie."
+  en: "Trees, houses and the broad river plain keep the Canon tertre at its real order of magnitude: a locally prominent rise of about 61 metres, not a limestone mountain. Vines occupy crown and slope while a narrow, weathered limestone cornice remains largely vegetated. The small cutaway is conceptual, represents no real parcel and does not turn limestone into a flavour or quality guarantee."
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Regenerated twice after geographic review; the final version presents the 61 metre tertre as a low rounded rise, removes the deep-valley effect and makes the local limestone exposure discreet and subordinate; original 1672 by 941 pixel PNG used without crop or colour alteration.

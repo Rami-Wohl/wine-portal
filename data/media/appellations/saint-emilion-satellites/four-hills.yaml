@@ -1,0 +1,22 @@
+id: media.appellations.saint-emilion-satellites.four-hills
+kind: illustration
+role: educational
+status: active
+storage_key: appellations/saint-emilion-satellites/four-hills.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 1e0fe10a5adf628fb3a0f4df18533965078809a55d395f8f11c2f3ee5390d551
+alt:
+  nl: Vier geschilderde wijngaardpanelen met lage kalkplateaus, bescheiden hellingen, bosstroken, beekdalen en een kleine oude groeve-ingang
+  en: Four painted vineyard panels with low limestone plateaus, modest slopes, woodland, stream valleys and a small old quarry entrance
+caption:
+  nl: "Lees van linksboven naar rechtsonder: Montagne combineert een laag kalkplateau, coteau en zachter terras; Lussac toont brede lage plateaus met lokaal een afgeronde hoogte en kleine beekdalen; Puisseguin heeft het meest versneden reliëf, beboste dalbodems en een discrete verwijzing naar oude kalkwinning; Saint-Georges ligt compact op plateau en helling boven de Barbanne. Gebouwen houden alle hoogteverschillen op tientallen meters. Het vierluik vergelijkt landschapslogica, niet ligging, oppervlakte, grenzen of kwaliteit."
+  en: "Read from top left to bottom right: Montagne combines a low limestone plateau, coteau and gentler terrace; Lussac shows broad low plateaus with a locally rounded rise and small stream valleys; Puisseguin has the most articulated relief, wooded valley bottoms and a discreet reference to historic limestone workings; Saint-Georges sits compactly on plateau and slope above the Barbanne. Buildings keep every elevation difference to a scale of tens of metres. The plate compares landscape logic, not location, area, boundaries or quality."
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-13
+changes: Regenerated after geographic review with common human scale, lower relief, more mixed land use and a much smaller quarry reference; original 1672 by 941 pixel PNG used without crop or colour alteration and panel arrangement does not encode geography.

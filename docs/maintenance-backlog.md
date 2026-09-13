@@ -21,7 +21,7 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-09-11.
+Peildatum: 2026-09-13.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
@@ -29,7 +29,7 @@ Peildatum: 2026-09-11.
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 12 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024` |
+| Afgerond | 14 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026`, `MNT-027` |
 | Vervallen | 0 | — |
 
 Van het uitvoerbare open werk hebben drie acties prioriteit `hoog` en zeven
@@ -237,6 +237,54 @@ geographydatalaag.
   voorlopige assertion `cancellation-request-published-not-confirmed`.
 
 ## Historie
+
+### `MNT-026` — Reliëf in rechteroeverillustraties geografisch herijken
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** media, geography, content
+- **Scope:** `region.fronsadais`, `appellation.fronsac`,
+  `appellation.canon-fronsac`, `appellation.lalande-de-pomerol` en de vier
+  Saint-Émilion-satellieten
+- **Herkomst:** visuele review 2026-09-13
+- **Bevinding:** de eerste geschilderde illustraties waren inhoudelijk leesbaar,
+  maar vergrootten plaatselijk het verticale reliëf, de kalkwanden en de
+  bodemovergangen. Fronsac en Canon-Fronsac hebben echte coteaux en tertres,
+  maar geen hoog heuvelland; Lalande-de-Pomerol is overwegend vlak tot zacht
+  golvend.
+- **Klaar wanneer:** iedere illustratie opnieuw is getoetst aan officiële
+  reliëf- en landschapsbeschrijvingen; hoogte, hellingshoek, rivierdal,
+  kalkcorniche, bodemovergang en groeve zijn proportioneel; captions benoemen de
+  conceptuele beperking; en desktop plus mobiel zijn gecontroleerd.
+- **Log:** 2026-09-13 — afgerond. Vijf PNG's zijn opnieuw gegenereerd met
+  expliciete hoogteankers, menselijke schaal, gemengd landgebruik en verboden
+  dramatisering. Fronsac noemt de circa 76 meter hoge tertre, Canon-Fronsac circa
+  61 meter; Lalande toont een onregelmatig bodemmozaïek in zacht reliëf; het
+  satellietvierluik gebruikt één vergelijkbare schaal en slechts een discrete
+  groeveverwijzing. Mediarecords, checksums, NL/EN-altteksten en captions zijn
+  vervangen en visueel plus technisch gevalideerd.
+
+### `MNT-027` — Legacy SVG-illustraties tegen de nieuwe huisstijl toetsen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** media, content, accessibility
+- **Scope:** `appellation.castillon-cotes-de-bordeaux`,
+  `appellation.cotes-de-bordeaux`, `appellation.francs-cotes-de-bordeaux` en
+  `appellation.sainte-foy-cotes-de-bordeaux`
+- **Herkomst:** visuele review 2026-09-13
+- **Bevinding:** vier pagina's gebruikten een SVG als atmosferische
+  `illustration`, terwijl hun leerdoel beter paste bij de gedetailleerde,
+  geschilderde rasterstijl. Echte schema's voor regels, etiketten,
+  classificatiehiërarchie en de traditionele methode blijven functionele SVG's.
+- **Klaar wanneer:** de vier visuals afzonderlijk zijn beoordeeld, geschikte
+  gevallen zijn vervangen door brongetrouwe rasterillustraties met de nieuwe
+  captionconventie en behouden SVG's expliciet een diagramfunctie hebben.
+- **Log:** 2026-09-13 — afgerond. Castillon kreeg een gekalibreerde overgang van
+  terras via helling naar plateau; de Côtes-overview vijf gelijkwaardige,
+  niet-cartografische landschapsmotieven; Francs drie begrensde oogstroutes; en
+  Sainte-Foy vier stijlen zonder kwaliteitsladder. De vier oude SVG-bestanden
+  zijn verwijderd en hun stabiele media-ID's verwijzen nu naar PNG's.
 
 ### `MNT-023` — Pomerol-producentenverzameling als end-to-end pilot
 

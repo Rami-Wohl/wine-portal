@@ -1,6 +1,6 @@
 id: appellation.montagne-saint-emilion
 type: appellation
-status: draft
+status: active
 canonical_name: Montagne-Saint-Émilion
 names:
   nl: Montagne-Saint-Émilion
@@ -11,6 +11,28 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: part_of, target: region.bordeaux }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.malbec }
+assertions:
+  - id: assertion.montagne-saint-emilion.red-wine-type
+    predicate: permitted_wine_type
+    value: still-red
+    status: verified
+    sources: [source.boagri-montagne-saint-emilion-specification-2019]
+    last_verified: 2026-09-12
+  - id: assertion.montagne-saint-emilion.recognition
+    predicate: aoc_recognition_date
+    value: 1936-11-14
+    status: verified
+    sources: [source.inao-montagne-saint-emilion-overview]
+    last_verified: 2026-09-12
+source_refs:
+  - source.inao-montagne-saint-emilion-overview
+  - source.boagri-montagne-saint-emilion-specification-2019
+  - source.inrae-bordeaux-climate-adaptation
+depth: foundation
+last_reviewed: 2026-09-13

@@ -1,0 +1,341 @@
+schema_version: 2
+package_id: region.fronsadais
+archetype: region-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids: [overzicht, regio-en-appellation]
+    target_ids: [region.libournais, appellation.fronsac, appellation.canon-fronsac]
+    completeness_questions:
+      ["Kan de lezer het Fronsadais plaatsen en regio van beschermde herkomst onderscheiden?"]
+    layers:
+      {
+        foundation: ["Plaats de streek tussen Isle, Dordogne en Libourne."],
+        intermediate: ["Scheid de streeknaam van de twee juridische appellations."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Regionale identiteit en appellationgrenzen."],
+          source_refs:
+            [
+              source.vins-fronsac-vineyard,
+              source.inao-fronsac-specification-2024,
+              source.inao-canon-fronsac-specification-2024,
+            ],
+        }
+      specific_claims: []
+    review: &done { outline: complete, nl: complete, en: complete }
+  - key: historical-development
+    disposition: on-page
+    block_ids: [geschiedenis, reputatie-en-markt]
+    target_ids: []
+    completeness_questions:
+      [
+        "Verbindt de geschiedenis rivieren, handel, oude reputatie en latere appellationerkenning zonder prestige als huidige rang te presenteren?",
+      ]
+    layers:
+      {
+        foundation: ["Introduceer de strategische ligging en historische handelsreputatie."],
+        intermediate: [],
+        advanced: ["Begrens historische bekendheid als veranderlijke marktpositie."],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Historische ontwikkeling en handel."],
+          source_refs: [source.vins-fronsac-vineyard, source.msha-bordeaux-wine-history],
+        }
+      specific_claims: []
+    review: *done
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids: [landschap-klimaat-en-bodem, water-en-erosie]
+    target_ids: []
+    completeness_questions:
+      [
+        "Zijn plateaus, tertres, molasse, rivieren, drainage en erosie zonder bodemdeterminisme uitgelegd?",
+      ]
+    layers:
+      {
+        foundation: ["Maak het heuvelachtige landschap en de bodemfamilie voorstelbaar."],
+        intermediate: ["Leg de dubbele rol van helling voor afwatering en erosie uit."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Landschap en groeiomstandigheden."],
+          source_refs:
+            [
+              source.vins-fronsac-vineyard,
+              source.inao-fronsac-specification-2024,
+              source.inao-canon-fronsac-specification-2024,
+            ],
+        }
+      specific_claims: []
+    review: *done
+  - key: wine-families
+    disposition: on-page
+    block_ids: [wijnstijlen]
+    target_ids: []
+    completeness_questions:
+      [
+        "Geeft de stijlsectie een bruikbare bandbreedte zonder een smaakrecept aan de streek toe te schrijven?",
+      ]
+    layers:
+      {
+        foundation: ["Introduceer de rode stijlbandbreedte."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Rode wijnstijlen."],
+          source_refs: [source.inao-fronsac-overview, source.inao-canon-fronsac-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: grape-varieties
+    disposition: on-page
+    block_ids: [druivenrassen]
+    target_ids: [grape.merlot, grape.cabernet-franc, grape.cabernet-sauvignon, grape.malbec]
+    completeness_questions:
+      [
+        "Zijn de belangrijkste rassen en hun mogelijke lokale rollen begrijpelijk van elkaar gescheiden?",
+      ]
+    layers:
+      {
+        foundation: ["Introduceer Merlot en zijn belangrijkste partners."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Druiven en lokale rollen."],
+          source_refs:
+            [source.inao-fronsac-specification-2024, source.inao-canon-fronsac-specification-2024],
+        }
+      specific_claims: []
+    review: *done
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids: [wijnbouw-en-wijnmaken]
+    target_ids: [concept.assemblage]
+    completeness_questions:
+      [
+        "Verklaart de pagina hellingbeheer, extractie en opvoeding zonder één regionaal recept te suggereren?",
+      ]
+    layers:
+      {
+        foundation: [],
+        intermediate: ["Verbind hellingbeheer en tanninestructuur aan wijnmaken."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Wijnbouw en wijnmaken."],
+          source_refs:
+            [source.inao-fronsac-specification-2024, source.inao-canon-fronsac-specification-2024],
+        }
+      specific_claims: []
+    review: *done
+  - key: appellation-structure
+    disposition: on-page
+    block_ids: [appellations]
+    target_ids: [appellation.fronsac, appellation.canon-fronsac]
+    completeness_questions:
+      [
+        "Zijn Fronsac en Canon-Fronsac als twee verwante maar zelfstandige appellations gepresenteerd?",
+      ]
+    layers:
+      {
+        foundation: ["Orden de twee appellations zonder kwaliteitsladder."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Appellationstructuur."],
+          source_refs:
+            [source.inao-fronsac-specification-2024, source.inao-canon-fronsac-specification-2024],
+        }
+      specific_claims: []
+    review: *done
+  - key: classification-systems
+    disposition: on-page
+    block_ids: [classificaties]
+    target_ids: []
+    completeness_questions:
+      ["Is helder dat het Fronsadais geen officiële châteauclassificatie kent?"]
+    layers:
+      {
+        foundation: ["Begrens reputatie en producentenbekendheid tegenover formele classificatie."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Classificatiecontext."],
+          source_refs: [source.inao-fronsac-overview, source.inao-canon-fronsac-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: trade-and-institutions
+    disposition: on-page
+    block_ids: [handel-en-instituties]
+    target_ids: []
+    completeness_questions:
+      [
+        "Zijn historische rivierhandel en hedendaagse gezamenlijke vertegenwoordiging van elkaar onderscheiden?",
+      ]
+    layers:
+      {
+        foundation: [],
+        intermediate:
+          ["Verbind historische handelsroutes aan de huidige gedeelde beroepsorganisatie."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Handel en instituties."],
+          source_refs: [source.vins-fronsac-vineyard, source.msha-bordeaux-wine-history],
+        }
+      specific_claims: []
+    review: *done
+  - key: labels-and-terminology
+    disposition: on-page
+    block_ids: [etiketten-en-begrippen]
+    target_ids: [appellation.fronsac, appellation.canon-fronsac]
+    completeness_questions:
+      [
+        "Kan de lezer streeknaam, huidige appellations, historische namen en geologische term uit elkaar houden?",
+      ]
+    layers:
+      {
+        foundation: ["Maak de twee herkomstnamen en kernbegrippen praktisch leesbaar."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Etikettermen en historische namen."],
+          source_refs:
+            [source.inao-fronsac-specification-2024, source.inao-canon-fronsac-specification-2024],
+        }
+      specific_claims: []
+    review: *done
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids: [in-het-glas]
+    target_ids: []
+    completeness_questions:
+      [
+        "Geeft de pagina proef-, serveer- en bewaarperspectief als bandbreedte en niet als garantie?",
+      ]
+    layers:
+      {
+        foundation: ["Geef praktische proef- en serveercontext."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Proef- en serveercontext."],
+          source_refs: [source.inao-fronsac-overview, source.inao-canon-fronsac-overview],
+        }
+      specific_claims: []
+    review: *done
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [hedendaagse-ontwikkelingen]
+    target_ids: []
+    completeness_questions:
+      [
+        "Zijn warmte, droogte, zonnebrand, hevige regen en erosie als samenhangende opgaven behandeld?",
+      ]
+    layers:
+      {
+        foundation: [],
+        intermediate: ["Leg actuele klimaat- en bodembeheerkeuzes uit."],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["Klimaatadaptatie."], source_refs: [source.inrae-bordeaux-climate-adaptation] }
+      specific_claims: []
+    review: *done
+  - key: visuals
+    disposition: on-page
+    block_ids: [twee-appellaties]
+    target_ids: []
+    completeness_questions:
+      [
+        "Blijven de tertres en kalkcorniches binnen het gedocumenteerde lage reliëf van maximaal enkele tientallen meters?",
+        "Vermijdt het beeld twee appellations als twee zichtbare gebieden, onderlinge ligging of kwaliteitsladder voor te stellen?",
+        "Zijn rivieren, wijngaarden, bosstroken, dorpen en geologie geloofwaardig zonder het landschap mooier of uniformer te maken dan het is?",
+        "Kan een lokale gebiedsexpert alle betekenisvolle details als correct of duidelijk conceptueel herkennen?",
+      ]
+    layers:
+      {
+        foundation: ["Toon een conceptuele tweedeling van het Fronsadais."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["Visuele oriëntatie en reliëfkalibratie."],
+          source_refs:
+            [source.inao-fronsac-specification-2024, source.inao-canon-fronsac-specification-2024],
+        }
+      specific_claims: []
+    review: *done
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids: [appellation.fronsac, appellation.canon-fronsac]
+    completeness_questions: ["Zijn beide appellations duurzaam als vervolgkennis ontsloten?"]
+    layers:
+      {
+        foundation: ["Verwijs door naar beide detailpagina's."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["Entiteitsnavigatie."], source_refs: [] }
+      specific_claims: []
+    review: *done
+entity_dependencies:
+  - id: appellation.fronsac
+    names: { nl: Fronsac, en: Fronsac }
+    slugs: { nl: fronsac, en: fronsac }
+    disposition: link
+  - id: appellation.canon-fronsac
+    names: { nl: Canon-Fronsac, en: Canon-Fronsac }
+    slugs: { nl: canon-fronsac, en: canon-fronsac }
+    disposition: link
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
