@@ -154,6 +154,36 @@ Naast Yquem bieden premiers crus als [[producer.chateau-guiraud|Château Guiraud
 Producenten verschillen in ligging, druivenverhouding, selectiestrengheid, vatregime en gewenste balans. De rang vertelt historische positie; de concrete fles vertelt hoe plaats, jaar en keuzes samenkwamen.
 :::
 
+:::detail{#producent-chateau-guiraud parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-guiraud-identity"}
+### Château Guiraud
+
+Château Guiraud ligt in de gemeente Sauternes en draagt sinds 1766 de naam van de koopmansfamilie die het landgoed toen verwierf. In 1855 werd het als Premier Cru opgenomen. Sinds 2022 maakt het deel uit van Terres de Natures, opgericht door Matthieu Gufflet; Sandrine Garbay leidt het team. Die opeenvolging is meer dan stamboom: Guiraud presenteert zich tegenwoordig nadrukkelijk via biodiversiteit en biologische wijnbouw. Het domein werd in 2011 biologisch gecertificeerd, na een koers die al in de jaren negentig begon. [@source.chateau-guiraud-identity]
+
+Ook de druivenmix maakt Guiraud leerzaam. De wijngaard bevat naar Sauternesmaatstaven veel [[grape.sauvignon-blanc|sauvignon blanc]], naast [[grape.semillon|sémillon]]. De grand vin is een zoete, door [[concept.botrytis|edele rotting]] gevormde Sauternes; Petit Guiraud is een afzonderlijke zoete selectie. G de Guiraud en Grand Vin Blanc Sec zijn droge witte Bordeauxwijnen. Zij komen uit hetzelfde domeinuniversum, maar vallen niet onder de zoete appellation Sauternes.
+
+Guiraud is daarom geen bewijs dat één druivenpercentage, certificaat of techniek een smaak garandeert. Het is een helder voorbeeld van hoe historische rang, moderne landbouwkeuzes en meerdere wijncategorieën binnen één producent naast elkaar kunnen bestaan.
+:::
+
+:::detail{#producent-chateau-rieussec parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-rieussec-estate"}
+### Château Rieussec
+
+Château Rieussec ligt op de overgang van Fargues naar Sauternes, naast het wijngaardgebied van Château d’Yquem. In de achttiende eeuw behoorde het aan de karmelieten van Langon; na de Franse Revolutie en verschillende eigenaarswisselingen kwam het in 1984 bij Domaines Barons de Rothschild Lafite. Het château was toen al een Premier Cru van 1855. De bouw van een nieuwe kelder vanaf 1989 en strengere selectie markeren volgens het domein de moderne fase. [@source.chateau-rieussec-estate]
+
+[[grape.semillon|Sémillon]] vormt de ruggengraat van de wijngaard, aangevuld met sauvignon blanc en [[grape.muscadelle|muscadelle]]. Château Rieussec is de lang te bewaren zoete hoofdwijn. Carmes de Rieussec is eveneens Sauternes, maar een afzonderlijke tweede selectie die doorgaans eerder benaderbaar wordt gemaakt. R de Rieussec is juist droog wit en draagt daarom een andere herkomstbenaming.
+
+Dat onderscheid voorkomt een veelgemaakte leesfout: “van Rieussec” betekent niet automatisch “Château Rieussec” en zelfs niet automatisch “Sauternes”. De rang uit 1855 hoort bij het historische cru; de exacte cuvée, appellation en jaargang vertellen wat er daadwerkelijk in de fles zit. Nabijheid tot Yquem biedt bovendien geografische oriëntatie, geen stilistische of kwalitatieve gelijkstelling.
+:::
+
+:::detail{#producent-chateau-suduiraut parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-suduiraut-history source.chateau-suduiraut-grand-vin source.chateau-suduiraut-castelnau"}
+### Château Suduiraut
+
+Château Suduiraut ligt in Preignac. Het domein kreeg zijn naam in 1580 door het huwelijk van Nicole d’Allard met Léonard de Suduiraut. Het oude huis werd tijdens de Fronde geplunderd en verbrand; de zeventiende-eeuwse herbouw en de later aangelegde formele tuinen gaven het landgoed zijn herkenbare aanzien. In 1855 volgde de rang Premier Cru. AXA Millésimes nam Suduiraut in 1992 over en is nog altijd eigenaar. [@source.chateau-suduiraut-history]
+
+De grand vin, Château Suduiraut, komt uit een strenge selectie van botrytisdruiven en is bedoeld als de meest geconcentreerde, langlevende zoete uitdrukking van het domein. Castelnau de Suduiraut is geen jongere jaargang van dezelfde wijn, maar een eigen Sauternesselectie uit partijen die eerder toegankelijkheid tonen. Daarnaast maakt het château droge witte wijnen; die staan appellationtechnisch buiten Sauternes, ook wanneer ze dezelfde druiven of percelenomgeving delen. [@source.chateau-suduiraut-grand-vin] [@source.chateau-suduiraut-castelnau]
+
+Suduiraut laat zo drie zaken uit elkaar houden: Premier Cru is een historische classificatie, grand vin is een producentenselectie en Sauternes is een beschermde herkomst voor zoete wijn. Geen van die labels voorspelt op zichzelf de precieze blend of smaak van iedere fles. Daarvoor blijven cuvée en jaargang noodzakelijk.
+:::
+
 :::detail{#reputatie-is-geen-volledigheid parent="classificatie-en-producenten" depth="advanced" source_refs="source.gcc1855-classification-history"}
 ### Wat de lijst buiten beeld laat
 

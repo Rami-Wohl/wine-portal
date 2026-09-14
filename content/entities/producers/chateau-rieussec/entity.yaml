@@ -1,6 +1,6 @@
 id: producer.chateau-rieussec
 type: producer
-status: draft
+status: active
 canonical_name: Château Rieussec
 names: { nl: Château Rieussec, en: Château Rieussec }
 slugs: { nl: chateau-rieussec, en: chateau-rieussec }
@@ -16,4 +16,5 @@ relations:
     properties: { tier: premier-cru }
     valid_from: 1855
 assertions: []
-source_refs: [source.gcc1855-classification-overview]
+source_refs: [source.gcc1855-classification-overview, source.chateau-rieussec-estate]
+last_reviewed: 2026-09-14

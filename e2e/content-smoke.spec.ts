@@ -569,6 +569,37 @@ test("Pauillac media and appellation details follow the knowledge-depth contract
   await expect(page.locator("#producent-chateau-pichon-baron")).toBeVisible();
 });
 
+test("Sauternes and Barsac expose their producer cohorts at intermediate depth", async ({
+  page,
+}) => {
+  await page.goto("/appellations/sauternes");
+  await page
+    .getByRole("group", { name: "Kies hoeveel detail je wilt zien" })
+    .getByRole("button", { name: "Verdieping" })
+    .click();
+
+  for (const anchor of [
+    "#producent-chateau-guiraud",
+    "#producent-chateau-rieussec",
+    "#producent-chateau-suduiraut",
+  ]) {
+    await expect(page.locator(anchor)).toBeVisible();
+  }
+
+  await page.goto("/producers/chateau-rieussec");
+  await expect(page).toHaveURL(/\/appellations\/sauternes#producent-chateau-rieussec$/);
+  await expect(page.locator("#producent-chateau-rieussec")).toBeVisible();
+
+  await page.goto("/appellations/barsac");
+  for (const anchor of ["#producent-chateau-climens", "#producent-chateau-coutet"]) {
+    await expect(page.locator(anchor)).toBeVisible();
+  }
+
+  await page.goto("/producers/chateau-climens");
+  await expect(page).toHaveURL(/\/appellations\/barsac#producent-chateau-climens$/);
+  await expect(page.locator("#producent-chateau-climens")).toBeVisible();
+});
+
 test("Libournais orients the region with contrasting landscapes and progressive depth", async ({
   page,
 }) => {

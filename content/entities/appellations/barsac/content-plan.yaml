@@ -147,7 +147,14 @@ coverage:
     review: *complete
   - key: classification-and-producers
     disposition: on-page
-    block_ids: [classificatie-en-producenten, twee-premiers-acht-deuxiemes, rang-en-huidige-wijn]
+    block_ids:
+      [
+        classificatie-en-producenten,
+        twee-premiers-acht-deuxiemes,
+        producent-chateau-climens,
+        producent-chateau-coutet,
+        rang-en-huidige-wijn,
+      ]
     target_ids:
       [
         classification.bordeaux-1855,
@@ -163,17 +170,30 @@ coverage:
         producer.chateau-suau-barsac,
       ]
     completeness_questions:
-      [Zijn alle tien Barsac-crus correct ontsloten en de grenzen van 1855 zichtbaar?]
+      [
+        Zijn alle tien Barsac-crus correct ontsloten en de grenzen van 1855 zichtbaar?,
+        Maken de twee collectieprofielen geschiedenis eigendom hoofdwijn nevenwijnen en hun didactische begrenzing duidelijk?,
+      ]
     layers:
       foundation: [Introduceer Climens Coutet en de tien Barsac-crus.]
-      intermediate: [Maak de twee Premiers en acht Deuxièmes navigeerbaar.]
+      intermediate:
+        [Maak de twee Premiers en acht Deuxièmes navigeerbaar en profileer Climens en Coutet.]
       advanced: [Begrens historische rang tegenover huidige producenten en flessen.]
       specialist: []
     evidence:
       general_synthesis:
         {
           topics: [Classificatiescope en producentennavigatie.],
-          source_refs: [source.gcc1855-classification-history],
+          source_refs:
+            [
+              source.gcc1855-classification-history,
+              source.chateau-climens-history,
+              source.chateau-climens-grand-vin,
+              source.chateau-climens-asphodele,
+              source.chateau-coutet-history,
+              source.chateau-coutet-second-wine,
+              source.chateau-coutet-opalie,
+            ],
         }
       specific_claims:
         [

@@ -48,5 +48,10 @@ source_refs:
   - source.brgm-bordeaux-geology-2022
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+  - source.chateau-guiraud-identity
+  - source.chateau-rieussec-estate
+  - source.chateau-suduiraut-history
+  - source.chateau-suduiraut-grand-vin
+  - source.chateau-suduiraut-castelnau
 depth: foundation
-last_reviewed: 2026-09-08
+last_reviewed: 2026-09-14

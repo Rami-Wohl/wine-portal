@@ -155,6 +155,26 @@ That strong presence explains Barsac's historical visibility, but 1855 is not an
 The list is a navigation map for producers and history, not buying advice. The three Doisy names are separate estates, not three spellings of one château.
 :::
 
+:::detail{#producent-chateau-climens parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-climens-history source.chateau-climens-grand-vin source.chateau-climens-asphodele"}
+### Château Climens
+
+Château Climens stands on Barsac’s limestone plateau. Its name appears in a contract from 1547, after which the estate remained in the hands of remarkably few families. In 2022 Bérénice Lurton transferred a majority holding to the Moitry family. Premier Cru status dates from 1855 and is therefore distinct from this much more recent ownership history. [@source.chateau-climens-history]
+
+The sweet grand vin is unusual within the area because it is made from 100% [[grape.semillon|Sémillon]]. The whole vineyard has been farmed biodynamically since 2010 and has carried Biodyvin certification since 2014. These are meaningful identity markers, but no guarantee that every vintage will show the same intensity, development or flavour. Strict selection may even mean that no grand vin is released in a difficult year. [@source.chateau-climens-grand-vin]
+
+Climens also makes other wines, including the dry Asphodèle. It too consists of estate-grown Sémillon, but carries Bordeaux as its appellation and is therefore not “dry Barsac”: the protected Barsac name applies here to sweet wine. Climens consequently offers a particularly clear lesson in the difference between producer, grape variety, cuvée and designation of origin. [@source.chateau-climens-asphodele]
+:::
+
+:::detail{#producent-chateau-coutet parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-coutet-history source.chateau-coutet-second-wine source.chateau-coutet-opalie"}
+### Château Coutet
+
+Château Coutet visibly carries its medieval past: the property began as a fortress and retains, among other features, a thirteenth-century tower. Its documented history as a wine estate begins in 1643. After a long period under the Lur-Saluces family and several later owners, Coutet was acquired in 1977 by Marcel Baly and his sons Philippe and Dominique. The château is one of Barsac’s two 1855 Premiers Crus. [@source.chateau-coutet-history]
+
+Château Coutet is the sweet grand vin. La Chartreuse de Coutet, created by the Baly family in 1977, is a distinct second sweet wine from the same vineyard. Cuvée Madame appears only as an exceptional, very small selection and should not be mistaken for a permanent higher classification tier. Alongside this sweet range, the estate has made Opalie since 2010, a dry white from selected parcels. It uses Sémillon and Sauvignon but sits outside the sweet Barsac appellation. [@source.chateau-coutet-second-wine] [@source.chateau-coutet-opalie]
+
+Coutet therefore makes label hierarchy easy to examine: Premier Cru is the château’s historical rank; grand vin, second wine and rare selection are producer decisions; dry or sweet helps determine which appellation may appear on the bottle. None of these terms replaces the exact wine name and vintage.
+:::
+
 :::detail{#rang-en-huidige-wijn parent="classificatie-en-producenten" depth="advanced" source_refs="source.gcc1855-classification-history"}
 ### Historical rank and present performance remain different questions
 

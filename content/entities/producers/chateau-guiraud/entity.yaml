@@ -1,6 +1,6 @@
 id: producer.chateau-guiraud
 type: producer
-status: draft
+status: active
 canonical_name: Château Guiraud
 names: { nl: Château Guiraud, en: Château Guiraud }
 slugs: { nl: chateau-guiraud, en: chateau-guiraud }
@@ -16,4 +16,5 @@ relations:
     properties: { tier: premier-cru }
     valid_from: 1855
 assertions: []
-source_refs: [source.gcc1855-classification-overview]
+source_refs: [source.gcc1855-classification-overview, source.chateau-guiraud-identity]
+last_reviewed: 2026-09-14

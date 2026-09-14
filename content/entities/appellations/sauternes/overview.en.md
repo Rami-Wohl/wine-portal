@@ -154,6 +154,36 @@ Alongside Yquem, Premiers Crus such as [[producer.chateau-guiraud|Château Guira
 Producers differ in site, grape proportions, strictness of selection, barrel regime and desired balance. Rank records historical position; the concrete bottle shows how place, season and decisions came together.
 :::
 
+:::detail{#producent-chateau-guiraud parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-guiraud-identity"}
+### Château Guiraud
+
+Château Guiraud stands in the commune of Sauternes and has carried the name of the merchant family that acquired the estate in 1766. It entered the 1855 classification as a Premier Cru. Since 2022 it has formed part of Terres de Natures, founded by Matthieu Gufflet, with Sandrine Garbay leading the team. That succession is more than genealogy: Guiraud now defines itself strongly through biodiversity and organic farming. The estate gained organic certification in 2011 after beginning that direction in the 1990s. [@source.chateau-guiraud-identity]
+
+Its varietal mix also makes Guiraud instructive. By Sauternes standards, the vineyard contains a substantial share of [[grape.sauvignon-blanc|Sauvignon Blanc]] alongside [[grape.semillon|Sémillon]]. The grand vin is a sweet Sauternes shaped by [[concept.botrytis|noble rot]]; Petit Guiraud is a separate sweet selection. G de Guiraud and Grand Vin Blanc Sec are dry white Bordeaux wines. They belong to the same estate world, but not to the sweet Sauternes appellation.
+
+Guiraud therefore does not prove that a grape percentage, certification or technique guarantees flavour. It clearly demonstrates how historic rank, modern farming decisions and several wine categories can coexist within one producer.
+:::
+
+:::detail{#producent-chateau-rieussec parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-rieussec-estate"}
+### Château Rieussec
+
+Château Rieussec lies where Fargues meets Sauternes, beside the vineyards of Château d’Yquem. During the eighteenth century it belonged to the Carmelite monks of Langon; after the French Revolution and several changes of owner, it joined Domaines Barons de Rothschild Lafite in 1984. The château was already an 1855 Premier Cru. Construction of a new winery from 1989 and stricter selection mark its modern phase in the estate’s account. [@source.chateau-rieussec-estate]
+
+[[grape.semillon|Sémillon]] forms the vineyard’s backbone, joined by Sauvignon Blanc and [[grape.muscadelle|Muscadelle]]. Château Rieussec is the ageworthy sweet principal wine. Carmes de Rieussec is also Sauternes, but a separate second selection generally shaped for earlier approachability. R de Rieussec, by contrast, is dry white and therefore carries another designation of origin.
+
+The distinction prevents a common reading error: “from Rieussec” does not automatically mean “Château Rieussec” or even necessarily “Sauternes”. The 1855 rank belongs to the historic cru; the precise cuvée, appellation and vintage reveal what is actually in the bottle. Proximity to Yquem provides geographical orientation, not stylistic or qualitative equivalence.
+:::
+
+:::detail{#producent-chateau-suduiraut parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-suduiraut-history source.chateau-suduiraut-grand-vin source.chateau-suduiraut-castelnau"}
+### Château Suduiraut
+
+Château Suduiraut stands in Preignac. The estate took its name in 1580 through the marriage of Nicole d’Allard and Léonard de Suduiraut. Its old house was looted and burned during the Fronde; seventeenth-century rebuilding and formal gardens added later gave the property its recognisable appearance. Premier Cru status followed in 1855. AXA Millésimes acquired Suduiraut in 1992 and remains its owner. [@source.chateau-suduiraut-history]
+
+The grand vin, Château Suduiraut, comes from a strict selection of botrytised fruit and is intended as the estate’s most concentrated, ageworthy sweet expression. Castelnau de Suduiraut is not a younger vintage of the same wine, but a distinct Sauternes selection from lots that show earlier accessibility. The château also makes dry white wines; in appellation terms these sit outside Sauternes even when they share grapes or vineyard surroundings. [@source.chateau-suduiraut-grand-vin] [@source.chateau-suduiraut-castelnau]
+
+Suduiraut thus helps separate three ideas: Premier Cru is a historical classification, grand vin is a producer’s selection and Sauternes is a protected origin for sweet wine. None of those labels alone predicts the exact blend or flavour of every bottle. Cuvée and vintage remain essential.
+:::
+
 :::detail{#reputatie-is-geen-volledigheid parent="classificatie-en-producenten" depth="advanced" source_refs="source.gcc1855-classification-history"}
 ### What the list leaves outside the frame
 

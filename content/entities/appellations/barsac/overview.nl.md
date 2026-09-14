@@ -155,6 +155,26 @@ Die sterke aanwezigheid verklaart Barsacs historische zichtbaarheid, maar 1855 i
 De lijst is een navigatiekaart voor producenten en geschiedenis, geen koopadvies. De drie Doisy-namen zijn afzonderlijke domeinen, geen drie schrijfwijzen voor één château.
 :::
 
+:::detail{#producent-chateau-climens parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-climens-history source.chateau-climens-grand-vin source.chateau-climens-asphodele"}
+### Château Climens
+
+Château Climens ligt op het kalksteenplateau van Barsac. De naam verschijnt al in een contract uit 1547; daarna bleef het domein opvallend lang in handen van slechts enkele families. Bérénice Lurton droeg in 2022 een meerderheidsbelang over aan de familie Moitry. De Premier Cru-rang dateert uit 1855 en staat dus los van die veel recentere eigendomsgeschiedenis. [@source.chateau-climens-history]
+
+De zoete grand vin is uitzonderlijk binnen de streek doordat hij uit 100% [[grape.semillon|sémillon]] wordt gemaakt. Het hele wijngaardareaal wordt sinds 2010 biodynamisch bewerkt en is sinds 2014 volgens Biodyvin gecertificeerd. Dat zijn relevante identiteitskenmerken, maar geen garantie dat iedere jaargang dezelfde intensiteit, ontwikkeling of smaak laat zien. Strenge selectie kan er zelfs toe leiden dat in een moeilijk jaar geen grand vin wordt uitgebracht. [@source.chateau-climens-grand-vin]
+
+Climens maakt daarnaast andere wijnen, waaronder de droge Asphodèle. Ook die bestaat uit sémillon van het domein, maar draagt Bordeaux als appellation en is dus geen droge Barsac: de beschermde naam Barsac geldt hier voor zoete wijn. Climens is daarmee een scherp leerpunt voor het verschil tussen producent, druivenras, cuvée en herkomstbenaming. [@source.chateau-climens-asphodele]
+:::
+
+:::detail{#producent-chateau-coutet parent="classificatie-en-producenten" depth="intermediate" source_refs="source.gcc1855-classification-overview source.chateau-coutet-history source.chateau-coutet-second-wine source.chateau-coutet-opalie"}
+### Château Coutet
+
+Château Coutet draagt zijn middeleeuwse verleden zichtbaar mee: het landgoed begon als vesting en bewaart onder meer een dertiende-eeuwse toren. De gedocumenteerde geschiedenis als wijndomein begint in 1643. Na een lange periode onder de familie Lur-Saluces en verschillende latere eigenaars kwam Coutet in 1977 bij Marcel Baly en zijn zonen Philippe en Dominique. Het château is een van Barsacs twee Premiers Crus van 1855. [@source.chateau-coutet-history]
+
+Château Coutet is de zoete grand vin. La Chartreuse de Coutet, door de familie Baly in 1977 gecreëerd, is een afzonderlijke tweede zoete wijn uit dezelfde wijngaard. Cuvée Madame verschijnt alleen als uitzonderlijke, zeer kleine selectie en moet niet worden opgevat als een vaste hogere classificatietrede. Naast deze zoete reeks maakt het domein sinds 2010 Opalie, een droge witte wijn uit geselecteerde percelen. Die gebruikt sémillon en sauvignon, maar valt buiten de zoete Barsac-appellation. [@source.chateau-coutet-second-wine] [@source.chateau-coutet-opalie]
+
+Coutet maakt daarmee de hiërarchie op een etiket goed leesbaar: Premier Cru is de historische rang van het château; grand vin, tweede wijn en zeldzame selectie zijn producentenkeuzes; droog of zoet bepaalt mede welke appellation op de fles kan staan. Geen van deze termen vervangt de exacte wijnnaam en jaargang.
+:::
+
 :::detail{#rang-en-huidige-wijn parent="classificatie-en-producenten" depth="advanced" source_refs="source.gcc1855-classification-history"}
 ### Historische rang en huidige prestatie blijven verschillende vragen
 
