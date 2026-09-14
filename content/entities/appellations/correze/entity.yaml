@@ -1,0 +1,16 @@
+id: appellation.correze
+type: appellation
+status: draft
+canonical_name: Corrèze
+names:
+  nl: Corrèze
+  en: Corrèze
+slugs:
+  nl: correze
+  en: correze
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

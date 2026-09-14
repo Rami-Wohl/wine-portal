@@ -1,0 +1,16 @@
+id: grape.muscat-blanc-a-petits-grains
+type: grape
+status: draft
+canonical_name: Muscat Blanc à Petits Grains
+names:
+  nl: Muscat Blanc à Petits Grains
+  en: Muscat Blanc à Petits Grains
+slugs:
+  nl: muscat-blanc-a-petits-grains
+  en: muscat-blanc-a-petits-grains
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

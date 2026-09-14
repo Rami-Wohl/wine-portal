@@ -16,6 +16,7 @@ relations:
   - { type: related_to, target: grape.riesling }
   - { type: related_to, target: region.tokaj }
   - { type: related_to, target: concept.passerillage }
+  - { type: related_to, target: concept.late-harvest }
 assertions:
   - id: assertion.botrytis.causal-organism
     predicate: causal_organism

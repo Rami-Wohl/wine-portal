@@ -1,0 +1,16 @@
+id: grape.trousseau
+type: grape
+status: draft
+canonical_name: Trousseau
+names:
+  nl: Trousseau
+  en: Trousseau
+slugs:
+  nl: trousseau
+  en: trousseau
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

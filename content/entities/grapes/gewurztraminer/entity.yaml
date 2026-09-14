@@ -1,0 +1,16 @@
+id: grape.gewurztraminer
+type: grape
+status: draft
+canonical_name: Gewürztraminer
+names:
+  nl: Gewürztraminer
+  en: Gewürztraminer
+slugs:
+  nl: gewurztraminer
+  en: gewurztraminer
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

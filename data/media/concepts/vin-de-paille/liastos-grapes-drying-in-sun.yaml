@@ -1,0 +1,24 @@
+id: media.concept.vin-de-paille.liastos-grapes-drying-in-sun
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/vin-de-paille/liastos-grapes-drying-in-sun.jpg
+mime_type: image/jpeg
+width: 1800
+height: 1350
+checksum_sha256: e24722937b8bf4920ce217e5d3410f637410740daafe4839fb6f3639a89a6c52
+alt:
+  nl: Muskaatdruiven uitgespreid op donkere netten in een droge wijngaard op Samos
+  en: Muscat grapes spread on dark nets in a dry vineyard on Samos
+caption:
+  nl: Muskaatdruiven drogen in de zon op netten bij Platanos op Samos, voor de Griekse strowijntraditie *liastos*. Dit openluchtproces laat de internationale familie van strowijnen zien, maar niet de Franse regels voor de beschermde term *vin de paille*.
+  en: Muscat grapes dry in the sun on nets near Platanos on Samos for the Greek *liastos* straw-wine tradition. This outdoor process shows the international family of straw wines, but not the French rules governing the protected term *vin de paille*.
+rights:
+  status: open-licensed
+  creator: Tim Clarke01
+  source_url: https://commons.wikimedia.org/wiki/File:%27Liastos%27_Traditional_straw_wine_in_Greece.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Tim Clarke01 via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-14
+changes: Original Wikimedia Commons file proportionally resized to 1800 pixels wide; no crop or editorial colour alteration.

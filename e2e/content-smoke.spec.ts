@@ -612,6 +612,69 @@ test("Passerillage compares on-vine and postharvest drying without implying swee
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
+test("the dried-grape concept cluster combines documentary images with progressive depth", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const pages = [
+    {
+      path: "/concepts/appassimento",
+      title: "Appassimento",
+      images: ["#hangende-vespaiola img", "#amarone-op-rekken img"],
+      intermediate: "#lucht-en-droogtempo",
+      advanced: "#geen-recept-voor-heel-italie",
+    },
+    {
+      path: "/concepts/late-oogst",
+      title: "Late oogst",
+      images: ["#laat-hangende-druiven img", "#spatlese-op-het-etiket img"],
+      intermediate: "#rijpheid-loopt-niet-gelijk",
+      advanced: "#concentratie-zonder-verdere-rijping",
+    },
+    {
+      path: "/concepts/vin-de-paille",
+      title: "Vin de paille",
+      images: ["#liastos-op-samos img", "#rood-en-wit-historisch img"],
+      intermediate: "#volume-inruilen-voor-concentratie",
+      advanced: "#drogen-zonder-uniformiteit",
+    },
+  ] as const;
+
+  for (const entry of pages) {
+    await page.goto(entry.path);
+    await expect(page.getByRole("heading", { level: 1, name: entry.title })).toBeVisible();
+
+    for (const image of entry.images) {
+      const documentaryImage = page.locator(image);
+      await documentaryImage.scrollIntoViewIfNeeded();
+      await expect(documentaryImage).toBeVisible();
+      await expect(documentaryImage).toHaveJSProperty("complete", true);
+    }
+
+    const intermediate = page.locator(entry.intermediate);
+    const advanced = page.locator(entry.advanced);
+    await expect(intermediate).toBeHidden();
+    await expect(advanced).toBeHidden();
+
+    await page.getByRole("button", { name: "Verdieping" }).click();
+    await expect(intermediate).toBeVisible();
+    await expect(advanced).toBeHidden();
+
+    await page.getByRole("button", { name: "Gevorderd" }).click();
+    await expect(advanced).toBeVisible();
+    await expect(advanced.getByRole("heading", { level: 3 })).toBeHidden();
+
+    const dimensions = await page.evaluate(() => ({
+      documentWidth: document.documentElement.scrollWidth,
+      viewportWidth: document.documentElement.clientWidth,
+    }));
+    expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+
+    await page.getByRole("button", { name: "Basis" }).click();
+  }
+});
+
 test("the southern Garonne sweet-wine cluster stays distinct and shares an accurate comparison", async ({
   page,
 }) => {

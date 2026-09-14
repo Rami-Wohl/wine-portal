@@ -1,0 +1,16 @@
+id: region.mosel
+type: region
+status: draft
+canonical_name: Mosel wine region
+names:
+  nl: Moezel
+  en: Mosel
+slugs:
+  nl: moezel
+  en: mosel
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

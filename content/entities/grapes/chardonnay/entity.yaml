@@ -1,0 +1,16 @@
+id: grape.chardonnay
+type: grape
+status: draft
+canonical_name: Chardonnay
+names:
+  nl: Chardonnay
+  en: Chardonnay
+slugs:
+  nl: chardonnay
+  en: chardonnay
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

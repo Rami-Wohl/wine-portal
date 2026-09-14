@@ -1,6 +1,6 @@
 id: concept.vin-de-paille
 type: concept
-status: draft
+status: active
 canonical_name: Vin de paille
 names:
   nl: Vin de paille
@@ -11,6 +11,19 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: associated_with, target: region.jura }
+  - { type: associated_with, target: appellation.arbois }
+  - { type: associated_with, target: appellation.cotes-du-jura }
+  - { type: associated_with, target: appellation.l-etoile }
+  - { type: associated_with, target: appellation.hermitage }
+  - { type: associated_with, target: appellation.correze }
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-passerillage-oeno-2-93
+  - source.sanmartin-postharvest-water-loss-2021
+  - source.inao-cotes-du-jura-vin-de-paille
+  - source.eurlex-vin-de-paille-2023
+  - source.wosa-wine-styles
+depth: foundation
+last_reviewed: 2026-09-14

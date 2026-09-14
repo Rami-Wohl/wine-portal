@@ -1,0 +1,16 @@
+id: grape.corvinone
+type: grape
+status: draft
+canonical_name: Corvinone
+names:
+  nl: Corvinone
+  en: Corvinone
+slugs:
+  nl: corvinone
+  en: corvinone
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

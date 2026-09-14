@@ -1,0 +1,16 @@
+id: concept.spatlese
+type: concept
+status: draft
+canonical_name: Spätlese
+names:
+  nl: Spätlese
+  en: Spätlese
+slugs:
+  nl: spatlese
+  en: spatlese
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

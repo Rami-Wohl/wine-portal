@@ -1,0 +1,16 @@
+id: appellation.recioto-della-valpolicella
+type: appellation
+status: draft
+canonical_name: Recioto della Valpolicella
+names:
+  nl: Recioto della Valpolicella
+  en: Recioto della Valpolicella
+slugs:
+  nl: recioto-della-valpolicella
+  en: recioto-della-valpolicella
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

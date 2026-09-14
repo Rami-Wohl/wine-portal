@@ -1,0 +1,16 @@
+id: appellation.hermitage
+type: appellation
+status: draft
+canonical_name: Hermitage
+names:
+  nl: Hermitage
+  en: Hermitage
+slugs:
+  nl: hermitage
+  en: hermitage
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

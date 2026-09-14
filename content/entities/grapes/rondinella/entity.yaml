@@ -1,0 +1,16 @@
+id: grape.rondinella
+type: grape
+status: draft
+canonical_name: Rondinella
+names:
+  nl: Rondinella
+  en: Rondinella
+slugs:
+  nl: rondinella
+  en: rondinella
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

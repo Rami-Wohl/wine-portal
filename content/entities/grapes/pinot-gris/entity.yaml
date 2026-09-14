@@ -1,0 +1,16 @@
+id: grape.pinot-gris
+type: grape
+status: draft
+canonical_name: Pinot Gris
+names:
+  nl: Pinot Gris
+  en: Pinot Gris
+slugs:
+  nl: pinot-gris
+  en: pinot-gris
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

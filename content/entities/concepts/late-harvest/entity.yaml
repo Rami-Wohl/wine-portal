@@ -1,6 +1,6 @@
 id: concept.late-harvest
 type: concept
-status: draft
+status: active
 canonical_name: Late harvest
 names:
   nl: Late oogst
@@ -11,6 +11,18 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.spatlese }
+  - { type: associated_with, target: region.alsace }
+  - { type: associated_with, target: region.mosel }
+  - { type: related_to, target: grape.riesling }
 assertions: []
-source_refs: []
+source_refs:
+  - source.dwi-praedikate
+  - source.dwi-wine-law-seminar-handbook
+  - source.vins-alsace-vendanges-tardives
+  - source.penn-state-grape-sour-rot
+  - source.wosa-wine-styles
+  - source.sanmartin-postharvest-water-loss-2021
+depth: foundation
+last_reviewed: 2026-09-14

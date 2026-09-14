@@ -1,0 +1,24 @@
+id: media.concept.late-harvest.riesling-spatlese-bottle
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/late-harvest/riesling-spatlese-bottle.jpg
+mime_type: image/jpeg
+width: 1600
+height: 2409
+checksum_sha256: d39b1bbb0d1e17875424a13ae4cc56ea711febc1c45691a67f41dffd3449a54d
+alt:
+  nl: Duitse Rieslingfles met het woord Spätlese duidelijk op het etiket
+  en: German Riesling bottle with the word Spätlese clearly visible on the label
+caption:
+  nl: Op deze Moezelriesling staat **Spätlese** als Duits Prädikat op het etiket. Dat woord verwijst naar druivenrijpheid en een latere oogstcategorie, niet zelfstandig naar de uiteindelijke hoeveelheid restsuiker; producent, herkomst, jaargang en andere etikettering blijven nodig om de fles te duiden.
+  en: This Mosel Riesling carries **Spätlese** as a German Prädikat on its label. The term refers to grape ripeness and a later-harvest category, not by itself to the finished level of residual sugar; producer, origin, vintage and other labelling still matter when interpreting the bottle.
+rights:
+  status: open-licensed
+  creator: Michal Osmenda
+  source_url: https://commons.wikimedia.org/wiki/File:2009_Willi_Haag_Brauneberger_Juffer-Sonnenuhr_Riesling_Sp%C3%A4tlese_from_Brauneberg,_Mosel_(5026617849).jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Michal Osmenda via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-09-14
+changes: Original Wikimedia Commons file proportionally resized to 1600 pixels wide; no crop or editorial colour alteration.

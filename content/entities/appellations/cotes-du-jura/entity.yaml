@@ -1,0 +1,16 @@
+id: appellation.cotes-du-jura
+type: appellation
+status: draft
+canonical_name: Côtes du Jura
+names:
+  nl: Côtes du Jura
+  en: Côtes du Jura
+slugs:
+  nl: cotes-du-jura
+  en: cotes-du-jura
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,24 @@
+id: media.concept.vin-de-paille.red-and-white-straw-wine-bottles
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/vin-de-paille/red-and-white-straw-wine-bottles.jpg
+mime_type: image/jpeg
+width: 1200
+height: 1600
+checksum_sha256: 4b0c35069e724909a1c60b784037f1e2e1ab71df56a540cfaa6c7d9d62c2220f
+alt:
+  nl: Een roodkleurige en een goudkleurige fles Vin Paillé uit Corrèze uit 2005
+  en: One red-coloured and one gold-coloured 2005 Vin Paillé bottle from Corrèze
+caption:
+  nl: Twee historische flessen *Vin Paillé* uit Corrèze tonen dat wijn van gedroogde druiven niet uitsluitend goudkleurig of van witte rassen hoeft te zijn. Het etiket dateert uit 2005 en is geen voorbeeld van de huidige Franse of Europese etiketteringsregels.
+  en: Two historical *Vin Paillé* bottles from Corrèze show that wine from dried grapes need not be exclusively golden or made from white varieties. The label dates from 2005 and is not an example of current French or European labelling rules.
+rights:
+  status: open-licensed
+  creator: Michel VENOT
+  source_url: https://commons.wikimedia.org/wiki/File:Vinpaille.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Michel VENOT via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-14
+changes: Original 1200 by 1600 pixel Wikimedia Commons file used without crop or editorial colour alteration.

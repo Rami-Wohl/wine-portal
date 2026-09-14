@@ -1,0 +1,16 @@
+id: region.alsace
+type: region
+status: draft
+canonical_name: Alsace wine region
+names:
+  nl: Elzas
+  en: Alsace
+slugs:
+  nl: elzas
+  en: alsace
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []
