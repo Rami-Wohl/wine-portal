@@ -1,6 +1,6 @@
 id: producer.chateau-croizet-bages
 type: producer
-status: draft
+status: active
 canonical_name: Château Croizet-Bages
 names:
   nl: Château Croizet-Bages
@@ -23,3 +23,4 @@ relations:
     properties: { tier: cinquieme-cru }
 assertions: []
 source_refs: [source.gcc1855-classification-overview]
+last_reviewed: 2026-09-14

@@ -1188,6 +1188,17 @@ h3 {
   display: block;
   margin-right: 0.12rem;
 }
+.content-register-group {
+  gap: 0;
+}
+.content-block-register-entry {
+  padding: 0.72rem 0.9rem;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+}
+.content-block-register-entry:last-child {
+  border-bottom: 1px solid var(--line);
+}
 .content-depth-advanced .content-depth-marker-symbol::before {
   position: absolute;
   top: 0.37rem;

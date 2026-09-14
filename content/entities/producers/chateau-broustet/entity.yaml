@@ -1,6 +1,6 @@
 id: producer.chateau-broustet
 type: producer
-status: draft
+status: active
 canonical_name: Château Broustet
 names: { nl: Château Broustet, en: Château Broustet }
 slugs: { nl: chateau-broustet, en: chateau-broustet }
@@ -17,3 +17,4 @@ relations:
     valid_from: 1855
 assertions: []
 source_refs: [source.gcc1855-classification-overview]
+last_reviewed: 2026-09-14

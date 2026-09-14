@@ -255,6 +255,48 @@ test("Saint-Émilion classification reveals its current ranks progressively", as
   );
 });
 
+test("the two revisable Médoc classifications explain their distinct systems", async ({ page }) => {
+  await page.goto("/classifications/crus-bourgeois-du-medoc");
+
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Crus Bourgeois du Médoc" }),
+  ).toBeVisible();
+  await expect(page.getByRole("img", { name: /Drie flessen Médoc/ })).toHaveJSProperty(
+    "complete",
+    true,
+  );
+
+  const bourgeoisDepth = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  await expect(page.locator("#editie-2025")).toBeHidden();
+  await bourgeoisDepth.getByRole("button", { name: "Verdieping" }).click();
+  await expect(page.locator("#editie-2025")).toBeVisible();
+  await expect(page.locator("#breuk-van-2007")).toBeHidden();
+  await bourgeoisDepth.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(page.locator("#breuk-van-2007")).toBeVisible();
+  await bourgeoisDepth.getByRole("button", { name: "Basis" }).click();
+
+  await page.goto("/classifications/crus-artisans-du-medoc");
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Crus Artisans du Médoc" }),
+  ).toBeVisible();
+  await expect(page.locator("#de-mens-in-het-bedrijf")).toBeHidden();
+  await page
+    .getByRole("group", { name: "Kies hoeveel detail je wilt zien" })
+    .getByRole("button", { name: "Verdieping" })
+    .click();
+  await expect(page.locator("#de-mens-in-het-bedrijf")).toBeVisible();
+});
+
+test("1855 register entries resolve to their stable classification anchors", async ({ page }) => {
+  await page.goto("/producers/chateau-batailley");
+
+  await expect(page).toHaveURL(/\/classifications\/bordeaux-1855#producent-chateau-batailley$/);
+  await expect(page.locator("#producent-chateau-batailley")).toBeVisible();
+  await expect(page.locator('[data-parent="compact-register"]')).toHaveCount(23);
+});
+
 test("Château Figeac presents both documentary images and layered producer knowledge", async ({
   page,
 }) => {

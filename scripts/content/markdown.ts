@@ -288,6 +288,10 @@ function validateBlockShape(block: ContentBlock, state: ParseState): void {
     if (!first || first.type !== "heading" || first.depth !== 3) {
       issue(state, `detail '${block.id}' must start with an H3`);
     }
+  } else if (block.type === "register-entry") {
+    if (block.nodes.length !== 1 || block.nodes[0]?.type !== "paragraph") {
+      issue(state, `register-entry '${block.id}' must contain one paragraph only`);
+    }
   } else if (containsHeading(block.nodes)) {
     issue(state, `${block.type} '${block.id}' must not contain headings`);
   }
@@ -364,11 +368,11 @@ export function parseContentDocument(
     if (parentValue && parent === null) {
       issue(state, `${type} '${id}' has invalid parent block ID '${parentValue}'`);
     }
-    if (type === "detail" && parent === null) {
-      issue(state, `detail '${id}' requires a parent block ID`);
+    if ((type === "detail" || type === "register-entry") && parent === null) {
+      issue(state, `${type} '${id}' requires a parent block ID`);
     }
-    if (type !== "detail" && parentValue) {
-      issue(state, `only detail blocks may use the parent attribute`);
+    if (type !== "detail" && type !== "register-entry" && parentValue) {
+      issue(state, `only detail and register-entry blocks may use the parent attribute`);
     }
 
     const sourceRefs = (attributes.source_refs ?? "").split(/\s+/).filter(Boolean);
@@ -428,30 +432,33 @@ export function parseContentDocument(
   const blocksById = new Map(blocks.map((block) => [block.id, block]));
   for (let index = 0; index < blocks.length; index += 1) {
     const block = blocks[index];
-    if (block.type !== "detail" || block.parent === null) continue;
+    if ((block.type !== "detail" && block.type !== "register-entry") || block.parent === null)
+      continue;
     const parent = blocksById.get(block.parent);
     if (!parent) {
-      issue(state, `detail '${block.id}' refers to unknown parent '${block.parent}'`);
+      issue(state, `${block.type} '${block.id}' refers to unknown parent '${block.parent}'`);
       continue;
     }
     if (parent.type !== "section") {
-      issue(state, `detail '${block.id}' parent '${block.parent}' must be a section block`);
+      issue(state, `${block.type} '${block.id}' parent '${block.parent}' must be a section block`);
     }
-    if (parent.depth === null || block.depth === null) {
-      issue(
-        state,
-        `detail '${block.id}' and parent '${block.parent}' require explicit depth values`,
-      );
-    } else if ((depthOrder.get(block.depth) ?? -1) <= (depthOrder.get(parent.depth) ?? -1)) {
-      issue(state, `detail '${block.id}' must be deeper than parent '${block.parent}'`);
+    if (block.type === "detail") {
+      if (parent.depth === null || block.depth === null) {
+        issue(
+          state,
+          `detail '${block.id}' and parent '${block.parent}' require explicit depth values`,
+        );
+      } else if ((depthOrder.get(block.depth) ?? -1) <= (depthOrder.get(parent.depth) ?? -1)) {
+        issue(state, `detail '${block.id}' must be deeper than parent '${block.parent}'`);
+      }
     }
     const previous = blocks[index - 1];
     const followsParent = previous?.id === block.parent;
-    const followsSibling = previous?.type === "detail" && previous.parent === block.parent;
+    const followsSibling = previous?.type === block.type && previous.parent === block.parent;
     if (!followsParent && !followsSibling) {
       issue(
         state,
-        `detail '${block.id}' must immediately follow parent '${block.parent}' or another detail for that parent`,
+        `${block.type} '${block.id}' must immediately follow parent '${block.parent}' or another ${block.type} for that parent`,
       );
     }
   }

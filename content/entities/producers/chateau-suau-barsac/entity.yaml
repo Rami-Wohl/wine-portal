@@ -1,6 +1,6 @@
 id: producer.chateau-suau-barsac
 type: producer
-status: draft
+status: active
 canonical_name: Château Suau
 names: { nl: Château Suau, en: Château Suau }
 slugs: { nl: chateau-suau-barsac, en: chateau-suau-barsac }
@@ -17,3 +17,4 @@ relations:
     valid_from: 1855
 assertions: []
 source_refs: [source.gcc1855-classification-overview]
+last_reviewed: 2026-09-14

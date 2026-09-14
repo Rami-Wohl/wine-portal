@@ -99,7 +99,7 @@ Iedere block ondersteunt uitsluitend deze gemeenschappelijke attributen:
 | `#id` | ja | Stabiele documentlokale identiteit |
 | `depth` | nee | `foundation`, `intermediate`, `advanced` of `specialist` |
 | `source_refs` | nee | Door spaties gescheiden `source.*`-IDs die de block ondersteunen |
-| `parent` | alleen `detail` | Stable block-ID van de hoofdsectie die wordt uitgebreid |
+| `parent` | `detail` en `register-entry` | Stable block-ID van de hoofdsectie die wordt uitgebreid of het register bezit |
 
 Een `figure` gebruikt daarnaast verplicht `media_id`. Dit is geen URL maar een
 stabiele `media.*`-ID uit `data/media/`.
@@ -204,6 +204,24 @@ Regels:
 
 Gebruik geen detail om een los nieuw onderwerp onder een bestaande heading te
 verstoppen. Maak daarvoor een zelfstandige `section`.
+
+### `register-entry`
+
+Een `register-entry` geeft een embedded producentenrecord één compact, stabiel
+anker op de eigenaarpagina. Het volgt direct op zijn parent-`section`, bevat
+precies één alinea en gebruikt dezelfde `#id` als
+`producer.presentation.anchor`:
+
+```md
+:::register-entry{#producent-voorbeeld parent="register" depth="foundation"}
+[[producer.voorbeeld|Château Voorbeeld]] — Cinquième Cru, [[appellation.voorbeeld|Voorbeeld]].
+:::
+```
+
+Opeenvolgende registervermeldingen worden als één compacte lijst gerenderd. Ze
+beperken zich tot de gegevens die de reden voor opname aantonen en vormen geen
+verkorte monografieën. Omdat het register zelf basisinformatie is, mag een
+`register-entry` dezelfde `foundation`-diepte dragen als zijn parent.
 
 ### `key-idea`
 

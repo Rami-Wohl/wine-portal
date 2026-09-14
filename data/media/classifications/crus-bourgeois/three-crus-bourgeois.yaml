@@ -1,0 +1,24 @@
+id: media.classification.crus-bourgeois.three-bottles
+kind: photo
+role: documentary
+status: active
+storage_key: classifications/crus-bourgeois/three-crus-bourgeois.jpg
+mime_type: image/jpeg
+width: 1751
+height: 2183
+checksum_sha256: e0c94c031656675c025428e036d5c7e05018055684cd42df0fd5fdff8b1cc43d
+alt:
+  nl: Drie flessen Médoc met Cru Bourgeois-vermeldingen uit een oudere editie van het systeem
+  en: Three Médoc bottles carrying Cru Bourgeois designations from an earlier edition of the system
+caption:
+  nl: Château Chasse-Spleen, Château Poujeaux en Château Caronne Sainte-Gemme droegen binnen de toenmalige erkenning verschillende Cru Bourgeois-vermeldingen. De foto uit 2010 documenteert die historische etikettaal; zij bewijst niet welke status de domeinen in de editie van 2025 hebben.
+  en: Château Chasse-Spleen, Château Poujeaux and Château Caronne Sainte-Gemme carried different Cru Bourgeois designations under the system then in force. This 2010 photograph documents that historical label language; it does not establish the estates' status in the 2025 edition.
+rights:
+  status: open-licensed
+  creator: Tomas er
+  source_url: https://commons.wikimedia.org/wiki/File:Three_Cru_Bourgeois.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Tomas er via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-14
+changes: Original Wikimedia Commons file used without crop or editorial colour alteration.

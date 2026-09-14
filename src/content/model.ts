@@ -54,6 +54,7 @@ export const CONTENT_BLOCK_TYPES = [
   "in-the-glass",
   "comparison",
   "figure",
+  "register-entry",
 ] as const;
 export const CAVEAT_VARIANTS = ["simplification", "uncertainty", "exception"] as const;
 export const MEDIA_KINDS = ["photo", "illustration", "diagram", "map"] as const;

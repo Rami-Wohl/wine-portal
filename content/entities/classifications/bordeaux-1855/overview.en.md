@@ -50,6 +50,104 @@ The red growths include one famous geographical exception: Château Haut-Brion, 
 That single château does not extend the list into a classification of all Graves. Instead, it highlights just how historical and selective its boundaries are.
 :::
 
+:::section{#compact-register depth="foundation" source_refs="source.gcc1855-classification-overview"}
+## Register — compact entries
+
+Not every classified château needs an independent monograph. These stable anchors state only what explains their inclusion in the register: appellation and formal rank.
+:::
+
+:::register-entry{#producent-chateau-la-lagune parent="compact-register" depth="foundation"}
+[[producer.chateau-la-lagune|Château La Lagune]] — Third Growth, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-la-tour-carnet parent="compact-register" depth="foundation"}
+[[producer.chateau-la-tour-carnet|Château La Tour Carnet]] — Fourth Growth, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-belgrave parent="compact-register" depth="foundation"}
+[[producer.chateau-belgrave|Château Belgrave]] — Fifth Growth, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-de-camensac parent="compact-register" depth="foundation"}
+[[producer.chateau-camensac|Château de Camensac]] — Fifth Growth, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-cantemerle parent="compact-register" depth="foundation"}
+[[producer.chateau-cantemerle|Château Cantemerle]] — Fifth Growth, [[appellation.haut-medoc|Haut-Médoc]]; added to the list in September 1855.
+:::
+
+:::register-entry{#producent-chateau-duhart-milon parent="compact-register" depth="foundation"}
+[[producer.chateau-duhart-milon|Château Duhart-Milon]] — Fourth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-batailley parent="compact-register" depth="foundation"}
+[[producer.chateau-batailley|Château Batailley]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-clerc-milon parent="compact-register" depth="foundation"}
+[[producer.chateau-clerc-milon|Château Clerc Milon]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-croizet-bages parent="compact-register" depth="foundation"}
+[[producer.chateau-croizet-bages|Château Croizet-Bages]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-darmailhac parent="compact-register" depth="foundation"}
+[[producer.chateau-darmailhac|Château d’Armailhac]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-grand-puy-ducasse parent="compact-register" depth="foundation"}
+[[producer.chateau-grand-puy-ducasse|Château Grand-Puy Ducasse]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-haut-bages-liberal parent="compact-register" depth="foundation"}
+[[producer.chateau-haut-bages-liberal|Château Haut-Bages Libéral]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-haut-batailley parent="compact-register" depth="foundation"}
+[[producer.chateau-haut-batailley|Château Haut-Batailley]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-lynch-moussas parent="compact-register" depth="foundation"}
+[[producer.chateau-lynch-moussas|Château Lynch-Moussas]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-pedesclaux parent="compact-register" depth="foundation"}
+[[producer.chateau-pedesclaux|Château Pédesclaux]] — Fifth Growth, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-broustet parent="compact-register" depth="foundation"}
+[[producer.chateau-broustet|Château Broustet]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-caillou parent="compact-register" depth="foundation"}
+[[producer.chateau-caillou|Château Caillou]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-de-myrat parent="compact-register" depth="foundation"}
+[[producer.chateau-de-myrat|Château de Myrat]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-doisy-daene parent="compact-register" depth="foundation"}
+[[producer.chateau-doisy-daene|Château Doisy Daëne]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-doisy-dubroca parent="compact-register" depth="foundation"}
+[[producer.chateau-doisy-dubroca|Château Doisy-Dubroca]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-doisy-vedrines parent="compact-register" depth="foundation"}
+[[producer.chateau-doisy-vedrines|Château Doisy-Védrines]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-nairac parent="compact-register" depth="foundation"}
+[[producer.chateau-nairac|Château Nairac]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-suau-barsac parent="compact-register" depth="foundation"}
+[[producer.chateau-suau-barsac|Château Suau]] — Second Growth in the sweet-wine ranking, [[appellation.barsac|Barsac]].
+:::
+
 :::figure{#twee-rangorden media_id="media.classification.bordeaux-1855.hierarchy" source_refs="source.gcc1855-classification-overview"}
 :::
 

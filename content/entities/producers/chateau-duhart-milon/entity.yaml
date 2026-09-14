@@ -1,6 +1,6 @@
 id: producer.chateau-duhart-milon
 type: producer
-status: draft
+status: active
 canonical_name: Château Duhart-Milon
 names:
   nl: Château Duhart-Milon
@@ -23,3 +23,4 @@ relations:
     properties: { tier: quatrieme-cru }
 assertions: []
 source_refs: [source.gcc1855-classification-overview]
+last_reviewed: 2026-09-14

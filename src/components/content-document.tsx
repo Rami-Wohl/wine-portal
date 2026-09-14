@@ -260,6 +260,12 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
     case "section":
     case "comparison":
       return <section {...common}>{content}</section>;
+    case "register-entry":
+      return (
+        <div {...common} data-parent={block.parent ?? undefined}>
+          {content}
+        </div>
+      );
     case "detail":
       return (
         <div {...common} data-parent={block.parent ?? undefined}>
@@ -341,23 +347,28 @@ export function ContentDocumentView({
       continue;
     }
 
-    const details: ContentBlock[] = [];
+    const children: ContentBlock[] = [];
     while (
-      document.blocks[index + 1]?.type === "detail" &&
+      (document.blocks[index + 1]?.type === "detail" ||
+        document.blocks[index + 1]?.type === "register-entry") &&
       document.blocks[index + 1]?.parent === block.id
     ) {
-      details.push(document.blocks[index + 1]);
+      children.push(document.blocks[index + 1]);
       index += 1;
     }
-    if (details.length === 0) {
+    if (children.length === 0) {
       contentItems.push(<Fragment key={block.id}>{renderContentBlock(block, context)}</Fragment>);
       continue;
     }
+    const hasRegisterEntries = children.some((child) => child.type === "register-entry");
     contentItems.push(
-      <div className="content-section-group" key={block.id}>
+      <div
+        className={`content-section-group${hasRegisterEntries ? " content-register-group" : ""}`}
+        key={block.id}
+      >
         {renderContentBlock(block, context)}
-        {details.map((detail) => (
-          <Fragment key={detail.id}>{renderContentBlock(detail, context)}</Fragment>
+        {children.map((child) => (
+          <Fragment key={child.id}>{renderContentBlock(child, context)}</Fragment>
         ))}
       </div>,
     );

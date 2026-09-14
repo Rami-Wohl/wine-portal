@@ -1,6 +1,6 @@
 id: producer.chateau-doisy-daene
 type: producer
-status: draft
+status: active
 canonical_name: Château Doisy Daëne
 names: { nl: Château Doisy Daëne, en: Château Doisy Daëne }
 slugs: { nl: chateau-doisy-daene, en: chateau-doisy-daene }
@@ -17,3 +17,4 @@ relations:
     valid_from: 1855
 assertions: []
 source_refs: [source.gcc1855-classification-overview]
+last_reviewed: 2026-09-14

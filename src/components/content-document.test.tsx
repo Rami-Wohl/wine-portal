@@ -151,4 +151,44 @@ describe("ContentDocumentView", () => {
     expect(html).toContain("Example Photographer");
     expect(html).toContain("CC BY 4.0");
   });
+
+  it("groups compact register entries under their owner section", () => {
+    const registerDocument: ContentDocument = {
+      blocks: [
+        {
+          id: "register",
+          type: "section",
+          depth: "foundation",
+          parent: null,
+          source_refs: [],
+          variant: null,
+          media_id: null,
+          nodes: [{ type: "heading", depth: 2, children: [{ type: "text", value: "Register" }] }],
+        },
+        {
+          id: "producent-voorbeeld",
+          type: "register-entry",
+          depth: "foundation",
+          parent: "register",
+          source_refs: [],
+          variant: null,
+          media_id: null,
+          nodes: [
+            {
+              type: "paragraph",
+              children: [{ type: "text", value: "Château Voorbeeld — Cinquième Cru." }],
+            },
+          ],
+        },
+      ],
+    };
+
+    const html = renderToStaticMarkup(
+      <ContentDocumentView document={registerDocument} locale="nl" media={[]} sources={[]} />,
+    );
+
+    expect(html).toContain("content-section-group content-register-group");
+    expect(html).toContain('class="content-block content-block-register-entry');
+    expect(html).toContain('data-parent="register"');
+  });
 });

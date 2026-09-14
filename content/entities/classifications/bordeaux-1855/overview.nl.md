@@ -50,6 +50,104 @@ Onder de rode crus staat één beroemde geografische uitzondering: Château Haut
 Dat ene château verruimt de lijst niet tot een classificatie van heel Graves. Het onderstreept juist hoe historisch en selectief de afbakening is.
 :::
 
+:::section{#compact-register depth="foundation" source_refs="source.gcc1855-classification-overview"}
+## Register — compacte vermeldingen
+
+Niet ieder geklasseerd château heeft een zelfstandige monografie nodig. Deze vaste ankers noemen alleen wat hun opname in het register verklaart: appellation en formele rang.
+:::
+
+:::register-entry{#producent-chateau-la-lagune parent="compact-register" depth="foundation"}
+[[producer.chateau-la-lagune|Château La Lagune]] — Troisième Cru, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-la-tour-carnet parent="compact-register" depth="foundation"}
+[[producer.chateau-la-tour-carnet|Château La Tour Carnet]] — Quatrième Cru, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-belgrave parent="compact-register" depth="foundation"}
+[[producer.chateau-belgrave|Château Belgrave]] — Cinquième Cru, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-de-camensac parent="compact-register" depth="foundation"}
+[[producer.chateau-camensac|Château de Camensac]] — Cinquième Cru, [[appellation.haut-medoc|Haut-Médoc]].
+:::
+
+:::register-entry{#producent-chateau-cantemerle parent="compact-register" depth="foundation"}
+[[producer.chateau-cantemerle|Château Cantemerle]] — Cinquième Cru, [[appellation.haut-medoc|Haut-Médoc]]; in september 1855 alsnog opgenomen.
+:::
+
+:::register-entry{#producent-chateau-duhart-milon parent="compact-register" depth="foundation"}
+[[producer.chateau-duhart-milon|Château Duhart-Milon]] — Quatrième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-batailley parent="compact-register" depth="foundation"}
+[[producer.chateau-batailley|Château Batailley]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-clerc-milon parent="compact-register" depth="foundation"}
+[[producer.chateau-clerc-milon|Château Clerc Milon]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-croizet-bages parent="compact-register" depth="foundation"}
+[[producer.chateau-croizet-bages|Château Croizet-Bages]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-darmailhac parent="compact-register" depth="foundation"}
+[[producer.chateau-darmailhac|Château d’Armailhac]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-grand-puy-ducasse parent="compact-register" depth="foundation"}
+[[producer.chateau-grand-puy-ducasse|Château Grand-Puy Ducasse]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-haut-bages-liberal parent="compact-register" depth="foundation"}
+[[producer.chateau-haut-bages-liberal|Château Haut-Bages Libéral]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-haut-batailley parent="compact-register" depth="foundation"}
+[[producer.chateau-haut-batailley|Château Haut-Batailley]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-lynch-moussas parent="compact-register" depth="foundation"}
+[[producer.chateau-lynch-moussas|Château Lynch-Moussas]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-pedesclaux parent="compact-register" depth="foundation"}
+[[producer.chateau-pedesclaux|Château Pédesclaux]] — Cinquième Cru, [[appellation.pauillac|Pauillac]].
+:::
+
+:::register-entry{#producent-chateau-broustet parent="compact-register" depth="foundation"}
+[[producer.chateau-broustet|Château Broustet]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-caillou parent="compact-register" depth="foundation"}
+[[producer.chateau-caillou|Château Caillou]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-de-myrat parent="compact-register" depth="foundation"}
+[[producer.chateau-de-myrat|Château de Myrat]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-doisy-daene parent="compact-register" depth="foundation"}
+[[producer.chateau-doisy-daene|Château Doisy Daëne]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-doisy-dubroca parent="compact-register" depth="foundation"}
+[[producer.chateau-doisy-dubroca|Château Doisy-Dubroca]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-doisy-vedrines parent="compact-register" depth="foundation"}
+[[producer.chateau-doisy-vedrines|Château Doisy-Védrines]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-nairac parent="compact-register" depth="foundation"}
+[[producer.chateau-nairac|Château Nairac]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
+:::register-entry{#producent-chateau-suau-barsac parent="compact-register" depth="foundation"}
+[[producer.chateau-suau-barsac|Château Suau]] — Deuxième Cru in de zoete rangorde, [[appellation.barsac|Barsac]].
+:::
+
 :::figure{#twee-rangorden media_id="media.classification.bordeaux-1855.hierarchy" source_refs="source.gcc1855-classification-overview"}
 :::
 

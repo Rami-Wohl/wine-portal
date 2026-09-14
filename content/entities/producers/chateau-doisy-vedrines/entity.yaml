@@ -1,6 +1,6 @@
 id: producer.chateau-doisy-vedrines
 type: producer
-status: draft
+status: active
 canonical_name: Château Doisy-Védrines
 names: { nl: Château Doisy-Védrines, en: Château Doisy-Védrines }
 slugs: { nl: chateau-doisy-vedrines, en: chateau-doisy-vedrines }
@@ -17,3 +17,4 @@ relations:
     valid_from: 1855
 assertions: []
 source_refs: [source.gcc1855-classification-overview]
+last_reviewed: 2026-09-14

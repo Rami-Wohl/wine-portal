@@ -1,6 +1,6 @@
 id: classification.crus-bourgeois-du-medoc
 type: classification
-status: draft
+status: active
 canonical_name: Crus Bourgeois du Médoc
 names:
   nl: Crus Bourgeois du Médoc
@@ -11,6 +11,31 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - { type: scope, target: appellation.medoc }
+  - { type: scope, target: appellation.haut-medoc }
+  - { type: scope, target: appellation.listrac-medoc }
+  - { type: scope, target: appellation.moulis-en-medoc }
+  - { type: scope, target: appellation.margaux }
+  - { type: scope, target: appellation.pauillac }
+  - { type: scope, target: appellation.saint-estephe }
+  - { type: scope, target: appellation.saint-julien }
+assertions:
+  - id: assertion.crus-bourgeois-2025-estates
+    predicate: current_estate_count
+    value: 170
+    status: verified
+    sources: [source.crus-bourgeois-medoc-classification-2025]
+    last_verified: 2026-09-14
+  - id: assertion.crus-bourgeois-2025-vintages
+    predicate: valid_vintages
+    value: 2023–2027
+    status: verified
+    sources: [source.crus-bourgeois-medoc-press-kit-2025]
+    last_verified: 2026-09-14
+source_refs:
+  - source.crus-bourgeois-medoc-classification-2025
+  - source.crus-bourgeois-medoc-press-kit-2025
+  - source.crus-bourgeois-medoc-specification
+depth: foundation
+last_reviewed: 2026-09-14
