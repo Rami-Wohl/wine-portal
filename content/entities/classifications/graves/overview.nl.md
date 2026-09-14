@@ -36,9 +36,41 @@ De classificatie hoort bij benoemde bezittingen en hun betrokken wijn, niet bij 
 :::section{#geclassificeerde-domeinen depth="foundation" source_refs="source.bordeaux-graves-classification source.pessac-leognan-classified-growths"}
 ## Geclassificeerde domeinen — de huidige veertien
 
-Voor rood én wit zijn geclassificeerd: [[producer.chateau-bouscaut|Château Bouscaut]], [[producer.chateau-carbonnieux|Château Carbonnieux]], [[producer.domaine-de-chevalier|Domaine de Chevalier]], [[producer.chateau-latour-martillac|Château Latour-Martillac]], [[producer.chateau-malartic-lagraviere|Château Malartic-Lagravière]], [[producer.chateau-olivier|Château Olivier]] en [[producer.chateau-smith-haut-lafitte|Château Smith Haut Lafitte]].
+Zes domeinen krijgen elders meer context: [[producer.chateau-haut-brion|Château Haut-Brion]], [[producer.chateau-la-mission-haut-brion|Château La Mission Haut-Brion]] en [[producer.chateau-haut-bailly|Château Haut-Bailly]] zijn voor rood geklasseerd; [[producer.chateau-carbonnieux|Château Carbonnieux]], [[producer.domaine-de-chevalier|Domaine de Chevalier]] en [[producer.chateau-smith-haut-lafitte|Château Smith Haut Lafitte]] voor rood én wit.
 
-Voor rood zijn geclassificeerd: Château Haut-Brion, [[producer.chateau-de-fieuzal|Château de Fieuzal]], [[producer.chateau-haut-bailly|Château Haut-Bailly]], [[producer.chateau-la-mission-haut-brion|Château La Mission Haut-Brion]] en [[producer.chateau-pape-clement|Château Pape Clément]]. Voor wit zijn [[producer.chateau-couhins|Château Couhins]] en [[producer.chateau-couhins-lurton|Château Couhins-Lurton]] geclassificeerd.
+De acht compacte vermeldingen hieronder maken de lijst compleet. Ze zijn geen lagere categorie: ook deze bezittingen voeren dezelfde niet-hiërarchische titel, telkens alleen voor de genoemde kleur.
+:::
+
+:::register-entry{#producent-chateau-bouscaut parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-bouscaut|Château Bouscaut]] — Cru Classé de Graves voor rood en wit.
+:::
+
+:::register-entry{#producent-chateau-couhins-lurton parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-couhins-lurton|Château Couhins-Lurton]] — Cru Classé de Graves voor wit.
+:::
+
+:::register-entry{#producent-chateau-couhins parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-couhins|Château Couhins]] — Cru Classé de Graves voor wit.
+:::
+
+:::register-entry{#producent-chateau-de-fieuzal parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-de-fieuzal|Château de Fieuzal]] — Cru Classé de Graves voor rood.
+:::
+
+:::register-entry{#producent-chateau-latour-martillac parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-latour-martillac|Château Latour-Martillac]] — Cru Classé de Graves voor rood en wit.
+:::
+
+:::register-entry{#producent-chateau-malartic-lagraviere parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-malartic-lagraviere|Château Malartic-Lagravière]] — Cru Classé de Graves voor rood en wit.
+:::
+
+:::register-entry{#producent-chateau-olivier parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-olivier|Château Olivier]] — Cru Classé de Graves voor rood en wit.
+:::
+
+:::register-entry{#producent-chateau-pape-clement parent="geclassificeerde-domeinen" depth="foundation"}
+[[producer.chateau-pape-clement|Château Pape Clément]] — Cru Classé de Graves voor rood.
 :::
 
 :::section{#etiket-en-gebruik depth="foundation" source_refs="source.bordeaux-graves-classification source.dgccrf-wine-labels-2025"}

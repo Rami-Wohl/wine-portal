@@ -1,6 +1,6 @@
 id: producer.chateau-smith-haut-lafitte
 type: producer
-status: draft
+status: active
 canonical_name: Château Smith Haut Lafitte
 names:
   nl: Château Smith Haut Lafitte
@@ -21,4 +21,8 @@ relations:
     target: classification.graves
     properties: { colours: red-and-white }
 assertions: []
-source_refs: [source.pessac-leognan-classified-growths]
+source_refs:
+  - source.pessac-leognan-classified-growths
+  - source.smith-haut-lafitte-chateau
+  - source.smith-haut-lafitte-wines
+last_reviewed: 2026-09-14

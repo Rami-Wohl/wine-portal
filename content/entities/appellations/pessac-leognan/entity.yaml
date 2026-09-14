@@ -50,5 +50,15 @@ source_refs:
   - source.gcc1855-classification-overview
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+  - source.mission-haut-brion-history
+  - source.mission-haut-brion-wines
+  - source.haut-bailly-history
+  - source.haut-bailly-vineyard
+  - source.smith-haut-lafitte-chateau
+  - source.smith-haut-lafitte-wines
+  - source.domaine-de-chevalier-estate
+  - source.domaine-de-chevalier-wines
+  - source.carbonnieux-history
+  - source.carbonnieux-vineyard
 depth: foundation
-last_reviewed: 2026-09-11
+last_reviewed: 2026-09-14

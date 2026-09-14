@@ -198,7 +198,20 @@ coverage:
             {
               topics: [Classificatie en producenten.],
               source_refs:
-                [source.pessac-leognan-classified-growths, source.gcc1855-classification-overview],
+                [
+                  source.pessac-leognan-classified-growths,
+                  source.gcc1855-classification-overview,
+                  source.mission-haut-brion-history,
+                  source.mission-haut-brion-wines,
+                  source.haut-bailly-history,
+                  source.haut-bailly-vineyard,
+                  source.smith-haut-lafitte-chateau,
+                  source.smith-haut-lafitte-wines,
+                  source.domaine-de-chevalier-estate,
+                  source.domaine-de-chevalier-wines,
+                  source.carbonnieux-history,
+                  source.carbonnieux-vineyard,
+                ],
             },
           specific_claims: [],
         },

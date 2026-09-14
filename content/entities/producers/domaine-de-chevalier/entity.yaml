@@ -1,6 +1,6 @@
 id: producer.domaine-de-chevalier
 type: producer
-status: draft
+status: active
 canonical_name: Domaine de Chevalier
 names:
   nl: Domaine de Chevalier
@@ -21,4 +21,8 @@ relations:
     target: classification.graves
     properties: { colours: red-and-white }
 assertions: []
-source_refs: [source.pessac-leognan-classified-growths]
+source_refs:
+  - source.pessac-leognan-classified-growths
+  - source.domaine-de-chevalier-estate
+  - source.domaine-de-chevalier-wines
+last_reviewed: 2026-09-14

@@ -1,6 +1,6 @@
 id: producer.chateau-bouscaut
 type: producer
-status: draft
+status: active
 canonical_name: Château Bouscaut
 names: { nl: Château Bouscaut, en: Château Bouscaut }
 slugs: { nl: chateau-bouscaut, en: chateau-bouscaut }
@@ -16,3 +16,4 @@ relations:
     properties: { colours: red-and-white }
 assertions: []
 source_refs: [source.pessac-leognan-classified-growths]
+last_reviewed: 2026-09-14

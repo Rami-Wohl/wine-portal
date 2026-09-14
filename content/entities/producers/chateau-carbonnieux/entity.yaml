@@ -1,6 +1,6 @@
 id: producer.chateau-carbonnieux
 type: producer
-status: draft
+status: active
 canonical_name: Château Carbonnieux
 names:
   nl: Château Carbonnieux
@@ -21,4 +21,8 @@ relations:
     target: classification.graves
     properties: { colours: red-and-white }
 assertions: []
-source_refs: [source.pessac-leognan-classified-growths]
+source_refs:
+  - source.pessac-leognan-classified-growths
+  - source.carbonnieux-history
+  - source.carbonnieux-vineyard
+last_reviewed: 2026-09-14

@@ -1,6 +1,6 @@
 id: producer.chateau-pape-clement
 type: producer
-status: draft
+status: active
 canonical_name: Château Pape Clément
 names: { nl: Château Pape Clément, en: Château Pape Clément }
 slugs: { nl: chateau-pape-clement, en: chateau-pape-clement }
@@ -16,3 +16,4 @@ relations:
     properties: { colours: red }
 assertions: []
 source_refs: [source.pessac-leognan-classified-growths]
+last_reviewed: 2026-09-14

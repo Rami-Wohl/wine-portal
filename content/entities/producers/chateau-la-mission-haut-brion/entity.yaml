@@ -1,6 +1,6 @@
 id: producer.chateau-la-mission-haut-brion
 type: producer
-status: draft
+status: active
 canonical_name: Château La Mission Haut-Brion
 names:
   nl: Château La Mission Haut-Brion
@@ -21,4 +21,8 @@ relations:
     target: classification.graves
     properties: { colours: red }
 assertions: []
-source_refs: [source.pessac-leognan-classified-growths]
+source_refs:
+  - source.pessac-leognan-classified-growths
+  - source.mission-haut-brion-history
+  - source.mission-haut-brion-wines
+last_reviewed: 2026-09-14

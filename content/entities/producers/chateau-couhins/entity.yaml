@@ -1,6 +1,6 @@
 id: producer.chateau-couhins
 type: producer
-status: draft
+status: active
 canonical_name: Château Couhins
 names: { nl: Château Couhins, en: Château Couhins }
 slugs: { nl: chateau-couhins, en: chateau-couhins }
@@ -16,3 +16,4 @@ relations:
     properties: { colours: white }
 assertions: []
 source_refs: [source.pessac-leognan-classified-growths]
+last_reviewed: 2026-09-14

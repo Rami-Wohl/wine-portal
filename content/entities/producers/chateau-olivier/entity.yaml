@@ -1,6 +1,6 @@
 id: producer.chateau-olivier
 type: producer
-status: draft
+status: active
 canonical_name: Château Olivier
 names: { nl: Château Olivier, en: Château Olivier }
 slugs: { nl: chateau-olivier, en: chateau-olivier }
@@ -16,3 +16,4 @@ relations:
     properties: { colours: red-and-white }
 assertions: []
 source_refs: [source.pessac-leognan-classified-growths]
+last_reviewed: 2026-09-14

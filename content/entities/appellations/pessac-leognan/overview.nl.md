@@ -97,34 +97,44 @@ Haut-Brion is uitzonderlijk omdat het zowel cru classé de Graves als premier cr
 Een château kan voor rood, wit of beide zijn geklasseerd. De rang hoort dus niet automatisch bij elk product dat een domein maakt. Op het etiket moeten producentennaam, appellation en eventuele classificatie samen worden gelezen. Dat voorkomt dat reputatie van de ene kleur zonder meer op de andere wordt geplakt.
 :::
 
-:::detail{#producent-la-mission-haut-brion parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths"}
+:::detail{#producent-la-mission-haut-brion parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.mission-haut-brion-history source.mission-haut-brion-wines"}
 ### Château La Mission Haut-Brion
 
-La Mission Haut-Brion is een geklasseerd domein voor rood en wit in de stedelijke noordzone. Het vormt met Haut-Brion een sterk leerpaar, maar behoudt een eigen wijngaard, geschiedenis en wijnidentiteit.
+La Mission Haut-Brion ligt in de stedelijke noordzone, tegenover buur Château Haut-Brion, maar is geen tweede etiket daarvan. De geschiedenis wordt teruggevoerd tot 1540; vanaf 1682 beheerden Lazaristen het bezit. De familie Woltner, eigenaar vanaf 1919, moderniseerde de kelder en begon in 1927 een witte wijn te maken. Sinds 1983 behoort het domein aan de familie Dillon, die ook Haut-Brion bezit.
+
+De rode Château La Mission Haut-Brion is de wijn die als Cru Classé de Graves is erkend. Het assortiment omvat daarnaast een witte grand vin, een tweede rode wijn onder de naam La Chapelle de La Mission Haut-Brion en de gedeelde droge witte La Clarté de Haut-Brion. Dat maakt het domein een nuttige les in precies lezen: een eigenaar kan meerdere kastelen en cuvées verbinden, terwijl wijngaardidentiteit en classificatiestatus afzonderlijk blijven. Dat La Mission wit maakt, betekent dus niet dat zijn huidige klassering ook voor wit geldt. De naam op de fles blijft daarom belangrijker dan de familierelatie alleen.
 :::
 
-:::detail{#producent-haut-bailly parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths"}
+:::detail{#producent-haut-bailly parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.haut-bailly-history source.haut-bailly-vineyard"}
 ### Château Haut-Bailly
 
-Haut-Bailly is voor rood geclassificeerd en biedt een nuttig tegenbeeld voor domeinen die beide kleuren centraal stellen. Het helpt de kleurgebonden logica van de classificatie zichtbaar maken.
+Haut-Bailly ligt op een goed drainerende grindrug bij Léognan. Firmin Le Bailly en Nicolas de Leuvarde brachten in de zeventiende eeuw de kern van het huidige bezit bijeen. Alcide Bellot des Minières kocht het in 1872; de familie Sanders volgde in 1955 en de Amerikaan Robert G. Wilmers in 1998. Na zijn overlijden in 2017 zette zijn familie het langetermijnbeheer voort.
+
+De grand vin is rood en daarvoor geldt de Graves-klassering. Cabernet Sauvignon vormt doorgaans de ruggengraat, aangevuld door Merlot en andere toegestane rode rassen. Een bijzonder historisch perceel, aangeplant in 1905 met zes rassen door elkaar, bewaart iets van de oude gemengde wijngaard. Die zeldzame beplanting is historisch erfgoed, geen algemeen recept voor moderne Pessac-Léognan. Haut-Bailly II is de tweede wijn. Haut-Bailly laat zo zien dat een domein zonder geklasseerde witte tegenhanger toch een rijk verhaal kan vertellen over bodem, oud plantmateriaal en selectie binnen één kleur, zonder die uitzondering tot norm te verheffen.
 :::
 
-:::detail{#producent-smith-haut-lafitte parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths"}
+:::detail{#producent-smith-haut-lafitte parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.smith-haut-lafitte-chateau source.smith-haut-lafitte-wines"}
 ### Château Smith Haut Lafitte
 
-Smith Haut Lafitte is voor rood geclassificeerd en maakt daarnaast een bekende droge witte wijn. Dat onderscheid laat precies zien waarom classificatie en volledig assortiment niet hetzelfde zijn.
+Smith Haut Lafitte ligt in Martillac en draagt de naam van de Schotse handelaar George Smith, die het bezit in de achttiende eeuw verwierf. Na een periode onder het handelshuis Eschenauer kochten Daniel en Florence Cathiard het château in 1990. Zij investeerden in wijngaard en kelder en maakten biodiversiteit en eigen onderzoek naar plantmateriaal zichtbaar onderdeel van het domeinverhaal.
+
+Anders dan een producent die slechts voor één kleur is erkend, is Smith Haut Lafitte Cru Classé de Graves voor zowel rood als wit. De rode grand vin is Cabernet-gedreven; de witte steunt vooral op Sauvignon Blanc, met Sémillon als partner. Het domein maakt daarnaast tweede en andere cuvées, maar die erven de klassering niet automatisch. De duurzaamheids- en onderzoeksclaims zijn het perspectief van de producent, niet zelf een classificatiecriterium. Smith Haut Lafitte is daarom vooral leerzaam als tweekleurig château: dezelfde grindomgeving levert twee zelfstandige hoofdwijnen op, met verschillende druiven, plukmomenten en kelderroutes.
 :::
 
-:::detail{#producent-domaine-de-chevalier parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths"}
+:::detail{#producent-domaine-de-chevalier parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.domaine-de-chevalier-estate source.domaine-de-chevalier-wines"}
 ### Domaine de Chevalier
 
-Domaine de Chevalier is voor rood en wit geklasseerd. De bosrijke ligging bij Léognan verbreedt het beeld voorbij de stedelijke wijngaarden van Pessac.
+Domaine de Chevalier ligt in een open plek in het bos ten westen van Léognan. Archieven noemen hier in de zeventiende eeuw het landgoed Chivaley, maar de reputatie als wijndomein kreeg vooral vanaf de tweede helft van de negentiende eeuw vorm onder de familie Ricard. De familie Bernard kocht het bezit in 1983; Olivier Bernard leidt het sindsdien vanuit een nadrukkelijk langetermijnperspectief.
+
+Zowel Domaine de Chevalier rouge als blanc is Cru Classé de Graves. De rode wijn is gebouwd rond de klassieke Cabernet-Merlotfamilie; de witte rond Sauvignon Blanc en Sémillon. L’Esprit de Chevalier bestaat eveneens in beide kleuren als tweede wijn. Juist de witte grand vin is hier geen voetnoot bij rood, maar een van de dragende identiteiten van het domein. De bosrijke ligging onderscheidt bovendien zijn context van de ingesloten wijngaarden dichter bij Bordeaux. Chevalier maakt daarmee zichtbaar hoe één landgoed twee serieus geselecteerde, afzonderlijk geclassificeerde stijlen kan voortbrengen zonder dat ze één kelderrecept delen.
 :::
 
-:::detail{#producent-carbonnieux parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths"}
+:::detail{#producent-carbonnieux parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.carbonnieux-history source.carbonnieux-vineyard"}
 ### Château Carbonnieux
 
-Carbonnieux is eveneens voor rood en wit geklasseerd. Het is een bruikbaar baken voor de lange lokale traditie van droge witte wijn, die niet als bijproduct van de rode crus moet worden gelezen.
+Carbonnieux ligt op een brede grindrug bij Léognan en behoort tot de oudste benoemde bezittingen van de streek: de naam verschijnt al in middeleeuwse bronnen. Benedictijnen van Sainte-Croix speelden eeuwenlang een belangrijke rol in het domein en zijn witte wijn. Na een lange reeks eigenaars kocht Marc Perrin het château in 1956, een moeilijk jaar van zware vorst. De familie Perrin herstelde wijngaard en gebouwen en bestuurt het bezit nog steeds.
+
+Carbonnieux is geklasseerd voor zowel rood als wit. Beide verschijnen als zelfstandige grand vin onder de naam van het château; rood en wit vragen daarbij andere druiven, oogstmomenten en vinificatie. Vooral de lange bekendheid van Carbonnieux Blanc helpt een misvatting corrigeren: droge witte Graves is geen moderne nevenactiviteit naast prestigieus rood. De middeleeuwse oorsprong bewijst daarbij geen ononderbroken, onveranderde wijnstijl door acht eeuwen heen. Het château vormt juist een historische brug tussen beide kleuren en maakt de tweekleurige identiteit van Pessac-Léognan tastbaar.
 :::
 
 :::section{#wijnstijl-en-flesontwikkeling depth="foundation" source_refs="source.inao-pessac-leognan-rouge source.inao-pessac-leognan-blanc"}

@@ -297,6 +297,27 @@ test("1855 register entries resolve to their stable classification anchors", asy
   await expect(page.locator('[data-parent="compact-register"]')).toHaveCount(23);
 });
 
+test("Graves producer records resolve to profiles and colour-specific register entries", async ({
+  page,
+}) => {
+  await page.goto("/producers/chateau-bouscaut");
+  await expect(page).toHaveURL(
+    /\/classifications\/classificatie-graves#producent-chateau-bouscaut$/,
+  );
+  await expect(page.locator("#producent-chateau-bouscaut")).toBeVisible();
+  await expect(page.locator('[data-parent="geclassificeerde-domeinen"]')).toHaveCount(8);
+  await expect(page.locator("#producent-chateau-couhins")).toContainText(
+    "Cru Classé de Graves voor wit",
+  );
+
+  await page.goto("/producers/chateau-la-mission-haut-brion");
+  await expect(page).toHaveURL(/\/appellations\/pessac-leognan#producent-la-mission-haut-brion$/);
+  await expect(page.locator("#producent-la-mission-haut-brion")).toBeVisible();
+  await expect(page.locator("#producent-la-mission-haut-brion")).toContainText(
+    "klassering ook voor wit geldt",
+  );
+});
+
 test("Château Figeac presents both documentary images and layered producer knowledge", async ({
   page,
 }) => {

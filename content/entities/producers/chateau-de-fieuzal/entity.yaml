@@ -1,6 +1,6 @@
 id: producer.chateau-de-fieuzal
 type: producer
-status: draft
+status: active
 canonical_name: Château de Fieuzal
 names: { nl: Château de Fieuzal, en: Château de Fieuzal }
 slugs: { nl: chateau-de-fieuzal, en: chateau-de-fieuzal }
@@ -16,3 +16,4 @@ relations:
     properties: { colours: red }
 assertions: []
 source_refs: [source.pessac-leognan-classified-growths]
+last_reviewed: 2026-09-14

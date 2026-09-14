@@ -1,6 +1,6 @@
 id: producer.chateau-haut-bailly
 type: producer
-status: draft
+status: active
 canonical_name: Château Haut-Bailly
 names:
   nl: Château Haut-Bailly
@@ -21,4 +21,8 @@ relations:
     target: classification.graves
     properties: { colours: red }
 assertions: []
-source_refs: [source.pessac-leognan-classified-growths]
+source_refs:
+  - source.pessac-leognan-classified-growths
+  - source.haut-bailly-history
+  - source.haut-bailly-vineyard
+last_reviewed: 2026-09-14
