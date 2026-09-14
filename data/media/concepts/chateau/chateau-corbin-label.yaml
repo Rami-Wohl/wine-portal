@@ -1,0 +1,26 @@
+id: media.concept.chateau.chateau-corbin-label
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/chateau/chateau-corbin-label.png
+mime_type: image/png
+width: 800
+height: 1068
+checksum_sha256: 3e46697d3ac7eb23c28f36a1c5f17ef01d1eab1f3521f48dfbb7123767ac9d7f
+alt:
+  nl: Etiket van Château Corbin 1976 met château-naam, Saint-Émilion-herkomst, exploitant en bottelvermelding
+  en: Label of Château Corbin 1976 showing the château name, Saint-Émilion origin, operator and estate-bottling statement
+caption:
+  nl: >-
+    Dit historische etiket laat vier verschillende informatielagen naast elkaar zien: **Château Corbin** is de exploitatie- of wijnnaam, **Saint-Émilion Grand Cru** de herkomst, **Grand Cru Classé** de historische classificatievermelding en *mis en bouteilles au château* een uitspraak over botteling. Die woorden zijn verwant, maar betekenen niet hetzelfde.
+  en: >-
+    This historic label places four different kinds of information together: **Château Corbin** is the estate or wine name, **Saint-Émilion Grand Cru** the origin, **Grand Cru Classé** a historical classification statement, and *mis en bouteilles au château* a bottling statement. The terms are related, but not interchangeable.
+rights:
+  status: public-domain
+  creator: Wdelaet
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Corbin_Label.png
+  license_name: Released into the public domain by the copyright holder
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  credit_line: Wdelaet via Wikimedia Commons, public domain
+acquired_at: 2026-09-14
+changes: Original Wikimedia Commons file used without crop or editorial colour alteration.

@@ -1,0 +1,24 @@
+id: media.concept.en-primeur.barrel-tasting
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/en-primeur/barrel-tasting.jpg
+mime_type: image/jpeg
+width: 1600
+height: 1200
+checksum_sha256: e1a0c164655ac9e44204b5c142f5015270790fc476db1bc457806e90a97c9463
+alt:
+  nl: Een wijnmonster wordt met een glazen pipet uit een vat in een proefglas geheveld
+  en: A wine sample is drawn from a barrel into a tasting glass with a glass wine thief
+caption:
+  nl: Met een glazen pipet wordt wijn rechtstreeks uit het vat geproefd. Zo'n jong monster maakt beoordeling vóór botteling mogelijk, maar deze documentaire foto toont geen Bordeauxse primeurproeverij en bewijst niets over de uiteindelijke assemblage of fles.
+  en: Wine is drawn directly from barrel with a glass wine thief. Such a young sample makes assessment before bottling possible, but this documentary photograph does not depict a Bordeaux en-primeur tasting and proves nothing about the final blend or bottle.
+rights:
+  status: open-licensed
+  creator: JJ
+  source_url: https://commons.wikimedia.org/wiki/File:Barrel_Tasting.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: JJ via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-14
+changes: Original Wikimedia Commons file used without crop or editorial colour alteration.

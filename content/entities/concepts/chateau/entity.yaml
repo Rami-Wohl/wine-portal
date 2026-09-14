@@ -1,6 +1,6 @@
 id: concept.chateau
 type: concept
-status: draft
+status: active
 canonical_name: Château as a wine term
 names:
   nl: Château als wijnnaam
@@ -11,6 +11,13 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: associated_with, target: region.bordeaux }
+  - { type: related_to, target: concept.grand-vin }
 assertions: []
-source_refs: []
+source_refs:
+  - source.dgccrf-wine-labels-2025
+  - source.legifrance-wine-estate-names-2012
+  - source.msha-bordeaux-wine-history
+depth: foundation
+last_reviewed: 2026-09-14

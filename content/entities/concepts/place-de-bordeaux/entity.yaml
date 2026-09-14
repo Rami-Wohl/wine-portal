@@ -1,6 +1,6 @@
 id: concept.place-de-bordeaux
 type: concept
-status: draft
+status: active
 canonical_name: Place de Bordeaux
 names:
   nl: Place de Bordeaux
@@ -11,6 +11,12 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: associated_with, target: region.bordeaux }
 assertions: []
-source_refs: []
+source_refs:
+  - source.civb-bordeaux-wine-trade
+  - source.bordeaux-negoce-profession
+  - source.msha-bordeaux-wine-history
+depth: foundation
+last_reviewed: 2026-09-14

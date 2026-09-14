@@ -1,6 +1,6 @@
 id: concept.en-primeur
 type: concept
-status: draft
+status: active
 canonical_name: En primeur
 names:
   nl: En primeur
@@ -11,6 +11,13 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: associated_with, target: region.bordeaux }
+  - { type: related_to, target: concept.negociant }
+  - { type: related_to, target: concept.place-de-bordeaux }
 assertions: []
-source_refs: []
+source_refs:
+  - source.civb-bordeaux-wine-trade
+  - source.ugcb-primeurs-week
+depth: foundation
+last_reviewed: 2026-09-14

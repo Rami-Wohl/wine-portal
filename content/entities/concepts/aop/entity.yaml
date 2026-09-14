@@ -1,6 +1,6 @@
 id: concept.aop
 type: concept
-status: draft
+status: active
 canonical_name: Protected designation of origin (PDO)
 names:
   nl: Appellation d’origine protégée (AOP)
@@ -11,6 +11,13 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: associated_with, target: region.bordeaux }
 assertions: []
-source_refs: []
+source_refs:
+  - source.inao-aop-overview
+  - source.inao-aoc-history
+  - source.eurlex-wine-pdo-regulation-2026
+  - source.dgccrf-wine-labels-2025
+depth: foundation
+last_reviewed: 2026-09-14

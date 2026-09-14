@@ -723,6 +723,82 @@ test("the chosen knowledge depth persists across navigation and refresh", async 
   );
 });
 
+test("the Bordeaux trade-system concepts publish complete media and depth layers", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const concepts = [
+    {
+      path: "/concepts/aop",
+      title: "Appellation d’origine protégée (AOP)",
+      images: ["#historisch-aoc-etiket img"],
+      intermediate: "#grens-is-niet-het-hele-verhaal",
+      advanced: "#woorden-op-oude-en-nieuwe-flessen",
+    },
+    {
+      path: "/concepts/chateau-wijnterm",
+      title: "Château als wijnnaam",
+      images: ["#chateau-corbin-etiket img", "#chateau-margaux-in-landschap img"],
+      intermediate: "#juridische-randvoorwaarden",
+      advanced: "#wat-het-etiket-niet-bewijst",
+    },
+    {
+      path: "/concepts/negociant",
+      title: "Négociant",
+      images: ["#handel-aan-de-chartrons img"],
+      intermediate: "#wat-de-handelaar-overneemt",
+      advanced: "#macht-en-transparantie",
+    },
+    {
+      path: "/concepts/place-de-bordeaux",
+      title: "Place de Bordeaux",
+      images: ["#chartrons-haven-1804 img"],
+      intermediate: "#releases-en-toewijzingen",
+      advanced: "#geen-centrale-regisseur",
+    },
+    {
+      path: "/concepts/en-primeur",
+      title: "En primeur",
+      images: ["#proeven-uit-het-vat img"],
+      intermediate: "#monster-is-geen-eindproduct",
+      advanced: "#prijs-vraag-en-reputatie",
+    },
+  ] as const;
+
+  for (const concept of concepts) {
+    await page.goto(concept.path);
+    await expect(page.getByRole("heading", { level: 1, name: concept.title })).toBeVisible();
+
+    for (const selector of concept.images) {
+      const image = page.locator(selector);
+      await image.scrollIntoViewIfNeeded();
+      await expect(image).toBeVisible();
+      await expect(image).toHaveJSProperty("complete", true);
+    }
+
+    const intermediate = page.locator(concept.intermediate);
+    const advanced = page.locator(concept.advanced);
+    await expect(intermediate).toBeHidden();
+    await expect(advanced).toBeHidden();
+
+    await page.getByRole("button", { name: "Verdieping" }).click();
+    await expect(intermediate).toBeVisible();
+    await expect(advanced).toBeHidden();
+
+    await page.getByRole("button", { name: "Gevorderd" }).click();
+    await expect(advanced).toBeVisible();
+
+    const dimensions = await page.evaluate(() => ({
+      documentWidth: document.documentElement.scrollWidth,
+      viewportWidth: document.documentElement.clientWidth,
+    }));
+    expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+
+    await page.getByRole("button", { name: "Basis" }).click();
+  }
+});
+
 test("the full document remains readable without JavaScript", async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();

@@ -1,0 +1,24 @@
+id: media.concept.place-de-bordeaux.chartrons-port-1804
+kind: illustration
+role: documentary
+status: active
+storage_key: concepts/place-de-bordeaux/chartrons-port-1804.jpg
+mime_type: image/jpeg
+width: 2000
+height: 1308
+checksum_sha256: aab1da001bd77ef98a467efd61b4513fadb6d7faa9c807c53f2f3d110ef31896
+alt:
+  nl: Schilderij uit 1804 van de drukke Bordeauxse haven en de Quai des Chartrons met schepen, pakhuizen en arbeiders
+  en: Painting from 1804 of Bordeaux's busy harbour and Quai des Chartrons with ships, warehouses and workers
+caption:
+  nl: Pierre Lacour schilderde in 1804 de haven en Quai des Chartrons als een volledig handelslandschap. Hier kreeg de Bordeauxhandel een fysieke thuisbasis; de huidige **Place de Bordeaux** is echter een netwerk van bedrijven en transacties, geen beursgebouw dat op dit schilderij kan worden aangewezen.
+  en: In 1804 Pierre Lacour painted the harbour and Quai des Chartrons as an entire trading landscape. Bordeaux commerce had a physical home here; today's **Place de Bordeaux**, however, is a network of firms and transactions, not an exchange building that can be pointed out in the painting.
+rights:
+  status: public-domain
+  creator: Pierre Lacour the Elder
+  source_url: https://commons.wikimedia.org/wiki/File:Pierre_LACOUR_-_Vue_d%E2%80%99une_partie_du_port_et_des_quais_de_Bordeaux_dits_des_Chartrons_et_de_Bacalan.jpg
+  license_name: Public Domain Mark 1.0
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
+  credit_line: Pierre Lacour the Elder / Musée des Beaux-Arts de Bordeaux via Wikimedia Commons, public domain
+acquired_at: 2026-09-14
+changes: Original Wikimedia Commons file proportionally resized to 2000 pixels wide; no crop or editorial colour alteration.
