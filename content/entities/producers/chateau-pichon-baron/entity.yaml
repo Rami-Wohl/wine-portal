@@ -1,6 +1,6 @@
 id: producer.chateau-pichon-baron
 type: producer
-status: draft
+status: active
 canonical_name: Château Pichon Baron
 names:
   nl: Château Pichon Baron
@@ -22,4 +22,8 @@ relations:
     target: classification.bordeaux-1855
     properties: { tier: deuxieme-cru }
 assertions: []
-source_refs: [source.gcc1855-classification-overview]
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.pichon-baron-heritage
+  - source.pichon-baron-terroir
+last_reviewed: 2026-09-14

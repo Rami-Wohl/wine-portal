@@ -1,6 +1,6 @@
 id: producer.chateau-pontet-canet
 type: producer
-status: draft
+status: active
 canonical_name: Château Pontet-Canet
 names:
   nl: Château Pontet-Canet
@@ -22,4 +22,8 @@ relations:
     target: classification.bordeaux-1855
     properties: { tier: cinquieme-cru }
 assertions: []
-source_refs: [source.gcc1855-classification-overview]
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.pontet-canet-history
+  - source.pontet-canet-practices
+last_reviewed: 2026-09-14

@@ -1,6 +1,6 @@
 id: producer.chateau-lynch-bages
 type: producer
-status: draft
+status: active
 canonical_name: Château Lynch-Bages
 names:
   nl: Château Lynch-Bages
@@ -22,4 +22,8 @@ relations:
     target: classification.bordeaux-1855
     properties: { tier: cinquieme-cru }
 assertions: []
-source_refs: [source.gcc1855-classification-overview]
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.lynch-bages-history
+  - source.lynch-bages-wines
+last_reviewed: 2026-09-14

@@ -1,6 +1,6 @@
 id: producer.chateau-grand-puy-lacoste
 type: producer
-status: draft
+status: active
 canonical_name: Château Grand-Puy-Lacoste
 names:
   nl: Château Grand-Puy-Lacoste
@@ -22,4 +22,8 @@ relations:
     target: classification.bordeaux-1855
     properties: { tier: cinquieme-cru }
 assertions: []
-source_refs: [source.gcc1855-classification-overview]
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.grand-puy-lacoste-family
+  - source.grand-puy-lacoste-chateau
+last_reviewed: 2026-09-14

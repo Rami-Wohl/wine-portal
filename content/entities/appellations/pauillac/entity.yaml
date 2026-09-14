@@ -54,5 +54,16 @@ source_refs:
   - source.inao-aop-overview
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+  - source.pichon-baron-heritage
+  - source.pichon-baron-terroir
+  - source.pichon-comtesse-history
+  - source.pichon-comtesse-place
+  - source.pichon-comtesse-wines
+  - source.lynch-bages-history
+  - source.lynch-bages-wines
+  - source.grand-puy-lacoste-family
+  - source.grand-puy-lacoste-chateau
+  - source.pontet-canet-history
+  - source.pontet-canet-practices
 depth: foundation
-last_reviewed: 2026-09-02
+last_reviewed: 2026-09-14

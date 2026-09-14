@@ -545,6 +545,15 @@ test("Pauillac media and appellation details follow the knowledge-depth contract
   await depthControl.getByRole("button", { name: "Verdieping" }).click();
   await expect(intermediateBlock).toBeVisible();
   await expect(advancedBlock).toBeHidden();
+  for (const anchor of [
+    "#producent-chateau-pichon-baron",
+    "#producent-chateau-pichon-longueville-comtesse-de-lalande",
+    "#producent-chateau-lynch-bages",
+    "#producent-chateau-grand-puy-lacoste",
+    "#producent-chateau-pontet-canet",
+  ]) {
+    await expect(page.locator(anchor)).toBeVisible();
+  }
 
   await depthControl.getByRole("button", { name: "Gevorderd" }).click();
   await expect(advancedBlock).toBeVisible();
@@ -554,6 +563,10 @@ test("Pauillac media and appellation details follow the knowledge-depth contract
     viewportWidth: document.documentElement.clientWidth,
   }));
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+
+  await page.goto("/producers/chateau-pichon-baron");
+  await expect(page).toHaveURL(/\/appellations\/pauillac#producent-chateau-pichon-baron$/);
+  await expect(page.locator("#producent-chateau-pichon-baron")).toBeVisible();
 });
 
 test("Libournais orients the region with contrasting landscapes and progressive depth", async ({

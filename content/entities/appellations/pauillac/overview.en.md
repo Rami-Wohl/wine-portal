@@ -146,6 +146,46 @@ They are followed by second growths [[producer.chateau-pichon-baron|Château Pic
 This is navigation, not buying advice. Style, reputation, holdings and price vary within one rank; judge a bottle by producer, cuvée and year. [@source.gcc1855-classification-overview]
 :::
 
+:::detail{#producent-chateau-pichon-baron parent="achttien-namen-een-geschiedenis" depth="intermediate" source_refs="source.gcc1855-classification-overview source.pichon-baron-heritage source.pichon-baron-terroir"}
+### Château Pichon Baron
+
+Pichon Baron stands south of Pauillac opposite Pichon Comtesse. Both emerged from the vineyard property that Pierre de Rauzan began assembling in 1689 and that was divided among the children of Joseph de Pichon Longueville in 1850. Raoul received what became Pichon Baron and commissioned the recognisable twin-turreted château in 1851. The estate became a second growth in 1855; AXA Millésimes bought and restored it in 1987.
+
+The red grand vin, Château Pichon Baron, comes from a strict selection centred on the historic gravel rise around the château, with Cabernet Sauvignon generally providing the structure. Les Griffons and Les Tourelles are two distinct second selections, not lower 1855 ranks. The estate has also made a dry white wine since 2022. Because Pauillac protects red wine only, that white must be read outside the Pauillac PDO. Pichon Baron therefore separates three frameworks clearly: historic rank, selection within an estate and the legal origin stated on the particular bottle.
+:::
+
+:::detail{#producent-chateau-pichon-longueville-comtesse-de-lalande parent="achttien-namen-een-geschiedenis" depth="intermediate" source_refs="source.gcc1855-classification-overview source.pichon-comtesse-history source.pichon-comtesse-place source.pichon-comtesse-wines"}
+### Château Pichon Longueville Comtesse de Lalande
+
+Pichon Comtesse arose from the same 1850 division as Pichon Baron. Virginie de Pichon Longueville, Countess of Lalande, inherited part of the family property with her sisters and commissioned the château that now bears her name. The estate likewise became a second growth in 1855. It passed to the Miailhe family in 1925; May Eliane de Lencquesaing later became its best-known ambassador. Champagne Louis Roederer, led by the Rouzaud family, took ownership in 2007.
+
+The grand vin is now known simply as Pichon Comtesse. Cabernet Sauvignon remains the vineyard's backbone, with Merlot, Cabernet Franc and Petit Verdot as partners; Réserve de la Comtesse is the second selection. The familiar comparison describing Comtesse as “softer” and Baron as “stricter” may guide a tasting, but it is not a fixed natural law. Parcels, blending, vintage and bottle age all shift the outcome. The two Pichons teach precisely because common origins, close proximity and equal rank do not produce one wine identity.
+:::
+
+:::detail{#producent-chateau-lynch-bages parent="achttien-namen-een-geschiedenis" depth="intermediate" source_refs="source.gcc1855-classification-overview source.lynch-bages-history source.lynch-bages-wines"}
+### Château Lynch-Bages
+
+Lynch-Bages occupies the gravel rise around the hamlet of Bages, on Pauillac's south-western side. Its name connects that place with the Irish-origin Lynch family, which acquired the property through marriage in 1750. In the nineteenth century the estate gained an innovative gravity-fed winery; it became a fifth growth in 1855. The Cazes family bought Lynch-Bages in 1939. Jean-Michel Cazes modernised it and developed its international reach from the 1970s; Jean-Charles took charge in 2007 and opened a rebuilt winery with the 2020 harvest.
+
+Château Lynch-Bages is the Cabernet-led grand vin; Echo de Lynch-Bages is the second wine. Blanc de Lynch-Bages belongs to the range, but as a white wine it cannot carry the Pauillac appellation. The renown Lynch-Bages acquired later does not alter its formal fifth rank. The estate therefore illustrates the difference between a historic class and a reputation that producers, trade and drinkers continue to reassess over time.
+:::
+
+:::detail{#producent-chateau-grand-puy-lacoste parent="achttien-namen-een-geschiedenis" depth="intermediate" source_refs="source.gcc1855-classification-overview source.grand-puy-lacoste-family source.grand-puy-lacoste-chateau"}
+### Château Grand-Puy-Lacoste
+
+Grand-Puy-Lacoste lies inland on the high gravel ridge of Grand-Puy. The property developed through a family line traced to the sixteenth century and gained its present name through the Lacoste family. The distinctive Raymond Dupin bought it in 1930 and sold it to Jean-Eugène Borie in 1978. His son François-Xavier Borie immediately took charge and renewed vineyard and winery in stages; he now shares the family project with the next generation. The château is an 1855 fifth growth.
+
+The grand vin is red, predominantly Cabernet-led and intended as the property's strictest selection. Lots not chosen for it may enter Lacoste-Borie, a separate second wine generally designed to be approachable sooner. That selection difference is not an appellation difference: both may be Pauillac when they meet the same origin rules. Grand-Puy-Lacoste thus offers a quiet counterpoint to the idea that spectacular architecture or constant brand reinvention defines a growth; continuity, parcel selection and family stewardship can matter at least as much.
+:::
+
+:::detail{#producent-chateau-pontet-canet parent="achttien-namen-een-geschiedenis" depth="intermediate" source_refs="source.gcc1855-classification-overview source.pontet-canet-history source.pontet-canet-practices"}
+### Château Pontet-Canet
+
+Pontet-Canet lies in northern Pauillac, opposite the surroundings of Mouton Rothschild. Jean-François de Pontet formed the property in the early eighteenth century; from 1865 the Cruse merchant family modernised the estate. It entered the 1855 classification as a fifth growth and was bought by Guy Tesseron in 1975. Alfred Tesseron took charge in 1994; his daughter Justine joined in 2015 and represents the next generation of owners with her brother and cousins.
+
+The red grand vin is Cabernet-led, but Pontet-Canet is especially useful as an example of a producer radically changing its methods while rank and appellation remain unchanged. An initial part of the vineyard converted to biodynamic farming in 2004, the whole estate followed one year later, and it gained organic and biodynamic certification in 2010. Those certificates describe agricultural practice, not automatic taste or quality. The story therefore demonstrates both the room for experimentation within Pauillac and the need to assess producer claims, verifiable certification and tasting experience separately.
+:::
+
 :::detail{#meer-dan-1855 parent="achttien-namen-een-geschiedenis" depth="advanced" source_refs="source.gcc1855-classification-overview source.inao-pauillac-specification-2026"}
 ### Pauillac does not end with the list
 

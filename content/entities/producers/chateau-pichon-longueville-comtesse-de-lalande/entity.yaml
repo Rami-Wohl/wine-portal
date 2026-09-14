@@ -1,6 +1,6 @@
 id: producer.chateau-pichon-longueville-comtesse-de-lalande
 type: producer
-status: draft
+status: active
 canonical_name: Château Pichon Longueville Comtesse de Lalande
 names:
   nl: Château Pichon Longueville Comtesse de Lalande
@@ -22,4 +22,9 @@ relations:
     target: classification.bordeaux-1855
     properties: { tier: deuxieme-cru }
 assertions: []
-source_refs: [source.gcc1855-classification-overview]
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.pichon-comtesse-history
+  - source.pichon-comtesse-place
+  - source.pichon-comtesse-wines
+last_reviewed: 2026-09-14

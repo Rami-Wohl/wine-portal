@@ -132,19 +132,46 @@ coverage:
 
   - key: classification-and-producers
     disposition: on-page
-    block_ids: [achttien-namen-een-geschiedenis, drie-premiers, alle-achttien, meer-dan-1855]
-    target_ids: []
+    block_ids:
+      - achttien-namen-een-geschiedenis
+      - drie-premiers
+      - alle-achttien
+      - producent-chateau-pichon-baron
+      - producent-chateau-pichon-longueville-comtesse-de-lalande
+      - producent-chateau-lynch-bages
+      - producent-chateau-grand-puy-lacoste
+      - producent-chateau-pontet-canet
+      - meer-dan-1855
+    target_ids:
+      - producer.chateau-pichon-baron
+      - producer.chateau-pichon-longueville-comtesse-de-lalande
+      - producer.chateau-lynch-bages
+      - producer.chateau-grand-puy-lacoste
+      - producer.chateau-pontet-canet
     completeness_questions:
       - Zijn de drie premiers crus en alle achttien Pauillac-crus in de actuele 1855-lijst correct ontsloten zonder classificatie gelijk te stellen aan huidige fleskwaliteit?
+      - Maken de vijf collectieprofielen geschiedenis, eigendom, grand vin, tweede selectie en hun didactische begrenzing voldoende duidelijk?
     layers:
       foundation: [Gebruik de drie premiers crus als eerste producentenankers.]
-      intermediate: [Maak alle achttien geclassificeerde Pauillac-crus navigeerbaar per rang.]
+      intermediate:
+        [Maak alle achttien crus navigeerbaar en profileer vijf belangrijke referentiedomeinen.]
       advanced: [Leg scope, historische verstarring en producenten buiten de lijst uit.]
       specialist: []
     evidence:
       general_synthesis:
         topics: [Rol en begrenzing van de classificatie van 1855.]
-        source_refs: []
+        source_refs:
+          - source.pichon-baron-heritage
+          - source.pichon-baron-terroir
+          - source.pichon-comtesse-history
+          - source.pichon-comtesse-place
+          - source.pichon-comtesse-wines
+          - source.lynch-bages-history
+          - source.lynch-bages-wines
+          - source.grand-puy-lacoste-family
+          - source.grand-puy-lacoste-chateau
+          - source.pontet-canet-history
+          - source.pontet-canet-practices
       specific_claims:
         - claim: De actuele 1855-lijst telt in Pauillac achttien crus, waaronder drie premiers crus.
           status: supported

@@ -54,13 +54,13 @@ describe("application metadata", () => {
     expect(generateEntityStaticParams()).toHaveLength(getAllEntities().length);
     const metadata = await generateEntityMetadata({
       params: Promise.resolve({
-        entityType: "producers",
-        slug: "chateau-pichon-baron",
+        entityType: "concepts",
+        slug: "zuur-in-wijn",
       }),
     });
 
     expect(metadata.alternates).toEqual({
-      canonical: "/producers/chateau-pichon-baron",
+      canonical: "/concepts/zuur-in-wijn",
     });
     expect(metadata.robots).toEqual({ index: false, follow: true });
     expect(metadata.description).not.toMatch(/canonical|fixture|entity/i);
