@@ -1,0 +1,16 @@
+id: concept.late-harvest
+type: concept
+status: draft
+canonical_name: Late harvest
+names:
+  nl: Late oogst
+  en: Late harvest
+slugs:
+  nl: late-oogst
+  en: late-harvest
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

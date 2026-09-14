@@ -1,0 +1,24 @@
+id: media.concept.passerillage.shrivelled-grapes-on-vine
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/passerillage/shrivelled-grapes-on-vine.jpg
+mime_type: image/jpeg
+width: 1577
+height: 1844
+checksum_sha256: 1356bbc4a1e8e52f9eb76fc04ff7f6e293e944f521c077d18cc97f99c7c0eeff
+alt:
+  nl: Deels verschrompelde blauwe druiventrossen die na de hoofdoogst aan de wijnstok zijn blijven hangen
+  en: Partially shrivelled dark grape bunches left on the vine after the main harvest
+caption:
+  nl: Deze Pinot Noirdruiven bleven na de hoofdoogst aan de stok in Santenay. Ze laten zichtbaar zien wat waterverlies met volle bessen kan doen, maar documenteren geen specifieke wijnbereiding en bewijzen op zichzelf niet waarom de druiven zijn blijven hangen.
+  en: These Pinot Noir grapes remained on the vine in Santenay after the main harvest. They visibly show what water loss can do to full berries, but document no specific winemaking process and do not by themselves establish why the grapes were left hanging.
+rights:
+  status: open-licensed
+  creator: Tomas er
+  source_url: https://commons.wikimedia.org/wiki/File:Shrivelled_Pinot_Noir_in_Santenay_1.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Tomas er via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-14
+changes: Original Wikimedia Commons file used without crop or editorial colour alteration.

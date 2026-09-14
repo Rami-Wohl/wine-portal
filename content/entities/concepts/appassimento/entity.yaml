@@ -1,0 +1,16 @@
+id: concept.appassimento
+type: concept
+status: draft
+canonical_name: Appassimento
+names:
+  nl: Appassimento
+  en: Appassimento
+slugs:
+  nl: appassimento
+  en: appassimento
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,16 @@
+id: appellation.amarone-della-valpolicella
+type: appellation
+status: draft
+canonical_name: Amarone della Valpolicella
+names:
+  nl: Amarone della Valpolicella
+  en: Amarone della Valpolicella
+slugs:
+  nl: amarone-della-valpolicella
+  en: amarone-della-valpolicella
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

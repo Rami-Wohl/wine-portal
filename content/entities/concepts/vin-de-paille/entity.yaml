@@ -1,0 +1,16 @@
+id: concept.vin-de-paille
+type: concept
+status: draft
+canonical_name: Vin de paille
+names:
+  nl: Vin de paille
+  en: Vin de paille
+slugs:
+  nl: vin-de-paille
+  en: vin-de-paille
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

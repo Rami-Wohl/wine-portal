@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 290 entities — 86 active, 204 draft, 0 deprecated.
+**Totaal:** 295 entities — 87 active, 208 draft, 0 deprecated.
 
 **Producentenrecords:** 155 — 17 monografie, 36 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (86)
+## Actief — publiek vindbaar (87)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -64,6 +64,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
+| [Passerillage](../content/entities/concepts/passerillage/entity.yaml) | Concept | Zelfstandige pagina | `concept.passerillage` | Ja | `/concepts/passerillage` | 2026-09-14 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/rijping-op-de-lies` | 2026-09-07 |
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-wine` | Ja | `/concepts/tweede-wijn` | 2026-09-08 |
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/vluchtige-thiolen` | 2026-09-07 |
@@ -99,12 +100,13 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (204)
+## Draft — nog uit te werken (208)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
 | Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- | --- |
+| [Amarone della Valpolicella](../content/entities/appellations/amarone-della-valpolicella/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.amarone-della-valpolicella` | Nee — reviewroute | `/appellations/amarone-della-valpolicella` | — |
 | [Bolgheri](../content/entities/appellations/bolgheri/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bolgheri` | Nee — reviewroute | `/appellations/bolgheri` | — |
 | [Bourgueil](../content/entities/appellations/bourgueil/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bourgueil` | Nee — reviewroute | `/appellations/bourgueil` | — |
 | [Chinon](../content/entities/appellations/chinon/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.chinon` | Nee — reviewroute | `/appellations/chinon` | — |
@@ -120,6 +122,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Crus Artisans du Médoc](../content/entities/classifications/crus-artisans-du-medoc/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.crus-artisans-du-medoc` | Nee — reviewroute | `/classifications/crus-artisans-du-medoc` | — |
 | [Crus Bourgeois du Médoc](../content/entities/classifications/crus-bourgeois-du-medoc/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.crus-bourgeois-du-medoc` | Nee — reviewroute | `/classifications/crus-bourgeois-du-medoc` | — |
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.fermentation` | Nee — reviewroute | `/concepts/alcoholische-vergisting` | — |
+| [Appassimento](../content/entities/concepts/appassimento/entity.yaml) | Concept | Zelfstandige pagina | `concept.appassimento` | Nee — reviewroute | `/concepts/appassimento` | — |
 | [Appellation d’origine protégée (AOP)](../content/entities/concepts/aop/entity.yaml) | Concept | Zelfstandige pagina | `concept.aop` | Nee — reviewroute | `/concepts/aop` | — |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Nee — reviewroute | `/concepts/chateau-wijnterm` | — |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Nee — reviewroute | `/concepts/clairet` | — |
@@ -133,12 +136,12 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | Zelfstandige pagina | `concept.en-primeur` | Nee — reviewroute | `/concepts/en-primeur` | — |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | Zelfstandige pagina | `concept.extraction` | Nee — reviewroute | `/concepts/extractie` | — |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
+| [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Nee — reviewroute | `/concepts/late-oogst` | — |
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Nee — reviewroute | `/concepts/liqueur-de-tirage` | — |
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Nee — reviewroute | `/concepts/malolactische-omzetting` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Nee — reviewroute | `/concepts/negociant` | — |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Nee — reviewroute | `/concepts/onderstam` | — |
-| [Passerillage](../content/entities/concepts/passerillage/entity.yaml) | Concept | Zelfstandige pagina | `concept.passerillage` | Nee — reviewroute | `/concepts/passerillage` | — |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Nee — reviewroute | `/concepts/place-de-bordeaux` | — |
 | [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Nee — reviewroute | `/concepts/remuage` | — |
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.maceration` | Nee — reviewroute | `/concepts/schilinweking` | — |
@@ -146,6 +149,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Terroir](../content/entities/concepts/terroir/entity.yaml) | Concept | Zelfstandige pagina | `concept.terroir` | Nee — reviewroute | `/concepts/terroir` | — |
 | [Traditionele methode](../content/entities/concepts/traditional-method/entity.yaml) | Concept | Zelfstandige pagina | `concept.traditional-method` | Nee — reviewroute | `/concepts/traditionele-methode` | — |
 | [Tweede vergisting](../content/entities/concepts/second-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-fermentation` | Nee — reviewroute | `/concepts/tweede-vergisting` | — |
+| [Vin de paille](../content/entities/concepts/vin-de-paille/entity.yaml) | Concept | Zelfstandige pagina | `concept.vin-de-paille` | Nee — reviewroute | `/concepts/vin-de-paille` | — |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Nee — reviewroute | `/concepts/zuur-in-wijn` | — |
 | [Alvarinho](../content/entities/grapes/alvarinho/entity.yaml) | Druif | Zelfstandige pagina | `grape.alvarinho` | Nee — reviewroute | `/grapes/alvarinho` | — |
 | [Arinarnoa](../content/entities/grapes/arinarnoa/entity.yaml) | Druif | Zelfstandige pagina | `grape.arinarnoa` | Nee — reviewroute | `/grapes/arinarnoa` | — |
@@ -306,6 +310,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [La Mondotte](../content/entities/producers/la-mondotte/entity.yaml) | Producent | Collectieprofiel | `producer.la-mondotte` | Nee — reviewroute | `/producers/la-mondotte → gepland: /classifications/classificatie-saint-emilion#producent-la-mondotte` | — |
 | [Lassègue](../content/entities/producers/lassegue/entity.yaml) | Producent | Registervermelding | `producer.lassegue` | Nee — reviewroute | `/producers/lassegue → gepland: /classifications/classificatie-saint-emilion#producent-lassegue` | — |
 | [Hunter Valley](../content/entities/regions/hunter-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.hunter-valley` | Nee — reviewroute | `/regions/hunter-valley` | — |
+| [Jura](../content/entities/regions/jura/entity.yaml) | Regio | Zelfstandige pagina | `region.jura` | Nee — reviewroute | `/regions/jura` | — |
 | [Loirevallei](../content/entities/regions/loire-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.loire-valley` | Nee — reviewroute | `/regions/loirevallei` | — |
 | [Marlborough](../content/entities/regions/marlborough/entity.yaml) | Regio | Zelfstandige pagina | `region.marlborough` | Nee — reviewroute | `/regions/marlborough` | — |
 | [Tokaj](../content/entities/regions/tokaj/entity.yaml) | Regio | Zelfstandige pagina | `region.tokaj` | Nee — reviewroute | `/regions/tokaj` | — |

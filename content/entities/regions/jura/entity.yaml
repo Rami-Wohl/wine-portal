@@ -1,0 +1,16 @@
+id: region.jura
+type: region
+status: draft
+canonical_name: Jura wine region
+names:
+  nl: Jura
+  en: Jura
+slugs:
+  nl: jura
+  en: jura
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

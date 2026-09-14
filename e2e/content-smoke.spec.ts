@@ -575,6 +575,43 @@ test("Botrytis distinguishes noble and grey rot across knowledge depths", async 
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
+test("Passerillage compares on-vine and postharvest drying without implying sweetness", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/passerillage");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Passerillage" })).toBeVisible();
+  await expect(page.locator("#indroging-aan-de-stok img")).toHaveJSProperty("complete", true);
+  await expect(page.locator("#indroging-op-rekken img")).toHaveJSProperty("complete", true);
+  await expect(page.getByRole("link", { name: "edele rotting" })).toHaveAttribute(
+    "href",
+    "/concepts/botrytis-edele-rotting",
+  );
+  await expect(
+    page.getByRole("link", { name: "Amarone della Valpolicella", exact: true }),
+  ).toHaveAttribute("href", "/appellations/amarone-della-valpolicella");
+
+  const intermediate = page.locator("#lucht-temperatuur-en-tijd");
+  const advanced = page.locator("#geen-universele-techniek");
+  await expect(intermediate).toBeHidden();
+  await expect(advanced).toBeHidden();
+
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(intermediate).toBeVisible();
+  await expect(advanced).toBeHidden();
+
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(advanced).toBeVisible();
+  await expect(advanced.getByRole("heading", { level: 3 })).toBeHidden();
+
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("the southern Garonne sweet-wine cluster stays distinct and shares an accurate comparison", async ({
   page,
 }) => {
