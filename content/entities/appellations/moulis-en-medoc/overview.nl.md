@@ -83,16 +83,24 @@ Het basisrendement bedraagt 57 hectoliter per hectare en het algemene plafond 63
 Moulis telt geen geclassificeerd château uit 1855. Crus bourgeois zijn daarom belangrijker als historisch en actueel oriëntatiepunt, maar ook zo’n vermelding behoort bij een specifieke producent en periode, niet bij de hele appellation. Namen als [[producer.chateau-chasse-spleen|Château Chasse-Spleen]] en [[producer.chateau-poujeaux|Château Poujeaux]] zijn nuttige bakens; zij definiëren Moulis niet alleen.
 :::
 
-:::detail{#producent-chateau-chasse-spleen parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview"}
+:::detail{#producent-chateau-chasse-spleen parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview source.chasse-spleen-history source.chasse-spleen-parcels source.chasse-spleen-other-wines"}
 ### Château Chasse-Spleen
 
-Chasse-Spleen is een herkenbaar referentiedomein op grind en klei-kalkgronden. Gebruik de naam als ingang naar de verscheidenheid van Moulis, niet als officiële hoogste rang: reputatie, cru-bourgeoisstatus en appellation zijn verschillende informatielagen.
+Château Chasse-Spleen groeide uit het oude domein Grand-Poujeaux, dat in de negentiende eeuw door erfenissen werd verdeeld. Rond de oorsprong van de naam circuleren literaire verhalen over Byron en Baudelaire, maar het château presenteert die zelf als mogelijkheden, niet als bewezen doopmoment. Na eigenaarswisselingen in de twintigste eeuw kwam het domein eind jaren zeventig bij de familie Merlaut. Céline Villars staat sinds 2000 aan het roer, samen met Jean-Pierre Foubet. [@source.chasse-spleen-history]
+
+De rode [[concept.grand-vin|grand vin]] verenigt percelen met grind boven klei-kalk en klei boven kalksteen. Door latere aankopen beslaat het bezit meer dan één herkomstzone; niet iedere wijn met Chasse-Spleen in de naam is daarom Moulis. L’Oratoire de Chasse-Spleen, begonnen in 1979, is de tweede selectie binnen Moulis. Héritage de Chasse-Spleen draagt [[appellation.haut-medoc|Haut-Médoc]], terwijl Blanc de Chasse-Spleen als [[appellation.bordeaux|Bordeaux Blanc]] wordt verkocht. Gressier Grand Poujeaux blijft een afzonderlijke rode Moulis binnen dezelfde bredere onderneming. [@source.chasse-spleen-parcels] [@source.chasse-spleen-other-wines]
+
+Dat maakt Chasse-Spleen vooral leerzaam als oefening in precies lezen. Producent, cuvée en appellation vallen niet automatisch samen. De grote reputatie buiten 1855 is evenmin een verborgen officiële rang: zij moet worden onderscheiden van iedere gedateerde Cru Bourgeois-classificatie en van de beschermde naam Moulis-en-Médoc.
 :::
 
-:::detail{#producent-chateau-poujeaux parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview"}
+:::detail{#producent-chateau-poujeaux parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview source.ugcb-chateau-poujeaux"}
 ### Château Poujeaux
 
-Poujeaux is verbonden met de grindrug van Grand-Poujeaux en laat zien hoe een domeinnaam een deel van het landschap internationaal herkenbaar kan maken. Ook hier blijft het domein een voorbeeld binnen Moulis, niet de definitie ervan.
+Château Poujeaux ligt op de grindrug van Grand-Poujeaux, een naam die zowel naar een buurtschap en landschap als naar verschillende historische domeinen kan verwijzen. In de middeleeuwen hoorde het land bij de heerlijkheid die verbonden was aan Latour Saint-Mambert, het latere [[producer.chateau-latour|Château Latour]]. Het wijndomein werd in de negentiende eeuw zelfstandiger. De familie Theil herenigde en ontwikkelde het bezit in de twintigste eeuw; in 2008 kocht de familie Cuvelier het château. Matthieu Cuvelier is tegenwoordig beheerder en Christophe Labenne leidt het domein. [@source.ugcb-chateau-poujeaux]
+
+Château Poujeaux is de rode hoofdwijn uit Moulis-en-Médoc. Cabernet Sauvignon en Merlot dragen doorgaans de assemblage, met Petit Verdot als aanvulling; de exacte verhouding verandert per jaargang. La Salle de Château Poujeaux is de [[concept.second-wine|tweede wijn]]. Die naam verwijst naar een oudere identiteit van het bezit, maar vormt geen tweede château en geen afzonderlijke appellation.
+
+Poujeaux toont hoe gemakkelijk geografische en commerciële namen door elkaar gaan lopen. “Grand-Poujeaux” op zichzelf bewijst niet dat een fles Château Poujeaux bevat, en de term hoofdwijn is geen classificatierang. Het château werd niet in 1855 geklasseerd. Zijn positie als referentiedomein berust daarom op plaats, geschiedenis en opgebouwde reputatie; de concrete fles blijft afhankelijk van wijnselectie, jaargang en conditie.
 :::
 
 :::section{#wijnstijl-en-flesontwikkeling depth="foundation" source_refs="source.inao-moulis-overview source.inao-moulis-specification-2021"}

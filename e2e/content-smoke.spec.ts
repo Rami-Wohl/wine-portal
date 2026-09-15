@@ -600,6 +600,23 @@ test("Sauternes and Barsac expose their producer cohorts at intermediate depth",
   await expect(page.locator("#producent-chateau-climens")).toBeVisible();
 });
 
+test("Moulis exposes both producer profiles and redirects their legacy routes", async ({
+  page,
+}) => {
+  await page.goto("/appellations/moulis-en-medoc");
+  await page
+    .getByRole("group", { name: "Kies hoeveel detail je wilt zien" })
+    .getByRole("button", { name: "Verdieping" })
+    .click();
+
+  await expect(page.locator("#producent-chateau-chasse-spleen")).toBeVisible();
+  await expect(page.locator("#producent-chateau-poujeaux")).toBeVisible();
+
+  await page.goto("/producers/chateau-poujeaux");
+  await expect(page).toHaveURL(/\/appellations\/moulis-en-medoc#producent-chateau-poujeaux$/);
+  await expect(page.locator("#producent-chateau-poujeaux")).toBeVisible();
+});
+
 test("Libournais orients the region with contrasting landscapes and progressive depth", async ({
   page,
 }) => {

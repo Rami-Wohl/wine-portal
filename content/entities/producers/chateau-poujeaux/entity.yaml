@@ -1,6 +1,6 @@
 id: producer.chateau-poujeaux
 type: producer
-status: draft
+status: active
 canonical_name: Château Poujeaux
 names:
   nl: Château Poujeaux
@@ -18,4 +18,5 @@ presentation:
 relations:
   - { type: located_in, target: appellation.moulis-en-medoc }
 assertions: []
-source_refs: []
+source_refs: [source.ugcb-chateau-poujeaux]
+last_reviewed: 2026-09-15

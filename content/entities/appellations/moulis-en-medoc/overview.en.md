@@ -83,16 +83,24 @@ The base yield is 57 hectolitres per hectare and the general ceiling 63. Such fi
 Moulis has no 1855 classified growth. Crus Bourgeois therefore matter more as historic and current guideposts, but any such status belongs to a particular producer and period, not the whole appellation. [[producer.chateau-chasse-spleen|Château Chasse-Spleen]] and [[producer.chateau-poujeaux|Château Poujeaux]] are useful landmarks; neither defines Moulis alone.
 :::
 
-:::detail{#producent-chateau-chasse-spleen parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview"}
+:::detail{#producent-chateau-chasse-spleen parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview source.chasse-spleen-history source.chasse-spleen-parcels source.chasse-spleen-other-wines"}
 ### Château Chasse-Spleen
 
-Chasse-Spleen is a recognisable reference estate on gravel and clay-limestone ground. Use it as an entry into Moulis’s diversity, not as an official top rank: reputation, Cru Bourgeois status and appellation are separate layers.
+Château Chasse-Spleen grew from the old Grand-Poujeaux estate, which inheritance divided during the nineteenth century. Literary stories involving Byron and Baudelaire circulate around the name, but the château itself presents them as possibilities rather than a proven christening. After several twentieth-century owners, the estate passed to the Merlaut family in the late 1970s. Céline Villars has led it since 2000, together with Jean-Pierre Foubet. [@source.chasse-spleen-history]
+
+The red [[concept.grand-vin|grand vin]] brings together parcels of gravel over clay-limestone and clay over limestone. Later acquisitions mean that the holdings span more than one designation; not every wine bearing Chasse-Spleen in its name is therefore Moulis. L’Oratoire de Chasse-Spleen, begun in 1979, is the second selection within Moulis. Héritage de Chasse-Spleen carries [[appellation.haut-medoc|Haut-Médoc]], while Blanc de Chasse-Spleen is sold as [[appellation.bordeaux|Bordeaux Blanc]]. Gressier Grand Poujeaux remains a separate red Moulis within the wider business. [@source.chasse-spleen-parcels] [@source.chasse-spleen-other-wines]
+
+Chasse-Spleen is consequently most instructive as an exercise in precise reading. Producer, cuvée and appellation do not automatically coincide. Its substantial reputation outside 1855 is not a hidden official rank either: it must be distinguished from any dated Cru Bourgeois classification and from the protected Moulis-en-Médoc name.
 :::
 
-:::detail{#producent-chateau-poujeaux parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview"}
+:::detail{#producent-chateau-poujeaux parent="classificatie-en-producenten" depth="intermediate" source_refs="source.inao-moulis-overview source.ugcb-chateau-poujeaux"}
 ### Château Poujeaux
 
-Poujeaux is tied to the Grand-Poujeaux gravel ridge and shows how an estate name can make part of a landscape internationally recognisable. It remains an example within Moulis, not its definition.
+Château Poujeaux stands on the Grand-Poujeaux gravel ridge, a name that can refer to a hamlet and landscape as well as several historic estates. In the Middle Ages the land belonged to a seigneury associated with Latour Saint-Mambert, the future [[producer.chateau-latour|Château Latour]]. The wine estate gained real independence during the nineteenth century. The Theil family reunited and developed it in the twentieth; in 2008 the Cuvelier family purchased the château. Matthieu Cuvelier now manages it and Christophe Labenne directs the estate. [@source.ugcb-chateau-poujeaux]
+
+Château Poujeaux is the principal red Moulis-en-Médoc wine. Cabernet Sauvignon and Merlot generally lead the blend, supplemented by Petit Verdot; exact proportions change with the vintage. La Salle de Château Poujeaux is the [[concept.second-wine|second wine]]. Its name recalls an older identity of the property, but does not denote a second château or separate appellation.
+
+Poujeaux shows how readily geographical and commercial names can become entangled. “Grand-Poujeaux” alone does not prove that a bottle contains Château Poujeaux, while “principal wine” is not a classification tier. The château was not classified in 1855. Its standing as a reference estate consequently rests on place, history and accumulated reputation; the concrete bottle still depends on wine selection, vintage and condition.
 :::
 
 :::section{#wijnstijl-en-flesontwikkeling depth="foundation" source_refs="source.inao-moulis-overview source.inao-moulis-specification-2021"}

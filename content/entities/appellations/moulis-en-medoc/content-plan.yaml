@@ -134,18 +134,32 @@ coverage:
     block_ids:
       [classificatie-en-producenten, producent-chateau-chasse-spleen, producent-chateau-poujeaux]
     target_ids: [producer.chateau-chasse-spleen, producer.chateau-poujeaux]
-    completeness_questions: [Is afwezigheid uit 1855 zonder waardeoordeel uitgelegd?]
+    completeness_questions:
+      [
+        Is afwezigheid uit 1855 zonder waardeoordeel uitgelegd?,
+        Maken beide collectieprofielen geschiedenis eigendom hoofdwijn nevenwijnen en hun didactische begrenzing duidelijk?,
+      ]
     layers:
       {
         foundation: [Plaats crus bourgeois en twee bakens.],
-        intermediate: [],
+        intermediate: [Profileer Chasse-Spleen en Poujeaux als vergelijkbare maar eigen bakens.],
         advanced: [],
         specialist: [],
       }
     evidence:
       {
         general_synthesis:
-          { topics: [Classificatie en producenten.], source_refs: [source.inao-moulis-overview] },
+          {
+            topics: [Classificatie en producenten.],
+            source_refs:
+              [
+                source.inao-moulis-overview,
+                source.chasse-spleen-history,
+                source.chasse-spleen-parcels,
+                source.chasse-spleen-other-wines,
+                source.ugcb-chateau-poujeaux,
+              ],
+          },
         specific_claims: [],
       }
     review: *complete
@@ -232,6 +246,13 @@ coverage:
       { general_synthesis: { topics: [Vervolgstructuur.], source_refs: [] }, specific_claims: [] }
     review: *complete
 entity_dependencies:
+  - {
+      id: producer.chateau-latour,
+      names: { nl: Château Latour, en: Château Latour },
+      slugs: { nl: chateau-latour, en: chateau-latour },
+      disposition: link,
+      presentation: { mode: monograph },
+    }
   - {
       id: producer.chateau-chasse-spleen,
       names: { nl: Château Chasse-Spleen, en: Château Chasse-Spleen },

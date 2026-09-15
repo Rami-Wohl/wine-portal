@@ -1,6 +1,6 @@
 id: producer.chateau-chasse-spleen
 type: producer
-status: draft
+status: active
 canonical_name: Château Chasse-Spleen
 names:
   nl: Château Chasse-Spleen
@@ -18,4 +18,8 @@ presentation:
 relations:
   - { type: located_in, target: appellation.moulis-en-medoc }
 assertions: []
-source_refs: []
+source_refs:
+  - source.chasse-spleen-history
+  - source.chasse-spleen-parcels
+  - source.chasse-spleen-other-wines
+last_reviewed: 2026-09-15

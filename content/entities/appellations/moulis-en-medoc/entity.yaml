@@ -38,5 +38,9 @@ source_refs:
   - source.msha-bordeaux-wine-history
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+  - source.chasse-spleen-history
+  - source.chasse-spleen-parcels
+  - source.chasse-spleen-other-wines
+  - source.ugcb-chateau-poujeaux
 depth: foundation
-last_reviewed: 2026-09-11
+last_reviewed: 2026-09-15
