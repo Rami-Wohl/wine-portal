@@ -1,0 +1,24 @@
+id: media.producer.chateau-leoville-las-cases.grand-enclos-gate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-leoville-las-cases/grand-enclos-gate.jpg
+mime_type: image/jpeg
+width: 960
+height: 1280
+checksum_sha256: f2ee239e816ff999767c20b261363075d180ee0f6968ca72c8c6999571eafae5
+alt:
+  nl: Monumentale stenen toegangspoort van Château Léoville Las Cases met ijzeren hek en leeuw bovenop
+  en: Monumental stone gateway of Château Léoville Las Cases with an iron gate and a lion on top
+caption:
+  nl: De leeuwenpoort markeert het ommuurde Grand Enclos en werd het herkenningsteken op het etiket. De poort maakt de ruimtelijke betekenis van het woord clos letterlijk zichtbaar.
+  en: The lion gate marks the walled Grand Enclos and became the label's identifying image. It makes the spatial meaning of the word clos literal.
+rights:
+  status: open-licensed
+  creator: BillBl
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_Leoville_Las_Cases_Entrance.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: BillBl via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-15
+changes: Original Wikimedia file used without crop or editorial colour alteration.

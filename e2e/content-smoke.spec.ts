@@ -123,6 +123,51 @@ test("the two Saint-Estèphe monographs expose images and progressive depth", as
   }
 });
 
+test("the two Saint-Julien monographs distinguish their wines across depth layers", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  for (const producer of [
+    {
+      path: "/producers/chateau-ducru-beaucaillou",
+      title: "Château Ducru-Beaucaillou",
+      estateAlt: /Wijngaard van Château Ducru-Beaucaillou met kiezelbodem/,
+      bottleAlt: /Fles Château Ducru-Beaucaillou 1986/,
+      intermediate: "#johnston-en-bordeauxse-pap",
+      advanced: "#breuken-achter-de-continuiteit",
+    },
+    {
+      path: "/producers/chateau-leoville-las-cases",
+      title: "Château Léoville Las Cases",
+      estateAlt: /Monumentale stenen toegangspoort van Château Léoville Las Cases/,
+      bottleAlt: /Fles Grand Vin de Léoville du Marquis de Las Cases 1975/,
+      intermediate: "#revolutie-en-verdeling",
+      advanced: "#familiebezit-en-generatieovergang",
+    },
+  ]) {
+    await page.goto(producer.path);
+
+    await expect(page.getByRole("heading", { level: 1, name: producer.title })).toBeVisible();
+    await expect(page.getByRole("img", { name: producer.estateAlt })).toBeVisible();
+    await expect(page.getByRole("img", { name: producer.bottleAlt })).toBeVisible();
+
+    const depthControl = page.getByRole("group", {
+      name: "Kies hoeveel detail je wilt zien",
+    });
+    await depthControl.getByRole("button", { name: "Basis" }).click();
+    await expect(page.locator(producer.intermediate)).toBeHidden();
+    await expect(page.locator(producer.advanced)).toBeHidden();
+
+    await depthControl.getByRole("button", { name: "Verdieping" }).click();
+    await expect(page.locator(producer.intermediate)).toBeVisible();
+    await expect(page.locator(producer.advanced)).toBeHidden();
+
+    await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+    await expect(page.locator(producer.advanced)).toBeVisible();
+  }
+});
+
 test("draft narrative degrades honestly and keeps its knowledge context", async ({ page }) => {
   await page.goto("/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef");
 

@@ -1,0 +1,24 @@
+id: media.producer.chateau-ducru-beaucaillou.vineyard-and-estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-ducru-beaucaillou/vineyard-and-estate.jpg
+mime_type: image/jpeg
+width: 3451
+height: 1712
+checksum_sha256: 5b534d450db74b7d7baedf99f4aec5ff3d1a74c0c006a6ddd77909586e185c0f
+alt:
+  nl: Wijngaard van Château Ducru-Beaucaillou met kiezelbodem, rozen, een zacht oplopend pad en het château op de achtergrond
+  en: Château Ducru-Beaucaillou vineyard with gravel soil, roses, a gently rising track and the château in the background
+caption:
+  nl: De wijngaard loopt zacht over de grindcroupe naar het château. De blootliggende kiezels en het geringe reliëf zijn hier belangrijker dan een spectaculair landschap.
+  en: The vineyard rises gently across the gravel ridge towards the château. Exposed stones and subtle relief matter more here than dramatic scenery.
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_Ducru_Beaucaillou,_Saint_Julien_vineyards.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-15
+changes: Original Wikimedia file used without crop or editorial colour alteration.

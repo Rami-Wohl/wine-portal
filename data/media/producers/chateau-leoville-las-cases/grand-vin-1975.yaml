@@ -1,0 +1,24 @@
+id: media.producer.chateau-leoville-las-cases.grand-vin-1975
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-leoville-las-cases/grand-vin-1975.jpg
+mime_type: image/jpeg
+width: 631
+height: 2094
+checksum_sha256: 4f04c63d16b1b45e0ffdf49a498e891cf9aba106c6e61d339020f244db584563
+alt:
+  nl: Fles Grand Vin de Léoville du Marquis de Las Cases 1975 met de leeuwenpoort op het etiket
+  en: Bottle of Grand Vin de Léoville du Marquis de Las Cases 1975 with the lion gate on the label
+caption:
+  nl: Een Grand Vin uit 1975. De poort verbindt fles en plaats, terwijl de lange officiële wijnnaam herinnert aan de erfenis van het vroegere Domaine de Léoville.
+  en: A 1975 Grand Vin. The gate connects bottle and place, while the long official wine name recalls the heritage of the former Domaine de Léoville.
+rights:
+  status: open-licensed
+  creator: BerndB
+  source_url: https://commons.wikimedia.org/wiki/File:Leoville-las-Cases-1975.JPG
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: BerndB via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-15
+changes: Original Wikimedia file used without crop or editorial colour alteration.

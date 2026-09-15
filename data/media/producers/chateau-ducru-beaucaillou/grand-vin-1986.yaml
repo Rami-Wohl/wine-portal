@@ -1,0 +1,24 @@
+id: media.producer.chateau-ducru-beaucaillou.grand-vin-1986
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-ducru-beaucaillou/grand-vin-1986.jpg
+mime_type: image/jpeg
+width: 1707
+height: 5215
+checksum_sha256: 75331133219841c6daed5ed0418b91c100bbf25e18aa7c5b3a1edf9225da1530
+alt:
+  nl: Fles Château Ducru-Beaucaillou 1986 met oranjerood etiket en afbeelding van het château
+  en: Bottle of Château Ducru-Beaucaillou 1986 with an orange-red label and an image of the château
+caption:
+  nl: De Grand Vin uit 1986 draagt het château, Saint-Julien en toenmalig eigenaar Jean-Eugène Borie samen op het etiket. De fles behoort tot een periode waarvan de opslaggeschiedenis extra aandacht verdient.
+  en: The 1986 Grand Vin brings the château, Saint-Julien and then-owner Jean-Eugène Borie together on its label. Bottles from this period demand particular attention to storage history.
+rights:
+  status: open-licensed
+  creator: Jamain
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Ducru-Beaucaillou_1986_J1.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Jamain via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-15
+changes: Original Wikimedia file used without crop or editorial colour alteration.
