@@ -80,6 +80,49 @@ test("Petrus presents documentary images and progressive producer knowledge", as
   await expect(advanced).toBeVisible();
 });
 
+test("the two Saint-Estèphe monographs expose images and progressive depth", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  for (const producer of [
+    {
+      path: "/producers/chateau-cos-d-estournel",
+      title: "Château Cos d’Estournel",
+      estateAlt: /opvallende pagodes van Château Cos d’Estournel/,
+      bottleAlt: /Twee flessen Château Cos d’Estournel 1985/,
+      intermediate: "#handel-verhaal-en-bewijs",
+      advanced: "#continuiteit-en-breuken",
+    },
+    {
+      path: "/producers/chateau-montrose",
+      title: "Château Montrose",
+      estateAlt: /Château Montrose tussen de wijnstokken/,
+      bottleAlt: /Fles Château Montrose 1975/,
+      intermediate: "#dollfus-en-het-dorp",
+      advanced: "#oorlog-continuiteit-en-overdracht",
+    },
+  ]) {
+    await page.goto(producer.path);
+
+    await expect(page.getByRole("heading", { level: 1, name: producer.title })).toBeVisible();
+    await expect(page.getByRole("img", { name: producer.estateAlt })).toBeVisible();
+    await expect(page.getByRole("img", { name: producer.bottleAlt })).toBeVisible();
+
+    const depthControl = page.getByRole("group", {
+      name: "Kies hoeveel detail je wilt zien",
+    });
+    await depthControl.getByRole("button", { name: "Basis" }).click();
+    await expect(page.locator(producer.intermediate)).toBeHidden();
+    await expect(page.locator(producer.advanced)).toBeHidden();
+
+    await depthControl.getByRole("button", { name: "Verdieping" }).click();
+    await expect(page.locator(producer.intermediate)).toBeVisible();
+    await expect(page.locator(producer.advanced)).toBeHidden();
+
+    await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+    await expect(page.locator(producer.advanced)).toBeVisible();
+  }
+});
+
 test("draft narrative degrades honestly and keeps its knowledge context", async ({ page }) => {
   await page.goto("/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef");
 

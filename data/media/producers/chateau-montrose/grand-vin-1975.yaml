@@ -1,0 +1,24 @@
+id: media.producer.chateau-montrose.grand-vin-1975
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-montrose/grand-vin-1975.jpg
+mime_type: image/jpeg
+width: 1577
+height: 5115
+checksum_sha256: f90b6e54e8127fc177add7ca087d9c450b1e6a3546e5106634eaab09e5c667e4
+alt:
+  nl: Fles Château Montrose 1975 met het historische wapenschild en de naam Charmolüe op het etiket
+  en: Bottle of Château Montrose 1975 with the historic coat of arms and the Charmolüe name on the label
+caption:
+  nl: Een fles Grand Vin uit 1975, uit de lange periode van de familie Charmolüe. Het etiket maakt producent, appellation, jaargang en château-botteling afzonderlijk leesbaar.
+  en: A bottle of the 1975 Grand Vin from the long Charmolüe family era. Its label separately identifies producer, appellation, vintage and château bottling.
+rights:
+  status: open-licensed
+  creator: Jamain
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Montrose_1975_J1.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Jamain via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-15
+changes: Original Wikimedia file used without crop or editorial colour alteration.

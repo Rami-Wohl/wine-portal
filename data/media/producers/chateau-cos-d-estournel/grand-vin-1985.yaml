@@ -1,0 +1,24 @@
+id: media.producer.chateau-cos-d-estournel.grand-vin-1985
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-cos-d-estournel/grand-vin-1985.jpg
+mime_type: image/jpeg
+width: 648
+height: 972
+checksum_sha256: d373f4638e1f28e74ccd3913bf487e8a1b4c4791c73bb71208fa2ff497912e43
+alt:
+  nl: Twee flessen Château Cos d’Estournel 1985, met het rode château-etiket scherp in beeld
+  en: Two bottles of Château Cos d’Estournel 1985, with the red château label in sharp focus
+caption:
+  nl: De Grand Vin uit 1985. De pagodes op het etiket maken de ongewone architectuur van het domein ook op fles tot herkenningsteken.
+  en: The 1985 Grand Vin. The pagodas on the label turn the estate’s unusual architecture into an identifying mark on the bottle as well.
+rights:
+  status: open-licensed
+  creator: Andrew Phillips
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_Cos_d%27Estournel_1985.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Andrew Phillips via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-15
+changes: Original Wikimedia file used without crop or editorial colour alteration.

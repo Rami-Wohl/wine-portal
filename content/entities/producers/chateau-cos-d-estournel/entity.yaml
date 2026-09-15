@@ -1,6 +1,6 @@
 id: producer.chateau-cos-d-estournel
 type: producer
-status: draft
+status: active
 canonical_name: Château Cos d’Estournel
 names:
   nl: Château Cos d’Estournel
@@ -19,6 +19,38 @@ relations:
     target: classification.bordeaux-1855
     properties: { tier: deuxieme-cru }
     valid_from: 1855
-assertions: []
-source_refs: [source.gcc1855-classification-overview]
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.petit-verdot }
+  - { type: related_to, target: concept.grand-vin }
+  - { type: related_to, target: concept.second-wine }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.extraction }
+  - { type: related_to, target: concept.en-primeur }
+  - { type: related_to, target: concept.massal-selection }
+assertions:
+  - id: assertion.chateau-cos-d-estournel.current-owner
+    predicate: owner
+    value: Michel Reybier
+    status: verified
+    sources: [source.cos-d-estournel-owner]
+    last_verified: 2026-09-15
+    valid_from: 2000
+  - id: assertion.chateau-cos-d-estournel.vineyard-area
+    predicate: vineyard_area_hectares
+    value: 100
+    status: verified
+    sources: [source.cos-d-estournel-vineyard]
+    last_verified: 2026-09-15
+source_refs:
+  - source.gcc1855-classification-overview
+  - source.cos-d-estournel-founder
+  - source.cos-d-estournel-vineyard
+  - source.cos-d-estournel-owner
+  - source.cos-d-estournel-innovation
+  - source.cos-d-estournel-pagodes
+  - source.decanter-cos-d-estournel-profile
+  - source.decanter-cos-d-estournel-vertical
 depth: foundation
+last_reviewed: 2026-09-15

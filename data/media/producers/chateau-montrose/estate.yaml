@@ -1,0 +1,24 @@
+id: media.producer.chateau-montrose.estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-montrose/estate.jpg
+mime_type: image/jpeg
+width: 2795
+height: 1826
+checksum_sha256: a0cccdc18d0d0ca06219f9a8f91b02d9d7b6f849e3cca7e3a28e110f9157f4e2
+alt:
+  nl: Château Montrose tussen de wijnstokken, met bloemen op de voorgrond en de vlaggenmast naast het gebouw
+  en: Château Montrose among its vines, with flowers in the foreground and the flagpole beside the building
+caption:
+  nl: Château Montrose staat midden in zijn aaneengesloten wijngaard. Het beeld toont hoe landgoed, kelder en wijnstokken hier één ruimtelijk geheel vormen.
+  en: Château Montrose stands within its contiguous vineyard. The view shows how estate, cellars and vines form a single spatial whole here.
+rights:
+  status: open-licensed
+  creator: Matissecstbd / H. Fabre
+  source_url: https://commons.wikimedia.org/wiki/File:PictureEstate_Cosmos%40H.Fabre.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Matissecstbd / H. Fabre via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-15
+changes: Original Wikimedia file used without crop or editorial colour alteration.
