@@ -1,6 +1,6 @@
 id: concept.extraction
 type: concept
-status: draft
+status: active
 canonical_name: Extraction
 names:
   nl: Extractie
@@ -11,6 +11,20 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.maceration
+  - type: related_to
+    target: concept.tannin
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-maceration
+  - source.awri-fermentation-temperature
+  - source.awri-extended-maceration-2019
+  - source.wre-cap-management
+  - source.awri-skin-contact
+  - source.oiv-oak-maturation
+depth: foundation
+last_reviewed: 2026-09-16

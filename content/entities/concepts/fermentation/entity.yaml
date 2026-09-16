@@ -1,6 +1,6 @@
 id: concept.fermentation
 type: concept
-status: draft
+status: active
 canonical_name: Alcoholic fermentation
 names:
   nl: Alcoholische vergisting
@@ -11,6 +11,19 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: related_to
+    target: concept.maceration
+  - type: related_to
+    target: concept.malolactic-fermentation
+  - type: related_to
+    target: concept.second-fermentation
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-fermentation-interruption
+  - source.oiv-alcoholic-fermentation
+  - source.awri-yeast-choice
+  - source.awri-stuck-fermentations-2013
+  - source.awri-fermentation-temperature
+depth: foundation
+last_reviewed: 2026-09-16

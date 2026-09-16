@@ -1,0 +1,24 @@
+id: media.concept.elevage.barrels-and-vats
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/elevage/barrels-and-vats.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1280
+checksum_sha256: 61687e31c936017178b1e0ac63b926ea77aee439ab895954bf0c5d52971d52f7
+alt:
+  nl: "Twee rijen houten wijnvaten op twee hoogten in de gemetselde gewelvenkelder van Avignonesi"
+  en: "Two rows of wooden wine barrels stacked on two levels in Avignonesi's brick-vaulted cellar"
+caption:
+  nl: "De vatenkelder van Avignonesi laat één vorm van élevage zien: wijn verblijft vóór botteling in houten vaten. Opvoeding kan ook in tanks of grotere foeders plaatsvinden. Aan deze foto alleen valt niet af te lezen hoe oud het hout is, hoe lang de wijn rijpt of hoe hij smaakt."
+  en: "Avignonesi's barrel cellar shows one form of élevage: wine spends time in wooden barrels before bottling. Maturation may also take place in tanks or large casks. This photograph alone cannot establish the wood's age, maturation time or the wine's flavour."
+rights:
+  status: open-licensed
+  creator: "Eric Kilby"
+  source_url: https://commons.wikimedia.org/wiki/File:Avignonesi_Barrel_Cellar.jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Eric Kilby via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-09-16
+changes: Wikimedia 1920-pixel rendition; no crop or editorial colour alteration.

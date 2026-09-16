@@ -1,0 +1,19 @@
+id: concept.carbonic-maceration
+type: concept
+status: draft
+canonical_name: Carbonic maceration
+names:
+  nl: Koolzuurmaceratie
+  en: Carbonic maceration
+slugs:
+  nl: koolzuurmaceratie
+  en: carbonic-maceration
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.maceration
+assertions: []
+source_refs:
+  - source.oiv-carbonic-maceration

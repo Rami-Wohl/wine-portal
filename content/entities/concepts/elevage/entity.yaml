@@ -1,6 +1,6 @@
 id: concept.elevage
 type: concept
-status: draft
+status: active
 canonical_name: Maturation
 names:
   nl: Élevage
@@ -11,6 +11,20 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.extraction
+  - type: related_to
+    target: concept.malolactic-fermentation
 assertions: []
-source_refs: []
+source_refs:
+  - source.awri-pre-packaging
+  - source.oiv-oak-maturation
+  - source.wset-oak-winemaking
+  - source.napa-oak-maturation
+  - source.awri-oak-queries-2013
+  - source.awri-lees-contact-2020
+depth: foundation
+last_reviewed: 2026-09-16

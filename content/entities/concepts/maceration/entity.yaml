@@ -1,6 +1,6 @@
 id: concept.maceration
 type: concept
-status: draft
+status: active
 canonical_name: Maceration
 names:
   nl: Schilinweking
@@ -11,6 +11,16 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: related_to
+    target: concept.volatile-thiols
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-carbonic-maceration
+  - source.oiv-maceration
+  - source.oiv-cold-maceration-red
+  - source.awri-skin-contact
+  - source.awri-extended-maceration-2019
+  - source.wre-cap-management
+depth: foundation
+last_reviewed: 2026-09-16

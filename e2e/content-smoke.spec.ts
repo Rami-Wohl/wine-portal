@@ -1,5 +1,66 @@
 import { expect, test } from "@playwright/test";
 
+test("winemaking concepts load documentary photos and cumulative knowledge depth", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  for (const topic of [
+    {
+      path: "/concepts/alcoholische-vergisting",
+      title: "Alcoholische vergisting",
+      intermediate: "een-gezonde-gisting",
+      advanced: "spontaan-is-geen-herkomstbewijs",
+    },
+    {
+      path: "/concepts/schilinweking",
+      title: "Schilinweking",
+      intermediate: "witte-inweking",
+      advanced: "niet-lineaire-overdracht",
+    },
+    {
+      path: "/concepts/extractie",
+      title: "Extractie",
+      intermediate: "tijd-temperatuur-en-alcohol",
+      advanced: "kleurstof-is-geen-tanninemeter",
+    },
+    {
+      path: "/concepts/elevage",
+      title: "Élevage",
+      intermediate: "maat-leeftijd-en-toast",
+      advanced: "zuurstof-is-meer-dan-vatwand",
+    },
+  ]) {
+    await page.goto(topic.path);
+    await expect(
+      page.getByRole("heading", { level: 1, name: topic.title, exact: true }),
+    ).toBeVisible();
+    const depthControl = page.getByRole("group", { name: "Kies hoeveel detail je wilt zien" });
+    await depthControl.getByRole("button", { name: "Basis", exact: true }).click();
+    const intermediate = page.locator(`#${topic.intermediate}`);
+    const advanced = page.locator(`#${topic.advanced}`);
+    await expect(intermediate).toBeHidden();
+    await expect(advanced).toBeHidden();
+    const photo = page.locator("figure img").first();
+    await photo.scrollIntoViewIfNeeded();
+    await expect(photo).toBeVisible();
+    await expect
+      .poll(() => photo.evaluate((element) => (element as HTMLImageElement).naturalWidth))
+      .toBeGreaterThan(0);
+    await depthControl.getByRole("button", { name: "Verdieping", exact: true }).click();
+    await expect(intermediate).toBeVisible();
+    await expect(advanced).toBeHidden();
+    await depthControl.getByRole("button", { name: "Gevorderd", exact: true }).click();
+    await expect(intermediate).toBeVisible();
+    await expect(advanced).toBeVisible();
+    await expect(advanced.locator("h3")).toBeHidden();
+    const dimensions = await page.evaluate(() => ({
+      width: document.documentElement.scrollWidth,
+      viewport: document.documentElement.clientWidth,
+    }));
+    expect(dimensions.width).toBeLessThanOrEqual(dimensions.viewport);
+  }
+});
+
 test("Explore remains compact and delegates large categories to browse results", async ({
   page,
 }) => {

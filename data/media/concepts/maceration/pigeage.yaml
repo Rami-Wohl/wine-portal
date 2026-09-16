@@ -1,0 +1,24 @@
+id: media.concept.maceration.pigeage
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/maceration/pigeage.jpg
+mime_type: image/jpeg
+width: 2592
+height: 1944
+checksum_sha256: b9c0a2674960e7e932db5ba6bdcf965b9408d93c65daeb3f2ee24dcef0b79f2b
+alt:
+  nl: "Keldermedewerker duwt met een lange stok de donkere druivenschillen onder in een open houten vat"
+  en: "Cellar worker uses a long tool to push dark grape skins down into an open wooden vessel"
+caption:
+  nl: "Bij pigeage wordt de drijvende schillenhoed ondergeduwd, zodat schillen en vloeistof opnieuw contact maken. Hier gebeurt dat in een open houten vat; de handeling toont hoe schilinweking wordt begeleid, niet hoeveel tannine of kwaliteit de wijn uiteindelijk krijgt."
+  en: "During pigeage, the floating cap is pushed down to renew contact between skins and liquid. Here it takes place in an open wooden vessel; the action shows how maceration is managed, not how much tannin or quality the finished wine will have."
+rights:
+  status: open-licensed
+  creator: "Ryan O'Connell"
+  source_url: https://commons.wikimedia.org/wiki/File:Pigeage_in_a_wine_barrel.jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Ryan O'Connell via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file; no crop or editorial colour alteration.
