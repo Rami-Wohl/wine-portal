@@ -1,0 +1,24 @@
+id: media.concept.acidity.wine-titration
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/acidity/wine-titration.jpg
+mime_type: image/jpeg
+width: 960
+height: 1440
+checksum_sha256: c66713859e096497a8b39e5d70f2b082818aa86e5b4bfedd0cb7ee40fbca3901
+alt:
+  nl: "Hand met blauwe handschoen bedient een buret boven een erlenmeyer met een lichte wijnoplossing; daarnaast staat natronloog"
+  en: "A blue-gloved hand operates a burette above a flask containing a pale wine solution, beside a bottle of sodium hydroxide"
+caption:
+  nl: "Bij een zuurbepaling wordt vanuit de buret afgemeten natronloog toegevoegd. Hoeveel nodig is om het afgesproken eindpunt te bereiken, bepaalt het titreerbare zuur. Deze opname van de Universiteit van Genua toont de handeling, niet het zuurgetal of de pH; evenmin vertelt zij hoe zuur de wijn smaakt."
+  en: "In an acidity determination, measured sodium hydroxide is added from the burette. The amount needed to reach the specified endpoint determines titratable acidity. This University of Genoa photograph shows the procedure, not an acidity value or pH; nor does it reveal how sour the wine tastes."
+rights:
+  status: open-licensed
+  creator: "Tcampe"
+  source_url: https://commons.wikimedia.org/wiki/File:Total_acidity_of_wine_-_titration_with_NaOH.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Tcampe via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: "Wikimedia 960-pixel rendition; no crop or editorial colour alteration."

@@ -1,0 +1,24 @@
+id: media.concept.tannin.grape-section
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/tannin/grape-section.jpg
+mime_type: image/jpeg
+width: 1280
+height: 1054
+checksum_sha256: 8a4d7e8d67489e76b9a73daafa94db42d153e046ed7420f358e11060adce331c
+alt:
+  nl: "Rode tafeldruif in lengtedoorsnede, met dunne schil, doorschijnend vruchtvlees en twee zichtbare pitten"
+  en: "Red table grape in longitudinal section, showing thin skin, translucent flesh and two visible seeds"
+caption:
+  nl: "De dunne schil omsluit het vruchtvlees; binnenin liggen de pitten. Schillen en pitten zijn belangrijke bronnen van druiventannine, maar hun bijdrage hangt ook af van het wijnmaken. Dit is een tafeldruif, geen geïdentificeerd wijnras. De foto verduidelijkt de bouw van de bes, niet haar tanninegehalte, rijpheid voor wijnbouw of wijnkwaliteit."
+  en: "The thin skin surrounds the flesh, with seeds inside. Skins and seeds are important sources of grape tannin, but their contribution also depends on winemaking. This is a table grape, not an identified wine variety. The photograph clarifies berry anatomy, not its tannin content, ripeness for winemaking or wine quality."
+rights:
+  status: open-licensed
+  creator: "V.Boldychev"
+  source_url: https://commons.wikimedia.org/wiki/File:Rote_Weinbeere_im_L%C3%A4ngsschnitt.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: V.Boldychev via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: "Wikimedia 1280-pixel rendition; no crop or editorial colour alteration."

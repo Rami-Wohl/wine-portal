@@ -13,6 +13,8 @@ locales:
   en: overview.en.md
 relations:
   - type: related_to
+    target: concept.tannin
+  - type: related_to
     target: concept.volatile-thiols
 assertions: []
 source_refs:

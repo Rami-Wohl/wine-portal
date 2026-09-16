@@ -1,0 +1,24 @@
+id: media.concept.malolactic-fermentation.wine-acid-chromatography
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/malolactic-fermentation/wine-acid-chromatography.jpg
+mime_type: image/jpeg
+width: 3072
+height: 2304
+checksum_sha256: d16aa09d77968b086fa4a4a0d69b08ff6da8edbb27aef56d5532cd4f4f0329e1
+alt:
+  nl: "Vier chromatografiepapieren met gele vlekken op verschillende hoogten boven een lijn met handgeschreven monsteraanduidingen"
+  en: "Four chromatography papers showing yellow spots at different heights above a line of handwritten sample labels"
+caption:
+  nl: "Bij papierchromatografie worden wijnzuren van elkaar gescheiden: vlekken van monsters worden vergeleken met bekende zuurstandaarden. Zo kan de verschuiving van appelzuur naar melkzuur worden gevolgd. Deze foto toont het principe; de labels zijn niet duidelijk genoeg om afzonderlijke wijnen te beoordelen en ontbreken van een zichtbare vlek bewijst geen gegarandeerde bottelstabiliteit."
+  en: "Paper chromatography separates wine acids: sample spots are compared with known acid standards. This can follow the shift from malic to lactic acid. The photograph illustrates the principle; its labels are not clear enough to assess individual wines, and the absence of a visible spot does not prove guaranteed bottling stability."
+rights:
+  status: open-licensed
+  creator: "Karen"
+  source_url: https://commons.wikimedia.org/wiki/File:Chromatographie_des_acides_du_vin_-_Malolactic_chromatography.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Karen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-16
+changes: "Original Wikimedia file; no crop or editorial colour alteration."

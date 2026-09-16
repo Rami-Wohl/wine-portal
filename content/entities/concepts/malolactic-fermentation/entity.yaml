@@ -1,6 +1,6 @@
 id: concept.malolactic-fermentation
 type: concept
-status: draft
+status: active
 canonical_name: Malolactic fermentation
 names:
   nl: Malolactische omzetting
@@ -13,4 +13,11 @@ locales:
   en: overview.en.md
 relations: []
 assertions: []
-source_refs: []
+source_refs:
+  - source.awri-mlf-style-2020
+  - source.oiv-microbiological-deacidification
+  - source.awri-mlf-success-2020
+  - source.awri-mlf-white-sparkling-2020
+  - source.awri-microbiological-stability
+depth: foundation
+last_reviewed: 2026-09-16

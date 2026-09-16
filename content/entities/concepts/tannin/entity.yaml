@@ -1,6 +1,6 @@
 id: concept.tannin
 type: concept
-status: draft
+status: active
 canonical_name: Tannin
 names:
   nl: Tannine
@@ -13,4 +13,14 @@ locales:
   en: overview.en.md
 relations: []
 assertions: []
-source_refs: []
+source_refs:
+  - source.wset-mouthfeel-2026
+  - source.wset-tasting-guide-2018
+  - source.wset-wine-composition
+  - source.oiv-oak-maturation
+  - source.awri-skin-contact
+  - source.awri-tannin-value-chain-2014
+  - source.awri-extended-maceration-2019
+  - source.awri-fining-agents
+depth: foundation
+last_reviewed: 2026-09-16

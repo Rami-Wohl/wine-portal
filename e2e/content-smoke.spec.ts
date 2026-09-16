@@ -29,6 +29,24 @@ test("winemaking concepts load documentary photos and cumulative knowledge depth
       intermediate: "maat-leeftijd-en-toast",
       advanced: "zuurstof-is-meer-dan-vatwand",
     },
+    {
+      path: "/concepts/zuur-in-wijn",
+      title: "Zuur in wijn",
+      intermediate: "ph-en-titreerbaar-zuur",
+      advanced: "buffering-en-neerslag",
+    },
+    {
+      path: "/concepts/malolactische-omzetting",
+      title: "Malolactische omzetting",
+      intermediate: "verloop-in-de-kelder",
+      advanced: "diacetyl-en-citroenzuur",
+    },
+    {
+      path: "/concepts/tannine",
+      title: "Tannine",
+      intermediate: "speeksel-en-waarneming",
+      advanced: "zachter-is-niet-alleen-minder",
+    },
   ]) {
     await page.goto(topic.path);
     await expect(

@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 316 entities — 156 active, 160 draft, 0 deprecated.
+**Totaal:** 316 entities — 159 active, 157 draft, 0 deprecated.
 
 **Producentenrecords:** 156 — 19 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (156)
+## Actief — publiek vindbaar (159)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -73,15 +73,18 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/klonale-selectie` | 2026-09-07 |
 | [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Ja | `/concepts/late-oogst` | 2026-09-14 |
+| [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Ja | `/concepts/malolactische-omzetting` | 2026-09-16 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Ja | `/concepts/negociant` | 2026-09-14 |
 | [Passerillage](../content/entities/concepts/passerillage/entity.yaml) | Concept | Zelfstandige pagina | `concept.passerillage` | Ja | `/concepts/passerillage` | 2026-09-14 |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Ja | `/concepts/place-de-bordeaux` | 2026-09-14 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/rijping-op-de-lies` | 2026-09-07 |
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.maceration` | Ja | `/concepts/schilinweking` | 2026-09-16 |
+| [Tannine](../content/entities/concepts/tannin/entity.yaml) | Concept | Zelfstandige pagina | `concept.tannin` | Ja | `/concepts/tannine` | 2026-09-16 |
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-wine` | Ja | `/concepts/tweede-wijn` | 2026-09-08 |
 | [Vin de paille](../content/entities/concepts/vin-de-paille/entity.yaml) | Concept | Zelfstandige pagina | `concept.vin-de-paille` | Ja | `/concepts/vin-de-paille` | 2026-09-14 |
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/vluchtige-thiolen` | 2026-09-07 |
+| [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/zuur-in-wijn` | 2026-09-16 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | Zelfstandige pagina | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-08 |
@@ -169,7 +172,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (160)
+## Draft — nog uit te werken (157)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -204,17 +207,14 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
 | [Koolzuurmaceratie](../content/entities/concepts/carbonic-maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.carbonic-maceration` | Nee — reviewroute | `/concepts/koolzuurmaceratie` | — |
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Nee — reviewroute | `/concepts/liqueur-de-tirage` | — |
-| [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Nee — reviewroute | `/concepts/malolactische-omzetting` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Nee — reviewroute | `/concepts/onderstam` | — |
 | [Passito](../content/entities/concepts/passito/entity.yaml) | Concept | Zelfstandige pagina | `concept.passito` | Nee — reviewroute | `/concepts/passito` | — |
 | [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Nee — reviewroute | `/concepts/remuage` | — |
 | [Spätlese](../content/entities/concepts/spatlese/entity.yaml) | Concept | Zelfstandige pagina | `concept.spatlese` | Nee — reviewroute | `/concepts/spatlese` | — |
-| [Tannine](../content/entities/concepts/tannin/entity.yaml) | Concept | Zelfstandige pagina | `concept.tannin` | Nee — reviewroute | `/concepts/tannine` | — |
 | [Terroir](../content/entities/concepts/terroir/entity.yaml) | Concept | Zelfstandige pagina | `concept.terroir` | Nee — reviewroute | `/concepts/terroir` | — |
 | [Traditionele methode](../content/entities/concepts/traditional-method/entity.yaml) | Concept | Zelfstandige pagina | `concept.traditional-method` | Nee — reviewroute | `/concepts/traditionele-methode` | — |
 | [Tweede vergisting](../content/entities/concepts/second-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-fermentation` | Nee — reviewroute | `/concepts/tweede-vergisting` | — |
-| [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Nee — reviewroute | `/concepts/zuur-in-wijn` | — |
 | [Alvarinho](../content/entities/grapes/alvarinho/entity.yaml) | Druif | Zelfstandige pagina | `grape.alvarinho` | Nee — reviewroute | `/grapes/alvarinho` | — |
 | [Arinarnoa](../content/entities/grapes/arinarnoa/entity.yaml) | Druif | Zelfstandige pagina | `grape.arinarnoa` | Nee — reviewroute | `/grapes/arinarnoa` | — |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | Zelfstandige pagina | `grape.carmenere` | Nee — reviewroute | `/grapes/carmenere` | — |

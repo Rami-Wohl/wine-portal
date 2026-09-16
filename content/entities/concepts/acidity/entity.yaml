@@ -1,6 +1,6 @@
 id: concept.acidity
 type: concept
-status: draft
+status: active
 canonical_name: Acidity in wine
 names:
   nl: Zuur in wijn
@@ -11,6 +11,23 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: related_to
+    target: concept.malolactic-fermentation
+  - type: related_to
+    target: concept.tannin
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.assemblage
 assertions: []
-source_refs: []
+source_refs:
+  - source.wset-acidity-2026
+  - source.wset-mouthfeel-2026
+  - source.wset-wine-composition
+  - source.awri-berry-ripening
+  - source.awri-acidity-ph
+  - source.awri-deacidification
+  - source.wset-tasting-guide-2018
+depth: foundation
+last_reviewed: 2026-09-16

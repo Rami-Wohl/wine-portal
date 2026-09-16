@@ -52,15 +52,21 @@ describe("application metadata", () => {
 
   it("generates params and noindex metadata for draft entity routes", async () => {
     expect(generateEntityStaticParams()).toHaveLength(getAllEntities().length);
+    const draft = getAllEntities().find(
+      (entity) => entity.type === "concept" && entity.status === "draft",
+    );
+    if (!draft) throw new Error("This integration check requires a draft concept");
+    const href = entityHref(draft);
+    const [, entityType, slug] = href.split("/");
     const metadata = await generateEntityMetadata({
       params: Promise.resolve({
-        entityType: "concepts",
-        slug: "zuur-in-wijn",
+        entityType,
+        slug,
       }),
     });
 
     expect(metadata.alternates).toEqual({
-      canonical: "/concepts/zuur-in-wijn",
+      canonical: href,
     });
     expect(metadata.robots).toEqual({ index: false, follow: true });
     expect(metadata.description).not.toMatch(/canonical|fixture|entity/i);
