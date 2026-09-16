@@ -1,0 +1,24 @@
+id: media.producer.chateau-la-mission-haut-brion.estate-entrance
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-la-mission-haut-brion/estate-entrance.jpg
+mime_type: image/jpeg
+width: 2576
+height: 1932
+checksum_sha256: cbff00acdcdc0a05aa0d07b4f2db6512b67641b6f8a264279e10757759221851
+alt:
+  nl: Smeedijzeren toegangspoort van Château La Mission Haut-Brion met stenen pijlers en kruisen
+  en: Wrought-iron entrance gate of Château La Mission Haut-Brion with stone piers and crosses
+caption:
+  nl: De poort maakt La Missions religieuze erfenis zichtbaar; achter die identiteit ligt een zelfstandige wijngaard, niet een tweede label van Haut-Brion.
+  en: The gate makes La Mission's religious legacy visible; behind that identity lies an independent vineyard, not a second label of Haut-Brion.
+rights:
+  status: open-licensed
+  creator: Henry Salomé
+  source_url: https://commons.wikimedia.org/wiki/File:Pessac_Mission_Haut-Brion_01.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Henry Salomé via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

@@ -12,17 +12,36 @@ locales:
   nl: overview.nl.md
   en: overview.en.md
 presentation:
-  mode: collection-profile
-  owner: appellation.pessac-leognan
-  anchor: producent-la-mission-haut-brion
+  mode: monograph
 relations:
   - { type: located_in, target: appellation.pessac-leognan }
   - type: classified_under
     target: classification.graves
     properties: { colours: red }
-assertions: []
+  - { type: important_grape, target: grape.cabernet-sauvignon }
+  - { type: important_grape, target: grape.merlot }
+  - { type: important_grape, target: grape.cabernet-franc }
+  - { type: important_grape, target: grape.sauvignon-blanc }
+  - { type: important_grape, target: grape.semillon }
+  - { type: related_to, target: concept.grand-vin }
+  - { type: related_to, target: concept.second-wine }
+  - { type: related_to, target: concept.assemblage }
+  - { type: related_to, target: concept.extraction }
+  - { type: related_to, target: concept.elevage }
+assertions:
+  - id: assertion.chateau-la-mission-haut-brion.current-owner
+    predicate: owner
+    value: Dillon family through Domaine Clarence Dillon
+    status: verified
+    sources: [source.mission-haut-brion-history]
+    last_verified: 2026-09-16
+    valid_from: 1983
 source_refs:
   - source.pessac-leognan-classified-growths
   - source.mission-haut-brion-history
   - source.mission-haut-brion-wines
-last_reviewed: 2026-09-14
+  - source.decanter-la-mission-haut-brion
+  - source.haut-brion-terroir
+  - source.gcc1855-classification-overview
+depth: foundation
+last_reviewed: 2026-09-16

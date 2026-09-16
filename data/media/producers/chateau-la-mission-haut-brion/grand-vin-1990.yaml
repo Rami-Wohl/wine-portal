@@ -1,0 +1,24 @@
+id: media.producer.chateau-la-mission-haut-brion.grand-vin-1990
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-la-mission-haut-brion/grand-vin-1990.jpg
+mime_type: image/jpeg
+width: 2614
+height: 8160
+checksum_sha256: 45da4963713f3629ca4fe5c59c23324ca3d9bc3cc74a32eb8393516700c862be
+alt:
+  nl: Fles Château La Mission Haut-Brion 1990 met donkerblauw etiket en gouden kruis
+  en: Bottle of Château La Mission Haut-Brion 1990 with a dark-blue label and gold cross
+caption:
+  nl: Het kruis op de Grand Vin uit 1990 verwijst naar La Missions Lazaristische geschiedenis; de wijn is de rode Cru Classé de Graves van het domein.
+  en: The cross on the 1990 Grand Vin recalls La Mission's Lazarist history; this is the estate's red Classified Growth of Graves.
+rights:
+  status: open-licensed
+  creator: Geographer
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_La_Mission_Haut-Brion_1990.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Geographer via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

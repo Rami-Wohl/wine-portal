@@ -1,0 +1,24 @@
+id: media.producer.chateau-haut-brion.estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-haut-brion/estate.jpg
+mime_type: image/jpeg
+width: 3543
+height: 2480
+checksum_sha256: 561a91e871c4b6852e51be723278832abfe435cdfeccdf741263b125b92782ed
+alt:
+  nl: Stenen château van Haut-Brion met ronde toren achter een hek en groen in Pessac
+  en: Haut-Brion's stone château and round tower behind a gate and greenery in Pessac
+caption:
+  nl: Haut-Brion staat niet in een afgelegen landschap maar in het stedelijke Pessac, waar de historische wijngaard tussen bebouwing bewaard bleef.
+  en: Haut-Brion does not stand in remote countryside but in urban Pessac, where the historic vineyard survived among development.
+rights:
+  status: open-licensed
+  creator: BillBl
+  source_url: https://commons.wikimedia.org/wiki/File:Haut_Brion_exterior.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: BillBl via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

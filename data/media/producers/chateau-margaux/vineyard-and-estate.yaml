@@ -1,0 +1,24 @@
+id: media.producer.chateau-margaux.vineyard-and-estate
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-margaux/vineyard-and-estate.jpg
+mime_type: image/jpeg
+width: 3110
+height: 2073
+checksum_sha256: 89588fa099b57c94cb56d0b36a3b259f5594c3585f94efb1df78aa90b38c7f64
+alt:
+  nl: Neoklassieke voorgevel van Château Margaux aan het einde van een door bomen omzoomde oprijlaan
+  en: Neoclassical façade of Château Margaux at the end of a tree-lined drive
+caption:
+  nl: "Het in de negentiende eeuw voltooide château werd het visuele symbool van het landgoed; de architectuur is iconisch, maar zegt op zichzelf niets over de kwaliteit van de wijngaard."
+  en: "Completed in the nineteenth century, the château became the estate's visual symbol; its architecture is iconic, but does not in itself explain the vineyard's quality."
+rights:
+  status: open-licensed
+  creator: Megan Mallen
+  source_url: https://commons.wikimedia.org/wiki/File:Chateau_Margaux_exterior.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Megan Mallen via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

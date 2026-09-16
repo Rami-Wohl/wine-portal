@@ -168,6 +168,67 @@ test("the two Saint-Julien monographs distinguish their wines across depth layer
   }
 });
 
+test("the four Margaux and Pessac icon monographs expose images and progressive depth", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  for (const producer of [
+    {
+      path: "/producers/chateau-margaux",
+      title: "Château Margaux",
+      estateAlt: /Neoklassieke voorgevel van Château Margaux/,
+      bottleAlt: /Fles Château Margaux 1961/,
+      intermediate: "#naam-reputatie-en-handel",
+      advanced: "#architectuur-is-geen-terroir",
+    },
+    {
+      path: "/producers/chateau-palmer",
+      title: "Château Palmer",
+      estateAlt: /Château Palmer met zijn vier ronde torens/,
+      bottleAlt: /Fles Château Palmer 1986/,
+      intermediate: "#pereires-en-de-vorm-van-palmer",
+      advanced: "#rang-en-reputatie",
+    },
+    {
+      path: "/producers/chateau-haut-brion",
+      title: "Château Haut-Brion",
+      estateAlt: /Stenen château van Haut-Brion met ronde toren/,
+      bottleAlt: /Fles Château Haut-Brion 1983/,
+      intermediate: "#londen-en-de-naam-haut-brion",
+      advanced: "#innovatie-zonder-rechte-lijn",
+    },
+    {
+      path: "/producers/chateau-la-mission-haut-brion",
+      title: "Château La Mission Haut-Brion",
+      estateAlt: /Smeedijzeren toegangspoort van Château La Mission Haut-Brion/,
+      bottleAlt: /Fles Château La Mission Haut-Brion 1990/,
+      intermediate: "#lazaristen-en-de-naam",
+      advanced: "#woltner-en-temperatuurbeheersing",
+    },
+  ]) {
+    await page.goto(producer.path);
+
+    await expect(page.getByRole("heading", { level: 1, name: producer.title })).toBeVisible();
+    await expect(page.getByRole("img", { name: producer.estateAlt })).toBeVisible();
+    await expect(page.getByRole("img", { name: producer.bottleAlt })).toBeVisible();
+
+    const depthControl = page.getByRole("group", {
+      name: "Kies hoeveel detail je wilt zien",
+    });
+    await depthControl.getByRole("button", { name: "Basis" }).click();
+    await expect(page.locator(producer.intermediate)).toBeHidden();
+    await expect(page.locator(producer.advanced)).toBeHidden();
+
+    await depthControl.getByRole("button", { name: "Verdieping" }).click();
+    await expect(page.locator(producer.intermediate)).toBeVisible();
+    await expect(page.locator(producer.advanced)).toBeHidden();
+
+    await depthControl.getByRole("button", { name: "Gevorderd" }).click();
+    await expect(page.locator(producer.advanced)).toBeVisible();
+  }
+});
+
 test("draft narrative degrades honestly and keeps its knowledge context", async ({ page }) => {
   await page.goto("/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef");
 
@@ -396,13 +457,6 @@ test("Graves producer records resolve to profiles and colour-specific register e
   await expect(page.locator('[data-parent="geclassificeerde-domeinen"]')).toHaveCount(8);
   await expect(page.locator("#producent-chateau-couhins")).toContainText(
     "Cru Classé de Graves voor wit",
-  );
-
-  await page.goto("/producers/chateau-la-mission-haut-brion");
-  await expect(page).toHaveURL(/\/appellations\/pessac-leognan#producent-la-mission-haut-brion$/);
-  await expect(page.locator("#producent-la-mission-haut-brion")).toBeVisible();
-  await expect(page.locator("#producent-la-mission-haut-brion")).toContainText(
-    "klassering ook voor wit geldt",
   );
 });
 

@@ -1,0 +1,24 @@
+id: media.producer.chateau-palmer.grand-vin-1986
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-palmer/grand-vin-1986.jpg
+mime_type: image/jpeg
+width: 643
+height: 2101
+checksum_sha256: fa1c9a31356c6173321b84186d5d7f65a40124d6db621b0cc93f03cbb1d94996
+alt:
+  nl: Fles Château Palmer 1986 met château-afbeelding en troisième-cruvermelding
+  en: Bottle of Château Palmer 1986 with an image of the château and third-growth statement
+caption:
+  nl: Het etiket van de Grand Vin uit 1986 noemt Palmer correct als troisième cru; latere reputatie heeft die officiële rang niet veranderd.
+  en: The 1986 Grand Vin label correctly identifies Palmer as a third growth; later reputation has not changed that official rank.
+rights:
+  status: open-licensed
+  creator: BerndB
+  source_url: https://commons.wikimedia.org/wiki/File:Palmer-1986.JPG
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: BerndB via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

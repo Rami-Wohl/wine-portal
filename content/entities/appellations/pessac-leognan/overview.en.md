@@ -97,14 +97,6 @@ Haut-Brion is exceptional as both a Classified Growth of Graves and an 1855 Firs
 A château may be classified for red, white or both. Rank does not automatically attach to every product an estate makes. Producer, appellation and classification statement must be read together on the label. This avoids transferring the reputation of one colour uncritically to the other.
 :::
 
-:::detail{#producent-la-mission-haut-brion parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.mission-haut-brion-history source.mission-haut-brion-wines"}
-### Château La Mission Haut-Brion
-
-La Mission Haut-Brion stands in the urban northern zone, opposite neighbouring Château Haut-Brion, but it is not a second label of that estate. Its history reaches back to 1540; Lazarist priests managed the property from 1682. The Woltner family, owners from 1919, modernised the cellar and began making a white wine in 1927. Since 1983 the estate has belonged to the Dillon family, which also owns Haut-Brion.
-
-Red Château La Mission Haut-Brion is the wine recognised as a Cru Classé de Graves. The range also includes a white grand vin, a second red called La Chapelle de La Mission Haut-Brion and the shared dry white La Clarté de Haut-Brion. The estate therefore teaches careful reading: one owner can connect several châteaux and cuvées while vineyard identity and classification status remain separate. Making white wine does not mean that La Mission's present classification extends to white. The name on the bottle therefore matters more than the family connection alone.
-:::
-
 :::detail{#producent-haut-bailly parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.haut-bailly-history source.haut-bailly-vineyard"}
 ### Château Haut-Bailly
 

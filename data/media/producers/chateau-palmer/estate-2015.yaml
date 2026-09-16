@@ -1,0 +1,24 @@
+id: media.producer.chateau-palmer.estate-2015
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-palmer/estate-2015.jpg
+mime_type: image/jpeg
+width: 5794
+height: 3868
+checksum_sha256: 3cab3615af6b40201a978367f5c1d475f909253fd9f50c55f95ccd8f8eeb1b90
+alt:
+  nl: Château Palmer met zijn vier ronde torens achter gazon en hoge bomen
+  en: Château Palmer with its four round towers beyond lawn and tall trees
+caption:
+  nl: Het neorenaissancechâteau werd onder de Pereire-broers het herkenningsteken van Palmer; het vlakke parklandschap past bij het geringe reliëf van Cantenac.
+  en: The neo-Renaissance château became Palmer's landmark under the Pereire brothers; its flat park setting reflects Cantenac's modest relief.
+rights:
+  status: open-licensed
+  creator: PA
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Palmer_2015.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: PA via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

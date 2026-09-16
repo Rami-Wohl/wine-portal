@@ -1,0 +1,24 @@
+id: media.producer.chateau-margaux.grand-vin-1961
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-margaux/grand-vin-1961.jpg
+mime_type: image/jpeg
+width: 648
+height: 2145
+checksum_sha256: dcbfa3ffd015fe2171361013680481d8419d3974687cfd9312029f33d5f057a3
+alt:
+  nl: Fles Château Margaux 1961 met crèmekleurig etiket en premier-cruvermelding
+  en: Bottle of Château Margaux 1961 with a cream label and first-growth statement
+caption:
+  nl: De Grand Vin uit 1961 verenigt producent, appellation, premier-crurang en jaargang op één etiket; de conditie van een oude fles blijft een afzonderlijke vraag.
+  en: The 1961 Grand Vin brings producer, appellation, first-growth rank and vintage together on one label; the condition of an old bottle remains a separate question.
+rights:
+  status: open-licensed
+  creator: BerndB
+  source_url: https://commons.wikimedia.org/wiki/File:Margaux-1961.JPG
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: BerndB via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

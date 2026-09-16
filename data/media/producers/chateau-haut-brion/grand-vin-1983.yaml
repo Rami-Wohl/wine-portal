@@ -1,0 +1,24 @@
+id: media.producer.chateau-haut-brion.grand-vin-1983
+kind: photo
+role: documentary
+status: active
+storage_key: producers/chateau-haut-brion/grand-vin-1983.jpg
+mime_type: image/jpeg
+width: 3404
+height: 9091
+checksum_sha256: a44f85ba76203310896a2ded2aa0430d9a719fe1d9549089e91bcc5bafc18332
+alt:
+  nl: Fles Château Haut-Brion 1983 met brede schouders en donker etiket
+  en: Bottle of Château Haut-Brion 1983 with broad shoulders and a dark label
+caption:
+  nl: De kenmerkende fles van de rode Grand Vin vermeldt Pessac en premier cru; die laatste rang geldt niet automatisch voor Haut-Brions witte wijn.
+  en: The distinctive red Grand Vin bottle states Pessac and first growth; the latter rank does not automatically apply to Haut-Brion's white wine.
+rights:
+  status: open-licensed
+  creator: Geographer
+  source_url: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_Haut-Brion_1983.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Geographer via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia file used without crop or editorial colour alteration.

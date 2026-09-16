@@ -97,14 +97,6 @@ Haut-Brion is uitzonderlijk omdat het zowel cru classé de Graves als premier cr
 Een château kan voor rood, wit of beide zijn geklasseerd. De rang hoort dus niet automatisch bij elk product dat een domein maakt. Op het etiket moeten producentennaam, appellation en eventuele classificatie samen worden gelezen. Dat voorkomt dat reputatie van de ene kleur zonder meer op de andere wordt geplakt.
 :::
 
-:::detail{#producent-la-mission-haut-brion parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.mission-haut-brion-history source.mission-haut-brion-wines"}
-### Château La Mission Haut-Brion
-
-La Mission Haut-Brion ligt in de stedelijke noordzone, tegenover buur Château Haut-Brion, maar is geen tweede etiket daarvan. De geschiedenis wordt teruggevoerd tot 1540; vanaf 1682 beheerden Lazaristen het bezit. De familie Woltner, eigenaar vanaf 1919, moderniseerde de kelder en begon in 1927 een witte wijn te maken. Sinds 1983 behoort het domein aan de familie Dillon, die ook Haut-Brion bezit.
-
-De rode Château La Mission Haut-Brion is de wijn die als Cru Classé de Graves is erkend. Het assortiment omvat daarnaast een witte grand vin, een tweede rode wijn onder de naam La Chapelle de La Mission Haut-Brion en de gedeelde droge witte La Clarté de Haut-Brion. Dat maakt het domein een nuttige les in precies lezen: een eigenaar kan meerdere kastelen en cuvées verbinden, terwijl wijngaardidentiteit en classificatiestatus afzonderlijk blijven. Dat La Mission wit maakt, betekent dus niet dat zijn huidige klassering ook voor wit geldt. De naam op de fles blijft daarom belangrijker dan de familierelatie alleen.
-:::
-
 :::detail{#producent-haut-bailly parent="classificatie-en-producenten" depth="intermediate" source_refs="source.pessac-leognan-classified-growths source.haut-bailly-history source.haut-bailly-vineyard"}
 ### Château Haut-Bailly
 

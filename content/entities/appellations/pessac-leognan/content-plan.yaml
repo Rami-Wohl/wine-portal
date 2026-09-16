@@ -166,7 +166,6 @@ coverage:
         [
           classificatie-en-producenten,
           classificatie-volgt-de-wijn,
-          producent-la-mission-haut-brion,
           producent-haut-bailly,
           producent-smith-haut-lafitte,
           producent-domaine-de-chevalier,
@@ -341,12 +340,7 @@ entity_dependencies:
       names: { nl: Château La Mission Haut-Brion, en: Château La Mission Haut-Brion },
       slugs: { nl: chateau-la-mission-haut-brion, en: chateau-la-mission-haut-brion },
       disposition: link,
-      presentation:
-        {
-          mode: collection-profile,
-          owner: appellation.pessac-leognan,
-          anchor: producent-la-mission-haut-brion,
-        },
+      presentation: { mode: monograph },
     }
   - {
       id: producer.chateau-haut-bailly,
