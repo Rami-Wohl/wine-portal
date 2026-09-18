@@ -1,0 +1,10 @@
+id: region.mendoza
+type: region
+status: draft
+canonical_name: Mendoza
+names: { nl: Mendoza, en: Mendoza }
+slugs: { nl: mendoza, en: mendoza }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,495 @@
+schema_version: 2
+package_id: grape.muscadelle
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids:
+      - identiteit
+    target_ids: []
+    completeness_questions:
+      - Wat is het ras, waarom is het belangrijk en waar eindigt zekerheid over oorsprong?
+    layers:
+      foundation:
+        - Identiteit en oorsprong — geur is nog geen familieband
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Identiteit en oorsprong — geur is nog geen familieband
+        source_refs:
+          - source.plantgrape-muscadelle
+          - source.civb-muscadelle
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids:
+      - groeicyclus
+    target_ids: []
+    completeness_questions:
+      - Hoe hangen knopvorming, bloei, rijping, oogst en de fysieke wijnstok samen?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnstok en groeicyclus — groei sturen vóór het oogstmoment
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstok en groeicyclus — groei sturen vóór het oogstmoment
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape geeft uitlopen elf dagen na Chasselas en rijping tweeënhalve week later; dit
+            blijft een relatieve referentie.
+          status: supported
+          source_refs:
+            - source.plantgrape-muscadelle
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - klimaat
+    target_ids: []
+    completeness_questions:
+      - Hoe sturen warmte, water, bodem en ligging het ras zonder bodem-smaakgarantie?
+    layers:
+      foundation:
+        - Klimaat, ligging en bodem — de tros moet kunnen drogen
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Klimaat, ligging en bodem — de tros moet kunnen drogen
+        source_refs:
+          - source.plantgrape-muscadelle
+          - source.monbazillac-cooperative-grapes
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids:
+      - regios
+    target_ids: []
+    completeness_questions:
+      - Zijn de wereldwijd bepalende herkomsten en de verschillende rollen evenwichtig uitgelegd?
+    layers:
+      foundation:
+        - Regio's en appellations — drie contexten om te onthouden
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Regio's en appellations — drie contexten om te onthouden
+        source_refs:
+          - source.civb-muscadelle
+          - source.monbazillac-cooperative-grapes
+          - source.rutherglen-topaque
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids:
+      - smaak
+      - zoet-is-niet-een-proces
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer structuur en stijl herkennen zonder geuren of bewaarpotentieel als garantie te
+        lezen?
+    layers:
+      foundation:
+        - Wijnstijlen en smaakprofiel — bloemen, fruit en een andere kant van rijping
+      intermediate:
+        - Edelzoet en versterkt ontstaan niet op dezelfde manier
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstijlen en smaakprofiel — bloemen, fruit en een andere kant van rijping
+          - Edelzoet en versterkt ontstaan niet op dezelfde manier
+        source_refs:
+          - source.plantgrape-muscadelle
+          - source.civb-muscadelle
+          - source.rutherglen-topaque
+          - source.monbazillac-cooperative-grapes
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids:
+      - wijnbouw
+    target_ids: []
+    completeness_questions:
+      - Zijn de bepalende sterktes, gevoeligheden, opbrengst- en gezondheidskeuzes uitgelegd?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnbouw en gevoeligheden — botrytis is geen vrijbrief voor rot
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnbouw en gevoeligheden — botrytis is geen vrijbrief voor rot
+        source_refs:
+          - source.plantgrape-muscadelle
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids:
+      - wijnmaken
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk hoe verwerking, vergisting, assemblage en rijping verschillende stijlen vormen?
+    layers:
+      foundation:
+        - Wijnmaken en rijping — de route bepaalt het resultaat
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnmaken en rijping — de route bepaalt het resultaat
+        source_refs:
+          - source.plantgrape-muscadelle
+          - source.civb-muscadelle
+          - source.rutherglen-topaque
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids:
+      - verwantschap
+    target_ids: []
+    completeness_questions:
+      - Zijn synoniem, mutatie, kruising, kloon en de grenzen van herkenning goed onderscheiden?
+    layers:
+      foundation: []
+      intermediate: []
+      advanced:
+        - Synoniemen, klonen en verwantschap — een naam is niet hetzelfde als een afstamming
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Synoniemen, klonen en verwantschap — een naam is niet hetzelfde als een afstamming
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape noemt Muscadelle een vermoedelijke nakomeling van Gouais Blanc, geen bewezen
+            volledig ouderpaar; de fiche noemt geen officieel EU-synoniem.
+          status: supported
+          source_refs:
+            - source.plantgrape-muscadelle
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids:
+      - etiket
+    target_ids: []
+    completeness_questions:
+      - Wat vertelt een ras- of herkomstetiket wel en niet, en welke verwarring moet worden
+        voorkomen?
+    layers:
+      foundation:
+        - Etiket en herkenning — Topaque is geen Tokaji
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Etiket en herkenning — Topaque is geen Tokaji
+        source_refs:
+          - source.civb-muscadelle
+      specific_claims:
+        - claim:
+            Wine Australia dateert het einde van de overgangsperiode voor Tokay op 1 september 2020 en
+            onderscheidt Topaque als Australische certificeringsnaam.
+          status: supported
+          source_refs:
+            - source.wine-australia-topaque-labelling
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - heden
+    target_ids: []
+    completeness_questions:
+      - Welke blijvende hedendaagse afweging is relevant zonder voorspelling, modeclaim of
+        ongedateerd areaalcijfer?
+    layers:
+      foundation: []
+      intermediate:
+        - Hedendaagse ontwikkelingen — een kleine rol kan veel betekenis hebben
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hedendaagse ontwikkelingen — een kleine rol kan veel betekenis hebben
+        source_refs:
+          - source.plantgrape-muscadelle
+          - source.rutherglen-topaque
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - rasbeeld
+      - botanische-plaat
+    target_ids: []
+    completeness_questions:
+      - Is het beeld correct geïdentificeerd, vrij gelicentieerd, visueel gereviewd en eerlijk
+        begrensd?
+    layers:
+      foundation:
+        - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+      intermediate:
+        - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+          - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - region.bordeaux
+      - grape.semillon
+      - grape.sauvignon-blanc
+      - concept.assemblage
+      - grape.muscat-blanc-a-petits-grains
+      - appellation.sauternes
+      - appellation.barsac
+      - region.bergerac
+      - appellation.monbazillac
+      - region.rutherglen
+      - concept.late-harvest
+      - concept.botrytis
+      - concept.fortification
+      - concept.oxidation
+      - concept.elevage
+      - grape.gouais-blanc
+      - concept.clonal-selection
+      - concept.ampelography
+    completeness_questions:
+      - Bestaan alle zelfstandig herbruikbare vervolgobjecten en staan er geen losse onverwerkte
+        namen?
+    layers:
+      foundation:
+        - Zelfstandig herbruikbare begrippen en herkomsten via canonical entities ontsluiten; drafts
+          zijn nog geen eigen pagina.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Scopegrens en herbruikbare vervolglinks.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: region.bordeaux
+    names:
+      nl: Bordeaux
+      en: Bordeaux
+    slugs:
+      nl: bordeaux
+      en: bordeaux
+    disposition: link
+  - id: grape.semillon
+    names:
+      nl: Sémillon
+      en: Sémillon
+    slugs:
+      nl: semillon
+      en: semillon
+    disposition: link
+  - id: grape.sauvignon-blanc
+    names:
+      nl: Sauvignon Blanc
+      en: Sauvignon Blanc
+    slugs:
+      nl: sauvignon-blanc
+      en: sauvignon-blanc
+    disposition: link
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link
+  - id: grape.muscat-blanc-a-petits-grains
+    names:
+      nl: Muscat Blanc à Petits Grains
+      en: Muscat Blanc à Petits Grains
+    slugs:
+      nl: muscat-blanc-a-petits-grains
+      en: muscat-blanc-a-petits-grains
+    disposition: link
+  - id: appellation.sauternes
+    names:
+      nl: Sauternes
+      en: Sauternes
+    slugs:
+      nl: sauternes
+      en: sauternes
+    disposition: link
+  - id: appellation.barsac
+    names:
+      nl: Barsac
+      en: Barsac
+    slugs:
+      nl: barsac
+      en: barsac
+    disposition: link
+  - id: region.bergerac
+    names:
+      nl: Bergerac
+      en: Bergerac
+    slugs:
+      nl: bergerac
+      en: bergerac
+    disposition: link
+  - id: appellation.monbazillac
+    names:
+      nl: Monbazillac
+      en: Monbazillac
+    slugs:
+      nl: monbazillac
+      en: monbazillac
+    disposition: link
+  - id: region.rutherglen
+    names:
+      nl: Rutherglen
+      en: Rutherglen
+    slugs:
+      nl: rutherglen
+      en: rutherglen
+    disposition: link
+  - id: concept.late-harvest
+    names:
+      nl: Late oogst
+      en: Late harvest
+    slugs:
+      nl: late-oogst
+      en: late-harvest
+    disposition: link
+  - id: concept.botrytis
+    names:
+      nl: Botrytis en edele rotting
+      en: Botrytis and noble rot
+    slugs:
+      nl: botrytis-edele-rotting
+      en: botrytis-noble-rot
+    disposition: link
+  - id: concept.fortification
+    names:
+      nl: Versterking
+      en: Fortification
+    slugs:
+      nl: fortification
+      en: fortification
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link
+  - id: grape.gouais-blanc
+    names:
+      nl: Gouais Blanc
+      en: Gouais Blanc
+    slugs:
+      nl: gouais-blanc
+      en: gouais-blanc
+    disposition: link
+  - id: concept.clonal-selection
+    names:
+      nl: Klonale selectie
+      en: Clonal selection
+    slugs:
+      nl: klonale-selectie
+      en: clonal-selection
+    disposition: link
+  - id: concept.ampelography
+    names:
+      nl: Ampelografie
+      en: Ampelography
+    slugs:
+      nl: ampelografie
+      en: ampelography
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

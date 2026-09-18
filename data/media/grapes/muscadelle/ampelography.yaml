@@ -1,0 +1,28 @@
+id: media.grape.muscadelle.ampelography
+kind: illustration
+role: educational
+status: active
+storage_key: grapes/muscadelle/ampelography.jpg
+mime_type: image/jpeg
+width: 789
+height: 1173
+checksum_sha256: a02c8f3fe6d2a8c881309ab737da7feef7a382ad65882babcc996b971e794e1a
+alt:
+  nl: Historische botanische plaat van Muscadelle met blad, tros, scheut en losse bes
+  en: Historical botanical plate of Muscadelle with leaf, bunch, shoot and individual berry
+caption:
+  nl: Jules Troncy bracht voor Viala en Vermorel meerdere kenmerken van Muscadelle samen. Dit is een
+    historische botanische plaat, geen foto van één actuele stok. De combinatie leert kijken, maar
+    vervangt moderne rasidentificatie niet.
+  en: Jules Troncy brought several Muscadelle traits together for Viala and Vermorel. This is a
+    historical botanical plate, not a photograph of a single present-day vine. The combination
+    teaches observation but does not replace modern variety identification.
+rights:
+  status: public-domain
+  creator: Jules Troncy
+  source_url: https://commons.wikimedia.org/wiki/File:Muscadelle_-_Amp%C3%A9lographie.jpg
+  license_name: Creative Commons Zero 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Jules Troncy via Wikimedia Commons, Creative Commons Zero 1.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia Commons image used without crop, retouching or editorial colour alteration.

@@ -1,0 +1,29 @@
+id: media.grape.sauvignon-gris.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/sauvignon-gris/bunch.jpg
+mime_type: image/jpeg
+width: 1923
+height: 2600
+checksum_sha256: 9b474eed854e872542c47c99b8a7eae58b0d83bc0d96edb95dbfe2f0616e773d
+alt:
+  nl: Rozegrijze Sauvignon Gris-trossen aan een wijnstok tussen deels verkleurde bladeren
+  en: Pink-grey Sauvignon Gris bunches on a vine among partly discoloured leaves
+caption:
+  nl: Sauvignon Gris kort voor de oogst in september 2024 op de Phöbener Wachtelberg in Brandenburg,
+    Duitsland. De rozegrijze schil is zichtbaar; de opname bewijst geen suikergehalte, perfecte
+    fruitgezondheid of bepaalde wijnstijl.
+  en:
+    Sauvignon Gris shortly before harvest in September 2024 at Phöbener Wachtelberg in Brandenburg,
+    Germany. The pink-grey skin is visible; the photograph does not establish sugar concentration,
+    perfect fruit health or a particular wine style.
+rights:
+  status: open-licensed
+  creator: Biberbaer
+  source_url: https://commons.wikimedia.org/wiki/File:Sauvignon_gris_by_biberbaer_02.jpg
+  license_name: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Biberbaer via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia Commons image used without crop, retouching or editorial colour alteration.

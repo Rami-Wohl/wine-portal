@@ -1,0 +1,10 @@
+id: concept.oxidation
+type: concept
+status: draft
+canonical_name: Oxidation
+names: { nl: Oxidatie, en: Oxidation }
+slugs: { nl: oxidation, en: oxidation }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

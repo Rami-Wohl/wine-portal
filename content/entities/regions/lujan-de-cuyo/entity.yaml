@@ -1,0 +1,16 @@
+id: region.lujan-de-cuyo
+type: region
+status: draft
+canonical_name: Luján de Cuyo
+names:
+  nl: Luján de Cuyo
+  en: Luján de Cuyo
+slugs:
+  nl: lujan-de-cuyo
+  en: lujan-de-cuyo
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

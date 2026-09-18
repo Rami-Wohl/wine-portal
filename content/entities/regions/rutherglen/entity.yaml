@@ -1,0 +1,10 @@
+id: region.rutherglen
+type: region
+status: draft
+canonical_name: Rutherglen
+names: { nl: Rutherglen, en: Rutherglen }
+slugs: { nl: rutherglen, en: rutherglen }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

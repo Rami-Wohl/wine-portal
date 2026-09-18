@@ -1,0 +1,16 @@
+id: region.salta
+type: region
+status: draft
+canonical_name: Salta
+names:
+  nl: Salta
+  en: Salta
+slugs:
+  nl: salta
+  en: salta
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,28 @@
+id: media.grape.malbec.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/malbec/bunch.jpg
+mime_type: image/jpeg
+width: 2048
+height: 1360
+checksum_sha256: a05d6da6f24abbe45f079e634f7ee3498694cdea4a99b4ec45640f3ec0a25036
+alt:
+  nl: Blauwpaarse Malbec-tros met ronde bessen en bladeren
+  en: Blue-purple Malbec bunch with round berries and leaves
+caption:
+  nl: Malbec bij Robert Mondavi Winery in Rutherford, Californië, zoals de bestandsbeschrijving
+    vermeldt. De donkere bessen laten één tros zien, niet een typische Argentijnse wijngaard of een
+    gegarandeerd wijnprofiel.
+  en: Malbec at Robert Mondavi Winery in Rutherford, California, as documented in the file
+    description. The dark berries show one bunch, not a typical Argentine vineyard or a guaranteed
+    wine profile.
+rights:
+  status: open-licensed
+  creator: Ian L
+  source_url: https://commons.wikimedia.org/wiki/File:Malbec_grapes.jpg
+  license_name: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Ian L via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia Commons image used without crop, retouching or editorial colour alteration.

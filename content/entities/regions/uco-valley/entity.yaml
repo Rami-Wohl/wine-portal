@@ -1,0 +1,16 @@
+id: region.uco-valley
+type: region
+status: draft
+canonical_name: Uco Valley
+names:
+  nl: Uco Valley
+  en: Uco Valley
+slugs:
+  nl: uco-valley
+  en: uco-valley
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

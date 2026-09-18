@@ -1,0 +1,564 @@
+schema_version: 2
+package_id: grape.malbec
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids:
+      - identiteit
+      - geschiedenis-en-verspreiding
+    target_ids: []
+    completeness_questions:
+      - Wat is het ras, waarom is het belangrijk en waar eindigt zekerheid over oorsprong?
+    layers:
+      foundation:
+        - Identiteit en oorsprong — Frans van oorsprong, Argentijns van betekenis
+      intermediate:
+        - Een geschiedenis van verspreiding, verlies en herwaardering
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Identiteit en oorsprong — Frans van oorsprong, Argentijns van betekenis
+          - Een geschiedenis van verspreiding, verlies en herwaardering
+        source_refs:
+          - source.plantgrape-cot
+          - source.wset-malbec
+      specific_claims:
+        - claim:
+            De FPS-historicus behandelt Pougets negentiende-eeuwse introductie en onderscheidt druifluis,
+            vorst van 1956 en vruchtzetting als factoren in de Franse achteruitgang.
+          status: supported
+          source_refs:
+            - source.ucdavis-malbec-history
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids:
+      - groeicyclus
+    target_ids: []
+    completeness_questions:
+      - Hoe hangen knopvorming, bloei, rijping, oogst en de fysieke wijnstok samen?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnstok en groeicyclus — de bloei kan de oogst al bepalen
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstok en groeicyclus — de bloei kan de oogst al bepalen
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape geeft uitlopen vier dagen na Chasselas en rijping tweeënhalve week later; klonale
+            selectie verminderde coulure sterk.
+          status: supported
+          source_refs:
+            - source.plantgrape-cot
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - klimaat
+      - hoogte-zonder-smaakformule
+    target_ids: []
+    completeness_questions:
+      - Hoe sturen warmte, water, bodem en ligging het ras zonder bodem-smaakgarantie?
+    layers:
+      foundation:
+        - Klimaat, ligging en bodem — zon en koelte kunnen samengaan
+      intermediate: []
+      advanced:
+        - Hoogte is een factor, geen kwaliteitsladder
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Klimaat, ligging en bodem — zon en koelte kunnen samengaan
+          - Hoogte is een factor, geen kwaliteitsladder
+        source_refs:
+          - source.wset-malbec
+          - source.wines-argentina-varieties-2022
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids:
+      - regios
+      - argentinie-en-overige-herkomsten
+    target_ids: []
+    completeness_questions:
+      - Zijn de wereldwijd bepalende herkomsten en de verschillende rollen evenwichtig uitgelegd?
+    layers:
+      foundation:
+        - Regio's en appellations — Cahors en Mendoza als twee hoofdassen
+      intermediate:
+        - Argentinië is groter dan Mendoza; Frankrijk groter dan Cahors
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Regio's en appellations — Cahors en Mendoza als twee hoofdassen
+          - Argentinië is groter dan Mendoza; Frankrijk groter dan Cahors
+        source_refs:
+          - source.wset-malbec
+          - source.wines-argentina-varieties-2022
+          - source.ucdavis-malbec-history
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids:
+      - smaak
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer structuur en stijl herkennen zonder geuren of bewaarpotentieel als garantie te
+        lezen?
+    layers:
+      foundation:
+        - Wijnstijlen en smaakprofiel — donker fruit is het begin, niet de hele wijn
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstijlen en smaakprofiel — donker fruit is het begin, niet de hele wijn
+        source_refs:
+          - source.wset-malbec
+          - source.plantgrape-cot
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids:
+      - wijnbouw
+    target_ids: []
+    completeness_questions:
+      - Zijn de bepalende sterktes, gevoeligheden, opbrengst- en gezondheidskeuzes uitgelegd?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnbouw en gevoeligheden — groeikracht en weer vragen verschillende antwoorden
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnbouw en gevoeligheden — groeikracht en weer vragen verschillende antwoorden
+        source_refs:
+          - source.plantgrape-cot
+          - source.wset-malbec
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids:
+      - wijnmaken
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk hoe verwerking, vergisting, assemblage en rijping verschillende stijlen vormen?
+    layers:
+      foundation:
+        - Wijnmaken en rijping — kracht vraagt niet altijd méér extractie
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnmaken en rijping — kracht vraagt niet altijd méér extractie
+        source_refs:
+          - source.plantgrape-cot
+          - source.wset-malbec
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids:
+      - verwantschap
+    target_ids: []
+    completeness_questions:
+      - Zijn synoniem, mutatie, kruising, kloon en de grenzen van herkenning goed onderscheiden?
+    layers:
+      foundation: []
+      intermediate: []
+      advanced:
+        - Synoniemen, klonen en verwantschap — Cot, Malbec en een gedeelde ouder
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Synoniemen, klonen en verwantschap — Cot, Malbec en een gedeelde ouder
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape en FPS koppelen Cot/Malbec aan Magdeleine Noire des Charentes en Prunelard; Cot en
+            Malbec zijn dezelfde rasidentiteit.
+          status: supported
+          source_refs:
+            - source.plantgrape-cot
+            - source.ucdavis-malbec-history
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids:
+      - etiket
+    target_ids: []
+    completeness_questions:
+      - Wat vertelt een ras- of herkomstetiket wel en niet, en welke verwarring moet worden
+        voorkomen?
+    layers:
+      foundation:
+        - Etiket en herkenning — lees de druif én de plaats
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Etiket en herkenning — lees de druif én de plaats
+        source_refs:
+          - source.wset-malbec
+          - source.ucdavis-malbec-history
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - heden
+    target_ids: []
+    completeness_questions:
+      - Welke blijvende hedendaagse afweging is relevant zonder voorspelling, modeclaim of
+        ongedateerd areaalcijfer?
+    layers:
+      foundation: []
+      intermediate:
+        - Hedendaagse ontwikkelingen — van herkenbare rasnaam naar herkenbare plaats
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hedendaagse ontwikkelingen — van herkenbare rasnaam naar herkenbare plaats
+        source_refs:
+          - source.wines-argentina-varieties-2022
+          - source.wset-malbec
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - rasbeeld
+      - argentijnse-wijngaard
+    target_ids: []
+    completeness_questions:
+      - Is het beeld correct geïdentificeerd, vrij gelicentieerd, visueel gereviewd en eerlijk
+        begrensd?
+    layers:
+      foundation:
+        - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+        - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+          - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - appellation.cahors
+      - region.mendoza
+      - region.bordeaux
+      - concept.phylloxera
+      - region.lujan-de-cuyo
+      - region.uco-valley
+      - region.salta
+      - region.patagonia
+      - region.loire-valley
+      - concept.tannin
+      - concept.vintage
+      - concept.terroir
+      - concept.coulure
+      - concept.assemblage
+      - grape.merlot
+      - grape.cabernet-sauvignon
+      - grape.petit-verdot
+      - concept.acidity
+      - concept.maceration
+      - concept.extraction
+      - concept.elevage
+      - grape.magdeleine-noire-des-charentes
+      - grape.prunelard
+      - concept.clonal-selection
+      - concept.ampelography
+    completeness_questions:
+      - Bestaan alle zelfstandig herbruikbare vervolgobjecten en staan er geen losse onverwerkte
+        namen?
+    layers:
+      foundation:
+        - Zelfstandig herbruikbare begrippen en herkomsten via canonical entities ontsluiten; drafts
+          zijn nog geen eigen pagina.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Scopegrens en herbruikbare vervolglinks.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: appellation.cahors
+    names:
+      nl: Cahors
+      en: Cahors
+    slugs:
+      nl: cahors
+      en: cahors
+    disposition: link
+  - id: region.mendoza
+    names:
+      nl: Mendoza
+      en: Mendoza
+    slugs:
+      nl: mendoza
+      en: mendoza
+    disposition: link
+  - id: region.bordeaux
+    names:
+      nl: Bordeaux
+      en: Bordeaux
+    slugs:
+      nl: bordeaux
+      en: bordeaux
+    disposition: link
+  - id: concept.phylloxera
+    names:
+      nl: Druifluis (phylloxera)
+      en: Phylloxera
+    slugs:
+      nl: druifluis-phylloxera
+      en: phylloxera
+    disposition: link
+  - id: region.lujan-de-cuyo
+    names:
+      nl: Luján de Cuyo
+      en: Luján de Cuyo
+    slugs:
+      nl: lujan-de-cuyo
+      en: lujan-de-cuyo
+    disposition: link
+  - id: region.uco-valley
+    names:
+      nl: Uco Valley
+      en: Uco Valley
+    slugs:
+      nl: uco-valley
+      en: uco-valley
+    disposition: link
+  - id: region.salta
+    names:
+      nl: Salta
+      en: Salta
+    slugs:
+      nl: salta
+      en: salta
+    disposition: link
+  - id: region.patagonia
+    names:
+      nl: Patagonië
+      en: Patagonia
+    slugs:
+      nl: patagonia
+      en: patagonia
+    disposition: link
+  - id: region.loire-valley
+    names:
+      nl: Loirevallei
+      en: Loire Valley
+    slugs:
+      nl: loirevallei
+      en: loire-valley
+    disposition: link
+  - id: concept.tannin
+    names:
+      nl: Tannine
+      en: Tannin
+    slugs:
+      nl: tannine
+      en: tannin
+    disposition: link
+  - id: concept.vintage
+    names:
+      nl: Jaargang
+      en: Vintage
+    slugs:
+      nl: jaargang
+      en: vintage
+    disposition: link
+  - id: concept.terroir
+    names:
+      nl: Terroir
+      en: Terroir
+    slugs:
+      nl: terroir
+      en: terroir
+    disposition: link
+  - id: concept.coulure
+    names:
+      nl: Coulure
+      en: Coulure
+    slugs:
+      nl: coulure
+      en: coulure
+    disposition: link
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link
+  - id: grape.merlot
+    names:
+      nl: Merlot
+      en: Merlot
+    slugs:
+      nl: merlot
+      en: merlot
+    disposition: link
+  - id: grape.cabernet-sauvignon
+    names:
+      nl: Cabernet Sauvignon
+      en: Cabernet Sauvignon
+    slugs:
+      nl: cabernet-sauvignon
+      en: cabernet-sauvignon
+    disposition: link
+  - id: grape.petit-verdot
+    names:
+      nl: Petit Verdot
+      en: Petit Verdot
+    slugs:
+      nl: petit-verdot
+      en: petit-verdot
+    disposition: link
+  - id: concept.acidity
+    names:
+      nl: Zuur in wijn
+      en: Acidity in wine
+    slugs:
+      nl: zuur-in-wijn
+      en: acidity-in-wine
+    disposition: link
+  - id: concept.maceration
+    names:
+      nl: Schilinweking
+      en: Maceration
+    slugs:
+      nl: schilinweking
+      en: maceration
+    disposition: link
+  - id: concept.extraction
+    names:
+      nl: Extractie
+      en: Extraction
+    slugs:
+      nl: extractie
+      en: extraction
+    disposition: link
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link
+  - id: grape.magdeleine-noire-des-charentes
+    names:
+      nl: Magdeleine Noire des Charentes
+      en: Magdeleine Noire des Charentes
+    slugs:
+      nl: magdeleine-noire-des-charentes
+      en: magdeleine-noire-des-charentes
+    disposition: link
+  - id: grape.prunelard
+    names:
+      nl: Prunelard
+      en: Prunelard
+    slugs:
+      nl: prunelard
+      en: prunelard
+    disposition: link
+  - id: concept.clonal-selection
+    names:
+      nl: Klonale selectie
+      en: Clonal selection
+    slugs:
+      nl: klonale-selectie
+      en: clonal-selection
+    disposition: link
+  - id: concept.ampelography
+    names:
+      nl: Ampelografie
+      en: Ampelography
+    slugs:
+      nl: ampelografie
+      en: ampelography
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

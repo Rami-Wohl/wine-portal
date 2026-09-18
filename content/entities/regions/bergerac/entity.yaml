@@ -1,0 +1,10 @@
+id: region.bergerac
+type: region
+status: draft
+canonical_name: Bergerac
+names: { nl: Bergerac, en: Bergerac }
+slugs: { nl: bergerac, en: bergerac }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

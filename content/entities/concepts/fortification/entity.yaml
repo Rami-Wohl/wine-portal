@@ -1,0 +1,10 @@
+id: concept.fortification
+type: concept
+status: draft
+canonical_name: Fortification
+names: { nl: Versterking, en: Fortification }
+slugs: { nl: fortification, en: fortification }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,10 @@
+id: grape.gouais-blanc
+type: grape
+status: draft
+canonical_name: Gouais Blanc
+names: { nl: Gouais Blanc, en: Gouais Blanc }
+slugs: { nl: gouais-blanc, en: gouais-blanc }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

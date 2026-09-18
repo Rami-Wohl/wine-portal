@@ -1,0 +1,10 @@
+id: region.colchagua
+type: region
+status: draft
+canonical_name: Colchagua
+names: { nl: Colchagua, en: Colchagua }
+slugs: { nl: colchagua, en: colchagua }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

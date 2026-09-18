@@ -1,0 +1,10 @@
+id: grape.prunelard
+type: grape
+status: draft
+canonical_name: Prunelard
+names: { nl: Prunelard, en: Prunelard }
+slugs: { nl: prunelard, en: prunelard }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

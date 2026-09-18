@@ -1,9 +1,9 @@
 id: grape.sauvignon-gris
 type: grape
-status: draft
-canonical_name: Sauvignon gris
+status: active
+canonical_name: Sauvignon Gris
 names:
-  nl: Sauvignon gris
+  nl: Sauvignon Gris
   en: Sauvignon Gris
 slugs:
   nl: sauvignon-gris
@@ -11,6 +11,49 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - type: associated_with
+    target: region.bordeaux
+  - type: associated_with
+    target: region.loire-valley
+  - type: associated_with
+    target: region.colchagua
+  - type: associated_with
+    target: appellation.pessac-leognan
+  - type: associated_with
+    target: appellation.graves
+  - type: associated_with
+    target: appellation.entre-deux-mers
+  - type: related_to
+    target: grape.semillon
+  - type: related_to
+    target: grape.souvignier-gris
+  - type: related_to
+    target: concept.assemblage
+  - type: related_to
+    target: concept.lees-ageing
+  - type: related_to
+    target: concept.oxidation
+  - type: related_to
+    target: concept.acidity
+  - type: related_to
+    target: concept.ampelography
+  - type: related_to
+    target: concept.clonal-selection
+  - type: related_to
+    target: concept.elevage
+assertions:
+  - id: assertion.sauvignon-gris.mutation
+    predicate: variety_relationship
+    value: Grey- or pink-skinned mutation of Sauvignon Blanc
+    status: verified
+    sources:
+      - source.plantgrape-sauvignon-gris
+    last_verified: 2026-09-16
+source_refs:
+  - source.plantgrape-sauvignon-gris
+  - source.plantgrape-sauvignon
+  - source.civb-sauvignon-gris
+  - source.casa-silva-sauvignon-gris
+depth: foundation
+last_reviewed: 2026-09-16

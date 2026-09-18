@@ -1,0 +1,16 @@
+id: region.patagonia
+type: region
+status: draft
+canonical_name: Patagonia
+names:
+  nl: Patagonië
+  en: Patagonia
+slugs:
+  nl: patagonia
+  en: patagonia
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs: []

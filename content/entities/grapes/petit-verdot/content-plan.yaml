@@ -1,0 +1,503 @@
+schema_version: 2
+package_id: grape.petit-verdot
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids:
+      - identiteit
+    target_ids: []
+    completeness_questions:
+      - Wat is het ras, waarom is het belangrijk en waar eindigt zekerheid over oorsprong?
+    layers:
+      foundation:
+        - Identiteit en oorsprong — een kleine naam, een duidelijke rol
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Identiteit en oorsprong — een kleine naam, een duidelijke rol
+        source_refs:
+          - source.plantgrape-petit-verdot
+          - source.civb-petit-verdot
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids:
+      - groeicyclus
+    target_ids: []
+    completeness_questions:
+      - Hoe hangen knopvorming, bloei, rijping, oogst en de fysieke wijnstok samen?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnstok en groeicyclus — de kalender loopt lang door
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstok en groeicyclus — de kalender loopt lang door
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape geeft uitlopen drie dagen na Chasselas en rijping drieënhalve tot vier weken
+            later; dit blijft een relatieve referentie.
+          status: supported
+          source_refs:
+            - source.plantgrape-petit-verdot
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - klimaat
+    target_ids: []
+    completeness_questions:
+      - Hoe sturen warmte, water, bodem en ligging het ras zonder bodem-smaakgarantie?
+    layers:
+      foundation:
+        - Klimaat, ligging en bodem — warmte helpt, water blijft nodig
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Klimaat, ligging en bodem — warmte helpt, water blijft nodig
+        source_refs:
+          - source.plantgrape-petit-verdot
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids:
+      - regios
+    target_ids: []
+    completeness_questions:
+      - Zijn de wereldwijd bepalende herkomsten en de verschillende rollen evenwichtig uitgelegd?
+    layers:
+      foundation:
+        - Regio's en appellations — van Médoc naar een eigen stem
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Regio's en appellations — van Médoc naar een eigen stem
+        source_refs:
+          - source.civb-petit-verdot
+      specific_claims:
+        - claim:
+            Cape Mentelle documenteert een Petit Verdot Cabernet Franc-blend uit 2018; Kingston Estate
+            een single-varietal Petit Verdot uit Riverland uit 2016.
+          status: supported
+          source_refs:
+            - source.cape-mentelle-petit-verdot-2018
+            - source.kingston-petit-verdot-2016
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids:
+      - smaak
+      - structuur-en-rijping
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer structuur en stijl herkennen zonder geuren of bewaarpotentieel als garantie te
+        lezen?
+    layers:
+      foundation:
+        - Wijnstijlen en smaakprofiel — donker, stevig en niet alleen zwaar
+      intermediate:
+        - Tannine wordt niet uitsluitend door het ras bepaald
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstijlen en smaakprofiel — donker, stevig en niet alleen zwaar
+          - Tannine wordt niet uitsluitend door het ras bepaald
+        source_refs:
+          - source.plantgrape-petit-verdot
+          - source.civb-petit-verdot
+          - source.cape-mentelle-petit-verdot-2018
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids:
+      - wijnbouw
+    target_ids: []
+    completeness_questions:
+      - Zijn de bepalende sterktes, gevoeligheden, opbrengst- en gezondheidskeuzes uitgelegd?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnbouw en gevoeligheden — rijpheid begint met een werkbare stok
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnbouw en gevoeligheden — rijpheid begint met een werkbare stok
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape onderscheidt huidige Franse selectie van historische bloemafwijkingen die coulure
+            veroorzaakten.
+          status: supported
+          source_refs:
+            - source.plantgrape-petit-verdot
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids:
+      - wijnmaken
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk hoe verwerking, vergisting, assemblage en rijping verschillende stijlen vormen?
+    layers:
+      foundation:
+        - Wijnmaken en rijping — bouwen aan evenwicht
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnmaken en rijping — bouwen aan evenwicht
+        source_refs:
+          - source.plantgrape-petit-verdot
+          - source.cape-mentelle-petit-verdot-2018
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids:
+      - verwantschap
+    target_ids: []
+    completeness_questions:
+      - Zijn synoniem, mutatie, kruising, kloon en de grenzen van herkenning goed onderscheiden?
+    layers:
+      foundation: []
+      intermediate: []
+      advanced:
+        - Synoniemen, klonen en verwantschap — wees preciezer dan de naam
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Synoniemen, klonen en verwantschap — wees preciezer dan de naam
+        source_refs: []
+      specific_claims:
+        - claim:
+            De Plantgrape-fiche vermeldt geen officieel erkend synoniem in Frankrijk of elders in de
+            Europese Unie; de pagina presenteert dit als gedateerde bronbeschrijving.
+          status: supported
+          source_refs:
+            - source.plantgrape-petit-verdot
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids:
+      - etiket
+    target_ids: []
+    completeness_questions:
+      - Wat vertelt een ras- of herkomstetiket wel en niet, en welke verwarring moet worden
+        voorkomen?
+    layers:
+      foundation:
+        - Etiket en herkenning — zoek soms achter de herkomstnaam
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Etiket en herkenning — zoek soms achter de herkomstnaam
+        source_refs:
+          - source.civb-petit-verdot
+          - source.cape-mentelle-petit-verdot-2018
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - heden
+    target_ids: []
+    completeness_questions:
+      - Welke blijvende hedendaagse afweging is relevant zonder voorspelling, modeclaim of
+        ongedateerd areaalcijfer?
+    layers:
+      foundation: []
+      intermediate:
+        - Hedendaagse ontwikkelingen — late rijping is een kans met voorwaarden
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hedendaagse ontwikkelingen — late rijping is een kans met voorwaarden
+        source_refs:
+          - source.plantgrape-petit-verdot
+          - source.civb-petit-verdot
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - rasbeeld
+    target_ids: []
+    completeness_questions:
+      - Is het beeld correct geïdentificeerd, vrij gelicentieerd, visueel gereviewd en eerlijk
+        begrensd?
+    layers:
+      foundation:
+        - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - region.bordeaux
+      - grape.cabernet-sauvignon
+      - grape.merlot
+      - concept.assemblage
+      - concept.tannin
+      - concept.acidity
+      - region.medoc
+      - appellation.graves
+      - appellation.margaret-river
+      - grape.cabernet-franc
+      - region.riverland
+      - concept.maceration
+      - concept.extraction
+      - concept.terroir
+      - concept.coulure
+      - concept.elevage
+      - concept.clonal-selection
+      - concept.ampelography
+      - concept.vintage
+    completeness_questions:
+      - Bestaan alle zelfstandig herbruikbare vervolgobjecten en staan er geen losse onverwerkte
+        namen?
+    layers:
+      foundation:
+        - Zelfstandig herbruikbare begrippen en herkomsten via canonical entities ontsluiten; drafts
+          zijn nog geen eigen pagina.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Scopegrens en herbruikbare vervolglinks.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: region.bordeaux
+    names:
+      nl: Bordeaux
+      en: Bordeaux
+    slugs:
+      nl: bordeaux
+      en: bordeaux
+    disposition: link
+  - id: grape.cabernet-sauvignon
+    names:
+      nl: Cabernet Sauvignon
+      en: Cabernet Sauvignon
+    slugs:
+      nl: cabernet-sauvignon
+      en: cabernet-sauvignon
+    disposition: link
+  - id: grape.merlot
+    names:
+      nl: Merlot
+      en: Merlot
+    slugs:
+      nl: merlot
+      en: merlot
+    disposition: link
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link
+  - id: concept.tannin
+    names:
+      nl: Tannine
+      en: Tannin
+    slugs:
+      nl: tannine
+      en: tannin
+    disposition: link
+  - id: concept.acidity
+    names:
+      nl: Zuur in wijn
+      en: Acidity in wine
+    slugs:
+      nl: zuur-in-wijn
+      en: acidity-in-wine
+    disposition: link
+  - id: region.medoc
+    names:
+      nl: Médoc
+      en: Médoc
+    slugs:
+      nl: medoc
+      en: medoc
+    disposition: link
+  - id: appellation.graves
+    names:
+      nl: Graves
+      en: Graves
+    slugs:
+      nl: graves
+      en: graves
+    disposition: link
+  - id: appellation.margaret-river
+    names:
+      nl: Margaret River
+      en: Margaret River
+    slugs:
+      nl: margaret-river
+      en: margaret-river
+    disposition: link
+  - id: grape.cabernet-franc
+    names:
+      nl: Cabernet Franc
+      en: Cabernet Franc
+    slugs:
+      nl: cabernet-franc
+      en: cabernet-franc
+    disposition: link
+  - id: region.riverland
+    names:
+      nl: Riverland
+      en: Riverland
+    slugs:
+      nl: riverland
+      en: riverland
+    disposition: link
+  - id: concept.maceration
+    names:
+      nl: Schilinweking
+      en: Maceration
+    slugs:
+      nl: schilinweking
+      en: maceration
+    disposition: link
+  - id: concept.extraction
+    names:
+      nl: Extractie
+      en: Extraction
+    slugs:
+      nl: extractie
+      en: extraction
+    disposition: link
+  - id: concept.terroir
+    names:
+      nl: Terroir
+      en: Terroir
+    slugs:
+      nl: terroir
+      en: terroir
+    disposition: link
+  - id: concept.coulure
+    names:
+      nl: Coulure
+      en: Coulure
+    slugs:
+      nl: coulure
+      en: coulure
+    disposition: link
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link
+  - id: concept.clonal-selection
+    names:
+      nl: Klonale selectie
+      en: Clonal selection
+    slugs:
+      nl: klonale-selectie
+      en: clonal-selection
+    disposition: link
+  - id: concept.ampelography
+    names:
+      nl: Ampelografie
+      en: Ampelography
+    slugs:
+      nl: ampelografie
+      en: ampelography
+    disposition: link
+  - id: concept.vintage
+    names:
+      nl: Jaargang
+      en: Vintage
+    slugs:
+      nl: jaargang
+      en: vintage
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

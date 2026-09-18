@@ -1,6 +1,6 @@
 id: grape.muscadelle
 type: grape
-status: draft
+status: active
 canonical_name: Muscadelle
 names:
   nl: Muscadelle
@@ -11,6 +11,61 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - type: associated_with
+    target: region.bordeaux
+  - type: associated_with
+    target: region.bergerac
+  - type: associated_with
+    target: region.rutherglen
+  - type: associated_with
+    target: appellation.monbazillac
+  - type: associated_with
+    target: appellation.sauternes
+  - type: associated_with
+    target: appellation.barsac
+  - type: related_to
+    target: grape.sauvignon-blanc
+  - type: related_to
+    target: grape.muscat-blanc-a-petits-grains
+  - type: related_to
+    target: concept.assemblage
+  - type: related_to
+    target: concept.botrytis
+  - type: related_to
+    target: concept.fortification
+  - type: related_to
+    target: concept.oxidation
+  - type: related_to
+    target: concept.ampelography
+  - type: related_to
+    target: concept.clonal-selection
+  - type: related_to
+    target: grape.gouais-blanc
+  - type: related_to
+    target: concept.late-harvest
+  - type: related_to
+    target: concept.elevage
+assertions:
+  - id: assertion.muscadelle.origin
+    predicate: geographic_origin
+    value: Probably southwest France
+    status: verified
+    sources:
+      - source.plantgrape-muscadelle
+    last_verified: 2026-09-16
+  - id: assertion.muscadelle.parentage
+    predicate: genetic_parentage
+    value: Apparent descendant of Gouais Blanc; second parent not established by this source
+    status: verified
+    sources:
+      - source.plantgrape-muscadelle
+    last_verified: 2026-09-16
+source_refs:
+  - source.plantgrape-muscadelle
+  - source.civb-muscadelle
+  - source.monbazillac-cooperative-grapes
+  - source.rutherglen-topaque
+  - source.wine-australia-topaque-labelling
+depth: foundation
+last_reviewed: 2026-09-16

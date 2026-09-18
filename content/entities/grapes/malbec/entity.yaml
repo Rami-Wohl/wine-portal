@@ -1,6 +1,6 @@
 id: grape.malbec
 type: grape
-status: draft
+status: active
 canonical_name: Malbec
 names:
   nl: Malbec
@@ -11,6 +11,72 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
-assertions: []
-source_refs: []
+relations:
+  - type: associated_with
+    target: appellation.cahors
+  - type: associated_with
+    target: region.mendoza
+  - type: associated_with
+    target: region.bordeaux
+  - type: associated_with
+    target: region.loire-valley
+  - type: related_to
+    target: grape.cabernet-sauvignon
+  - type: related_to
+    target: grape.petit-verdot
+  - type: related_to
+    target: grape.prunelard
+  - type: related_to
+    target: concept.coulure
+  - type: related_to
+    target: concept.ampelography
+  - type: related_to
+    target: concept.clonal-selection
+  - type: related_to
+    target: concept.assemblage
+  - type: related_to
+    target: concept.maceration
+  - type: related_to
+    target: concept.extraction
+  - type: related_to
+    target: concept.tannin
+  - type: related_to
+    target: concept.acidity
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.terroir
+  - type: related_to
+    target: concept.phylloxera
+  - type: associated_with
+    target: region.lujan-de-cuyo
+  - type: associated_with
+    target: region.uco-valley
+  - type: associated_with
+    target: region.salta
+  - type: associated_with
+    target: region.patagonia
+  - type: related_to
+    target: concept.vintage
+assertions:
+  - id: assertion.malbec.official-name
+    predicate: official_french_variety_name
+    value: Cot
+    status: verified
+    sources:
+      - source.plantgrape-cot
+    last_verified: 2026-09-16
+  - id: assertion.malbec.parentage
+    predicate: genetic_parentage
+    value: Magdeleine Noire des Charentes × Prunelard
+    status: verified
+    sources:
+      - source.plantgrape-cot
+    last_verified: 2026-09-16
+source_refs:
+  - source.plantgrape-cot
+  - source.ucdavis-malbec-history
+  - source.wset-malbec
+  - source.wines-argentina-varieties-2022
+depth: foundation
+last_reviewed: 2026-09-16

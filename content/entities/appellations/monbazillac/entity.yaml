@@ -1,0 +1,10 @@
+id: appellation.monbazillac
+type: appellation
+status: draft
+canonical_name: Monbazillac
+names: { nl: Monbazillac, en: Monbazillac }
+slugs: { nl: monbazillac, en: monbazillac }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

@@ -1,0 +1,28 @@
+id: media.grape.muscadelle.inflorescence
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/muscadelle/inflorescence.jpg
+mime_type: image/jpeg
+width: 4608
+height: 3072
+checksum_sha256: 85041241382d48bb7aed57383ff6ae1839e2359411e51230598878d4e0f9da2b
+alt:
+  nl: Groene bloeiwijze van Muscadelle met bloemknoppen en blad
+  en: Green Muscadelle inflorescence with flower buds and a leaf
+caption:
+  nl:
+    "Een bloeiwijze van Muscadelle, gefotografeerd in mei 2016. Deze vertakte bloemknoppen zijn nog
+    geen rijpe tros: pas na bloei en vruchtzetting ontwikkelen de bessen zich."
+  en:
+    "A Muscadelle inflorescence photographed in May 2016. These branching flower buds are not a ripe
+    bunch: berries develop after flowering and fruit set."
+rights:
+  status: open-licensed
+  creator: Marianne Casamance
+  source_url: https://commons.wikimedia.org/wiki/File:Muscadelle_-_inflorescence.jpg
+  license_name: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Marianne Casamance via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia Commons image used without crop, retouching or editorial colour alteration.

@@ -1,0 +1,487 @@
+schema_version: 2
+package_id: grape.sauvignon-gris
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids:
+      - identiteit
+    target_ids: []
+    completeness_questions:
+      - Wat is het ras, waarom is het belangrijk en waar eindigt zekerheid over oorsprong?
+    layers:
+      foundation:
+        - Identiteit en oorsprong — een andere schil, dezelfde familie
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Identiteit en oorsprong — een andere schil, dezelfde familie
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape beschrijft Sauvignon Gris als grijze kleurmutatie van Sauvignon Blanc met een
+            grijze of soms roze rijpe schil.
+          status: supported
+          source_refs:
+            - source.plantgrape-sauvignon-gris
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids:
+      - groeicyclus
+    target_ids: []
+    completeness_questions:
+      - Hoe hangen knopvorming, bloei, rijping, oogst en de fysieke wijnstok samen?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnstok en groeicyclus — minder fruit, veel suikerpotentieel
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstok en groeicyclus — minder fruit, veel suikerpotentieel
+        source_refs: []
+      specific_claims:
+        - claim:
+            Plantgrape geeft uitlopen tien dagen na Chasselas, rijping twee tot tweeënhalve week later en
+            lagere productiviteit dan Sauvignon.
+          status: supported
+          source_refs:
+            - source.plantgrape-sauvignon-gris
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - klimaat
+    target_ids: []
+    completeness_questions:
+      - Hoe sturen warmte, water, bodem en ligging het ras zonder bodem-smaakgarantie?
+    layers:
+      foundation:
+        - Klimaat, ligging en bodem — frisheid vraagt een oogstkeuze
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Klimaat, ligging en bodem — frisheid vraagt een oogstkeuze
+        source_refs:
+          - source.plantgrape-sauvignon-gris
+          - source.plantgrape-sauvignon
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids:
+      - regios
+      - colchagua-als-voorbeeld
+    target_ids: []
+    completeness_questions:
+      - Zijn de wereldwijd bepalende herkomsten en de verschillende rollen evenwichtig uitgelegd?
+    layers:
+      foundation:
+        - Regio's en appellations — Franse blends en een Chileense hoofdrol
+      intermediate:
+        - Colchagua laat een wijn zonder blendpartners zien
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Regio's en appellations — Franse blends en een Chileense hoofdrol
+          - Colchagua laat een wijn zonder blendpartners zien
+        source_refs:
+          - source.civb-sauvignon-gris
+          - source.plantgrape-sauvignon-gris
+      specific_claims:
+        - claim:
+            Casa Silva documenteert 1912 Vines Sauvignon Gris als zelfstandig ras in Colchagua, verbonden
+            aan Angostura en roestvrijstalen rijping.
+          status: supported
+          source_refs:
+            - source.casa-silva-sauvignon-gris
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids:
+      - smaak
+      - vergelijken-met-blanc
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer structuur en stijl herkennen zonder geuren of bewaarpotentieel als garantie te
+        lezen?
+    layers:
+      foundation:
+        - Wijnstijlen en smaakprofiel — Sauvignon met meer breedte
+      intermediate:
+        - Lager zuurpotentieel betekent niet dat iedere wijn slap is
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnstijlen en smaakprofiel — Sauvignon met meer breedte
+          - Lager zuurpotentieel betekent niet dat iedere wijn slap is
+        source_refs:
+          - source.plantgrape-sauvignon-gris
+          - source.civb-sauvignon-gris
+          - source.casa-silva-sauvignon-gris
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids:
+      - wijnbouw
+    target_ids: []
+    completeness_questions:
+      - Zijn de bepalende sterktes, gevoeligheden, opbrengst- en gezondheidskeuzes uitgelegd?
+    layers:
+      foundation: []
+      intermediate:
+        - Wijnbouw en gevoeligheden — een mutatie is niet vanzelf resistentie
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnbouw en gevoeligheden — een mutatie is niet vanzelf resistentie
+        source_refs:
+          - source.plantgrape-sauvignon-gris
+          - source.plantgrape-sauvignon
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids:
+      - wijnmaken
+      - suiker-lies-en-zuurstof
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk hoe verwerking, vergisting, assemblage en rijping verschillende stijlen vormen?
+    layers:
+      foundation:
+        - Wijnmaken en rijping — volume zonder verplicht hout
+      intermediate:
+        - Suikerpotentieel en textuur zijn geen eindbestemming
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wijnmaken en rijping — volume zonder verplicht hout
+          - Suikerpotentieel en textuur zijn geen eindbestemming
+        source_refs:
+          - source.plantgrape-sauvignon-gris
+          - source.civb-sauvignon-gris
+          - source.casa-silva-sauvignon-gris
+          - source.plantgrape-sauvignon
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids:
+      - verwantschap
+    target_ids: []
+    completeness_questions:
+      - Zijn synoniem, mutatie, kruising, kloon en de grenzen van herkenning goed onderscheiden?
+    layers:
+      foundation: []
+      intermediate: []
+      advanced:
+        - Synoniemen, klonen en verwantschap — mutatie, naam en selectie uit elkaar houden
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Synoniemen, klonen en verwantschap — mutatie, naam en selectie uit elkaar houden
+        source_refs:
+          - source.plantgrape-sauvignon
+      specific_claims:
+        - claim:
+            Plantgrape registreert kloon 917 en Anjou-conservatoria; CIVB gebruikt Fié Gris historisch,
+            terwijl de Plantgrape-fiche geen officieel EU-synoniem noemt.
+          status: supported
+          source_refs:
+            - source.plantgrape-sauvignon-gris
+            - source.civb-sauvignon-gris
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids:
+      - etiket
+    target_ids: []
+    completeness_questions:
+      - Wat vertelt een ras- of herkomstetiket wel en niet, en welke verwarring moet worden
+        voorkomen?
+    layers:
+      foundation:
+        - Etiket en herkenning — “Sauvignon” vertelt soms te weinig
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Etiket en herkenning — “Sauvignon” vertelt soms te weinig
+        source_refs:
+          - source.civb-sauvignon-gris
+          - source.casa-silva-sauvignon-gris
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - heden
+    target_ids: []
+    completeness_questions:
+      - Welke blijvende hedendaagse afweging is relevant zonder voorspelling, modeclaim of
+        ongedateerd areaalcijfer?
+    layers:
+      foundation: []
+      intermediate:
+        - Hedendaagse ontwikkelingen — een extra keuze binnen witte wijn
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hedendaagse ontwikkelingen — een extra keuze binnen witte wijn
+        source_refs:
+          - source.plantgrape-sauvignon-gris
+          - source.casa-silva-sauvignon-gris
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - rasbeeld
+    target_ids: []
+    completeness_questions:
+      - Is het beeld correct geïdentificeerd, vrij gelicentieerd, visueel gereviewd en eerlijk
+        begrensd?
+    layers:
+      foundation:
+        - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Correct geïdentificeerd rasbeeld met gecontroleerde rechten en begrensde caption.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      - grape.sauvignon-blanc
+      - grape.souvignier-gris
+      - region.bordeaux
+      - grape.semillon
+      - appellation.graves
+      - appellation.pessac-leognan
+      - appellation.entre-deux-mers
+      - region.loire-valley
+      - region.colchagua
+      - concept.elevage
+      - concept.acidity
+      - concept.assemblage
+      - concept.lees-ageing
+      - concept.oxidation
+      - concept.clonal-selection
+      - concept.ampelography
+    completeness_questions:
+      - Bestaan alle zelfstandig herbruikbare vervolgobjecten en staan er geen losse onverwerkte
+        namen?
+    layers:
+      foundation:
+        - Zelfstandig herbruikbare begrippen en herkomsten via canonical entities ontsluiten; drafts
+          zijn nog geen eigen pagina.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Scopegrens en herbruikbare vervolglinks.
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: grape.sauvignon-blanc
+    names:
+      nl: Sauvignon Blanc
+      en: Sauvignon Blanc
+    slugs:
+      nl: sauvignon-blanc
+      en: sauvignon-blanc
+    disposition: link
+  - id: grape.souvignier-gris
+    names:
+      nl: Souvignier Gris
+      en: Souvignier Gris
+    slugs:
+      nl: souvignier-gris
+      en: souvignier-gris
+    disposition: link
+  - id: region.bordeaux
+    names:
+      nl: Bordeaux
+      en: Bordeaux
+    slugs:
+      nl: bordeaux
+      en: bordeaux
+    disposition: link
+  - id: grape.semillon
+    names:
+      nl: Sémillon
+      en: Sémillon
+    slugs:
+      nl: semillon
+      en: semillon
+    disposition: link
+  - id: appellation.graves
+    names:
+      nl: Graves
+      en: Graves
+    slugs:
+      nl: graves
+      en: graves
+    disposition: link
+  - id: appellation.pessac-leognan
+    names:
+      nl: Pessac-Léognan
+      en: Pessac-Léognan
+    slugs:
+      nl: pessac-leognan
+      en: pessac-leognan
+    disposition: link
+  - id: appellation.entre-deux-mers
+    names:
+      nl: AOP Entre-deux-Mers
+      en: Entre-deux-Mers AOP
+    slugs:
+      nl: entre-deux-mers-aop
+      en: entre-deux-mers-aop
+    disposition: link
+  - id: region.loire-valley
+    names:
+      nl: Loirevallei
+      en: Loire Valley
+    slugs:
+      nl: loirevallei
+      en: loire-valley
+    disposition: link
+  - id: region.colchagua
+    names:
+      nl: Colchagua
+      en: Colchagua
+    slugs:
+      nl: colchagua
+      en: colchagua
+    disposition: link
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link
+  - id: concept.acidity
+    names:
+      nl: Zuur in wijn
+      en: Acidity in wine
+    slugs:
+      nl: zuur-in-wijn
+      en: acidity-in-wine
+    disposition: link
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link
+  - id: concept.lees-ageing
+    names:
+      nl: Rijping op de lies
+      en: Lees ageing
+    slugs:
+      nl: rijping-op-de-lies
+      en: lees-ageing
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.clonal-selection
+    names:
+      nl: Klonale selectie
+      en: Clonal selection
+    slugs:
+      nl: klonale-selectie
+      en: clonal-selection
+    disposition: link
+  - id: concept.ampelography
+    names:
+      nl: Ampelografie
+      en: Ampelography
+    slugs:
+      nl: ampelografie
+      en: ampelography
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

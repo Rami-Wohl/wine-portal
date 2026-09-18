@@ -1,0 +1,32 @@
+id: media.grape.malbec.vineyard
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/malbec/vineyard.jpg
+mime_type: image/jpeg
+width: 2304
+height: 1728
+checksum_sha256: ddb70f144ee287dd8032b2869fdd56bf2df45d851f6e45eca2f0a37c801db969
+alt:
+  nl: Malbec-trossen in een wijngaard in Cafayate met geleiding, irrigatieslang en bergachtig
+    achterland
+  en: Malbec bunches in a Cafayate vineyard with training wires, irrigation tubing and mountainous
+    surroundings
+caption:
+  nl:
+    Malbec in Cafayate, in het noorden van Argentinië. Trossen hangen aan geleide stokken; onderaan
+    is een irrigatieslang zichtbaar. Het bergachtige achterland hoort bij deze opname en is geen
+    voorstelling van heel Mendoza of alle Argentijnse wijnbouw.
+  en:
+    Malbec in Cafayate in northern Argentina. Bunches hang on trained vines, with irrigation tubing
+    visible below. The mountainous surroundings belong to this photograph; they do not represent all
+    Mendoza or all Argentine winegrowing.
+rights:
+  status: open-licensed
+  creator: Micah MacAllen
+  source_url: https://commons.wikimedia.org/wiki/File:Malbec_grapes_on_the_vine.jpg
+  license_name: CC BY-SA 2.0
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Micah MacAllen via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia Commons image used without crop, retouching or editorial colour alteration.

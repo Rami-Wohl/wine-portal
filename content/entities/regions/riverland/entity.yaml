@@ -1,0 +1,10 @@
+id: region.riverland
+type: region
+status: draft
+canonical_name: Riverland
+names: { nl: Riverland, en: Riverland }
+slugs: { nl: riverland, en: riverland }
+locales: { nl: overview.nl.md, en: overview.en.md }
+relations: []
+assertions: []
+source_refs: []

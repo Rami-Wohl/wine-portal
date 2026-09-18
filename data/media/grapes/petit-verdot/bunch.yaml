@@ -1,0 +1,28 @@
+id: media.grape.petit-verdot.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/petit-verdot/bunch.jpg
+mime_type: image/jpeg
+width: 1509
+height: 1000
+checksum_sha256: 14f3b33c87be94ba260206cf9aa62618206f456c451acaf8c5bb12cf6d835b5c
+alt:
+  nl: Petit Verdot-trossen met blauwe bessen tussen bladeren aan een wijnstok
+  en: Petit Verdot bunches with blue berries among vine leaves
+caption:
+  nl:
+    Petit Verdot in een wijngaard, door de fotograaf als dit ras beschreven. De opname toont trossen
+    en bladeren; ze bewijst geen suikergehalte, opbrengst of kwaliteit.
+  en:
+    Petit Verdot in a vineyard, identified as the variety by the photographer. The photograph shows
+    bunches and leaves; it does not establish sugar concentration, yield or quality.
+rights:
+  status: open-licensed
+  creator: Eric Hwang
+  source_url: https://commons.wikimedia.org/wiki/File:01_Petit_verdot.jpg
+  license_name: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Eric Hwang via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-16
+changes: Original Wikimedia Commons image used without crop, retouching or editorial colour alteration.
