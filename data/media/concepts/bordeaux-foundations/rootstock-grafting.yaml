@@ -1,0 +1,24 @@
+id: media.concept.rootstock.graft-union
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/bordeaux-foundations/rootstock-grafting.jpg
+mime_type: image/jpeg
+width: 427
+height: 640
+checksum_sha256: f870313b96ff39645d5d4b847615bbc1520bbe1655b2c5bb13df8336482a1dfe
+alt:
+  nl: Zichtbare entverbinding op een wijnstok, waar boven- en onderstam samenkomen
+  en: Visible graft union on a vine where scion and rootstock meet
+caption:
+  nl: "De verdikking markeert de entverbinding tussen boven- en onderstam. De foto toont geen wortels en zegt niet welk druivenras of welke onderstam is gebruikt."
+  en: "The swelling marks the graft union between scion and rootstock. The photograph does not show the roots or identify the grape variety or rootstock used."
+rights:
+  status: open-licensed
+  creator: Riccardo Pastore
+  source_url: https://commons.wikimedia.org/wiki/File:Vine_grafting.jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Riccardo Pastore via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-20
+changes: Wikimedia file used without further crop or editorial colour alteration.

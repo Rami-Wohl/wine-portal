@@ -1,0 +1,24 @@
+id: media.concept.claret.historic-jug
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/bordeaux-foundations/claret-jug.jpg
+mime_type: image/jpeg
+width: 1920
+height: 2399
+checksum_sha256: 072afce420a07efea48aac5634fb02d8db6c9f438185f7b16c362d1449a1d78e
+alt:
+  nl: Lege glazen claretkan uit circa 1820 met hengsel en deksel
+  en: Empty glass claret jug from around 1820, with handle and lid
+caption:
+  nl: "Een Britse of Ierse claretkan uit circa 1820 in de collectie van The Metropolitan Museum of Art. Het voorwerp getuigt van de Engelse wijnterm, niet van de kleur of productieregels van de huidige Bordeaux Claret."
+  en: "A British or Irish claret jug from around 1820 in The Metropolitan Museum of Art. The object illustrates the English wine term, not the colour or production rules of present-day Bordeaux Claret."
+rights:
+  status: open-licensed
+  creator: Richard Lee / The Metropolitan Museum of Art
+  source_url: https://commons.wikimedia.org/wiki/File:Claret_jug_MET_DP-1505-031.jpg
+  license_name: Creative Commons CC0 1.0 Universal
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: The Metropolitan Museum of Art via Wikimedia Commons, CC0 1.0
+acquired_at: 2026-09-20
+changes: Wikimedia thumbnail resized to 1920 pixels wide; no crop or editorial colour alteration.

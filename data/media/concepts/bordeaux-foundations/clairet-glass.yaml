@@ -1,0 +1,24 @@
+id: media.concept.clairet.glass
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/bordeaux-foundations/clairet-glass.png
+mime_type: image/png
+width: 853
+height: 1844
+checksum_sha256: 00f31d6e7383a1606fee79cf5905333a08e44c2088f0c7d492a40c057b3f8099
+alt:
+  nl: Glas helderroze clairet voor een landschap met wijnstokken
+  en: Glass of bright pink clairet in front of a vineyard landscape
+caption:
+  nl: "Een door de fotograaf als clairet aangeduid glas in de Bordeauxstreek. De foto laat een mogelijke kleurindruk zien; licht en glas veranderen die indruk, en uit een foto alleen volgt geen appellatiecontrole."
+  en: "A glass identified by the photographer as clairet in the Bordeaux area. It offers one impression of the colour; light and glass affect that impression, and a photograph alone cannot verify an appellation claim."
+rights:
+  status: open-licensed
+  creator: Babs2a
+  source_url: https://commons.wikimedia.org/wiki/File:Verre_de_clairet.png
+  license_name: Creative Commons CC0 1.0 Universal
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Babs2a via Wikimedia Commons, CC0 1.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia file; no crop or editorial colour alteration.

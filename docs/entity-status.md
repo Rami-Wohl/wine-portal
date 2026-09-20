@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 331 entities — 163 active, 168 draft, 0 deprecated.
+**Totaal:** 331 entities — 167 active, 164 draft, 0 deprecated.
 
 **Producentenrecords:** 156 — 19 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (163)
+## Actief — publiek vindbaar (167)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -65,8 +65,11 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | Zelfstandige pagina | `concept.botrytis` | Ja | `/concepts/botrytis-edele-rotting` | 2026-09-13 |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.estate-bottling` | Ja | `/concepts/botteling-op-het-chateau` | 2026-09-08 |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Ja | `/concepts/chateau-wijnterm` | 2026-09-14 |
+| [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Ja | `/concepts/clairet` | 2026-09-20 |
+| [Claret](../content/entities/concepts/claret/entity.yaml) | Concept | Zelfstandige pagina | `concept.claret` | Ja | `/concepts/claret` | 2026-09-20 |
 | [Courtier](../content/entities/concepts/courtier/entity.yaml) | Concept | Zelfstandige pagina | `concept.courtier` | Ja | `/concepts/courtier` | 2026-09-09 |
 | [Cru](../content/entities/concepts/cru/entity.yaml) | Concept | Zelfstandige pagina | `concept.cru` | Ja | `/concepts/cru` | 2026-09-09 |
+| [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Ja | `/concepts/druifluis-phylloxera` | 2026-09-20 |
 | [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | Zelfstandige pagina | `concept.elevage` | Ja | `/concepts/elevage` | 2026-09-16 |
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | Zelfstandige pagina | `concept.en-primeur` | Ja | `/concepts/en-primeur` | 2026-09-14 |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | Zelfstandige pagina | `concept.extraction` | Ja | `/concepts/extractie` | 2026-09-16 |
@@ -76,6 +79,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Ja | `/concepts/malolactische-omzetting` | 2026-09-16 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazinen` | 2026-09-07 |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Ja | `/concepts/negociant` | 2026-09-14 |
+| [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Ja | `/concepts/onderstam` | 2026-09-20 |
 | [Passerillage](../content/entities/concepts/passerillage/entity.yaml) | Concept | Zelfstandige pagina | `concept.passerillage` | Ja | `/concepts/passerillage` | 2026-09-14 |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Ja | `/concepts/place-de-bordeaux` | 2026-09-14 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/rijping-op-de-lies` | 2026-09-07 |
@@ -176,7 +180,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (168)
+## Draft — nog uit te werken (164)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -203,18 +207,14 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Sancerre](../content/entities/appellations/sancerre/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sancerre` | Nee — reviewroute | `/appellations/sancerre` | — |
 | [Saumur-Champigny](../content/entities/appellations/saumur-champigny/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saumur-champigny` | Nee — reviewroute | `/appellations/saumur-champigny` | — |
 | [Stellenbosch](../content/entities/appellations/stellenbosch/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.stellenbosch` | Nee — reviewroute | `/appellations/stellenbosch` | — |
-| [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Nee — reviewroute | `/concepts/clairet` | — |
-| [Claret](../content/entities/concepts/claret/entity.yaml) | Concept | Zelfstandige pagina | `concept.claret` | Nee — reviewroute | `/concepts/claret` | — |
 | [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | Zelfstandige pagina | `concept.coulure` | Nee — reviewroute | `/concepts/coulure` | — |
 | [Cuvée](../content/entities/concepts/cuvee/entity.yaml) | Concept | Zelfstandige pagina | `concept.cuvee` | Nee — reviewroute | `/concepts/cuvee` | — |
 | [Dégorgement](../content/entities/concepts/disgorgement/entity.yaml) | Concept | Zelfstandige pagina | `concept.disgorgement` | Nee — reviewroute | `/concepts/degorgement` | — |
 | [Dosage](../content/entities/concepts/dosage/entity.yaml) | Concept | Zelfstandige pagina | `concept.dosage` | Nee — reviewroute | `/concepts/dosage` | — |
-| [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Nee — reviewroute | `/concepts/druifluis-phylloxera` | — |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Nee — reviewroute | `/concepts/jaargang` | — |
 | [Koolzuurmaceratie](../content/entities/concepts/carbonic-maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.carbonic-maceration` | Nee — reviewroute | `/concepts/koolzuurmaceratie` | — |
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Nee — reviewroute | `/concepts/liqueur-de-tirage` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.massal-selection` | Nee — reviewroute | `/concepts/massale-selectie` | — |
-| [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Nee — reviewroute | `/concepts/onderstam` | — |
 | [Oxidatie](../content/entities/concepts/oxidation/entity.yaml) | Concept | Zelfstandige pagina | `concept.oxidation` | Nee — reviewroute | `/concepts/oxidation` | — |
 | [Passito](../content/entities/concepts/passito/entity.yaml) | Concept | Zelfstandige pagina | `concept.passito` | Nee — reviewroute | `/concepts/passito` | — |
 | [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Nee — reviewroute | `/concepts/remuage` | — |

@@ -1,6 +1,6 @@
 id: concept.claret
 type: concept
-status: draft
+status: active
 canonical_name: Claret
 names:
   nl: Claret
@@ -13,7 +13,12 @@ locales:
   en: overview.en.md
 relations:
   - { type: contrasts_with, target: concept.clairet }
+  - { type: related_to, target: appellation.bordeaux }
 assertions: []
 source_refs:
-  - source.boagri-bordeaux-specification-2025
-  - source.inao-bordeaux-clairet-product-page
+  - source.inao-bordeaux-claret-product-page
+  - source.boagri-bordeaux-specification-2026
+  - source.legifrance-bordeaux-order-2026
+  - source.oiv-maceration
+depth: foundation
+last_reviewed: 2026-09-20
