@@ -1,10 +1,20 @@
 id: grape.colombard
 type: grape
-status: draft
+status: active
 canonical_name: Colombard
 names: { nl: Colombard, en: Colombard }
 slugs: { nl: colombard, en: colombard }
 locales: { nl: overview.nl.md, en: overview.en.md }
-relations: []
+relations:
+  - { type: related_to, target: grape.ugni-blanc }
+  - { type: related_to, target: grape.gouais-blanc }
+  - { type: associated_with, target: appellation.cremant-de-bordeaux }
 assertions: []
-source_refs: []
+source_refs:
+  - source.plantgrape-colombard
+  - source.bnic-cognac-grapes
+  - source.bnia-armagnac-grapes
+  - source.inao-cremant-bordeaux-specification-2026
+  - source.wosa-colombard
+depth: foundation
+last_reviewed: 2026-09-20

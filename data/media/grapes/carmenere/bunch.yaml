@@ -1,0 +1,24 @@
+id: media.grape.carmenere.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/carmenere/bunch.jpg
+mime_type: image/jpeg
+width: 2592
+height: 1944
+checksum_sha256: 4f91fb30f06b1360ac83bb1ecd67c326726d3eaa5beaecd346377fbdb31f0330
+alt:
+  nl: Blauwe Carménère-druiventrossen tussen wijnbladeren
+  en: Blue Carménère grape bunches among vine leaves
+caption:
+  nl: Door de fotograaf als Carménère geïdentificeerde trossen. De foto is geen Chileens wijngaardbeeld en toont geen wijnstijl of rijpheidsmeting.
+  en: Bunches identified as Carménère by the photographer. This is not a Chilean vineyard view and it cannot establish wine style or measured ripeness.
+rights:
+  status: open-licensed
+  creator: Simon-sake
+  source_url: https://commons.wikimedia.org/wiki/File:Carmenere_grapes.jpg
+  license_name: CC BY-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Simon-sake via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia Commons image, without crop or retouching.

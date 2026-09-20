@@ -55,4 +55,30 @@ describe("active relation coverage audit", () => {
       },
     ]);
   });
+
+  it("accepts a geographically associated grape without exaggerating its importance", () => {
+    const entities = [
+      entity("appellation.example", "appellation", [{ type: "part_of", target: "region.example" }]),
+      entity("region.example", "region"),
+      entity("grape.accessory", "grape", [
+        { type: "associated_with", target: "appellation.example" },
+      ]),
+    ];
+
+    expect(auditActiveRelationCoverage(entities)).toEqual([]);
+  });
+
+  it("does not mistake a conceptual link for a grape's geographic association", () => {
+    const entities = [
+      entity("grape.unplaced", "grape", [{ type: "related_to", target: "concept.example" }]),
+      entity("concept.example", "concept"),
+    ];
+
+    expect(auditActiveRelationCoverage(entities)).toEqual([
+      {
+        entityId: "grape.unplaced",
+        message: "active grape has no documented geographic association",
+      },
+    ]);
+  });
 });

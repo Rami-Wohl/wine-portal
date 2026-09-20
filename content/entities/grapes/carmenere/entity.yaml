@@ -1,6 +1,6 @@
 id: grape.carmenere
 type: grape
-status: draft
+status: active
 canonical_name: Carménère
 names:
   nl: Carménère
@@ -11,6 +11,13 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: associated_with, target: region.bordeaux }
+  - { type: related_to, target: grape.cabernet-franc }
+  - { type: related_to, target: concept.assemblage }
 assertions: []
-source_refs: []
+source_refs:
+  - source.plantgrape-carmenere
+  - source.pszczolkowski-carmenere-chile-2004
+depth: foundation
+last_reviewed: 2026-09-20

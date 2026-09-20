@@ -1,0 +1,24 @@
+id: media.grape.colombard.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/colombard/bunch.jpg
+mime_type: image/jpeg
+width: 2339
+height: 3015
+checksum_sha256: 05745c807937bb98be096dc30a237405065f32d88bc83eb2b732259565ccc91a
+alt:
+  nl: Colombard-tros op zwarte achtergrond naast een meetschaal
+  en: Colombard bunch against a black background beside a scale
+caption:
+  nl: Geïdentificeerde Colombard-tros uit de VIVC-collectie, gefotografeerd in een laboratorium. De schaal helpt naar de vorm kijken; dit is geen opname van een wijngaard.
+  en: Identified Colombard bunch from the VIVC collection, photographed in a laboratory. The scale helps show its form; this is not a vineyard view.
+rights:
+  status: open-licensed
+  creator: Ursula Brühl, Julius Kühn-Institut
+  source_url: https://commons.wikimedia.org/wiki/File:VIVC2771_COLOMBARD_Cluster_in_the_laboratory_12071.jpg
+  license_name: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Ursula Brühl / Julius Kühn-Institut via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia Commons image, without crop or retouching.

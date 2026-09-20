@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 331 entities — 259 active, 72 draft, 0 deprecated.
+**Totaal:** 331 entities — 263 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 156 — 19 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (259)
+## Actief — publiek vindbaar (263)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -101,13 +101,17 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/zuur-in-wijn` | 2026-09-16 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
+| [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | Zelfstandige pagina | `grape.carmenere` | Ja | `/grapes/carmenere` | 2026-09-20 |
+| [Colombard](../content/entities/grapes/colombard/entity.yaml) | Druif | Zelfstandige pagina | `grape.colombard` | Ja | `/grapes/colombard` | 2026-09-20 |
 | [Malbec](../content/entities/grapes/malbec/entity.yaml) | Druif | Zelfstandige pagina | `grape.malbec` | Ja | `/grapes/malbec` | 2026-09-16 |
 | [Merlot](../content/entities/grapes/merlot/entity.yaml) | Druif | Zelfstandige pagina | `grape.merlot` | Ja | `/grapes/merlot` | 2026-09-08 |
+| [Merlot Blanc](../content/entities/grapes/merlot-blanc/entity.yaml) | Druif | Zelfstandige pagina | `grape.merlot-blanc` | Ja | `/grapes/merlot-blanc` | 2026-09-20 |
 | [Muscadelle](../content/entities/grapes/muscadelle/entity.yaml) | Druif | Zelfstandige pagina | `grape.muscadelle` | Ja | `/grapes/muscadelle` | 2026-09-16 |
 | [Petit Verdot](../content/entities/grapes/petit-verdot/entity.yaml) | Druif | Zelfstandige pagina | `grape.petit-verdot` | Ja | `/grapes/petit-verdot` | 2026-09-16 |
 | [Sauvignon Blanc](../content/entities/grapes/sauvignon-blanc/entity.yaml) | Druif | Zelfstandige pagina | `grape.sauvignon-blanc` | Ja | `/grapes/sauvignon-blanc` | 2026-09-07 |
 | [Sauvignon Gris](../content/entities/grapes/sauvignon-gris/entity.yaml) | Druif | Zelfstandige pagina | `grape.sauvignon-gris` | Ja | `/grapes/sauvignon-gris` | 2026-09-16 |
 | [Sémillon](../content/entities/grapes/semillon/entity.yaml) | Druif | Zelfstandige pagina | `grape.semillon` | Ja | `/grapes/semillon` | 2026-09-07 |
+| [Ugni Blanc](../content/entities/grapes/ugni-blanc/entity.yaml) | Druif | Zelfstandige pagina | `grape.ugni-blanc` | Ja | `/grapes/ugni-blanc` | 2026-09-20 |
 | [Château Angélus](../content/entities/producers/chateau-angelus/entity.yaml) | Producent | Monografie | `producer.chateau-angelus` | Ja | `/producers/chateau-angelus` | 2026-09-08 |
 | [Château Ausone](../content/entities/producers/chateau-ausone/entity.yaml) | Producent | Monografie | `producer.chateau-ausone` | Ja | `/producers/chateau-ausone` | 2026-09-08 |
 | [Château Badette](../content/entities/producers/chateau-badette/entity.yaml) | Producent | Registervermelding | `producer.chateau-badette` | Ja | `/classifications/classificatie-saint-emilion#producent-chateau-badette` | 2026-09-20 |
@@ -272,7 +276,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (72)
+## Draft — nog uit te werken (68)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -307,10 +311,8 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Versterking](../content/entities/concepts/fortification/entity.yaml) | Concept | Zelfstandige pagina | `concept.fortification` | Nee — reviewroute | `/concepts/fortification` | — |
 | [Alvarinho](../content/entities/grapes/alvarinho/entity.yaml) | Druif | Zelfstandige pagina | `grape.alvarinho` | Nee — reviewroute | `/grapes/alvarinho` | — |
 | [Arinarnoa](../content/entities/grapes/arinarnoa/entity.yaml) | Druif | Zelfstandige pagina | `grape.arinarnoa` | Nee — reviewroute | `/grapes/arinarnoa` | — |
-| [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | Zelfstandige pagina | `grape.carmenere` | Nee — reviewroute | `/grapes/carmenere` | — |
 | [Castets](../content/entities/grapes/castets/entity.yaml) | Druif | Zelfstandige pagina | `grape.castets` | Nee — reviewroute | `/grapes/castets` | — |
 | [Chardonnay](../content/entities/grapes/chardonnay/entity.yaml) | Druif | Zelfstandige pagina | `grape.chardonnay` | Nee — reviewroute | `/grapes/chardonnay` | — |
-| [Colombard](../content/entities/grapes/colombard/entity.yaml) | Druif | Zelfstandige pagina | `grape.colombard` | Nee — reviewroute | `/grapes/colombard` | — |
 | [Corvina](../content/entities/grapes/corvina/entity.yaml) | Druif | Zelfstandige pagina | `grape.corvina` | Nee — reviewroute | `/grapes/corvina` | — |
 | [Corvinone](../content/entities/grapes/corvinone/entity.yaml) | Druif | Zelfstandige pagina | `grape.corvinone` | Nee — reviewroute | `/grapes/corvinone` | — |
 | [Floréal](../content/entities/grapes/floreal/entity.yaml) | Druif | Zelfstandige pagina | `grape.floreal` | Nee — reviewroute | `/grapes/floreal` | — |
@@ -321,7 +323,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Liliorila](../content/entities/grapes/liliorila/entity.yaml) | Druif | Zelfstandige pagina | `grape.liliorila` | Nee — reviewroute | `/grapes/liliorila` | — |
 | [Magdeleine Noire des Charentes](../content/entities/grapes/magdeleine-noire-des-charentes/entity.yaml) | Druif | Zelfstandige pagina | `grape.magdeleine-noire-des-charentes` | Nee — reviewroute | `/grapes/magdeleine-noire-des-charentes` | — |
 | [Marselan](../content/entities/grapes/marselan/entity.yaml) | Druif | Zelfstandige pagina | `grape.marselan` | Nee — reviewroute | `/grapes/marselan` | — |
-| [Merlot Blanc](../content/entities/grapes/merlot-blanc/entity.yaml) | Druif | Zelfstandige pagina | `grape.merlot-blanc` | Nee — reviewroute | `/grapes/merlot-blanc` | — |
 | [Muscat Blanc à Petits Grains](../content/entities/grapes/muscat-blanc-a-petits-grains/entity.yaml) | Druif | Zelfstandige pagina | `grape.muscat-blanc-a-petits-grains` | Nee — reviewroute | `/grapes/muscat-blanc-a-petits-grains` | — |
 | [Pinot Gris](../content/entities/grapes/pinot-gris/entity.yaml) | Druif | Zelfstandige pagina | `grape.pinot-gris` | Nee — reviewroute | `/grapes/pinot-gris` | — |
 | [Poulsard](../content/entities/grapes/poulsard/entity.yaml) | Druif | Zelfstandige pagina | `grape.poulsard` | Nee — reviewroute | `/grapes/poulsard` | — |
@@ -333,7 +334,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Souvignier Gris](../content/entities/grapes/souvignier-gris/entity.yaml) | Druif | Zelfstandige pagina | `grape.souvignier-gris` | Nee — reviewroute | `/grapes/souvignier-gris` | — |
 | [Touriga Nacional](../content/entities/grapes/touriga-nacional/entity.yaml) | Druif | Zelfstandige pagina | `grape.touriga-nacional` | Nee — reviewroute | `/grapes/touriga-nacional` | — |
 | [Trousseau](../content/entities/grapes/trousseau/entity.yaml) | Druif | Zelfstandige pagina | `grape.trousseau` | Nee — reviewroute | `/grapes/trousseau` | — |
-| [Ugni Blanc](../content/entities/grapes/ugni-blanc/entity.yaml) | Druif | Zelfstandige pagina | `grape.ugni-blanc` | Nee — reviewroute | `/grapes/ugni-blanc` | — |
 | [Bergerac](../content/entities/regions/bergerac/entity.yaml) | Regio | Zelfstandige pagina | `region.bergerac` | Nee — reviewroute | `/regions/bergerac` | — |
 | [Colchagua](../content/entities/regions/colchagua/entity.yaml) | Regio | Zelfstandige pagina | `region.colchagua` | Nee — reviewroute | `/regions/colchagua` | — |
 | [Elzas](../content/entities/regions/alsace/entity.yaml) | Regio | Zelfstandige pagina | `region.alsace` | Nee — reviewroute | `/regions/elzas` | — |

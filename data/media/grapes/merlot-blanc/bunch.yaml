@@ -1,0 +1,24 @@
+id: media.grape.merlot-blanc.bunch
+kind: photo
+role: documentary
+status: active
+storage_key: grapes/merlot-blanc/bunch.jpg
+mime_type: image/jpeg
+width: 3065
+height: 4000
+checksum_sha256: 00e872929e271d5808c395d78b9dda85fda49fa6015bfcb8ae7f8ffe192349a2
+alt:
+  nl: Dichte tros groene Merlot Blanc-druiven tussen bladeren
+  en: Dense bunch of green Merlot Blanc grapes among leaves
+caption:
+  nl: Als Merlot Blanc geïdentificeerde tros uit de VIVC-collectie. De foto toont het ras aan de stok, niet een kenmerkende wijnstijl of Bordeauxwijngaard.
+  en: Bunch identified as Merlot Blanc in the VIVC collection. The image shows the variety on the vine, not a characteristic wine style or a Bordeaux vineyard.
+rights:
+  status: open-licensed
+  creator: Ursula Brühl, Julius Kühn-Institut
+  source_url: https://commons.wikimedia.org/wiki/File:VIVC7655_MERLOT_BLANC_Cluster_in_the_field_16765.jpg
+  license_name: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Ursula Brühl / Julius Kühn-Institut via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia Commons image, without crop or retouching.

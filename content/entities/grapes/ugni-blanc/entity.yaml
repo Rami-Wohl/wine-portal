@@ -1,10 +1,17 @@
 id: grape.ugni-blanc
 type: grape
-status: draft
+status: active
 canonical_name: Ugni Blanc
 names: { nl: Ugni Blanc, en: Ugni Blanc }
 slugs: { nl: ugni-blanc, en: ugni-blanc }
 locales: { nl: overview.nl.md, en: overview.en.md }
-relations: []
+relations:
+  - { type: associated_with, target: appellation.cremant-de-bordeaux }
 assertions: []
-source_refs: []
+source_refs:
+  - source.plantgrape-ugni-blanc
+  - source.bnic-cognac-grapes
+  - source.bnia-armagnac-grapes
+  - source.inao-cremant-bordeaux-specification-2026
+depth: foundation
+last_reviewed: 2026-09-20

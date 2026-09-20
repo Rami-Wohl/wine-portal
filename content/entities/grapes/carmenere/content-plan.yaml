@@ -1,0 +1,274 @@
+schema_version: 2
+package_id: grape.carmenere
+archetype: grape-overview
+coverage:
+  - key: identity-and-origins
+    disposition: on-page
+    block_ids: [identiteit]
+    target_ids: []
+    completeness_questions:
+      [
+        "Is oorsprong en identiteit uitgelegd zonder meer zekerheid te claimen dan de bronnen dragen?",
+      ]
+    layers:
+      {
+        foundation:
+          [
+            "Is oorsprong en identiteit uitgelegd zonder meer zekerheid te claimen dan de bronnen dragen?",
+          ],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["identity-and-origins"], source_refs: [] }
+      specific_claims:
+        [
+          {
+            claim: "Plantgrape noemt Cabernet Franc als vermoedelijke voorouder.",
+            status: supported,
+            source_refs: [source.plantgrape-carmenere],
+          },
+        ]
+    review: &complete { outline: complete, nl: complete, en: complete }
+  - key: vine-and-growing-cycle
+    disposition: on-page
+    block_ids: [groeicyclus]
+    target_ids: []
+    completeness_questions:
+      ["Kan de lezer vruchtbaarheid, bloei en rijping onderscheiden van vaste kalenderdata?"]
+    layers:
+      {
+        foundation: [],
+        intermediate:
+          ["Kan de lezer vruchtbaarheid, bloei en rijping onderscheiden van vaste kalenderdata?"],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["vine-and-growing-cycle"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims: []
+    review: *complete
+  - key: site-climate-and-soils
+    disposition: on-page
+    block_ids: [klimaat]
+    target_ids: []
+    completeness_questions:
+      ["Zijn klimaat, water en bodem causaal maar zonder bodem-smaakgarantie uitgelegd?"]
+    layers:
+      {
+        foundation:
+          ["Zijn klimaat, water en bodem causaal maar zonder bodem-smaakgarantie uitgelegd?"],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["site-climate-and-soils"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims: []
+    review: *complete
+  - key: regions-and-appellations
+    disposition: on-page
+    block_ids: [regios]
+    target_ids: []
+    completeness_questions:
+      ["Zijn de bepalende internationale rollen evenwichtig en concreet aanwezig?"]
+    layers:
+      {
+        foundation: ["Zijn de bepalende internationale rollen evenwichtig en concreet aanwezig?"],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["regions-and-appellations"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims:
+        [
+          {
+            claim: "De heridentificatie van Chileense stokken dateert uit 1994.",
+            status: supported,
+            source_refs: [source.pszczolkowski-carmenere-chile-2004],
+          },
+        ]
+    review: *complete
+  - key: wine-styles-and-sensory-profile
+    disposition: on-page
+    block_ids: [smaak]
+    target_ids: []
+    completeness_questions:
+      ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"]
+    layers:
+      {
+        foundation:
+          ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["wine-styles-and-sensory-profile"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims: []
+    review: *complete
+  - key: viticulture-and-risks
+    disposition: on-page
+    block_ids: [wijnbouw]
+    target_ids: []
+    completeness_questions:
+      ["Zijn de eigen teeltrisico's van het ras en hun praktische gevolgen helder?"]
+    layers:
+      {
+        foundation: [],
+        intermediate:
+          ["Zijn de eigen teeltrisico's van het ras en hun praktische gevolgen helder?"],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["viticulture-and-risks"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims: []
+    review: *complete
+  - key: winemaking-and-ageing
+    disposition: on-page
+    block_ids: [wijnmaken]
+    target_ids: []
+    completeness_questions:
+      ["Is duidelijk welke keuzes de wijnmaker maakt en wat het ras niet voorschrijft?"]
+    layers:
+      {
+        foundation: [],
+        intermediate:
+          ["Is duidelijk welke keuzes de wijnmaker maakt en wat het ras niet voorschrijft?"],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["winemaking-and-ageing"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims: []
+    review: *complete
+  - key: synonyms-clones-and-relatives
+    disposition: on-page
+    block_ids: [verwantschap]
+    target_ids: []
+    completeness_questions: ["Zijn synoniem, kruising en kloon nauwkeurig van elkaar gescheiden?"]
+    layers:
+      {
+        foundation: [],
+        intermediate: [],
+        advanced: ["Zijn synoniem, kruising en kloon nauwkeurig van elkaar gescheiden?"],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        {
+          topics: ["synonyms-clones-and-relatives"],
+          source_refs: [source.plantgrape-carmenere, source.pszczolkowski-carmenere-chile-2004],
+        }
+      specific_claims: []
+    review: *complete
+  - key: labels-and-recognition
+    disposition: on-page
+    block_ids: [etiket]
+    target_ids: []
+    completeness_questions: ["Helpt het etiket de lezer zonder meer te beloven dan het toont?"]
+    layers:
+      {
+        foundation: ["Helpt het etiket de lezer zonder meer te beloven dan het toont?"],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["labels-and-recognition"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims: []
+    review: *complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids: [heden]
+    target_ids: []
+    completeness_questions:
+      ["Is de huidige rol geplaatst zonder modeclaim of ongedateerd areaalcijfer?"]
+    layers:
+      {
+        foundation: [],
+        intermediate: ["Is de huidige rol geplaatst zonder modeclaim of ongedateerd areaalcijfer?"],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis:
+        { topics: ["modern-developments"], source_refs: [source.plantgrape-carmenere] }
+      specific_claims: []
+    review: *complete
+  - key: visuals
+    disposition: on-page
+    block_ids: [rasbeeld]
+    target_ids: []
+    completeness_questions:
+      ["Is het rasbeeld geïdentificeerd en zijn beeldrechten en bijschrift correct?"]
+    layers:
+      {
+        foundation: ["Is het rasbeeld geïdentificeerd en zijn beeldrechten en bijschrift correct?"],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["visuals"], source_refs: [] }
+      specific_claims: []
+    review: *complete
+  - key: child-knowledge
+    disposition: child-entity
+    block_ids: []
+    target_ids:
+      [grape.cabernet-franc, grape.merlot, concept.assemblage, concept.tannin, concept.elevage]
+    completeness_questions:
+      [
+        "Zijn noodzakelijke vervolgidentiteiten vastgelegd zonder onvoltooide pagina's te publiceren?",
+      ]
+    layers:
+      {
+        foundation:
+          [
+            "Zijn noodzakelijke vervolgidentiteiten vastgelegd zonder onvoltooide pagina's te publiceren?",
+          ],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      general_synthesis: { topics: ["child-knowledge"], source_refs: [] }
+      specific_claims: []
+    review: *complete
+entity_dependencies:
+  - id: region.bordeaux
+    names: { nl: "Bordeaux", en: "Bordeaux" }
+    slugs: { nl: bordeaux, en: bordeaux }
+    disposition: link
+  - id: grape.cabernet-franc
+    names: { nl: "Cabernet Franc", en: "Cabernet Franc" }
+    slugs: { nl: cabernet-franc, en: cabernet-franc }
+    disposition: link
+  - id: grape.merlot
+    names: { nl: "Merlot", en: "Merlot" }
+    slugs: { nl: merlot, en: merlot }
+    disposition: link
+  - id: concept.assemblage
+    names: { nl: "Assemblage", en: "Blending" }
+    slugs: { nl: assemblage, en: blending }
+    disposition: link
+  - id: concept.tannin
+    names: { nl: "Tannine", en: "Tannin" }
+    slugs: { nl: tannine, en: tannin }
+    disposition: link
+  - id: concept.elevage
+    names: { nl: "Élevage", en: "Maturation" }
+    slugs: { nl: elevage, en: maturation }
+    disposition: link
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

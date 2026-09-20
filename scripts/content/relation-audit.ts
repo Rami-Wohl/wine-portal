@@ -66,10 +66,19 @@ export function auditActiveRelationCoverage(entities: AuditableEntity[]): Relati
       });
     }
 
-    if (entity.type === "grape" && !hasIncomingRelation(entities, entity.id, "important_grape")) {
+    const hasGeographicAssociation = entity.relations.some(
+      ({ type, target }) =>
+        type === "associated_with" &&
+        (target.startsWith("region.") || target.startsWith("appellation.")),
+    );
+    if (
+      entity.type === "grape" &&
+      !hasIncomingRelation(entities, entity.id, "important_grape") &&
+      !hasGeographicAssociation
+    ) {
       findings.push({
         entityId: entity.id,
-        message: "active grape is not marked as an important grape anywhere",
+        message: "active grape has no documented geographic association",
       });
     }
   }
