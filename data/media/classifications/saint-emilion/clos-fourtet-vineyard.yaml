@@ -1,0 +1,24 @@
+id: media.classification.saint-emilion.clos-fourtet-vineyard
+kind: photo
+role: documentary
+status: active
+storage_key: classifications/saint-emilion/clos-fourtet-vineyard.jpg
+mime_type: image/jpeg
+width: 2023
+height: 1307
+checksum_sha256: c7204c0aaffecd8e4bd2a108c83e1a0a7715ea3f49fca25757c6af9aaf5b3814
+alt:
+  nl: Wijnstokken, rozen en een gebouw van Clos Fourtet op een foto uit 2006
+  en: Vines, roses and a Clos Fourtet building in a 2006 photograph
+caption:
+  nl: Clos Fourtet in 2006. Deze foto toont één domein uit de classificatie, niet het landschap of de stijl van alle 85 geklasseerde crus.
+  en: Clos Fourtet in 2006. This photograph shows one estate in the classification, not the landscape or style of all 85 classified growths.
+rights:
+  status: open-licensed
+  creator: Ernmuhl
+  source_url: https://commons.wikimedia.org/wiki/File:StEmilion32_Waigudd_Clos_Fourtet_wn.jpg
+  license_name: Creative Commons Attribution-ShareAlike 3.0 Unported
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Ernmuhl via Wikimedia Commons, CC BY-SA 3.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia file used without crop or editorial colour alteration.

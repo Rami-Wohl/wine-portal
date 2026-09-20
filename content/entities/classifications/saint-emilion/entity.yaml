@@ -47,5 +47,16 @@ source_refs:
   - source.inao-saint-emilion-grand-cru-overview
   - source.decanter-cheval-blanc-ausone-withdrawal-2021
   - source.chateau-angelus-withdrawal-2022
+  - source.saint-emilion-beau-sejour-becot
+  - source.saint-emilion-beausejour-duffau-lagarrosse
+  - source.saint-emilion-belair-monange
+  - source.saint-emilion-canon-la-gaffeliere
+  - source.saint-emilion-clos-fourtet
+  - source.saint-emilion-larcis-ducasse
+  - source.saint-emilion-la-mondotte
+  - source.saint-emilion-pavie-macquin
+  - source.saint-emilion-troplong-mondot
+  - source.saint-emilion-trottevieille
+  - source.saint-emilion-valandraud
 depth: foundation
 last_reviewed: 2026-09-08

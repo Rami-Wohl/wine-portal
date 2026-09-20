@@ -452,7 +452,9 @@ test("Médoc keeps its regional distinctions, imagery and depth layers usable on
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
 
-test("Saint-Émilion classification reveals its current ranks progressively", async ({ page }) => {
+test("Saint-Émilion classification resolves its 2022 producer cohort progressively", async ({
+  page,
+}) => {
   await page.goto("/classifications/classificatie-saint-emilion");
 
   await expect(
@@ -463,24 +465,43 @@ test("Saint-Émilion classification reveals its current ranks progressively", as
   const depthControl = page.getByRole("group", {
     name: "Kies hoeveel detail je wilt zien",
   });
-  const premiers = page.locator("#premiers-2022");
-  const grands = page.locator("#grands-2022");
+  const premiers = page.locator('[data-parent="premier-profielen"]');
+  const grands = page.locator('[data-parent="register-2022"]');
 
-  await expect(premiers).toBeHidden();
-  await expect(grands).toBeHidden();
+  await expect(premiers).toHaveCount(11);
+  await expect(premiers.first()).toBeHidden();
+  await expect(grands).toHaveCount(71);
+  await expect(grands.first()).toBeVisible();
+  for (const name of ["Château Canon", "Château Figeac", "Château Pavie"]) {
+    await expect(
+      page.locator("#premier-profielen").getByRole("link", { name, exact: true }),
+    ).toBeVisible();
+  }
 
   await depthControl.getByRole("button", { name: "Verdieping" }).click();
-  await expect(premiers).toBeVisible();
-  await expect(premiers.getByRole("link")).toHaveCount(14);
-  await expect(grands).toBeHidden();
+  await expect(premiers.first()).toBeVisible();
+  await expect(page.locator("#producent-chateau-trolong-mondot")).toContainText("Troplong Mondot");
 
   await depthControl.getByRole("button", { name: "Gevorderd" }).click();
-  await expect(grands).toBeVisible();
-  await expect(grands.getByRole("link")).toHaveCount(71);
-  await expect(premiers.getByRole("link", { name: "Château Figeac (A)" })).toHaveAttribute(
-    "href",
-    "/producers/chateau-figeac",
+  await expect(grands.first()).toBeVisible();
+  await expect(premiers.first()).toBeVisible();
+  await expect(
+    page.locator("#premier-profielen").getByRole("link", { name: "Château Figeac" }),
+  ).toHaveAttribute("href", "/producers/chateau-figeac");
+});
+
+test("Saint-Émilion embedded producer routes reach stable anchors", async ({ page }) => {
+  await page.goto("/producers/chateau-beau-sejour-becot");
+  await expect(page).toHaveURL(
+    /\/classifications\/classificatie-saint-emilion#producent-chateau-beau-sejour-becot$/,
   );
+  await expect(page.locator("#producent-chateau-beau-sejour-becot")).toBeVisible();
+
+  await page.goto("/producers/chateau-badette");
+  await expect(page).toHaveURL(
+    /\/classifications\/classificatie-saint-emilion#producent-chateau-badette$/,
+  );
+  await expect(page.locator("#producent-chateau-badette")).toBeVisible();
 });
 
 test("the two revisable Médoc classifications explain their distinct systems", async ({ page }) => {

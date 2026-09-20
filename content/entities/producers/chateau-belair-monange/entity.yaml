@@ -1,6 +1,6 @@
 id: producer.chateau-belair-monange
 type: producer
-status: draft
+status: active
 canonical_name: Château Bélair-Monange
 names:
   nl: Château Bélair-Monange
@@ -23,4 +23,6 @@ relations:
       tier: premier-grand-cru-classe
     valid_from: 2022
 assertions: []
-source_refs: [source.inao-saint-emilion-classification-2022]
+source_refs: [source.inao-saint-emilion-classification-2022, source.saint-emilion-belair-monange]
+depth: foundation
+last_reviewed: 2026-09-20
