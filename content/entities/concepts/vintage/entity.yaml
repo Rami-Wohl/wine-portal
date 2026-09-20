@@ -1,6 +1,6 @@
 id: concept.vintage
 type: concept
-status: draft
+status: active
 canonical_name: Vintage
 names:
   nl: Jaargang
@@ -13,4 +13,10 @@ locales:
   en: overview.en.md
 relations: []
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-vintage-labelling-2023
+  - source.oiv-climate-variability-2015
+  - source.champagne-non-vintage-brut
+  - source.oiv-terroir-definition-2010
+depth: foundation
+last_reviewed: 2026-09-20

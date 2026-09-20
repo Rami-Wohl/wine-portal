@@ -1,0 +1,24 @@
+id: media.concept.terroir.vineyard-work
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/place-and-time/terroir-vineyard-work.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1275
+checksum_sha256: a80b95ce7074df46fc71bd247c35cf358ba69a12f8f00fabaf43e4e749825a03
+alt:
+  nl: Wijngaardwerker en paard bewerken de bodem tussen wijnstokken in Bourgogne
+  en: Vineyard worker and horse till soil among vines in Burgundy
+caption:
+  nl: "Bodembewerking bij Vosne-Romanée in Bourgogne. De foto toont een menselijke keuze in een wijngaardlandschap, niet het volledige terroir of de smaak van de wijn."
+  en: "Soil cultivation near Vosne-Romanée in Burgundy. The photograph shows one human choice within a vineyard landscape, not the whole terroir or the wine's flavour."
+rights:
+  status: open-licensed
+  creator: Michal Osmenda
+  source_url: https://commons.wikimedia.org/wiki/File:A_vineyard_worker_manually_tills_the_soil_near_Vosne-Roman%C3%A9e_in_Burgundy_(7309839432).jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Michal Osmenda via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-20
+changes: Wikimedia thumbnail resized to 1920 pixels wide; no crop or editorial colour alteration.

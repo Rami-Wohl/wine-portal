@@ -1,0 +1,24 @@
+id: media.concept.vintage.harvest
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/place-and-time/vintage-harvest.jpg
+mime_type: image/jpeg
+width: 1440
+height: 1597
+checksum_sha256: 0f4b1172f52ef95a0636a9e9a51ed6f9f312dc054cb67eeb0d7f97a1ab54f460
+alt:
+  nl: Persoon knipt een tros druiven van de wijnstok tijdens de oogst
+  en: Person cuts a bunch of grapes from a vine during harvest
+caption:
+  nl: "Druivenoogst in Spanje. Het oogstjaar verwijst naar het jaar waarin de druiven zijn geplukt; deze foto vertelt niets over de kwaliteit of samenstelling van een specifieke wijn."
+  en: "Grape harvest in Spain. A vintage refers to the year the grapes were picked; this photograph says nothing about the quality or composition of a particular wine."
+rights:
+  status: open-licensed
+  creator: Mike McBey
+  source_url: https://commons.wikimedia.org/wiki/File:Harvesting_Grapes,_Spain_(29694546017).jpg
+  license_name: Creative Commons Attribution 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Mike McBey via Wikimedia Commons, CC BY 2.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia resolution; no crop or editorial colour alteration.
