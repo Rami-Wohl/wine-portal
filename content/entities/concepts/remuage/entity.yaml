@@ -1,6 +1,6 @@
 id: concept.remuage
 type: concept
-status: draft
+status: active
 canonical_name: Riddling
 names:
   nl: Remuage
@@ -11,7 +11,12 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.disgorgement }
 assertions: []
 source_refs:
   - source.inao-cremant-bordeaux-specification-2026
+  - source.champagne-riddling
+  - source.champagne-disgorgement
+depth: foundation
+last_reviewed: 2026-09-20

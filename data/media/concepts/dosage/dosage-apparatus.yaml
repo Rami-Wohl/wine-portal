@@ -1,0 +1,23 @@
+id: media.concept.dosage.dosage-apparatus
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/dosage/dosage-apparatus.jpg
+mime_type: image/jpeg
+width: 502
+height: 719
+checksum_sha256: 13bb6b5e2ca18d51818f3cc0572bd30560cdd677b16458f5b56983c33a0e47d5
+alt:
+  nl: Mechanisch apparaat met champagneflessen voor dosage na dégorgement
+  en: Mechanical apparatus holding Champagne bottles for dosage after disgorgement
+caption:
+  nl: Een apparaat voor het doseren van Champagne na dégorgement. Het beeld laat de bewerking zien, niet de hoeveelheid suiker in een afgewerkte wijn.
+  en: A Champagne dosage apparatus used after disgorgement. The image shows the operation, not the sugar level of a finished wine.
+rights:
+  status: public-domain
+  creator: BerndtF
+  source_url: https://commons.wikimedia.org/wiki/File:Dosage_Champagner.jpg
+  license_name: Public domain dedication by creator
+  credit_line: BerndtF via Wikimedia Commons, public domain
+acquired_at: 2026-09-20
+changes: Original Wikimedia file; no crop or editorial colour alteration.

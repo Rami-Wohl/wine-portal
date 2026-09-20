@@ -1,0 +1,24 @@
+id: media.concept.cuvee.barrels-by-vineyard
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/cuvee/barrels-by-vineyard.jpg
+mime_type: image/jpeg
+width: 2592
+height: 1944
+checksum_sha256: fec2135c345c3cce62e38e64ae868c73ba0da3d8720969067e41aa195a5d2473
+alt:
+  nl: Houten vaten met verschillende plaats- en wijngaardnamen in een champagnekelder
+  en: Wooden barrels marked with different place and vineyard names in a Champagne cellar
+caption:
+  nl: Afzonderlijk gelabelde wijnpartijen in de kelder van Veuve Clicquot. Een cuvée kan uit een selectie of assemblage van partijen ontstaan; deze foto bewijst niet hoe een bepaalde botteling is samengesteld.
+  en: Separately labelled wine lots in the Veuve Clicquot cellar. A cuvée can come from a selection or blend of lots; this photograph does not establish how any particular bottling was composed.
+rights:
+  status: open-licensed
+  creator: Tomas er
+  source_url: https://commons.wikimedia.org/wiki/File:Barrels_in_Veuve_Clicquot_cellars.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Tomas er via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia file; no crop or editorial colour alteration.

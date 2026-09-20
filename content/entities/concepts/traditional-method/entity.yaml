@@ -1,6 +1,6 @@
 id: concept.traditional-method
 type: concept
-status: draft
+status: active
 canonical_name: Traditional method
 names:
   nl: Traditionele methode
@@ -11,7 +11,18 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.second-fermentation }
+  - { type: related_to, target: concept.remuage }
+  - { type: related_to, target: concept.disgorgement }
+  - { type: related_to, target: concept.dosage }
 assertions: []
 source_refs:
   - source.inao-cremant-bordeaux-specification-2026
+  - source.champagne-bottling-second-fermentation
+  - source.champagne-riddling
+  - source.champagne-disgorgement
+  - source.champagne-dosage
+  - source.awri-lees-contact-2020
+depth: foundation
+last_reviewed: 2026-09-20

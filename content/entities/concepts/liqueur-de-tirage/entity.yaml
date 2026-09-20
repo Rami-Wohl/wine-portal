@@ -1,6 +1,6 @@
 id: concept.liqueur-de-tirage
 type: concept
-status: draft
+status: active
 canonical_name: Liqueur de tirage
 names:
   nl: Liqueur de tirage
@@ -11,7 +11,13 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - { type: related_to, target: concept.second-fermentation }
+  - { type: related_to, target: concept.dosage }
 assertions: []
 source_refs:
   - source.inao-cremant-bordeaux-specification-2026
+  - source.champagne-bottling-second-fermentation
+  - source.champagne-dosage
+depth: foundation
+last_reviewed: 2026-09-20

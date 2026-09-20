@@ -1,10 +1,15 @@
 id: concept.oxidation
 type: concept
-status: draft
+status: active
 canonical_name: Oxidation
 names: { nl: Oxidatie, en: Oxidation }
 slugs: { nl: oxidation, en: oxidation }
 locales: { nl: overview.nl.md, en: overview.en.md }
-relations: []
+relations:
+  - { type: related_to, target: concept.elevage }
 assertions: []
-source_refs: []
+source_refs:
+  - source.awri-wine-faults
+  - source.wine-australia-oxygen-style
+depth: foundation
+last_reviewed: 2026-09-20

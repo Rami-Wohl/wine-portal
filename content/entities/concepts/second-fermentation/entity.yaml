@@ -1,6 +1,6 @@
 id: concept.second-fermentation
 type: concept
-status: draft
+status: active
 canonical_name: Second fermentation
 names:
   nl: Tweede vergisting
@@ -15,3 +15,6 @@ relations: []
 assertions: []
 source_refs:
   - source.inao-cremant-bordeaux-specification-2026
+  - source.champagne-bottling-second-fermentation
+depth: foundation
+last_reviewed: 2026-09-20

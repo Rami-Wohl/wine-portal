@@ -6,10 +6,10 @@ storage_key: appellations/cremant-de-bordeaux/traditional-method.svg
 mime_type: image/svg+xml
 width: 1800
 height: 900
-checksum_sha256: 35e961472f56b7c97a487c847478afa00f2a473bd2ae83f0feebdbfe64294b05
+checksum_sha256: 0cacc2728fb9bcae7dc68aa6c0380a00105795601125d1afea18daa06d245bae
 alt:
-  nl: Zes stappen van handmatige oogst tot vrijgave bij de traditionele methode
-  en: Six stages from hand harvest to release in the traditional method
+  nl: Zes stappen van oogst tot vrijgave bij de traditionele methode
+  en: Six stages from harvest to release in the traditional method
 caption:
   nl: Na oogst en persing volgt de tweede vergisting in de fles, rijping op de gist, dégorgement en uiteindelijk vrijgave.
   en: Harvesting and pressing are followed by the second fermentation in bottle, ageing on lees, disgorgement and final release.
@@ -19,4 +19,4 @@ rights:
   license_name: Project-owned original SVG
   credit_line: Oenocademy
 acquired_at: 2026-09-11
-changes: Original educational illustration.
+changes: Original educational illustration; revised accessibility description to avoid implying hand harvest is universal.

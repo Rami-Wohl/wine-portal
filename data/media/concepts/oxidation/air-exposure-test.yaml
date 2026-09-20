@@ -1,0 +1,24 @@
+id: media.concept.oxidation.air-exposure-test
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/oxidation/air-exposure-test.jpg
+mime_type: image/jpeg
+width: 1970
+height: 2878
+checksum_sha256: 52dabd7c091f8288c8ed91a7bf98059fb37a4271817c0b634a0c28bee76f89b3
+alt:
+  nl: Twee flessen van hetzelfde wijnmonster, links lichter en rechts donkerder na langer contact met lucht
+  en: Two bottles of the same wine sample, paler on the left and darker on the right after longer air exposure
+caption:
+  nl: "Een luchtblootstellingstest van één wijnmonster: links na één uur, rechts na 24 uur. De kleurverandering is in dit voorbeeld zichtbaar, maar zegt niet dat iedere wijn zo snel of op dezelfde manier oxideert."
+  en: "An air-exposure test of one wine sample: left after one hour, right after 24 hours. Colour change is visible here, but this does not mean every wine oxidises as quickly or in the same way."
+rights:
+  status: open-licensed
+  creator: Olivier Lemoine
+  source_url: https://commons.wikimedia.org/wiki/File:Test_tenue_%C3%A0_l%27air.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Olivier Lemoine via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia file; no crop or editorial colour alteration.

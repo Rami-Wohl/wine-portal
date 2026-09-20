@@ -1,6 +1,6 @@
 id: concept.cuvee
 type: concept
-status: draft
+status: active
 canonical_name: Cuvée
 names:
   nl: Cuvée
@@ -13,4 +13,8 @@ locales:
   en: overview.en.md
 relations: []
 assertions: []
-source_refs: []
+source_refs:
+  - source.champagne-blending
+  - source.champagne-pressing
+depth: foundation
+last_reviewed: 2026-09-20

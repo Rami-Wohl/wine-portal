@@ -1,0 +1,24 @@
+id: media.concept.disgorgement.neck-freezing
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/disgorgement/neck-freezing.jpg
+mime_type: image/jpeg
+width: 3648
+height: 2736
+checksum_sha256: 3cdb2524ee0a4856e8bc247e079cb9e6e86eb05676931fbf2595099593bbc13e
+alt:
+  nl: Omgekeerde flessen met hun hals in een machine voor het bevriezen van het gistdepot
+  en: Inverted bottles with their necks in a machine that freezes the yeast deposit
+caption:
+  nl: De flessenhalzen worden bevroren vóór het dégorgement. De foto toont de voorbereiding, niet het moment waarop de ijsprop naar buiten schiet.
+  en: Bottle necks are frozen before disgorgement. The photograph shows preparation, not the instant when the ice plug is expelled.
+rights:
+  status: open-licensed
+  creator: Robert Pitkin
+  source_url: https://commons.wikimedia.org/wiki/File:Freezing_the_neck_of_sparkling_wine_bottles_to_remove_sediment_while_disgorging_after_riddling.jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Robert Pitkin via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia file; no crop or editorial colour alteration.

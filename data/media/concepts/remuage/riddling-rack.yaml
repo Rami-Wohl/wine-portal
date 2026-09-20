@@ -1,0 +1,24 @@
+id: media.concept.remuage.riddling-rack
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/remuage/riddling-rack.jpg
+mime_type: image/jpeg
+width: 1280
+height: 960
+checksum_sha256: 80818c792437e957937a6342f7ad2736fe76e3e21c172b2b4d199400a38234de
+alt:
+  nl: Onderkanten van omgekeerde champagneflessen in een houten remuagerek
+  en: Bases of inverted Champagne bottles in a wooden riddling rack
+caption:
+  nl: Flessen in een pupitre, het rek voor handmatige remuage. De flessen worden stapsgewijs gedraaid en gekanteld; het gistdepot is op deze foto niet zichtbaar.
+  en: Bottles in a pupitre, the rack used for hand riddling. They are turned and tilted in stages; the yeast deposit is not visible in this photograph.
+rights:
+  status: open-licensed
+  creator: Amanda Slater
+  source_url: https://commons.wikimedia.org/wiki/File:Champagne_bottles_in_riddling_rack.jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Amanda Slater via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-09-20
+changes: Original Wikimedia file; no crop or editorial colour alteration.
