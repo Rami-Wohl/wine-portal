@@ -25,14 +25,14 @@ Peildatum: 2026-09-21.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 17 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-033` t/m `MNT-038` |
+| Open | 16 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-034` t/m `MNT-038` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 18 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` |
+| Afgerond | 19 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032`, `MNT-033` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben zeven acties prioriteit `hoog` en tien
+Van het uitvoerbare open werk hebben zeven acties prioriteit `hoog` en negen
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -250,23 +250,6 @@ geographydatalaag.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
 - **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
 
-### `MNT-033` — README en developer-onboarding actualiseren
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** documentatie, operations
-- **Scope:** hoofd-README en de eerste lokale ontwikkelrun
-- **Herkomst:** onderhoudsplan 2026-09-21
-- **Bevinding:** de algemene README moet opnieuw tegen de actuele repository,
-  scripts, contentworkflow, runtimevereisten en browserinstallatie worden
-  getoetst; verouderde of onvolledige onboarding vergroot de kans op afwijkende
-  lokale werkwijzen.
-- **Klaar wanneer:** een nieuwe developer vanuit één actuele ingang de app kan
-  installeren, starten, content kan authoren en genereren, media kan valideren
-  en de vaste kwaliteitschecks kan uitvoeren, zonder impliciete kennis of een
-  ongeldig voorbeeldcommando.
-- **Log:** 2026-09-21 — geregistreerd voor uitvoering direct na de routemigratie.
-
 ### `MNT-034` — Volledige artikelinhoud doorzoekbaar maken
 
 - **Status:** open
@@ -353,6 +336,26 @@ geographydatalaag.
   kleine aanvulling.
 
 ## Historie
+
+### `MNT-033` — README en developer-onboarding actualiseren
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** documentatie, operations
+- **Scope:** hoofd-README en de eerste lokale ontwikkelrun
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** de algemene README moest opnieuw tegen de actuele repository,
+  scripts, contentworkflow, runtimevereisten en browserinstallatie worden
+  getoetst; het producentenvoorbeeld was ongeldig en essentiële context ontbrak.
+- **Klaar wanneer:** een nieuwe developer vanuit één actuele ingang de app kan
+  installeren, starten, content kan authoren en genereren, media kan valideren
+  en de vaste kwaliteitschecks kan uitvoeren, zonder impliciete kennis of een
+  ongeldig voorbeeldcommando.
+- **Log:** 2026-09-21 — afgerond. De README documenteert nu Node `>=20.9.0`,
+  reproduceerbare installatie, de Playwright-browser, canonical versus
+  generated data, de tweetalige entityworkflow, correcte generatorvoorbeelden,
+  het mediasysteem, alle huidige scripts en een risicogestuurde testkeuze. Alle
+  lokale links en genoemde niet-mutatieve commando's zijn gecontroleerd.
 
 ### `MNT-032` — Canonieke Engelstalige URL-slugs invoeren
 
