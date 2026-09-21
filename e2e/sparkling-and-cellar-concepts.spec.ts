@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 const concepts = [
   {
-    slug: "traditionele-methode",
+    slug: "traditional-method",
     title: "Traditionele methode",
     intermediate: "gistcontact",
     advanced: "grenzen",
@@ -25,7 +25,7 @@ const concepts = [
     intermediate: "hand-en-machine",
     advanced: "uitzonderingen",
   },
-  { slug: "degorgement", title: "Dégorgement", intermediate: "varianten", advanced: "zuurstof" },
+  { slug: "disgorgement", title: "Dégorgement", intermediate: "varianten", advanced: "zuurstof" },
   { slug: "dosage", title: "Dosage", intermediate: "smaakbalans", advanced: "etiket-en-grenzen" },
   { slug: "cuvee", title: "Cuvée", intermediate: "geen-garantie", advanced: "context" },
   { slug: "oxidation", title: "Oxidatie", intermediate: "kwetsbaarheid", advanced: "chemie" },

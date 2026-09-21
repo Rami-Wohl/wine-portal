@@ -16,7 +16,7 @@ arrange shared knowledge into a useful sequence. They must not create parallel
 copies of canonical facts.
 
 Self-contained entity and narrative packages are the canonical authoring unit.
-Preserve the repository's stable IDs, localized routes, relation and backlink
+Preserve the repository's stable IDs, canonical routes and localized route aliases, relation and backlink
 generation, content pipeline, and provenance model. Generated indexes and
 runtime bundles are outputs, not authoring sources. The detailed contract is in
 `knowledge-architecture.md`.

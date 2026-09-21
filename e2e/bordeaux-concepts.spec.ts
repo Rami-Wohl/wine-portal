@@ -14,13 +14,13 @@ const concepts = [
     advanced: "huidige-regels",
   },
   {
-    path: "/concepts/druifluis-phylloxera",
+    path: "/concepts/phylloxera",
     title: "Druifluis (phylloxera)",
     intermediate: "blad-en-wortelvormen",
     advanced: "resistentie-heeft-grenzen",
   },
   {
-    path: "/concepts/onderstam",
+    path: "/concepts/rootstock",
     title: "Onderstam",
     intermediate: "eigen-wortels",
     advanced: "grenzen-van-oplossing",

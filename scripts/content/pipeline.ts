@@ -848,6 +848,26 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       issues,
     );
   }
+  findDuplicates(
+    entityRecords.flatMap(({ file, value }) =>
+      Array.from(new Set(LOCALES.map((locale) => value.slugs[locale]))).map((slug) => ({
+        key: `${value.type}:${slug}`,
+        file,
+      })),
+    ),
+    "entity route slug",
+    issues,
+  );
+  findDuplicates(
+    narrativeRecords.flatMap(({ file, value }) =>
+      Array.from(new Set(LOCALES.map((locale) => value.slugs[locale]))).map((slug) => ({
+        key: `${value.type}:${slug}`,
+        file,
+      })),
+    ),
+    "narrative route slug",
+    issues,
+  );
 
   const entityIds = entityRecords.map(({ value }) => value.id).sort();
   const entityIdSet = new Set(entityIds);

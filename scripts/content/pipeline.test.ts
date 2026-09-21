@@ -329,6 +329,16 @@ describe("content pipeline validation", () => {
     );
   });
 
+  it("rejects route collisions across localized entity slugs", async () => {
+    const root = await temporaryRoot();
+    await addEntity(root, { id: "region.first", enSlug: "shared" });
+    await addEntity(root, { id: "region.second", nlSlug: "shared" });
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /Duplicate entity route slug 'region:shared'/,
+    );
+  });
+
   it("rejects an ID whose prefix does not match its entity type", async () => {
     const root = await temporaryRoot();
     await addEntity(root, { id: "region.example", type: "producer" });

@@ -231,10 +231,17 @@ Een ID verandert niet door vertaling of een kleine naamswijziging.
 ### Slugs zijn presentatie; IDs zijn identiteit
 
 Het datacontract ondersteunt verschillende NL- en EN-slugs die naar dezelfde
-entity wijzen. De pipeline valideert slugbotsingen per entity- of narrativetype en
-locale en genereert een `localized_slugs`-index. Alleen de Nederlandse routes en
-presentatielaag zijn momenteel in de applicatie geïmplementeerd; een Engelse slug
-is dus nog geen publieke Engelse URL.
+entity wijzen. De Engelse slug is taaloverstijgend de canonieke publieke
+routecomponent; de Nederlandse slug blijft een gelokaliseerde legacy-alias die
+permanent naar die canonieke route verwijst. Dit houdt URLs voorspelbaar zonder
+bestaande bookmarks of externe links te breken. De keuze zegt niets over de
+weergavetaal: de huidige publieke interface en contentpresentatie blijven
+Nederlands.
+
+De pipeline valideert slugbotsingen per locale én over alle route-aliases binnen
+hetzelfde entity- of narrativetype. De `localized_slugs`-index bewaart beide
+lookups; interne links, canonicals en de sitemap gebruiken uitsluitend de Engelse
+slug. Stable IDs blijven de identiteit en veranderen niet bij een routewijziging.
 
 ### Gedeeld en gelokaliseerd
 

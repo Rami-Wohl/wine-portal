@@ -21,18 +21,18 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-09-20.
+Peildatum: 2026-09-21.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 11 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031` |
+| Open | 17 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-033` t/m `MNT-038` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 17 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029` |
+| Afgerond | 18 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben vier acties prioriteit `hoog` en zeven
+Van het uitvoerbare open werk hebben zeven acties prioriteit `hoog` en tien
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -250,7 +250,130 @@ geographydatalaag.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
 - **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
 
+### `MNT-033` — README en developer-onboarding actualiseren
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** documentatie, operations
+- **Scope:** hoofd-README en de eerste lokale ontwikkelrun
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** de algemene README moet opnieuw tegen de actuele repository,
+  scripts, contentworkflow, runtimevereisten en browserinstallatie worden
+  getoetst; verouderde of onvolledige onboarding vergroot de kans op afwijkende
+  lokale werkwijzen.
+- **Klaar wanneer:** een nieuwe developer vanuit één actuele ingang de app kan
+  installeren, starten, content kan authoren en genereren, media kan valideren
+  en de vaste kwaliteitschecks kan uitvoeren, zonder impliciete kennis of een
+  ongeldig voorbeeldcommando.
+- **Log:** 2026-09-21 — geregistreerd voor uitvoering direct na de routemigratie.
+
+### `MNT-034` — Volledige artikelinhoud doorzoekbaar maken
+
+- **Status:** open
+- **Prioriteit:** hoog
+- **Categorie:** search, knowledge-data, product-ux
+- **Scope:** zoekindex, ranking, snippets en resultaatlinks
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** zoeken vindt entities en metadata, maar benut de eigenlijke
+  artikeltitels, paragrafen en relevante beeldbijschriften nog onvoldoende.
+- **Klaar wanneer:** betekenisvolle inhoud uit actieve, gelokaliseerde
+  contentblokken reproduceerbaar wordt geïndexeerd; resultaten een begrijpelijke
+  contextsnippet en zo mogelijk een stabiele sectieanchor tonen; ranking
+  entitynamen boven losse teksttreffers houdt; en kennisdiepte geen verborgen
+  informatie onvindbaar maakt.
+- **Log:** 2026-09-21 — geregistreerd; uitvoering volgt na de onboardingcheck.
+
+### `MNT-035` — Zoekinteractie direct en zichtbaar maken
+
+- **Status:** open
+- **Prioriteit:** hoog
+- **Categorie:** search, product-ux, accessibility, testing
+- **Scope:** zoekpagina zonder en met query, desktop en mobiel
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** zonder query krijgt het invoerveld niet vanzelf focus; na een
+  zoekactie kunnen resultaten onder de fold verschijnen zonder zichtbare
+  terugkoppeling.
+- **Klaar wanneer:** een lege zoekpagina het zoekveld veilig focust, een
+  uitgevoerde zoekopdracht het resultaatgebied zichtbaar maakt of focust zonder
+  onverwachte beweging, reduced-motion en browsergeschiedenis respecteert, en
+  het gedrag met Playwright op relevante viewports is afgedekt.
+- **Log:** 2026-09-21 — geregistreerd als aparte UX-laag boven op MNT-034.
+
+### `MNT-036` — Discovery schaalbaar maken met hiërarchie en facetten
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** discovery, product-ux, information-architecture
+- **Scope:** Ontdekken en grote entiteitverzamelingen
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** de huidige categoriepresentatie is helder voor het bestaande
+  corpus, maar vlakke lijsten blijven niet scanbaar bij honderden of duizenden
+  onderwerpen per categorie.
+- **Klaar wanneer:** de interface typegebonden tussenniveaus, hiërarchie en
+  betekenisvolle filters of facetten kan tonen; filtertoestand deelbaar in de
+  URL is; kleine collecties compact blijven; en de oplossing geen generieke,
+  lege filterlaag over ieder entitytype legt.
+- **Log:** 2026-09-21 — geregistreerd voor een informatiearchitectuurreview na
+  de zoekverbeteringen.
+
+### `MNT-037` — Defensieve formuleringen corpusbreed terugdringen
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** editorial, content-quality
+- **Scope:** paragrafen, koppen en beeldbijschriften in actieve NL- en EN-content
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** teksten leggen geregeld uit wat iets niet is, ook wanneer een
+  positieve, directe formulering het onderwerp sterker en rustiger kan
+  uitleggen.
+- **Klaar wanneer:** de authoringrichtlijnen onderscheid maken tussen nuttige
+  begrenzing en defensieve stopzinnen; het actieve corpus menselijk is
+  doorgelopen; noodzakelijke contrasten behouden blijven; en beide talen
+  inhoudelijk gelijkwaardig zijn herzien.
+- **Log:** 2026-09-21 — geregistreerd; geen mechanische zoek-en-vervangactie,
+  omdat ontkenningen soms essentieel zijn voor juistheid.
+
+### `MNT-038` — Phylloxera en franc-de-pied inhoudelijk herbouwen
+
+- **Status:** open
+- **Prioriteit:** hoog
+- **Categorie:** content, research, media
+- **Scope:** `concept.phylloxera`, relevante relaties en verwijzingen naar
+  franc-de-pied en `producer.liber-pater`
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** de pagina doet nog onvoldoende recht aan de historische crisis,
+  de mondiale gevolgen en de gebieden en bewegingen rond wijnstokken op eigen
+  wortel; het huidige bladschadebeeld legt visueel het verkeerde accent.
+- **Klaar wanneer:** geschiedenis, biologische werking aan de wortels,
+  verspreiding, entreactie, blijvende gevolgen, zorgvuldig begrensde
+  phylloxeravrije contexten en franc-de-pied samen een compleet NL/EN-verhaal
+  vormen; claims zijn passend onderbouwd; relaties zijn vooruit aangelegd; en
+  media ondersteunt de kern in plaats van perifere bladschade.
+- **Log:** 2026-09-21 — geregistreerd als gerichte inhoudelijke herbouw, niet als
+  kleine aanvulling.
+
 ## Historie
+
+### `MNT-032` — Canonieke Engelstalige URL-slugs invoeren
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** routing, knowledge-data, SEO, testing
+- **Scope:** alle entity- en narrativepagina's, interne links, sitemap en
+  legacyroutes
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** publieke URL-slugs wisselden tussen Nederlands en Engels,
+  doordat de Nederlandse slug impliciet de route bepaalde.
+- **Klaar wanneer:** de Engelse slug overal de canonieke publieke route vormt,
+  bestaande Nederlandse URLs permanent blijven werken, interne links en sitemap
+  alleen canonieke routes publiceren, en aliasbotsingen door de pipeline worden
+  tegengehouden.
+- **Log:** 2026-09-21 — afgerond. Alle 36 afwijkende entity-slugs en de ene
+  afwijkende narrative-slug hebben een canonieke Engelse bestemming; 31 daarvan
+  zijn momenteel publieke actieve entitypagina's. Nederlandse legacy-slugs
+  blijven als permanente 308-redirect bestaan. Cross-locale collisions,
+  statische generatie, canonicals, sitemap, embedded produceranchors en
+  browsergedrag zijn geautomatiseerd gecontroleerd.
 
 ### `MNT-029` — Structurele volledigheidsaudit voor relaties
 

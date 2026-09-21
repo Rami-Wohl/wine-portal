@@ -61,11 +61,11 @@ export const NARRATIVE_TYPE_LABELS_NL = {
 } as const satisfies Record<Narrative["type"], string>;
 
 export function entityHref(entity: Entity): string {
-  return `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.nl}`;
+  return `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.en}`;
 }
 
 export function narrativeHref(narrative: Narrative): string {
-  return `/verdiepingen/${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}/${narrative.slugs.nl}`;
+  return `/verdiepingen/${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}/${narrative.slugs.en}`;
 }
 
 export function entityTypeFromRouteSegment(segment: string): EntityType | undefined {

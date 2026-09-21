@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ContentDocumentView } from "@/components/content-document";
 import { EntityLink } from "@/components/entity-link";
 import { mediaIdsForDocument } from "@/content/media";
@@ -34,10 +34,12 @@ function publicNarrativeTitle(narrative: GeneratedNarrative): string {
 }
 
 export function generateStaticParams() {
-  return getAllNarratives().map((narrative) => ({
-    narrativeType: NARRATIVE_ROUTE_SEGMENTS[narrative.type],
-    slug: narrative.slugs.nl,
-  }));
+  return getAllNarratives().flatMap((narrative) =>
+    Array.from(new Set([narrative.slugs.en, narrative.slugs.nl])).map((slug) => ({
+      narrativeType: NARRATIVE_ROUTE_SEGMENTS[narrative.type],
+      slug,
+    })),
+  );
 }
 
 export async function generateMetadata({ params }: NarrativePageProps): Promise<Metadata> {
@@ -61,6 +63,7 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
   const { narrativeType, slug } = await params;
   const narrative = getNarrativeByRoute(narrativeType, slug);
   if (!narrative) notFound();
+  if (slug !== narrative.slugs.en) permanentRedirect(narrativeHref(narrative));
 
   const mentionedEntities = Array.from(
     new Set([

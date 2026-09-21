@@ -51,7 +51,12 @@ describe("application metadata", () => {
   });
 
   it("generates params and noindex metadata for draft entity routes", async () => {
-    expect(generateEntityStaticParams()).toHaveLength(getAllEntities().length);
+    expect(generateEntityStaticParams()).toHaveLength(
+      getAllEntities().reduce(
+        (count, entity) => count + new Set([entity.slugs.en, entity.slugs.nl]).size,
+        0,
+      ),
+    );
     const draft = getAllEntities().find(
       (entity) => entity.type === "concept" && entity.status === "draft",
     );
@@ -78,7 +83,12 @@ describe("application metadata", () => {
   });
 
   it("generates params and noindex metadata for draft narrative routes", async () => {
-    expect(generateNarrativeStaticParams()).toHaveLength(getAllNarratives().length);
+    expect(generateNarrativeStaticParams()).toHaveLength(
+      getAllNarratives().reduce(
+        (count, narrative) => count + new Set([narrative.slugs.en, narrative.slugs.nl]).size,
+        0,
+      ),
+    );
     const metadata = await generateNarrativeMetadata({
       params: Promise.resolve({
         narrativeType: "regional-deep-dives",
@@ -87,7 +97,7 @@ describe("application metadata", () => {
     });
 
     expect(metadata.alternates).toEqual({
-      canonical: "/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef",
+      canonical: "/verdiepingen/regional-deep-dives/bordeaux-pipeline-proof",
     });
     expect(metadata.robots).toEqual({ index: false, follow: true });
     expect(metadata.title).toBe("Bordeaux: verdieping in voorbereiding");

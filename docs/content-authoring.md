@@ -602,7 +602,7 @@ renderer.
 
 ## Localization
 
-Canonical facts and relations exist once in `entity.yaml`. Dutch and English names, slugs, and Markdown are localized presentation fields. Both locale files are required in v1 so missing translations are visible during validation rather than silently hidden.
+Canonical facts and relations exist once in `entity.yaml`. Dutch and English names, slugs, and Markdown are localized presentation fields. The English slug supplies the canonical public URL; the Dutch slug is a validated legacy alias and may differ without creating a second page. Both locale files are required in v1 so missing translations are visible during validation rather than silently hidden.
 
 ## Sources, geography, and depth
 

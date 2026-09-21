@@ -21,10 +21,12 @@ const narrativesById = new Map(
 const sourcesById = new Map(knowledgeBase.sources.map((source) => [source.id, source]));
 const mediaById = new Map(knowledgeBase.media.map((asset) => [asset.id, asset]));
 const narrativesByRoute = new Map(
-  knowledgeBase.narratives.map((narrative) => [
-    `${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}:${narrative.slugs.nl}`,
-    narrative,
-  ]),
+  knowledgeBase.narratives.flatMap((narrative) =>
+    Array.from(new Set([narrative.slugs.en, narrative.slugs.nl])).map((slug) => [
+      `${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}:${slug}`,
+      narrative,
+    ]),
+  ),
 );
 const forwardRelationsByEntity = new Map<string, ResolvedRelation[]>();
 for (const relation of knowledgeBase.relations.forward) {
@@ -77,7 +79,9 @@ export function getEntityPublicHref(entity: Entity): string {
 export function getEntityByRoute(routeSegment: string, slug: string): GeneratedEntity | undefined {
   const type = entityTypeFromRouteSegment(routeSegment);
   if (!type) return undefined;
-  const id = knowledgeBase.indexes.localized_slugs.nl[`${type}:${slug}`];
+  const key = `${type}:${slug}`;
+  const id =
+    knowledgeBase.indexes.localized_slugs.en[key] ?? knowledgeBase.indexes.localized_slugs.nl[key];
   return id ? getEntityById(id) : undefined;
 }
 

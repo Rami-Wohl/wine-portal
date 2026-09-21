@@ -35,10 +35,12 @@ function highestDocumentDepth(entity: GeneratedEntity): Depth | null {
 }
 
 export function generateStaticParams() {
-  return getAllEntities().map((entity) => ({
-    entityType: ENTITY_ROUTE_SEGMENTS[entity.type],
-    slug: entity.slugs.nl,
-  }));
+  return getAllEntities().flatMap((entity) =>
+    Array.from(new Set([entity.slugs.en, entity.slugs.nl])).map((slug) => ({
+      entityType: ENTITY_ROUTE_SEGMENTS[entity.type],
+      slug,
+    })),
+  );
 }
 
 export async function generateMetadata({ params }: EntityPageProps): Promise<Metadata> {
@@ -67,6 +69,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
   const { entityType, slug } = await params;
   const entity = getEntityByRoute(entityType, slug);
   if (!entity) notFound();
+  if (slug !== entity.slugs.en) permanentRedirect(getEntityPublicHref(entity));
   if (
     entity.status === "active" &&
     entity.presentation &&

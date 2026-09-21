@@ -71,8 +71,11 @@ Learning paths worden later geordende routes door bestaande entities en
 narratives. Ze worden geen aparte opslagplaats voor gekopieerde wijnkennis.
 
 NL en EN zijn beide verplichte, gevalideerde authoringlagen. De huidige publieke
-interface en routes zijn uitsluitend Nederlands. Engelse presentatie is een
+interface en contentpresentatie zijn uitsluitend Nederlands. Engelse presentatie is een
 bewuste volgende productstap, geen al werkende feature of automatische fallback.
+Publieke entity- en narrativeroutes gebruiken wel consequent de Engelse slug als
+taalonafhankelijke canonieke URL. Eventueel afwijkende Nederlandse slugs blijven
+als permanente legacy-redirect bestaan.
 
 ## Dagelijkse contentworkflow
 

@@ -31,11 +31,11 @@ const STATUS_COPY = {
 } as const;
 
 function entityRoute(entity: GeneratedEntity, entitiesById: Map<string, GeneratedEntity>): string {
-  const directRoute = `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.nl}`;
+  const directRoute = `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.en}`;
   if (entity.presentation && entity.presentation.mode !== "monograph") {
     const owner = entitiesById.get(entity.presentation.owner);
     if (owner) {
-      const target = `/${ENTITY_ROUTE_SEGMENTS[owner.type]}/${owner.slugs.nl}#${entity.presentation.anchor}`;
+      const target = `/${ENTITY_ROUTE_SEGMENTS[owner.type]}/${owner.slugs.en}#${entity.presentation.anchor}`;
       return entity.status === "active" ? target : `${directRoute} → gepland: ${target}`;
     }
   }
@@ -89,7 +89,7 @@ export function renderEntityStatus(entities: GeneratedEntity[]): string {
       continue;
     }
     lines.push(
-      "| Naam | Type | Publicatievorm | ID | Publiek | Nederlandse bestemming | Laatst beoordeeld |",
+      "| Naam | Type | Publicatievorm | ID | Publiek | Canonieke bestemming | Laatst beoordeeld |",
       "| --- | --- | --- | --- | --- | --- | --- |",
     );
     for (const entity of entitiesWithStatus) {

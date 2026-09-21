@@ -27,6 +27,8 @@ describe("canonical content routing", () => {
   it("derives context-independent entity URLs", () => {
     const latour = getAllEntities().find((entity) => entity.id === "producer.chateau-latour");
     expect(latour && entityHref(latour)).toBe("/producers/chateau-latour");
+    const phylloxera = getAllEntities().find((entity) => entity.id === "concept.phylloxera");
+    expect(phylloxera && entityHref(phylloxera)).toBe("/concepts/phylloxera");
   });
 
   it("routes active collection profiles to their stable owner anchor", () => {
@@ -45,6 +47,7 @@ describe("canonical content routing", () => {
 
   it("resolves every generated entity route and rejects mismatched routes", () => {
     for (const entity of getAllEntities()) {
+      expect(getEntityByRoute(ENTITY_ROUTE_SEGMENTS[entity.type], entity.slugs.en)).toBe(entity);
       expect(getEntityByRoute(ENTITY_ROUTE_SEGMENTS[entity.type], entity.slugs.nl)).toBe(entity);
     }
     expect(getEntityByRoute("producers", "bordeaux")).toBeUndefined();
@@ -115,12 +118,15 @@ describe("canonical content routing", () => {
       (item) => item.id === "narrative.regional.bordeaux-proof",
     );
     expect(narrative && narrativeHref(narrative)).toBe(
-      "/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef",
+      "/verdiepingen/regional-deep-dives/bordeaux-pipeline-proof",
     );
   });
 
   it("resolves every generated narrative route and rejects unknown families", () => {
     for (const narrative of getAllNarratives()) {
+      expect(
+        getNarrativeByRoute(NARRATIVE_ROUTE_SEGMENTS[narrative.type], narrative.slugs.en),
+      ).toBe(narrative);
       expect(
         getNarrativeByRoute(NARRATIVE_ROUTE_SEGMENTS[narrative.type], narrative.slugs.nl),
       ).toBe(narrative);

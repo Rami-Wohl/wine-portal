@@ -6,13 +6,13 @@ test("winemaking concepts load documentary photos and cumulative knowledge depth
   await page.setViewportSize({ width: 390, height: 844 });
   for (const topic of [
     {
-      path: "/concepts/alcoholische-vergisting",
+      path: "/concepts/alcoholic-fermentation",
       title: "Alcoholische vergisting",
       intermediate: "een-gezonde-gisting",
       advanced: "spontaan-is-geen-herkomstbewijs",
     },
     {
-      path: "/concepts/schilinweking",
+      path: "/concepts/maceration",
       title: "Schilinweking",
       intermediate: "witte-inweking",
       advanced: "niet-lineaire-overdracht",
@@ -30,19 +30,19 @@ test("winemaking concepts load documentary photos and cumulative knowledge depth
       advanced: "zuurstof-is-meer-dan-vatwand",
     },
     {
-      path: "/concepts/zuur-in-wijn",
+      path: "/concepts/acidity-in-wine",
       title: "Zuur in wijn",
       intermediate: "ph-en-titreerbaar-zuur",
       advanced: "buffering-en-neerslag",
     },
     {
-      path: "/concepts/malolactische-omzetting",
+      path: "/concepts/malolactic-fermentation",
       title: "Malolactische omzetting",
       intermediate: "verloop-in-de-kelder",
       advanced: "diacetyl-en-citroenzuur",
     },
     {
-      path: "/concepts/tannine",
+      path: "/concepts/tannin",
       title: "Tannine",
       intermediate: "speeksel-en-waarneming",
       advanced: "zachter-is-niet-alleen-minder",
@@ -309,7 +309,7 @@ test("the four Margaux and Pessac icon monographs expose images and progressive 
 });
 
 test("draft narrative degrades honestly and keeps its knowledge context", async ({ page }) => {
-  await page.goto("/verdiepingen/regional-deep-dives/bordeaux-pipeline-proef");
+  await page.goto("/verdiepingen/regional-deep-dives/bordeaux-pipeline-proof");
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Bordeaux: verdieping in voorbereiding",
@@ -455,7 +455,7 @@ test("Médoc keeps its regional distinctions, imagery and depth layers usable on
 test("Saint-Émilion classification resolves its 2022 producer cohort progressively", async ({
   page,
 }) => {
-  await page.goto("/classifications/classificatie-saint-emilion");
+  await page.goto("/classifications/saint-emilion-classification");
 
   await expect(
     page.getByRole("heading", { level: 1, name: "Classificatie van Saint-Émilion" }),
@@ -493,13 +493,13 @@ test("Saint-Émilion classification resolves its 2022 producer cohort progressiv
 test("Saint-Émilion embedded producer routes reach stable anchors", async ({ page }) => {
   await page.goto("/producers/chateau-beau-sejour-becot");
   await expect(page).toHaveURL(
-    /\/classifications\/classificatie-saint-emilion#producent-chateau-beau-sejour-becot$/,
+    /\/classifications\/saint-emilion-classification#producent-chateau-beau-sejour-becot$/,
   );
   await expect(page.locator("#producent-chateau-beau-sejour-becot")).toBeVisible();
 
   await page.goto("/producers/chateau-badette");
   await expect(page).toHaveURL(
-    /\/classifications\/classificatie-saint-emilion#producent-chateau-badette$/,
+    /\/classifications\/saint-emilion-classification#producent-chateau-badette$/,
   );
   await expect(page.locator("#producent-chateau-badette")).toBeVisible();
 });
@@ -551,7 +551,7 @@ test("Graves producer records resolve to profiles and colour-specific register e
 }) => {
   await page.goto("/producers/chateau-bouscaut");
   await expect(page).toHaveURL(
-    /\/classifications\/classificatie-graves#producent-chateau-bouscaut$/,
+    /\/classifications\/graves-classification#producent-chateau-bouscaut$/,
   );
   await expect(page.locator("#producent-chateau-bouscaut")).toBeVisible();
   await expect(page.locator('[data-parent="geclassificeerde-domeinen"]')).toHaveCount(8);
@@ -741,7 +741,7 @@ test("entity relationships are grouped by their meaning", async ({ page }) => {
   await expect(bordeauxPanel.getByRole("link", { name: "Médoc Regio" })).toBeVisible();
   await expect(bordeauxPanel.getByRole("link", { name: "Sémillon Druif" })).toBeVisible();
 
-  await page.goto("/classifications/classificatie-saint-emilion");
+  await page.goto("/classifications/saint-emilion-classification");
   const classificationPanel = page.getByRole("region", {
     name: "Ga verder vanuit Classificatie van Saint-Émilion",
   });
@@ -908,7 +908,7 @@ test("a deep block anchor reveals the required knowledge depth", async ({ page }
 
 test("Botrytis distinguishes noble and grey rot across knowledge depths", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/concepts/botrytis-edele-rotting");
+  await page.goto("/concepts/botrytis-noble-rot");
 
   await expect(
     page.getByRole("heading", { level: 1, name: "Botrytis en edele rotting" }),
@@ -952,7 +952,7 @@ test("Passerillage compares on-vine and postharvest drying without implying swee
   await expect(page.locator("#indroging-op-rekken img")).toHaveJSProperty("complete", true);
   await expect(page.getByRole("link", { name: "edele rotting" })).toHaveAttribute(
     "href",
-    "/concepts/botrytis-edele-rotting",
+    "/concepts/botrytis-noble-rot",
   );
   await expect(
     page.getByRole("link", { name: "Amarone della Valpolicella", exact: true }),
@@ -992,7 +992,7 @@ test("the dried-grape concept cluster combines documentary images with progressi
       advanced: "#geen-recept-voor-heel-italie",
     },
     {
-      path: "/concepts/late-oogst",
+      path: "/concepts/late-harvest",
       title: "Late oogst",
       images: ["#laat-hangende-druiven img", "#spatlese-op-het-etiket img"],
       intermediate: "#rijpheid-loopt-niet-gelijk",
