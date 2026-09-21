@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/page-intro";
+import { SearchFocusManager } from "@/components/search-focus-manager";
 import {
   getEntityById,
   getEntityPublicHref,
@@ -113,9 +114,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     ? Math.min(Math.max(requestedPage, 1), pageCount)
     : 1;
   const results = allResults.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const navigationKey = `${q}\u0000${selectedType}\u0000${currentPage}`;
 
   return (
     <main id="main-content" className="page-shell">
+      <SearchFocusManager hasSearchIntent={hasSearchIntent} navigationKey={navigationKey} />
       <PageIntro eyebrow="Zoeken" title="Vind direct wat je nodig hebt">
         <p>
           Zoek op onderwerp of op woorden uit artikelen en beeldbijschriften. Een inhoudstreffer
@@ -151,12 +154,17 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       </form>
 
       {hasSearchIntent ? (
-        <section className="search-results" aria-live="polite" aria-labelledby="results-title">
+        <section
+          id="search-results"
+          className="search-results"
+          aria-live="polite"
+          aria-labelledby="results-title"
+        >
           <div className="section-heading-compact">
             <p className="eyebrow">
               {allResults.length} {allResults.length === 1 ? "resultaat" : "resultaten"}
             </p>
-            <h2 id="results-title">
+            <h2 id="results-title" tabIndex={-1}>
               {hasQuery
                 ? `Voor “${q.trim()}”`
                 : selectedType !== "all"

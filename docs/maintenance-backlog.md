@@ -25,14 +25,14 @@ Peildatum: 2026-09-21.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 15 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-035` t/m `MNT-038` |
+| Open | 14 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-036` t/m `MNT-038` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 20 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-034` |
+| Afgerond | 21 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-035` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben zes acties prioriteit `hoog` en negen
+Van het uitvoerbare open werk hebben vijf acties prioriteit `hoog` en negen
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -250,22 +250,6 @@ geographydatalaag.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
 - **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
 
-### `MNT-035` — Zoekinteractie direct en zichtbaar maken
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Categorie:** search, product-ux, accessibility, testing
-- **Scope:** zoekpagina zonder en met query, desktop en mobiel
-- **Herkomst:** onderhoudsplan 2026-09-21
-- **Bevinding:** zonder query krijgt het invoerveld niet vanzelf focus; na een
-  zoekactie kunnen resultaten onder de fold verschijnen zonder zichtbare
-  terugkoppeling.
-- **Klaar wanneer:** een lege zoekpagina het zoekveld veilig focust, een
-  uitgevoerde zoekopdracht het resultaatgebied zichtbaar maakt of focust zonder
-  onverwachte beweging, reduced-motion en browsergeschiedenis respecteert, en
-  het gedrag met Playwright op relevante viewports is afgedekt.
-- **Log:** 2026-09-21 — geregistreerd als aparte UX-laag boven op MNT-034.
-
 ### `MNT-036` — Discovery schaalbaar maken met hiërarchie en facetten
 
 - **Status:** open
@@ -320,6 +304,28 @@ geographydatalaag.
   kleine aanvulling.
 
 ## Historie
+
+### `MNT-035` — Zoekinteractie direct en zichtbaar maken
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** search, product-ux, accessibility, testing
+- **Scope:** zoekpagina zonder en met query, desktop en mobiel
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** zonder query kreeg het invoerveld niet vanzelf focus; na een
+  zoekactie konden resultaten onder de fold verschijnen zonder zichtbare
+  terugkoppeling.
+- **Klaar wanneer:** een lege zoekpagina het zoekveld veilig focust, een
+  uitgevoerde zoekopdracht het resultaatgebied zichtbaar maakt of focust zonder
+  onverwachte beweging, reduced-motion en browsergeschiedenis respecteert, en
+  het gedrag met Playwright op relevante viewports is afgedekt.
+- **Log:** 2026-09-21 — afgerond. Een kleine client-helper focust het zoekveld
+  alleen wanneer de pagina nog geen betekenisvolle focus heeft. Na zoeken krijgt
+  de resultaatkop focus en wordt zij uitsluitend wanneer nodig zichtbaar
+  gescrold; `prefers-reduced-motion` schakelt animatie uit. De bestaande
+  GET-navigatie en browsergeschiedenis blijven intact. Desktop en mobiel zijn
+  visueel gecontroleerd; Playwright dekt lege focus, resultaatfocus,
+  reduced-motion, terugnavigatie en overflow af.
 
 ### `MNT-034` — Volledige artikelinhoud doorzoekbaar maken
 
