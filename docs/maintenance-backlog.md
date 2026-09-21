@@ -21,18 +21,18 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-09-21.
+Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 13 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-037`, `MNT-038` |
+| Open | 12 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-038` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 22 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-036` |
+| Afgerond | 23 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-037` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben vijf acties prioriteit `hoog` en acht
+Van het uitvoerbare open werk hebben vijf acties prioriteit `hoog` en zeven
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -250,23 +250,6 @@ geographydatalaag.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
 - **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
 
-### `MNT-037` — Defensieve formuleringen corpusbreed terugdringen
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** editorial, content-quality
-- **Scope:** paragrafen, koppen en beeldbijschriften in actieve NL- en EN-content
-- **Herkomst:** onderhoudsplan 2026-09-21
-- **Bevinding:** teksten leggen geregeld uit wat iets niet is, ook wanneer een
-  positieve, directe formulering het onderwerp sterker en rustiger kan
-  uitleggen.
-- **Klaar wanneer:** de authoringrichtlijnen onderscheid maken tussen nuttige
-  begrenzing en defensieve stopzinnen; het actieve corpus menselijk is
-  doorgelopen; noodzakelijke contrasten behouden blijven; en beide talen
-  inhoudelijk gelijkwaardig zijn herzien.
-- **Log:** 2026-09-21 — geregistreerd; geen mechanische zoek-en-vervangactie,
-  omdat ontkenningen soms essentieel zijn voor juistheid.
-
 ### `MNT-038` — Phylloxera en franc-de-pied inhoudelijk herbouwen
 
 - **Status:** open
@@ -287,6 +270,27 @@ geographydatalaag.
   kleine aanvulling.
 
 ## Historie
+
+### `MNT-037` — Defensieve formuleringen corpusbreed terugdringen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** editorial, content-quality
+- **Scope:** paragrafen, koppen en beeldbijschriften in actieve NL- en EN-content
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** teksten legden geregeld uit wat iets niet is, ook wanneer een
+  positieve, directe formulering het onderwerp sterker en rustiger kon
+  uitleggen.
+- **Klaar wanneer:** de authoringrichtlijnen onderscheid maken tussen nuttige
+  begrenzing en defensieve stopzinnen; het actieve corpus menselijk is
+  doorgelopen; noodzakelijke contrasten behouden blijven; en beide talen
+  inhoudelijk gelijkwaardig zijn herzien.
+- **Log:** 2026-09-21 — geregistreerd; geen mechanische zoek-en-vervangactie,
+  omdat ontkenningen soms essentieel zijn voor juistheid. 2026-09-22 — alle 263
+  actieve packages en 526 lokalisaties geïnventariseerd; dichtste en meest
+  zichtbare patronen in tien tweetalige packages inhoudelijk herschreven;
+  positieve-herformuleringstest en herhaalbaar auditcommando ingevoerd; zie
+  `QCR-2026-09-22-01`.
 
 ### `MNT-036` — Discovery schaalbaar maken met hiërarchie en facetten
 

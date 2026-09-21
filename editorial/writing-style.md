@@ -41,6 +41,37 @@ mag een feit laten leven; stijl mag nooit een ontbrekend feit verbergen.
   mechanische woorden als “kan”, “vaak” en “doorgaans” over iedere zin.
 - Citations ondersteunen claims, maar onderbreken het verhaal zo weinig mogelijk.
 
+## Schrijf vanuit wat iets wél is
+
+Een tekst legt een onderwerp in de eerste plaats positief en rechtstreeks uit.
+Ontkenningen zijn soms noodzakelijk, maar vormen geen standaardmanier om nuance
+of deskundigheid te suggereren.
+
+- Begin een samenvatting, sectie en alinea met identiteit, werking of betekenis;
+  bouw de uitleg niet op als verdediging tegen een denkbeeldige misvatting.
+- Gebruik een contrast alleen wanneer de lezer werkelijk twee verwante begrippen
+  kan verwarren, een wettelijke grens moet begrijpen, een hardnekkige mythe moet
+  loslaten of een onjuiste causale conclusie dreigt te trekken.
+- Formuleer onzekerheid bij de claim waarop zij betrekking heeft. Voeg geen losse
+  stopzin toe als “dit is geen garantie” wanneer dezelfde beperking concreter kan
+  worden uitgelegd via jaargang, producent, meetmethode of toepassingsgebied.
+- Vermijd opeenvolgende patronen als “niet alleen”, “niet automatisch”, “geen
+  recept” en “geen ranglijst”. Benoem liever welke factoren of categorieën wél
+  relevant zijn.
+- Koppen kondigen het onderwerp aan. Een ontkennende kop is gereserveerd voor een
+  essentieel onderscheid dat de sectie daadwerkelijk uitlegt; een speelse
+  tegenstelling alleen is onvoldoende reden.
+- Beeldbijschriften vertellen wat het beeld laat begrijpen. Ze hoeven niet
+  preventief op te sommen wat de afbeelding allemaal niet bewijst.
+
+Pas bij de eindredactie de **positieve-herformuleringstest** toe: kan dezelfde
+betekenis even precies worden uitgedrukt door eerst het werkelijke mechanisme,
+onderscheid of toepassingsgebied te benoemen? Kies dan die versie. Behoud de
+ontkenning wanneer omformuleren een juridische grens, veiligheidswaarschuwing,
+wezenlijk onderscheid of eerlijke onzekerheid zou verzwakken. Deze controle geldt
+afzonderlijk voor Nederlands en Engels; vertaal een Nederlandse ontkenning niet
+automatisch naar een even defensieve Engelse zin.
+
 ## Regiopagina's
 
 Een regiopagina opent met een algemene introductie die de regio als levende

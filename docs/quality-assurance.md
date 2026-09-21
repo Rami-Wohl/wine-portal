@@ -132,6 +132,7 @@ Nieuwste review eerst.
 
 | Review-ID | Datum | Type en scope | Rapport | Resultaat | Acties |
 | --- | --- | --- | --- | --- | --- |
+| `QCR-2026-09-22-01` | 2026-09-22 | Defensieve formuleringen in alle 263 actieve packages en 526 lokalisaties | [Audit defensieve formuleringen 2026-09-22](../editorial/defensive-language-audit-2026-09-22.md) | Positieve-herformuleringstest ingevoerd, herhaalbare inventaris toegevoegd en dichtste patronen in tien tweetalige packages herschreven | `MNT-037` afgerond |
 | `QCR-2026-09-20-01` | 2026-09-20 | Bronactualiteit Bordeaux-specificatie tijdens Clairet/Claret-authoring | [Bordeaux-specificatie bronreview 2026-09-20](../editorial/bordeaux-specification-source-review-2026-09-20.md) | Definitieve 2026-tekst voor nieuwe pagina's geregistreerd; corpusbrede 2025-verwijzingen vragen claimgewijze controle | `MNT-031` open |
 | `QCR-2026-09-13-01` | 2026-09-13 | Volledigheid en presentatie van gerelateerde onderwerpen op alle 81 actieve entities | [Audit gerelateerde onderwerpen 2026-09-13](../editorial/related-knowledge-audit-2026-09-13.md) | Structurele dekking schoon; compact semantisch clusterontwerp en herhaalbare audit ingevoerd | `MNT-012`, `MNT-028`, `MNT-029` afgerond; `MNT-030` open |
 | `QCR-2026-09-09-03` | 2026-09-09 | End-to-end Pomerol-producentenpilot, Pétrus en schaalbare Ontdekken-pagina | [Pomerol-producentenpilot 2026-09-09](../editorial/pomerol-producer-pilot-review-2026-09-09.md) | Acht actieve collectieprofielen, één nieuwe monografie en een begrensde categorie-ingang | `MNT-023` afgerond |

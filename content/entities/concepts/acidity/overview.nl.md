@@ -1,11 +1,11 @@
 :::summary{#orientatie depth="foundation" source_refs="source.wset-acidity-2026"}
-Zuur geeft wijn vaart: het maakt een slok verfrissend en houdt zoetheid en rijkdom in evenwicht. Dat geldt niet alleen voor strakke witte wijn, maar ook voor rood, zoet en mousserend. De vraag is niet hoeveel zuur een goede wijn moet hebben, maar hoe het zuur bij de rest past.
+Zuur geeft wijn vaart: het maakt een slok verfrissend en houdt zoetheid en rijkdom in evenwicht. Die rol is belangrijk in strakke witte wijn én in rood, zoet en mousserend. Een goede wijn dankt zijn balans aan de manier waarop het zuur bij de rest past.
 :::
 
 :::section{#zuur-proeven depth="foundation" source_refs="source.wset-acidity-2026 source.wset-mouthfeel-2026"}
 ## Zuur herkennen
 
-Neem een slok en let op wat er gebeurt nadat je hebt doorgeslikt of uitgespuugd. Zuur wekt speekselvorming op; je mond gaat wateren. Een wijn met uitgesproken zuur kan levendig en strak overkomen. Zonder voldoende tegenwicht kan dat scherp worden, maar een zachte wijn is niet automatisch beter in balans.
+Neem een slok en let op wat er gebeurt nadat je hebt doorgeslikt of uitgespuugd. Zuur wekt speekselvorming op; je mond gaat wateren. Een wijn met uitgesproken zuur kan levendig en strak overkomen. Balans vraagt voldoende fruit, zoetheid of structuur als tegenwicht, ongeacht of de wijn strak of zacht aanvoelt.
 
 Zuur is iets anders dan bitterheid, de warmte van alcohol of de drogende grip van [[concept.tannin|tannine]]. Ook een volledig droge wijn kan veel zuur hebben: *droog* beschrijft hier de afwezigheid van merkbare zoetheid, niet een droog mondgevoel. Het helpt om deze waarnemingen eerst apart te benoemen voordat je het geheel beoordeelt. [@source.wset-mouthfeel-2026]
 :::
@@ -15,7 +15,7 @@ Zuur is iets anders dan bitterheid, de warmte van alcohol of de drogende grip va
 
 Wijnsteenzuur en appelzuur zijn de belangrijkste zuren die de druif zelf meebrengt. Appelzuur wordt tijdens de rijping afgebroken; warmere omstandigheden bevorderen die afbraak. Ras, groeiseizoen en oogstmoment helpen dus bepalen welk uitgangspunt de wijnmaker krijgt. Koeler betekent een tendens tot meer behouden zuur, geen garantie op één vast zuurprofiel. [@source.awri-berry-ripening]
 
-De kelder verandert dat uitgangspunt. Bij [[concept.fermentation|alcoholische vergisting]] ontstaan ook andere zuren. [[concept.malolactic-fermentation|Malolactische omzetting]] zet appelzuur om in melkzuur en verlaagt de zuurgraad. De wijn blijft zuur bevatten: melkzuur is óók een zuur. Het zuur in de uiteindelijke fles is daardoor niet simpelweg een onveranderde kopie van het druivensap. [@source.wset-wine-composition]
+De kelder verandert dat uitgangspunt. Bij [[concept.fermentation|alcoholische vergisting]] ontstaan ook andere zuren. [[concept.malolactic-fermentation|Malolactische omzetting]] zet appelzuur om in melkzuur en verlaagt de zuurgraad. De uiteindelijke fles bevat daardoor een zuurprofiel dat tijdens rijping en wijnmaken stap voor stap is gevormd. [@source.wset-wine-composition]
 :::
 
 :::detail{#rijping-is-geen-enkele-schuif parent="van-druif-tot-wijn" depth="intermediate" source_refs="source.awri-berry-ripening"}
@@ -48,7 +48,7 @@ Daarom beoordelen kelderproeven zowel de metingen als het smaakresultaat. Eén u
 
 Bij een zoete wijn vormt zuur tegenwicht aan de suiker; bij een droge wijn staat dezelfde hoeveelheid zuur minder beschut. Ook fruit, alcohol en mondgevoel bepalen hoe scherp of harmonieus het geheel overkomt. Een frisse wijn hoeft dus niet zuur te *smaken* in de alledaagse, negatieve betekenis.
 
-Zuur helpt een wijn zijn frisheid tijdens ontwikkeling te behouden, maar is geen houdbaarheidscertificaat. Bewaarpotentieel vraagt ook voldoende smaakintensiteit en een passende structuur. Een wijn die nu schraal en onevenwichtig is, wordt niet vanzelf boeiend doordat hij veel zuur heeft. [@source.wset-tasting-guide-2018]
+Zuur helpt een wijn zijn frisheid tijdens ontwikkeling te behouden. Bewaarpotentieel vraagt daarnaast voldoende smaakintensiteit en een passende structuur. Een schrale, onevenwichtige jonge wijn heeft dus meer nodig dan veel zuur om boeiend te kunnen rijpen. [@source.wset-tasting-guide-2018]
 :::
 
 :::section{#kelderkeuzes depth="intermediate" source_refs="source.awri-deacidification source.wset-acidity-2026"}
@@ -60,5 +60,5 @@ Het gewenste eindpunt volgt uit de wijn, niet uit een wereldwijde ideale waarde.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
-Zuur brengt frisheid en samenhang. Leer het herkennen, maar beoordeel het altijd naast zoetheid, fruit, alcohol en structuur: meer is niet automatisch beter.
+Zuur brengt frisheid en samenhang. Beoordeel hoeveelheid en karakter altijd naast zoetheid, fruit, alcohol en structuur.
 :::

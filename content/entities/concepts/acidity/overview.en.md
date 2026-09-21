@@ -1,11 +1,11 @@
 :::summary{#orientatie depth="foundation" source_refs="source.wset-acidity-2026"}
-Acidity gives wine momentum: it refreshes a sip and keeps sweetness and richness in balance. That matters not only in crisp whites, but in red, sweet and sparkling wines too. The question is not how much acidity a good wine must have, but how it fits the rest.
+Acidity gives wine momentum: it refreshes a sip and keeps sweetness and richness in balance. That role matters in crisp whites as well as red, sweet and sparkling wines. A good wine draws its balance from the way acidity fits everything else.
 :::
 
 :::section{#zuur-proeven depth="foundation" source_refs="source.wset-acidity-2026 source.wset-mouthfeel-2026"}
 ## Recognising acidity
 
-Take a sip and notice what happens after swallowing or spitting. Acidity stimulates saliva; your mouth waters. Pronounced acidity can make a wine feel lively and taut. Without sufficient counterweight that may become sharp, but a soft wine is not automatically better balanced.
+Take a sip and notice what happens after swallowing or spitting. Acidity stimulates saliva; your mouth waters. Pronounced acidity can make a wine feel lively and taut. Balance requires enough fruit, sweetness or structure as a counterweight, whether the wine feels taut or soft.
 
 Acidity differs from bitterness, alcoholic warmth and the drying grip of [[concept.tannin|tannin]]. A completely dry wine can still have high acidity: *dry* here describes the absence of noticeable sweetness, not a drying mouthfeel. It helps to name these sensations separately before judging the whole. [@source.wset-mouthfeel-2026]
 :::
@@ -15,7 +15,7 @@ Acidity differs from bitterness, alcoholic warmth and the drying grip of [[conce
 
 Tartaric and malic acid are the main acids supplied by the grape itself. Malic acid is broken down during ripening; warmer conditions favour that breakdown. Variety, growing season and picking date therefore help determine the winemaker's starting point. Cooler conditions favour acid retention, rather than guaranteeing one fixed acid profile. [@source.awri-berry-ripening]
 
-The cellar changes that starting point. [[concept.fermentation|Alcoholic fermentation]] also produces other acids. [[concept.malolactic-fermentation|Malolactic fermentation]] converts malic acid into lactic acid and reduces acidity. The wine still contains acid: lactic acid is an acid too. The acid profile in the bottle is therefore not simply an unchanged copy of the grape juice. [@source.wset-wine-composition]
+The cellar changes that starting point. [[concept.fermentation|Alcoholic fermentation]] also produces other acids. [[concept.malolactic-fermentation|Malolactic fermentation]] converts malic acid into lactic acid and reduces acidity. The bottle consequently contains an acid profile shaped step by step through ripening and winemaking. [@source.wset-wine-composition]
 :::
 
 :::detail{#rijping-is-geen-enkele-schuif parent="van-druif-tot-wijn" depth="intermediate" source_refs="source.awri-berry-ripening"}
@@ -48,7 +48,7 @@ Cellar trials consequently assess both the measurements and the sensory result. 
 
 In a sweet wine, acidity counterbalances sugar; in a dry wine the same amount of acidity has less shelter. Fruit, alcohol and mouthfeel also influence how sharp or harmonious the whole seems. A refreshing wine need not taste *sour* in the everyday negative sense.
 
-Acidity helps wine retain freshness during development, but is not a certificate of longevity. Ageing potential also requires sufficient flavour intensity and appropriate structure. A lean, unbalanced wine does not automatically become interesting because its acidity is high. [@source.wset-tasting-guide-2018]
+Acidity helps wine retain freshness during development. Ageing potential also requires sufficient flavour intensity and appropriate structure. A lean, unbalanced young wine therefore needs more than high acidity to develop with interest. [@source.wset-tasting-guide-2018]
 :::
 
 :::section{#kelderkeuzes depth="intermediate" source_refs="source.awri-deacidification source.wset-acidity-2026"}
@@ -60,5 +60,5 @@ The target follows the wine, not a worldwide ideal value. Pronounced acidity in 
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
-Acidity brings freshness and cohesion. Learn to recognise it, but always assess it alongside sweetness, fruit, alcohol and structure: more is not automatically better.
+Acidity brings freshness and cohesion. Assess its amount and character alongside sweetness, fruit, alcohol and structure.
 :::

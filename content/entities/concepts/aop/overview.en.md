@@ -1,13 +1,13 @@
 :::summary{#orientatie depth="foundation" source_refs="source.inao-aop-overview source.eurlex-wine-pdo-regulation-2026"}
 A **protected designation of origin**, or **PDO**, protects the name of a product whose origin, production and distinctive characteristics are connected to a delimited area under recorded rules. For wine, it is the European legal foundation beneath names such as Bordeaux, Champagne, Barolo and Rioja.
 
-A PDO therefore says much more than “made nearby”. Yet it is not a tasting score: the name guarantees compliance with an origin and production specification, not that every bottle has one style or that every drinker will value it equally.
+A PDO therefore says much more than “made nearby”. The name guarantees compliance with an origin and production specification, while producer, vintage and drinker still shape the style and its appreciation.
 :::
 
 :::section{#wat-een-aop-beschermt depth="foundation" source_refs="source.inao-aop-overview source.eurlex-wine-pdo-regulation-2026"}
 ## Protected origin — place, practice and product belong together
 
-For a PDO, the place name is not free-floating marketing copy. The wine must come from the defined geographical area and be produced under its specification. The European definition connects quality or characteristics essentially or exclusively to the geographical environment, including natural and human factors; all grapes come from the area and production takes place there. [@source.eurlex-wine-pdo-regulation-2026; art. 93]
+For a PDO, the place name carries enforceable meaning. The wine must come from the defined geographical area and be produced under its specification. The European definition connects quality or characteristics essentially or exclusively to the geographical environment, including natural and human factors; all grapes come from the area and production takes place there. [@source.eurlex-wine-pdo-regulation-2026; art. 93]
 
 That human element matters. [[concept.terroir|Terroir]] here means more than soil or climate: it also includes production knowledge built over time. A PDO therefore protects a name-with-rules, not merely a circle on a map.
 :::
@@ -21,7 +21,7 @@ Looking only at the map misses part of the meaning. In [[region.bordeaux|Bordeau
 :::
 
 :::section{#aop-aoc-en-igp depth="foundation" source_refs="source.inao-aop-overview source.dgccrf-wine-labels-2025"}
-## Terms — PDO, AOP, AOC and PGI are not tasting grades
+## Terms — distinguishing PDO, AOP, AOC and PGI
 
 **PDO** is the English form of the European protection; French uses **AOP**, *appellation d’origine protégée*. In France, **AOC**, *appellation d’origine contrôlée*, is the national recognition that precedes European registration. Wine may retain the traditional AOC wording, so a French label can say AOC while the European register speaks of PDO. [@source.inao-aop-overview]
 
@@ -50,15 +50,15 @@ The rules are concrete but not uniform. Vine density, pruning, yield, ripeness, 
 :::detail{#regels-kunnen-veranderen parent="productdossier-en-controle" depth="advanced" source_refs="source.eurlex-wine-pdo-regulation-2026"}
 ### Protection is more stable than every line of its rules
 
-A PDO is not a frozen museum piece. Producer groups may request amendments; competent authorities assess procedure, justification and compatibility with the protected link. A name may ultimately be cancelled. The consolidated European rules therefore cover amendment, objection and cancellation as well as recognition.
+A PDO can evolve through a formal procedure. Producer groups may request amendments; competent authorities assess procedure, justification and compatibility with the protected link. A name may ultimately be cancelled. The consolidated European rules therefore cover recognition, amendment, objection and cancellation.
 
 Anyone quoting an exact maximum or permitted grape must consult a dated specification. The famous name alone does not reveal which version governed an older [[concept.vintage|vintage]].
 :::
 
 :::section{#geen-kwaliteitsladder depth="foundation" source_refs="source.inao-aop-overview"}
-## Quality and style — controlled origin is not a league table
+## Quality and style — origin, rules and variation
 
-A PDO protects authenticity of origin and compliance with collective conditions. Producer, site, vintage, selection and winemaking can still vary greatly within one appellation. A smaller PDO is not automatically better than a broader one; chiefly it gives more specific origin information and its own rules.
+A PDO protects authenticity of origin and compliance with collective conditions. Producer, site, vintage, selection and winemaking can still vary greatly within one appellation. A smaller PDO gives more specific origin information and its own rules; quality is then assessed in the individual wine.
 
 Nor are [[concept.cru|crus]] and classifications equivalent to PDOs. Some rank producers or vineyards within a defined scope, while other appellations have no official ranking at all. PDO places a wine within a legal origin system, not on one universal quality staircase.
 :::

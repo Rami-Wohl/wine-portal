@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.civb-bordeaux-wine-trade source.bordeaux-negoce-profession"}
-De **Place de Bordeaux** is geen beursgebouw en ook geen enkel bedrijf. Het is het handelsnetwerk waarin wijnproducenten uit [[region.bordeaux|Bordeaux]], [[concept.courtier|courtiers]] en [[concept.negociant|négociants]] wijn aanbieden, bemiddelen en over internationale markten verdelen. *Place* betekent hier handelsplaats: een stelsel van relaties, gewoonten en transacties. [@source.civb-bordeaux-wine-trade]
+De **Place de Bordeaux** is het handelsnetwerk waarin wijnproducenten uit [[region.bordeaux|Bordeaux]], [[concept.courtier|courtiers]] en [[concept.negociant|négociants]] wijn aanbieden, bemiddelen en over internationale markten verdelen. *Place* betekent hier handelsplaats: een stelsel van relaties, gewoonten en transacties dat veel verder reikt dan één gebouw of bedrijf. [@source.civb-bordeaux-wine-trade]
 :::
 
 :::section{#drie-kernrollen depth="foundation" source_refs="source.civb-bordeaux-wine-trade source.bordeaux-negoce-profession"}
@@ -13,9 +13,9 @@ Die taakverdeling geeft een château toegang tot veel markten zonder overal een 
 :::section{#handelsstroom depth="foundation"}
 ## Handelsstroom
 
-Een eenvoudige route luidt: **château → courtier → négociant → professionele afnemer → drinker**. De wijn zelf, informatie over de wijn en het geld bewegen niet altijd tegelijk. Bij [[concept.en-primeur|en primeur]] kan de commerciële toezegging bijvoorbeeld plaatsvinden terwijl de jonge wijn nog op vat rijpt en de fysieke flessen pas veel later volgen.
+Een eenvoudige route luidt: **château → courtier → négociant → professionele afnemer → drinker**. De wijn zelf, informatie over de wijn en het geld kunnen op verschillende momenten bewegen. Bij [[concept.en-primeur|en primeur]] kan de commerciële toezegging bijvoorbeeld plaatsvinden terwijl de jonge wijn nog op vat rijpt en de fysieke flessen pas veel later volgen.
 
-De route is bovendien geen verplicht schema. Een courtier bemiddelt en bezit de wijn normaal niet; een producent kan verschillende négociants inzetten; sommige verkopen gaan rechtstreeks of buiten de Place. Het model helpt de functies begrijpen, niet iedere afzonderlijke transactie voorspellen.
+De route kent verschillende varianten. Een courtier bemiddelt en bezit de wijn normaal niet; een producent kan verschillende négociants inzetten; sommige verkopen gaan rechtstreeks of buiten de Place. Het model maakt de functies inzichtelijk, terwijl iedere transactie haar eigen route kan volgen.
 :::
 
 :::detail{#releases-en-toewijzingen parent="handelsstroom" depth="intermediate"}
@@ -46,13 +46,13 @@ Omgekeerd loopt niet iedere Bordeauxwijn noodzakelijk via dit netwerk. Coöperat
 :::
 
 :::detail{#geen-centrale-regisseur parent="reikwijdte-en-grenzen" depth="advanced"}
-### Geen centrale regisseur
+### Een gedecentraliseerde markt
 
-De Place heeft geen enkel orderboek waarin alle transacties openbaar samenkomen en geen bestuurder die iedere prijs vastlegt. Informatie stroomt door bilaterale relaties; reputatie, krediet, allocations en toegang tot klanten geven deelnemers verschillende posities.
+De Place werkt zonder centraal orderboek of bestuurder die iedere prijs vastlegt. Informatie stroomt door bilaterale relaties; reputatie, krediet, allocations en toegang tot klanten geven deelnemers verschillende posities.
 
 Juist daarom kan het netwerk tegelijk efficiënt en moeilijk doorzichtig zijn. Het verspreidt wijn wereldwijd en verzamelt veel marktkennis, maar buitenstaanders zien niet vanzelf elk volume, iedere marge of alle afspraken tussen de schakels.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
-De Place de Bordeaux is een netwerk, geen plek: producenten leveren de wijn, courtiers verbinden partijen en négociants financieren en verspreiden voorraad. Het is een belangrijke route, maar geen verplichte of centraal bestuurde markt voor iedere Bordeauxfles.
+De Place de Bordeaux is een handelsnetwerk: producenten leveren de wijn, courtiers verbinden partijen en négociants financieren en verspreiden voorraad. Het vormt een belangrijke, gedecentraliseerde route naast directe verkoop en andere distributiemodellen.
 :::

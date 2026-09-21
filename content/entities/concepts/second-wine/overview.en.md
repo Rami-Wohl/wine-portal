@@ -10,7 +10,7 @@ This does not make a second wine a diluted Grand Vin, nor automatically a bargai
 :::section{#betekenis-en-gebruik depth="foundation" source_refs="source.chateau-latour-les-forts source.chateau-mouton-wines source.chateau-figeac-wine"}
 ## Meaning and use — second within one wine estate
 
-“Second” means that the wine sits alongside and below the same producer's principal selection. The word does not compare two arbitrary wines from an appellation. A famous château's second wine is not therefore ranked above a neighbour's Grand Vin.
+“Second” places the wine alongside and below the same producer's principal selection. It describes an internal relationship within one estate; comparisons with a neighbour's Grand Vin still require tasting the actual wines.
 
 The two wines often share a family resemblance: they come from the same estate, are made by the same team and share part of a vineyard and cellar philosophy. The second wine nevertheless has its own name and its own [[concept.cuvee|cuvée]]. At [[producer.chateau-figeac|Château Figeac]] it is Petit-Figeac; at [[producer.chateau-mouton-rothschild|Château Mouton Rothschild]], Le Petit Mouton; at [[producer.chateau-latour|Château Latour]], Les Forts de Latour.
 :::
@@ -24,7 +24,7 @@ Dedicated parcels are another possibility: since 2017, Arômes de Pavie has been
 :::
 
 :::section{#selectie-en-stijl depth="foundation" source_refs="source.chateau-latour-les-forts source.chateau-mouton-wines source.chateau-figeac-wine"}
-## Selection and style — earlier to approach does not mean simple
+## Selection and style — a distinct balance and line of development
 
 Second wines are often selected with a more approachable style and a shorter time horizon in mind. Less emphatic [[concept.tannin|tannin]], more immediate fruit or a different proportion of [[grape.merlot|Merlot]] can make the wine inviting sooner. These are common outcomes, not a fixed definition or a guarantee of taste.
 
@@ -32,7 +32,7 @@ In each [[concept.vintage|vintage]], the technical team assesses which parcels a
 :::
 
 :::detail{#geen-afvoerladder parent="selectie-en-stijl" depth="advanced" source_refs="source.chateau-latour-les-forts source.chateau-mouton-wines"}
-### Not every barrel moves one rung down
+### Each wine receives its own selection
 
 A simple pyramid — Grand Vin, then second wine, then everything discarded — misrepresents practice. Some parcels are followed with a particular wine in mind; other lots change destination only after tasting. An estate may also make a third wine, a branded cuvée or a wine under another appellation.
 

@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.plantgrape-sauvignon-gris source.civb-sauvignon-gris source.casa-silva-sauvignon-gris"}
-Sauvignon Gris makes white wine from grapes with pink-grey skins. It is a colour mutation of Sauvignon Blanc, but not merely a different exterior: lower productivity, considerable sugar accumulation potential and often broader wine structure give it a role of its own. It can add fragrance and volume to French blends; a Chilean example shows that it can also speak independently.
+Sauvignon Gris makes white wine from grapes with pink-grey skins. As a colour mutation of Sauvignon Blanc it shares a family background, while lower productivity, considerable sugar accumulation potential and often broader wine structure give it a role of its own. It can add fragrance and volume to French blends; a Chilean example shows that it can also speak independently.
 :::
 
 :::section{#identiteit depth="foundation" source_refs="source.plantgrape-sauvignon-gris"}
@@ -7,7 +7,7 @@ Sauvignon Gris makes white wine from grapes with pink-grey skins. It is a colour
 
 Sauvignon Gris is the grey colour mutation of [[grape.sauvignon-blanc|Sauvignon Blanc]]. A mutation is a change within existing plant material, not the same as a cross between two parents. Plantgrape describes its ripe skins as grey and sometimes pink, while the grapes are used for white wine. [@source.plantgrape-sauvignon-gris]
 
-This does not make Sauvignon Gris rosé growing on a vine. Grape-skin colour and finished-wine colour are separate questions: for white wine, grapes are generally pressed without the extended skin contact used for reds. The similar name [[grape.souvignier-gris|Souvignier Gris]] does not identify the same grape either. These names should not be interchanged when choosing a bottle or plant.
+The pink-grey colour belongs to the grape skin; for white wine, the grapes are generally pressed without the extended skin contact used for reds. Despite its similar name, [[grape.souvignier-gris|Souvignier Gris]] is a different variety. The full variety name therefore matters when choosing a bottle or plant.
 :::
 
 :::figure{#rasbeeld depth="foundation" media_id="media.grape.sauvignon-gris.bunch"}
@@ -16,11 +16,11 @@ This does not make Sauvignon Gris rosé growing on a vine. Grape-skin colour and
 :::section{#regios depth="foundation" source_refs="source.civb-sauvignon-gris source.plantgrape-sauvignon-gris source.casa-silva-sauvignon-gris"}
 ## Regions and appellations — French blends and a Chilean leading role
 
-In [[region.bordeaux|Bordeaux]], Sauvignon Gris occurs in small quantities in white wines. It can join Sauvignon Blanc and [[grape.semillon|Sémillon]], for example in the wine contexts of [[appellation.graves|Graves]], [[appellation.pessac-leognan|Pessac-Léognan]] and [[appellation.entre-deux-mers|Entre-Deux-Mers]]. It is not automatically present in every wine from those places; producer information is still needed for the actual composition. [@source.civb-sauvignon-gris]
+In [[region.bordeaux|Bordeaux]], Sauvignon Gris occurs in small quantities in white wines. It can join Sauvignon Blanc and [[grape.semillon|Sémillon]], for example in the wine contexts of [[appellation.graves|Graves]], [[appellation.pessac-leognan|Pessac-Léognan]] and [[appellation.entre-deux-mers|Entre-Deux-Mers]]. Producer information establishes whether and in what proportion it actually appears in a wine from those places. [@source.civb-sauvignon-gris]
 
 The [[region.loire-valley|Loire]] also belongs to the French context. Plantgrape describes conservatories in Anjou. This establishes a concrete connection, not permission to assign every famous Sauvignon Blanc appellation to Sauvignon Gris as well. [@source.plantgrape-sauvignon-gris]
 
-In Chile, Sauvignon Gris is also bottled on its own. Casa Silva's 1912 Vines from [[region.colchagua|Colchagua]] demonstrates a different role from that of a French blending partner. This belongs in the basic picture of the variety: it is not exclusively a French grape. [@source.casa-silva-sauvignon-gris]
+In Chile, Sauvignon Gris is also bottled on its own. Casa Silva's 1912 Vines from [[region.colchagua|Colchagua]] demonstrates a different role from that of a French blending partner. This broadens the basic picture of the variety beyond France. [@source.casa-silva-sauvignon-gris]
 :::
 
 :::detail{#colchagua-als-voorbeeld parent="regios" depth="intermediate" source_refs="source.casa-silva-sauvignon-gris"}
@@ -40,9 +40,9 @@ Citrus, flowers, ripe stone fruit or tropical fruit are useful aromatic associat
 :::
 
 :::detail{#vergelijken-met-blanc parent="smaak" depth="intermediate" source_refs="source.plantgrape-sauvignon-gris source.casa-silva-sauvignon-gris"}
-### Lower acidity potential does not make every wine flat
+### Acidity potential and freshness in the bottle
 
-A comparison between varieties is not an analysis of every bottle. A producer can harvest early enough to retain [[concept.acidity|freshness]], or combine separate lots. Casa Silva, for example, describes its own wine as fresh with medium-high acidity. This can coexist with Plantgrape's broader comparison with Sauvignon Blanc. [@source.casa-silva-sauvignon-gris]
+A comparison between varieties gives a general direction; harvest timing and blending help determine how much [[concept.acidity|acidity and freshness]] a particular bottle retains. Casa Silva, for example, describes its own wine as fresh with medium-high acidity. This can coexist with Plantgrape's broader comparison with Sauvignon Blanc. [@source.casa-silva-sauvignon-gris]
 
 The same applies to fullness. Weight can reflect ripeness and alcohol, but also fermentation, lees contact and blending. “Gris is fuller” provides an initial direction, not an explanation replacing all other information.
 :::
@@ -64,9 +64,9 @@ From flowering and fruit set through ripening, bunches, skin colour and composit
 :::
 
 :::section{#wijnbouw depth="intermediate" source_refs="source.plantgrape-sauvignon-gris source.plantgrape-sauvignon"}
-## Viticulture and vulnerabilities — mutation does not automatically mean resistance
+## Viticulture and vulnerabilities — health requires attention
 
-Plantgrape states that disease behaviour appears similar to Sauvignon Blanc's. Grey skins are therefore no evidence of better fungal resistance. Sound planting material, a manageable canopy and attention to bunch condition remain necessary. [@source.plantgrape-sauvignon-gris]
+Plantgrape states that disease behaviour appears similar to Sauvignon Blanc's. Sound planting material, a manageable canopy and attention to bunch condition consequently remain important. [@source.plantgrape-sauvignon-gris]
 
 For Sauvignon Blanc, Plantgrape identifies rot, powdery mildew and wood diseases among its concerns. The comparison helps growers look purposefully, but does not justify a precise disease prediction for every Sauvignon Gris vine. Moisture, damage, vigour and harvest timing must be assessed together in the actual site. [@source.plantgrape-sauvignon]
 :::
@@ -74,13 +74,13 @@ For Sauvignon Blanc, Plantgrape identifies rot, powdery mildew and wood diseases
 :::section{#wijnmaken depth="foundation" source_refs="source.plantgrape-sauvignon-gris source.civb-sauvignon-gris source.casa-silva-sauvignon-gris"}
 ## Winemaking and ageing — volume does not require oak
 
-For dry white wine, juice is fermented after the grapes are pressed. Cool, protected handling can produce a different expression from barrel fermentation and longer maturation. Oak is not needed to create breadth: the Chilean example on this page uses stainless steel. [@source.casa-silva-sauvignon-gris]
+For dry white wine, juice is fermented after the grapes are pressed. Cool, protected handling can produce a different expression from barrel fermentation and longer maturation. Stainless steel can also yield a broad wine, as the Chilean example on this page shows. [@source.casa-silva-sauvignon-gris]
 
 In an [[concept.assemblage|assemblage]], or blend of grapes or separate wine lots, Sauvignon Gris can add fragrance and volume. Its role is not determined by the varietal name alone. Harvest timing, plot, share in the blend and treatment of the other lots together shape balance. [@source.civb-sauvignon-gris]
 :::
 
 :::detail{#suiker-lies-en-zuurstof parent="wijnmaken" depth="intermediate" source_refs="source.plantgrape-sauvignon-gris source.plantgrape-sauvignon"}
-### Sugar potential and texture are not fixed destinations
+### Sugar potential, alcohol and texture
 
 High sugar in fruit can produce more alcohol through dry fermentation; it does not make every Sauvignon Gris sweet. Plantgrape also notes suitability for sweet wines. That is a technological possibility, not a reason to introduce all Sauvignon Gris as dessert wine. [@source.plantgrape-sauvignon-gris; Technological potential]
 
@@ -110,5 +110,5 @@ On an explicitly named Sauvignon Gris wine, the variety is clearer but the style
 
 Sauvignon Gris offers makers a different accent alongside familiar white grapes. Lower productivity and considerable sugar potential can lead to different harvest and blending decisions. A Chilean varietal wine makes that range visible without requiring the grape to play a leading role everywhere.
 
-Extra warmth is not simply an advantage. Sugar, acidity, water and fruit health still need balance. The durable story is not that Sauvignon Gris will automatically become the Sauvignon of the future, but that suitable sites offer another possibility for fragrance, weight and structure.
+Extra warmth accelerates sugar accumulation, while acidity, water and fruit health must remain in balance. On suitable sites, Sauvignon Gris therefore offers another possibility for fragrance, weight and structure.
 :::

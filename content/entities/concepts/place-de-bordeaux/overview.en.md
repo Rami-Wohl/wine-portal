@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.civb-bordeaux-wine-trade source.bordeaux-negoce-profession"}
-The **Place de Bordeaux** is neither an exchange building nor a single company. It is the trading network in which wine producers from [[region.bordeaux|Bordeaux]], [[concept.courtier|courtiers]] and [[concept.negociant|négociants]] offer, broker and distribute wine across international markets. Here, *place* means marketplace: a system of relationships, customs and transactions. [@source.civb-bordeaux-wine-trade]
+The **Place de Bordeaux** is the trading network in which wine producers from [[region.bordeaux|Bordeaux]], [[concept.courtier|courtiers]] and [[concept.negociant|négociants]] offer, broker and distribute wine across international markets. Here, *place* means marketplace: a system of relationships, customs and transactions extending far beyond one building or company. [@source.civb-bordeaux-wine-trade]
 :::
 
 :::section{#drie-kernrollen depth="foundation" source_refs="source.civb-bordeaux-wine-trade source.bordeaux-negoce-profession"}
@@ -13,9 +13,9 @@ This division of labour gives a château access to many markets without building
 :::section{#handelsstroom depth="foundation"}
 ## Flow of trade
 
-A simple route reads: **château → courtier → négociant → professional buyer → drinker**. The wine itself, information about it and the money do not always move at the same time. In [[concept.en-primeur|en primeur]], for example, the commercial commitment may occur while the young wine is still maturing in barrel and the physical bottles follow much later.
+A simple route reads: **château → courtier → négociant → professional buyer → drinker**. The wine itself, information about it and the money may move at different times. In [[concept.en-primeur|en primeur]], for example, the commercial commitment may occur while the young wine is still maturing in barrel and the physical bottles follow much later.
 
-Nor is the route compulsory. A courtier brokers and normally does not own the wine; a producer may use several négociants; some sales are direct or outside the Place. The model helps explain functions, not predict every individual transaction.
+The route has several variations. A courtier brokers and normally does not own the wine; a producer may use several négociants; some sales are direct or outside the Place. The model makes the functions clear, while each transaction may follow its own route.
 :::
 
 :::detail{#releases-en-toewijzingen parent="handelsstroom" depth="intermediate"}
@@ -46,13 +46,13 @@ Conversely, not every Bordeaux wine necessarily travels through this network. Co
 :::
 
 :::detail{#geen-centrale-regisseur parent="reikwijdte-en-grenzen" depth="advanced"}
-### No central director
+### A decentralised market
 
-The Place has no single order book in which every transaction is made public and no authority setting every price. Information travels through bilateral relationships; reputation, credit, allocations and access to customers give participants differing positions.
+The Place operates without a central order book or authority setting every price. Information travels through bilateral relationships; reputation, credit, allocations and access to customers give participants differing positions.
 
 That is precisely why the network can be both efficient and hard to see through. It distributes wine around the world and concentrates considerable market knowledge, but outsiders do not automatically see every volume, margin or agreement between its links.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
-The Place de Bordeaux is a network, not a place: producers supply the wine, courtiers connect parties, and négociants finance and distribute stock. It is an important route, but neither compulsory nor centrally governed for every Bordeaux bottle.
+The Place de Bordeaux is a trading network: producers supply the wine, courtiers connect parties, and négociants finance and distribute stock. It forms an important decentralised route alongside direct sales and other distribution models.
 :::

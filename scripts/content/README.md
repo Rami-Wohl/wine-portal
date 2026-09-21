@@ -44,6 +44,17 @@ Scaffolds planned dependencies. Every content plan uses schema v2, and every pro
 dependency must first choose `monograph`, `collection-profile`, or
 `register-entry`; the generated draft preserves that decision.
 
+```bash
+npm run content:language-audit
+```
+
+Inventories possible defensive formulations in every active localized document
+and ranks the densest files for human review. Matches are candidates rather than
+validation errors: legal boundaries, material uncertainty and genuine conceptual
+distinctions often require an explicit negation. Apply the positive-rephrasing
+test in `editorial/writing-style.md`; never use this report for automatic prose
+replacement.
+
 ## Output
 
 The generated bundle contains normalized entities and narratives with their safe

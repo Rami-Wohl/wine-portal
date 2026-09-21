@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.champagne-bottling-second-fermentation"}
-Een **tweede vergisting** is een nieuwe alcoholische vergisting van een al gemaakte basiswijn. Bij mousserende wijn gebruikt gist toegevoegde suiker; het gevormde koolzuurgas blijft in een afgesloten fles of tank en zorgt voor de bubbels. Het is niet hetzelfde als de eerste vergisting van druivensap. [@source.champagne-bottling-second-fermentation]
+Een **tweede vergisting** is een nieuwe alcoholische vergisting van een al gemaakte basiswijn. Bij mousserende wijn gebruikt gist toegevoegde suiker; het gevormde koolzuurgas blijft in een afgesloten fles of tank en zorgt voor de bubbels. De eerste vergisting maakt dus de basiswijn, de tweede bouwt daar druk en mousse in op. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::figure{#flessenkelder depth="foundation" media_id="media.concept.second-fermentation.bottles-in-cellar"}
@@ -18,15 +18,15 @@ Bij de [[concept.traditional-method|traditionele methode]] gebeurt dit in de fle
 :::
 
 :::section{#niet-verwarren depth="foundation" source_refs="source.champagne-bottling-second-fermentation"}
-## Niet verwarren — ‘tweede’ betekent niet altijd hetzelfde
+## Onderscheid — alcoholische vergisting en zuurconversie
 
-In dit verband gaat het om een tweede **alcoholische** vergisting die koolzuurgas vasthoudt. [[concept.malolactic-fermentation|Malolactische omzetting]] verandert vooral zuren door bacteriën en is geen andere naam voor deze belvormende stap. Ook bij stille wijn kan een vergisting opnieuw op gang komen; dat maakt de wijn nog niet automatisch een bedoelde mousserende wijn. [@source.champagne-bottling-second-fermentation]
+In dit verband gaat het om een tweede **alcoholische** vergisting die koolzuurgas vasthoudt. [[concept.malolactic-fermentation|Malolactische omzetting]] is een bacteriële zuurconversie met een ander doel. Een herstart in stille wijn is weer een ongepland proces; bedoelde mousserende wijn vraagt een gecontroleerde vergisting in een drukbestendige fles of tank. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::detail{#druk-en-stijl parent="niet-verwarren" depth="advanced" source_refs="source.champagne-bottling-second-fermentation"}
 ### De uitkomst hangt van meer af dan gasvorming
 
-Hoeveel suiker wordt vergist, de drukvaste afsluiting en wat er later met de wijn gebeurt bepalen samen de uiteindelijke stijl. Bij flesgisting volgen doorgaans rijping op de gist, [[concept.remuage|remuage]] en [[concept.disgorgement|dégorgement]]; in de tank verloopt de verwijdering van gist anders. Bubbels alleen vertellen daarom niet hoe de wijn is gemaakt. [@source.champagne-bottling-second-fermentation]
+Hoeveel suiker wordt vergist, de drukvaste afsluiting en wat er later met de wijn gebeurt bepalen samen de uiteindelijke stijl. Bij flesgisting volgen doorgaans rijping op de gist, [[concept.remuage|remuage]] en [[concept.disgorgement|dégorgement]]; in de tank verloopt de verwijdering van gist anders. De plaats en verdere behandeling verklaren dus hoe de bubbels zijn gemaakt. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::key-idea{#kern depth="foundation"}

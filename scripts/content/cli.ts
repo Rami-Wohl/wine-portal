@@ -5,6 +5,10 @@ import { generateEntityPackage } from "./generator";
 import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
 import { auditActiveRelationCoverage } from "./relation-audit";
 import { writeEntityStatus } from "./status";
+import {
+  auditEditorialLanguage,
+  rankEditorialLanguageCandidates,
+} from "./editorial-language-audit";
 
 async function main(): Promise<void> {
   const [command, first, second, third, fourth, fifth] = process.argv.slice(2);
@@ -98,8 +102,24 @@ async function main(): Promise<void> {
     }
     return;
   }
+  if (command === "language-audit") {
+    const result = await auditEditorialLanguage();
+    console.log(
+      `Editorial language inventory: ${result.activePackages} active packages, ${result.documents.length} localized documents, ${result.totalMarkers} possible defensive markers, ${result.summaryCandidates} summaries and ${result.headingCandidates} headings to consider.`,
+    );
+    console.log(
+      "These are review candidates, not errors; retain negation where scope, law, safety or a real distinction requires it.",
+    );
+    for (const document of rankEditorialLanguageCandidates(result.documents).slice(0, 20)) {
+      const rate = document.words === 0 ? 0 : (document.markers / document.words) * 1_000;
+      console.log(
+        `- ${document.path}: ${document.markers} markers (${rate.toFixed(1)} per 1,000 words), ${document.summaryCandidates} summary, ${document.headingCandidates} headings`,
+      );
+    }
+    return;
+  }
   throw new Error(
-    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> [producer-presentation] | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit | npm run content:relation-audit",
+    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> [producer-presentation] | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit | npm run content:relation-audit | npm run content:language-audit",
   );
 }
 

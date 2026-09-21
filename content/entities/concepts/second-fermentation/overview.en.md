@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.champagne-bottling-second-fermentation"}
-A **second fermentation** is a new alcoholic fermentation of a wine that has already been made. In sparkling wine, yeast consumes added sugar; the resulting carbon dioxide stays in a sealed bottle or tank and creates the bubbles. This is not the same as the initial fermentation of grape juice. [@source.champagne-bottling-second-fermentation]
+A **second fermentation** is a new alcoholic fermentation of a wine that has already been made. In sparkling wine, yeast consumes added sugar; the resulting carbon dioxide stays in a sealed bottle or tank and creates the bubbles. The first fermentation therefore makes the base wine, while the second builds pressure and mousse within it. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::figure{#flessenkelder depth="foundation" media_id="media.concept.second-fermentation.bottles-in-cellar"}
@@ -18,15 +18,15 @@ In the [[concept.traditional-method|traditional method]], fermentation takes pla
 :::
 
 :::section{#niet-verwarren depth="foundation" source_refs="source.champagne-bottling-second-fermentation"}
-## Do not confuse — ‘second’ can mean different things
+## Distinction — alcoholic fermentation and acid conversion
 
-Here, it means a second **alcoholic** fermentation that retains carbon dioxide. [[concept.malolactic-fermentation|Malolactic conversion]] mainly changes acids through bacterial action; it is not another name for this bubble-forming step. Fermentation can also restart in still wine, without turning it into an intentionally made sparkling wine. [@source.champagne-bottling-second-fermentation]
+Here, it means a second **alcoholic** fermentation that retains carbon dioxide. [[concept.malolactic-fermentation|Malolactic conversion]] is a bacterial acid conversion with another purpose. A restart in still wine is an unplanned process again; intentional sparkling wine requires controlled fermentation in a pressure-resistant bottle or tank. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::detail{#druk-en-stijl parent="niet-verwarren" depth="advanced" source_refs="source.champagne-bottling-second-fermentation"}
 ### More than gas determines the result
 
-The amount of sugar fermented, the pressure-resistant closure and the wine's later handling all shape the final style. Bottle fermentation is usually followed by [[concept.lees-ageing|lees ageing]], [[concept.remuage|riddling]] and [[concept.disgorgement|disgorgement]]; yeast is removed differently in the tank method. Bubbles alone therefore do not reveal how a wine was made. [@source.champagne-bottling-second-fermentation]
+The amount of sugar fermented, the pressure-resistant closure and the wine's later handling all shape the final style. Bottle fermentation is usually followed by [[concept.lees-ageing|lees ageing]], [[concept.remuage|riddling]] and [[concept.disgorgement|disgorgement]]; yeast is removed differently in the tank method. Place and later handling therefore explain how the bubbles were made. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::key-idea{#kern depth="foundation"}

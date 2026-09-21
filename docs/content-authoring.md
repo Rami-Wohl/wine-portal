@@ -110,6 +110,23 @@ Deze proportionaliteitscontrole is een harde stap in iedere sectiereview. AI mag
 algemene kennis helpen synthetiseren, maar is nooit de bron en mag het onderscheid
 tussen algemene context en een specifieke claim niet zelf stilzwijgend vervagen.
 
+### Positieve formulering als vaste redactiestap
+
+Controleer samenvattingen, koppen, paragrafen en beeldbijschriften vóór
+publicatie met de positieve-herformuleringstest uit
+`../editorial/writing-style.md`. De tekst vertelt eerst wat een onderwerp is,
+doet of betekent. Behoud een ontkenning alleen wanneer die een echte verwarring,
+wettelijke grens, onjuiste causaliteit, veiligheidskwestie of materiële
+onzekerheid voorkomt. Een algemene stopzin als “dit is geen garantie” moet worden
+vervangen door de concrete factoren die de uitkomst begrenzen wanneer die bekend
+zijn.
+
+Dit is een inhoudelijke review, geen woordfilter. Een automatische zoekactie mag
+kandidaten aanwijzen, maar mag nooit zelfstandig ontkenningen verwijderen of
+herschrijven: woorden als *niet*, *geen*, *not* en *never* kunnen precies de
+betekenis dragen die voor betrouwbaarheid nodig is. Controleer Nederlands en
+Engels afzonderlijk op natuurlijk ritme en gelijke feitelijke scope.
+
 ### Kennisdiepte toekennen
 
 Diepte beschrijft de functie van informatie voor de lezer, niet hoe technisch een

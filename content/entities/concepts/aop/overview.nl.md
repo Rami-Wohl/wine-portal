@@ -9,7 +9,7 @@ Een AOP vertelt dus veel meer dan “gemaakt in de buurt van”. Toch is zij gee
 
 Bij een AOP is de plaatsnaam geen losse marketingtekst. De wijn moet uit de vastgelegde geografische zone komen en volgens het bijbehorende productdossier zijn voortgebracht. De Europese definitie verbindt kwaliteit of kenmerken wezenlijk of uitsluitend met het geografische milieu, inclusief natuurlijke én menselijke factoren; alle druiven komen uit het gebied en de productie vindt er plaats. [@source.eurlex-wine-pdo-regulation-2026; art. 93]
 
-Dat menselijke deel is belangrijk. [[concept.terroir|Terroir]] betekent hier niet alleen bodem of klimaat, maar ook over tijd opgebouwde kennis en productiepraktijk. Een AOP beschermt daarom een naam-met-regels, niet simpelweg een cirkel op de kaart.
+Dat menselijke deel is belangrijk. [[concept.terroir|Terroir]] omvat hier bodem en klimaat én de over tijd opgebouwde kennis en productiepraktijk. Een AOP beschermt daarom een naam die herkomst, product en regels met elkaar verbindt.
 :::
 
 :::detail{#grens-is-niet-het-hele-verhaal parent="wat-een-aop-beschermt" depth="intermediate" source_refs="source.inao-aop-overview source.eurlex-wine-pdo-regulation-2026"}
@@ -21,7 +21,7 @@ Wie alleen naar de kaart kijkt, mist dus een deel van de betekenis. In [[region.
 :::
 
 :::section{#aop-aoc-en-igp depth="foundation" source_refs="source.inao-aop-overview source.dgccrf-wine-labels-2025"}
-## Begrippen — AOP, AOC en IGP zijn geen drie proefcijfers
+## Begrippen — AOP, AOC en IGP uit elkaar houden
 
 **AOP** is de Europese bescherming; het Engelse equivalent is **PDO**, *Protected Designation of Origin*. In Frankrijk is **AOC**, *appellation d’origine contrôlée*, de nationale erkenning die aan Europese registratie voorafgaat. Wijn mag de traditionele vermelding AOC blijven gebruiken, waardoor op Franse flessen vaak AOC staat waar het Europese register over AOP spreekt. [@source.inao-aop-overview]
 
@@ -50,15 +50,15 @@ De regels zijn concreet maar niet overal gelijk. Plantdichtheid, snoei, opbrengs
 :::detail{#regels-kunnen-veranderen parent="productdossier-en-controle" depth="advanced" source_refs="source.eurlex-wine-pdo-regulation-2026"}
 ### Bescherming is stabieler dan de tekst van iedere regel
 
-Een AOP is geen bevroren museumstuk. Producentengroepen kunnen wijzigingen aanvragen; bevoegde autoriteiten toetsen procedure, motivering en verenigbaarheid met het beschermde verband. Ook een naam kan uiteindelijk worden geannuleerd. De geconsolideerde Europese regels beschrijven daarom niet alleen erkenning, maar ook wijziging, bezwaar en intrekking.
+Een AOP kan zich binnen een formele procedure ontwikkelen. Producentengroepen kunnen wijzigingen aanvragen; bevoegde autoriteiten toetsen procedure, motivering en verenigbaarheid met het beschermde verband. Ook een naam kan uiteindelijk worden geannuleerd. De geconsolideerde Europese regels beschrijven erkenning, wijziging, bezwaar en intrekking.
 
 Wie een exact maximum of toegestane druif noemt, moet dus een gedateerd dossier raadplegen. De beroemde naam alleen vertelt niet welke versie van de regels gold voor een oudere [[concept.vintage|jaargang]].
 :::
 
 :::section{#geen-kwaliteitsladder depth="foundation" source_refs="source.inao-aop-overview"}
-## Kwaliteit en stijl — gecontroleerde herkomst is geen ranglijst
+## Kwaliteit en stijl — oorsprong, regels en variatie
 
-Een AOP beschermt authenticiteit van oorsprong en naleving van collectieve voorwaarden. Binnen één appellation kunnen producent, perceel, jaargang, selectie en wijnmaken nog altijd sterk verschillen. Een kleinere AOP is niet automatisch beter dan een grotere; zij geeft vooral specifiekere herkomstinformatie en eigen regels.
+Een AOP beschermt authenticiteit van oorsprong en naleving van collectieve voorwaarden. Binnen één appellation kunnen producent, perceel, jaargang, selectie en wijnmaken sterk verschillen. Een kleinere AOP geeft specifiekere herkomstinformatie en eigen regels; kwaliteit beoordeel je vervolgens aan de concrete wijn.
 
 Ook [[concept.cru|cru’s]] en classificaties staan niet gelijk aan AOP. Sommige rangschikken producenten of wijngaarden binnen een bepaalde scope, andere appellations kennen helemaal geen officiële rangorde. Het woord AOP plaatst een wijn in een juridisch herkomstsysteem, niet op één universele kwaliteitstrap.
 :::

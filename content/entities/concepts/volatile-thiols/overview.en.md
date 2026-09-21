@@ -3,15 +3,15 @@
 :::
 
 :::section{#betekenis-en-geur depth="foundation" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012"}
-## Meaning and aroma — sulphur without rotten eggs
+## Meaning and aroma — a diverse sulphur family
 
 A thiol is a chemical compound containing a sulphur-bearing group. *Volatile* means here that a substance readily enters the air above the glass and can reach the nose. The family is broad: some thiols contribute prized fruity or herbal aromas, while other sulphur compounds may instead recall onion, cabbage or rotten eggs.
 
-“Sulphur” is therefore not a tasting note. The exact compound, concentration and surrounding wine determine what someone smells. Compounds without sulphur also blend into that aroma; wine is never the smell of one molecule. [@source.coetzee-du-toit-sauvignon-aroma-2012]
+“Sulphur” therefore names a chemical element, while the exact compound, concentration and surrounding wine determine what someone smells. Other compounds blend into the aroma too; wine scent arises from many molecules at once. [@source.coetzee-du-toit-sauvignon-aroma-2012]
 :::
 
 :::detail{#gewenst-of-ongewenst parent="betekenis-en-geur" depth="intermediate" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012"}
-### Desirable and undesirable are not chemical families
+### From prized aroma to wine fault
 
 Wine language often describes Sauvignon's aromatic thiols positively, while “volatile sulphur compounds” is also used as an umbrella term for faults. These groups share an element, not necessarily an aroma or effect.
 
@@ -27,7 +27,7 @@ The grape supplies the starting material and yeast helps unlock it. This two-ste
 :::
 
 :::detail{#drie-bekende-afkortingen parent="van-druif-naar-wijn" depth="advanced" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012 source.degryse-sauvignon-thiols-2008"}
-### 3SH, 3SHA and 4MSP — names for precision, not a tasting exam
+### 3SH, 3SHA and 4MSP — three compounds in view
 
 Three frequently studied compounds are 3-sulfanylhexan-1-ol (**3SH**, also called 3MH), 3-sulfanylhexyl acetate (**3SHA**, also 3MHA) and 4-methyl-4-sulfanylpentan-2-one (**4MSP**, also 4MMP). They are associated with impressions including grapefruit, passionfruit, guava and boxwood. [@source.coetzee-du-toit-sauvignon-aroma-2012]
 
@@ -35,21 +35,21 @@ The paired abbreviations result from changing chemical nomenclature. Their funct
 :::
 
 :::section{#sturen-en-begrenzen depth="foundation" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012"}
-## Steering and limits — aroma can be influenced, not ordered
+## Steering and limits — aroma emerges from a chain
 
 Variety, site, bunch microclimate, ripeness and grape health influence which precursors enter the winery. Pressing, juice exposure to oxygen, yeast strain, nutrition, temperature and storage then play their parts. Thiols are vulnerable to oxidation, so protection after fermentation may matter too. [@source.coetzee-du-toit-sauvignon-aroma-2012]
 
-These controls do not work independently. A yeast that releases abundant thiol in one trial does not guarantee a tropical wine in another must; without suitable precursors there is little to unlock. Other aromas may amplify, alter or mask the effect.
+These controls work as a chain. A yeast that releases abundant thiol in one trial needs suitable precursors and conditions in another must. Other aromas may amplify, alter or mask the effect.
 :::
 
 :::detail{#meer-is-niet-automatisch-beter parent="sturen-en-begrenzen" depth="intermediate" source_refs="source.degryse-sauvignon-thiols-2008"}
-### More is not automatically better
+### Intensity and balance
 
 Research shows that yeast strains differ in their uptake and conversion of precursors. Only part of the available potential ends up as free thiol in wine. This makes fermentation important while also exposing the limits of control. [@source.degryse-sauvignon-thiols-2008]
 
-The most successful wine need not have the highest concentration. Acidity, texture, [[concept.methoxypyrazines|methoxypyrazines]], esters and site expression must make a convincing whole. Aromatic intensity is a stylistic choice, not a universal scale of quality.
+A successful wine brings concentration together with acidity, texture, [[concept.methoxypyrazines|methoxypyrazines]], esters and site expression. Aromatic intensity is a stylistic choice; quality lies in their cohesion.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
-Volatile thiols show that grape aroma does not stand complete inside the berry. The vineyard largely supplies odourless precursors; yeast and cellar conditions help turn them into powerful aromas. The result remains an interaction, not a molecular recipe.
+Volatile thiols show how grape aroma develops further during fermentation. The vineyard largely supplies odourless precursors; yeast and cellar conditions help turn them into powerful aromas. The result emerges from their interaction.
 :::

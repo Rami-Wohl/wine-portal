@@ -24,15 +24,15 @@ Ook vaste percelen zijn mogelijk: Arômes de Pavie wordt sinds 2017 vooral uit s
 :::
 
 :::section{#selectie-en-stijl depth="foundation" source_refs="source.chateau-latour-les-forts source.chateau-mouton-wines source.chateau-figeac-wine"}
-## Selectie en stijl — eerder benaderbaar is niet hetzelfde als eenvoudig
+## Selectie en stijl — een eigen balans en ontwikkelingslijn
 
 Tweede wijnen worden vaak geselecteerd met een toegankelijker stijl en een kortere tijdshorizon voor ogen. Minder nadrukkelijke [[concept.tannin|tannine]], meer direct fruit of een ander aandeel [[grape.merlot|merlot]] kan de wijn jonger uitnodigend maken. Dat zijn veelvoorkomende uitkomsten, geen vaste definitie en geen smaakgarantie.
 
-Het technische team beoordeelt per [[concept.vintage|jaargang]] welke percelen en vaten bij iedere wijn passen. Een partij kan uitstekend zijn en toch niet de structuur, geur of ontwikkelingslijn hebben die voor de Grand Vin wordt gezocht. Selectie is daarmee ook compositie: niet alleen “de beste vaten” bovenaan zetten, maar verschillende samenhangende wijnen bouwen.
+Het technische team beoordeelt per [[concept.vintage|jaargang]] welke percelen en vaten bij iedere wijn passen. Een uitstekende partij kan een andere structuur, geur of ontwikkelingslijn hebben dan voor de Grand Vin wordt gezocht. Selectie is daarmee ook compositie: uit verschillende partijen worden meerdere samenhangende wijnen gebouwd.
 :::
 
 :::detail{#geen-afvoerladder parent="selectie-en-stijl" depth="advanced" source_refs="source.chateau-latour-les-forts source.chateau-mouton-wines"}
-### Niet ieder vat schuift één trede omlaag
+### Iedere wijn krijgt zijn eigen selectie
 
 Een eenvoudige piramide — Grand Vin, daarna tweede wijn, daarna alles overboord — doet de praktijk tekort. Sommige percelen worden vooraf voor een bepaalde wijn gevolgd; andere partijen wisselen pas na proeven van bestemming. Een domein kan bovendien nog een derde wijn, merkcuvée of wijn onder een andere appellation maken.
 
@@ -44,7 +44,7 @@ Daarom mag de hiërarchie niet achterwaarts als perceelkaart worden gelezen. Dat
 
 De woorden *second wine* of *deuxième vin* hoeven niet groot op het etiket te staan. Herken de fles aan haar volledige naam en controleer vervolgens appellation, [[concept.vintage|jaargang]], producent en bottelaar. Die gegevens vertellen meer over de formele identiteit dan de plaats van de wijn in het assortiment. [@source.dgccrf-wine-labels-2025]
 
-Vergelijk de tweede wijn niet alleen met de Grand Vin. Vraag ook wat dezelfde appellation en prijsklasse elders bieden. De gedeelde château-naam geeft nuttige context over team en herkomst, maar prijs, bewaarpotentieel en kwaliteit blijven eigenschappen van de concrete wijn en jaargang.
+Vergelijk de tweede wijn met de Grand Vin én met wat dezelfde appellation en prijsklasse elders bieden. De gedeelde château-naam geeft nuttige context over team en herkomst, terwijl prijs, bewaarpotentieel en kwaliteit bij de concrete wijn en jaargang horen.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
