@@ -743,11 +743,21 @@ blockanker, zodat een dieper block via het bestaande kennisdieptecontract
 automatisch zichtbaar wordt. Resultaten worden per document samengevoegd en
 tonen alleen de best passende passage.
 
+Explore houdt de categoriepagina bewust compact en gebruikt per entitytype een
+vaste browse-route. Grote verzamelingen krijgen naamzoeken, een alfabetische
+ingang en paginering via deelbare queryparameters. Alleen entitytypes waarvoor
+de canonical graph een betekenisvolle context levert, krijgen een extra facet:
+bijvoorbeeld `located_in` voor producenten en de meest specifieke `part_of`-regio
+voor appellations. Kleine verzamelingen blijven een directe lijst. De interface
+verzint geen concepttaxonomie of geografische indeling wanneer die niet in de
+graph bestaat.
+
 ### Roadmap
 
 - ranking met relationele nabijheid en rijkere taalafhankelijke
   woordvormvarianten;
-- facetten zoals geography, depth, classification, grape en contenttype;
+- verdere facetten zoals depth, classification en grape zodra hun concrete
+  discoverywaarde en canonical bron zijn vastgesteld;
 - compare views en rijke relationele discovery.
 
 ---

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { BRAND, SITE_URL } from "@/config/brand";
 import { getAllEntities, getAllNarratives } from "@/content/repository";
 import { entityPresentationMode } from "@/content/model";
+import { DISCOVERY_CATEGORIES } from "@/content/discovery";
 import { entityHref, narrativeHref } from "@/content/routing";
 import {
   generateMetadata as generateEntityMetadata,
@@ -37,6 +38,9 @@ describe("application metadata", () => {
 
     for (const path of ["/", "/about", "/explore", "/verdiepingen", "/learn"]) {
       expect(paths.has(path)).toBe(true);
+    }
+    for (const category of DISCOVERY_CATEGORIES) {
+      expect(paths.has(`/explore/${category.route_segment}`)).toBe(true);
     }
     expect(paths.has("/search")).toBe(false);
     expect(paths.has("/atlas")).toBe(false);

@@ -102,8 +102,30 @@ test("Explore remains compact and delegates large categories to browse results",
   const browseConcepts = concepts.locator(".category-browse-link");
   await expect(browseConcepts).toBeVisible();
   await browseConcepts.click();
-  await expect(page).toHaveURL(/\/search\?type=concept/);
-  await expect(page.getByRole("heading", { name: "Concepten" })).toBeVisible();
+  await expect(page).toHaveURL(/\/explore\/concepts$/);
+  await expect(page.getByRole("heading", { name: "Concepten", exact: true })).toBeVisible();
+  await page.getByRole("link", { name: "B", exact: true }).click();
+  await expect(page).toHaveURL(/\/explore\/concepts\?initial=B$/);
+  await expect(page.getByRole("heading", { name: "Botrytis" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Fermentatie", exact: true })).toBeHidden();
+
+  const filteredDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(filteredDimensions.documentWidth).toBeLessThanOrEqual(filteredDimensions.viewportWidth);
+});
+
+test("producer discovery uses a shareable appellation facet", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("/explore/producers");
+
+  await page.getByLabel("Appellation").selectOption("pauillac");
+  await page.getByRole("button", { name: "Toepassen" }).click();
+  await expect(page).toHaveURL(/\/explore\/producers\?q=&context=pauillac$/);
+  await expect(page.getByRole("heading", { name: "Château Batailley", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Château Angélus", exact: true })).toBeHidden();
+  await expect(page.locator(".discovery-entity-card").first()).toContainText("Pauillac");
 });
 
 test("Pomerol collection profiles reveal together and producer routes target stable anchors", async ({

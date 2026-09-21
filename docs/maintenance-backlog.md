@@ -25,14 +25,14 @@ Peildatum: 2026-09-21.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 14 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-036` t/m `MNT-038` |
+| Open | 13 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-037`, `MNT-038` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 21 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-035` |
+| Afgerond | 22 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-036` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben vijf acties prioriteit `hoog` en negen
+Van het uitvoerbare open werk hebben vijf acties prioriteit `hoog` en acht
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -250,23 +250,6 @@ geographydatalaag.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
 - **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
 
-### `MNT-036` — Discovery schaalbaar maken met hiërarchie en facetten
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** discovery, product-ux, information-architecture
-- **Scope:** Ontdekken en grote entiteitverzamelingen
-- **Herkomst:** onderhoudsplan 2026-09-21
-- **Bevinding:** de huidige categoriepresentatie is helder voor het bestaande
-  corpus, maar vlakke lijsten blijven niet scanbaar bij honderden of duizenden
-  onderwerpen per categorie.
-- **Klaar wanneer:** de interface typegebonden tussenniveaus, hiërarchie en
-  betekenisvolle filters of facetten kan tonen; filtertoestand deelbaar in de
-  URL is; kleine collecties compact blijven; en de oplossing geen generieke,
-  lege filterlaag over ieder entitytype legt.
-- **Log:** 2026-09-21 — geregistreerd voor een informatiearchitectuurreview na
-  de zoekverbeteringen.
-
 ### `MNT-037` — Defensieve formuleringen corpusbreed terugdringen
 
 - **Status:** open
@@ -304,6 +287,30 @@ geographydatalaag.
   kleine aanvulling.
 
 ## Historie
+
+### `MNT-036` — Discovery schaalbaar maken met hiërarchie en facetten
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** discovery, product-ux, information-architecture
+- **Scope:** Ontdekken en grote entiteitverzamelingen
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** de categoriepresentatie was helder voor het bestaande corpus,
+  maar de vervolgstap bleef een vlakke lijst die bij honderden of duizenden
+  onderwerpen niet scanbaar zou blijven.
+- **Klaar wanneer:** de interface typegebonden tussenniveaus, hiërarchie en
+  betekenisvolle filters of facetten kan tonen; filtertoestand deelbaar in de
+  URL is; kleine collecties compact blijven; en de oplossing geen generieke,
+  lege filterlaag over ieder entitytype legt.
+- **Log:** 2026-09-21 — afgerond. Alle acht entitytypes hebben een vaste
+  Explore-browse-route. Verzamelingen boven de drempel krijgen naamzoeken,
+  contextgevoelige beginletters, 36 resultaten per pagina en waar betrouwbaar
+  afleidbaar een relationeel contextfacet. Producenten gebruiken bijvoorbeeld
+  hun `located_in`-appellation; appellations gebruiken hun meest specifieke
+  actieve `part_of`-regio. Filters staan in de URL, kleine collecties blijven een
+  directe lijst en er is bewust geen verzonnen concepttaxonomie toegevoegd. De
+  routes staan in de sitemap en zijn met unit-, metadata-, responsive en
+  Playwrightchecks afgedekt.
 
 ### `MNT-035` — Zoekinteractie direct en zichtbaar maken
 

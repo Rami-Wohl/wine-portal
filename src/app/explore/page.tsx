@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
-import { getPublishedEntitiesByType } from "@/content/repository";
-import type { EntityType } from "@/content/model";
+import { DISCOVERY_CATEGORIES, getDiscoveryEntries } from "@/content/discovery";
 
 export const metadata: Metadata = {
   title: "Wijnkennis ontdekken",
@@ -12,60 +11,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/explore" },
 };
 
-const categories: Array<{
-  type: EntityType;
-  title: string;
-  description: string;
-}> = [
-  {
-    type: "region",
-    title: "Regio's",
-    description: "Wijngebieden als geografische en culturele context.",
-  },
-  {
-    type: "appellation",
-    title: "Appellaties",
-    description: "Beschermde herkomsten en hun plaats in het grotere geheel.",
-  },
-  {
-    type: "site",
-    title: "Wijngaardsites",
-    description: "Afgebakende wijngaarden en lieux-dits binnen hun geografische context.",
-  },
-  {
-    type: "producer",
-    title: "Producenten",
-    description: "Châteaux, domeinen, estates en andere producenten.",
-  },
-  {
-    type: "grape",
-    title: "Druiven",
-    description: "Druivenrassen, synoniemen en relevante relaties.",
-  },
-  {
-    type: "vintage",
-    title: "Jaargangen",
-    description: "Jaargangen binnen een expliciete regionale scope.",
-  },
-  {
-    type: "classification",
-    title: "Classificaties",
-    description: "Classificatiesystemen met duidelijke geldigheid en bronvermelding.",
-  },
-  {
-    type: "concept",
-    title: "Concepten",
-    description: "Wijnbouw, vinificatie, geologie, chemie en sensoriek.",
-  },
-];
-
 const CATEGORY_PREVIEW_LIMIT = 5;
 
 export default function ExplorePage() {
-  const categoryGroups = categories.map((category) => {
-    const available = getPublishedEntitiesByType(category.type).toSorted((left, right) =>
-      left.names.nl.localeCompare(right.names.nl, "nl", { sensitivity: "base" }),
-    );
+  const categoryGroups = DISCOVERY_CATEGORIES.map((category) => {
+    const available = getDiscoveryEntries(category.type).map((entry) => entry.entity);
     return { ...category, available, preview: available.slice(0, CATEGORY_PREVIEW_LIMIT) };
   });
 
@@ -102,7 +52,7 @@ export default function ExplorePage() {
         </div>
         <div className="category-grid">
           {categoryGroups.map((category) => {
-            const categoryHref = `/search?type=${category.type}`;
+            const categoryHref = `/explore/${category.route_segment}`;
             const remaining = category.available.length - category.preview.length;
             return (
               <article className="category-card" key={category.type}>

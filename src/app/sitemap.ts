@@ -1,9 +1,17 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/config/brand";
+import { DISCOVERY_CATEGORIES } from "@/content/discovery";
 import { getPublishedNarratives, getPublishedStandaloneEntities } from "@/content/repository";
 import { entityHref, narrativeHref } from "@/content/routing";
 
-const staticPaths = ["/", "/explore", "/verdiepingen", "/learn", "/about"];
+const staticPaths = [
+  "/",
+  "/explore",
+  ...DISCOVERY_CATEGORIES.map((category) => `/explore/${category.route_segment}`),
+  "/verdiepingen",
+  "/learn",
+  "/about",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const indexableEntityPaths = getPublishedStandaloneEntities().map(entityHref);
