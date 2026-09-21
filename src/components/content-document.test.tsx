@@ -98,6 +98,58 @@ const document: ContentDocument = {
         },
       ],
     },
+    {
+      id: "uitleg-detail-twee",
+      type: "detail",
+      depth: "intermediate",
+      parent: "uitleg",
+      source_refs: [],
+      variant: null,
+      media_id: null,
+      nodes: [
+        {
+          type: "heading",
+          depth: 3,
+          children: [{ type: "text", value: "Nog meer uitleg" }],
+        },
+      ],
+    },
+    {
+      id: "verdiepende-sectie",
+      type: "section",
+      depth: "intermediate",
+      parent: null,
+      source_refs: [],
+      variant: null,
+      media_id: null,
+      nodes: [
+        {
+          type: "heading",
+          depth: 2,
+          children: [{ type: "text", value: "Verdiepende sectie" }],
+        },
+        {
+          type: "paragraph",
+          children: [{ type: "text", value: "Ook een volledige sectie toont haar niveau." }],
+        },
+      ],
+    },
+    {
+      id: "tweede-verdiepende-sectie",
+      type: "section",
+      depth: "intermediate",
+      parent: null,
+      source_refs: [],
+      variant: null,
+      media_id: null,
+      nodes: [
+        {
+          type: "heading",
+          depth: 2,
+          children: [{ type: "text", value: "Tweede verdiepende sectie" }],
+        },
+      ],
+    },
   ],
 };
 
@@ -114,6 +166,13 @@ describe("ContentDocumentView", () => {
     expect(html).toContain('class="content-depth-marker"');
     expect(html).toContain("Verdieping");
     expect(html).toContain("<h3>Meer uitleg</h3>");
+    expect(html.match(/class="content-depth-marker"/g)).toHaveLength(2);
+    expect(html).toMatch(
+      /data-depth-detail-run="intermediate".*content-depth-marker.*Verdieping.*id="uitleg-detail".*id="uitleg-detail-twee"/,
+    );
+    expect(html).toMatch(
+      /data-depth-run="intermediate".*content-depth-marker.*Verdieping.*id="verdiepende-sectie".*id="tweede-verdiepende-sectie"/,
+    );
     expect(html).toContain('href="/regions/bordeaux"');
     expect(html).toContain('href="#source-1"');
     expect(html).toContain('aria-label="Bron 1: Example source, p. 42"');

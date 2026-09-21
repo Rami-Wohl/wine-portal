@@ -92,7 +92,7 @@ coverage:
     review: *complete
   - key: wine-styles-and-sensory-profile
     disposition: on-page
-    block_ids: [smaak]
+    block_ids: [smaak, twee-oogstdoelen]
     target_ids: []
     completeness_questions:
       ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"]
@@ -100,13 +100,17 @@ coverage:
       {
         foundation:
           ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"],
-        intermediate: [],
+        intermediate:
+          ["Waarom vragen drinkwijn en een distillatiebasis om verschillende oogstdoelen?"],
         advanced: [],
         specialist: [],
       }
     evidence:
       general_synthesis:
-        { topics: ["wine-styles-and-sensory-profile"], source_refs: [source.plantgrape-colombard] }
+        {
+          topics: ["wine-styles-and-sensory-profile"],
+          source_refs: [source.plantgrape-colombard, source.bnic-cognac-grapes],
+        }
       specific_claims: []
     review: *complete
   - key: viticulture-and-risks
@@ -163,7 +167,8 @@ coverage:
         specialist: [],
       }
     evidence:
-      general_synthesis: { topics: ["synonyms-clones-and-relatives"], source_refs: [] }
+      general_synthesis:
+        { topics: ["synonyms-clones-and-relatives"], source_refs: [source.wosa-colombard] }
       specific_claims:
         [
           {

@@ -65,14 +65,14 @@ coverage:
     review: *complete
   - key: regions-and-appellations
     disposition: on-page
-    block_ids: [regios]
+    block_ids: [regios, charentese-omslag]
     target_ids: []
     completeness_questions:
       ["Zijn de bepalende internationale rollen evenwichtig en concreet aanwezig?"]
     layers:
       {
         foundation: ["Zijn de bepalende internationale rollen evenwichtig en concreet aanwezig?"],
-        intermediate: [],
+        intermediate: ["Hoe werden teeltomstandigheden en rassenkeuze in de Charentes veranderd?"],
         advanced: [],
         specialist: [],
       }
@@ -92,7 +92,7 @@ coverage:
     review: *complete
   - key: wine-styles-and-sensory-profile
     disposition: on-page
-    block_ids: [smaak]
+    block_ids: [smaak, basiswijn-als-tussenstap]
     target_ids: []
     completeness_questions:
       ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"]
@@ -100,7 +100,7 @@ coverage:
       {
         foundation:
           ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"],
-        intermediate: [],
+        intermediate: ["Waarom zijn zuur en bescheiden suiker functioneel voor Cognacbasiswijn?"],
         advanced: [],
         specialist: [],
       }
@@ -234,7 +234,14 @@ coverage:
   - key: child-knowledge
     disposition: child-entity
     block_ids: []
-    target_ids: [grape.colombard, appellation.cremant-de-bordeaux, region.bordeaux]
+    target_ids:
+      [
+        grape.colombard,
+        grape.folle-blanche,
+        concept.phylloxera,
+        appellation.cremant-de-bordeaux,
+        region.bordeaux,
+      ]
     completeness_questions:
       [
         "Zijn noodzakelijke vervolgidentiteiten vastgelegd zonder onvoltooide pagina's te publiceren?",
@@ -254,6 +261,14 @@ coverage:
       specific_claims: []
     review: *complete
 entity_dependencies:
+  - id: concept.phylloxera
+    names: { nl: "Druifluis (phylloxera)", en: "Phylloxera" }
+    slugs: { nl: druifluis-phylloxera, en: phylloxera }
+    disposition: link
+  - id: grape.folle-blanche
+    names: { nl: "Folle Blanche", en: "Folle Blanche" }
+    slugs: { nl: folle-blanche, en: folle-blanche }
+    disposition: link
   - id: grape.colombard
     names: { nl: "Colombard", en: "Colombard" }
     slugs: { nl: colombard, en: colombard }

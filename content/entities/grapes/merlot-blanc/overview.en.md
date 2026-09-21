@@ -45,20 +45,22 @@ Regular yield is useful, but the amount of fruit must suit the intended wine and
 ## Viticulture and vulnerabilities — rot is the main warning
 
 Plantgrape calls Merlot Blanc very susceptible to grey rot. Wet weather near harvest can therefore matter greatly. An airy canopy, inspection and a sensible picking date are more important than assuming a productive vine is always an easy vine. Drought also needs attention. [@source.plantgrape-merlot-blanc]
+
+Those two vulnerabilities do not call for one standard remedy. Waiting longer may increase the rot risk in wet bunches, while a dry site can stress the vine even before harvest. The relevant question is therefore not only how many grapes it bears, but how many can be picked in sound, usable condition on this particular site.
 :::
 
 :::section{#wijnmaken depth="intermediate" source_refs="source.plantgrape-merlot-blanc"}
 ## Winemaking and ageing — a restrained starting point
 
-The grapes are pressed and fermented as white wine. From a neutral base, a maker might choose a fresh, direct style or a blend in which another variety brings more aroma. Oak, long ageing or a highly aromatic profile are not automatic features of Merlot Blanc. Sound fruit matters more to either route than a heavy-handed cellar recipe.
+The grapes are pressed and fermented as white wine. From a relatively neutral base, a maker might choose a fresh, direct style or a blend in which another variety brings more aroma. Oak and long ageing are not properties of the grape; such choices make sense only in relation to the harvested fruit and the intended wine. Plantgrape's restrained assessment of its wines is a general tasting observation, not a verdict on every bottle. [@source.plantgrape-merlot-blanc]
 :::
 
-:::section{#verwantschap depth="advanced" source_refs="source.plantgrape-merlot-blanc source.boursiquot-merlot-parentage-2009"}
-## Synonyms, clones and relationships — precise about parentage
+:::section{#verwantschap depth="intermediate" source_refs="source.plantgrape-merlot-blanc"}
+## Synonyms, clones and relationships — a reconstructed family
 
-Plantgrape presents the parentage as a **probable** crossing of Folle Blanche and Merlot. That nuance belongs to genetic reconstruction; it should not be turned into a documented deliberate crossing with a known date and breeder. The profile lists no officially recognised synonym in France or other EU countries. [@source.plantgrape-merlot-blanc]
+Plantgrape presents the parentage as a **probable** crossing of Folle Blanche and Merlot. The source describes a genetically reconstructed family, not a documented deliberate crossing with a known date and breeder. A white mutation of Merlot would be different again: it would not require a second parent to explain a separate variety. [@source.plantgrape-merlot-blanc]
 
-The existing study of Merlot and related varieties helps place the family in context, but a similar name is no proof of mutation or identity. [@source.boursiquot-merlot-parentage-2009]
+The same profile lists no officially recognised synonym for the variety in France or other EU countries and records one certified French clone. That describes formally registered plant material in France; it is not proof that no other Merlot Blanc vines exist elsewhere. [@source.plantgrape-merlot-blanc]
 :::
 
 :::section{#etiket depth="foundation" source_refs="source.plantgrape-merlot-blanc"}
@@ -70,5 +72,5 @@ Merlot Blanc on a label names a white grape variety, not a colour variant of Mer
 :::section{#heden depth="intermediate" source_refs="source.plantgrape-merlot-blanc"}
 ## Contemporary developments — rarity without romanticism
 
-The historical decline in French plantings makes Merlot Blanc a piece of living wine history. Rare does not automatically mean better. Its practical limits — especially rot sensitivity and drought risk — help explain why preserving and using it require a suitable place and clear purpose. [@source.plantgrape-merlot-blanc]
+The historical decline in French plantings makes Merlot Blanc a piece of living wine history. Rare does not automatically mean better. Rot sensitivity and drought risk can make cultivation difficult, but Plantgrape's area figures do not establish why the variety declined so sharply. Anyone growing it now needs above all a suitable site, sound fruit and a clear winemaking purpose. [@source.plantgrape-merlot-blanc]
 :::

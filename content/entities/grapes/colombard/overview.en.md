@@ -29,6 +29,12 @@ Plantgrape describes Colombard as capable of pleasant, aromatic wine with good a
 A base wine for distillation is judged differently from a white wine intended for drinking. The eventual spirit's character develops later, through distillation and perhaps time in barrel; tasting notes for the finished spirit cannot simply be assigned to the raw grape juice.
 :::
 
+:::detail{#twee-oogstdoelen parent="smaak" depth="intermediate" source_refs="source.plantgrape-colombard source.bnic-cognac-grapes"}
+### The same acidity, a different purpose
+
+For Colombard intended as a drinking wine, freshness has to sit alongside sufficient fruit flavour. Cognac follows another goal: its trade body describes high acidity and relatively low sugar as desirable for the distillation base. It also values Colombard's aromatic contribution when blended. The variety can serve both routes, then, but the target composition of the harvested grapes and the way the result is judged are not interchangeable. [@source.plantgrape-colombard] [@source.bnic-cognac-grapes]
+:::
+
 :::section{#klimaat depth="foundation" source_refs="source.plantgrape-colombard"}
 ## Climate, site and soils — keeping freshness
 
@@ -59,12 +65,12 @@ For a fresh white wine the grapes are usually pressed and the juice fermented wi
 For Cognac the route begins with a dry white base wine, which is then distilled. That base wine matters, but “delicious as still wine” and “well suited to distillation” are not the same task. Colombard contributes a smaller share than Ugni Blanc in this world. [@source.bnic-cognac-grapes]
 :::
 
-:::section{#verwantschap depth="advanced" source_refs="source.plantgrape-colombard"}
-## Synonyms, clones and relationships — parentage is not a flavour recipe
+:::section{#verwantschap depth="advanced" source_refs="source.plantgrape-colombard source.wosa-colombard"}
+## Synonyms, clones and relationships — names and plant material in context
 
 According to genetic analyses summarised by Plantgrape, Colombard probably arose from a crossing of [[grape.gouais-blanc|Gouais Blanc]] and Chenin. That does not make its taste the average of its parents. The same source lists no officially recognised synonym for propagation material in France or other EU countries. [@source.plantgrape-colombard]
 
-French [[concept.clonal-selection|clonal selection]] shows that plant material can differ within one variety. A clone remains Colombard; the choice can influence growing and fruit quality without creating another grape variety.
+Wines of South Africa writes the name as “Colombar(d)”. That usage in another country does not contradict the French source: one describes a familiar variety name, the other a formally recognised synonym for a particular purpose and jurisdiction. Plant material also varies within a single name. Plantgrape documents French clones with differing yield, sugar and acidity profiles. [[concept.clonal-selection|Clonal selection]] can therefore change a grower's options, but clone figures do not predict how a bottle from another site or vintage will taste. [@source.wosa-colombard] [@source.plantgrape-colombard]
 :::
 
 :::section{#etiket depth="foundation" source_refs="source.plantgrape-colombard"}

@@ -7,3 +7,5 @@ Belofte: verklaar waarom dezelfde witte druif zowel frisse, expressieve wijn als
 Foundation: identiteit, twee gebruiksroutes, herkomsten, smaak en etiket. Intermediate: productiviteit, gezondheid, oogstmoment en verwerking. Advanced: ouderschap en identiteit. Alle twaalf grape-overview-dimensies krijgen een expliciete bestemming in het contentplan. Compleet betekent dat de lezer het verschil tussen wijn en distillaat begrijpt zonder onnodige lijst van appellationregels.
 
 Plantgrape draagt botaniek en genetica, BNIC en BNIA de distillatierol. De laboratoriumfoto is een geïdentificeerde tros met schaal, nadrukkelijk geen wijngaardbeeld. Twee taalversies moeten gelijkwaardig zijn.
+
+Niveaureview 2026-09-21: Verdieping legt de verschillende oogstdoelen voor drinkwijn en distillatiebasis uit. Gevorderd scheidt de Zuid-Afrikaanse gebruiksnaam van de officiële Franse/EU-synoniemlijst voor voortplantingsmateriaal en legt uit waarom klonengegevens niet één vaste wijnstijl voorschrijven.

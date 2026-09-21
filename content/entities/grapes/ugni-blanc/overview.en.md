@@ -21,12 +21,24 @@ In Tuscany, Ugni Blanc belongs under the name Trebbiano Toscano. In the Charente
 Ugni Blanc is also important in Armagnac, alongside varieties such as [[grape.colombard|Colombard]]. Outside those spirits it can be a white wine grape. In [[region.bordeaux|Bordeaux]] it is only one possible supporting white variety for [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]; that local use should not define its wider role. [@source.bnia-armagnac-grapes] [@source.inao-cremant-bordeaux-specification-2026]
 :::
 
+:::detail{#charentese-omslag parent="regios" depth="intermediate" source_refs="source.bnic-cognac-grapes source.plantgrape-ugni-blanc"}
+### Why this grape came to dominate the Charentes
+
+Ugni Blanc's dominant position is not just a matter of taste. According to the Cognac trade body, [[grape.folle-blanche|Folle Blanche]] used to matter more, but grape choice and growing conditions changed after the [[concept.phylloxera|phylloxera]] crisis and the move to grafted vines. In that context Ugni Blanc offers a substantial usable crop and relatively low susceptibility to grey rot in its bunches. This helps explain its role without pretending that one historic event or one growing trait caused the whole change. [@source.bnic-cognac-grapes] [@source.plantgrape-ugni-blanc]
+:::
+
 :::section{#smaak depth="foundation" source_refs="source.plantgrape-ugni-blanc source.bnic-cognac-grapes"}
 ## Wine styles and sensory profile — restrained aroma, useful tension
 
 As a still white wine, Ugni Blanc is often relatively neutral and fresh. That need not be a flaw: the restrained aroma leaves room for place, other grapes or a chosen cellar style. Plantgrape describes its wines as relatively neutral, depending on conditions. [@source.plantgrape-ugni-blanc]
 
 For Cognac, the equation changes. Acidity helps keep the base wine sound, while modest sugar leads to relatively low alcohol after fermentation. Distillation then concentrates and transforms aromas; the flavour of Cognac after time in barrel is not simply twice the aroma of the grape. [@source.bnic-cognac-grapes]
+:::
+
+:::detail{#basiswijn-als-tussenstap parent="smaak" depth="intermediate" source_refs="source.bnic-cognac-grapes source.plantgrape-ugni-blanc"}
+### Why the wine in between matters
+
+Even when the final destination is a spirit, the grape must first make a suitable wine. The Cognac trade body describes Ugni Blanc's combination of high acidity, modest sugar and consequently a relatively low-alcohol base wine. Its fresh, restrained character has a purpose here: the maker need not first produce a strongly aromatic still wine. Distillation and time in barrel then build a different product; the base wine's acidity or aroma does not transfer unchanged into a glass of Cognac. [@source.bnic-cognac-grapes]
 :::
 
 :::section{#klimaat depth="foundation" source_refs="source.plantgrape-ugni-blanc"}
@@ -60,9 +72,11 @@ Still white wine follows another emphasis. A maker can retain the fresh, restrai
 :::
 
 :::section{#verwantschap depth="advanced" source_refs="source.plantgrape-ugni-blanc"}
-## Synonyms, clones and relationships — Trebbiano is not one grape
+## Synonyms, clones and relationships — when a name officially means the same vine
 
-Trebbiano Toscano refers to Ugni Blanc; “Trebbiano” without a qualifier can refer to several varieties. Names alone are not genetic evidence. Plantgrape also documents selected French vine material: a clone is a selection **within** the variety, not a synonym or a new variety. [@source.plantgrape-ugni-blanc]
+Trebbiano Toscano refers to Ugni Blanc; “Trebbiano” without a qualifier can refer to several varieties. Plantgrape makes the picture both more complicated and more precise: its European list also recognises Biancame in Italy and Talia in Portugal as names for Ugni Blanc; in Cyprus and Malta even the shorter Trebbiano appears. This formal list concerns the identification of **propagation material** in the jurisdictions named. It is not blanket permission to use any of those names on every wine label everywhere. [@source.plantgrape-ugni-blanc]
+
+Variety, recognised name and clone are three different levels. A selected clone remains Ugni Blanc even if vine material circulates under another permitted variety name elsewhere. Careful name-checking avoids both merging distinct Trebbiano varieties and artificially splitting one grape into several. [@source.plantgrape-ugni-blanc]
 :::
 
 :::section{#etiket depth="foundation" source_refs="source.plantgrape-ugni-blanc source.bnic-cognac-grapes"}

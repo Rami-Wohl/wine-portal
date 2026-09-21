@@ -7,3 +7,5 @@ Belofte: maak duidelijk hoe een ogenschijnlijk neutrale witte wijn de ideale gro
 Foundation: identiteit, oorsprong, wijn versus distillatie, herkomsten en smaak. Intermediate: groei, zuur/suiker, oogst en kelderkeuzes. Advanced: synoniemen en herkenning. Alle twaalf dimensies worden in het contentplan afgedekt. Vermijd het onjuiste idee dat een neutrale basiswijn een gebrekkige wijn is.
 
 Plantgrape voor ras en teelt; BNIC en BNIA voor Charentes en Armagnac. De foto toont een geïdentificeerde tros in Charente, geen bewijs van sensorische eigenschappen. Controleer NL/EN-betekenis per blok.
+
+Niveaureview 2026-09-21: Verdieping geeft de historische omslag in de Charentes en de functionele rol van zuur en suiker in een Cognacbasiswijn. Gevorderd onderscheidt ras, officiële namen voor voortplantingsmateriaal en klonen, zonder daar algemene etiketteringsrechten uit af te leiden.

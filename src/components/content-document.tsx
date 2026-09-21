@@ -58,6 +58,17 @@ interface RenderContext {
   media: Map<string, MediaAsset>;
 }
 
+function renderDepthMarker(depth: ContentBlock["depth"], locale: Locale): ReactNode {
+  if (depth !== "intermediate" && depth !== "advanced") return null;
+
+  return (
+    <span className="content-depth-marker">
+      <span aria-hidden="true" className="content-depth-marker-symbol" />
+      {DETAIL_DEPTH_LABELS[locale][depth]}
+    </span>
+  );
+}
+
 function renderInline(nodes: ContentInlineNode[], context: RenderContext): ReactNode {
   return nodes.map((node, index) => {
     const key = `${node.type}-${index}`;
@@ -199,7 +210,11 @@ function renderBlockNodes(nodes: ContentBlockNode[], context: RenderContext): Re
   });
 }
 
-function renderContentBlock(block: ContentBlock, context: RenderContext): ReactNode {
+function renderContentBlock(
+  block: ContentBlock,
+  context: RenderContext,
+  showDepthMarker = true,
+): ReactNode {
   const className = [
     "content-block",
     `content-block-${block.type}`,
@@ -258,6 +273,7 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
     case "summary":
       return <div {...common}>{content}</div>;
     case "section":
+      return <section {...common}>{content}</section>;
     case "comparison":
       return <section {...common}>{content}</section>;
     case "register-entry":
@@ -269,12 +285,7 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
     case "detail":
       return (
         <div {...common} data-parent={block.parent ?? undefined}>
-          {block.depth === "intermediate" || block.depth === "advanced" ? (
-            <span className="content-depth-marker">
-              <span aria-hidden="true" className="content-depth-marker-symbol" />
-              {DETAIL_DEPTH_LABELS[context.locale][block.depth]}
-            </span>
-          ) : null}
+          {showDepthMarker ? renderDepthMarker(block.depth, context.locale) : null}
           {content}
         </div>
       );
@@ -323,6 +334,40 @@ function renderContentBlock(block: ContentBlock, context: RenderContext): ReactN
   }
 }
 
+function renderSectionChildren(children: ContentBlock[], context: RenderContext): ReactNode[] {
+  const items: ReactNode[] = [];
+
+  for (let index = 0; index < children.length; index += 1) {
+    const child = children[index];
+    if (child.type !== "detail" || (child.depth !== "intermediate" && child.depth !== "advanced")) {
+      items.push(<Fragment key={child.id}>{renderContentBlock(child, context)}</Fragment>);
+      continue;
+    }
+
+    const run = [child];
+    while (children[index + 1]?.type === "detail" && children[index + 1]?.depth === child.depth) {
+      run.push(children[index + 1]);
+      index += 1;
+    }
+    items.push(
+      <div
+        className={`content-depth-detail-run content-depth-${child.depth}`}
+        data-depth-detail-run={child.depth}
+        key={`detail-run-${child.id}`}
+      >
+        {renderDepthMarker(child.depth, context.locale)}
+        <div className="content-depth-detail-run-body">
+          {run.map((runChild) => (
+            <Fragment key={runChild.id}>{renderContentBlock(runChild, context, false)}</Fragment>
+          ))}
+        </div>
+      </div>,
+    );
+  }
+
+  return items;
+}
+
 export function ContentDocumentView({
   document,
   locale,
@@ -339,11 +384,21 @@ export function ContentDocumentView({
   const mediaMap = new Map(media.map((asset) => [asset.id, asset]));
   const context: RenderContext = { locale, media: mediaMap, sources: sourceMap, sourceNumbers };
 
-  const contentItems: ReactNode[] = [];
+  const units: Array<{
+    content: ReactNode;
+    depth: ContentBlock["depth"];
+    key: string;
+    type: "other" | "section";
+  }> = [];
   for (let index = 0; index < document.blocks.length; index += 1) {
     const block = document.blocks[index];
     if (block.type !== "section") {
-      contentItems.push(<Fragment key={block.id}>{renderContentBlock(block, context)}</Fragment>);
+      units.push({
+        content: renderContentBlock(block, context),
+        depth: block.depth,
+        key: block.id,
+        type: "other",
+      });
       continue;
     }
 
@@ -357,19 +412,55 @@ export function ContentDocumentView({
       index += 1;
     }
     if (children.length === 0) {
-      contentItems.push(<Fragment key={block.id}>{renderContentBlock(block, context)}</Fragment>);
+      units.push({
+        content: renderContentBlock(block, context),
+        depth: block.depth,
+        key: block.id,
+        type: "section",
+      });
       continue;
     }
     const hasRegisterEntries = children.some((child) => child.type === "register-entry");
+    units.push({
+      content: (
+        <div
+          className={`content-section-group${hasRegisterEntries ? " content-register-group" : ""}`}
+        >
+          {renderContentBlock(block, context)}
+          {renderSectionChildren(children, context)}
+        </div>
+      ),
+      depth: block.depth,
+      key: block.id,
+      type: "section",
+    });
+  }
+
+  const contentItems: ReactNode[] = [];
+  for (let index = 0; index < units.length; index += 1) {
+    const unit = units[index];
+    if (unit.type !== "section" || (unit.depth !== "intermediate" && unit.depth !== "advanced")) {
+      contentItems.push(<Fragment key={unit.key}>{unit.content}</Fragment>);
+      continue;
+    }
+
+    const run = [unit];
+    while (units[index + 1]?.type === "section" && units[index + 1]?.depth === unit.depth) {
+      run.push(units[index + 1]);
+      index += 1;
+    }
     contentItems.push(
       <div
-        className={`content-section-group${hasRegisterEntries ? " content-register-group" : ""}`}
-        key={block.id}
+        className={`content-depth-section-run content-depth-${unit.depth}`}
+        data-depth-run={unit.depth}
+        key={`depth-run-${unit.key}`}
       >
-        {renderContentBlock(block, context)}
-        {children.map((child) => (
-          <Fragment key={child.id}>{renderContentBlock(child, context)}</Fragment>
-        ))}
+        {renderDepthMarker(unit.depth, locale)}
+        <div className="content-depth-section-run-body">
+          {run.map((runUnit) => (
+            <Fragment key={runUnit.key}>{runUnit.content}</Fragment>
+          ))}
+        </div>
       </div>,
     );
   }

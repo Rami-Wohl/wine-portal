@@ -21,12 +21,24 @@ In Toscane hoort Ugni Blanc thuis onder de naam Trebbiano Toscano. In de Charent
 Ook voor Armagnac is Ugni Blanc een belangrijk ras, naast onder meer [[grape.colombard|Colombard]]. Buiten deze distillaten kan hij als witte wijndruif voorkomen. In [[region.bordeaux|Bordeaux]] is hij slechts één van de mogelijke ondersteunende witte rassen voor [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]; dat lokale gebruik mag zijn bredere rol niet bepalen. [@source.bnia-armagnac-grapes] [@source.inao-cremant-bordeaux-specification-2026]
 :::
 
+:::detail{#charentese-omslag parent="regios" depth="intermediate" source_refs="source.bnic-cognac-grapes source.plantgrape-ugni-blanc"}
+### Waarom juist dit ras de Charentes ging domineren
+
+De dominante plaats van Ugni Blanc is niet alleen een kwestie van smaak. Volgens de Cognacorganisatie was [[grape.folle-blanche|Folle Blanche]] vroeger belangrijker, maar veranderden de druivenkeuze en de teeltomstandigheden na de [[concept.phylloxera|druifluiscrisis]] en het enten op onderstammen. Ugni Blanc biedt in die context veel bruikbare druiven en relatief weinig gevoeligheid voor grijze rot in de tros. Dat helpt zijn plaats te verklaren, zonder te doen alsof één historische gebeurtenis of één teelteigenschap de hele ontwikkeling veroorzaakte. [@source.bnic-cognac-grapes] [@source.plantgrape-ugni-blanc]
+:::
+
 :::section{#smaak depth="foundation" source_refs="source.plantgrape-ugni-blanc source.bnic-cognac-grapes"}
 ## Wijnstijlen en smaakprofiel — bescheiden geur, nuttige spanning
 
 Als stille witte wijn is Ugni Blanc vaak relatief neutraal en fris. Dat hoeft geen gebrek te zijn: de bescheiden geur geeft ruimte aan herkomst, andere druiven of een gekozen kelderstijl. Plantgrape beschrijft de wijnen als betrekkelijk neutraal, afhankelijk van de omstandigheden. [@source.plantgrape-ugni-blanc]
 
 Voor Cognac telt een andere optelsom. Zuur helpt de basiswijn stabiel te houden, terwijl bescheiden suiker tot een relatief laag alcoholpercentage na vergisting leidt. Distillatie concentreert en verandert daarna aroma's; de smaak van gerijpte Cognac is geen simpele verdubbeling van het aroma van de druif. [@source.bnic-cognac-grapes]
+:::
+
+:::detail{#basiswijn-als-tussenstap parent="smaak" depth="intermediate" source_refs="source.bnic-cognac-grapes source.plantgrape-ugni-blanc"}
+### Waarom de tussenstap wijn telt
+
+Ook wanneer de uiteindelijke bestemming een distillaat is, moet de druif eerst een geschikte wijn leveren. De Cognacorganisatie noemt voor Ugni Blanc een combinatie van hoog zuur, weinig suiker en daardoor een basiswijn met bescheiden alcohol. Het frisse, weinig uitgesproken karakter is hier functioneel: de maker hoeft niet eerst een zeer aromatische stille wijn te produceren. Distilleren en vatrijping bouwen vervolgens een nieuw product op; het zuur of de geur van de basiswijn gaat niet één-op-één over in het glas Cognac. [@source.bnic-cognac-grapes]
 :::
 
 :::section{#klimaat depth="foundation" source_refs="source.plantgrape-ugni-blanc"}
@@ -60,9 +72,11 @@ Bij stille witte wijn ligt de nadruk anders. Een maker kan het frisse, terughoud
 :::
 
 :::section{#verwantschap depth="advanced" source_refs="source.plantgrape-ugni-blanc"}
-## Synoniemen, klonen en verwantschap — Trebbiano is niet één druif
+## Synoniemen, klonen en verwantschap — wanneer een naam officieel dezelfde stok bedoelt
 
-Trebbiano Toscano verwijst naar Ugni Blanc; “Trebbiano” zonder verdere aanduiding kan daarentegen meerdere rassen bedoelen. Vergelijk namen dus niet alsof ze vanzelf genetisch bewijs zijn. Plantgrape documenteert ook geselecteerd Frans plantmateriaal: een kloon is een selectie **binnen** het ras, niet een synoniem of een nieuw ras. [@source.plantgrape-ugni-blanc]
+Trebbiano Toscano verwijst naar Ugni Blanc; “Trebbiano” zonder verdere aanduiding kan daarentegen meerdere rassen bedoelen. Plantgrape maakt het ingewikkelder én preciezer: in zijn Europese overzicht gelden ook Biancame in Italië en Talia in Portugal als erkende namen voor Ugni Blanc; in Cyprus en Malta komt zelfs het kortere Trebbiano voor. De formele lijst gaat over de identificatie van **voortplantingsmateriaal** in genoemde rechtsgebieden, niet over een onbeperkte toestemming om elke fles overal zo te etiketteren. [@source.plantgrape-ugni-blanc]
+
+Ras, erkende naam en kloon zijn drie verschillende niveaus. Een geselecteerde kloon blijft Ugni Blanc, ook als het plantmateriaal in een ander land onder een andere toegestane rasnaam circuleert. Zo voorkomt een nauwkeurige naamcontrole zowel het ten onrechte samenvoegen van verschillende Trebbiano's als het kunstmatig opsplitsen van één ras. [@source.plantgrape-ugni-blanc]
 :::
 
 :::section{#etiket depth="foundation" source_refs="source.plantgrape-ugni-blanc source.bnic-cognac-grapes"}

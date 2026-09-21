@@ -29,6 +29,18 @@ Goed gerijpte Carménère kan een diepgekleurde wijn met duidelijk donker fruit,
 Een groene toon hoeft niet automatisch een fout te zijn. Wel verdient het onderscheid aandacht tussen een subtiele kruidige spanning en een overheersend onrijp karakter. Proeven blijft belangrijker dan een vast lijstje van geuren afvinken.
 :::
 
+:::detail{#rijpheid-en-stijl parent="smaak" depth="intermediate" source_refs="source.plantgrape-carmenere source.fredes-carmenere-seed-maturity-2010"}
+### Wanneer suiker nog niet het hele verhaal vertelt
+
+Een druif kan al genoeg suiker hebben voor vergisting terwijl schillen en pitten zich nog ontwikkelen. Een studie in één wijngaard in het Chileense Curicó vond bij Carménère een duidelijke afstand tussen het bereiken van een bepaald suikergehalte en de gemeten rijpheid van kleurstoffen en pittannines. Daardoor kan een vroege oogst tegelijk voldoende alcoholpotentieel en een stroever, groener smaakbeeld geven. Die waarneming verklaart een mogelijke stijlkeuze, niet een vaste oogstdatum voor alle Carménère. [@source.fredes-carmenere-seed-maturity-2010]
+:::
+
+:::detail{#oogstvenster parent="smaak" depth="advanced" source_refs="source.fredes-carmenere-seed-maturity-2010 source.pszczolkowski-carmenere-chile-2004"}
+### De grenzen van één rijpheidsmaat
+
+Suiker, zuurgraad, schilkleur en pittannines veranderen niet noodzakelijk tegelijk. In het Curicó-onderzoek volgden de gemeten fenolische kenmerken pas later op de suikeropbouw. Het is verleidelijk daaruit een universele grens voor “perfect rijp” af te leiden, maar de studie volgde één perceel in één seizoen. Pszczólkowski beschrijft bovendien de keerzijde van zeer lang wachten: bij verder rijpende druiven kunnen zuur en frisheid teruglopen en kan de vergisting lastiger worden. De oogstbeslissing is dus een afweging tussen meerdere doelen, niet het moment waarop één meter groen licht geeft. [@source.fredes-carmenere-seed-maturity-2010] [@source.pszczolkowski-carmenere-chile-2004]
+:::
+
 :::section{#klimaat depth="foundation" source_refs="source.plantgrape-carmenere"}
 ## Klimaat, ligging en bodem — rijpheid is geen simpele warmtesom
 
@@ -37,20 +49,22 @@ Carménère vraagt een plek en seizoen waarin de druiven voldoende kunnen rijpen
 Uit een smaakbeschrijving valt geen specifiek bodemtype af te leiden. Bodem beïnvloedt onder meer water en groei, maar levert niet rechtstreeks een voorgeschreven aroma op.
 :::
 
-:::section{#groeicyclus depth="intermediate" source_refs="source.plantgrape-carmenere"}
+:::section{#groeicyclus depth="intermediate" source_refs="source.plantgrape-carmenere source.pszczolkowski-carmenere-chile-2004"}
 ## Wijnstok en groeicyclus — de bloei bepaalt mee
 
 De wijnstok groeit krachtig, terwijl de eerste knoppen aan een scheut volgens Plantgrape relatief weinig vrucht dragen. Daarom kan een langere snoei nodig zijn om voldoende vruchtbare knoppen te behouden. Bloei en vruchtzetting vormen een tweede kwetsbaar moment: bij ongunstig weer kunnen bloemen afvallen of niet tot bessen uitgroeien. [@source.plantgrape-carmenere]
 
-De latere rijping maakt duidelijk waarom een telling van trossen vroeg in het jaar nog weinig zegt over de uiteindelijke kwaliteit. Een gelijkmatige oogst vraagt zowel goed gezette vruchten als tijd om ze volledig te laten rijpen.
+In Chili kan het wachten op de gewenste smaak- en pitrijpheid lang duren; de vergelijkende rijpingsdatum van Plantgrape in Frankrijk is geen wereldwijde oogstkalender. Een telling van trossen vroeg in het jaar zegt daarom weinig over de uiteindelijke kwaliteit. Een gelijkmatige oogst vraagt zowel goed gezette vruchten als tijd om ze voor de beoogde stijl te laten rijpen. [@source.pszczolkowski-carmenere-chile-2004]
 :::
 
-:::section{#wijnbouw depth="intermediate" source_refs="source.plantgrape-carmenere"}
+:::section{#wijnbouw depth="intermediate" source_refs="source.plantgrape-carmenere source.fredes-carmenere-vine-balance-2010"}
 ## Wijnbouw en gevoeligheden — tussen opbrengst en rijpheid
 
 De combinatie van krachtige groei en kwetsbare vruchtzetting vraagt om gerichte snoei en een werkbare bladwand. Te veel schaduw kan de rijping hinderen; te drastisch blad weghalen kan het fruit juist blootstellen. De passende keuze verschilt per perceel en jaar.
 
 Plantgrape noemt geen uitzonderlijke algemene ziektegevoeligheid als hoofdkenmerk van Carménère. Dat betekent niet dat een wijngaard zonder normale bescherming of monitoring kan; het onderscheidende probleem zit hier eerder bij vruchtzetting en het bereiken van een overtuigende rijpheid. [@source.plantgrape-carmenere]
+
+Het verband tussen stok en smaak is concreet onderzocht in één Chileense wijngaard: veel groeikracht en een hoge trosbelasting vertraagden daar de rijping, terwijl een andere balans tussen scheuten en fruit het oogstmoment kon vervroegen. Dat is geen algemene opdracht om overal eenzelfde percentage trossen weg te nemen; het laat zien waarom “langer laten hangen” niet de enige knop is waaraan een teler kan draaien. [@source.fredes-carmenere-vine-balance-2010]
 :::
 
 :::section{#wijnmaken depth="intermediate" source_refs="source.plantgrape-carmenere"}
@@ -64,9 +78,9 @@ In een assemblage kan Carménère kleur, fruit en een kruidige nuance toevoegen.
 :::section{#verwantschap depth="advanced" source_refs="source.plantgrape-carmenere source.pszczolkowski-carmenere-chile-2004"}
 ## Synoniemen, klonen en verwantschap — een naam is geen DNA-test
 
-De Chileense geschiedenis illustreert hoe vergelijkbare wijnstokken lang onder een verkeerde naam kunnen groeien. De gedraaide meeldraden van de bloem waren een herkenningsaanwijzing bij de identificatie; voor een betrouwbare rasbepaling tellen ook andere plantkenmerken en genetische gegevens. [@source.pszczolkowski-carmenere-chile-2004]
+De Chileense geschiedenis toont meer dan een verkeerd etiket. In 1991 werd al betwijfeld of een deel van de Chileense “Merlot” werkelijk Merlot was; bij een wijngaardbezoek in 1994 werd Carménère als identiteit aangewezen. Gedraaide meeldraden tijdens de bloei vormden een herkenningsaanwijzing, naast andere kenmerken van de stok. Een oude Chileense registratie of fles met “Merlot” kan dus geen zelfstandig bewijs voor de werkelijk aangeplante druif zijn. [@source.pszczolkowski-carmenere-chile-2004]
 
-Plantgrape noemt geen officieel erkend synoniem in Frankrijk of andere EU-landen. Een kloon is geselecteerd plantmateriaal **binnen** Carménère, niet een nieuw ras; een gedeelde voorouder met Cabernet Franc maakt Carménère evenmin tot Cabernet Franc. [@source.plantgrape-carmenere]
+Dezelfde bron beschrijft hoe een wijn van die stokken aanvankelijk onder de naam Grande Vidure werd uitgebracht. Dat historische gebruik van een naam is iets anders dan een **officieel erkend synoniem voor voortplantingsmateriaal**: Plantgrape noemt daarvoor geen erkende alternatieve naam in Frankrijk of andere EU-landen. Een kloon is op zijn beurt geselecteerd materiaal binnen Carménère, geen nieuwe druif. Hier lopen wijngaardidentificatie, handelsnaam en formele naamgeving dus niet vanzelf gelijk. [@source.pszczolkowski-carmenere-chile-2004] [@source.plantgrape-carmenere]
 :::
 
 :::section{#etiket depth="foundation" source_refs="source.plantgrape-carmenere"}

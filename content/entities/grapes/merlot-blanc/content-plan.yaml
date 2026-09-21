@@ -165,16 +165,16 @@ coverage:
     layers:
       {
         foundation: [],
-        intermediate: [],
-        advanced: ["Zijn synoniem, kruising en kloon nauwkeurig van elkaar gescheiden?"],
+        intermediate:
+          [
+            "Hoe verschillen de vermoedelijke afstamming, een kloon en een officiële synoniemlijst?",
+          ],
+        advanced: [],
         specialist: [],
       }
     evidence:
       general_synthesis:
-        {
-          topics: ["synonyms-clones-and-relatives"],
-          source_refs: [source.plantgrape-merlot-blanc, source.boursiquot-merlot-parentage-2009],
-        }
+        { topics: ["synonyms-clones-and-relatives"], source_refs: [source.plantgrape-merlot-blanc] }
       specific_claims: []
     review: *complete
   - key: labels-and-recognition

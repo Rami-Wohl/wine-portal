@@ -19,5 +19,7 @@ assertions: []
 source_refs:
   - source.plantgrape-carmenere
   - source.pszczolkowski-carmenere-chile-2004
+  - source.fredes-carmenere-vine-balance-2010
+  - source.fredes-carmenere-seed-maturity-2010
 depth: foundation
 last_reviewed: 2026-09-20

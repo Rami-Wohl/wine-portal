@@ -47,7 +47,10 @@ coverage:
       }
     evidence:
       general_synthesis:
-        { topics: ["vine-and-growing-cycle"], source_refs: [source.plantgrape-carmenere] }
+        {
+          topics: ["vine-and-growing-cycle"],
+          source_refs: [source.plantgrape-carmenere, source.pszczolkowski-carmenere-chile-2004],
+        }
       specific_claims: []
     review: *complete
   - key: site-climate-and-soils
@@ -96,7 +99,7 @@ coverage:
     review: *complete
   - key: wine-styles-and-sensory-profile
     disposition: on-page
-    block_ids: [smaak]
+    block_ids: [smaak, rijpheid-en-stijl, oogstvenster]
     target_ids: []
     completeness_questions:
       ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"]
@@ -104,13 +107,24 @@ coverage:
       {
         foundation:
           ["Zijn wijnstijl en smaak als mogelijkheden in plaats van garanties beschreven?"],
-        intermediate: [],
-        advanced: [],
+        intermediate:
+          [
+            "Wat verklaart het verschil tussen suikerrijpheid en schil- en pitrijpheid voor de stijl?",
+          ],
+        advanced: ["Waarom kan één rijpheidsmeting het oogstmoment niet universeel voorschrijven?"],
         specialist: [],
       }
     evidence:
       general_synthesis:
-        { topics: ["wine-styles-and-sensory-profile"], source_refs: [source.plantgrape-carmenere] }
+        {
+          topics: ["wine-styles-and-sensory-profile"],
+          source_refs:
+            [
+              source.plantgrape-carmenere,
+              source.fredes-carmenere-seed-maturity-2010,
+              source.pszczolkowski-carmenere-chile-2004,
+            ],
+        }
       specific_claims: []
     review: *complete
   - key: viticulture-and-risks
@@ -129,7 +143,10 @@ coverage:
       }
     evidence:
       general_synthesis:
-        { topics: ["viticulture-and-risks"], source_refs: [source.plantgrape-carmenere] }
+        {
+          topics: ["viticulture-and-risks"],
+          source_refs: [source.plantgrape-carmenere, source.fredes-carmenere-vine-balance-2010],
+        }
       specific_claims: []
     review: *complete
   - key: winemaking-and-ageing

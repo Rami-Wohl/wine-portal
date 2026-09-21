@@ -1,10 +1,25 @@
 import { expect, test } from "@playwright/test";
 
 const grapes = [
-  { slug: "carmenere", name: "Carménère" },
-  { slug: "colombard", name: "Colombard" },
-  { slug: "ugni-blanc", name: "Ugni Blanc" },
-  { slug: "merlot-blanc", name: "Merlot Blanc" },
+  {
+    slug: "carmenere",
+    name: "Carménère",
+    intermediateDetail: "rijpheid-en-stijl",
+    advancedDetail: "oogstvenster",
+  },
+  {
+    slug: "colombard",
+    name: "Colombard",
+    intermediateDetail: "twee-oogstdoelen",
+    advancedDetail: null,
+  },
+  {
+    slug: "ugni-blanc",
+    name: "Ugni Blanc",
+    intermediateDetail: "basiswijn-als-tussenstap",
+    advancedDetail: null,
+  },
+  { slug: "merlot-blanc", name: "Merlot Blanc", intermediateDetail: null, advancedDetail: null },
 ];
 
 for (const width of [390, 1440]) {
@@ -32,10 +47,31 @@ for (const width of [390, 1440]) {
 
       await control.getByRole("button", { name: "Verdieping", exact: true }).click();
       await expect(page.locator("#groeicyclus")).toBeVisible();
-      await expect(page.locator("#verwantschap")).toBeHidden();
+      if (grape.intermediateDetail) {
+        await expect(page.locator(`#${grape.intermediateDetail}`)).toBeVisible();
+      }
+      if (grape.slug === "merlot-blanc") {
+        await expect(page.locator("#verwantschap")).toBeVisible();
+        await expect(
+          page.locator(
+            '[data-depth-run="intermediate"]:has(#verwantschap) > .content-depth-marker',
+          ),
+        ).toHaveText("Verdieping");
+      } else {
+        await expect(page.locator("#verwantschap")).toBeHidden();
+      }
 
-      await control.getByRole("button", { name: "Gevorderd", exact: true }).click();
-      await expect(page.locator("#verwantschap")).toBeVisible();
+      if (grape.slug === "merlot-blanc") {
+        await expect(control.getByRole("button", { name: "Gevorderd", exact: true })).toHaveCount(
+          0,
+        );
+      } else {
+        await control.getByRole("button", { name: "Gevorderd", exact: true }).click();
+        await expect(page.locator("#verwantschap")).toBeVisible();
+        if (grape.advancedDetail) {
+          await expect(page.locator(`#${grape.advancedDetail}`)).toBeVisible();
+        }
+      }
       expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
         width,
       );

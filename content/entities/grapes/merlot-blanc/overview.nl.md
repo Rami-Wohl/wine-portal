@@ -45,20 +45,22 @@ Regelmatige opbrengst is nuttig, maar de hoeveelheid fruit moet passen bij de ge
 ## Wijnbouw en gevoeligheden — rot is de grote waarschuwing
 
 Plantgrape noemt Merlot Blanc zeer gevoelig voor grijze rot. Bij nat weer rond de oogst kan dit zwaar wegen. Een luchtige bladwand, inspectie en een verstandig oogstmoment zijn dus belangrijker dan de gedachte dat een productieve stok altijd een makkelijke stok is. Ook droogte vraagt aandacht. [@source.plantgrape-merlot-blanc]
+
+Die twee gevoeligheden vragen niet om één standaardoplossing. Lang wachten kan bij natte trossen de rotkans vergroten, terwijl een droog perceel de stok al vóór de oogst onder druk kan zetten. De relevante vraag is daarom niet alleen hoeveel druiven hij draagt, maar hoeveel daarvan op deze plek gezond en bruikbaar kunnen worden geoogst.
 :::
 
 :::section{#wijnmaken depth="intermediate" source_refs="source.plantgrape-merlot-blanc"}
 ## Wijnmaken en rijping — een bescheiden uitgangspunt
 
-De druiven worden als witte wijn geperst en vergist. Bij een neutrale basis kan de maker kiezen voor een frisse, directe stijl of een blend waarin een ander ras meer geur levert. Hout, lange rijping of een uitgesproken aromatisch profiel horen niet automatisch bij Merlot Blanc. Gezond fruit is voor beide routes belangrijker dan een zwaar kelderrecept.
+De druiven worden als witte wijn geperst en vergist. Bij een betrekkelijk neutrale basis kan de maker kiezen voor een frisse, directe stijl of een blend waarin een ander ras meer geur levert. Hout of lange rijping zijn geen eigenschappen van het ras; zulke keuzes hebben pas zin vanuit de kwaliteit van de geoogste druiven en de gewenste wijn. Plantgrape's terughoudende beoordeling van de wijnen is een algemene proefobservatie, geen oordeel over elke afzonderlijke fles. [@source.plantgrape-merlot-blanc]
 :::
 
-:::section{#verwantschap depth="advanced" source_refs="source.plantgrape-merlot-blanc source.boursiquot-merlot-parentage-2009"}
-## Synoniemen, klonen en verwantschap — precies over ouderschap
+:::section{#verwantschap depth="intermediate" source_refs="source.plantgrape-merlot-blanc"}
+## Synoniemen, klonen en verwantschap — een gereconstrueerde familie
 
-Plantgrape formuleert de afstamming als een **waarschijnlijke** kruising van Folle Blanche en Merlot. Die nuance hoort bij genetische reconstructie en moet niet worden omgezet in een gedocumenteerde menselijke kruising met bekende datum en maker. De fiche noemt geen officieel erkend synoniem in Frankrijk of de overige EU-landen. [@source.plantgrape-merlot-blanc]
+Plantgrape formuleert de afstamming als een **waarschijnlijke** kruising van Folle Blanche en Merlot. De bron noemt daarmee een genetisch gereconstrueerde familie, niet een gedocumenteerde menselijke kruising met bekende datum en maker. Ook een witte mutatie van Merlot zou iets anders zijn: dan was geen tweede ouder nodig om een zelfstandig ras te verklaren. [@source.plantgrape-merlot-blanc]
 
-De bestaande studie naar Merlot en verwante rassen helpt de familiecontext begrijpen, maar een naamsovereenkomst is geen bewijs van mutatie of identiteit. [@source.boursiquot-merlot-parentage-2009]
+Dezelfde fiche noemt geen officieel erkend synoniem voor het ras in Frankrijk of de overige EU-landen en registreert één gecertificeerde Franse kloon. Dat is een uitspraak over formeel geregistreerd plantmateriaal in Frankrijk, niet het bewijs dat elders geen andere Merlot Blanc-stokken bestaan. [@source.plantgrape-merlot-blanc]
 :::
 
 :::section{#etiket depth="foundation" source_refs="source.plantgrape-merlot-blanc"}
@@ -70,5 +72,5 @@ Merlot Blanc op een etiket benoemt een wit druivenras, niet een kleurvariant van
 :::section{#heden depth="intermediate" source_refs="source.plantgrape-merlot-blanc"}
 ## Hedendaagse ontwikkelingen — zeldzaamheid zonder romantisering
 
-De historische daling in Franse aanplant maakt Merlot Blanc interessant als stukje levende wijngeschiedenis. Zeldzaam betekent echter niet automatisch beter. De praktische beperkingen — vooral rotgevoeligheid en droogterisico — verklaren waarom zijn behoud en gebruik vragen om een passende plek en een duidelijk doel. [@source.plantgrape-merlot-blanc]
+De historische daling in Franse aanplant maakt Merlot Blanc interessant als stukje levende wijngeschiedenis. Zeldzaam betekent echter niet automatisch beter. Rotgevoeligheid en droogterisico kunnen de teelt lastig maken, maar de areaalcijfers van Plantgrape bewijzen niet waarom het ras zo sterk terugliep. Wie het nu wil gebruiken, heeft vooral een passende plek, gezond fruit en een duidelijk wijnmaakdoel nodig. [@source.plantgrape-merlot-blanc]
 :::

@@ -28,6 +28,39 @@ const concepts = [
 ];
 
 for (const width of [390, 1440]) {
+  test(`Bordeaux groups consecutive depth passages at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/regions/bordeaux");
+
+    const depthControl = page.getByRole("group", {
+      name: "Kies hoeveel detail je wilt zien",
+    });
+    await depthControl.getByRole("button", { name: "Gevorderd", exact: true }).click();
+
+    const history = page.locator(".content-section-group:has(#geschiedenis-in-beweging)");
+    const intermediateRun = history.locator('[data-depth-detail-run="intermediate"]');
+    const advancedRun = history.locator('[data-depth-detail-run="advanced"]');
+
+    await expect(intermediateRun).toHaveCount(1);
+    await expect(intermediateRun.locator(":scope > .content-depth-marker")).toHaveText(
+      "Verdieping",
+    );
+    await expect(advancedRun).toHaveCount(1);
+    await expect(advancedRun.locator(":scope > .content-depth-marker")).toHaveText("Gevorderd");
+    await expect(advancedRun.locator("#geschiedenis-water-en-medoc")).toBeVisible();
+    await expect(advancedRun.locator("#geschiedenis-handel-en-slavernij")).toBeVisible();
+    await expect(advancedRun.locator("#geschiedenis-crises-en-herstel")).toBeVisible();
+    await expect(history.locator(".content-block-detail > .content-depth-marker")).toHaveCount(0);
+
+    const borderStyle = await advancedRun.evaluate(
+      (element) => getComputedStyle(element).borderLeftStyle,
+    );
+    expect(borderStyle).toBe("solid");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      width,
+    );
+  });
+
   test(`Bordeaux foundations expose photography and progressive depth at ${width}px`, async ({
     page,
   }) => {

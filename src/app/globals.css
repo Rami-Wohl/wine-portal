@@ -1150,16 +1150,40 @@ h3 {
   min-width: 0;
   scroll-margin-top: 110px;
 }
-.content-block-detail {
+.content-block-detail,
+.content-depth-section-run,
+.content-depth-detail-run {
   --detail-accent: color-mix(in srgb, var(--brand) 24%, var(--line));
   padding-left: clamp(1rem, 3vw, 1.8rem);
   border-left: 2px solid var(--detail-accent);
 }
-.content-block-detail.content-depth-intermediate {
+:is(
+  .content-block-detail,
+  .content-depth-section-run,
+  .content-depth-detail-run
+).content-depth-intermediate {
   --detail-accent: color-mix(in srgb, #a2714c 72%, var(--line));
 }
-.content-block-detail.content-depth-advanced {
+:is(
+  .content-block-detail,
+  .content-depth-section-run,
+  .content-depth-detail-run
+).content-depth-advanced {
   --detail-accent: color-mix(in srgb, var(--brand) 76%, var(--line));
+}
+.content-depth-section-run-body {
+  display: grid;
+  gap: clamp(2.25rem, 4.5vw, 3.5rem);
+  min-width: 0;
+}
+.content-depth-detail-run-body {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  min-width: 0;
+}
+.content-depth-detail-run .content-block-detail {
+  padding-left: 0;
+  border-left: 0;
 }
 .content-depth-marker {
   display: flex;

@@ -29,6 +29,12 @@ Plantgrape beschrijft Colombard als een druif die aangename, aromatische wijn me
 Een basiswijn voor distillatie beoordeel je anders dan een witte wijn voor direct drinken. Het karakter van het uiteindelijke distillaat ontstaat pas verder in de keten, door distillatie en eventuele rijping; proefnotities van de afgewerkte drank kun je niet rechtstreeks aan het ruwe druivensap toeschrijven.
 :::
 
+:::detail{#twee-oogstdoelen parent="smaak" depth="intermediate" source_refs="source.plantgrape-colombard source.bnic-cognac-grapes"}
+### Hetzelfde zuur, een ander doel
+
+Voor een Colombard die als witte wijn wordt gedronken, moet frisheid samengaan met voldoende smaak in het fruit. In Cognac ligt het doel anders: de beroepsorganisatie beschrijft voor de distillatiebasis juist hoge zuurgraad en betrekkelijk weinig suiker. Zij waardeert Colombard daar ook om zijn aromatische bijdrage in een menging. Het ras biedt dus eigenschappen voor beide routes, maar de gewenste samenstelling van de geoogste druiven en de beoordeling van het resultaat zijn niet uitwisselbaar. [@source.plantgrape-colombard] [@source.bnic-cognac-grapes]
+:::
+
 :::section{#klimaat depth="foundation" source_refs="source.plantgrape-colombard"}
 ## Klimaat, ligging en bodem — frisheid bewaren
 
@@ -59,12 +65,12 @@ Voor een frisse witte wijn worden de druiven doorgaans geperst en wordt het sap 
 Voor Cognac begint de route met een droge witte basiswijn die daarna wordt gedistilleerd. De kwaliteit van die basiswijn is belangrijk, maar “lekker als stille wijn” en “geschikt voor distillatie” zijn niet dezelfde opdracht. Colombard levert in die wereld een kleiner aandeel dan Ugni Blanc. [@source.bnic-cognac-grapes]
 :::
 
-:::section{#verwantschap depth="advanced" source_refs="source.plantgrape-colombard"}
-## Synoniemen, klonen en verwantschap — ouderschap is geen smaakrecept
+:::section{#verwantschap depth="advanced" source_refs="source.plantgrape-colombard source.wosa-colombard"}
+## Synoniemen, klonen en verwantschap — namen en materiaal in context
 
 Volgens de genetische analyses die Plantgrape samenvat, is Colombard vermoedelijk een kruising van [[grape.gouais-blanc|Gouais Blanc]] en Chenin. Dat maakt hem niet tot een smaakgemiddelde van zijn ouders. Dezelfde fiche vermeldt geen officieel erkend synoniem voor voortplantingsmateriaal in Frankrijk of de overige EU-landen. [@source.plantgrape-colombard]
 
-Franse [[concept.clonal-selection|klonale selectie]] laat zien dat ook binnen één ras plantmateriaal kan verschillen. Een kloon blijft Colombard; de keuze kan teelt en fruitkwaliteit beïnvloeden zonder een nieuwe druivensoort te scheppen.
+Wines of South Africa schrijft de naam als “Colombar(d)”. Dat gebruik in een ander land is geen weerlegging van de Franse bron: de ene beschrijft een gangbare rasnaam, de andere een formeel erkend synoniem voor een specifiek doel en rechtsgebied. Ook binnen één naam is het plantmateriaal niet uniform. Plantgrape documenteert Franse klonen met uiteenlopende opbrengst-, suiker- en zuurprofielen. [[concept.clonal-selection|Klonale selectie]] kan daardoor de speelruimte van de wijnbouwer veranderen, maar de klonencijfers voorspellen niet wat een fles uit een andere wijngaard of jaargang zal smaken. [@source.wosa-colombard] [@source.plantgrape-colombard]
 :::
 
 :::section{#etiket depth="foundation" source_refs="source.plantgrape-colombard"}
