@@ -1,31 +1,73 @@
 import { describe, expect, it } from "vitest";
-import { getAllEntities } from "./repository";
-import { filterEntities, firstSearchParam, parseEntityTypeFilter } from "./search";
+import { getPublishedSearchIndex } from "./repository";
+import {
+  firstSearchParam,
+  normalizeSearchValue,
+  parseEntityTypeFilter,
+  searchKnowledge,
+} from "./search";
 
-describe("entity search", () => {
-  it("matches IDs, localized names, slugs, case, and diacritics", () => {
-    const entities = getAllEntities();
+describe("knowledge search", () => {
+  it("ranks an exact entity name above article mentions", () => {
+    const results = searchKnowledge(getPublishedSearchIndex(), "Cabernet Sauvignon");
 
-    expect(filterEntities(entities, "PRODUCER.CHATEAU-LATOUR")[0]?.id).toBe(
+    expect(results[0]?.entry.id).toBe("grape.cabernet-sauvignon");
+    expect(results[0]?.match_kind).toBe("metadata");
+    expect(results.some((result) => result.entry.id === "region.bordeaux")).toBe(true);
+  });
+
+  it("matches IDs, localized names, aliases, slugs, case, and diacritics", () => {
+    const index = getPublishedSearchIndex();
+
+    expect(searchKnowledge(index, "PRODUCER.CHATEAU-LATOUR")[0]?.entry.id).toBe(
       "producer.chateau-latour",
     );
-    expect(filterEntities(entities, "Chateau Latour")[0]?.id).toBe("producer.chateau-latour");
-    expect(filterEntities(entities, "cabernet-sauvignon")[0]?.id).toBe("grape.cabernet-sauvignon");
+    expect(searchKnowledge(index, "Chateau Latour")[0]?.entry.id).toBe("producer.chateau-latour");
+    expect(searchKnowledge(index, "cabernet-sauvignon")[0]?.entry.id).toBe(
+      "grape.cabernet-sauvignon",
+    );
+    expect(normalizeSearchValue("Élevage & Cuvée")).toBe("elevage cuvee");
+  });
+
+  it("returns a contextual block anchor for article text", () => {
+    const [result] = searchKnowledge(getPublishedSearchIndex(), "groot wortelprobleem");
+
+    expect(result.entry.id).toBe("concept.phylloxera");
+    expect(result.match_kind).toBe("heading");
+    expect(result.anchor).toBe("insect-en-schade");
+    expect(result.snippet).toContain("wortelprobleem");
+  });
+
+  it("indexes captions only when their figure is used by the page", () => {
+    const [result] = searchKnowledge(getPublishedSearchIndex(), "Pennsylvania");
+
+    expect(result.entry.id).toBe("concept.phylloxera");
+    expect(result.match_kind).toBe("media-caption");
+    expect(result.anchor).toBe("bladgallen");
+    expect(result.snippet).toContain("Pennsylvania");
+  });
+
+  it("keeps the depth and anchor of advanced passages", () => {
+    const [result] = searchKnowledge(getPublishedSearchIndex(), "absolute immuniteit");
+
+    expect(result.entry.id).toBe("concept.phylloxera");
+    expect(result.passage?.depth).toBe("advanced");
+    expect(result.anchor).toBe("resistentie-heeft-grenzen");
   });
 
   it("combines text and entity-type filters", () => {
-    const entities = getAllEntities();
+    const index = getPublishedSearchIndex();
 
-    expect(filterEntities(entities, "bordeaux", "region").map((entity) => entity.id)).toEqual([
+    expect(searchKnowledge(index, "bordeaux", "region").map((result) => result.entry.id)).toContain(
       "region.bordeaux",
-    ]);
-    expect(filterEntities(entities, "bordeaux", "producer")).toEqual([]);
-    expect(filterEntities(entities, "", "classification").map((entity) => entity.id)).toEqual([
+    );
+    expect(searchKnowledge(index, "bordeaux", "producer")).not.toHaveLength(0);
+    expect(searchKnowledge(index, "", "classification").map((result) => result.entry.id)).toEqual([
       "classification.bordeaux-1855",
-      "classification.crus-artisans-du-medoc",
-      "classification.crus-bourgeois-du-medoc",
       "classification.graves",
       "classification.saint-emilion",
+      "classification.crus-artisans-du-medoc",
+      "classification.crus-bourgeois-du-medoc",
     ]);
   });
 

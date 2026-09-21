@@ -25,14 +25,14 @@ Peildatum: 2026-09-21.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 16 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-034` t/m `MNT-038` |
+| Open | 15 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-035` t/m `MNT-038` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 19 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032`, `MNT-033` |
+| Afgerond | 20 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-034` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben zeven acties prioriteit `hoog` en negen
+Van het uitvoerbare open werk hebben zes acties prioriteit `hoog` en negen
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -250,22 +250,6 @@ geographydatalaag.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
 - **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
 
-### `MNT-034` — Volledige artikelinhoud doorzoekbaar maken
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Categorie:** search, knowledge-data, product-ux
-- **Scope:** zoekindex, ranking, snippets en resultaatlinks
-- **Herkomst:** onderhoudsplan 2026-09-21
-- **Bevinding:** zoeken vindt entities en metadata, maar benut de eigenlijke
-  artikeltitels, paragrafen en relevante beeldbijschriften nog onvoldoende.
-- **Klaar wanneer:** betekenisvolle inhoud uit actieve, gelokaliseerde
-  contentblokken reproduceerbaar wordt geïndexeerd; resultaten een begrijpelijke
-  contextsnippet en zo mogelijk een stabiele sectieanchor tonen; ranking
-  entitynamen boven losse teksttreffers houdt; en kennisdiepte geen verborgen
-  informatie onvindbaar maakt.
-- **Log:** 2026-09-21 — geregistreerd; uitvoering volgt na de onboardingcheck.
-
 ### `MNT-035` — Zoekinteractie direct en zichtbaar maken
 
 - **Status:** open
@@ -336,6 +320,29 @@ geographydatalaag.
   kleine aanvulling.
 
 ## Historie
+
+### `MNT-034` — Volledige artikelinhoud doorzoekbaar maken
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** search, knowledge-data, product-ux
+- **Scope:** zoekindex, ranking, snippets en resultaatlinks
+- **Herkomst:** onderhoudsplan 2026-09-21
+- **Bevinding:** zoeken vond entities en metadata, maar benutte de eigenlijke
+  artikeltitels, paragrafen en relevante beeldbijschriften nog onvoldoende.
+- **Klaar wanneer:** betekenisvolle inhoud uit actieve, gelokaliseerde
+  contentblokken reproduceerbaar wordt geïndexeerd; resultaten een begrijpelijke
+  contextsnippet en zo mogelijk een stabiele sectieanchor tonen; ranking
+  entitynamen boven losse teksttreffers houdt; en kennisdiepte geen verborgen
+  informatie onvindbaar maakt.
+- **Log:** 2026-09-21 — afgerond. De build maakt nu een tweetalige zoekindex voor
+  entities en narratives met 2.170 Nederlandse passages over de 263 actieve
+  documenten, waaronder 158 bijschriften van daadwerkelijk gebruikte figures.
+  Exacte namen blijven boven headings, prose en captions staan. Iedere
+  inhoudstreffer toont context en een begrensde snippet en linkt naar het
+  stabiele blockanker; een gevorderde treffer opent daardoor automatisch het
+  vereiste kennisniveau. De nieuwe resultaatkaarten zijn op 1440×1200 en 390×844
+  visueel gecontroleerd en met unit-, pipeline- en Playwrighttests afgedekt.
 
 ### `MNT-033` — README en developer-onboarding actualiseren
 

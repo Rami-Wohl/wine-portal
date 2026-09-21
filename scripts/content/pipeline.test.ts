@@ -304,8 +304,35 @@ describe("content pipeline validation", () => {
     expect(knowledgeBase.indexes.localized_slugs.nl["region:voorbeeld"]).toBe("region.example");
     expect(knowledgeBase.indexes.geography["geo.example"]).toBe("region.example");
     expect(knowledgeBase.indexes.search[0]).toMatchObject({
+      kind: "entity",
       id: "region.example",
-      type: "region",
+      entity_type: "region",
+      passages: { nl: [], en: [] },
+    });
+  });
+
+  it("indexes localized narrative passages with their stable block anchor", async () => {
+    const root = await temporaryRoot();
+    await addNarrative(root, {
+      markdown: "Een unieke narratieve passage.",
+      englishMarkdown: "A unique narrative passage.",
+    });
+
+    const { knowledgeBase } = await buildContent({ root, write: false });
+    const narrativeEntry = knowledgeBase.indexes.search.find((entry) => entry.kind === "narrative");
+
+    expect(narrativeEntry).toMatchObject({
+      kind: "narrative",
+      id: "narrative.proof",
+      passages: {
+        nl: [
+          {
+            block_id: "test-content",
+            kind: "content",
+            text: "Een unieke narratieve passage.",
+          },
+        ],
+      },
     });
   });
 
@@ -737,6 +764,18 @@ describe("content pipeline validation", () => {
       type: "figure",
       media_id: "media.example.photo",
       nodes: [],
+    });
+    expect(knowledgeBase.indexes.search[0]).toMatchObject({
+      kind: "entity",
+      passages: {
+        nl: [
+          {
+            block_id: "voorbeeldfoto",
+            kind: "media-caption",
+            text: "Een onderschrift.",
+          },
+        ],
+      },
     });
   });
 

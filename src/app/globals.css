@@ -681,6 +681,75 @@ h3 {
   color: var(--faint);
   text-wrap: nowrap;
 }
+.search-result-list {
+  display: grid;
+  gap: 0.85rem;
+}
+.search-result-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.3rem 1.5rem;
+  padding: clamp(1.15rem, 2.2vw, 1.55rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgb(251 250 247 / 70%);
+  text-decoration: none;
+  transition:
+    border-color var(--motion-fast) ease,
+    background var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+.search-result-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--brand);
+  background: var(--surface);
+}
+.search-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: 0.4rem 0.75rem;
+  color: var(--faint);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+.search-result-meta span + span::before {
+  margin-right: 0.75rem;
+  content: "·";
+}
+.search-result-card h3 {
+  margin: 0;
+  font: 520 clamp(1.45rem, 2.8vw, 2rem) / 1.12 var(--font-display);
+  letter-spacing: -0.02em;
+}
+.search-result-context,
+.search-result-snippet {
+  grid-column: 1;
+}
+.search-result-context {
+  margin-top: 0.2rem;
+  color: var(--brand);
+  font-size: 0.76rem;
+  font-weight: 720;
+}
+.search-result-snippet {
+  max-width: 800px;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+.search-result-action {
+  grid-column: 2;
+  grid-row: 2 / span 3;
+  align-self: center;
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
 .empty-inline,
 .quiet-note {
   color: var(--faint);
@@ -1642,6 +1711,14 @@ h3 {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.15rem;
+  }
+  .search-result-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .search-result-action {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 0.35rem;
   }
   .site-footer {
     align-items: flex-start;

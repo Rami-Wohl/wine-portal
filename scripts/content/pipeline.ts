@@ -18,6 +18,7 @@ import {
   sourceSchema,
   type Entity,
   type EntityType,
+  type ContentBlockNode,
   type ContentDocument,
   type ContentInlineNode,
   type ContentPlan,
@@ -28,6 +29,8 @@ import {
   type Narrative,
   type NarrativeMention,
   type ResolvedRelation,
+  type SearchIndexEntry,
+  type SearchPassage,
   entityPresentationMode,
 } from "../../src/content/model";
 import { relationLabel } from "../../src/content/relations";
@@ -47,7 +50,10 @@ const CONTENT_PLAN_REQUIREMENTS = {
   },
 } as const;
 
-function inlineText(nodes: ContentInlineNode[]): string {
+function inlineText(
+  nodes: ContentInlineNode[],
+  entityLabel: (id: string) => string = (id) => id,
+): string {
   return nodes
     .map((node) => {
       switch (node.type) {
@@ -55,19 +61,75 @@ function inlineText(nodes: ContentInlineNode[]): string {
         case "inline-code":
           return node.value;
         case "entity-link":
-          return node.label ?? node.entity_id;
+          return node.label ?? entityLabel(node.entity_id);
         case "citation":
           return "";
         case "emphasis":
         case "strong":
         case "link":
-          return inlineText(node.children);
+          return inlineText(node.children, entityLabel);
         case "break":
           return " ";
       }
     })
     .join("")
     .trim();
+}
+
+function blockNodeText(node: ContentBlockNode, entityLabel: (id: string) => string): string {
+  switch (node.type) {
+    case "paragraph":
+    case "heading":
+      return inlineText(node.children, entityLabel);
+    case "list":
+      return node.children
+        .flatMap((item) => item.children.map((child) => blockNodeText(child, entityLabel)))
+        .join(" ");
+    case "blockquote":
+      return node.children.map((child) => blockNodeText(child, entityLabel)).join(" ");
+    case "table":
+      return node.rows.flatMap((row) => row.map((cell) => inlineText(cell, entityLabel))).join(" ");
+  }
+}
+
+function searchPassagesForDocument(
+  document: ContentDocument,
+  locale: Locale,
+  entityNamesById: Map<string, Record<Locale, string>>,
+  mediaById: Map<string, MediaAsset>,
+): SearchPassage[] {
+  const entityLabel = (id: string) => entityNamesById.get(id)?.[locale] ?? id;
+  const clean = (value: string) => value.replace(/\s+/g, " ").trim();
+
+  return document.blocks.flatMap((block): SearchPassage[] => {
+    if (block.type === "figure") {
+      const caption = block.media_id ? mediaById.get(block.media_id)?.caption?.[locale] : undefined;
+      if (!caption?.trim()) return [];
+      return [
+        {
+          block_id: block.id,
+          kind: "media-caption",
+          depth: block.depth,
+          heading: null,
+          text: clean(caption),
+        },
+      ];
+    }
+
+    const headingNode = block.nodes.find((node) => node.type === "heading");
+    const heading = headingNode ? clean(inlineText(headingNode.children, entityLabel)) : null;
+    const text = clean(block.nodes.map((node) => blockNodeText(node, entityLabel)).join(" "));
+    if (!text) return [];
+    return [
+      {
+        block_id: block.id,
+        kind: "content",
+        depth: block.depth,
+        heading,
+        text,
+      },
+    ];
+  });
 }
 import {
   parseContentDocument,
@@ -1049,13 +1111,40 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       .filter((entity) => entity.geography_id)
       .map((entity) => [entity.geography_id as string, entity.id]),
   );
-  const search = entities.map(({ id, type, canonical_name, names, slugs }) => ({
-    id,
-    type,
-    canonical_name,
-    names,
-    slugs,
-  }));
+  const entityNamesById = new Map(entities.map((entity) => [entity.id, entity.names]));
+  const mediaById = new Map(media.map((asset) => [asset.id, asset]));
+  const search: SearchIndexEntry[] = [
+    ...entities.map(({ id, status, type, canonical_name, names, aliases, slugs, content }) => ({
+      kind: "entity" as const,
+      id,
+      status,
+      entity_type: type,
+      canonical_name,
+      names,
+      aliases: aliases ?? { nl: [], en: [] },
+      slugs,
+      passages: Object.fromEntries(
+        LOCALES.map((locale) => [
+          locale,
+          searchPassagesForDocument(content[locale], locale, entityNamesById, mediaById),
+        ]),
+      ) as SearchIndexEntry["passages"],
+    })),
+    ...narratives.map(({ id, status, type, title, slugs, content }) => ({
+      kind: "narrative" as const,
+      id,
+      status,
+      narrative_type: type,
+      titles: title,
+      slugs,
+      passages: Object.fromEntries(
+        LOCALES.map((locale) => [
+          locale,
+          searchPassagesForDocument(content[locale], locale, entityNamesById, mediaById),
+        ]),
+      ) as SearchIndexEntry["passages"],
+    })),
+  ];
   const knowledgeBase: GeneratedKnowledgeBase = {
     entities,
     narratives,

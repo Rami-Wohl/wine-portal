@@ -707,6 +707,38 @@ export interface ContentDocument {
   blocks: ContentBlock[];
 }
 
+export interface SearchPassage {
+  block_id: string;
+  kind: "content" | "media-caption";
+  depth: Depth | null;
+  heading: string | null;
+  text: string;
+}
+
+export interface EntitySearchIndexEntry {
+  kind: "entity";
+  id: string;
+  status: Entity["status"];
+  entity_type: EntityType;
+  canonical_name: string;
+  names: Record<Locale, string>;
+  aliases: Record<Locale, string[]>;
+  slugs: Record<Locale, string>;
+  passages: Record<Locale, SearchPassage[]>;
+}
+
+export interface NarrativeSearchIndexEntry {
+  kind: "narrative";
+  id: string;
+  status: Narrative["status"];
+  narrative_type: Narrative["type"];
+  titles: Record<Locale, string>;
+  slugs: Record<Locale, string>;
+  passages: Record<Locale, SearchPassage[]>;
+}
+
+export type SearchIndexEntry = EntitySearchIndexEntry | NarrativeSearchIndexEntry;
+
 export type GeneratedEntity = Entity & {
   content: Record<Locale, ContentDocument>;
 };
@@ -741,12 +773,6 @@ export interface GeneratedKnowledgeBase {
     entities_by_type: Record<EntityType, string[]>;
     localized_slugs: Record<Locale, Record<string, string>>;
     geography: Record<string, string>;
-    search: Array<{
-      id: string;
-      type: EntityType;
-      canonical_name: string;
-      names: Record<Locale, string>;
-      slugs: Record<Locale, string>;
-    }>;
+    search: SearchIndexEntry[];
   };
 }

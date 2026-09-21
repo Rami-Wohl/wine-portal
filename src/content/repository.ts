@@ -7,6 +7,7 @@ import type {
   GeneratedNarrative,
   MediaAsset,
   ResolvedRelation,
+  SearchIndexEntry,
   Source,
 } from "./model";
 import { entityPresentationMode } from "./model";
@@ -91,6 +92,10 @@ export function getAllNarratives(): GeneratedNarrative[] {
 
 export function getPublishedNarratives(): GeneratedNarrative[] {
   return knowledgeBase.narratives.filter((narrative) => narrative.status === "active");
+}
+
+export function getPublishedSearchIndex(): SearchIndexEntry[] {
+  return knowledgeBase.indexes.search.filter((entry) => entry.status === "active");
 }
 
 export function getNarrativeById(id: string): GeneratedNarrative | undefined {

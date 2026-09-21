@@ -1,13 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { EntityLink } from "@/components/entity-link";
 import { PageIntro } from "@/components/page-intro";
-import { getPublishedEntities } from "@/content/repository";
-import { filterEntities, firstSearchParam, parseEntityTypeFilter } from "@/content/search";
-import { ENTITY_TYPE_LABELS_NL, ENTITY_TYPE_PLURAL_LABELS_NL } from "@/content/routing";
+import {
+  getEntityById,
+  getEntityPublicHref,
+  getNarrativeById,
+  getPublishedSearchIndex,
+} from "@/content/repository";
+import {
+  firstSearchParam,
+  normalizeSearchValue,
+  parseEntityTypeFilter,
+  searchEntryTitle,
+  searchKnowledge,
+  type KnowledgeSearchResult,
+} from "@/content/search";
+import {
+  DEPTH_LABELS_NL,
+  ENTITY_TYPE_LABELS_NL,
+  ENTITY_TYPE_PLURAL_LABELS_NL,
+  NARRATIVE_TYPE_LABELS_NL,
+  narrativeHref,
+} from "@/content/routing";
 import type { EntityType } from "@/content/model";
 
-const PAGE_SIZE = 48;
+const PAGE_SIZE = 24;
 
 export const metadata: Metadata = {
   title: "Zoeken",
@@ -32,6 +49,52 @@ function pageHref(query: string, type: string, page: number): string {
   return `/search?${params.toString()}`;
 }
 
+function resultHref(result: KnowledgeSearchResult): string | null {
+  const entry = result.entry;
+  let baseHref: string | null;
+  if (entry.kind === "entity") {
+    const entity = getEntityById(entry.id);
+    baseHref = entity ? getEntityPublicHref(entity) : null;
+  } else {
+    const narrative = getNarrativeById(entry.id);
+    baseHref = narrative ? narrativeHref(narrative) : null;
+  }
+  if (!baseHref) return null;
+  return result.anchor ? `${baseHref}#${result.anchor}` : baseHref;
+}
+
+function resultTypeLabel(result: KnowledgeSearchResult): string {
+  return result.entry.kind === "entity"
+    ? ENTITY_TYPE_LABELS_NL[result.entry.entity_type]
+    : NARRATIVE_TYPE_LABELS_NL[result.entry.narrative_type];
+}
+
+function resultContext(result: KnowledgeSearchResult): string | null {
+  if (result.match_kind === "media-caption") return "Gevonden in een beeldbijschrift";
+  if (result.match_kind === "metadata") return null;
+  if (result.passage?.heading) return `Gevonden in ${result.passage.heading}`;
+  return "Gevonden in de artikeltekst";
+}
+
+function SearchResultCard({ result }: { result: KnowledgeSearchResult }) {
+  const href = resultHref(result);
+  if (!href) return null;
+  const context = resultContext(result);
+
+  return (
+    <Link className="search-result-card" href={href}>
+      <span className="search-result-meta">
+        <span>{resultTypeLabel(result)}</span>
+        {result.passage?.depth ? <span>{DEPTH_LABELS_NL[result.passage.depth]}</span> : null}
+      </span>
+      <h3>{searchEntryTitle(result.entry, "nl")}</h3>
+      {context ? <span className="search-result-context">{context}</span> : null}
+      {result.snippet ? <span className="search-result-snippet">{result.snippet}</span> : null}
+      <span className="search-result-action">Lees verder →</span>
+    </Link>
+  );
+}
+
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const rawSearchParams = await searchParams;
   const q = firstSearchParam(rawSearchParams.q);
@@ -39,13 +102,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const requestedPage = Number.parseInt(firstSearchParam(rawSearchParams.page, "1"), 10);
   const validTypes = Object.keys(ENTITY_TYPE_LABELS_NL) as EntityType[];
   const selectedType = parseEntityTypeFilter(type);
-  const hasQuery = q.trim().length > 0;
+  const hasQuery = normalizeSearchValue(q).length > 0;
   const hasTypeFilter = selectedType !== "all";
   const hasSearchIntent = hasQuery || hasTypeFilter;
   const allResults = hasSearchIntent
-    ? filterEntities(getPublishedEntities(), q, selectedType).toSorted((left, right) =>
-        left.names.nl.localeCompare(right.names.nl, "nl", { sensitivity: "base" }),
-      )
+    ? searchKnowledge(getPublishedSearchIndex(), q, selectedType)
     : [];
   const pageCount = Math.max(1, Math.ceil(allResults.length / PAGE_SIZE));
   const currentPage = Number.isFinite(requestedPage)
@@ -56,7 +117,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   return (
     <main id="main-content" className="page-shell">
       <PageIntro eyebrow="Zoeken" title="Vind direct wat je nodig hebt">
-        <p>Zoek op regio, appellatie, producent, druif, jaargang of wijnbegrip.</p>
+        <p>
+          Zoek op onderwerp of op woorden uit artikelen en beeldbijschriften. Een inhoudstreffer
+          brengt je meteen naar de relevante passage.
+        </p>
       </PageIntro>
 
       <form className="discovery-search" action="/search" role="search">
@@ -67,7 +131,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             name="q"
             type="search"
             defaultValue={q}
-            placeholder="Bordeaux, Cabernet Sauvignon…"
+            placeholder="Bordeaux, Cabernet Sauvignon, wortelschade…"
           />
           <button type="submit">Zoeken</button>
         </div>
@@ -100,9 +164,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                   : "Resultaten"}
             </h2>
           </div>
-          <div className="entity-link-list entity-link-list-wide">
+          <div className="search-result-list">
             {results.length > 0 ? (
-              results.map((entity) => <EntityLink entity={entity} key={entity.id} />)
+              results.map((result) => (
+                <SearchResultCard result={result} key={`${result.entry.kind}:${result.entry.id}`} />
+              ))
             ) : (
               <p>Geen passende onderwerpen gevonden. Probeer een andere zoekterm of filter.</p>
             )}

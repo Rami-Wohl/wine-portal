@@ -595,7 +595,8 @@ Die bundle bevat:
 - locale-aware narrative mentions en entitybacklinks;
 - entity-ID- en entity-type-indexes;
 - gelokaliseerde sluglookups;
-- een entitymetadata-searchindex;
+- een gelokaliseerde zoekindex voor entity- en narrativemetadata, contentblocks
+  en bij daadwerkelijk gebruikte figures horende beeldbijschriften;
 - geography-ID-lookups.
 
 De generator verwijdert oude gesplitste JSON-outputs. De gegenereerde directory is genegeerd door Git, kan vóór een build afwezig zijn en mag nooit handmatig worden aangepast.
@@ -721,7 +722,10 @@ De bundle bevat:
 - alle entity-IDs;
 - entities gegroepeerd per type;
 - NL- en EN-sluglookups per entitytype;
-- een zoekindex met ID, type, canonical name, localized names en slugs;
+- een zoekindex met ID, publicatiestatus, type, canonical en gelokaliseerde
+  namen, aliases, slugs en gelokaliseerde contentpassages;
+- per passage het stabiele blockanker, kennisniveau, eventuele heading en het
+  onderscheid tussen artikeltekst en een gebruikt beeldbijschrift;
 - geographylookups waar `geography_id` bestaat;
 - forward/inverse relations en narrativebacklinks voor discovery.
 
@@ -730,11 +734,19 @@ Dit is indexing-infrastructuur. Publieke repository-accessors selecteren uitslui
 draftreviews en ontwikkelcontroles. Welke routes en zoekinterfaces de applicatie
 publiek aanbiedt, blijft een applicatiebeslissing boven op deze graph.
 
+De Nederlandse zoekinterface doorzoekt Nederlandse passages. Namen, aliases en
+slugs uit beide locales blijven als vindbare metadata beschikbaar, maar leveren
+geen Engelstalige prose-snippet in de Nederlandstalige UI. Exacte onderwerpen
+wegen zwaarder dan een losse tekstvermelding; headings wegen zwaarder dan
+lopende tekst en beeldbijschriften. Een inhoudstreffer verwijst naar het stabiele
+blockanker, zodat een dieper block via het bestaande kennisdieptecontract
+automatisch zichtbaar wordt. Resultaten worden per document samengevoegd en
+tonen alleen de best passende passage.
+
 ### Roadmap
 
-- full-text zoeken in narrativepassages;
-- aliases en historische namen zodra het schema die ondersteunt;
-- ranking van exacte entities, related entities en passages;
+- ranking met relationele nabijheid en rijkere taalafhankelijke
+  woordvormvarianten;
 - facetten zoals geography, depth, classification, grape en contenttype;
 - compare views en rijke relationele discovery.
 
@@ -828,7 +840,7 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - learning-pathschema en voortgangsmodel;
 - geography storage, import en mogelijke PostGIS-runtime;
 - provideradapter en geautomatiseerde object-storage/CDN-sync op storage key en checksum;
-- aliasmodel, full-text search, ranking en facetten;
+- rijkere relationele ranking, taalgebonden woordvormen en facetten;
 - provenance- en uncertaintypresentatie in de UI;
 - correctie- en community suggestionworkflow;
 - de fijnmazigheid en UI van externe framework alignment;
