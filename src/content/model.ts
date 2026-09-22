@@ -43,6 +43,7 @@ export const SYMMETRIC_RELATION_TYPES = [
 ] as const satisfies readonly (typeof RELATION_TYPES)[number][];
 
 export const LOCALES = ["nl", "en"] as const;
+export const CURRICULUM_LEVELS = ["understand", "explain", "analyze"] as const;
 export const DEPTHS = ["foundation", "intermediate", "advanced", "specialist"] as const;
 export const CONTENT_BLOCK_TYPES = [
   "summary",
@@ -233,6 +234,7 @@ export const CONTENT_PLAN_SECTION_HEADINGS = {
 
 export type EntityType = (typeof ENTITY_TYPES)[number];
 export type Locale = (typeof LOCALES)[number];
+export type CurriculumLevel = (typeof CURRICULUM_LEVELS)[number];
 export type Depth = (typeof DEPTHS)[number];
 export type ContentBlockType = (typeof CONTENT_BLOCK_TYPES)[number];
 export type CaveatVariant = (typeof CAVEAT_VARIANTS)[number];
@@ -259,6 +261,9 @@ export const narrativeIdSchema = z
     /^narrative\.[a-z0-9]+(?:-[a-z0-9]+)*(?:\.[a-z0-9]+(?:-[a-z0-9]+)*)?$/,
     "must start with 'narrative.' and contain canonical slugs",
   );
+export const learningPathIdSchema = z
+  .string()
+  .regex(/^learning-path\.[a-z0-9]+(?:-[a-z0-9]+)*$/, "must be 'learning-path.<canonical-slug>'");
 const slugSchema = z
   .string()
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "must be a lowercase kebab-case slug");
@@ -388,6 +393,57 @@ export const narrativeSchema = z
     source_refs: z.array(sourceIdSchema).default([]),
     depth: z.enum(DEPTHS).optional(),
     framework_alignment: z.array(frameworkAlignmentSchema).optional(),
+  })
+  .strict();
+
+const learningPathTargetSchema = z.union([entityIdSchema, narrativeIdSchema, learningPathIdSchema]);
+const localizedRequiredStringListSchema = z
+  .object({
+    nl: z.array(z.string().min(1)).min(1),
+    en: z.array(z.string().min(1)).min(1),
+  })
+  .strict();
+
+export const learningPathSchema = z
+  .object({
+    schema_version: z.literal(1),
+    id: learningPathIdSchema,
+    status: z.enum(["draft", "active", "deprecated"]),
+    curriculum_level: z.enum(CURRICULUM_LEVELS),
+    title: localizedTextSchema,
+    slugs: z.object({ nl: slugSchema, en: slugSchema }).strict(),
+    summary: localizedTextSchema,
+    audience: localizedTextSchema,
+    prerequisites: localizedStringListSchema,
+    objectives: localizedRequiredStringListSchema,
+    steps: z
+      .array(
+        z
+          .object({
+            id: contentAnchorSchema,
+            target: narrativeIdSchema,
+            context: localizedTextSchema,
+          })
+          .strict(),
+      )
+      .min(1),
+    completion: z
+      .object({
+        recap: localizedRequiredStringListSchema,
+        encouragement: localizedTextSchema,
+        suggestions: z
+          .array(
+            z
+              .object({
+                id: contentAnchorSchema,
+                target: learningPathTargetSchema,
+                context: localizedTextSchema,
+              })
+              .strict(),
+          )
+          .min(1),
+      })
+      .strict(),
   })
   .strict();
 
@@ -590,6 +646,7 @@ export type Entity = z.infer<typeof entitySchema>;
 export type EntityPresentation = z.infer<typeof entityPresentationSchema>;
 export type Relation = z.infer<typeof relationSchema>;
 export type Narrative = z.infer<typeof narrativeSchema>;
+export type LearningPath = z.infer<typeof learningPathSchema>;
 export type Source = z.infer<typeof sourceSchema>;
 export type MediaAsset = z.infer<typeof mediaAssetSchema>;
 export type ContentPlan = z.infer<typeof contentPlanSchema>;
@@ -758,9 +815,15 @@ export type GeneratedNarrative = Narrative & {
   content: Record<Locale, ContentDocument>;
 };
 
+export interface LearningPathMembership {
+  path_id: string;
+  step_id: string;
+}
+
 export interface GeneratedKnowledgeBase {
   entities: GeneratedEntity[];
   narratives: GeneratedNarrative[];
+  learning_paths: LearningPath[];
   sources: Source[];
   media: MediaAsset[];
   relations: {
@@ -772,6 +835,9 @@ export interface GeneratedKnowledgeBase {
     entity_ids: string[];
     entities_by_type: Record<EntityType, string[]>;
     localized_slugs: Record<Locale, Record<string, string>>;
+    learning_path_ids: string[];
+    learning_path_slugs: Record<Locale, Record<string, string>>;
+    lesson_memberships: Record<string, LearningPathMembership[]>;
     geography: Record<string, string>;
     search: SearchIndexEntry[];
   };

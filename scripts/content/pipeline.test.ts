@@ -11,6 +11,7 @@ import {
   type ContentPlan,
   type Entity,
   type EntityPresentation,
+  type LearningPath,
 } from "../../src/content/model";
 import { auditEntityLinks, loadContentPlans, scaffoldPlanDependencies } from "./dependencies";
 import { generateEntityPackage } from "./generator";
@@ -35,6 +36,8 @@ interface AddEntityOptions {
 }
 
 interface AddNarrativeOptions {
+  id?: string;
+  slug?: string;
   markdown?: string;
   englishMarkdown?: string;
   primaryEntity?: string;
@@ -42,6 +45,15 @@ interface AddNarrativeOptions {
   sourceRefs?: string[];
   status?: "draft" | "active";
   type?: "lesson" | "explainer";
+}
+
+interface AddLearningPathOptions {
+  id?: string;
+  status?: LearningPath["status"];
+  nlSlug?: string;
+  enSlug?: string;
+  steps: LearningPath["steps"];
+  suggestions?: LearningPath["completion"]["suggestions"];
 }
 
 async function temporaryRoot(): Promise<string> {
@@ -195,16 +207,24 @@ async function addRegionPlan(
 }
 
 async function addNarrative(root: string, options: AddNarrativeOptions = {}): Promise<void> {
-  const directory = path.join(root, "content", "narratives", "explainers", "proof");
+  const id = options.id ?? "narrative.proof";
+  const slug = options.slug ?? id.split(".").at(-1) ?? "proof";
+  const directory = path.join(
+    root,
+    "content",
+    "narratives",
+    options.type === "lesson" ? "lessons" : "explainers",
+    slug,
+  );
   await mkdir(directory, { recursive: true });
   await writeFile(
     path.join(directory, "narrative.yaml"),
     stringifyYaml({
-      id: "narrative.proof",
+      id,
       type: options.type ?? "explainer",
       status: options.status ?? "draft",
       title: { nl: "Proef", en: "Proof" },
-      slugs: { nl: "proef", en: "proof" },
+      slugs: { nl: slug, en: slug },
       locales: { nl: "article.nl.md", en: "article.en.md" },
       ...(options.primaryEntity ? { primary_entity: options.primaryEntity } : {}),
       related_entities: options.relatedEntities ?? [],
@@ -219,6 +239,49 @@ async function addNarrative(root: string, options: AddNarrativeOptions = {}): Pr
   await writeFile(
     path.join(directory, "article.en.md"),
     wrap(options.englishMarkdown ?? options.markdown ?? ""),
+  );
+}
+
+async function addLearningPath(root: string, options: AddLearningPathOptions): Promise<void> {
+  const id = options.id ?? "learning-path.example";
+  const slug = id.slice("learning-path.".length);
+  const directory = path.join(root, "content", "learning-paths", slug);
+  await mkdir(directory, { recursive: true });
+  await writeFile(
+    path.join(directory, "learning-path.yaml"),
+    stringifyYaml({
+      schema_version: 1,
+      id,
+      status: options.status ?? "draft",
+      curriculum_level: "understand",
+      title: { nl: "Voorbeeldleerpad", en: "Example learning path" },
+      slugs: {
+        nl: options.nlSlug ?? slug,
+        en: options.enSlug ?? slug,
+      },
+      summary: { nl: "Een korte samenvatting.", en: "A short summary." },
+      audience: { nl: "Nieuwsgierige wijnliefhebbers.", en: "Curious wine lovers." },
+      prerequisites: { nl: [], en: [] },
+      objectives: {
+        nl: ["Leg de hoofdroute uit."],
+        en: ["Explain the main route."],
+      },
+      steps: options.steps,
+      completion: {
+        recap: {
+          nl: ["Je kunt de hoofdroute uitleggen."],
+          en: ["You can explain the main route."],
+        },
+        encouragement: { nl: "Mooi werk.", en: "Well done." },
+        suggestions: options.suggestions ?? [
+          {
+            id: "review-first-lesson",
+            target: options.steps[0]?.target,
+            context: { nl: "Bekijk de eerste les opnieuw.", en: "Review the first lesson." },
+          },
+        ],
+      },
+    }),
   );
 }
 
@@ -334,6 +397,267 @@ describe("content pipeline validation", () => {
         ],
       },
     });
+  });
+
+  it("builds a seven-lesson learning path and its lookup indexes", async () => {
+    const root = await temporaryRoot();
+    const steps: LearningPath["steps"] = [];
+    for (let index = 1; index <= 7; index += 1) {
+      const id = `narrative.lesson.pilot-${index}`;
+      await addNarrative(root, { id, slug: `pilot-${index}`, type: "lesson" });
+      steps.push({
+        id: `lesson-${index}`,
+        target: id,
+        context: { nl: `Context ${index}.`, en: `Context ${index}.` },
+      });
+    }
+    await addLearningPath(root, {
+      id: "learning-path.from-grape-to-still-wine",
+      nlSlug: "van-druif-naar-stille-wijn",
+      enSlug: "from-grape-to-still-wine",
+      steps,
+    });
+
+    const first = await buildContent({ root, write: false });
+    const second = await buildContent({ root, write: false });
+    const { knowledgeBase } = first;
+
+    expect(knowledgeBase.learning_paths).toHaveLength(1);
+    expect(knowledgeBase.learning_paths[0]?.steps).toHaveLength(7);
+    expect(knowledgeBase.indexes.learning_path_ids).toEqual([
+      "learning-path.from-grape-to-still-wine",
+    ]);
+    expect(knowledgeBase.indexes.learning_path_slugs.en["from-grape-to-still-wine"]).toBe(
+      "learning-path.from-grape-to-still-wine",
+    );
+    expect(knowledgeBase.indexes.lesson_memberships["narrative.lesson.pilot-1"]).toEqual([
+      {
+        path_id: "learning-path.from-grape-to-still-wine",
+        step_id: "lesson-1",
+      },
+    ]);
+    expect(second.outputs).toEqual(first.outputs);
+  });
+
+  it("requires every learning path step to target a known lesson narrative", async () => {
+    const explainerRoot = await temporaryRoot();
+    await addNarrative(explainerRoot, {
+      id: "narrative.explainer-proof",
+      slug: "explainer-proof",
+      type: "explainer",
+    });
+    await addLearningPath(explainerRoot, {
+      steps: [
+        {
+          id: "wrong-kind",
+          target: "narrative.explainer-proof",
+          context: { nl: "Context.", en: "Context." },
+        },
+      ],
+    });
+    await expect(buildContent({ root: explainerRoot, write: false })).rejects.toThrow(
+      /must be a narrative of type 'lesson'/,
+    );
+
+    const missingRoot = await temporaryRoot();
+    await addLearningPath(missingRoot, {
+      steps: [
+        {
+          id: "missing",
+          target: "narrative.lesson.missing",
+          context: { nl: "Context.", en: "Context." },
+        },
+      ],
+    });
+    await expect(buildContent({ root: missingRoot, write: false })).rejects.toThrow(
+      /step 'missing': Unknown reference 'narrative\.lesson\.missing'/,
+    );
+  });
+
+  it("prevents active learning paths from targeting draft content", async () => {
+    const lessonRoot = await temporaryRoot();
+    await addNarrative(lessonRoot, {
+      id: "narrative.lesson.draft-proof",
+      slug: "draft-proof",
+      type: "lesson",
+      status: "draft",
+    });
+    await addLearningPath(lessonRoot, {
+      status: "active",
+      steps: [
+        {
+          id: "draft-lesson",
+          target: "narrative.lesson.draft-proof",
+          context: { nl: "Context.", en: "Context." },
+        },
+      ],
+    });
+    await expect(buildContent({ root: lessonRoot, write: false })).rejects.toThrow(
+      /requires active lesson 'narrative\.lesson\.draft-proof', found 'draft'/,
+    );
+
+    const suggestionRoot = await temporaryRoot();
+    const activeLesson =
+      ":::summary{#orientatie}\nSamenvatting.\n:::\n\n:::objectives{#leerdoelen}\n- Leg dit uit.\n:::\n\n:::section{#uitleg}\n## Uitleg\n\nTekst.\n:::\n\n:::key-idea{#kern}\nKern.\n:::\n";
+    await addNarrative(suggestionRoot, {
+      id: "narrative.lesson.active-proof",
+      slug: "active-proof",
+      type: "lesson",
+      status: "active",
+      markdown: activeLesson,
+    });
+    await addEntity(suggestionRoot, { id: "concept.draft-reference", status: "draft" });
+    await addLearningPath(suggestionRoot, {
+      status: "active",
+      steps: [
+        {
+          id: "active-lesson",
+          target: "narrative.lesson.active-proof",
+          context: { nl: "Context.", en: "Context." },
+        },
+      ],
+      suggestions: [
+        {
+          id: "draft-reference",
+          target: "concept.draft-reference",
+          context: { nl: "Lees verder.", en: "Read more." },
+        },
+      ],
+    });
+    await expect(buildContent({ root: suggestionRoot, write: false })).rejects.toThrow(
+      /requires active target 'concept\.draft-reference', found 'draft'/,
+    );
+  });
+
+  it("rejects duplicate learning path steps and route slugs", async () => {
+    const duplicateStepRoot = await temporaryRoot();
+    await addNarrative(duplicateStepRoot, {
+      id: "narrative.lesson.proof",
+      slug: "proof",
+      type: "lesson",
+    });
+    const duplicateStep = {
+      id: "same-step",
+      target: "narrative.lesson.proof",
+      context: { nl: "Context.", en: "Context." },
+    };
+    await addLearningPath(duplicateStepRoot, { steps: [duplicateStep, duplicateStep] });
+    await expect(buildContent({ root: duplicateStepRoot, write: false })).rejects.toThrow(
+      /Duplicate step ID 'same-step'/,
+    );
+
+    const slugRoot = await temporaryRoot();
+    await addNarrative(slugRoot, {
+      id: "narrative.lesson.proof",
+      slug: "proof",
+      type: "lesson",
+    });
+    const steps = [
+      {
+        id: "proof",
+        target: "narrative.lesson.proof",
+        context: { nl: "Context.", en: "Context." },
+      },
+    ];
+    await addLearningPath(slugRoot, { id: "learning-path.first", enSlug: "shared", steps });
+    await addLearningPath(slugRoot, { id: "learning-path.second", nlSlug: "shared", steps });
+    await expect(buildContent({ root: slugRoot, write: false })).rejects.toThrow(
+      /Duplicate learning path route slug 'shared'/,
+    );
+  });
+
+  it("rejects invalid learning path identity and self-referential completion", async () => {
+    const duplicateRoot = await temporaryRoot();
+    await addNarrative(duplicateRoot, {
+      id: "narrative.lesson.proof",
+      slug: "proof",
+      type: "lesson",
+    });
+    const steps = [
+      {
+        id: "proof",
+        target: "narrative.lesson.proof",
+        context: { nl: "Context.", en: "Context." },
+      },
+    ];
+    await addLearningPath(duplicateRoot, { id: "learning-path.same", steps });
+    const duplicateDirectory = path.join(duplicateRoot, "content", "learning-paths", "same-copy");
+    await mkdir(duplicateDirectory, { recursive: true });
+    await writeFile(
+      path.join(duplicateDirectory, "learning-path.yaml"),
+      await readFile(
+        path.join(duplicateRoot, "content", "learning-paths", "same", "learning-path.yaml"),
+        "utf8",
+      ),
+    );
+    await expect(buildContent({ root: duplicateRoot, write: false })).rejects.toThrow(
+      /Duplicate learning path ID 'learning-path\.same'/,
+    );
+
+    const selfRoot = await temporaryRoot();
+    await addNarrative(selfRoot, {
+      id: "narrative.lesson.proof",
+      slug: "proof",
+      type: "lesson",
+    });
+    await addLearningPath(selfRoot, {
+      id: "learning-path.self",
+      steps,
+      suggestions: [
+        {
+          id: "repeat-path",
+          target: "learning-path.self",
+          context: { nl: "Herhaal het pad.", en: "Repeat the path." },
+        },
+      ],
+    });
+    await expect(buildContent({ root: selfRoot, write: false })).rejects.toThrow(
+      /must not target its own learning path 'learning-path\.self'/,
+    );
+  });
+
+  it("rejects an entity as a learning path core step at schema validation", async () => {
+    const root = await temporaryRoot();
+    await addEntity(root, { id: "concept.reference" });
+    const directory = path.join(root, "content", "learning-paths", "entity-step");
+    await mkdir(directory, { recursive: true });
+    await writeFile(
+      path.join(directory, "learning-path.yaml"),
+      stringifyYaml({
+        schema_version: 1,
+        id: "learning-path.entity-step",
+        status: "draft",
+        curriculum_level: "understand",
+        title: { nl: "Entitystap", en: "Entity step" },
+        slugs: { nl: "entitystap", en: "entity-step" },
+        summary: { nl: "Samenvatting.", en: "Summary." },
+        audience: { nl: "Doelgroep.", en: "Audience." },
+        prerequisites: { nl: [], en: [] },
+        objectives: { nl: ["Leer iets."], en: ["Learn something."] },
+        steps: [
+          {
+            id: "entity",
+            target: "concept.reference",
+            context: { nl: "Context.", en: "Context." },
+          },
+        ],
+        completion: {
+          recap: { nl: ["Geleerd."], en: ["Learned."] },
+          encouragement: { nl: "Mooi.", en: "Well done." },
+          suggestions: [
+            {
+              id: "reference",
+              target: "concept.reference",
+              context: { nl: "Naslag.", en: "Reference." },
+            },
+          ],
+        },
+      }),
+    );
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /steps\.0\.target must start with 'narrative\.'/,
+    );
   });
 
   it("rejects duplicate entity IDs", async () => {

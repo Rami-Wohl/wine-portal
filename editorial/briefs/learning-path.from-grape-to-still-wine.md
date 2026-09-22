@@ -1,6 +1,6 @@
 # Leerpadbrief — Van druif naar stille wijn
 
-Status: voorstel ter goedkeuring  
+Status: goedgekeurde curriculumbrief
 Datum: 2026-09-23  
 Roadmapticket: `LRN-002`  
 Voorgesteld stable ID: `learning-path.from-grape-to-still-wine`
@@ -93,7 +93,7 @@ alcohol zijn en kent enkele bekende wijnstijlen. Een formeel diploma is niet
 vereist. Iedere noodzakelijke productieterm wordt bij eerste gebruik in gewone
 taal uitgelegd, ook wanneer er een entitylink naast staat.
 
-## Voorgestelde lesvolgorde — besluit `DEC-LRN-006`
+## Goedgekeurde lesvolgorde — besluit `DEC-LRN-006`
 
 ### 1. De druif als grondstof
 
@@ -449,10 +449,7 @@ hoofdvergisting, kleurroute en extractie, processen na vergisting, rijping en
 bescherming, afwerking en botteling. De outline laat bewust buiten beschouwing
 wat een ander productietype of volwaardig viticultuurpad vereist.
 
-Voor `LRN-002` blijven twee expliciete goedkeuringen over:
-
-1. `DEC-LRN-006`: zeven lessen in bovenstaande volgorde;
-2. `DEC-LRN-007`: alleen kelderrelevante druif- en oogstkennis in dit pad.
-
-Na goedkeuring is de inhoudelijke scope stabiel genoeg om in `LRN-003` het
-kleinst mogelijke learning-pathschema en authoringcontract te ontwerpen.
+De gebruiker heeft op 2026-09-23 de zeven lessen in bovenstaande volgorde en de
+kelderrelevante viticultuurgrens goedgekeurd. De inhoudelijke scope is daarmee
+stabiel genoeg om in `LRN-003` het kleinst mogelijke learning-pathschema en
+authoringcontract te ontwerpen.

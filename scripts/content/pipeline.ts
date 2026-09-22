@@ -13,6 +13,7 @@ import {
   SYMMETRIC_RELATION_TYPES,
   contentPlanSchema,
   entitySchema,
+  learningPathSchema,
   mediaAssetSchema,
   narrativeSchema,
   sourceSchema,
@@ -25,6 +26,7 @@ import {
   type GeneratedEntity,
   type GeneratedKnowledgeBase,
   type Locale,
+  type LearningPath,
   type MediaAsset,
   type Narrative,
   type NarrativeMention,
@@ -265,12 +267,17 @@ function levenshtein(left: string, right: string): number {
   return previous[right.length];
 }
 
-function unknownReferenceMessage(reference: string, knownIds: string[]): string {
+function unknownReferenceMessage(
+  reference: string,
+  knownIds: string[],
+  referenceKind = "entity",
+): string {
   const suggestion = knownIds
     .map((id) => ({ id, distance: levenshtein(reference, id) }))
     .sort((left, right) => left.distance - right.distance || left.id.localeCompare(right.id))[0];
   const hint = suggestion && suggestion.distance <= 4 ? ` Did you mean '${suggestion.id}'?` : "";
-  return `Unknown entity reference '${reference}'.${hint}`;
+  const kind = referenceKind ? `${referenceKind} ` : "";
+  return `Unknown ${kind}reference '${reference}'.${hint}`;
 }
 
 async function validateLocaleFiles<T extends Entity | Narrative>(
@@ -833,21 +840,30 @@ function stableJson(value: object): string {
 export async function buildContent(options: BuildOptions = {}): Promise<BuildResult> {
   const root = path.resolve(options.root ?? process.cwd());
   const issues: string[] = [];
-  const [entityFiles, narrativeFiles, planFiles, sourceFiles, mediaFiles] = await Promise.all([
-    discoverFiles(path.join(root, "content", "entities"), "entity.yaml"),
-    discoverFiles(path.join(root, "content", "narratives"), "narrative.yaml"),
-    discoverFiles(path.join(root, "content", "entities"), "content-plan.yaml"),
-    discoverYamlFiles(path.join(root, "data", "sources")),
-    discoverYamlFiles(path.join(root, "data", "media")),
-  ]);
-  const [entityRecords, narrativeRecords, planRecords, sourceRecords, mediaRecords] =
+  const [entityFiles, narrativeFiles, learningPathFiles, planFiles, sourceFiles, mediaFiles] =
     await Promise.all([
-      loadYamlRecords(entityFiles, entitySchema, root, issues),
-      loadYamlRecords(narrativeFiles, narrativeSchema, root, issues),
-      loadYamlRecords(planFiles, contentPlanSchema, root, issues),
-      loadYamlRecords(sourceFiles, sourceSchema, root, issues),
-      loadYamlRecords(mediaFiles, mediaAssetSchema, root, issues),
+      discoverFiles(path.join(root, "content", "entities"), "entity.yaml"),
+      discoverFiles(path.join(root, "content", "narratives"), "narrative.yaml"),
+      discoverFiles(path.join(root, "content", "learning-paths"), "learning-path.yaml"),
+      discoverFiles(path.join(root, "content", "entities"), "content-plan.yaml"),
+      discoverYamlFiles(path.join(root, "data", "sources")),
+      discoverYamlFiles(path.join(root, "data", "media")),
     ]);
+  const [
+    entityRecords,
+    narrativeRecords,
+    learningPathRecords,
+    planRecords,
+    sourceRecords,
+    mediaRecords,
+  ] = await Promise.all([
+    loadYamlRecords(entityFiles, entitySchema, root, issues),
+    loadYamlRecords(narrativeFiles, narrativeSchema, root, issues),
+    loadYamlRecords(learningPathFiles, learningPathSchema, root, issues),
+    loadYamlRecords(planFiles, contentPlanSchema, root, issues),
+    loadYamlRecords(sourceFiles, sourceSchema, root, issues),
+    loadYamlRecords(mediaFiles, mediaAssetSchema, root, issues),
+  ]);
 
   findDuplicates(
     entityRecords.map(({ file, value }) => ({ key: value.id, file })),
@@ -857,6 +873,11 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
   findDuplicates(
     narrativeRecords.map(({ file, value }) => ({ key: value.id, file })),
     "narrative ID",
+    issues,
+  );
+  findDuplicates(
+    learningPathRecords.map(({ file, value }) => ({ key: value.id, file })),
+    "learning path ID",
     issues,
   );
   findDuplicates(
@@ -909,6 +930,14 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       `${locale} narrative slug`,
       issues,
     );
+    findDuplicates(
+      learningPathRecords.map(({ file, value }) => ({
+        key: `${locale}:${value.slugs[locale]}`,
+        file,
+      })),
+      `${locale} learning path slug`,
+      issues,
+    );
   }
   findDuplicates(
     entityRecords.flatMap(({ file, value }) =>
@@ -930,9 +959,20 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     "narrative route slug",
     issues,
   );
+  findDuplicates(
+    learningPathRecords.flatMap(({ file, value }) =>
+      Array.from(new Set(LOCALES.map((locale) => value.slugs[locale]))).map((slug) => ({
+        key: slug,
+        file,
+      })),
+    ),
+    "learning path route slug",
+    issues,
+  );
 
   const entityIds = entityRecords.map(({ value }) => value.id).sort();
   const entityIdSet = new Set(entityIds);
+  const narrativeById = new Map(narrativeRecords.map(({ value }) => [value.id, value]));
   const sourceIdSet = new Set(sourceRecords.map(({ value }) => value.id));
   const mediaIdSet = new Set(mediaRecords.map(({ value }) => value.id));
   const mentionMap = new Map<string, NarrativeMention[]>();
@@ -1035,6 +1075,85 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
     );
   }
 
+  const knownTargets = [
+    ...entityRecords.map(({ value }) => value.id),
+    ...narrativeRecords.map(({ value }) => value.id),
+    ...learningPathRecords.map(({ value }) => value.id),
+  ].sort();
+  const targetStatuses = new Map<string, "draft" | "active" | "deprecated">([
+    ...entityRecords.map(({ value }) => [value.id, value.status] as const),
+    ...narrativeRecords.map(({ value }) => [value.id, value.status] as const),
+    ...learningPathRecords.map(({ value }) => [value.id, value.status] as const),
+  ]);
+
+  for (const record of learningPathRecords) {
+    findDuplicatesWithinRecord(
+      record.value.steps.map((step) => step.id),
+      "step ID",
+      record.file,
+      issues,
+    );
+    findDuplicatesWithinRecord(
+      record.value.steps.map((step) => step.target),
+      "lesson target",
+      record.file,
+      issues,
+    );
+    findDuplicatesWithinRecord(
+      record.value.completion.suggestions.map((suggestion) => suggestion.id),
+      "completion suggestion ID",
+      record.file,
+      issues,
+    );
+    findDuplicatesWithinRecord(
+      record.value.completion.suggestions.map((suggestion) => suggestion.target),
+      "completion suggestion target",
+      record.file,
+      issues,
+    );
+
+    for (const step of record.value.steps) {
+      const target = narrativeById.get(step.target);
+      if (!target) {
+        issues.push(
+          `${record.file}: step '${step.id}': ${unknownReferenceMessage(step.target, knownTargets, "")}`,
+        );
+        continue;
+      }
+      if (target.type !== "lesson") {
+        issues.push(
+          `${record.file}: step '${step.id}' target '${step.target}' must be a narrative of type 'lesson', found '${target.type}'.`,
+        );
+      }
+      if (record.value.status === "active" && target.status !== "active") {
+        issues.push(
+          `${record.file}: active learning path step '${step.id}' requires active lesson '${step.target}', found '${target.status}'.`,
+        );
+      }
+    }
+
+    for (const suggestion of record.value.completion.suggestions) {
+      if (suggestion.target === record.value.id) {
+        issues.push(
+          `${record.file}: completion suggestion '${suggestion.id}' must not target its own learning path '${record.value.id}'.`,
+        );
+        continue;
+      }
+      const targetStatus = targetStatuses.get(suggestion.target);
+      if (!targetStatus) {
+        issues.push(
+          `${record.file}: completion suggestion '${suggestion.id}': ${unknownReferenceMessage(suggestion.target, knownTargets, "")}`,
+        );
+        continue;
+      }
+      if (record.value.status === "active" && targetStatus !== "active") {
+        issues.push(
+          `${record.file}: active learning path completion suggestion '${suggestion.id}' requires active target '${suggestion.target}', found '${targetStatus}'.`,
+        );
+      }
+    }
+  }
+
   validateEntityPresentations(entityRecords, entityContentMap, issues);
 
   validateContentPlans(
@@ -1067,6 +1186,9 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       mentions: mentionMap.get(value.id) ?? [],
       content: narrativeContentMap.get(value.id) ?? { nl: { blocks: [] }, en: { blocks: [] } },
     }))
+    .sort((left, right) => left.id.localeCompare(right.id));
+  const learningPaths: LearningPath[] = learningPathRecords
+    .map(({ value }) => value)
     .sort((left, right) => left.id.localeCompare(right.id));
   const forward: ResolvedRelation[] = entities
     .flatMap((entity) => entity.relations.map((relation) => ({ source: entity.id, ...relation })))
@@ -1106,6 +1228,26 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       ),
     ]),
   ) as Record<Locale, Record<string, string>>;
+  const learningPathSlugs = Object.fromEntries(
+    LOCALES.map((locale) => [
+      locale,
+      Object.fromEntries(
+        learningPaths.map((learningPath) => [learningPath.slugs[locale], learningPath.id]),
+      ),
+    ]),
+  ) as Record<Locale, Record<string, string>>;
+  const lessonMemberships = Object.fromEntries(
+    narratives
+      .filter((narrative) => narrative.type === "lesson")
+      .map((narrative) => [
+        narrative.id,
+        learningPaths.flatMap((learningPath) =>
+          learningPath.steps
+            .filter((step) => step.target === narrative.id)
+            .map((step) => ({ path_id: learningPath.id, step_id: step.id })),
+        ),
+      ]),
+  );
   const geography = Object.fromEntries(
     entities
       .filter((entity) => entity.geography_id)
@@ -1148,6 +1290,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
   const knowledgeBase: GeneratedKnowledgeBase = {
     entities,
     narratives,
+    learning_paths: learningPaths,
     sources,
     media,
     relations: { forward, inverse },
@@ -1156,6 +1299,9 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
       entity_ids: entityIds,
       entities_by_type: entitiesByType,
       localized_slugs: localizedSlugs,
+      learning_path_ids: learningPaths.map(({ id }) => id),
+      learning_path_slugs: learningPathSlugs,
+      lesson_memberships: lessonMemberships,
       geography,
       search,
     },

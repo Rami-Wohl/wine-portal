@@ -14,6 +14,7 @@ authored en canonical
 
   entity.yaml + content-plan.yaml + overview.nl.md + overview.en.md
   narrative.yaml + article.nl.md + article.en.md
+  learning-path.yaml
   source records + media records + verified geography
                          |
                          | content:check / content:build
@@ -41,6 +42,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Entity-uitleg | `content/entities/**/overview.<locale>.md` | Gelokaliseerde presentatie |
 | Narrative-metadata en entitykoppelingen | `content/narratives/**/narrative.yaml` | Identiteit, scope en relaties van een verhaal |
 | Narrative-artikel | `content/narratives/**/article.<locale>.md` | Gelokaliseerde uitleg over meerdere entities |
+| Learning path | `content/learning-paths/**/learning-path.yaml` | Tweetalige doelgroep, doelen, lessonvolgorde en succesbestemming; geen wijnfeiten of voortgang |
 | Herbruikbare bronnen | `data/sources/` | Provenance voor claims en contentblocks |
 | Mediametadata | `data/media/` | Stabiele media-ID, opslagkey, afmetingen, alttekst en rechten |
 | Lokale mediabytes | `public/media/` | Huidige opslagadapter; later vervangbaar door object storage/CDN |
@@ -65,11 +67,10 @@ heen loopt. Het verwijst met stable IDs naar entities. De pipeline leidt daar
 mentions en backlinks uit af; auteurs hardcoderen geen applicatieroutes.
 
 Narratives wonen canoniek onder `/verdiepingen/<type>/<slug>`. Alleen narratives
-van type `lesson` worden in Learn aangeboden. Een toekomstig learning path is een
-geordende route langs bestaande content en wordt niet de eigenaar van die content.
-
-Learning paths worden later geordende routes door bestaande entities en
-narratives. Ze worden geen aparte opslagplaats voor gekopieerde wijnkennis.
+van type `lesson` kunnen kernstappen in Learn zijn. Learning paths zijn
+geordende, tweetalige YAML-routes langs zulke lessen; entitypagina's blijven
+naslag, tellen niet mee voor voortgang en worden geen pathstep. Het volledige
+contract staat in `learning-paths.md`.
 
 NL en EN zijn beide verplichte, gevalideerde authoringlagen. De huidige publieke
 interface en contentpresentatie zijn uitsluitend Nederlands. Engelse presentatie is een
@@ -98,6 +99,12 @@ als permanente legacy-redirect bestaan.
 9. Draai relevante unit- en browsertests wanneer routes, rendering of layouts
    zijn geraakt.
 10. Review inhoud, bronnen, mediarechten, onzekerheid, responsive presentatie en publicatiestatus.
+
+Een learning path volgt pas nadat zijn curriculumbrief is goedgekeurd. De auteur
+maakt één `learning-path.yaml` met stable path- en step-ID's, verwijst steps
+uitsluitend naar lessons en houdt inhoudelijke uitleg in de lesson- en
+entitypackages. `content:check` valideert deze targets en voorkomt dat een actief
+path nog draftcontent vereist.
 
 `draft` blijft beschikbaar voor redactionele review, maar verschijnt niet in
 Explore, search, publieke backlinks of de sitemap. Alleen `active` content wordt
@@ -157,6 +164,8 @@ Markdownformatter worden herschreven.
 - Gebruik `learn-roadmap.md` voor de vaste uitvoervolgorde en open
   productbeslissingen van de Learn-MVP; kopieer die tickets niet naar de
   onderhoudsbacklog.
+- Gebruik `learning-paths.md` voor het canonical pathschema, authoringcontract en
+  lifecyclegedrag.
 
 Lees dus niet standaard ieder beleidsdocument voor iedere taak. Kies de
 documenten die daadwerkelijk door de wijziging worden geraakt.

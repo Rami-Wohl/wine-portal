@@ -44,7 +44,7 @@ Prettier-extensie en formatteren ondersteunde bestanden automatisch bij opslaan.
 ## Mentale kaart
 
 ```text
-content/entities + content/narratives + data/sources + data/media
+content/entities + content/narratives + content/learning-paths + data/sources + data/media
                               │
                               │ content:check / content:build
                               ▼
@@ -54,7 +54,7 @@ content/entities + content/narratives + data/sources + data/media
                   Next.js-routes en React-UI
 ```
 
-- `content/` bevat canonical entity- en narrativepackages.
+- `content/` bevat canonical entity-, narrative- en learning-pathpackages.
 - `data/sources/` en `data/media/` bevatten herbruikbare bron- en
   mediametadata.
 - `public/media/` is de huidige lokale opslagadapter voor mediabestanden.
@@ -200,5 +200,7 @@ reviewstappen. Registreer periodieke controles en vervolgacties volgens
   definition of done voor de anonieme leerervaring
 - [Learn-productbrief](docs/learn-product-brief.md) — doelgroep, niveaumodel,
   terminologie en succescriteria voor de Learn-MVP
+- [Learning-pathcontract](docs/learning-paths.md) — canonical schema, ownership,
+  lifecycle en validatieregels voor leerpaden
 - [Content commands](scripts/content/README.md) — compacte technische
   commandoreferentie

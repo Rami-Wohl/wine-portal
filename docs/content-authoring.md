@@ -2,6 +2,26 @@
 
 Canonical content lives in self-contained packages. Generated indexes live under `src/generated/content/` and must never be edited manually.
 
+## Learning paths authoren
+
+Een learning path begint eveneens met een goedgekeurde curriculumbrief, maar
+bezit geen eigen Markdown en geen wijnfeiten. Het canonical package is:
+
+```text
+content/learning-paths/<canonical-slug>/
+└── learning-path.yaml
+```
+
+De YAML bewaart stable path- en step-ID's, curriculumniveau, compacte NL/EN-
+presentatietekst, geordende lesson-targets en de succesbestemming. Alleen een
+narrative van type `lesson` mag een kernstap zijn. Entitylinks zijn naslag in de
+relevante les en tellen niet mee voor voortgang. Prerequisites zijn in v1
+menselijke tekst en veroorzaken geen gates of unlockregels.
+
+Volg voor alle velden, statuses, targets en activatievoorwaarden het bindende
+contract in `learning-paths.md`. Maak geen leeg pathpackage voordat onderwerp,
+doelgroep, lesvolgorde en contentgaps inhoudelijk zijn goedgekeurd.
+
 ## Begin met een contentbrief, niet met proza
 
 Een nieuwe entity, narrative of ingrijpende herschrijving begint met een tijdelijke

@@ -8,6 +8,7 @@ The pipeline reads canonical content from:
 
 - `content/entities/**/entity.yaml` and their localized Markdown files;
 - `content/narratives/**/narrative.yaml` and their localized Markdown files;
+- `content/learning-paths/**/learning-path.yaml`;
 - reusable source records under `data/sources/`.
 - media records under `data/media/`, with local assets under `public/media/`.
 
@@ -19,7 +20,8 @@ Relationships and narrative links use stable IDs such as `producer.chateau-latou
 npm run content:check
 ```
 
-Validates schemas, IDs, slugs, locale files, relations, semantic content blocks,
+Validates schemas, IDs, slugs, locale files, relations, learning-path steps and
+active targets, semantic content blocks,
 hard NL/EN block parity, source inventories, citations, media references,
 local asset checksums, producer presentation targets, and Markdown entity links
 without writing generated files.
@@ -80,8 +82,8 @@ and link queues.
 ## Output
 
 The generated bundle contains normalized entities and narratives with their safe
-content trees, forward and inverse relations, narrative backlinks, source and media data,
-and application indexes for lookup, localized slugs, search, and geography
-references.
+content trees, learning paths, forward and inverse relations, narrative
+backlinks, source and media data, and application indexes for lookup, localized
+slugs, lesson membership, search, and geography references.
 
 `src/generated/content/` is ignored by Git and must not be edited manually. Change the canonical content and run `npm run content:build` again instead.

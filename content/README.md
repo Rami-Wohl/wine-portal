@@ -12,15 +12,20 @@ content/
 │   ├── narrative.yaml
 │   ├── article.nl.md
 │   └── article.en.md
+└── learning-paths/<slug>/
+    └── learning-path.yaml
 ```
 
 YAML contains shared identity, relations, assertions, and provenance references.
 Markdown contains localized presentation. Reusable sources, media records, and
 verified geography remain under `data/`. Content refers to media by stable
 `media.*` ID; current local bytes live under `public/media/` and can later move
-to a CDN without changing Markdown.
+to a CDN without changing Markdown. Learning-path YAML contains only compact
+localized learning context and an ordered list of lesson targets; it does not
+duplicate lesson or entity knowledge.
 
 Start with `docs/project-map.md` for the system overview. See
 `docs/content-authoring.md` for the package workflow,
 `docs/content-blocks.md` for the accepted Markdown and semantic-block contract,
+`docs/learning-paths.md` for the path schema and lifecycle,
 and `scripts/content/README.md` for current validation and generated output.

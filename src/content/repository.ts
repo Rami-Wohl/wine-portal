@@ -5,6 +5,8 @@ import type {
   GeneratedEntity,
   GeneratedKnowledgeBase,
   GeneratedNarrative,
+  LearningPath,
+  LearningPathMembership,
   MediaAsset,
   ResolvedRelation,
   SearchIndexEntry,
@@ -18,6 +20,9 @@ const knowledgeBase = knowledgeBaseJson as GeneratedKnowledgeBase;
 const entitiesById = new Map(knowledgeBase.entities.map((entity) => [entity.id, entity]));
 const narrativesById = new Map(
   knowledgeBase.narratives.map((narrative) => [narrative.id, narrative]),
+);
+const learningPathsById = new Map(
+  knowledgeBase.learning_paths.map((learningPath) => [learningPath.id, learningPath]),
 );
 const sourcesById = new Map(knowledgeBase.sources.map((source) => [source.id, source]));
 const mediaById = new Map(knowledgeBase.media.map((asset) => [asset.id, asset]));
@@ -100,6 +105,29 @@ export function getPublishedSearchIndex(): SearchIndexEntry[] {
 
 export function getNarrativeById(id: string): GeneratedNarrative | undefined {
   return narrativesById.get(id);
+}
+
+export function getAllLearningPaths(): LearningPath[] {
+  return knowledgeBase.learning_paths;
+}
+
+export function getPublishedLearningPaths(): LearningPath[] {
+  return knowledgeBase.learning_paths.filter((learningPath) => learningPath.status === "active");
+}
+
+export function getLearningPathById(id: string): LearningPath | undefined {
+  return learningPathsById.get(id);
+}
+
+export function getLearningPathByRoute(slug: string): LearningPath | undefined {
+  const id =
+    knowledgeBase.indexes.learning_path_slugs.en[slug] ??
+    knowledgeBase.indexes.learning_path_slugs.nl[slug];
+  return id ? getLearningPathById(id) : undefined;
+}
+
+export function getLearningPathMembershipsForLesson(lessonId: string): LearningPathMembership[] {
+  return knowledgeBase.indexes.lesson_memberships[lessonId] ?? [];
 }
 
 export function getSourcesByIds(ids: string[]): Source[] {

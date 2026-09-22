@@ -15,10 +15,13 @@ Oenocademy is een Dutch-first, meertalig en entity-first kennisplatform voor wij
 
 De v1-contentarchitectuur is geïmplementeerd:
 
-- YAML-metadata en gelokaliseerde Markdown staan in self-contained entity- en narrativepackages;
-- strikte schema's valideren entities, narratives, relaties, assertions, bronverwijzingen, lokale bestanden, IDs en slugs;
+- YAML-metadata en gelokaliseerde Markdown staan in self-contained entity- en
+  narrativepackages; learning paths staan in compacte tweetalige YAML-packages;
+- strikte schema's valideren entities, narratives, learning paths, relaties,
+  assertions, bronverwijzingen, lokale bestanden, IDs en slugs;
 - de pipeline leidt inverse relaties, narrative mentions en backlinks af;
-- gelokaliseerde slug-, zoek-, type- en geography-indexes worden opgebouwd;
+- gelokaliseerde slug-, zoek-, type-, learning-path- en geography-indexes worden
+  opgebouwd;
 - één deterministische runtimebundle wordt gegenereerd in `src/generated/content/knowledge-base.json`;
 - `npm run content:new` genereert een leeg entitypackage zonder wijnfeiten toe te voegen.
 - de publieke repositoryviews, Explore, search, sitemaps en backlinks tonen alleen
@@ -28,7 +31,7 @@ De v1-contentarchitectuur is geïmplementeerd:
 De actuele entity-inventaris wordt niet handmatig in dit architectuurdocument
 gekopieerd. Iedere `content:build` vernieuwt `entity-status.md`, gesorteerd op
 publicatiestatus; `npm run content:check` rapporteert daarnaast de actuele
-aantallen entities, narratives, bronnen en media.
+aantallen entities, narratives, learning paths, bronnen en media.
 
 ## Samenhang met bindend beleid
 
@@ -61,7 +64,9 @@ Explore, Learn en Atlas zijn complementaire views op hetzelfde stelsel:
 - **Learn** ordent gedeelde kennis didactisch;
 - **Atlas** is de geografische expressie van dezelfde knowledge graph.
 
-Learn is geen aparte contentdatabase en domineert Explore of Atlas niet. Een learning path rangschikt entities en narratives; het kopieert hun canonical feiten niet.
+Learn is geen aparte contentdatabase en domineert Explore of Atlas niet. Een
+learning path rangschikt lesson-narratives; die lessen ontsluiten entities als
+naslag zonder hun canonical feiten te kopiëren.
 
 ### Eén feit, meerdere views
 
@@ -490,23 +495,36 @@ Markdown gebruikt definitief deze vormen:
 De eerste vorm laat de renderer later een gelokaliseerd label kiezen; de tweede legt het zichtbare label vast. De parser valideert syntax en entity-ID, bouwt locale-aware mentions en genereert narrativebacklinks. Routes worden niet in Markdown hardgecodeerd.
 
 Narratives hebben een modus-neutrale canonical route onder
-`/verdiepingen/<narrative-type>/<slug>`. Alleen narratives van type `lesson` horen
-als zelfstandige items thuis in Learn. Een toekomstig learning path kan naar
-iedere geschikte entity of narrative verwijzen zonder de canonical URL of het
-eigenaarschap daarvan te veranderen.
+`/verdiepingen/<narrative-type>/<slug>`. Alleen narratives van type `lesson`
+kunnen als zelfstandige kernstap in Learn voorkomen. Een learning path verandert
+de canonical URL of het eigenaarschap daarvan niet.
 
 ### Learning paths
 
-Een learning path is conceptueel een geordende view op bestaande narratives en entities:
+Een learning path is een geordende view op bestaande lesson-narratives:
 
 ```text
 curriculum != canonical content storage
 curriculum = curated path through shared content
 ```
 
-Een formeel learning-pathschema en pipeline-integratie zijn nog roadmap. De
-geordende uitvoering, open productbeslissingen en acceptatiecriteria voor de
-eerste anonieme implementatie staan in `learn-roadmap.md`.
+Het geïmplementeerde v1-package bevat uitsluitend structurele, tweetalige YAML:
+
+```text
+content/learning-paths/<canonical-slug>/
+└── learning-path.yaml
+```
+
+Een path bezit stable ID, status, curriculumniveau, NL/EN-titel en slugs,
+samenvatting, doelgroep, menselijke prerequisites, leerdoelen, geordende steps
+en de authored succesbestemming. Alleen narratives van type `lesson` mogen een
+step-target zijn. Entitypagina's blijven vanuit lessen bereikbare naslag, tellen
+niet mee voor voortgang en worden niet als pathstep gemodelleerd.
+
+V1 heeft geen path-Markdown en geen formele prerequisite-, unlock- of
+completionregels. Het volledige veld-, lifecycle-, routing- en
+validatiecontract staat in `learning-paths.md`; de verdere uitvoervolgorde staat
+in `learn-roadmap.md`.
 
 ---
 
@@ -534,13 +552,13 @@ framework_alignment:
 
 Ondersteunde relaties zijn `prerequisite`, `core-overlap`, `extension` en `beyond`. Een extern opleidingskader is metadata en bepaalt de ontologie niet.
 
-De geplande Learn-capability gebruikt daarnaast drie curriculumniveaus, globaal
-gekalibreerd rond WSET Level 2+, 3+ en 4+. Dit toekomstige leerniveau is een
+De Learn-capability gebruikt daarnaast drie curriculumniveaus, globaal
+gekalibreerd rond WSET Level 2+, 3+ en 4+. Dit leerniveau is een
 andere as dan entity- of blockdepth: lokale kennisdiepte wordt nooit automatisch
 naar curriculumgeschiktheid vertaald. Een lessonbrief selecteert expliciet welke
 entityblocks en claims voor zijn doelgroep relevant zijn. Het productcontract
-staat in `learn-product-brief.md`; schema en pipeline blijven roadmap totdat
-`LRN-003` en `LRN-004` zijn uitgevoerd.
+staat in `learn-product-brief.md`; het geïmplementeerde pathschema gebruikt de
+losstaande waarden `understand`, `explain` en `analyze`.
 
 ### Geïmplementeerd: depth per block
 
@@ -571,6 +589,7 @@ De pipeline leest:
 
 - `content/entities/**/entity.yaml` plus hun package-relative NL/EN-Markdown;
 - `content/narratives/**/narrative.yaml` plus hun package-relative NL/EN-Markdown;
+- `content/learning-paths/**/learning-path.yaml`;
 - herbruikbare YAML-bronrecords onder `data/sources/`.
 - herbruikbare YAML-mediarecords onder `data/media/` plus lokale bytes onder `public/media/`.
 
@@ -582,13 +601,15 @@ Canonical content staat niet in `src/generated/content/`.
 
 - strikte schema's, enums, IDs en ID/type-overeenkomst;
 - dubbele entity-, narrative-, assertion- en geography-IDs;
+- dubbele learning-path-ID's, step-ID's en gelokaliseerde pathroutes;
 - gelokaliseerde slugs en routebotsingen;
 - vereiste package-relative localebestanden;
 - bekende entity- en sourceverwijzingen;
 - bekende media-ID's, unieke storage keys, rechtenmetadata en gelokaliseerde alttekst;
 - bestaan en SHA-256-integriteit van lokale media-assets;
 - dubbele relaties en bronverwijzingen;
-- inline entitylinksyntax, mentions en targets.
+- inline entitylinksyntax, mentions en targets;
+- bekende lesson- en completiontargets en actieve targets voor actieve paths.
 
 Validatie is noodzakelijk maar bewijst geen feitelijke juistheid.
 
@@ -603,10 +624,12 @@ src/generated/content/knowledge-base.json
 Die bundle bevat:
 
 - genormaliseerde entities, narratives, sources en mediarecords;
+- genormaliseerde learning paths met hun authored succesbestemming;
 - forward relations en afgeleide inverse relations;
 - locale-aware narrative mentions en entitybacklinks;
 - entity-ID- en entity-type-indexes;
 - gelokaliseerde sluglookups;
+- learning-path-ID- en sluglookups plus reverse lessonmembership;
 - een gelokaliseerde zoekindex voor entity- en narrativemetadata, contentblocks
   en bij daadwerkelijk gebruikte figures horende beeldbijschriften;
 - geography-ID-lookups.
@@ -853,19 +876,19 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - mediaregister, stable media-ID's, figures, rights/alt-metadata en lokale checksumvalidatie;
 - entity/narrative depth en framework alignment;
 - inverse relations, localized slug/search/geography-indexes;
+- learning-pathschema, targetvalidatie, pathlookups en reverse lessonmembership;
 - één deterministische gegenereerde runtimebundle;
 - een entitypackagegenerator en validation/buildcommands.
 
 ### Besloten principe, implementatie pending
 
 - verified-data-only geography en Atlas;
-- learning paths als curated views in plaats van contentopslag;
 - een Engelse applicatiepresentatie en locale-aware publieke routing;
 - niet-destructieve import en vervanging wanneer later externe of bestaande content in scope komt.
 
 ### Open roadmapontwerp
 
-- learning-pathschema en voortgangsmodel;
+- voortgangsmodel en pathgebonden lessoncontext;
 - geography storage, import en mogelijke PostGIS-runtime;
 - provideradapter en geautomatiseerde object-storage/CDN-sync op storage key en checksum;
 - rijkere relationele ranking, taalgebonden woordvormen en facetten;

@@ -89,9 +89,9 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | Volgorde | Ticket | Resultaat | Afhankelijk van | Status |
 | ---: | --- | --- | --- | --- |
 | 1 | `LRN-001` | Productcontract en succescriteria | — | afgerond |
-| 2 | `LRN-002` | Pilotcurriculum, lesoutline en contentgap-analyse | `LRN-001` | bezig |
-| 3 | `LRN-003` | Canonical learning-pathschema en authoringcontract | `LRN-002` | gepland |
-| 4 | `LRN-004` | Pipeline, validatie, indexes en tests | `LRN-003` | gepland |
+| 2 | `LRN-002` | Pilotcurriculum, lesoutline en contentgap-analyse | `LRN-001` | afgerond |
+| 3 | `LRN-003` | Canonical learning-pathschema en authoringcontract | `LRN-002` | afgerond |
+| 4 | `LRN-004` | Pipeline, validatie, indexes en tests | `LRN-003` | afgerond |
 | 5 | `LRN-005` | Eerste echte lesson vertical slice | `LRN-002`, `LRN-004` | gepland |
 | 6 | `LRN-006` | Learn-catalogus en learning-pathoverzicht | `LRN-004`, `LRN-005` | gepland |
 | 7 | `LRN-007` | Lescontext en vorige/volgende-navigatie | `LRN-006` | gepland |
@@ -134,7 +134,7 @@ beslismoment horen.
 
 ### `LRN-002` — Pilotcurriculum en contentgap-analyse ontwerpen
 
-- **Status:** bezig
+- **Status:** afgerond
 - **Doel:** eerst de echte leerroute ontwerpen en pas daarna het generieke model.
 - **Werk:**
   - kies het pilotonderwerp en de afbakening;
@@ -154,8 +154,8 @@ beslismoment horen.
 - **Voortgang:** 2026-09-23 — onderwerp, pilotniveau en publieke niveaunamen
   zijn besloten. De voorgestelde zeven lessen, exacte hergebruikselectie en
   contentgaps staan in
-  `../editorial/briefs/learning-path.from-grape-to-still-wine.md`. Goedkeuring
-  van de lessonindeling en viticultuurgrens resteert.
+  `../editorial/briefs/learning-path.from-grape-to-still-wine.md`. De gebruiker
+  heeft de lessonindeling en viticultuurgrens op 2026-09-23 goedgekeurd.
 - **Klaar wanneer:** de gebruiker de pathoutline en lessonbriefs heeft
   goedgekeurd, de dependencylijst compleet is en iedere contentgap een eigenaar
   en plaats in de werkvolgorde heeft.
@@ -164,7 +164,7 @@ beslismoment horen.
 
 ### `LRN-003` — Canonical learning-pathschema en authoringcontract ontwerpen
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** learning paths als geordende, gelokaliseerde view op bestaande
   canonical content modelleren.
 - **Werk:**
@@ -180,6 +180,10 @@ beslismoment horen.
   - werk `knowledge-architecture.md`, `project-map.md` en de authoringdocumentatie
     bij als besloten contract, maar nog niet als geïmplementeerd gedrag.
 - **Beslismomenten:** `DEC-LRN-008`, `DEC-LRN-009` en `DEC-LRN-010`.
+- **Voortgang:** 2026-09-23 — een minimaal v1-contract is uitgewerkt in
+  `learning-paths.md`. De gebruiker heeft de drie architectuurbesluiten over
+  core steps, pathproza en prerequisites goedgekeurd; het contract is verwerkt
+  in de architectuur-, project- en authoringdocumentatie.
 - **Klaar wanneer:** het contract de goedgekeurde pilot zonder uitzonderingen
   kan beschrijven, feiten niet dupliceert en een expliciete definition of done
   heeft voor implementatie.
@@ -187,7 +191,7 @@ beslismoment horen.
 
 ### `LRN-004` — Learning paths in pipeline en runtimebundle opnemen
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** het authoringcontract uitvoerbaar en betrouwbaar maken.
 - **Werk:**
   - voeg strikte modelschema's en Typescripttypen toe;
@@ -203,6 +207,11 @@ beslismoment horen.
 - **Klaar wanneer:** een geldige pilotfixture bouwt, alle relevante ongeldige
   varianten vroeg falen en bestaande entity- en narrativebuilds onveranderd
   blijven werken.
+- **Voortgang:** 2026-09-23 — schema v1, deterministische ontdekking,
+  target- en lifecyclevalidatie, runtime-opname, sluglookups en omgekeerde
+  lessonmembership zijn geïmplementeerd. Een zeven-lessenfixture en gerichte
+  foutgevallen zijn met unit-tests afgedekt. Er is bewust nog geen generator:
+  één handgeschreven pilotpackage rechtvaardigt die abstractie nog niet.
 - **Verificatie:** formatter, lint, typecheck, unit-tests, `content:check` en
   deterministische `content:build`.
 
@@ -380,11 +389,11 @@ aanbeveling richtinggevend maar niet bindend.
 | `DEC-LRN-003` | Terminologie in de publieke UI | `LRN-001` | `Leerpad`, `les`, `onderdeel`, `naslag`, `voortgang` en `voltooid`; geen LMS- of schemataal | besloten 2026-09-23 |
 | `DEC-LRN-004` | Onderwerp van het eerste leerpad | `LRN-002` | **Van druif naar stille wijn — hoe wijn wordt gemaakt** | besloten 2026-09-23 |
 | `DEC-LRN-005` | Doelniveau van de pilot | `LRN-002` | Eerste curriculumniveau, globaal WSET Level 2 plus; publiek label nog te besluiten | besloten 2026-09-23 |
-| `DEC-LRN-006` | Definitieve lessonindeling en aantal | `LRN-002` | Vijf tot zeven lessons, bepaald door leerdoelen en cognitieve samenhang | open |
-| `DEC-LRN-007` | Welke viticultuur hoort in het vinificatiepilotpad? | `LRN-002` | Alleen de druif- en oogstkennis die nodig is om de productiestappen te begrijpen | open |
-| `DEC-LRN-008` | Mogen entitypagina's core steps zijn? | `LRN-003` | Core steps zijn normaal lessons; entities zijn naslag, tenzij de pilot een duidelijke uitzondering bewijst | open |
-| `DEC-LRN-009` | Hoeveel gelokaliseerde prose bezit een path zelf? | `LRN-003` | Alleen oriëntatie, leerdoelen en stepcontext; inhoudelijke wijnuitleg blijft in entities/lessons | open |
-| `DEC-LRN-010` | Zijn prerequisites in v1 formele relaties? | `LRN-003` | Alleen als de pilot ze nodig heeft; anders menselijke voorkennisbeschrijving zonder nieuw relationeel subsysteem | open |
+| `DEC-LRN-006` | Definitieve lessonindeling en aantal | `LRN-002` | Zeven lessons volgens de goedgekeurde curriculumbrief | besloten 2026-09-23 |
+| `DEC-LRN-007` | Welke viticultuur hoort in het vinificatiepilotpad? | `LRN-002` | Alleen de druif- en oogstkennis die nodig is om de productiestappen te begrijpen | besloten 2026-09-23 |
+| `DEC-LRN-008` | Mogen entitypagina's core steps zijn? | `LRN-003` | Alleen lesson-narratives zijn core steps; entities zijn naslag en tellen niet voor voortgang | besloten 2026-09-23 |
+| `DEC-LRN-009` | Hoeveel gelokaliseerde prose bezit een path zelf? | `LRN-003` | Alleen compacte structurele UI-prose in tweetalige YAML; geen path-Markdown | besloten 2026-09-23 |
+| `DEC-LRN-010` | Zijn prerequisites in v1 formele relaties? | `LRN-003` | Alleen menselijke, gelokaliseerde voorkennisbeschrijving; geen graph, gates of unlockregels | besloten 2026-09-23 |
 | `DEC-LRN-011` | Hoe draagt een canonical lesson pathcontext? | `LRN-007` | Een gevalideerde, deelbare queryparameter; geen dubbele `/learn/.../lesson`-contentroute | open |
 | `DEC-LRN-012` | Exact lokaal progressrecord en versiebeleid | `LRN-009` | Path-ID, schema-versie, voltooide step-ID's en `updated_at`; overige waarden afleiden | open |
 | `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete gebruikersactie, omkeerbaar; alleen openen voltooit niets | open |
@@ -402,6 +411,11 @@ aanbeveling richtinggevend maar niet bindend.
 | 2026-09-23 | Ieder leerpad krijgt een succesbestemming met recap, aanmoediging en vervolgsuggesties. | De leerervaring moet ook zonder toetsing een duidelijke, positieve afronding en logische volgende stap bieden. |
 | 2026-09-23 | Het eerste leerpad heet **Van druif naar stille wijn — hoe wijn wordt gemaakt**. | Stille wijn geeft een inhoudelijk volledige maar beheersbare eerste productieroute; mousserend, zoet en versterkt krijgen later eigen leerpaden. |
 | 2026-09-23 | De publieke curriculumniveaus heten **Wijn begrijpen**, **Wijn verklaren** en **Wijn doorgronden**. | De namen beschrijven de oplopende cognitieve taak en houden de WSET 2+/3+/4+-vergelijking zichtbaar als kalibratie in plaats van als productidentiteit. |
+| 2026-09-23 | Het pilotpad bestaat uit zeven lessen van druif als grondstof tot wijn in de fles. | De volgorde vormt één complete productieroute met cognitief samenhangende lessen en houdt de hoeveelheid per les beheersbaar. |
+| 2026-09-23 | Het pilotpad behandelt alleen kelderrelevante druif- en oogstkennis. | Volledige viticultuur verdient een eigen leerpad; deze grens voorkomt een oppervlakkige halve wijnbouwcursus binnen het vinificatiepad. |
+| 2026-09-23 | Alleen lesson-narratives zijn core steps; entities blijven naslag zonder voortgang. | Een kernstap heeft een didactische boog nodig en gebruikers moeten duidelijk kunnen onderscheiden wat het pad vormt en wat vrijwillige verdieping is. |
+| 2026-09-23 | Een learning path bezit alleen compacte tweetalige UI-prose in YAML en geen eigen Markdown. | Dit ondersteunt catalogus, context en afronding zonder een parallelle opslagplaats voor wijnkennis te maken. |
+| 2026-09-23 | Prerequisites blijven in v1 menselijke tekst zonder formele relaties of toegangspoorten. | Het ene pilotpad heeft geen aantoonbare behoefte aan een tweede curriculumgraaf of blokkerend gedrag. |
 
 ## Definition of done voor de anonieme Learn-MVP
 

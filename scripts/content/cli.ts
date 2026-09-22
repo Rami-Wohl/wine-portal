@@ -23,7 +23,7 @@ async function main(): Promise<void> {
   if (command === "check") {
     const result = await buildContent({ write: false });
     console.log(
-      `Content is valid: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.sources.length} sources, ${result.knowledgeBase.media.length} media assets.`,
+      `Content is valid: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.learning_paths.length} learning paths, ${result.knowledgeBase.sources.length} sources, ${result.knowledgeBase.media.length} media assets.`,
     );
     return;
   }
@@ -31,7 +31,7 @@ async function main(): Promise<void> {
     const result = await buildContent();
     await writeEntityStatus(result.knowledgeBase.entities);
     console.log(
-      `Generated content graph: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.media.length} media assets, ${result.knowledgeBase.relations.forward.length} forward relations.`,
+      `Generated content graph: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.learning_paths.length} learning paths, ${result.knowledgeBase.media.length} media assets, ${result.knowledgeBase.relations.forward.length} forward relations.`,
     );
     return;
   }
