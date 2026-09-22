@@ -71,6 +71,9 @@ Het dossier onderscheidt drie systemen van grindkoppen: de grootste groep in het
 Die indeling helpt het landschap lezen, maar is geen interne kwaliteitsrang. Domeinen kunnen percelen op verschillende croupes bezitten. Voor een betrouwbare perceelkaart is geverifieerde Atlas-geometrie nodig; châteauverhalen of bodemkleuren mogen nooit als grensdata dienen.
 :::
 
+:::figure{#grindcroupe-in-doorsnede depth="foundation" media_id="media.pauillac.gravel-croupe-cutaway" source_refs="source.inao-pauillac-specification-2026 source.brgm-bordeaux-geology-2022"}
+:::
+
 :::section{#cabernet-en-zijn-gezelschap depth="foundation" source_refs="source.inao-pauillac-specification-2026 source.civb-pauillac-overview"}
 ## Druivenrassen — cabernet sauvignon voert, maar speelt niet solo
 

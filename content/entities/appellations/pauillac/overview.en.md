@@ -71,6 +71,9 @@ The dossier distinguishes three systems: the largest in the south around Saint-L
 This helps read the landscape but is no internal quality ranking. Estates may own parcels on several croupes. A reliable parcel map requires verified Atlas geometry; château stories or soil colours must never serve as boundary data.
 :::
 
+:::figure{#grindcroupe-in-doorsnede depth="foundation" media_id="media.pauillac.gravel-croupe-cutaway" source_refs="source.inao-pauillac-specification-2026 source.brgm-bordeaux-geology-2022"}
+:::
+
 :::section{#cabernet-en-zijn-gezelschap depth="foundation" source_refs="source.inao-pauillac-specification-2026 source.civb-pauillac-overview"}
 ## Grape varieties — Cabernet Sauvignon leads, but never plays alone
 

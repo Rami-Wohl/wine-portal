@@ -38,7 +38,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Margaux](../content/entities/appellations/margaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.margaux` | Ja | `/appellations/margaux` | 2026-09-11 |
 | [Montagne-Saint-Émilion](../content/entities/appellations/montagne-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.montagne-saint-emilion` | Ja | `/appellations/montagne-saint-emilion` | 2026-09-13 |
 | [Moulis-en-Médoc](../content/entities/appellations/moulis-en-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.moulis-en-medoc` | Ja | `/appellations/moulis-en-medoc` | 2026-09-15 |
-| [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-14 |
+| [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-22 |
 | [Pessac-Léognan](../content/entities/appellations/pessac-leognan/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pessac-leognan` | Ja | `/appellations/pessac-leognan` | 2026-09-14 |
 | [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pomerol` | Ja | `/appellations/pomerol` | 2026-09-09 |
 | [Puisseguin-Saint-Émilion](../content/entities/appellations/puisseguin-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.puisseguin-saint-emilion` | Ja | `/appellations/puisseguin-saint-emilion` | 2026-09-13 |

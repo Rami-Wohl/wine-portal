@@ -237,18 +237,28 @@ coverage:
 
   - key: visuals
     disposition: on-page
-    block_ids: [pauillac-vanaf-het-estuarium]
+    block_ids: [pauillac-vanaf-het-estuarium, grindcroupe-in-doorsnede]
     target_ids: []
     completeness_questions:
       - Laat de foto de relatie tussen estuarium, wijngaarden en château-landschap zien zonder als kaart of appellationgrens te dienen?
+      - Maakt de aanvullende illustratie de lage grindcroupe, afwatering en heterogene ondergrond voorstelbaar zonder geografische grenzen of een werkelijk perceel te suggereren?
     layers:
       foundation:
-        [Toon Pauillac vanaf de estuariumzijde met wijngaarden en de twee Pichon-domeinen.]
+        [
+          Toon Pauillac vanaf de estuariumzijde en leg daarnaast de lage grindcroupe en ondergrond uit.,
+        ]
       intermediate: []
       advanced: []
       specialist: []
     evidence:
-      general_synthesis: { topics: [Documentair beeld van het wijnlandschap.], source_refs: [] }
+      general_synthesis:
+        {
+          topics:
+            [
+              Documentair beeld van het wijnlandschap en een conceptuele uitleg van grindcroupe en ondergrond.,
+            ],
+          source_refs: [source.inao-pauillac-specification-2026, source.brgm-bordeaux-geology-2022],
+        }
       specific_claims: []
     review: *complete_section_review
 

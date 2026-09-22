@@ -1,0 +1,22 @@
+id: media.pauillac.gravel-croupe-cutaway
+kind: illustration
+role: educational
+status: active
+storage_key: pauillac/gravel-croupe-cutaway.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: de1b5badcb5b28e7534ee702bf3a329d7888c1b5a9f86d0c456a4ed7b915e8e2
+alt:
+  nl: Geschilderd laag Pauillac-landschap aan de Gironde met wijnstokken op een zachte grindwelving en een doorsnede van grind, zand en diepere klei- en mergellagen
+  en: Painted low Pauillac landscape beside the Gironde with vines on a gentle gravel rise and a cutaway of gravel, sand and deeper clay-rich and marl layers
+caption:
+  nl: Boven de doorsnede volgen wijnranken een lage grindcroupe richting de Gironde. Onder de stokken ligt een onregelmatig mengsel van grind en zand boven kleirijker en mergelachtig materiaal. De samengestelde landschapsles maakt schaal, afwatering en wortelruimte voorstelbaar; de precieze bodemopbouw verschilt per perceel.
+  en: Above the cutaway, vine rows follow a low gravel croupe towards the Gironde. Beneath the vines, an irregular mixture of gravel and sand overlies more clay-rich and marly material. This composite landscape lesson makes scale, drainage and rooting space tangible; the precise soil structure varies by parcel.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-22
+changes: Third generated 1536 by 1024 pixel revision selected after flattening the croupe, lowering the horizon and reducing the prominence and regularity of the soil cutaway; used without crop or colour alteration.

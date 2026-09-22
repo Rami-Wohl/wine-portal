@@ -25,14 +25,14 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 7 | `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-030` |
+| Open | 6 | `MNT-008` t/m `MNT-011`, `MNT-020`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
-| Afgerond | 29 | `MNT-001`, `MNT-003` t/m `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` |
+| Afgerond | 30 | `MNT-001`, `MNT-003` t/m `MNT-007`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` |
 | Vervallen | 0 | — |
 
-Het uitvoerbare open werk bestaat uit zeven acties met prioriteit `middel`.
+Het uitvoerbare open werk bestaat uit zes acties met prioriteit `middel`.
 Drie geblokkeerde acties zijn afhankelijk van een
 betrouwbare Atlas- en geographydatalaag; één wacht op een definitief extern
 regelgevingsbesluit.
@@ -55,20 +55,6 @@ regelgevingsbesluit.
   beschikbaar.
 - **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
   generatief verzonnen grenzen.
-
-### `MNT-007` — Tweede appellationbeeld voor Pauillac
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** media, content
-- **Scope:** `appellation.pauillac`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** één châteaubeeld vertegenwoordigt de appellation visueel te
-  smal.
-- **Klaar wanneer:** een tweede rechtenveilig beeld een appellationkenmerk zoals
-  landschap, estuariuminvloed, kiezelterroir of ruimtelijke context uitlegt en
-  niet slechts nog een beroemde producent portretteert.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-008` — Procesvisual voor methoxypyrazinen
 
@@ -214,6 +200,26 @@ regelgevingsbesluit.
   losgehouden van structurele graafdekking.
 
 ## Historie
+
+### `MNT-007` — Tweede appellationbeeld voor Pauillac
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** media, content
+- **Scope:** `appellation.pauillac`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** één châteaubeeld vertegenwoordigde de appellation visueel te
+  smal.
+- **Klaar wanneer:** een tweede rechtenveilig beeld een appellationkenmerk zoals
+  landschap, estuariuminvloed, kiezelterroir of ruimtelijke context uitlegt en
+  niet slechts nog een beroemde producent portretteert.
+- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
+  2026-09-22 — afgerond met een taalneutrale, samengestelde landschapsdoorsnede
+  van een lage grindcroupe aan de Gironde. Drie beelditeraties brachten reliëf,
+  horizon, bodemdoorsnede, wortels en gesteentetextuur terug tot een voor
+  Pauillac geloofwaardige schaal. De figure staat bij landschap, klimaat en
+  bodem in NL en EN, is gekoppeld aan het INAO-dossier en BRGM-geologie en
+  vormt samen met de bestaande estuariumfoto een documentair-uitleggend paar.
 
 ### `MNT-040` — Defensieve beeldbijschriften terugbrengen
 
