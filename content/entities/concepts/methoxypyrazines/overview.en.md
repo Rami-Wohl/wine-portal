@@ -50,6 +50,9 @@ Calling every green note “unripe” is too simple. A wine may have sufficient 
 A careful judgement therefore asks three questions: what exactly do I smell or feel, how strong is it beside fruit and structure, and does that balance suit the origin and intended style? The molecule's name cannot answer a quality question by itself.
 :::
 
+:::figure{#ontwikkeling-en-waarneming depth="foundation" media_id="media.concept.methoxypyrazines.development-and-perception" source_refs="source.zhao-methoxypyrazines-review-2019 source.awri-green-flavour-cabernet-sauvignon"}
+:::
+
 :::key-idea{#centraal-inzicht depth="foundation"}
 Methoxypyrazines can give wine a powerful green voice, but “green” is a much larger language. Variety and ripening determine how much potential the grape carries; the full aromatic mixture determines whether that voice sounds fresh, characteristic or dominant.
 :::

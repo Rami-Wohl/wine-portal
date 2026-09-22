@@ -34,6 +34,9 @@ Candidates are propagated and followed over several seasons. A trial may compare
 After approval, identity and health remain controlled through mother vines and successive propagation stages. For France, Plantgrape records details such as origin, selection partners, approval year, agronomic reference and availability of registered clones. [@source.plantgrape-cabernet-franc]
 :::
 
+:::figure{#selectie-vermeerdering-en-toetsing depth="foundation" media_id="media.concept.clonal-selection.selection-propagation-trials" source_refs="source.oiv-clonal-selection-2017 source.oiv-grape-variety-identification-2019"}
+:::
+
 :::section{#gebruiken-en-begrenzen depth="foundation" source_refs="source.plantgrape-cabernet-franc source.plantgrape-cabernet-sauvignon"}
 ## Use and limits — suitable material, not a ranking
 

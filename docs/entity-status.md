@@ -79,11 +79,11 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Franc de pied](../content/entities/concepts/franc-de-pied/entity.yaml) | Concept | Zelfstandige pagina | `concept.franc-de-pied` | Ja | `/concepts/franc-de-pied` | 2026-09-22 |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-22 |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Ja | `/concepts/vintage` | 2026-09-20 |
-| [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-07 |
+| [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-22 |
 | [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Ja | `/concepts/late-harvest` | 2026-09-14 |
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Ja | `/concepts/liqueur-de-tirage` | 2026-09-20 |
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Ja | `/concepts/malolactic-fermentation` | 2026-09-16 |
-| [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazines` | 2026-09-07 |
+| [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazines` | 2026-09-22 |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Ja | `/concepts/negociant` | 2026-09-14 |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Ja | `/concepts/rootstock` | 2026-09-20 |
 | [Oxidatie](../content/entities/concepts/oxidation/entity.yaml) | Concept | Zelfstandige pagina | `concept.oxidation` | Ja | `/concepts/oxidation` | 2026-09-20 |
@@ -98,7 +98,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Tweede vergisting](../content/entities/concepts/second-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-fermentation` | Ja | `/concepts/second-fermentation` | 2026-09-20 |
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-wine` | Ja | `/concepts/second-wine` | 2026-09-08 |
 | [Vin de paille](../content/entities/concepts/vin-de-paille/entity.yaml) | Concept | Zelfstandige pagina | `concept.vin-de-paille` | Ja | `/concepts/vin-de-paille` | 2026-09-14 |
-| [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/volatile-thiols` | 2026-09-07 |
+| [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/volatile-thiols` | 2026-09-22 |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/acidity-in-wine` | 2026-09-16 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |

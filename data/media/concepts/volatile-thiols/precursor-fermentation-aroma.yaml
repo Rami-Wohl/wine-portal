@@ -1,0 +1,22 @@
+id: media.concept.volatile-thiols.precursor-fermentation-aroma
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/volatile-thiols/precursor-fermentation-aroma.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 41453403ca3fe2d0e14dea889c4f954b29d7368576e5de152fb163ce00b0c405
+alt:
+  nl: Drieluik met Sauvignon Blanc-druiven en most met gebonden grijze motieven, gistcellen in een vergistingstank die enkele goudkleurige motieven vrijmaken en een glas witte wijn met opstijgende fruitige aromamotieven
+  en: Three-part illustration with Sauvignon Blanc grapes and must containing bound grey motifs, yeast cells in a fermenter releasing some golden motifs, and a glass of white wine with rising fruity aroma motifs
+caption:
+  nl: In druif en most zit een voorraad vrijwel geurloze voorlopers. Tijdens de alcoholische vergisting kan gist een klein deel vrijmaken of omzetten tot vluchtige thiolen, die boven het glas herkenbare fruitige en kruidige associaties kunnen dragen. De vormen verbeelden de omzettingslogica en geen afzonderlijke moleculen of exact rendement.
+  en: Grapes and must contain a pool of nearly odourless precursors. During alcoholic fermentation, yeast can release or transform a small share into volatile thiols that may carry recognisable fruity and herbal associations above the glass. The shapes illustrate the conversion logic rather than individual molecules or an exact yield.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-22
+changes: First generated 1536 by 1024 pixel version selected after review of precursor binding, partial yeast conversion, aroma release and mobile legibility; used without crop or colour alteration.

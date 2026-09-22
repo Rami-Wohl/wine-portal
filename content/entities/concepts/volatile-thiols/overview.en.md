@@ -34,6 +34,9 @@ Three frequently studied compounds are 3-sulfanylhexan-1-ol (**3SH**, also calle
 The paired abbreviations result from changing chemical nomenclature. Their function matters more to wine understanding than memorisation: 3SH and 4MSP can be released from grape precursors, while yeast can also convert 3SH further into 3SHA. [@source.degryse-sauvignon-thiols-2008]
 :::
 
+:::figure{#voorloper-vergisting-en-aroma depth="foundation" media_id="media.concept.volatile-thiols.precursor-fermentation-aroma" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012 source.degryse-sauvignon-thiols-2008"}
+:::
+
 :::section{#sturen-en-begrenzen depth="foundation" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012"}
 ## Steering and limits — aroma emerges from a chain
 

@@ -34,6 +34,9 @@ Drie vaak onderzochte verbindingen zijn 3-sulfanylhexan-1-ol (**3SH**, ook 3MH g
 De dubbele afkortingen komen voort uit veranderde chemische naamgeving. Voor wijnbegrip is hun functie belangrijker dan memoriseren: 3SH en 4MSP kunnen uit druivenvoorlopers worden vrijgemaakt; gist kan 3SH daarnaast verder omzetten in 3SHA. [@source.degryse-sauvignon-thiols-2008]
 :::
 
+:::figure{#voorloper-vergisting-en-aroma depth="foundation" media_id="media.concept.volatile-thiols.precursor-fermentation-aroma" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012 source.degryse-sauvignon-thiols-2008"}
+:::
+
 :::section{#sturen-en-begrenzen depth="foundation" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012"}
 ## Sturen en begrenzen — aroma ontstaat uit een keten
 

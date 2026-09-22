@@ -50,6 +50,9 @@ Het is te eenvoudig om iedere groene toon “onrijp” te noemen. Een wijn kan v
 Een zorgvuldig oordeel vraagt daarom drie vragen: wat ruik of voel ik precies, hoe sterk is het ten opzichte van fruit en structuur, en past die verhouding bij de herkomst en beoogde stijl? De molecuulnaam beantwoordt geen kwaliteitsvraag op zichzelf.
 :::
 
+:::figure{#ontwikkeling-en-waarneming depth="foundation" media_id="media.concept.methoxypyrazines.development-and-perception" source_refs="source.zhao-methoxypyrazines-review-2019 source.awri-green-flavour-cabernet-sauvignon"}
+:::
+
 :::key-idea{#centraal-inzicht depth="foundation"}
 Methoxypyrazinen kunnen een krachtige groene stem aan wijn geven, maar “groen” is een veel grotere taal. Ras en rijping bepalen hoeveel potentieel de druif draagt; het volledige aromamengsel bepaalt of die stem fris, kenmerkend of overheersend klinkt.
 :::

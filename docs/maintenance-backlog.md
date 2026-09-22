@@ -25,14 +25,14 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 6 | `MNT-008` t/m `MNT-011`, `MNT-020`, `MNT-030` |
+| Open | 3 | `MNT-011`, `MNT-020`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
-| Afgerond | 30 | `MNT-001`, `MNT-003` t/m `MNT-007`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` |
+| Afgerond | 33 | `MNT-001`, `MNT-003` t/m `MNT-010`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` |
 | Vervallen | 0 | — |
 
-Het uitvoerbare open werk bestaat uit zes acties met prioriteit `middel`.
+Het uitvoerbare open werk bestaat uit drie acties met prioriteit `middel`.
 Drie geblokkeerde acties zijn afhankelijk van een
 betrouwbare Atlas- en geographydatalaag; één wacht op een definitief extern
 regelgevingsbesluit.
@@ -55,46 +55,6 @@ regelgevingsbesluit.
   beschikbaar.
 - **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
   generatief verzonnen grenzen.
-
-### `MNT-008` — Procesvisual voor methoxypyrazinen
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** media, content
-- **Scope:** `concept.methoxypyrazines`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de relatie tussen concentratie, rijping en waarneming blijft
-  abstract zonder beeld.
-- **Klaar wanneer:** een toegankelijke visual de causale keten zorgvuldig en
-  zonder schijnprecisie toont.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
-
-### `MNT-009` — Procesvisual voor vluchtige thiolen
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** media, content
-- **Scope:** `concept.volatile-thiols`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de omzetting van geurloze precursoren tijdens gisting naar
-  waarneembare aroma's is visueel beter uit te leggen.
-- **Klaar wanneer:** een toegankelijke visual precursor, gistingsstap en vluchtig
-  aroma correct verbindt en de beperkingen van het vereenvoudigde model noemt.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
-
-### `MNT-010` — Procesvisual voor klonale selectie
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** media, content
-- **Scope:** `concept.clonal-selection`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** selectie, vermeerdering en genetische variatie zijn tekstueel
-  correct maar visueel lastig te onderscheiden.
-- **Klaar wanneer:** een toegankelijke visual het selectie- en
-  vermeerderingsproces toont zonder een kloon als genetisch onveranderlijk of
-  als kwaliteitsgarantie voor te stellen.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-011` — Toepassingen bij autolyse en liesrijping toevoegen
 
@@ -200,6 +160,57 @@ regelgevingsbesluit.
   losgehouden van structurele graafdekking.
 
 ## Historie
+
+### `MNT-010` — Procesvisual voor klonale selectie
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** media, content
+- **Scope:** `concept.clonal-selection`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** selectie, vermeerdering en genetische variatie waren tekstueel
+  correct maar visueel lastig te onderscheiden.
+- **Klaar wanneer:** een toegankelijke visual het selectie- en
+  vermeerderingsproces toont zonder een kloon als genetisch onveranderlijk of
+  als kwaliteitsgarantie voor te stellen.
+- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
+  2026-09-22 — afgerond met een taalneutrale procesplaat van kandidaatstok,
+  identiteits- en gezondheidscontrole, vegetatieve vermeerdering en meerjarige
+  proefrijen. Variatie blijft zichtbaar en de plaat gebruikt geen industriële
+  kopieermetafoor of kwaliteitssymbool.
+
+### `MNT-009` — Procesvisual voor vluchtige thiolen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** media, content
+- **Scope:** `concept.volatile-thiols`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** de omzetting van geurloze precursoren tijdens gisting naar
+  waarneembare aroma's was visueel beter uit te leggen.
+- **Klaar wanneer:** een toegankelijke visual precursor, gistingsstap en vluchtig
+  aroma correct verbindt en de beperkingen van het vereenvoudigde model noemt.
+- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
+  2026-09-22 — afgerond met een taalneutraal drieluik van precursoren in druif
+  en most, gedeeltelijke omzetting door gist en aroma boven het glas. Het beeld
+  laat bewust precursor achter en claimt geen exacte moleculen of rendement.
+
+### `MNT-008` — Procesvisual voor methoxypyrazinen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** media, content
+- **Scope:** `concept.methoxypyrazines`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** de relatie tussen concentratie, rijping en waarneming bleef
+  abstract zonder beeld.
+- **Klaar wanneer:** een toegankelijke visual de causale keten zorgvuldig en
+  zonder schijnprecisie toont.
+- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
+  2026-09-22 — afgerond met een taalneutraal drieluik waarin groene
+  herkenningsvormen van jong druivenweefsel via véraison in een aromatische
+  wijncontext terechtkomen. De aantallen tonen een algemene tendens zonder
+  meetschaal, nulpunt of kwaliteitsrangorde.
 
 ### `MNT-007` — Tweede appellationbeeld voor Pauillac
 

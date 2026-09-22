@@ -34,6 +34,9 @@ Kandidaten worden vermeerderd en gedurende meerdere seizoenen gevolgd. Een proef
 Na toelating blijven identiteit en gezondheid via moederplanten en opeenvolgende vermeerderingsstappen bewaakt. Plantgrape toont voor Frankrijk onder meer de oorsprong, selectiepartner, toelatingsdatum, agronomische referentie en beschikbaarheid van geregistreerde klonen. [@source.plantgrape-cabernet-franc]
 :::
 
+:::figure{#selectie-vermeerdering-en-toetsing depth="foundation" media_id="media.concept.clonal-selection.selection-propagation-trials" source_refs="source.oiv-clonal-selection-2017 source.oiv-grape-variety-identification-2019"}
+:::
+
 :::section{#gebruiken-en-begrenzen depth="foundation" source_refs="source.plantgrape-cabernet-franc source.plantgrape-cabernet-sauvignon"}
 ## Gebruik en grenzen — passend materiaal, geen ranglijst
 
