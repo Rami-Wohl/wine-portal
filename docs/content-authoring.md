@@ -698,6 +698,46 @@ als gewone tekst zijn blijven staan. Zo worden nieuwe entities ook teruggevonden
 in eerder geschreven content. De audit maakt geen links en bedenkt geen nieuwe
 entities; de auteur beslist of een kandidaat werkelijk een verwijzing is.
 
+De beslisworkflow gebruikt
+`editorial/link-audit-decisions.yaml`. Iedere kandidaat heeft een stabiele ID in
+de vorm `<document-id>:<locale>-><target-id>` en valt in een van deze queues:
+
+- `new` — nog niet in de baseline en dus ontstaan sinds de laatste sync;
+- `pending` — bekend, maar nog niet inhoudelijk beoordeeld;
+- `link` — door een redacteur aangemerkt als gewenste prose-link;
+- `skip` — bewust niet linken, met een vastgelegde reden;
+- `false-positive` — geen werkelijke verwijzing naar de targetentity, met een
+  vastgelegde reden.
+
+Gebruik:
+
+```bash
+npm run content:link-audit
+npm run content:link-audit -- --status=pending
+npm run content:link-audit -- --sync
+```
+
+De standaardrun is read-only en toont naast de totalen alleen nieuwe kandidaten
+en openstaande `link`-besluiten. `--status=<status>` opent één volledige queue.
+Voer `--sync` pas uit nadat nieuwe kandidaten zijn bekeken; deze opdracht voegt
+hun IDs als `pending` aan de baseline toe en bewaart alle bestaande besluiten.
+
+Een handmatig besluit onder `decisions` ziet er bijvoorbeeld zo uit:
+
+```yaml
+- id: region.example:nl->grape.merlot
+  status: skip
+  reviewed_at: 2026-09-22
+  reason: De eerste vermelding in dezelfde sectie is al gelinkt.
+```
+
+Voor `skip` en `false-positive` zijn `reviewed_at` en `reason` verplicht. Voor
+`link` is `reviewed_at` verplicht en is een reden optioneel. Een besluit past
+nooit zelfstandig Markdown of een graafrelatie aan. Nadat een auteur een
+gewenste link handmatig heeft aangebracht, verdwijnt de kandidaat uit de actuele
+set en telt het register hem als inactief; de historische beslissing blijft
+behouden.
+
 `content:relation-audit` controleert structurele dekking van de actieve graaf en
 faalt bij ontbrekende minimumcontext. De opdracht claimt geen semantische
 volledigheid: niet-gemodelleerde vakkennis blijft via research en menselijke

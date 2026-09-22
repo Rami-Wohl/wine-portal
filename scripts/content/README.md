@@ -55,6 +55,28 @@ distinctions often require an explicit negation. Apply the positive-rephrasing
 test in `editorial/writing-style.md`; never use this report for automatic prose
 replacement.
 
+```bash
+npm run content:link-audit
+```
+
+Inventories known entity names that still occur as plain text and classifies
+them against `editorial/link-audit-decisions.yaml`. The default command is
+read-only and reports counts for new, pending, link, skip and false-positive
+candidates. It only expands candidate details for new items and items already
+marked for linking, so a large reviewed corpus remains usable in the terminal.
+
+```bash
+npm run content:link-audit -- --sync
+npm run content:link-audit -- --status=pending
+```
+
+`--sync` is the only mode that writes: it adds new stable candidate IDs to the
+registry as pending without changing existing decisions. Reviewers add `link`,
+`skip` or `false-positive` decisions manually, including `reviewed_at` and a
+reason for skip or false-positive. The audit never edits Markdown or graph
+relations. `--status=<status>` lists one queue; `--all` expands the default new
+and link queues.
+
 ## Output
 
 The generated bundle contains normalized entities and narratives with their safe

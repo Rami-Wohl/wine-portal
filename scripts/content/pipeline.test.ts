@@ -894,8 +894,22 @@ describe("content dependency tooling", () => {
 
     const findings = await auditEntityLinks(root);
 
-    expect(findings).toContain("region.example:en mentions 'merlot' without linking grape.merlot");
-    expect(findings).toContain("region.example:nl mentions 'merlot' without linking grape.merlot");
+    expect(findings).toEqual([
+      {
+        id: "region.example:en->grape.merlot",
+        ownerId: "region.example",
+        locale: "en",
+        matchedText: "merlot",
+        targetId: "grape.merlot",
+      },
+      {
+        id: "region.example:nl->grape.merlot",
+        ownerId: "region.example",
+        locale: "nl",
+        matchedText: "merlot",
+        targetId: "grape.merlot",
+      },
+    ]);
   });
 });
 

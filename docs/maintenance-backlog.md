@@ -25,16 +25,16 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 2 | `MNT-020`, `MNT-030` |
+| Open | 0 | — |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
-| Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
-| Afgerond | 36 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` t/m `MNT-042` |
+| Geblokkeerd | 5 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039` |
+| Afgerond | 37 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-042` |
 | Vervallen | 0 | — |
 
-Het uitvoerbare open werk bestaat uit twee acties met prioriteit `middel`.
-Drie geblokkeerde acties zijn afhankelijk van een
-betrouwbare Atlas- en geographydatalaag; één wacht op een definitief extern
+Er is geen uitvoerbaar open onderhoudswerk meer in deze ronde. Drie geblokkeerde
+acties zijn afhankelijk van een betrouwbare Atlas- en geographydatalaag, één van
+nieuw beeld met aantoonbare hergebruikrechten en één van een definitief extern
 regelgevingsbesluit.
 
 ## Open werk
@@ -90,8 +90,8 @@ regelgevingsbesluit.
 
 ### `MNT-020` — Ideale beeldparen voor Ausone, Angélus en Canon
 
-- **Status:** open
-- **Prioriteit:** middel
+- **Status:** geblokkeerd
+- **Prioriteit:** afhankelijk
 - **Categorie:** media, content
 - **Scope:** `producer.chateau-ausone`, `producer.chateau-angelus`,
   `producer.chateau-canon`
@@ -105,8 +105,22 @@ regelgevingsbesluit.
   of via de beheerde mediaketen toont, met volledige rechtenmetadata,
   gelokaliseerde alttekst en een caption met een andere didactische functie dan
   het bestaande beeld.
+- **Blokkade:** op 22 september 2026 is voor geen van de drie ontbrekende
+  beelden een kandidaat gevonden die tegelijk het juiste onderwerp toont én
+  een controleerbare oorspronkelijke maker en hergebruiklicentie heeft. De
+  producentengalerij van Angélus reserveert alle reproductierechten; commerciële
+  flesfoto's van Ausone en Canon hebben evenmin een open licentie. Een
+  aggregatorsclaim zonder oorspronkelijke maker of bron geldt niet als
+  voldoende rechtenbewijs.
 - **Log:** 2026-09-08 — geregistreerd nadat Wikimedia wel bruikbare historische
   en wijngaardbeelden opleverde, maar niet alle drie gewenste beeldparen.
+  2026-09-22 — Wikimedia Commons, Mapillary, producentenpersmateriaal en
+  vindbare commerciële beelden opnieuw gecontroleerd; uitkomst en
+  acceptatiecriteria vastgelegd in
+  [`iconic-producer-media-review-2026-09-22.md`](../editorial/iconic-producer-media-review-2026-09-22.md).
+  Vrijgave vereist eigen fotografie, expliciete schriftelijke toestemming van
+  de rechthebbende of een nieuwe open-licensepublicatie met volledige
+  provenance.
 
 ### `MNT-039` — Definitief EU-besluit Graves Supérieures verwerken
 
@@ -127,25 +141,27 @@ regelgevingsbesluit.
 - **Log:** 2026-09-22 — externe afhankelijkheid expliciet afgesplitst zodat de
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
+## Historie
+
 ### `MNT-030` — Markdown-linkaudit triageerbaar maken
 
-- **Status:** open
+- **Status:** afgerond
 - **Prioriteit:** middel
 - **Categorie:** content, engineering, operations
 - **Scope:** `npm run content:link-audit` en de volledige actieve contentcorpus
 - **Herkomst:** `QCR-2026-09-13-01`
-- **Bevinding:** de audit rapporteert momenteel 579 kandidaatvermeldingen. De
-  lijst vermengt nuttige ontbrekende links met herhaling, homoniemen en contexten
-  waarin linken niet wenselijk is, en is daardoor niet efficiënt als vaste
-  publicatiecontrole.
-- **Klaar wanneer:** bevindingen per entity en term duurzaam kunnen worden
-  beoordeeld als linken, bewust overslaan of vals-positief; nieuwe kandidaten
-  duidelijk van afgehandelde gevallen zijn te onderscheiden; en de audit nooit
-  zelfstandig prose-links of graafrelaties aanmaakt.
+- **Bevinding:** de audit rapporteerde oorspronkelijk 579 kandidaatvermeldingen
+  als één ongedifferentieerde lijst. Door verdere contentgroei waren dat bij
+  uitvoering 768 kandidaten geworden.
+- **Uitvoering:** kandidaten hebben nu een stabiele ID, een compacte baseline en
+  gevalideerde handmatige besluiten voor `link`, `skip` en `false-positive`.
+  De terminaluitvoer scheidt daarnaast `new`, `pending` en inactieve regels;
+  alleen een expliciete `--sync` schrijft het beslisregister en geen enkele modus
+  wijzigt content of relaties.
 - **Log:** 2026-09-13 — geregistreerd vanuit de relationele corpusreview; bewust
-  losgehouden van structurele graafdekking.
-
-## Historie
+  losgehouden van structurele graafdekking. 2026-09-22 — triageworkflow,
+  compacte baseline van 768 pending kandidaten, documentatie en unit-tests
+  toegevoegd; afgerond via `QCR-2026-09-22-06`.
 
 ### `MNT-011` — Toepassingen bij autolyse en liesrijping toevoegen
 

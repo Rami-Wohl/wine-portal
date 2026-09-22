@@ -9,6 +9,14 @@ import {
   auditEditorialLanguage,
   rankEditorialLanguageCandidates,
 } from "./editorial-language-audit";
+import {
+  LINK_AUDIT_REGISTRY,
+  LINK_AUDIT_STATUSES,
+  loadLinkAuditRegistry,
+  syncLinkAuditRegistry,
+  triageLinkFindings,
+  type LinkAuditStatus,
+} from "./link-audit";
 
 async function main(): Promise<void> {
   const [command, first, second, third, fourth, fifth] = process.argv.slice(2);
@@ -76,11 +84,49 @@ async function main(): Promise<void> {
   }
   if (command === "link-audit") {
     const findings = await auditEntityLinks();
-    if (findings.length === 0) console.log("Link audit found no unlinked known entity names.");
-    else {
-      console.log(`Link audit found ${findings.length} candidate mention(s):`);
-      for (const finding of findings) console.log(`- ${finding}`);
+    const sync = [first, second, third].includes("--sync");
+    const showAll = [first, second, third].includes("--all");
+    const statusArgument = [first, second, third].find((value) => value?.startsWith("--status="));
+    const requestedStatus = statusArgument?.slice("--status=".length);
+    const allowedStatuses = ["new", ...LINK_AUDIT_STATUSES] as const;
+    if (
+      requestedStatus &&
+      !allowedStatuses.includes(requestedStatus as (typeof allowedStatuses)[number])
+    ) {
+      throw new Error(
+        `Unknown link-audit status '${requestedStatus}'. Use ${allowedStatuses.join(", ")}.`,
+      );
     }
+
+    const syncResult = sync ? await syncLinkAuditRegistry(findings) : null;
+    const registry = syncResult?.registry ?? (await loadLinkAuditRegistry());
+    const result = triageLinkFindings(findings, registry);
+    console.log(
+      `Link audit: ${findings.length} current candidate(s) — ${result.counts.new} new, ${result.counts.pending} pending, ${result.counts.link} marked link, ${result.counts.skip} skip, ${result.counts["false-positive"]} false-positive; ${result.inactive} inactive registry entr${result.inactive === 1 ? "y" : "ies"}.`,
+    );
+    console.log(`Decision registry: ${LINK_AUDIT_REGISTRY}`);
+    if (syncResult) {
+      console.log(
+        `Registered ${syncResult.added} new candidate(s) as pending; existing decisions were preserved.`,
+      );
+    }
+
+    const selectedStatus = requestedStatus as LinkAuditStatus | "new" | undefined;
+    const visible = result.current.filter(({ status }) =>
+      selectedStatus ? status === selectedStatus : status === "new" || status === "link",
+    );
+    const limit = showAll || selectedStatus ? visible.length : 25;
+    for (const { finding, status } of visible.slice(0, limit)) {
+      console.log(
+        `- [${status}] ${finding.id} — '${finding.matchedText}' in ${finding.ownerId}:${finding.locale}`,
+      );
+    }
+    if (visible.length > limit) {
+      console.log(`… ${visible.length - limit} more; use --all or --status=<status> to list them.`);
+    }
+    console.log(
+      "The audit is read-only for canonical content: review the registry manually; it never creates prose links or graph relations.",
+    );
     return;
   }
   if (command === "relation-audit") {
@@ -119,7 +165,7 @@ async function main(): Promise<void> {
     return;
   }
   throw new Error(
-    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> [producer-presentation] | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit | npm run content:relation-audit | npm run content:language-audit",
+    "Usage: npm run content:check | npm run content:build | npm run content:status | npm run content:new -- <entity-type> <slug> [producer-presentation] | npm run content:deps -- scaffold <entity-id> | npm run content:link-audit -- [--sync] [--status=<status>] [--all] | npm run content:relation-audit | npm run content:language-audit",
   );
 }
 

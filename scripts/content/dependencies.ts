@@ -133,17 +133,25 @@ function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+export interface EntityLinkFinding {
+  id: string;
+  ownerId: string;
+  locale: Locale;
+  matchedText: string;
+  targetId: string;
+}
+
 function documentFindings(
   ownerId: string,
   locale: Locale,
   document: ContentDocument,
   entities: GeneratedEntity[],
-): string[] {
+): EntityLinkFinding[] {
   const textParts: string[] = [];
   const links = new Set<string>();
   for (const block of document.blocks) collectBlockNodes(block.nodes, textParts, links);
   const plainText = textParts.join(" ");
-  const findings: string[] = [];
+  const findings: EntityLinkFinding[] = [];
 
   for (const target of entities) {
     if (target.id === ownerId || links.has(target.id)) continue;
@@ -155,15 +163,22 @@ function documentFindings(
         plainText,
       ),
     );
-    if (matched)
-      findings.push(`${ownerId}:${locale} mentions '${matched}' without linking ${target.id}`);
+    if (matched) {
+      findings.push({
+        id: `${ownerId}:${locale}->${target.id}`,
+        ownerId,
+        locale,
+        matchedText: matched,
+        targetId: target.id,
+      });
+    }
   }
   return findings;
 }
 
-export async function auditEntityLinks(root = process.cwd()): Promise<string[]> {
+export async function auditEntityLinks(root = process.cwd()): Promise<EntityLinkFinding[]> {
   const { knowledgeBase } = await buildContent({ root, write: false });
-  const findings: string[] = [];
+  const findings: EntityLinkFinding[] = [];
   for (const entity of knowledgeBase.entities) {
     for (const locale of LOCALES) {
       findings.push(
@@ -183,5 +198,5 @@ export async function auditEntityLinks(root = process.cwd()): Promise<string[]> 
       );
     }
   }
-  return findings.sort();
+  return findings.sort((left, right) => left.id.localeCompare(right.id));
 }
