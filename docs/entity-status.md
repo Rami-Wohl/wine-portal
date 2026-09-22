@@ -28,8 +28,8 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Crémant de Bordeaux](../content/entities/appellations/cremant-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cremant-de-bordeaux` | Ja | `/appellations/cremant-de-bordeaux` | 2026-09-12 |
 | [Francs Côtes de Bordeaux](../content/entities/appellations/francs-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.francs-cotes-de-bordeaux` | Ja | `/appellations/francs-cotes-de-bordeaux` | 2026-09-12 |
 | [Fronsac](../content/entities/appellations/fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.fronsac` | Ja | `/appellations/fronsac` | 2026-09-13 |
-| [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves` | Ja | `/appellations/graves` | 2026-09-11 |
-| [Graves Supérieures](../content/entities/appellations/graves-superieures/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves-superieures` | Ja | `/appellations/graves-superieures` | 2026-09-11 |
+| [Graves](../content/entities/appellations/graves/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves` | Ja | `/appellations/graves` | 2026-09-22 |
+| [Graves Supérieures](../content/entities/appellations/graves-superieures/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.graves-superieures` | Ja | `/appellations/graves-superieures` | 2026-09-22 |
 | [Haut-Médoc](../content/entities/appellations/haut-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.haut-medoc` | Ja | `/appellations/haut-medoc` | 2026-09-09 |
 | [Lalande-de-Pomerol](../content/entities/appellations/lalande-de-pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.lalande-de-pomerol` | Ja | `/appellations/lalande-de-pomerol` | 2026-09-13 |
 | [Listrac-Médoc](../content/entities/appellations/listrac-medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.listrac-medoc` | Ja | `/appellations/listrac-medoc` | 2026-09-11 |

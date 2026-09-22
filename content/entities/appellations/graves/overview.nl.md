@@ -71,10 +71,10 @@ Voor rood vergisten de druiven met de schillen; extractie, temperatuur en duur s
 Hout is bij beide kleuren een keuze, geen verplicht kwaliteitsstempel. Te veel nieuw eiken kan fruit bedekken; zorgvuldig gebruikte vaten kunnen structuur en zuurstofdosering ondersteunen. De stijl van een producent is daarom minstens zo belangrijk als de kleurcategorie.
 :::
 
-:::section{#appellationregels depth="foundation" source_refs="source.inao-graves-specification-2025"}
+:::section{#appellationregels depth="foundation" source_refs="source.inao-graves-specification-2025 source.eambrosia-graves-superieures-register-2026"}
 ## Appellationregels — droog Graves is rood of wit
 
-De AOP Graves beschermt stille rode en droge witte wijn. Zoetere witte wijn uit dezelfde bredere zone valt onder de afzonderlijke naam [[appellation.graves-superieures|Graves Supérieures]] wanneer aan die regels is voldaan. “Blanc” op zichzelf zegt dus nog niet droog of zoet; de precieze appellationnaam doet dat wel.
+De AOP Graves beschermt stille rode en droge witte wijn. Zoetere witte wijn uit dezelfde bredere zone valt onder de afzonderlijke naam [[appellation.graves-superieures|Graves Supérieures]] wanneer aan die regels is voldaan. Op de controledatum 22 september 2026 stond die naam nog als geregistreerd in het EU-register. “Blanc” op zichzelf zegt dus nog niet droog of zoet; de precieze appellationnaam doet dat wel.
 :::
 
 :::detail{#verschillende-rendementen parent="appellationregels" depth="advanced" source_refs="source.inao-graves-specification-2025"}
@@ -99,10 +99,10 @@ Rode Graves beweegt van soepel, rood- en zwartfruitig tot steviger, cederachtig 
 Rood kan met tijd tabak en bosgrond ontwikkelen; rijker wit honing, was en noten terwijl zuur voor frisheid zorgt. Niet iedere fles is gemaakt om lang te bewaren. Producent, jaar, druivenverhouding en opslag zijn beslissend.
 :::
 
-:::section{#etiket-en-aankoop depth="foundation" source_refs="source.dgccrf-wine-labels-2025"}
-## Etiket en aankoop — Graves is niet Graves Supérieures
+:::section{#etiket-en-aankoop depth="foundation" source_refs="source.dgccrf-wine-labels-2025 source.eambrosia-graves-superieures-register-2026"}
+## Etiket en aankoop — twee namen in een overgang
 
-Lees de volledige appellation, kleur, producent, cuvée, jaargang en bottelaar. “Graves” op een droge witte fles verschilt juridisch van “Graves Supérieures” op een zoete. Oudere boeken kunnen Pessac-Léognan nog onder Graves behandelen; het oogstjaar en de toen geldende herkomstregels voorkomen verwarring.
+Lees de volledige appellation, kleur, producent, cuvée, jaargang en bottelaar. Op 22 september 2026 waren “Graves” op een droge witte fles en “Graves Supérieures” op een zoete juridisch nog afzonderlijke namen. Oudere boeken kunnen Pessac-Léognan nog onder Graves behandelen; het oogstjaar en de toen geldende herkomstregels voorkomen verwarring.
 :::
 
 :::section{#hedendaagse-ontwikkelingen depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.inao-graves-specification-2025"}

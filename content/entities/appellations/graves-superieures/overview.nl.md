@@ -1,7 +1,7 @@
-:::summary{#orientatie depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::summary{#orientatie depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 Graves Supérieures is de historische appellation voor witte Graves met merkbare restsuiker: rijker dan droog wit, maar doorgaans minder extreem geconcentreerd dan [[appellation.sauternes|Sauternes]]. De wijn komt uit hetzelfde brede productiegebied als [[appellation.graves|Graves]] en steunt vooral op Sémillon, Sauvignon en Muscadelle.
 
-De naam bevindt zich in een juridische overgang. Frankrijk heeft gevraagd de afzonderlijke Europese registratie te annuleren en de stijl onder Graves op te nemen. Op 3 juni 2026 publiceerde de EU het verzoek; op de controledatum 11 september 2026 was in de gebruikte officiële bronnen nog geen definitieve goedkeuring vastgesteld. Deze pagina bewaart daarom zowel de wijnstijl als de overgang, zonder de uitkomst vooruit te lopen.
+De naam bevindt zich in een juridische overgang. Frankrijk heeft gevraagd de afzonderlijke Europese registratie te annuleren en de stijl onder Graves op te nemen. Op 3 juni 2026 publiceerde de EU het verzoek. Op de controledatum 22 september 2026 stond Graves Supérieures in het juridische EU-register nog als geregistreerd, met een lopende wijzigingsprocedure en zonder verwijderingsmarkering. Deze pagina bewaart daarom zowel de wijnstijl als de overgang, zonder de uitkomst vooruit te lopen.
 :::
 
 :::section{#ligging-en-afbakening depth="foundation" source_refs="source.inao-graves-specification-2025 source.inao-graves-overview"}
@@ -18,10 +18,10 @@ Graves en Graves Supérieures werden in 1937 als appellations erkend. De tweede 
 Een Frans besluit uit september 2025 keurt een nieuw Graves-dossier goed waarin de zoetere stijl wordt geïntegreerd. Dat besluit treedt pas in werking zodra de Europese Commissie de annulering van Graves Supérieures goedkeurt. De EU-publicatie van juni 2026 startte een formele fase en vermeldde een oppositietermijn van drie maanden; publicatie van een verzoek is nog niet hetzelfde als definitieve annulering.
 :::
 
-:::detail{#waarom-de-overgang-telt parent="geschiedenis-en-juridische-status" depth="advanced" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::detail{#waarom-de-overgang-telt parent="geschiedenis-en-juridische-status" depth="advanced" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 ### Regels met een uitgestelde ingangsdatum vragen datumstempels
 
-Het Franse besluit zegt expliciet dat het nieuwe Graves-dossier pas geldt vanaf Europese goedkeuring van de annulering. Daarom kunnen twee officiële teksten tegelijk geldig lijken: het bestaande gezamenlijke dossier voor Graves en Graves Supérieures, en het nieuwe Graves-dossier dat klaarstaat voor later. Voor onderwijs is de veilige formulering datumgebonden: per 11 september 2026 is het annuleringsverzoek gepubliceerd, maar de definitieve voltooiing is hier niet bevestigd.
+Het Franse besluit zegt expliciet dat het nieuwe Graves-dossier pas geldt vanaf Europese goedkeuring van de annulering. Daarom kunnen twee officiële teksten tegelijk geldig lijken: het bestaande gezamenlijke dossier voor Graves en Graves Supérieures, en het nieuwe Graves-dossier dat klaarstaat voor later. Voor onderwijs is de veilige formulering datumgebonden: op 22 september 2026 stond de naam nog als geregistreerd in eAmbrosia en was de wijzigingsprocedure nog lopend.
 :::
 
 :::section{#appellationregels depth="foundation" source_refs="source.inao-graves-specification-2025 source.legifrance-graves-transition-2025"}
@@ -79,12 +79,12 @@ De categorie kent veel minder marktzichtbaarheid dan Sauternes. Producent en oog
 Lees Graves Supérieures als beschermde herkomst en wijnstijl, niet als een algemene superlatief. Na een eventuele definitieve annulering verdwijnen bestaande flessen en historische etiketten niet. Nieuwe vergelijkbare wijn kan dan onder gewijzigde Graves-regels verschijnen. Controleer bij actuele aankopen daarom producent, jaargang, zoetheidsinformatie en de wettelijke naam op die specifieke fles.
 :::
 
-:::section{#hedendaagse-ontwikkelingen depth="foundation" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::section{#hedendaagse-ontwikkelingen depth="foundation" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 ## Hedendaagse ontwikkelingen — volg de registratie, niet de voorspelling
 
 De voorgenomen samenvoeging kan de kleine wijnstijl onder een bekendere naam zichtbaarder maken, maar ook een historische term laten verdwijnen uit nieuwe productie. Tot de bevoegde instanties de procedure formeel afronden, blijft de betrouwbare formulering datumgebonden. Deze status moet daarom bij iedere toekomstige inhoudscontrole opnieuw worden geverifieerd.
 :::
 
-:::key-idea{#kernidee depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::key-idea{#kernidee depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 Graves Supérieures bewaart een kleine traditie van selectief geoogste witte Graves met restsuiker. Juist nu hoort kennis over de wijn samen te gaan met een precieze, gedateerde uitleg van haar nog niet definitief afgeronde juridische overgang.
 :::

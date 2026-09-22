@@ -25,17 +25,17 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 10 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030` |
+| Open | 9 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
-| Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 25 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038` |
+| Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
+| Afgerond | 26 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben drie acties prioriteit `hoog` en zeven
-prioriteit `middel`. De drie
-geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
-geographydatalaag.
+Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zeven
+prioriteit `middel`. Drie geblokkeerde acties zijn afhankelijk van een
+betrouwbare Atlas- en geographydatalaag; één wacht op een definitief extern
+regelgevingsbesluit.
 
 ## Open werk
 
@@ -203,23 +203,24 @@ geographydatalaag.
 - **Log:** 2026-09-08 — geregistreerd nadat Wikimedia wel bruikbare historische
   en wijngaardbeelden opleverde, maar niet alle drie gewenste beeldparen.
 
-### `MNT-025` — Europese status Graves Supérieures opnieuw verifiëren
+### `MNT-039` — Definitief EU-besluit Graves Supérieures verwerken
 
-- **Status:** open
-- **Prioriteit:** hoog
+- **Status:** geblokkeerd
+- **Prioriteit:** afhankelijk
 - **Categorie:** content, research, regelgeving
 - **Scope:** `appellation.graves-superieures`, `appellation.graves`
-- **Herkomst:** contentauthoring 2026-09-11
-- **Bevinding:** Frankrijk heeft een nieuw Graves-dossier met uitgestelde
-  inwerkingtreding vastgesteld en de EU publiceerde op 3 juni 2026 het verzoek om
-  de BOB Graves Supérieures te annuleren. Op 11 september 2026 was in de
-  gecontroleerde officiële bronnen nog geen definitieve goedkeuring vastgesteld.
-- **Klaar wanneer:** na publicatie van een definitief EU-besluit de assertions,
-  samenvattingen, juridische uitleg, relaties en etiketcontext in beide talen zijn
-  bijgewerkt; bij uitblijven van een besluit wordt de status uiterlijk bij de
-  volgende periodieke contentreview opnieuw gecontroleerd en gedateerd.
-- **Log:** 2026-09-11 — geregistreerd; de huidige pagina gebruikt bewust de
-  voorlopige assertion `cancellation-request-published-not-confirmed`.
+- **Herkomst:** afgesplitst van `MNT-025` in `QCR-2026-09-22-04`
+- **Bevinding:** Frankrijk heeft de samenvoeging voorbereid en de EU heeft het
+  annuleringsverzoek gepubliceerd, maar eAmbrosia toont Graves Supérieures op
+  22 september 2026 nog als geregistreerd, met een lopende wijzigingsprocedure
+  en zonder verwijderingsmarkering.
+- **Klaar wanneer:** een definitief officieel EU-besluit is gepubliceerd en de
+  assertions, samenvattingen, juridische uitleg, relaties, etiketcontext en
+  controledatums in beide talen claimgewijs zijn bijgewerkt.
+- **Blokkade:** het definitieve EU-besluit is nog niet gepubliceerd; het
+  verstrijken van de oppositietermijn bewijst op zichzelf geen annulering.
+- **Log:** 2026-09-22 — externe afhankelijkheid expliciet afgesplitst zodat de
+  uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ### `MNT-030` — Markdown-linkaudit triageerbaar maken
 
@@ -240,6 +241,26 @@ geographydatalaag.
   losgehouden van structurele graafdekking.
 
 ## Historie
+
+### `MNT-025` — Europese status Graves Supérieures opnieuw verifiëren
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** content, research, regelgeving
+- **Scope:** `appellation.graves-superieures`, `appellation.graves`
+- **Herkomst:** contentauthoring 2026-09-11; afgerond in `QCR-2026-09-22-04`
+- **Bevinding:** Frankrijk heeft een nieuw Graves-dossier met uitgestelde
+  inwerkingtreding vastgesteld en de EU publiceerde op 3 juni 2026 het verzoek
+  om de BOB Graves Supérieures te annuleren. Op 11 september 2026 was nog geen
+  definitieve goedkeuring vastgesteld.
+- **Klaar wanneer:** bij uitblijven van een definitief besluit de status bij de
+  volgende periodieke contentreview opnieuw officieel is gecontroleerd,
+  gedateerd en op alle betrokken oppervlakken gelijkgetrokken.
+- **Log:** 2026-09-11 — geregistreerd met de voorlopige assertion
+  `cancellation-request-published-not-confirmed`. 2026-09-22 — eAmbrosia toont
+  de naam nog als geregistreerd, met een lopende wijzigingsprocedure en zonder
+  verwijderingsmarkering; bron, assertion, NL/EN-proza en reviewdata bijgewerkt.
+  Het latere definitieve besluit staat als externe blokkade in `MNT-039`.
 
 ### `MNT-031` — Bordeaux-specificatie 2026 claimgewijs doorvoeren
 

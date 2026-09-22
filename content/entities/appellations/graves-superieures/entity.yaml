@@ -29,14 +29,19 @@ assertions:
     value: cancellation-request-published-not-confirmed
     status: provisional
     sources:
-      [source.legifrance-graves-transition-2025, source.eurlex-graves-superieures-cancellation-2026]
-    last_verified: 2026-09-11
+      [
+        source.legifrance-graves-transition-2025,
+        source.eurlex-graves-superieures-cancellation-2026,
+        source.eambrosia-graves-superieures-register-2026,
+      ]
+    last_verified: 2026-09-22
 source_refs:
   - source.inao-graves-specification-2025
   - source.inao-graves-overview
   - source.graves-winegrowers-wines
   - source.legifrance-graves-transition-2025
   - source.eurlex-graves-superieures-cancellation-2026
+  - source.eambrosia-graves-superieures-register-2026
   - source.dgccrf-wine-labels-2025
 depth: foundation
-last_reviewed: 2026-09-11
+last_reviewed: 2026-09-22

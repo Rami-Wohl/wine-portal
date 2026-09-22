@@ -55,6 +55,11 @@ coverage:
             status: supported,
             source_refs: [source.eurlex-graves-superieures-cancellation-2026],
           }
+        - {
+            claim: Op 22 september 2026 stond Graves Supérieures nog als geregistreerd met een lopende wijzigingsprocedure in eAmbrosia.,
+            status: supported,
+            source_refs: [source.eambrosia-graves-superieures-register-2026],
+          }
     review: *complete
   - key: landscape-climate-and-soils
     disposition: on-page
@@ -206,6 +211,7 @@ coverage:
             [
               source.legifrance-graves-transition-2025,
               source.eurlex-graves-superieures-cancellation-2026,
+              source.eambrosia-graves-superieures-register-2026,
             ],
         }
       specific_claims: []

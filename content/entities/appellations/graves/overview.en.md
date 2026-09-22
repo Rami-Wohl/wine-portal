@@ -71,10 +71,10 @@ For red, grapes ferment with their skins; extraction, temperature and time shape
 Oak is a choice for either colour, not a compulsory quality mark. Too much new wood can cover fruit; carefully used barrels can support structure and controlled oxygen exposure. Producer style therefore matters at least as much as colour.
 :::
 
-:::section{#appellationregels depth="foundation" source_refs="source.inao-graves-specification-2025"}
+:::section{#appellationregels depth="foundation" source_refs="source.inao-graves-specification-2025 source.eambrosia-graves-superieures-register-2026"}
 ## Appellation rules — dry Graves is red or white
 
-The Graves PDO protects still red and dry white wine. Sweeter white wine from the broader zone belongs to the separate [[appellation.graves-superieures|Graves Supérieures]] name when it meets those rules. “White” alone therefore does not tell you dry or sweet; the exact appellation does.
+The Graves PDO protects still red and dry white wine. Sweeter white wine from the broader zone belongs to the separate [[appellation.graves-superieures|Graves Supérieures]] name when it meets those rules. On the verification date, 22 September 2026, that name remained registered in the EU register. “White” alone therefore does not tell you dry or sweet; the exact appellation does.
 :::
 
 :::detail{#verschillende-rendementen parent="appellationregels" depth="advanced" source_refs="source.inao-graves-specification-2025"}
@@ -99,10 +99,10 @@ Red Graves ranges from supple, red- and black-fruited wines to firmer, cedar-sce
 Red may develop tobacco and forest floor; richer white honey, wax and nuts while acidity preserves freshness. Not every bottle is intended for long ageing. Producer, vintage, grape balance and storage decide.
 :::
 
-:::section{#etiket-en-aankoop depth="foundation" source_refs="source.dgccrf-wine-labels-2025"}
-## Labels and buying — Graves is not Graves Supérieures
+:::section{#etiket-en-aankoop depth="foundation" source_refs="source.dgccrf-wine-labels-2025 source.eambrosia-graves-superieures-register-2026"}
+## Labels and buying — two names in transition
 
-Read the full appellation, colour, producer, cuvée, vintage and bottler. “Graves” on a dry white bottle differs legally from “Graves Supérieures” on a sweet one. Older books may still treat Pessac-Léognan under Graves; vintage and the rules then in force prevent confusion.
+Read the full appellation, colour, producer, cuvée, vintage and bottler. On 22 September 2026, “Graves” on a dry white bottle and “Graves Supérieures” on a sweet one were still legally separate names. Older books may still treat Pessac-Léognan under Graves; vintage and the rules then in force prevent confusion.
 :::
 
 :::section{#hedendaagse-ontwikkelingen depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.inao-graves-specification-2025"}

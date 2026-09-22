@@ -151,7 +151,14 @@ coverage:
       {
         general_synthesis:
           { topics: [Productiedossier.], source_refs: [source.inao-graves-specification-2025] },
-        specific_claims: [],
+        specific_claims:
+          [
+            {
+              claim: Op 22 september 2026 stond Graves Supérieures nog als afzonderlijk geregistreerd in eAmbrosia.,
+              status: supported,
+              source_refs: [source.eambrosia-graves-superieures-register-2026],
+            },
+          ],
       }
     review: *complete
   - {
@@ -215,7 +222,11 @@ coverage:
       evidence:
         {
           general_synthesis:
-            { topics: [Etiketlezen.], source_refs: [source.dgccrf-wine-labels-2025] },
+            {
+              topics: [Etiketlezen en actuele naamstatus.],
+              source_refs:
+                [source.dgccrf-wine-labels-2025, source.eambrosia-graves-superieures-register-2026],
+            },
           specific_claims: [],
         },
       review: *complete,

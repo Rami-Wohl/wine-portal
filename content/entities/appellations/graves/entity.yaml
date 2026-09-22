@@ -51,5 +51,6 @@ source_refs:
   - source.pessac-leognan-classified-growths
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+  - source.eambrosia-graves-superieures-register-2026
 depth: foundation
-last_reviewed: 2026-09-11
+last_reviewed: 2026-09-22

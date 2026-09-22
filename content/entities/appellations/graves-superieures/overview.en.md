@@ -1,7 +1,7 @@
-:::summary{#orientatie depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::summary{#orientatie depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 Graves Supérieures is the historic appellation for white Graves with perceptible residual sugar: richer than dry white, but generally less intensely concentrated than [[appellation.sauternes|Sauternes]]. It comes from the same broad production area as [[appellation.graves|Graves]] and relies chiefly on Sémillon, Sauvignon and Muscadelle.
 
-The name is in legal transition. France has requested cancellation of the separate European registration and intends to incorporate the style into Graves. The EU published that request on 3 June 2026; as of the verification date, 11 September 2026, the official sources used here did not yet establish final approval. This page therefore preserves both the wine style and the transition without anticipating the outcome.
+The name is in legal transition. France has requested cancellation of the separate European registration and intends to incorporate the style into Graves. The EU published that request on 3 June 2026. On the verification date, 22 September 2026, the Union's legal register still listed Graves Supérieures as registered, with an amendment in progress and no removal flag. This page therefore preserves both the wine style and the transition without anticipating the outcome.
 :::
 
 :::section{#ligging-en-afbakening depth="foundation" source_refs="source.inao-graves-specification-2025 source.inao-graves-overview"}
@@ -18,10 +18,10 @@ Graves and Graves Supérieures were recognised as appellations in 1937. The latt
 A French order of September 2025 approves a new Graves specification incorporating the sweeter style. The order takes effect only when the European Commission approves cancellation of Graves Supérieures. The June 2026 EU notice opened a formal stage and specified a three-month opposition window; publication of a request is not final cancellation.
 :::
 
-:::detail{#waarom-de-overgang-telt parent="geschiedenis-en-juridische-status" depth="advanced" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::detail{#waarom-de-overgang-telt parent="geschiedenis-en-juridische-status" depth="advanced" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 ### Deferred rules require date stamps
 
-The French order explicitly says that the new Graves specification applies only from European approval of cancellation. Two official texts can consequently appear relevant at once: the existing joint specification for Graves and Graves Supérieures, and a new Graves text waiting to take effect. For education, the safe formulation is dated: on 11 September 2026 the cancellation request had been published, but final completion was not confirmed here.
+The French order explicitly says that the new Graves specification applies only from European approval of cancellation. Two official texts can consequently appear relevant at once: the existing joint specification for Graves and Graves Supérieures, and a new Graves text waiting to take effect. For education, the safe formulation is dated: on 22 September 2026 the name remained registered in eAmbrosia and the amendment procedure was still in progress.
 :::
 
 :::section{#appellationregels depth="foundation" source_refs="source.inao-graves-specification-2025 source.legifrance-graves-transition-2025"}
@@ -79,12 +79,12 @@ The category has far less market visibility than Sauternes. Producer and vintage
 Read Graves Supérieures as a protected origin and wine style, not a general superlative. If cancellation becomes final, existing bottles and historic labels do not disappear. Newly produced comparable wine may then appear under amended Graves rules. For current purchases, check producer, vintage, sweetness information and the legal name on that particular bottle.
 :::
 
-:::section{#hedendaagse-ontwikkelingen depth="foundation" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::section{#hedendaagse-ontwikkelingen depth="foundation" source_refs="source.legifrance-graves-transition-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 ## Contemporary developments — follow the register, not the prediction
 
 Consolidation may make this small style more visible under a better-known name, while removing an historic term from new production. Until the competent authorities formally complete the procedure, reliable wording remains date-bound. This status must therefore be reverified at every future content review.
 :::
 
-:::key-idea{#kernidee depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026"}
+:::key-idea{#kernidee depth="foundation" source_refs="source.inao-graves-specification-2025 source.eurlex-graves-superieures-cancellation-2026 source.eambrosia-graves-superieures-register-2026"}
 Graves Supérieures preserves a small tradition of selectively harvested white Graves with residual sugar. Knowledge of the wine now belongs together with a precise, dated account of its not-yet-completed legal transition.
 :::
