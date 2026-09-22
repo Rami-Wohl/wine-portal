@@ -16,8 +16,8 @@ const concepts = [
   {
     path: "/concepts/phylloxera",
     title: "Druifluis (phylloxera)",
-    intermediate: "blad-en-wortelvormen",
-    advanced: "resistentie-heeft-grenzen",
+    intermediate: "levenscyclus-en-verspreiding",
+    advanced: "grenzen-van-resistentie",
   },
   {
     path: "/concepts/rootstock",

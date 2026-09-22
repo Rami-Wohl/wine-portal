@@ -1,0 +1,24 @@
+id: media.concept.phylloxera.root-nodosities
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/bordeaux-foundations/phylloxera-root-nodosities.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1440
+checksum_sha256: 4f2cfaa402e427b209536cae51364f26a0b3ba5b06098c212fd198de6ffdbe04
+alt:
+  nl: Fijne wijnstokwortels met geelbruine haakvormige zwellingen door wortelphylloxera
+  en: Fine grapevine roots with yellow-brown hooked swellings caused by root phylloxera
+caption:
+  nl: "De gekromde, verdikte wortelpunten zijn nodositeiten die door wortelphylloxera zijn veroorzaakt. De foto maakt zichtbaar waar de historische schade begon: in de fijne wortels die water en voedingsstoffen opnemen."
+  en: "The hooked, swollen root tips are nodosities caused by root phylloxera. The photograph shows where the historic damage began: in the fine roots that absorb water and nutrients."
+rights:
+  status: open-licensed
+  creator: Joachim Schmid, Forschungsanstalt Geisenheim
+  source_url: https://commons.wikimedia.org/wiki/File:Nodositaet2.jpg
+  license_name: Creative Commons Attribution 3.0 Germany
+  license_url: https://creativecommons.org/licenses/by/3.0/de/deed.en
+  credit_line: Joachim Schmid via Wikimedia Commons, CC BY 3.0 DE
+acquired_at: 2026-09-22
+changes: Resized proportionally from 6356 × 4767 to 1920 × 1440 pixels; no crop or editorial colour alteration.

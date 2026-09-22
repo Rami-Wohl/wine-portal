@@ -30,29 +30,29 @@ describe("knowledge search", () => {
   });
 
   it("returns a contextual block anchor for article text", () => {
-    const [result] = searchKnowledge(getPublishedSearchIndex(), "groot wortelprobleem");
+    const [result] = searchKnowledge(getPublishedSearchIndex(), "biologie en wortelschade");
 
     expect(result.entry.id).toBe("concept.phylloxera");
     expect(result.match_kind).toBe("heading");
-    expect(result.anchor).toBe("insect-en-schade");
-    expect(result.snippet).toContain("wortelprobleem");
+    expect(result.anchor).toBe("biologie-en-wortelschade");
+    expect(result.snippet).toContain("wortelschade");
   });
 
   it("indexes captions only when their figure is used by the page", () => {
-    const [result] = searchKnowledge(getPublishedSearchIndex(), "Pennsylvania");
+    const [result] = searchKnowledge(getPublishedSearchIndex(), "gekromde verdikte wortelpunten");
 
     expect(result.entry.id).toBe("concept.phylloxera");
     expect(result.match_kind).toBe("media-caption");
-    expect(result.anchor).toBe("bladgallen");
-    expect(result.snippet).toContain("Pennsylvania");
+    expect(result.anchor).toBe("wortelschade");
+    expect(result.snippet).toContain("wortelpunten");
   });
 
   it("keeps the depth and anchor of advanced passages", () => {
-    const [result] = searchKnowledge(getPublishedSearchIndex(), "absolute immuniteit");
+    const [result] = searchKnowledge(getPublishedSearchIndex(), "AXR#1-onderstam");
 
     expect(result.entry.id).toBe("concept.phylloxera");
     expect(result.passage?.depth).toBe("advanced");
-    expect(result.anchor).toBe("resistentie-heeft-grenzen");
+    expect(result.anchor).toBe("grenzen-van-resistentie");
   });
 
   it("combines text and entity-type filters", () => {

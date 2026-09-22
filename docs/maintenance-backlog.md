@@ -25,14 +25,14 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 12 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031`, `MNT-038` |
+| Open | 11 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 23 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-037` |
+| Afgerond | 24 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-038` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben vijf acties prioriteit `hoog` en zeven
+Van het uitvoerbare open werk hebben vier acties prioriteit `hoog` en zeven
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -250,26 +250,29 @@ geographydatalaag.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
 - **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
 
+## Historie
+
 ### `MNT-038` — Phylloxera en franc-de-pied inhoudelijk herbouwen
 
-- **Status:** open
+- **Status:** afgerond
 - **Prioriteit:** hoog
 - **Categorie:** content, research, media
 - **Scope:** `concept.phylloxera`, relevante relaties en verwijzingen naar
   franc-de-pied en `producer.liber-pater`
-- **Herkomst:** onderhoudsplan 2026-09-21
-- **Bevinding:** de pagina doet nog onvoldoende recht aan de historische crisis,
+- **Herkomst:** onderhoudsplan 2026-09-21; `QCR-2026-09-22-02`
+- **Bevinding:** de pagina deed onvoldoende recht aan de historische crisis,
   de mondiale gevolgen en de gebieden en bewegingen rond wijnstokken op eigen
-  wortel; het huidige bladschadebeeld legt visueel het verkeerde accent.
+  wortel; het bladschadebeeld legde visueel het verkeerde accent.
 - **Klaar wanneer:** geschiedenis, biologische werking aan de wortels,
   verspreiding, entreactie, blijvende gevolgen, zorgvuldig begrensde
   phylloxeravrije contexten en franc-de-pied samen een compleet NL/EN-verhaal
   vormen; claims zijn passend onderbouwd; relaties zijn vooruit aangelegd; en
   media ondersteunt de kern in plaats van perifere bladschade.
 - **Log:** 2026-09-21 — geregistreerd als gerichte inhoudelijke herbouw, niet als
-  kleine aanvulling.
-
-## Historie
+  kleine aanvulling. 2026-09-22 — phylloxera volledig herschreven; actieve
+  franc-de-piedentity en Liber Pater-draft toegevoegd; bladgalfoto vervangen
+  door gedocumenteerde wortelnodositeiten; bron-, relatie-, zoek-, taal-,
+  responsive en repositorychecks afgerond; zie `QCR-2026-09-22-02`.
 
 ### `MNT-037` — Defensieve formuleringen corpusbreed terugdringen
 

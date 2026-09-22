@@ -1,0 +1,22 @@
+id: producer.liber-pater
+type: producer
+status: draft
+canonical_name: Liber Pater
+names:
+  nl: Liber Pater
+  en: Liber Pater
+slugs:
+  nl: liber-pater
+  en: liber-pater
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+presentation:
+  mode: monograph
+relations:
+  - { type: located_in, target: appellation.graves }
+assertions: []
+source_refs:
+  - source.francs-de-pied-association
+  - source.rvf-liber-pater-profile
+last_reviewed: 2026-09-22

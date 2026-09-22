@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 331 entities — 263 active, 68 draft, 0 deprecated.
+**Totaal:** 333 entities — 264 active, 69 draft, 0 deprecated.
 
-**Producentenrecords:** 156 — 19 monografie, 35 collectieprofiel, 102 registervermelding.
+**Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (263)
+## Actief — publiek vindbaar (264)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -72,10 +72,11 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Cuvée](../content/entities/concepts/cuvee/entity.yaml) | Concept | Zelfstandige pagina | `concept.cuvee` | Ja | `/concepts/cuvee` | 2026-09-20 |
 | [Dégorgement](../content/entities/concepts/disgorgement/entity.yaml) | Concept | Zelfstandige pagina | `concept.disgorgement` | Ja | `/concepts/disgorgement` | 2026-09-20 |
 | [Dosage](../content/entities/concepts/dosage/entity.yaml) | Concept | Zelfstandige pagina | `concept.dosage` | Ja | `/concepts/dosage` | 2026-09-20 |
-| [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Ja | `/concepts/phylloxera` | 2026-09-20 |
+| [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Ja | `/concepts/phylloxera` | 2026-09-22 |
 | [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | Zelfstandige pagina | `concept.elevage` | Ja | `/concepts/maturation` | 2026-09-16 |
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | Zelfstandige pagina | `concept.en-primeur` | Ja | `/concepts/en-primeur` | 2026-09-14 |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | Zelfstandige pagina | `concept.extraction` | Ja | `/concepts/extraction` | 2026-09-16 |
+| [Franc de pied](../content/entities/concepts/franc-de-pied/entity.yaml) | Concept | Zelfstandige pagina | `concept.franc-de-pied` | Ja | `/concepts/franc-de-pied` | 2026-09-22 |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Ja | `/concepts/vintage` | 2026-09-20 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-07 |
@@ -276,7 +277,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (68)
+## Draft — nog uit te werken (69)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -334,6 +335,7 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Souvignier Gris](../content/entities/grapes/souvignier-gris/entity.yaml) | Druif | Zelfstandige pagina | `grape.souvignier-gris` | Nee — reviewroute | `/grapes/souvignier-gris` | — |
 | [Touriga Nacional](../content/entities/grapes/touriga-nacional/entity.yaml) | Druif | Zelfstandige pagina | `grape.touriga-nacional` | Nee — reviewroute | `/grapes/touriga-nacional` | — |
 | [Trousseau](../content/entities/grapes/trousseau/entity.yaml) | Druif | Zelfstandige pagina | `grape.trousseau` | Nee — reviewroute | `/grapes/trousseau` | — |
+| [Liber Pater](../content/entities/producers/liber-pater/entity.yaml) | Producent | Monografie | `producer.liber-pater` | Nee — reviewroute | `/producers/liber-pater` | 2026-09-22 |
 | [Bergerac](../content/entities/regions/bergerac/entity.yaml) | Regio | Zelfstandige pagina | `region.bergerac` | Nee — reviewroute | `/regions/bergerac` | — |
 | [Colchagua](../content/entities/regions/colchagua/entity.yaml) | Regio | Zelfstandige pagina | `region.colchagua` | Nee — reviewroute | `/regions/colchagua` | — |
 | [Elzas](../content/entities/regions/alsace/entity.yaml) | Regio | Zelfstandige pagina | `region.alsace` | Nee — reviewroute | `/regions/alsace` | — |

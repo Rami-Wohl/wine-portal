@@ -24,17 +24,17 @@ test("submitted search reveals and focuses results while respecting reduced moti
   });
   await page.goto("/search");
 
-  await page.getByRole("searchbox", { name: "Zoekterm" }).fill("Pennsylvania");
+  await page.getByRole("searchbox", { name: "Zoekterm" }).fill("wortelpunten");
   await page.getByRole("button", { name: "Zoeken" }).click();
 
-  await expect(page).toHaveURL(/\/search\?q=Pennsylvania/);
-  const results = page.getByRole("region", { name: /Voor “Pennsylvania”/ });
-  await expect(page.getByRole("heading", { name: /Voor “Pennsylvania”/ })).toBeFocused();
+  await expect(page).toHaveURL(/\/search\?q=wortelpunten/);
+  const results = page.getByRole("region", { name: /Voor “wortelpunten”/ });
+  await expect(page.getByRole("heading", { name: /Voor “wortelpunten”/ })).toBeFocused();
   await expect(results).toBeVisible();
   await expect
     .poll(
       async () =>
-        (await page.getByRole("heading", { name: /Voor “Pennsylvania”/ }).boundingBox())?.y,
+        (await page.getByRole("heading", { name: /Voor “wortelpunten”/ }).boundingBox())?.y,
     )
     .toBeGreaterThanOrEqual(0);
   await expect(page.locator("html")).toHaveAttribute("data-test-scroll-behavior", "auto");
@@ -53,27 +53,27 @@ test("search ranks entities and links article matches to their depth-aware block
   await expect(exactEntity.getByRole("heading", { name: "Cabernet Sauvignon" })).toBeVisible();
   await expect(exactEntity).toHaveAttribute("href", "/grapes/cabernet-sauvignon");
 
-  await page.goto("/search?q=absolute+immuniteit");
+  await page.goto("/search?q=AXR%231-onderstam");
   const contentResult = page.getByRole("link", { name: /Druifluis \(phylloxera\)/ });
   await expect(contentResult).toContainText("Gevorderd");
-  await expect(contentResult).toContainText("Gevonden in Resistentie is geen absolute immuniteit");
+  await expect(contentResult).toContainText("Gevonden in Resistentie blijft een levende relatie");
   await expect(contentResult).toHaveAttribute(
     "href",
-    "/concepts/phylloxera#resistentie-heeft-grenzen",
+    "/concepts/phylloxera#grenzen-van-resistentie",
   );
 
   await contentResult.click();
-  await expect(page).toHaveURL(/\/concepts\/phylloxera#resistentie-heeft-grenzen$/);
-  await expect(page.locator("#resistentie-heeft-grenzen")).toBeVisible();
+  await expect(page).toHaveURL(/\/concepts\/phylloxera#grenzen-van-resistentie$/);
+  await expect(page.locator("#grenzen-van-resistentie")).toBeVisible();
 });
 
 test("search includes captions used by published pages", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/search?q=Pennsylvania");
+  await page.goto("/search?q=gekromde+verdikte+wortelpunten");
 
   const captionResult = page.getByRole("link", { name: /Druifluis \(phylloxera\)/ });
   await expect(captionResult).toContainText("Gevonden in een beeldbijschrift");
-  await expect(captionResult).toContainText("Pennsylvania");
-  await expect(captionResult).toHaveAttribute("href", "/concepts/phylloxera#bladgallen");
+  await expect(captionResult).toContainText("wortelpunten");
+  await expect(captionResult).toHaveAttribute("href", "/concepts/phylloxera#wortelschade");
   await expect(page.locator("body")).not.toHaveCSS("overflow-x", "scroll");
 });

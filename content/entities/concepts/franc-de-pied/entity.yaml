@@ -1,27 +1,24 @@
-id: concept.phylloxera
+id: concept.franc-de-pied
 type: concept
 status: active
-canonical_name: Phylloxera
+canonical_name: Franc de pied
 names:
-  nl: Druifluis (phylloxera)
-  en: Phylloxera
+  nl: Franc de pied
+  en: Own-rooted vine
 slugs:
-  nl: druifluis-phylloxera
-  en: phylloxera
+  nl: franc-de-pied
+  en: franc-de-pied
 locales:
   nl: overview.nl.md
   en: overview.en.md
 relations:
-  - type: related_to
-    target: concept.rootstock
+  - { type: related_to, target: concept.phylloxera }
+  - { type: related_to, target: concept.rootstock }
+  - { type: associated_with, target: producer.liber-pater }
 assertions: []
 source_refs:
-  - source.inrae-ephytia-phylloxera
-  - source.inrae-phylloxera-genomics-2020
-  - source.inrae-vine-disease-history
-  - source.uc-ipm-grape-phylloxera
   - source.osu-grape-phylloxera
-  - source.osu-establishing-vineyard-rootstocks
+  - source.uc-ipm-grape-phylloxera
   - source.awri-phylloxera
   - source.wines-greece-pdo-santorini
   - source.sag-chile-quarantine-pests-2025
