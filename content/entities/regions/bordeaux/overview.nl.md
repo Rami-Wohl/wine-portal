@@ -87,20 +87,20 @@ De bekende vuistregel zegt: grind op de linkeroever, klei en kalk op de rechtero
 Belangrijker dan de naam van één bestanddeel is hoe een bodem als geheel functioneert: houdt hij water vast of voert hij het snel af, warmt hij vroeg op, hoe diep kunnen wortels groeien en hoe reageert hij in een droog of nat jaar? Grind kan afwatering bevorderen, klei kan water vasthouden en kalk beïnvloedt structuur en beworteling, maar geen bodemsoort vertaalt zichzelf rechtstreeks in een aroma of kwaliteitsniveau.
 :::
 
-:::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2025"}
+:::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2026"}
 ## Wijnstijlen — Bordeaux heeft meer dan één kleur
 
-Rode wijn beslaat een groot deel van de productie en van het internationale beeld, maar de regio maakt veel meer. Droog wit kan fris en direct zijn of breder en op vat opgevoed. Bij de bekendste zoete witte wijnen concentreert [[concept.botrytis|edele rotting]] de druiven voordat selectieve pluk weinig, suikerrijk sap oplevert. Daarnaast bestaan rosé, de historisch donkere roséstijl [[concept.clairet|clairet]], en mousserende [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles] [@source.boagri-bordeaux-specification-2025]
+Rode wijn beslaat een groot deel van de productie en van het internationale beeld, maar de regio maakt veel meer. Droog wit kan fris en direct zijn of breder en op vat opgevoed. Bij de bekendste zoete witte wijnen concentreert [[concept.botrytis|edele rotting]] de druiven voordat selectieve pluk weinig, suikerrijk sap oplevert. Daarnaast bestaan rosé, de historisch donkere roséstijl [[concept.clairet|clairet]], en mousserende [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles] [@source.boagri-bordeaux-specification-2026]
 
 Zelfs “rode Bordeaux” is geen enkele stijl. Een soepele, fruitgedreven regionale wijn voor jonge consumptie en een geconcentreerde, lang gerijpte wijn uit een kleine appellation kunnen dezelfde streeknaam delen, maar verschillen in druiven, opbrengst, selectie, kelderwerk, prijs en bedoeling. De wijnfamilie is daarom de eerste vertakking, niet het eindantwoord.
 :::
 
-:::detail{#wijnfamilies-productie parent="wijnfamilies" depth="intermediate" source_refs="source.boagri-bordeaux-specification-2025 source.civb-bordeaux-wine-styles"}
+:::detail{#wijnfamilies-productie parent="wijnfamilies" depth="intermediate" source_refs="source.boagri-bordeaux-specification-2026 source.civb-bordeaux-wine-styles"}
 ### Iedere familie vraagt andere keuzes
 
 Voor rood ondergaat de most doorgaans zijn [[concept.fermentation|alcoholische vergisting]] met de druivenschillen. Tijdens die omzetting van suiker in alcohol kunnen kleur en [[concept.tannin|tannine]], de stroef aanvoelende stoffen uit schil en pit, worden onttrokken. Bij wit wordt sap meestal eerder van de schillen gescheiden; behoud van frisheid en aroma vraagt andere pers- en temperatuurkeuzes. Rosé en clairet danken hun kleur aan korter schilcontact dan rood. Mousserende Crémant krijgt zijn bubbels door een tweede gisting op fles.
 
-Zoete Bordeaux is niet simpelweg droge witte wijn met restsuiker. Rijpe, vaak door edele rotting geconcentreerde druiven worden in meerdere selectieve plukrondes geoogst en leveren weinig, suikerrijk sap. De productspecificatie van iedere appellation bepaalt vervolgens wat onder die naam mag worden gemaakt. De brede AOP Bordeaux kent eigen toegestane kleuren en voorwaarden; die gelden niet automatisch voor alle andere Bordeaux-appellations. [@source.boagri-bordeaux-specification-2025]
+Zoete Bordeaux is niet simpelweg droge witte wijn met restsuiker. Rijpe, vaak door edele rotting geconcentreerde druiven worden in meerdere selectieve plukrondes geoogst en leveren weinig, suikerrijk sap. De productspecificatie van iedere appellation bepaalt vervolgens wat onder die naam mag worden gemaakt. De brede AOP Bordeaux kent eigen toegestane kleuren en voorwaarden; die gelden niet automatisch voor alle andere Bordeaux-appellations. [@source.boagri-bordeaux-specification-2026]
 :::
 
 :::section{#druiven-en-rollen depth="foundation" source_refs="source.civb-bordeaux-grape-varieties"}
@@ -111,15 +111,15 @@ Bij rood vormen [[grape.merlot|merlot]], [[grape.cabernet-sauvignon|cabernet sau
 Voor wit zijn [[grape.sauvignon-blanc|sauvignon blanc]], [[grape.semillon|sémillon]] en [[grape.muscadelle|muscadelle]] de bekendste drie. Sauvignon blanc kan spanning en uitgesproken aroma geven; sémillon brengt vaak textuur en is belangrijk voor zowel droge als zoete wijn; muscadelle kan een bloemige toets leveren. Hun betekenis verandert met plek, rijpheid, vinificatie en verhouding.
 :::
 
-:::detail{#druiven-keuzes-en-minderheden parent="druiven-en-rollen" depth="intermediate" source_refs="source.civb-bordeaux-grape-varieties source.boagri-bordeaux-specification-2025"}
+:::detail{#druiven-keuzes-en-minderheden parent="druiven-en-rollen" depth="intermediate" source_refs="source.civb-bordeaux-grape-varieties source.boagri-bordeaux-specification-2026"}
 ### Minderheidsrassen en een veranderend klimaat
 
 Ook [[grape.petit-verdot|petit verdot]], [[grape.malbec|malbec]] en [[grape.carmenere|carménère]] horen bij het rode Bordeauxverhaal. Hun oppervlak of aandeel is doorgaans kleiner, maar een klein percentage kan in een assemblage toch merkbaar zijn. Welke rassen zijn toegestaan verschilt per appellation; wat toegestaan is, hoeft bovendien niet veel te zijn aangeplant.
 
-De regels van de brede AOP Bordeaux laten onder voorwaarden ook een beperkte groep aanpassingsrassen toe. [@source.boagri-bordeaux-specification-2025] Dat maakt zulke rassen nog niet tot de nieuwe standaard. Het is een gecontroleerde reactie op warmere en drogere omstandigheden, naast andere keuzes zoals later snoeien, ander bladerdekbeheer, geschikte onderstammen en verschuiving van oogstmomenten.
+De regels van de brede AOP Bordeaux laten onder voorwaarden ook een beperkte groep aanpassingsrassen toe. [@source.boagri-bordeaux-specification-2026] Dat maakt zulke rassen nog niet tot de nieuwe standaard. Het is een gecontroleerde reactie op warmere en drogere omstandigheden, naast andere keuzes zoals later snoeien, ander bladerdekbeheer, geschikte onderstammen en verschuiving van oogstmomenten.
 :::
 
-:::section{#van-wijngaard-tot-kelder depth="foundation" source_refs="source.civb-bordeaux-blending source.boagri-bordeaux-specification-2025"}
+:::section{#van-wijngaard-tot-kelder depth="foundation" source_refs="source.civb-bordeaux-blending source.boagri-bordeaux-specification-2026"}
 ## Wijnbouw en wijnmaken — de maker schrijft mee
 
 Een herkomstnaam bepaalt de buitengrenzen, maar binnen die grenzen blijven veel keuzes over. In de wijngaard gaat het onder meer om ras, onderstam, plantdichtheid, snoei, bodembeheer, ziektebestrijding, opbrengst en plukmoment. In de kelder volgen selectie, persen, vergisting, [[concept.extraction|extractie]] — hoeveel kleur, tannine en smaak uit vaste druivendelen wordt gehaald — samenstelling en rijping. Twee buren kunnen daardoor herkenbaar verschillende wijnen maken.
@@ -127,7 +127,7 @@ Een herkomstnaam bepaalt de buitengrenzen, maar binnen die grenzen blijven veel 
 Er bestaat dus geen enkel “Bordeauxrecept”. Sommige wijnen zijn bedoeld voor direct fruit en vroege drinkbaarheid; andere krijgen lange [[concept.maceration|schilinweking]], strenge selectie en jaren ontwikkeling voor zich. Appellation, oogstjaar, schaal en ambitie begrenzen de mogelijkheden, maar de maker zet de accenten.
 :::
 
-:::detail{#assemblage-en-elevage parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.oiv-blending-code source.civb-bordeaux-blending source.boagri-bordeaux-specification-2025"}
+:::detail{#assemblage-en-elevage parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.oiv-blending-code source.civb-bordeaux-blending source.boagri-bordeaux-specification-2026"}
 ### Samenstellen en opvoeden
 
 Wanneer afzonderlijke partijen worden samengebracht tot een uiteindelijke wijn heet dat een [[concept.assemblage|assemblage]]. Die partijen kunnen uit verschillende druivenrassen, percelen, plukmomenten of vaten komen; een assemblage hoeft dus niet altijd een mengsel van rassen te zijn. De wijnmaker zoekt samenhang, balans en een stijl die bij wijn en jaar past. [@source.oiv-blending-code] [@source.civb-bordeaux-blending]
@@ -135,7 +135,7 @@ Wanneer afzonderlijke partijen worden samengebracht tot een uiteindelijke wijn h
 Daarna — en deels daarvoor — volgt de [[concept.elevage|élevage]], letterlijk de opvoeding van de jonge wijn tussen vergisting en botteling. Dat kan in tank, vat, amfora of een combinatie gebeuren. Nieuw eiken kan geur, tannine en zuurstofuitwisseling beïnvloeden, maar is geen verplicht Bordeauxkeurmerk en evenmin automatisch een kwaliteitsbewijs. Tijd, overhevelen, klaring en keuze van het vat zijn onderdelen van hetzelfde traject.
 :::
 
-:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2025"}
+:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2026"}
 ### Wanneer rotting edel wordt
 
 In Sauternes en omgeving kunnen ochtendmist en drogere middagen de ontwikkeling van [[concept.botrytis|botrytis, of edele rotting]], bevorderen. De schimmel maakt de druivenschil poreus, waardoor water verdampt en suiker, zuren en smaakstoffen geconcentreerd raken. Alleen gezonde, gunstig aangetaste druiven zijn gewenst; grijze rot bij aanhoudend nat weer is iets heel anders.
@@ -163,7 +163,7 @@ Een preciezere naam is niet automatisch een belofte dat iedere fles beter smaakt
 Deze vijf routes zijn een leerhulpmiddel, geen officiële vijfdelige hiërarchie. [@source.civb-bordeaux-designations]
 :::
 
-:::detail{#appellations-en-regels parent="appellations-als-navigatie" depth="advanced" source_refs="source.inao-aop-overview source.boagri-bordeaux-specification-2025"}
+:::detail{#appellations-en-regels parent="appellations-als-navigatie" depth="advanced" source_refs="source.inao-aop-overview source.boagri-bordeaux-specification-2026"}
 ### De naam komt met een dossier
 
 Elke AOP berust op een productdossier. Daarin staan het gebied, toegestane druiven, teelt- en productieregels, analytische grenzen en soms bepalingen over opvoeding of presentatie. De regels zijn historisch gegroeid en kunnen worden gewijzigd. Daardoor is “toegestaan in Bordeaux” zonder verdere precisie meestal een onvolledige uitspraak: bedoelt men de streek, de brede AOP of een andere appellation?
@@ -267,7 +267,7 @@ Een maker kan selecteren, eerder of later oogsten, zachter of steviger extrahere
 Zie “Bordeaux” op een fles als het begin van een speurtocht, niet als een proefnotitie. Zoek de preciezere herkomst, het type wijn, de maker en — als hij vermeld is — de jaargang. Zo verandert een grote beroemde naam in informatie waarmee je gericht kunt kiezen, vergelijken en verder leren.
 :::
 
-:::section{#bordeaux-vandaag depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2025"}
+:::section{#bordeaux-vandaag depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2026"}
 ## Hedendaagse ontwikkelingen — geen museum achter een etiket
 
 Bordeaux draagt veel geschiedenis, maar staat niet stil. Producenten werken op uiteenlopende schaal en met verschillende landbouwvisies. Sommige zoeken lichtere extractie of een vroeger drinkbare stijl, andere blijven bouwen op lange opvoeding en bewaarpotentieel. Droge witte wijn, mousserend, clairet en minder bekende herkomsten krijgen naast klassiek rood opnieuw aandacht.
@@ -275,10 +275,10 @@ Bordeaux draagt veel geschiedenis, maar staat niet stil. Producenten werken op u
 De dringendste verandering komt van het klimaat. Warmere omstandigheden kunnen rijping versnellen, alcohol verhogen, zuur verlagen en droogtestress vergroten; tegelijk blijven natte perioden en schimmelrisico bij het oceaanklimaat horen. Aanpassing is daarom geen enkele ingreep, maar een pakket van keuzes in plantmateriaal, bodem, bladerdek, timing en regelgeving. [@source.inrae-bordeaux-climate-adaptation]
 :::
 
-:::detail{#klimaat-en-aanpassing parent="bordeaux-vandaag" depth="advanced" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2025"}
+:::detail{#klimaat-en-aanpassing parent="bordeaux-vandaag" depth="advanced" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2026"}
 ### Veranderen zonder de herkomst leeg te maken
 
-Onderzoek in Bordeaux bekijkt onder meer fenologie, droogterespons, druivenkeuze, onderstammen en teeltmaatregelen. [@source.inrae-bordeaux-climate-adaptation] De brede AOP-specificatie heeft daarnaast enkele aanpassingsrassen onder beperkte voorwaarden toegelaten. [@source.boagri-bordeaux-specification-2025] Zulke maatregelen moeten tijd winnen en risico spreiden; hun langetermijneffect op regionale stijl en gebruik is nog in ontwikkeling.
+Onderzoek in Bordeaux bekijkt onder meer fenologie, droogterespons, druivenkeuze, onderstammen en teeltmaatregelen. [@source.inrae-bordeaux-climate-adaptation] De brede AOP-specificatie heeft daarnaast enkele aanpassingsrassen onder beperkte voorwaarden toegelaten. [@source.boagri-bordeaux-specification-2026] Zulke maatregelen moeten tijd winnen en risico spreiden; hun langetermijneffect op regionale stijl en gebruik is nog in ontwikkeling.
 
 Daar zit een fundamentele spanning. Een appellation bewaart herkenbare collectieve praktijken, maar moet genoeg kunnen veranderen om onder nieuwe omstandigheden geloofwaardig wijn te blijven voortbrengen. Te weinig beweging maakt regels kwetsbaar; te snelle verandering kan de betekenis van de herkomstnaam uithollen. Bordeaux van de toekomst zal dus niet worden bepaald door één “klimaatdruif”, maar door voortdurende afweging tussen continuïteit en aanpassing.
 :::

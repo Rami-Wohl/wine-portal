@@ -31,8 +31,9 @@ begrip, niet het vanzelfsprekende zwaartepunt van het platform.
 ## Bronnen, relaties en bewuste grenzen
 
 Officiële producentenbronnen van Latour en Mouton dragen de concrete voorbeelden;
-Franse etiketteringsinformatie, de Bordeaux-productspecificatie en de officiële
-classificatiecontext begrenzen de terminologie. De canonieke relaties verbinden
+Franse etiketteringsinformatie, actuele dossiers van afzonderlijke
+Bordeaux-appellations en de officiële classificatiecontext begrenzen de
+terminologie. De canonieke relaties verbinden
 de pagina met tweede wijn, cuvée, assemblage en Bordeaux 1855. Voorbeelden worden
 niet tot universele regels verheven.
 
@@ -40,4 +41,3 @@ De bestaande selectie-illustratie maakt het beslismoment zichtbaar zonder een
 vaste kwaliteitspiramide te suggereren. De pagina is compleet wanneer beide talen
 dezelfde betekenis en blockstructuur behouden en de reguliere content-, link- en
 projectchecks slagen.
-

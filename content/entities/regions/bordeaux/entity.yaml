@@ -40,7 +40,7 @@ source_refs:
   - source.boutoulle-bordelais-wine-trade-2000
   - source.lavaud-bordeaux-vineyard-landscape-2014
   - source.inao-aop-overview
-  - source.boagri-bordeaux-specification-2025
+  - source.boagri-bordeaux-specification-2026
   - source.civb-bordeaux-wine-styles
   - source.civb-bordeaux-designations
   - source.civb-bordeaux-grape-varieties
@@ -58,4 +58,4 @@ source_refs:
   - source.inrae-bordeaux-climate-adaptation
   - source.musee-aquitaine-bordeaux-slavery
 depth: foundation
-last_reviewed: 2026-09-08
+last_reviewed: 2026-09-22

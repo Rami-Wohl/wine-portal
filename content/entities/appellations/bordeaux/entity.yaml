@@ -27,28 +27,28 @@ assertions:
     predicate: permitted_wine_type
     value: still-red
     status: verified
-    sources: [source.boagri-bordeaux-specification-2025]
-    last_verified: 2026-09-11
+    sources: [source.boagri-bordeaux-specification-2026]
+    last_verified: 2026-09-22
   - id: assertion.bordeaux-aop.wine-type-rose
     predicate: permitted_wine_type
     value: still-rose
     status: verified
-    sources: [source.boagri-bordeaux-specification-2025]
-    last_verified: 2026-09-11
+    sources: [source.boagri-bordeaux-specification-2026]
+    last_verified: 2026-09-22
   - id: assertion.bordeaux-aop.wine-type-white
     predicate: permitted_wine_type
     value: still-white
     status: verified
-    sources: [source.boagri-bordeaux-specification-2025]
-    last_verified: 2026-09-11
+    sources: [source.boagri-bordeaux-specification-2026]
+    last_verified: 2026-09-22
   - id: assertion.bordeaux-aop.aoc-recognition
     predicate: aoc_recognition_date
     value: 1936-11-14
     status: verified
-    sources: [source.boagri-bordeaux-specification-2025]
-    last_verified: 2026-09-11
+    sources: [source.boagri-bordeaux-specification-2026]
+    last_verified: 2026-09-22
 source_refs:
-  - source.boagri-bordeaux-specification-2025
+  - source.boagri-bordeaux-specification-2026
   - source.inao-bordeaux-product-page
   - source.inao-bordeaux-clairet-product-page
   - source.inao-aoc-history
@@ -60,4 +60,4 @@ source_refs:
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
 depth: foundation
-last_reviewed: 2026-09-11
+last_reviewed: 2026-09-22

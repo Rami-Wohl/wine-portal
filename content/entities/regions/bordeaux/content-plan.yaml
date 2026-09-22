@@ -135,7 +135,7 @@ coverage:
         - claim: De productspecificatie van AOP Bordeaux onderscheidt concrete toegestane wijnsoorten en regels.
           status: supported
           source_refs:
-            - source.boagri-bordeaux-specification-2025
+            - source.boagri-bordeaux-specification-2026
     review: *complete_section_review
 
   - key: grape-varieties
@@ -165,7 +165,7 @@ coverage:
         - claim: De actuele AOP-specificatie bepaalt welke rassen en aanpassingsrassen onder voorwaarden zijn toegestaan.
           status: supported
           source_refs:
-            - source.boagri-bordeaux-specification-2025
+            - source.boagri-bordeaux-specification-2026
     review: *complete_section_review
 
   - key: viticulture-and-winemaking
@@ -198,7 +198,7 @@ coverage:
           status: supported
           source_refs:
             - source.oiv-blending-code
-            - source.boagri-bordeaux-specification-2025
+            - source.boagri-bordeaux-specification-2026
     review: *complete_section_review
 
   - key: appellation-structure
@@ -382,7 +382,7 @@ coverage:
         - claim: De actuele Bordeaux-specificatie bevat onder voorwaarden rassen voor klimaatadaptatie.
           status: supported
           source_refs:
-            - source.boagri-bordeaux-specification-2025
+            - source.boagri-bordeaux-specification-2026
     review: *complete_section_review
 
   - key: visuals

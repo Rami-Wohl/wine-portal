@@ -21,7 +21,7 @@ coverage:
         - {
             claim: Alleen goedgekeurde percelen binnen de geografische zone komen in aanmerking.,
             status: supported,
-            source_refs: [source.boagri-bordeaux-specification-2025],
+            source_refs: [source.boagri-bordeaux-specification-2026],
           }
     review: &complete { outline: complete, nl: complete, en: complete }
   - key: historical-development
@@ -48,7 +48,7 @@ coverage:
         - {
             claim: De AOC Bordeaux werd op 14 november 1936 erkend.,
             status: supported,
-            source_refs: [source.boagri-bordeaux-specification-2025],
+            source_refs: [source.boagri-bordeaux-specification-2026],
           }
     review: *complete
   - key: landscape-climate-and-soils
@@ -77,7 +77,7 @@ coverage:
         {
           topics: [Landschap klimaat en geologie.],
           source_refs:
-            [source.brgm-bordeaux-geology-2022, source.boagri-bordeaux-specification-2025],
+            [source.brgm-bordeaux-geology-2022, source.boagri-bordeaux-specification-2026],
         }
       specific_claims: []
     review: *complete
@@ -122,7 +122,7 @@ coverage:
         - {
             claim: Het actuele dossier laat verschillende aanpassingsrassen onder overeenkomst en met kwantitatieve grenzen toe.,
             status: supported,
-            source_refs: [source.boagri-bordeaux-specification-2025],
+            source_refs: [source.boagri-bordeaux-specification-2026],
           }
     review: *complete
   - key: viticulture-and-winemaking
@@ -153,7 +153,7 @@ coverage:
         {
           topics: [Wijnbouw en vinificatie per kleur.],
           source_refs:
-            [source.boagri-bordeaux-specification-2025, source.civb-bordeaux-wine-styles],
+            [source.boagri-bordeaux-specification-2026, source.civb-bordeaux-wine-styles],
         }
       specific_claims: []
     review: *complete
@@ -180,7 +180,7 @@ coverage:
         - {
             claim: De basisrendementen zijn 67 hl/ha voor wit 62 voor rosé 60 voor rood en 55 voor Haut-Benauge.,
             status: supported,
-            source_refs: [source.boagri-bordeaux-specification-2025],
+            source_refs: [source.boagri-bordeaux-specification-2026],
           }
     review: *complete
   - key: classification-and-producers
@@ -243,7 +243,7 @@ coverage:
       general_synthesis:
         {
           topics: [Etiket lezen en kopen.],
-          source_refs: [source.dgccrf-wine-labels-2025, source.boagri-bordeaux-specification-2025],
+          source_refs: [source.dgccrf-wine-labels-2025, source.boagri-bordeaux-specification-2026],
         }
       specific_claims: []
     review: *complete
@@ -263,7 +263,7 @@ coverage:
         {
           topics: [Klimaat- en stijlaanpassing.],
           source_refs:
-            [source.inrae-bordeaux-climate-adaptation, source.boagri-bordeaux-specification-2025],
+            [source.inrae-bordeaux-climate-adaptation, source.boagri-bordeaux-specification-2026],
         }
       specific_claims: []
     review: *complete

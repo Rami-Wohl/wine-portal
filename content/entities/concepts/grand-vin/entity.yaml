@@ -22,7 +22,8 @@ source_refs:
   - source.chateau-latour-les-forts
   - source.chateau-mouton-wines
   - source.dgccrf-wine-labels-2025
-  - source.boagri-bordeaux-specification-2025
+  - source.inao-pauillac-specification-2026
+  - source.boagri-bordeaux-specification-2026
   - source.gcc1855-classification-overview
 depth: foundation
-last_reviewed: 2026-09-08
+last_reviewed: 2026-09-22

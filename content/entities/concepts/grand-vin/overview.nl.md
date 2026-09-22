@@ -47,7 +47,7 @@ Een bekend perceel geeft geen automatisch recht op de grand vin. Vorst, droogte,
 Daarom is het riskant om een portefeuille als een vaste afvoerladder te tekenen. De namen blijven herkenbaar, maar de route van druif naar fles is per jaar een nieuwe redactionele en technische keuze van het domein.
 :::
 
-:::section{#etiket-en-kwaliteit depth="foundation" source_refs="source.dgccrf-wine-labels-2025 source.boagri-bordeaux-specification-2025"}
+:::section{#etiket-en-kwaliteit depth="foundation" source_refs="source.dgccrf-wine-labels-2025 source.inao-pauillac-specification-2026 source.boagri-bordeaux-specification-2026"}
 ## Etiket en kwaliteit — lees verder dan de grootste woorden
 
 Begin bij producent, exacte appellation, jaargang en bottelaar. Die gegevens vertellen welke wijn voor je staat en onder welke herkomstregels hij valt. *Grand vin* kan helpen de hoofdwijn binnen het assortiment te herkennen, maar garandeert geen smaak, bewaarpotentieel of verhouding tot de prijs. [@source.dgccrf-wine-labels-2025]
@@ -55,10 +55,12 @@ Begin bij producent, exacte appellation, jaargang en bottelaar. Die gegevens ver
 Vergelijk bij aankoop daarom de volledige wijnnaam. Een tweede wijn en grand vin van hetzelfde château kunnen dezelfde appellation dragen, maar uit andere selecties bestaan. Een droge witte nevenwijn kan juist onder een andere appellation vallen en hoort niet noodzakelijk in dezelfde hiërarchie.
 :::
 
-:::detail{#grand-vin-de-bordeaux parent="etiket-en-kwaliteit" depth="advanced" source_refs="source.boagri-bordeaux-specification-2025 source.dgccrf-wine-labels-2025"}
+:::detail{#grand-vin-de-bordeaux parent="etiket-en-kwaliteit" depth="advanced" source_refs="source.inao-pauillac-specification-2026 source.boagri-bordeaux-specification-2026 source.dgccrf-wine-labels-2025"}
 ### “Grand Vin de Bordeaux” kan iets anders doen dan “de grand vin”
 
-De productspecificatie van de brede AOC Bordeaux staat toe dat bepaalde appellationwijnen op het etiket de grotere geografische eenheid “Vin de Bordeaux” of “Grand Vin de Bordeaux” vermelden. Daar functioneert de volledige formulering als geografische presentatie, niet als bewijs dat de fles de hoofdwijn van het domein is. [@source.boagri-bordeaux-specification-2025]
+Verscheidene Bordeaux-appellations staan op het etiket een grotere geografische eenheid toe. In het actuele dossier van Pauillac luidt die bijvoorbeeld “Vin de Bordeaux — Médoc” of “Grand Vin de Bordeaux — Médoc”. De volledige formulering presenteert daar de ruimere herkomst; zij bewijst niet dat de fles de hoofdwijn van het domein is. [@source.inao-pauillac-specification-2026]
+
+De brede AOP Bordeaux gebruikt in haar eigen actuele dossier alleen “Vin de Bordeaux” voor deze grotere geografische eenheid. Welke formulering is toegestaan, volgt dus uit de specifieke appellation op de fles. [@source.boagri-bordeaux-specification-2026]
 
 Dat kleine verschil maakt precies lezen belangrijk. Kijk of de woorden deel zijn van een langere herkomstvermelding, een châteaupresentatie of een formele classificatieterm. De typografie mag indruk maken; de volledige context geeft betekenis.
 :::

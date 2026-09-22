@@ -12,7 +12,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 
 | Naam | Type | Publicatievorm | ID | Publiek | Canonieke bestemming | Laatst beoordeeld |
 | --- | --- | --- | --- | --- | --- | --- |
-| [AOP Bordeaux](../content/entities/appellations/bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux` | Ja | `/appellations/bordeaux-aop` | 2026-09-11 |
+| [AOP Bordeaux](../content/entities/appellations/bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.bordeaux` | Ja | `/appellations/bordeaux-aop` | 2026-09-22 |
 | [AOP Entre-deux-Mers](../content/entities/appellations/entre-deux-mers/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.entre-deux-mers` | Ja | `/appellations/entre-deux-mers-aop` | 2026-09-11 |
 | [AOP Médoc](../content/entities/appellations/medoc/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.medoc` | Ja | `/appellations/medoc-aop` | 2026-09-09 |
 | [Barsac](../content/entities/appellations/barsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.barsac` | Ja | `/appellations/barsac` | 2026-09-14 |
@@ -77,7 +77,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | Zelfstandige pagina | `concept.en-primeur` | Ja | `/concepts/en-primeur` | 2026-09-14 |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | Zelfstandige pagina | `concept.extraction` | Ja | `/concepts/extraction` | 2026-09-16 |
 | [Franc de pied](../content/entities/concepts/franc-de-pied/entity.yaml) | Concept | Zelfstandige pagina | `concept.franc-de-pied` | Ja | `/concepts/franc-de-pied` | 2026-09-22 |
-| [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-08 |
+| [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-22 |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Ja | `/concepts/vintage` | 2026-09-20 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-07 |
 | [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Ja | `/concepts/late-harvest` | 2026-09-14 |
@@ -270,7 +270,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Petrus](../content/entities/producers/petrus/entity.yaml) | Producent | Monografie | `producer.petrus` | Ja | `/producers/petrus` | 2026-09-09 |
 | [Vieux Château Certan](../content/entities/producers/vieux-chateau-certan/entity.yaml) | Producent | Collectieprofiel | `producer.vieux-chateau-certan` | Ja | `/appellations/pomerol#producent-vieux-chateau-certan` | 2026-09-09 |
 | [Blayais en Bourgeais](../content/entities/regions/blayais-bourgeais/entity.yaml) | Regio | Zelfstandige pagina | `region.blayais-bourgeais` | Ja | `/regions/blayais-and-bourgeais` | 2026-09-12 |
-| [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | Zelfstandige pagina | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-08 |
+| [Bordeaux](../content/entities/regions/bordeaux/entity.yaml) | Regio | Zelfstandige pagina | `region.bordeaux` | Ja | `/regions/bordeaux` | 2026-09-22 |
 | [Entre-deux-Mers](../content/entities/regions/entre-deux-mers/entity.yaml) | Regio | Zelfstandige pagina | `region.entre-deux-mers` | Ja | `/regions/entre-deux-mers` | 2026-09-11 |
 | [Fronsadais](../content/entities/regions/fronsadais/entity.yaml) | Regio | Zelfstandige pagina | `region.fronsadais` | Ja | `/regions/fronsadais` | 2026-09-13 |
 | [Graves en Sauternais](../content/entities/regions/graves-sauternais/entity.yaml) | Regio | Zelfstandige pagina | `region.graves-sauternais` | Ja | `/regions/graves-and-sauternais` | 2026-09-11 |

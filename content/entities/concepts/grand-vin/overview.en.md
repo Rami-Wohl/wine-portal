@@ -47,7 +47,7 @@ A celebrated parcel does not automatically earn a place in the grand vin. Frost,
 It is therefore risky to draw an estate range as a fixed disposal ladder. The names remain recognisable, but the route from grape to bottle is a fresh editorial and technical decision by the estate each year.
 :::
 
-:::section{#etiket-en-kwaliteit depth="foundation" source_refs="source.dgccrf-wine-labels-2025 source.boagri-bordeaux-specification-2025"}
+:::section{#etiket-en-kwaliteit depth="foundation" source_refs="source.dgccrf-wine-labels-2025 source.inao-pauillac-specification-2026 source.boagri-bordeaux-specification-2026"}
 ## Labels and quality — read beyond the largest words
 
 Start with the producer, exact appellation, vintage and bottler. These details tell you which wine you are holding and which origin rules govern it. *Grand vin* may identify the principal wine within a range, but does not guarantee flavour, ageing potential or value for money. [@source.dgccrf-wine-labels-2025]
@@ -55,10 +55,12 @@ Start with the producer, exact appellation, vintage and bottler. These details t
 Compare the complete wine name when buying. A second wine and grand vin from one château may carry the same appellation while coming from different selections. A dry white companion wine may instead fall under another appellation and need not belong to the same hierarchy.
 :::
 
-:::detail{#grand-vin-de-bordeaux parent="etiket-en-kwaliteit" depth="advanced" source_refs="source.boagri-bordeaux-specification-2025 source.dgccrf-wine-labels-2025"}
+:::detail{#grand-vin-de-bordeaux parent="etiket-en-kwaliteit" depth="advanced" source_refs="source.inao-pauillac-specification-2026 source.boagri-bordeaux-specification-2026 source.dgccrf-wine-labels-2025"}
 ### “Grand Vin de Bordeaux” can do a different job from “the grand vin”
 
-The specification of the broad Bordeaux AOC permits certain appellation wines to display the larger geographical unit “Vin de Bordeaux” or “Grand Vin de Bordeaux”. In that complete expression, the words function as geographical presentation, not as proof that the bottle is the estate's principal wine. [@source.boagri-bordeaux-specification-2025]
+Several Bordeaux appellations permit a larger geographical unit on the label. In Pauillac’s current specification, for example, it reads “Vin de Bordeaux — Médoc” or “Grand Vin de Bordeaux — Médoc”. The complete expression presents the wider origin; it does not prove that the bottle is the estate’s principal wine. [@source.inao-pauillac-specification-2026]
+
+The broad Bordeaux AOP uses only “Vin de Bordeaux” for this larger geographical unit in its own current specification. The permitted wording therefore follows the specific appellation named on the bottle. [@source.boagri-bordeaux-specification-2026]
 
 That small distinction makes close reading important. Check whether the words belong to a broader origin statement, a château's presentation or a formal classification term. Typography may create an impression; the complete context supplies the meaning.
 :::

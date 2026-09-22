@@ -166,14 +166,14 @@ de zin zelf begrijpelijk zijn.
 - De twee CIVB-pagina's zijn bruikbaar voor wat de Bordeauxbranche zelf zegt over
   druiven en assemblage. Als trade-body-bronnen bewijzen zij geen reputatie,
   historische prioriteit of universele smaakoorzaak.
-- `source.boagri-bordeaux-specification-2025` is de actuele officiële
+- `source.boagri-bordeaux-specification-2026` is sinds 20 mei 2026 de actuele officiële
   productspecificatie voor AOP Bordeaux. Hij ondersteunt juridische claims over
   die ene appellation, niet automatisch over alle appellations van de regio.
 - `source.oiv-blending-code` geeft een wijnbrede technische definitie van
   assemblage. De definitie ondersteunt niet de promotionele claim dat assemblage
   uniek voor Bordeaux zou zijn.
 - `source.inao-aop-overview` ondersteunt de algemene betekenis van AOP/AOC en
-  `source.boagri-bordeaux-specification-2025` laat zien hoe die bescherming voor
+  `source.boagri-bordeaux-specification-2026` laat zien hoe die bescherming voor
   de specifieke AOP Bordeaux in een concreet productdossier wordt uitgewerkt.
 - `source.dgccrf-wine-labels-2025` ondersteunt wat een Frans wijnetiket verplicht
   en facultatief kan tonen. Het is geen bron voor smaak- of kwaliteitsclaims.
@@ -397,7 +397,7 @@ Kennisdiepte:
 Ondersteunende source IDs:
 
 - `source.civb-bordeaux-grape-varieties` voor de regionale hoofdgroep;
-- `source.boagri-bordeaux-specification-2025` voor de juridische correctie dat
+- `source.boagri-bordeaux-specification-2026` voor de juridische correctie dat
   AOP Bordeaux een ruimere en voorwaardelijke rassenlijst kent.
 
 Dit cluster is inhoudelijk besloten. Voor publicatie hoeft niet iedere genoemde
@@ -452,7 +452,7 @@ Ondersteunende source IDs:
 - `source.oiv-blending-code` voor de algemene technische definitie;
 - `source.civb-bordeaux-blending` voor de wijze waarop de Bordeauxbranche haar
   eigen praktijk beschrijft, met uitsluiting van de promotionele claims;
-- `source.boagri-bordeaux-specification-2025` voor productspecifieke juridische
+- `source.boagri-bordeaux-specification-2026` voor productspecifieke juridische
   regels binnen AOP Bordeaux.
 
 Dit cluster is inhoudelijk besloten. Het schrijven van de Bordeaux-sectie blijft
@@ -511,7 +511,7 @@ Kennisdiepte:
 Ondersteunende source IDs:
 
 - `source.inao-aop-overview`;
-- `source.boagri-bordeaux-specification-2025`;
+- `source.boagri-bordeaux-specification-2026`;
 - `source.dgccrf-wine-labels-2025`;
 - `source.gcc1855-classification-overview`.
 
@@ -569,7 +569,7 @@ Ondersteunende source IDs:
 - `source.civb-bordeaux-designations` voor de zes door de branche gebruikte
   redactionele groepen;
 - `source.gironde-estuary-landscape-atlas` voor de fysieke wateroriëntatie;
-- `source.boagri-bordeaux-specification-2025` als concrete juridische controle
+- `source.boagri-bordeaux-specification-2026` als concrete juridische controle
   dat een appellation zijn eigen afgebakende scope heeft.
 
 Dit cluster is inhoudelijk besloten. Het oriëntatiemodel mag in tekst worden

@@ -25,14 +25,14 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 11 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030`, `MNT-031` |
+| Open | 10 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-025`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 3 | `MNT-002`, `MNT-013`, `MNT-014` |
-| Afgerond | 24 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-032` t/m `MNT-038` |
+| Afgerond | 25 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-024`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben vier acties prioriteit `hoog` en zeven
+Van het uitvoerbare open werk hebben drie acties prioriteit `hoog` en zeven
 prioriteit `middel`. De drie
 geblokkeerde acties zijn afhankelijk van een betrouwbare Atlas- en
 geographydatalaag.
@@ -239,18 +239,18 @@ geographydatalaag.
 - **Log:** 2026-09-13 — geregistreerd vanuit de relationele corpusreview; bewust
   losgehouden van structurele graafdekking.
 
+## Historie
+
 ### `MNT-031` — Bordeaux-specificatie 2026 claimgewijs doorvoeren
 
-- **Status:** open
+- **Status:** afgerond
 - **Prioriteit:** hoog
 - **Categorie:** content, knowledge-data
 - **Scope:** `region.bordeaux`, `appellation.bordeaux`, `concept.grand-vin`, bijbehorende contentplannen en briefs, en het Bordeaux-stijlspectrum-mediarecord
-- **Herkomst:** `QCR-2026-09-20-01`
-- **Bevinding:** deze bestaande content verwijst voor actuele regels nog naar de 2025-specificatie, terwijl een nieuwe Bordeaux-specificatie op 21 mei 2026 is gepubliceerd.
+- **Herkomst:** `QCR-2026-09-20-01`; afgerond in `QCR-2026-09-22-03`
+- **Bevinding:** deze bestaande content verwees voor actuele regels nog naar de 2025-specificatie, terwijl een nieuwe Bordeaux-specificatie op 21 mei 2026 is gepubliceerd.
 - **Klaar wanneer:** iedere betrokken juridische en productclaim tegen de definitieve 2026-tekst is gecontroleerd, nodige NL/EN-correcties zijn uitgevoerd, actuele referenties zijn omgezet, historische provenance intact blijft en alle contentchecks slagen.
-- **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview.
-
-## Historie
+- **Log:** 2026-09-20 — definitieve 2026-bron geregistreerd bij het Clairet/Claret-cluster; oudere referenties niet mechanisch vervangen zonder claimreview. 2026-09-22 — alle betrokken claims en bronverwijzingen gecontroleerd; claretverzoeting toegevoegd; scopeclaim voor `Grand Vin de Bordeaux` gecorrigeerd; 2025-bron als deprecated behouden; zie `QCR-2026-09-22-03`.
 
 ### `MNT-038` — Phylloxera en franc-de-pied inhoudelijk herbouwen
 

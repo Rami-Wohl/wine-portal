@@ -87,20 +87,20 @@ The familiar rule says gravel on the Left Bank, clay and limestone on the Right.
 More important than one ingredient's name is how the soil functions as a whole. Does it retain water or drain quickly? Does it warm early, how deeply can roots grow, and how does it respond in a wet or dry year? Gravel can aid drainage, clay can retain water and limestone affects structure and rooting, but no soil translates directly into one aroma or quality level.
 :::
 
-:::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2025"}
+:::section{#wijnfamilies depth="foundation" source_refs="source.civb-bordeaux-wine-styles source.boagri-bordeaux-specification-2026"}
 ## Wine styles — Bordeaux comes in more than one colour
 
-Red wine accounts for much of the production and international image, but the region makes far more. Dry white can be brisk and immediate or broad and barrel-matured. In the best-known sweet whites, [[concept.botrytis|noble rot]] concentrates the grapes before selective picking yields a little sugar-rich juice. Bordeaux also produces rosé, the historically deeper-coloured [[concept.clairet|clairet]], and sparkling [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles] [@source.boagri-bordeaux-specification-2025]
+Red wine accounts for much of the production and international image, but the region makes far more. Dry white can be brisk and immediate or broad and barrel-matured. In the best-known sweet whites, [[concept.botrytis|noble rot]] concentrates the grapes before selective picking yields a little sugar-rich juice. Bordeaux also produces rosé, the historically deeper-coloured [[concept.clairet|clairet]], and sparkling [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.civb-bordeaux-wine-styles] [@source.boagri-bordeaux-specification-2026]
 
 Even “red Bordeaux” is not one style. A supple, fruit-led regional bottle made for early drinking and a concentrated wine from a small appellation may share the regional name while differing in grapes, yield, selection, cellar work, price and purpose. Wine family is the first branch, not the final answer.
 :::
 
-:::detail{#wijnfamilies-productie parent="wijnfamilies" depth="intermediate" source_refs="source.boagri-bordeaux-specification-2025 source.civb-bordeaux-wine-styles"}
+:::detail{#wijnfamilies-productie parent="wijnfamilies" depth="intermediate" source_refs="source.boagri-bordeaux-specification-2026 source.civb-bordeaux-wine-styles"}
 ### Each family requires different choices
 
 Red wine must normally undergo [[concept.fermentation|alcoholic fermentation]] with grape skins. As yeast turns sugar into alcohol, colour and [[concept.tannin|tannin]], the drying compounds found in skins and seeds, can be extracted. For white wine, juice is generally separated from skins earlier; pressing and temperature choices focus differently on freshness, texture and aroma. Rosé and clairet receive shorter skin contact than red. Crémant gains its bubbles through a second fermentation in bottle.
 
-Sweet Bordeaux is not merely dry white with residual sugar. Ripe grapes, often concentrated by noble rot, are gathered in several selective passes and yield little, sugar-rich juice. Each appellation's specification determines what may be made under its name. The broad Bordeaux AOP has its own permitted colours and conditions, which do not automatically apply to every other Bordeaux appellation. [@source.boagri-bordeaux-specification-2025]
+Sweet Bordeaux is not merely dry white with residual sugar. Ripe grapes, often concentrated by noble rot, are gathered in several selective passes and yield little, sugar-rich juice. Each appellation's specification determines what may be made under its name. The broad Bordeaux AOP has its own permitted colours and conditions, which do not automatically apply to every other Bordeaux appellation. [@source.boagri-bordeaux-specification-2026]
 :::
 
 :::section{#druiven-en-rollen depth="foundation" source_refs="source.civb-bordeaux-grape-varieties"}
@@ -111,15 +111,15 @@ For red wine, [[grape.merlot|Merlot]], [[grape.cabernet-sauvignon|Cabernet Sauvi
 The best-known white trio is [[grape.sauvignon-blanc|Sauvignon Blanc]], [[grape.semillon|Sémillon]] and [[grape.muscadelle|Muscadelle]]. Sauvignon can provide tension and vivid aroma; Sémillon often brings texture and matters in dry as well as sweet wine; Muscadelle can add a floral note. Their effect changes with site, ripeness, winemaking and proportion.
 :::
 
-:::detail{#druiven-keuzes-en-minderheden parent="druiven-en-rollen" depth="intermediate" source_refs="source.civb-bordeaux-grape-varieties source.boagri-bordeaux-specification-2025"}
+:::detail{#druiven-keuzes-en-minderheden parent="druiven-en-rollen" depth="intermediate" source_refs="source.civb-bordeaux-grape-varieties source.boagri-bordeaux-specification-2026"}
 ### Minority grapes and a changing climate
 
 [[grape.petit-verdot|Petit Verdot]], [[grape.malbec|Malbec]] and [[grape.carmenere|Carménère]] also belong to red Bordeaux. Their planted area or share of a blend is usually smaller, but a modest proportion can still be perceptible. Permitted varieties differ between appellations, and legal permission does not imply extensive planting.
 
-Under limited conditions, the broad Bordeaux AOP also permits a small group of adaptation varieties. [@source.boagri-bordeaux-specification-2025] That does not make them the new standard. They are one controlled response to warmer, drier conditions, alongside later pruning, canopy management, suitable rootstocks and shifts in harvest timing.
+Under limited conditions, the broad Bordeaux AOP also permits a small group of adaptation varieties. [@source.boagri-bordeaux-specification-2026] That does not make them the new standard. They are one controlled response to warmer, drier conditions, alongside later pruning, canopy management, suitable rootstocks and shifts in harvest timing.
 :::
 
-:::section{#van-wijngaard-tot-kelder depth="foundation" source_refs="source.civb-bordeaux-blending source.boagri-bordeaux-specification-2025"}
+:::section{#van-wijngaard-tot-kelder depth="foundation" source_refs="source.civb-bordeaux-blending source.boagri-bordeaux-specification-2026"}
 ## Viticulture and winemaking — the maker writes part of the story
 
 An appellation sets outer limits, but many choices remain within them. In the vineyard these include variety, rootstock, planting density, pruning, soil management, disease control, yield and harvest date. Selection, pressing, fermentation, [[concept.extraction|extraction]] — how much colour, tannin and flavour is drawn from solid grape material — composition and maturation follow in the cellar. Two neighbours can consequently make recognisably different wines.
@@ -127,7 +127,7 @@ An appellation sets outer limits, but many choices remain within them. In the vi
 There is no single “Bordeaux recipe”. Some wines aim for direct fruit and early drinkability; others receive long [[concept.maceration|maceration]], strict selection and are built to develop for years. Appellation, vintage, scale and ambition frame the possibilities, while the producer sets the emphasis.
 :::
 
-:::detail{#assemblage-en-elevage parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.oiv-blending-code source.civb-bordeaux-blending source.boagri-bordeaux-specification-2025"}
+:::detail{#assemblage-en-elevage parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.oiv-blending-code source.civb-bordeaux-blending source.boagri-bordeaux-specification-2026"}
 ### Blending and maturation
 
 Bringing separate lots together into a finished composition is called [[concept.assemblage|blending]]. The lots may differ by grape, parcel, picking date or vessel; a blend therefore does not have to contain more than one variety. The winemaker looks for coherence, balance and a style suited to the wine and year. [@source.oiv-blending-code] [@source.civb-bordeaux-blending]
@@ -135,7 +135,7 @@ Bringing separate lots together into a finished composition is called [[concept.
 Afterwards — and partly before — comes [[concept.elevage|maturation]], the period between fermentation and bottling in which the young wine is raised. It may take place in tank, barrel, amphora or a combination. New oak can affect aroma, tannin and oxygen exchange, but it is neither compulsory Bordeaux branding nor automatic proof of quality. Time, racking, clarification and vessel choice belong to the same process.
 :::
 
-:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2025"}
+:::detail{#zoete-wijn-en-botrytis parent="van-wijngaard-tot-kelder" depth="intermediate" source_refs="source.msha-bordeaux-wine-history source.boagri-bordeaux-specification-2026"}
 ### When rot becomes noble
 
 In Sauternes and its surroundings, morning mist followed by drier afternoons can favour [[concept.botrytis|botrytis, or noble rot]]. The fungus makes berry skins porous so water evaporates and sugar, acidity and flavour become concentrated. Only sound, beneficially affected grapes are wanted; destructive grey rot in persistently wet weather is different.
@@ -163,7 +163,7 @@ A more precise name is not an automatic promise that every bottle tastes better.
 These routes are a learning aid, not an official five-part hierarchy. [@source.civb-bordeaux-designations]
 :::
 
-:::detail{#appellations-en-regels parent="appellations-als-navigatie" depth="advanced" source_refs="source.inao-aop-overview source.boagri-bordeaux-specification-2025"}
+:::detail{#appellations-en-regels parent="appellations-als-navigatie" depth="advanced" source_refs="source.inao-aop-overview source.boagri-bordeaux-specification-2026"}
 ### The name comes with a specification
 
 Every AOP rests on a production specification. It describes the area, permitted grapes, growing and production rules, analytical limits and sometimes provisions for maturation or presentation. Rules have developed historically and can change. “Permitted in Bordeaux” is therefore usually incomplete: does it mean the region, the broad AOP or another appellation?
@@ -267,7 +267,7 @@ A producer can select, pick earlier or later, extract more or less firmly and ad
 Treat “Bordeaux” on a bottle as the beginning of an investigation, not a tasting note. Find the more precise origin, wine type, producer and — if shown — vintage. A famous regional name then becomes information you can use to choose, compare and continue learning.
 :::
 
-:::section{#bordeaux-vandaag depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2025"}
+:::section{#bordeaux-vandaag depth="foundation" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2026"}
 ## Contemporary developments — not a museum behind a label
 
 Bordeaux carries abundant history but does not stand still. Producers work at very different scales and with different approaches to farming. Some seek lighter extraction or earlier drinkability; others continue to build for long maturation and ageing. Dry white, sparkling wine, clairet and less familiar origins receive renewed attention alongside classic red.
@@ -275,10 +275,10 @@ Bordeaux carries abundant history but does not stand still. Producers work at ve
 The most urgent change comes from climate. Warmer conditions can accelerate ripening, raise alcohol, lower acidity and increase drought stress, while wet periods and fungal risk remain part of an oceanic climate. Adaptation is not one intervention but a set of choices involving plant material, soil, canopy, timing and regulation. [@source.inrae-bordeaux-climate-adaptation]
 :::
 
-:::detail{#klimaat-en-aanpassing parent="bordeaux-vandaag" depth="advanced" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2025"}
+:::detail{#klimaat-en-aanpassing parent="bordeaux-vandaag" depth="advanced" source_refs="source.inrae-bordeaux-climate-adaptation source.boagri-bordeaux-specification-2026"}
 ### Changing without emptying origin of meaning
 
-Research in Bordeaux examines phenology, drought response, grape choice, rootstocks and vineyard measures, among other subjects. [@source.inrae-bordeaux-climate-adaptation] The broad AOP specification has also admitted several adaptation varieties under limited conditions. [@source.boagri-bordeaux-specification-2025] Such steps can buy time and spread risk; their long-term effect on regional style and adoption is still developing.
+Research in Bordeaux examines phenology, drought response, grape choice, rootstocks and vineyard measures, among other subjects. [@source.inrae-bordeaux-climate-adaptation] The broad AOP specification has also admitted several adaptation varieties under limited conditions. [@source.boagri-bordeaux-specification-2026] Such steps can buy time and spread risk; their long-term effect on regional style and adoption is still developing.
 
 This creates a fundamental tension. An appellation preserves recognisable collective practice, yet must be able to change enough to keep producing credible wine under new conditions. Too little movement makes rules vulnerable; change that is too rapid can hollow out the origin's meaning. Bordeaux's future will not be decided by one “climate grape”, but by an ongoing balance between continuity and adaptation.
 :::
