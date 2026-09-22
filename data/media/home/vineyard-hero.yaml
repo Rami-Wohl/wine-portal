@@ -1,0 +1,19 @@
+id: media.home.vineyard-hero
+kind: illustration
+role: decorative
+status: active
+storage_key: home/vineyard-hero.png
+mime_type: image/png
+width: 2048
+height: 768
+checksum_sha256: e482da1bdce0cba51568f23953f787e231e2b29d4a997f7305d2db9424621fc2
+alt:
+  nl: ""
+  en: ""
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-22
+changes: First generated 2048 by 768 pixel version selected after review of gentle relief, quiet copy space, edge blending and responsive crop; used without crop or colour alteration.

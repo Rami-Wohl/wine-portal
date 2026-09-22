@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/page-intro";
+import { ResultPagination } from "@/components/result-pagination";
 import { SearchFocusManager } from "@/components/search-focus-manager";
 import {
   getEntityById,
@@ -164,7 +165,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             <p className="eyebrow">
               {allResults.length} {allResults.length === 1 ? "resultaat" : "resultaten"}
             </p>
-            <h2 id="results-title" tabIndex={-1}>
+            <h2 id="results-title" data-pagination-heading tabIndex={-1}>
               {hasQuery
                 ? `Voor “${q.trim()}”`
                 : selectedType !== "all"
@@ -172,6 +173,16 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                   : "Resultaten"}
             </h2>
           </div>
+          {pageCount > 1 ? (
+            <ResultPagination
+              currentPage={currentPage}
+              hrefForPage={(page) => pageHref(q.trim(), selectedType, page)}
+              label="Pagina's met zoekresultaten"
+              pageCount={pageCount}
+              position="top"
+              targetId="search-results"
+            />
+          ) : null}
           <div className="search-result-list">
             {results.length > 0 ? (
               results.map((result) => (
@@ -182,21 +193,14 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             )}
           </div>
           {pageCount > 1 ? (
-            <nav className="result-pagination" aria-label="Pagina's met zoekresultaten">
-              {currentPage > 1 ? (
-                <Link href={pageHref(q.trim(), selectedType, currentPage - 1)}>← Vorige</Link>
-              ) : (
-                <span />
-              )}
-              <span aria-current="page">
-                Pagina {currentPage} van {pageCount}
-              </span>
-              {currentPage < pageCount ? (
-                <Link href={pageHref(q.trim(), selectedType, currentPage + 1)}>Volgende →</Link>
-              ) : (
-                <span />
-              )}
-            </nav>
+            <ResultPagination
+              currentPage={currentPage}
+              hrefForPage={(page) => pageHref(q.trim(), selectedType, page)}
+              label="Pagina's met zoekresultaten"
+              pageCount={pageCount}
+              position="bottom"
+              targetId="search-results"
+            />
           ) : null}
         </section>
       ) : (

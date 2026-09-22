@@ -29,7 +29,7 @@ Peildatum: 2026-09-22.
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
-| Afgerond | 33 | `MNT-001`, `MNT-003` t/m `MNT-010`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` |
+| Afgerond | 35 | `MNT-001`, `MNT-003` t/m `MNT-010`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` t/m `MNT-042` |
 | Vervallen | 0 | — |
 
 Het uitvoerbare open werk bestaat uit drie acties met prioriteit `middel`.
@@ -160,6 +160,44 @@ regelgevingsbesluit.
   losgehouden van structurele graafdekking.
 
 ## Historie
+
+### `MNT-042` — Paginatie dichter bij de resultaten bedienen
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** product-ux, accessibility, navigation, testing
+- **Scope:** gepagineerde zoekresultaten en Ontdekken-verzamelingen
+- **Herkomst:** gebruikersevaluatie 2026-09-22
+- **Bevinding:** de bediening stond alleen onder lange lijsten en een volgende of
+  vorige pagina bracht de gebruiker niet betrouwbaar terug naar de lijstkop.
+- **Klaar wanneer:** dezelfde toegankelijke bediening boven en onder iedere
+  gepagineerde lijst staat, directe paginalinks lange reeksen compact houden,
+  grensknoppen hun uitgeschakelde staat tonen en navigatie naar de bovenkant van
+  de betreffende resultatenlijst scrolt zonder de volledige pagina te resetten.
+- **Log:** 2026-09-22 — geregistreerd en afgerond met één gedeeld
+  paginatiecomponent voor Search en Explore. Beide posities tonen vorige,
+  volgende, huidige status en compacte directe paginalinks; links gebruiken een
+  stabiele lijst-anchor en respecteren de bestaande scroll-offset. Unit- en
+  Playwrighttests dekken paginabereik, states, beide posities, doelscroll en
+  responsive overflow.
+
+### `MNT-041` — Rustige wijngaardillustratie achter de homepagehero
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** product-ux, media, visual-design
+- **Scope:** homepagehero
+- **Herkomst:** gebruikersevaluatie 2026-09-22
+- **Bevinding:** de heldere hero miste een rustige visuele introductie tot het
+  onderwerp wijn en landschap.
+- **Klaar wanneer:** een taalneutrale illustratie met geloofwaardig licht reliëf
+  achter de bestaande tekst staat, aan beide zijden exact in de canvas-kleur
+  overvloeit, tekstcontrast behoudt en op smalle en brede viewports goed uitsnijdt.
+- **Log:** 2026-09-22 — geregistreerd en afgerond met een decoratieve,
+  taalneutrale watercolor-en-gouacheplaat van zacht golvende wijngaarden. Het
+  asset is in het mediasysteem geregistreerd; gelaagde CSS-overlays garanderen
+  de overgang naar `#f4f1eb` en beschermen tekstcontrast. Desktop en mobiel zijn
+  met echte responsive uitsnedes en beeldlading afgedekt.
 
 ### `MNT-010` — Procesvisual voor klonale selectie
 

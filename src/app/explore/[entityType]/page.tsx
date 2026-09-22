@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/page-intro";
+import { ResultPagination } from "@/components/result-pagination";
 import {
   DISCOVERY_CATEGORIES,
   DISCOVERY_FILTER_THRESHOLD,
@@ -182,13 +183,17 @@ export default async function DiscoveryBrowsePage({
         </section>
       ) : null}
 
-      <section className="discovery-results" aria-labelledby="browse-results-title">
+      <section
+        id="browse-results"
+        className="discovery-results"
+        aria-labelledby="browse-results-title"
+      >
         <div className="discovery-results-heading">
           <div>
             <p className="eyebrow">
               {filteredEntries.length} {filteredEntries.length === 1 ? "onderwerp" : "onderwerpen"}
             </p>
-            <h2 id="browse-results-title">
+            <h2 id="browse-results-title" data-pagination-heading tabIndex={-1}>
               {hasActiveFilters
                 ? "Gevonden onderwerpen"
                 : `Alle ${category.title.toLocaleLowerCase("nl")}`}
@@ -200,6 +205,22 @@ export default async function DiscoveryBrowsePage({
             </Link>
           ) : null}
         </div>
+
+        {pageCount > 1 ? (
+          <ResultPagination
+            currentPage={currentPage}
+            hrefForPage={(page) =>
+              browseHref(category.route_segment, {
+                ...filters,
+                page,
+              })
+            }
+            label={`Pagina's met ${category.title.toLocaleLowerCase("nl")}`}
+            pageCount={pageCount}
+            position="top"
+            targetId="browse-results"
+          />
+        ) : null}
 
         {visibleEntries.length > 0 ? (
           <div className="discovery-entity-grid">
@@ -218,38 +239,19 @@ export default async function DiscoveryBrowsePage({
         )}
 
         {pageCount > 1 ? (
-          <nav
-            className="result-pagination"
-            aria-label={`Pagina's met ${category.title.toLocaleLowerCase("nl")}`}
-          >
-            {currentPage > 1 ? (
-              <Link
-                href={browseHref(category.route_segment, {
-                  ...filters,
-                  page: currentPage - 1,
-                })}
-              >
-                ← Vorige
-              </Link>
-            ) : (
-              <span />
-            )}
-            <span aria-current="page">
-              Pagina {currentPage} van {pageCount}
-            </span>
-            {currentPage < pageCount ? (
-              <Link
-                href={browseHref(category.route_segment, {
-                  ...filters,
-                  page: currentPage + 1,
-                })}
-              >
-                Volgende →
-              </Link>
-            ) : (
-              <span />
-            )}
-          </nav>
+          <ResultPagination
+            currentPage={currentPage}
+            hrefForPage={(page) =>
+              browseHref(category.route_segment, {
+                ...filters,
+                page,
+              })
+            }
+            label={`Pagina's met ${category.title.toLocaleLowerCase("nl")}`}
+            pageCount={pageCount}
+            position="bottom"
+            targetId="browse-results"
+          />
         ) : null}
       </section>
     </main>

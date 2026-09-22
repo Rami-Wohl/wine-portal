@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BRAND } from "@/config/brand";
+import { mediaUrl } from "@/content/media";
+import { getMediaByIds } from "@/content/repository";
 
 export const metadata: Metadata = {
   description:
@@ -33,9 +36,21 @@ const modes = [
 ];
 
 export default function Home() {
+  const [heroImage] = getMediaByIds(["media.home.vineyard-hero"]);
+
   return (
     <main id="main-content" className="page-shell">
       <section className="home-hero">
+        {heroImage ? (
+          <Image
+            alt={heroImage.alt.nl}
+            className="home-hero-image"
+            fill
+            preload
+            sizes="(max-width: 620px) calc(100vw - 32px), 1220px"
+            src={mediaUrl(heroImage)}
+          />
+        ) : null}
         <p className="eyebrow">Verbonden wijnkennis</p>
         <h1>{BRAND.name}</h1>
         <p className="home-tagline">{BRAND.tagline.nl}</p>
