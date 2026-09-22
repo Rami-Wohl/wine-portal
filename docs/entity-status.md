@@ -60,8 +60,8 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Appassimento](../content/entities/concepts/appassimento/entity.yaml) | Concept | Zelfstandige pagina | `concept.appassimento` | Ja | `/concepts/appassimento` | 2026-09-14 |
 | [Appellation d’origine protégée (AOP)](../content/entities/concepts/aop/entity.yaml) | Concept | Zelfstandige pagina | `concept.aop` | Ja | `/concepts/protected-designation-of-origin` | 2026-09-14 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | Zelfstandige pagina | `concept.assemblage` | Ja | `/concepts/blending` | 2026-09-08 |
-| [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | Zelfstandige pagina | `concept.autolysis` | Ja | `/concepts/autolysis` | 2026-09-07 |
-| [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | Zelfstandige pagina | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-07 |
+| [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | Zelfstandige pagina | `concept.autolysis` | Ja | `/concepts/autolysis` | 2026-09-22 |
+| [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | Zelfstandige pagina | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-22 |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | Zelfstandige pagina | `concept.botrytis` | Ja | `/concepts/botrytis-noble-rot` | 2026-09-13 |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.estate-bottling` | Ja | `/concepts/estate-bottling` | 2026-09-08 |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Ja | `/concepts/chateau-wine-term` | 2026-09-14 |
@@ -90,7 +90,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Passerillage](../content/entities/concepts/passerillage/entity.yaml) | Concept | Zelfstandige pagina | `concept.passerillage` | Ja | `/concepts/passerillage` | 2026-09-14 |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Ja | `/concepts/place-de-bordeaux` | 2026-09-14 |
 | [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Ja | `/concepts/riddling` | 2026-09-20 |
-| [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/lees-ageing` | 2026-09-07 |
+| [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/lees-ageing` | 2026-09-22 |
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.maceration` | Ja | `/concepts/maceration` | 2026-09-16 |
 | [Tannine](../content/entities/concepts/tannin/entity.yaml) | Concept | Zelfstandige pagina | `concept.tannin` | Ja | `/concepts/tannin` | 2026-09-16 |
 | [Terroir](../content/entities/concepts/terroir/entity.yaml) | Concept | Zelfstandige pagina | `concept.terroir` | Ja | `/concepts/terroir` | 2026-09-20 |

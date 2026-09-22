@@ -1,0 +1,22 @@
+id: media.concept.lees-autolysis-batonnage.process-comparison
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/lees-autolysis-batonnage/process-comparison.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 96a95c5cd65e7ff4471e3bb4501de90dbaee1fb9349a09669310e6858da603ce
+alt:
+  nl: Drieluik met wijn boven fijne lies, sterk vergrote gistcellen in verschillende afbraakstadia en een tank waarin lies wordt opgeroerd
+  en: Three-part illustration showing wine above fine lees, highly magnified yeast cells at different stages of breakdown, and a tank in which lees are being stirred
+caption:
+  nl: De drie vensters vergelijken verbonden processen. Links rust wijn op een dunne laag fijne lies; midden is geleidelijke gistafbraak sterk vergroot; rechts wordt bezinksel tijdelijk door de wijn verdeeld. Vatdoorsneden en stroming zijn conceptueel weergegeven, terwijl het microscopische middenbeeld een veel grotere schaal gebruikt.
+  en: The three views compare related processes. On the left, wine rests on a thin layer of fine lees; the centre greatly magnifies gradual yeast breakdown; on the right, sediment is temporarily dispersed through the wine. The vessel sections and movement are conceptual, while the microscopic centre view uses a much larger scale.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-22
+changes: Third generated 1536 by 1024 pixel revision selected after reducing sediment volume and stirring intensity and replacing explosive cell rupture with gradual degradation; used without crop or colour alteration.

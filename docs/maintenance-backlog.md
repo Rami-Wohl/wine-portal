@@ -25,15 +25,15 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 8 | `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-030` |
+| Open | 7 | `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
-| Afgerond | 27 | `MNT-001`, `MNT-003`, `MNT-004`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038` |
+| Afgerond | 29 | `MNT-001`, `MNT-003` t/m `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk heeft één actie prioriteit `hoog` en hebben zeven
-prioriteit `middel`. Drie geblokkeerde acties zijn afhankelijk van een
+Het uitvoerbare open werk bestaat uit zeven acties met prioriteit `middel`.
+Drie geblokkeerde acties zijn afhankelijk van een
 betrouwbare Atlas- en geographydatalaag; één wacht op een definitief extern
 regelgevingsbesluit.
 
@@ -55,20 +55,6 @@ regelgevingsbesluit.
   beschikbaar.
 - **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
   generatief verzonnen grenzen.
-
-### `MNT-005` — Gedeelde visual voor lies, autolyse en bâtonnage
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Categorie:** media, content
-- **Scope:** `concept.lees-ageing`, `concept.autolysis`, `concept.batonnage`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** drie verbonden processen zijn correct beschreven maar missen
-  een visueel model van bezinken, contact, afbraak en oproeren.
-- **Klaar wanneer:** één samenhangend, herbruikbaar beeldsysteem de verschillen
-  en samenhang correct uitlegt en op de relevante pagina's met passende
-  gelokaliseerde context wordt ingezet.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-007` — Tweede appellationbeeld voor Pauillac
 
@@ -228,6 +214,48 @@ regelgevingsbesluit.
   losgehouden van structurele graafdekking.
 
 ## Historie
+
+### `MNT-040` — Defensieve beeldbijschriften terugbrengen
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** content, media, procedure
+- **Scope:** alle actieve mediarecords en de captionconventie
+- **Herkomst:** redactionele bevinding tijdens de onderhoudsronde van 2026-09-22
+- **Bevinding:** veel bijschriften eindigden routinematig met wat één beeld niet
+  toont, bewijst of voorspelt. Vooral vanzelfsprekende opmerkingen over smaak,
+  kwaliteit, meetwaarden en representativiteit onderbraken de leesstroom.
+- **Klaar wanneer:** alle actieve captions in Nederlands en Engels zijn
+  beoordeeld; generieke disclaimers zijn verwijderd of positief geformuleerd;
+  alleen beperkingen met een concrete kans op misleiding blijven staan; en de
+  captionconventie voorkomt terugkeer van het patroon.
+- **Log:** 2026-09-22 — geregistreerd en direct afgerond. Alle 132 actieve
+  mediarecords zijn geaudit en 72 captionrecords zijn in beide talen compacter
+  en positiever geformuleerd. Noodzakelijke begrenzingen voor conceptuele
+  schaal, samengestelde geografie, historische status en wetenschappelijke
+  variatie zijn behouden. `docs/visual-language.md` verlangt voortaan alleen
+  een beperking bij een concrete, plausibele mislezing en noemt smaak- en
+  kwaliteitsdisclaimers expliciet als ongewenste routine.
+
+### `MNT-005` — Gedeelde visual voor lies, autolyse en bâtonnage
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** media, content
+- **Scope:** `concept.lees-ageing`, `concept.autolysis`, `concept.batonnage`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** drie verbonden processen waren correct beschreven maar misten
+  een visueel model van bezinken, contact, afbraak en oproeren.
+- **Klaar wanneer:** één samenhangend, herbruikbaar beeldsysteem de verschillen
+  en samenhang correct uitlegt en op de relevante pagina's met passende
+  gelokaliseerde context wordt ingezet.
+- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
+  2026-09-22 — afgerond met één taalneutraal drieluik dat rustige lies, langzaam
+  afbrekende gistcellen en tijdelijk opgeroerde lies gelijkwaardig vergelijkt.
+  Twee inhoudelijke iteraties verminderden de bezinkselmassa en roerintensiteit
+  en vervingen explosieve celbreuk door geleidelijke degradatie. Dezelfde
+  foundation-figure staat met gelokaliseerde context op alle drie pagina's;
+  caption en alttekst maken de conceptuele schaal en samenhang leesbaar.
 
 ### `MNT-004` — Educatieve ampelografievisual
 

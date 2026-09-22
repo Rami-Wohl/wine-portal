@@ -14,6 +14,9 @@ Na de [[concept.fermentation|vergisting]] sterft een groot deel van de gistpopul
 Autolyse voltrekt zich over tijd en wordt beïnvloed door onder meer temperatuur, pH, giststam en de duur van het liescontact. Tegelijk kunnen nog levende gist, bacteriën, zuurstof en andere deeltjes actief zijn. In een vat gebeurt dus meer dan autolyse alleen. [@source.awri-lees-contact-2020]
 :::
 
+:::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
+:::
+
 :::section{#betekenis-voor-wijn depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Betekenis voor wijn — vrijkomende stoffen kunnen meedoen
 

@@ -18,6 +18,9 @@ Hoe vaak en hoe krachtig wordt geroerd, hoeveel lies aanwezig is en of het vat d
 De wijnmaker beoordeelt de wijn tussendoor en kan het roeren verminderen of stoppen. Bâtonnage is geen proces dat na de eerste beslissing vanzelf moet worden afgemaakt.
 :::
 
+:::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
+:::
+
 :::section{#effect-op-de-wijn depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Effect op de wijn — contact kan textuur en geur verschuiven
 

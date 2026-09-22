@@ -34,6 +34,9 @@ Mannoproteins are large molecules from yeast cell walls. Alongside polysaccharid
 That mechanism does not justify a simple formula in which more lees means more body. Release is slow and depends on yeast, time, temperature, movement and wine composition. [[concept.malolactic-fermentation|Malolactic fermentation]], wood and oxygen may also alter texture at the same time.
 :::
 
+:::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
+:::
+
 :::section{#batonnage-en-risico depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Bâtonnage and risk — stirring changes contact and oxygen
 

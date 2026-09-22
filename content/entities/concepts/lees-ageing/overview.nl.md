@@ -34,6 +34,9 @@ Mannoproteïnen zijn grote moleculen uit de wand van gistcellen. Samen met polys
 Dat mechanisme rechtvaardigt geen eenvoudige formule “meer lies is meer body”. Afgifte verloopt langzaam en hangt af van gist, tijd, temperatuur, beweging en wijnsamenstelling. Bovendien kunnen [[concept.malolactic-fermentation|malolactische omzetting]], hout en zuurstof tegelijk de textuur veranderen.
 :::
 
+:::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
+:::
+
 :::section{#batonnage-en-risico depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Bâtonnage en risico — roeren verandert contact én zuurstof
 

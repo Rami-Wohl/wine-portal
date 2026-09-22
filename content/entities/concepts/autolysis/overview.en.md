@@ -14,6 +14,9 @@ After [[concept.fermentation|fermentation]], much of the yeast population dies a
 Autolysis unfolds over time and is influenced by factors including temperature, pH, yeast strain and the duration of lees contact. Living yeast, bacteria, oxygen and other particles may be active at the same time. More than autolysis alone is therefore taking place in a vessel. [@source.awri-lees-contact-2020]
 :::
 
+:::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
+:::
+
 :::section{#betekenis-voor-wijn depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Significance for wine — released compounds can participate
 

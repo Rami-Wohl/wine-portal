@@ -96,12 +96,20 @@ or parcel as the named real subject.
 
 ### 3.2 Caption convention for educational illustration
 
-An educational caption should normally do three jobs in this order:
+An educational caption should normally do two jobs in this order:
 
-1. tell the reader how to read the image and identify its relevant elements;
-2. explain the relationship or contrast those elements illustrate; and
-3. state the material limitation, such as “conceptual,” “not a map,” “not a real
-   parcel,” or “not evidence of quality.”
+1. tell the reader how to read the image and identify its relevant elements; and
+2. explain the relationship or contrast those elements illustrate.
+
+Add a limitation only when omitting it would create a concrete and plausible
+misreading. Prefer a concise positive scope statement—such as “conceptual
+comparison,” “editorial grouping,” or “strongly magnified”—over a list of what
+the image does not show. Do not routinely explain that an image cannot predict
+taste or quality, that one photograph does not represent an entire region, or
+that invisible measurements cannot be read from a photograph. Readers can
+normally infer those limits. Maps, generated geography, composite viewpoints,
+historical reconstructions and materially altered scale still require explicit
+and useful qualification.
 
 Write the caption as useful editorial prose rather than production metadata.
 Keep the creator or credit line separate. Alternative text describes the visual

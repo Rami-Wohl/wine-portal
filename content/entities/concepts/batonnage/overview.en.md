@@ -18,6 +18,9 @@ How often and vigorously the wine is stirred, how much lees is present and wheth
 The winemaker assesses the wine between interventions and may reduce or stop stirring. Bâtonnage is not a process that must run automatically once begun.
 :::
 
+:::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
+:::
+
 :::section{#effect-op-de-wijn depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Effect on the wine — contact can shift texture and aroma
 
