@@ -14,8 +14,10 @@ locales:
 relations:
   - { type: related_to, target: concept.lees-ageing }
   - { type: related_to, target: concept.fermentation }
+  - { type: related_to, target: concept.traditional-method }
 assertions: []
 source_refs:
   - source.awri-lees-contact-2020
+  - source.champagne-maturation-on-lees
 depth: foundation
 last_reviewed: 2026-09-22

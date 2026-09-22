@@ -67,3 +67,32 @@ test("eight new concepts render images and cumulative knowledge depth", async ({
     );
   }
 });
+
+test("autolysis and lees ageing connect their mechanism to distinct cellar applications", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  for (const topic of [
+    { path: "/concepts/autolysis", detail: "fles-vat-en-tank" },
+    { path: "/concepts/lees-ageing", detail: "contact-eindigt-anders" },
+  ]) {
+    await page.goto(topic.path);
+
+    const depthControl = page.getByRole("group", {
+      name: "Kies hoeveel detail je wilt zien",
+    });
+    await depthControl.getByRole("button", { name: "Basis", exact: true }).click();
+    await expect(page.locator("#toepassingen")).toBeVisible();
+    await expect(page.locator(`#${topic.detail}`)).toBeHidden();
+    await expect(page.getByRole("link", { name: /traditionele methode/i }).first()).toBeVisible();
+    await expect(page.getByRole("link", { name: "Maturation on lees", exact: true })).toBeVisible();
+
+    await depthControl.getByRole("button", { name: "Verdieping", exact: true }).click();
+    await expect(page.locator(`#${topic.detail}`)).toBeVisible();
+    await expect(page.locator(`#${topic.detail}`).getByRole("heading")).toBeHidden();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      390,
+    );
+  }
+});

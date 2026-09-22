@@ -53,6 +53,24 @@ Te weinig passende zuurstof of problematische lies kan ongewenste zwavelachtige,
 De oplossing is niet simpelweg vaker of minder vaak roeren. Hoeveel vaste stof de wijn bevat, welk vat wordt gebruikt, hoe warm hij ligt en hoe gezond de vergisting verliep bepalen de afweging. Bâtonnage is een gereedschap, geen kwaliteitsritueel.
 :::
 
+:::section{#toepassingen depth="foundation" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
+## Toepassingen — fles, vat en tank geven ieder een ander contact
+
+**In de fles** hoort liesrijping bij mousserende wijn volgens de [[concept.traditional-method|traditionele methode]]. Na de tweede vergisting blijft de wijn bij het gistbezinksel tot remuage en [[concept.disgorgement|dégorgement]]. In Champagne duurt die wettelijk begrensde fase lang genoeg om autolyse een wezenlijke rol te geven; andere traditioneel gemaakte mousserende wijnen volgen dezelfde hoofdlogica met hun eigen rijpingsregels. [@source.champagne-maturation-on-lees]
+
+**In houten vat** komt de techniek veel voor bij droge witte wijn, met vatvergiste Chardonnay als bekend maar niet exclusief voorbeeld. De wijn kan rustig op fijne lies blijven of periodiek worden geroerd. Lies, hout, zuurstof en eventuele malolactische omzetting ontwikkelen zich dan gezamenlijk. [@source.awri-lees-contact-2020]
+
+**In tank** kan dezelfde fijne vergistingslies worden behouden zonder de zuurstoftoevoer van een houten vat. Temperatuur, hoeveelheid vaste stof en reductieve geuren vragen daardoor een eigen vorm van bewaking. Tankrijping is dus geen verkorte vatrijping, maar een afzonderlijk kelderregime met dezelfde fundamentele keuze: welke lies blijft hoe lang bij de wijn? [@source.awri-lees-contact-2020]
+:::
+
+:::detail{#contact-eindigt-anders parent="toepassingen" depth="intermediate" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
+### Het contact eindigt anders
+
+Bij stille wijn kan de maker het contact beëindigen door over te hevelen of te filteren wanneer textuur, geur of risico daarom vragen. In traditioneel gemaakte mousserende wijn blijft het bezinksel in iedere afgesloten fles totdat remuage het naar de hals brengt en dégorgement het verwijdert.
+
+Een vermelding als *sur lie* vertelt daarom pas iets bruikbaars wanneer ook wijnstijl, vat, duur en behandeling duidelijk zijn. Dezelfde twee woorden kunnen een stille witte tankwijn, een op vat gerijpte Chardonnay of jarenlange flesrijping van mousserende wijn beschrijven.
+:::
+
 :::key-idea{#centraal-inzicht depth="foundation"}
 Rijping op de lies verlengt het gesprek tussen wijn en vergisting. Gistcellen en ander bezinksel kunnen textuur, aroma, zuurstofhuishouding en stabiliteit beïnvloeden; selectie, tijd en bewaking bepalen of dat gesprek iets toevoegt.
 :::

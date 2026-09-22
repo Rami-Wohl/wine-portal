@@ -31,6 +31,22 @@ Mannoproteins from yeast cell walls receive considerable attention for their pos
 A fuller mouthfeel does not prove that autolysis was the sole cause. Alcohol, acids, oak, [[concept.malolactic-fermentation|malolactic fermentation]] and [[concept.batonnage|bâtonnage]] may all make a difference at the same time.
 :::
 
+:::section{#toepassingen depth="foundation" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
+## Applications — where time with yeast becomes visible
+
+In sparkling wine made by the [[concept.traditional-method|traditional method]], a fresh layer of yeast forms in every bottle after the second fermentation. The wine remains in contact with it until [[concept.disgorgement|disgorgement]]. Champagne makes such long bottle maturation especially visible, but the same family of processes occurs worldwide in sparkling wines that undergo second fermentation and maturation in bottle. Autolysis and the slow development of the sealed wine proceed alongside each other during that time. [@source.champagne-maturation-on-lees]
+
+Still dry white wine may likewise spend months on suitable fine fermentation lees, in barrel or tank. Chardonnay is a familiar example, but the technique belongs to no single variety or region. Here autolysis forms part of wider lees contact in which oxygen, oak, living yeast and possibly malolactic fermentation also participate. Australian Chardonnay research illustrates both the international reach of the practice and the decisions it demands. [@source.awri-lees-contact-2020]
+:::
+
+:::detail{#fles-vat-en-tank parent="toepassingen" depth="intermediate" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
+### The same cell breakdown within a different cellar regime
+
+In a bottle of sparkling wine, sediment is enclosed with the wine and consists of yeast from the second fermentation. In barrel or tank it generally comes from the first alcoholic fermentation; the producer can taste, rack or resuspend the lees through [[concept.batonnage|bâtonnage]] along the way.
+
+Those differences shape time, oxygen exposure and contact area. They explain why “autolytic” does not denote a fixed flavour profile: the base wine and the complete maturation regime determine how clearly yeast breakdown contributes to the finished wine.
+:::
+
 :::key-idea{#centraal-inzicht depth="foundation"}
 Autolysis is the slow breakdown of dead yeast cells. The compounds released can influence wine, but their effect always arises within a wider context of time, material and cellar choices.
 :::

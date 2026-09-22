@@ -25,14 +25,14 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 3 | `MNT-011`, `MNT-020`, `MNT-030` |
+| Open | 2 | `MNT-020`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
-| Afgerond | 35 | `MNT-001`, `MNT-003` t/m `MNT-010`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` t/m `MNT-042` |
+| Afgerond | 36 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038`, `MNT-040` t/m `MNT-042` |
 | Vervallen | 0 | — |
 
-Het uitvoerbare open werk bestaat uit drie acties met prioriteit `middel`.
+Het uitvoerbare open werk bestaat uit twee acties met prioriteit `middel`.
 Drie geblokkeerde acties zijn afhankelijk van een
 betrouwbare Atlas- en geographydatalaag; één wacht op een definitief extern
 regelgevingsbesluit.
@@ -55,20 +55,6 @@ regelgevingsbesluit.
   beschikbaar.
 - **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
   generatief verzonnen grenzen.
-
-### `MNT-011` — Toepassingen bij autolyse en liesrijping toevoegen
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Categorie:** content, research
-- **Scope:** `concept.autolysis`, `concept.lees-ageing`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de mechanismen zijn goed uitgelegd, maar herkenbare toepassingen
-  in verschillende wijnstijlen blijven beperkt.
-- **Klaar wanneer:** beide pagina's enkele wereldwijd relevante, zorgvuldig
-  begrensde toepassingen bevatten zonder effect als vaste smaakgarantie te
-  presenteren; NL en EN blijven gelijkwaardig.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
 
@@ -160,6 +146,27 @@ regelgevingsbesluit.
   losgehouden van structurele graafdekking.
 
 ## Historie
+
+### `MNT-011` — Toepassingen bij autolyse en liesrijping toevoegen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** content, research
+- **Scope:** `concept.autolysis`, `concept.lees-ageing`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** de mechanismen waren goed uitgelegd, maar herkenbare
+  toepassingen in verschillende wijnstijlen bleven beperkt.
+- **Klaar wanneer:** beide pagina's enkele wereldwijd relevante, zorgvuldig
+  begrensde toepassingen bevatten zonder effect als vaste smaakgarantie te
+  presenteren; NL en EN blijven gelijkwaardig.
+- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
+  2026-09-22 — afgerond met gelijkwaardige NL/EN-secties over flesrijping van
+  traditioneel gemaakte mousserende wijn en liescontact van stille witte wijn in
+  vat en tank. Champagne fungeert als gedocumenteerd flesvoorbeeld, terwijl
+  AWRI-onderzoek de internationale praktijk en afwegingen bij droge witte wijn
+  ondersteunt. Basis introduceert de toepassingen; Verdieping vergelijkt
+  contact, zuurstof, ingrepen en het einde van de rijping. Beide entities zijn
+  structureel aan de traditionele methode gekoppeld.
 
 ### `MNT-042` — Paginatie dichter bij de resultaten bedienen
 

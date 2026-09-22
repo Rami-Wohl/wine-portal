@@ -53,6 +53,24 @@ Too little suitable oxygen or problematic lees may encourage unwanted sulphurous
 The answer is not simply stirring more or less often. The amount of solids, vessel, temperature and health of the fermentation shape the trade-off. Bâtonnage is a tool, not a quality ritual.
 :::
 
+:::section{#toepassingen depth="foundation" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
+## Applications — bottle, barrel and tank each create different contact
+
+**In bottle**, lees ageing belongs to sparkling wine made by the [[concept.traditional-method|traditional method]]. After second fermentation, the wine remains with its yeast deposit until riddling and [[concept.disgorgement|disgorgement]]. In Champagne, this legally bounded phase lasts long enough for autolysis to play a substantial part; other traditionally made sparkling wines follow the same main logic under their own maturation rules. [@source.champagne-maturation-on-lees]
+
+**In wooden barrel**, the technique is common in dry white wine, with barrel-fermented Chardonnay a familiar but not exclusive example. Wine may rest quietly on fine lees or be stirred periodically. Lees, wood, oxygen and any malolactic fermentation then develop together. [@source.awri-lees-contact-2020]
+
+**In tank**, the same fine fermentation lees can be retained without the oxygen ingress of a wooden barrel. Temperature, solids load and reductive odours consequently demand their own form of monitoring. Tank ageing is therefore a distinct cellar regime rather than shortened barrel ageing, built around the same fundamental decision: which lees remain with the wine, and for how long? [@source.awri-lees-contact-2020]
+:::
+
+:::detail{#contact-eindigt-anders parent="toepassingen" depth="intermediate" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
+### Contact ends differently
+
+With still wine, a producer can end contact by racking or filtering when texture, aroma or risk calls for it. In traditionally made sparkling wine, sediment remains inside each sealed bottle until riddling moves it into the neck and disgorgement removes it.
+
+A term such as *sur lie* therefore becomes useful only when wine style, vessel, duration and handling are clear too. The same two words may describe a still white wine from tank, a barrel-aged Chardonnay or years of bottle maturation for sparkling wine.
+:::
+
 :::key-idea{#centraal-inzicht depth="foundation"}
 Lees ageing extends the conversation between wine and fermentation. Yeast cells and other sediment can influence texture, aroma, oxygen balance and stability; selection, time and monitoring decide whether that conversation contributes something worthwhile.
 :::
