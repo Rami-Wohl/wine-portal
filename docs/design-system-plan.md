@@ -47,6 +47,10 @@ wordt pas toegevoegd wanneer echte content een herhaalde, geteste use-case toont
 
 ## Volgende UI-stappen
 
+De uitvoervolgorde, beslismomenten en acceptatiecriteria voor Learn staan
+centraal in `learn-roadmap.md`; onderstaande punten blijven ontwerpgrenzen en
+vormen geen afzonderlijke backlog.
+
 1. Bouw pas learning-pathnavigatie en previous/next-logica nadat het pathschema en
    een eerste echte reeks lessen zijn ontworpen.
 2. Voeg persisted progress pas toe nadat anoniem lezen en navigeren inhoudelijk

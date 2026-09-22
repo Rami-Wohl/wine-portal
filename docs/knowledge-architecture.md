@@ -2,9 +2,9 @@
 title: "Knowledge architecture"
 purpose: "Actieve content-, data- en provenancearchitectuur voor Oenocademy"
 status: "active"
-version: "1.0"
+version: "1.1"
 created: "2026-08-25"
-last_updated: "2026-09-01"
+last_updated: "2026-09-23"
 ---
 
 # Knowledge architecture
@@ -114,8 +114,10 @@ Gelokaliseerde redactionele documenten die entities expliciet kunnen noemen en d
 #### Sources
 
 Herbruikbare bronrecords onder `data/sources/`. Het schema en de validatie zijn
-geïmplementeerd; drie officiële bronrecords ondersteunen de eerste actieve
-Bordeaux-entity.
+geïmplementeerd en de actieve content gebruikt het register inmiddels breed.
+Contentblocks kunnen hun bronnen afbakenen, precieze claims kunnen inline naar
+dezelfde stable source-ID's verwijzen en de publieke pagina toont de gebruikte
+bronnen zonder bibliografische gegevens in Markdown te dupliceren.
 
 #### Media
 
@@ -502,7 +504,9 @@ curriculum != canonical content storage
 curriculum = curated path through shared content
 ```
 
-Een formeel learning-pathschema en pipeline-integratie zijn nog roadmap.
+Een formeel learning-pathschema en pipeline-integratie zijn nog roadmap. De
+geordende uitvoering, open productbeslissingen en acceptatiecriteria voor de
+eerste anonieme implementatie staan in `learn-roadmap.md`.
 
 ---
 
@@ -529,6 +533,14 @@ framework_alignment:
 ```
 
 Ondersteunde relaties zijn `prerequisite`, `core-overlap`, `extension` en `beyond`. Een extern opleidingskader is metadata en bepaalt de ontologie niet.
+
+De geplande Learn-capability gebruikt daarnaast drie curriculumniveaus, globaal
+gekalibreerd rond WSET Level 2+, 3+ en 4+. Dit toekomstige leerniveau is een
+andere as dan entity- of blockdepth: lokale kennisdiepte wordt nooit automatisch
+naar curriculumgeschiktheid vertaald. Een lessonbrief selecteert expliciet welke
+entityblocks en claims voor zijn doelgroep relevant zijn. Het productcontract
+staat in `learn-product-brief.md`; schema en pipeline blijven roadmap totdat
+`LRN-003` en `LRN-004` zijn uitgevoerd.
 
 ### Geïmplementeerd: depth per block
 
@@ -791,25 +803,30 @@ gecontroleerd is.
 
 ### Huidige repositorystatus
 
-`region.bordeaux` is de eerste actieve region-overview met een gevalideerd
-contentplan, cumulatieve kennisdiepte, tweetalige prose, block-level citations,
-geregistreerde media en vooraf aangelegde routes naar de genoemde subregio's,
-appellations, druiven, classificaties en begrippen. Die bestemmingen zijn bewust
-lege draftpackages totdat hun eigen research- en authoringcyclus voltooid is.
+`region.bordeaux` begon als de eerste actieve region-overview met een gevalideerd
+contentplan en groeide uit tot de eerste volwassen authoringslice. Het cluster
+omvat nu gereviewde regio's, appellations, druiven, classificaties, begrippen en
+producentenpresentaties met cumulatieve kennisdiepte, tweetalige prose,
+block-level citations, geregistreerde media en canonical onderlinge links. Een
+deel van de oorspronkelijk aangelegde bestemmingen is inmiddels actief; de
+overige draftpackages blijven onvindbaar totdat hun eigen research- en
+authoringcyclus is voltooid of een later contentplan ze bewust laat vervallen.
 
 Exacte aantallen entities, bronnen, media en relaties worden hier niet handmatig
 bijgehouden. `npm run content:check` rapporteert de actuele repositorystatus en
 `npm run content:link-audit` controleert of bekende entities in oude of nieuwe
-prose ongekoppeld zijn gebleven. De graph bevat daarnaast nog enkele technische
-fixtures voor relationele en narrative-tests. Er is nog geen geverifieerde
-geografie voor Atlas.
+prose ongekoppeld zijn gebleven. Er is nog geen actieve inhoudelijke narrative;
+de enige narrative is een technische draftfixture voor pipeline- en routetests.
+Er is evenmin geverifieerde geografie voor Atlas.
 
 ### Vervolg na deze vertical slice
 
-- research en authoring van de aangelegde draftbestemmingen;
+- resterende draftbestemmingen alleen onderzoeken en authoren wanneer een
+  content- of leerplan hun waarde aantoont;
 - relevante scoped vintage-entities wanneer een concrete use-case dat vraagt;
 - brongebonden assertions waar de use-case daarom vraagt;
-- inhoudelijk volwaardige NL- en EN-narratives;
+- de eerste inhoudelijk volwaardige NL- en EN-lessons en learning paths volgens
+  `learn-roadmap.md`;
 - geverifieerde boundaries, punten en Atlasdata met volledige provenance;
 - verdere selectie en review van foto's, illustraties en diagrammen;
 - verdere verfijning van publieke bronweergave en menselijk leesbare relaties;
@@ -831,6 +848,8 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - NL/EN als verplichte gelokaliseerde authoringlagen met structurele pariteitsvalidatie;
 - stable entitylinks met mentions en backlinks;
 - veilige semantic content blocks met citations en NL/EN-pariteitsvalidatie;
+- herbruikbare source records, blockprovenance, inline citations en publieke
+  bronlijsten in actieve content;
 - mediaregister, stable media-ID's, figures, rights/alt-metadata en lokale checksumvalidatie;
 - entity/narrative depth en framework alignment;
 - inverse relations, localized slug/search/geography-indexes;
@@ -840,7 +859,6 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 ### Besloten principe, implementatie pending
 
 - verified-data-only geography en Atlas;
-- reusable provenance en claim-level support in echte content;
 - learning paths als curated views in plaats van contentopslag;
 - een Engelse applicatiepresentatie en locale-aware publieke routing;
 - niet-destructieve import en vervanging wanneer later externe of bestaande content in scope komt.

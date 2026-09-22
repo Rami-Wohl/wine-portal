@@ -49,6 +49,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
 | Kwaliteitsreviews | `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
+| Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus geordende `LRN-*`-tickets, beslismomenten en acceptatiecriteria voor de anonieme Learn-MVP |
 
 Een stabiel feit heeft één canonical eigenaar. Narratives en pagina's mogen dat
 feit uitleggen, maar onderhouden geen parallelle structurele kopie.
@@ -153,6 +154,9 @@ Markdownformatter worden herschreven.
   kwaliteitschecks.
 - Gebruik `maintenance-backlog.md` om actiepunten uit reviews te volgen tot en
   met afronding of een gemotiveerd vervalbesluit.
+- Gebruik `learn-roadmap.md` voor de vaste uitvoervolgorde en open
+  productbeslissingen van de Learn-MVP; kopieer die tickets niet naar de
+  onderhoudsbacklog.
 
 Lees dus niet standaard ieder beleidsdocument voor iedere taak. Kies de
 documenten die daadwerkelijk door de wijziging worden geraakt.

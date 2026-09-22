@@ -196,5 +196,9 @@ reviewstappen. Registreer periodieke controles en vervolgacties volgens
 - [Knowledge architecture](docs/knowledge-architecture.md) — model, routing,
   search, indexes en migraties
 - [Visual language](docs/visual-language.md) — UI, responsive gedrag en beelden
+- [Learn-roadmap](docs/learn-roadmap.md) — geordende tickets, beslismomenten en
+  definition of done voor de anonieme leerervaring
+- [Learn-productbrief](docs/learn-product-brief.md) — doelgroep, niveaumodel,
+  terminologie en succescriteria voor de Learn-MVP
 - [Content commands](scripts/content/README.md) — compacte technische
   commandoreferentie
