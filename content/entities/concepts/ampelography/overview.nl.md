@@ -34,6 +34,9 @@ De OIV kent kenmerken codes en omschreven toestanden toe. Daardoor kan “dicht 
 Niet ieder kenmerk weegt even zwaar. Kwantitatieve eigenschappen zoals afmetingen reageren relatief sterk op omgeving en teelt. Een identificatie rust daarom op een zorgvuldig gekozen geheel, niet op het langste formulier.
 :::
 
+:::figure{#kenmerkenplaat depth="foundation" media_id="media.concept.ampelography.observable-organs" source_refs="source.oiv-grape-descriptors-2023"}
+:::
+
 :::section{#grenzen-en-dna depth="foundation" source_refs="source.oiv-grape-variety-identification-2019 source.inrae-vassal-ampelography"}
 ## Grenzen en DNA — kijken blijft waardevol, bewijs gaat verder
 

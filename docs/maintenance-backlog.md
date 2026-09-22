@@ -25,14 +25,14 @@ Peildatum: 2026-09-22.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 9 | `MNT-004`, `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-030` |
+| Open | 8 | `MNT-005`, `MNT-007` t/m `MNT-011`, `MNT-020`, `MNT-030` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 4 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-039` |
-| Afgerond | 26 | `MNT-001`, `MNT-003`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038` |
+| Afgerond | 27 | `MNT-001`, `MNT-003`, `MNT-004`, `MNT-006`, `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-025`, `MNT-026` t/m `MNT-029`, `MNT-031` t/m `MNT-038` |
 | Vervallen | 0 | — |
 
-Van het uitvoerbare open werk hebben twee acties prioriteit `hoog` en zeven
+Van het uitvoerbare open werk heeft één actie prioriteit `hoog` en hebben zeven
 prioriteit `middel`. Drie geblokkeerde acties zijn afhankelijk van een
 betrouwbare Atlas- en geographydatalaag; één wacht op een definitief extern
 regelgevingsbesluit.
@@ -55,19 +55,6 @@ regelgevingsbesluit.
   beschikbaar.
 - **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
   generatief verzonnen grenzen.
-
-### `MNT-004` — Educatieve ampelografievisual
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Categorie:** media, content
-- **Scope:** `concept.ampelography`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** herkenningskenmerken worden alleen tekstueel uitgelegd.
-- **Klaar wanneer:** een rechtenveilige visual scheuttop, blad, tros, bes en pit
-  herkenbaar en botanisch verantwoord toont, met gelokaliseerde alttekst en
-  caption.
-- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
 
 ### `MNT-005` — Gedeelde visual voor lies, autolyse en bâtonnage
 
@@ -241,6 +228,24 @@ regelgevingsbesluit.
   losgehouden van structurele graafdekking.
 
 ## Historie
+
+### `MNT-004` — Educatieve ampelografievisual
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** media, content
+- **Scope:** `concept.ampelography`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** herkenningskenmerken werden alleen tekstueel uitgelegd.
+- **Klaar wanneer:** een rechtenveilige visual scheuttop, blad, tros, bes en pit
+  herkenbaar en botanisch verantwoord toont, met gelokaliseerde alttekst en
+  caption.
+- **Log:** 2026-09-08 — geregistreerd vanuit de content-health-review.
+  2026-09-22 — afgerond met een taalneutrale botanische rasterplaat in de
+  editorial-naturalistische huisstijl. Een eerste te brede compositie is na
+  responsive review verworpen; de definitieve 3:2-plaat toont de vijf organen
+  in twee leesbare rijen. Alttekst en caption zijn gelijkwaardig gelokaliseerd
+  en begrenzen groeimoment, vergroting, rasidentiteit en bewijswaarde.
 
 ### `MNT-025` — Europese status Graves Supérieures opnieuw verifiëren
 

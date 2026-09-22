@@ -34,6 +34,9 @@ The OIV assigns codes and defined states to characteristics. This lets observers
 Not every trait carries equal weight. Quantitative properties such as dimensions respond relatively strongly to environment and cultivation. Identification therefore rests on a carefully chosen whole, not the longest possible form.
 :::
 
+:::figure{#kenmerkenplaat depth="foundation" media_id="media.concept.ampelography.observable-organs" source_refs="source.oiv-grape-descriptors-2023"}
+:::
+
 :::section{#grenzen-en-dna depth="foundation" source_refs="source.oiv-grape-variety-identification-2019 source.inrae-vassal-ampelography"}
 ## Limits and DNA — looking remains useful, evidence goes further
 

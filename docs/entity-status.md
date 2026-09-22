@@ -56,7 +56,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Crus Artisans du Médoc](../content/entities/classifications/crus-artisans-du-medoc/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.crus-artisans-du-medoc` | Ja | `/classifications/crus-artisans-du-medoc` | 2026-09-14 |
 | [Crus Bourgeois du Médoc](../content/entities/classifications/crus-bourgeois-du-medoc/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.crus-bourgeois-du-medoc` | Ja | `/classifications/crus-bourgeois-du-medoc` | 2026-09-14 |
 | [Alcoholische vergisting](../content/entities/concepts/fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.fermentation` | Ja | `/concepts/alcoholic-fermentation` | 2026-09-16 |
-| [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | Zelfstandige pagina | `concept.ampelography` | Ja | `/concepts/ampelography` | 2026-09-07 |
+| [Ampelografie](../content/entities/concepts/ampelography/entity.yaml) | Concept | Zelfstandige pagina | `concept.ampelography` | Ja | `/concepts/ampelography` | 2026-09-22 |
 | [Appassimento](../content/entities/concepts/appassimento/entity.yaml) | Concept | Zelfstandige pagina | `concept.appassimento` | Ja | `/concepts/appassimento` | 2026-09-14 |
 | [Appellation d’origine protégée (AOP)](../content/entities/concepts/aop/entity.yaml) | Concept | Zelfstandige pagina | `concept.aop` | Ja | `/concepts/protected-designation-of-origin` | 2026-09-14 |
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | Zelfstandige pagina | `concept.assemblage` | Ja | `/concepts/blending` | 2026-09-08 |
