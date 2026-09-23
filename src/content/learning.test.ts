@@ -28,7 +28,7 @@ describe("learning-path lesson position", () => {
     });
   });
 
-  it("ends the last core lesson without inventing a next target", () => {
+  it("resolves the real pilot boundaries without inventing adjacent targets", () => {
     expect(learningPath).toBeDefined();
     if (!learningPath) return;
 
@@ -36,8 +36,16 @@ describe("learning-path lesson position", () => {
       getLearningPathLessonPosition(learningPath, "narrative.lesson.grape-as-raw-material"),
     ).toEqual({
       position: 1,
-      total: 1,
+      total: 7,
       previousTarget: undefined,
+      nextTarget: "narrative.lesson.grape-to-must",
+    });
+    expect(
+      getLearningPathLessonPosition(learningPath, "narrative.lesson.cellar-to-bottle"),
+    ).toEqual({
+      position: 7,
+      total: 7,
+      previousTarget: "narrative.lesson.maturation-and-protection",
       nextTarget: undefined,
     });
     expect(getLearningPathLessonPosition(learningPath, "narrative.lesson.unknown")).toBeUndefined();

@@ -1,0 +1,24 @@
+id: narrative.lesson.three-still-wine-routes
+type: lesson
+status: active
+title:
+  nl: Drie routes voor stille wijn
+  en: Three routes for still wine
+slugs:
+  nl: drie-routes-voor-stille-wijn
+  en: three-routes-for-still-wine
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.maceration
+  - concept.extraction
+  - concept.tannin
+  - concept.pressing
+source_refs:
+  - source.oiv-maceration
+  - source.awri-skin-contact
+  - source.awri-fermentation-temperature
+  - source.awri-extended-maceration-2019
+  - source.wre-cap-management
+depth: foundation

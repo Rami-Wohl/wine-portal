@@ -95,7 +95,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 5 | `LRN-005` | Eerste echte lesson vertical slice | `LRN-002`, `LRN-004` | afgerond |
 | 6 | `LRN-006` | Learn-catalogus en learning-pathoverzicht | `LRN-004`, `LRN-005` | afgerond |
 | 7 | `LRN-007` | Lescontext en vorige/volgende-navigatie | `LRN-006` | afgerond |
-| 8 | `LRN-008` | Volledig pilotcurriculum en ontbrekende basiscontent | `LRN-005`, `LRN-007` | gepland |
+| 8 | `LRN-008` | Volledig pilotcurriculum en ontbrekende basiscontent | `LRN-005`, `LRN-007` | afgerond |
 | 9 | `LRN-009` | Anonieme, vervangbare lokale voortgang | `LRN-007`, `LRN-008` | gepland |
 | 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | gepland |
 | 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | gepland |
@@ -319,7 +319,7 @@ beslismoment horen.
 
 ### `LRN-008` — Pilotcurriculum en vereiste basiscontent voltooien
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** een klein maar inhoudelijk volledig leerpad publiceren, niet alleen
   een technische demo.
 - **Werk:**
@@ -335,6 +335,26 @@ beslismoment horen.
   verantwoord en prettig achter elkaar te volgen zijn.
 - **Buiten scope:** alle mondiale viticultuur- en vinificatiecontent vooraf
   compleet maken.
+- **Opgeleverd op 2026-09-23:** alle zeven kernlessen zijn actief, tweetalig en
+  in de goedgekeurde volgorde verbonden. De zes nieuwe lessen behandelen
+  ontvangst en persen, alcoholische vergisting, de witte/rosé/rode routes,
+  processen na de hoofdgisting, rijping en bescherming, en voorbereiding plus
+  botteling. Vier aantoonbaar herbruikbare hiaten hebben een eigen actieve
+  conceptentity gekregen: persen, zwaveldioxide, klaring en fining, en
+  botteling. Kleinere verbindingsstappen zoals sorteren, ontstelen, overhevelen,
+  filtratie en stabilisatie blijven lessonproza totdat zelfstandig hergebruik
+  een verdere entitygrens rechtvaardigt.
+- **Inhouds- en visual-QA:** iedere lesson bevat directe leerdoelen, heldere
+  leerbakens, een glas-koppeling, kernidee en betekenis-equivalente NL/EN-opbouw.
+  Vier nieuwe procesillustraties zijn op apparatuur, materiaal, volgorde,
+  schaal, captions en mobiele leesbaarheid beoordeeld; relevante bestaande
+  documentaire foto's en de liesprocesvisual zijn hergebruikt. Het pad bevat
+  geen dragende Bordeaux-voorbeelden en blijft op het afgesproken niveau Wijn
+  begrijpen, globaal WSET Level 2 plus.
+- **Publicatie:** het volledige path is na integrale controle van `draft` naar
+  `active` gegaan. Catalogus, zeven posities, vorige/volgende-links,
+  standalonefallback en de succesbestemming zijn op 390 en 1440 pixels
+  gecontroleerd zonder horizontale pagina-overflow.
 
 ### `LRN-009` — Anonieme lokale voortgang vervangbaar implementeren
 

@@ -1,0 +1,26 @@
+id: narrative.lesson.cellar-to-bottle
+type: lesson
+status: active
+title:
+  nl: Van kelder naar fles
+  en: From cellar to bottle
+slugs:
+  nl: van-kelder-naar-fles
+  en: cellar-to-bottle
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.assemblage
+  - concept.clarification-and-fining
+  - concept.bottling
+  - concept.sulfur-dioxide
+source_refs:
+  - source.oiv-blending-code
+  - source.awri-fining-agents
+  - source.oiv-fining-practices
+  - source.oiv-filtration-wine
+  - source.awri-pre-packaging
+  - source.awri-microbiological-stability
+  - source.awri-sulfur-dioxide
+depth: foundation

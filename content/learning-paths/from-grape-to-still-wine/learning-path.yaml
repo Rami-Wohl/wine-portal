@@ -1,6 +1,6 @@
 schema_version: 1
 id: learning-path.from-grape-to-still-wine
-status: draft
+status: active
 curriculum_level: understand
 title:
   nl: Van druif naar stille wijn — hoe wijn wordt gemaakt
@@ -34,6 +34,36 @@ steps:
     context:
       nl: Begin bij wat de geoogste druif de kelder binnenbrengt en welke mogelijkheden daar al in besloten liggen.
       en: Start with what the harvested grape brings into the winery and the possibilities it already contains.
+  - id: grape-to-must
+    target: narrative.lesson.grape-to-must
+    context:
+      nl: Volg hoe sorteren, ontstelen, kneuzen en persen bepalen welke druivendelen samen de volgende fase ingaan.
+      en: Follow how sorting, destemming, crushing and pressing determine which grape parts enter the next stage together.
+  - id: alcoholic-fermentation
+    target: narrative.lesson.alcoholic-fermentation
+    context:
+      nl: Bekijk hoe gist druivensuiker omzet en waarom temperatuur, vat en voortgang actief worden bewaakt.
+      en: See how yeast converts grape sugar and why temperature, vessel and progress are actively monitored.
+  - id: three-still-wine-routes
+    target: narrative.lesson.three-still-wine-routes
+    context:
+      nl: Vergelijk wanneer sap en schillen elkaar ontmoeten en weer scheiden bij witte, rosé- en rode wijn.
+      en: Compare when juice and skins meet and separate again in white, rosé and red winemaking.
+  - id: after-main-fermentation
+    target: narrative.lesson.after-main-fermentation
+    context:
+      nl: Ontdek hoe malolactische omzetting, overhevelen, liescontact en bâtonnage jonge wijn verder vormen.
+      en: Discover how malolactic conversion, racking, lees contact and bâtonnage further shape young wine.
+  - id: maturation-and-protection
+    target: narrative.lesson.maturation-and-protection
+    context:
+      nl: Onderzoek hoe vat, tijd, zuurstof en bescherming samen de opvoeding richting botteling bepalen.
+      en: Explore how vessel, time, oxygen and protection together guide maturation towards bottling.
+  - id: cellar-to-bottle
+    target: narrative.lesson.cellar-to-bottle
+    context:
+      nl: Breng de route samen via assemblage, voorbereiding, stabiliteit en de kritieke overdracht naar fles.
+      en: Bring the route together through blending, preparation, stability and the critical transfer into bottle.
 completion:
   recap:
     nl:

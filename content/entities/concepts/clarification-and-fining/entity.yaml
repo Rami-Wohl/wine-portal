@@ -1,0 +1,24 @@
+id: concept.clarification-and-fining
+type: concept
+status: active
+canonical_name: Clarification and fining
+names:
+  nl: Klaring en fining
+  en: Clarification and fining
+slugs:
+  nl: klaring-en-fining
+  en: clarification-and-fining
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.tannin
+assertions: []
+source_refs:
+  - source.awri-fining-agents
+  - source.oiv-fining-practices
+  - source.oiv-filtration-wine
+  - source.awri-pre-packaging
+depth: foundation
+last_reviewed: 2026-09-23

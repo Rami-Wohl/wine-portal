@@ -433,7 +433,7 @@ h3 {
 .entity-header h1,
 .lesson-page-header h1 {
   margin-bottom: var(--space-heading-copy);
-  font: 470 clamp(3rem, 8vw, 7rem)/0.94 var(--font-display);
+  font: 470 clamp(2rem, 4vw, 4rem)/0.94 var(--font-display);
   letter-spacing: -0.05em;
 }
 .home-tagline {
@@ -1709,10 +1709,10 @@ h3 {
 
 .lesson-page-header {
   max-width: 900px;
-  padding-block: clamp(4rem, 9vw, 7rem);
+  padding-block: clamp(3rem, 5vw, 4rem);
 }
 .lesson-page-header h1 {
-  font-size: clamp(2.75rem, 7vw, 6rem);
+  font-size: clamp(2.25rem, 4vw, 4rem);
 }
 .lesson-metadata {
   display: flex;
@@ -2321,7 +2321,7 @@ h3 {
     padding-block: 2.5rem;
   }
   .lesson-page-header {
-    padding-block: 3.5rem;
+    padding-block: 1.5rem;
   }
   .lesson-path-context,
   .lesson-path-navigation-heading {
@@ -2337,7 +2337,7 @@ h3 {
   }
   .entity-header h1,
   .lesson-page-header h1 {
-    font-size: clamp(2.3rem, 11vw, 3.2rem);
+    font-size: clamp(1.3rem, 11vw, 2.2rem);
     line-height: 1.02;
     overflow-wrap: anywhere;
   }

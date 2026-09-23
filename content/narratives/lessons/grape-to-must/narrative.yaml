@@ -1,0 +1,19 @@
+id: narrative.lesson.grape-to-must
+type: lesson
+status: active
+title:
+  nl: Van druif naar most
+  en: From grape to must
+slugs:
+  nl: van-druif-naar-most
+  en: grape-to-must
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.pressing
+  - concept.maceration
+source_refs:
+  - source.oiv-grape-preparation
+  - source.oiv-pressing
+depth: foundation

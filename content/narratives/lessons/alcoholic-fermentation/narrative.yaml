@@ -1,0 +1,22 @@
+id: narrative.lesson.alcoholic-fermentation
+type: lesson
+status: active
+title:
+  nl: Alcoholische vergisting
+  en: Alcoholic fermentation
+slugs:
+  nl: alcoholische-vergisting-les
+  en: alcoholic-fermentation-lesson
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.fermentation
+  - concept.acidity
+source_refs:
+  - source.oiv-alcoholic-fermentation
+  - source.oiv-fermentation-interruption
+  - source.awri-yeast-choice
+  - source.awri-stuck-fermentations-2013
+  - source.awri-fermentation-temperature
+depth: foundation

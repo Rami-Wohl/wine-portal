@@ -1,0 +1,22 @@
+id: media.lesson.alcoholic-fermentation.fermentation-conversion
+kind: illustration
+role: educational
+status: active
+storage_key: lessons/alcoholic-fermentation/fermentation-conversion.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 3ef9f55f5567ba16220ccad261b4e588128e1de941fa27788641638996470d72
+alt:
+  nl: Doorsnede van een gesloten gisttank met bleke most, opstijgend koolzuurgas, temperatuurmeting, koelmantel en een sterk vergroot beeld van gistcellen in de vloeistof
+  en: Cutaway of a closed fermentation tank with pale must, rising carbon dioxide, temperature monitoring, a cooling jacket and a strongly magnified view of yeast cells in the liquid
+caption:
+  nl: Gistcellen zijn sterk vergroot weergegeven in de most. Terwijl zij suiker omzetten, ontstaan alcohol, koolzuurgas en warmte; de tank, temperatuursonde en koelmantel laten zien waarom een wijnmaker de vergisting volgt en zo nodig koelt.
+  en: Yeast cells are shown greatly magnified within the must. As they convert sugar, alcohol, carbon dioxide and heat are produced; the tank, temperature probe and cooling jacket show why a winemaker monitors the fermentation and cools it when needed.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-23
+changes: Second generated version selected after removing decorative cellar clutter and replacing a drinking glass with a plain sampling beaker; yeast and vessel cutaways are conceptual and used without crop or colour alteration.

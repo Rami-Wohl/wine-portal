@@ -159,9 +159,16 @@ describe("canonical content routing", () => {
   });
 
   it("exposes lesson membership only for published learning paths", () => {
-    expect(getPublishedLearningPathsForLesson("narrative.lesson.grape-as-raw-material")).toEqual(
-      [],
-    );
+    expect(
+      getPublishedLearningPathsForLesson("narrative.lesson.grape-as-raw-material").map(
+        (learningPath) => learningPath.id,
+      ),
+    ).toEqual(["learning-path.from-grape-to-still-wine"]);
+    expect(
+      getPublishedLearningPathsForLesson("narrative.lesson.cellar-to-bottle").map(
+        (learningPath) => learningPath.id,
+      ),
+    ).toEqual(["learning-path.from-grape-to-still-wine"]);
     expect(getPublishedLearningPathsForLesson("narrative.lesson.unknown")).toEqual([]);
   });
 

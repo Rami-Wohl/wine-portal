@@ -453,3 +453,23 @@ De gebruiker heeft op 2026-09-23 de zeven lessen in bovenstaande volgorde en de
 kelderrelevante viticultuurgrens goedgekeurd. De inhoudelijke scope is daarmee
 stabiel genoeg om in `LRN-003` het kleinst mogelijke learning-pathschema en
 authoringcontract te ontwerpen.
+
+## Implementatie-uitkomst `LRN-008`
+
+Op 2026-09-23 is de volledige zevenlessenroute inhoudelijk afgerond en actief
+gemaakt. De gapanalyse heeft tot de volgende duurzame eigenaars geleid:
+
+- druivenrijpheid en oogstbesluit blijven voor deze route in les 1; een aparte
+  entity wordt pas gerechtvaardigd door het latere viticultuurleerpad;
+- ontvangst, sorteren, ontstelen, kneuzen en overhevelen blijven verbindend
+  lessonproza;
+- `concept.pressing`, `concept.sulfur-dioxide`,
+  `concept.clarification-and-fining` en `concept.bottling` zijn als actieve,
+  tweetalige naslagentities toegevoegd;
+- filtratie en stabilisatie zijn compleet genoeg voor het pilotmodel uitgelegd,
+  maar nog niet als extra losse entities afgesplitst.
+
+De vier ontbrekende procesvisuals zijn geleverd voor ontvangst tot persen,
+alcoholische vergisting, de vergelijking wit/rosé/rood en de eindroute naar
+botteling. De visual teaching audit vond daarnaast voldoende herbruikbaar,
+geregistreerd beeld voor schillenkoekbeheer, liescontact en vatrijping.

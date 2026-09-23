@@ -1,0 +1,23 @@
+id: narrative.lesson.after-main-fermentation
+type: lesson
+status: active
+title:
+  nl: Na de hoofdgisting
+  en: After the main fermentation
+slugs:
+  nl: na-de-hoofdgisting
+  en: after-main-fermentation
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.malolactic-fermentation
+  - concept.lees-ageing
+  - concept.batonnage
+source_refs:
+  - source.oiv-microbiological-deacidification
+  - source.awri-mlf-style-2020
+  - source.awri-mlf-success-2020
+  - source.awri-mlf-white-sparkling-2020
+  - source.awri-lees-contact-2020
+depth: foundation

@@ -1,0 +1,24 @@
+id: concept.sulfur-dioxide
+type: concept
+status: active
+canonical_name: Sulfur dioxide
+names:
+  nl: Zwaveldioxide
+  en: Sulfur dioxide
+slugs:
+  nl: zwaveldioxide
+  en: sulfur-dioxide
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.oxidation
+  - type: related_to
+    target: concept.fermentation
+assertions: []
+source_refs:
+  - source.oiv-sulphiting-wine
+  - source.awri-sulfur-dioxide
+depth: foundation
+last_reviewed: 2026-09-23

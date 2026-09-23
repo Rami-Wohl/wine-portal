@@ -1,0 +1,23 @@
+id: concept.pressing
+type: concept
+status: active
+canonical_name: Pressing
+names:
+  nl: Persen
+  en: Pressing
+slugs:
+  nl: persen
+  en: pressing
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.maceration
+  - type: related_to
+    target: concept.extraction
+assertions: []
+source_refs:
+  - source.oiv-pressing
+depth: foundation
+last_reviewed: 2026-09-23

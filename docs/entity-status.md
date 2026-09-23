@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 333 entities — 264 active, 69 draft, 0 deprecated.
+**Totaal:** 337 entities — 268 active, 69 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (264)
+## Actief — publiek vindbaar (268)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -63,6 +63,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | Zelfstandige pagina | `concept.autolysis` | Ja | `/concepts/autolysis` | 2026-09-22 |
 | [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | Zelfstandige pagina | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-22 |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | Zelfstandige pagina | `concept.botrytis` | Ja | `/concepts/botrytis-noble-rot` | 2026-09-13 |
+| [Botteling](../content/entities/concepts/bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.bottling` | Ja | `/concepts/bottling` | 2026-09-23 |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.estate-bottling` | Ja | `/concepts/estate-bottling` | 2026-09-08 |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Ja | `/concepts/chateau-wine-term` | 2026-09-14 |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Ja | `/concepts/clairet` | 2026-09-20 |
@@ -79,6 +80,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Franc de pied](../content/entities/concepts/franc-de-pied/entity.yaml) | Concept | Zelfstandige pagina | `concept.franc-de-pied` | Ja | `/concepts/franc-de-pied` | 2026-09-22 |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-22 |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Ja | `/concepts/vintage` | 2026-09-20 |
+| [Klaring en fining](../content/entities/concepts/clarification-and-fining/entity.yaml) | Concept | Zelfstandige pagina | `concept.clarification-and-fining` | Ja | `/concepts/clarification-and-fining` | 2026-09-23 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-22 |
 | [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Ja | `/concepts/late-harvest` | 2026-09-14 |
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Ja | `/concepts/liqueur-de-tirage` | 2026-09-20 |
@@ -88,6 +90,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Ja | `/concepts/rootstock` | 2026-09-20 |
 | [Oxidatie](../content/entities/concepts/oxidation/entity.yaml) | Concept | Zelfstandige pagina | `concept.oxidation` | Ja | `/concepts/oxidation` | 2026-09-20 |
 | [Passerillage](../content/entities/concepts/passerillage/entity.yaml) | Concept | Zelfstandige pagina | `concept.passerillage` | Ja | `/concepts/passerillage` | 2026-09-14 |
+| [Persen](../content/entities/concepts/pressing/entity.yaml) | Concept | Zelfstandige pagina | `concept.pressing` | Ja | `/concepts/pressing` | 2026-09-23 |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Ja | `/concepts/place-de-bordeaux` | 2026-09-14 |
 | [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Ja | `/concepts/riddling` | 2026-09-20 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/lees-ageing` | 2026-09-22 |
@@ -100,6 +103,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Vin de paille](../content/entities/concepts/vin-de-paille/entity.yaml) | Concept | Zelfstandige pagina | `concept.vin-de-paille` | Ja | `/concepts/vin-de-paille` | 2026-09-14 |
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/volatile-thiols` | 2026-09-22 |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/acidity-in-wine` | 2026-09-16 |
+| [Zwaveldioxide](../content/entities/concepts/sulfur-dioxide/entity.yaml) | Concept | Zelfstandige pagina | `concept.sulfur-dioxide` | Ja | `/concepts/sulfur-dioxide` | 2026-09-23 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | Zelfstandige pagina | `grape.carmenere` | Ja | `/grapes/carmenere` | 2026-09-20 |

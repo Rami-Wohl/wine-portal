@@ -1,0 +1,22 @@
+id: media.lesson.cellar-to-bottle.final-preparation-and-bottling
+kind: illustration
+role: educational
+status: active
+storage_key: lessons/cellar-to-bottle/final-preparation-and-bottling.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: b8b4597db1d86ad7c18d5e030fa943f33841e3e0cf8baf7307dc1fb5fdefd787
+alt:
+  nl: Werkende wijnkelder waarin proefmonsters tot een assemblage leiden, wijn door voorbereiding en filtratie stroomt en een bottellijn donkere flessen vult en sluit
+  en: Working winery in which tasting samples lead to a blend, wine passes through preparation and filtration, and a bottling line fills and closes dark bottles
+caption:
+  nl: Links worden componenten geproefd en in een assemblage samengebracht; in het midden staan mogelijke voorbereidingsstappen; rechts vult en sluit de bottellijn de verpakking. Klaring en filtratie worden alleen ingezet wanneer de wijn en het gewenste stabiliteitsniveau daarom vragen.
+  en: On the left, components are tasted and brought together in a blend; possible preparation stages occupy the centre; on the right, the bottling line fills and closes the package. Fining and filtration are used only when the wine and intended level of stability call for them.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-23
+changes: First generated version selected after review of blending samples, closed transfer, filter housing, fill levels, closure handling and ordinary winery context; used without crop or colour alteration.

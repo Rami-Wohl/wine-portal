@@ -133,6 +133,9 @@ describe("application metadata", () => {
       generateLearningPathMetadata({
         params: Promise.resolve({ slug: "from-grape-to-still-wine" }),
       }),
-    ).resolves.toEqual({});
+    ).resolves.toMatchObject({
+      title: "Van druif naar stille wijn — hoe wijn wordt gemaakt",
+      alternates: { canonical: "/learn/from-grape-to-still-wine" },
+    });
   });
 });

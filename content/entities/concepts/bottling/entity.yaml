@@ -1,0 +1,28 @@
+id: concept.bottling
+type: concept
+status: active
+canonical_name: Bottling
+names:
+  nl: Botteling
+  en: Bottling
+slugs:
+  nl: botteling
+  en: bottling
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.clarification-and-fining
+  - type: related_to
+    target: concept.oxidation
+  - type: related_to
+    target: concept.estate-bottling
+assertions: []
+source_refs:
+  - source.awri-pre-packaging
+  - source.awri-microbiological-stability
+  - source.awri-sulfur-dioxide
+  - source.oiv-filtration-wine
+depth: foundation
+last_reviewed: 2026-09-23

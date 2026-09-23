@@ -1,0 +1,28 @@
+id: narrative.lesson.maturation-and-protection
+type: lesson
+status: active
+title:
+  nl: Rijping en bescherming
+  en: Maturation and protection
+slugs:
+  nl: rijping-en-bescherming
+  en: maturation-and-protection
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.elevage
+  - concept.oxidation
+  - concept.sulfur-dioxide
+source_refs:
+  - source.awri-pre-packaging
+  - source.oiv-oak-maturation
+  - source.wset-oak-winemaking
+  - source.napa-oak-maturation
+  - source.awri-oak-queries-2013
+  - source.awri-lees-contact-2020
+  - source.awri-wine-faults
+  - source.wine-australia-oxygen-style
+  - source.oiv-sulphiting-wine
+  - source.awri-sulfur-dioxide
+depth: foundation

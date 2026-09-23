@@ -1,0 +1,22 @@
+id: media.lesson.grape-to-must.reception-to-pressing
+kind: illustration
+role: educational
+status: active
+storage_key: lessons/grape-to-must/reception-to-pressing.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: c0936e2d77eac7ee0b174aeb626ca6f5fe055b9e90a7e9e1c6e931e0024cb8f4
+alt:
+  nl: Vier verbonden keldermomenten met blauwe druiven in oogstkratten, sorteren, ontstelen en kneuzen, gevolgd door persen en het opvangen van most
+  en: Four connected winery stages with black grapes in harvest crates, sorting, destemming and crushing, followed by pressing and must collection
+caption:
+  nl: De illustratie volgt één mogelijke route met blauwe druiven. Sorteren verwijdert ongewenst materiaal, de ontsteler scheidt de steeltjes, kneuzen opent een deel van de bessen en de pers scheidt vloeistof van vaste druivendelen. Welke handelingen worden gebruikt en in welke volgorde hangt af van de beoogde wijn.
+  en: The illustration follows one possible route using black grapes. Sorting removes unwanted material, the destemmer separates stems, crushing opens some berries and the press separates liquid from grape solids. Which operations are used, and in what order, depends on the intended wine.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-23
+changes: First generated version selected after review of berry scale, sorting logic, destemmer output, press operation and ordinary cellar materials; used without crop or colour alteration.
