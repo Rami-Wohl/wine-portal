@@ -1,0 +1,22 @@
+id: media.lesson.grape-as-raw-material.harvest-to-reception
+kind: illustration
+role: educational
+status: active
+storage_key: lessons/grape-as-raw-material/harvest-to-reception.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 3ec5ddd92217a63dbc7e883dd677551a466eb08e0bf436c5f00c53eec6a168a1
+alt:
+  nl: Aquarel in drie opeenvolgende scènes waarin een blauwe wijndruiventros wordt geoogst, beschadigde bessen aan een sorteertafel worden verwijderd en geselecteerde trossen in de kelder worden ontvangen
+  en: Watercolour in three successive scenes showing a bunch of black wine grapes being harvested, damaged berries being removed at a sorting table and selected bunches arriving at the winery
+caption:
+  nl: De drie momenten volgen de druif van oogst naar kelderontvangst. Het oogstmoment bepaalt welk fruit wordt binnengebracht; aan de sorteertafel worden aangetaste bessen verwijderd, zodat de geselecteerde trossen het uitgangspunt voor de verdere vinificatie vormen.
+  en: These three moments follow grapes from harvest to winery reception. Harvest timing determines which fruit comes in; damaged berries are removed at the sorting table, leaving the selected bunches as the starting point for further winemaking.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-23
+changes: Second generated version selected after review of process clarity, wine-grape scale, sorting logic, plausible equipment and visibly painterly treatment; used without crop or colour alteration.

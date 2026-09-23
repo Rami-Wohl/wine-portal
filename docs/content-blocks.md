@@ -3,7 +3,7 @@ title: "Markdown- en content-blockconventies"
 status: "accepted"
 version: "1.0"
 created: "2026-08-31"
-last_updated: "2026-09-01"
+last_updated: "2026-09-23"
 implementation: "implemented"
 ---
 
@@ -323,6 +323,24 @@ Een actieve narrative van type `lesson` heeft daarnaast:
 - precies één `objectives` vóór de eerste `section`;
 - minimaal één `key-idea`;
 - minimaal één `in-the-glass`.
+
+Voor iedere lesson gelden bovendien twee afzonderlijke redactionele controles:
+
+1. **Koppen als leerbakens.** H2- en H3-koppen benoemen rechtstreeks het
+   begrip, mechanisme, proces of onderscheid dat volgt. Een kop mag ritme en
+   karakter hebben, maar een lezer moet hem los van de alinea kunnen begrijpen.
+   Vermijd voor lessons cryptische metaforen, woordspelingen en koppen die pas na
+   lezing van de volledige sectie betekenis krijgen.
+2. **Visual teaching opportunity audit.** Beoordeel tijdens outline én
+   eindredactie per leerdoel of een foto, procesillustratie, vergelijking of
+   diagram de uitleg aantoonbaar sneller of duidelijker maakt. Hergebruik eerst
+   geschikt geregistreerd beeld. Kies fotografie voor observeerbare
+   werkelijkheid en illustratie voor een proces, onzichtbaar mechanisme of
+   gecontroleerde vergelijking. Leg vast waarom geen visual nodig is wanneer
+   een lastig ruimtelijk, temporeel of causaal idee uitsluitend in proza blijft.
+   Een verplichte beoordeling betekent niet dat iedere les decoratief beeld
+   moet krijgen; ieder toegevoegd beeld moet een concrete leertaak vervullen en
+   de visuele, media- en nauwkeurigheidschecks doorlopen.
 
 Andere narrative-types gebruiken deze didactische blocks alleen wanneer ze inhoudelijk passen. Een historical essay krijgt bijvoorbeeld niet automatisch een `in-the-glass`-block.
 

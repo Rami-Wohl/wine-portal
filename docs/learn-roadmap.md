@@ -92,7 +92,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 2 | `LRN-002` | Pilotcurriculum, lesoutline en contentgap-analyse | `LRN-001` | afgerond |
 | 3 | `LRN-003` | Canonical learning-pathschema en authoringcontract | `LRN-002` | afgerond |
 | 4 | `LRN-004` | Pipeline, validatie, indexes en tests | `LRN-003` | afgerond |
-| 5 | `LRN-005` | Eerste echte lesson vertical slice | `LRN-002`, `LRN-004` | gepland |
+| 5 | `LRN-005` | Eerste echte lesson vertical slice | `LRN-002`, `LRN-004` | afgerond |
 | 6 | `LRN-006` | Learn-catalogus en learning-pathoverzicht | `LRN-004`, `LRN-005` | gepland |
 | 7 | `LRN-007` | Lescontext en vorige/volgende-navigatie | `LRN-006` | gepland |
 | 8 | `LRN-008` | Volledig pilotcurriculum en ontbrekende basiscontent | `LRN-005`, `LRN-007` | gepland |
@@ -217,7 +217,21 @@ beslismoment horen.
 
 ### `LRN-005` — Eerste echte lesson als volledige vertical slice maken
 
-- **Status:** gepland
+- **Status:** afgerond
+- **Voortgang:** 2026-09-23 — de actieve, tweetalige les **De druif als
+  grondstof** is gepubliceerd als eerste core step van het draftleerpad. De les
+  verbindt besopbouw, meervoudige rijpheid, oogstmoment en fruitgezondheid in
+  één didactische boog, hergebruikt de geregistreerde druivendoorsnede en linkt
+  canonical naslag zonder entityproza te kopiëren. De narrativepagina en de
+  bestaande Learn-index zijn op 390 en 1440 CSS-pixels gecontroleerd; content,
+  tabel, beeld, bronnen en contextkolom reflowen correct.
+- **Nacontrole:** 2026-09-23 — de leskoppen zijn aangescherpt als directe
+  leerbakens, een educatieve procesillustratie van oogst via sortering naar
+  kelderontvangst is toegevoegd en de verplichte visual-opportunity-check voor
+  toekomstige lessons is in de authoring- en schrijfrichtlijnen vastgelegd.
+- **Verificatie:** `content:check`, deterministische `content:build`, desktop- en
+  mobiele visuele controle; volledige repositorycheck bij afsluiting van het
+  ticket.
 - **Doel:** contentcontract, renderer en didactische kwaliteit bewijzen met echte
   inhoud voordat de hele Learn-UI wordt gebouwd.
 - **Werk:**

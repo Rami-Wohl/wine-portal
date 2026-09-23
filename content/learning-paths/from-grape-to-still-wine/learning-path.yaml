@@ -1,0 +1,60 @@
+schema_version: 1
+id: learning-path.from-grape-to-still-wine
+status: draft
+curriculum_level: understand
+title:
+  nl: Van druif naar stille wijn — hoe wijn wordt gemaakt
+  en: From grape to still wine — how wine is made
+slugs:
+  nl: van-druif-naar-stille-wijn
+  en: from-grape-to-still-wine
+summary:
+  nl: Volg de belangrijkste keuzes van rijpe druif tot gebottelde stille wijn en ontdek hoe iedere stap de volgende mogelijk maakt.
+  en: Follow the key decisions from ripe grape to bottled still wine and discover how each stage enables the next.
+audience:
+  nl: Voor wijnliefhebbers met voorkennis rond WSET Level 2 die wijnmaken in samenhang willen begrijpen.
+  en: For wine lovers with knowledge broadly comparable to WSET Level 2 who want to understand winemaking as a connected process.
+prerequisites:
+  nl:
+    - Je weet globaal wat druivenrassen, droge wijn, zuur, tannine en alcohol zijn.
+  en:
+    - You broadly understand grape varieties, dry wine, acidity, tannin and alcohol.
+objectives:
+  nl:
+    - Leg de hoofdroute van gezonde druif tot gebottelde stille wijn in logische volgorde uit.
+    - Vergelijk de hoofdkeuzes bij witte, rosé- en rode vinificatie.
+    - Verbind belangrijke kelderkeuzes zorgvuldig met mogelijke gevolgen in het glas.
+  en:
+    - Explain the main route from healthy grapes to bottled still wine in a logical order.
+    - Compare the principal choices in white, rosé and red winemaking.
+    - Carefully connect important winery decisions to their possible effects in the glass.
+steps:
+  - id: grape-as-raw-material
+    target: narrative.lesson.grape-as-raw-material
+    context:
+      nl: Begin bij wat de geoogste druif de kelder binnenbrengt en welke mogelijkheden daar al in besloten liggen.
+      en: Start with what the harvested grape brings into the winery and the possibilities it already contains.
+completion:
+  recap:
+    nl:
+      - Je kunt de productieroute van gezonde druif tot fles in volgorde uitleggen.
+      - Je kunt beredeneren waar kelderkeuzes de stijl van een stille wijn mede vormen.
+      - Je kunt gericht naslag openen wanneer een productievraag meer diepte vraagt.
+    en:
+      - You can explain the production route from healthy grapes to bottle in order.
+      - You can reason where winery choices help shape the style of a still wine.
+      - You can open focused reference material when a production question needs greater depth.
+  encouragement:
+    nl: "Mooi werk: je hebt nu een samenhangend basismodel waarmee je wijnmaken stap voor stap kunt blijven onderzoeken."
+    en: "Well done: you now have a connected foundation for continuing to explore winemaking step by step."
+  suggestions:
+    - id: explore-fermentation
+      target: concept.fermentation
+      context:
+        nl: Verdiep je verder in de omzetting van druivensap naar wijn.
+        en: Explore the transformation of grape juice into wine in greater depth.
+    - id: explore-maceration
+      target: concept.maceration
+      context:
+        nl: Bekijk hoe contact tussen sap en schillen kleur, tannine en textuur kan vormen.
+        en: See how contact between juice and skins can shape colour, tannin and texture.

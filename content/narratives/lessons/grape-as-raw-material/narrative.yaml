@@ -1,0 +1,23 @@
+id: narrative.lesson.grape-as-raw-material
+type: lesson
+status: active
+title:
+  nl: De druif als grondstof
+  en: The grape as raw material
+slugs:
+  nl: de-druif-als-grondstof
+  en: grape-as-raw-material
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.acidity
+  - concept.tannin
+  - concept.vintage
+  - concept.botrytis
+source_refs:
+  - source.wset-wine-composition
+  - source.awri-berry-ripening
+  - source.awri-managing-botrytis-fruit-2023
+  - source.penn-state-grape-sour-rot
+depth: foundation

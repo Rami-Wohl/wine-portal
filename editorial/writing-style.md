@@ -2,7 +2,7 @@
 title: Editorial writing style
 status: accepted
 version: "1.0"
-last_updated: "2026-09-01"
+last_updated: "2026-09-23"
 ---
 
 # Editorial writing style
@@ -85,6 +85,21 @@ plek neerzet. Zodra bronnen het toelaten, komen minimaal deze dimensies terug:
 Dit is geen vaste hoofdstukvolgorde. Het openingsdeel moet als verhaal lezen,
 niet als vier ingevulde databasevelden. Historisch belang wordt niet uit
 reputatie afgeleid: zonder geschikte bron blijft het zichtbaar te onderzoeken.
+
+## Lessen
+
+Een leskop helpt de gebruiker voorspellen wat hij of zij in de volgende sectie
+gaat leren. Benoem daarom het concrete onderwerp of verband: bijvoorbeeld
+“Suiker, zuur en fenolische rijpheid” of “Hoe het oogstmoment de grondstof
+bepaalt”. Bewaar een meer literaire formulering voor de lopende tekst. Een kop
+die mooi klinkt maar zonder context meerdere dingen kan betekenen, wordt voor
+een lesson herschreven.
+
+Controleer bij iedere lesson expliciet waar beeld uitleg kan overnemen van
+proza. Geef voorrang aan beelden die een handeling, volgorde, structuur,
+schaalverschil of causaal verband zichtbaar maken. Voeg geen illustratie toe om
+alleen de pagina te vullen; noteer tijdens review wel bewust waarom een complex
+leerdoel voldoende helder blijft zonder visual.
 
 ## Beeld en tekst
 
