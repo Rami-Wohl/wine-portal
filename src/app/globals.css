@@ -73,6 +73,9 @@ video {
   outline: 3px solid color-mix(in srgb, var(--brand) 64%, white);
   outline-offset: 4px;
 }
+main#main-content:focus {
+  outline: none;
+}
 h1,
 h2,
 h3,

@@ -148,7 +148,7 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
   const learningPathContexts = learningPathContextOptionsForLesson(narrative);
 
   return (
-    <main id="main-content" className="page-shell lesson-page">
+    <main id="main-content" className="page-shell lesson-page" tabIndex={-1}>
       <nav className="breadcrumbs" aria-label="Broodkruimelpad">
         <Link href="/verdiepingen">Verdiepingen</Link>
         <span aria-hidden="true">/</span>

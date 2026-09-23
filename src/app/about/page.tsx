@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main id="main-content" className="page-shell">
+    <main id="main-content" className="page-shell" tabIndex={-1}>
       <article className="about-copy">
         <section>
           <h2>Waarom bestaat Oenocademy?</h2>

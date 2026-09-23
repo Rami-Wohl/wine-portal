@@ -67,7 +67,7 @@ export default async function LearningPathPage({ params }: LearningPathPageProps
   }));
 
   return (
-    <main id="main-content" className="page-shell learning-path-page">
+    <main id="main-content" className="page-shell learning-path-page" tabIndex={-1}>
       <nav className="breadcrumbs" aria-label="Broodkruimelpad">
         <Link href="/learn">Leren</Link>
         <span aria-hidden="true">/</span>

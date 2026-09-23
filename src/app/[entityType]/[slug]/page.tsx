@@ -13,11 +13,17 @@ import {
   getEntityPublicHref,
   getEntityByRoute,
   getMediaByIds,
+  getPublishedLearningPathsForLesson,
   getPublishedNarrativeBacklinks,
   getRelationsForEntity,
   getSourcesByIds,
 } from "@/content/repository";
-import { ENTITY_ROUTE_SEGMENTS, ENTITY_TYPE_LABELS_NL, narrativeHref } from "@/content/routing";
+import {
+  ENTITY_ROUTE_SEGMENTS,
+  ENTITY_TYPE_LABELS_NL,
+  learningPathLessonHref,
+  narrativeHref,
+} from "@/content/routing";
 
 interface EntityPageProps {
   params: Promise<{ entityType: string; slug: string }>;
@@ -32,6 +38,16 @@ function highestDocumentDepth(entity: GeneratedEntity): Depth | null {
     if (!highest) return depth;
     return DEPTHS.indexOf(depth) > DEPTHS.indexOf(highest) ? depth : highest;
   }, null);
+}
+
+function narrativeLearningHref(
+  narrative: ReturnType<typeof getPublishedNarrativeBacklinks>[number],
+) {
+  if (narrative.type !== "lesson") return narrativeHref(narrative);
+  const learningPaths = getPublishedLearningPathsForLesson(narrative.id);
+  return learningPaths.length === 1
+    ? learningPathLessonHref(learningPaths[0], narrative)
+    : narrativeHref(narrative);
 }
 
 export function generateStaticParams() {
@@ -117,7 +133,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
   const hasSupportingInformation = hasRelatedKnowledge || sources.length > 0;
 
   return (
-    <main id="main-content" className="page-shell entity-page">
+    <main id="main-content" className="page-shell entity-page" tabIndex={-1}>
       <nav className="breadcrumbs" aria-label="Broodkruimelpad">
         <Link href="/explore">Ontdekken</Link>
         <span aria-hidden="true">/</span>
@@ -231,7 +247,7 @@ export default async function EntityPage({ params }: EntityPageProps) {
                   </summary>
                   <div className="relation-cluster-body related-learning-links">
                     {relatedNarratives.map((narrative) => (
-                      <Link href={narrativeHref(narrative)} key={narrative.id}>
+                      <Link href={narrativeLearningHref(narrative)} key={narrative.id}>
                         {narrative.title.nl}
                       </Link>
                     ))}

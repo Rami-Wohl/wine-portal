@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AtlasPage() {
   return (
-    <main id="main-content" className="page-shell">
+    <main id="main-content" className="page-shell" tabIndex={-1}>
       <PageIntro eyebrow="Atlas" title="Wijnkennis in geografische context">
         <p>
           De Atlas wordt de geografische ingang tot dezelfde wijnkennis die je via Ontdekken, Leren

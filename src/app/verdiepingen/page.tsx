@@ -15,7 +15,7 @@ export default function NarrativesPage() {
   const narratives = getPublishedNarratives();
 
   return (
-    <main id="main-content" className="page-shell">
+    <main id="main-content" className="page-shell" tabIndex={-1}>
       <PageIntro eyebrow="Verdiepingen" title="Verhalen die verbanden zichtbaar maken">
         <p>
           Verdiepingen verbinden de feiten uit de kennisbank tot essays, profielen, vergelijkingen

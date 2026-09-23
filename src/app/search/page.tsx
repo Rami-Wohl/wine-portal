@@ -118,7 +118,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const navigationKey = `${q}\u0000${selectedType}\u0000${currentPage}`;
 
   return (
-    <main id="main-content" className="page-shell">
+    <main id="main-content" className="page-shell" tabIndex={-1}>
       <SearchFocusManager hasSearchIntent={hasSearchIntent} navigationKey={navigationKey} />
       <PageIntro eyebrow="Zoeken" title="Vind direct wat je nodig hebt">
         <p>

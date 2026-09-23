@@ -97,7 +97,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 7 | `LRN-007` | Lescontext en vorige/volgende-navigatie | `LRN-006` | afgerond |
 | 8 | `LRN-008` | Volledig pilotcurriculum en ontbrekende basiscontent | `LRN-005`, `LRN-007` | afgerond |
 | 9 | `LRN-009` | Anonieme, vervangbare lokale voortgang | `LRN-007`, `LRN-008` | afgerond |
-| 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | gepland |
+| 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | afgerond |
 | 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | gepland |
 | 12 | `LRN-012` | Werkelijk gebruik evalueren en vervolg besluiten | `LRN-011` | gepland |
 
@@ -409,7 +409,7 @@ beslismoment horen.
 
 ### `LRN-010` — Integrale Learn-QA en releasegereedheid
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** inhoud, didactiek, techniek en UI als één productflow beoordelen.
 - **Werk:**
   - voer een inhoudelijke curriculumreview uit op volledigheid, volgorde,
@@ -424,6 +424,20 @@ beslismoment horen.
     release niet blokkeren.
 - **Klaar wanneer:** de volledige anonieme journey geen blockerende inhoudelijke,
   toegankelijkheids-, responsive-, routing- of progressproblemen heeft.
+- **Opgeleverd op 2026-09-23:** de volledige catalogus–pad–lesson–afsluitflow en
+  alle zeven lessen zijn inhoudelijk, tweetalig, visueel en technisch
+  beoordeeld. De curriculumvolgorde, WSET 2-pluskalibratie, wereldwijde
+  toepasbaarheid, 35 unieke bronrecords, mediarechten, captions en NL/EN-pariteit
+  zijn gecontroleerd. De review staat in
+  `../editorial/learn-release-qa-2026-09-23.md`.
+- **Direct gecorrigeerd:** skiplinks verplaatsen nu ook toetsenbordfocus;
+  resetten of annuleren van voortgang heeft voorspelbaar focusherstel; een
+  canonical entitybacklink herstelt bij precies één actief pad de geldige
+  lessoncontext. Gerichte regressietests dekken deze gevallen.
+- **Gecontroleerd:** alle Learn-views op 375, 768, 1024 en 1440 CSS-pixels,
+  200%-reflow, reduced motion, headings, landmarks, media, interne links,
+  storagefouten, navigatie zonder JavaScript en Learn–Explore–Learn. Er zijn
+  geen blockerende bevindingen en geen nieuwe onderhoudstickets.
 
 ### `LRN-011` — Anonieme pilot publiceren
 

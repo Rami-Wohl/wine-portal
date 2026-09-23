@@ -20,7 +20,7 @@ export default function ExplorePage() {
   });
 
   return (
-    <main id="main-content" className="page-shell">
+    <main id="main-content" className="page-shell" tabIndex={-1}>
       <PageIntro eyebrow="Ontdekken" title="Waar ben je nieuwsgierig naar?">
         <p>
           Verken onderwerpen en ontdek hoe regio&apos;s, producenten, druiven en wijnbegrippen met

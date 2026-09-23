@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useLearningProgress } from "@/hooks/use-learning-progress";
 
 export interface LearningProgressLesson {
@@ -54,13 +54,15 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
   const stepIds = lessons.map((lesson) => lesson.stepId);
   const progress = useLearningProgress({ pathId, stepIds });
   const [confirmingReset, setConfirmingReset] = useState(false);
+  const progressTitleRef = useRef<HTMLHeadingElement>(null);
+  const resetButtonRef = useRef<HTMLButtonElement>(null);
   const nextLesson = lessons.find((lesson) => lesson.stepId === progress.firstIncompleteStepId);
 
   return (
     <section className="learning-progress-panel" aria-labelledby="learning-progress-title">
       <div>
         <p className="eyebrow">Jouw voortgang</p>
-        <h2 id="learning-progress-title">
+        <h2 id="learning-progress-title" ref={progressTitleRef} tabIndex={-1}>
           {!progress.isReady
             ? "Voortgang laden"
             : progress.isComplete
@@ -89,13 +91,14 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
               {progress.completedCount > 0 ? "Ga verder" : "Start het leerpad"}
             </Link>
           ) : null}
-          {progress.completedCount > 0 && !confirmingReset ? (
+          {progress.completedCount > 0 ? (
             <button
               className="text-button"
               type="button"
-              aria-expanded="false"
+              aria-expanded={confirmingReset}
               aria-controls="learning-progress-reset-confirmation"
-              onClick={() => setConfirmingReset(true)}
+              ref={resetButtonRef}
+              onClick={() => setConfirmingReset((current) => !current)}
             >
               Wis voortgang
             </button>
@@ -114,7 +117,10 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
                   type="button"
                   disabled={progress.isSaving}
                   onClick={() => {
-                    void progress.clear().then(() => setConfirmingReset(false));
+                    void progress.clear().then(() => {
+                      setConfirmingReset(false);
+                      requestAnimationFrame(() => progressTitleRef.current?.focus());
+                    });
                   }}
                 >
                   Ja, wis voortgang
@@ -122,7 +128,10 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
                 <button
                   className="text-button"
                   type="button"
-                  onClick={() => setConfirmingReset(false)}
+                  onClick={() => {
+                    setConfirmingReset(false);
+                    requestAnimationFrame(() => resetButtonRef.current?.focus());
+                  }}
                 >
                   Annuleren
                 </button>

@@ -114,7 +114,7 @@ export default async function DiscoveryBrowsePage({
     : filteredEntries;
 
   return (
-    <main id="main-content" className="page-shell discovery-browse-page">
+    <main id="main-content" className="page-shell discovery-browse-page" tabIndex={-1}>
       <nav className="breadcrumbs" aria-label="Kruimelpad">
         <Link href="/explore">Ontdekken</Link>
         <span aria-hidden="true">/</span>

@@ -27,7 +27,7 @@ export default function LearnPage() {
   const standaloneLessons = getPublishedStandaloneLessons();
 
   return (
-    <main id="main-content" className="page-shell learn-catalog-page">
+    <main id="main-content" className="page-shell learn-catalog-page" tabIndex={-1}>
       <PageIntro eyebrow="Leren" title="Leer in een doordachte volgorde">
         <p>
           Leerpaden bouwen wijnkennis stap voor stap op. Iedere kernles vertelt een zelfstandig

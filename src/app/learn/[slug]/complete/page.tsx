@@ -108,7 +108,7 @@ export default async function LearningPathCompletionPage({
   });
 
   return (
-    <main id="main-content" className="page-shell learning-completion-page">
+    <main id="main-content" className="page-shell learning-completion-page" tabIndex={-1}>
       <nav className="breadcrumbs" aria-label="Broodkruimelpad">
         <Link href="/learn">Leren</Link>
         <span aria-hidden="true">/</span>

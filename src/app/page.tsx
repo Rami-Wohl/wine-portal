@@ -39,7 +39,7 @@ export default function Home() {
   const [heroImage] = getMediaByIds(["media.home.vineyard-hero"]);
 
   return (
-    <main id="main-content" className="page-shell">
+    <main id="main-content" className="page-shell" tabIndex={-1}>
       <section className="home-hero">
         {heroImage ? (
           <Image
