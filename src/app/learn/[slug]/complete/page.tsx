@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
+import { LearningCompletionStatus } from "@/components/learning-progress";
 import type { LearningPath } from "@/content/model";
 import {
   getEntityById,
@@ -15,6 +16,7 @@ import {
   NARRATIVE_TYPE_LABELS_NL,
   learningPathCompletionHref,
   learningPathHref,
+  learningPathLessonHref,
   narrativeHref,
 } from "@/content/routing";
 
@@ -92,6 +94,18 @@ export default async function LearningPathCompletionPage({
     const presentation = suggestionPresentation(suggestion);
     return presentation ? [{ suggestion, presentation }] : [];
   });
+  const progressLessons = learningPath.steps.flatMap((step) => {
+    const lesson = getNarrativeById(step.target);
+    return lesson
+      ? [
+          {
+            stepId: step.id,
+            title: lesson.title.nl,
+            href: learningPathLessonHref(learningPath, lesson),
+          },
+        ]
+      : [];
+  });
 
   return (
     <main id="main-content" className="page-shell learning-completion-page">
@@ -105,9 +119,16 @@ export default async function LearningPathCompletionPage({
 
       <header className="learning-completion-hero">
         <p className="eyebrow">Afronding</p>
-        <h1>Wat je nu kunt</h1>
-        <p>{learningPath.completion.encouragement.nl}</p>
+        <h1>Terugblik op het leerpad</h1>
+        <p>Bekijk wat deze route samenbrengt en welke lessen je bewust hebt afgerond.</p>
       </header>
+
+      <LearningCompletionStatus
+        pathId={learningPath.id}
+        lessons={progressLessons}
+        pathHref={learningPathHref(learningPath)}
+        encouragement={learningPath.completion.encouragement.nl}
+      />
 
       <section className="learning-recap" aria-labelledby="learning-recap-title">
         <p className="eyebrow">Terugblik</p>

@@ -69,9 +69,12 @@ function learningPathContextOptionsForLesson(
 
     return [
       {
+        pathId: learningPath.id,
         pathSlug: learningPath.slugs.en,
         pathTitle: learningPath.title.nl,
         pathHref: learningPathHref(learningPath),
+        stepId: learningPath.steps[lessonPosition.position - 1].id,
+        stepIds: learningPath.steps.map((step) => step.id),
         position: lessonPosition.position,
         total: lessonPosition.total,
         previous: previousLesson

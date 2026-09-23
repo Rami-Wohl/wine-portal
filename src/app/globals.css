@@ -7,6 +7,7 @@
   --raised: #fff;
   --ink: #252823;
   --muted: #686b63;
+  --muted-strong: #62655d;
   --faint: #74776f;
   --line: #dedbd3;
   --line-strong: #c9c5bb;
@@ -1070,14 +1071,12 @@ h3 {
   border-radius: var(--radius-md);
   background: var(--surface);
 }
-.learning-card-meta,
-.learning-path-facts {
+.learning-card-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
 }
-.learning-card-meta span,
-.learning-path-facts span {
+.learning-card-meta span {
   padding: 0.32rem 0.65rem;
   border: 1px solid color-mix(in srgb, var(--brand) 16%, var(--line));
   border-radius: 999px;
@@ -1094,6 +1093,28 @@ h3 {
   margin-bottom: 2rem;
   color: var(--ink);
   font-size: 0.92rem;
+}
+.learning-card-progress {
+  display: grid;
+  gap: 0.55rem;
+  min-height: 58px;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.76rem;
+}
+.learning-card-progress.loading {
+  opacity: 0;
+}
+.learning-card-progress a,
+.learning-progress-complete {
+  color: var(--brand);
+  font-weight: 700;
+}
+.learning-card-progress a {
+  width: fit-content;
+  text-underline-offset: 0.2em;
 }
 .learning-card-link {
   display: flex;
@@ -1175,11 +1196,131 @@ h3 {
   font: clamp(1.15rem, 2vw, 1.4rem)/1.5 var(--font-display);
 }
 .learning-path-facts {
-  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(110px, auto) minmax(260px, 560px);
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.8rem 0 0;
+  padding: 0;
+  border-block: 1px solid var(--line-strong);
 }
-.learning-path-facts span:last-child {
-  max-width: 560px;
-  text-transform: none;
+.learning-path-facts > div {
+  padding: 0.85rem 1.25rem 0.9rem 0;
+}
+.learning-path-facts > div + div {
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--line);
+}
+.learning-path-facts dt {
+  margin-bottom: 0.16rem;
+  color: var(--brand);
+  font-size: 0.66rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.learning-path-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 620;
+  line-height: 1.45;
+}
+.learning-progress-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--leaf) 28%, var(--line));
+  border-radius: var(--radius-md);
+  background: linear-gradient(105deg, var(--leaf-soft), var(--surface));
+}
+.learning-progress-panel h2,
+.learning-completion-status h2 {
+  margin-bottom: 0.8rem;
+  font: 500 clamp(1.6rem, 3vw, 2.2rem)/1.08 var(--font-display);
+}
+.learning-progress-meter {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+.learning-progress-meter progress {
+  width: min(260px, 48vw);
+  height: 7px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--leaf) 12%, var(--line));
+}
+.learning-progress-meter progress::-webkit-progress-bar {
+  background: color-mix(in srgb, var(--leaf) 12%, var(--line));
+}
+.learning-progress-meter progress::-webkit-progress-value {
+  border-radius: 999px;
+  background: var(--leaf);
+}
+.learning-progress-meter progress::-moz-progress-bar {
+  border-radius: 999px;
+  background: var(--leaf);
+}
+.learning-progress-loading,
+.learning-progress-notice {
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.8rem;
+}
+.learning-progress-notice {
+  max-width: 620px;
+  margin-top: 0.8rem;
+}
+.learning-progress-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+.text-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.8rem;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--brand);
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease;
+}
+.learning-progress-reset {
+  flex: 1 0 100%;
+  max-width: 390px;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.learning-progress-reset p {
+  margin-bottom: 0.8rem;
+  color: var(--ink);
+  font-size: 0.8rem;
+}
+.learning-progress-reset > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
 }
 .primary-action,
 .secondary-action {
@@ -1192,6 +1333,10 @@ h3 {
   font-size: 0.82rem;
   font-weight: 750;
   text-decoration: none;
+  transition:
+    border-color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease;
 }
 .primary-action {
   margin-top: 2rem;
@@ -1255,6 +1400,13 @@ h3 {
 .learning-step-list > li:last-child {
   border-bottom: 1px solid var(--line);
 }
+.learning-step-list > li.is-complete {
+  color: color-mix(in srgb, var(--ink) 78%, var(--leaf));
+}
+.learning-step-list > li.is-complete .learning-step-number,
+.learning-step-list > li.is-complete .learning-step-kind {
+  color: var(--leaf);
+}
 .learning-step-number {
   color: var(--brand);
   font: 500 1.7rem/1 var(--font-display);
@@ -1309,6 +1461,26 @@ h3 {
 }
 .learning-completion-hero {
   padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+.learning-completion-status {
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.learning-completion-status.loading {
+  min-height: 170px;
+  opacity: 0;
+}
+.learning-completion-status.is-complete {
+  border-color: color-mix(in srgb, var(--leaf) 34%, var(--line));
+  background: linear-gradient(105deg, var(--leaf-soft), var(--surface));
+}
+.learning-completion-status > p:not(.eyebrow) {
+  max-width: 690px;
+  margin: 1rem 0;
+  color: var(--ink);
 }
 .learning-recap {
   padding: clamp(1.6rem, 4vw, 2.8rem);
@@ -1759,8 +1931,83 @@ h3 {
 .lesson-path-context > p strong {
   color: var(--brand);
 }
-.lesson-path-navigation {
+.lesson-completion-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 0.7rem;
+  align-items: center;
+  min-height: 48px;
+  width: 210px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--brand) 34%, var(--line));
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease;
+}
+.lesson-completion-toggle:disabled {
+  cursor: wait;
+  opacity: 0.64;
+}
+.lesson-completion-toggle.is-complete {
+  border-color: color-mix(in srgb, var(--leaf) 52%, var(--line));
+  background: var(--leaf-soft);
+}
+.lesson-completion-icon {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  flex: 0 0 27px;
+  place-items: center;
+  border: 1.5px solid var(--brand);
+  border-radius: 50%;
+  color: var(--surface);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+.lesson-completion-toggle.is-complete .lesson-completion-icon {
+  border-color: var(--leaf);
+  background: var(--leaf);
+}
+.lesson-completion-toggle > span:last-child {
+  display: grid;
+  gap: 0.05rem;
+}
+.lesson-completion-toggle strong {
+  font-size: 0.78rem;
+}
+.lesson-completion-toggle small {
+  color: var(--muted-strong);
+  font-size: 0.7rem;
+}
+.lesson-path-footer {
   margin-top: clamp(3.5rem, 7vw, 6rem);
+}
+.lesson-completion-footer {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--leaf) 26%, var(--line));
+  border-radius: var(--radius-md);
+  background: linear-gradient(100deg, var(--leaf-soft), var(--surface));
+}
+.lesson-completion-footer p {
+  margin: 0;
+}
+.lesson-completion-footer div > p:last-child {
+  max-width: 520px;
+  color: var(--ink);
+  font-size: 0.8rem;
+}
+.lesson-path-navigation {
+  margin-top: 1.25rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line-strong);
 }
@@ -1796,6 +2043,10 @@ h3 {
   border-radius: var(--radius-md);
   background: var(--surface);
   text-decoration: none;
+  transition:
+    border-color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease;
 }
 .lesson-path-navigation-link.next {
   border-color: color-mix(in srgb, var(--brand) 38%, var(--line));
@@ -1814,6 +2065,41 @@ h3 {
 }
 .lesson-path-navigation-link strong {
   font: 550 1.15rem/1.18 var(--font-display);
+}
+
+@media (hover: hover) {
+  .primary-action:hover {
+    background: var(--brand-dark);
+  }
+  .secondary-action:hover {
+    border-color: var(--brand-dark);
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+  }
+  .text-button:hover {
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+  }
+  .learning-card-progress a:hover,
+  .learning-card-link:hover {
+    color: var(--brand-dark);
+  }
+  .lesson-completion-toggle:hover {
+    border-color: var(--brand);
+    background: var(--brand-soft);
+  }
+  .lesson-completion-toggle.is-complete:hover {
+    border-color: var(--leaf);
+    background: color-mix(in srgb, var(--leaf) 14%, var(--surface));
+  }
+  .lesson-path-navigation-link:hover {
+    border-color: color-mix(in srgb, var(--brand) 46%, var(--line));
+    background: color-mix(in srgb, var(--brand-soft) 42%, var(--surface));
+  }
+  .lesson-path-navigation-link.next:hover {
+    border-color: var(--brand);
+    background: color-mix(in srgb, var(--brand-soft) 72%, var(--surface));
+  }
 }
 
 .entity-body {
@@ -2383,6 +2669,38 @@ h3 {
   .learning-path-hero,
   .learning-completion-hero {
     padding-block: 3.5rem;
+  }
+  .learning-path-facts {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .learning-path-facts > div {
+    padding: 0.8rem 0;
+  }
+  .learning-path-facts > div + div {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+  .learning-progress-panel {
+    grid-template-columns: 1fr;
+  }
+  .learning-progress-actions {
+    justify-content: flex-start;
+  }
+  .learning-progress-meter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .learning-progress-meter progress {
+    width: 100%;
+  }
+  .lesson-completion-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .lesson-completion-toggle {
+    justify-content: flex-start;
   }
   .learning-step-list > li {
     grid-template-columns: 42px minmax(0, 1fr);

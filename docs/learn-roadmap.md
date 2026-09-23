@@ -96,7 +96,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 6 | `LRN-006` | Learn-catalogus en learning-pathoverzicht | `LRN-004`, `LRN-005` | afgerond |
 | 7 | `LRN-007` | Lescontext en vorige/volgende-navigatie | `LRN-006` | afgerond |
 | 8 | `LRN-008` | Volledig pilotcurriculum en ontbrekende basiscontent | `LRN-005`, `LRN-007` | afgerond |
-| 9 | `LRN-009` | Anonieme, vervangbare lokale voortgang | `LRN-007`, `LRN-008` | gepland |
+| 9 | `LRN-009` | Anonieme, vervangbare lokale voortgang | `LRN-007`, `LRN-008` | afgerond |
 | 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | gepland |
 | 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | gepland |
 | 12 | `LRN-012` | Werkelijk gebruik evalueren en vervolg besluiten | `LRN-011` | gepland |
@@ -358,7 +358,7 @@ beslismoment horen.
 
 ### `LRN-009` — Anonieme lokale voortgang vervangbaar implementeren
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** terugkerende gebruikers lokaal laten doorgaan zonder accounts of
   backend, via een later vervangbare opslaggrens.
 - **Werk:**
@@ -379,6 +379,33 @@ beslismoment horen.
   rechtstreeks van `localStorage` afhankelijk is.
 - **Verificatie:** hook/store-unit-tests en Playwright voor first visit,
   voltooien, heropenen, refresh, reset, corrupte opslag en storage failure.
+- **Opgeleverd op 2026-09-23:** de UI gebruikt één vervangbare
+  `LearningProgressRepository` voor laden, opslaan, wissen en synchroniseren.
+  Het versieerbare record bewaart alleen path-ID, voltooide stabiele step-ID's
+  en `updated_at`; aantallen, percentages, vervolgactie en volledige status
+  worden afgeleid. De lokale adapter valt bij onbeschikbare opslag terug op
+  tijdelijk sessiegeheugen zonder lessen of navigatie te blokkeren. Dezelfde
+  interface en payload kunnen later door een accountgebonden API- en
+  databaseadapter worden geleverd.
+- **UX:** iedere pathgebonden lesson toont boven en onder een toegankelijke,
+  omkeerbare toggle tussen **Nog te leren** en **Les voltooid**. Catalogus en
+  pathpagina tonen afgeleide voortgang en een passende doorgaanactie; de
+  pathpagina ondersteunt een expliciet bevestigde reset. De afsluitpagina doet
+  alleen bij alle gemarkeerde steps een persoonlijke voltooiingsclaim.
+  Navigeren, openen en de afsluiting bekijken wijzigen nooit vanzelf de staat.
+- **Gecontroleerd:** corrupte, toekomstige en geblokkeerde opslag, refresh,
+  reset, synchronisatie tussen beide toggles, de volledige afronding, mobiel,
+  desktop en navigatie zonder JavaScript. Formatter, lint, typecheck, 125
+  unit-tests, relation-audit, production build en 10 gerichte Playwrighttests
+  slagen.
+- **Visuele nacontrole 2026-09-23:** de volledige voortgangsflow is opnieuw
+  beoordeeld op 375, 768, 1024 en 1440 CSS-pixels, inclusief lege,
+  gedeeltelijke en voltooide staat, resetbevestiging, hover en keyboardfocus.
+  Actieknoppen hebben consistente padding en minimaal 44 pixels
+  aanraakhoogte; hoverstates veranderen geen geometrie; de lesson-toggle en het
+  voortgangspaneel behouden hun afmetingen bij een gewone statewissel; kleine
+  buttoncopy heeft aangescherpt contrast. Alle vier de publieke Learn-views
+  blijven op iedere gecontroleerde breedte vrij van horizontale overflow.
 
 ### `LRN-010` — Integrale Learn-QA en releasegereedheid
 
@@ -455,8 +482,8 @@ aanbeveling richtinggevend maar niet bindend.
 | `DEC-LRN-009` | Hoeveel gelokaliseerde prose bezit een path zelf? | `LRN-003` | Alleen compacte structurele UI-prose in tweetalige YAML; geen path-Markdown | besloten 2026-09-23 |
 | `DEC-LRN-010` | Zijn prerequisites in v1 formele relaties? | `LRN-003` | Alleen menselijke, gelokaliseerde voorkennisbeschrijving; geen graph, gates of unlockregels | besloten 2026-09-23 |
 | `DEC-LRN-011` | Hoe draagt een canonical lesson pathcontext? | `LRN-007` | Een gevalideerde, deelbare queryparameter; geen dubbele `/learn/.../lesson`-contentroute | besloten 2026-09-23 |
-| `DEC-LRN-012` | Exact lokaal progressrecord en versiebeleid | `LRN-009` | Path-ID, schema-versie, voltooide step-ID's en `updated_at`; overige waarden afleiden | open |
-| `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete gebruikersactie, omkeerbaar; alleen openen voltooit niets | open |
+| `DEC-LRN-012` | Exact lokaal progressrecord en versiebeleid | `LRN-009` | Path-ID, schema-versie, voltooide step-ID's en `updated_at`; overige waarden afleiden; repositorygrens blijft vervangbaar door API/database | besloten 2026-09-23 |
+| `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete omkeerbare toggle boven en onder de lesson; openen of navigeren voltooit niets | besloten 2026-09-23 |
 | `DEC-LRN-014` | Publieke namen voor de drie curriculumniveaus | `LRN-002` | **Wijn begrijpen**, **Wijn verklaren** en **Wijn doorgronden**, met WSET 2+/3+/4+ als kalibrerende toelichting | besloten 2026-09-23 |
 
 ## Besluitenlog

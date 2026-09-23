@@ -279,6 +279,60 @@ worden nergens als dubbele authored of progressdata opgeslagen.
 - de queryparameter maakt geen tweede contentroute en wordt niet opgenomen in
   canonical metadata.
 
+## 9. Anonieme voortgang en vervangbare opslaggrens
+
+`DEC-LRN-012` en `DEC-LRN-013` zijn op 2026-09-23 goedgekeurd. De anonieme MVP
+gebruikt lokale browseropslag, maar de UI spreekt uitsluitend met een
+`LearningProgressRepository`. Deze grens bezit vier operaties: een record laden,
+opslaan, wissen en op wijzigingen abonneren. Geen Learn-component leest of
+schrijft rechtstreeks in `localStorage`.
+
+Het versieerbare voortgangsrecord is:
+
+```json
+{
+  "schema_version": 1,
+  "path_id": "learning-path.from-grape-to-still-wine",
+  "completed_step_ids": ["grape-as-raw-material"],
+  "updated_at": "2026-09-23T12:00:00.000Z"
+}
+```
+
+Alle velden hebben een blijvende betekenis:
+
+- `path_id` verwijst naar de stabiele identiteit van het leerpad;
+- `completed_step_ids` bevat uitsluitend stabiele lokale step-ID's, nooit
+  posities, slugs of titels;
+- `updated_at` is een ISO-tijdstip voor conflict- en synchronisatiebeleid dat
+  pas bij een toekomstige backend wordt vastgesteld;
+- `schema_version` voorkomt dat onbekende records stilzwijgend verkeerd worden
+  geïnterpreteerd.
+
+Percentages, aantallen, de volgende onvoltooide les en de volledige pathstatus
+worden steeds afgeleid. Zij worden niet dubbel opgeslagen. Onbekende oude
+step-ID's worden bij het lezen genegeerd; corrupte records en onbekende
+schemaversies gelden als lege voortgang en veroorzaken geen contentblokkade.
+
+Een toekomstige account- of API-adapter behoudt dezelfde repository-interface
+en payload. Gebruikersidentiteit, autorisatie, sync en databasekolommen zijn
+serververantwoordelijkheid en worden niet vooraf in het anonieme record
+gesimuleerd. Daardoor kunnen de hook en publieke componenten blijven bestaan
+wanneer alleen de adapter wisselt.
+
+### Voltooiingshandeling
+
+Een les wordt uitsluitend voltooid door de expliciete, omkeerbare toggle op de
+lespagina. De toggle staat boven en onder de inhoud en wisselt tussen **Nog te
+leren** en **Les voltooid**. Openen, scrollen, vorige/volgende-navigatie of het
+bezoeken van de afsluiting voltooit nooit automatisch een step.
+
+De catalogus en pathpagina leiden aantallen en een doorgaanactie af uit de
+opgeslagen step-ID's. De afsluitpagina doet alleen een persoonlijke
+voltooiingsclaim wanneer alle huidige steps bewust zijn gemarkeerd. Zonder of
+bij geblokkeerde opslag blijven alle lessen, links en de algemene terugblik
+bruikbaar. In dat geval bewaart de adapter wijzigingen hoogstens tijdelijk in
+het lopende browserbezoek en meldt de UI dit eerlijk.
+
 ## 9. Authoringworkflow
 
 1. Keur eerst curriculumbrief, lesvolgorde en contentgaps goed.

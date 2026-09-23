@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LearningPathCardProgress } from "@/components/learning-progress";
 import { PageIntro } from "@/components/page-intro";
-import { getPublishedLearningPaths, getPublishedStandaloneLessons } from "@/content/repository";
+import {
+  getNarrativeById,
+  getPublishedLearningPaths,
+  getPublishedStandaloneLessons,
+} from "@/content/repository";
 import {
   CURRICULUM_LEVEL_LABELS_NL,
   DEPTH_LABELS_NL,
   learningPathHref,
+  learningPathLessonHref,
   narrativeHref,
 } from "@/content/routing";
 
@@ -47,6 +53,21 @@ export default function LearnPage() {
                 </div>
                 <h3>{learningPath.title.nl}</h3>
                 <p>{learningPath.summary.nl}</p>
+                <LearningPathCardProgress
+                  pathId={learningPath.id}
+                  lessons={learningPath.steps.flatMap((step) => {
+                    const lesson = getNarrativeById(step.target);
+                    return lesson
+                      ? [
+                          {
+                            stepId: step.id,
+                            title: lesson.title.nl,
+                            href: learningPathLessonHref(learningPath, lesson),
+                          },
+                        ]
+                      : [];
+                  })}
+                />
                 <Link className="learning-card-link" href={learningPathHref(learningPath)}>
                   Bekijk het leerpad <span aria-hidden="true">→</span>
                 </Link>

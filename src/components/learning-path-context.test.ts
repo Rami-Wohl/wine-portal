@@ -2,9 +2,12 @@ import { describe, expect, it } from "vitest";
 import { selectLearningPathContext, type LearningPathContextOption } from "./learning-path-context";
 
 const context: LearningPathContextOption = {
+  pathId: "learning-path.from-grape-to-still-wine",
   pathSlug: "from-grape-to-still-wine",
   pathTitle: "Van druif naar stille wijn",
   pathHref: "/learn/from-grape-to-still-wine",
+  stepId: "grape-to-must",
+  stepIds: ["grape-as-raw-material", "grape-to-must"],
   position: 2,
   total: 7,
   next: {

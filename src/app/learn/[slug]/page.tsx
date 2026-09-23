@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
+import { LearningPathProgressPanel, LearningPathStepList } from "@/components/learning-progress";
 import type { GeneratedNarrative } from "@/content/model";
 import {
   getLearningPathByRoute,
@@ -58,7 +59,12 @@ export default async function LearningPathPage({ params }: LearningPathPageProps
     step: (typeof learningPath.steps)[number];
     lesson: GeneratedNarrative;
   }>;
-  const firstLesson = resolvedLessons[0]?.lesson;
+  const progressLessons = resolvedLessons.map(({ step, lesson }) => ({
+    stepId: step.id,
+    title: lesson.title.nl,
+    href: learningPathLessonHref(learningPath, lesson),
+    context: step.context.nl,
+  }));
 
   return (
     <main id="main-content" className="page-shell learning-path-page">
@@ -74,18 +80,22 @@ export default async function LearningPathPage({ params }: LearningPathPageProps
         </p>
         <h1>{learningPath.title.nl}</h1>
         <p className="learning-path-summary">{learningPath.summary.nl}</p>
-        <div className="learning-path-facts" aria-label="Leerpadinformatie">
-          <span>
-            {learningPath.steps.length} {learningPath.steps.length === 1 ? "kernles" : "kernlessen"}
-          </span>
-          <span>{learningPath.audience.nl}</span>
-        </div>
-        {firstLesson ? (
-          <Link className="primary-action" href={learningPathLessonHref(learningPath, firstLesson)}>
-            Start met de eerste les <span aria-hidden="true">→</span>
-          </Link>
-        ) : null}
+        <dl className="learning-path-facts" aria-label="Leerpadinformatie">
+          <div>
+            <dt>Omvang</dt>
+            <dd>
+              {learningPath.steps.length}{" "}
+              {learningPath.steps.length === 1 ? "kernles" : "kernlessen"}
+            </dd>
+          </div>
+          <div>
+            <dt>Voor wie</dt>
+            <dd>{learningPath.audience.nl}</dd>
+          </div>
+        </dl>
       </header>
+
+      <LearningPathProgressPanel pathId={learningPath.id} lessons={progressLessons} />
 
       <div className="learning-path-layout">
         <div className="learning-path-main">
@@ -108,24 +118,7 @@ export default async function LearningPathPage({ params }: LearningPathPageProps
                 kennisbankpagina&apos;s zijn naslag: nuttig, maar geen verplichte stap.
               </p>
             </div>
-            <ol className="learning-step-list">
-              {resolvedLessons.map(({ step, lesson }, index) => (
-                <li key={step.id}>
-                  <span className="learning-step-number" aria-hidden="true">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <p className="learning-step-kind">Kernles</p>
-                    <h3>
-                      <Link href={learningPathLessonHref(learningPath, lesson)}>
-                        {lesson.title.nl}
-                      </Link>
-                    </h3>
-                    <p>{step.context.nl}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+            <LearningPathStepList pathId={learningPath.id} lessons={progressLessons} />
           </section>
         </div>
 
@@ -144,14 +137,6 @@ export default async function LearningPathPage({ params }: LearningPathPageProps
           <p className="learning-path-reference-note">
             Je kunt iedere les ook zelfstandig openen. Naslagpagina&apos;s blijven altijd optioneel.
           </p>
-          {firstLesson ? (
-            <Link
-              className="secondary-action"
-              href={learningPathLessonHref(learningPath, firstLesson)}
-            >
-              Begin bij les 1
-            </Link>
-          ) : null}
           <Link className="text-link" href={learningPathCompletionHref(learningPath)}>
             Bekijk de afsluiting
           </Link>
