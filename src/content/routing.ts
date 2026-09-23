@@ -1,4 +1,4 @@
-import type { Depth, Entity, EntityType, Narrative } from "./model";
+import type { CurriculumLevel, Depth, Entity, EntityType, LearningPath, Narrative } from "./model";
 
 export const ENTITY_ROUTE_SEGMENTS = {
   region: "regions",
@@ -50,6 +50,12 @@ export const DEPTH_LABELS_NL = {
   specialist: "Specialistisch",
 } as const satisfies Record<Depth, string>;
 
+export const CURRICULUM_LEVEL_LABELS_NL = {
+  understand: "Wijn begrijpen",
+  explain: "Wijn verklaren",
+  analyze: "Wijn doorgronden",
+} as const satisfies Record<CurriculumLevel, string>;
+
 export const NARRATIVE_TYPE_LABELS_NL = {
   lesson: "Les",
   "regional-deep-dive": "Regionale verdieping",
@@ -66,6 +72,19 @@ export function entityHref(entity: Entity): string {
 
 export function narrativeHref(narrative: Narrative): string {
   return `/verdiepingen/${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}/${narrative.slugs.en}`;
+}
+
+export function learningPathHref(learningPath: LearningPath): string {
+  return `/learn/${learningPath.slugs.en}`;
+}
+
+export function learningPathCompletionHref(learningPath: LearningPath): string {
+  return `${learningPathHref(learningPath)}/complete`;
+}
+
+export function learningPathLessonHref(learningPath: LearningPath, lesson: Narrative): string {
+  const query = new URLSearchParams({ path: learningPath.slugs.en });
+  return `${narrativeHref(lesson)}?${query.toString()}`;
 }
 
 export function entityTypeFromRouteSegment(segment: string): EntityType | undefined {

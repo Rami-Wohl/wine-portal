@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { BRAND, SITE_URL } from "@/config/brand";
-import { getAllEntities, getAllNarratives } from "@/content/repository";
+import { getAllEntities, getAllLearningPaths, getAllNarratives } from "@/content/repository";
 import { entityPresentationMode } from "@/content/model";
 import { DISCOVERY_CATEGORIES } from "@/content/discovery";
-import { entityHref, narrativeHref } from "@/content/routing";
+import { entityHref, learningPathHref, narrativeHref } from "@/content/routing";
 import {
   generateMetadata as generateEntityMetadata,
   generateStaticParams as generateEntityStaticParams,
@@ -13,6 +13,10 @@ import {
   generateMetadata as generateNarrativeMetadata,
   generateStaticParams as generateNarrativeStaticParams,
 } from "./verdiepingen/[narrativeType]/[slug]/page";
+import {
+  generateMetadata as generateLearningPathMetadata,
+  generateStaticParams as generateLearningPathStaticParams,
+} from "./learn/[slug]/page";
 import robots from "./robots";
 import sitemap from "./sitemap";
 
@@ -51,6 +55,9 @@ describe("application metadata", () => {
     }
     for (const narrative of getAllNarratives()) {
       expect(paths.has(narrativeHref(narrative))).toBe(narrative.status === "active");
+    }
+    for (const learningPath of getAllLearningPaths()) {
+      expect(paths.has(learningPathHref(learningPath))).toBe(learningPath.status === "active");
     }
   });
 
@@ -108,6 +115,23 @@ describe("application metadata", () => {
     await expect(
       generateNarrativeMetadata({
         params: Promise.resolve({ narrativeType: "lessons", slug: "unknown" }),
+      }),
+    ).resolves.toEqual({});
+  });
+
+  it("publishes only active learning-path routes", async () => {
+    expect(generateLearningPathStaticParams()).toHaveLength(
+      getAllLearningPaths()
+        .filter((learningPath) => learningPath.status === "active")
+        .reduce(
+          (count, learningPath) =>
+            count + new Set([learningPath.slugs.en, learningPath.slugs.nl]).size,
+          0,
+        ),
+    );
+    await expect(
+      generateLearningPathMetadata({
+        params: Promise.resolve({ slug: "from-grape-to-still-wine" }),
       }),
     ).resolves.toEqual({});
   });

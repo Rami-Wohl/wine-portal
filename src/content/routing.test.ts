@@ -4,6 +4,7 @@ import {
   getAllEntitiesByType,
   getAllNarrativeBacklinks,
   getAllNarratives,
+  getAllLearningPaths,
   getEntityByRoute,
   getEntityPublicHref,
   getNarrativeByRoute,
@@ -13,6 +14,9 @@ import {
   getPublishedStandaloneEntitiesByType,
   getPublishedNarrativeBacklinks,
   getPublishedNarratives,
+  getPublishedLearningPaths,
+  getPublishedLearningPathsForLesson,
+  getPublishedStandaloneLessons,
   getRelationsForEntity,
 } from "./repository";
 import {
@@ -20,6 +24,9 @@ import {
   NARRATIVE_ROUTE_SEGMENTS,
   entityHref,
   entityTypeFromRouteSegment,
+  learningPathCompletionHref,
+  learningPathHref,
+  learningPathLessonHref,
   narrativeHref,
 } from "./routing";
 
@@ -85,6 +92,19 @@ describe("canonical content routing", () => {
     expect(getPublishedNarratives()).toEqual(
       getAllNarratives().filter((narrative) => narrative.status === "active"),
     );
+    expect(getPublishedLearningPaths()).toEqual(
+      getAllLearningPaths().filter((learningPath) => learningPath.status === "active"),
+    );
+    const lessonsInPublishedPaths = new Set(
+      getPublishedLearningPaths().flatMap((learningPath) =>
+        learningPath.steps.map((step) => step.target),
+      ),
+    );
+    expect(getPublishedStandaloneLessons()).toEqual(
+      getPublishedNarratives().filter(
+        (narrative) => narrative.type === "lesson" && !lessonsInPublishedPaths.has(narrative.id),
+      ),
+    );
     expect(getPublishedNarrativeBacklinks("region.bordeaux")).toEqual(
       getAllNarrativeBacklinks("region.bordeaux").filter(
         (narrative) => narrative.status === "active",
@@ -122,6 +142,29 @@ describe("canonical content routing", () => {
     );
   });
 
+  it("derives canonical learning-path and completion routes", () => {
+    const learningPath = getAllLearningPaths().find(
+      (item) => item.id === "learning-path.from-grape-to-still-wine",
+    );
+    expect(learningPath && learningPathHref(learningPath)).toBe("/learn/from-grape-to-still-wine");
+    expect(learningPath && learningPathCompletionHref(learningPath)).toBe(
+      "/learn/from-grape-to-still-wine/complete",
+    );
+    const lesson = getAllNarratives().find(
+      (item) => item.id === "narrative.lesson.grape-as-raw-material",
+    );
+    expect(learningPath && lesson && learningPathLessonHref(learningPath, lesson)).toBe(
+      "/verdiepingen/lessons/grape-as-raw-material?path=from-grape-to-still-wine",
+    );
+  });
+
+  it("exposes lesson membership only for published learning paths", () => {
+    expect(getPublishedLearningPathsForLesson("narrative.lesson.grape-as-raw-material")).toEqual(
+      [],
+    );
+    expect(getPublishedLearningPathsForLesson("narrative.lesson.unknown")).toEqual([]);
+  });
+
   it("resolves every generated narrative route and rejects unknown families", () => {
     for (const narrative of getAllNarratives()) {
       expect(
@@ -135,7 +178,11 @@ describe("canonical content routing", () => {
   });
 
   it("keeps all canonical generated routes unique", () => {
-    const routes = [...getAllEntities().map(entityHref), ...getAllNarratives().map(narrativeHref)];
+    const routes = [
+      ...getAllEntities().map(entityHref),
+      ...getAllNarratives().map(narrativeHref),
+      ...getAllLearningPaths().map(learningPathHref),
+    ];
     expect(new Set(routes).size).toBe(routes.length);
   });
 });

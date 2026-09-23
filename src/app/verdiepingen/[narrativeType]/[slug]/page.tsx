@@ -1,19 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
+import { Suspense } from "react";
 import { ContentDocumentView } from "@/components/content-document";
 import { EntityLink } from "@/components/entity-link";
+import {
+  LearningPathContext,
+  type LearningPathContextOption,
+} from "@/components/learning-path-context";
 import { mediaIdsForDocument } from "@/content/media";
+import { getLearningPathLessonPosition } from "@/content/learning";
 import type { GeneratedEntity, GeneratedNarrative } from "@/content/model";
 import {
   getAllNarratives,
   getEntityById,
   getMediaByIds,
+  getNarrativeById,
   getNarrativeByRoute,
+  getPublishedLearningPathsForLesson,
   getSourcesByIds,
 } from "@/content/repository";
 import {
   DEPTH_LABELS_NL,
+  learningPathCompletionHref,
+  learningPathHref,
+  learningPathLessonHref,
   NARRATIVE_ROUTE_SEGMENTS,
   NARRATIVE_TYPE_LABELS_NL,
   narrativeHref,
@@ -31,6 +42,58 @@ function publicNarrativeTitle(narrative: GeneratedNarrative): string {
   return primaryEntity
     ? `${primaryEntity.names.nl}: verdieping in voorbereiding`
     : "Verdieping in voorbereiding";
+}
+
+function learningPathContextOptionsForLesson(
+  lesson: GeneratedNarrative,
+): LearningPathContextOption[] {
+  if (lesson.type !== "lesson" || lesson.status !== "active") return [];
+
+  return getPublishedLearningPathsForLesson(lesson.id).flatMap((learningPath) => {
+    const lessonPosition = getLearningPathLessonPosition(learningPath, lesson.id);
+    if (!lessonPosition) return [];
+
+    const previousLesson = lessonPosition.previousTarget
+      ? getNarrativeById(lessonPosition.previousTarget)
+      : undefined;
+    const nextLesson = lessonPosition.nextTarget
+      ? getNarrativeById(lessonPosition.nextTarget)
+      : undefined;
+
+    if (
+      (lessonPosition.previousTarget && (!previousLesson || previousLesson.status !== "active")) ||
+      (lessonPosition.nextTarget && (!nextLesson || nextLesson.status !== "active"))
+    ) {
+      return [];
+    }
+
+    return [
+      {
+        pathSlug: learningPath.slugs.en,
+        pathTitle: learningPath.title.nl,
+        pathHref: learningPathHref(learningPath),
+        position: lessonPosition.position,
+        total: lessonPosition.total,
+        previous: previousLesson
+          ? {
+              title: previousLesson.title.nl,
+              href: learningPathLessonHref(learningPath, previousLesson),
+            }
+          : undefined,
+        next: nextLesson
+          ? {
+              title: nextLesson.title.nl,
+              href: learningPathLessonHref(learningPath, nextLesson),
+              kind: "lesson" as const,
+            }
+          : {
+              title: "Bekijk wat je nu kunt",
+              href: learningPathCompletionHref(learningPath),
+              kind: "completion" as const,
+            },
+      },
+    ];
+  });
 }
 
 export function generateStaticParams() {
@@ -79,6 +142,7 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
   const title = publicNarrativeTitle(narrative);
   const sources = getSourcesByIds(narrative.source_refs);
   const media = getMediaByIds(mediaIdsForDocument(narrative.content.nl));
+  const learningPathContexts = learningPathContextOptionsForLesson(narrative);
 
   return (
     <main id="main-content" className="page-shell lesson-page">
@@ -89,6 +153,12 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
         <span aria-hidden="true">/</span>
         <span aria-current="page">{title}</span>
       </nav>
+
+      {learningPathContexts.length > 0 ? (
+        <Suspense fallback={null}>
+          <LearningPathContext options={learningPathContexts} placement="header" />
+        </Suspense>
+      ) : null}
 
       <header className="lesson-page-header">
         <p className="eyebrow">{NARRATIVE_TYPE_LABELS_NL[narrative.type]}</p>
@@ -103,12 +173,19 @@ export default async function NarrativePage({ params }: NarrativePageProps) {
       <div className="lesson-layout">
         <article className="lesson-body">
           {narrative.status === "active" ? (
-            <ContentDocumentView
-              document={narrative.content.nl}
-              locale="nl"
-              media={media}
-              sources={sources}
-            />
+            <>
+              <ContentDocumentView
+                document={narrative.content.nl}
+                locale="nl"
+                media={media}
+                sources={sources}
+              />
+              {learningPathContexts.length > 0 ? (
+                <Suspense fallback={null}>
+                  <LearningPathContext options={learningPathContexts} placement="footer" />
+                </Suspense>
+              ) : null}
+            </>
           ) : (
             <div className="empty-state">
               <p className="eyebrow">In voorbereiding</p>

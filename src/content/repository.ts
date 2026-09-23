@@ -115,6 +115,17 @@ export function getPublishedLearningPaths(): LearningPath[] {
   return knowledgeBase.learning_paths.filter((learningPath) => learningPath.status === "active");
 }
 
+export function getPublishedStandaloneLessons(): GeneratedNarrative[] {
+  const lessonsInPublishedPaths = new Set(
+    getPublishedLearningPaths().flatMap((learningPath) =>
+      learningPath.steps.map((step) => step.target),
+    ),
+  );
+  return getPublishedNarratives().filter(
+    (narrative) => narrative.type === "lesson" && !lessonsInPublishedPaths.has(narrative.id),
+  );
+}
+
 export function getLearningPathById(id: string): LearningPath | undefined {
   return learningPathsById.get(id);
 }
@@ -128,6 +139,13 @@ export function getLearningPathByRoute(slug: string): LearningPath | undefined {
 
 export function getLearningPathMembershipsForLesson(lessonId: string): LearningPathMembership[] {
   return knowledgeBase.indexes.lesson_memberships[lessonId] ?? [];
+}
+
+export function getPublishedLearningPathsForLesson(lessonId: string): LearningPath[] {
+  return getLearningPathMembershipsForLesson(lessonId)
+    .map((membership) => getLearningPathById(membership.path_id))
+    .filter((learningPath): learningPath is LearningPath => Boolean(learningPath))
+    .filter((learningPath) => learningPath.status === "active");
 }
 
 export function getSourcesByIds(ids: string[]): Source[] {

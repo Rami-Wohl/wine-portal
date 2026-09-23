@@ -93,8 +93,8 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 3 | `LRN-003` | Canonical learning-pathschema en authoringcontract | `LRN-002` | afgerond |
 | 4 | `LRN-004` | Pipeline, validatie, indexes en tests | `LRN-003` | afgerond |
 | 5 | `LRN-005` | Eerste echte lesson vertical slice | `LRN-002`, `LRN-004` | afgerond |
-| 6 | `LRN-006` | Learn-catalogus en learning-pathoverzicht | `LRN-004`, `LRN-005` | gepland |
-| 7 | `LRN-007` | Lescontext en vorige/volgende-navigatie | `LRN-006` | gepland |
+| 6 | `LRN-006` | Learn-catalogus en learning-pathoverzicht | `LRN-004`, `LRN-005` | afgerond |
+| 7 | `LRN-007` | Lescontext en vorige/volgende-navigatie | `LRN-006` | afgerond |
 | 8 | `LRN-008` | Volledig pilotcurriculum en ontbrekende basiscontent | `LRN-005`, `LRN-007` | gepland |
 | 9 | `LRN-009` | Anonieme, vervangbare lokale voortgang | `LRN-007`, `LRN-008` | gepland |
 | 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | gepland |
@@ -253,7 +253,7 @@ beslismoment horen.
 
 ### `LRN-006` — Learn-catalogus en learning-pathoverzicht bouwen
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** gebruikers een leerpad laten kiezen en vóór de start laten begrijpen
   wat zij gaan leren.
 - **Werk:**
@@ -271,10 +271,22 @@ beslismoment horen.
   de eerste lesson kan starten zonder account.
 - **Verificatie:** unit-tests en Playwright op smal en breed scherm, keyboard en
   correcte active/draft-discovery.
+- **Opgeleverd op 2026-09-23:** de Learn-catalogus toont actieve leerpaden en
+  actieve zelfstandige lessen als afzonderlijk aanbod; de canonical pathpagina
+  maakt niveau, doelgroep, leerdoelen, voorkennis, kernstappen en naslagrol
+  expliciet; de afsluitpagina bevat een authored recap, aanmoediging en
+  vervolgsuggesties. Alleen actieve paden komen in catalogus, routes, metadata
+  en sitemap. De responsive UI is op smal en breed scherm beoordeeld en routing,
+  lifecycle en discovery zijn geautomatiseerd getest.
+- **Lifecycle-notitie:** het pilotpad blijft bewust `draft` zolang de zes overige
+  kernlessen ontbreken. De volledige actieve ervaring is tijdens ontwikkeling
+  tijdelijk als preview gecontroleerd en daarna teruggezet. Definitieve
+  activatie en publieke vindbaarheid horen bij `LRN-008`; tot die tijd blijft de
+  volwaardige eerste les eerlijk als zelfstandige les in de catalogus staan.
 
 ### `LRN-007` — Leerpadcontext en vorige/volgende-navigatie toevoegen
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** een canonical lesson binnen een gekozen leerpad als onderdeel van een
   volgorde laten voelen zonder een tweede lesson-URL te maken.
 - **Werk:**
@@ -290,6 +302,20 @@ beslismoment horen.
   correcte navigatie, canonical URL en focus/scrollgedrag hebben.
 - **Verificatie:** routingtests en Playwright voor direct bezoek, refresh,
   deep-link, vorige/volgende, mobiel en toetsenbord.
+- **Opgeleverd op 2026-09-23:** pathpagina's linken naar de bestaande canonical
+  lessonroute met een gevalideerde `path`-queryparameter. Een geldige context
+  toont pathnaam, positie, terugweg en vorige/volgende-navigatie; de laatste
+  core lesson verwijst naar de afsluitpagina. Directe lessonbezoeken blijven
+  zelfstandig bruikbaar en ontbrekende, dubbele, onbekende, draft- of foutieve
+  context wordt genegeerd. Canonical metadata blijft query-onafhankelijk en de
+  narrativepagina blijft statisch genereerbaar doordat alleen het kleine
+  contextcomponent de query client-side leest.
+- **QA-notitie:** de echte pilotdata is tijdelijk actief gemaakt voor visuele
+  controle op 390 en 1440 pixels, keyboardfocus, deep-link en doorloop naar de
+  afsluiting, en daarna teruggezet naar `draft`. Pure tests dekken ook een
+  meerstapspad met zowel vorige als volgende core lesson; definitieve publieke
+  end-to-enddekking volgt automatisch wanneer `LRN-008` het complete pad
+  activeert.
 
 ### `LRN-008` — Pilotcurriculum en vereiste basiscontent voltooien
 
@@ -408,7 +434,7 @@ aanbeveling richtinggevend maar niet bindend.
 | `DEC-LRN-008` | Mogen entitypagina's core steps zijn? | `LRN-003` | Alleen lesson-narratives zijn core steps; entities zijn naslag en tellen niet voor voortgang | besloten 2026-09-23 |
 | `DEC-LRN-009` | Hoeveel gelokaliseerde prose bezit een path zelf? | `LRN-003` | Alleen compacte structurele UI-prose in tweetalige YAML; geen path-Markdown | besloten 2026-09-23 |
 | `DEC-LRN-010` | Zijn prerequisites in v1 formele relaties? | `LRN-003` | Alleen menselijke, gelokaliseerde voorkennisbeschrijving; geen graph, gates of unlockregels | besloten 2026-09-23 |
-| `DEC-LRN-011` | Hoe draagt een canonical lesson pathcontext? | `LRN-007` | Een gevalideerde, deelbare queryparameter; geen dubbele `/learn/.../lesson`-contentroute | open |
+| `DEC-LRN-011` | Hoe draagt een canonical lesson pathcontext? | `LRN-007` | Een gevalideerde, deelbare queryparameter; geen dubbele `/learn/.../lesson`-contentroute | besloten 2026-09-23 |
 | `DEC-LRN-012` | Exact lokaal progressrecord en versiebeleid | `LRN-009` | Path-ID, schema-versie, voltooide step-ID's en `updated_at`; overige waarden afleiden | open |
 | `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete gebruikersactie, omkeerbaar; alleen openen voltooit niets | open |
 | `DEC-LRN-014` | Publieke namen voor de drie curriculumniveaus | `LRN-002` | **Wijn begrijpen**, **Wijn verklaren** en **Wijn doorgronden**, met WSET 2+/3+/4+ als kalibrerende toelichting | besloten 2026-09-23 |
@@ -430,6 +456,7 @@ aanbeveling richtinggevend maar niet bindend.
 | 2026-09-23 | Alleen lesson-narratives zijn core steps; entities blijven naslag zonder voortgang. | Een kernstap heeft een didactische boog nodig en gebruikers moeten duidelijk kunnen onderscheiden wat het pad vormt en wat vrijwillige verdieping is. |
 | 2026-09-23 | Een learning path bezit alleen compacte tweetalige UI-prose in YAML en geen eigen Markdown. | Dit ondersteunt catalogus, context en afronding zonder een parallelle opslagplaats voor wijnkennis te maken. |
 | 2026-09-23 | Prerequisites blijven in v1 menselijke tekst zonder formele relaties of toegangspoorten. | Het ene pilotpad heeft geen aantoonbare behoefte aan een tweede curriculumgraaf of blokkerend gedrag. |
+| 2026-09-23 | Canonical lessonroutes ontvangen geldige leerpadcontext via `?path=<canonical-english-path-slug>`. | Een deelbare queryparameter bewaart één eigenaar en canonical URL per lesson, terwijl dezelfde content binnen een gekozen leerroute positie en navigatie kan tonen. |
 
 ## Definition of done voor de anonieme Learn-MVP
 

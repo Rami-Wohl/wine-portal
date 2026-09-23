@@ -270,7 +270,14 @@ worden nergens als dubbele authored of progressdata opgeslagen.
 - een afwijkende Nederlandse slug redirect permanent naar de canonical route;
 - lessons behouden hun bestaande modus-neutrale narrative-URL;
 - pathcontext verandert nooit de canonical metadata van een lesson;
-- de precieze overdracht van pathcontext wordt pas in `DEC-LRN-011` besloten.
+- een pathgebonden lessonlink draagt context via de gevalideerde, deelbare
+  queryparameter `?path=<canonical-english-path-slug>`;
+- de context is alleen geldig wanneer het path actief is en de lesson daarin
+  werkelijk als core step voorkomt;
+- een ontbrekende, dubbele, onbekende, niet-actieve of inhoudelijk ongeldige
+  `path`-waarde valt geruisloos terug op de volledig bruikbare standalone lesson;
+- de queryparameter maakt geen tweede contentroute en wordt niet opgenomen in
+  canonical metadata.
 
 ## 9. Authoringworkflow
 

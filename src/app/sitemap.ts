@@ -1,8 +1,12 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/config/brand";
 import { DISCOVERY_CATEGORIES } from "@/content/discovery";
-import { getPublishedNarratives, getPublishedStandaloneEntities } from "@/content/repository";
-import { entityHref, narrativeHref } from "@/content/routing";
+import {
+  getPublishedLearningPaths,
+  getPublishedNarratives,
+  getPublishedStandaloneEntities,
+} from "@/content/repository";
+import { entityHref, learningPathHref, narrativeHref } from "@/content/routing";
 
 const staticPaths = [
   "/",
@@ -16,8 +20,14 @@ const staticPaths = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const indexableEntityPaths = getPublishedStandaloneEntities().map(entityHref);
   const indexableNarrativePaths = getPublishedNarratives().map(narrativeHref);
+  const indexableLearningPaths = getPublishedLearningPaths().map(learningPathHref);
 
-  return [...staticPaths, ...indexableEntityPaths, ...indexableNarrativePaths].map((pathname) => ({
+  return [
+    ...staticPaths,
+    ...indexableEntityPaths,
+    ...indexableNarrativePaths,
+    ...indexableLearningPaths,
+  ].map((pathname) => ({
     url: new URL(pathname, SITE_URL).toString(),
   }));
 }
