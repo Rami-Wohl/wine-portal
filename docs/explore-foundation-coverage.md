@@ -345,9 +345,9 @@ registeritem.
 
 ## 9. Uitvoeringsvolgorde na deze audit
 
-1. `EXP-002` maakt eerst één proportioneel authoringcontract voor hubs en
-   satellites, inclusief coveragevragen, depth en entitygrenzen.
-2. `EXP-003` bewijst de nieuwe diagramstijl op één onderwerp. De beste pilot is
+1. `EXP-002` heeft het proportionele authoringcontract voor hubs en satellites,
+   inclusief coveragevragen, depth en entitygrenzen, vastgelegd en gevalideerd.
+2. `EXP-003` bewijst nu de nieuwe diagramstijl op één onderwerp. De beste pilot is
    waarschijnlijk de wijnstok als levend systeem, omdat fotografie de
    transport- en source–sink-relaties niet in één beeld kan uitleggen.
 3. `EXP-004–011` bouwen vervolgens de biologische en omgevingsruggengraat die nu

@@ -1,0 +1,133 @@
+# Copy beside entity.yaml as content-plan.yaml, replace every example value and
+# remove these comments before use. This template is not read by the pipeline.
+schema_version: 2
+package_id: concept.example-system
+archetype: concept-system-overview
+coverage:
+  - &coverage
+    key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer welk systeem deze pagina verklaart en waar de scope eindigt?
+    layers:
+      foundation: [Definieer het systeem en zijn betekenis in gewone taal.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Identiteit en scope.], source_refs: [] }
+      specific_claims: []
+    review: &open-review { outline: open, nl: open, en: open }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: []
+    completeness_questions:
+      - Zijn alle essentiële onderdelen, onderlinge relaties en zelfstandige owners zichtbaar?
+    layers:
+      foundation: [Introduceer de onderdelen en hun belangrijkste relaties.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Onderdelen en samenhang.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer de hoofdmechanismen en interacties causaal of temporeel volgen?
+    layers:
+      foundation: [Leg de hoofdwerking uit.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Mechanismen en interacties.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: []
+    completeness_questions:
+      - Welke omstandigheden veranderen werking, intensiteit of uitkomst?
+    layers:
+      foundation: [Benoem de belangrijkste bronnen van variatie.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Omstandigheden en variatie.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: []
+    completeness_questions:
+      - Welke beslissingen zijn mogelijk en welke voordelen, risico's en alternatieven horen daarbij?
+    layers:
+      foundation: [Introduceer de belangrijkste beslissingen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Keuzes en trade-offs.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: []
+    completeness_questions:
+      - Tonen de voorbeelden betekenisvolle mondiale variatie zonder één regio als norm te gebruiken?
+    layers:
+      foundation: [Plaats het systeem in herkenbare wereldwijde context.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Wereldwijde context.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions:
+      - Zijn aangetoonde kennis, contextafhankelijkheid, onzekerheid en modelgrenzen precies onderscheiden?
+    layers:
+      foundation: [Benoem de belangrijkste betrouwbare interpretatiegrens.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Evidence en modelgrenzen.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: []
+    completeness_questions:
+      - Helpt de uitleg wijnkennis interpreteren zonder smaak of kwaliteit te garanderen?
+    layers:
+      foundation: [Verbind het systeem met de betekenis voor druif, wijngaard, proces of wijn.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Praktische interpretatie.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+entity_dependencies: []
+review:
+  outline: open
+  dependencies: open
+  nl: open
+  en: open

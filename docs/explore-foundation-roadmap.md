@@ -162,8 +162,9 @@ unplanned standalone pages.
 | Ticket | Status | Result |
 | --- | --- | --- |
 | `EXP-001` | complete | Maintained baseline and ownership matrix in `explore-foundation-coverage.md` |
-| `EXP-002` | next | Foundation authoring contract and reusable coverage questions |
-| `EXP-003`–`EXP-028` | open | Execute in the dependency order below |
+| `EXP-002` | complete | Validated hub/focused archetypes, authoring contract and reusable templates in `explore-foundation-authoring.md` |
+| `EXP-003` | next | Pilot the schematic-naturalist educational diagram contract |
+| `EXP-004`–`EXP-028` | open | Execute in the dependency order below |
 
 ### Phase A — coverage and contracts
 
@@ -184,6 +185,10 @@ satellite, its current status, reuse dependencies and priority; no ticket below
 depends on memory alone.
 
 #### EXP-002 — Approve the foundation authoring contract
+
+**Status:** complete on 2026-09-24. The binding workflow lives in
+`explore-foundation-authoring.md`; the two plan archetypes are validated by the
+content pipeline and have reusable templates under `editorial/templates/`.
 
 **Depends on:** EXP-001.
 
@@ -505,7 +510,7 @@ current and the foundation is ready to support new regions and Learn paths.
 | `DEC-EXP-004` | Use existing content blocks for the soil directory before adding specialized UI | EXP-010/011 | Recommended |
 | `DEC-EXP-005` | Confirm the regions and climates used for the global-bias stress test | Start of EXP-027 | Open; Loire provisional |
 
-No user decision blocks `EXP-002`. The next mandatory conversation is at
+No user decision blocks `EXP-003`. The next mandatory conversation is at
 `DEC-EXP-003`, after the soil research and terminology matrix make the
 trade-offs concrete.
 

@@ -116,10 +116,30 @@ export const GRAPE_OVERVIEW_DIMENSIONS = [
   "visuals",
   "child-knowledge",
 ] as const;
+export const CONCEPT_SYSTEM_OVERVIEW_DIMENSIONS = [
+  "identity-and-scope",
+  "system-components-and-relationships",
+  "mechanisms-and-interactions",
+  "conditions-and-variation",
+  "decisions-and-trade-offs",
+  "global-context-and-examples",
+  "evidence-and-limits",
+  "practical-interpretation",
+] as const;
+export const CONCEPT_FOCUSED_OVERVIEW_DIMENSIONS = [
+  "identity-and-scope",
+  "mechanism-and-function",
+  "conditions-and-variation",
+  "application-and-decisions",
+  "evidence-and-limits",
+  "practical-interpretation",
+] as const;
 export const CONTENT_PLAN_DIMENSIONS = [
   ...REGION_OVERVIEW_DIMENSIONS,
   ...APPELLATION_OVERVIEW_DIMENSIONS,
   ...GRAPE_OVERVIEW_DIMENSIONS,
+  ...CONCEPT_SYSTEM_OVERVIEW_DIMENSIONS,
+  ...CONCEPT_FOCUSED_OVERVIEW_DIMENSIONS,
 ] as const;
 
 export const CONTENT_PLAN_SECTION_HEADINGS = {
@@ -229,6 +249,48 @@ export const CONTENT_PLAN_SECTION_HEADINGS = {
     },
     visuals: { nl: "Beeld", en: "Visuals" },
     "child-knowledge": { nl: "Verder ontdekken", en: "Explore further" },
+  },
+  "concept-system-overview": {
+    "identity-and-scope": { nl: "Overzicht", en: "Overview" },
+    "system-components-and-relationships": {
+      nl: "Opbouw en samenhang",
+      en: "Structure and relationships",
+    },
+    "mechanisms-and-interactions": { nl: "Werking", en: "How it works" },
+    "conditions-and-variation": {
+      nl: "Omstandigheden en variatie",
+      en: "Conditions and variation",
+    },
+    "decisions-and-trade-offs": {
+      nl: "Keuzes en afwegingen",
+      en: "Decisions and trade-offs",
+    },
+    "global-context-and-examples": {
+      nl: "Wereldwijde context",
+      en: "Global context",
+    },
+    "evidence-and-limits": { nl: "Bewijs en grenzen", en: "Evidence and limits" },
+    "practical-interpretation": {
+      nl: "Betekenis voor wijn",
+      en: "Significance for wine",
+    },
+  },
+  "concept-focused-overview": {
+    "identity-and-scope": { nl: "Overzicht", en: "Overview" },
+    "mechanism-and-function": { nl: "Werking", en: "How it works" },
+    "conditions-and-variation": {
+      nl: "Omstandigheden en variatie",
+      en: "Conditions and variation",
+    },
+    "application-and-decisions": {
+      nl: "Toepassing en keuzes",
+      en: "Application and decisions",
+    },
+    "evidence-and-limits": { nl: "Bewijs en grenzen", en: "Evidence and limits" },
+    "practical-interpretation": {
+      nl: "Betekenis voor wijn",
+      en: "Significance for wine",
+    },
   },
 } as const;
 
@@ -531,7 +593,13 @@ export const contentPlanSchema = z
   .object({
     schema_version: z.literal(2),
     package_id: entityIdSchema,
-    archetype: z.enum(["region-overview", "appellation-overview", "grape-overview"]),
+    archetype: z.enum([
+      "region-overview",
+      "appellation-overview",
+      "grape-overview",
+      "concept-system-overview",
+      "concept-focused-overview",
+    ]),
     coverage: z
       .array(
         z

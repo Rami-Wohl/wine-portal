@@ -6,6 +6,8 @@ import { afterEach, describe, expect, it } from "vitest";
 import { stringify as stringifyYaml } from "yaml";
 import {
   APPELLATION_OVERVIEW_DIMENSIONS,
+  CONCEPT_FOCUSED_OVERVIEW_DIMENSIONS,
+  CONCEPT_SYSTEM_OVERVIEW_DIMENSIONS,
   GRAPE_OVERVIEW_DIMENSIONS,
   REGION_OVERVIEW_DIMENSIONS,
   type ContentPlan,
@@ -175,6 +177,38 @@ function grapePlan(packageId: string): ContentPlan {
     ...regionPlan(packageId),
     archetype: "grape-overview",
     coverage: GRAPE_OVERVIEW_DIMENSIONS.map((key) => ({
+      key,
+      disposition: "on-page" as const,
+      block_ids: ["orientatie"],
+      target_ids: [],
+      completeness_questions: [`Is ${key} voldoende afgedekt?`],
+      layers: {
+        foundation: ["De noodzakelijke hoofdlijn."],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      },
+      evidence: {
+        general_synthesis: { topics: [], source_refs: [] },
+        specific_claims: [],
+      },
+      review: { outline: "complete", nl: "complete", en: "complete" },
+    })),
+  };
+}
+
+function conceptPlan(
+  packageId: string,
+  archetype: "concept-system-overview" | "concept-focused-overview",
+): ContentPlan {
+  const dimensions =
+    archetype === "concept-system-overview"
+      ? CONCEPT_SYSTEM_OVERVIEW_DIMENSIONS
+      : CONCEPT_FOCUSED_OVERVIEW_DIMENSIONS;
+  return {
+    ...regionPlan(packageId),
+    archetype,
+    coverage: dimensions.map((key) => ({
       key,
       disposition: "on-page" as const,
       block_ids: ["orientatie"],
@@ -1003,6 +1037,59 @@ describe("content pipeline validation", () => {
       path.join(directory, "content-plan.yaml"),
       stringifyYaml(grapePlan("grape.example")),
     );
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+  });
+
+  it("validates system and focused content plans for concept entities", async () => {
+    for (const archetype of ["concept-system-overview", "concept-focused-overview"] as const) {
+      const root = await temporaryRoot();
+      const directory = await addEntity(root, {
+        id: `concept.${archetype}`,
+        status: "active",
+      });
+      const summary = ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n';
+      await writeFile(path.join(directory, "overview.nl.md"), summary);
+      await writeFile(path.join(directory, "overview.en.md"), summary);
+      await writeFile(
+        path.join(directory, "content-plan.yaml"),
+        stringifyYaml(conceptPlan(`concept.${archetype}`, archetype)),
+      );
+
+      await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+    }
+  });
+
+  it("rejects a concept content-plan archetype on another entity type", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "grape.example" });
+    await writeFile(
+      path.join(directory, "content-plan.yaml"),
+      stringifyYaml(conceptPlan("grape.example", "concept-focused-overview")),
+    );
+
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
+      /concept-focused-overview.*requires entity type 'concept'/,
+    );
+  });
+
+  it("validates localized category labels for focused concept sections", async () => {
+    const root = await temporaryRoot();
+    const directory = await addEntity(root, { id: "concept.example" });
+    const plan = conceptPlan("concept.example", "concept-focused-overview");
+    const mechanism = plan.coverage.find((item) => item.key === "mechanism-and-function");
+    if (!mechanism) throw new Error("mechanism coverage missing from concept test plan");
+    mechanism.block_ids = ["werking"];
+    await writeFile(path.join(directory, "content-plan.yaml"), stringifyYaml(plan));
+
+    await writeFile(
+      path.join(directory, "overview.nl.md"),
+      ':::summary{#orientatie depth="foundation"}\nOriëntatie.\n:::\n\n:::section{#werking depth="foundation"}\n## Werking — van oorzaak naar gevolg\n\nDe hoofdlijn.\n:::\n',
+    );
+    await writeFile(
+      path.join(directory, "overview.en.md"),
+      ':::summary{#orientatie depth="foundation"}\nOrientation.\n:::\n\n:::section{#werking depth="foundation"}\n## How it works — from cause to effect\n\nThe main line.\n:::\n',
+    );
+
     await expect(buildContent({ root, write: false })).resolves.toBeDefined();
   });
 

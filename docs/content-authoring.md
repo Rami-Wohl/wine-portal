@@ -469,13 +469,34 @@ wanneer die noodzakelijk is voor het volledige narratief; de brief legt dan vast
 waarom het onderwerp niet helder onder een standaardcategorie past. Verplichte
 dimensies verdwijnen daardoor niet stilzwijgend.
 
+### Page-archetypes voor de conceptuele Explore-basis
+
+Nieuwe of substantieel herziene concepts uit de Explore-foundation-roadmap
+gebruiken één van twee package-lokale contentplannen:
+
+- `concept-system-overview` voor een hub die onderdelen, mechanismen,
+  omstandigheden, beslissingen en voorbeelden in samenhang uitlegt; of
+- `concept-focused-overview` voor een zelfstandig herbruikbaar mechanisme,
+  functie of beslisbegrip met een smallere scope.
+
+De pipeline valideert entitytype, verplichte coverage keys, gelokaliseerde
+sectiecategorieën, evidence, dependencies en reviewstatus. Bestaande actieve
+concepts zonder plan worden incrementeel gemigreerd wanneer hun inhoudelijke
+`EXP-*`-ticket ze werkelijk herziet; genereer geen fillerplannen voor onaangeraakte
+pagina's.
+
+Het bindende keuze-, coverage-, depth-, globale voorbeelden-, visual- en
+publicationcontract staat in `explore-foundation-authoring.md`. Gebruik de
+templates onder `editorial/templates/` en controleer vóór authoring altijd
+`explore-foundation-coverage.md` op bestaande owners en overlap.
+
 ### Semigestandaardiseerde titels van hoofdsecties
 
-De H2 van iedere `section` in een region-, appellation-, producer- of
-grape-overview begint met een vaste, gelokaliseerde categorie. Een auteur mag
-daarna met ` — ` een vrije, levendige toevoeging schrijven. Zo blijft een pagina
-scanbaar en onderling vergelijkbaar zonder de redactionele stem uit de koppen te
-verwijderen.
+De H2 van iedere `section` in een region-, appellation-, producer-, grape- of
+gepland concept-overview begint met een vaste, gelokaliseerde categorie. Een
+auteur mag daarna met ` — ` een vrije, levendige toevoeging schrijven. Zo blijft
+een pagina scanbaar en onderling vergelijkbaar zonder de redactionele stem uit
+de koppen te verwijderen.
 
 Voorbeeld:
 
@@ -537,6 +558,10 @@ Druivenrassen gebruiken deze vaste categorieën:
 | `modern-developments` | Hedendaagse ontwikkelingen / Contemporary developments |
 | `visuals` | Beeld / Visuals |
 | `child-knowledge` | Verder ontdekken / Explore further |
+
+De vaste categorieën en coveragevragen voor `concept-system-overview` en
+`concept-focused-overview` staan bij hun volledige contract in
+`explore-foundation-authoring.md`; de pipeline gebruikt exact die labels.
 
 ## Add an entity
 

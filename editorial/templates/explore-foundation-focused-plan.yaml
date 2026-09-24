@@ -1,0 +1,103 @@
+# Copy beside entity.yaml as content-plan.yaml, replace every example value and
+# remove these comments before use. This template is not read by the pipeline.
+schema_version: 2
+package_id: concept.example-focused
+archetype: concept-focused-overview
+coverage:
+  - &coverage
+    key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer het concept in gewone taal en de grens met nabije begrippen?
+    layers:
+      foundation: [Definieer het concept en zijn hoofdrol.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Identiteit en scope.], source_refs: [] }
+      specific_claims: []
+    review: &open-review { outline: open, nl: open, en: open }
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk wat er gebeurt, in welke volgorde en via welk mechanisme?
+    layers:
+      foundation: [Leg de hoofdwerking uit.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Mechanisme en functie.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: []
+    completeness_questions:
+      - Wanneer verandert de werking, intensiteit of relevantie van het concept?
+    layers:
+      foundation: [Benoem de belangrijkste variatie.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Omstandigheden en variatie.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids: [toepassing-en-keuzes]
+    target_ids: []
+    completeness_questions:
+      - Hoe wordt het concept herkend, gebruikt of gestuurd en welke afwegingen horen daarbij?
+    layers:
+      foundation: [Introduceer toepassing en hoofdkeuzes.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Toepassing en keuzes.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions:
+      - Welke claims zijn aangetoond, contextafhankelijk of te stellig?
+    layers:
+      foundation: [Benoem de belangrijkste betrouwbare interpretatiegrens.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Evidence en grenzen.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: []
+    completeness_questions:
+      - Waarom heeft de lezer dit concept nodig om druif, wijngaard, proces of wijn te begrijpen?
+    layers:
+      foundation: [Leg de praktische betekenis uit.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis: { topics: [Praktische interpretatie.], source_refs: [] }
+      specific_claims: []
+    review: *open-review
+entity_dependencies: []
+review:
+  outline: open
+  dependencies: open
+  nl: open
+  en: open

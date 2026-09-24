@@ -5,6 +5,8 @@ import { parse as parseYaml } from "yaml";
 import { z } from "zod";
 import {
   APPELLATION_OVERVIEW_DIMENSIONS,
+  CONCEPT_FOCUSED_OVERVIEW_DIMENSIONS,
+  CONCEPT_SYSTEM_OVERVIEW_DIMENSIONS,
   CONTENT_PLAN_SECTION_HEADINGS,
   ENTITY_TYPES,
   GRAPE_OVERVIEW_DIMENSIONS,
@@ -49,6 +51,14 @@ const CONTENT_PLAN_REQUIREMENTS = {
   "grape-overview": {
     entityType: "grape",
     dimensions: GRAPE_OVERVIEW_DIMENSIONS,
+  },
+  "concept-system-overview": {
+    entityType: "concept",
+    dimensions: CONCEPT_SYSTEM_OVERVIEW_DIMENSIONS,
+  },
+  "concept-focused-overview": {
+    entityType: "concept",
+    dimensions: CONCEPT_FOCUSED_OVERVIEW_DIMENSIONS,
   },
 } as const;
 
