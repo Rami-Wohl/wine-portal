@@ -218,6 +218,8 @@ reviewstappen. Registreer periodieke controles en vervolgacties volgens
 - [Visual language](docs/visual-language.md) — UI, responsive gedrag en beelden
 - [Explore-foundation-roadmap](docs/explore-foundation-roadmap.md) — geordende
   tickets voor de wereldwijde basis van wijnstok, wijngaard en vinificatie
+- [Explore-foundation-dekking](docs/explore-foundation-coverage.md) — actuele
+  owners, bestaande bouwstenen, hiaten en dependencies voor die roadmap
 - [Learn-roadmap](docs/learn-roadmap.md) — geordende tickets, beslismomenten en
   definition of done voor de anonieme leerervaring
 - [Learn-productbrief](docs/learn-product-brief.md) — doelgroep, niveaumodel,

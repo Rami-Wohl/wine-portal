@@ -52,7 +52,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Kwaliteitsreviews | `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
 | Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus geordende `LRN-*`-tickets, beslismomenten en acceptatiecriteria voor de anonieme Learn-MVP |
-| Conceptuele Explore-basis | `docs/explore-foundation-roadmap.md` | Geordende `EXP-*`-tickets voor wijnstok, wijngaardomgeving, wijnbouw, vinificatie, compositie en waarneming, inclusief diagram- en bodemstrategie |
+| Conceptuele Explore-basis | `docs/explore-foundation-roadmap.md` en `docs/explore-foundation-coverage.md` | Geordende `EXP-*`-tickets plus de actuele dekkings-, ownership- en gapmatrix voor wijnstok, wijngaardomgeving, wijnbouw, vinificatie, compositie en waarneming |
 
 Een stabiel feit heeft één canonical eigenaar. Narratives en pagina's mogen dat
 feit uitleggen, maar onderhouden geen parallelle structurele kopie.
@@ -169,6 +169,8 @@ Markdownformatter worden herschreven.
   lifecyclegedrag.
 - Gebruik `explore-foundation-roadmap.md` voor de systematische uitvoervolgorde,
   scope en beslismomenten van de conceptuele Explore-basis.
+- Gebruik `explore-foundation-coverage.md` om vóór ieder `EXP-*`-contentticket
+  bestaande owners, herbruikbare content, gaps en dependencies te controleren.
 
 Lees dus niet standaard ieder beleidsdocument voor iedere taak. Kies de
 documenten die daadwerkelijk door de wijziging worden geraakt.

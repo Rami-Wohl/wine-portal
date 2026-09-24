@@ -157,9 +157,20 @@ Tickets are intentionally sequential within a phase. Work may reveal additional
 satellites, but those are added to the relevant ticket rather than inserted as
 unplanned standalone pages.
 
+### Execution status
+
+| Ticket | Status | Result |
+| --- | --- | --- |
+| `EXP-001` | complete | Maintained baseline and ownership matrix in `explore-foundation-coverage.md` |
+| `EXP-002` | next | Foundation authoring contract and reusable coverage questions |
+| `EXP-003`–`EXP-028` | open | Execute in the dependency order below |
+
 ### Phase A — coverage and contracts
 
 #### EXP-001 — Audit the existing conceptual corpus
+
+**Status:** complete on 2026-09-24. The maintained result lives in
+`explore-foundation-coverage.md`.
 
 **Goal:** establish what is already active, draft, duplicated or missing.
 
@@ -494,9 +505,9 @@ current and the foundation is ready to support new regions and Learn paths.
 | `DEC-EXP-004` | Use existing content blocks for the soil directory before adding specialized UI | EXP-010/011 | Recommended |
 | `DEC-EXP-005` | Confirm the regions and climates used for the global-bias stress test | Start of EXP-027 | Open; Loire provisional |
 
-No user decision blocks `EXP-001`. The next mandatory conversation is at
-`DEC-EXP-003`, after the research and terminology matrix make the trade-offs
-concrete.
+No user decision blocks `EXP-002`. The next mandatory conversation is at
+`DEC-EXP-003`, after the soil research and terminology matrix make the
+trade-offs concrete.
 
 ## Definition of done for every content ticket
 
