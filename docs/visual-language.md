@@ -89,10 +89,12 @@ a generally low landscape; an illustration must preserve that scale. Never
 arrange conceptual panels so that they imply real adjacency or direction unless
 verified geographic data supports it.
 
-Generated illustrations contain no baked-in names, legends, logos, borders, or
-map-like labels. Add localized explanation in the page layer where necessary.
-They must not imitate a photograph or present a generic château, bottle, person,
-or parcel as the named real subject.
+Generated atmospheric or geographic illustrations contain no baked-in names,
+legends, logos, borders, or map-like labels. Schematic-naturalist educational
+plates follow the limited-label exception in section 3.3. Add localized
+explanation in the page layer where necessary. Generated imagery must not
+imitate a photograph or present a generic château, bottle, person, or parcel as
+the named real subject.
 
 ### 3.2 Caption convention for educational illustration
 
@@ -115,6 +117,39 @@ Write the caption as useful editorial prose rather than production metadata.
 Keep the creator or credit line separate. Alternative text describes the visual
 information required to understand the image; it does not repeat the complete
 caption.
+
+### 3.3 Schematic-naturalist educational diagrams
+
+For plant physiology, cellar processes, cycles and causal comparisons, use a
+schematic-naturalist plate when neither a photograph nor a purely geometric
+diagram can teach the relationship clearly. Combine a botanically or materially
+credible watercolor/gouache base with restrained arrows, numbered stages,
+callouts and compact comparison panels. The composition must answer one defined
+teaching question rather than collect loosely related facts.
+
+Use the warm off-white, aubergine and muted-green editorial palette for
+hierarchy, with additional colors only when they encode a function. Concrete
+plant parts, vessels, tools and materials are preferable to decorative icons.
+Include a visible nuance or limitation when a simplified flow could otherwise
+teach a false absolute.
+
+Keep baked-in wording to the minimum. English is the preferred shared language
+for unavoidable short source labels; the full Dutch and English explanation,
+translation, citations and accessible alternative live in localized HTML and
+captions. Essential knowledge may never exist only inside image pixels. Check
+legibility at narrow width and provide an enlargeable or structured alternative
+when the plate is information-dense.
+
+These plates are normally raster PNG or WebP assets. Use SVG only when the
+teaching value genuinely depends on scalable geometry or localized overlays;
+do not reduce a rich explanatory plate to a basic vector graphic for production
+convenience.
+
+Before creating a plate, write a brief naming its teaching question, required
+objects and relations, prohibited implications, acceptable simplifications,
+label list, aspect ratio and responsive plan. Before publication, review
+botanical or process accuracy, scale, prose consistency, accessibility, rights
+and media metadata.
 
 ## 4. Image credibility and rights
 

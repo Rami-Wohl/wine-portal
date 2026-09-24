@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const baseURL = "http://127.0.0.1:3100";
+const configuredBaseURL = process.env.PLAYWRIGHT_BASE_URL;
+const baseURL = configuredBaseURL ?? "http://127.0.0.1:3100";
 
 export default defineConfig({
   testDir: "./e2e",
@@ -12,12 +13,14 @@ export default defineConfig({
     baseURL,
     trace: "on-first-retry",
   },
-  webServer: {
-    command: "npm run start -- --hostname 127.0.0.1 --port 3100",
-    url: baseURL,
-    reuseExistingServer: false,
-    timeout: 120_000,
-  },
+  webServer: configuredBaseURL
+    ? undefined
+    : {
+        command: "npm run start -- --hostname 127.0.0.1 --port 3100",
+        url: baseURL,
+        reuseExistingServer: false,
+        timeout: 120_000,
+      },
   projects: [
     {
       name: "chromium",

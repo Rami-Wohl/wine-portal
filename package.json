@@ -17,6 +17,7 @@
     "pretest": "npm run content:build",
     "test": "vitest run",
     "test:e2e": "npm run content:build && next build --webpack && playwright test",
+    "test:e2e:live": "PLAYWRIGHT_BASE_URL=https://wine-portal.vercel.app playwright test e2e/learn.spec.ts",
     "content:check": "node --import tsx scripts/content/cli.ts check",
     "content:build": "node --import tsx scripts/content/cli.ts build",
     "content:status": "node --import tsx scripts/content/cli.ts status",

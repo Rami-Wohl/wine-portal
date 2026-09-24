@@ -153,6 +153,7 @@ responsive presentatie [de visuele richtlijnen](docs/visual-language.md).
 | `npm run format` | Formatteert code, CSS, JSON en YAML met de vastgepinde Prettier-versie |
 | `npm run check` | Controleert formatting, lint, types, unit-tests en relationele dekking |
 | `npm run test:e2e` | Bouwt de productieapp en draait de volledige Playwright-suite in Chromium |
+| `npm run test:e2e:live` | Draait de niet-destructieve Learn-smokesuite rechtstreeks tegen de publieke Vercel-omgeving |
 
 Markdown valt bewust buiten Prettier: de eigen directives worden door de
 contentpipeline gevalideerd en mogen niet door een algemene Markdownformatter
@@ -177,6 +178,25 @@ interactie, toegankelijkheid of een andere volledige gebruikersflow verandert:
 npm run test:e2e
 ```
 
+## Productie en Learn-pilot
+
+De publieke omgeving staat op
+[`https://wine-portal.vercel.app`](https://wine-portal.vercel.app). De
+Learn-smokesuite schrijft uitsluitend tijdelijke browserstaat in de geïsoleerde
+Playwrightcontext en muteert geen serverdata. Voer haar na een relevante
+productiedeployment uit met:
+
+```bash
+npm run test:e2e:live
+```
+
+Een andere preview- of productieomgeving kan zonder configuratiewijziging worden
+gecontroleerd met:
+
+```bash
+PLAYWRIGHT_BASE_URL=https://example.test npx playwright test e2e/learn.spec.ts
+```
+
 Playwright controleert de integratie en presentatie, niet de waarheid van
 wijninhoud. Feitelijke volledigheid, bronkwaliteit, vertaalgelijkwaardigheid,
 mediarechten en visuele nauwkeurigheid blijven afzonderlijke menselijke
@@ -196,10 +216,14 @@ reviewstappen. Registreer periodieke controles en vervolgacties volgens
 - [Knowledge architecture](docs/knowledge-architecture.md) — model, routing,
   search, indexes en migraties
 - [Visual language](docs/visual-language.md) — UI, responsive gedrag en beelden
+- [Explore-foundation-roadmap](docs/explore-foundation-roadmap.md) — geordende
+  tickets voor de wereldwijde basis van wijnstok, wijngaard en vinificatie
 - [Learn-roadmap](docs/learn-roadmap.md) — geordende tickets, beslismomenten en
   definition of done voor de anonieme leerervaring
 - [Learn-productbrief](docs/learn-product-brief.md) — doelgroep, niveaumodel,
-  terminologie en succescriteria voor de Learn-MVP
+  succescriteria en afbakening van de anonieme MVP
+- [Learn-pilotrelease](docs/learn-pilot-release.md) — productiecontrole,
+  privacygrens, observatieperiode en rollback
 - [Learning-pathcontract](docs/learning-paths.md) — canonical schema, ownership,
   lifecycle en validatieregels voor leerpaden
 - [Content commands](scripts/content/README.md) — compacte technische

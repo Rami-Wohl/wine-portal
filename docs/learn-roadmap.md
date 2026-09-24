@@ -1,7 +1,7 @@
 # Learn-roadmap
 
 Status: actieve productroadmap  
-Peildatum: 2026-09-23
+Peildatum: 2026-09-24
 
 Dit document ordent de eerste volwaardige Learn-implementatie van Oenocademy.
 Het is de enige actuele ticketlijst voor deze capability. Reguliere
@@ -98,7 +98,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 8 | `LRN-008` | Volledig pilotcurriculum en ontbrekende basiscontent | `LRN-005`, `LRN-007` | afgerond |
 | 9 | `LRN-009` | Anonieme, vervangbare lokale voortgang | `LRN-007`, `LRN-008` | afgerond |
 | 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | afgerond |
-| 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | gepland |
+| 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | afgerond |
 | 12 | `LRN-012` | Werkelijk gebruik evalueren en vervolg besluiten | `LRN-011` | gepland |
 
 Tickets worden in deze volgorde uitgevoerd. Een later ticket mag wel worden
@@ -441,7 +441,7 @@ beslismoment horen.
 
 ### `LRN-011` — Anonieme pilot publiceren
 
-- **Status:** gepland
+- **Status:** afgerond
 - **Doel:** de volledig gevalideerde anonieme leerervaring beschikbaar maken
   zonder al conclusies te trekken over nog niet geobserveerd gebruik.
 - **Werk:**
@@ -454,6 +454,19 @@ beslismoment horen.
   - maak herstel- en rollbackstappen expliciet.
 - **Klaar wanneer:** het pilotpad publiek, stabiel en observeerbaar is en
   `LRN-012` pas na een betekenisvolle gebruiksperiode kan starten.
+- **Opgeleverd op 2026-09-23:** release `50b1cb5` is publiek beschikbaar op
+  `https://wine-portal.vercel.app`. Catalogus, leerpad, lessons, afsluiting en
+  canonical naslag zijn in productie gecontroleerd. De bestaande
+  Learn-Playwrightsuite kan via `PLAYWRIGHT_BASE_URL` zonder lokale server als
+  niet-destructieve live smoke-suite draaien; alle 17 scenario's zijn op 24
+  september 2026 tegen Vercel geslaagd.
+- **Privacy en observatie:** er is geen nieuwe analytics- of trackinglaag
+  toegevoegd; voortgang blijft lokaal. Kwalitatieve feedback is het primaire
+  pilotsignaal. De minimale observatieperiode loopt tot en met 21 oktober 2026
+  en wordt verlengd als werkelijk gebruik nog onvoldoende bewijs oplevert.
+- **Runbook:** scope, checks, privacygrens en herstelstappen staan in
+  `learn-pilot-release.md`. Rollback gebruikt een Vercel-redeploy of normale
+  `git revert`, nooit het herschrijven van gedeelde geschiedenis.
 
 ### `LRN-012` — Werkelijk gebruik evalueren en vervolgarchitectuur besluiten
 
@@ -474,6 +487,9 @@ beslismoment horen.
 - **Startvoorwaarde:** de pilot is lang genoeg werkelijk beschikbaar geweest om
   niet alleen interne verwachtingen te evalueren; de benodigde periode wordt bij
   publicatie vastgelegd.
+- **Vroegste evaluatiemoment:** 2026-10-22, mits er voldoende werkelijk gebruik
+  of gerichte gebruiksgesprekken zijn vastgelegd; anders blijft het ticket
+  gepland en wordt de observatieperiode verlengd.
 - **Klaar wanneer:** de pilotuitkomst is vastgelegd en ieder vervolg een
   expliciet besluit heeft in plaats van een impliciete uitbreiding van de MVP.
 
