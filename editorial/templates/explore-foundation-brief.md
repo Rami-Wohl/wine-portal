@@ -57,7 +57,7 @@ regionale voorbeeld wordt vervangen?
 
 | Visual | Teaching question | Vorm | Verplicht zichtbaar | Verboden implicaties | Vereenvoudiging | Labels en HTML-alternatief |
 | --- | --- | --- | --- | --- | --- | --- |
-| <werknaam> | <vraag> | <foto/plaat/diagram/geen> | <elementen> | <grenzen> | <toegestaan> | <EN labels + NL/EN uitleg> |
+| <werknaam> | <vraag> | <foto/plaat/diagram/geen> | <elementen> | <grenzen> | <toegestaan> | <taalneutrale nummers/symbolen + NL/EN HTML-uitleg; alleen onvermijdelijke korte labels in EN> |
 
 ## Publication gate
 

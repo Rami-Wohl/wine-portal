@@ -1,0 +1,29 @@
+id: media.concept.clonal-selection.selection-propagation-trials-v3
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/clonal-selection/selection-propagation-trials-v3.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 81ef51521ad8ea3ee04cd21ff89d26bc4ce8b0a68f3884b5c9a333a57dbb2a9c
+alt:
+  nl: Genummerde procesplaat van klonale selectie, van één kandidaatstok via onderzoek, vegetatieve vermeerdering en meerjarige proefrijen tot registratie en conservering
+  en: Numbered clonal-selection process plate, following one candidate vine through examination, vegetative propagation and multi-year trials to registration and conservation
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-24
+changes: >-
+  EXP-003 final language-neutral pilot generated in built-in OpenAI image-edit
+  mode from selection-propagation-trials-v2.png. Production prompt: remove every
+  word and letter, retain exactly the numerals 1 through 5 in aubergine markers,
+  preserve the five-stage process, objects, arrows, nearly level neutral research
+  vineyard, botanical plausibility, palette and watercolor/gouache style, and use
+  the freed space for larger, calmer panels. Source-based process review used
+  source.oiv-clonal-selection-2017 and
+  source.oiv-grape-variety-identification-2019. Responsive, image-absence,
+  accessibility and editorial checks completed; used without crop or colour
+  alteration.

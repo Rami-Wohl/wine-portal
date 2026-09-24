@@ -1,0 +1,39 @@
+id: media.concept.clonal-selection.selection-propagation-trials-v2
+kind: diagram
+role: educational
+status: deprecated
+storage_key: concepts/clonal-selection/selection-propagation-trials-v2.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 5b013297581adc7e0a66376f89cfb96cc90f635e44338aaac7828f89fa2a0485
+alt:
+  nl: Vijfdelige procesplaat van een gemarkeerde kandidaatstok via blad-, druif- en laboratoriumcontrole, vegetatieve vermeerdering en proefrijen tot registratie en conservering van gezond uitgangsmateriaal
+  en: Five-part process plate showing a marked candidate vine progressing through leaf, grape and laboratory checks, vegetative propagation and trial rows to registration and conservation of healthy source material
+caption:
+  nl: "Lees van links naar rechts: 1 kandidaatstok selecteren; 2 identiteit en gezondheid controleren; 3 vegetatief vermeerderen; 4 meerdere jaren vergelijkend toetsen; 5 registreren en gezond uitgangsmateriaal conserveren. De proefrijen tonen herhaling door de tijd: een opvallende stok wordt pas na identificatie, sanitaire controle en vergelijking geselecteerd materiaal."
+  en: "Read from left to right: 1 select a candidate vine; 2 verify identity and health; 3 propagate vegetatively; 4 run multi-year comparative trials; 5 register and conserve healthy source material. The trial rows show repetition over time: a notable vine becomes selected material only after identification, sanitary checks and comparison."
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-09-24
+changes: >-
+  EXP-003 schematic-naturalist pilot generated with the built-in OpenAI image
+  generator from the approved brief in editorial/briefs/concept.clonal-selection.md
+  and factual sources source.oiv-clonal-selection-2017 and
+  source.oiv-grape-variety-identification-2019. Production prompt: create a
+  landscape 3:2 educational plate titled CLONAL SELECTION with one left-to-right
+  route and the exact stages SELECT CANDIDATE VINE, VERIFY IDENTITY & HEALTH,
+  VEGETATIVE PROPAGATION, MULTI-YEAR COMPARATIVE TRIALS, and REGISTRATION &
+  CONSERVATION; use botanically credible watercolor and gouache, aubergine
+  hierarchy, muted greens, a warm off-white ground, restrained arrows and no
+  seeds, invented pathogens, trophies, bottles, chateau, map, logo or watermark.
+  Revision prompt: preserve every label, object and relationship while replacing
+  mountainous, hilly, cypress and Mediterranean scenery with a nearly level,
+  geographically neutral research vineyard. Source-based process review plus
+  geographic, accessibility and responsive visual checks were completed on the
+  final 1536 by 1024 pixel version; final human editorial acceptance is pending.
+  Used without crop or colour alteration. Retained for provenance and deprecated
+  on 2026-09-24 after the language-neutral numbered v3 plate replaced it.

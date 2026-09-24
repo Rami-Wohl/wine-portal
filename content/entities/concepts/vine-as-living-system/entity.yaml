@@ -1,0 +1,29 @@
+id: concept.vine-as-living-system
+type: concept
+status: active
+canonical_name: Vine as a living system
+names:
+  nl: De wijnstok als levend systeem
+  en: The vine as a living system
+slugs:
+  nl: wijnstok-als-levend-systeem
+  en: vine-as-living-system
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.ampelography }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.clonal-selection }
+assertions: []
+source_refs:
+  - source.cornell-grapevine-roots
+  - source.cornell-grapevine-flowers
+  - source.gambetta-grapevine-drought-physiology-2020
+  - source.li-carbon-sink-strength-grapevine-2021
+  - source.martinez-luscher-source-sink-grapevine-2021
+  - source.pellegrino-vine-carbohydrate-status-2014
+  - source.dai-grape-berry-water-carbon-fluxes-2010
+  - source.escalona-grapevine-carbon-balance-2012
+depth: foundation
+last_reviewed: 2026-09-24

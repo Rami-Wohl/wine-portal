@@ -232,6 +232,7 @@ function renderContentBlock(
       const caption = asset.caption?.[context.locale];
       const credit = asset.rights.credit_line;
       const isTall = asset.height / asset.width >= 2;
+      const hasDescription = block.nodes.length > 0;
       return (
         <figure {...common}>
           <Image
@@ -247,6 +248,7 @@ function renderContentBlock(
             width={asset.width}
           />
           <figcaption>
+            {hasDescription ? <div className="content-figure-description">{content}</div> : null}
             {caption ? <span>{caption}</span> : null}
             <small>
               {asset.rights.source_url ? (

@@ -131,7 +131,7 @@ Statussen:
 
 | Roadmapowner | Geplande canonical scope | Bestaande bruikbare owners | Auditstatus | Belangrijkste ontbrekende dekking | Prioriteit |
 | --- | --- | --- | --- | --- | --- |
-| `EXP-004` | Wijnstok als levend systeem | `ampelography`, `rootstock`, `clonal-selection`, `phylloxera` | fragmenten | Anatomie, fotosynthese, respiratie, xyleem/floëem, transpiratie, reserves en source–sink | P0 |
+| `EXP-004` | Wijnstok als levend systeem | `vine-as-living-system`, `ampelography`, `rootstock`, `clonal-selection`, `phylloxera` | complete hub | Vervolgdetails landen bij fenologie, water, bodem en beheer zonder de systeemhub te dupliceren | voltooid |
 | `EXP-005` | Jaarcyclus en fenologie | `vintage`; delen van grape- en regioproza | afwezig | Volledige cyclus, overlappende fasen, hemisferen, cultivar- en klimaateffect | P0 |
 | `EXP-006` | Bloei, vruchtzetting en opbrengstvorming | `coulure` (minimale draft) | afwezig | Bloembiologie, vruchtzetting, millerandage, clusterbouw en yield components | P0 |
 | `EXP-007` | Besontwikkeling, véraison en rijpheid | `acidity`, `tannin`, `late-harvest`; lesson `grape-as-raw-material` | fragmenten | Groeifasen, suiker/zuur/water/phenolics, meerdere rijpheidsbegrippen en oogstsampling | P0 |
@@ -347,13 +347,15 @@ registeritem.
 
 1. `EXP-002` heeft het proportionele authoringcontract voor hubs en satellites,
    inclusief coveragevragen, depth en entitygrenzen, vastgelegd en gevalideerd.
-2. `EXP-003` bewijst nu de nieuwe diagramstijl op één onderwerp. De beste pilot is
-   waarschijnlijk de wijnstok als levend systeem, omdat fotografie de
-   transport- en source–sink-relaties niet in één beeld kan uitleggen.
-3. `EXP-004–011` bouwen vervolgens de biologische en omgevingsruggengraat die nu
-   het meest ontbreekt.
+2. `EXP-003` heeft de nieuwe diagramstijl als geaccepteerde pilot toegepast op
+   klonale selectie: één geografisch neutrale, taalneutraal genummerde
+   procesplaat met gelokaliseerde uitleg, een volledige HTML-terugval en
+   vastgelegde productie- en reviewhistorie.
+3. `EXP-004` heeft de biologische systeemhub voltooid; `EXP-005–011` bouwen nu
+   de fenologische en omgevingsruggengraat verder uit.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-Er is nu geen gebruikersbeslissing nodig. `DEC-EXP-003` blijft de eerste harde
+De visuele pilot en systeemhub zijn voltooid; `EXP-005` is de eerstvolgende
+uitvoeringstaak. `DEC-EXP-003` blijft daarna de eerste harde inhoudelijke
 beslissing: welke bodemtermen na research een eigen entity krijgen.

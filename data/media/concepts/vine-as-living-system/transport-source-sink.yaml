@@ -1,0 +1,19 @@
+id: media.concept.vine-as-living-system.transport-source-sink
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vine-as-living-system/transport-source-sink.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 2d1b5d414386f73e8ff50f6b79fc23ba1a2033bbf4689d2c8bc4a3a43838ee4d
+alt:
+  nl: Drie genummerde panelen tonen watertransport via xyleem, assimilatenverdeling via floëem en het seizoensgebruik van reserves.
+  en: Three numbered panels show water transport through xylem, assimilate distribution through phloem and seasonal use of reserves.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-24
+changes: "Generated in built-in image mode from an Oenocademy factual brief; language-neutral markers 1–6 only. Reviewed against Gambetta et al. 2020, Li et al. 2021, Martínez-Lüscher and Kurtural 2021 and Dai et al. 2010. Arrows are explicitly a teaching model rather than literal vessels or fixed one-way source–sink identities."

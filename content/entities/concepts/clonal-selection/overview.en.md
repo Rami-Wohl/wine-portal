@@ -34,7 +34,16 @@ Candidates are propagated and followed over several seasons. A trial may compare
 After approval, identity and health remain controlled through mother vines and successive propagation stages. For France, Plantgrape records details such as origin, selection partners, approval year, agronomic reference and availability of registered clones. [@source.plantgrape-cabernet-franc]
 :::
 
-:::figure{#selectie-vermeerdering-en-toetsing depth="foundation" media_id="media.concept.clonal-selection.selection-propagation-trials" source_refs="source.oiv-clonal-selection-2017 source.oiv-grape-variety-identification-2019"}
+:::figure{#selectie-vermeerdering-en-toetsing depth="foundation" media_id="media.concept.clonal-selection.selection-propagation-trials-v3" source_refs="source.oiv-clonal-selection-2017 source.oiv-grape-variety-identification-2019"}
+**Clonal selection — from candidate vine to registered planting material**
+
+1. **Select a candidate vine.** Researchers choose a vine within a grape variety because it may have useful characteristics. The marker means only that the vine merits further study; it is not yet a demonstrably better clone.
+2. **Verify identity and health.** Leaves, bunches and other traits are compared to confirm varietal identity. Genetic analysis may support that work. Separate sanitary tests screen for harmful pathogens.
+3. **Propagate the vine vegetatively.** Cuttings or grafts create genetically related plants from the candidate. This provides enough material to examine the same line repeatedly under comparable conditions.
+4. **Run multi-year comparative trials.** The descendants grow in trial rows beside reference material. Across several seasons, researchers may follow growth, ripening, yield, bunch architecture, health and, where relevant, the resulting wine.
+5. **Register and conserve.** Material that meets the required identity, health and performance criteria may be registered within a national system. Healthy source material is then conserved carefully and propagated further.
+
+A selected clone is therefore not the winner of one observation, but the result of identification, sanitary control, repeated propagation and comparison through time. Exact criteria and procedures differ between countries and selection programmes.
 :::
 
 :::section{#gebruiken-en-begrenzen depth="foundation" source_refs="source.plantgrape-cabernet-franc source.plantgrape-cabernet-sauvignon"}

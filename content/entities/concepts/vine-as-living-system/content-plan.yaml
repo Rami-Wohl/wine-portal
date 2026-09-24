@@ -1,0 +1,207 @@
+schema_version: 2
+package_id: concept.vine-as-living-system
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer de wijnstok als meerjarige plant waarvan jaarlijkse groei afhankelijk is van een blijvend raamwerk?
+    layers:
+      foundation: [Wijnstok als één levend systeem; permanent hout en jaarlijkse organen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Meerjarige anatomie en seizoensgroei.]
+        source_refs: [source.cornell-grapevine-roots]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.ampelography, concept.rootstock]
+    completeness_questions:
+      - Zijn wortels, stam, blijvend hout, scheuten, knopen, knoppen, bladeren, bloeiwijzen en bessen herkenbaar en onderling verbonden?
+      - Is het verschil tussen zichtbare anatomie en functies die later in het seizoen veranderen duidelijk?
+    layers:
+      foundation: [Benoem alle hoofdorganen en verbind onder- en bovengrondse delen.]
+      intermediate: [Leg uit dat knoppen de groei van twee seizoenen met elkaar verbinden.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Wortelanatomie, scheuten, knoppen, bloemen en bessen.]
+        source_refs: [source.cornell-grapevine-roots]
+      specific_claims:
+        - claim: De aanleg van bloeiwijzen begint in knoppen in het voorgaande groeiseizoen.
+          status: supported
+          source_refs: [source.cornell-grapevine-flowers]
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer water- en mineralenopname, fotosynthese, respiratie, assimilatenverdeling en reservegebruik causaal volgen?
+      - Is duidelijk dat source en sink veranderlijke rollen zijn en dat xyleem- en floëempijlen modellen zijn?
+    layers:
+      foundation:
+        [
+          Xyleem transporteert vooral water en opgeloste mineralen; floëem verdeelt assimilaten van sources naar sinks.,
+        ]
+      intermediate:
+        [Sources en sinks veranderen met ontwikkelingsstadium; reserves verbinden seizoenen.]
+      advanced:
+        [
+          Transportpaden zijn dynamisch; berry-hydrauliek verandert rond véraison zonder bewijs voor een universele xyleemstop.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Hydrauliek, koolstofbalans, source–sink-relaties en reserves.]
+        source_refs:
+          [
+            source.gambetta-grapevine-drought-physiology-2020,
+            source.li-carbon-sink-strength-grapevine-2021,
+            source.escalona-grapevine-carbon-balance-2012,
+          ]
+      specific_claims:
+        - claim: Een aanzienlijk deel van de seizoensreserve bevindt zich in houtige wortels en blijvend hout.
+          status: supported
+          source_refs:
+            [source.cornell-grapevine-roots, source.martinez-luscher-source-sink-grapevine-2021]
+        - claim: Xyleem in de bes blijft structureel intact na véraison, ook al verandert de relatieve waterflux.
+          status: supported
+          source_refs: [source.dai-grape-berry-water-carbon-fluxes-2010]
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: []
+    completeness_questions:
+      - Zijn licht, temperatuur, water, bladstatus, ontwikkelingsfase en genetisch materiaal als samenwerkende variabelen behandeld?
+    layers:
+      foundation: [Licht, warmte en water veranderen wat de plant kan opnemen en maken.]
+      intermediate:
+        [Bladleeftijd, stomatale reactie, gewasvraag en reservestatus veranderen de balans.]
+      advanced: [Genotype en omgeving maken één universele respons onmogelijk.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Drought physiology en conditionele koolstofbalans.]
+        source_refs:
+          [
+            source.gambetta-grapevine-drought-physiology-2020,
+            source.escalona-grapevine-carbon-balance-2012,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: [concept.rootstock, concept.clonal-selection]
+    completeness_questions:
+      - Zijn snoei, loofwand, gewasbelasting, water en plantmateriaal als ingrepen in hetzelfde systeem gekaderd zonder te diep op latere owners vooruit te lopen?
+    layers:
+      foundation: [Wijnbouwbeslissingen veranderen bladoppervlak, vraag, watergebruik en reserves.]
+      intermediate: [Een ingreep kan dit seizoen én het volgende beïnvloeden.]
+      advanced: [Opbrengst alleen is geen volledige maat voor koolstofstatus.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Beheer, source–sink-aanpassing en carry-over.]
+        source_refs:
+          [
+            source.martinez-luscher-source-sink-grapevine-2021,
+            source.pellegrino-vine-carbohydrate-status-2014,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: []
+    completeness_questions:
+      - Is de biologie mondiaal uitgelegd zonder Bordeaux of één klimaattype als norm te nemen?
+    layers:
+      foundation:
+        [Dezelfde organen en processen werken wereldwijd; timing en beperkingen verschillen.]
+      intermediate:
+        [Koele, warme, droge en vochtige omstandigheden verschuiven de dominante beperking.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Omgevingsafhankelijke wijnstokfysiologie.]
+        source_refs: [source.gambetta-grapevine-drought-physiology-2020]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions:
+      - Onderscheidt de pagina meetbare processen van de vereenvoudigde pijlen en metaforen waarmee ze worden uitgelegd?
+    layers:
+      foundation:
+        [Pijlen maken stromen begrijpelijk maar zijn geen letterlijke kaart van ieder vat.]
+      intermediate:
+        [Fotosynthese is niet hetzelfde als netto koolstofwinst doordat de hele plant respireert.]
+      advanced: [Bron- en sinksterkte, hydrauliek en berry-flux veranderen door tijd en context.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Modelgrenzen en whole-plant balance.]
+        source_refs:
+          [
+            source.dai-grape-berry-water-carbon-fluxes-2010,
+            source.escalona-grapevine-carbon-balance-2012,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer wijnbouwclaims beter interpreteren zonder fysiologie in een smaakgarantie te veranderen?
+    layers:
+      foundation: [Verbind plantbalans met groei, rijping en overleving zonder directe smaakclaim.]
+      intermediate:
+        [
+          Gebruik systeemdenken om losse claims over lage opbrengst,
+          waterstress of bladverwijdering te toetsen.,
+        ]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Praktische interpretatie van plantbalans.]
+        source_refs:
+          [
+            source.pellegrino-vine-carbohydrate-status-2014,
+            source.gambetta-grapevine-drought-physiology-2020,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.ampelography
+    names: { nl: Ampelografie, en: Ampelography }
+    slugs: { nl: ampelografie, en: ampelography }
+    disposition: link-and-relation
+  - id: concept.rootstock
+    names: { nl: Onderstam, en: Rootstock }
+    slugs: { nl: onderstam, en: rootstock }
+    disposition: link-and-relation
+  - id: concept.clonal-selection
+    names: { nl: Klonale selectie, en: Clonal selection }
+    slugs: { nl: klonale-selectie, en: clonal-selection }
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

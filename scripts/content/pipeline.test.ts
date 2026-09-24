@@ -1164,7 +1164,8 @@ describe("content pipeline validation", () => {
     const root = await temporaryRoot();
     const directory = await addEntity(root, { id: "region.example" });
     await addMedia(root);
-    const markdown = ':::figure{#voorbeeldfoto media_id="media.example.photo"}\n:::\n';
+    const markdown =
+      ':::figure{#voorbeeldfoto media_id="media.example.photo"}\n**Proces in beeld**\n\n1. Eerste stap.\n2. Tweede stap.\n:::\n';
     await writeFile(path.join(directory, "overview.nl.md"), markdown);
     await writeFile(path.join(directory, "overview.en.md"), markdown);
 
@@ -1174,7 +1175,10 @@ describe("content pipeline validation", () => {
     expect(knowledgeBase.entities[0].content.nl.blocks[0]).toMatchObject({
       type: "figure",
       media_id: "media.example.photo",
-      nodes: [],
+      nodes: expect.arrayContaining([
+        expect.objectContaining({ type: "paragraph" }),
+        expect.objectContaining({ type: "list", ordered: true }),
+      ]),
     });
     expect(knowledgeBase.indexes.search[0]).toMatchObject({
       kind: "entity",
@@ -1183,7 +1187,7 @@ describe("content pipeline validation", () => {
           {
             block_id: "voorbeeldfoto",
             kind: "media-caption",
-            text: "Een onderschrift.",
+            text: "Proces in beeld Eerste stap. Tweede stap.",
           },
         ],
       },

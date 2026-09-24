@@ -116,14 +116,18 @@ function searchPassagesForDocument(
   return document.blocks.flatMap((block): SearchPassage[] => {
     if (block.type === "figure") {
       const caption = block.media_id ? mediaById.get(block.media_id)?.caption?.[locale] : undefined;
-      if (!caption?.trim()) return [];
+      const description = clean(
+        block.nodes.map((node) => blockNodeText(node, entityLabel)).join(" "),
+      );
+      const text = description || clean(caption ?? "");
+      if (!text) return [];
       return [
         {
           block_id: block.id,
           kind: "media-caption",
           depth: block.depth,
           heading: null,
-          text: clean(caption),
+          text,
         },
       ];
     }

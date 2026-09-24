@@ -1,7 +1,7 @@
 id: media.concept.clonal-selection.selection-propagation-trials
 kind: illustration
 role: educational
-status: active
+status: deprecated
 storage_key: concepts/clonal-selection/selection-propagation-trials.png
 mime_type: image/png
 width: 1536
@@ -19,4 +19,4 @@ rights:
   license_name: Project-owned generated asset
   credit_line: Generated with OpenAI for Oenocademy
 acquired_at: 2026-09-22
-changes: First generated 1536 by 1024 pixel version selected after review of within-variety variation, identity and health testing, vegetative propagation, multi-season trials and mobile legibility; used without crop or colour alteration.
+changes: First generated 1536 by 1024 pixel version selected after review of within-variety variation, identity and health testing, vegetative propagation, multi-season trials and mobile legibility; retained for provenance and deprecated on 2026-09-24 after the English-labelled schematic-naturalist EXP-003 pilot replaced it.

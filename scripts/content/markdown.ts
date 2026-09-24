@@ -305,9 +305,6 @@ function validateBlockShape(block: ContentBlock, state: ParseState): void {
     if (block.media_id === null) {
       issue(state, `figure '${block.id}' requires a media_id`);
     }
-    if (block.nodes.length > 0) {
-      issue(state, `figure '${block.id}' must not contain Markdown content`);
-    }
   } else if (block.media_id !== null) {
     issue(state, `only figure blocks may use media_id`);
   }

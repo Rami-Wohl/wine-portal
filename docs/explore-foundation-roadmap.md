@@ -73,12 +73,13 @@ desired family is a schematic-naturalist educational plate:
 - one teaching question per plate, with enough quiet space to preserve
   hierarchy at desktop and mobile sizes.
 
-English is the preferred shared language for the few labels that must be baked
-into an image. Labels must be short and checked by an editor. The localized
-caption and adjacent HTML provide the Dutch explanation or translation and own
-all essential teaching content. A reader must not lose the lesson when the
-image cannot be seen, enlarged or read. Do not put paragraphs, citations or
-complex legends into raster pixels.
+Prefer language-neutral numbers, arrows and symbols for the few marks that must
+be baked into an image. A localized title and numbered explanation in adjacent
+HTML own all essential teaching content. English labels are only a fallback
+when a concept cannot be made legible without words, and must then be short and
+editorially checked. A reader must not lose the lesson when the image cannot be
+seen, enlarged or read. Do not put paragraphs, citations or complex legends
+into raster pixels.
 
 Every diagram needs a content brief before production: teaching question,
 required objects and relations, prohibited implications, acceptable
@@ -163,8 +164,9 @@ unplanned standalone pages.
 | --- | --- | --- |
 | `EXP-001` | complete | Maintained baseline and ownership matrix in `explore-foundation-coverage.md` |
 | `EXP-002` | complete | Validated hub/focused archetypes, authoring contract and reusable templates in `explore-foundation-authoring.md` |
-| `EXP-003` | next | Pilot the schematic-naturalist educational diagram contract |
-| `EXP-004`–`EXP-028` | open | Execute in the dependency order below |
+| `EXP-003` | complete | Language-neutral clonal-selection pilot accepted; localized rich figure descriptions validated |
+| `EXP-004` | complete | Bilingual living-vine hub, research brief and two language-neutral educational plates validated |
+| `EXP-005`–`EXP-028` | open | Execute in the dependency order below |
 
 ### Phase A — coverage and contracts
 
@@ -201,11 +203,19 @@ structure from scratch, and validation or review checklists cover the contract.
 
 #### EXP-003 — Pilot the educational diagram contract
 
+**Status:** complete on 2026-09-24. `concept.clonal-selection` now uses the
+accepted language-neutral schematic-naturalist pilot; its production brief,
+prompt set, factual sources, revision history, rights and completed
+technical/source-based checks are retained in the editorial brief and canonical
+media record. Localized rich figure descriptions carry the title, numbered
+steps and nuance outside the raster image.
+
 **Depends on:** EXP-001–002.
 
 **Work:** select one existing plant-process topic, make a factual diagram brief,
-produce one English-labelled plate and integrate localized captions and a full
-HTML explanation. Test narrow and wide layouts, zoom and image absence.
+produce one language-neutral numbered plate and integrate a localized title,
+numbered description and full HTML explanation. Test narrow and wide layouts,
+zoom and image absence.
 
 **Done when:** expert, editorial and visual review approve the reusable style;
 the media record contains production prompt, sources, rights and review status.
@@ -213,6 +223,12 @@ the media record contains production prompt, sources, rights and review status.
 ### Phase B — the vine as a living system
 
 #### EXP-004 — Vine anatomy, transport and source–sink relations
+
+**Status:** complete on 2026-09-24. `concept.vine-as-living-system` owns the
+system relationships; existing ampelography, rootstock and clonal-selection
+entities retain their focused scope. The bilingual page, complete content plan,
+eight-source research set and two numbered educational plates pass the content
+contract and pipeline validation.
 
 **Depends on:** EXP-002–003.
 
@@ -234,7 +250,8 @@ plant and understand the limits of directional-arrow models.
 berry growth, veraison, ripening, harvest, leaf fall and reserve storage;
 variation by hemisphere, climate, cultivar and season.
 
-**Visual:** annual cycle with English phase labels and localized explanation.
+**Visual:** annual cycle with language-neutral numbered phases and localized
+HTML explanation.
 
 **Done when:** the sequence, overlap, timing variability and management stakes
 are clear without implying a universal calendar.
@@ -505,14 +522,14 @@ current and the foundation is ready to support new regions and Learn paths.
 | ID | Decision | Timing | Status |
 | --- | --- | --- | --- |
 | `DEC-EXP-001` | Keep the existing concept model unless the audit proves a real modeling gap | EXP-001/002 | Recommended; no decision needed now |
-| `DEC-EXP-002` | Use minimal English labels in shared diagrams and localized HTML/captions for the full lesson | Validate in EXP-003 | Direction approved by user; pilot still required |
+| `DEC-EXP-002` | Prefer language-neutral marks in shared diagrams and put the complete localized explanation in HTML | Validate in EXP-003 | Approved and validated in the accepted pilot |
 | `DEC-EXP-003` | Approve which soil terms become entities versus hub-owned entries | End of EXP-010 | Open decision gate |
 | `DEC-EXP-004` | Use existing content blocks for the soil directory before adding specialized UI | EXP-010/011 | Recommended |
 | `DEC-EXP-005` | Confirm the regions and climates used for the global-bias stress test | Start of EXP-027 | Open; Loire provisional |
 
-No user decision blocks `EXP-003`. The next mandatory conversation is at
-`DEC-EXP-003`, after the soil research and terminology matrix make the
-trade-offs concrete.
+The `EXP-003` review gate is closed. The next mandatory content-model
+conversation is at `DEC-EXP-003`, after the soil research and terminology
+matrix make the trade-offs concrete.
 
 ## Definition of done for every content ticket
 

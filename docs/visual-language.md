@@ -133,12 +133,14 @@ plant parts, vessels, tools and materials are preferable to decorative icons.
 Include a visible nuance or limitation when a simplified flow could otherwise
 teach a false absolute.
 
-Keep baked-in wording to the minimum. English is the preferred shared language
-for unavoidable short source labels; the full Dutch and English explanation,
-translation, citations and accessible alternative live in localized HTML and
-captions. Essential knowledge may never exist only inside image pixels. Check
-legibility at narrow width and provide an enlargeable or structured alternative
-when the plate is information-dense.
+Prefer language-neutral numbers, arrows and symbols over baked-in wording. A
+localized HTML figure description should pair a bold title with a numbered list
+that explains every marker. If a short source label is genuinely unavoidable,
+English remains the shared fallback language. The full Dutch and English
+explanation, translation, citations and accessible alternative live in
+localized HTML. Essential knowledge may never exist only inside image pixels.
+Check legibility at narrow width and provide a structured alternative when the
+plate is information-dense.
 
 These plates are normally raster PNG or WebP assets. Use SVG only when the
 teaching value genuinely depends on scalable geometry or localized overlays;

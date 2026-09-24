@@ -284,14 +284,26 @@ Vergelijk alleen werkelijk vergelijkbare scopes en definities. Een tabel is geen
 Plaatst één geregistreerd beeld tussen de inhoudsblocks:
 
 ```md
-:::figure{#saint-emilion-panorama media_id="media.bordeaux.saint-emilion-panorama"}
+:::figure{#procesplaat media_id="media.example.process"}
+**Proces in beeld**
+
+1. **Eerste stap.** Gelokaliseerde uitleg.
+2. **Tweede stap.** Gelokaliseerde uitleg.
 :::
 ```
 
-Een figure heeft geen Markdownbody. Alttekst, caption, afmetingen, maker, bron,
+Een figure mag een gelokaliseerde Markdownbody bevatten wanneer een educatieve
+plaat genummerde of anderszins gestructureerde uitleg nodig heeft. Gebruik dan
+een vetgedrukte, beschrijvende titel, gevolgd door een geordende lijst die de
+nummers in het beeld één op één verklaart. De body mag geen headings bevatten.
+Essentiële kennis blijft zo semantische, doorzoekbare HTML en staat niet alleen
+in pixels. Een gewone fotofigure blijft leeg.
+
+Alttekst, een eventueel compact herbruikbaar caption, afmetingen, maker, bron,
 licentie en storage key staan één keer in het mediarecord. De renderer kiest de
-gelokaliseerde tekst en toont de credits. Auteurs plaatsen geen bestandspad,
-CDN-URL of handgeschreven credit in Markdown.
+gelokaliseerde tekst en toont de credits. Vermijd herhaling tussen een
+gestructureerde figurebody en het media-caption. Auteurs plaatsen geen
+bestandspad, CDN-URL of handgeschreven credit in Markdown.
 
 ## 6. Welke blocks zijn vereist?
 

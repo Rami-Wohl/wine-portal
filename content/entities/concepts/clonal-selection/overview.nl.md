@@ -34,7 +34,16 @@ Kandidaten worden vermeerderd en gedurende meerdere seizoenen gevolgd. Een proef
 Na toelating blijven identiteit en gezondheid via moederplanten en opeenvolgende vermeerderingsstappen bewaakt. Plantgrape toont voor Frankrijk onder meer de oorsprong, selectiepartner, toelatingsdatum, agronomische referentie en beschikbaarheid van geregistreerde klonen. [@source.plantgrape-cabernet-franc]
 :::
 
-:::figure{#selectie-vermeerdering-en-toetsing depth="foundation" media_id="media.concept.clonal-selection.selection-propagation-trials" source_refs="source.oiv-clonal-selection-2017 source.oiv-grape-variety-identification-2019"}
+:::figure{#selectie-vermeerdering-en-toetsing depth="foundation" media_id="media.concept.clonal-selection.selection-propagation-trials-v3" source_refs="source.oiv-clonal-selection-2017 source.oiv-grape-variety-identification-2019"}
+**Klonale selectie — van kandidaatstok tot geregistreerd plantmateriaal**
+
+1. **Een kandidaatstok selecteren.** Onderzoekers kiezen binnen een druivenras een wijnstok met mogelijk interessante eigenschappen. De markering betekent alleen dat de stok verder wordt onderzocht; hij is nog geen bewezen betere kloon.
+2. **Identiteit en gezondheid controleren.** Bladeren, trossen en andere kenmerken worden vergeleken om de rasidentiteit te bevestigen. Genetische analyse kan daarbij helpen. Afzonderlijke sanitaire tests controleren op schadelijke ziekteverwekkers.
+3. **De wijnstok vegetatief vermeerderen.** Van de kandidaatstok worden genetisch verwante planten gemaakt door stekken of enten. Zo ontstaat voldoende materiaal om dezelfde lijn herhaald en onder vergelijkbare omstandigheden te onderzoeken.
+4. **Meerdere jaren vergelijkend toetsen.** De nakomelingen groeien in proefrijen naast referentiemateriaal. Onderzoekers volgen gedurende verschillende seizoenen onder meer groei, rijping, opbrengst, trosbouw, gezondheid en eventueel de resulterende wijn.
+5. **Registreren en conserveren.** Materiaal dat aan de vereiste identiteit, gezondheid en prestatiecriteria voldoet, kan binnen een nationaal systeem worden geregistreerd. Gezond uitgangsmateriaal wordt vervolgens zorgvuldig bewaard en verder vermeerderd.
+
+Een geselecteerde kloon is daarmee geen winnaar van één observatie, maar het resultaat van identificatie, sanitaire controle, herhaalde vermeerdering en vergelijking door de tijd. De precieze criteria en procedures verschillen per land en selectieprogramma.
 :::
 
 :::section{#gebruiken-en-begrenzen depth="foundation" source_refs="source.plantgrape-cabernet-franc source.plantgrape-cabernet-sauvignon"}

@@ -1,0 +1,19 @@
+id: media.concept.vine-as-living-system.vine-anatomy-cutaway
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vine-as-living-system/vine-anatomy-cutaway.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 3e45f222fdac4eac3f8920ac94285ac72683cc04305cee05a2c3889dcdf1b02e
+alt:
+  nl: Genummerde doorsnede van een wijnstok met fijne en houtige wortels, stam, eenjarige scheut, knop, blad, bloeiwijze en druiventros.
+  en: Numbered cutaway of a grapevine showing fine and woody roots, trunk, annual shoot, bud, leaf, inflorescence and grape bunch.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-24
+changes: "Generated in built-in image mode from an Oenocademy factual brief; language-neutral markers 1–8 only. Reviewed for botanical recognizability, neutral geography, relief, prohibited text, responsive legibility and consistency with Cornell grapevine anatomy sources. The simultaneous organs are an educational composite, not one phenological date."

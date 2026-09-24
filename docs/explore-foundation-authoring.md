@@ -202,7 +202,7 @@ relatie op beeldkans. Leg in de brief vast:
 - welke objecten, fasen en relaties zichtbaar moeten zijn;
 - welke details of implicaties verboden zijn;
 - schaal, richting, timing en andere toegestane vereenvoudigingen;
-- korte Engelse labels die werkelijk in pixels moeten staan;
+- taalneutrale nummers, pijlen of symbolen die werkelijk in pixels moeten staan;
 - hoe de Nederlandse en Engelse HTML-uitleg alle essentiële kennis draagt; en
 - narrow-screen-, zoom- en alttekstgedrag.
 
@@ -303,3 +303,23 @@ Dit is geen halve migratie: de coverage matrix benoemt precies welke pagina op
 welk ticket wordt herzien. Zo wordt de overgang per inhoudelijke cluster
 volledig uitgevoerd zonder 49 plannen te genereren die nog niet eerlijk zijn
 onderzocht.
+
+## 14. Visuele pilot voor review
+
+`EXP-003` heeft `concept.clonal-selection` als eerste productieproef voor de
+schematisch-naturalistische diagramstijl gebruikt. De goedgekeurde plaat is
+`media.concept.clonal-selection.selection-propagation-trials-v3`.
+
+De pilot bevestigt dat taalneutrale nummers en pijlen in het beeld, gecombineerd
+met een sterke gelokaliseerde titel en genummerde uitleg in HTML, de beste balans
+geven. De uitleg blijft zo vertaalbaar, doorzoekbaar en toegankelijk zonder de
+plaat visueel te overladen. Vijf duidelijk genummerde fasen, concrete botanische
+objecten en beperkte pijlen bleven ook op smal scherm als proces herkenbaar. Een
+reviewcorrectie verwijderde bovendien bergen, heuvels en cipressen die een
+onnodige mediterrane herkomst suggereerden; geografische neutraliteit is daarom
+ook bij niet-geografische procesplaten een expliciete controle.
+
+Deze plaat is een stijlreferentie, geen verplicht lay-outsjabloon. De
+onderwijsvraag bepaalt of een volgende visual een route, cyclus, doorsnede of
+vergelijking nodig heeft. Productieprompt, bronnen, correctierondes en
+reviewstatus blijven per asset in brief en mediarecord traceerbaar.
