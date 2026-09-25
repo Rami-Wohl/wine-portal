@@ -319,6 +319,14 @@ are globally useful.
 
 #### EXP-009 — Water relations, drought and irrigation
 
+**Status:** complete on 2026-09-25. `concept.vine-water-relations` now owns
+the soil–plant–atmosphere pathway, vine water status, stomatal regulation,
+deficit timing, excess water and the principles of irrigation. Its bilingual
+system plan, six-source research set and two language-neutral educational
+plates distinguish controlled limitation from harmful stress; soil physics,
+canopy management, regional irrigation law and broader sustainability retain
+their planned owners.
+
 **Depends on:** EXP-004 and EXP-008.
 
 **Coverage:** soil-water storage, roots, transpiration, stomata, water status,

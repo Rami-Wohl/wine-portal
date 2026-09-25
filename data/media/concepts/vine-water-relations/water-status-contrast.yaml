@@ -1,0 +1,19 @@
+id: media.concept.vine-water-relations.water-status-contrast
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vine-water-relations/water-status-contrast.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 887cc2073bc5dc6789654062db612c36e7382d6c3c9416f885c48ff4569cf569
+alt:
+  nl: Vier genummerde panelen vergelijken dezelfde wijnstok bij een verzadigde wortelzone, passende waterbalans, matige beperking en ernstige langdurige droogtestress.
+  en: Four numbered panels compare the same grapevine under a saturated root zone, adequate water balance, moderate limitation and severe prolonged drought stress.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-25
+changes: "Generated in built-in image mode from a reviewed factual brief and the accepted Oenocademy transport plate as style reference; language-neutral markers 1–4 only. The same training and stage are retained across panels; moderate deficit is deliberately not coded as optimal or higher quality."

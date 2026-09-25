@@ -136,7 +136,7 @@ Statussen:
 | `EXP-006` | Bloei, vruchtzetting en opbrengstvorming | `flowering-fruit-set-yield`, met `coulure` en `millerandage` als satellites | complete hub | Verdere beschemie en rijpheid landen bij EXP-007; snoei, loofwand en crop load bij EXP-012 | voltooid |
 | `EXP-007` | Besontwikkeling, véraison en rijpheid | `berry-development-ripeness`, met `acidity`, `tannin` en `late-harvest` als satellites | complete hub | Verdere waterstress landt bij EXP-009; volledige wijnsamenstelling en perceptie bij EXP-024/025 | voltooid |
 | `EXP-008` | Klimaat, weer, standplaats en microklimaat | `climate-weather-site-microclimate`, met `terroir`, `vintage`, `grapevine-phenology`, `vine-as-living-system` en `berry-development-ripeness` als dependencies | complete hub | Waterfysiologie landt bij EXP-009; bodems bij EXP-010/011; loofwandkeuzes en weergevaren bij EXP-012/014 | voltooid |
-| `EXP-009` | Waterrelaties, droogte en irrigatie | Incidentele passages in `terroir`, druiven en regio's | afwezig | Bodem–plant–atmosfeer, huidmondjes, waterstatus, timing van tekort, teveel water en irrigatie | P0 |
+| `EXP-009` | Waterrelaties, droogte en irrigatie | `vine-water-relations`, met `vine-as-living-system`, `climate-weather-site-microclimate`, `grapevine-phenology`, `berry-development-ripeness`, `rootstock` en `terroir` als dependencies | complete hub | Volledige bodemfysica landt bij EXP-010/011; loofwandkeuzes bij EXP-012; regionale irrigatieregels bij hun geografische owners; brede duurzaamheidsafwegingen bij EXP-015 | voltooid |
 | `EXP-010/011` | Wijngaardbodems en alfabetische directory | `terroir`; verspreide regiobodemtekst | afwezig | Terminologie, fysische eigenschappen, wortelomgeving, indirecte effecten, mythes en beeldrijke vergelijking | P0 |
 | `EXP-012` | Snoei, training, canopy en crop load | Losse voorbeelden op druiven- en regiopagina's | afwezig | Doelen, systemen, seizoenswerk en trade-offs tussen opbrengst, rijping, ziekte en levensduur | P1 |
 | `EXP-013` | Voeding, bodembeheer en wijngaardvloer | Geen zelfstandige owner | afwezig | Nutriënten, diagnose, organische stof, bodemleven, cover crops, erosie, compactie en amendments | P1 |
@@ -355,13 +355,13 @@ registeritem.
    procesplaat met gelokaliseerde uitleg, een volledige HTML-terugval en
    vastgelegde productie- en reviewhistorie.
 3. `EXP-004` heeft de biologische systeemhub voltooid, `EXP-005` de
-   fenologische jaarcyclus, `EXP-006` de reproductieve opbrengstketen en
-   `EXP-007` besontwikkeling en het oogstbesluit; `EXP-008` klimaat en
-   microklimaat; `EXP-009–011` bouwen nu de
-   omgevingsruggengraat verder uit.
+   fenologische jaarcyclus, `EXP-006` de reproductieve opbrengstketen,
+   `EXP-007` besontwikkeling en het oogstbesluit, `EXP-008` klimaat en
+   microklimaat en `EXP-009` waterrelaties; `EXP-010–011` bouwen nu de
+   bodemruggengraat verder uit.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-De visuele pilot en de eerste vijf foundationhubs zijn voltooid; `EXP-009` is de
-eerstvolgende uitvoeringstaak. `DEC-EXP-003` blijft daarna de eerste harde
+De visuele pilot en de eerste zes foundationhubs zijn voltooid; `EXP-010` is de
+eerstvolgende onderzoeks- en modelleertaak. `DEC-EXP-003` blijft de eerste harde
 inhoudelijke beslissing: welke bodemtermen na research een eigen entity krijgen.

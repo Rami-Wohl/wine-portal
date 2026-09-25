@@ -435,6 +435,8 @@ h3 {
 .home-hero h1,
 .page-intro h1,
 .entity-header h1,
+.learning-path-hero h1,
+.learning-completion-hero h1,
 .lesson-page-header h1 {
   margin-bottom: var(--space-heading-copy);
   font: 470 clamp(2rem, 4vw, 4rem)/0.94 var(--font-display);
@@ -491,7 +493,9 @@ h3 {
   max-width: 870px;
   padding-block: clamp(4.5rem, 10vw, 8rem) clamp(3rem, 6vw, 5rem);
 }
-.page-intro h1 {
+.page-intro h1,
+.learning-path-hero h1,
+.learning-completion-hero h1 {
   font-size: clamp(2.75rem, 7vw, 4rem);
 }
 .page-intro-copy {
@@ -1189,8 +1193,6 @@ h3 {
 .learning-path-hero h1,
 .learning-completion-hero h1 {
   margin-bottom: 1.25rem;
-  font: 470 clamp(2.8rem, 7vw, 5.8rem)/0.97 var(--font-display);
-  letter-spacing: -0.05em;
 }
 .learning-path-summary,
 .learning-completion-hero > p:last-child {
@@ -1627,7 +1629,7 @@ h3 {
   grid-template-columns: minmax(0, 900px);
 }
 .entity-header h1 {
-  font-size: clamp(2.9rem, 6vw, 5.75rem);
+  font-size: clamp(2.75rem, 7vw, 4rem);
 }
 .entity-summary {
   max-width: 690px;
@@ -2609,6 +2611,10 @@ h3 {
   }
   .page-intro h1 {
     font-size: clamp(2.45rem, 12vw, 3.5rem);
+  }
+  .learning-path-hero h1,
+  .learning-completion-hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
   }
   .page-intro-copy {
     font-size: 1rem;

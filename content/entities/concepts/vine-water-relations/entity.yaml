@@ -1,0 +1,30 @@
+id: concept.vine-water-relations
+type: concept
+status: active
+canonical_name: Vine water relations, drought and irrigation
+names:
+  nl: Waterrelaties, droogte en irrigatie bij de wijnstok
+  en: Vine water relations, drought and irrigation
+slugs:
+  nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok
+  en: vine-water-relations-drought-irrigation
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.climate-weather-site-microclimate }
+  - { type: related_to, target: concept.grapevine-phenology }
+  - { type: related_to, target: concept.berry-development-ripeness }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.terroir }
+assertions: []
+source_refs:
+  - source.gambetta-grapevine-drought-physiology-2020
+  - source.chaves-grapevine-deficit-irrigation-2010
+  - source.van-leeuwen-vine-water-status-2009
+  - source.oiv-sustainable-water-viticulture-2018
+  - source.awri-waterlogged-vineyards
+  - source.zhou-tsang-grapevine-salt-tolerance-2021
+depth: foundation
+last_reviewed: 2026-09-25

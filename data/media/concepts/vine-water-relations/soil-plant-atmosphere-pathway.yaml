@@ -1,0 +1,19 @@
+id: media.concept.vine-water-relations.soil-plant-atmosphere-pathway
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vine-water-relations/soil-plant-atmosphere-pathway.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: a5edf80fab8aa90f30faa4259076815e7e45c712d1971004625194f62144e7da
+alt:
+  nl: Een genummerde doorsnede volgt water van regen en druppelleiding via bodemporiën, fijne wortels en xyleem naar bladeren en atmosfeer.
+  en: A numbered cutaway follows water from rain and a drip line through soil pores, fine roots and xylem to leaves and the atmosphere.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-25
+changes: "Generated in built-in image mode from a reviewed factual brief and the accepted Oenocademy transport plate as style reference; language-neutral markers 1–6 only. Reviewed for fine-root uptake, pore-scale soil water, upward xylem transport, stomatal exchange and modest relief. Arrows are a teaching model rather than literal tubes or constant flow."

@@ -127,3 +127,53 @@ test("the climate and microclimate hub keeps its nested scales and evidence laye
   }));
   expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
 });
+
+test("the vine water hub distinguishes its pathway, water states and progressive depth", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/vine-water-relations-drought-irrigation");
+
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Waterrelaties, droogte en irrigatie bij de wijnstok",
+    }),
+  ).toBeVisible();
+
+  const pathway = page.locator("#waterroute-in-beeld");
+  await pathway.scrollIntoViewIfNeeded();
+  await expect(
+    pathway.getByRole("img", { name: /genummerde doorsnede volgt water/ }),
+  ).toBeVisible();
+  await expect(pathway.locator("li")).toHaveCount(6);
+
+  const states = page.locator("#vier-waterstanden");
+  await states.scrollIntoViewIfNeeded();
+  await expect(states.getByRole("img", { name: /vier genummerde panelen/i })).toBeVisible();
+  await expect(states.locator("li")).toHaveCount(4);
+
+  await expect(page.locator("#matige-beperking-is-geen-recept")).toBeHidden();
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(page.locator("#matige-beperking-is-geen-recept")).toBeVisible();
+  await expect(page.locator("#hydraulische-grenzen")).toBeHidden();
+
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(page.locator("#hydraulische-grenzen")).toBeVisible();
+  await expect(page.locator("#drempels-zijn-methodespecifiek")).toBeVisible();
+
+  const mobileDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(mobileDimensions.documentWidth).toBeLessThanOrEqual(mobileDimensions.viewportWidth);
+
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.reload();
+  await expect(pathway).toBeVisible();
+  const desktopDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
+});

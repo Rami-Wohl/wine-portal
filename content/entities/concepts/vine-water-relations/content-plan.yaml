@@ -1,0 +1,210 @@
+schema_version: 2
+package_id: concept.vine-water-relations
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.vine-as-living-system, concept.climate-weather-site-microclimate]
+    completeness_questions:
+      - Kan de lezer neerslag, bodemwater, plantwaterstatus, watertekort en droogtestress uit elkaar houden?
+    layers:
+      foundation: [Definieer de waterbalans en de belangrijkste termen in gewone taal.]
+      intermediate: [Plaats atmosferische vraag en wortelzone in hetzelfde systeem.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Wijnstokwaterbalans en droogtefysiologie.]
+        source_refs:
+          [
+            source.gambetta-grapevine-drought-physiology-2020,
+            source.chaves-grapevine-deficit-irrigation-2010,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.vine-as-living-system]
+    completeness_questions:
+      - Zijn aanvoer, infiltratie, opslag, wortelopname, xyleem, blad en atmosfeer als één route uitgelegd?
+      - Is duidelijk dat een beperkende schakel de hele route beïnvloedt?
+    layers:
+      foundation: [Volg water van bron tot atmosfeer.]
+      intermediate: [Verbind bodemopslag, wortelbereik en atmosferische vraag.]
+      advanced: [Leg waterpotentiaal en hydraulische kwetsbaarheid begrensd uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Bodem–plant–atmosfeercontinuüm, xyleem en transpiratie.]
+        source_refs: [source.gambetta-grapevine-drought-physiology-2020]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.vine-as-living-system]
+    completeness_questions:
+      - Zijn huidmondjes als afweging tussen koolstofopname, koeling en waterverlies verklaard?
+      - Zijn matige beperking en schadelijke stress als delen van een continuüm behandeld?
+    layers:
+      foundation: [Leg transpiratie en stomatale regeling uit.]
+      intermediate: [Verbind timing en intensiteit aan groei en bessen.]
+      advanced: [Begrens hydraulische en hormonale verklaringen en vaste raslabels.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Stomatale regeling en fysiologische droogterespons.]
+        source_refs:
+          [
+            source.gambetta-grapevine-drought-physiology-2020,
+            source.chaves-grapevine-deficit-irrigation-2010,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.grapevine-phenology, concept.berry-development-ripeness, concept.rootstock]
+    completeness_questions:
+      - Zijn stadium, duur, intensiteit, ras, onderstam, bodem en klimaat als variatiebronnen aanwezig?
+      - Zijn teveel water en saliniteit naast droogte behandeld?
+    layers:
+      foundation: [Vergelijk vier waterstanden zonder kwaliteitsrangorde.]
+      intermediate: [Werk timing, waterverzadiging en saliniteit uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Timing van tekort, waterverzadiging en saliniteit.]
+        source_refs:
+          [
+            source.chaves-grapevine-deficit-irrigation-2010,
+            source.awri-waterlogged-vineyards,
+            source.zhou-tsang-grapevine-salt-tolerance-2021,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: [concept.rootstock]
+    completeness_questions:
+      - Zijn irrigatiedoel, hoeveelheid, timing, verdeling en waterkwaliteit afzonderlijke beslissingen?
+      - Zijn rainfed, aanvullend, volledig en deficit-irrigatie zonder rangorde beschreven?
+      - Is de juridische context naar actuele lokale eigenaren verwezen?
+    layers:
+      foundation: [Begin bij doel en diagnose, niet bij een vaste hoeveelheid.]
+      intermediate: [Vergelijk strategieën en systeemtrade-offs.]
+      advanced: [Begrens efficiëntiemaatstaven en precisieclaims.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Beredeneerde irrigatie en duurzaam watergebruik.]
+        source_refs:
+          [
+            source.oiv-sustainable-water-viticulture-2018,
+            source.chaves-grapevine-deficit-irrigation-2010,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: [concept.climate-weather-site-microclimate]
+    completeness_questions:
+      - Krijgt de lezer voorbeelden uit droge, vochtige, warme en koele wijnbouw zonder één normregio?
+      - Blijven wettelijke en maatschappelijke watergrenzen plaatsgebonden?
+    layers:
+      foundation: [Gebruik mondiale contrasten als systeemvoorbeelden.]
+      intermediate: [Benoem waterbron, concurrentie, energie en saliniteit als context.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Mondiale watercontext en duurzaam gebruik.]
+        source_refs:
+          [
+            source.oiv-sustainable-water-viticulture-2018,
+            source.zhou-tsang-grapevine-salt-tolerance-2021,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer bodem-, plant-, thermische en seizoensmetingen naar schaal onderscheiden?
+      - Worden drempelwaarden niet als universeel gepresenteerd?
+    layers:
+      foundation: []
+      intermediate: [Vergelijk meetfamilies en hun tijdschaal.]
+      advanced: [Begrens waterpotentiaal, sensoren, thermiek, koolstofisotopen en modellen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Indicatoren van wijnstokwaterstatus.]
+        source_refs:
+          [
+            source.van-leeuwen-vine-water-status-2009,
+            source.gambetta-grapevine-drought-physiology-2020,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.berry-development-ripeness, concept.terroir]
+    completeness_questions:
+      - Kan de lezer waterclaims beoordelen zonder droogte rechtstreeks naar kwaliteit of smaak te vertalen?
+    layers:
+      foundation: [Geef een praktisch leesraam voor waterclaims.]
+      intermediate: [Vraag om timing, intensiteit, plantstatus en productiedoel.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Waterstatus, druifontwikkeling en contextafhankelijke uitkomsten.]
+        source_refs:
+          [
+            source.chaves-grapevine-deficit-irrigation-2010,
+            source.van-leeuwen-vine-water-status-2009,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.vine-as-living-system
+    names: { nl: De wijnstok als levend systeem, en: The vine as a living system }
+    slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system }
+    disposition: link-and-relation
+  - id: concept.climate-weather-site-microclimate
+    names:
+      nl: "Klimaat, weer, standplaats en microklimaat"
+      en: "Climate, weather, site and microclimate"
+    slugs: { nl: klimaat-weer-standplaats-en-microklimaat, en: climate-weather-site-microclimate }
+    disposition: link-and-relation
+  - id: concept.grapevine-phenology
+    names: { nl: Jaarcyclus en fenologie van de wijnstok, en: Grapevine phenology and annual cycle }
+    slugs: { nl: jaarcyclus-en-fenologie-van-de-wijnstok, en: grapevine-phenology }
+    disposition: link-and-relation
+  - id: concept.berry-development-ripeness
+    names:
+      nl: "Besontwikkeling, véraison en rijpheid"
+      en: "Berry development, veraison and ripeness"
+    slugs: { nl: besontwikkeling-veraison-en-rijpheid, en: berry-development-veraison-ripeness }
+    disposition: link-and-relation
+  - id: concept.rootstock
+    names: { nl: Onderstam, en: Rootstock }
+    slugs: { nl: onderstam, en: rootstock }
+    disposition: link-and-relation
+  - id: concept.terroir
+    names: { nl: Terroir, en: Terroir }
+    slugs: { nl: terroir, en: terroir }
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete
