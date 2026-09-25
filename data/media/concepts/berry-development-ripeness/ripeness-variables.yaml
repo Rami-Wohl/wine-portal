@@ -1,0 +1,27 @@
+id: media.concept.berry-development-ripeness.ripeness-variables
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/berry-development-ripeness/ripeness-variables.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 18ae87980eb39e240b664ba99e8b82664a6df5c3c308efbfba6036aacc3d20e9
+alt:
+  nl: Taalneutraal beslismodel met een druiventros, zeven genummerde waarnemingen rond samenstelling en conditie, en drie mogelijke oogstmomenten.
+  en: Language-neutral decision model with a grape bunch, seven numbered observations of composition and condition, and three possible harvest moments.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-25
+changes: >-
+  Generated in built-in image mode from the EXP-007 factual visual brief, using
+  the accepted annual-cycle plate as a style reference. The production prompt
+  required exactly seven language-neutral observations: soluble solids, acid
+  chemistry, skin phenolics, seeds, aroma and flavour, water and berry mass,
+  and fruit health plus weather risk. Three unranked harvest baskets prevent a
+  single optimum from being implied. Reviewed for exact numbering, neutral
+  geography, absence of text, no quality score and correspondence with the
+  localized HTML explanation.

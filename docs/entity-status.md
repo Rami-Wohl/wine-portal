@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 341 entities — 273 active, 68 draft, 0 deprecated.
+**Totaal:** 342 entities — 274 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (273)
+## Actief — publiek vindbaar (274)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -62,6 +62,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | Zelfstandige pagina | `concept.assemblage` | Ja | `/concepts/blending` | 2026-09-08 |
 | [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | Zelfstandige pagina | `concept.autolysis` | Ja | `/concepts/autolysis` | 2026-09-22 |
 | [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | Zelfstandige pagina | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-22 |
+| [Besontwikkeling, véraison en rijpheid](../content/entities/concepts/berry-development-ripeness/entity.yaml) | Concept | Zelfstandige pagina | `concept.berry-development-ripeness` | Ja | `/concepts/berry-development-veraison-ripeness` | 2026-09-25 |
 | [Bloei, vruchtzetting en opbrengstvorming](../content/entities/concepts/flowering-fruit-set-yield/entity.yaml) | Concept | Zelfstandige pagina | `concept.flowering-fruit-set-yield` | Ja | `/concepts/flowering-fruit-set-yield` | 2026-09-25 |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | Zelfstandige pagina | `concept.botrytis` | Ja | `/concepts/botrytis-noble-rot` | 2026-09-13 |
 | [Botteling](../content/entities/concepts/bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.bottling` | Ja | `/concepts/bottling` | 2026-09-23 |

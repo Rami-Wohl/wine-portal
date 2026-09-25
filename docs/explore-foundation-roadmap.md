@@ -168,7 +168,8 @@ unplanned standalone pages.
 | `EXP-004` | complete | Bilingual living-vine hub, research brief and two language-neutral educational plates validated |
 | `EXP-005` | complete | Bilingual phenology hub, twelve-stage annual-cycle plate and localized explanation validated |
 | `EXP-006` | complete | Bilingual flowering, fruit-set and yield-system hub; coulure and millerandage satellites; language-neutral seven-stage process plate |
-| `EXP-007`–`EXP-028` | open | Execute in the dependency order below |
+| `EXP-007` | complete | Bilingual berry-development and ripeness hub; six-stage development plate and seven-variable harvest model |
+| `EXP-008`–`EXP-028` | open | Execute in the dependency order below |
 
 ### Phase A — coverage and contracts
 
@@ -279,6 +280,10 @@ decisions.
 as a system rather than a single harvest number.
 
 #### EXP-007 — Berry development, veraison and ripeness
+
+**Status:** complete on 2026-09-25. The hub owns berry development from fruit
+set to harvest and treats technological, phenolic and aromatic maturity as
+useful assessment lenses rather than synchronized biological endpoints.
 
 **Depends on:** EXP-004–006.
 

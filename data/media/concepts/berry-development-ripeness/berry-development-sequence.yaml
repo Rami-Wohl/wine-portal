@@ -1,0 +1,26 @@
+id: media.concept.berry-development-ripeness.berry-development-sequence
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/berry-development-ripeness/berry-development-sequence.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 458a95ecb6cb5c0cc6ffc5e31badc88a9cf0451e057b6574d882e764975b3f29
+alt:
+  nl: Taalneutrale botanische procesplaat met zes genummerde stappen van een kleine groene bes via een ongelijktijdige véraison naar een rijpe blauwe bes.
+  en: Language-neutral botanical process plate with six numbered stages from a small green berry through uneven veraison to a ripe blue berry.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-25
+changes: >-
+  Generated in built-in image mode from the EXP-007 visual brief, using the
+  accepted annual-cycle plate as a style reference. The prompt required exactly
+  six language-neutral stages, a visibly asynchronous veraison cluster and four
+  unlabeled composition traces for berry growth, sugars, acids and skin pigment.
+  Reviewed for exact numbering, plausible berry and seed development, the
+  absence of a universal optimum, neutral geography, absence of text and full
+  correspondence with the localized HTML explanation.

@@ -1,0 +1,33 @@
+id: concept.berry-development-ripeness
+type: concept
+status: active
+canonical_name: Berry development, veraison and ripeness
+names:
+  nl: Besontwikkeling, véraison en rijpheid
+  en: Berry development, veraison and ripeness
+slugs:
+  nl: besontwikkeling-veraison-en-rijpheid
+  en: berry-development-veraison-ripeness
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.grapevine-phenology }
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.flowering-fruit-set-yield }
+  - { type: related_to, target: concept.acidity }
+  - { type: related_to, target: concept.tannin }
+  - { type: related_to, target: concept.late-harvest }
+assertions: []
+source_refs:
+  - source.awri-berry-ripening
+  - source.coombe-mccarthy-berry-growth-2000
+  - source.dai-grape-berry-water-carbon-fluxes-2010
+  - source.sweetman-malate-metabolism-2009
+  - source.gouot-grape-secondary-metabolites-2021
+  - source.melendez-grape-maturities-2013
+  - source.fredes-carmenere-seed-maturity-2010
+  - source.awri-berry-sampling-maturity
+  - source.osu-harvest-grape-chemistry-2023
+depth: foundation
+last_reviewed: 2026-09-25

@@ -1,0 +1,247 @@
+schema_version: 2
+package_id: concept.berry-development-ripeness
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.grapevine-phenology, concept.flowering-fruit-set-yield]
+    completeness_questions:
+      [
+        Begrijpt de lezer besontwikkeling als een proces en oogstrijpheid als een doelgebonden beslissing?,
+      ]
+    layers:
+      foundation:
+        [
+          Plaats besontwikkeling tussen vruchtzetting en oogst en definieer véraison als overgangsperiode.,
+        ]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Besontwikkeling en rijping.],
+          source_refs: [source.awri-berry-ripening, source.coombe-mccarthy-berry-growth-2000],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.acidity, concept.tannin, concept.vine-as-living-system]
+    completeness_questions:
+      [
+        Zijn schil,
+        vruchtvlees,
+        zaden,
+        water,
+        suiker,
+        zuren,
+        fenolen en aromacomponenten als verbonden maar ongelijk lopende onderdelen behandeld?,
+      ]
+    layers:
+      foundation: [Introduceer de anatomie en hoofdcomponenten van de bes.]
+      intermediate:
+        [Leg uit dat ieder weefsel en iedere stoffenfamilie een eigen ontwikkelingsroute heeft.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Besweefsels en samenstelling.],
+          source_refs: [source.awri-berry-ripening, source.gouot-grape-secondary-metabolites-2021],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking, besontwikkeling-in-beeld]
+    target_ids: [concept.vine-as-living-system, concept.acidity]
+    completeness_questions:
+      [
+        Zijn de twee groeiperioden,
+        lagfase,
+        verzachting,
+        suikerimport,
+        zuurverloop en huid- en zaadontwikkeling zonder een synchrone schakelaanname uitgelegd?,
+      ]
+    layers:
+      foundation: [Volg harde groene bes, lagfase, véraison en rijping.]
+      intermediate: [Verbind suiker, zuur, water, kleur en weefselontwikkeling.]
+      advanced: [Begrens het dubbel-sigmoïde model en het idee dat xyleem simpelweg stopt.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Groeipatroon en fysiologie.],
+          source_refs:
+            [
+              source.coombe-mccarthy-berry-growth-2000,
+              source.dai-grape-berry-water-carbon-fluxes-2010,
+              source.sweetman-malate-metabolism-2009,
+            ],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.grapevine-phenology]
+    completeness_questions:
+      [
+        Zijn ras,
+        seizoen,
+        temperatuur,
+        licht,
+        water,
+        trospositie en berry-to-berry variation behandeld zonder één universeel rijpingspad?,
+      ]
+    layers:
+      foundation: [Benoem ras en seizoen als hoofdbronnen van timing en samenstelling.]
+      intermediate:
+        [
+          Leg uit hoe warmte,
+          licht en water verschillende componenten verschillend kunnen verschuiven.,
+        ]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Omgevings- en genotypevariatie.],
+          source_refs:
+            [source.gouot-grape-secondary-metabolites-2021, source.sweetman-malate-metabolism-2009],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen, rijpheid-als-meervoudige-afweging]
+    target_ids: [concept.late-harvest]
+    completeness_questions:
+      [
+        Kan de lezer technologische,
+        fenolische en aromatische rijpheid als beoordelingslenzen gebruiken en begrijpen waarom oogsttiming stijl,
+        gezondheid,
+        weer en logistiek afweegt?,
+      ]
+    layers:
+      foundation: [Leg uit waarom Brix alleen de oogst niet beslist.]
+      intermediate: [Introduceer meerdere rijpheidslenzen en oogsttrade-offs.]
+      advanced: [Begrens de termen als niet-onafhankelijke en niet-objectieve eindpunten.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Rijpheidsbegrippen en oogstbesluit.],
+          source_refs:
+            [source.melendez-grape-maturities-2013, source.osu-harvest-grape-chemistry-2023],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: []
+    completeness_questions:
+      [
+        Blijft het model bruikbaar voor witte en blauwe rassen,
+        warme en koele locaties en uiteenlopende wijnstijlen?,
+      ]
+    layers:
+      foundation:
+        [Laat zien dat dezelfde variabelen per ras, plaats en stijl anders worden gewogen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wereldwijde variatie in rijping.],
+          source_refs: [source.gouot-grape-secondary-metabolites-2021, source.awri-berry-ripening],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions:
+      [
+        Kan de lezer begrijpen waarom een representatieve steekproef,
+        een tijdreeks en meerdere metingen betrouwbaarder zijn dan één mooie bes of één Brixmeting?,
+      ]
+    layers:
+      foundation: []
+      intermediate: [Leg ruimtelijke variatie en representatief bemonsteren uit.]
+      advanced:
+        [
+          Onderscheid concentratieverandering door metabolisme,
+          verdunning en uitdroging en begrens de rijpheidstermen.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Bemonstering en meetgrenzen.],
+          source_refs:
+            [source.awri-berry-sampling-maturity, source.osu-harvest-grape-chemistry-2023],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.acidity, concept.tannin, concept.late-harvest]
+    completeness_questions:
+      [
+        Kan de lezer rijpheidsinformatie vertalen naar mogelijke grondstof- en stijlgevolgen zonder smaak of kwaliteit als zekerheid te behandelen?,
+      ]
+    layers:
+      foundation: [Verbind oogstmoment met de samenstelling en conditie die de kelder binnenkomen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Praktische betekenis voor wijn.],
+          source_refs:
+            [
+              source.osu-harvest-grape-chemistry-2023,
+              source.gouot-grape-secondary-metabolites-2021,
+            ],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.grapevine-phenology
+    names: { nl: Jaarcyclus en fenologie van de wijnstok, en: Grapevine phenology and annual cycle }
+    slugs: { nl: jaarcyclus-en-fenologie-van-de-wijnstok, en: grapevine-phenology }
+    disposition: link-and-relation
+  - id: concept.vine-as-living-system
+    names: { nl: De wijnstok als levend systeem, en: The vine as a living system }
+    slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system }
+    disposition: link-and-relation
+  - id: concept.flowering-fruit-set-yield
+    names:
+      {
+        nl: "Bloei, vruchtzetting en opbrengstvorming",
+        en: "Flowering, fruit set and yield formation",
+      }
+    slugs: { nl: bloei-vruchtzetting-en-opbrengstvorming, en: flowering-fruit-set-yield }
+    disposition: link-and-relation
+  - id: concept.acidity
+    names: { nl: Zuur in wijn, en: Acidity in wine }
+    slugs: { nl: zuur-in-wijn, en: acidity-in-wine }
+    disposition: link-and-relation
+  - id: concept.tannin
+    names: { nl: Tannine, en: Tannin }
+    slugs: { nl: tannine, en: tannin }
+    disposition: link-and-relation
+  - id: concept.late-harvest
+    names: { nl: Late oogst, en: Late harvest }
+    slugs: { nl: late-oogst, en: late-harvest }
+    disposition: link-and-relation
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
