@@ -1,0 +1,22 @@
+id: concept.millerandage
+type: concept
+status: active
+canonical_name: Millerandage
+names:
+  nl: Millerandage
+  en: Millerandage
+slugs:
+  nl: millerandage
+  en: millerandage
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.dry-reproductive-performance-2010
+  - source.muntean-millerandage-review-2025
+  - source.tello-bunch-compactness-review-2018
+  - source.vasconcelos-flowering-review-2009
+depth: foundation
+last_reviewed: 2026-09-25

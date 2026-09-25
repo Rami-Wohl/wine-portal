@@ -1,0 +1,31 @@
+id: media.concept.flowering-fruit-set-yield.flower-to-set-outcomes
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/flowering-fruit-set-yield/flower-to-set-outcomes.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 0208f6dde946b9d7dced378117f3143cda4b1d60ff33f081a6837183ca52871e
+alt:
+  nl: Taalneutrale botanische procesplaat met zeven nummers van gesloten wijnstokbloem via kapval en bevruchting naar gewone vruchtzetting, coulure en millerandage.
+  en: Language-neutral botanical process plate with seven numbers from a closed grapevine flower through capfall and fertilisation to ordinary fruit set, coulure and millerandage.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-25
+changes: >-
+  Generated in built-in image mode from the EXP-006 factual visual brief, using
+  the accepted annual-cycle plate only as a style reference. The production
+  prompt required exactly seven language-neutral numbered states: closed flower,
+  capfall, pollen-tube cutaway, swelling ovary, representative partial fruit
+  set, coulure and millerandage. Reviewed against
+  source.vasconcelos-flowering-review-2009,
+  source.dry-reproductive-performance-2010 and
+  source.muntean-millerandage-review-2025 for flower form, process order and
+  separation of outcomes. Checked for small green flowers, a hermaphroditic
+  flower, no required insect pollinator, clean abscission rather than disease,
+  mixed berry development for millerandage, exact numbering, neutral geography,
+  absence of words and correspondence with the localized HTML explanation.

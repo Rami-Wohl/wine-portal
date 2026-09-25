@@ -423,6 +423,26 @@ export function ContentDocumentView({
       continue;
     }
     const hasRegisterEntries = children.some((child) => child.type === "register-entry");
+    const crossesVisibleDepthBoundary =
+      (block.depth === "intermediate" || block.depth === "advanced") &&
+      children.some((child) => child.depth !== block.depth);
+
+    if (crossesVisibleDepthBoundary) {
+      units.push({
+        content: renderContentBlock(block, context),
+        depth: block.depth,
+        key: block.id,
+        type: "section",
+      });
+      units.push({
+        content: renderSectionChildren(children, context),
+        depth: null,
+        key: `${block.id}-deeper-details`,
+        type: "other",
+      });
+      continue;
+    }
+
     units.push({
       content: (
         <div

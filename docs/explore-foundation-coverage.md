@@ -133,7 +133,7 @@ Statussen:
 | --- | --- | --- | --- | --- | --- |
 | `EXP-004` | Wijnstok als levend systeem | `vine-as-living-system`, `ampelography`, `rootstock`, `clonal-selection`, `phylloxera` | complete hub | Vervolgdetails landen bij fenologie, water, bodem en beheer zonder de systeemhub te dupliceren | voltooid |
 | `EXP-005` | Jaarcyclus en fenologie | `grapevine-phenology`, met `vine-as-living-system` en `vintage` als dependencies | complete hub | Detail over bloembiologie, rijpheid en klimaatmechanismen landt bij EXP-006–008 | voltooid |
-| `EXP-006` | Bloei, vruchtzetting en opbrengstvorming | `coulure` (minimale draft) | afwezig | Bloembiologie, vruchtzetting, millerandage, clusterbouw en yield components | P0 |
+| `EXP-006` | Bloei, vruchtzetting en opbrengstvorming | `flowering-fruit-set-yield`, met `coulure` en `millerandage` als satellites | complete hub | Verdere beschemie en rijpheid landen bij EXP-007; snoei, loofwand en crop load bij EXP-012 | voltooid |
 | `EXP-007` | Besontwikkeling, véraison en rijpheid | `acidity`, `tannin`, `late-harvest`; lesson `grape-as-raw-material` | fragmenten | Groeifasen, suiker/zuur/water/phenolics, meerdere rijpheidsbegrippen en oogstsampling | P0 |
 | `EXP-008` | Klimaat, weer, site en microklimaat | `terroir`, `vintage`; regionale voorbeelden | fragmenten | Schalen, meetbegrippen en causale routes via hitte, licht, regen, vocht, wind, aspect en canopy | P0 |
 | `EXP-009` | Waterrelaties, droogte en irrigatie | Incidentele passages in `terroir`, druiven en regio's | afwezig | Bodem–plant–atmosfeer, huidmondjes, waterstatus, timing van tekort, teveel water en irrigatie | P0 |
@@ -168,7 +168,8 @@ canonical type of route niet.
 | `concept.rootstock` | actief | Enting en plaatsgebonden onderstamkeuze | `EXP-004/009/013` |
 | `concept.phylloxera` | actief | Plaag, crisis en structurele gevolgen | `EXP-014` met dependencies naar `EXP-004` |
 | `concept.franc-de-pied` | actief | Eigen wortels als bijzondere context | `EXP-014` |
-| `concept.coulure` | minimale draft | Vruchtzettingsprobleem; zelfstandige entitygrens nog toetsen | `EXP-006` |
+| `concept.coulure` | actief | Sterke bloem- en jonge vruchtval; gerichte satellite van opbrengstvorming | `EXP-006` voltooid |
+| `concept.millerandage` | actief | Ongelijke, blijvende besontwikkeling; gerichte satellite van opbrengstvorming | `EXP-006` voltooid |
 
 ### 5.2 Omgeving en wijngaardcontext
 
@@ -351,12 +352,12 @@ registeritem.
    klonale selectie: één geografisch neutrale, taalneutraal genummerde
    procesplaat met gelokaliseerde uitleg, een volledige HTML-terugval en
    vastgelegde productie- en reviewhistorie.
-3. `EXP-004` heeft de biologische systeemhub voltooid en `EXP-005` de
-   fenologische jaarcyclus; `EXP-006–011` bouwen nu de reproductieve en
-   omgevingsruggengraat verder uit.
+3. `EXP-004` heeft de biologische systeemhub voltooid, `EXP-005` de
+   fenologische jaarcyclus en `EXP-006` de reproductieve opbrengstketen;
+   `EXP-007–011` bouwen nu de rijpings- en omgevingsruggengraat verder uit.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-De visuele pilot, systeemhub en fenologiehub zijn voltooid; `EXP-006` is de
+De visuele pilot en de eerste drie wijnstokhubs zijn voltooid; `EXP-007` is de
 eerstvolgende uitvoeringstaak. `DEC-EXP-003` blijft daarna de eerste harde
 inhoudelijke beslissing: welke bodemtermen na research een eigen entity krijgen.

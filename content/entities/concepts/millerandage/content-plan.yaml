@@ -1,0 +1,155 @@
+schema_version: 2
+package_id: concept.millerandage
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.coulure]
+    completeness_questions: [Kan de lezer millerandage herkennen en van coulure onderscheiden?]
+    layers:
+      {
+        foundation: [Definieer gemengde besontwikkeling binnen een tros.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Definitie en grens.], source_refs: [source.muntean-millerandage-review-2025] },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.flowering-fruit-set-yield]
+    completeness_questions:
+      [
+        Is uitgelegd hoe onvolledige zaad- en besontwikkeling verschillende kleine vruchten kan opleveren?,
+      ]
+    layers:
+      {
+        foundation: [Leg gemengde besontwikkeling uit.],
+        intermediate: [Onderscheid kleine rijpende bessen en groene levende ovaria.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bes- en zaadontwikkeling.],
+            source_refs: [source.muntean-millerandage-review-2025],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: []
+    completeness_questions:
+      [Zijn genotype, bloeiomstandigheden en plantvoeding als context behandeld?]
+    layers:
+      {
+        foundation: [Benoem hoofdvariatie.],
+        intermediate: [Leg uit waarom de uitkomst per ras en seizoen verschilt.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Ras- en omgevingsvariatie.],
+            source_refs: [source.muntean-millerandage-review-2025],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids: [toepassing-en-keuzes]
+    target_ids: []
+    completeness_questions:
+      [Kan de teler de uitkomst op meerdere momenten beoordelen en contextueel handelen?]
+    layers:
+      {
+        foundation: [Observeer na zetting en richting rijping.],
+        intermediate: [Verbind preventie en selectie aan oorzaak en doel.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Waarneming en beheer.],
+            source_refs: [source.muntean-millerandage-review-2025],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions: [Zijn terminologie en meetcategorieen precies genoeg begrensd?]
+    layers:
+      {
+        foundation: [],
+        intermediate: [Benoem inconsistente terminologie.],
+        advanced: [Onderscheid meetbare categorieen binnen het verschijnsel.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Terminologie en meting.],
+            source_refs:
+              [source.dry-reproductive-performance-2010, source.muntean-millerandage-review-2025],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: []
+    completeness_questions:
+      [Zijn heterogeniteit, opbrengst en bemonstering uitgelegd zonder kwaliteitsregel?]
+    layers:
+      {
+        foundation: [Leg de praktische betekenis uit.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Trosheterogeniteit.],
+            source_refs:
+              [source.tello-bunch-compactness-review-2018, source.muntean-millerandage-review-2025],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.flowering-fruit-set-yield
+    names:
+      {
+        nl: "Bloei, vruchtzetting en opbrengstvorming",
+        en: "Flowering, fruit set and yield formation",
+      }
+    slugs: { nl: bloei-vruchtzetting-en-opbrengstvorming, en: flowering-fruit-set-yield }
+    disposition: link
+  - id: concept.coulure
+    names: { nl: Coulure, en: Coulure }
+    slugs: { nl: coulure, en: coulure }
+    disposition: link
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

@@ -1,7 +1,7 @@
 # Explore foundation roadmap
 
 Status: active execution roadmap  
-Last reviewed: 2026-09-24
+Last reviewed: 2026-09-25
 
 This roadmap turns Oenocademy's existing concept collection into a systematic,
 globally useful foundation for viticulture, vinification and wine science. It
@@ -167,7 +167,8 @@ unplanned standalone pages.
 | `EXP-003` | complete | Language-neutral clonal-selection pilot accepted; localized rich figure descriptions validated |
 | `EXP-004` | complete | Bilingual living-vine hub, research brief and two language-neutral educational plates validated |
 | `EXP-005` | complete | Bilingual phenology hub, twelve-stage annual-cycle plate and localized explanation validated |
-| `EXP-006`–`EXP-028` | open | Execute in the dependency order below |
+| `EXP-006` | complete | Bilingual flowering, fruit-set and yield-system hub; coulure and millerandage satellites; language-neutral seven-stage process plate |
+| `EXP-007`–`EXP-028` | open | Execute in the dependency order below |
 
 ### Phase A — coverage and contracts
 
@@ -263,6 +264,10 @@ HTML explanation.
 are clear without implying a universal calendar.
 
 #### EXP-006 — Flowering, fruit set and yield formation
+
+**Status:** complete on 2026-09-25. The hub owns flower biology, fruit set,
+bunch architecture and yield components; `concept.coulure` and
+`concept.millerandage` are focused satellites.
 
 **Depends on:** EXP-005.
 

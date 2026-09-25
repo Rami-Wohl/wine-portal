@@ -1,0 +1,158 @@
+schema_version: 2
+package_id: concept.coulure
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.millerandage]
+    completeness_questions: [Kan de lezer coulure herkennen en van millerandage onderscheiden?]
+    layers:
+      {
+        foundation: [Definieer overmatige bloem- of vruchtval.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Definitie en grens.],
+            source_refs: [source.dry-reproductive-performance-2010],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.flowering-fruit-set-yield]
+    completeness_questions:
+      [Is duidelijk dat meerdere storingen voor en kort na zetting tot abscissie kunnen leiden?]
+    layers:
+      {
+        foundation: [Leg bloem- en jonge vruchtval uit.],
+        intermediate: [Onderscheid mogelijke mechanismen.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Abscissie en vruchtzetting.],
+            source_refs: [source.vasconcelos-flowering-review-2009],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [grape.merlot]
+    completeness_questions:
+      [Zijn ras, bloeiweer en plantbalans behandeld zonder een enkelvoudige oorzaak?]
+    layers:
+      {
+        foundation: [Benoem hoofdvariatie.],
+        intermediate: [Verbind koolstofbalans en scheutgroei met risico.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Ras- en omgevingsvariatie.],
+            source_refs: [source.vasconcelos-flowering-review-2009, source.plantgrape-merlot],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids: [toepassing-en-keuzes]
+    target_ids: []
+    completeness_questions:
+      [Kan de teler waarnemen en oorzaken onderzoeken zonder een universele remedie te verwachten?]
+    layers:
+      {
+        foundation: [Observeer bloei, planttoestand en trosuitkomst.],
+        intermediate: [Plaats beheer in ras- en seizoenscontext.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Diagnose en beheer.],
+            source_refs: [source.dry-reproductive-performance-2010],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions: [Is lage berry count onderscheiden van lage fruit set?]
+    layers:
+      {
+        foundation: [],
+        intermediate: [Gebruik de juiste noemer.],
+        advanced: [Leg de coulure-index en diagnosegrens uit.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Meten en interpretatie.],
+            source_refs: [source.dry-reproductive-performance-2010],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: []
+    completeness_questions:
+      [Is de invloed op opbrengst en trosbouw uitgelegd zonder kwaliteitsgarantie?]
+    layers:
+      {
+        foundation: [Leg de praktische betekenis uit.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Opbrengst en trosbouw.],
+            source_refs: [source.dry-reproductive-performance-2010],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.flowering-fruit-set-yield
+    names:
+      {
+        nl: "Bloei, vruchtzetting en opbrengstvorming",
+        en: "Flowering, fruit set and yield formation",
+      }
+    slugs: { nl: bloei-vruchtzetting-en-opbrengstvorming, en: flowering-fruit-set-yield }
+    disposition: link
+  - id: concept.millerandage
+    names: { nl: Millerandage, en: Millerandage }
+    slugs: { nl: millerandage, en: millerandage }
+    disposition: link
+  - id: grape.merlot
+    names: { nl: Merlot, en: Merlot }
+    slugs: { nl: merlot, en: merlot }
+    disposition: link-and-relation
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

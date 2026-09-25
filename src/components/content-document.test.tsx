@@ -211,6 +211,55 @@ describe("ContentDocumentView", () => {
     expect(html).toContain("CC BY 4.0");
   });
 
+  it("starts a separate visual run when a detail is deeper than an already elevated section", () => {
+    const mixedDepthDocument: ContentDocument = {
+      blocks: [
+        {
+          id: "bewijs-en-grenzen",
+          type: "section",
+          depth: "intermediate",
+          parent: null,
+          source_refs: [],
+          variant: null,
+          media_id: null,
+          nodes: [
+            {
+              type: "heading",
+              depth: 2,
+              children: [{ type: "text", value: "Bewijs en grenzen" }],
+            },
+          ],
+        },
+        {
+          id: "categorieen",
+          type: "detail",
+          depth: "advanced",
+          parent: "bewijs-en-grenzen",
+          source_refs: [],
+          variant: null,
+          media_id: null,
+          nodes: [
+            {
+              type: "heading",
+              depth: 3,
+              children: [{ type: "text", value: "Categorieën" }],
+            },
+          ],
+        },
+      ],
+    };
+
+    const html = renderToStaticMarkup(
+      <ContentDocumentView document={mixedDepthDocument} locale="nl" media={[]} sources={[]} />,
+    );
+
+    expect(html.match(/class="content-depth-marker"/g)).toHaveLength(2);
+    expect(html).toMatch(
+      /data-depth-run="intermediate".*Verdieping.*id="bewijs-en-grenzen".*<\/section><\/div><\/div><div class="content-depth-detail-run content-depth-advanced"/,
+    );
+    expect(html).toMatch(/data-depth-detail-run="advanced".*Gevorderd.*id="categorieen"/);
+  });
+
   it("groups compact register entries under their owner section", () => {
     const registerDocument: ContentDocument = {
       blocks: [

@@ -1,6 +1,6 @@
 id: concept.coulure
 type: concept
-status: draft
+status: active
 canonical_name: Coulure
 names:
   nl: Coulure
@@ -14,5 +14,10 @@ locales:
 relations:
   - { type: related_to, target: grape.merlot }
 assertions: []
-source_refs: [source.plantgrape-merlot]
+source_refs:
+  - source.vasconcelos-flowering-review-2009
+  - source.dry-reproductive-performance-2010
+  - source.cornell-grapevine-flowers
+  - source.plantgrape-merlot
 depth: foundation
+last_reviewed: 2026-09-25

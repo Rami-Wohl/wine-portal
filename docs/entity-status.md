@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 339 entities — 270 active, 69 draft, 0 deprecated.
+**Totaal:** 341 entities — 273 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (270)
+## Actief — publiek vindbaar (273)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -62,12 +62,14 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Assemblage](../content/entities/concepts/assemblage/entity.yaml) | Concept | Zelfstandige pagina | `concept.assemblage` | Ja | `/concepts/blending` | 2026-09-08 |
 | [Autolyse](../content/entities/concepts/autolysis/entity.yaml) | Concept | Zelfstandige pagina | `concept.autolysis` | Ja | `/concepts/autolysis` | 2026-09-22 |
 | [Bâtonnage](../content/entities/concepts/batonnage/entity.yaml) | Concept | Zelfstandige pagina | `concept.batonnage` | Ja | `/concepts/batonnage` | 2026-09-22 |
+| [Bloei, vruchtzetting en opbrengstvorming](../content/entities/concepts/flowering-fruit-set-yield/entity.yaml) | Concept | Zelfstandige pagina | `concept.flowering-fruit-set-yield` | Ja | `/concepts/flowering-fruit-set-yield` | 2026-09-25 |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | Zelfstandige pagina | `concept.botrytis` | Ja | `/concepts/botrytis-noble-rot` | 2026-09-13 |
 | [Botteling](../content/entities/concepts/bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.bottling` | Ja | `/concepts/bottling` | 2026-09-23 |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.estate-bottling` | Ja | `/concepts/estate-bottling` | 2026-09-08 |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Ja | `/concepts/chateau-wine-term` | 2026-09-14 |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Ja | `/concepts/clairet` | 2026-09-20 |
 | [Claret](../content/entities/concepts/claret/entity.yaml) | Concept | Zelfstandige pagina | `concept.claret` | Ja | `/concepts/claret` | 2026-09-20 |
+| [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | Zelfstandige pagina | `concept.coulure` | Ja | `/concepts/coulure` | 2026-09-25 |
 | [Courtier](../content/entities/concepts/courtier/entity.yaml) | Concept | Zelfstandige pagina | `concept.courtier` | Ja | `/concepts/courtier` | 2026-09-09 |
 | [Cru](../content/entities/concepts/cru/entity.yaml) | Concept | Zelfstandige pagina | `concept.cru` | Ja | `/concepts/cru` | 2026-09-09 |
 | [Cuvée](../content/entities/concepts/cuvee/entity.yaml) | Concept | Zelfstandige pagina | `concept.cuvee` | Ja | `/concepts/cuvee` | 2026-09-20 |
@@ -88,6 +90,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Ja | `/concepts/liqueur-de-tirage` | 2026-09-20 |
 | [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Ja | `/concepts/malolactic-fermentation` | 2026-09-16 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazines` | 2026-09-22 |
+| [Millerandage](../content/entities/concepts/millerandage/entity.yaml) | Concept | Zelfstandige pagina | `concept.millerandage` | Ja | `/concepts/millerandage` | 2026-09-25 |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Ja | `/concepts/negociant` | 2026-09-14 |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Ja | `/concepts/rootstock` | 2026-09-20 |
 | [Oxidatie](../content/entities/concepts/oxidation/entity.yaml) | Concept | Zelfstandige pagina | `concept.oxidation` | Ja | `/concepts/oxidation` | 2026-09-20 |
@@ -283,7 +286,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (69)
+## Draft — nog uit te werken (68)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -310,7 +313,6 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Sancerre](../content/entities/appellations/sancerre/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sancerre` | Nee — reviewroute | `/appellations/sancerre` | — |
 | [Saumur-Champigny](../content/entities/appellations/saumur-champigny/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saumur-champigny` | Nee — reviewroute | `/appellations/saumur-champigny` | — |
 | [Stellenbosch](../content/entities/appellations/stellenbosch/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.stellenbosch` | Nee — reviewroute | `/appellations/stellenbosch` | — |
-| [Coulure](../content/entities/concepts/coulure/entity.yaml) | Concept | Zelfstandige pagina | `concept.coulure` | Nee — reviewroute | `/concepts/coulure` | — |
 | [Koolzuurmaceratie](../content/entities/concepts/carbonic-maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.carbonic-maceration` | Nee — reviewroute | `/concepts/carbonic-maceration` | — |
 | [Massale selectie](../content/entities/concepts/massal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.massal-selection` | Nee — reviewroute | `/concepts/massal-selection` | — |
 | [Passito](../content/entities/concepts/passito/entity.yaml) | Concept | Zelfstandige pagina | `concept.passito` | Nee — reviewroute | `/concepts/passito` | — |

@@ -1,0 +1,208 @@
+schema_version: 2
+package_id: concept.flowering-fruit-set-yield
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: []
+    completeness_questions:
+      [Begrijpt de lezer opbrengstvorming als een keten van opeenvolgende biologische filters?]
+    layers:
+      foundation: [Definieer de keten van bloemaanleg tot uiteindelijke oogstmassa.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Bloei, vruchtzetting en opbrengstvorming.],
+          source_refs:
+            [source.vasconcelos-flowering-review-2009, source.cornell-bud-fruitfulness-yield-2012],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.grapevine-phenology, concept.vine-as-living-system]
+    completeness_questions:
+      [
+        Zijn knopvruchtbaarheid,
+        scheuten,
+        bloeiwijzen,
+        bloemen,
+        bessen en trosmassa in hun tweeseizoensverband geplaatst?,
+      ]
+    layers:
+      foundation: [Volg de opbrengstcomponenten van vruchtbare knop tot tros.]
+      intermediate: [Leg uit waarom één oogst tijdens twee groeiseizoenen wordt voorbereid.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Tweeseizoensvorming en opbrengstcomponenten.],
+          source_refs:
+            [source.cornell-grapevine-flowers, source.cornell-bud-fruitfulness-yield-2012],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.coulure, concept.millerandage]
+    completeness_questions:
+      [Kan de lezer kapval, bestuiving, bevruchting, zetting en vroege besbehoud uit elkaar houden?]
+    layers:
+      foundation: [Leg de route van gesloten bloem naar jonge bes uit.]
+      intermediate: [Maak natuurlijke partiele zetting en de twee afwijkende uitkomsten herkenbaar.]
+      advanced: [Onderscheid bestuiving, bevruchting en vruchtzetting als afzonderlijke stappen.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Bloembiologie en vruchtzetting.],
+          source_refs:
+            [source.vasconcelos-flowering-review-2009, source.dry-reproductive-performance-2010],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.vine-as-living-system]
+    completeness_questions:
+      [
+        Zijn ras,
+        planttoestand,
+        reserves,
+        licht,
+        temperatuur,
+        water en voeding als samenwerkende bronnen van variatie behandeld?,
+      ]
+    layers:
+      foundation: [Benoem genotype, planttoestand en bloeiweer als hoofdbronnen van variatie.]
+      intermediate:
+        [Verbind vegetatieve concurrentie en koolstofbeschikbaarheid met reproductieve uitkomsten.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Biologische en omgevingsvariatie.],
+          source_refs:
+            [source.vasconcelos-flowering-review-2009, source.dry-reproductive-performance-2010],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: []
+    completeness_questions:
+      [
+        Is duidelijk welke opbrengstcomponenten een teler kan verschuiven en waarom geen ingreep een universeel recept vormt?,
+      ]
+    layers:
+      foundation: [Verbind snoei en scheutkeuze met vruchtbare knoppen en trossen.]
+      intermediate:
+        [Leg uit dat timing meerdere componenten en toekomstige seizoenen tegelijk kan raken.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wijnbouwkeuzes en trade-offs.],
+          source_refs:
+            [source.cornell-bud-fruitfulness-yield-2012, source.dry-reproductive-performance-2010],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: []
+    completeness_questions:
+      [
+        Blijft het systeem bruikbaar voor verschillende rassen,
+        klimaten,
+        hemisferen en productiedoelen?,
+      ]
+    layers:
+      foundation: [Plaats dezelfde biologische keten in uiteenlopende teeltsystemen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Wereldwijde variatie in tros- en opbrengstvorming.],
+          source_refs:
+            [source.vasconcelos-flowering-review-2009, source.tello-bunch-compactness-review-2018],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [meten-en-vergelijken]
+    target_ids: []
+    completeness_questions:
+      [
+        Kan de lezer vruchtzetting en opbrengstcomponenten meten zonder lage berry count automatisch als slechte zetting te zien?,
+      ]
+    layers:
+      foundation: []
+      intermediate: [Leg noemers, steekproeven en timing van opbrengstschattingen uit.]
+      advanced: [Ontleed opbrengst als product van meerdere componenten en onzekerheden.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Vruchtzettingsmetingen en opbrengstschatting.],
+          source_refs:
+            [source.dry-reproductive-performance-2010, source.awri-yield-estimation-2022],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: []
+    completeness_questions:
+      [
+        Kan de lezer trosgetal,
+        besgetal,
+        besmassa en compactheid interpreteren zonder een directe kwaliteitsregel?,
+      ]
+    layers:
+      foundation: [Verbind opbrengst en trosbouw met rijpingsbelasting en gezondheidsrisico.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        {
+          topics: [Troscompactheid en praktische interpretatie.],
+          source_refs: [source.tello-bunch-compactness-review-2018],
+        }
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.grapevine-phenology
+    names: { nl: Jaarcyclus en fenologie van de wijnstok, en: Grapevine phenology and annual cycle }
+    slugs: { nl: jaarcyclus-en-fenologie-van-de-wijnstok, en: grapevine-phenology }
+    disposition: link-and-relation
+  - id: concept.vine-as-living-system
+    names: { nl: De wijnstok als levend systeem, en: The vine as a living system }
+    slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system }
+    disposition: link-and-relation
+  - id: concept.coulure
+    names: { nl: Coulure, en: Coulure }
+    slugs: { nl: coulure, en: coulure }
+    disposition: link-and-relation
+  - id: concept.millerandage
+    names: { nl: Millerandage, en: Millerandage }
+    slugs: { nl: millerandage, en: millerandage }
+    disposition: link-and-relation
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

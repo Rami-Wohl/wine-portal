@@ -1,0 +1,30 @@
+id: concept.flowering-fruit-set-yield
+type: concept
+status: active
+canonical_name: Flowering, fruit set and yield formation
+names:
+  nl: Bloei, vruchtzetting en opbrengstvorming
+  en: Flowering, fruit set and yield formation
+slugs:
+  nl: bloei-vruchtzetting-en-opbrengstvorming
+  en: flowering-fruit-set-yield
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.grapevine-phenology }
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.coulure }
+  - { type: related_to, target: concept.millerandage }
+assertions: []
+source_refs:
+  - source.vasconcelos-flowering-review-2009
+  - source.dry-reproductive-performance-2010
+  - source.cornell-grapevine-flowers
+  - source.cornell-bud-fruitfulness-yield-2012
+  - source.tello-bunch-compactness-review-2018
+  - source.awri-yield-estimation-2022
+  - source.muntean-millerandage-review-2025
+  - source.plantgrape-merlot
+depth: foundation
+last_reviewed: 2026-09-25
