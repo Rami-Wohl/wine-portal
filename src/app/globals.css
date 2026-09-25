@@ -1954,7 +1954,7 @@ h3 {
     color var(--motion-fast) ease;
 }
 .lesson-completion-toggle:disabled {
-  cursor: wait;
+  /* cursor: wait; */
   opacity: 0.64;
 }
 .lesson-completion-toggle.is-complete {
@@ -2439,7 +2439,7 @@ h3 {
   display: grid;
   gap: 0.55rem;
   margin: 0;
-  padding-left: 1.4rem;
+  padding-left: 2rem;
   list-style: decimal;
 }
 .content-figure-description li {

@@ -1,0 +1,186 @@
+schema_version: 2
+package_id: concept.grapevine-phenology
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer fenologie als het waarnemen en vergelijken van terugkerende ontwikkelingsstadia in plaats van een vaste kalender?
+    layers:
+      foundation: [Definieer fenologie en leg uit waarom wijnbouwers stadia volgen.]
+      intermediate: [Maak duidelijk dat vegetatieve en reproductieve ontwikkeling tegelijk lopen.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Definitie, observatie en jaarlijkse ontwikkeling.]
+        source_refs: [source.nmsu-grapevine-phenology]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [de-jaarcyclus]
+    target_ids: [concept.vine-as-living-system]
+    completeness_questions:
+      - Zijn winterrust, sapstroom, uitloop, scheutgroei, bloei, vruchtzetting, besgroei, véraison, rijping, oogst, bladval en reserveopbouw in begrijpelijke volgorde aanwezig?
+      - Is zichtbaar hoe het einde van één seizoen het begin van het volgende ondersteunt?
+    layers:
+      foundation: [Volg de twaalf herkenbare hoofdfasen en hun zichtbare overgang.]
+      intermediate: [Verbind knopaanleg, reserves en post-harvestblad over twee seizoenen.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Volledige modified E-L-volgorde en jaarlijkse cyclus.]
+        source_refs: [source.awri-grapevine-growth-stages, source.cornell-grapevine-flowers]
+      specific_claims:
+        - claim: Vroege scheutgroei steunt in belangrijke mate op reserves uit wortels en blijvend hout.
+          status: supported
+          source_refs: [source.awri-bud-dormancy-budburst, source.cornell-grapevine-roots]
+        - claim: Gezond blad na de oogst kan nog bijdragen aan reserveopbouw voor het volgende seizoen.
+          status: supported
+          source_refs: [source.hall-postharvest-phenology-2016]
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [timing-en-overlap]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer dat een stadium een populatie-observatie met spreiding is en dat vegetatieve en reproductieve processen overlappen?
+      - Is de overgang van dormantie via worteldruk en knopgroei naar bladergedreven activiteit correct begrensd?
+    layers:
+      foundation: [Fasen volgen elkaar herkenbaar op maar schakelen niet overal tegelijk om.]
+      intermediate: [Leg de overgang van dormantie en reservegebruik naar actieve groei uit.]
+      advanced:
+        [
+          Onderscheid chill,
+          forcing en modelmatige drempels zonder een universele temperatuursom te suggereren.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Dormantie, uitloop, spreiding en overlappende processen.]
+        source_refs: [source.awri-bud-dormancy-budburst]
+      specific_claims:
+        - claim: Positieve worteldruk kan in het voorjaar bijdragen aan het hervullen van xyleemvaten en zichtbaar bloeden bij snoeiwonden.
+          status: supported
+          source_refs: [source.sperry-spring-xylem-filling-1987]
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.vintage]
+    completeness_questions:
+      - Zijn cultivar, temperatuur, winterkou, water, locatie, jaargang en planttoestand als bronnen van variatie behandeld zonder één universele kalender?
+    layers:
+      foundation: [Timing verschilt per ras, plaats en jaar.]
+      intermediate:
+        [Temperatuur beïnvloedt intervallen niet overal of bij ieder ras op dezelfde manier.]
+      advanced:
+        [
+          Fenologiemodellen zijn gekalibreerde benaderingen met cultivar- en siteafhankelijke onzekerheid.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Temperatuur, cultivar en jaargang als fenologische variabelen.]
+        source_refs:
+          [source.cameron-temperature-phenology-2022, source.oiv-climate-variability-2015]
+      specific_claims:
+        - claim: Cultivars verschillen systematisch in de timing van bloei en véraison.
+          status: supported
+          source_refs: [source.parker-variety-phenology-2013]
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: []
+    completeness_questions:
+      - Is per relevante fase duidelijk waarom waarneming het moment en doel van een ingreep bepaalt zonder een teeltrecept te worden?
+    layers:
+      foundation:
+        [Koppel snoei, vorstrisico, loofwerk, ziektebeheer en oogstbeslissingen aan stadia.]
+      intermediate: [Leg uit dat een timingkeuze verschillende risico's tegelijk kan verschuiven.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Fenologie als praktische observatietaal voor wijnbouwbeslissingen.]
+        source_refs: [source.nmsu-grapevine-phenology]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: []
+    completeness_questions:
+      - Werkt de uitleg in beide hemisferen en in gematigde, warme en koude wijnbouw zonder maanden of één regio als norm te nemen?
+    layers:
+      foundation: [Hemisferen keren de maanden om; de biologische volgorde blijft.]
+      intermediate:
+        [Rust en groeiritme kunnen in warme wintergebieden anders verlopen dan in koele gebieden.]
+      advanced:
+        [
+          Meerdere cycli of onregelmatige dormantie vragen een andere interpretatie van het temperate model.,
+        ]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Wereldwijde klimaatscope, post-harvestperiode en dormantie.]
+        source_refs:
+          [source.hall-postharvest-phenology-2016, source.lavee-grapevine-bud-dormancy-1997]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [meten-en-vergelijken]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer E-L/BBCH-codes, percentages en temperatuurmodellen gebruiken zonder ze voor universele data of biologische grenzen te houden?
+    layers:
+      foundation: [Gestandaardiseerde stadia maken waarnemingen vergelijkbaar.]
+      intermediate:
+        [Een wijngaardstadium wordt vaak als aandeel of representatief moment genoteerd.]
+      advanced:
+        [Modeluitkomsten hangen af van definitie, kalibratie, cultivar, plaats en meetreeks.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Modified E-L-schaal en fenologiemodellen.]
+        source_refs: [source.awri-grapevine-growth-stages, source.parker-variety-phenology-2013]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.vintage]
+    completeness_questions:
+      - Helpt de pagina vroege of late jaren en rassen interpreteren zonder timing rechtstreeks tot kwaliteit te verheffen?
+    layers:
+      foundation: [Plaats timing als kader voor risico, rijpingsomstandigheden en oogstkeuze.]
+      intermediate: [Vergelijk stadium en omstandigheden in plaats van alleen kalenderdatum.]
+      advanced:
+        [Koppel klimaattrends aan verschuivende fasen en blootstelling zonder kwaliteitspredictie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Fenologische timing als context voor druif en oogst.]
+        source_refs: [source.cameron-temperature-phenology-2022, source.awri-berry-ripening]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.vine-as-living-system
+    names: { nl: De wijnstok als levend systeem, en: The vine as a living system }
+    slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system }
+    disposition: link-and-relation
+  - id: concept.vintage
+    names: { nl: Jaargang, en: Vintage }
+    slugs: { nl: jaargang, en: vintage }
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

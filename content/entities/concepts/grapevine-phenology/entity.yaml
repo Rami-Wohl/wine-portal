@@ -1,0 +1,32 @@
+id: concept.grapevine-phenology
+type: concept
+status: active
+canonical_name: Grapevine phenology
+names:
+  nl: Jaarcyclus en fenologie van de wijnstok
+  en: Grapevine phenology and annual cycle
+slugs:
+  nl: jaarcyclus-en-fenologie-van-de-wijnstok
+  en: grapevine-phenology
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.vintage }
+assertions: []
+source_refs:
+  - source.awri-grapevine-growth-stages
+  - source.awri-bud-dormancy-budburst
+  - source.nmsu-grapevine-phenology
+  - source.cornell-grapevine-flowers
+  - source.cornell-grapevine-roots
+  - source.awri-berry-ripening
+  - source.cameron-temperature-phenology-2022
+  - source.parker-variety-phenology-2013
+  - source.hall-postharvest-phenology-2016
+  - source.sperry-spring-xylem-filling-1987
+  - source.lavee-grapevine-bud-dormancy-1997
+  - source.oiv-climate-variability-2015
+depth: foundation
+last_reviewed: 2026-09-25

@@ -132,7 +132,7 @@ Statussen:
 | Roadmapowner | Geplande canonical scope | Bestaande bruikbare owners | Auditstatus | Belangrijkste ontbrekende dekking | Prioriteit |
 | --- | --- | --- | --- | --- | --- |
 | `EXP-004` | Wijnstok als levend systeem | `vine-as-living-system`, `ampelography`, `rootstock`, `clonal-selection`, `phylloxera` | complete hub | Vervolgdetails landen bij fenologie, water, bodem en beheer zonder de systeemhub te dupliceren | voltooid |
-| `EXP-005` | Jaarcyclus en fenologie | `vintage`; delen van grape- en regioproza | afwezig | Volledige cyclus, overlappende fasen, hemisferen, cultivar- en klimaateffect | P0 |
+| `EXP-005` | Jaarcyclus en fenologie | `grapevine-phenology`, met `vine-as-living-system` en `vintage` als dependencies | complete hub | Detail over bloembiologie, rijpheid en klimaatmechanismen landt bij EXP-006–008 | voltooid |
 | `EXP-006` | Bloei, vruchtzetting en opbrengstvorming | `coulure` (minimale draft) | afwezig | Bloembiologie, vruchtzetting, millerandage, clusterbouw en yield components | P0 |
 | `EXP-007` | Besontwikkeling, véraison en rijpheid | `acidity`, `tannin`, `late-harvest`; lesson `grape-as-raw-material` | fragmenten | Groeifasen, suiker/zuur/water/phenolics, meerdere rijpheidsbegrippen en oogstsampling | P0 |
 | `EXP-008` | Klimaat, weer, site en microklimaat | `terroir`, `vintage`; regionale voorbeelden | fragmenten | Schalen, meetbegrippen en causale routes via hitte, licht, regen, vocht, wind, aspect en canopy | P0 |
@@ -175,7 +175,7 @@ canonical type of route niet.
 | Concept | Status | Foundationrol | Volgende eigenaar |
 | --- | --- | --- | --- |
 | `concept.terroir` | actief | Synthese van plaats en mens; niet de owner van bodem of klimaatmechanismen | `EXP-008/010/015` |
-| `concept.vintage` | actief | Seizoensvariatie en etiketbetekenis | `EXP-005/008` |
+| `concept.vintage` | actief | Seizoensvariatie en etiketbetekenis | `EXP-005` voltooid / `EXP-008` |
 | `concept.botrytis` | actief | Biologie, edele en grijze rot en oogstselectie | `EXP-014/023` |
 
 Dit cluster is numeriek klein omdat de meeste geplande owners nog ontbreken.
@@ -351,11 +351,12 @@ registeritem.
    klonale selectie: één geografisch neutrale, taalneutraal genummerde
    procesplaat met gelokaliseerde uitleg, een volledige HTML-terugval en
    vastgelegde productie- en reviewhistorie.
-3. `EXP-004` heeft de biologische systeemhub voltooid; `EXP-005–011` bouwen nu
-   de fenologische en omgevingsruggengraat verder uit.
+3. `EXP-004` heeft de biologische systeemhub voltooid en `EXP-005` de
+   fenologische jaarcyclus; `EXP-006–011` bouwen nu de reproductieve en
+   omgevingsruggengraat verder uit.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-De visuele pilot en systeemhub zijn voltooid; `EXP-005` is de eerstvolgende
-uitvoeringstaak. `DEC-EXP-003` blijft daarna de eerste harde inhoudelijke
-beslissing: welke bodemtermen na research een eigen entity krijgen.
+De visuele pilot, systeemhub en fenologiehub zijn voltooid; `EXP-006` is de
+eerstvolgende uitvoeringstaak. `DEC-EXP-003` blijft daarna de eerste harde
+inhoudelijke beslissing: welke bodemtermen na research een eigen entity krijgen.

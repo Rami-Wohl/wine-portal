@@ -1,0 +1,32 @@
+id: media.concept.grapevine-phenology.annual-cycle
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/grapevine-phenology/annual-cycle.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 9ede78f70ab6ecfb69f85626a80bca17529db19d6e03f34c4c57e150ae234729
+alt:
+  nl: Taalneutraal cyclusdiagram met twaalf genummerde stadia van winterrust en sapstroom via groei, bloei en druifontwikkeling naar oogst, bladval en reserveopbouw.
+  en: Language-neutral cycle diagram with twelve numbered stages from winter dormancy and sap flow through growth, flowering and berry development to harvest, leaf fall and reserve renewal.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-25
+changes: >-
+  Generated in built-in image mode from the EXP-005 factual visual brief, using
+  the supplied older annual-cycle plate only as a style reference. Production
+  prompt required exactly twelve clockwise, language-neutral numbered stages:
+  dormancy, bleeding, budburst, shoot growth, flowering, fruit set, green berry
+  growth, veraison, ripening, harvest, leaf senescence and reserve renewal.
+  Reviewed against source.awri-grapevine-growth-stages,
+  source.awri-bud-dormancy-budburst and source.nmsu-grapevine-phenology for
+  stage order and botanical recognizability. Checked for exact numbering,
+  transition rather than fully ripe veraison, small green flowers, neutral
+  geography, level relief, absence of calendar or hemisphere cues, no embedded
+  words, responsive legibility and correspondence with the localized HTML
+  description. The circular route is an educational sequence model; stages
+  overlap in a real vine and vineyard.

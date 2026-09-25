@@ -552,6 +552,9 @@ known_candidates:
   - concept.grand-vin:nl->appellation.bordeaux
   - concept.grand-vin:nl->appellation.pauillac
   - concept.grand-vin:nl->region.medoc
+  - concept.grapevine-phenology:en->concept.elevage
+  - concept.grapevine-phenology:en->concept.late-harvest
+  - concept.grapevine-phenology:nl->concept.late-harvest
   - concept.lees-ageing:en->concept.oxidation
   - concept.lees-ageing:en->concept.remuage
   - concept.lees-ageing:en->concept.second-fermentation
@@ -770,4 +773,16 @@ known_candidates:
   - region.medoc:nl->concept.tannin
   - region.medoc:nl->concept.terroir
   - region.medoc:nl->concept.vintage
-decisions: []
+decisions:
+  - id: concept.grapevine-phenology:en->concept.elevage
+    status: false-positive
+    reviewed_at: 2026-09-25
+    reason: Maturation refers to grape and cane development here, not wine maturation or élevage.
+  - id: concept.grapevine-phenology:en->concept.late-harvest
+    status: false-positive
+    reviewed_at: 2026-09-25
+    reason: Late harvest is used descriptively for harvest timing, not as the named wine-style concept.
+  - id: concept.grapevine-phenology:nl->concept.late-harvest
+    status: false-positive
+    reviewed_at: 2026-09-25
+    reason: Late oogst beschrijft hier oogsttiming en verwijst niet naar het zelfstandige wijnstijlconcept.

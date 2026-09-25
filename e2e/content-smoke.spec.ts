@@ -1,5 +1,57 @@
 import { expect, test } from "@playwright/test";
 
+test("grapevine phenology presents a complete numbered cycle at progressive depth", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/grapevine-phenology");
+
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Jaarcyclus en fenologie van de wijnstok",
+    }),
+  ).toBeVisible();
+
+  const cycle = page.locator("#jaarlijkse-cyclus");
+  const diagram = cycle.getByRole("img", { name: /twaalf genummerde stadia/i });
+  await diagram.scrollIntoViewIfNeeded();
+  await expect(diagram).toBeVisible();
+  await expect
+    .poll(() => diagram.evaluate((element) => (element as HTMLImageElement).naturalWidth))
+    .toBeGreaterThan(0);
+  const stages = cycle.locator(".content-figure-description li");
+  await expect(stages).toHaveCount(12);
+  await expect
+    .poll(() =>
+      cycle
+        .locator(".content-figure-description ol")
+        .evaluate((element) => Number.parseFloat(getComputedStyle(element).paddingLeft)),
+    )
+    .toBeGreaterThanOrEqual(32);
+
+  const depthControl = page.getByRole("group", {
+    name: "Kies hoeveel detail je wilt zien",
+  });
+  const intermediate = page.locator("#twee-seizoenen");
+  const advanced = page.locator("#warmte-en-modellen");
+  await depthControl.getByRole("button", { name: "Basis", exact: true }).click();
+  await expect(intermediate).toBeHidden();
+  await expect(advanced).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Verdieping", exact: true }).click();
+  await expect(intermediate).toBeVisible();
+  await expect(advanced).toBeHidden();
+
+  await depthControl.getByRole("button", { name: "Gevorderd", exact: true }).click();
+  await expect(advanced).toBeVisible();
+  const dimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
+});
+
 test("winemaking concepts load documentary photos and cumulative knowledge depth", async ({
   page,
 }) => {

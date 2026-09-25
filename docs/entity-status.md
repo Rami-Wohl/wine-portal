@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 338 entities — 269 active, 69 draft, 0 deprecated.
+**Totaal:** 339 entities — 270 active, 69 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (269)
+## Actief — publiek vindbaar (270)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -80,6 +80,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | Zelfstandige pagina | `concept.extraction` | Ja | `/concepts/extraction` | 2026-09-16 |
 | [Franc de pied](../content/entities/concepts/franc-de-pied/entity.yaml) | Concept | Zelfstandige pagina | `concept.franc-de-pied` | Ja | `/concepts/franc-de-pied` | 2026-09-22 |
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-22 |
+| [Jaarcyclus en fenologie van de wijnstok](../content/entities/concepts/grapevine-phenology/entity.yaml) | Concept | Zelfstandige pagina | `concept.grapevine-phenology` | Ja | `/concepts/grapevine-phenology` | 2026-09-25 |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Ja | `/concepts/vintage` | 2026-09-20 |
 | [Klaring en fining](../content/entities/concepts/clarification-and-fining/entity.yaml) | Concept | Zelfstandige pagina | `concept.clarification-and-fining` | Ja | `/concepts/clarification-and-fining` | 2026-09-23 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-24 |

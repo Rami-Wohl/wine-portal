@@ -166,7 +166,8 @@ unplanned standalone pages.
 | `EXP-002` | complete | Validated hub/focused archetypes, authoring contract and reusable templates in `explore-foundation-authoring.md` |
 | `EXP-003` | complete | Language-neutral clonal-selection pilot accepted; localized rich figure descriptions validated |
 | `EXP-004` | complete | Bilingual living-vine hub, research brief and two language-neutral educational plates validated |
-| `EXP-005`–`EXP-028` | open | Execute in the dependency order below |
+| `EXP-005` | complete | Bilingual phenology hub, twelve-stage annual-cycle plate and localized explanation validated |
+| `EXP-006`–`EXP-028` | open | Execute in the dependency order below |
 
 ### Phase A — coverage and contracts
 
@@ -243,6 +244,11 @@ rootstock and grape entities.
 plant and understand the limits of directional-arrow models.
 
 #### EXP-005 — Annual cycle and phenology
+
+**Status:** complete on 2026-09-25. `concept.grapevine-phenology` now owns
+the annual sequence and phenological observation language; its research brief,
+system content plan, bilingual prose, sources and twelve-stage visual are
+validated together.
 
 **Depends on:** EXP-004.
 
