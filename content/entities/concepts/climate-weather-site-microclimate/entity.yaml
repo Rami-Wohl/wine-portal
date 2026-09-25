@@ -1,0 +1,31 @@
+id: concept.climate-weather-site-microclimate
+type: concept
+status: active
+canonical_name: Climate, weather, site and microclimate
+names:
+  nl: Klimaat, weer, standplaats en microklimaat
+  en: Climate, weather, site and microclimate
+slugs:
+  nl: klimaat-weer-standplaats-en-microklimaat
+  en: climate-weather-site-microclimate
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.grapevine-phenology }
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.berry-development-ripeness }
+  - { type: related_to, target: concept.vintage }
+  - { type: related_to, target: concept.terroir }
+assertions: []
+source_refs:
+  - source.wmo-climatological-normals
+  - source.wmo-instruments-observation-guide
+  - source.oiv-climate-variability-2015
+  - source.sturman-high-resolution-vineyard-climate-2017
+  - source.pena-vineyard-canopy-temperature-2020
+  - source.hunter-row-orientation-microclimate-2020
+  - source.van-leeuwen-climate-adaptation-2017
+  - source.ipcc-ar6-wgi-chapter-11
+depth: foundation
+last_reviewed: 2026-09-25

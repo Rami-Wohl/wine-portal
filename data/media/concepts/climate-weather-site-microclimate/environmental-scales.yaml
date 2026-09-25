@@ -1,0 +1,26 @@
+id: media.concept.climate-weather-site-microclimate.environmental-scales
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/climate-weather-site-microclimate/environmental-scales.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 6cc34d3153fba44a3d3d41a7636cfda993b3a43f8959a9a6588e91a44c33f007
+alt:
+  nl: Taalneutrale overzichtsplaat met vier genummerde zoomniveaus van een wijnbouwlandschap via standplaats en loofwand naar het microklimaat rond één druiventros.
+  en: Language-neutral overview plate with four numbered zoom levels from a winegrowing landscape through site and canopy to the microclimate around one grape bunch.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-25
+changes: >-
+  Generated in built-in image mode from the EXP-008 visual brief, using the
+  accepted annual-cycle plate as a style reference. The production prompt
+  required exactly four language-neutral nested scales, modest relief, a
+  distant water body, plausible airflow, open-air and bunch-zone sensors, and
+  no geographic labels or quality hierarchy. Reviewed for exact numbering,
+  botanical plausibility, restrained relief, lack of regional identity, no
+  baked-in prose and correspondence with the localized HTML explanation.

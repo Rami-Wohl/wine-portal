@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 342 entities — 274 active, 68 draft, 0 deprecated.
+**Totaal:** 343 entities — 275 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (274)
+## Actief — publiek vindbaar (275)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -86,6 +86,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Jaarcyclus en fenologie van de wijnstok](../content/entities/concepts/grapevine-phenology/entity.yaml) | Concept | Zelfstandige pagina | `concept.grapevine-phenology` | Ja | `/concepts/grapevine-phenology` | 2026-09-25 |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Ja | `/concepts/vintage` | 2026-09-20 |
 | [Klaring en fining](../content/entities/concepts/clarification-and-fining/entity.yaml) | Concept | Zelfstandige pagina | `concept.clarification-and-fining` | Ja | `/concepts/clarification-and-fining` | 2026-09-23 |
+| [Klimaat, weer, standplaats en microklimaat](../content/entities/concepts/climate-weather-site-microclimate/entity.yaml) | Concept | Zelfstandige pagina | `concept.climate-weather-site-microclimate` | Ja | `/concepts/climate-weather-site-microclimate` | 2026-09-25 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-24 |
 | [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Ja | `/concepts/late-harvest` | 2026-09-14 |
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Ja | `/concepts/liqueur-de-tirage` | 2026-09-20 |

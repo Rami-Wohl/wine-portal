@@ -135,7 +135,7 @@ Statussen:
 | `EXP-005` | Jaarcyclus en fenologie | `grapevine-phenology`, met `vine-as-living-system` en `vintage` als dependencies | complete hub | Detail over bloembiologie, rijpheid en klimaatmechanismen landt bij EXP-006–008 | voltooid |
 | `EXP-006` | Bloei, vruchtzetting en opbrengstvorming | `flowering-fruit-set-yield`, met `coulure` en `millerandage` als satellites | complete hub | Verdere beschemie en rijpheid landen bij EXP-007; snoei, loofwand en crop load bij EXP-012 | voltooid |
 | `EXP-007` | Besontwikkeling, véraison en rijpheid | `berry-development-ripeness`, met `acidity`, `tannin` en `late-harvest` als satellites | complete hub | Verdere waterstress landt bij EXP-009; volledige wijnsamenstelling en perceptie bij EXP-024/025 | voltooid |
-| `EXP-008` | Klimaat, weer, site en microklimaat | `terroir`, `vintage`; regionale voorbeelden | fragmenten | Schalen, meetbegrippen en causale routes via hitte, licht, regen, vocht, wind, aspect en canopy | P0 |
+| `EXP-008` | Klimaat, weer, standplaats en microklimaat | `climate-weather-site-microclimate`, met `terroir`, `vintage`, `grapevine-phenology`, `vine-as-living-system` en `berry-development-ripeness` als dependencies | complete hub | Waterfysiologie landt bij EXP-009; bodems bij EXP-010/011; loofwandkeuzes en weergevaren bij EXP-012/014 | voltooid |
 | `EXP-009` | Waterrelaties, droogte en irrigatie | Incidentele passages in `terroir`, druiven en regio's | afwezig | Bodem–plant–atmosfeer, huidmondjes, waterstatus, timing van tekort, teveel water en irrigatie | P0 |
 | `EXP-010/011` | Wijngaardbodems en alfabetische directory | `terroir`; verspreide regiobodemtekst | afwezig | Terminologie, fysische eigenschappen, wortelomgeving, indirecte effecten, mythes en beeldrijke vergelijking | P0 |
 | `EXP-012` | Snoei, training, canopy en crop load | Losse voorbeelden op druiven- en regiopagina's | afwezig | Doelen, systemen, seizoenswerk en trade-offs tussen opbrengst, rijping, ziekte en levensduur | P1 |
@@ -175,8 +175,9 @@ canonical type of route niet.
 
 | Concept | Status | Foundationrol | Volgende eigenaar |
 | --- | --- | --- | --- |
-| `concept.terroir` | actief | Synthese van plaats en mens; niet de owner van bodem of klimaatmechanismen | `EXP-008/010/015` |
-| `concept.vintage` | actief | Seizoensvariatie en etiketbetekenis | `EXP-005` voltooid / `EXP-008` |
+| `concept.climate-weather-site-microclimate` | actief | Schaalniveaus, omgevingsdrivers, standplaats- en loofwandmicroklimaat, meting en klimaatgrenzen | `EXP-008` voltooid |
+| `concept.terroir` | actief | Synthese van plaats en mens; niet de owner van bodem of klimaatmechanismen | `EXP-008` dependency / `EXP-010/015` |
+| `concept.vintage` | actief | Seizoensvariatie en etiketbetekenis | `EXP-005/008` dependency |
 | `concept.botrytis` | actief | Biologie, edele en grijze rot en oogstselectie | `EXP-014/023` |
 
 Dit cluster is numeriek klein omdat de meeste geplande owners nog ontbreken.
@@ -355,11 +356,12 @@ registeritem.
    vastgelegde productie- en reviewhistorie.
 3. `EXP-004` heeft de biologische systeemhub voltooid, `EXP-005` de
    fenologische jaarcyclus, `EXP-006` de reproductieve opbrengstketen en
-   `EXP-007` besontwikkeling en het oogstbesluit; `EXP-008–011` bouwen nu de
+   `EXP-007` besontwikkeling en het oogstbesluit; `EXP-008` klimaat en
+   microklimaat; `EXP-009–011` bouwen nu de
    omgevingsruggengraat verder uit.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-De visuele pilot en de eerste vier wijnstokhubs zijn voltooid; `EXP-008` is de
+De visuele pilot en de eerste vijf foundationhubs zijn voltooid; `EXP-009` is de
 eerstvolgende uitvoeringstaak. `DEC-EXP-003` blijft daarna de eerste harde
 inhoudelijke beslissing: welke bodemtermen na research een eigen entity krijgen.

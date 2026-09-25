@@ -84,3 +84,46 @@ test("the berry-development hub presents both teaching models and progressive de
   }));
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
 });
+
+test("the climate and microclimate hub keeps its nested scales and evidence layers legible", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/climate-weather-site-microclimate");
+
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Klimaat, weer, standplaats en microklimaat",
+    }),
+  ).toBeVisible();
+
+  const scaleFigure = page.locator("#omgeving-op-vier-schalen");
+  await scaleFigure.scrollIntoViewIfNeeded();
+  await expect(scaleFigure.getByRole("img", { name: /vier genummerde zoomniveaus/ })).toBeVisible();
+  await expect(scaleFigure.locator("li")).toHaveCount(4);
+
+  await expect(page.locator("#schaalnamen-zijn-gereedschap")).toBeHidden();
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(page.locator("#schaalnamen-zijn-gereedschap")).toBeVisible();
+  await expect(page.locator("#indices-vereenvoudigen")).toBeHidden();
+
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(page.locator("#indices-vereenvoudigen")).toBeVisible();
+  await expect(page.locator("#weer-klimaat-en-attributie")).toBeVisible();
+
+  const mobileDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(mobileDimensions.documentWidth).toBeLessThanOrEqual(mobileDimensions.viewportWidth);
+
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.reload();
+  await expect(scaleFigure).toBeVisible();
+  const desktopDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
+});

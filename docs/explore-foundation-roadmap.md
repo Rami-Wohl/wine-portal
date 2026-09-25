@@ -169,7 +169,8 @@ unplanned standalone pages.
 | `EXP-005` | complete | Bilingual phenology hub, twelve-stage annual-cycle plate and localized explanation validated |
 | `EXP-006` | complete | Bilingual flowering, fruit-set and yield-system hub; coulure and millerandage satellites; language-neutral seven-stage process plate |
 | `EXP-007` | complete | Bilingual berry-development and ripeness hub; six-stage development plate and seven-variable harvest model |
-| `EXP-008`–`EXP-028` | open | Execute in the dependency order below |
+| `EXP-008` | complete | Bilingual climate, weather, site and microclimate hub with nested-scale visual and measurement limits |
+| `EXP-009`–`EXP-028` | open | Execute in the dependency order below |
 
 ### Phase A — coverage and contracts
 
@@ -299,6 +300,13 @@ decision across interacting variables, not one reading.
 ### Phase C — vineyard environment and decisions
 
 #### EXP-008 — Climate, weather, site and microclimate
+
+**Status:** complete on 2026-09-25. `concept.climate-weather-site-microclimate`
+now owns the temporal and spatial scale distinctions and the causal routes from
+atmosphere through site and canopy to leaf and bunch. Its bilingual prose,
+system content plan, eight-source research set and four-scale educational plate
+are validated together; water relations, soils, canopy decisions, hazards and
+adaptation retain their planned owners.
 
 **Depends on:** EXP-005–007.
 

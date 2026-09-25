@@ -1,0 +1,205 @@
+schema_version: 2
+package_id: concept.climate-weather-site-microclimate
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.vintage]
+    completeness_questions:
+      - Kan de lezer klimaat, weer, jaargang, standplaats en microklimaat uit elkaar houden?
+    layers:
+      foundation: [Definieer de tijd- en ruimteschalen in gewone taal.]
+      intermediate:
+        [
+          Laat zien dat grenzen tussen ruimtelijke schaaltermen functioneel en contextafhankelijk zijn.,
+        ]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaatnormalen, weer en viticulturele schaal.]
+        source_refs: [source.wmo-climatological-normals, source.oiv-climate-variability-2015]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.grapevine-phenology, concept.vine-as-living-system]
+    completeness_questions:
+      - Zijn atmosfeer, standplaats, loofwand en troszone als geneste maar verbonden omgevingen uitgelegd?
+      - Zijn warmte, licht, water, vocht en wind als samenwerkende drivers aanwezig?
+    layers:
+      foundation: [Introduceer de vijf drivers en vier geneste schalen.]
+      intermediate: [Leg uit waarom ruimtelijke schaal en meetdoel bij elkaar moeten passen.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Ruimtelijke klimaatvariatie en microklimaat.]
+        source_refs:
+          [
+            source.sturman-high-resolution-vineyard-climate-2017,
+            source.pena-vineyard-canopy-temperature-2020,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.vine-as-living-system, concept.berry-development-ripeness]
+    completeness_questions:
+      - Is per driver een begrijpelijke route naar plant en bes beschreven zonder directe smaakoorsprong te suggereren?
+      - Worden interacties en timing belangrijker gemaakt dan losse gemiddelden?
+    layers:
+      foundation: [Verbind iedere driver aan hoofdroutes in plant, blad en tros.]
+      intermediate: [Behandel energie, verdamping, natduur en luchtdoorstroming in samenhang.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Temperatuur, straling, vocht, wind en wijnstokrespons.]
+        source_refs:
+          [
+            source.oiv-climate-variability-2015,
+            source.hunter-row-orientation-microclimate-2020,
+            source.van-leeuwen-climate-adaptation-2017,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      - Zijn hoogte, helling, expositie, koude-luchtafvoer, beschutting en waterlichamen mondiaal correct begrensd?
+      - Is het microklimaat van loofwand en tros als veranderlijke uitkomst behandeld?
+    layers:
+      foundation: [Laat zien waarom één regionaal klimaat meerdere standplaatsen bevat.]
+      intermediate: [Werk topografie, water en loofwand uit met hemisfeer- en contextnuance.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Topografie, lokale modellering en loofwandmicroklimaat.]
+        source_refs:
+          [
+            source.sturman-high-resolution-vineyard-climate-2017,
+            source.hunter-row-orientation-microclimate-2020,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk wat al bij standplaatskeuze wordt vastgelegd en wat later via inrichting, monitoring en loofwand kan worden gestuurd?
+    layers:
+      foundation: [Koppel standplaats en waarneming aan risico en timing.]
+      intermediate:
+        [Benoem trade-offs tussen blootstelling, beschutting, lucht, schaduw en meetdichtheid.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Rijoriëntatie, loofwand en meetkeuzes.]
+        source_refs:
+          [
+            source.hunter-row-orientation-microclimate-2020,
+            source.wmo-instruments-observation-guide,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: []
+    completeness_questions:
+      - Bevat de pagina maritiem/continentaal, hoog/laag, droog/vochtig en beide hemisferen zonder één ideaal klimaat?
+    layers:
+      foundation: [Gebruik wereldwijde contrasten als verklarende assen.]
+      intermediate:
+        [
+          Laat zien dat tropische en subtropische cycli niet altijd in het gematigde kalenderbeeld passen.,
+        ]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Wereldwijde viticulturele klimaatscope.]
+        source_refs: [source.oiv-climate-variability-2015]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [meten-en-modelleren]
+    target_ids: []
+    completeness_questions:
+      - Begrijpt de lezer dat sensorplaatsing, resolutie, periode en indexdefinitie de uitkomst bepalen?
+      - Is klimaatverandering onderscheiden van afzonderlijk weer en is attributie zorgvuldig begrensd?
+    layers:
+      foundation: []
+      intermediate: [Vergelijk station, logger en ruimtelijk model; verklaar referentieperioden.]
+      advanced: [Begrens indices, gemiddelden, resolutie en event attribution.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Meetpraktijk, klimaatnormalen, indices en attributie.]
+        source_refs:
+          [
+            source.wmo-instruments-observation-guide,
+            source.wmo-climatological-normals,
+            source.ipcc-ar6-wgi-chapter-11,
+          ]
+      specific_claims:
+        - claim: Lucht in een loofwand kan systematisch andere minima en maxima hebben dan een nabij standaardweerstation.
+          status: supported
+          source_refs: [source.pena-vineyard-canopy-temperature-2020]
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.vintage, concept.terroir]
+    completeness_questions:
+      - Leert de lezer klimaat- en standplaatsclaims als causale context lezen zonder smaak of kwaliteit rechtstreeks uit het landschap af te leiden?
+    layers:
+      foundation: [Geef een praktisch leesraam voor regio, jaargang en perceel.]
+      intermediate: [Vraag bij claims altijd om schaal, periode, route en beheerscontext.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Klimaat als context voor fenologie en druifsamenstelling.]
+        source_refs:
+          [source.van-leeuwen-climate-adaptation-2017, source.oiv-climate-variability-2015]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.grapevine-phenology
+    names: { nl: Jaarcyclus en fenologie van de wijnstok, en: Grapevine phenology and annual cycle }
+    slugs: { nl: jaarcyclus-en-fenologie-van-de-wijnstok, en: grapevine-phenology }
+    disposition: link-and-relation
+  - id: concept.vine-as-living-system
+    names: { nl: De wijnstok als levend systeem, en: The vine as a living system }
+    slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system }
+    disposition: link-and-relation
+  - id: concept.berry-development-ripeness
+    names:
+      nl: "Besontwikkeling, véraison en rijpheid"
+      en: "Berry development, veraison and ripeness"
+    slugs: { nl: besontwikkeling-veraison-en-rijpheid, en: berry-development-veraison-ripeness }
+    disposition: link-and-relation
+  - id: concept.vintage
+    names: { nl: Jaargang, en: Vintage }
+    slugs: { nl: jaargang, en: vintage }
+    disposition: link-and-relation
+  - id: concept.terroir
+    names: { nl: Terroir, en: Terroir }
+    slugs: { nl: terroir, en: terroir }
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete
