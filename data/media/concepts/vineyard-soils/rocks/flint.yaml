@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-flint
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/flint.jpg
+mime_type: image/jpeg
+width: 2367
+height: 1702
+checksum_sha256: 309ef863459d8b1ade004619189466961df25a7db689b2dbacc128420b414c42
+alt:
+  nl: Donker blauwgrijs vuursteenmonster met een glad, scherp breukvlak en lichtere fossiele insluitsels.
+  en: Dark blue-grey flint specimen with a smooth, sharp fracture surface and paler fossil inclusions.
+caption:
+  nl: "Vuursteen of chert — fossielhoudende vuursteen uit de Upper Mercer-laag in Ohio. Het compacte, silicarijke gesteente breekt met gladde, scherpe vlakken; kleur en insluitsels variëren."
+  en: "Flint or chert — fossiliferous flint from the Upper Mercer unit in Ohio. The compact, silica-rich rock breaks along smooth, sharp surfaces; colour and inclusions vary."
+rights:
+  status: open-licensed
+  creator: James St. John
+  source_url: https://commons.wikimedia.org/wiki/File:Fossiliferous_flint_(Upper_Mercer_Flint,_Middle_Pennsylvanian;_Rock_Cut_railroad_cut,_south-southeast_of_Dresden,_Ohio,_USA)_5_(30484016683).jpg
+  license_name: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: James St. John, CC BY 2.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

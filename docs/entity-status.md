@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 344 entities — 276 active, 68 draft, 0 deprecated.
+**Totaal:** 347 entities — 279 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (276)
+## Actief — publiek vindbaar (279)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -85,6 +85,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Grand vin](../content/entities/concepts/grand-vin/entity.yaml) | Concept | Zelfstandige pagina | `concept.grand-vin` | Ja | `/concepts/grand-vin` | 2026-09-22 |
 | [Jaarcyclus en fenologie van de wijnstok](../content/entities/concepts/grapevine-phenology/entity.yaml) | Concept | Zelfstandige pagina | `concept.grapevine-phenology` | Ja | `/concepts/grapevine-phenology` | 2026-09-25 |
 | [Jaargang](../content/entities/concepts/vintage/entity.yaml) | Concept | Zelfstandige pagina | `concept.vintage` | Ja | `/concepts/vintage` | 2026-09-20 |
+| [Kalkrijke wijngaardbodems](../content/entities/concepts/calcareous-vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.calcareous-vineyard-soils` | Ja | `/concepts/calcareous-vineyard-soils` | 2026-09-26 |
 | [Klaring en fining](../content/entities/concepts/clarification-and-fining/entity.yaml) | Concept | Zelfstandige pagina | `concept.clarification-and-fining` | Ja | `/concepts/clarification-and-fining` | 2026-09-23 |
 | [Klimaat, weer, standplaats en microklimaat](../content/entities/concepts/climate-weather-site-microclimate/entity.yaml) | Concept | Zelfstandige pagina | `concept.climate-weather-site-microclimate` | Ja | `/concepts/climate-weather-site-microclimate` | 2026-09-25 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-24 |
@@ -109,7 +110,9 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-wine` | Ja | `/concepts/second-wine` | 2026-09-08 |
 | [Vin de paille](../content/entities/concepts/vin-de-paille/entity.yaml) | Concept | Zelfstandige pagina | `concept.vin-de-paille` | Ja | `/concepts/vin-de-paille` | 2026-09-14 |
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/volatile-thiols` | 2026-09-22 |
+| [Vulkanische wijngaardbodems](../content/entities/concepts/volcanic-vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.volcanic-vineyard-soils` | Ja | `/concepts/volcanic-vineyard-soils` | 2026-09-26 |
 | [Waterrelaties, droogte en irrigatie bij de wijnstok](../content/entities/concepts/vine-water-relations/entity.yaml) | Concept | Zelfstandige pagina | `concept.vine-water-relations` | Ja | `/concepts/vine-water-relations-drought-irrigation` | 2026-09-25 |
+| [Wijngaardbodems](../content/entities/concepts/vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-soils` | Ja | `/concepts/vineyard-soils` | 2026-09-26 |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/acidity-in-wine` | 2026-09-16 |
 | [Zwaveldioxide](../content/entities/concepts/sulfur-dioxide/entity.yaml) | Concept | Zelfstandige pagina | `concept.sulfur-dioxide` | Ja | `/concepts/sulfur-dioxide` | 2026-09-23 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |

@@ -213,6 +213,17 @@ monster, perceel of wijn zich zo gedraagt. Een systeemhub heeft normaal minimaal
 gepubliceerd wanneer de brief concreet uitlegt waarom beeld geen leertaak
 vervult.
 
+Wanneer een register herkenbare fysieke materialen onderwijst — zoals
+gesteenten, druifonderdelen of keldermaterialen — controleert de auteur ieder
+genoemd materiaal op een echte, rechtenvrije referentiefoto. Voeg die foto toe
+wanneer zichtbare herkenning educatieve waarde heeft; de omvang van het register
+is op zichzelf geen reden om voorbeelden weg te laten. Presenteer een grote set
+compact via gewone `figure`-blocks en het mediasysteem. Benoem in alttekst en
+bijschrift het werkelijk gefotografeerde specimen en relevante herkomst, en maak
+duidelijk dat kleur, vorm, verwering of samenstelling binnen de categorie kan
+variëren. Een specimenfoto documenteert uiterlijk en herkenningskenmerken; zij
+bewijst zonder profiel- of meetgegevens geen functie in een wijngaard.
+
 De inhoudelijke expertcheck vraagt niet alleen “is dit mooi?”, maar ook:
 
 - zijn onderdelen botanisch, fysisch of technisch herkenbaar;

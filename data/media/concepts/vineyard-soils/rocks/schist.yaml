@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-schist
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/schist.jpg
+mime_type: image/jpeg
+width: 2524
+height: 1699
+checksum_sha256: d9df943a2e7910cf455988e5fc5d469bbb8c32be9f2ec629933794f1c483ee7c
+alt:
+  nl: Grijsbruin micaschist met golvende, glanzende foliatie en museummarkeringen.
+  en: Grey-brown mica schist with wavy, lustrous foliation and museum markings.
+caption:
+  nl: "Schist — een fijnkorrelig micaschist met golvende foliatie van onder meer mica en kwarts. Metamorfose en mineraalsamenstelling bepalen hoe uitgesproken die structuur is."
+  en: "Schist — a fine-grained mica schist with wavy foliation formed by minerals including mica and quartz. Metamorphic grade and mineral composition determine how pronounced that structure becomes."
+rights:
+  status: open-licensed
+  creator: Mike Davis
+  source_url: https://commons.wikimedia.org/wiki/File:Mica_schist_(GeoDIL_number_-_425).jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Mike Davis, CC0 1.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

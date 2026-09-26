@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.gravelly-vineyard-soil
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/vineyard-soils/gravelly-vineyard-soil.jpg
+mime_type: image/jpeg
+width: 1936
+height: 2592
+checksum_sha256: 098cd09ddec1b240ed4a759322bc350aaa93b6c5a5988cc4ef4d4a64f2921b67
+alt:
+  nl: Een hand houdt een heterogeen bodemmonster met fijne aarde en afgeronde grove fragmenten vast.
+  en: A hand holds a heterogeneous soil sample containing fine earth and rounded coarse fragments.
+caption:
+  nl: Monster uit Red Willow Vineyard in Washington met onder meer grind, kleine hoeveelheden klei, samengedrukte as en zandsteen. Het beeld documenteert het mengsel; functie vraagt ook profiel- en meetgegevens.
+  en: A sample from Red Willow Vineyard in Washington containing gravel, small amounts of clay, compressed ash and sandstone. The image documents the mixture; function also requires profile data and measurement.
+rights:
+  status: open-licensed
+  creator: Agne27
+  source_url: https://commons.wikimedia.org/wiki/File:Red_Willow_soil_sample.JPG
+  license_name: CC BY-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  credit_line: Agne27, CC BY-SA 3.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

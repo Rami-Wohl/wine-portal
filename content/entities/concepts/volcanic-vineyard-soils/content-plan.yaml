@@ -1,0 +1,166 @@
+package_id: concept.volcanic-vineyard-soils
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.vineyard-soils]
+    completeness_questions:
+      [Zijn basalt, tuf, as, moedermateriaal en Andisol van elkaar onderscheiden?]
+    layers:
+      {
+        foundation: [Definieer vulkanisch als herkomstfamilie.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Vulkanische materialen en bodemvorming.],
+            source_refs: [source.usgs-lithologic-classification, source.nrcs-andisols],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.vine-water-relations]
+    completeness_questions:
+      [Zijn verwering, porositeit, water en chemie als variabele profieleigenschappen behandeld?]
+    layers:
+      {
+        foundation: [Volg moedermateriaal naar wortelomgeving.],
+        intermediate: [Werk andische eigenschappen en uitzonderingen uit.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Andisols, water en mineralogie.],
+            source_refs: [source.nrcs-andisols, source.nrcs-available-water-capacity],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.vineyard-soils]
+    completeness_questions:
+      [Worden droge, vochtige, jonge en verweerde vulkanische profielen onderscheiden?]
+    layers:
+      {
+        foundation: [Laat zien waarom één oorsprongsnaam uiteenlopende profielen dekt.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          { topics: [Variatie in vulkanische bodems.], source_refs: [source.nrcs-andisols] },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids: [toepassing-en-keuzes]
+    target_ids: [concept.vine-water-relations]
+    completeness_questions: [Kan de lezer bepalen welke lokale profielmetingen nodig zijn?]
+    layers:
+      {
+        foundation: [],
+        intermediate: [Meet profiel, water en chemie vóór vergelijking.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemclassificatie en profielmeting.],
+            source_refs: [source.nrcs-andisols, source.nrcs-available-water-capacity],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      [Is de claim dat vulkanische bodem automatisch rokerige of minerale wijn geeft gecorrigeerd?]
+    layers:
+      {
+        foundation: [Geef betere vragen bij vulkanische claims.],
+        intermediate: [],
+        advanced: [Scheid materiaal, bodemclassificatie en proefwoord.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Geologie en sensorische causaliteitsgrenzen.],
+            source_refs: [source.maltman-vineyards-rocks-soils-2018],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      [Kan de lezer een vulkanische claim langs materiaal, profiel en plantreactie beoordelen?]
+    layers:
+      {
+        foundation: [Geef betere vragen bij vulkanische claims.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Praktische interpretatie.],
+            source_refs: [source.maltman-vineyards-rocks-soils-2018],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - {
+      id: concept.vineyard-soils,
+      names: { nl: Wijngaardbodems, en: Vineyard soils },
+      slugs: { nl: wijngaardbodems, en: vineyard-soils },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.vine-water-relations,
+      names:
+        {
+          nl: "Waterrelaties, droogte en irrigatie bij de wijnstok",
+          en: "Vine water relations, drought and irrigation",
+        },
+      slugs:
+        {
+          nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok,
+          en: vine-water-relations-drought-irrigation,
+        },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.terroir,
+      names: { nl: Terroir, en: Terroir },
+      slugs: { nl: terroir, en: terroir },
+      disposition: link-and-relation,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
+schema_version: 2

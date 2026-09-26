@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-shale
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/shale.jpg
+mime_type: image/jpeg
+width: 2104
+height: 1768
+checksum_sha256: 18c6d27ebb25945356942f489908919a451026757bf5308aa498ba4fa61ae3dc
+alt:
+  nl: Roodbruin ijzerhoudend schaliemonster met dunne laagjes en museummarkeringen.
+  en: Reddish-brown ferruginous shale specimen with thin layers and museum markings.
+caption:
+  nl: "Schalie — een fijnkorrelig, ijzerhoudend monster waarin de dunne sedimentaire gelaagdheid zichtbaar is. Kleur, samenstelling en verweringsgedrag verschillen per schalie."
+  en: "Shale — a fine-grained, iron-bearing specimen showing thin sedimentary layering. Colour, composition and weathering behaviour differ among shales."
+rights:
+  status: open-licensed
+  creator: Nessa Eull
+  source_url: https://commons.wikimedia.org/wiki/File:Ferruginous_shale_(GeoDIL_number_-_479).jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Nessa Eull, CC0 1.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

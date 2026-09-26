@@ -1,0 +1,24 @@
+id: concept.volcanic-vineyard-soils
+type: concept
+status: active
+canonical_name: Volcanic Vineyard Soils
+names:
+  nl: Vulkanische wijngaardbodems
+  en: Volcanic vineyard soils
+slugs:
+  nl: vulkanische-wijngaardbodems
+  en: volcanic-vineyard-soils
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.vine-water-relations }
+  - { type: related_to, target: concept.terroir }
+assertions: []
+source_refs:
+  - source.maltman-vineyards-rocks-soils-2018
+  - source.usgs-lithologic-classification
+  - source.nrcs-andisols
+  - source.nrcs-available-water-capacity
+depth: foundation
+last_reviewed: 2026-09-26

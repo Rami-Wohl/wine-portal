@@ -1,0 +1,25 @@
+id: concept.calcareous-vineyard-soils
+type: concept
+status: active
+canonical_name: Calcareous Vineyard Soils
+names:
+  nl: Kalkrijke wijngaardbodems
+  en: Calcareous vineyard soils
+slugs:
+  nl: kalkrijke-wijngaardbodems
+  en: calcareous-vineyard-soils
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.vine-water-relations }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.terroir }
+assertions: []
+source_refs:
+  - source.maltman-vineyards-rocks-soils-2018
+  - source.van-leeuwen-soil-terroir-2018
+  - source.tagliavini-rombola-iron-chlorosis-2001
+  - source.diaz-de-la-torre-iron-chlorosis-2010
+depth: foundation
+last_reviewed: 2026-09-26

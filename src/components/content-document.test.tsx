@@ -211,6 +211,39 @@ describe("ContentDocumentView", () => {
     expect(html).toContain("CC BY 4.0");
   });
 
+  it("groups consecutive representative photographs into one compact gallery", () => {
+    const representativeAssets: MediaAsset[] = [
+      { ...mediaAsset, id: "media.example.rock-one", role: "representative" },
+      { ...mediaAsset, id: "media.example.rock-two", role: "representative" },
+    ];
+    const galleryDocument: ContentDocument = {
+      blocks: representativeAssets.map((asset, index) => ({
+        id: `rock-${index + 1}`,
+        type: "figure",
+        depth: "foundation",
+        parent: null,
+        source_refs: [],
+        variant: null,
+        media_id: asset.id,
+        nodes: [],
+      })),
+    };
+
+    const html = renderToStaticMarkup(
+      <ContentDocumentView
+        document={galleryDocument}
+        locale="nl"
+        media={representativeAssets}
+        sources={[]}
+      />,
+    );
+
+    expect(html.match(/class="content-media-gallery"/g)).toHaveLength(1);
+    expect(html).toContain('id="rock-1"');
+    expect(html).toContain('id="rock-2"');
+    expect(html.match(/sizes="\(max-width: 620px\) calc\(100vw - 32px\), 370px"/g)).toHaveLength(2);
+  });
+
   it("starts a separate visual run when a detail is deeper than an already elevated section", () => {
     const mixedDepthDocument: ContentDocument = {
       blocks: [

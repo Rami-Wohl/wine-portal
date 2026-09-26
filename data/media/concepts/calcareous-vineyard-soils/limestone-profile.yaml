@@ -1,0 +1,24 @@
+id: media.concept.calcareous-vineyard-soils.limestone-profile
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/calcareous-vineyard-soils/limestone-profile.jpg
+mime_type: image/jpeg
+width: 3648
+height: 2048
+checksum_sha256: f20a16a372b3d0693c0cefa109bfba88466c91eb30d6ba0e823f2cc1fff187cc
+alt:
+  nl: Een dun, eroderend bodemprofiel boven moddersteen en een gebroken kalksteenoppervlak.
+  en: A thin, eroding soil profile over mudstone and a broken limestone pavement.
+caption:
+  nl: Bodem boven moddersteen en kalksteen in Yorkshire. De foto toont een geologische overgang, niet hoe iedere kalkrijke wijngaardbodem eruitziet.
+  en: Soil over mudstone and limestone in Yorkshire. The photograph shows a geological transition, not the appearance of every calcareous vineyard soil.
+rights:
+  status: open-licensed
+  creator: Dr Duncan Pepper
+  source_url: https://commons.wikimedia.org/wiki/File:Eroding_soil_overlying_mudstone_and_limestone_pavement_-_geograph.org.uk_-_5043791.jpg
+  license_name: CC BY-SA 2.0
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Dr Duncan Pepper, CC BY-SA 2.0, via Geograph and Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

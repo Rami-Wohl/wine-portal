@@ -232,6 +232,7 @@ function renderContentBlock(
       const caption = asset.caption?.[context.locale];
       const credit = asset.rights.credit_line;
       const isTall = asset.height / asset.width >= 2;
+      const isGalleryImage = asset.role === "representative";
       const hasDescription = block.nodes.length > 0;
       return (
         <figure {...common}>
@@ -240,9 +241,11 @@ function renderContentBlock(
             className={isTall ? "content-media-tall" : undefined}
             height={asset.height}
             sizes={
-              isTall
-                ? "(max-width: 620px) 50vw, 220px"
-                : "(max-width: 620px) calc(100vw - 32px), 760px"
+              isGalleryImage
+                ? "(max-width: 620px) calc(100vw - 32px), 370px"
+                : isTall
+                  ? "(max-width: 620px) 50vw, 220px"
+                  : "(max-width: 620px) calc(100vw - 32px), 760px"
             }
             src={mediaUrl(asset)}
             width={asset.width}
@@ -394,6 +397,31 @@ export function ContentDocumentView({
   }> = [];
   for (let index = 0; index < document.blocks.length; index += 1) {
     const block = document.blocks[index];
+    const galleryAsset =
+      block.type === "figure" && block.media_id ? mediaMap.get(block.media_id) : undefined;
+    if (block.type === "figure" && galleryAsset?.role === "representative") {
+      const galleryBlocks = [block];
+      while (document.blocks[index + 1]?.type === "figure") {
+        const nextBlock = document.blocks[index + 1];
+        const nextAsset = nextBlock.media_id ? mediaMap.get(nextBlock.media_id) : undefined;
+        if (nextAsset?.role !== "representative") break;
+        galleryBlocks.push(nextBlock);
+        index += 1;
+      }
+      units.push({
+        content: (
+          <div className="content-media-gallery">
+            {galleryBlocks.map((galleryBlock) => (
+              <Fragment key={galleryBlock.id}>{renderContentBlock(galleryBlock, context)}</Fragment>
+            ))}
+          </div>
+        ),
+        depth: block.depth,
+        key: `media-gallery-${block.id}`,
+        type: "other",
+      });
+      continue;
+    }
     if (block.type !== "section") {
       units.push({
         content: renderContentBlock(block, context),

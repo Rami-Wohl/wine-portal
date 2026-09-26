@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-granite
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/granite.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1273
+checksum_sha256: b84b9cb9038b2c554f3061d43470c2aab7e37bf515e36b3a204ade9871f66de5
+alt:
+  nl: Licht biotietgraniet met duidelijk zichtbare witte, grijze en donkere kristallen tegen een zwarte achtergrond.
+  en: Pale biotite granite with clearly visible white, grey and dark crystals against a black background.
+caption:
+  nl: "Graniet — een middelkorrelig biotietgraniet met zichtbare veldspaat, kwarts en donkere mica. Kristalgrootte en mineraalverhouding verschillen tussen granieten."
+  en: "Granite — a medium-grained biotite granite with visible feldspar, quartz and dark mica. Crystal size and mineral proportions vary among granites."
+rights:
+  status: open-licensed
+  creator: Dexter Perkins
+  source_url: https://commons.wikimedia.org/wiki/File:Biotite_granite_(GeoDIL_number_-_18).jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Dexter Perkins, CC0 1.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Source service supplied a 1920-pixel derivative; no colour alteration or documentary crop.

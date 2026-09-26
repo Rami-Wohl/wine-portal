@@ -1,0 +1,186 @@
+package_id: concept.calcareous-vineyard-soils
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.vineyard-soils]
+    completeness_questions:
+      [Is kalkrijk als profieleigenschap onderscheiden van kalksteen als gesteente?]
+    layers:
+      {
+        foundation: [Definieer carbonaten, kalksteen, krijt en mergel.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Kalkrijke bodem en geologie.],
+            source_refs: [source.maltman-vineyards-rocks-soils-2018],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.rootstock, concept.vine-water-relations]
+    completeness_questions:
+      [
+        Zijn ijzerbeschikbaarheid,
+        chlorose,
+        water en onderstam zonder universele uitkomst verbonden?,
+      ]
+    layers:
+      {
+        foundation: [Leg de functionele routes uit.],
+        intermediate: [Werk chloroserisico en diagnose uit.],
+        advanced: [Begrens actieve-kalktests en vaste drempels.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Kalkgeïnduceerde ijzerchlorose.],
+            source_refs:
+              [
+                source.tagliavini-rombola-iron-chlorosis-2001,
+                source.diaz-de-la-torre-iron-chlorosis-2010,
+              ],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.vineyard-soils]
+    completeness_questions: [Zijn profiel, klimaat en plantmateriaal als variatiebronnen aanwezig?]
+    layers:
+      {
+        foundation: [Vergelijk uiteenlopende kalkrijke profielen.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Variatie in kalkrijke wijngaardbodems.],
+            source_refs: [source.van-leeuwen-soil-terroir-2018],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: [concept.rootstock]
+    completeness_questions: [Wordt onderstamkeuze vóór symptoombestrijding geplaatst?]
+    layers:
+      {
+        foundation: [],
+        intermediate: [Verbind diagnose en plantmateriaal.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Chlorosediagnose en onderstamkeuze.],
+            source_refs:
+              [
+                source.tagliavini-rombola-iron-chlorosis-2001,
+                source.diaz-de-la-torre-iron-chlorosis-2010,
+              ],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      [Is de claim dat kalksteen rechtstreeks zuur of krijtsmaak geeft duidelijk gecorrigeerd?]
+    layers:
+      {
+        foundation: [Geef betere vragen bij kalkclaims.],
+        intermediate: [],
+        advanced: [Scheid gemeten bodemeffecten van proefwoorden.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemterroir en causaliteitsgrenzen.],
+            source_refs:
+              [source.van-leeuwen-soil-terroir-2018, source.maltman-vineyards-rocks-soils-2018],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.terroir]
+    completeness_questions: [Kan de lezer een kalkclaim langs profiel en plantreactie beoordelen?]
+    layers:
+      {
+        foundation: [Geef betere vragen bij kalkclaims.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Praktische interpretatie.],
+            source_refs: [source.van-leeuwen-soil-terroir-2018],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - {
+      id: concept.vineyard-soils,
+      names: { nl: Wijngaardbodems, en: Vineyard soils },
+      slugs: { nl: wijngaardbodems, en: vineyard-soils },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.rootstock,
+      names: { nl: Onderstam, en: Rootstock },
+      slugs: { nl: onderstam, en: rootstock },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.vine-water-relations,
+      names:
+        {
+          nl: "Waterrelaties, droogte en irrigatie bij de wijnstok",
+          en: "Vine water relations, drought and irrigation",
+        },
+      slugs:
+        {
+          nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok,
+          en: vine-water-relations-drought-irrigation,
+        },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.terroir,
+      names: { nl: Terroir, en: Terroir },
+      slugs: { nl: terroir, en: terroir },
+      disposition: link-and-relation,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
+schema_version: 2

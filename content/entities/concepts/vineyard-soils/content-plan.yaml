@@ -1,0 +1,246 @@
+package_id: concept.vineyard-soils
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.terroir]
+    completeness_questions:
+      [Kan de lezer bodem, profiel, moedermateriaal en gesteente onderscheiden?]
+    layers:
+      {
+        foundation: [Definieer het profiel als wortelomgeving.],
+        intermediate: [Orden de verschillende soorten bodemtermen.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemprofiel en geologische terminologie.],
+            source_refs:
+              [source.maltman-vineyards-rocks-soils-2018, source.white-soil-terroir-2020],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.vine-water-relations, concept.vine-as-living-system]
+    completeness_questions:
+      [Zijn vaste delen, poriën, water, lucht, wortels en organismen als één systeem behandeld?]
+    layers:
+      {
+        foundation: [Leg de wortelomgeving en de hoofdmechanismen uit.],
+        intermediate: [Werk water en chemische beschikbaarheid uit.],
+        advanced: [Begrens claims over bodemleven.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemfuncties en waterbeschikbaarheid.],
+            source_refs:
+              [
+                source.nrcs-available-water-capacity,
+                source.lazcano-healthy-vineyard-soils-2020,
+                source.oliver-soil-quality-viticulture-2013,
+              ],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.vine-water-relations, concept.rootstock]
+    completeness_questions:
+      [Zijn water, lucht, warmte, beworteling en nutriënten als verbonden mechanismen uitgelegd?]
+    layers:
+      {
+        foundation: [Leg de hoofdmechanismen uit.],
+        intermediate: [Werk water en chemische beschikbaarheid uit.],
+        advanced: [Begrens claims over bodemleven.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemfuncties en plantreactie.],
+            source_refs:
+              [source.nrcs-available-water-capacity, source.oliver-soil-quality-viticulture-2013],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids: [concept.calcareous-vineyard-soils, concept.volcanic-vineyard-soils]
+    completeness_questions:
+      [Gebruikt ieder directory-item dezelfde functionele meetlat zonder smaakvoorspelling?]
+    layers:
+      {
+        foundation: [Vergelijk achttien termen alfabetisch.],
+        intermediate: [Leg uit waarom dezelfde naam uiteenlopende profielen kan dekken.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemvariatie en classificatie.],
+            source_refs:
+              [source.usgs-lithologic-classification, source.nrcs-available-water-capacity],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids: [concept.rootstock]
+    completeness_questions:
+      [Kan de lezer inherente eigenschappen, seizoentoestand en beheer uit elkaar houden?]
+    layers:
+      {
+        foundation: [],
+        intermediate: [Meet profiel en functie vóór een ingreep.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemdiagnose en beheergrenzen.],
+            source_refs:
+              [source.nrcs-soil-health-assessment, source.lazcano-healthy-vineyard-soils-2020],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: []
+    completeness_questions:
+      [Worden regionale bodemnamen gebruikt als voorbeelden en niet als wereldwijde norm?]
+    layers:
+      {
+        foundation: [],
+        intermediate: [Toon functiecontrast zonder regiohiërarchie.],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Contextafhankelijke bodemwerking.],
+            source_refs: [source.white-soil-terroir-2020, source.van-leeuwen-soil-terroir-2018],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: [concept.terroir]
+    completeness_questions: [Kan de lezer een directe gesteente-naar-smaakclaim kritisch ontleden?]
+    layers:
+      {
+        foundation: [Geef een herbruikbare vragenreeks.],
+        intermediate: [],
+        advanced: [Scheid geologische mineralen, nutriënten, wijnelementen en minerality.],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Bodemterroir en minerality-claims.],
+            source_refs:
+              [
+                source.maltman-vineyards-rocks-soils-2018,
+                source.parr-maltman-minerality-2018,
+                source.van-leeuwen-soil-terroir-2018,
+              ],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.terroir]
+    completeness_questions: [Krijgt de lezer een vaste vragenreeks voor bodemclaims?]
+    layers:
+      {
+        foundation: [Lees van profiel via eigenschap en plantreactie naar druif.],
+        intermediate: [],
+        advanced: [],
+        specialist: [],
+      }
+    evidence:
+      {
+        general_synthesis:
+          {
+            topics: [Praktische interpretatie van bodemclaims.],
+            source_refs: [source.van-leeuwen-soil-terroir-2018, source.white-soil-terroir-2020],
+          },
+        specific_claims: [],
+      }
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - {
+      id: concept.vine-water-relations,
+      names:
+        {
+          nl: "Waterrelaties, droogte en irrigatie bij de wijnstok",
+          en: "Vine water relations, drought and irrigation",
+        },
+      slugs:
+        {
+          nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok,
+          en: vine-water-relations-drought-irrigation,
+        },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.vine-as-living-system,
+      names: { nl: De wijnstok als levend systeem, en: The vine as a living system },
+      slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.rootstock,
+      names: { nl: Onderstam, en: Rootstock },
+      slugs: { nl: onderstam, en: rootstock },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.terroir,
+      names: { nl: Terroir, en: Terroir },
+      slugs: { nl: terroir, en: terroir },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.calcareous-vineyard-soils,
+      names: { nl: Kalkrijke wijngaardbodems, en: Calcareous vineyard soils },
+      slugs: { nl: kalkrijke-wijngaardbodems, en: calcareous-vineyard-soils },
+      disposition: link-and-relation,
+    }
+  - {
+      id: concept.volcanic-vineyard-soils,
+      names: { nl: Vulkanische wijngaardbodems, en: Volcanic vineyard soils },
+      slugs: { nl: vulkanische-wijngaardbodems, en: volcanic-vineyard-soils },
+      disposition: link-and-relation,
+    }
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }
+schema_version: 2

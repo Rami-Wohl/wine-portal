@@ -177,3 +177,64 @@ test("the vine water hub distinguishes its pathway, water states and progressive
   }));
   expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
 });
+
+test("the vineyard-soils hub stays scannable and links its focused satellites", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/vineyard-soils");
+
+  await expect(page.getByRole("heading", { level: 1, name: "Wijngaardbodems" })).toBeVisible();
+
+  const profile = page.locator("#profiel-in-beeld");
+  await profile.scrollIntoViewIfNeeded();
+  await expect(profile.getByRole("img", { name: /genummerde doorsnede/i })).toBeVisible();
+  await expect(profile.locator("li")).toHaveCount(8);
+
+  const comparison = page.locator("#eigenschappen-vergelijken");
+  await comparison.scrollIntoViewIfNeeded();
+  await expect(
+    comparison.getByRole("img", { name: /vier genummerde bodemdoorsneden/i }),
+  ).toBeVisible();
+  await expect(comparison.locator("li")).toHaveCount(4);
+
+  const rockGallery = page.locator(".content-media-gallery");
+  await rockGallery.scrollIntoViewIfNeeded();
+  await expect(rockGallery.locator("figure")).toHaveCount(10);
+  await expect(rockGallery.locator("img")).toHaveCount(10);
+  for (const image of await rockGallery.locator("img").all()) {
+    await expect(image).toHaveJSProperty("complete", true);
+  }
+  await expect(rockGallery.locator("figcaption").first()).toContainText("Basalt");
+  await expect(rockGallery.locator("figcaption").last()).toContainText("Tufsteen");
+
+  const directory = page.locator("#bodemtypen-van-a-tot-z");
+  await directory.scrollIntoViewIfNeeded();
+  await expect(directory.getByRole("heading", { level: 3 })).toHaveCount(18);
+  await expect(directory.getByRole("link", { name: "kalkrijke wijngaardbodems" })).toBeVisible();
+  await expect(
+    directory.getByRole("link", { name: "vulkanische wijngaardbodems" }).first(),
+  ).toBeVisible();
+
+  await expect(page.locator("#water-in-porien")).toBeHidden();
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(page.locator("#water-in-porien")).toBeVisible();
+  await expect(page.locator("#levende-bodem")).toBeHidden();
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(page.locator("#levende-bodem")).toBeVisible();
+
+  const mobileDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(mobileDimensions.documentWidth).toBeLessThanOrEqual(mobileDimensions.viewportWidth);
+
+  for (const satellite of [
+    { path: "/concepts/calcareous-vineyard-soils", title: "Kalkrijke wijngaardbodems" },
+    { path: "/concepts/volcanic-vineyard-soils", title: "Vulkanische wijngaardbodems" },
+  ]) {
+    await page.goto(satellite.path);
+    await expect(page.getByRole("heading", { level: 1, name: satellite.title })).toBeVisible();
+    await expect(page.locator("figure img")).toHaveJSProperty("complete", true);
+  }
+});

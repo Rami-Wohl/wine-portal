@@ -1,0 +1,19 @@
+id: media.concept.vineyard-soils.four-soil-profiles
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vineyard-soils/four-soil-profiles.png
+mime_type: image/png
+width: 1672
+height: 941
+checksum_sha256: 286e4680d8755749208946ce1fb3ce36e46876f10996af70ca1cc552cea4e419
+alt:
+  nl: Vier genummerde bodemdoorsneden vergelijken een grof, leemachtig, kleirijk en ondiep stenig profiel onder gelijke wijnstokken.
+  en: Four numbered soil cutaways compare a coarse, loamy, clay-rich and shallow stony profile beneath equivalent grapevines.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-26
+changes: "Generated from the approved four-profile factual brief in the Oenocademy educational house style; language-neutral markers 1–4. It is a comparative model, not a ranking or a documentary image of named soils."

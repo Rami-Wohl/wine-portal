@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.mixed-soil-profile
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/vineyard-soils/mixed-soil-profile.jpg
+mime_type: image/jpeg
+width: 3456
+height: 4608
+checksum_sha256: 58730641eed6050544f0cca3ad0f8ba3c0a107f713feb94d0077dd1e9a9745b1
+alt:
+  nl: Een blootgelegd bodemprofiel met zichtbaar verschillende lagen en overgangen in kleur en structuur.
+  en: An exposed soil profile with visibly different layers and transitions in colour and structure.
+caption:
+  nl: Dit profiel langs een beek bevat silt, leem en klei. De zichtbare gelaagdheid laat zien waarom één oppervlaktelabel een volledig profiel niet beschrijft.
+  en: This creek-side profile contains silt, loam and clay. Its visible layering shows why one surface label cannot describe a complete profile.
+rights:
+  status: open-licensed
+  creator: Rivadavia.vila
+  source_url: https://commons.wikimedia.org/wiki/File:Soil_profile_with_silt,_loam,_and_clay.jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Rivadavia.vila, CC0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

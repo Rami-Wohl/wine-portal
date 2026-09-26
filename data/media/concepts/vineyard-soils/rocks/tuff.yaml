@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-tuff
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/tuff.jpg
+mime_type: image/jpeg
+width: 3072
+height: 2048
+checksum_sha256: 7abd5f5fad155295396e9645d4a3ba0f25099413712ad997ba5b8e28832a54a7
+alt:
+  nl: Lichtbruin tufsteenmonster met duidelijk zichtbare donkere en lichte gesteentefragmenten naast een schaal.
+  en: Light-brown tuff specimen with clearly visible dark and pale rock fragments beside a scale.
+caption:
+  nl: "Tufsteen — een oligocene tuf uit Kakanui in Nieuw-Zeeland met ingesloten gesteentefragmenten. Tuf varieert van fijn asrijk materiaal tot grovere, sterk verkitte afzettingen."
+  en: "Tuff — an Oligocene tuff from Kakanui, New Zealand, containing enclosed rock fragments. Tuff ranges from fine ash-rich material to coarser, strongly cemented deposits."
+rights:
+  status: open-licensed
+  creator: Smithsonian Institution
+  source_url: https://commons.wikimedia.org/wiki/File:Oligocene_Tuff_containing_Xenoliths_-_from_New_Zealand_-_Smithsonian_Rock_Sample_109647-23.jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Smithsonian Institution, CC0 1.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

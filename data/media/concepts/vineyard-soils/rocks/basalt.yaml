@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-basalt
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/basalt.jpg
+mime_type: image/jpeg
+width: 1277
+height: 1293
+checksum_sha256: 4fa257aba9b780662693d0cd808dfe7737afebcc2244aa50f0f0e71fd180f176
+alt:
+  nl: Donkergrijs, fijnkorrelig basaltmonster met een hoekig breukvlak op een lichte ondergrond.
+  en: Dark-grey, fine-grained basalt specimen with an angular fracture surface on a pale background.
+caption:
+  nl: "Basalt — een fijnkorrelig monster uit de Addi Amyuq-pas in Ethiopië. Basalt kan er door verwering, breukvorming en samenstelling elders anders uitzien."
+  en: "Basalt — a fine-grained specimen from the Addi Amyuq pass in Ethiopia. Weathering, fracturing and composition can make basalt look different elsewhere."
+rights:
+  status: open-licensed
+  creator: Jan Nyssen
+  source_url: https://commons.wikimedia.org/wiki/File:Rock_sample_4_Aphanitic_basalt_Addi_Amyuq_pass.jpg
+  license_name: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Jan Nyssen, CC BY-SA 4.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

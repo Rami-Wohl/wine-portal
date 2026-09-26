@@ -170,7 +170,10 @@ unplanned standalone pages.
 | `EXP-006` | complete | Bilingual flowering, fruit-set and yield-system hub; coulure and millerandage satellites; language-neutral seven-stage process plate |
 | `EXP-007` | complete | Bilingual berry-development and ripeness hub; six-stage development plate and seven-variable harvest model |
 | `EXP-008` | complete | Bilingual climate, weather, site and microclimate hub with nested-scale visual and measurement limits |
-| `EXP-009`–`EXP-028` | open | Execute in the dependency order below |
+| `EXP-009` | complete | Bilingual water-relations hub, evidence set and two language-neutral educational plates validated |
+| `EXP-010` | complete | Soil terminology, common physical-property model, claim matrix, bilingual outline, media shot list and satellite recommendation documented |
+| `EXP-011` | complete | Bilingual vineyard-soils hub, eighteen-entry A–Z directory, two focused satellites, four documentary photographs, ten rock-reference photographs and two language-neutral educational diagrams published and validated |
+| `EXP-012`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -340,6 +343,14 @@ without treating less water as automatically better.
 
 #### EXP-010 — Research and model the vineyard-soils hub
 
+**Status:** complete on 2026-09-26. The decision-ready research result lives in
+`../editorial/briefs/concept.vineyard-soils.md`. It normalizes the candidate
+inventory by term type, fixes one ten-field comparison model, records the source
+and myth-claim matrices, supplies a bilingual outline and media shot list, and
+recommends two satellites. No package or satellite has been scaffolded while
+`DEC-EXP-003` was approved on 2026-09-26: only calcareous and volcanic vineyard
+soils become independent satellites; all other terms remain hub-owned entries.
+
 **Depends on:** EXP-008–009.
 
 **Work:** build the source set, terminology table and claim matrix; normalize
@@ -352,6 +363,14 @@ write the bilingual outline and media shot list.
 myth claims have an evidence response and no rock-to-flavour shortcut remains.
 
 #### EXP-011 — Publish the vineyard-soils hub and directory
+
+**Status:** complete on 2026-09-26. `concept.vineyard-soils` now owns the
+shared soil-profile model and the bilingual eighteen-entry directory;
+`concept.calcareous-vineyard-soils` and `concept.volcanic-vineyard-soils` are
+the only independent satellites. Existing content blocks proved sufficient.
+Four open-licensed documentary photographs, ten open-licensed rock-reference
+photographs and two reviewed language-neutral educational diagrams are
+registered in the media system.
 
 **Depends on:** EXP-010 and DEC-EXP-003.
 
@@ -555,13 +574,13 @@ current and the foundation is ready to support new regions and Learn paths.
 | --- | --- | --- | --- |
 | `DEC-EXP-001` | Keep the existing concept model unless the audit proves a real modeling gap | EXP-001/002 | Recommended; no decision needed now |
 | `DEC-EXP-002` | Prefer language-neutral marks in shared diagrams and put the complete localized explanation in HTML | Validate in EXP-003 | Approved and validated in the accepted pilot |
-| `DEC-EXP-003` | Approve which soil terms become entities versus hub-owned entries | End of EXP-010 | Open decision gate |
-| `DEC-EXP-004` | Use existing content blocks for the soil directory before adding specialized UI | EXP-010/011 | Recommended |
+| `DEC-EXP-003` | Approve which soil terms become entities versus hub-owned entries | End of EXP-010 | Approved 2026-09-26: only `concept.calcareous-vineyard-soils` and `concept.volcanic-vineyard-soils` become satellites; all other terms remain hub-owned entries |
+| `DEC-EXP-004` | Use existing content blocks for the soil directory before adding specialized UI | EXP-010/011 | Approved 2026-09-26: validate the directory with canonical blocks before considering new UI |
 | `DEC-EXP-005` | Confirm the regions and climates used for the global-bias stress test | Start of EXP-027 | Open; Loire provisional |
 
-The `EXP-003` review gate is closed. The next mandatory content-model
-conversation is at `DEC-EXP-003`, after the soil research and terminology
-matrix make the trade-offs concrete.
+The `EXP-003` review gate is closed. `DEC-EXP-003` and `DEC-EXP-004` are also
+closed; `EXP-011` publishes the approved soil hub and two satellites with the
+existing content-block vocabulary.
 
 ## Definition of done for every content ticket
 

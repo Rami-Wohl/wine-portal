@@ -2398,6 +2398,22 @@ h3 {
 .content-block-figure {
   margin: 0;
 }
+.content-media-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+}
+.content-media-gallery .content-block-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.content-media-gallery .content-block-figure figcaption {
+  padding-top: 0.65rem;
+}
+.content-media-gallery .content-block-figure figcaption > span {
+  font-size: 0.8rem;
+}
 .content-block-figure img {
   display: block;
   width: 100%;
@@ -2457,6 +2473,11 @@ h3 {
 }
 .content-block-figure figcaption a {
   color: inherit;
+}
+@media (max-width: 620px) {
+  .content-media-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 .content-source-list {
   margin-top: 1.6rem;

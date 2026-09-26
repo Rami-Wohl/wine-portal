@@ -1,0 +1,35 @@
+id: concept.vineyard-soils
+type: concept
+status: active
+canonical_name: Vineyard soils
+names:
+  nl: Wijngaardbodems
+  en: Vineyard soils
+slugs:
+  nl: wijngaardbodems
+  en: vineyard-soils
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.vine-water-relations }
+  - { type: related_to, target: concept.climate-weather-site-microclimate }
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.terroir }
+  - { type: related_to, target: concept.calcareous-vineyard-soils }
+  - { type: related_to, target: concept.volcanic-vineyard-soils }
+assertions: []
+source_refs:
+  - source.maltman-vineyards-rocks-soils-2018
+  - source.parr-maltman-minerality-2018
+  - source.van-leeuwen-soil-terroir-2018
+  - source.white-soil-terroir-2020
+  - source.lazcano-healthy-vineyard-soils-2020
+  - source.oliver-soil-quality-viticulture-2013
+  - source.nrcs-available-water-capacity
+  - source.nrcs-soil-health-assessment
+  - source.usgs-lithologic-classification
+  - source.cornell-grapevine-roots
+depth: foundation
+last_reviewed: 2026-09-26

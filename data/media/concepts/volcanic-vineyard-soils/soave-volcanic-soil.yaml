@@ -1,0 +1,24 @@
+id: media.concept.volcanic-vineyard-soils.soave-volcanic-soil
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/volcanic-vineyard-soils/soave-volcanic-soil.jpg
+mime_type: image/jpeg
+width: 1536
+height: 2048
+checksum_sha256: e4588d18028772c6725451fc7a0763e035a4991acfa0f45fb3db92b38e67dd86
+alt:
+  nl: Donker verweerd vulkanisch materiaal en hoekige stenen aan het oppervlak van een wijngaard in Soave.
+  en: Dark weathered volcanic material and angular stones at the surface of a vineyard in Soave.
+caption:
+  nl: Vulkanisch materiaal in Soave. Kleur en stenen zijn zichtbaar; porositeit, waterbeschikbaarheid en chemie moeten afzonderlijk worden onderzocht.
+  en: Volcanic material in Soave. Colour and stones are visible; porosity, water availability and chemistry require separate investigation.
+rights:
+  status: open-licensed
+  creator: Alessandro Pighi
+  source_url: https://commons.wikimedia.org/wiki/File:Soave_Volcanic_Soil.JPG
+  license_name: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Alessandro Pighi, CC BY-SA 4.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

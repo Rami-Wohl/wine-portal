@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-limestone
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/limestone.jpg
+mime_type: image/jpeg
+width: 1920
+height: 1454
+checksum_sha256: 75b1d3c438d7e8c34ea705b589891316f66b1354ac344c3360ea090d2e9d87d8
+alt:
+  nl: Grijs, fijnkorrelig kalksteenmonster met lichte aders en museummarkeringen tegen een blauwe achtergrond.
+  en: Grey, fine-grained limestone specimen with pale veins and museum markings against a blue background.
+caption:
+  nl: "Kalksteen — een grijs, fijnkorrelig calcietrijk monster met fossielfragmenten. Kalksteen omvat veel afzettingen met uiteenlopende porositeit, hardheid en structuur."
+  en: "Limestone — a grey, fine-grained, calcite-rich specimen containing fossil fragments. Limestone includes many deposits with different porosity, hardness and structure."
+rights:
+  status: open-licensed
+  creator: Nessa Eull
+  source_url: https://commons.wikimedia.org/wiki/File:Gray_limestone_(GeoDIL_number_-_484).jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Nessa Eull, CC0 1.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Source service supplied a 1920-pixel derivative; no colour alteration or documentary crop.

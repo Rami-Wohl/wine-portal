@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-chalk
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/chalk.jpg
+mime_type: image/jpeg
+width: 3040
+height: 2016
+checksum_sha256: fdd773b1d3a5a93a23492dc7cb3b537417bba7618b60ada56fcef002bd2c158e
+alt:
+  nl: Wit tot lichtgrijs krijtmonster met een fijn, poreus oppervlak en museummarkeringen.
+  en: White to light-grey chalk specimen with a fine, porous surface and museum markings.
+caption:
+  nl: "Krijt — een fijnkorrelig kalksteenmonster van de White Cliffs of Dover. Dit specimen toont de zachte, lichte matrix; porositeit en breukvorming verschillen per afzetting."
+  en: "Chalk — a fine-grained limestone specimen from the White Cliffs of Dover. This sample shows the soft, pale matrix; porosity and fracturing vary between deposits."
+rights:
+  status: open-licensed
+  creator: Nessa Eull
+  source_url: https://commons.wikimedia.org/wiki/File:Chalk_(GeoDIL_number_-_488).jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Nessa Eull, CC0 1.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.

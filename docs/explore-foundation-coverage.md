@@ -137,7 +137,7 @@ Statussen:
 | `EXP-007` | Besontwikkeling, véraison en rijpheid | `berry-development-ripeness`, met `acidity`, `tannin` en `late-harvest` als satellites | complete hub | Verdere waterstress landt bij EXP-009; volledige wijnsamenstelling en perceptie bij EXP-024/025 | voltooid |
 | `EXP-008` | Klimaat, weer, standplaats en microklimaat | `climate-weather-site-microclimate`, met `terroir`, `vintage`, `grapevine-phenology`, `vine-as-living-system` en `berry-development-ripeness` als dependencies | complete hub | Waterfysiologie landt bij EXP-009; bodems bij EXP-010/011; loofwandkeuzes en weergevaren bij EXP-012/014 | voltooid |
 | `EXP-009` | Waterrelaties, droogte en irrigatie | `vine-water-relations`, met `vine-as-living-system`, `climate-weather-site-microclimate`, `grapevine-phenology`, `berry-development-ripeness`, `rootstock` en `terroir` als dependencies | complete hub | Volledige bodemfysica landt bij EXP-010/011; loofwandkeuzes bij EXP-012; regionale irrigatieregels bij hun geografische owners; brede duurzaamheidsafwegingen bij EXP-015 | voltooid |
-| `EXP-010/011` | Wijngaardbodems en alfabetische directory | `terroir`; verspreide regiobodemtekst | afwezig | Terminologie, fysische eigenschappen, wortelomgeving, indirecte effecten, mythes en beeldrijke vergelijking | P0 |
+| `EXP-010/011` | Wijngaardbodems en alfabetische directory | `vineyard-soils`, met `calcareous-vineyard-soils` en `volcanic-vineyard-soils` als satellites; `terroir`, `vine-water-relations` en `rootstock` als dependencies | complete hub and satellites | Verdere bodemvoeding, vloerbeheer en amendments landen bij EXP-013; volledige sensorische behandeling van minerality bij EXP-025 | voltooid |
 | `EXP-012` | Snoei, training, canopy en crop load | Losse voorbeelden op druiven- en regiopagina's | afwezig | Doelen, systemen, seizoenswerk en trade-offs tussen opbrengst, rijping, ziekte en levensduur | P1 |
 | `EXP-013` | Voeding, bodembeheer en wijngaardvloer | Geen zelfstandige owner | afwezig | Nutriënten, diagnose, organische stof, bodemleven, cover crops, erosie, compactie en amendments | P1 |
 | `EXP-014` | Weerrisico's, ziekten, plagen en stoornissen | `phylloxera`, `botrytis`, `rootstock` | fragmenten | Samenhangend risicokader, vorst/hagel/hitte, hoofdziekten, virussen, IPM en fysiologische schade | P1 |
@@ -357,11 +357,10 @@ registeritem.
 3. `EXP-004` heeft de biologische systeemhub voltooid, `EXP-005` de
    fenologische jaarcyclus, `EXP-006` de reproductieve opbrengstketen,
    `EXP-007` besontwikkeling en het oogstbesluit, `EXP-008` klimaat en
-   microklimaat en `EXP-009` waterrelaties; `EXP-010–011` bouwen nu de
-   bodemruggengraat verder uit.
+   microklimaat, `EXP-009` waterrelaties en `EXP-010–011` de bodemruggengraat.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-De visuele pilot en de eerste zes foundationhubs zijn voltooid; `EXP-010` is de
-eerstvolgende onderzoeks- en modelleertaak. `DEC-EXP-003` blijft de eerste harde
-inhoudelijke beslissing: welke bodemtermen na research een eigen entity krijgen.
+De visuele pilot en de eerste zeven foundationhubs zijn voltooid. De volgende
+uitvoeringstaak is `EXP-012`: snoei, training, loofwand en gewasbelasting als
+één beslissysteem.

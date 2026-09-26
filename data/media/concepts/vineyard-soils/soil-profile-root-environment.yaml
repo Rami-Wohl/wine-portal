@@ -1,0 +1,19 @@
+id: media.concept.vineyard-soils.soil-profile-root-environment
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vineyard-soils/soil-profile-root-environment.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: a1b3569b46c60a02fd1bea62f483825504e0c9aca1fff4a7b21cac9e69a59ad3
+alt:
+  nl: Genummerde doorsnede van een wijnstok boven een bodemprofiel met poriën, fijne wortels, een verdichte laag, verweerd moedermateriaal en vast gesteente.
+  en: Numbered cutaway of a grapevine above a soil profile with pores, fine roots, a compacted layer, weathered parent material and bedrock.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-09-26
+changes: "Generated from the approved soil-profile factual brief in the Oenocademy educational house style; exactly eight language-neutral markers. Reviewed for plausible horizons, pore-scale water, root distribution, limiting layer and a clear separation between weathered material and intact rock."

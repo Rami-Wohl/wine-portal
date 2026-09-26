@@ -1,0 +1,8 @@
+id: source.usgs-lithologic-classification
+source_type: regulator
+publisher: U.S. Geological Survey
+title: Lithologic classification of geologic map units
+url: https://apps.usgs.gov/thesaurus/thesaurus-full.php?thcode=4
+accessed_at: 2026-09-26
+language: en
+status: active

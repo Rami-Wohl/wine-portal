@@ -1,0 +1,24 @@
+id: media.concept.vineyard-soils.rock-marl
+kind: photo
+role: representative
+status: active
+storage_key: concepts/vineyard-soils/rocks/marl.jpg
+mime_type: image/jpeg
+width: 908
+height: 916
+checksum_sha256: b40673a69685ecfc56a70864e3bd862411535a95754640202255bf1d87cd83c6
+alt:
+  nl: Lichtgrijs mergelmonster met een brokkelig oppervlak naast een schaal en kleurenkaart.
+  en: Light-grey marl specimen with a crumbly surface beside a scale and colour chart.
+caption:
+  nl: "Mergel — een Smithsonian-monster uit North Carolina waarin carbonaat en kleirijk materiaal samen voorkomen. De verhouding tussen beide en de hardheid lopen sterk uiteen."
+  en: "Marl — a Smithsonian specimen from North Carolina combining carbonate and clay-rich material. Their proportions and the material's hardness vary widely."
+rights:
+  status: open-licensed
+  creator: Smithsonian Institution
+  source_url: https://commons.wikimedia.org/wiki/File:Marl_from_North_Carolina_-_Smithsonian_Rock_Sample_NMNH-36850.jpg
+  license_name: CC0 1.0
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  credit_line: Smithsonian Institution, CC0 1.0, via Wikimedia Commons
+acquired_at: 2026-09-26
+changes: Original file retained; no colour alteration or documentary crop.
