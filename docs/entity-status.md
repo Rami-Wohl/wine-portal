@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 348 entities — 280 active, 68 draft, 0 deprecated.
+**Totaal:** 349 entities — 281 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (280)
+## Actief — publiek vindbaar (281)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -111,6 +111,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Tweede wijn](../content/entities/concepts/second-wine/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-wine` | Ja | `/concepts/second-wine` | 2026-09-08 |
 | [Vin de paille](../content/entities/concepts/vin-de-paille/entity.yaml) | Concept | Zelfstandige pagina | `concept.vin-de-paille` | Ja | `/concepts/vin-de-paille` | 2026-09-14 |
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/volatile-thiols` | 2026-09-22 |
+| [Voeding van de wijnstok, bodembeheer en wijngaardvloer](../content/entities/concepts/vine-nutrition-soil-management-vineyard-floor/entity.yaml) | Concept | Zelfstandige pagina | `concept.vine-nutrition-soil-management-vineyard-floor` | Ja | `/concepts/vine-nutrition-soil-management-vineyard-floor` | 2026-10-02 |
 | [Vulkanische wijngaardbodems](../content/entities/concepts/volcanic-vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.volcanic-vineyard-soils` | Ja | `/concepts/volcanic-vineyard-soils` | 2026-09-26 |
 | [Waterrelaties, droogte en irrigatie bij de wijnstok](../content/entities/concepts/vine-water-relations/entity.yaml) | Concept | Zelfstandige pagina | `concept.vine-water-relations` | Ja | `/concepts/vine-water-relations-drought-irrigation` | 2026-09-25 |
 | [Wijngaardbodems](../content/entities/concepts/vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-soils` | Ja | `/concepts/vineyard-soils` | 2026-09-26 |

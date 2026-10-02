@@ -139,7 +139,7 @@ Statussen:
 | `EXP-009` | Waterrelaties, droogte en irrigatie | `vine-water-relations`, met `vine-as-living-system`, `climate-weather-site-microclimate`, `grapevine-phenology`, `berry-development-ripeness`, `rootstock` en `terroir` als dependencies | complete hub | Volledige bodemfysica landt bij EXP-010/011; loofwandkeuzes bij EXP-012; regionale irrigatieregels bij hun geografische owners; brede duurzaamheidsafwegingen bij EXP-015 | voltooid |
 | `EXP-010/011` | Wijngaardbodems en alfabetische directory | `vineyard-soils`, met `calcareous-vineyard-soils` en `volcanic-vineyard-soils` als satellites; `terroir`, `vine-water-relations` en `rootstock` als dependencies | complete hub and satellites | Verdere bodemvoeding, vloerbeheer en amendments landen bij EXP-013; volledige sensorische behandeling van minerality bij EXP-025 | voltooid |
 | `EXP-012` | Snoei, training, canopy en crop load | `pruning-training-canopy-crop-load`, met de biologische, fenologische, klimaat-, water- en bodemhubs als dependencies | complete hub | Afzonderlijke ziekten en IPM landen bij EXP-014; brede teeltsystemen en duurzaamheid bij EXP-015; regionale regels bij hun geografische owners | voltooid |
-| `EXP-013` | Voeding, bodembeheer en wijngaardvloer | Geen zelfstandige owner | afwezig | Nutriënten, diagnose, organische stof, bodemleven, cover crops, erosie, compactie en amendments | P1 |
+| `EXP-013` | Voeding, bodembeheer en wijngaardvloer | `vine-nutrition-soil-management-vineyard-floor`, met bodem-, water-, plant-, klimaat-, fenologie-, loofwand- en rijpheidshubs als dependencies | complete hub | Afzonderlijke ziekten en fysiologische stoornissen landen bij EXP-014; certificerings- en duurzaamheidsclaims bij EXP-015; bodemtypen en waterfysiologie blijven bij hun bestaande owners | voltooid |
 | `EXP-014` | Weerrisico's, ziekten, plagen en stoornissen | `phylloxera`, `botrytis`, `rootstock` | fragmenten | Samenhangend risicokader, vorst/hagel/hitte, hoofdziekten, virussen, IPM en fysiologische schade | P1 |
 | `EXP-015` | Teeltsystemen, duurzaamheid en adaptatie | Incidentele regiopassages | afwezig | Praktijken versus certificering en resultaten; biodiversiteit, water, koolstof, arbeid, veerkracht en adaptatie | P1 |
 | `EXP-016` | Vinificatiegraaf en kleinste set hubs | Veel actieve kelderconcepten en zeven lessons | sterke basis | Canonical procesoverzicht, grensafspraken en expliciete plaats voor ieder bestaand concept | P0 na EXP-002 |
@@ -357,10 +357,12 @@ registeritem.
 3. `EXP-004` heeft de biologische systeemhub voltooid, `EXP-005` de
    fenologische jaarcyclus, `EXP-006` de reproductieve opbrengstketen,
    `EXP-007` besontwikkeling en het oogstbesluit, `EXP-008` klimaat en
-   microklimaat, `EXP-009` waterrelaties en `EXP-010–011` de bodemruggengraat.
+   microklimaat, `EXP-009` waterrelaties, `EXP-010–011` de bodemruggengraat,
+   `EXP-012` snoei en loofwand en `EXP-013` voeding en vloerbeheer.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-De visuele pilot en de eerste acht foundationhubs zijn voltooid. De volgende
-uitvoeringstaak is `EXP-013`: voeding, bodembeheer en de wijngaardvloer als
-één beslissysteem dat voortbouwt op waterrelaties en wijngaardbodems.
+De visuele pilot en de eerste tien foundationhubs zijn voltooid. De volgende
+uitvoeringstaak is `EXP-014`: weerrisico's, ziekten, plagen en fysiologische
+stoornissen als één herkennings- en beheerkader dat bestaande pagina's over
+phylloxera en botrytis ontsluit zonder ze te dupliceren.

@@ -1,0 +1,24 @@
+id: media.concept.vine-nutrition-soil-management-vineyard-floor.cultivated-vineyard-floor
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/vine-nutrition-soil-management-vineyard-floor/cultivated-vineyard-floor.jpg
+mime_type: image/jpeg
+width: 4800
+height: 2400
+checksum_sha256: 23a05cb7769bb8e5314d8106d93c73db3721c01b75d7449130eb98f979056f25
+alt:
+  nl: Jonge wijnstokken staan op een Toscaanse helling met zichtbaar bewerkte, vrijwel onbegroeide grond tussen de rijen.
+  en: Young vines stand on a Tuscan slope with visibly cultivated, nearly vegetation-free soil between rows.
+caption:
+  nl: Bewerkte wijngaardvloer bij Montepulciano. Open grond vermindert actieve concurrentie, maar stelt het oppervlak op een helling ook direct bloot aan regeninslag en afstroming.
+  en: Cultivated vineyard floor near Montepulciano. Open soil reduces active competition, but on a slope it also exposes the surface directly to raindrop impact and runoff.
+rights:
+  status: open-licensed
+  creator: Filipe Fortes
+  source_url: https://commons.wikimedia.org/wiki/File:Vineyard_in_Montepulciano_Tuscany-also_example_of_clear_cultivation.jpg
+  license_name: CC BY-SA 2.0
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Filipe Fortes, CC BY-SA 2.0, via Wikimedia Commons
+acquired_at: 2026-10-02
+changes: Original file retained without colour alteration or documentary crop.

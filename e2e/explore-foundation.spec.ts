@@ -292,3 +292,54 @@ test("the pruning and canopy hub keeps its decision chain, photos and depth laye
   }));
   expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
 });
+
+test("the nutrition and vineyard-floor hub keeps its cycle, field contrasts and depth layers legible", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/vine-nutrition-soil-management-vineyard-floor");
+
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Voeding van de wijnstok, bodembeheer en wijngaardvloer",
+    }),
+  ).toBeVisible();
+
+  const cycle = page.locator("#voedingskringloop-in-beeld");
+  await cycle.scrollIntoViewIfNeeded();
+  await expect(cycle.getByRole("img", { name: /zes nummers bodemvoorraden/i })).toBeVisible();
+  await expect(cycle.locator("li")).toHaveCount(6);
+
+  for (const figureId of ["#begroeide-wijngaardvloer", "#bewerkte-wijngaardvloer"]) {
+    const image = page.locator(`${figureId} img`);
+    await image.scrollIntoViewIfNeeded();
+    await expect(image).toBeVisible();
+    await expect(image).toHaveJSProperty("complete", true);
+  }
+
+  await expect(page.locator("#cover-crop-is-een-ontwerp")).toBeHidden();
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(page.locator("#cover-crop-is-een-ontwerp")).toBeVisible();
+  await expect(page.locator("#bodemleven-heeft-functies-geen-smaakrecept")).toBeHidden();
+
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(page.locator("#bodemleven-heeft-functies-geen-smaakrecept")).toBeVisible();
+  await expect(page.locator("#verkeer-grondbewerking-en-amendments")).toBeVisible();
+  await expect(page.locator("#gezonde-bodem-als-functie")).toBeVisible();
+
+  const mobileDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(mobileDimensions.documentWidth).toBeLessThanOrEqual(mobileDimensions.viewportWidth);
+
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.reload();
+  await expect(cycle).toBeVisible();
+  const desktopDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
+});

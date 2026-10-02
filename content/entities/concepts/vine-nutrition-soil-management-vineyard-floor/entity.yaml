@@ -1,0 +1,36 @@
+id: concept.vine-nutrition-soil-management-vineyard-floor
+type: concept
+status: active
+canonical_name: Vine nutrition, soil management and vineyard floor
+names:
+  nl: Voeding van de wijnstok, bodembeheer en wijngaardvloer
+  en: Vine nutrition, soil management and vineyard floor
+slugs:
+  nl: voeding-wijnstok-bodembeheer-wijngaardvloer
+  en: vine-nutrition-soil-management-vineyard-floor
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.vineyard-soils }
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.vine-water-relations }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.grapevine-phenology }
+  - { type: related_to, target: concept.pruning-training-canopy-crop-load }
+  - { type: related_to, target: concept.climate-weather-site-microclimate }
+  - { type: related_to, target: concept.berry-development-ripeness }
+assertions: []
+source_refs:
+  - source.osu-monitoring-vineyard-nutrition-2024
+  - source.schreiner-nutrient-uptake-young-vines-2016
+  - source.lazcano-healthy-vineyard-soils-2020
+  - source.oliver-soil-quality-viticulture-2013
+  - source.nrcs-soil-health-assessment
+  - source.guerra-steenwerth-floor-management-review-2011
+  - source.abad-cover-crops-viticulture-soil-2021
+  - source.novara-vineyard-floor-water-conservation-2018
+  - source.rodrigo-comino-vineyard-erosion-review-2018
+  - source.tagliavini-rombola-iron-chlorosis-2001
+depth: foundation
+last_reviewed: 2026-10-02

@@ -1,0 +1,19 @@
+id: media.concept.vine-nutrition-soil-management-vineyard-floor.root-zone-nutrient-cycle
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vine-nutrition-soil-management-vineyard-floor/root-zone-nutrient-cycle.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: f3ba1b5e54c16cf59ac1175837577b1bd74036dfeb8476654e77435e1164d5b8
+alt:
+  nl: Een doorsnede van een wijnstok en wortelzone toont met zes nummers bodemvoorraden, omzetting, opgeloste en gebonden voedingsstoffen, wortelopname, verdeling door de plant en terugkeer, afvoer of verlies.
+  en: A cutaway of a vine and root zone uses six numbers to show soil pools, transformation, dissolved and retained nutrients, root uptake, allocation through the plant, and return, removal or loss.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-10-02
+changes: "Generated in built-in image mode from a reviewed factual brief and the accepted Oenocademy soil-profile and water-pathway plates as style references. Language-neutral markers 1–6 only. Reviewed for nearly level terrain, realistic rooting, modest biology, explicit harvest removal and losses, and the absence of a direct rock-to-grape or soil-to-flavour path."

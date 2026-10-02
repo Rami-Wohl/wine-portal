@@ -174,7 +174,8 @@ unplanned standalone pages.
 | `EXP-010` | complete | Soil terminology, common physical-property model, claim matrix, bilingual outline, media shot list and satellite recommendation documented |
 | `EXP-011` | complete | Bilingual vineyard-soils hub, eighteen-entry A–Z directory, two focused satellites, four documentary photographs, ten rock-reference photographs and two language-neutral educational diagrams published and validated |
 | `EXP-012` | complete | Bilingual pruning, training, canopy and crop-load system hub with one educational plate and three documentary photographs published and validated |
-| `EXP-013`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-013` | complete | Bilingual vine-nutrition, soil-management and vineyard-floor hub with a six-stage educational plate and two documentary floor-management photographs published and validated |
+| `EXP-014`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -398,6 +399,13 @@ among yield, ripening, disease and longevity.
 ranked as universally superior.
 
 #### EXP-013 — Nutrition, soil management and vineyard floor
+
+**Status:** complete on 2026-10-02. The bilingual system hub owns the
+diagnosis-and-management chain from soil pools and plant status to fertilisers,
+organic inputs, cover crops, tillage, compaction and erosion. One language-neutral
+six-stage plate and two documentary photographs make the root-zone cycle and
+contrasting floor states visible without turning either system into a quality
+ranking.
 
 **Depends on:** EXP-009–011.
 

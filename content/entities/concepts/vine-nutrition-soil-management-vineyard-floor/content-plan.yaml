@@ -1,0 +1,234 @@
+schema_version: 2
+package_id: concept.vine-nutrition-soil-management-vineyard-floor
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.vineyard-soils, concept.vine-as-living-system]
+    completeness_questions:
+      - Kan de lezer plantenvoeding onderscheiden van gesteentemineralen, bodemvruchtbaarheid en bemesting?
+      - Is de wijngaardvloer gedefinieerd als beheerde ruimte onder en tussen de rijen?
+    layers:
+      foundation: [Definieer voeding, vloerbeheer en hun gezamenlijke doel.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Grapevine nutrition, soil functions and vineyard floor management.]
+        source_refs:
+          [
+            source.osu-monitoring-vineyard-nutrition-2024,
+            source.guerra-steenwerth-floor-management-review-2011,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.vineyard-soils, concept.vine-as-living-system]
+    completeness_questions:
+      - Zijn bodemvoorraden, bodemoplossing, wortels, organismen, plantweefsel, oogst en terugvoer verbonden?
+      - Is duidelijk dat organische stof en bodemleven functies ondersteunen zonder smaak te dicteren?
+    layers:
+      foundation: [Volg voedingsstoffen van voorraad via opname naar plant en terugkeer of afvoer.]
+      intermediate: [Werk organische stof en biologische omzettingen uit.]
+      advanced: [Begrens microbiomecausaliteit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Nutrient cycling, organic matter and vineyard soil biology.]
+        source_refs:
+          [
+            source.schreiner-nutrient-uptake-young-vines-2016,
+            source.lazcano-healthy-vineyard-soils-2020,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.vine-water-relations, concept.rootstock]
+    completeness_questions:
+      - Zijn totale voorraad, beschikbaarheid, opname, plantstatus en vraag onderscheiden?
+      - Zijn pH, water, zuurstof, binding, wortels en reserves als interacties behandeld?
+    layers:
+      foundation: [Leg beschikbaarheid, opname en hoofdfuncties van essentiële elementen uit.]
+      intermediate: [Werk pH, binding en transportroutes uit.]
+      advanced: [Werk interacties, herverdeling en reserves uit.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Nutrient availability, uptake, allocation and root-zone constraints.]
+        source_refs:
+          [
+            source.schreiner-nutrient-uptake-young-vines-2016,
+            source.oliver-soil-quality-viticulture-2013,
+            source.tagliavini-rombola-iron-chlorosis-2001,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids:
+      [concept.climate-weather-site-microclimate, concept.vine-water-relations, concept.rootstock]
+    completeness_questions:
+      - Zijn plaats, seizoen, ontwikkelingsfase, ras, onderstam en opbrengstbelasting als variatiebronnen aanwezig?
+      - Is duidelijk waarom een symptoom niet rechtstreeks één oorzaak bewijst?
+    layers:
+      foundation: [Toon waarom dezelfde voorraad of ingreep verschillend kan uitpakken.]
+      intermediate: [Verbind dynamische plantstatus aan meetmoment en groei.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Site and seasonal variation in grapevine nutrient status.]
+        source_refs:
+          [
+            source.osu-monitoring-vineyard-nutrition-2024,
+            source.schreiner-nutrient-uptake-young-vines-2016,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids:
+      [
+        concept.vineyard-soils,
+        concept.vine-water-relations,
+        concept.pruning-training-canopy-crop-load,
+      ]
+    completeness_questions:
+      - Is de diagnoseketen compleet vóór meststof of amendment wordt gekozen?
+      - Zijn begroeiing, grondbewerking, organische input, compactie en erosie als trade-offs behandeld?
+    layers:
+      foundation: [Introduceer diagnose en de hoofdkeuzes voor de vloer.]
+      intermediate: [Verdiep cover crops, timing en organische inputs.]
+      advanced: [Behandel amendments, compactie en langetermijneffecten.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Diagnosis, floor management, cover crops, tillage, erosion and amendments.]
+        source_refs:
+          [
+            source.osu-monitoring-vineyard-nutrition-2024,
+            source.guerra-steenwerth-floor-management-review-2011,
+            source.abad-cover-crops-viticulture-soil-2021,
+            source.rodrigo-comino-vineyard-erosion-review-2018,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: [concept.climate-weather-site-microclimate, concept.vine-water-relations]
+    completeness_questions:
+      - Tonen droge, vochtige, hellende en krachtige situaties verschillende geldige prioriteiten?
+    layers:
+      foundation: [Vergelijk vloerbeheer als antwoord op verschillende beperkingen.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Context-dependent vineyard floor strategies.]
+        source_refs:
+          [
+            source.guerra-steenwerth-floor-management-review-2011,
+            source.novara-vineyard-floor-water-conservation-2018,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: [concept.vineyard-soils]
+    completeness_questions:
+      - Kan de lezer bodemtest, weefselanalyse, symptoom en veldhistorie combineren zonder één meting te absoluteren?
+      - Zijn microbiome- en directe bodem-naar-smaakclaims begrensd?
+    layers:
+      foundation: [Bouw bewijs op uit meerdere signalen en een vergelijking door de tijd.]
+      intermediate: [Leg representatieve en consistente bemonstering uit.]
+      advanced: [Begrens microbiome-, koolstof- en smaakclaims.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Diagnostic limits and evidence for soil-biological claims.]
+        source_refs:
+          [
+            source.osu-monitoring-vineyard-nutrition-2024,
+            source.lazcano-healthy-vineyard-soils-2020,
+            source.nrcs-soil-health-assessment,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.berry-development-ripeness, concept.pruning-training-canopy-crop-load]
+    completeness_questions:
+      - Kan de lezer voedings- en vloerbeheerclaims verbinden aan plantreactie en druifsamenstelling zonder kwaliteitsgarantie?
+    layers:
+      foundation: [Lees claims via uitgangstoestand, doel, dosis, timing en gemeten respons.]
+      intermediate: [Verbind plantstatus aan most zonder directe smaakketen.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Interpretation of nutrition and floor-management effects on grapes and must.]
+        source_refs:
+          [
+            source.osu-monitoring-vineyard-nutrition-2024,
+            source.guerra-steenwerth-floor-management-review-2011,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.vineyard-soils
+    names: { nl: Wijngaardbodems, en: Vineyard soils }
+    slugs: { nl: wijngaardbodems, en: vineyard-soils }
+    disposition: link-and-relation
+  - id: concept.vine-as-living-system
+    names: { nl: De wijnstok als levend systeem, en: The vine as a living system }
+    slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system }
+    disposition: link-and-relation
+  - id: concept.vine-water-relations
+    names:
+      nl: "Waterrelaties, droogte en irrigatie bij de wijnstok"
+      en: "Vine water relations, drought and irrigation"
+    slugs:
+      {
+        nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok,
+        en: vine-water-relations-drought-irrigation,
+      }
+    disposition: link-and-relation
+  - id: concept.rootstock
+    names: { nl: Onderstam, en: Rootstock }
+    slugs: { nl: onderstam, en: rootstock }
+    disposition: link-and-relation
+  - id: concept.grapevine-phenology
+    names: { nl: Jaarcyclus en fenologie van de wijnstok, en: Grapevine phenology and annual cycle }
+    slugs: { nl: jaarcyclus-en-fenologie-van-de-wijnstok, en: grapevine-phenology }
+    disposition: link-and-relation
+  - id: concept.pruning-training-canopy-crop-load
+    names:
+      nl: "Snoei, geleiding, loofwand en gewasbelasting"
+      en: "Pruning, training, canopy and crop load"
+    slugs: { nl: snoei-geleiding-loofwand-en-gewasbelasting, en: pruning-training-canopy-crop-load }
+    disposition: link-and-relation
+  - id: concept.climate-weather-site-microclimate
+    names:
+      nl: "Klimaat, weer, standplaats en microklimaat"
+      en: "Climate, weather, site and microclimate"
+    slugs: { nl: klimaat-weer-standplaats-en-microklimaat, en: climate-weather-site-microclimate }
+    disposition: link-and-relation
+  - id: concept.berry-development-ripeness
+    names:
+      nl: "Besontwikkeling, véraison en rijpheid"
+      en: "Berry development, veraison and ripeness"
+    slugs: { nl: besontwikkeling-veraison-en-rijpheid, en: berry-development-veraison-ripeness }
+    disposition: link-and-relation
+review: { outline: complete, dependencies: complete, nl: complete, en: complete }

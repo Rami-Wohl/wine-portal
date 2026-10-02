@@ -2259,6 +2259,12 @@ h3 {
   margin: 1.2rem 0;
   padding-left: 1.4rem;
 }
+#keuzes-en-afwegingen > ul {
+  list-style-type: disc;
+}
+#keuzes-en-afwegingen > ul li::marker {
+  color: var(--brand);
+}
 .content-block li > p {
   margin: 0;
 }
