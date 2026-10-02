@@ -1,0 +1,24 @@
+id: media.concept.pruning-training-canopy-crop-load.winter-pruning
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/pruning-training-canopy-crop-load/winter-pruning.jpg
+mime_type: image/jpeg
+width: 3008
+height: 2000
+checksum_sha256: 17dc1f6b3a8b2153460c0d0835fdd2857cba3bde77fc7926fc0ecb2dc9598429
+alt:
+  nl: Een team snoeit kale, draadgeleide wijnstokken in een winterwijngaard in Tasmanië.
+  en: A crew prunes dormant, trellised grapevines in a Tasmanian winter vineyard.
+caption:
+  nl: Wintersnoei in Granton Vineyard, Tasmanië. De foto toont hoeveel selectie, bindwerk en arbeid achter een uniforme rij schuilgaan.
+  en: Winter pruning at Granton Vineyard, Tasmania. The photograph shows how much selection, tying and labour sit behind a uniform row.
+rights:
+  status: open-licensed
+  creator: Mark Smith
+  source_url: https://commons.wikimedia.org/wiki/File:Winter_pruning_grapevines_at_Stefano_Lubiana.jpg
+  license_name: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Mark Smith, CC BY 2.0, via Wikimedia Commons
+acquired_at: 2026-10-02
+changes: Original file retained without colour alteration or documentary crop.

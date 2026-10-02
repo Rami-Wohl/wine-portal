@@ -1,0 +1,238 @@
+schema_version: 2
+package_id: concept.pruning-training-canopy-crop-load
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids: [overzicht]
+    target_ids: [concept.vine-as-living-system, concept.grapevine-phenology]
+    completeness_questions:
+      - Kan de lezer geleiding, snoei, loofwandbeheer en gewasbelasting van elkaar onderscheiden?
+      - Is duidelijk dat deze beslissingen op verschillende tijdschalen aan dezelfde wijnstok sturen?
+    layers:
+      foundation: [Definieer de vier beslisvelden en verbind ze tot één systeem.]
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Training systems, vine form, pruning and canopy management.]
+        source_refs:
+          [source.reynolds-vanden-heuvel-training-systems-2009, source.uga-dormant-pruning-2022]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids: [opbouw-en-samenhang]
+    target_ids: [concept.vine-as-living-system]
+    completeness_questions:
+      - Zijn stam, kop of cordon, eenjarig hout, knoppen, scheuten, bladeren en trossen in hun onderlinge relatie uitgelegd?
+      - Kan de lezer cane pruning en spur pruning structureel uit elkaar houden?
+    layers:
+      foundation: [Leg blijvend hout, eenjarig hout, vruchtbare knoppen en ondersteuning uit.]
+      intermediate: [Vergelijk cane- en spur-pruning zonder kwaliteitsrangorde.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Vine architecture, retained fruitful wood and buds.]
+        source_refs:
+          [source.uga-dormant-pruning-2022, source.reynolds-vanden-heuvel-training-systems-2009]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids: [werking]
+    target_ids: [concept.flowering-fruit-set-yield, concept.berry-development-ripeness]
+    completeness_questions:
+      - Volgt de lezer de keten van behouden knop via scheut en tros naar een seizoensloofwand?
+      - Zijn compensatie en interactie tussen blad, scheut en fruit begrensd uitgelegd?
+    layers:
+      foundation: [Volg het seizoen van knopgetal naar bladwand en fruit.]
+      intermediate: [Verbind licht, lucht, bladfunctie en cluster microclimate.]
+      advanced:
+        [Leg compensatie en source–sink-verschuivingen uit zonder simpele suikerbudgetmetafoor.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Canopy light microclimate, vine form and fruit composition.]
+        source_refs: [source.reynolds-vanden-heuvel-training-systems-2009]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids: [omstandigheden-en-variatie]
+    target_ids:
+      [
+        concept.climate-weather-site-microclimate,
+        concept.vine-water-relations,
+        concept.vineyard-soils,
+      ]
+    completeness_questions:
+      - Zijn groeiwijze, groeikracht, vruchtbaarheid, klimaat, water, bodem, topografie, arbeid en mechanisatie als keuzevoorwaarden aanwezig?
+      - Is blootstelling als balans tussen licht, lucht, hitte en zonnebrand beschreven?
+    layers:
+      foundation: [Laat zien waarom dezelfde techniek niet overal dezelfde functie heeft.]
+      intermediate: [Werk blootstelling, warmte en abrupte verandering uit.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Training-system context and grape sunburn risk.]
+        source_refs:
+          [
+            source.reynolds-vanden-heuvel-training-systems-2009,
+            source.gambetta-grape-sunburn-review-2021,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids: [keuzes-en-afwegingen]
+    target_ids:
+      [
+        concept.grapevine-phenology,
+        concept.flowering-fruit-set-yield,
+        concept.berry-development-ripeness,
+      ]
+    completeness_questions:
+      - Zijn pruning, shoot thinning, positioning, hedging, leaf removal en cluster thinning aan doelen én risico’s gekoppeld?
+      - Zijn houtziekterisico, levensduur, arbeid en mechanisatie onderdeel van de afweging?
+    layers:
+      foundation: [Introduceer het seizoensgereedschap als volgorde van beslissingen.]
+      intermediate: [Verdiep timing en trade-offs van blad- en fruitingrepen.]
+      advanced: [Behandel wonden, langetermijnarchitectuur en mechanisatie.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Pruning, leaf removal, cluster thinning, pruning wounds and mechanization.]
+        source_refs:
+          [
+            source.uga-dormant-pruning-2022,
+            source.vanderweide-leaf-removal-meta-analysis-2021,
+            source.vanderweide-cluster-thinning-meta-analysis-2024,
+            source.rosace-pruning-wounds-2023,
+            source.kurtural-fidelibus-mechanization-2021,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids: [wereldwijde-context]
+    target_ids: [concept.climate-weather-site-microclimate]
+    completeness_questions:
+      - Tonen gobelet, VSP, high-wire, pergola en gedeelde loofwanden verschillende functies zonder één normregio?
+    layers:
+      foundation: [Vergelijk hoofdarchitecturen als antwoorden op omstandigheden.]
+      intermediate: [Verbind constructie, groeiwijze, arbeidsorganisatie en mechaniseerbaarheid.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Global diversity of training systems.]
+        source_refs:
+          [
+            source.reynolds-vanden-heuvel-training-systems-2009,
+            source.kurtural-fidelibus-mechanization-2021,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids: [bewijs-en-grenzen]
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer zichtbare toestand, tellingen, snoeihoutgewicht en ratio’s naar schaal en moment onderscheiden?
+      - Worden lage opbrengst en één vine-balance-index niet als universeel kwaliteitsbewijs gebruikt?
+    layers:
+      foundation: [Benoem dat doel en uitgangstoestand vóór een ingreep moeten worden vastgesteld.]
+      intermediate: [Vergelijk relevante waarnemingen en metingen.]
+      advanced: [Begrens ratio’s, gemiddelden en experimentele overdraagbaarheid.]
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Vine balance metrics and context dependence of interventions.]
+        source_refs:
+          [
+            source.uga-dormant-pruning-2022,
+            source.vanderweide-leaf-removal-meta-analysis-2021,
+            source.vanderweide-cluster-thinning-meta-analysis-2024,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids: [betekenis-voor-wijn]
+    target_ids: [concept.berry-development-ripeness, concept.climate-weather-site-microclimate]
+    completeness_questions:
+      - Kan de lezer claims over lage opbrengst, open loofwand, handwerk en oude stokken kritisch beoordelen?
+    layers:
+      foundation:
+        [Geef een praktisch leesraam met doel, timing, uitgangstoestand en gemeten uitkomst.]
+      intermediate: [Verbind keuzes aan druifsamenstelling zonder smaak of kwaliteit te garanderen.]
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: [Contextual interpretation of canopy and crop-load decisions.]
+        source_refs:
+          [
+            source.reynolds-vanden-heuvel-training-systems-2009,
+            source.vanderweide-cluster-thinning-meta-analysis-2024,
+          ]
+      specific_claims: []
+    review: { outline: complete, nl: complete, en: complete }
+entity_dependencies:
+  - id: concept.vine-as-living-system
+    names: { nl: De wijnstok als levend systeem, en: The vine as a living system }
+    slugs: { nl: wijnstok-als-levend-systeem, en: vine-as-living-system }
+    disposition: link-and-relation
+  - id: concept.grapevine-phenology
+    names: { nl: Jaarcyclus en fenologie van de wijnstok, en: Grapevine phenology and annual cycle }
+    slugs: { nl: jaarcyclus-en-fenologie-van-de-wijnstok, en: grapevine-phenology }
+    disposition: link-and-relation
+  - id: concept.flowering-fruit-set-yield
+    names:
+      {
+        nl: "Bloei, vruchtzetting en opbrengstvorming",
+        en: "Flowering, fruit set and yield formation",
+      }
+    slugs: { nl: bloei-vruchtzetting-en-opbrengstvorming, en: flowering-fruit-set-yield }
+    disposition: link-and-relation
+  - id: concept.berry-development-ripeness
+    names:
+      {
+        nl: "Besontwikkeling, véraison en rijpheid",
+        en: "Berry development, veraison and ripeness",
+      }
+    slugs: { nl: besontwikkeling-veraison-en-rijpheid, en: berry-development-veraison-ripeness }
+    disposition: link-and-relation
+  - id: concept.climate-weather-site-microclimate
+    names:
+      {
+        nl: "Klimaat, weer, standplaats en microklimaat",
+        en: "Climate, weather, site and microclimate",
+      }
+    slugs: { nl: klimaat-weer-standplaats-en-microklimaat, en: climate-weather-site-microclimate }
+    disposition: link-and-relation
+  - id: concept.vine-water-relations
+    names:
+      {
+        nl: "Waterrelaties, droogte en irrigatie bij de wijnstok",
+        en: "Vine water relations, drought and irrigation",
+      }
+    slugs:
+      {
+        nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok,
+        en: vine-water-relations-drought-irrigation,
+      }
+    disposition: link-and-relation
+  - id: concept.vineyard-soils
+    names: { nl: Wijngaardbodems, en: Vineyard soils }
+    slugs: { nl: wijngaardbodems, en: vineyard-soils }
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

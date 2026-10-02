@@ -173,7 +173,8 @@ unplanned standalone pages.
 | `EXP-009` | complete | Bilingual water-relations hub, evidence set and two language-neutral educational plates validated |
 | `EXP-010` | complete | Soil terminology, common physical-property model, claim matrix, bilingual outline, media shot list and satellite recommendation documented |
 | `EXP-011` | complete | Bilingual vineyard-soils hub, eighteen-entry A–Z directory, two focused satellites, four documentary photographs, ten rock-reference photographs and two language-neutral educational diagrams published and validated |
-| `EXP-012`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-012` | complete | Bilingual pruning, training, canopy and crop-load system hub with one educational plate and three documentary photographs published and validated |
+| `EXP-013`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -382,6 +383,10 @@ reference; every entry has a stable destination or is deliberately hub-owned;
 mobile layout, captions, sources and related topics pass review.
 
 #### EXP-012 — Pruning, training, canopy and crop-load decisions
+
+**Status:** complete on 2026-10-02. The canonical owner is
+`concept.pruning-training-canopy-crop-load`; individual techniques remain
+hub-owned until a distinct maintenance need justifies a satellite.
 
 **Depends on:** EXP-004–009.
 

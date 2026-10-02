@@ -1,0 +1,32 @@
+id: concept.pruning-training-canopy-crop-load
+type: concept
+status: active
+canonical_name: Pruning, training, canopy and crop load
+names:
+  nl: Snoei, geleiding, loofwand en gewasbelasting
+  en: Pruning, training, canopy and crop load
+slugs:
+  nl: snoei-geleiding-loofwand-en-gewasbelasting
+  en: pruning-training-canopy-crop-load
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.vine-as-living-system }
+  - { type: related_to, target: concept.grapevine-phenology }
+  - { type: related_to, target: concept.flowering-fruit-set-yield }
+  - { type: related_to, target: concept.berry-development-ripeness }
+  - { type: related_to, target: concept.climate-weather-site-microclimate }
+  - { type: related_to, target: concept.vine-water-relations }
+  - { type: related_to, target: concept.vineyard-soils }
+assertions: []
+source_refs:
+  - source.reynolds-vanden-heuvel-training-systems-2009
+  - source.uga-dormant-pruning-2022
+  - source.vanderweide-leaf-removal-meta-analysis-2021
+  - source.vanderweide-cluster-thinning-meta-analysis-2024
+  - source.gambetta-grape-sunburn-review-2021
+  - source.rosace-pruning-wounds-2023
+  - source.kurtural-fidelibus-mechanization-2021
+depth: foundation
+last_reviewed: 2026-10-02

@@ -1,0 +1,19 @@
+id: media.concept.pruning-training-canopy-crop-load.annual-decision-chain
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/pruning-training-canopy-crop-load/annual-decision-chain.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: f5db7dc1750f672e78f3206f3b9bbf631e9087d0bee39ebed6115919d720422c
+alt:
+  nl: Vijf genummerde stadia tonen dezelfde draadgeleide wijnstok vóór en na wintersnoei, tijdens scheutwerk, bij zomerwerk aan de loofwand en bij beoordeling van blad en fruit.
+  en: Five numbered stages show the same trellised vine before and after dormant pruning, during shoot work, during summer canopy work and while foliage and fruit are assessed.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-10-02
+changes: "Generated in built-in image mode from a reviewed factual brief and the accepted Oenocademy annual-cycle and transport plates as style references. Language-neutral markers 1–5 only. Reviewed for consistent trellis form, modest terrain, retained partial bunch shade and the absence of a quality hierarchy; the final fruit comparison represents assessment, not a prescription to remove fruit."

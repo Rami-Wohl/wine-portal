@@ -1,0 +1,24 @@
+id: media.concept.pruning-training-canopy-crop-load.goblet-trained-vines
+kind: photo
+role: documentary
+status: active
+storage_key: concepts/pruning-training-canopy-crop-load/goblet-trained-vines.jpg
+mime_type: image/jpeg
+width: 3456
+height: 2304
+checksum_sha256: b58f5e5cb54bc5e1fae3f73942d7780f05ca748a581621fa0f8b9bf63ff62514
+alt:
+  nl: Lage, vrijstaande gobelet-wijnstokken staan in winterrust voor het dorp La Livinière in de Minervois.
+  en: Low, free-standing goblet-trained vines stand dormant in front of La Livinière in Minervois.
+caption:
+  nl: Vrijstaande gobelet-stokken bij La Livinière in de Minervois. Hun lage, ruimtelijke architectuur organiseert scheuten en schaduw zonder een verticale draadwand.
+  en: Free-standing goblet-trained vines near La Livinière in Minervois. Their low, three-dimensional architecture organises shoots and shade without a vertical wire wall.
+rights:
+  status: open-licensed
+  creator: Greg Roberts
+  source_url: https://commons.wikimedia.org/wiki/File:Goblet_trained_vines_in_La_Laviniere,_Minervois.jpg
+  license_name: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  credit_line: Greg Roberts, CC BY 2.0, via Wikimedia Commons
+acquired_at: 2026-10-02
+changes: Original file retained without colour alteration or documentary crop.

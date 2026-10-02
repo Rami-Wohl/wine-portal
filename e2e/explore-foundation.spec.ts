@@ -238,3 +238,57 @@ test("the vineyard-soils hub stays scannable and links its focused satellites", 
     await expect(page.locator("figure img")).toHaveJSProperty("complete", true);
   }
 });
+
+test("the pruning and canopy hub keeps its decision chain, photos and depth layers legible", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/pruning-training-canopy-crop-load");
+
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Snoei, geleiding, loofwand en gewasbelasting",
+    }),
+  ).toBeVisible();
+
+  const decisionChain = page.locator("#beslisketen-in-beeld");
+  await decisionChain.scrollIntoViewIfNeeded();
+  await expect(decisionChain.getByRole("img", { name: /vijf genummerde stadia/i })).toBeVisible();
+  await expect(decisionChain.locator("li")).toHaveCount(5);
+
+  for (const figureId of [
+    "#cordon-in-winter",
+    "#gobelet-als-andere-architectuur",
+    "#wintersnoei-als-werk",
+  ]) {
+    const image = page.locator(`${figureId} img`);
+    await image.scrollIntoViewIfNeeded();
+    await expect(image).toBeVisible();
+    await expect(image).toHaveJSProperty("complete", true);
+  }
+
+  await expect(page.locator("#blootstelling-is-timing")).toBeHidden();
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(page.locator("#blootstelling-is-timing")).toBeVisible();
+  await expect(page.locator("#wonden-en-levensduur")).toBeHidden();
+
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(page.locator("#wonden-en-levensduur")).toBeVisible();
+  await expect(page.locator("#mechanisatie-verplaatst-de-beslissing")).toBeVisible();
+
+  const mobileDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(mobileDimensions.documentWidth).toBeLessThanOrEqual(mobileDimensions.viewportWidth);
+
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.reload();
+  await expect(decisionChain).toBeVisible();
+  const desktopDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
+});
