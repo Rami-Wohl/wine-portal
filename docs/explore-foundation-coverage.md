@@ -4,6 +4,8 @@ Status: living planning document
 Baseline date: 2026-09-24  
 Owner: `docs/explore-foundation-roadmap.md`
 
+Latest vinification ownership audit: 2026-10-03 (`EXP-016`)
+
 Dit document is de uitvoer van `EXP-001`. Het legt vast wat Oenocademy al bezit,
 waar de conceptuele basis nog gaten heeft en welk toekomstig ticket eigenaar is
 van ieder deel. Het is een planningsmatrix, geen nieuwe feitenbron en geen
@@ -33,7 +35,13 @@ kan meer onderwijzen dan meerdere foto's. De cijfers hieronder zijn daarom
 triagesignalen die tijdens het betreffende authoringticket inhoudelijk worden
 beoordeeld.
 
-## 2. Baseline
+## 2. Baseline — momentopname 2026-09-24
+
+De aantallen en oorspronkelijke bevindingen in §2–3 en §7 beschrijven de
+startinventaris; zij zijn geen actuele totalen na EXP-004–016. De bijgewerkte
+uitvoeringsmatrix staat in §4, de vinificatiebesluiten in §8. Voor de laatste
+gerichte inventaris, bewijsplekken en vervolgacties zie de
+[EXP-016-audit](../editorial/vinification-ownership-audit-2026-10-03.md).
 
 | Onderdeel | Huidige stand | Betekenis voor de roadmap |
 | --- | ---: | --- |
@@ -142,14 +150,14 @@ Statussen:
 | `EXP-013` | Voeding, bodembeheer en wijngaardvloer | `vine-nutrition-soil-management-vineyard-floor`, met bodem-, water-, plant-, klimaat-, fenologie-, loofwand- en rijpheidshubs als dependencies | complete hub | Afzonderlijke ziekten en fysiologische stoornissen landen bij EXP-014; certificerings- en duurzaamheidsclaims bij EXP-015; bodemtypen en waterfysiologie blijven bij hun bestaande owners | voltooid |
 | `EXP-014` | Weerrisico's, ziekten, plagen en stoornissen | `vineyard-hazards-diseases-pests-disorders`, met `phylloxera` en `botrytis` als satellites en klimaat-, fenologie-, water-, voeding-, loofwand- en onderstamhubs als dependencies | complete hub | Afzonderlijke pathogenen blijven hub-owned totdat de entitytest zelfstandige satellites rechtvaardigt; teeltsystemen, certificering en brede duurzaamheid landen bij EXP-015 | voltooid |
 | `EXP-015` | Teeltsystemen, duurzaamheid en adaptatie | `vineyard-systems-sustainability-adaptation`, met klimaat-, water-, bodem-, voeding-, loofwand-, risico-, onderstam- en rijpheidsconcepts als dependencies | complete hub | Teeltsystemen, certificeringsscope, resultaatmeting en adaptatie zijn hub-owned; bodem- en plantmechanismen blijven bij hun bestaande owners; kelder- en verpakkingsprocessen volgen bij EXP-016–023 | voltooid |
-| `EXP-016` | Vinificatiegraaf en kleinste set hubs | Veel actieve kelderconcepten en zeven lessons | sterke basis | Canonical procesoverzicht, grensafspraken en expliciete plaats voor ieder bestaand concept | P0 na EXP-002 |
-| `EXP-017` | Ontvangst, sortering en mostvoorbereiding | `pressing`; lessons `grape-as-raw-material` en `grape-to-must` | fragmenten | Oogstconditie, transport, sortering, ontstelen, kneuzen, hele trossen en mostbehandelingen | P1 |
-| `EXP-018` | Gist, microbiologie en alcoholische vergisting | `fermentation`; lesson `alcoholic-fermentation` | sterke basis | Gistecologie, inoculatiekeuze, voeding, kinetiek, monitoring en vastlopende gisting in één owner | P1 |
-| `EXP-019` | Hoofdroutes, schilcontact en extractie | `maceration`, `extraction`, `pressing`; `carbonic-maceration` draft; route-lesson | sterke basis | Rosé/orange volledigheid, cap management en beslissing over carbonic-macerationdraft | P1 |
-| `EXP-020` | Na vergisting, zuurstof en rijping | `malolactic-fermentation`, `elevage`, `lees-ageing`, `batonnage`, `autolysis`, `oxidation`, `assemblage` | sterke basis | Overkoepelende beslisroute, vaten/hout, overhevelen, topping en begrensde interacties | P1 |
-| `EXP-021` | Stabilisatie, klaring, filtratie en verpakking | `clarification-and-fining`, `sulfur-dioxide`, `bottling`; cellar-to-bottle-lesson | sterke basis | Tartraat/proteïne/microbiële stabiliteit, filtratie, gassen en sluitingen als systeem | P1 |
-| `EXP-022` | Hygiëne, microbiële risico's en fouten | `oxidation`, `sulfur-dioxide`; risicopassages elders | fragmenten | Hygiëne-owner, reductie, VA, Brett, TCA, refermentatie, drempels en diagnosegrenzen | P1 |
-| `EXP-023` | Zoete, mousserende en versterkte families | `botrytis`, `late-harvest`, `passerillage`, `appassimento`, `vin-de-paille`, traditional-methodfamilie; drie drafts | sterke fragmenten | Familiehubs, restsuikerroutes, tankmethode/carbonatie, fortification en besluit over passito/spätlese | P1 |
+| `EXP-016` | Vinificatiegraaf en kleinste set hubs | 25 actieve concepts, vier drafts en zeven lessons | audit complete | Zeven hubs afgebakend, waarvan drie bestaande owners; tien kernonderwerpen en alle vervolgacties toegewezen in §8 en het auditrapport | voltooid |
+| `EXP-017` | Ontvangst, sortering en mostvoorbereiding | Nieuwe owner `grape-reception-must-preparation`; bestaande `pressing`, rijpheids-/risicohubs en vroege lessons | fragmenten | Ontvangsthub authoren; persmechaniek bij `pressing`; transport, selectie, intact materiaal, sapbehandeling en juridisch begrensde mostcorrecties onderzoeken | volgende |
+| `EXP-018` | Gist, microbiologie en alcoholische vergisting | Bestaande owner `fermentation`; lesson `alcoholic-fermentation` | sterke basis | Dezelfde entity tot systeemhub uitbreiden met gistecologie, voeding, kinetiek en monitoring; geen aparte gisthub | P1 |
+| `EXP-019` | Hoofdroutes, schilcontact en extractie | Nieuwe owner `winemaking-routes`; `maceration`, `extraction`, `pressing`; `carbonic-maceration` draft; route-lesson | sterke basis | Vertakkende routehub; cap management bij `extraction`, contactregime bij `maceration`; carbonische satellite onderzoeken en vullen; rosé/schilvergist wit expliciet vergelijken | P1 |
+| `EXP-020` | Na vergisting, zuurstof en rijping | Bestaande owner `elevage`; `malolactic-fermentation`, `lees-ageing`, `batonnage`, `autolysis`, `oxidation`, `assemblage` | sterke basis | Élevage zelf tot systeemhub uitbreiden, gericht detail bij bestaande satellites houden; timing kan overlappen met vergisting | P1 |
+| `EXP-021` | Stabilisatie, klaring, filtratie en verpakking | Bestaande owner `bottling`; `clarification-and-fining`, `sulfur-dioxide`; cellar-to-bottle-lesson | sterke basis | Botteling uitbreiden met systeemmodel voor stabiliteit, filtratie, gassen en sluitingen; geen extra afwerkingshub; fining en SO₂ bij bestaande owners | P1 |
+| `EXP-022` | Hygiëne, microbiële risico's en fouten | Nieuwe owner `cellar-hygiene-wine-faults`; `oxidation`, `sulfur-dioxide`, `fermentation`, MLF en risicopassages | fragmenten | Preventie en diagnose samenbrengen; reductie, VA, Brett, TCA en hergisting onderzoeken; mechanismeowners blijven behouden | P1 |
+| `EXP-023` | Zoete, mousserende en versterkte families | Nieuwe owner `sweet-sparkling-fortified-wines`; droog-, botrytis- en traditional-methodfamilies; drie drafts | sterke fragmenten | Eén vergelijkende hub; fortification gericht invullen, passito/Spätlese op eigen termscope beoordelen; tank/carbonatie en overige relevante families onderzoeken; vijf NL/EN-linkverschillen reviewen | P1 |
 | `EXP-024` | Wijnsamenstelling als systeem | `acidity`, `tannin`, `methoxypyrazines`, `volatile-thiols`, `sulfur-dioxide` | fragmenten | Volledige compositiekaart en interacties zonder component-aromalijst | P1 |
 | `EXP-025` | Waarneming, balans en flesontwikkeling | Sensorische passages in concepts, grapes en lessons | afwezig | Zintuigen, thresholds, interactie, context, textuur, balans, kwaliteitsoordeel en ontwikkeling | P1 |
 
@@ -200,9 +208,9 @@ Dit cluster is numeriek klein omdat de meeste geplande owners nog ontbreken.
 | `concept.maceration` | actief | Schilcontact in verschillende routes | `EXP-019` |
 | `concept.extraction` | actief | Overdracht en sturing in de kuip | `EXP-019` |
 | `concept.pressing` | actief | Scheiding, timing en fracties | `EXP-017/019` |
-| `concept.carbonic-maceration` | lege draft | Kandidaatsatelliet voor een bijzondere route | `EXP-019` |
+| `concept.carbonic-maceration` | lege draft | Behouden als gericht procesconcept; bronreview en authoring vereist | `EXP-019` |
 | `concept.malolactic-fermentation` | actief | Omzetting, stijl en stabiliteit | `EXP-020` |
-| `concept.elevage` | actief | Overkoepelende opvoeding; grens met nieuwe hub bepalen | `EXP-020` |
+| `concept.elevage` | actief | Bestaande owner wordt zelf de opvoedingshub; geen parallelle rijpingshub | `EXP-020` |
 | `concept.lees-ageing` | actief | Liescontact over vat, tank en fles | `EXP-020` |
 | `concept.batonnage` | actief | Gerichte bewerking tijdens liescontact | `EXP-020` |
 | `concept.autolysis` | actief | Onderliggend gistcelmechanisme | `EXP-020/023` |
@@ -210,7 +218,7 @@ Dit cluster is numeriek klein omdat de meeste geplande owners nog ontbreken.
 | `concept.assemblage` | actief | Partijen samenstellen; visuele proceskans | `EXP-020` |
 | `concept.clarification-and-fining` | actief | Klaring en fining; filtratie nog elders | `EXP-021` |
 | `concept.sulfur-dioxide` | actief | Antioxidatieve en microbiële bescherming; visuele proceskans | `EXP-021/022` |
-| `concept.bottling` | actief | Voorbereiding, zuurstof, sluiting en fles | `EXP-021` |
+| `concept.bottling` | actief | Bestaande owner wordt hub voor bottelvoorbereiding, stabiliteit en verpakking | `EXP-021` |
 
 ### 5.5 Mousserende wijn
 
@@ -231,9 +239,9 @@ Dit cluster is numeriek klein omdat de meeste geplande owners nog ontbreken.
 | `concept.passerillage` | actief | Concentratie door waterverlies | `EXP-023` |
 | `concept.appassimento` | actief | Italiaanse uitvoering en terminologie | `EXP-023` |
 | `concept.vin-de-paille` | actief | Meerdere strowijntradities | `EXP-023` |
-| `concept.passito` | lege draft | Term/entitygrens toetsen tegenover appassimento en passerillage | `EXP-023` |
-| `concept.spatlese` | lege draft | Duitse wettelijke/stilistische term; waarschijnlijk context buiten procesowner | `EXP-023` |
-| `concept.fortification` | lege draft | Ontbrekende hoofdtechniek voor versterkte wijn | `EXP-023` |
+| `concept.passito` | lege draft | Gerichte terminologische kandidaat behouden; geen extra droogmechanismeowner | `EXP-023` |
+| `concept.spatlese` | lege draft | Gerichte juridische/etiketkandidaat behouden; officiële scope onderzoeken | `EXP-023` |
+| `concept.fortification` | lege draft | Behouden als gerichte hoofdtechniek; nog bronnen en volledige uitleg nodig | `EXP-023` |
 
 `concept.botrytis` hoort inhoudelijk ook bij deze familie, maar blijft hierboven
 één keer als bestaande entity geïnventariseerd.
@@ -288,6 +296,14 @@ proza gebruikt, maar `EXP-026` moet beoordelen welke structurele relaties
 inhoudelijk noodzakelijk zijn. Voeg geen relaties toe om alleen een teller te
 verhogen.
 
+Aanvulling EXP-016 (2026-10-03): uitgaande relaties alleen geven geen volledig
+beeld. MLF, dosage en tweede vergisting hebben in de huidige entityinventaris
+respectievelijk acht, drie en drie inkomende geschreven relaties. Hun afgeleide
+verbindingen bestaan dus al; schrijf geen spiegelrelaties. Nieuwe hubkoppelingen
+volgen per authoringticket, met integrale controle in EXP-026. Het auditrapport
+onderscheidt de beperkte vinificatiedeelgraaf van verbindingen via proza en het
+gehele platform.
+
 ### Sources
 
 Alle actieve concepts hebben minimaal één geregistreerde source. `batonnage` en
@@ -317,11 +333,13 @@ mechanisme worden ontworpen en vervolgens in hub, satellite en lesson worden
 hergebruikt. Een nieuwe visual krijgt dus niet automatisch de naam van één
 pagina wanneer zijn teaching question breder is.
 
-## 8. Canonical owners die waarschijnlijk nodig zijn
+## 8. Canonical owners en vinificatiebesluiten
 
-Dit is de dependencylijst voor `EXP-002`, niet de definitieve entitylijst. Het
-authoringcontract moet per regel besluiten tussen hub, conceptentity, sectie of
-registeritem.
+Onderstaande brede inventaris begon als dependencylijst voor `EXP-002`. De
+wijngaardowners zijn inmiddels uitgevoerd volgens §4. EXP-016 heeft de zeven
+vinificatieowners definitief afgebakend voor de volgende authoringrondes; hun
+nieuwe IDs bestaan nog niet als packages. Samenstelling en waarneming volgen
+later hun eigen scopebrief.
 
 | Werknaam | Minimale scope | Eerste consumer | Waarschijnlijke vorm |
 | --- | --- | --- | --- |
@@ -336,15 +354,32 @@ registeritem.
 | Vine nutrition and soil management | Nutriënten en wijngaardvloer | `EXP-013` | Hub met beperkte satellites |
 | Vineyard hazards and health | Weer, ziekte, plagen en stoornissen | `EXP-014` | Hub die bestaande concepts ontsluit |
 | Vineyard systems and sustainability | Praktijken, uitkomsten en adaptatie | `EXP-015` | Hub |
-| From grape reception to must | Ontvangst en voorbereiding | `EXP-017` | Hub of process narrative plus concepts |
-| Yeast and wine microbiology | Organismen, kinetiek en risico | `EXP-018/022` | Concept/hub; grens met fermentation bepalen |
-| Main vinification routes | Gemeenschappelijke stappen en splitsingen | `EXP-019` | Hub |
-| Post-fermentation decisions | MLF, rijping, zuurstof en assemblage | `EXP-020` | Hub |
-| Finishing and packaging | Stabiliteit tot sluiting | `EXP-021` | Hub |
-| Cellar hygiene and faults | Preventie, causale families en diagnose | `EXP-022` | Hub met selectieve satellites |
-| Special wine method families | Zoet, mousserend en versterkt | `EXP-023` | Eén navigatiehub of drie family hubs; beslissen in EXP-002/016 |
+| `concept.grape-reception-must-preparation` (nieuw) | Ontvangst, selectie en mostvoorbereiding; persmechaniek blijft bij `pressing` | `EXP-017` | Systeemhub |
+| `concept.fermentation` (bestaand) | Alcoholische vergisting, gist, voeding en kinetiek; bederfdiagnose bij EXP-022 | `EXP-018` | Bestaande entity uitbreiden tot systeemhub |
+| `concept.winemaking-routes` (nieuw) | Volledige routeoriëntatie en vergelijking wit, rosé, rood en schilvergist wit; mechanismen blijven satellites | `EXP-019` | Systeemhub; geen extra algemene vinificatiehub |
+| `concept.elevage` (bestaand) | Samenhang van MLF, lies, vat, tijd, zuurstof en assemblage; detail bij bestaande concepts | `EXP-020` | Bestaande entity uitbreiden tot systeemhub |
+| `concept.bottling` (bestaand) | Stabiliteit, filtratie, opgeloste gassen, verpakking en sluiting; fining/SO₂ bij eigen owners | `EXP-021` | Bestaande entity uitbreiden tot systeemhub |
+| `concept.cellar-hygiene-wine-faults` (nieuw) | Preventie, foutfamilies en diagnostische grenzen; oxidatiechemie bij `oxidation` | `EXP-022` | Systeemhub; gerichte satellites alleen na entitytoets |
+| `concept.sweet-sparkling-fortified-wines` (nieuw) | Vergelijking restsuiker, mousse en versterking; specialistische methoden bij eigen concepts | `EXP-023` | Eén vergelijkende systeemhub met drie families |
 | Wine composition | Stoffamilies, herkomst en interactie | `EXP-024` | Hub |
 | Sensory perception and development | Waarneming, balans en tijd | `EXP-025` | Hub |
+
+De tien verplichte owners uit EXP-016 blijven `fermentation`, `extraction`,
+`pressing`, `malolactic-fermentation`, `elevage`, `lees-ageing`,
+`clarification-and-fining`, `oxidation`, `sulfur-dioxide` en `bottling`.
+`maceration` bezit het contactregime; `extraction` de overdracht en cap management;
+`autolysis` de celafbraak en `batonnage` de handeling binnen liescontact.
+`sulfur-dioxide` is geen owner voor alle zwavelverbindingen. Bottelvoorbereiding
+en stabiliteit komen bij `bottling`, algemene flesontwikkeling bij EXP-025.
+
+De [audit, §4–7](../editorial/vinification-ownership-audit-2026-10-03.md#4-overlap-en-concrete-vervolgacties)
+legt de bewijsplekken en toewijzing van overlap, bron-/beeldhiaten en lessons
+vast. EXP-023 beoordeelt de vijf EN-only entitytargets bij `disgorgement`,
+`late-harvest`, `second-fermentation` en `vin-de-paille`; EXP-026 controleert de
+uitkomst. Carbonic maceration en fortification blijven gerichte drafts voor
+invulling in EXP-019/023; passito en Spätlese blijven terminologische/juridische
+kandidaten voor expliciete review in EXP-023. Geen draft wordt op basis van deze
+planning actief en geen bestaande ID of route wordt verwijderd.
 
 ## 9. Uitvoeringsvolgorde na deze audit
 
@@ -361,11 +396,11 @@ registeritem.
    `EXP-012` snoei en loofwand, `EXP-013` voeding en vloerbeheer, `EXP-014`
    weerrisico's, ziekten, plagen en fysiologische stoornissen en `EXP-015`
    teeltsystemen, duurzaamheid en adaptatie.
-4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
-   nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
+4. `EXP-016` heeft de vinificatiegraaf geïnventariseerd en zeven systeemhubs
+   afgebakend, met behoud van de bestaande mechanismen, identities en sources.
 
-De visuele pilot en de foundationhubs tot en met `EXP-015` zijn voltooid. De
-volgende uitvoeringstaak is `EXP-016`: de bestaande vinificatiegraaf auditen en
-ordenen langs de productieketen. Fermentatie, extractie, persen, malolactische
-omzetting, élevage, liecontact, klaring, oxidatie, zwavel en botteling krijgen
-daar een expliciete owner en samenhang, vóór de nieuwe authoring van EXP-017–023.
+De volgende uitvoeringstaak is `EXP-017`: de ontvangst- en
+mostvoorbereidingshub authoren en de aansluiting op de bestaande perspagina
+controleren. De [overdracht in de audit](../editorial/vinification-ownership-audit-2026-10-03.md#9-overdracht-aan-exp-017)
+benoemt dependencies, onderzoeksgrenzen en beeldhergebruik. Verdere proza-
+authoring volgt daarna EXP-018–023 in de vastgelegde volgorde.

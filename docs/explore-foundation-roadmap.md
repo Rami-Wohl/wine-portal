@@ -177,7 +177,8 @@ unplanned standalone pages.
 | `EXP-013` | complete | Bilingual vine-nutrition, soil-management and vineyard-floor hub with a six-stage educational plate and two documentary floor-management photographs published and validated |
 | `EXP-014` | complete | Bilingual vineyard-hazards system hub with an integrated risk framework, IPM cycle and reviewed diagnostic plate active and locally validated |
 | `EXP-015` | complete | Bilingual vineyard-systems hub distinguishing practices, certification and measured outcomes, with adaptation, evidence limits and a reviewed relationship diagram locally validated |
-| `EXP-016`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-016` | complete | Audit of 25 active vinification concepts, four drafts and seven lessons; seven hubs scoped, three existing owners reused, overlap and follow-up assigned |
+| `EXP-017`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -461,6 +462,17 @@ article does not turn contested labels into quality rankings.
 
 #### EXP-016 — Audit and reframe the existing vinification graph
 
+**Status:** complete on 2026-10-03. The
+[ownership audit](../editorial/vinification-ownership-audit-2026-10-03.md)
+maps all selected packages, ten required mechanism owners, lessons, sources,
+media and overlap to their next tickets. The maintained decisions live in
+`explore-foundation-coverage.md`, section 8. Seven system hubs suffice:
+`fermentation`, `elevage` and `bottling` will be expanded in place; reception,
+production routes, hygiene/faults and special method families get four new
+owners. Existing identities, routes, factual content and provenance are retained.
+Four draft decisions and five NL/EN link differences have explicit follow-up;
+none is silently marked as published or resolved. Next execution: EXP-017.
+
 **Depends on:** EXP-001–002.
 
 **Work:** map the many active method concepts to the production sequence,
@@ -474,6 +486,11 @@ place in the system.
 
 **Depends on:** EXP-016.
 
+**Owner:** new `concept.grape-reception-must-preparation` system hub. Reuse
+`concept.pressing` for separation mechanics and fractions; review that page's
+early-route scope in this ticket. The complete route comparison belongs to
+EXP-019. The EXP-016 audit, section 9, contains the research handoff.
+
 **Coverage:** harvest condition, transport, sorting, destemming, crushing,
 whole clusters, pressing order, juice handling, protection and corrective must
 treatments with legal context.
@@ -484,6 +501,10 @@ universal line.
 #### EXP-018 — Yeast, microbiology and alcoholic fermentation
 
 **Depends on:** EXP-016–017.
+
+**Owner:** expand `concept.fermentation` into the system hub with a content
+plan. Keep the existing ID and routes; do not create a parallel yeast hub.
+MLF remains separately owned; hygiene and spoilage diagnosis belong to EXP-022.
 
 **Coverage:** yeast ecology, inoculated and spontaneous starts, sugar-to-ethanol
 conversion, temperature, nutrients, kinetics, stuck fermentation, by-products
@@ -498,6 +519,12 @@ later method and lesson pages without repeating its core mechanism.
 
 **Depends on:** EXP-017–018.
 
+**Owner:** new `concept.winemaking-routes` system hub. `maceration` owns contact
+regimes, `extraction` owns transfer and cap management, and `pressing` owns
+separation. Retain `carbonic-maceration` as a focused concept for research and
+publication in this ticket. Reconcile the bounded route examples in the early
+lessons; preserve their introductory learning scope.
+
 **Coverage:** red, white, rosé and orange routes; maceration, cap management,
 pressing decisions, carbonic-family methods and extraction trade-offs.
 
@@ -507,6 +534,11 @@ textually clear, and the draft carbonic-maceration entity has a decision.
 #### EXP-020 — Post-fermentation choices, oxygen and maturation
 
 **Depends on:** EXP-018–019.
+
+**Owner:** expand `concept.elevage` itself into the system hub. Retain MLF,
+lees ageing, bâtonnage, autolysis, oxidation and assemblage as mechanism owners;
+avoid a second maturation hub. Preserve timing overlap, including co-inoculation,
+and review the lesson links to lees and autolysis.
 
 **Coverage:** MLF, lees, vessels, oak, oxygen exposure, topping, racking,
 blending and élevage as a connected decision field.
@@ -518,6 +550,11 @@ interaction without promising a fixed sensory result.
 
 **Depends on:** EXP-020.
 
+**Owner:** expand `concept.bottling` into the preparation-and-packaging system
+hub, including the stability decision and filtration. `clarification-and-fining`
+and `sulfur-dioxide` retain their own mechanisms. Later bottle development
+belongs to EXP-025; no separate finishing hub is needed.
+
 **Coverage:** microbial, tartrate and protein stability; settling, fining,
 filtration, sulfur management, dissolved gases, bottling and closure choices.
 
@@ -527,6 +564,10 @@ pages are linked rather than copied.
 #### EXP-022 — Cellar hygiene, microbial risk and wine faults
 
 **Depends on:** EXP-018–021.
+
+**Owner:** new `concept.cellar-hygiene-wine-faults` system hub for prevention
+and diagnosis. Reuse oxidation, SO₂, fermentation and MLF rather than copying
+their mechanisms. New fault satellites require the normal entity test.
 
 **Coverage:** prevention and diagnosis framework for oxidation, reduction,
 volatile acidity, Brettanomyces, cork taint, refermentation and other central
@@ -538,6 +579,14 @@ aroma checklist as diagnosis.
 #### EXP-023 — Sweet, sparkling and fortified method families
 
 **Depends on:** EXP-017–022.
+
+**Owner:** one new comparative system hub,
+`concept.sweet-sparkling-fortified-wines`, with three clearly distinguished
+families. Retain existing drying and sparkling-method owners. Research and
+complete the `fortification` draft; review `passito` as a wine-term candidate
+and `spatlese` as a legal/label candidate before publication or an explicit
+non-destructive consolidation decision. Review the five EN-only entitytargets
+listed in the EXP-016 audit; EXP-026 verifies their disposition.
 
 **Coverage:** concentrating or retaining sugar, noble rot and drying, arresting
 fermentation, dosage, traditional and tank methods, carbonation, fortification
@@ -575,6 +624,9 @@ distinct and bottle development builds on rather than duplicates oxidation.
 
 **Work:** audit reciprocal relations, contextual links, related-topic groups,
 media records, captions, terminology, NL/EN parity and search discoverability.
+
+**Input:** use the EXP-016 audit's owner/consumer boundaries and verify the
+assigned lesson links and five NL/EN link differences after EXP-017–023.
 
 **Done when:** every foundational concept has an intentional place and the user
 can move from regions and lessons into the foundation without dead ends.
