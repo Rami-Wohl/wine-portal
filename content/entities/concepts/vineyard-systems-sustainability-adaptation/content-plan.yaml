@@ -1,0 +1,328 @@
+schema_version: 2
+package_id: concept.vineyard-systems-sustainability-adaptation
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat onderscheiden praktijk, certificering en gemeten resultaat?
+    layers:
+      foundation:
+        - Scheid teeltsysteem van duurzaamheid en bewijs.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Duurzaamheid omvat milieu, sociale aspecten en economische
+            levensvatbaarheid.
+          status: supported
+          source_refs:
+            - source.oiv-sustainability-principles-2016
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids:
+      - concept.vineyard-hazards-diseases-pests-disorders
+    completeness_questions:
+      - Hoe verschillen conventioneel, geïntegreerd, biologisch, biodynamisch en
+        regeneratief?
+    layers:
+      foundation:
+        - Vergelijk praktijken en standaardgebonden claims.
+      intermediate:
+        - Beoordeel reikwijdte, geldigheid en activiteit van certificering.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: EU biologisch omvat teelt en wijnbereiding; Demeter 2026 stelt eisen aan
+            preparaten; regeneratieve definities uit de review van 2020
+            onderscheiden praktijk en resultaat.
+          status: supported
+          source_refs:
+            - source.ec-organic-production-products
+            - source.demeter-biodynamic-standard-2026
+            - source.newton-regenerative-definitions-2020
+        - claim: SWNZ vereist jaarlijkse gegevens en onafhankelijke audits binnen zijn
+            programma.
+          status: supported
+          source_refs:
+            - source.swnz-certification-handbook-2026
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids:
+      - concept.vine-water-relations
+      - concept.vineyard-soils
+      - concept.vine-nutrition-soil-management-vineyard-floor
+    completeness_questions:
+      - Hoe verbinden bodem, biodiversiteit, middelen, water, koolstof en arbeid
+        elkaar?
+    layers:
+      foundation:
+        - Leg de causale routes en mogelijke afruilen uit.
+      intermediate:
+        - Verbind middelenrisico en toepassingen met veilige arbeid en kosten.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Bodemdekking beïnvloedt bodemprocessen, biodiversiteit en
+            waterconcurrentie.
+          status: supported
+          source_refs:
+            - source.abad-cover-crops-viticulture-soil-2021
+            - source.abad-cover-crops-agronomic-performance-2021
+        - claim: Risico van gewasbescherming vraagt gegevens over product, toepassing en
+            blootstelling.
+          status: supported
+          source_refs:
+            - source.oiv-plant-protection-good-practices-2018
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids:
+      - concept.climate-weather-site-microclimate
+    completeness_questions:
+      - Waarom verschilt dezelfde maatregel tussen percelen en seizoenen?
+    layers:
+      foundation:
+        - Maak klimaat, water, uitgangstoestand en tijd expliciet.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Waterconcurrentie en de uitkomst van begroeiing hangen af van beheer en
+            groeicondities.
+          status: supported
+          source_refs:
+            - source.abad-cover-crops-agronomic-performance-2021
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids:
+      - concept.pruning-training-canopy-crop-load
+      - concept.rootstock
+    completeness_questions:
+      - Hoe kiest en evalueert een teler maatregelen en adaptatie?
+    layers:
+      foundation:
+        - Verbind korte en lange termijn met kosten en risico.
+      intermediate:
+        - Vergelijk aanpassing binnen een seizoen met langjarige
+          investeringskeuzes.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Aanpassing kent verschillende routes via teelttechniek en plantmateriaal.
+          status: supported
+          source_refs:
+            - source.van-leeuwen-climate-adaptation-2017
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Hoe veranderen keurmerken en afwegingen tussen landen en klimaten?
+    layers:
+      foundation:
+        - Vergelijk EU, VS en Nieuw-Zeeland zonder universele standaard te
+          suggereren.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: EU en VS hebben verschillende scopes voor biologische wijn; SWNZ v10
+            volgt zes aandachtsgebieden.
+          status: supported
+          source_refs:
+            - source.ec-organic-production-products
+            - source.usda-organic-alcohol
+            - source.swnz-certification-handbook-2026
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Wat bewijzen een audit, systeemvergelijking en koolstofmeting?
+    layers:
+      foundation:
+        - Maak de reikwijdte van bewijs en onderzoek herkenbaar.
+      intermediate: []
+      advanced:
+        - Begrens de interpretatie van de preparatenproef.
+        - Onderscheid bodemkoolstofvoorraad van de voetafdruk en vergelijk
+          dezelfde grenzen en eenheden.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: De review van Döring onderscheidt biodiversiteitsbevindingen van
+            wijnkwaliteit; de Zwitserse proef van Rienth toetst uitsluitend de
+            extra preparatenbehandeling.
+          status: supported
+          source_refs:
+            - source.doering-organic-biodynamic-review-2019
+            - source.rienth-biodynamic-preparations-2023
+        - claim: Bodemkoolstofvoorraden vragen diepte en dichtheid; productvoetafdrukken
+            vragen systeemgrenzen en gelijke eenheden.
+          status: supported
+          source_refs:
+            - source.fao-soil-carbon-mrv-protocol-2020
+            - source.oiv-ghg-inventory-2015
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids:
+      - concept.berry-development-ripeness
+    completeness_questions:
+      - Hoe leest een wijnliefhebber een duurzaamheidsclaim?
+    layers:
+      foundation:
+        - Volg van concrete praktijk naar aantoonbare gevolgen.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Volg van concrete praktijk naar aantoonbare gevolgen.
+        source_refs:
+          - source.newton-regenerative-definitions-2020
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.climate-weather-site-microclimate
+    names:
+      nl: Klimaat, weer, standplaats en microklimaat
+      en: Climate, weather, site and microclimate
+    slugs:
+      nl: klimaat-weer-standplaats-en-microklimaat
+      en: climate-weather-site-microclimate
+    disposition: link-and-relation
+  - id: concept.vine-water-relations
+    names:
+      nl: Waterrelaties, droogte en irrigatie bij de wijnstok
+      en: Vine water relations, drought and irrigation
+    slugs:
+      nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok
+      en: vine-water-relations-drought-irrigation
+    disposition: link-and-relation
+  - id: concept.vineyard-soils
+    names:
+      nl: Wijngaardbodems
+      en: Vineyard soils
+    slugs:
+      nl: wijngaardbodems
+      en: vineyard-soils
+    disposition: link-and-relation
+  - id: concept.vine-nutrition-soil-management-vineyard-floor
+    names:
+      nl: Voeding van de wijnstok, bodembeheer en wijngaardvloer
+      en: Vine nutrition, soil management and vineyard floor
+    slugs:
+      nl: voeding-wijnstok-bodembeheer-wijngaardvloer
+      en: vine-nutrition-soil-management-vineyard-floor
+    disposition: link-and-relation
+  - id: concept.pruning-training-canopy-crop-load
+    names:
+      nl: Snoei, geleiding, loofwand en gewasbelasting
+      en: Pruning, training, canopy and crop load
+    slugs:
+      nl: snoei-geleiding-loofwand-en-gewasbelasting
+      en: pruning-training-canopy-crop-load
+    disposition: link-and-relation
+  - id: concept.vineyard-hazards-diseases-pests-disorders
+    names:
+      nl: Weerrisico's, ziekten, plagen en stoornissen
+      en: Vineyard hazards, diseases, pests and disorders
+    slugs:
+      nl: weerrisicos-ziekten-plagen-en-stoornissen
+      en: vineyard-hazards-diseases-pests-disorders
+    disposition: link-and-relation
+  - id: concept.rootstock
+    names:
+      nl: Onderstam
+      en: Rootstock
+    slugs:
+      nl: onderstam
+      en: rootstock
+    disposition: link-and-relation
+  - id: concept.berry-development-ripeness
+    names:
+      nl: Besontwikkeling, véraison en rijpheid
+      en: Berry development, veraison and ripeness
+    slugs:
+      nl: besontwikkeling-veraison-en-rijpheid
+      en: berry-development-veraison-ripeness
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

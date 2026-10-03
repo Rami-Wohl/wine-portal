@@ -55,7 +55,7 @@ copy must identify important simplifications and uncertainty. Generated imagery
 is never a source and must not pretend to be a photograph, historical record,
 scientific observation, or geographic evidence.
 
-Prefer reusable visuals without baked-in language. Use HTML/SVG labels or other
+Prefer reusable visuals without baked-in language. Use HTML labels or other
 localizable overlays where practical; otherwise maintain explicit NL and EN
 variants with equivalent meaning and localized alternative text.
 
@@ -74,10 +74,12 @@ small comparative plate over floating symbols, generic icons, vague collage, or
 decorative abstraction. Show enough physical detail to distinguish the specific
 landform, soil sequence, vineyard practice, or process being taught.
 
-Painterly illustrations are raster assets, normally PNG or WebP, and not SVG.
-Reserve SVG for interface icons and genuinely diagrammatic visuals whose value
-depends on scalable geometry, labels, or data—not as a substitute for a rich
-editorial illustration. A horizontal editorial image may default to an
+New educational illustrations and diagrams use PNG raster assets, including
+simple conceptual diagrams. The explicit house-style preference confirmed on
+2026-10-03 is restrained painterly illustration rather than SVG diagrams; use
+only the detail needed to explain the subject. SVG remains suitable for interface
+icons. Existing educational SVGs will be replaced in a separately requested
+illustration review. A horizontal editorial image may default to an
 approximately 16:9 composition, but the content determines the final aspect
 ratio.
 
@@ -121,8 +123,8 @@ caption.
 ### 3.3 Schematic-naturalist educational diagrams
 
 For plant physiology, cellar processes, cycles and causal comparisons, use a
-schematic-naturalist plate when neither a photograph nor a purely geometric
-diagram can teach the relationship clearly. Combine a botanically or materially
+schematic-naturalist plate when a photograph cannot teach the relationship
+clearly. Combine a botanically or materially
 credible watercolor/gouache base with restrained arrows, numbered stages,
 callouts and compact comparison panels. The composition must answer one defined
 teaching question rather than collect loosely related facts.
@@ -142,10 +144,9 @@ localized HTML. Essential knowledge may never exist only inside image pixels.
 Check legibility at narrow width and provide a structured alternative when the
 plate is information-dense.
 
-These plates are normally raster PNG or WebP assets. Use SVG only when the
-teaching value genuinely depends on scalable geometry or localized overlays;
-do not reduce a rich explanatory plate to a basic vector graphic for production
-convenience.
+Create these plates as PNG assets, including when the underlying relationship
+is simple. Keep a restrained illustration for a simple lesson instead of adding
+detail merely to fill space. Localized explanation belongs in the page layer.
 
 Before creating a plate, write a brief naming its teaching question, required
 objects and relations, prohibited implications, acceptable simplifications,

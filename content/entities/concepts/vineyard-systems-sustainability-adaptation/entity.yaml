@@ -1,0 +1,50 @@
+id: concept.vineyard-systems-sustainability-adaptation
+type: concept
+status: active
+canonical_name: Vineyard systems, sustainability and adaptation
+names:
+  nl: Teeltsystemen, duurzaamheid en adaptatie
+  en: Vineyard systems, sustainability and adaptation
+slugs:
+  nl: teeltsystemen-duurzaamheid-en-adaptatie
+  en: vineyard-systems-sustainability-adaptation
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.climate-weather-site-microclimate
+  - type: related_to
+    target: concept.vine-water-relations
+  - type: related_to
+    target: concept.vineyard-soils
+  - type: related_to
+    target: concept.vine-nutrition-soil-management-vineyard-floor
+  - type: related_to
+    target: concept.pruning-training-canopy-crop-load
+  - type: related_to
+    target: concept.vineyard-hazards-diseases-pests-disorders
+  - type: related_to
+    target: concept.rootstock
+  - type: related_to
+    target: concept.berry-development-ripeness
+assertions: []
+source_refs:
+  - source.oiv-sustainability-principles-2016
+  - source.oiv-sustainability-implementation-2020
+  - source.ec-organic-production-products
+  - source.demeter-biodynamic-standard-2026
+  - source.newton-regenerative-definitions-2020
+  - source.doering-organic-biodynamic-review-2019
+  - source.rienth-biodynamic-preparations-2023
+  - source.swnz-certification-handbook-2026
+  - source.usda-organic-alcohol
+  - source.oiv-ghg-inventory-2015
+  - source.fao-soil-carbon-mrv-protocol-2020
+  - source.abad-cover-crops-agronomic-performance-2021
+  - source.abad-cover-crops-viticulture-soil-2021
+  - source.van-leeuwen-climate-adaptation-2017
+  - source.oiv-sustainable-water-viticulture-2018
+  - source.oiv-plant-protection-good-practices-2018
+depth: foundation
+last_reviewed: 2026-10-03

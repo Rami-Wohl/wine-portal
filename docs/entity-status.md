@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 350 entities — 282 active, 68 draft, 0 deprecated.
+**Totaal:** 351 entities — 283 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (282)
+## Actief — publiek vindbaar (283)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -105,6 +105,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.maceration` | Ja | `/concepts/maceration` | 2026-09-16 |
 | [Snoei, geleiding, loofwand en gewasbelasting](../content/entities/concepts/pruning-training-canopy-crop-load/entity.yaml) | Concept | Zelfstandige pagina | `concept.pruning-training-canopy-crop-load` | Ja | `/concepts/pruning-training-canopy-crop-load` | 2026-10-02 |
 | [Tannine](../content/entities/concepts/tannin/entity.yaml) | Concept | Zelfstandige pagina | `concept.tannin` | Ja | `/concepts/tannin` | 2026-09-16 |
+| [Teeltsystemen, duurzaamheid en adaptatie](../content/entities/concepts/vineyard-systems-sustainability-adaptation/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-systems-sustainability-adaptation` | Ja | `/concepts/vineyard-systems-sustainability-adaptation` | 2026-10-03 |
 | [Terroir](../content/entities/concepts/terroir/entity.yaml) | Concept | Zelfstandige pagina | `concept.terroir` | Ja | `/concepts/terroir` | 2026-09-20 |
 | [Traditionele methode](../content/entities/concepts/traditional-method/entity.yaml) | Concept | Zelfstandige pagina | `concept.traditional-method` | Ja | `/concepts/traditional-method` | 2026-09-20 |
 | [Tweede vergisting](../content/entities/concepts/second-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.second-fermentation` | Ja | `/concepts/second-fermentation` | 2026-09-20 |

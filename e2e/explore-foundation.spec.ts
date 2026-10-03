@@ -1,5 +1,73 @@
 import { expect, test } from "@playwright/test";
 
+test("the sustainability hub separates practices, certification and outcomes at each depth", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/vineyard-systems-sustainability-adaptation");
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Teeltsystemen, duurzaamheid en adaptatie" }),
+  ).toBeVisible();
+  await expect(page.locator("#opbouw-en-samenhang li")).toHaveCount(5);
+  const figure = page.locator("#praktijk-controle-resultaat");
+  await figure.scrollIntoViewIfNeeded();
+  const diagram = figure.getByRole("img", { name: /Drie genummerde illustraties/ });
+  await expect(diagram).toBeVisible();
+  await expect
+    .poll(() => diagram.evaluate((image: HTMLImageElement) => image.naturalWidth))
+    .toBeGreaterThan(0);
+  await expect(figure.locator("li")).toHaveCount(3);
+  await expect(page.locator("#certificering-en-scope")).toBeHidden();
+  await page.getByRole("button", { name: "Verdieping", exact: true }).click();
+  await expect(page.locator("#certificering-en-scope")).toBeVisible();
+  await expect(page.locator("#adaptatie-over-meerdere-oogsten")).toBeVisible();
+  await expect(page.locator("#koolstof-en-systeemgrenzen")).toBeHidden();
+  await page.getByRole("button", { name: "Gevorderd", exact: true }).click();
+  await expect(page.locator("#proef-en-bedrijfssysteem")).toBeVisible();
+  await expect(page.locator("#koolstof-en-systeemgrenzen")).toBeVisible();
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    const dimensions = await page.evaluate(() => ({
+      document: document.documentElement.scrollWidth,
+      viewport: document.documentElement.clientWidth,
+    }));
+    expect(dimensions.document).toBeLessThanOrEqual(dimensions.viewport);
+  }
+});
+
+test("sustainability is searchable and its deeper blocks open directly", async ({ page }) => {
+  await page.goto("/search?q=teeltsystemen");
+  const result = page.locator(".search-result-card").filter({
+    has: page.getByRole("heading", {
+      name: "Teeltsystemen, duurzaamheid en adaptatie",
+      exact: true,
+    }),
+  });
+  await expect(result).toHaveAttribute(
+    "href",
+    "/concepts/vineyard-systems-sustainability-adaptation",
+  );
+  await result.click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    "Teeltsystemen, duurzaamheid en adaptatie",
+  );
+  await page.goto(
+    "/concepts/vineyard-systems-sustainability-adaptation#koolstof-en-systeemgrenzen",
+  );
+  await expect(page.locator("#koolstof-en-systeemgrenzen")).toBeVisible();
+  await expect(page.locator("#proef-en-bedrijfssysteem")).toBeVisible();
+});
+
+test("the sustainability explanation remains complete without JavaScript", async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto("/concepts/vineyard-systems-sustainability-adaptation");
+  await expect(page.locator("#koolstof-en-systeemgrenzen")).toBeVisible();
+  await expect(page.locator("#praktijk-controle-resultaat li")).toHaveCount(3);
+  await expect(page.getByRole("button", { name: "Gevorderd", exact: true })).toBeHidden();
+  await context.close();
+});
+
 test("the flowering and fruit-set system publishes its visual, depth layers and satellites", async ({
   page,
 }) => {

@@ -176,7 +176,8 @@ unplanned standalone pages.
 | `EXP-012` | complete | Bilingual pruning, training, canopy and crop-load system hub with one educational plate and three documentary photographs published and validated |
 | `EXP-013` | complete | Bilingual vine-nutrition, soil-management and vineyard-floor hub with a six-stage educational plate and two documentary floor-management photographs published and validated |
 | `EXP-014` | complete | Bilingual vineyard-hazards system hub with an integrated risk framework, IPM cycle and reviewed diagnostic plate active and locally validated |
-| `EXP-015`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-015` | complete | Bilingual vineyard-systems hub distinguishing practices, certification and measured outcomes, with adaptation, evidence limits and a reviewed relationship diagram locally validated |
+| `EXP-016`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -437,6 +438,15 @@ physiological disorders.
 are distinguishable and imagery documents symptoms or mechanisms accurately.
 
 #### EXP-015 — Vineyard systems, sustainability and adaptation
+
+**Status:** complete on 2026-10-03. The bilingual hub compares conventional,
+integrated, organic, biodynamic and regenerative approaches while separating
+practices, certification scope and measured outcomes. It connects soil,
+biodiversity, water, carbon, labour and business viability with adaptation and
+mitigation. EU/US organic wine rules and SWNZ illustrate different scopes;
+advanced blocks cover experimental design and carbon accounting boundaries.
+The [content brief](../editorial/briefs/concept.vineyard-systems-sustainability-adaptation.md)
+records source review, the painterly PNG relationship diagram and local validation.
 
 **Depends on:** EXP-008–014.
 

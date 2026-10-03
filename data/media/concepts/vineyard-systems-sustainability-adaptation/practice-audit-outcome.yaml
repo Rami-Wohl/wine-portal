@@ -1,0 +1,29 @@
+id: media.concept.vineyard-systems-sustainability-adaptation.practice-audit-outcome
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vineyard-systems-sustainability-adaptation/practice-audit-outcome.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 186e5bdeec3e35bff02f3298ee16c715e1b3664eb54e4b4d4504ed72dcab409e
+alt:
+  nl: "Drie genummerde illustraties: een wijnstok met veldnotitieboek bovenaan,
+    documenten met een vergrootglas linksonder en een bodemmonster met meetlat
+    rechtsonder. Pijlen verbinden praktijk met controle en meting; een
+    stippelpijl brengt resultaten terug naar de praktijk."
+  en: "Three numbered illustrations: a vine with a field notebook at the top,
+    documents with a magnifying glass at lower left, and a soil sample with a
+    ruler at lower right. Arrows connect practice to verification and
+    measurement; a dashed arrow returns outcomes to practice."
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-10-03
+changes: Generated with the built-in image tool on 2026-10-03 to replace the
+  geometric SVG at the user’s request. Restrained watercolor/gouache
+  illustration, language-neutral numerals 1–3, two information arrows and one
+  feedback arrow. Original source output retained; full prompt and review
+  recorded in the content brief.

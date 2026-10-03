@@ -141,7 +141,7 @@ Statussen:
 | `EXP-012` | Snoei, training, canopy en crop load | `pruning-training-canopy-crop-load`, met de biologische, fenologische, klimaat-, water- en bodemhubs als dependencies | complete hub | Afzonderlijke ziekten en IPM landen bij EXP-014; brede teeltsystemen en duurzaamheid bij EXP-015; regionale regels bij hun geografische owners | voltooid |
 | `EXP-013` | Voeding, bodembeheer en wijngaardvloer | `vine-nutrition-soil-management-vineyard-floor`, met bodem-, water-, plant-, klimaat-, fenologie-, loofwand- en rijpheidshubs als dependencies | complete hub | Afzonderlijke ziekten en fysiologische stoornissen landen bij EXP-014; certificerings- en duurzaamheidsclaims bij EXP-015; bodemtypen en waterfysiologie blijven bij hun bestaande owners | voltooid |
 | `EXP-014` | Weerrisico's, ziekten, plagen en stoornissen | `vineyard-hazards-diseases-pests-disorders`, met `phylloxera` en `botrytis` als satellites en klimaat-, fenologie-, water-, voeding-, loofwand- en onderstamhubs als dependencies | complete hub | Afzonderlijke pathogenen blijven hub-owned totdat de entitytest zelfstandige satellites rechtvaardigt; teeltsystemen, certificering en brede duurzaamheid landen bij EXP-015 | voltooid |
-| `EXP-015` | Teeltsystemen, duurzaamheid en adaptatie | Incidentele regiopassages | afwezig | Praktijken versus certificering en resultaten; biodiversiteit, water, koolstof, arbeid, veerkracht en adaptatie | P1 |
+| `EXP-015` | Teeltsystemen, duurzaamheid en adaptatie | `vineyard-systems-sustainability-adaptation`, met klimaat-, water-, bodem-, voeding-, loofwand-, risico-, onderstam- en rijpheidsconcepts als dependencies | complete hub | Teeltsystemen, certificeringsscope, resultaatmeting en adaptatie zijn hub-owned; bodem- en plantmechanismen blijven bij hun bestaande owners; kelder- en verpakkingsprocessen volgen bij EXP-016–023 | voltooid |
 | `EXP-016` | Vinificatiegraaf en kleinste set hubs | Veel actieve kelderconcepten en zeven lessons | sterke basis | Canonical procesoverzicht, grensafspraken en expliciete plaats voor ieder bestaand concept | P0 na EXP-002 |
 | `EXP-017` | Ontvangst, sortering en mostvoorbereiding | `pressing`; lessons `grape-as-raw-material` en `grape-to-must` | fragmenten | Oogstconditie, transport, sortering, ontstelen, kneuzen, hele trossen en mostbehandelingen | P1 |
 | `EXP-018` | Gist, microbiologie en alcoholische vergisting | `fermentation`; lesson `alcoholic-fermentation` | sterke basis | Gistecologie, inoculatiekeuze, voeding, kinetiek, monitoring en vastlopende gisting in één owner | P1 |
@@ -358,13 +358,14 @@ registeritem.
    fenologische jaarcyclus, `EXP-006` de reproductieve opbrengstketen,
    `EXP-007` besontwikkeling en het oogstbesluit, `EXP-008` klimaat en
    microklimaat, `EXP-009` waterrelaties, `EXP-010–011` de bodemruggengraat,
-   `EXP-012` snoei en loofwand, `EXP-013` voeding en vloerbeheer en `EXP-014`
-   weerrisico's, ziekten, plagen en fysiologische stoornissen.
+   `EXP-012` snoei en loofwand, `EXP-013` voeding en vloerbeheer, `EXP-014`
+   weerrisico's, ziekten, plagen en fysiologische stoornissen en `EXP-015`
+   teeltsystemen, duurzaamheid en adaptatie.
 4. `EXP-016` mag na `EXP-002` al de bestaande vinificatiegraaf modelleren, maar
    nieuwe proza-authoring volgt de vastgelegde volgorde van de roadmap.
 
-De visuele pilot en de foundationhubs tot en met `EXP-014` zijn voltooid. De
-volgende uitvoeringstaak is `EXP-015`: teeltsystemen, duurzaamheid en adaptatie,
-met een expliciet onderscheid tussen praktijken, certificering en aantoonbare
-uitkomsten. Het risicokader van `EXP-014` ontsluit de bestaande pagina's over
-phylloxera en botrytis zonder ze te dupliceren.
+De visuele pilot en de foundationhubs tot en met `EXP-015` zijn voltooid. De
+volgende uitvoeringstaak is `EXP-016`: de bestaande vinificatiegraaf auditen en
+ordenen langs de productieketen. Fermentatie, extractie, persen, malolactische
+omzetting, élevage, liecontact, klaring, oxidatie, zwavel en botteling krijgen
+daar een expliciete owner en samenhang, vóór de nieuwe authoring van EXP-017–023.
