@@ -1,0 +1,394 @@
+schema_version: 2
+package_id: concept.vineyard-hazards-diseases-pests-disorders
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids:
+      - concept.climate-weather-site-microclimate
+    completeness_questions:
+      - Kan de lezer weerrisico, ziekte, plaag, stoornis, symptoom en schade van elkaar
+        onderscheiden?
+    layers:
+      foundation:
+        - Definieer vier oorzakencategorieën en het verschil tussen oorzaak en symptoom.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Vineyard hazard and plant-health terminology.
+        source_refs:
+          - source.oiv-plant-protection-good-practices-2018
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids:
+      - concept.grapevine-phenology
+      - concept.vine-water-relations
+      - concept.vine-nutrition-soil-management-vineyard-floor
+    completeness_questions:
+      - Zijn waardplant, veroorzaker, omgeving, tijd, vector en schadepad als samenhangend systeem
+        behandeld?
+    layers:
+      foundation:
+        - Verbind plant
+        - oorzaak
+        - omstandigheden
+        - ontwikkelingsfase en verspreiding.
+      intermediate:
+        - Werk ziektecyclus, symptoomvertraging en vectoren uit.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Disease cycles
+          - vectors and interacting vineyard conditions.
+        source_refs:
+          - source.cornell-grape-powdery-mildew-2025
+      specific_claims:
+        - claim:
+            "Vectorrollen onderscheiden: Xylella via bepaalde cicaden en bladrol via bepaalde wol- en
+            schildluizen."
+          status: supported
+          source_refs:
+            - source.uc-ipm-pierces-disease
+            - source.uc-ipm-grape-virus-diseases
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids:
+      - concept.phylloxera
+      - concept.botrytis
+    completeness_questions:
+      - Zijn directe weersschade, infectie, vraat, overdracht en fysiologische ontregeling
+        mechanistisch onderscheiden?
+    layers:
+      foundation:
+        - Volg de hoofdroutes van oorzaak naar schade.
+      intermediate:
+        - Vergelijk de grote ziekte- en plaaggroepen.
+      advanced:
+        - Behandel chronische aantasting
+        - latente infectie en resistentieselectie.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Abiotic injury
+          - infection
+          - feeding
+          - vector transmission and physiological disruption.
+        source_refs:
+          - source.bernardo-grapevine-abiotic-stress-2018
+          - source.cornell-grapes-101-downy-mildew-2021
+          - source.uc-ipm-pierces-disease
+      specific_claims:
+        - claim:
+            Specifieke bronnen voor virusoverdracht, infectie via snoeiwonden en overwintering in
+            aangetaste trossen.
+          status: supported
+          source_refs:
+            - source.uc-ipm-grape-virus-diseases
+            - source.uc-ipm-grape-eutypa-dieback
+            - source.umn-diseased-grape-clusters
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids:
+      - concept.climate-weather-site-microclimate
+      - concept.grapevine-phenology
+    completeness_questions:
+      - Zijn vorst, hagel, hitte, zonnebrand, droogte en waterverzadiging naast hoofdziekten,
+        virussen en plagen herkenbaar geplaatst?
+    layers:
+      foundation:
+        - Geef een wereldwijd bruikbaar register van hoofdrisico's.
+      intermediate:
+        - Leg uit waarom timing en ruimtelijk patroon diagnostische informatie geven.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Weather injury
+          - fungal and oomycete diseases
+          - viruses
+          - bacteria
+          - insects and disorders.
+        source_refs:
+          - source.bernardo-grapevine-abiotic-stress-2018
+          - source.gambetta-grape-sunburn-review-2021
+          - source.cornell-grape-powdery-mildew-2025
+          - source.uc-ipm-pierces-disease
+      specific_claims:
+        - claim: Waterverzadiging onderbouwen via zuurstofbeperking in de wortelzone.
+          status: supported
+          source_refs:
+            - source.awri-waterlogged-vineyards
+        - claim: Vorstgevoeligheid en bescherming relateren aan ontwikkelingsfase en vorsttype.
+          status: supported
+          source_refs:
+            - source.uga-vineyard-frost-protection
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids:
+      - concept.pruning-training-canopy-crop-load
+      - concept.rootstock
+    completeness_questions:
+      - Is geïntegreerde beheersing een cyclus van preventie, monitoring, diagnose, interventie en
+        evaluatie?
+      - Zijn effectiviteit, resistentie, mens, milieu, arbeid en regelgeving als afwegingen aanwezig?
+    layers:
+      foundation:
+        - Introduceer IPM en de diagnoseketen vóór ingrijpen.
+      intermediate:
+        - Werk cultuurmaatregelen
+        - timing
+        - drempels en selectieve opties uit.
+      advanced:
+        - Behandel resistentiemanagement en meerjarige sanering.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Integrated pest management and plant-protection trade-offs.
+        source_refs: []
+      specific_claims:
+        - claim: Maatregelen bij vorst, motten en houtziekten aan doel en omstandigheden binden.
+          status: supported
+          source_refs:
+            - source.uga-vineyard-frost-protection
+            - source.uc-ipm-european-grapevine-moth
+            - source.uc-ipm-grape-eutypa-dieback
+        - claim: Resistentiemanagement onderscheiden van werkzaamheid tegen het gekozen organisme.
+          status: supported
+          source_refs:
+            - source.oiv-plant-protection-good-practices-2018
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids:
+      - concept.phylloxera
+      - concept.botrytis
+    completeness_questions:
+      - Laat de pagina zien dat risicoprofielen per klimaatzone, jaar en quarantainegebied
+        verschillen?
+    layers:
+      foundation:
+        - Vergelijk vochtige
+        - warme
+        - droge
+        - koele en quarantainecontexten zonder rangorde.
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Global variation in grapevine hazard profiles.
+        source_refs:
+          - source.bernardo-grapevine-abiotic-stress-2018
+          - source.vaczy-noble-grey-rot-2024
+      specific_claims:
+        - claim:
+            Historische phylloxeracontext en Australische biosecurity onderscheiden van universele
+            wijnbouwpraktijk.
+          status: supported
+          source_refs:
+            - source.inrae-ephytia-phylloxera
+            - source.awri-phylloxera
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids:
+      - concept.vine-nutrition-soil-management-vineyard-floor
+    completeness_questions:
+      - Is duidelijk dat een foto of symptoom geen sluitende diagnose vormt?
+      - Zijn lokale modellen, labtests en veranderende toelatingen begrensd?
+    layers:
+      foundation:
+        - Combineer symptoom
+        - patroon
+        - historie
+        - weer
+        - organisme en zo nodig laboratoriumbewijs.
+      intermediate:
+        - Bespreek onzekerheid en lookalikes.
+      advanced:
+        - Begrens modellen en causaliteitsclaims.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Diagnostic uncertainty and evidence limits.
+        source_refs:
+          - source.oiv-plant-protection-good-practices-2018
+      specific_claims:
+        - claim: Lookalikes en geschikte monstername begrenzen wat symptomen en tests aantonen.
+          status: supported
+          source_refs:
+            - source.uc-ipm-pierces-disease
+            - source.uc-ipm-grape-virus-diseases
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids:
+      - concept.berry-development-ripeness
+      - concept.botrytis
+    completeness_questions:
+      - Kan de lezer plant- en druifeffecten benoemen zonder schade rechtstreeks naar wijnkwaliteit
+        te vertalen?
+    layers:
+      foundation:
+        - Verbind blad, hout, wortel, opbrengst en vruchtintegriteit aan mogelijke gevolgen voor de
+          kelder.
+      intermediate:
+        - Leg selectie
+        - sortering en veranderde rijping uit.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Consequences for vine function
+          - fruit integrity and harvest decisions.
+        source_refs:
+          - source.bernardo-grapevine-abiotic-stress-2018
+          - source.vaczy-noble-grey-rot-2024
+      specific_claims:
+        - claim: Selectie van aangetaste trossen verbindt wijngaardgezondheid met oogst en kelder.
+          status: supported
+          source_refs:
+            - source.umn-diseased-grape-clusters
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.climate-weather-site-microclimate
+    names:
+      nl: Klimaat, weer, standplaats en microklimaat
+      en: Climate, weather, site and microclimate
+    slugs:
+      nl: klimaat-weer-standplaats-en-microklimaat
+      en: climate-weather-site-microclimate
+    disposition: link-and-relation
+  - id: concept.grapevine-phenology
+    names:
+      nl: Jaarcyclus en fenologie van de wijnstok
+      en: Grapevine phenology and annual cycle
+    slugs:
+      nl: jaarcyclus-en-fenologie-van-de-wijnstok
+      en: grapevine-phenology
+    disposition: link-and-relation
+  - id: concept.vine-water-relations
+    names:
+      nl: Waterrelaties, droogte en irrigatie bij de wijnstok
+      en: Vine water relations, drought and irrigation
+    slugs:
+      nl: waterrelaties-droogte-en-irrigatie-bij-de-wijnstok
+      en: vine-water-relations-drought-irrigation
+    disposition: link-and-relation
+  - id: concept.vine-nutrition-soil-management-vineyard-floor
+    names:
+      nl: Voeding van de wijnstok, bodembeheer en wijngaardvloer
+      en: Vine nutrition, soil management and vineyard floor
+    slugs:
+      nl: voeding-wijnstok-bodembeheer-wijngaardvloer
+      en: vine-nutrition-soil-management-vineyard-floor
+    disposition: link-and-relation
+  - id: concept.pruning-training-canopy-crop-load
+    names:
+      nl: Snoei, geleiding, loofwand en gewasbelasting
+      en: Pruning, training, canopy and crop load
+    slugs:
+      nl: snoei-geleiding-loofwand-en-gewasbelasting
+      en: pruning-training-canopy-crop-load
+    disposition: link-and-relation
+  - id: concept.phylloxera
+    names:
+      nl: Druifluis (phylloxera)
+      en: Phylloxera
+    slugs:
+      nl: druifluis-phylloxera
+      en: phylloxera
+    disposition: link-and-relation
+  - id: concept.botrytis
+    names:
+      nl: Botrytis en edele rotting
+      en: Botrytis and noble rot
+    slugs:
+      nl: botrytis-edele-rotting
+      en: botrytis-noble-rot
+    disposition: link-and-relation
+  - id: concept.rootstock
+    names:
+      nl: Onderstam
+      en: Rootstock
+    slugs:
+      nl: onderstam
+      en: rootstock
+    disposition: link-and-relation
+  - id: concept.coulure
+    names:
+      nl: Coulure
+      en: Coulure
+    slugs:
+      nl: coulure
+      en: coulure
+    disposition: link-and-relation
+  - id: concept.millerandage
+    names:
+      nl: Millerandage
+      en: Millerandage
+    slugs:
+      nl: millerandage
+      en: millerandage
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

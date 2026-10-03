@@ -1,0 +1,43 @@
+id: concept.vineyard-hazards-diseases-pests-disorders
+type: concept
+status: active
+canonical_name: Vineyard hazards, diseases, pests and disorders
+names:
+  nl: Weerrisico's, ziekten, plagen en stoornissen
+  en: Vineyard hazards, diseases, pests and disorders
+slugs:
+  nl: weerrisicos-ziekten-plagen-en-stoornissen
+  en: vineyard-hazards-diseases-pests-disorders
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - { type: related_to, target: concept.climate-weather-site-microclimate }
+  - { type: related_to, target: concept.grapevine-phenology }
+  - { type: related_to, target: concept.vine-water-relations }
+  - { type: related_to, target: concept.vine-nutrition-soil-management-vineyard-floor }
+  - { type: related_to, target: concept.pruning-training-canopy-crop-load }
+  - { type: related_to, target: concept.phylloxera }
+  - { type: related_to, target: concept.botrytis }
+  - { type: related_to, target: concept.rootstock }
+  - { type: related_to, target: concept.coulure }
+  - { type: related_to, target: concept.millerandage }
+assertions: []
+source_refs:
+  - source.oiv-plant-protection-good-practices-2018
+  - source.cornell-grape-powdery-mildew-2025
+  - source.cornell-grapes-101-downy-mildew-2021
+  - source.uc-ipm-pierces-disease
+  - source.bernardo-grapevine-abiotic-stress-2018
+  - source.gambetta-grape-sunburn-review-2021
+  - source.inrae-ephytia-phylloxera
+  - source.vaczy-noble-grey-rot-2024
+  - source.uc-ipm-grape-virus-diseases
+  - source.uc-ipm-grape-eutypa-dieback
+  - source.uga-vineyard-frost-protection
+  - source.umn-diseased-grape-clusters
+  - source.uc-ipm-european-grapevine-moth
+  - source.awri-waterlogged-vineyards
+  - source.awri-phylloxera
+depth: foundation
+last_reviewed: 2026-10-02

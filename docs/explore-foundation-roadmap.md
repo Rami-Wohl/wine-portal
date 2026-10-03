@@ -1,7 +1,7 @@
 # Explore foundation roadmap
 
 Status: active execution roadmap  
-Last reviewed: 2026-09-25
+Last reviewed: 2026-10-03
 
 This roadmap turns Oenocademy's existing concept collection into a systematic,
 globally useful foundation for viticulture, vinification and wine science. It
@@ -175,7 +175,8 @@ unplanned standalone pages.
 | `EXP-011` | complete | Bilingual vineyard-soils hub, eighteen-entry A–Z directory, two focused satellites, four documentary photographs, ten rock-reference photographs and two language-neutral educational diagrams published and validated |
 | `EXP-012` | complete | Bilingual pruning, training, canopy and crop-load system hub with one educational plate and three documentary photographs published and validated |
 | `EXP-013` | complete | Bilingual vine-nutrition, soil-management and vineyard-floor hub with a six-stage educational plate and two documentary floor-management photographs published and validated |
-| `EXP-014`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-014` | complete | Bilingual vineyard-hazards system hub with an integrated risk framework, IPM cycle and reviewed diagnostic plate active and locally validated |
+| `EXP-015`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -416,6 +417,15 @@ matter, microbiology, tillage, cover crops, compaction, erosion and amendments.
 unsupported microbiome and flavour claims.
 
 #### EXP-014 — Weather hazards, diseases, pests and disorders
+
+**Status:** complete on 2026-10-03. The bilingual system hub distinguishes
+abiotic hazards, infectious diseases, animal pests and physiological disorders;
+integrates the existing phylloxera and botrytis satellites; and follows vineyard
+health from symptom and spatial pattern through diagnosis, proportionate action
+and reassessment. A language-neutral five-part plate was regenerated after the
+first draft combined too many symptoms on single vines. Final source review,
+content validation, automated checks and mobile/desktop browser review are
+recorded in the [content brief](../editorial/briefs/concept.vineyard-hazards-diseases-pests-disorders.md).
 
 **Depends on:** EXP-005–013.
 

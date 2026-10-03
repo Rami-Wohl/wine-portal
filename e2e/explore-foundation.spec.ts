@@ -343,3 +343,55 @@ test("the nutrition and vineyard-floor hub keeps its cycle, field contrasts and 
   }));
   expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
 });
+
+test("the vineyard-hazards hub keeps causal classes, diagnosis and progressive depth legible", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/concepts/vineyard-hazards-diseases-pests-disorders");
+
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Weerrisico's, ziekten, plagen en stoornissen",
+    }),
+  ).toBeVisible();
+
+  const framework = page.locator("#risicokader-in-beeld");
+  await framework.scrollIntoViewIfNeeded();
+  const diagnosticImage = framework.getByRole("img", { name: /vijf genummerde beelden/i });
+  await expect(diagnosticImage).toBeVisible();
+  await expect
+    .poll(() => diagnosticImage.evaluate((image: HTMLImageElement) => image.naturalWidth))
+    .toBeGreaterThan(0);
+  await expect(framework.locator("li")).toHaveCount(5);
+
+  await expect(page.locator("#van-besmetting-tot-uitbraak")).toBeHidden();
+  await page.getByRole("button", { name: "Verdieping" }).click();
+  await expect(page.locator("#van-besmetting-tot-uitbraak")).toBeVisible();
+  await expect(page.locator("#chronische-en-onzichtbare-schade")).toBeHidden();
+
+  await page.getByRole("button", { name: "Gevorderd" }).click();
+  await expect(page.locator("#chronische-en-onzichtbare-schade")).toBeVisible();
+  await expect(page.locator("#resistentie-en-meerjarige-sanering")).toBeVisible();
+  await expect(page.locator("#onzekerheid-hoort-bij-de-diagnose")).toBeVisible();
+
+  const mobileDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(mobileDimensions.documentWidth).toBeLessThanOrEqual(mobileDimensions.viewportWidth);
+
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await expect(framework).toBeVisible();
+  await diagnosticImage.scrollIntoViewIfNeeded();
+  await expect(diagnosticImage).toHaveJSProperty("complete", true);
+  await expect
+    .poll(() => diagnosticImage.evaluate((image: HTMLImageElement) => image.naturalWidth))
+    .toBeGreaterThan(0);
+  const desktopDimensions = await page.evaluate(() => ({
+    documentWidth: document.documentElement.scrollWidth,
+    viewportWidth: document.documentElement.clientWidth,
+  }));
+  expect(desktopDimensions.documentWidth).toBeLessThanOrEqual(desktopDimensions.viewportWidth);
+});

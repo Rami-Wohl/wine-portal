@@ -1,0 +1,19 @@
+id: media.concept.vineyard-hazards-diseases-pests-disorders.diagnostic-framework
+kind: diagram
+role: educational
+status: active
+storage_key: concepts/vineyard-hazards-diseases-pests-disorders/diagnostic-framework.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 373af334c90a5dfb51a3376251d158053e9a81d3dbb0aa13b70abc75de351bf5
+alt:
+  nl: Vijf genummerde beelden onderscheiden vorstschade, schimmelaantasting, een insectvector, waterverzadiging en de cyclus van inspectie, monstername, identificatie, ingreep en hercontrole.
+  en: Five numbered scenes distinguish frost injury, fungal infection, an insect vector, waterlogging, and the cycle of inspection, sampling, identification, intervention and reassessment.
+rights:
+  status: generated
+  creator: OpenAI image generation model, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-10-02
+changes: "Generated in built-in image mode from a reviewed factual brief. Language-neutral markers 1–5 only. The first draft was rejected because it combined too many symptoms on single vines; this revision separates one causal example per panel and keeps diagnosis and reassessment explicit."
