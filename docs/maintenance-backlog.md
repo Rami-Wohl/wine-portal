@@ -26,14 +26,15 @@ Peildatum: 2026-10-04.
 | Status | Aantal | Acties |
 | --- | ---: | --- |
 | Open | 6 | `MNT-046`, `MNT-048`, `MNT-049`, `MNT-051` t/m `MNT-053` |
-| Gepland | 2 | `MNT-045`, `MNT-050` |
+| Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 41 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-044`, `MNT-047`, `MNT-054` |
+| Afgerond | 42 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-045`, `MNT-047`, `MNT-054` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
-taken. Het eerstvolgende uitvoerbare werk is het taalcontract (`MNT-045`).
+taken. Het taalcontract (`MNT-045`) is vastgelegd; het eerstvolgende uitvoerbare
+werk is ontvangst, selectie en mostvoorbereiding (`EXP-017`).
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
@@ -78,26 +79,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   volledige audit daalt van zes naar vijf dependencyvermeldingen. De
   incompatibele downgrade en een ongeteste major-upgrade zijn niet toegepast.
 
-### `MNT-045` — Contract voor taalkeuze, URLs en publicatie vastleggen
-
-- **Status:** gepland
-- **Prioriteit:** hoog
-- **Scope:** taalkeuze, publieke routes, SEO en navigatie
-- **Categorie:** product-ux, knowledge-data, engineering
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** NL/EN-content bestaat, maar routes, interface, metadata en
-  navigatie presenteren Nederlands. Tweetalige authoring is nog geen tweetalig
-  product.
-- **Klaar wanneer:** een kort besluit locale-URLs, taalkeuze, legacyredirects,
-  canonical/hreflang/sitemap, zoeken, anchors en pathcontext vastlegt. Aanbevolen
-  uitgangspunt ter toetsing: behoud bestaande NL-URLs, voeg `/en` toe en behoud
-  stabiele Engelse entityslugs; geen stille contentfallback. Toets dit aan de
-  geïnstalleerde Next.js-documentatie voordat het routecontract verandert.
-- **Planning:** direct na `MNT-047`, vóór verdere route-uitbreidingen; de huidige
-  publieke URLs veranderen pas in `MNT-046` na compatibiliteitscontrole.
-- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
-  volgt de overkoepelende productplanning.
-
 ### `MNT-046` — Volledige NL/EN-presentatie en taalwisselaar bouwen
 
 - **Status:** open
@@ -105,12 +86,19 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 - **Scope:** publieke NL/EN-interface en contentpresentatie
 - **Categorie:** product-ux, accessibility, engineering, testing
 - **Herkomst:** `QCR-2026-10-04-01`
-- **Afhankelijkheid:** `MNT-045`
+- **Afhankelijkheid:** `MNT-045` (afgerond); volg het
+  [taal- en routingcontract](localization-routing.md).
 - **Klaar wanneer:** een toegankelijke taalwisselaar de equivalente entity,
   narrative of Learnpagina opent; interface, captions, alttekst, zoekresultaten,
   foutmeldingen en metadata de gekozen taal volgen. Anchors, query/pathcontext,
   browsergeschiedenis, redirects en gedeelde voortgang op stable IDs blijven
   correct. Beide talen zijn op mobiel/desktop en zonder JavaScript getest.
+- **Uitvoeringsvolgorde:** bewijs eerst de gedeelde locale-routeboom, publieke
+  NL-rewrite en routehelpers met clientnavigatie en metadata. Lokaliseer daarna
+  alle UI-/contentlinks, zoeken en Learn; controleer ook ingebakken beeldtekst.
+  Rond af met de contractmatrix in beide talen, inclusief no-JS, embedded
+  producenten en tijdelijke voortgang bij geblokkeerde storage. Het contract
+  specificeert de fragmentbeperking van een taalwissel zonder JavaScript.
 - **Planning:** aanbevolen vóór `EXP-020`, zodat Engelse presentatie vóór de
   laatste grote contentfase echt gebruikt en gereviewd wordt; vertalingen zijn
   expliciet gereviewd, geen runtime-machinevertaling.
@@ -362,6 +350,34 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-045` — Contract voor taalkeuze, URLs en publicatie vastleggen
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Scope:** taalkeuze, publieke routes, SEO en navigatie
+- **Categorie:** product-ux, knowledge-data, engineering
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** NL/EN-content bestaat, maar routes, interface, metadata en
+  navigatie presenteren Nederlands. Tweetalige authoring is nog geen tweetalig
+  product.
+- **Klaar wanneer:** een kort besluit locale-URLs, taalkeuze, legacyredirects,
+  canonical/hreflang/sitemap, zoeken, anchors en pathcontext vastlegt. Aanbevolen
+  uitgangspunt ter toetsing: behoud bestaande NL-URLs, voeg `/en` toe en behoud
+  stabiele Engelse entityslugs; geen stille contentfallback. Toets dit aan de
+  geïnstalleerde Next.js-documentatie voordat het routecontract verandert.
+- **Planning:** direct na `MNT-047`, vóór verdere route-uitbreidingen; de huidige
+  publieke URLs veranderen pas in `MNT-046` na compatibiliteitscontrole.
+- **Log:** 2026-10-04 — route-, zoek-, renderer-, metadata- en Learn-contracten
+  geïnventariseerd en aan de geïnstalleerde Next.js 16.3.8-documentatie getoetst.
+  [Het taalcontract](localization-routing.md) legt NL zonder prefix, EN onder
+  `/en`, aliasgedrag, taalwisselen, anchors, querycontext, gedeelde voortgang, SEO
+  en publicatie vast. De acceptatiematrix en implementatievolgorde horen bij
+  `MNT-046`; deze beslissing wijzigt nog geen runtimegedrag.
+- **Validatie:** `npm run format` en `npm run check` geslaagd op Node 24.21.0
+  (133 tests, typecheck, lint en relationele audit); lokale documentatielinks
+  gecontroleerd. Geen nieuwe E2E-run: alleen documentatie is gewijzigd; de
+  taalwisselaar wordt met de contractmatrix in `MNT-046` getest.
 
 ### `MNT-047` — Ondersteunde Node-versie en automatische kwaliteitscontrole
 

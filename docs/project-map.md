@@ -79,7 +79,9 @@ interface en contentpresentatie zijn uitsluitend Nederlands. Engelse presentatie
 bewuste volgende productstap, geen al werkende feature of automatische fallback.
 Publieke entity- en narrativeroutes gebruiken wel consequent de Engelse slug als
 taalonafhankelijke canonieke URL. Eventueel afwijkende Nederlandse slugs blijven
-als permanente legacy-redirect bestaan.
+als permanente legacy-redirect bestaan. Het besloten
+[taal- en URL-contract](localization-routing.md) beschrijft de uitbreiding onder
+`/en` en de acceptatiecriteria voor `MNT-046`; deze uitbreiding is nog niet gebouwd.
 
 ## Dagelijkse contentworkflow
 
@@ -158,6 +160,8 @@ Markdownformatter worden herschreven.
   maar precieze redactie.
 - Gebruik `knowledge-architecture.md` wanneer het model, relaties, routing,
   indexing of canonical ownership verandert.
+- Gebruik [localization-routing.md](localization-routing.md) bij taalkeuze,
+  publieke routing, metadata, zoeken of de implementatie van `MNT-046`.
 - Gebruik `geography-policy.md` voor plaatsen, coördinaten, grenzen en Atlas.
 - Gebruik `visual-language.md` voor UI, responsive gedrag en visuals.
 - Gebruik `quality-assurance.md` voor het uitvoeren en registreren van periodieke

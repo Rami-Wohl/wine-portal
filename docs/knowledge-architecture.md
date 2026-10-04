@@ -242,7 +242,10 @@ routecomponent; de Nederlandse slug blijft een gelokaliseerde legacy-alias die
 permanent naar die canonieke route verwijst. Dit houdt URLs voorspelbaar zonder
 bestaande bookmarks of externe links te breken. De keuze zegt niets over de
 weergavetaal: de huidige publieke interface en contentpresentatie blijven
-Nederlands.
+Nederlands. De toekomstige NL/EN-presentatie volgt het
+[taal- en URL-contract](localization-routing.md): NL behoudt deze routes, EN
+krijgt `/en`, beide met dezelfde Engelse slug. Het contract is besloten in
+`MNT-045`; de runtime-implementatie volgt in `MNT-046`.
 
 De pipeline valideert slugbotsingen per locale én over alle route-aliases binnen
 hetzelfde entity- of narrativetype. De `localized_slugs`-index bewaart beide

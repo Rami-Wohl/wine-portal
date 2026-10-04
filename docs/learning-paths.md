@@ -279,6 +279,12 @@ worden nergens als dubbele authored of progressdata opgeslagen.
 - de queryparameter maakt geen tweede contentroute en wordt niet opgenomen in
   canonical metadata.
 
+De toekomstige Engelse presentatie volgt het
+[taal- en URL-contract](localization-routing.md): `/en` vóór dezelfde routes,
+gedeelde path-/step-ID's en voortgang, en behoud van geldige lessoncontext bij
+taalwisselen. Dit is het implementatiecontract voor `MNT-046`, nog geen
+beschrijving van een werkende taalwisselaar.
+
 ## 9. Anonieme voortgang en vervangbare opslaggrens
 
 `DEC-LRN-012` en `DEC-LRN-013` zijn op 2026-09-23 goedgekeurd. De anonieme MVP
