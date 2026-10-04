@@ -14,6 +14,8 @@ Na de oogst moet de kelder bepalen welke druivendelen samen verdergaan. Sorteren
 In de kelder worden herkomst, temperatuur en toestand van het fruit beoordeeld. Trossen, bladeren, onrijpe of aangetaste bessen en ander materiaal kunnen aan een sorteertafel of met mechanische hulpmiddelen van de gewenste druiven worden gescheiden. Dat maakt de partij niet uniform, maar geeft de wijnmaker een beter beheersbaar vertrekpunt.
 
 Snelheid en zachtheid zijn belangrijk. Beschadigde bessen geven sap vrij; vanaf dat moment kunnen zuurstof en micro-organismen gemakkelijker inwerken. Koel houden, schoon werken en onnodig wachten vermijden beschermen de grondstof voordat de bedoelde [[concept.fermentation|alcoholische vergisting]] begint.
+
+Meer uitleg over materiaalkeuzes, mostbezinking en correcties staat bij [[concept.grape-reception-must-preparation|ontvangst, selectie en mostvoorbereiding]].
 :::
 
 :::section{#ontstelen-en-kneuzen depth="foundation" source_refs="source.oiv-grape-preparation"}
@@ -24,10 +26,10 @@ Snelheid en zachtheid zijn belangrijk. Beschadigde bessen geven sap vrij; vanaf 
 **Kneuzen** breekt de schil van een deel van de bessen zodat sap vrijkomt. Het is iets anders dan malen: pitten horen niet te worden verbrijzeld. Sommige routes vragen slechts licht kneuzen; bij andere blijven veel bessen of hele trossen intact. De keuze bepaalt hoeveel sap, schil, pit en steel elkaar vroeg ontmoeten.
 :::
 
-:::section{#persen-en-most depth="foundation" source_refs="source.oiv-pressing"}
+:::section{#persen-en-most depth="foundation" source_refs="source.oiv-pressing source.ifv-rose-vinification-itineraires-11"}
 ## Persen maakt most vrij
 
-Bij [[concept.pressing|persen]] oefent een wijnpers geleidelijk druk uit om vloeistof van vaste druivendelen te scheiden. Vóór vergisting heet die vloeistof **most**. Voor veel witte wijn gebeurt dit vroeg: de most gaat naar de gisttank, terwijl schillen en pitten achterblijven. Bij rosé volgt persen meestal na een korte periode van contact met blauwe schillen.
+Bij [[concept.pressing|persen]] oefent een wijnpers geleidelijk druk uit om vloeistof van vaste druivendelen te scheiden. Vóór vergisting heet die vloeistof **most**. Voor veel witte wijn gebeurt dit vroeg: de most gaat naar de gisttank, terwijl schillen en pitten achterblijven. Voor rosé kan de maker blauwe druiven direct persen of eerst kort [[concept.maceration|laten inweken]]. [@source.ifv-rose-vinification-itineraires-11; p. 14]
 
 Rode wijn neemt vaak de omgekeerde route. De gekneusde of hele blauwe bessen vergisten met hun schillen; pas daarna worden vrij aflopende wijn en perswijn van de vaste massa gescheiden. [@source.oiv-pressing]
 :::
@@ -43,12 +45,12 @@ Een deel van sap of wijn loopt zonder sterke druk uit de druivenmassa. Daarna le
 De wijnmaker zoekt geen maximale druk als doel op zichzelf. Voorzichtig en progressief persen helpt vloeistof winnen zonder pitten en vaste weefsels onnodig te beschadigen. Hoeveel perssap of perswijn wordt gebruikt, blijft een keuze binnen de stijl en kwaliteit van de partij.
 :::
 
-:::comparison{#drie-vertrekpunten depth="foundation"}
+:::comparison{#drie-vertrekpunten depth="foundation" source_refs="source.oiv-pressing source.ifv-rose-vinification-itineraires-11"}
 ## Waar de drie hoofdroutes uiteenlopen
 
 | Witte wijn | Rosé | Rode wijn |
 | --- | --- | --- |
-| Meestal vroeg persen | Kort contact met blauwe schillen | Vergisting met blauwe schillen |
+| Meestal vroeg persen | Direct persen of korte schilinweking | Vergisting met blauwe schillen |
 | Most vergist zonder schillen | Roze most vergist zonder schillen | Persen volgt meestal na de schilvergisting |
 
 Dit zijn hoofdpatronen, geen uitputtende recepten. Hele-trospersing, schilinweking voor wit en andere technieken kunnen bewust van het patroon afwijken.

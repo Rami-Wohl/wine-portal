@@ -151,8 +151,8 @@ Statussen:
 | `EXP-014` | Weerrisico's, ziekten, plagen en stoornissen | `vineyard-hazards-diseases-pests-disorders`, met `phylloxera` en `botrytis` als satellites en klimaat-, fenologie-, water-, voeding-, loofwand- en onderstamhubs als dependencies | complete hub | Afzonderlijke pathogenen blijven hub-owned totdat de entitytest zelfstandige satellites rechtvaardigt; teeltsystemen, certificering en brede duurzaamheid landen bij EXP-015 | voltooid |
 | `EXP-015` | Teeltsystemen, duurzaamheid en adaptatie | `vineyard-systems-sustainability-adaptation`, met klimaat-, water-, bodem-, voeding-, loofwand-, risico-, onderstam- en rijpheidsconcepts als dependencies | complete hub | Teeltsystemen, certificeringsscope, resultaatmeting en adaptatie zijn hub-owned; bodem- en plantmechanismen blijven bij hun bestaande owners; kelder- en verpakkingsprocessen volgen bij EXP-016–023 | voltooid |
 | `EXP-016` | Vinificatiegraaf en kleinste set hubs | 25 actieve concepts, vier drafts en zeven lessons | audit complete | Zeven hubs afgebakend, waarvan drie bestaande owners; tien kernonderwerpen en alle vervolgacties toegewezen in §8 en het auditrapport | voltooid |
-| `EXP-017` | Ontvangst, sortering en mostvoorbereiding | Nieuwe owner `grape-reception-must-preparation`; bestaande `pressing`, rijpheids-/risicohubs en vroege lessons | fragmenten | Ontvangsthub authoren; persmechaniek bij `pressing`; transport, selectie, intact materiaal, sapbehandeling en juridisch begrensde mostcorrecties onderzoeken | volgende |
-| `EXP-018` | Gist, microbiologie en alcoholische vergisting | Bestaande owner `fermentation`; lesson `alcoholic-fermentation` | sterke basis | Dezelfde entity tot systeemhub uitbreiden met gistecologie, voeding, kinetiek en monitoring; geen aparte gisthub | P1 |
+| `EXP-017` | Ontvangst, sortering en mostvoorbereiding | Actieve hub `grape-reception-must-preparation`; bestaande `pressing`, rijpheids-/risicohubs en vroege lesson | volledig binnen scope | Tweetalige ontvangsthub, materiaal-PNG, mostbezinking, bescherming en juridisch begrensde correcties; directe rosépersing en naslaglinks in perspagina/lesson gecontroleerd | voltooid |
+| `EXP-018` | Gist, microbiologie en alcoholische vergisting | Bestaande owner `fermentation`; lesson `alcoholic-fermentation` | sterke basis | Dezelfde entity tot systeemhub uitbreiden met gistecologie, voeding, kinetiek en monitoring; geen aparte gisthub | volgende |
 | `EXP-019` | Hoofdroutes, schilcontact en extractie | Nieuwe owner `winemaking-routes`; `maceration`, `extraction`, `pressing`; `carbonic-maceration` draft; route-lesson | sterke basis | Vertakkende routehub; cap management bij `extraction`, contactregime bij `maceration`; carbonische satellite onderzoeken en vullen; rosé/schilvergist wit expliciet vergelijken | P1 |
 | `EXP-020` | Na vergisting, zuurstof en rijping | Bestaande owner `elevage`; `malolactic-fermentation`, `lees-ageing`, `batonnage`, `autolysis`, `oxidation`, `assemblage` | sterke basis | Élevage zelf tot systeemhub uitbreiden, gericht detail bij bestaande satellites houden; timing kan overlappen met vergisting | P1 |
 | `EXP-021` | Stabilisatie, klaring, filtratie en verpakking | Bestaande owner `bottling`; `clarification-and-fining`, `sulfur-dioxide`; cellar-to-bottle-lesson | sterke basis | Botteling uitbreiden met systeemmodel voor stabiliteit, filtratie, gassen en sluitingen; geen extra afwerkingshub; fining en SO₂ bij bestaande owners | P1 |
@@ -208,7 +208,7 @@ de Explore-roadmap; zij is geen volledige actuele entitylijst.
 | `concept.fermentation` | actief | Canonical basisowner alcoholische vergisting | `EXP-018` |
 | `concept.maceration` | actief | Schilcontact in verschillende routes | `EXP-019` |
 | `concept.extraction` | actief | Overdracht en sturing in de kuip | `EXP-019` |
-| `concept.pressing` | actief | Scheiding, timing en fracties | `EXP-017/019` |
+| `concept.pressing` | actief | Scheiding, timing en fracties; vroege routes gereviewd in EXP-017 | `EXP-019` |
 | `concept.carbonic-maceration` | lege draft | Behouden als gericht procesconcept; bronreview en authoring vereist | `EXP-019` |
 | `concept.malolactic-fermentation` | actief | Omzetting, stijl en stabiliteit | `EXP-020` |
 | `concept.elevage` | actief | Bestaande owner wordt zelf de opvoedingshub; geen parallelle rijpingshub | `EXP-020` |
@@ -273,7 +273,7 @@ de kernruggengraat van wijnstok–omgeving–wijnmaken–waarneming.
 | Narrative | Status | Wat het al verbindt | Betekenis voor foundation |
 | --- | --- | --- | --- |
 | `narrative.lesson.grape-as-raw-material` | actief | Druif, zuur, tannine, Botrytis, jaargang en vergisting | Goede consumer van `EXP-004–009` en `EXP-024`; later actualiseren, geen feitenowner maken |
-| `narrative.lesson.grape-to-must` | actief | Ontvangst en persen | Consumer van `EXP-017` |
+| `narrative.lesson.grape-to-must` | actief | Ontvangst en persen | Consumer van de actieve EXP-017-hub; naslaglink en directe rosépersing toegevoegd |
 | `narrative.lesson.alcoholic-fermentation` | actief | Vergisting als kernstap | Consumer van `EXP-018`; bevat nu geen entitylink naar de bestaande fermentation-owner |
 | `narrative.lesson.three-still-wine-routes` | actief | Wit, rosé en rood; maceratie, extractie en persen | Sterke integratielaag voor `EXP-019` |
 | `narrative.lesson.after-main-fermentation` | actief | MLF en bâtonnage | Consumer van `EXP-020`; kan later explicieter naar lies/autolyse verwijzen |
@@ -339,7 +339,8 @@ pagina wanneer zijn teaching question breder is.
 Onderstaande brede inventaris begon als dependencylijst voor `EXP-002`. De
 wijngaardowners zijn inmiddels uitgevoerd volgens §4. EXP-016 heeft de zeven
 vinificatieowners definitief afgebakend voor de volgende authoringrondes; hun
-nieuwe IDs bestaan nog niet als packages. Samenstelling en waarneming volgen
+ontvangsthub is in EXP-017 gepubliceerd. De overige nieuwe IDs bestaan nog
+niet als packages. Samenstelling en waarneming volgen
 later hun eigen scopebrief.
 
 | Werknaam | Minimale scope | Eerste consumer | Waarschijnlijke vorm |
@@ -355,7 +356,7 @@ later hun eigen scopebrief.
 | Vine nutrition and soil management | Nutriënten en wijngaardvloer | `EXP-013` | Hub met beperkte satellites |
 | Vineyard hazards and health | Weer, ziekte, plagen en stoornissen | `EXP-014` | Hub die bestaande concepts ontsluit |
 | Vineyard systems and sustainability | Praktijken, uitkomsten en adaptatie | `EXP-015` | Hub |
-| `concept.grape-reception-must-preparation` (nieuw) | Ontvangst, selectie en mostvoorbereiding; persmechaniek blijft bij `pressing` | `EXP-017` | Systeemhub |
+| `concept.grape-reception-must-preparation` (actief) | Ontvangst, selectie en mostvoorbereiding; persmechaniek blijft bij `pressing` | `EXP-017` | Systeemhub |
 | `concept.fermentation` (bestaand) | Alcoholische vergisting, gist, voeding en kinetiek; bederfdiagnose bij EXP-022 | `EXP-018` | Bestaande entity uitbreiden tot systeemhub |
 | `concept.winemaking-routes` (nieuw) | Volledige routeoriëntatie en vergelijking wit, rosé, rood en schilvergist wit; mechanismen blijven satellites | `EXP-019` | Systeemhub; geen extra algemene vinificatiehub |
 | `concept.elevage` (bestaand) | Samenhang van MLF, lies, vat, tijd, zuurstof en assemblage; detail bij bestaande concepts | `EXP-020` | Bestaande entity uitbreiden tot systeemhub |
@@ -400,8 +401,12 @@ planning actief en geen bestaande ID of route wordt verwijderd.
 4. `EXP-016` heeft de vinificatiegraaf geïnventariseerd en zeven systeemhubs
    afgebakend, met behoud van de bestaande mechanismen, identities en sources.
 
-De volgende uitvoeringstaak is `EXP-017`: de ontvangst- en
-mostvoorbereidingshub authoren en de aansluiting op de bestaande perspagina
-controleren. De [overdracht in de audit](../editorial/vinification-ownership-audit-2026-10-03.md#9-overdracht-aan-exp-017)
-benoemt dependencies, onderzoeksgrenzen en beeldhergebruik. Verdere proza-
-authoring volgt daarna EXP-018–023 in de vastgelegde volgorde.
+5. `EXP-017` heeft ontvangst, selectie en mostvoorbereiding gepubliceerd, met
+   behoud van persmechaniek bij `pressing`, een nieuwe materiaalillustratie en
+   gecorrigeerde vroege roséroutes in de perspagina en `grape-to-must` lesson.
+
+De volgende uitvoeringstaak is `EXP-018`: de bestaande `fermentation`-entity
+uitbreiden tot systeemhub voor gist, voeding, kinetiek en monitoring. Behoud ID
+en routes; MLF en bederfdiagnose blijven bij hun eigen owners. De lesson
+`alcoholic-fermentation` krijgt bij die review een naslaglink. Daarna volgen
+EXP-019–023 in de vastgelegde volgorde.

@@ -1,0 +1,26 @@
+id: media.concept.grape-reception-must-preparation.material-choices
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/grape-reception-must-preparation/material-choices.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: f6d990ef82df661ea8738289fe063e5f126bacb6ae5e2cd2bf64e6b684267ab7
+alt:
+  nl: "Drie genummerde vergelijkingen: een tros blauwe druiven met vertakte steel,
+    losse intacte bessen en een schaal met geopende schillen, licht sap en
+    intacte pitten."
+  en: "Three numbered comparisons: a bunch of black grapes with a branching stem,
+    detached intact berries, and a dish of opened skins, pale juice and intact
+    seeds."
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy
+  license_name: Project-owned generated asset
+  credit_line: Generated for Oenocademy
+acquired_at: 2026-10-04
+changes: Generated with the built-in image tool. First output retained without
+  edits. Material-state comparison, not a mandatory processing sequence; full
+  prompt and review in
+  editorial/briefs/concept.grape-reception-must-preparation.md.

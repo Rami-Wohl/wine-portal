@@ -14,6 +14,8 @@ After harvest, the winery must decide which parts of the grape continue together
 At the winery, the origin, temperature and condition of the fruit are assessed. Bunches, leaves, underripe or damaged berries and other material can be separated from the desired grapes at a sorting table or by mechanical aids. This does not make the lot uniform, but it gives the winemaker a more controlled starting point.
 
 Speed and gentle handling matter. Damaged berries release juice; from that moment, oxygen and microorganisms can act more easily. Keeping fruit cool, working cleanly and avoiding unnecessary delay protect the raw material before the intended [[concept.fermentation|alcoholic fermentation]] begins.
+
+For more on material choices, juice settling and adjustments, see [[concept.grape-reception-must-preparation|grape reception, sorting and must preparation]].
 :::
 
 :::section{#ontstelen-en-kneuzen depth="foundation" source_refs="source.oiv-grape-preparation"}
@@ -24,10 +26,10 @@ Speed and gentle handling matter. Damaged berries release juice; from that momen
 **Crushing** breaks the skins of some berries so that juice is released. It is not the same as grinding: seeds should not be shattered. Some routes call for only light crushing; in others, many berries or whole bunches remain intact. The choice determines how soon juice, skin, seed and stem meet.
 :::
 
-:::section{#persen-en-most depth="foundation" source_refs="source.oiv-pressing"}
+:::section{#persen-en-most depth="foundation" source_refs="source.oiv-pressing source.ifv-rose-vinification-itineraires-11"}
 ## Pressing releases must
 
-During [[concept.pressing|pressing]], a wine press applies gradual pressure to separate liquid from grape solids. Before fermentation, that liquid is called **must**. For many white wines this happens early: must moves to the fermentation vessel while skins and seeds remain behind. For rosé, pressing generally follows a short period of contact with black skins.
+During [[concept.pressing|pressing]], a wine press applies gradual pressure to separate liquid from grape solids. Before fermentation, that liquid is called **must**. For many white wines this happens early: must moves to the fermentation vessel while skins and seeds remain behind. For rosé, a winemaker can press black grapes directly or allow short [[concept.maceration|maceration]] first. [@source.ifv-rose-vinification-itineraires-11; p. 14]
 
 Red wine commonly takes the reverse route. Crushed or whole black berries ferment with their skins; only afterwards are free-run wine and press wine separated from the solid mass. [@source.oiv-pressing]
 :::
@@ -43,12 +45,12 @@ Some juice or wine drains from the grape mass without strong pressure. Increasin
 Maximum pressure is not an end in itself. Slow, progressive pressing helps recover liquid without unnecessarily damaging seeds and solid tissue. How much press juice or press wine is used remains a decision within the style and quality of the lot.
 :::
 
-:::comparison{#drie-vertrekpunten depth="foundation"}
+:::comparison{#drie-vertrekpunten depth="foundation" source_refs="source.oiv-pressing source.ifv-rose-vinification-itineraires-11"}
 ## Where the three main routes diverge
 
 | White wine | Rosé | Red wine |
 | --- | --- | --- |
-| Usually pressed early | Brief contact with black skins | Fermentation with black skins |
+| Usually pressed early | Direct pressing or short maceration | Fermentation with black skins |
 | Must ferments without skins | Pink must ferments without skins | Pressing usually follows skin fermentation |
 
 These are principal patterns, not exhaustive recipes. Whole-bunch pressing, skin contact for white wine and other techniques may deliberately depart from them.

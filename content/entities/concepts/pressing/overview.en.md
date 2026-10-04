@@ -10,12 +10,14 @@ A wine press applies controlled pressure to whole or crushed grapes, or to the s
 A press is therefore not meant to grind grapes into purée. Slow, progressive pressure helps release juice or wine without unnecessarily breaking seeds and other solid tissue.
 :::
 
-:::section{#moment-in-de-route depth="foundation" source_refs="source.oiv-pressing"}
+:::section{#moment-in-de-route depth="foundation" source_refs="source.oiv-pressing source.ifv-rose-vinification-itineraires-11"}
 ## Pressing before or after fermentation
 
-In the usual white-wine route, grapes are pressed early so that the juice ferments largely without skins. For rosé, black grapes generally receive brief skin contact before the pink juice is separated and fermented off skins. Red wine instead ferments with skins and is normally pressed afterwards.
+In the usual white-wine route, grapes are pressed early so that the juice ferments largely without skins. For rosé, a winemaker can press black grapes directly or allow short maceration first; the separated juice then ferments off skins. [@source.ifv-rose-vinification-itineraires-11; p. 14] Red wine instead ferments with skins and is normally pressed afterwards.
 
 That order explains why pressing cannot be understood apart from [[concept.maceration|maceration]] and [[concept.extraction|extraction]]. The moment of separation determines how long liquid and grape solids can affect one another.
+
+The preceding choices are explained in [[concept.grape-reception-must-preparation|grape reception, sorting and must preparation]].
 :::
 
 :::figure{#ontvangst-tot-pers depth="foundation" media_id="media.lesson.grape-to-must.reception-to-pressing"}

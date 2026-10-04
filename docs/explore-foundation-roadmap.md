@@ -178,7 +178,8 @@ unplanned standalone pages.
 | `EXP-014` | complete | Bilingual vineyard-hazards system hub with an integrated risk framework, IPM cycle and reviewed diagnostic plate active and locally validated |
 | `EXP-015` | complete | Bilingual vineyard-systems hub distinguishing practices, certification and measured outcomes, with adaptation, evidence limits and a reviewed relationship diagram locally validated |
 | `EXP-016` | complete | Audit of 25 active vinification concepts, four drafts and seven lessons; seven hubs scoped, three existing owners reused, overlap and follow-up assigned |
-| `EXP-017`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-017` | complete | Bilingual reception and must-preparation hub, three-state PNG illustration, legal context and corrected early rosé routes in pressing and the lesson |
+| `EXP-018`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -483,6 +484,14 @@ clarification, oxidation, sulfur and bottling each have an explicit owner and
 place in the system.
 
 #### EXP-017 — Reception, sorting, crushing and must preparation
+
+**Status:** complete on 2026-10-04. The bilingual
+`concept.grape-reception-must-preparation` hub owns reception, material choices,
+juice settling, protection and legally bounded adjustments. Its three-state PNG
+compares whole bunches, detached intact berries and crushed fruit. The pressing
+page and `grape-to-must` lesson now include direct rosé pressing and link to the
+hub. Research, scope and validation are recorded in the
+[content brief](../editorial/briefs/concept.grape-reception-must-preparation.md).
 
 **Depends on:** EXP-016.
 

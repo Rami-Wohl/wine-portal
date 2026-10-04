@@ -11,9 +11,11 @@ locales:
   nl: article.nl.md
   en: article.en.md
 related_entities:
+  - concept.grape-reception-must-preparation
   - concept.pressing
   - concept.maceration
 source_refs:
   - source.oiv-grape-preparation
   - source.oiv-pressing
+  - source.ifv-rose-vinification-itineraires-11
 depth: foundation

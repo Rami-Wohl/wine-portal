@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 351 entities — 283 active, 68 draft, 0 deprecated.
+**Totaal:** 352 entities — 284 active, 68 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (283)
+## Actief — publiek vindbaar (284)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -96,9 +96,10 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Millerandage](../content/entities/concepts/millerandage/entity.yaml) | Concept | Zelfstandige pagina | `concept.millerandage` | Ja | `/concepts/millerandage` | 2026-09-25 |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Ja | `/concepts/negociant` | 2026-09-14 |
 | [Onderstam](../content/entities/concepts/rootstock/entity.yaml) | Concept | Zelfstandige pagina | `concept.rootstock` | Ja | `/concepts/rootstock` | 2026-09-20 |
+| [Ontvangst, selectie en mostvoorbereiding](../content/entities/concepts/grape-reception-must-preparation/entity.yaml) | Concept | Zelfstandige pagina | `concept.grape-reception-must-preparation` | Ja | `/concepts/grape-reception-must-preparation` | 2026-10-04 |
 | [Oxidatie](../content/entities/concepts/oxidation/entity.yaml) | Concept | Zelfstandige pagina | `concept.oxidation` | Ja | `/concepts/oxidation` | 2026-09-20 |
 | [Passerillage](../content/entities/concepts/passerillage/entity.yaml) | Concept | Zelfstandige pagina | `concept.passerillage` | Ja | `/concepts/passerillage` | 2026-09-14 |
-| [Persen](../content/entities/concepts/pressing/entity.yaml) | Concept | Zelfstandige pagina | `concept.pressing` | Ja | `/concepts/pressing` | 2026-09-23 |
+| [Persen](../content/entities/concepts/pressing/entity.yaml) | Concept | Zelfstandige pagina | `concept.pressing` | Ja | `/concepts/pressing` | 2026-10-04 |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Ja | `/concepts/place-de-bordeaux` | 2026-09-14 |
 | [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Ja | `/concepts/riddling` | 2026-09-20 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/lees-ageing` | 2026-09-22 |

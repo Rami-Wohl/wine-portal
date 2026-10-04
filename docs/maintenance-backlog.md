@@ -34,7 +34,8 @@ Peildatum: 2026-10-04.
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Het taalcontract (`MNT-045`) is vastgelegd; het eerstvolgende uitvoerbare
-werk is ontvangst, selectie en mostvoorbereiding (`EXP-017`).
+werk is gist en alcoholische vergisting (`EXP-018`), na de afgeronde
+ontvangst- en mostvoorbereidingshub (`EXP-017`).
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.

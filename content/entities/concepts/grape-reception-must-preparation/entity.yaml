@@ -1,0 +1,53 @@
+id: concept.grape-reception-must-preparation
+type: concept
+status: active
+canonical_name: Grape reception and must preparation
+names:
+  nl: Ontvangst, selectie en mostvoorbereiding
+  en: Grape reception, sorting and must preparation
+slugs:
+  nl: ontvangst-selectie-en-mostvoorbereiding
+  en: grape-reception-must-preparation
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.berry-development-ripeness
+  - type: related_to
+    target: concept.vineyard-hazards-diseases-pests-disorders
+  - type: related_to
+    target: concept.botrytis
+  - type: related_to
+    target: concept.pressing
+  - type: related_to
+    target: concept.maceration
+  - type: related_to
+    target: concept.extraction
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.clarification-and-fining
+  - type: related_to
+    target: concept.oxidation
+  - type: related_to
+    target: concept.sulfur-dioxide
+  - type: related_to
+    target: concept.acidity
+assertions: []
+source_refs:
+  - source.oiv-grape-preparation
+  - source.oiv-pressing
+  - source.oiv-must-settling
+  - source.oiv-so2-reduction-practices-2020
+  - source.osu-harvest-grape-chemistry-2023
+  - source.awri-acidity-ph
+  - source.awri-sulfur-dioxide
+  - source.awri-managing-botrytis-fruit-2023
+  - source.awri-juice-solids-white-fermentation
+  - source.awri-white-prefermentation-skin-contact-2020
+  - source.ifv-rose-vinification-itineraires-11
+  - source.eurlex-wine-oenological-practices-20260818
+  - source.wine-australia-compliance-guide-2026
+depth: foundation
+last_reviewed: 2026-10-04
