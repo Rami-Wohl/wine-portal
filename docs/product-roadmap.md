@@ -4,6 +4,8 @@ Bijgewerkt: 2026-10-04. Deze kaart verbindt platformwerk met de bestaande
 content- en Learn-roadmaps. Ticketstatus en acceptatiecriteria blijven uitsluitend
 in de gekoppelde backlog; dit document maakt de prioriteit en timing expliciet.
 De onderbouwing staat in [de sanity review](../editorial/platform-sanity-review-2026-10-04.md).
+De [runtime-/CI-review](../editorial/runtime-ci-review-2026-10-04.md) beschrijft
+de inmiddels uitgevoerde eerste platformstap.
 
 ## Waar we staan
 
@@ -22,8 +24,8 @@ features niet automatisch gereed.
 
 | Moment | Werk | Reden en grens |
 | --- | --- | --- |
-| Eerstvolgende platformtaak, vóór volgende release | `MNT-047` + `MNT-055`: Node 24 LTS toetsen/vastleggen, ontwikkeldependencies herstellen en CI toevoegen | Ondersteunde runtime en herhaalbare kwaliteitscontrole vóór verdere groei; controleer ook deploymentinstellingen |
-| Meteen daarna, vóór nieuwe route-uitbreidingen | `MNT-045`: taal- en URL-contract | Voorkom dat navigatie, metadata en steeds meer routes alleen Nederlands veronderstellen |
+| Eerstvolgende externe vrijgave, zodra toegang werkt | `MNT-056`: eerste GitHub-run, mergebescherming en deployment bevestigen | Node 24 en CI zijn lokaal gereed (`MNT-047`); de ongepatchte ontwikkelketen blijft bij `MNT-055` |
+| Eerstvolgende uitvoerbare ontwikkeltaak, vóór nieuwe route-uitbreidingen | `MNT-045`: taal- en URL-contract | Voorkom dat navigatie, metadata en steeds meer routes alleen Nederlands veronderstellen |
 | Volgende contenttaak | `EXP-017`: ontvangst, selectie en mostvoorbereiding | De scope-/ownershipreview `EXP-016` is afgerond; bestaande perskennis blijft bij haar owner |
 | Aanbevolen vóór `EXP-020` | `MNT-046`: NL/EN-presentatie en taalwisselaar | Toets de reeds geschreven Engelse content in het echte product; los metadata, zoeken en Learn mee op |
 | Vóór volgende schema-/GIS-uitbreiding; bij bredere UI-wijziging | `MNT-048` en `MNT-049`: pipeline/model en CSS organiseren | Houd verantwoordelijkheden voor menselijke reviewers herkenbaar, met behoud van gedrag |
@@ -43,11 +45,53 @@ Explore-tickets en één Learn-evaluatie. Een geblokkeerde of geplande actie tel
 mee. Deze momentopname wordt bij wijziging van de uitvoeringsvolgorde bijgewerkt;
 de gekoppelde backlogs blijven leidend voor actuele status.
 
-| Backlog | Niet-afgerond werk |
-| --- | --- |
-| [Onderhoud](maintenance-backlog.md) | `MNT-002` Bordeauxkaart; `MNT-013` druivenverspreiding; `MNT-014` Barsac/Sauternes-geometrie; `MNT-020` ontbrekende producentenfoto's; `MNT-039` officieel EU-besluit Graves Supérieures; `MNT-045` taalcontract; `MNT-046` taalpresentatie; `MNT-047` runtime/CI; `MNT-048` pipeline/model; `MNT-049` CSS; `MNT-050` backendbesluit; `MNT-051` Atlaspilot; `MNT-052` performance/media; `MNT-053` SVG-migratie; `MNT-055` ontwikkeldependencies |
-| [Explore](explore-foundation-roadmap.md) | `EXP-017` ontvangst/most; `EXP-018` gist/vergisting; `EXP-019` productieroutes/extractie; `EXP-020` opvoeding/zuurstof; `EXP-021` stabilisatie/verpakking; `EXP-022` hygiëne/fouten; `EXP-023` zoet/mousserend/versterkt; `EXP-024` wijnsamenstelling; `EXP-025` waarneming/ontwikkeling; `EXP-026` graph/links/media/terminologie; `EXP-027` mondiale toets; `EXP-028` integrale QA |
-| [Learn](learn-roadmap.md) | `LRN-012` werkelijk gebruik evalueren en vervolg kiezen |
+De onderstaande ontwikkelvolgorde is het uitgangspunt. Tijdgebonden evaluaties
+en vrijgekomen externe controles mogen deze volgorde onderbreken.
+
+| Volgorde | Ticket | Werk |
+| ---: | --- | --- |
+| 1 | `MNT-045` | Taal- en URL-contract |
+| 2 | `EXP-017` | Ontvangst, selectie en mostvoorbereiding |
+| 3 | `EXP-018` | Gist en alcoholische vergisting |
+| 4 | `EXP-019` | Productieroutes en extractie |
+| 5 | `MNT-049` | CSS organiseren bij de komende UI-uitbreiding |
+| 6 | `MNT-046` | NL/EN-presentatie en taalwisselaar, vóór EXP-020 |
+| 7 | `MNT-048` | Pipeline/model organiseren vóór verdere schema-/GIS-uitbreiding |
+| 8 | `EXP-020` | Opvoeding en zuurstof |
+| 9 | `EXP-021` | Stabilisatie en verpakking |
+| 10 | `EXP-022` | Kelderhygiëne en wijnfouten |
+| 11 | `EXP-023` | Zoete, mousserende en versterkte wijn |
+| 12 | `EXP-024` | Wijnsamenstelling |
+| 13 | `EXP-025` | Waarneming en ontwikkeling |
+| 14 | `EXP-026` | Integratie graph, links, media en terminologie |
+| 15 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
+| 16 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
+| 17 | `EXP-027` | Mondiale toets en regiokeuze |
+| 18 | `EXP-028` | Integrale redactionele en product-QA |
+| 19 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
+
+Tijdgebonden, in deze onderlinge volgorde:
+
+| Moment | Ticket | Werk |
+| --- | --- | --- |
+| Vroegst 2026-10-22 bij voldoende werkelijk gebruik | `LRN-012` | Learn-pilot evalueren en vervolg kiezen |
+| Aansluitend, of eerder bij een concrete consumer | `MNT-050` | Backend/API/databasebesluit |
+
+Geblokkeerd, in aanbevolen oppakvolgorde zodra de genoemde afhankelijkheid
+beschikbaar is:
+
+| Prioriteit bij vrijgave | Ticket | Afhankelijkheid |
+| ---: | --- | --- |
+| 1 | `MNT-056` | Gepushte workflow en toegang tot GitHub/Vercel voor externe verificatie |
+| 2 | `MNT-055` | Compatibele upstreampatch voor braces; handmatige hercontrole uiterlijk 2026-10-18 |
+| 3 | `MNT-002` | Geverifieerde Atlasdata voor Bordeauxkaart |
+| 4 | `MNT-014` | Officiële Barsac-/Sauternes-geometrie |
+| 5 | `MNT-013` | Wereldwijde druivenverspreidingsdata |
+| 6 | `MNT-020` | Ontbrekende producentenfoto's met aantoonbare hergebruikrechten |
+| 7 | `MNT-039` | Definitief officieel EU-besluit Graves Supérieures |
+
+Status en acceptatiecriteria staan in de [onderhoudsbacklog](maintenance-backlog.md),
+[Explore-roadmap](explore-foundation-roadmap.md) en [Learn-roadmap](learn-roadmap.md).
 
 De regiokeuze in `DEC-EXP-005` hoort bij `EXP-027`, niet bij een extra los
 uitvoeringsticket. Overige Learn-productkeuzes blijven bij `LRN-012`. Draftentities

@@ -25,45 +25,24 @@ Peildatum: 2026-10-04.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 7 | `MNT-046`, `MNT-048`, `MNT-049`, `MNT-051` t/m `MNT-053`, `MNT-055` |
-| Gepland | 3 | `MNT-045`, `MNT-047`, `MNT-050` |
+| Open | 6 | `MNT-046`, `MNT-048`, `MNT-049`, `MNT-051` t/m `MNT-053` |
+| Gepland | 2 | `MNT-045`, `MNT-050` |
 | Bezig | 0 | — |
-| Geblokkeerd | 5 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039` |
-| Afgerond | 40 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-044`, `MNT-054` |
+| Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
+| Afgerond | 41 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-044`, `MNT-047`, `MNT-054` |
 | Vervallen | 0 | — |
 
-De [productplanning](product-roadmap.md) verbindt deze acties met Explore en
-Learn. Eerst volgt de ondersteunde ontwikkelruntime en CI (`MNT-047`), daarna
-de ontwikkeldependencies (`MNT-055`) en het taalcontract (`MNT-045`). De vijf oudere blokkades zijn behouden; hun externe
-bronnen en beeldrechten zijn in deze technische ronde niet opnieuw onderzocht.
+De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
+taken. Het eerstvolgende uitvoerbare werk is het taalcontract (`MNT-045`).
+Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
+en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
+De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 
 ## Open werk
 
-### `MNT-047` — Ondersteunde Node-versie en automatische kwaliteitscontrole
-
-- **Status:** gepland
-- **Prioriteit:** hoog; eerstvolgende platformtaak
-- **Scope:** packagecontract, ontwikkelruntime, deploymentcontrole en CI
-- **Categorie:** engineering, testing, operations
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** de lokale runtime is Node 20.19.6 (end-of-life); de repo heeft
-  geen runtimepin, `engines`-contract of GitHub Actions-workflow. De daadwerkelijk
-  ingestelde productieruntime is in deze review niet vastgesteld.
-- **Uitvoering:** migreer en test op Node 24 LTS, leg runtime en onboarding vast,
-  controleer de deploymentinstelling en voeg een CI-workflow voor pushes/PR's toe.
-- **Klaar wanneer:** `npm ci`, `npm run check` en de volledige browsersuite op de
-  vastgelegde runtime slagen; CI Chromium installeert en faalt op testfouten en
-  ongewenste wijzigingen aan gevolgde gegenereerde bestanden; repositoryrechten
-  en eventuele branch protection apart zijn gecontroleerd. Voer geen algemene
-  dependency-upgrade uit als bijvangst.
-- **Planning:** vóór de volgende release; geen globale Node-installatie vervangen
-  als onderdeel van alleen documentatieonderhoud.
-- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
-  volgt de overkoepelende productplanning.
-
 ### `MNT-055` — Kwetsbare ontwikkeldependencies gericht herstellen
 
-- **Status:** open
+- **Status:** geblokkeerd
 - **Prioriteit:** hoog
 - **Scope:** lint-/ontwikkelketen: `brace-expansion`, `braces`, `micromatch`,
   `fast-glob` en de bovenliggende Next ESLint-packages
@@ -79,10 +58,25 @@ bronnen en beeldrechten zijn in deze technische ronde niet opnieuw onderzocht.
   Waar een upstreamfix ontbreekt, documenteer de begrensde blootstelling en een
   concrete hercontrole; verlaag niet blind `eslint-config-next` naar versie 14
   en gebruik geen ongecontroleerde `npm audit fix --force`.
-- **Planning:** meenemen bij `MNT-047`, vóór nieuwe CI onbetrouwbare branches gaat
-  verwerken; beoordeel overrides alleen met compatibilitybewijs.
+- **Blokkade:** voor `braces <=3.0.3` (`GHSA-vfj7-8cjw-p6xm`) bestaat op
+  2026-10-04 geen gepubliceerde upstreampatch. De vijf resterende high meldingen
+  komen uit dezelfde ontwikkelketen; productieaudit blijft schoon. De Next-rule
+  gebruikt fast-glob voor een expliciete `settings.next.rootDir`; de huidige
+  ESLint-config stelt die niet in. CI heeft geen secrets, schrijfrechten of
+  bewaarde credentials en heeft een timeout.
+- **Hercontrole:** uiterlijk 2026-10-18 en bij wijziging van lintconfig of
+  dependencies: controleer de advisory en npm-release, pas een compatibele fix
+  toe en herhaal de volledige audit plus lint/build/tests. Dit is een handmatig
+  controlepunt, geen ingestelde automation. Neem daarbij de ESLint 10-migratie
+  mee zodra de React-plugin die major ondersteunt; versie 9 wordt inmiddels
+  door npm als unsupported gemeld.
 - **Log:** 2026-10-04 — volledige audit na `MNT-054` getrieerd; apart gehouden van
   de geslaagde productiepatch. Adviesdetails staan in het reviewrapport.
+
+- **Uitvoering 2026-10-04:** `brace-expansion` 1.1.18 → 1.1.21 en 5.0.9 →
+  5.0.12 binnen bestaande semverranges bijgewerkt, zonder overrides. De
+  volledige audit daalt van zes naar vijf dependencyvermeldingen. De
+  incompatibele downgrade en een ongeteste major-upgrade zijn niet toegepast.
 
 ### `MNT-045` — Contract voor taalkeuze, URLs en publicatie vastleggen
 
@@ -244,6 +238,27 @@ bronnen en beeldrechten zijn in deze technische ronde niet opnieuw onderzocht.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
 
+### `MNT-056` — CI extern activeren en deploymentruntime bevestigen
+
+- **Status:** geblokkeerd
+- **Prioriteit:** hoog; afronden zodra de commit is gepusht en toegang werkt
+- **Scope:** GitHub Actions, repositoryrechten/branch protection en Vercel
+- **Categorie:** operations, testing
+- **Herkomst:** afgesplitst van de externe acceptatiestappen van `MNT-047`
+- **Bevinding:** de lokale implementatie is gereed, maar SSH-authenticatie faalt
+  en de beschikbare browser is niet ingelogd op GitHub of Vercel. Een workflow
+  in een lokale commit bewijst nog geen geslaagde Ubuntu-run of mergebescherming.
+- **Klaar wanneer:** de gepushte commit een geslaagde **Quality checks**-run op
+  GitHub heeft; repositoryrechten en Actions-instellingen zijn gecontroleerd;
+  de passende branch protection/required check is expliciet beoordeeld; en de
+  eerstvolgende toegestane Vercel-deployment Node 24 in zijn buildlog toont en
+  de Learn-live-smoke doorstaat. Vercel kiest de patch binnen `24.x` zelf.
+- **Blokkade:** geauthenticeerde toegang en een gepushte commit/deployment zijn
+  vereist. Geen credentials aangemaakt en geen deployment of permissiewijziging
+  uitgevoerd tijdens lokaal ontwikkelwerk.
+- **Log:** 2026-10-04 — SSH en browsertoegang read-only geprobeerd; externe
+  controle blijft open. Volg de runbookstappen in README en het runtime-reviewrapport.
+
 ### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
 
 - **Status:** geblokkeerd
@@ -347,6 +362,33 @@ bronnen en beeldrechten zijn in deze technische ronde niet opnieuw onderzocht.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-047` — Ondersteunde Node-versie en automatische kwaliteitscontrole
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Scope:** packagecontract, ontwikkelruntime en CI; externe activatie volgt in `MNT-056`
+- **Categorie:** engineering, testing, operations
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** de lokale runtime is Node 20.19.6 (end-of-life); de repo heeft
+  geen runtimepin, `engines`-contract of GitHub Actions-workflow. De daadwerkelijk
+  ingestelde productieruntime is in deze review niet vastgesteld.
+- **Uitvoering:** migreer en test op Node 24 LTS, leg runtime en onboarding vast,
+  controleer de deploymentinstelling en voeg een CI-workflow voor pushes/PR's toe.
+- **Klaar wanneer:** `npm ci`, `npm run check` en de volledige browsersuite op de
+  vastgelegde runtime slagen; CI Chromium installeert en faalt op testfouten en
+  ongewenste wijzigingen aan gevolgde gegenereerde bestanden; repositoryrechten
+  en eventuele branch protection apart zijn gecontroleerd. Voer geen algemene
+  dependency-upgrade uit als bijvangst.
+- **Planning:** vóór de volgende release; geen globale Node-installatie vervangen
+  als onderdeel van alleen documentatieonderhoud.
+- **Log:** 2026-10-04 — Node 24.21.0 en npm 11.19.0 lokaal geïnstalleerd en
+  getest, `.nvmrc`, engines, strikte enginecontrole, Node 24-typen en vastgepinde
+  Quality-workflow toegevoegd. Schone installatie, vaste checks, productiebuild
+  en browsersuite gecontroleerd. De oorspronkelijke externe acceptatiestappen
+  (eerste GitHub-run, rechten/branch protection en deploymentverificatie) zijn
+  expliciet afgesplitst naar `MNT-056`; dit ticket sluit het lokale werk af.
+
 
 ### `MNT-054` — Next.js-securitypatch gericht toepassen
 

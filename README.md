@@ -17,9 +17,8 @@ werken.
 
 Vereisten:
 
-- een ondersteunde Node.js LTS-versie; de frameworkondergrens is `20.9.0`,
-  maar Node 20 is inmiddels end-of-life. De overstap naar vastgepinde Node 24 LTS
-  en CI-validatie staat als `MNT-047` in de onderhoudsbacklog;
+- Node.js **24.21.0 LTS**, vastgelegd in `.nvmrc`;
+- npm **11.19.0**, meegeleverd met deze Node-versie;
 - npm en Git;
 - Chromium voor de optionele end-to-endtests.
 
@@ -27,9 +26,17 @@ Installeer exact de dependencies uit `package-lock.json` en start de
 ontwikkelserver:
 
 ```bash
+nvm install
+nvm use
 npm ci
 npm run dev
 ```
+
+De eerste twee opdrachten gebruiken [nvm](https://github.com/nvm-sh/nvm).
+Gebruik je een andere version manager, selecteer dan de versie uit `.nvmrc`.
+`node --version` moet `v24.21.0` tonen. `.npmrc` laat installaties met een andere
+Node-major of npm-major expliciet stoppen. De exacte ontwikkel-/CI-pin staat in
+`.nvmrc`; `package.json` houdt de ondersteunde reeks op Node `24.x` en npm `11.x`.
 
 Open daarna [http://localhost:3000](http://localhost:3000). `npm run dev`
 valideert en genereert eerst automatisch de actuele contentbundle.
@@ -87,6 +94,32 @@ interactie, toegankelijkheid of een andere volledige gebruikersflow verandert:
 ```bash
 npm run test:e2e
 ```
+
+## Automatische kwaliteitscontrole
+
+[De Quality-workflow](.github/workflows/quality.yml) draait na pushes naar `main`,
+bij pull requests en op handmatig verzoek in GitHub Actions. Eén job
+**Quality checks** gebruikt de versie uit `.nvmrc`, `npm ci`, een productieaudit,
+`npm run check` en de volledige productiebuild/browsersuite. Twee browserworkers
+begrenzen het geheugengebruik; foutdiagnostiek blijft zeven dagen beschikbaar.
+Een afsluitende `git diff --exit-code` detecteert ook achterlopende gevolgde
+buildoutput, zoals `docs/entity-status.md`. Commit die gegenereerde wijzigingen
+samen met de bijbehorende contentwijziging.
+
+De workflow heeft alleen leesrechten op repositorycontent, bewaart geen Git-
+credentials en gebruikt vastgepinde Action-commits. Een workflowbestand maakt
+zijn resultaat niet automatisch verplicht voor merges: de eerste GitHub-run en
+branch protection moeten nog worden bevestigd (`MNT-056`).
+
+`npm audit --omit=dev --audit-level=high` blokkeert CI bij nieuwe high/critical
+productiemeldingen. De volledige `npm audit` heeft nog een bekende, ongepatchte
+ontwikkeltoolketen (`MNT-055`); die wordt apart getrieerd en niet als schone audit
+voorgesteld. Hercontroleer die bij dependencywijzigingen en uiterlijk 2026-10-18.
+
+Vercel gebruikt voor volgende deployments de Node `24.x`-reeks uit
+`package.json`; Vercel beheert de patchversie. `npm run build` logt daarvoor de
+Node-versie vóór de build. Verifieer die regel in de eerstvolgende deployment;
+de bestaande productieomgeving is hiermee nog niet opnieuw uitgerold.
 
 ## Productie en Learn-pilot
 
