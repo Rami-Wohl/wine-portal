@@ -20,7 +20,8 @@ te veranderen.
    gerenderd.
 4. **Paginasamenstellingen** — Explore, Verdiepingen, Learn, Atlas en entitypagina's
    gebruiken dezelfde visuele taal. Entity- en narrative-routing is actief;
-   learning paths en Atlasdata zijn nog roadmap.
+   learning paths, lesnavigatie en lokale voortgang zijn actief. Atlasdata is
+   nog roadmap.
 
 ## Responsive en toegankelijkheidsbasis
 
@@ -45,19 +46,15 @@ bronnen, stable block-IDs en eventuele caveats komen uit het contentmodel.
 Er bestaat geen `wine relevance score` in schema of interface. Nieuwe metadata
 wordt pas toegevoegd wanneer echte content een herhaalde, geteste use-case toont.
 
-## Volgende UI-stappen
+## Vervolg en onderhoud
 
-De uitvoervolgorde, beslismomenten en acceptatiecriteria voor Learn staan
-centraal in `learn-roadmap.md`; onderstaande punten blijven ontwerpgrenzen en
-vormen geen afzonderlijke backlog.
+De Learn-pilot heeft pathnavigatie, previous/next-links en anonieme lokale
+voortgang. Evaluatie en eventuele uitbreiding volgen `LRN-012` in
+[de Learn-roadmap](learn-roadmap.md). De
+[productplanning](product-roadmap.md) zet taalkeuze en Atlas op de juiste plek.
 
-1. Bouw pas learning-pathnavigatie en previous/next-logica nadat het pathschema en
-   een eerste echte reeks lessen zijn ontworpen.
-2. Voeg persisted progress pas toe nadat anoniem lezen en navigeren inhoudelijk
-   werken.
-3. Blijf keyboard, screenreader, zoom, mobiele en lange-content-edge-cases testen
-   bij relevante wijzigingen.
-4. Voeg screenshotregressie toe wanneer de visuele basis stabiel genoeg is om de
-   onderhoudslast te rechtvaardigen.
-5. Laat nieuwe Bordeaux-content de volgende concrete patronen en componenten
-   afdwingen, in plaats van hypothetische UI vooraf te ontwerpen.
+Blijf keyboard, screenreader, zoom, mobiele en lange-content-edge-cases testen
+bij relevante wijzigingen. Nieuwe concrete content- en productbehoeften bepalen
+welke componenten nodig zijn. Splits de inmiddels grote stylesheet langs
+bestaande componentgrenzen (`MNT-049`), met behoud van cascade en visuele uitkomst.
+Voeg screenshotregressie toe wanneer de winst de onderhoudslast rechtvaardigt.

@@ -38,7 +38,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Onderwerp | Canonical locatie | Rol |
 | --- | --- | --- |
 | Entity-identiteit, relaties, assertions en producentenpublicatievorm | `content/entities/**/entity.yaml` | Gedeelde, taaloverstijgende kennis en de stabiele bestemming van producentenrecords |
-| Dekkingsplan en dependency-inventaris | `content/entities/**/content-plan.yaml` | Afdwingbaar redactioneel contract voor regio-, appellation- en druivenrasoverzichten; niet in de runtimebundle |
+| Dekkingsplan en dependency-inventaris | `content/entities/**/content-plan.yaml` | Afdwingbaar redactioneel contract voor regio-, appellation-, druivenras- en conceptoverzichten; niet in de runtimebundle |
 | Entity-uitleg | `content/entities/**/overview.<locale>.md` | Gelokaliseerde presentatie |
 | Narrative-metadata en entitykoppelingen | `content/narratives/**/narrative.yaml` | Identiteit, scope en relaties van een verhaal |
 | Narrative-artikel | `content/narratives/**/article.<locale>.md` | Gelokaliseerde uitleg over meerdere entities |
@@ -50,6 +50,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Runtimebundle | `src/generated/content/knowledge-base.json` | Afgeleid buildresultaat, niet canonical |
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
 | Kwaliteitsreviews | `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
+| Overkoepelende productvolgorde | `docs/product-roadmap.md` | Prioriteiten en beslismomenten tussen platform, Explore, Learn en Atlas; ticketstatus blijft in de eigen backlog |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
 | Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus geordende `LRN-*`-tickets, beslismomenten en acceptatiecriteria voor de anonieme Learn-MVP |
 | Conceptuele Explore-basis | `docs/explore-foundation-roadmap.md`, `docs/explore-foundation-coverage.md` en `docs/explore-foundation-authoring.md` | Geordende `EXP-*`-tickets, actuele dekkingsmatrix en bindend authoringcontract voor systeemhubs en gerichte concepts |
@@ -112,14 +113,15 @@ Explore, search, publieke backlinks of de sitemap. Alleen `active` content wordt
 via die publieke overzichten ontdekt.
 
 Lokaal wordt een storage key als `/media/<key>` geleverd. Bij een latere CDN
-stelt deployment `MEDIA_BASE_URL` in en synchroniseert een provideradapter
-dezelfde keys automatisch. Contentbestanden en mediarecords bevatten daarom
+kan deployment `MEDIA_BASE_URL` instellen. Geautomatiseerde synchronisatie
+van dezelfde keys vereist nog een te bouwen provideradapter. Contentbestanden en mediarecords bevatten daarom
 nooit provider-URL's en hoeven bij die overgang niet te worden herschreven.
 
-`region.bordeaux` is de eerste actieve, onderzochte overzichtsentity. De gelinkte
-Bordeauxpackages vormen bewuste draftbestemmingen voor volgende authoringrondes:
-hun identiteit en routes bestaan al, hun inhoud wordt pas actief na eigen
-onderzoek en review. Zij worden niet uit een oud curriculum geconverteerd.
+Bordeaux is inmiddels een uitgebreide actieve authoringslice; daarnaast groeit
+de wereldwijde conceptuele Explore-basis. Resterende draftbestemmingen worden
+pas actief na eigen onderzoek en review. De gegenereerde
+[`entity-status.md`](entity-status.md) toont de actuele stand. De Learn-pilot
+bevat een werkend leerpad met zeven lessen en lokale browservoortgang.
 
 ## Welk commando doet wat?
 
@@ -133,9 +135,9 @@ onderzoek en review. Zij worden niet uit een oud curriculum geconverteerd.
 | `npm run content:status` | Vernieuwt `docs/entity-status.md` vanuit alle canonical entity-YAML |
 | `npm run format` | Format code, CSS, JSON en YAML met de vastgepinde Prettier-versie |
 | `npm run format:check` | Controleert die formatting zonder bestanden te wijzigen |
-| `npm run check` | Draait formattingcheck, lint, typecheck en unit-tests |
+| `npm run check` | Draait formattingcheck, lint, typecheck, unit-tests en relationele audit |
 | `npm test` | Test parser, graph, routing, search en rendererlogica snel |
-| `npm run test:e2e` | Test een kleine kritieke keten in een echte browser |
+| `npm run test:e2e` | Bouwt de productieapp en draait de volledige Playwright-suite in Chromium |
 
 Browsertests zijn bedoeld voor integratiegrenzen zoals routing, gelokaliseerde
 content, draftgedrag, links, rendering en responsive overflow. Ze controleren
@@ -160,6 +162,8 @@ Markdownformatter worden herschreven.
 - Gebruik `visual-language.md` voor UI, responsive gedrag en visuals.
 - Gebruik `quality-assurance.md` voor het uitvoeren en registreren van periodieke
   kwaliteitschecks.
+- Gebruik `product-roadmap.md` voor de samenhang en prioriteit van platform- en
+  contentwerk.
 - Gebruik `maintenance-backlog.md` om actiepunten uit reviews te volgen tot en
   met afronding of een gemotiveerd vervalbesluit.
 - Gebruik `learn-roadmap.md` voor de vaste uitvoervolgorde en open

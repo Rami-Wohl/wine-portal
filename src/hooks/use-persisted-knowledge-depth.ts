@@ -7,6 +7,7 @@ const STORAGE_KEY = "oenocademy:knowledge-depth";
 const STORAGE_EVENT = "oenocademy:knowledge-depth-change";
 const DEPTH_ORDER: Depth[] = ["foundation", "intermediate", "advanced", "specialist"];
 let inMemoryDepth: string | null = null;
+let hasUnpersistedDepth = false;
 
 function subscribeToStoredDepth(onStoreChange: () => void) {
   window.addEventListener("storage", onStoreChange);
@@ -18,6 +19,7 @@ function subscribeToStoredDepth(onStoreChange: () => void) {
 }
 
 function readStoredDepth() {
+  if (hasUnpersistedDepth) return inMemoryDepth;
   try {
     return window.localStorage.getItem(STORAGE_KEY) ?? inMemoryDepth;
   } catch {
@@ -66,8 +68,10 @@ export function usePersistedKnowledgeDepth(options: Depth[], fallback: Depth) {
     inMemoryDepth = depth;
     try {
       window.localStorage.setItem(STORAGE_KEY, depth);
+      hasUnpersistedDepth = false;
     } catch {
-      // The control remains fully usable when persisting is unavailable.
+      // Reads may still succeed with an older value after a failed write.
+      hasUnpersistedDepth = true;
     }
     window.dispatchEvent(new Event(STORAGE_EVENT));
   };

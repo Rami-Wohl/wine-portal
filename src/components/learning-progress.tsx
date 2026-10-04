@@ -78,8 +78,9 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
         )}
         {progress.persistence === "temporary" && progress.isReady ? (
           <p className="learning-progress-notice" role="status">
-            Opslaan in deze browser is niet beschikbaar. Je markeringen blijven alleen tijdens dit
-            bezoek bewaard; de lessen en navigatie blijven gewoon werken.
+            Opslaan in deze browser is niet beschikbaar. Wijzigingen gelden alleen tijdens dit
+            bezoek. Eerder opgeslagen voortgang kan bij een nieuw bezoek terugkomen; de lessen en
+            navigatie blijven gewoon werken.
           </p>
         ) : null}
       </div>

@@ -160,7 +160,9 @@ navigatie te valideren.
 
 ## Gevolg voor het vervolg
 
-`LRN-002` ontwerpt nu het eerste leerpad tegen dit contract. Daarbij worden de
-lesindeling en de exacte selectie van entityblocks als afzonderlijke
-beslissingen vastgelegd. Pas die echte curriculumoutline bepaalt welke nieuwe
-content en welk learning-pathschema nodig zijn.
+Het eerste leerpad, de zeven lessen, navigatie en lokale browservoortgang zijn
+geïmplementeerd. [De pilotrelease](learn-pilot-release.md) bewaart de
+release- en observatieafspraken. `LRN-012` in de
+[Learn-roadmap](learn-roadmap.md) bepaalt op basis van werkelijk gebruik welke
+uitbreiding nodig is. Het platformbrede beslismoment voor taalondersteuning en
+serveropslag staat in [de productplanning](product-roadmap.md).

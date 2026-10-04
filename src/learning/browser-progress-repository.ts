@@ -41,6 +41,9 @@ export function createBrowserLearningProgressRepository({
   eventTarget = typeof window === "undefined" ? undefined : window,
 }: BrowserLearningProgressOptions = {}): LearningProgressRepository {
   const temporaryRecords = new Map<string, LearningProgressRecord>();
+  // Failed writes must take precedence over stale, still-readable browser data.
+  // A path without a record represents a reset that could not be persisted.
+  const temporaryPaths = new Set<string>();
 
   function resolveStorage(): StorageLike | undefined {
     try {
@@ -56,6 +59,12 @@ export function createBrowserLearningProgressRepository({
 
   return {
     async load(pathId, knownStepIds): Promise<LearningProgressSnapshot> {
+      if (temporaryPaths.has(pathId)) {
+        return {
+          record: parseLearningProgressRecord(temporaryRecords.get(pathId), pathId, knownStepIds),
+          persistence: "temporary",
+        };
+      }
       const storage = resolveStorage();
       if (!storage) {
         return {
@@ -89,15 +98,18 @@ export function createBrowserLearningProgressRepository({
       temporaryRecords.set(record.path_id, record);
       const storage = resolveStorage();
       if (!storage) {
+        temporaryPaths.add(record.path_id);
         announceChange(record.path_id);
         return "temporary";
       }
 
       try {
         storage.setItem(storageKey(record.path_id), JSON.stringify(record));
+        temporaryPaths.delete(record.path_id);
         announceChange(record.path_id);
         return "persistent";
       } catch {
+        temporaryPaths.add(record.path_id);
         announceChange(record.path_id);
         return "temporary";
       }
@@ -107,15 +119,18 @@ export function createBrowserLearningProgressRepository({
       temporaryRecords.delete(pathId);
       const storage = resolveStorage();
       if (!storage) {
+        temporaryPaths.add(pathId);
         announceChange(pathId);
         return "temporary";
       }
 
       try {
         storage.removeItem(storageKey(pathId));
+        temporaryPaths.delete(pathId);
         announceChange(pathId);
         return "persistent";
       } catch {
+        temporaryPaths.add(pathId);
         announceChange(pathId);
         return "temporary";
       }

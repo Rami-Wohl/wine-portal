@@ -161,7 +161,7 @@ Statussen:
 | `EXP-024` | Wijnsamenstelling als systeem | `acidity`, `tannin`, `methoxypyrazines`, `volatile-thiols`, `sulfur-dioxide` | fragmenten | Volledige compositiekaart en interacties zonder component-aromalijst | P1 |
 | `EXP-025` | Waarneming, balans en flesontwikkeling | Sensorische passages in concepts, grapes en lessons | afwezig | Zintuigen, thresholds, interactie, context, textuur, balans, kwaliteitsoordeel en ontwikkeling | P1 |
 
-## 5. Volledige inventaris van bestaande concepts
+## 5. Bouwstenen uit de baseline en gerichte aanvullingen
 
 Deze indeling beschrijft hun rol in de nieuwe foundation; zij verandert hun
 canonical type of route niet.
@@ -188,7 +188,8 @@ canonical type of route niet.
 | `concept.vintage` | actief | Seizoensvariatie en etiketbetekenis | `EXP-005/008` dependency |
 | `concept.botrytis` | actief | Biologie, edele en grijze rot en oogstselectie | `EXP-014/023` |
 
-Dit cluster is numeriek klein omdat de meeste geplande owners nog ontbreken.
+Deze baseline-inventaris wordt aangevuld door de hubmatrix en de voortgang in
+de Explore-roadmap; zij is geen volledige actuele entitylijst.
 
 ### 5.3 Druif- en wijnsamenstelling
 

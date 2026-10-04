@@ -21,23 +21,228 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-09-22.
+Peildatum: 2026-10-04.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 0 | — |
-| Gepland | 0 | — |
+| Open | 7 | `MNT-046`, `MNT-048`, `MNT-049`, `MNT-051` t/m `MNT-053`, `MNT-055` |
+| Gepland | 3 | `MNT-045`, `MNT-047`, `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 5 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039` |
-| Afgerond | 37 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-042` |
+| Afgerond | 40 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-044`, `MNT-054` |
 | Vervallen | 0 | — |
 
-Er is geen uitvoerbaar open onderhoudswerk meer in deze ronde. Drie geblokkeerde
-acties zijn afhankelijk van een betrouwbare Atlas- en geographydatalaag, één van
-nieuw beeld met aantoonbare hergebruikrechten en één van een definitief extern
-regelgevingsbesluit.
+De [productplanning](product-roadmap.md) verbindt deze acties met Explore en
+Learn. Eerst volgt de ondersteunde ontwikkelruntime en CI (`MNT-047`), daarna
+de ontwikkeldependencies (`MNT-055`) en het taalcontract (`MNT-045`). De vijf oudere blokkades zijn behouden; hun externe
+bronnen en beeldrechten zijn in deze technische ronde niet opnieuw onderzocht.
 
 ## Open werk
+
+### `MNT-047` — Ondersteunde Node-versie en automatische kwaliteitscontrole
+
+- **Status:** gepland
+- **Prioriteit:** hoog; eerstvolgende platformtaak
+- **Scope:** packagecontract, ontwikkelruntime, deploymentcontrole en CI
+- **Categorie:** engineering, testing, operations
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** de lokale runtime is Node 20.19.6 (end-of-life); de repo heeft
+  geen runtimepin, `engines`-contract of GitHub Actions-workflow. De daadwerkelijk
+  ingestelde productieruntime is in deze review niet vastgesteld.
+- **Uitvoering:** migreer en test op Node 24 LTS, leg runtime en onboarding vast,
+  controleer de deploymentinstelling en voeg een CI-workflow voor pushes/PR's toe.
+- **Klaar wanneer:** `npm ci`, `npm run check` en de volledige browsersuite op de
+  vastgelegde runtime slagen; CI Chromium installeert en faalt op testfouten en
+  ongewenste wijzigingen aan gevolgde gegenereerde bestanden; repositoryrechten
+  en eventuele branch protection apart zijn gecontroleerd. Voer geen algemene
+  dependency-upgrade uit als bijvangst.
+- **Planning:** vóór de volgende release; geen globale Node-installatie vervangen
+  als onderdeel van alleen documentatieonderhoud.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-055` — Kwetsbare ontwikkeldependencies gericht herstellen
+
+- **Status:** open
+- **Prioriteit:** hoog
+- **Scope:** lint-/ontwikkelketen: `brace-expansion`, `braces`, `micromatch`,
+  `fast-glob` en de bovenliggende Next ESLint-packages
+- **Categorie:** engineering, testing, operations
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** na de Next.js-patch meldt de volledige npm-audit zes high
+  dependencyvermeldingen, deels door dezelfde transitieve oorzaak. De
+  productieaudit is schoon. Advisories betreffen onder meer stack exhaustion en
+  dure expansie bij kwaadaardige bracepatronen; dit zijn ontwikkeltools, geen
+  aangetoonde publieke applicatieroute.
+- **Klaar wanneer:** de dependencyketens en bereikbaarheid zijn getrieerd,
+  compatibele patches zijn toegepast en lint, tests en build blijven slagen.
+  Waar een upstreamfix ontbreekt, documenteer de begrensde blootstelling en een
+  concrete hercontrole; verlaag niet blind `eslint-config-next` naar versie 14
+  en gebruik geen ongecontroleerde `npm audit fix --force`.
+- **Planning:** meenemen bij `MNT-047`, vóór nieuwe CI onbetrouwbare branches gaat
+  verwerken; beoordeel overrides alleen met compatibilitybewijs.
+- **Log:** 2026-10-04 — volledige audit na `MNT-054` getrieerd; apart gehouden van
+  de geslaagde productiepatch. Adviesdetails staan in het reviewrapport.
+
+### `MNT-045` — Contract voor taalkeuze, URLs en publicatie vastleggen
+
+- **Status:** gepland
+- **Prioriteit:** hoog
+- **Scope:** taalkeuze, publieke routes, SEO en navigatie
+- **Categorie:** product-ux, knowledge-data, engineering
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** NL/EN-content bestaat, maar routes, interface, metadata en
+  navigatie presenteren Nederlands. Tweetalige authoring is nog geen tweetalig
+  product.
+- **Klaar wanneer:** een kort besluit locale-URLs, taalkeuze, legacyredirects,
+  canonical/hreflang/sitemap, zoeken, anchors en pathcontext vastlegt. Aanbevolen
+  uitgangspunt ter toetsing: behoud bestaande NL-URLs, voeg `/en` toe en behoud
+  stabiele Engelse entityslugs; geen stille contentfallback. Toets dit aan de
+  geïnstalleerde Next.js-documentatie voordat het routecontract verandert.
+- **Planning:** direct na `MNT-047`, vóór verdere route-uitbreidingen; de huidige
+  publieke URLs veranderen pas in `MNT-046` na compatibiliteitscontrole.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-046` — Volledige NL/EN-presentatie en taalwisselaar bouwen
+
+- **Status:** open
+- **Prioriteit:** hoog
+- **Scope:** publieke NL/EN-interface en contentpresentatie
+- **Categorie:** product-ux, accessibility, engineering, testing
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Afhankelijkheid:** `MNT-045`
+- **Klaar wanneer:** een toegankelijke taalwisselaar de equivalente entity,
+  narrative of Learnpagina opent; interface, captions, alttekst, zoekresultaten,
+  foutmeldingen en metadata de gekozen taal volgen. Anchors, query/pathcontext,
+  browsergeschiedenis, redirects en gedeelde voortgang op stable IDs blijven
+  correct. Beide talen zijn op mobiel/desktop en zonder JavaScript getest.
+- **Planning:** aanbevolen vóór `EXP-020`, zodat Engelse presentatie vóór de
+  laatste grote contentfase echt gebruikt en gereviewd wordt; vertalingen zijn
+  expliciet gereviewd, geen runtime-machinevertaling.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-048` — Contentpipeline en model in herkenbare modules verdelen
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Scope:** `scripts/content/pipeline.ts`, `src/content/model.ts` en importgrenzen
+- **Categorie:** engineering, testing, knowledge-data
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** `pipeline.ts` telt 1.339 regels en combineert discovery,
+  validatie, contentplannen, graphopbouw en searchindexing; `model.ts` telt 912
+  regels met schema's, constants en runtimevormen. Dit bemoeilijkt lokale review.
+- **Klaar wanneer:** planvalidatie en searchindexing eigen modules hebben en de
+  pipeline als leesbare orchestration fungeert; modellen langs bestaande
+  verantwoordelijkheden zijn gegroepeerd zonder importcycli. Bestaande exports,
+  foutmeldingen, deterministische output en inhoud blijven gelijk. Vergelijk
+  bundles vóór/na en behoud de huidige fixturetests. Borg dat de repository en
+  generated bundle niet vanuit clientmodules geïmporteerd kunnen worden.
+- **Planning:** incrementeel vóór volgende schema-/GIS-uitbreiding; geen volledige
+  herschrijving of nieuwe abstractielaag zonder concrete use-case.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-049` — Stylesheet langs bestaande UI-grenzen organiseren
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Scope:** `src/app/globals.css` en componentstijlen
+- **Categorie:** engineering, product-ux, testing
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** `globals.css` telt 2.853 regels; tokens, globale basis en
+  componentpatronen staan in één bestand.
+- **Klaar wanneer:** tokens en basis globaal herkenbaar blijven, componentstijlen
+  logisch te vinden zijn en cascade/importvolgorde expliciet behouden blijven;
+  desktop, mobiel, kennisdiepte, print en Learn geen visuele regressie tonen.
+  Kies gewone stylesheets of CSS Modules passend bij de bestaande stack;
+  introduceer geen nieuw stylingframework om alleen bestanden te splitsen.
+- **Planning:** bij de eerstvolgende bredere UI-uitbreiding; geen verplichte
+  voorwaarde voor een kleine contentwijziging.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-050` — Beslismoment voor backend, API en database
+
+- **Status:** gepland
+- **Prioriteit:** middel
+- **Scope:** gebruikersdata, redactionele samenwerking en toekomstige API-consumers
+- **Categorie:** engineering, operations, product-ux
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** de Next.js-server en contentrepository bestaan; een aparte
+  account-/voortgangsbackend bestaat nog niet. Lokale voortgang heeft een
+  repositoryinterface, maar netwerkfouten, authenticatie en conflicten zijn nog
+  geen uitgewerkt contract.
+- **Klaar wanneer:** een besluit de concrete use-cases en invoertriggers benoemt:
+  accounts/cross-device voortgang, redactionele samenwerking, externe consumers
+  of bewezen query-/GIS-behoefte. Vergelijk file-backed content plus een aparte
+  gebruikersdatabase met verdere migratie. Leg zo nodig autorisatie, retries,
+  offlinegedrag, conflicten, export/verwijdering, backups en migratie vast.
+  Ook bewust uitstel krijgt een volgende toetsbare trigger.
+- **Planning:** samen met `LRN-012` (vroegst 2026-10-22 bij genoeg gebruik), of
+  eerder zodra een genoemde use-case wordt ingepland. Dit ticket bewaakt het
+  platformbesluit; `LRN-012` blijft eigenaar van de pilotevaluatie. Geen tweede
+  handmatig onderhouden feitenbron en geen verplichte REST-laag zonder consumer.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-051` — Eerste verifieerbare Atlasdataset en kleine pilot afbakenen
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Scope:** geverifieerde geography-data en eerste Atlaslevering
+- **Categorie:** atlas-gis, research, engineering
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** Atlas heeft nog geen data; drie oudere kaarttickets blijven
+  daardoor geblokkeerd zonder een concrete eerste datalevering.
+- **Klaar wanneer:** een beperkte dataset voor Bordeaux is gekozen op officiële
+  provenance, licentie, schaal, CRS, versie en updatepad; een import- en
+  validatiecontract plus eerste publiek bruikbare kaart zijn afgebakend. Leg vast
+  welke oude kaarttickets hierdoor wel/niet kunnen volgen. Punten, appellation-
+  geometrie en wereldwijde druivenverspreiding zijn afzonderlijke dataproblemen.
+- **Planning:** bronverkenning vóór `EXP-027`; bouw pas op geverifieerde data.
+  PostGIS is een mogelijke latere keuze, geen vereiste voor de eerste pilot.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-052` — Meetbare performance- en mediabudgetten vastleggen
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Scope:** search, builds, runtimebundles en media
+- **Categorie:** engineering, operations, media
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** lokale media nemen circa 311 MiB in, de gegenereerde JSON circa
+  16 MiB; dit zijn schijfvolumes, geen gemeten browserdownloads. De zoekcode
+  normaliseert passages tijdens iedere zoekactie.
+- **Klaar wanneer:** buildduur, route-/clientbundles, beeldbytes en zoeklatentie
+  met een reproduceerbare workload zijn gemeten en passende budgetten gekozen.
+  Optimaliseer alleen aangetoonde knelpunten. Een eventuele CDN-stap omvat
+  synchronisatie, checksums, cachebeleid en rollback; `MEDIA_BASE_URL` alleen
+  uploadt niets. Bewaar bronmetadata en canonical media-ID's.
+- **Planning:** vóór de volgende grootschalige regio-uitbreiding en bij Atlas-
+  datasetkeuze; grote bronbestanden alleen rechtvaardigen geen databasemigratie.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+### `MNT-053` — Bestaande SVG-diagrammen naar de gewenste rasterstijl migreren
+
+- **Status:** open
+- **Prioriteit:** laag; apart te plannen beeldronde
+- **Scope:** redactionele SVG-diagrammen met een geregistreerd media-ID
+- **Categorie:** media, content, accessibility
+- **Herkomst:** gebruikersvoorkeur uit de wijngaardsystemenronde; bevestigd als
+  toekomstig werk in `QCR-2026-10-04-01`
+- **Klaar wanneer:** de nog gebruikte redactionele SVG's geïnventariseerd en per
+  leerdoel vervangen zijn door gecontroleerde rasterillustraties, met behoud
+  van betekenis, bronnen, stabiele media-ID's en gelijkwaardige NL/EN-uitleg.
+  UI-iconen en geverifieerde GIS-weergave zijn geen automatisch onderdeel van
+  deze illustratiemigratie. Controleer leesbaarheid op mobiel en assetomvang.
+- **Planning:** afzonderlijke illustratieronde; in deze onderhoudsreview zijn
+  geen bestaande beelden opnieuw gegenereerd.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
 
 ### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
 
@@ -142,6 +347,58 @@ regelgevingsbesluit.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-054` — Next.js-securitypatch gericht toepassen
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** engineering, testing, operations
+- **Scope:** `next`, `eslint-config-next` en lockbestand
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** npm audit meldde één kritieke advisory voor Next.js 16.3.3:
+  `GHSA-vcvr-r3jv-pc5j`. In deze app is geen gebruik van `next/og` of
+  `ImageResponse` gevonden; de specifieke aanvalvoorwaarde is daarmee niet
+  aangetoond. De dependencyversie valt wel binnen het getroffen bereik.
+- **Uitvoering:** Next.js en de bijbehorende ESLint-config gericht vastgepind op
+  16.3.8; lockbestand bijgewerkt. Deze patch bevat ook de aanvullende fixes uit
+  de [officiële releasenotes](https://github.com/vercel/next.js/releases/tag/v16.3.8).
+- **Klaar wanneer:** dependencycontrole, vaste kwaliteitschecks, productiebuild
+  en browsersuite op de gepatchte versie slagen.
+- **Log:** 2026-10-04 — lokaal bijgewerkt en gecontroleerd; dit ticket omvat geen
+  productiedeployment. Resultaten en beperkingen staan in het reviewrapport.
+
+
+### `MNT-043` — Documentatie en overkoepelende planning opschonen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Scope:** documentatie-ingangen, placeholders en productplanning
+- **Categorie:** engineering, operations
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Uitvoering:** zes achterhaalde placeholder-README's/guides verwijderd,
+  relevante mediabetekenis geconsolideerd, hoofd-README ingekort en verouderde
+  Learn-/architectuurbeschrijvingen hersteld. Alle canonical contentbestanden,
+  policycontracten, researchbriefs en historische audits zijn behouden.
+  Productplanning verbindt de bestaande backlogs zonder tickets te dupliceren.
+- **Log:** 2026-10-04 — uitgevoerd en gedocumenteerd in de sanity review.
+
+### `MNT-044` — Tijdelijke browserstaat voorrang geven na mislukte opslag
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Scope:** lokale Learn-voortgang en kennisdieptekeuze
+- **Categorie:** engineering, product-ux, testing
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** een mislukte schrijfactie gevolgd door een succesvolle read
+  herstelde oude voortgang of kennisdiepte. Een mislukte reset kon oude
+  lesmarkeringen direct terugbrengen.
+- **Uitvoering:** niet-opgeslagen wijzigingen blijven tijdens het bezoek
+  leidend, inclusief lege voortgang na reset. Een succesvolle nieuwe schrijfactie
+  herstelt persistent gedrag. De melding verduidelijkt dat oudere opgeslagen
+  voortgang bij een nieuw bezoek kan terugkomen. Drie unitregressies en drie
+  browserregressies dekken gedeeltelijk falende opslag.
+- **Log:** 2026-10-04 — gereproduceerd en hersteld; validatie staat in het rapport.
+
 
 ### `MNT-030` — Markdown-linkaudit triageerbaar maken
 

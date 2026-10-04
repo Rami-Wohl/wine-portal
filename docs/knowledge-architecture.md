@@ -139,7 +139,6 @@ Een entity kan een gevalideerde `geography_id` dragen en de bundle bouwt daar ee
 ### Roadmap
 
 - een volwaardige, geverifieerde geography-datalaag;
-- learning-pathpackages die gedeelde kennis rangschikken;
 - rijkere search, compare en bronweergave boven op de gegenereerde graph.
 
 ---
@@ -670,11 +669,12 @@ project/
 │   │       ├── entity.yaml
 │   │       ├── overview.nl.md
 │   │       └── overview.en.md
-│   └── narratives/
-│       └── <type-directory>/<slug>/
-│           ├── narrative.yaml
-│           ├── article.nl.md
-│           └── article.en.md
+│   ├── narratives/
+│   │   └── <type-directory>/<slug>/
+│   │       ├── narrative.yaml
+│   │       ├── article.nl.md
+│   │       └── article.en.md
+│   └── learning-paths/<slug>/learning-path.yaml
 ├── data/
 │   ├── sources/
 │   ├── media/
@@ -838,9 +838,10 @@ authoringcyclus is voltooid of een later contentplan ze bewust laat vervallen.
 Exacte aantallen entities, bronnen, media en relaties worden hier niet handmatig
 bijgehouden. `npm run content:check` rapporteert de actuele repositorystatus en
 `npm run content:link-audit` controleert of bekende entities in oude of nieuwe
-prose ongekoppeld zijn gebleven. Er is nog geen actieve inhoudelijke narrative;
-de enige narrative is een technische draftfixture voor pipeline- en routetests.
-Er is evenmin geverifieerde geografie voor Atlas.
+prose ongekoppeld zijn gebleven. De Learn-pilot heeft zeven actieve, tweetalige
+lessons en een learning path met navigatie en lokale voortgang; zie
+[de pilotrelease](learn-pilot-release.md). Er is nog geen geverifieerde geografie
+voor Atlas.
 
 ### Vervolg na deze vertical slice
 
@@ -848,8 +849,7 @@ Er is evenmin geverifieerde geografie voor Atlas.
   content- of leerplan hun waarde aantoont;
 - relevante scoped vintage-entities wanneer een concrete use-case dat vraagt;
 - brongebonden assertions waar de use-case daarom vraagt;
-- de eerste inhoudelijk volwaardige NL- en EN-lessons en learning paths volgens
-  `learn-roadmap.md`;
+- de Learn-pilot evalueren en vervolg bepalen volgens `learn-roadmap.md`;
 - geverifieerde boundaries, punten en Atlasdata met volledige provenance;
 - verdere selectie en review van foto's, illustraties en diagrammen;
 - verdere verfijning van publieke bronweergave en menselijk leesbare relaties;
@@ -877,6 +877,7 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - entity/narrative depth en framework alignment;
 - inverse relations, localized slug/search/geography-indexes;
 - learning-pathschema, targetvalidatie, pathlookups en reverse lessonmembership;
+- Learn-navigatie, pathgebonden lessoncontext en anonieme lokale browservoortgang;
 - één deterministische gegenereerde runtimebundle;
 - een entitypackagegenerator en validation/buildcommands.
 
@@ -888,7 +889,7 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 
 ### Open roadmapontwerp
 
-- voortgangsmodel en pathgebonden lessoncontext;
+- eventuele accounts en gesynchroniseerde voortgang na pilotevaluatie;
 - geography storage, import en mogelijke PostGIS-runtime;
 - provideradapter en geautomatiseerde object-storage/CDN-sync op storage key en checksum;
 - rijkere relationele ranking, taalgebonden woordvormen en facetten;
@@ -896,6 +897,9 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - correctie- en community suggestionworkflow;
 - de fijnmazigheid en UI van externe framework alignment;
 - criteria voor een mogelijk toekomstig `wine_style`-type.
+
+De uitvoeringsvolgorde en beslismomenten staan in
+[de productplanning](product-roadmap.md).
 
 Open roadmapkeuzes veranderen het huidige v1-authoringcontract niet stilzwijgend. Iedere schema- of canonical-storagewijziging vereist documentatie, validatie, een compatibele overgang en behoud van bestaande provenance.
 
