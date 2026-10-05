@@ -19,4 +19,6 @@ source_refs:
   - source.awri-yeast-choice
   - source.awri-stuck-fermentations-2013
   - source.awri-fermentation-temperature
+  - source.uc-davis-problem-fermentations
+  - source.mouret-fermentation-strategy-2021
 depth: foundation

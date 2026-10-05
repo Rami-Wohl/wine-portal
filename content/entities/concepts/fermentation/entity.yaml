@@ -18,6 +18,10 @@ relations:
     target: concept.malolactic-fermentation
   - type: related_to
     target: concept.second-fermentation
+  - type: related_to
+    target: concept.oxidation
+  - type: related_to
+    target: concept.terroir
 assertions: []
 source_refs:
   - source.oiv-fermentation-interruption
@@ -25,5 +29,17 @@ source_refs:
   - source.awri-yeast-choice
   - source.awri-stuck-fermentations-2013
   - source.awri-fermentation-temperature
+  - source.awri-yan
+  - source.awri-nutrient-management-2022
+  - source.awri-aeration-ferments
+  - source.awri-restart-fermentation-2020
+  - source.awri-natural-ferment-sequencing-2017
+  - source.mouret-fermentation-strategy-2021
+  - source.uc-davis-problem-fermentations
+  - source.awri-residual-sugar-measurement
+  - source.awri-tss-measurement
+  - source.oiv-microbiological-deacidification
+  - source.champagne-bottling-second-fermentation
+  - source.awri-lees-contact-2020
 depth: foundation
-last_reviewed: 2026-09-16
+last_reviewed: 2026-10-05

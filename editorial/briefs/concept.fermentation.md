@@ -1,43 +1,150 @@
-# Contentbrief — Alcoholische vergisting
+# Contentbrief — Gist en alcoholische vergisting
 
-Datum: 2026-09-16. Outline en bronnenplan goedgekeurd voor authoring.
+Datum: 2026-10-05
 
-## Voorkennis en paginabelofte
+Roadmapticket: `EXP-018`
 
-Geen kelderkennis vereist; gist, most, fenolen en andere vakwoorden worden bij eerste gebruik uitgelegd. Hoe druivensuiker wijn wordt, welke keuzes de vergisting sturen en waarom droog, zoet en mousserend niet met elkaar verward mogen worden.
+Package: `concept.fermentation`
 
-De vier pagina's vergisting, schilinweking, extractie en élevage vormen één begrippencluster met aparte canonical eigenaars. Specifieke producentenrecepten, apparatuurinstructies, wettelijke appellationregels, laboratoriummethoden en jaargangadvies vallen buiten scope.
+Archetype: `concept-system-overview`
 
-## Dekkingsmatrix en sectie-outline
+## Paginabelofte en ownership
 
-| Block / onderwerp op deze pagina | Kennisniveau | Reden | Volledigheidsvragen |
-| --- | --- | --- | --- |
-| `van-suiker-naar-wijn` — Suiker, gist, alcohol, koolzuur en warmte | basis | Zonder omzetting en producten is het begrip onbegrijpelijk. | Wat wordt omgezet? Wat ontstaat? Waar blijft het gas? |
-| `gist-en-temperatuur` — Gistkeuze en temperatuur | basis + verdieping | Keuzes herkennen is WSET 2; hun wisselwerking verklaren WSET 3. | Wat betekent spontaan? Wat doet koeling? Welke rol spelen voedingsstoffen? |
-| `einde-van-de-gisting` — Droog, zoet en stilgevallen | basis + gevorderd | Restsuiker is essentieel; meet- en stressnuance ligt boven de gewone stijluitleg. | Wanneer is gisting klaar? Is stilvallen hetzelfde als een zoete stijl? Is een universeel alcoholplafond verantwoord? |
-| `andere-processen` — Schilcontact, malolactische omzetting en tweede gisting | basis | De drie veelgemaakte verwarringen moeten meteen worden opgelost. | Wat maakt alcohol, wat verandert zuur en wat kan bubbels maken? |
+De lezer kent druif, most en het verschil tussen sap en schillen. Deze pagina is
+de canonical eigenaar van alcoholische vergisting, gistecologie, startkeuze,
+voeding, verloop, monitoring en onbedoeld vastlopen. De pagina legt uit hoe
+most, gist en kelderbeheer samen bepalen wat tijdens de vergisting gebeurt.
 
-Glascontext wordt in de hoofdsecties geïntegreerd; een kernidee sluit af. Details blijven cumulatief onder hun hoofdsectie. WSET is een graadmeter, geen examenmapping.
+De bestaande entity, slugs, tien gepubliceerde block-IDs en documentaire foto
+blijven behouden. Er komt geen afzonderlijke gistentity. Ontvangst en
+mostcorrecties blijven bij `grape-reception-must-preparation`, contact bij
+`maceration`, stofoverdracht bij `extraction`, zuurconversie bij
+`malolactic-fermentation`, rijping bij `elevage` en `lees-ageing`, oxidatie bij
+`oxidation` en sulfietchemie bij `sulfur-dioxide`. Brede bederfdiagnostiek volgt
+in EXP-022; de volledige routevergelijking volgt in EXP-019.
 
-## Claims en bronnenplan
+## Outline, lezersvragen en claimplan
 
-Per sectie zijn de hierboven benoemde identiteit, hoofdwerking en begrenzing de drie centrale claims. Status na bronreview: **supported** voor deze claimfamilies; precieze opbrengsten, universele temperatuur-/tijdsrecepten, prioriteitsclaims en smaakgaranties: **omit**. OIV draagt definities, AWRI draagt mechanismen en hun grenzen; WRE ondersteunt hoedbeheer en WSET/Napa dragen herkenbare houtcontext. Een OIV-aanbeveling wordt niet als lokale wettelijke verplichting gepresenteerd.
+| Coverage | Block | Lezersvragen en kernclaims | Diepte | Bewijs |
+| --- | --- | --- | --- | --- |
+| identity-and-scope | van-suiker-naar-wijn | Wat wordt omgezet, door wie, en wat zijn de producten? | foundation | OIV vergisting; AWRI temperatuur |
+| system-components-and-relationships | opbouw-en-samenhang | Hoe werken suikers, populatie, voeding en vat samen? | foundation | AWRI gistkeuze/YAN; UC Davis |
+| mechanisms-and-interactions | werking | Hoe verschillen groei, suikeromzetting en vertraging? | foundation; intermediate groei versus activiteit | Mouret et al. 2021; UC Davis |
+| conditions-and-variation | gist-en-temperatuur | Wat verandert met startkeuze, temperatuur en zuurstof? | foundation; bestaande intermediate voeding en advanced ecologische herkomst | OIV; AWRI temperatuur, YAN, voedingsbeheer, sequencing, aeration |
+| decisions-and-trade-offs | einde-van-de-gisting | Hoe kies en controleer je droog uitgisten, onderbreken of ingrijpen? | foundation; bestaande advanced meetblock | OIV interruption; AWRI restsuiker/TSS |
+| global-context-and-examples | wereldwijde-context | Waarom vraagt iedere most een eigen verloop? | foundation | Australisch voedingsonderzoek; UC Davis Grenache-vergelijking |
+| evidence-and-limits | bewijs-en-grenzen | Welke meting helpt bij vertragen; wat kan een diagnose niet uit één symptoom afleiden? | foundation; intermediate herstart; advanced aroma gevormd versus behouden | AWRI 2013 en rescue 2020; Mouret et al. 2021 |
+| practical-interpretation | andere-processen | Wat verklaart vergisting aan het glas; welke buurprocessen doen iets anders? | foundation | OIV; AWRI gistkeuze; Comité Champagne; AWRI lies |
 
-Algemene synthese gebruikt gedeelde blockbronnen; specifieke wetenschappelijke of risicoclaims krijgen directe citations. Geen extra bron per aangrenzende zin, maar ook geen producentenbron als universeel bewijs. Geraadpleegde bronnen worden alleen in het bronregister bewaard.
+Status: de roadmap en de EXP-016-ownershipaudit autoriseren deze afbakening.
+Outline en dependencies zijn vóór nieuwe prose gecontroleerd. Claims worden
+alleen op de hierboven afgebakende schaal gebruikt. Er komt geen universele
+voedingsdosering, temperatuur, fermentatieduur of alcoholtolerantie.
 
 ## Dependencies en begrippen
 
-De vier clusterentities bestaan al. Verder bestaan assemblage, liesrijping, bâtonnage, autolyse, malolactische omzetting, tweede gisting en tannine als actieve of draftrecords. Verwijs naar de juiste eigenaar; geen nieuwe entiteit voor ieder gereedschap. Leg alleen echte, unieke relaties vast en controleer de afgeleide groepen. Bordeaux krijgt geen disproportioneel aandeel; algemene stijlvoorbeelden volgen het onderwerp zelf.
+Bestaande concepts hergebruiken: ontvangst/mostvoorbereiding, maceration,
+extraction, malolactic-fermentation, second-fermentation, elevage, lees-ageing,
+oxidation, sulfur-dioxide, acidity en terroir. Structurele relaties worden
+alleen toegevoegd als zij niet al aan de andere kant van de graph staan.
+YAN, glucose/fructose, groeifasen en herstart zijn hub-owned uitleg, geen
+nieuwe satellites. Chardonnay verwijst naar het bestaande draftrecord, zonder
+activatie of structurele gist-druifrelatie. Grenache identificeert uitsluitend
+het besproken onderzoeksmateriaal; er komt hiervoor geen nieuw druivenpackage. De lesson `alcoholic-fermentation` krijgt een inline
+naslaglink en gerichte bron-/formuleringscorrecties; leerdoelen en path blijven.
 
-## Beeld en feitencontract
+## Wereldwijde voorbeeldmatrix
 
-Documentaire fotografie heeft de voorkeur boven illustratie. Eén foto per pagina toont respectievelijk gistingskuipen, onderdompelen van schillen, overpompen en een vatenkelder. Beelden zijn visueel geïnspecteerd: echte apparatuur, gewone kelderomgeving en correcte handeling; geen gefabriceerd reliëf, géén bewijs van smaak of kwaliteit. De caption noemt locatie uitsluitend indien de bestandsbron deze vastlegt, legt de les uit en maakt duidelijk welke werking niet zichtbaar is. Geen claim over inhoud, vatleeftijd, oogstjaar of fermentatieactiviteit alleen vanuit het uiterlijk. Rechten, maker, checksum, alt en caption worden NL/EN geregistreerd.
+- Wit na sapklaring versus rood met schillen: andere beschikbaarheid van voeding
+  en andere samenhang tussen temperatuur en extractie.
+- UC Davis vergelijkt een geïnoculeerde en ongeïnoculeerde vergisting van dezelfde
+  Grenache-most: verschillende curven kunnen beide droog eindigen. Geen duur
+  uit die vergelijking verheffen tot een algemene kalender.
+- Australische AWRI-publicaties tonen stam- en mostafhankelijke stikstofvraag;
+  aroma-aanbevelingen uit Chardonnay-onderzoek blijven tot die context begrensd.
+- Suikerrijke most versus een lager startgehalte: andere stress en voedingsvraag,
+  zonder ieder warm wijngebied of iedere oogst over één kam te scheren.
 
-## Publication gate en iteraties
+Het algemene mechanisme blijft geldig zonder Bordeauxvoorbeelden. Onderzoeks-
+contexten uit beide hemisferen dienen het inhoudelijke contrast, geen landenlijst.
 
-Na iedere conceptsectie opnieuw toetsen: alle bovenstaande vragen beantwoord of expliciet uitbesteed; jargon geïntroduceerd; de basis zelfstandig begrijpelijk; verdieping causaal en gevorderd werkelijk boven WSET 3; geen dubbele uitleg of Bordeauxbias; proportionele bronbasis; NL/EN-equivalente structuur. Pas na inhoudelijke review en harde pipelinechecks activeren. De laatste review wordt hier vastgelegd, niet als publieke copy.
+## Visual teaching contract
 
-### Redactionele review — 2026-09-16
+De bestaande PNG `media.lesson.alcoholic-fermentation.fermentation-conversion`
+wordt hergebruikt: sap met sterk vergrote gist, gasafvoer, sonde en koelmantel
+verbinden biologische omzetting met kelderbeheer. De plaat is een conceptuele
+opengewerkte tank, geen technisch bouwplan; de cellen en belletjes zijn niet op
+ware schaal. Caption en omringende tekst leggen suiker → alcohol/CO₂ en warmte
+uit. Geen nieuwe cijfers, molecuulstructuren, labels of empirische curves nodig.
+
+De bestaande foto `oak-fermentation-tanks` documenteert houten kuipen bij
+O. Fournier in Mendoza; oorspronkelijke Commons-beschrijving en CC BY 2.0
+gecontroleerd. Zij blijft bij het fysieke vat en krijgt geen bewijsrol voor
+onzichtbare biologische of sensorische uitkomsten. De PNG toont juist het
+onzichtbare proces. Controleer beide beelden op 390 en 1440 pixels.
+
+## Research en correcties
+
+- De vijf bestaande fermentation-bronnen zijn opnieuw geopend. De AWRI-tekst
+  uit 2013 blijft bruikbaar voor algemene monitoring en diagnose; geen absolute
+  zuurstofveiligheidsclaim of temperatuurgrens overnemen. Het rescueprotocol
+  van maart 2020 en het voedingsartikel van december 2022 scherpen die scope aan.
+- Mouret et al. (2021), DOI `10.3390/fermentation7030155`, is gelezen als volledige
+  uitgevers-PDF via de Semantic Scholar-mirror; de uitgeverspagina was voor de
+  webtool niet bereikbaar. Identiteit, auteurs, datum en CC BY staan in de PDF.
+- De les citeerde OIV voor dichtheidsmonitoring en AWRI's rode-temperatuurpagina
+  voor algemene vatmateriaalclaims. De monitoring krijgt eigen brondekking;
+  het vatgedeelte richt zich op het onderbouwde warmte-/meetvraagstuk. Detail
+  over materialen blijft bij EXP-020.
+- De informele brede mostdefinitie wordt vervangen door een verwijzing naar de
+  nieuwe ontvangsthub; de omzetting blijft deze pagina's onderwerp.
+- Gepubliceerde anchors blijven werken, ook wanneer hun kop positiever wordt
+  geformuleerd. De naam `spontaan-is-geen-herkomstbewijs` blijft technisch intact.
+
+## Publication gate
+
+- [x] Ownership, outline, dependencies en beeldhergebruik beoordeeld.
+- [x] Acht coveragevragen volledig en brongebonden beantwoord.
+- [x] Foundation zelfstandig; hogere lagen voegen verklaringen en grenzen toe.
+- [x] NL/EN structureren dezelfde kennis, links en citations.
+- [x] Oude anchors, nieuwe naslaglink en afgeleide relaties gecontroleerd.
+- [x] Smal/breed, zoeken, kennisdiepte, beide beelden en bronankers gecontroleerd.
+- [x] Content-, link-, taal- en repositorychecks en relevante E2E geslaagd.
+
+## Iteratielog
+
+- Outline: bestaande IDs behouden; gisting, groei en voltooiing onderscheiden;
+  voedingsstrategie en herstart geen recept geven. Bestaande PNG hergebruiken.
+- Inhoud: acht foundationsecties, drie intermediate- en drie advanceddetails;
+  de tien oude block-IDs zijn behouden. Groei/activiteit, restsuikermethoden en
+  gevormd/behouden aroma expliciet onderscheiden. NL/EN-blockmetadata en
+  entitylinks zijn gelijk; de lesson behoudt haar tien blocks en leerpadpositie.
+- Bron- en linkreview: negen nieuwe source records, vijf oude bronnen opnieuw
+  geraadpleegd; geen duplicaatmedia of nieuwe entity. Gerichte links naar
+  Chardonnay en extractie toegevoegd. De globale linkaudit houdt 945 kandidaten
+  over (174 nieuw, 768 pending, 3 false-positive); dit is redactionele voorraad,
+  geen lijst gebroken links. Brede afhandeling blijft bij EXP-026.
+- Techniek: `npm run format`, `npm run check` (133 tests), contentvalidatie,
+  taal-/linkinventaris en productiebuild geslaagd. De volledige Playwright-suite
+  slaagt met 85 tests. De sandbox blokkeerde poort 3100; dezelfde tests zijn
+  daarna met toegestane lokale server uitgevoerd.
+- Browser: 390 en 1440 pixels, foto/PNG, cumulatieve kennisdiepte, alle
+  bronankers en les → naslag → les gecontroleerd. Geen horizontale overflow.
+  Zoeken op YAN plaatst de voedingspassage bovenaan en opent de juiste
+  intermediate-passage via haar bewaarde anchor. De preview draait op 3101.
+- Publicatiestatus: 352 entities (284 actief), 8 narratives, één leerpad,
+  559 sources en 179 media; 1.282 authored forward relations. EXP-018 afgerond;
+  EXP-019 volgt, met platformonderhoud volgens de productroadmap.
+
+Deze review is een redactionele zelfcontrole met technische validatie, geen
+onafhankelijke expertcertificering.
+
+## Historische review — 2026-09-16
+
+Het eerdere vierpagina-cluster had een smallere introductiescope en uitsluitend
+documentaire fotografie. EXP-018 breidt deze owner uit; de oorspronkelijke
+reviewbevindingen blijven hieronder bewaard.
+
 
 - Iteratie 1: dekkingsvragen per hoofdsectie gecontroleerd; definitie, werking, wijnstijlen en beperkingen geïntegreerd. Basis draagt de identiteit zelfstandig; verdieping verklaart keuzes en gevorderd behandelt niet-lineaire of microbiologische grenzen.
 - Iteratie 2: het cluster onderling nagelopen. Bewust stoppen van vergisting onderscheiden van vastlopen; koolzuurmaceratie onderscheiden van koude schilinweking; kleur onderscheiden van tannine; élevage aangevuld met voorbereiding op botteling. Koolzuurmaceratie heeft een eigen draftrecord voor latere volledige uitwerking, geen tweede eigenaar op deze pagina.

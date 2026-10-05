@@ -1,0 +1,352 @@
+schema_version: 2
+package_id: concept.fermentation
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - van-suiker-naar-wijn
+    target_ids: []
+    completeness_questions:
+      - Wat zet gist om en welke producten ontstaan?
+    layers:
+      foundation:
+        - Wat zet gist om en welke producten ontstaan?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Gist zet druivensuikers om in ethanol, CO₂ en nevenproducten; warmte komt
+            vrij.
+          status: supported
+          source_refs:
+            - source.oiv-alcoholic-fermentation
+            - source.awri-fermentation-temperature
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Hoe werken most, gistpopulatie, voeding en vat samen?
+    layers:
+      foundation:
+        - Hoe werken most, gistpopulatie, voeding en vat samen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Suiker alleen bepaalt geen succesvolle gisting; stam, mostsamenstelling
+            en beheer werken samen.
+          status: supported
+          source_refs:
+            - source.awri-yeast-choice
+            - source.awri-yan
+            - source.uc-davis-problem-fermentations
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen gistgroei, vergistingsactiviteit en vertraging?
+    layers:
+      foundation:
+        - Hoe verschillen gistgroei, vergistingsactiviteit en vertraging?
+      intermediate:
+        - Waarom kan een niet-groeiende populatie nog suiker verbruiken?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Suikeromzetting gaat door nadat de gistpopulatie niet meer groeit.
+          status: supported
+          source_refs:
+            - source.mouret-fermentation-strategy-2021
+            - source.uc-davis-problem-fermentations
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - gist-en-temperatuur
+    target_ids: []
+    completeness_questions:
+      - Hoe veranderen startkeuze, voeding, temperatuur en zuurstof het verloop?
+    layers:
+      foundation:
+        - Hoe veranderen startkeuze, voeding, temperatuur en zuurstof het
+          verloop?
+      intermediate:
+        - Wat meet YAN en waarom doet timing van voeding ertoe?
+      advanced:
+        - Wat vertellen soort- en stamniveau over een spontane gisting?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: YAN-vraag is contextafhankelijk; populaties veranderen en zuurstof kan
+            gist op geschikte momenten ondersteunen.
+          status: supported
+          source_refs:
+            - source.awri-yeast-choice
+            - source.awri-yan
+            - source.awri-nutrient-management-2022
+            - source.awri-natural-ferment-sequencing-2017
+            - source.awri-fermentation-temperature
+            - source.awri-aeration-ferments
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - einde-van-de-gisting
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen droog uitgisten, gepland stoppen en eindcontrole?
+    layers:
+      foundation:
+        - Hoe verschillen droog uitgisten, gepland stoppen en eindcontrole?
+      intermediate: []
+      advanced:
+        - Hoe verschillen dichtheid, glucose/fructose en reducerende suikers als
+          eindmeting?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Een geplande stop laat vergistbare suiker achter;
+            glucose/fructose-analyse heeft een andere meetscope dan totale
+            reducerende suikers.
+          status: supported
+          source_refs:
+            - source.oiv-fermentation-interruption
+            - source.awri-residual-sugar-measurement
+            - source.awri-tss-measurement
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Waarom vragen verschillende mosten en startkeuzes een eigen vergelijking?
+    layers:
+      foundation:
+        - Waarom vragen verschillende mosten en startkeuzes een eigen
+          vergelijking?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: De UC Davis Grenache-vergelijking en AWRI-voedingscontexten leveren geen
+            universele duur of dosering.
+          status: supported
+          source_refs:
+            - source.uc-davis-problem-fermentations
+            - source.awri-nutrient-management-2022
+            - source.awri-yan
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Wat zegt een vertraagde curve en wat vereist nadere diagnose?
+    layers:
+      foundation:
+        - Wat zegt een vertraagde curve en wat vereist nadere diagnose?
+      intermediate:
+        - Waarom vraagt herstart aanpassing aan het probleemmilieu?
+      advanced:
+        - Waarom zijn gevormde en in wijn behouden aromastoffen niet hetzelfde?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Temperatuur, voeding, stress en levensvatbaarheid vragen gezamenlijke
+            diagnose; herstart kan acclimatisatie vergen.
+          status: supported
+          source_refs:
+            - source.awri-stuck-fermentations-2013
+            - source.awri-restart-fermentation-2020
+            - source.mouret-fermentation-strategy-2021
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - andere-processen
+    target_ids: []
+    completeness_questions:
+      - Wat verklaart vergisting aan wijnstijl en wat doen aangrenzende
+        processen?
+    layers:
+      foundation:
+        - Wat verklaart vergisting aan wijnstijl en wat doen aangrenzende
+          processen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics: []
+        source_refs: []
+      specific_claims:
+        - claim: Alcoholische gisting, bacteriële zuurconversie, tweede gisting en
+            liescontact zijn verschillende processen.
+          status: supported
+          source_refs:
+            - source.oiv-alcoholic-fermentation
+            - source.awri-yeast-choice
+            - source.oiv-microbiological-deacidification
+            - source.champagne-bottling-second-fermentation
+            - source.awri-lees-contact-2020
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.grape-reception-must-preparation
+    names:
+      nl: Ontvangst, selectie en mostvoorbereiding
+      en: Grape reception, sorting and must preparation
+    slugs:
+      nl: ontvangst-selectie-en-mostvoorbereiding
+      en: grape-reception-must-preparation
+    disposition: link-and-relation
+  - id: concept.maceration
+    names:
+      nl: Schilinweking
+      en: Maceration
+    slugs:
+      nl: schilinweking
+      en: maceration
+    disposition: link-and-relation
+  - id: concept.extraction
+    names:
+      nl: Extractie
+      en: Extraction
+    slugs:
+      nl: extractie
+      en: extraction
+    disposition: link-and-relation
+  - id: concept.malolactic-fermentation
+    names:
+      nl: Malolactische omzetting
+      en: Malolactic fermentation
+    slugs:
+      nl: malolactische-omzetting
+      en: malolactic-fermentation
+    disposition: link-and-relation
+  - id: concept.second-fermentation
+    names:
+      nl: Tweede vergisting
+      en: Second fermentation
+    slugs:
+      nl: tweede-vergisting
+      en: second-fermentation
+    disposition: link-and-relation
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link-and-relation
+  - id: concept.lees-ageing
+    names:
+      nl: Rijping op de lies
+      en: Lees ageing
+    slugs:
+      nl: rijping-op-de-lies
+      en: lees-ageing
+    disposition: link-and-relation
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link-and-relation
+  - id: concept.sulfur-dioxide
+    names:
+      nl: Zwaveldioxide
+      en: Sulfur dioxide
+    slugs:
+      nl: zwaveldioxide
+      en: sulfur-dioxide
+    disposition: link-and-relation
+  - id: concept.acidity
+    names:
+      nl: Zuur in wijn
+      en: Acidity in wine
+    slugs:
+      nl: zuur-in-wijn
+      en: acidity-in-wine
+    disposition: link-and-relation
+  - id: concept.terroir
+    names:
+      nl: Terroir
+      en: Terroir
+    slugs:
+      nl: terroir
+      en: terroir
+    disposition: link-and-relation
+  - id: grape.chardonnay
+    names:
+      nl: Chardonnay
+      en: Chardonnay
+    slugs:
+      nl: chardonnay
+      en: chardonnay
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

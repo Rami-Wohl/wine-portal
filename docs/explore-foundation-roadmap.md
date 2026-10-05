@@ -1,7 +1,7 @@
 # Explore foundation roadmap
 
 Status: active execution roadmap  
-Last reviewed: 2026-10-03
+Last reviewed: 2026-10-05
 
 This roadmap turns Oenocademy's existing concept collection into a systematic,
 globally useful foundation for viticulture, vinification and wine science. It
@@ -179,7 +179,8 @@ unplanned standalone pages.
 | `EXP-015` | complete | Bilingual vineyard-systems hub distinguishing practices, certification and measured outcomes, with adaptation, evidence limits and a reviewed relationship diagram locally validated |
 | `EXP-016` | complete | Audit of 25 active vinification concepts, four drafts and seven lessons; seven hubs scoped, three existing owners reused, overlap and follow-up assigned |
 | `EXP-017` | complete | Bilingual reception and must-preparation hub, three-state PNG illustration, legal context and corrected early rosé routes in pressing and the lesson |
-| `EXP-018`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-018` | complete | Bilingual fermentation system hub, nine additional sources, reused process PNG, preserved anchors and reviewed lesson link |
+| `EXP-019`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -508,6 +509,14 @@ treatments with legal context.
 universal line.
 
 #### EXP-018 — Yeast, microbiology and alcoholic fermentation
+
+**Status:** complete on 2026-10-05. The existing `concept.fermentation` now has
+a bilingual system overview and coverage plan for yeast ecology, growth versus
+activity, YAN and timing, temperature/oxygen, monitoring and stuck fermentation.
+The lesson’s process PNG is reused alongside the original documentary photo;
+all published block IDs and routes remain. The lesson links to the hub and has
+more precise source coverage. Research and validation are recorded in the
+[content brief](../editorial/briefs/concept.fermentation.md).
 
 **Depends on:** EXP-016–017.
 

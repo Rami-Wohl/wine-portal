@@ -8,31 +8,33 @@ Alcoholic fermentation is the stage at which must becomes wine: yeast cells cons
 - Distinguish fermenting dry, deliberate arrest and an unintended stuck fermentation.
 :::
 
-:::section{#suiker-wordt-wijn depth="foundation" source_refs="source.oiv-alcoholic-fermentation"}
+:::section{#suiker-wordt-wijn depth="foundation" source_refs="source.oiv-alcoholic-fermentation source.awri-stuck-fermentations-2013"}
 ## From sugar to alcohol
 
 Yeasts are microorganisms that can convert grape sugars into ethanol and carbon dioxide. The conversion also produces heat and a range of compounds that may contribute to aroma and texture. Escaping carbon dioxide explains the lively surface of an active fermentation; for ordinary still wine, most of that gas is allowed to leave.
 
-As yeast consumes sugar, liquid density falls and alcohol rises. A winemaker therefore follows more than visible bubbles, measuring factors such as density or sugar concentration and temperature. [@source.oiv-alcoholic-fermentation]
+As yeast consumes sugar, liquid density falls and alcohol rises. A winemaker therefore follows more than visible bubbles, measuring factors such as density or sugar concentration and temperature. [@source.awri-stuck-fermentations-2013]
+
+The overview of [[concept.fermentation|alcoholic fermentation]] explains in more detail how yeast growth, nutrition and measurements relate.
 :::
 
 :::figure{#omzetting-in-de-gisttank depth="foundation" media_id="media.lesson.alcoholic-fermentation.fermentation-conversion"}
 :::
 
-:::section{#gist-en-start depth="foundation" source_refs="source.awri-yeast-choice"}
+:::section{#gist-en-start depth="foundation" source_refs="source.awri-yeast-choice source.uc-davis-problem-fermentations"}
 ## Yeast and the start of fermentation
 
 Yeast cells are already present on grapes and in the winery environment. A winemaker may allow a spontaneous population to develop or add a selected yeast culture. A selected strain offers greater predictability, but does not determine wine character on its own; must composition, temperature, nutrition and later cellar decisions still matter.
 
-Yeast needs a suitable environment to establish a healthy population. Insufficient available nutrients, unsuitable temperature, high sugar concentration or inhibitory compounds can make that start more difficult. [@source.awri-yeast-choice]
+Yeast needs a suitable environment to establish a healthy population. Insufficient available nutrients, unsuitable temperature, high sugar concentration or inhibitory compounds can make that start more difficult. [@source.uc-davis-problem-fermentations]
 :::
 
-:::section{#temperatuur-en-vat depth="foundation" source_refs="source.awri-fermentation-temperature"}
+:::section{#temperatuur-en-vat depth="foundation" source_refs="source.awri-fermentation-temperature source.mouret-fermentation-strategy-2021"}
 ## Temperature and fermentation vessel
 
 Fermentation generates heat. Without cooling, a large tank can therefore become warmer than the surrounding cellar. Temperature affects yeast activity, process speed and which volatile aroma compounds are retained or formed. Cooling, or choosing a warmer fermentation, is consequently both a style and process decision within safe limits.
 
-Stainless steel makes cooling and cleaning straightforward; concrete and wood have different thermal and oxygen properties. Vessel shape and size also influence heat loss and, in red wine, contact with the cap of skins. No material occupies the highest rung for every wine.
+The vessel needs to make the intended fermentation manageable. The probe and cooling jacket in the illustration show how monitoring temperature and removing heat relate. Red wine also involves managing the floating cap of skins: temperature and movement affect [[concept.extraction|extraction]] too. The choice of material alone therefore cannot tell you how fermentation will proceed. [@source.awri-fermentation-temperature] [@source.mouret-fermentation-strategy-2021]
 :::
 
 :::section{#volgen-en-bijsturen depth="foundation" source_refs="source.awri-stuck-fermentations-2013"}

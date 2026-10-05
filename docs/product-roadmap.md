@@ -1,6 +1,6 @@
 # Overkoepelende productplanning
 
-Bijgewerkt: 2026-10-04. Deze kaart verbindt platformwerk met de bestaande
+Bijgewerkt: 2026-10-05. Deze kaart verbindt platformwerk met de bestaande
 content- en Learn-roadmaps. Ticketstatus en acceptatiecriteria blijven uitsluitend
 in de gekoppelde backlog; dit document maakt de prioriteit en timing expliciet.
 De onderbouwing staat in [de sanity review](../editorial/platform-sanity-review-2026-10-04.md).
@@ -27,7 +27,7 @@ features niet automatisch gereed.
 | Moment | Werk | Reden en grens |
 | --- | --- | --- |
 | Eerstvolgende externe vrijgave, zodra toegang werkt | `MNT-056`: eerste GitHub-run, mergebescherming en deployment bevestigen | Node 24 en CI zijn lokaal gereed (`MNT-047`); de ongepatchte ontwikkelketen blijft bij `MNT-055` |
-| Eerstvolgende uitvoerbare ontwikkeltaak | `EXP-018`: gist en alcoholische vergisting | De ontvangsthub `EXP-017` is afgerond; breid de bestaande fermentation-owner uit |
+| Eerstvolgende uitvoerbare ontwikkeltaak | `EXP-019`: productieroutes en extractie | Ontvangst en vergisting zijn afgerond; vergelijk routes met behoud van de bestaande mechanismen |
 | Aanbevolen vóór `EXP-020` | `MNT-046`: NL/EN-presentatie en taalwisselaar | Toets de reeds geschreven Engelse content in het echte product; los metadata, zoeken en Learn mee op |
 | Vóór volgende schema-/GIS-uitbreiding; bij bredere UI-wijziging | `MNT-048` en `MNT-049`: pipeline/model en CSS organiseren | Houd verantwoordelijkheden voor menselijke reviewers herkenbaar, met behoud van gedrag |
 | Samen met pilotevaluatie, vroegst 2026-10-22 bij genoeg gebruik | `LRN-012` en `MNT-050`: Learn-vervolg en platformopslag besluiten | Accounts, cross-device voortgang, quizzen en personalisatie moeten een bewezen doel dienen; vervroeg het opslagbesluit bij een concrete consumer |
@@ -37,11 +37,11 @@ features niet automatisch gereed.
 
 Dit is een aanbevolen afwisseling van platform- en contentwerk, geen eis om
 alle content stil te leggen tot elk onderhoudsticket af is. De onderlinge
-inhoudelijke volgorde `EXP-018` t/m `EXP-028` blijft intact.
+inhoudelijke volgorde `EXP-019` t/m `EXP-028` blijft intact.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-Er staan 26 niet-afgeronde tickets geregistreerd: 14 onderhoudsacties, 11
+Er staan 25 niet-afgeronde tickets geregistreerd: 14 onderhoudsacties, 10
 Explore-tickets en één Learn-evaluatie. Een geblokkeerde of geplande actie telt
 mee. Deze momentopname wordt bij wijziging van de uitvoeringsvolgorde bijgewerkt;
 de gekoppelde backlogs blijven leidend voor actuele status.
@@ -51,23 +51,22 @@ en vrijgekomen externe controles mogen deze volgorde onderbreken.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `EXP-018` | Gist en alcoholische vergisting |
-| 2 | `EXP-019` | Productieroutes en extractie |
-| 3 | `MNT-049` | CSS organiseren bij de komende UI-uitbreiding |
-| 4 | `MNT-046` | NL/EN-presentatie en taalwisselaar, vóór EXP-020 |
-| 5 | `MNT-048` | Pipeline/model organiseren vóór verdere schema-/GIS-uitbreiding |
-| 6 | `EXP-020` | Opvoeding en zuurstof |
-| 7 | `EXP-021` | Stabilisatie en verpakking |
-| 8 | `EXP-022` | Kelderhygiëne en wijnfouten |
-| 9 | `EXP-023` | Zoete, mousserende en versterkte wijn |
-| 10 | `EXP-024` | Wijnsamenstelling |
-| 11 | `EXP-025` | Waarneming en ontwikkeling |
-| 12 | `EXP-026` | Integratie graph, links, media en terminologie |
-| 13 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
-| 14 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
-| 15 | `EXP-027` | Mondiale toets en regiokeuze |
-| 16 | `EXP-028` | Integrale redactionele en product-QA |
-| 17 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
+| 1 | `EXP-019` | Productieroutes en extractie |
+| 2 | `MNT-049` | CSS organiseren bij de komende UI-uitbreiding |
+| 3 | `MNT-046` | NL/EN-presentatie en taalwisselaar, vóór EXP-020 |
+| 4 | `MNT-048` | Pipeline/model organiseren vóór verdere schema-/GIS-uitbreiding |
+| 5 | `EXP-020` | Opvoeding en zuurstof |
+| 6 | `EXP-021` | Stabilisatie en verpakking |
+| 7 | `EXP-022` | Kelderhygiëne en wijnfouten |
+| 8 | `EXP-023` | Zoete, mousserende en versterkte wijn |
+| 9 | `EXP-024` | Wijnsamenstelling |
+| 10 | `EXP-025` | Waarneming en ontwikkeling |
+| 11 | `EXP-026` | Integratie graph, links, media en terminologie |
+| 12 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
+| 13 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
+| 14 | `EXP-027` | Mondiale toets en regiokeuze |
+| 15 | `EXP-028` | Integrale redactionele en product-QA |
+| 16 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
 
 Tijdgebonden, in deze onderlinge volgorde:
 
