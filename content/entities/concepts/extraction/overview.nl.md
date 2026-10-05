@@ -26,6 +26,14 @@ De overdracht wordt mede gestuurd door contactduur, temperatuur en het verandere
 Extra contact ná de vergisting kan eveneens anders uitpakken dan extra beweging tijdens de gisting. De beschikbare stoffen en hun toegankelijkheid verschillen tussen rassen en oogstjaren. Daarom beoordeelt de wijnmaker de partij zelf, in plaats van een vast schema als smaakgarantie te gebruiken. [@source.awri-extended-maceration-2019]
 :::
 
+:::detail{#delestage-en-zuurstof parent="sturen-in-de-kuip" depth="intermediate" source_refs="source.awri-cap-management-2023 source.wre-cap-management"}
+### Tijdelijk aflaten en weer terugbrengen
+
+Bij **délestage** wordt de vloeistof tijdelijk naar een andere tank afgelaten. De schillenhoed zakt in; daarna gaat de vloeistof terug over de druivendelen. Dit verschilt van het definitieve aflaten vóór persen: hier wordt het contact juist vernieuwd. De handeling vraagt extra opvangruimte en planning. [@source.awri-cap-management-2023]
+
+Hoedbeheer helpt ook warmte en opgeloste stoffen over de kuip verdelen. Hoeveel zuurstof binnenkomt, hangt af van de uitvoering: gesloten overpompen en open laten terugstromen geven verschillende omstandigheden. De behoefte verandert bovendien met het gistingsstadium. Mengen en beluchten zijn daarom afzonderlijke afwegingen, ook wanneer één handeling beide beïnvloedt. [@source.awri-cap-management-2023] [@source.wre-cap-management]
+:::
+
 :::figure{#overpompen depth="foundation" media_id="media.concept.extraction.pump-over"}
 :::
 

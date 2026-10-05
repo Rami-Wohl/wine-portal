@@ -24,5 +24,8 @@ source_refs:
   - source.awri-skin-contact
   - source.awri-extended-maceration-2019
   - source.wre-cap-management
+  - source.ifv-rose-production
+  - source.awri-amber-wine
+  - source.awri-carbonic-maceration-2018
 depth: foundation
-last_reviewed: 2026-09-16
+last_reviewed: 2026-10-05

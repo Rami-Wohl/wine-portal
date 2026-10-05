@@ -10,10 +10,12 @@ Een wijnpers oefent gecontroleerde druk uit op hele of gekneusde druiven, of op 
 Een pers is daarmee geen machine die druiven tot puree hoort te malen. Langzaam en progressief drukken helpt sap of wijn vrij te maken zonder pitten en andere vaste weefsels onnodig te breken.
 :::
 
-:::section{#moment-in-de-route depth="foundation" source_refs="source.oiv-pressing source.ifv-rose-vinification-itineraires-11"}
+:::section{#moment-in-de-route depth="foundation" source_refs="source.oiv-pressing source.ifv-rose-vinification-itineraires-11 source.awri-whole-bunch-fermentation source.awri-amber-wine"}
 ## Persen vóór of na de vergisting
 
 Bij de gebruikelijke witte route worden druiven vroeg geperst, zodat het sap grotendeels zonder schillen vergist. Voor rosé kan de maker blauwe druiven direct persen of eerst kort laten inweken; het afgescheiden sap vergist daarna zonder schillen. [@source.ifv-rose-vinification-itineraires-11; p. 14] Rode wijn vergist juist met schillen en wordt doorgaans pas daarna geperst.
+
+Ook witte druiven kunnen op de schillen vergisten en pas later worden geperst. Bij verwerking met hele trossen kan persen bovendien sap vrijmaken uit nog intacte bessen. De vloeistof bevat dan mogelijk nog suiker die verder moet vergisten; persen en het einde van de gisting hoeven niet samen te vallen. Het overzicht van [[concept.winemaking-routes|productieroutes]] zet deze varianten naast elkaar. [@source.awri-amber-wine] [@source.awri-whole-bunch-fermentation]
 
 Die volgorde verklaart waarom persen niet los van [[concept.maceration|schilinweking]] en [[concept.extraction|extractie]] kan worden begrepen. Het scheidingsmoment bepaalt hoe lang vloeistof en vaste druivendelen elkaar kunnen beïnvloeden.
 

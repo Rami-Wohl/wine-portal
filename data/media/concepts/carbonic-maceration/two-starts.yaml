@@ -1,0 +1,32 @@
+id: media.concept.carbonic-maceration.two-starts
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/carbonic-maceration/two-starts.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 80f749592875f5c3426249251c8f83e8b1f7b3380b046aa07effb85275e2d222
+alt:
+  nl: "Twee opengewerkte kuipen: links intacte trossen met CO₂ van buiten; rechts
+    intacte trossen boven gistend sap waaruit gas opstijgt."
+  en: "Two cutaway vats: intact bunches with an external CO₂ supply on the left;
+    intact bunches above fermenting juice releasing gas on the right."
+caption:
+  nl: De twee kuipen vergelijken de herkomst van het koolzuurgas bij de start.
+    Links ondersteunt toegevoegd CO₂ de atmosfeer rond intact fruit; rechts
+    levert gistend sap onderin gas aan de ruimte rond de bessen. Pijlen en
+    belletjes maken het onzichtbare gas schematisch zichtbaar.
+  en: The two vats compare the origin of carbon dioxide at the start. On the left,
+    supplied CO₂ supports the atmosphere around intact fruit; on the right,
+    fermenting juice below supplies gas around the berries. Arrows and bubbles
+    represent the invisible gas schematically.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-05
+changes: First generated version reviewed for process order, material states,
+  numbered correspondence and scope. Conceptual cutaways; full generation prompt
+  and review are retained in the content brief.

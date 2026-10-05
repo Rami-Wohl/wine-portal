@@ -1,6 +1,6 @@
 id: concept.carbonic-maceration
 type: concept
-status: draft
+status: active
 canonical_name: Carbonic maceration
 names:
   nl: Koolzuurmaceratie
@@ -14,6 +14,23 @@ locales:
 relations:
   - type: related_to
     target: concept.maceration
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.pressing
+  - type: related_to
+    target: concept.malolactic-fermentation
+  - type: related_to
+    target: concept.acidity
+  - type: related_to
+    target: concept.extraction
 assertions: []
 source_refs:
   - source.oiv-carbonic-maceration
+  - source.awri-carbonic-maceration
+  - source.awri-carbonic-maceration-2018
+  - source.awri-whole-bunch-fermentation
+  - source.ifv-carbonic-maceration
+  - source.beaujolais-vinification-2020
+depth: foundation
+last_reviewed: 2026-10-05

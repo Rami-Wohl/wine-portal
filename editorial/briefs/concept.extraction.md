@@ -43,3 +43,7 @@ Na iedere conceptsectie opnieuw toetsen: alle bovenstaande vragen beantwoord of 
 - Iteratie 2: het cluster onderling nagelopen. Bewust stoppen van vergisting onderscheiden van vastlopen; koolzuurmaceratie onderscheiden van koude schilinweking; kleur onderscheiden van tannine; élevage aangevuld met voorbereiding op botteling. Koolzuurmaceratie heeft een eigen draftrecord voor latere volledige uitwerking, geen tweede eigenaar op deze pagina.
 - Iteratie 3: NL/EN naast elkaar gecontroleerd op gelijkwaardige blokken, diepte en betekenis. Geen Bordeaux als universele norm, geen vaste kelderrecepten of kwaliteitsscores. Fotografie toont daadwerkelijk zichtbare apparatuur of handelingen; captions begrenzen wat daaruit kan worden afgeleid.
 - De secties beantwoorden de dekkingsvragen binnen deze paginabelofte; specialistische uitvoering en volledige deeltechnieken blijven bij hun eigen onderwerpen. Dit is een redactionele zelfcontrole, geen onafhankelijke expertcertificering.
+
+## Gerichte review EXP-019 — 2026-10-05
+
+Délestage toegevoegd als tijdelijk aflaten en terugbrengen; mengen, warmteverdeling en zuurstofinbreng onderscheiden met AWRI 2023 en WRE. Bestaande blocks, anchors en documentaire media behouden; NL/EN samen bijgewerkt. Dit is een begrensde aanvulling op de bestaande pagina, geen vervanging van de oorspronkelijke brief of research.

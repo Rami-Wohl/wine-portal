@@ -1,0 +1,227 @@
+schema_version: 2
+package_id: concept.carbonic-maceration
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat is koolzuurmaceratie en hoe verschilt zij van gistvergisting?
+    layers:
+      foundation:
+        - Wat is koolzuurmaceratie en hoe verschilt zij van gistvergisting?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat is koolzuurmaceratie en hoe verschilt zij van gistvergisting?
+        source_refs:
+          - source.awri-carbonic-maceration
+          - source.awri-carbonic-maceration-2018
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe werken intracellulaire omzetting, zuurverandering en verdere
+        vergisting?
+    layers:
+      foundation:
+        - Hoe werken intracellulaire omzetting, zuurverandering en verdere
+          vergisting?
+      intermediate:
+        - Waarom is intracellulaire appelzuuromzetting een ander proces dan MLF?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe werken intracellulaire omzetting, zuurverandering en verdere
+            vergisting?
+        source_refs:
+          - source.awri-carbonic-maceration-2018
+          - source.ifv-carbonic-maceration
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen toegevoegd CO₂, semi-carbonisch en hele trossen?
+    layers:
+      foundation:
+        - Hoe verschillen toegevoegd CO₂, semi-carbonisch en hele trossen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen toegevoegd CO₂, semi-carbonisch en hele trossen?
+        source_refs:
+          - source.beaujolais-vinification-2020
+          - source.awri-whole-bunch-fermentation
+          - source.awri-carbonic-maceration
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids:
+      - toepassing-en-keuzes
+    target_ids: []
+    completeness_questions:
+      - Welke keuzes en metingen begeleiden fruit, atmosfeer en persen?
+    layers:
+      foundation:
+        - Welke keuzes en metingen begeleiden fruit, atmosfeer en persen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke keuzes en metingen begeleiden fruit, atmosfeer en persen?
+        source_refs:
+          - source.ifv-carbonic-maceration
+          - source.awri-whole-bunch-fermentation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Welke beperkingen kennen monsters en vergelijkende proeven?
+    layers:
+      foundation:
+        - Welke beperkingen kennen monsters en vergelijkende proeven?
+      intermediate: []
+      advanced:
+        - Welke gelijktijdige veranderingen begrenzen een carbonische proef?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke beperkingen kennen monsters en vergelijkende proeven?
+        source_refs:
+          - source.awri-carbonic-maceration
+      specific_claims:
+        - claim: De IFV VINAROMAS-vergelijking veranderde ook de gistingstemperatuur na
+            persen; aromaverschillen isoleren daardoor niet uitsluitend
+            intracellulaire omzetting.
+          status: supported
+          source_refs:
+            - source.ifv-carbonic-maceration
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Welke stijlbijdrage en variatie zijn onderbouwd?
+    layers:
+      foundation:
+        - Welke stijlbijdrage en variatie zijn onderbouwd?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke stijlbijdrage en variatie zijn onderbouwd?
+        source_refs:
+          - source.awri-carbonic-maceration
+          - source.ifv-carbonic-maceration
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.maceration
+    names:
+      nl: Schilinweking
+      en: Maceration
+    slugs:
+      nl: schilinweking
+      en: maceration
+    disposition: link-and-relation
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link-and-relation
+  - id: concept.pressing
+    names:
+      nl: Persen
+      en: Pressing
+    slugs:
+      nl: persen
+      en: pressing
+    disposition: link-and-relation
+  - id: concept.winemaking-routes
+    names:
+      nl: Productieroutes voor stille wijn
+      en: Still wine production routes
+    slugs:
+      nl: productieroutes-voor-stille-wijn
+      en: winemaking-routes
+    disposition: link-and-relation
+  - id: concept.malolactic-fermentation
+    names:
+      nl: Malolactische omzetting
+      en: Malolactic fermentation
+    slugs:
+      nl: malolactische-omzetting
+      en: malolactic-fermentation
+    disposition: link-and-relation
+  - id: concept.acidity
+    names:
+      nl: Zuur in wijn
+      en: Acidity in wine
+    slugs:
+      nl: zuur-in-wijn
+      en: acidity-in-wine
+    disposition: link-and-relation
+  - id: concept.extraction
+    names:
+      nl: Extractie
+      en: Extraction
+    slugs:
+      nl: extractie
+      en: extraction
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

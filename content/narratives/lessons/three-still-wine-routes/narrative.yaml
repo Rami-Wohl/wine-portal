@@ -15,10 +15,13 @@ related_entities:
   - concept.extraction
   - concept.tannin
   - concept.pressing
+  - concept.winemaking-routes
 source_refs:
   - source.oiv-maceration
   - source.awri-skin-contact
   - source.awri-fermentation-temperature
   - source.awri-extended-maceration-2019
   - source.wre-cap-management
+  - source.ifv-rose-production
+  - source.awri-amber-wine
 depth: foundation

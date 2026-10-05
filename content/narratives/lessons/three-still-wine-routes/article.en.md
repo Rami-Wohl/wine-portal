@@ -9,10 +9,10 @@ White, rosé and red wine differ by more than colour. Their main route is determ
 - Recognise pumping over and punching down as ways of managing the cap of skins.
 :::
 
-:::section{#drie-hoofdroutes depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact"}
+:::section{#drie-hoofdroutes depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact source.ifv-rose-production"}
 ## When juice and skins remain together
 
-For most white wine, grapes are pressed before the must ferments. Skins are therefore separated early, although a short period of skin contact before pressing may be used deliberately. Rosé begins with black grapes: limited contact releases colour and other skin components before the pink juice continues fermentation without skins.
+For most white wine, grapes are pressed before the must ferments. Skins are therefore separated early, although a short period of skin contact before pressing may be used deliberately. For rosé, black grapes can be pressed directly, releasing some colour, or undergo short maceration first. After this early separation, the pink juice ferments without the mass of skins. [@source.ifv-rose-production]
 
 For red wine, black skins remain present during alcoholic fermentation. Alcohol develops while juice and skins are together and helps make different components available than aqueous juice alone. After the intended contact period, free-run wine and [[concept.pressing|press wine]] are separated from the solid mass.
 :::
@@ -50,16 +50,16 @@ During **pumping over**, or *remontage*, fermenting wine is drawn from the botto
 :::figure{#onderdompelen depth="foundation" media_id="media.concept.maceration.pigeage"}
 :::
 
-:::comparison{#vergelijking-routes depth="foundation"}
+:::comparison{#vergelijking-routes depth="foundation" source_refs="source.ifv-rose-production source.awri-amber-wine"}
 ## The decisive point of separation
 
 | Route | Skin contact | Usual pressing point |
 | --- | --- | --- |
 | White | None or brief contact before fermentation | Before fermentation |
-| Rosé | Brief contact with black skins | Before fermentation, after colour extraction |
+| Rosé | Direct pressing or short maceration of black grapes | Early separation, then juice fermentation |
 | Red | Contact during alcoholic fermentation | After or near the end of skin fermentation |
 
-The table gives the main model. Orange wine, direct pressing of black grapes and other deliberate variants show how winemakers can alter the same moment of separation.
+The table gives the three main routes. Skin-fermented white, also called amber or orange wine, uses white grapes but keeps the skins during fermentation. The reference overview of [[concept.winemaking-routes|still wine production routes]] compares this fourth route and the rosé variants in more detail. [@source.awri-amber-wine]
 :::
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}

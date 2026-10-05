@@ -13,12 +13,14 @@ Grape skin is not a useless wrapper to discard after picking. It contains colour
 :::figure{#schillen-onderdompelen depth="foundation" media_id="media.concept.maceration.pigeage"}
 :::
 
-:::section{#rood-rose-en-wit depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact"}
+:::section{#rood-rose-en-wit depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact source.ifv-rose-production source.awri-amber-wine"}
 ## Red, rosé and white
 
-Red wine is generally fermented with dark grape skins. This explains why skin contact is central: it brings colour and tannin into the wine. For rosé, shorter contact may be chosen before separating juice from skins. Rosé can also be made by direct pressing; it is not a fixed number of hours on a stopwatch.
+Red wine is generally fermented with dark grape skins. This explains why skin contact is central: it brings colour and tannin into the wine. For rosé, shorter contact may be chosen before separating juice from skins. Rosé can also be made by direct pressing; it is not a fixed number of hours on a stopwatch. [@source.ifv-rose-production]
 
-Many white wines are made by pressing first, then fermenting the juice. A winemaker may nevertheless deliberately allow white grapes to macerate before pressing, for example to include certain flavour and mouthfeel compounds. Longer fermentation of white grapes with their skins can produce amber or orange wine: wine made from white grapes with extended skin contact, not from oranges. [@source.awri-skin-contact]
+Many white wines are made by pressing first, then fermenting the juice. A winemaker may nevertheless deliberately allow white grapes to macerate before pressing, for example to include certain flavour and mouthfeel compounds. Longer fermentation of white grapes with their skins can produce amber or orange wine: wine made from white grapes with extended skin contact, not from oranges. [@source.awri-skin-contact] [@source.awri-amber-wine]
+
+The overview of [[concept.winemaking-routes|still wine production routes]] compares these points of separation.
 :::
 
 :::detail{#witte-inweking parent="rood-rose-en-wit" depth="intermediate" source_refs="source.awri-skin-contact"}
@@ -43,10 +45,10 @@ In a *cold soak*, grapes are kept cool for a period of skin contact before ferme
 During fermentation, temperature and alcohol level change, altering extraction conditions. In **extended maceration** after fermentation, skins and seeds remain with the young wine. The choice is used with grapes including [[grape.cabernet-sauvignon|Cabernet Sauvignon]], Pinot Noir, Shiraz and Nebbiolo, but not according to one regional or variety-specific recipe. [@source.awri-extended-maceration-2019]
 :::
 
-:::detail{#koolzuurmaceratie parent="tijd-en-beweging" depth="intermediate" source_refs="source.oiv-carbonic-maceration"}
-### Carbon dioxide is different from cooling
+:::detail{#koolzuurmaceratie parent="tijd-en-beweging" depth="intermediate" source_refs="source.awri-carbonic-maceration-2018"}
+### A different beginning inside the intact berry
 
-[[concept.carbonic-maceration|Carbonic maceration]] begins with whole grapes in a closed tank with a carbon dioxide-rich atmosphere. The grapes are subsequently crushed and pressed, and the separated juice continues fermenting. It is not another term for cold soak, nor a method for retaining carbon dioxide as bubbles in the finished wine. The full technique and its variants belong on their own concept page. [@source.oiv-carbonic-maceration]
+In [[concept.carbonic-maceration|carbonic maceration]], grape enzymes transform sugars and acids inside intact berries in an oxygen-poor atmosphere. Yeast in released juice then completes alcoholic fermentation; both processes can coexist in a vat. A cold soak instead manages cool skin contact before fermentation. The terms therefore describe different choices. [@source.awri-carbonic-maceration-2018]
 :::
 
 :::section{#grenzen-van-contact depth="intermediate" source_refs="source.awri-extended-maceration-2019"}

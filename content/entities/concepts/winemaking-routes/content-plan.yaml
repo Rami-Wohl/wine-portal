@@ -1,0 +1,307 @@
+schema_version: 2
+package_id: concept.winemaking-routes
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Welke route verbindt druif, schilcontact en persen?
+    layers:
+      foundation:
+        - Welke route verbindt druif, schilcontact en persen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke route verbindt druif, schilcontact en persen?
+        source_refs:
+          - source.oiv-maceration
+          - source.oiv-pressing
+          - source.awri-amber-wine
+          - source.ifv-rose-production
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Hoe passen voorbereiding, vergisting en scheiding bij elkaar?
+    layers:
+      foundation:
+        - Hoe passen voorbereiding, vergisting en scheiding bij elkaar?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe passen voorbereiding, vergisting en scheiding bij elkaar?
+        source_refs:
+          - source.oiv-maceration
+          - source.oiv-pressing
+          - source.awri-whole-bunch-fermentation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen de vier routes en de rosévarianten?
+    layers:
+      foundation:
+        - Hoe verschillen de vier routes en de rosévarianten?
+      intermediate:
+        - Hoe verandert saignée de verhouding tussen schillen en sap?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen de vier routes en de rosévarianten?
+        source_refs:
+          - source.ifv-rose-production
+          - source.awri-skin-contact
+          - source.awri-amber-wine
+          - source.awri-saignee
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Wat veranderen intacte bessen, stelen en fruitconditie?
+    layers:
+      foundation:
+        - Wat veranderen intacte bessen, stelen en fruitconditie?
+      intermediate:
+        - Hoe verschillen intacte bessen en hele trossen?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat veranderen intacte bessen, stelen en fruitconditie?
+        source_refs:
+          - source.awri-whole-bunch-fermentation
+          - source.ifv-carbonic-maceration
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Hoe kies je contactduur, hoedbeheer en persmoment?
+    layers:
+      foundation:
+        - Hoe kies je contactduur, hoedbeheer en persmoment?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe kies je contactduur, hoedbeheer en persmoment?
+        source_refs:
+          - source.awri-cap-management-2023
+          - source.awri-extended-maceration-2019
+          - source.oiv-pressing
+          - source.awri-amber-wine
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Welke onderzochte praktijken tonen het bereik van deze routes?
+    layers:
+      foundation:
+        - Welke onderzochte praktijken tonen het bereik van deze routes?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke onderzochte praktijken tonen het bereik van deze routes?
+        source_refs:
+          - source.ifv-rose-production
+          - source.awri-amber-wine
+          - source.beaujolais-vinification-2020
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Wat zegt een route of normdefinitie over de uiteindelijke wijn?
+    layers:
+      foundation:
+        - Wat zegt een route of normdefinitie over de uiteindelijke wijn?
+      intermediate: []
+      advanced:
+        - Hoe verhoudt de OIV-definitie zich tot de bredere stijlterm?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat zegt een route of normdefinitie over de uiteindelijke wijn?
+        source_refs:
+          - source.awri-extended-maceration-2019
+      specific_claims:
+        - claim: OIV I.4.9 vereist uitsluitend witte druiven en minimaal één maand
+            maceratie binnen die specifieke categorie; dit is geen universele
+            minimumduur voor iedere stijlterm orange.
+          status: supported
+          source_refs:
+            - source.oiv-white-wine-maceration
+            - source.awri-amber-wine
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe helpen routekeuzes kleur, mondgevoel en vervolgwerk begrijpen?
+    layers:
+      foundation:
+        - Hoe helpen routekeuzes kleur, mondgevoel en vervolgwerk begrijpen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe helpen routekeuzes kleur, mondgevoel en vervolgwerk begrijpen?
+        source_refs:
+          - source.awri-skin-contact
+          - source.awri-amber-wine
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.grape-reception-must-preparation
+    names:
+      nl: Ontvangst, selectie en mostvoorbereiding
+      en: Grape reception, sorting and must preparation
+    slugs:
+      nl: ontvangst-selectie-en-mostvoorbereiding
+      en: grape-reception-must-preparation
+    disposition: link-and-relation
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link-and-relation
+  - id: concept.maceration
+    names:
+      nl: Schilinweking
+      en: Maceration
+    slugs:
+      nl: schilinweking
+      en: maceration
+    disposition: link-and-relation
+  - id: concept.extraction
+    names:
+      nl: Extractie
+      en: Extraction
+    slugs:
+      nl: extractie
+      en: extraction
+    disposition: link-and-relation
+  - id: concept.pressing
+    names:
+      nl: Persen
+      en: Pressing
+    slugs:
+      nl: persen
+      en: pressing
+    disposition: link-and-relation
+  - id: concept.carbonic-maceration
+    names:
+      nl: Koolzuurmaceratie
+      en: Carbonic maceration
+    slugs:
+      nl: koolzuurmaceratie
+      en: carbonic-maceration
+    disposition: link-and-relation
+  - id: concept.tannin
+    names:
+      nl: Tannine
+      en: Tannin
+    slugs:
+      nl: tannine
+      en: tannin
+    disposition: link-and-relation
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link-and-relation
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link-and-relation
+  - id: grape.chardonnay
+    names:
+      nl: Chardonnay
+      en: Chardonnay
+    slugs:
+      nl: chardonnay
+      en: chardonnay
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

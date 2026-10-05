@@ -1,0 +1,49 @@
+id: concept.winemaking-routes
+type: concept
+status: active
+canonical_name: Still wine production routes
+names:
+  nl: Productieroutes voor stille wijn
+  en: Still wine production routes
+slugs:
+  nl: productieroutes-voor-stille-wijn
+  en: winemaking-routes
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.grape-reception-must-preparation
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.maceration
+  - type: related_to
+    target: concept.extraction
+  - type: related_to
+    target: concept.pressing
+  - type: related_to
+    target: concept.carbonic-maceration
+  - type: related_to
+    target: concept.tannin
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.assemblage
+assertions: []
+source_refs:
+  - source.oiv-maceration
+  - source.oiv-pressing
+  - source.awri-skin-contact
+  - source.awri-extended-maceration-2019
+  - source.awri-fermentation-temperature
+  - source.awri-whole-bunch-fermentation
+  - source.awri-amber-wine
+  - source.awri-saignee
+  - source.awri-cap-management-2023
+  - source.ifv-rose-production
+  - source.ifv-carbonic-maceration
+  - source.oiv-white-wine-maceration
+  - source.beaujolais-vinification-2020
+depth: foundation
+last_reviewed: 2026-10-05

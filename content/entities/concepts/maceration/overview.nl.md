@@ -13,12 +13,14 @@ De schil is geen nutteloos omhulsel dat na het plukken weg kan. Zij bevat kleurs
 :::figure{#schillen-onderdompelen depth="foundation" media_id="media.concept.maceration.pigeage"}
 :::
 
-:::section{#rood-rose-en-wit depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact"}
+:::section{#rood-rose-en-wit depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact source.ifv-rose-production source.awri-amber-wine"}
 ## Rood, rosé en wit
 
-Rode wijn wordt gewoonlijk met de schillen van blauwe druiven vergist. Dat verklaart waarom schilcontact zo centraal staat: het brengt kleur en tannine in de wijn. Voor rosé kan korter contact worden gekozen, waarna het sap van de schillen wordt gescheiden. Rosé kan ook door direct persen worden gemaakt; het is geen vast aantal uren op een stopwatch.
+Rode wijn wordt gewoonlijk met de schillen van blauwe druiven vergist. Dat verklaart waarom schilcontact zo centraal staat: het brengt kleur en tannine in de wijn. Voor rosé kan korter contact worden gekozen, waarna het sap van de schillen wordt gescheiden. Rosé kan ook door direct persen worden gemaakt; het is geen vast aantal uren op een stopwatch. [@source.ifv-rose-production]
 
-Veel witte wijn ontstaat door eerst te persen en daarna het sap te vergisten. Toch kan een wijnmaker witte druiven vóór het persen bewust laten inweken, bijvoorbeeld om bepaalde smaak- en mondgevoelstoffen mee te nemen. Wie witte druiven langer op de schillen vergist, kan een amber- of orangewijn maken: wijn van witte druiven met langduriger schilcontact, niet wijn van sinaasappels. [@source.awri-skin-contact]
+Veel witte wijn ontstaat door eerst te persen en daarna het sap te vergisten. Toch kan een wijnmaker witte druiven vóór het persen bewust laten inweken, bijvoorbeeld om bepaalde smaak- en mondgevoelstoffen mee te nemen. Wie witte druiven langer op de schillen vergist, kan een amber- of orangewijn maken: wijn van witte druiven met langduriger schilcontact, niet wijn van sinaasappels. [@source.awri-skin-contact] [@source.awri-amber-wine]
+
+Het overzicht van [[concept.winemaking-routes|productieroutes voor stille wijn]] vergelijkt deze scheidingsmomenten.
 :::
 
 :::detail{#witte-inweking parent="rood-rose-en-wit" depth="intermediate" source_refs="source.awri-skin-contact"}
@@ -43,10 +45,10 @@ Bij een *cold soak* worden druiven vóór de vergisting koel gehouden voor een p
 Tijdens de vergisting veranderen temperatuur en alcoholgehalte, en daarmee de omstandigheden voor extractie. Bij **verlengde inweking** na de gisting blijven schillen en pitten nog met de jonge wijn samen. Die keuze wordt onder meer toegepast met [[grape.cabernet-sauvignon|Cabernet Sauvignon]], Pinot Noir, Shiraz en Nebbiolo, maar niet volgens één regionaal of rasspecifiek recept. [@source.awri-extended-maceration-2019]
 :::
 
-:::detail{#koolzuurmaceratie parent="tijd-en-beweging" depth="intermediate" source_refs="source.oiv-carbonic-maceration"}
-### Koolzuur is iets anders dan koeling
+:::detail{#koolzuurmaceratie parent="tijd-en-beweging" depth="intermediate" source_refs="source.awri-carbonic-maceration-2018"}
+### Een ander begin in de intacte bes
 
-[[concept.carbonic-maceration|Koolzuurmaceratie]] begint met hele druiven in een gesloten kuip met een koolzuurrijke atmosfeer. Vervolgens worden de druiven geplet en geperst en vergist het afgescheiden sap verder. Het is dus geen ander woord voor cold soak en ook geen methode om koolzuurgas als bubbels in de uiteindelijke wijn te bewaren. De volledige techniek en haar varianten horen op de eigen begrippenpagina. [@source.oiv-carbonic-maceration]
+Bij [[concept.carbonic-maceration|koolzuurmaceratie]] veranderen druivenenzymen suikers en zuren binnen intacte bessen in een zuurstofarme atmosfeer. Gist in vrijgemaakt sap voltooit vervolgens de alcoholische vergisting; in een kuip kunnen beide processen naast elkaar voorkomen. Een cold soak stuurt juist het koele schilcontact vóór de gisting. De begrippen beschrijven dus verschillende keuzes. [@source.awri-carbonic-maceration-2018]
 :::
 
 :::section{#grenzen-van-contact depth="intermediate" source_refs="source.awri-extended-maceration-2019"}

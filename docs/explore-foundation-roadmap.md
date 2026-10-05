@@ -180,7 +180,8 @@ unplanned standalone pages.
 | `EXP-016` | complete | Audit of 25 active vinification concepts, four drafts and seven lessons; seven hubs scoped, three existing owners reused, overlap and follow-up assigned |
 | `EXP-017` | complete | Bilingual reception and must-preparation hub, three-state PNG illustration, legal context and corrected early rosé routes in pressing and the lesson |
 | `EXP-018` | complete | Bilingual fermentation system hub, nine additional sources, reused process PNG, preserved anchors and reviewed lesson link |
-| `EXP-019`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-019` | complete | Bilingual route hub and carbonic concept, two PNG comparisons, targeted satellite and introductory lesson review |
+| `EXP-020`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -534,6 +535,17 @@ and monitoring.
 later method and lesson pages without repeating its core mechanism.
 
 #### EXP-019 — Main production routes, skin contact and extraction
+
+**Status:** complete on 2026-10-05. Published the bilingual `winemaking-routes`
+system hub and filled the existing `carbonic-maceration` draft as a focused
+concept. Two PNG plates compare pressing points and carbonic starting situations.
+Reviewed `maceration`, `extraction` and `pressing`, including rosé variants,
+délestage and fermentation after pressing. The three-route lesson retains its
+learning scope and illustration, with direct pressing clarified and a reference
+link to the hub. Existing anchors and documentary media remain. Research,
+generation prompts and validation are in the
+[route brief](../editorial/briefs/concept.winemaking-routes.md) and
+[carbonic brief](../editorial/briefs/concept.carbonic-maceration.md).
 
 **Depends on:** EXP-017–018.
 

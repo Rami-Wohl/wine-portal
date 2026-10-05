@@ -9,10 +9,10 @@ Witte, rosé- en rode wijn verschillen niet alleen door kleur. Hun hoofdroute wo
 - Herken overpompen en onderdompelen als manieren om de schillenkoek te beheren.
 :::
 
-:::section{#drie-hoofdroutes depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact"}
+:::section{#drie-hoofdroutes depth="foundation" source_refs="source.oiv-maceration source.awri-skin-contact source.ifv-rose-production"}
 ## Wanneer sap en schillen samenblijven
 
-Voor de meeste witte wijn worden druiven geperst voordat de most vergist. De schillen zijn daardoor vroeg gescheiden, al kan korte schilinweking vóór persen bewust worden gebruikt. Rosé begint met blauwe druiven: een beperkte contacttijd geeft kleur en andere schilcomponenten af, waarna het roze sap zonder schillen verder vergist.
+Voor de meeste witte wijn worden druiven geperst voordat de most vergist. De schillen zijn daardoor vroeg gescheiden, al kan korte schilinweking vóór persen bewust worden gebruikt. Voor rosé kunnen blauwe druiven direct worden geperst, waarbij al wat kleur vrijkomt, of eerst kort worden ingeweekt. Na die vroege scheiding vergist het roze sap zonder de schillenmassa. [@source.ifv-rose-production]
 
 Bij rode wijn blijven blauwe schillen tijdens de alcoholische vergisting aanwezig. Alcohol ontstaat terwijl sap en schillen samen zijn en helpt andere componenten beschikbaar maken dan waterig sap alleen. Na de gewenste contactperiode worden vrij aflopende wijn en [[concept.pressing|perswijn]] van de vaste massa gescheiden.
 :::
@@ -50,16 +50,16 @@ Bij **overpompen** of *remontage* wordt gistende wijn onder uit de tank gehaald 
 :::figure{#onderdompelen depth="foundation" media_id="media.concept.maceration.pigeage"}
 :::
 
-:::comparison{#vergelijking-routes depth="foundation"}
+:::comparison{#vergelijking-routes depth="foundation" source_refs="source.ifv-rose-production source.awri-amber-wine"}
 ## Het beslissende scheidingsmoment
 
 | Route | Contact met schillen | Gebruikelijk persmoment |
 | --- | --- | --- |
 | Wit | Geen of kort contact vóór vergisting | Vóór vergisting |
-| Rosé | Kort contact met blauwe schillen | Vóór vergisting, na kleurwinning |
+| Rosé | Directe persing of korte inweking van blauwe druiven | Vroege scheiding, daarna sapvergisting |
 | Rood | Contact tijdens alcoholische vergisting | Na of tegen het einde van de schilvergisting |
 
-De tabel geeft het hoofdmodel. Oranje wijn, directe persing van blauwe druiven en andere bewuste varianten laten zien dat wijnmakers met hetzelfde scheidingsmoment kunnen spelen.
+De tabel geeft de drie hoofdroutes. Schilvergist wit, ook amber- of orangewijn genoemd, gebruikt witte druiven maar houdt de schillen tijdens de vergisting erbij. Het naslagoverzicht [[concept.winemaking-routes|productieroutes voor stille wijn]] vergelijkt die vierde route en de rosévarianten uitgebreider. [@source.awri-amber-wine]
 :::
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}

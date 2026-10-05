@@ -26,6 +26,14 @@ Transfer is influenced by contact time, temperature and changing alcohol level. 
 Extra contact after fermentation may also differ from extra movement during it. Available compounds and their accessibility vary between grapes and seasons. The winemaker therefore judges the batch itself, rather than treating a fixed schedule as a flavour guarantee. [@source.awri-extended-maceration-2019]
 :::
 
+:::detail{#delestage-en-zuurstof parent="sturen-in-de-kuip" depth="intermediate" source_refs="source.awri-cap-management-2023 source.wre-cap-management"}
+### Draining temporarily, then returning the liquid
+
+In **délestage**, or rack and return, liquid is temporarily drained into another tank. The cap collapses, and the liquid is then returned over the grape solids. This differs from final draining before pressing: here the purpose is to renew contact. The operation requires additional holding space and planning. [@source.awri-cap-management-2023]
+
+Cap management also helps distribute heat and dissolved compounds throughout the vat. Oxygen input depends on how it is performed: a closed pump-over and an open return create different conditions. Requirements also change with fermentation progress. Mixing and aeration are therefore separate decisions, even when one operation affects both. [@source.awri-cap-management-2023] [@source.wre-cap-management]
+:::
+
 :::figure{#overpompen depth="foundation" media_id="media.concept.extraction.pump-over"}
 :::
 

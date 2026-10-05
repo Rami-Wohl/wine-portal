@@ -34,8 +34,8 @@ Peildatum: 2026-10-05.
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Het taalcontract (`MNT-045`) is vastgelegd; het eerstvolgende uitvoerbare
-werk is productieroutes en extractie (`EXP-019`), na de afgeronde
-ontvangst- en vergistingshubs (`EXP-017–018`).
+werk is de CSS organiseren (`MNT-049`), vóór de publieke taalpresentatie
+(`MNT-046`). Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.

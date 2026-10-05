@@ -1,0 +1,33 @@
+id: media.concept.winemaking-routes.four-routes
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/winemaking-routes/four-routes.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 2a8197757c3d25de5d4dbfde62c85297d81f5e88a71260ef248f03434213ba6b
+alt:
+  nl: "Vier genummerde routes: witte en blauwe druiven via een pers naar
+    sapvergisting; blauwe en witte druiven via schilvergisting naar de pers."
+  en: "Four numbered routes: white and black grapes pass through a press before
+    juice fermentation; black and white grapes ferment on skins before
+    pressing."
+caption:
+  nl: Lees iedere rij van links naar rechts. De plaats van de pers ten opzichte
+    van de gistkuip maakt het scheidingsmoment zichtbaar. De tweede rij toont
+    direct geperste rosé; korte inweking is een andere roséroute. De
+    opengewerkte vaten en schillenmassa zijn schematisch weergegeven.
+  en: Read each row from left to right. The position of the press relative to the
+    fermentation vessel reveals the point of separation. Row two shows
+    direct-pressed rosé; short maceration is another rosé route. The cutaway
+    vessels and grape solids are schematic.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-05
+changes: First generated version reviewed for process order, material states,
+  numbered correspondence and scope. Conceptual cutaways; full generation prompt
+  and review are retained in the content brief.

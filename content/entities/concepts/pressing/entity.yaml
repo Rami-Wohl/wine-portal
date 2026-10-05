@@ -20,5 +20,7 @@ assertions: []
 source_refs:
   - source.oiv-pressing
   - source.ifv-rose-vinification-itineraires-11
+  - source.awri-whole-bunch-fermentation
+  - source.awri-amber-wine
 depth: foundation
-last_reviewed: 2026-10-04
+last_reviewed: 2026-10-05
