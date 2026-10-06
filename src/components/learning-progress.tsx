@@ -1,8 +1,9 @@
 "use client";
 
+import { useLearningProgress } from "@/hooks/use-learning-progress";
+import { useLocale } from "@/i18n/locale-context";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { useLearningProgress } from "@/hooks/use-learning-progress";
 
 export interface LearningProgressLesson {
   stepId: string;
@@ -17,17 +18,35 @@ interface LearningPathProgressProps {
 }
 
 function ProgressMeter({ completed, total }: { completed: number; total: number }) {
+  const locale = useLocale();
   return (
     <div className="learning-progress-meter">
-      <progress value={completed} max={total} aria-label={`${completed} van ${total} voltooid`} />
+      <progress
+        value={completed}
+        max={total}
+        aria-label={
+          locale === "nl"
+            ? `${completed} van ${total} voltooid`
+            : `${completed} of ${total} complete`
+        }
+      />
       <span>
-        {completed} van {total} {total === 1 ? "les" : "lessen"} voltooid
+        {completed} {locale === "nl" ? "van" : "of"} {total}{" "}
+        {total === 1
+          ? locale === "nl"
+            ? "les"
+            : "lesson"
+          : locale === "nl"
+            ? "lessen"
+            : "lessons"}{" "}
+        {locale === "nl" ? "voltooid" : "complete"}{" "}
       </span>
     </div>
   );
 }
 
 export function LearningPathCardProgress({ pathId, lessons }: LearningPathProgressProps) {
+  const locale = useLocale();
   const stepIds = lessons.map((lesson) => lesson.stepId);
   const progress = useLearningProgress({ pathId, stepIds });
   const nextLesson = lessons.find((lesson) => lesson.stepId === progress.firstIncompleteStepId);
@@ -40,17 +59,22 @@ export function LearningPathCardProgress({ pathId, lessons }: LearningPathProgre
     <div className="learning-card-progress" aria-live="polite">
       <ProgressMeter completed={progress.completedCount} total={lessons.length} />
       {progress.completedCount > 0 && !progress.isComplete && nextLesson ? (
-        <Link href={nextLesson.href}>Ga verder met {nextLesson.title} →</Link>
+        <Link href={nextLesson.href}>
+          {locale === "nl" ? "Ga verder met" : "Continue with"} {nextLesson.title} →
+        </Link>
       ) : progress.isComplete ? (
-        <span className="learning-progress-complete">Leerpad voltooid</span>
+        <span className="learning-progress-complete">
+          {locale === "nl" ? "Leerpad voltooid" : "Learning path complete"}
+        </span>
       ) : (
-        <span>Nog niet gestart</span>
+        <span>{locale === "nl" ? "Nog niet gestart" : "Not started yet"}</span>
       )}
     </div>
   );
 }
 
 export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgressProps) {
+  const locale = useLocale();
   const stepIds = lessons.map((lesson) => lesson.stepId);
   const progress = useLearningProgress({ pathId, stepIds });
   const [confirmingReset, setConfirmingReset] = useState(false);
@@ -61,26 +85,38 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
   return (
     <section className="learning-progress-panel" aria-labelledby="learning-progress-title">
       <div>
-        <p className="eyebrow">Jouw voortgang</p>
+        <p className="eyebrow">{locale === "nl" ? "Jouw voortgang" : "Your progress"}</p>
         <h2 id="learning-progress-title" ref={progressTitleRef} tabIndex={-1}>
           {!progress.isReady
-            ? "Voortgang laden"
+            ? locale === "nl"
+              ? "Voortgang laden"
+              : "Loading progress"
             : progress.isComplete
-              ? "Alle lessen voltooid"
+              ? locale === "nl"
+                ? "Alle lessen voltooid"
+                : "All lessons complete"
               : progress.completedCount > 0
-                ? "Ga verder waar je was"
-                : "Klaar om te beginnen"}
+                ? locale === "nl"
+                  ? "Ga verder waar je was"
+                  : "Continue where you left off"
+                : locale === "nl"
+                  ? "Klaar om te beginnen"
+                  : "Ready to begin"}
         </h2>
         {progress.isReady ? (
           <ProgressMeter completed={progress.completedCount} total={lessons.length} />
         ) : (
-          <p className="learning-progress-loading">Je lokale voortgang wordt gecontroleerd.</p>
+          <p className="learning-progress-loading">
+            {locale === "nl"
+              ? "Je lokale voortgang wordt gecontroleerd."
+              : "Checking your local progress."}
+          </p>
         )}
         {progress.persistence === "temporary" && progress.isReady ? (
           <p className="learning-progress-notice" role="status">
-            Opslaan in deze browser is niet beschikbaar. Wijzigingen gelden alleen tijdens dit
-            bezoek. Eerder opgeslagen voortgang kan bij een nieuw bezoek terugkomen; de lessen en
-            navigatie blijven gewoon werken.
+            {locale === "nl"
+              ? "Opslaan in deze browser is niet beschikbaar. Wijzigingen gelden alleen tijdens dit bezoek. Eerder opgeslagen voortgang kan bij een nieuw bezoek terugkomen; de lessen en navigatie blijven gewoon werken."
+              : "Storage is unavailable in this browser. Changes last only for this visit. Previously saved progress may return on your next visit; lessons and navigation remain available."}{" "}
           </p>
         ) : null}
       </div>
@@ -89,7 +125,13 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
         <div className="learning-progress-actions">
           {!progress.isComplete && nextLesson ? (
             <Link className="secondary-action" href={nextLesson.href}>
-              {progress.completedCount > 0 ? "Ga verder" : "Start het leerpad"}
+              {progress.completedCount > 0
+                ? locale === "nl"
+                  ? "Ga verder"
+                  : "Continue"
+                : locale === "nl"
+                  ? "Start het leerpad"
+                  : "Start the learning path"}
             </Link>
           ) : null}
           {progress.completedCount > 0 ? (
@@ -101,7 +143,7 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
               ref={resetButtonRef}
               onClick={() => setConfirmingReset((current) => !current)}
             >
-              Wis voortgang
+              {locale === "nl" ? "Wis voortgang" : "Clear progress"}{" "}
             </button>
           ) : null}
           {confirmingReset ? (
@@ -109,9 +151,13 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
               className="learning-progress-reset"
               id="learning-progress-reset-confirmation"
               role="group"
-              aria-label="Voortgang wissen"
+              aria-label={locale === "nl" ? "Voortgang wissen" : "Clear progress"}
             >
-              <p>Alle lesmarkeringen voor dit leerpad worden op dit apparaat verwijderd.</p>
+              <p>
+                {locale === "nl"
+                  ? "Alle lesmarkeringen voor dit leerpad worden op dit apparaat verwijderd."
+                  : "All completion marks for this learning path will be removed from this device."}
+              </p>
               <div>
                 <button
                   className="secondary-action"
@@ -124,7 +170,7 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
                     });
                   }}
                 >
-                  Ja, wis voortgang
+                  {locale === "nl" ? "Ja, wis voortgang" : "Yes, clear progress"}{" "}
                 </button>
                 <button
                   className="text-button"
@@ -134,7 +180,7 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
                     requestAnimationFrame(() => resetButtonRef.current?.focus());
                   }}
                 >
-                  Annuleren
+                  {locale === "nl" ? "Annuleren" : "Cancel"}{" "}
                 </button>
               </div>
             </div>
@@ -146,6 +192,7 @@ export function LearningPathProgressPanel({ pathId, lessons }: LearningPathProgr
 }
 
 export function LearningPathStepList({ pathId, lessons }: LearningPathProgressProps) {
+  const locale = useLocale();
   const stepIds = lessons.map((lesson) => lesson.stepId);
   const progress = useLearningProgress({ pathId, stepIds });
 
@@ -159,7 +206,15 @@ export function LearningPathStepList({ pathId, lessons }: LearningPathProgressPr
               {completed ? "✓" : String(index + 1).padStart(2, "0")}
             </span>
             <div>
-              <p className="learning-step-kind">{completed ? "Voltooid" : "Kernles"}</p>
+              <p className="learning-step-kind">
+                {completed
+                  ? locale === "nl"
+                    ? "Voltooid"
+                    : "Complete"
+                  : locale === "nl"
+                    ? "Kernles"
+                    : "Core lesson"}
+              </p>
               <h3>
                 <Link href={lesson.href}>{lesson.title}</Link>
               </h3>
@@ -183,6 +238,7 @@ export function LearningCompletionStatus({
   pathHref,
   encouragement,
 }: LearningCompletionStatusProps) {
+  const locale = useLocale();
   const stepIds = lessons.map((lesson) => lesson.stepId);
   const progress = useLearningProgress({ pathId, stepIds });
   const nextLesson = lessons.find((lesson) => lesson.stepId === progress.firstIncompleteStepId);
@@ -197,23 +253,33 @@ export function LearningCompletionStatus({
       aria-labelledby="completion-status-title"
       aria-live="polite"
     >
-      <p className="eyebrow">Lokale voortgang</p>
+      <p className="eyebrow">{locale === "nl" ? "Lokale voortgang" : "Local progress"}</p>
       <h2 id="completion-status-title">
-        {progress.isComplete ? "Je hebt alle lessen voltooid" : "Je leerpad is nog niet voltooid"}
+        {progress.isComplete
+          ? locale === "nl"
+            ? "Je hebt alle lessen voltooid"
+            : "You have completed every lesson"
+          : locale === "nl"
+            ? "Je leerpad is nog niet voltooid"
+            : "Your learning path is not complete yet"}
       </h2>
       <ProgressMeter completed={progress.completedCount} total={lessons.length} />
       <p>
         {progress.isComplete
-          ? `${encouragement} Je hebt iedere les bewust als voltooid gemarkeerd; deze status is lokaal in deze browser bewaard.`
-          : "Je kunt deze terugblik altijd bekijken. Een persoonlijke voltooiing verschijnt pas wanneer je iedere les bewust hebt gemarkeerd."}
+          ? locale === "nl"
+            ? `${encouragement} Je hebt iedere les bewust als voltooid gemarkeerd; deze status is lokaal in deze browser bewaard.`
+            : `${encouragement} You have marked every lesson as complete. This status is saved locally in this browser.`
+          : locale === "nl"
+            ? "Je kunt deze terugblik altijd bekijken. Een persoonlijke voltooiing verschijnt pas wanneer je iedere les bewust hebt gemarkeerd."
+            : "You can view this recap at any time. Your personal completion status appears once you have marked every lesson as complete."}
       </p>
       {!progress.isComplete && nextLesson ? (
         <Link className="secondary-action" href={nextLesson.href}>
-          Ga naar {nextLesson.title}
+          {locale === "nl" ? "Ga naar" : "Go to"} {nextLesson.title}
         </Link>
       ) : (
         <Link className="text-link" href={pathHref}>
-          Bekijk het leerpad opnieuw
+          {locale === "nl" ? "Bekijk het leerpad opnieuw" : "Revisit the learning path"}{" "}
         </Link>
       )}
     </section>

@@ -1,7 +1,7 @@
 # Taalkeuze en publieke URLs
 
-Besluit: `MNT-045`, 2026-10-04. Dit is het implementatiecontract voor `MNT-046`;
-de applicatie presenteert momenteel nog uitsluitend Nederlands. De gedeelde
+Besluit: `MNT-045`, 2026-10-04. Dit contract is geïmplementeerd in `MNT-046` op 2026-10-06;
+de applicatie presenteert Nederlands en Engels. De gedeelde
 kennislaag en publicatievoorwaarden uit [de architectuur](knowledge-architecture.md)
 en [het blockcontract](content-blocks.md) blijven leidend.
 
@@ -56,7 +56,14 @@ toekomstige `/api`-routes krijgen geen taalprefix.
   voorrang op een fragment van de oude producentenroute.
 - De selector toont echte links met zelfnamen **Nederlands** en **English**,
   `lang`/`hreflang`, een herkenbare actieve taal en toegankelijke naam/focus.
-  Gebruik geen vlaggen. Volg de bestaande responsive en aanraakdoelrichtlijnen.
+  Op verzoek van de producteigenaar (2026-10-06) opent een compacte vlagknop
+  een dropdown naast de aanvullende navigatie; mobiel staat hij naast zoeken
+  en de menuknop. Vlaggen zijn uitsluitend decoratieve herkenningspunten;
+  de toegankelijke knopnaam noemt de huidige taal en de links houden hun
+  volledige zelfnamen. Dit introduceert geen regionale taalvarianten. De
+  native disclosure werkt ook zonder JavaScript; Escape, buiten klikken en
+  focus buiten de lijst sluiten de verrijkte versie. Volg de bestaande
+  responsive en aanraakdoelrichtlijnen.
   Een wissel opent hetzelfde object of dezelfde index en werkt met Terug/Vooruit.
 - Block-ID's blijven exact gelijk, ook als een ID Nederlands leest. Met
   JavaScript bewaart de wissel het actuele fragment en opent zo nodig de
@@ -125,18 +132,24 @@ Referentie in `node_modules/next/dist/docs/01-app/`: `02-guides/internationaliza
 `03-api-reference/03-file-conventions/proxy.md`, `03-api-reference/04-functions/generate-metadata.md`
 en `03-api-reference/03-file-conventions/01-metadata/sitemap.md`.
 
-Begin `MNT-046` met een kleine integratieproef: één gedeelde locale-routeboom,
-een interne NL-rewrite voor ongewijzigde publieke URLs en een centrale routehelper.
-Bewijs direct dat externe `/nl`-aliases, interne rewrites, clientnavigatie,
-prefetch en HTML-taal samenwerken zonder lus, interne URL-lek of verlies van
-clientstate. Deze technische inrichting is nog niet geïmplementeerd of getest;
-pas haar zo nodig aan met behoud van het publieke contract. Dupliceer geen
-paginabomen of kennisbundle per taal, en stuur servercontent niet integraal naar
-de browser om labels te vertalen. Houd asset-/API-routes buiten de rewrite.
+De implementatie gebruikt één `[lang]`-routeboom met een interne NL-rewrite en
+centrale helpers. `skipProxyUrlNormalize` bewaart de originele origin en RSC-query;
+zonder deze instelling normaliseerde Next.js de lokale `127.0.0.1`-origin naar
+`localhost`, waardoor een interne rewrite ten onrechte extern werd afgehandeld.
+De gedeelde rootlayout behoudt clientstate bij locale-navigatie. Alleen compacte
+route-ID's voor filter-/pathvalidatie gaan naar de taalwisselaar, geen kennisbundle.
 
-Daarna volgen UI-/contentpresentatie en metadata, gevolgd door onderstaande
-acceptatiecontrole. Deze matrix beschrijft **nog te bouwen tests**, geen geslaagde
-browsercontrole van een bestaande taalwisselaar.
+Indexeerbare pagina's blijven waar mogelijk vooraf gebouwd. Query-afhankelijke
+search-, browse- en lessonpagina's worden op de server gerenderd; lessoncontext
+is daardoor ook zonder JavaScript beschikbaar. De gedeelde header en
+lessoncontext worden niet achter een lege streamingfallback verborgen. De drie
+query-afhankelijke paginatypen leggen request-rendering expliciet vast, zodat
+ook de gedeelde header vóór de eerste HTML de juiste query ontvangt. De selector
+leest alleen daar zoekparameters; een lege-queryfallback zou bij vroeg klikken
+of zonder JavaScript de context verliezen.
+
+Onderstaande acceptatiegevallen zijn gecontroleerd in
+[de implementatiereview](../editorial/localization-review-2026-10-06.md).
 
 | Controle | Vereist resultaat in MNT-046 |
 | --- | --- |
@@ -150,8 +163,8 @@ browsercontrole van een bestaande taalwisselaar.
 | Publicatie en SEO | Ontbrekende verplichte vertaling blokkeert release; self-canonical en wederkerige alternatieven voor indexeerbare pagina's; uitsluitingen ontbreken in sitemap |
 | Mobiel, desktop, toetsenbord en JS uit | Bedienbare selector, leesbare vertaling/beelden, geen overflow of ontoegankelijke inhoud; fragmentbeperking zonder JS zoals hierboven |
 
-De inventaris op 2026-10-04 vond 146 actieve zelfstandige entities, 137 actieve
+De inventaris op 2026-10-06 bevat 149 actieve zelfstandige entities, 137 actieve
 ingebedde producenten, zeven actieve narratives en één actief learning path.
-Alle actieve zelfstandige entities en narratives hebben Engelse blocks; hun
-NL/EN-block-ID's komen overeen. Dit bewijst technische beschikbaarheid, geen
-volledige redactionele of visuele review van de Engelse productpresentatie.
+Actieve content heeft verplichte NL/EN-blocks met dezelfde ID's. De
+implementatiereview toetst presentatie en integratie; zij vervangt geen nieuwe
+corpusbrede inhoudelijke bronreview.

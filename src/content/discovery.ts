@@ -1,4 +1,4 @@
-import type { EntityType, GeneratedEntity, ResolvedRelation } from "./model";
+import type { EntityType, GeneratedEntity, Locale, ResolvedRelation } from "./model";
 import { getEntityById, getPublishedEntitiesByType, getRelationsForEntity } from "./repository";
 import { ENTITY_ROUTE_SEGMENTS } from "./routing";
 
@@ -176,50 +176,60 @@ function contextEntitiesFor(entity: GeneratedEntity): GeneratedEntity[] {
   });
 }
 
-const discoveryEntryCache = new Map<EntityType, DiscoveryEntry[]>();
+const discoveryEntryCache = new Map<string, DiscoveryEntry[]>();
 
-export function getDiscoveryCategoryByType(type: EntityType): DiscoveryCategory {
-  return DISCOVERY_CATEGORY_BY_TYPE.get(type)!;
+export function getDiscoveryCategoryByType(
+  type: EntityType,
+  locale: Locale = "nl",
+): DiscoveryCategory {
+  return localizeCategory(DISCOVERY_CATEGORY_BY_TYPE.get(type)!, locale);
 }
 
-export function getDiscoveryCategoryBySegment(segment: string): DiscoveryCategory | undefined {
-  return DISCOVERY_CATEGORY_BY_SEGMENT.get(segment);
+export function getDiscoveryCategoryBySegment(
+  segment: string,
+  locale: Locale = "nl",
+): DiscoveryCategory | undefined {
+  const category = DISCOVERY_CATEGORY_BY_SEGMENT.get(segment);
+  return category ? localizeCategory(category, locale) : undefined;
 }
 
-export function getDiscoveryEntries(type: EntityType): DiscoveryEntry[] {
-  const cached = discoveryEntryCache.get(type);
+export function getDiscoveryEntries(type: EntityType, locale: Locale = "nl"): DiscoveryEntry[] {
+  const cached = discoveryEntryCache.get(`${locale}:${type}`);
   if (cached) return cached;
 
   const entries = getPublishedEntitiesByType(type)
     .toSorted((left, right) =>
-      left.names.nl.localeCompare(right.names.nl, "nl", { sensitivity: "base" }),
+      left.names[locale].localeCompare(right.names[locale], locale, { sensitivity: "base" }),
     )
     .map((entity) => ({
       entity,
       contexts: contextEntitiesFor(entity).toSorted((left, right) =>
-        left.names.nl.localeCompare(right.names.nl, "nl", { sensitivity: "base" }),
+        left.names[locale].localeCompare(right.names[locale], locale, { sensitivity: "base" }),
       ),
-      initial: discoveryInitial(entity.names.nl),
+      initial: discoveryInitial(entity.names[locale]),
     }));
 
-  discoveryEntryCache.set(type, entries);
+  discoveryEntryCache.set(`${locale}:${type}`, entries);
   return entries;
 }
 
-export function discoveryContextOptions(entries: DiscoveryEntry[]): DiscoveryContextOption[] {
+export function discoveryContextOptions(
+  entries: DiscoveryEntry[],
+  locale: Locale = "nl",
+): DiscoveryContextOption[] {
   const contexts = new Map<string, DiscoveryContextOption>();
   for (const entry of entries) {
     for (const context of entry.contexts) {
       const existing = contexts.get(context.slugs.en);
       contexts.set(context.slugs.en, {
         slug: context.slugs.en,
-        label: context.names.nl,
+        label: context.names[locale],
         count: (existing?.count ?? 0) + 1,
       });
     }
   }
   return [...contexts.values()].toSorted((left, right) =>
-    left.label.localeCompare(right.label, "nl", { sensitivity: "base" }),
+    left.label.localeCompare(right.label, locale, { sensitivity: "base" }),
   );
 }
 
@@ -252,4 +262,61 @@ export function filterDiscoveryEntries(
     const matchesInitial = !requestedInitial || entry.initial === requestedInitial;
     return matchesQuery && matchesContext && matchesInitial;
   });
+}
+
+const ENGLISH_CATEGORIES: Record<EntityType, Omit<DiscoveryCategory, "type" | "route_segment">> = {
+  region: {
+    title: "Regions",
+    description: "Wine regions as geographic and cultural context.",
+    context_label: "Parent region",
+    context_all_label: "All regions",
+  },
+  appellation: {
+    title: "Appellations",
+    description: "Protected origins and their place in the wider landscape.",
+    context_label: "Subregion",
+    context_all_label: "All subregions",
+  },
+  site: {
+    title: "Vineyard sites",
+    description: "Defined vineyards and lieux-dits in their geographic context.",
+    context_label: "Origin",
+    context_all_label: "All origins",
+  },
+  producer: {
+    title: "Producers",
+    description: "Châteaux, domaines, estates and other wine producers.",
+    context_label: "Appellation",
+    context_all_label: "All appellations",
+  },
+  grape: {
+    title: "Grapes",
+    description: "Grape varieties, synonyms and their connections.",
+    context_label: null,
+    context_all_label: null,
+  },
+  vintage: {
+    title: "Vintages",
+    description: "Vintages within an explicit regional scope.",
+    context_label: "Area",
+    context_all_label: "All areas",
+  },
+  classification: {
+    title: "Classifications",
+    description: "Classification systems with clear scope and sources.",
+    context_label: "Scope",
+    context_all_label: "All scopes",
+  },
+  concept: {
+    title: "Concepts",
+    description: "Viticulture, winemaking, geology, chemistry and sensory science.",
+    context_label: null,
+    context_all_label: null,
+  },
+};
+function localizeCategory(category: DiscoveryCategory, locale: Locale): DiscoveryCategory {
+  return locale === "nl" ? category : { ...category, ...ENGLISH_CATEGORIES[category.type] };
+}
+export function getDiscoveryCategories(locale: Locale): DiscoveryCategory[] {
+  return DISCOVERY_CATEGORIES.map((category) => localizeCategory(category, locale));
 }

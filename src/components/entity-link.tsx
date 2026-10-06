@@ -1,13 +1,13 @@
-import Link from "next/link";
-import type { Entity } from "@/content/model";
+import type { Entity, Locale } from "@/content/model";
 import { getEntityPublicHref } from "@/content/repository";
-import { ENTITY_TYPE_LABELS_NL } from "@/content/routing";
+import { contentLabels } from "@/content/routing";
+import Link from "next/link";
 
-export function EntityLink({ entity }: { entity: Entity }) {
+export function EntityLink({ entity, locale = "nl" }: { entity: Entity; locale?: Locale }) {
   return (
-    <Link className="entity-link" href={getEntityPublicHref(entity)}>
-      <span>{entity.names.nl}</span>
-      <small>{ENTITY_TYPE_LABELS_NL[entity.type]}</small>
+    <Link className="entity-link" href={getEntityPublicHref(entity, locale)}>
+      <span>{entity.names[locale]}</span>
+      <small>{contentLabels(locale).entity[entity.type]}</small>
     </Link>
   );
 }

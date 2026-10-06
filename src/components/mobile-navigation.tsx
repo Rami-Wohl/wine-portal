@@ -1,27 +1,31 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import type { AnimationEvent, MouseEvent } from "react";
 import {
   isNavigationItemCurrent,
+  localizedNavigation,
   PRIMARY_NAVIGATION,
   SEARCH_NAVIGATION_ITEM,
   UTILITY_NAVIGATION,
 } from "@/config/navigation";
+import { useLocale } from "@/i18n/locale-context";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import type { AnimationEvent, MouseEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavigationLinks } from "./navigation-links";
 
 type MenuState = "closed" | "open" | "closing";
 
 export function MobileNavigation() {
+  const locale = useLocale();
+  const searchItem = localizedNavigation([SEARCH_NAVIGATION_ITEM], locale)[0];
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closingTimerRef = useRef<number | null>(null);
   const pathname = usePathname();
   const [menuState, setMenuState] = useState<MenuState>("closed");
   const isOpen = menuState !== "closed";
-  const isSearchCurrent = isNavigationItemCurrent(SEARCH_NAVIGATION_ITEM, pathname);
+  const isSearchCurrent = isNavigationItemCurrent(searchItem, pathname);
 
   useEffect(() => {
     const desktopQuery = window.matchMedia("(min-width: 861px)");
@@ -100,10 +104,10 @@ export function MobileNavigation() {
   return (
     <div className="mobile-navigation">
       <Link
-        aria-label="Zoeken"
+        aria-label={locale === "nl" ? "Zoeken" : "Search"}
         aria-current={isSearchCurrent ? "page" : undefined}
         className="mobile-header-action mobile-search-link"
-        href={SEARCH_NAVIGATION_ITEM.href}
+        href={searchItem.href}
       >
         <svg aria-hidden="true" viewBox="0 0 20 20">
           <circle cx="8.5" cy="8.5" r="5.25" />
@@ -111,7 +115,7 @@ export function MobileNavigation() {
         </svg>
       </Link>
       <button
-        aria-label="Navigatiemenu openen"
+        aria-label={locale === "nl" ? "Navigatiemenu openen" : "Open navigation menu"}
         aria-controls="mobile-navigation-dialog"
         aria-expanded={isOpen}
         className="mobile-header-action mobile-menu-trigger"
@@ -140,9 +144,9 @@ export function MobileNavigation() {
       >
         <div className="mobile-navigation-sheet">
           <header>
-            <p id="mobile-navigation-title">Navigatie</p>
+            <p id="mobile-navigation-title">{locale === "nl" ? "Navigatie" : "Navigation"}</p>
             <button
-              aria-label="Navigatiemenu sluiten"
+              aria-label={locale === "nl" ? "Navigatiemenu sluiten" : "Close navigation menu"}
               className="mobile-menu-close"
               onClick={closeMenu}
               type="button"
@@ -152,11 +156,25 @@ export function MobileNavigation() {
               </svg>
             </button>
           </header>
-          <nav className="mobile-nav-primary" aria-label="Hoofdnavigatie mobiel">
-            <NavigationLinks items={PRIMARY_NAVIGATION} onNavigate={closeMenu} />
+          <nav
+            className="mobile-nav-primary"
+            aria-label={locale === "nl" ? "Hoofdnavigatie mobiel" : "Main mobile navigation"}
+          >
+            <NavigationLinks
+              items={localizedNavigation(PRIMARY_NAVIGATION, locale)}
+              onNavigate={closeMenu}
+            />
           </nav>
-          <nav className="mobile-nav-utility" aria-label="Aanvullende navigatie mobiel">
-            <NavigationLinks items={UTILITY_NAVIGATION} onNavigate={closeMenu} />
+          <nav
+            className="mobile-nav-utility"
+            aria-label={
+              locale === "nl" ? "Aanvullende navigatie mobiel" : "Additional mobile navigation"
+            }
+          >
+            <NavigationLinks
+              items={localizedNavigation(UTILITY_NAVIGATION, locale)}
+              onNavigate={closeMenu}
+            />
           </nav>
         </div>
       </dialog>

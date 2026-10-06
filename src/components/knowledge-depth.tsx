@@ -1,17 +1,26 @@
 "use client";
 
-import { useMemo, type ReactNode } from "react";
 import type { Depth } from "@/content/model";
-import { DEPTH_LABELS_NL } from "@/content/routing";
+import { contentLabels } from "@/content/routing";
 import { usePersistedKnowledgeDepth } from "@/hooks/use-persisted-knowledge-depth";
+import { useLocale } from "@/i18n/locale-context";
+import { useMemo, type ReactNode } from "react";
 
 const DEPTH_ORDER: Depth[] = ["foundation", "intermediate", "advanced", "specialist"];
 
-const DEPTH_DESCRIPTIONS: Record<Depth, string> = {
-  foundation: "De kern en de belangrijkste oriëntatie.",
-  intermediate: "De basis, aangevuld met meer uitleg en samenhang.",
-  advanced: "Ook de technische keuzes, nuances en uitzonderingen.",
-  specialist: "Alle beschikbare details en specialistische context.",
+const DEPTH_DESCRIPTIONS: Record<"nl" | "en", Record<Depth, string>> = {
+  nl: {
+    foundation: "De kern en de belangrijkste oriëntatie.",
+    intermediate: "De basis, aangevuld met meer uitleg en samenhang.",
+    advanced: "Ook de technische keuzes, nuances en uitzonderingen.",
+    specialist: "Alle beschikbare details en specialistische context.",
+  },
+  en: {
+    foundation: "The essentials and a clear starting point.",
+    intermediate: "The foundations, with more explanation and connections.",
+    advanced: "Technical choices, nuances and exceptions too.",
+    specialist: "All available detail and specialist context.",
+  },
 };
 
 export function KnowledgeDepth({
@@ -23,6 +32,7 @@ export function KnowledgeDepth({
   initialDepth: Depth;
   maxDepth: Depth;
 }) {
+  const locale = useLocale();
   const maxDepthIndex = Math.max(0, DEPTH_ORDER.indexOf(maxDepth));
   const options = useMemo(() => DEPTH_ORDER.slice(0, maxDepthIndex + 1), [maxDepthIndex]);
   const safeInitialDepth = options.includes(initialDepth) ? initialDepth : options[0];
@@ -32,14 +42,16 @@ export function KnowledgeDepth({
     <div className="knowledge-depth">
       <div className="knowledge-depth-control" data-selected-depth={selectedDepth}>
         <div className="knowledge-depth-summary">
-          <span>Kennisdiepte</span>
-          <strong aria-live="polite">{DEPTH_LABELS_NL[selectedDepth]}</strong>
-          <p>{DEPTH_DESCRIPTIONS[selectedDepth]}</p>
+          <span>{locale === "nl" ? "Kennisdiepte" : "Knowledge depth"}</span>
+          <strong aria-live="polite">{contentLabels(locale).depth[selectedDepth]}</strong>
+          <p>{DEPTH_DESCRIPTIONS[locale][selectedDepth]}</p>
         </div>
         <div
           className="knowledge-depth-options"
           role="group"
-          aria-label="Kies hoeveel detail je wilt zien"
+          aria-label={
+            locale === "nl" ? "Kies hoeveel detail je wilt zien" : "Choose how much detail to show"
+          }
         >
           {options.map((depth) => (
             <button
@@ -50,7 +62,7 @@ export function KnowledgeDepth({
               onClick={() => selectDepth(depth)}
               type="button"
             >
-              {DEPTH_LABELS_NL[depth]}
+              {contentLabels(locale).depth[depth]}
             </button>
           ))}
         </div>

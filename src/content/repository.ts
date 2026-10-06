@@ -1,20 +1,20 @@
 import knowledgeBaseJson from "../generated/content/knowledge-base.json";
 import type {
-  EntityType,
   Entity,
+  EntityType,
   GeneratedEntity,
   GeneratedKnowledgeBase,
   GeneratedNarrative,
   LearningPath,
   LearningPathMembership,
+  Locale,
   MediaAsset,
   ResolvedRelation,
   SearchIndexEntry,
   Source,
 } from "./model";
 import { entityPresentationMode } from "./model";
-import { NARRATIVE_ROUTE_SEGMENTS, entityTypeFromRouteSegment } from "./routing";
-import { entityHref } from "./routing";
+import { NARRATIVE_ROUTE_SEGMENTS, entityHref, entityTypeFromRouteSegment } from "./routing";
 
 const knowledgeBase = knowledgeBaseJson as GeneratedKnowledgeBase;
 const entitiesById = new Map(knowledgeBase.entities.map((entity) => [entity.id, entity]));
@@ -73,13 +73,13 @@ export function getPublishedStandaloneEntitiesByType(type: EntityType): Generate
   );
 }
 
-export function getEntityPublicHref(entity: Entity): string {
+export function getEntityPublicHref(entity: Entity, locale: Locale = "nl"): string {
   const presentation = entity.presentation;
   if (entity.status === "active" && presentation && presentation.mode !== "monograph") {
     const owner = getEntityById(presentation.owner);
-    if (owner) return `${entityHref(owner)}#${presentation.anchor}`;
+    if (owner) return `${entityHref(owner, locale)}#${presentation.anchor}`;
   }
-  return entityHref(entity);
+  return entityHref(entity, locale);
 }
 
 export function getEntityByRoute(routeSegment: string, slug: string): GeneratedEntity | undefined {

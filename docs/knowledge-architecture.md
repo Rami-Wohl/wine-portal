@@ -105,8 +105,8 @@ Relaties voeden afgeleide backlinks, gerelateerde onderwerpen, navigatie en zoek
 #### Entities
 
 Zelfstandig adresseerbare kennisobjecten met een stabiele ID, gedeelde metadata en
-verplichte NL/EN-authoring. De huidige applicatie presenteert alleen Nederlands;
-Engelse routes en interface zijn nog niet geïmplementeerd.
+verplichte NL/EN-authoring. De applicatie presenteert beide talen via één
+gedeelde routeboom; Engels staat onder `/en`, Nederlands behoudt zijn URLs.
 
 #### Relations en assertions
 
@@ -240,12 +240,11 @@ Het datacontract ondersteunt verschillende NL- en EN-slugs die naar dezelfde
 entity wijzen. De Engelse slug is taaloverstijgend de canonieke publieke
 routecomponent; de Nederlandse slug blijft een gelokaliseerde legacy-alias die
 permanent naar die canonieke route verwijst. Dit houdt URLs voorspelbaar zonder
-bestaande bookmarks of externe links te breken. De keuze zegt niets over de
-weergavetaal: de huidige publieke interface en contentpresentatie blijven
-Nederlands. De toekomstige NL/EN-presentatie volgt het
-[taal- en URL-contract](localization-routing.md): NL behoudt deze routes, EN
-krijgt `/en`, beide met dezelfde Engelse slug. Het contract is besloten in
-`MNT-045`; de runtime-implementatie volgt in `MNT-046`.
+bestaande bookmarks of externe links te breken. De weergavetaal volgt de URL:
+NL behoudt deze routes, EN krijgt `/en`, beide met dezelfde Engelse slug.
+De gedeelde implementatie (`MNT-046`) volgt het
+[taal- en URL-contract](localization-routing.md), inclusief taalwisselaar,
+metadata, querycontext en gedeelde voortgang.
 
 De pipeline valideert slugbotsingen per locale én over alle route-aliases binnen
 hetzelfde entity- of narrativetype. De `localized_slugs`-index bewaart beide
@@ -772,9 +771,9 @@ Dit is indexing-infrastructuur. Publieke repository-accessors selecteren uitslui
 draftreviews en ontwikkelcontroles. Welke routes en zoekinterfaces de applicatie
 publiek aanbiedt, blijft een applicatiebeslissing boven op deze graph.
 
-De Nederlandse zoekinterface doorzoekt Nederlandse passages. Namen, aliases en
-slugs uit beide locales blijven als vindbare metadata beschikbaar, maar leveren
-geen Engelstalige prose-snippet in de Nederlandstalige UI. Exacte onderwerpen
+De zoekinterface doorzoekt passages in de gekozen taal. Namen, aliases en
+slugs uit beide locales blijven als vindbare metadata beschikbaar, maar snippets
+worden nooit uit de andere taal aangevuld. Exacte onderwerpen
 wegen zwaarder dan een losse tekstvermelding; headings wegen zwaarder dan
 lopende tekst en beeldbijschriften. Een inhoudstreffer verwijst naar het stabiele
 blockanker, zodat een dieper block via het bestaande kennisdieptecontract

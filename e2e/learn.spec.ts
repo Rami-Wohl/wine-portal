@@ -391,9 +391,9 @@ test("canonical reference links support a complete Learn to Explore and back jou
   await expect(page).toHaveURL("/concepts/pressing");
   await expect(page.getByRole("heading", { level: 1, name: "Persen" })).toBeVisible();
 
-  const lessonBacklink = page.locator(
-    'a[href="/verdiepingen/lessons/grape-to-must?path=from-grape-to-still-wine"]',
-  );
+  const lessonBacklink = page
+    .getByRole("main")
+    .locator('a[href="/verdiepingen/lessons/grape-to-must?path=from-grape-to-still-wine"]');
   await expect(lessonBacklink).toHaveAttribute(
     "href",
     "/verdiepingen/lessons/grape-to-must?path=from-grape-to-still-wine",

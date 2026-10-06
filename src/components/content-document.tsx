@@ -1,6 +1,4 @@
-import { Fragment, type ReactNode } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { mediaUrl } from "@/content/media";
 import type {
   CaveatVariant,
   ContentBlock,
@@ -11,8 +9,11 @@ import type {
   MediaAsset,
   Source,
 } from "@/content/model";
-import { mediaUrl } from "@/content/media";
 import { getEntityById, getEntityPublicHref } from "@/content/repository";
+import { localizedHref } from "@/i18n/routing";
+import Image from "next/image";
+import Link from "next/link";
+import { Fragment, type ReactNode } from "react";
 
 const BLOCK_LABELS: Record<Locale, Record<"objectives" | "key-idea" | "in-the-glass", string>> = {
   nl: {
@@ -87,7 +88,15 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
         const children = renderInline(node.children, context);
         if (node.url.startsWith("/") || node.url.startsWith("#")) {
           return (
-            <Link href={node.url} key={key} title={node.title ?? undefined}>
+            <Link
+              href={
+                node.url.startsWith("/") && !node.url.startsWith("/media/")
+                  ? localizedHref(node.url, context.locale)
+                  : node.url
+              }
+              key={key}
+              title={node.title ?? undefined}
+            >
               {children}
             </Link>
           );
@@ -108,7 +117,11 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
         const entity = getEntityById(node.entity_id);
         if (!entity) return null;
         return (
-          <Link className="content-entity-link" href={getEntityPublicHref(entity)} key={key}>
+          <Link
+            className="content-entity-link"
+            href={getEntityPublicHref(entity, context.locale)}
+            key={key}
+          >
             {node.label ?? entity.names[context.locale]}
           </Link>
         );

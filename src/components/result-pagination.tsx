@@ -1,9 +1,11 @@
+import type { Locale } from "@/content/model";
 import Link from "next/link";
 import { PaginationScrollManager } from "./pagination-scroll-manager";
 
 type PaginationItem = number | "ellipsis";
 
 interface ResultPaginationProps {
+  locale?: Locale;
   currentPage: number;
   hrefForPage: (page: number) => string;
   label: string;
@@ -26,6 +28,7 @@ function targetedHref(href: string, targetId: string): string {
 }
 
 export function ResultPagination({
+  locale = "nl",
   currentPage,
   hrefForPage,
   label,
@@ -40,7 +43,11 @@ export function ResultPagination({
   return (
     <nav
       className={`result-pagination result-pagination-${position}`}
-      aria-label={`${label}, ${position === "top" ? "boven" : "onder"} de lijst`}
+      aria-label={
+        locale === "nl"
+          ? `${label}, ${position === "top" ? "boven" : "onder"} de lijst`
+          : `${label}, ${position === "top" ? "above" : "below"} the list`
+      }
     >
       <PaginationScrollManager
         active={position === "top"}
@@ -51,21 +58,29 @@ export function ResultPagination({
         <Link
           className="pagination-direction pagination-previous"
           href={targetedHref(hrefForPage(previousPage), targetId)}
-          aria-label={`Ga naar vorige pagina, pagina ${previousPage}`}
+          aria-label={
+            locale === "nl"
+              ? `Ga naar vorige pagina, pagina ${previousPage}`
+              : `Go to previous page, page ${previousPage}`
+          }
         >
-          <span aria-hidden="true">←</span> Vorige
+          <span aria-hidden="true">←</span> {locale === "nl" ? "Vorige" : "Previous"}{" "}
         </Link>
       ) : (
         <span className="pagination-direction pagination-previous is-disabled" aria-disabled="true">
-          <span aria-hidden="true">←</span> Vorige
+          <span aria-hidden="true">←</span> {locale === "nl" ? "Vorige" : "Previous"}{" "}
         </span>
       )}
 
       <div className="pagination-center">
         <span className="pagination-status">
-          Pagina {currentPage} van {pageCount}
+          {locale === "nl" ? "Pagina" : "Page"} {currentPage} {locale === "nl" ? "van" : "of"}{" "}
+          {pageCount}
         </span>
-        <span className="pagination-pages" aria-label="Kies een pagina">
+        <span
+          className="pagination-pages"
+          aria-label={locale === "nl" ? "Kies een pagina" : "Choose a page"}
+        >
           {items.map((item, index) =>
             item === "ellipsis" ? (
               <span className="pagination-ellipsis" aria-hidden="true" key={`ellipsis-${index}`}>
@@ -75,7 +90,7 @@ export function ResultPagination({
               <span
                 className="pagination-page is-current"
                 aria-current="page"
-                aria-label={`Pagina ${item}`}
+                aria-label={locale === "nl" ? `Pagina ${item}` : `Page ${item}`}
                 key={item}
               >
                 {item}
@@ -84,7 +99,7 @@ export function ResultPagination({
               <Link
                 className="pagination-page"
                 href={targetedHref(hrefForPage(item), targetId)}
-                aria-label={`Ga naar pagina ${item}`}
+                aria-label={locale === "nl" ? `Ga naar pagina ${item}` : `Go to page ${item}`}
                 key={item}
               >
                 {item}
@@ -98,13 +113,17 @@ export function ResultPagination({
         <Link
           className="pagination-direction pagination-next"
           href={targetedHref(hrefForPage(nextPage), targetId)}
-          aria-label={`Ga naar volgende pagina, pagina ${nextPage}`}
+          aria-label={
+            locale === "nl"
+              ? `Ga naar volgende pagina, pagina ${nextPage}`
+              : `Go to next page, page ${nextPage}`
+          }
         >
-          Volgende <span aria-hidden="true">→</span>
+          {locale === "nl" ? "Volgende" : "Next"} <span aria-hidden="true">→</span>
         </Link>
       ) : (
         <span className="pagination-direction pagination-next is-disabled" aria-disabled="true">
-          Volgende <span aria-hidden="true">→</span>
+          {locale === "nl" ? "Volgende" : "Next"} <span aria-hidden="true">→</span>
         </span>
       )}
     </nav>

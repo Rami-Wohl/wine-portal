@@ -1,4 +1,13 @@
-import type { CurriculumLevel, Depth, Entity, EntityType, LearningPath, Narrative } from "./model";
+import { localizedHref } from "@/i18n/routing";
+import type {
+  CurriculumLevel,
+  Depth,
+  Entity,
+  EntityType,
+  LearningPath,
+  Locale,
+  Narrative,
+} from "./model";
 
 export const ENTITY_ROUTE_SEGMENTS = {
   region: "regions",
@@ -66,29 +75,92 @@ export const NARRATIVE_TYPE_LABELS_NL = {
   explainer: "Uitleg",
 } as const satisfies Record<Narrative["type"], string>;
 
-export function entityHref(entity: Entity): string {
-  return `/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.en}`;
+export function entityHref(entity: Entity, locale: Locale = "nl"): string {
+  return localizedHref(`/${ENTITY_ROUTE_SEGMENTS[entity.type]}/${entity.slugs.en}`, locale);
 }
 
-export function narrativeHref(narrative: Narrative): string {
-  return `/verdiepingen/${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}/${narrative.slugs.en}`;
+export function narrativeHref(narrative: Narrative, locale: Locale = "nl"): string {
+  return localizedHref(
+    `/verdiepingen/${NARRATIVE_ROUTE_SEGMENTS[narrative.type]}/${narrative.slugs.en}`,
+    locale,
+  );
 }
 
-export function learningPathHref(learningPath: LearningPath): string {
-  return `/learn/${learningPath.slugs.en}`;
+export function learningPathHref(learningPath: LearningPath, locale: Locale = "nl"): string {
+  return localizedHref(`/learn/${learningPath.slugs.en}`, locale);
 }
 
-export function learningPathCompletionHref(learningPath: LearningPath): string {
-  return `${learningPathHref(learningPath)}/complete`;
+export function learningPathCompletionHref(
+  learningPath: LearningPath,
+  locale: Locale = "nl",
+): string {
+  return `${learningPathHref(learningPath, locale)}/complete`;
 }
 
-export function learningPathLessonHref(learningPath: LearningPath, lesson: Narrative): string {
+export function learningPathLessonHref(
+  learningPath: LearningPath,
+  lesson: Narrative,
+  locale: Locale = "nl",
+): string {
   const query = new URLSearchParams({ path: learningPath.slugs.en });
-  return `${narrativeHref(lesson)}?${query.toString()}`;
+  return `${narrativeHref(lesson, locale)}?${query.toString()}`;
 }
 
 export function entityTypeFromRouteSegment(segment: string): EntityType | undefined {
   return (Object.entries(ENTITY_ROUTE_SEGMENTS) as Array<[EntityType, string]>).find(
     ([, routeSegment]) => routeSegment === segment,
   )?.[0];
+}
+
+export function contentLabels(locale: Locale) {
+  return locale === "nl"
+    ? {
+        entity: ENTITY_TYPE_LABELS_NL,
+        entities: ENTITY_TYPE_PLURAL_LABELS_NL,
+        depth: DEPTH_LABELS_NL,
+        curriculum: CURRICULUM_LEVEL_LABELS_NL,
+        narrative: NARRATIVE_TYPE_LABELS_NL,
+      }
+    : {
+        entity: {
+          region: "Region",
+          appellation: "Appellation",
+          site: "Vineyard site",
+          producer: "Producer",
+          grape: "Grape",
+          vintage: "Vintage",
+          classification: "Classification",
+          concept: "Concept",
+        },
+        entities: {
+          region: "Regions",
+          appellation: "Appellations",
+          site: "Vineyard sites",
+          producer: "Producers",
+          grape: "Grapes",
+          vintage: "Vintages",
+          classification: "Classifications",
+          concept: "Concepts",
+        },
+        depth: {
+          foundation: "Foundation",
+          intermediate: "Intermediate",
+          advanced: "Advanced",
+          specialist: "Specialist",
+        },
+        curriculum: {
+          understand: "Understanding wine",
+          explain: "Explaining wine",
+          analyze: "Analyzing wine",
+        },
+        narrative: {
+          lesson: "Lesson",
+          "regional-deep-dive": "Regional deep dive",
+          "producer-profile": "Producer profile",
+          comparison: "Comparison",
+          "tasting-guide": "Tasting guide",
+          "historical-essay": "Historical essay",
+          explainer: "Explainer",
+        },
+      };
 }

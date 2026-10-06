@@ -2,20 +2,20 @@ import { describe, expect, it } from "vitest";
 import {
   getAllEntities,
   getAllEntitiesByType,
+  getAllLearningPaths,
   getAllNarrativeBacklinks,
   getAllNarratives,
-  getAllLearningPaths,
   getEntityByRoute,
   getEntityPublicHref,
   getNarrativeByRoute,
   getPublishedEntities,
   getPublishedEntitiesByType,
-  getPublishedStandaloneEntities,
-  getPublishedStandaloneEntitiesByType,
-  getPublishedNarrativeBacklinks,
-  getPublishedNarratives,
   getPublishedLearningPaths,
   getPublishedLearningPathsForLesson,
+  getPublishedNarrativeBacklinks,
+  getPublishedNarratives,
+  getPublishedStandaloneEntities,
+  getPublishedStandaloneEntitiesByType,
   getPublishedStandaloneLessons,
   getRelationsForEntity,
 } from "./repository";
@@ -186,9 +186,9 @@ describe("canonical content routing", () => {
 
   it("keeps all canonical generated routes unique", () => {
     const routes = [
-      ...getAllEntities().map(entityHref),
-      ...getAllNarratives().map(narrativeHref),
-      ...getAllLearningPaths().map(learningPathHref),
+      ...getAllEntities().map((item) => entityHref(item)),
+      ...getAllNarratives().map((item) => narrativeHref(item)),
+      ...getAllLearningPaths().map((item) => learningPathHref(item)),
     ];
     expect(new Set(routes).size).toBe(routes.length);
   });

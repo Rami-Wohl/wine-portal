@@ -1,27 +1,31 @@
-import { describe, expect, it } from "vitest";
 import { BRAND, SITE_URL } from "@/config/brand";
-import { getAllEntities, getAllLearningPaths, getAllNarratives } from "@/content/repository";
-import { entityPresentationMode } from "@/content/model";
 import { DISCOVERY_CATEGORIES } from "@/content/discovery";
+import { entityPresentationMode } from "@/content/model";
+import { getAllEntities, getAllLearningPaths, getAllNarratives } from "@/content/repository";
 import { entityHref, learningPathHref, narrativeHref } from "@/content/routing";
+import { describe, expect, it } from "vitest";
 import {
   generateMetadata as generateEntityMetadata,
   generateStaticParams as generateEntityStaticParams,
-} from "./[entityType]/[slug]/page";
-import { metadata as rootMetadata } from "./layout";
-import {
-  generateMetadata as generateNarrativeMetadata,
-  generateStaticParams as generateNarrativeStaticParams,
-} from "./verdiepingen/[narrativeType]/[slug]/page";
+} from "./[lang]/[entityType]/[slug]/page";
+import { generateMetadata as generateRootMetadata } from "./[lang]/layout";
 import {
   generateMetadata as generateLearningPathMetadata,
   generateStaticParams as generateLearningPathStaticParams,
-} from "./learn/[slug]/page";
+} from "./[lang]/learn/[slug]/page";
+import {
+  generateMetadata as generateNarrativeMetadata,
+  generateStaticParams as generateNarrativeStaticParams,
+} from "./[lang]/verdiepingen/[narrativeType]/[slug]/page";
 import robots from "./robots";
 import sitemap from "./sitemap";
 
 describe("application metadata", () => {
-  it("uses the centralized brand for root SEO metadata", () => {
+  it("uses the centralized brand for root SEO metadata", async () => {
+    const rootMetadata = await generateRootMetadata({
+      params: Promise.resolve({ lang: "nl" }),
+      children: null,
+    });
     expect(rootMetadata.applicationName).toBe(BRAND.name);
     expect(rootMetadata.description).toBe(BRAND.description.nl);
     expect(rootMetadata.openGraph).toMatchObject({
@@ -75,10 +79,7 @@ describe("application metadata", () => {
     const href = entityHref(draft);
     const [, entityType, slug] = href.split("/");
     const metadata = await generateEntityMetadata({
-      params: Promise.resolve({
-        entityType,
-        slug,
-      }),
+      params: Promise.resolve({ lang: "nl", entityType, slug }),
     });
 
     expect(metadata.alternates).toEqual({
@@ -88,7 +89,7 @@ describe("application metadata", () => {
     expect(metadata.description).not.toMatch(/canonical|fixture|entity/i);
     await expect(
       generateEntityMetadata({
-        params: Promise.resolve({ entityType: "producers", slug: "unknown" }),
+        params: Promise.resolve({ lang: "nl", entityType: "producers", slug: "unknown" }),
       }),
     ).resolves.toEqual({});
   });
@@ -102,6 +103,7 @@ describe("application metadata", () => {
     );
     const metadata = await generateNarrativeMetadata({
       params: Promise.resolve({
+        lang: "nl",
         narrativeType: "regional-deep-dives",
         slug: "bordeaux-pipeline-proef",
       }),
@@ -114,7 +116,7 @@ describe("application metadata", () => {
     expect(metadata.title).toBe("Bordeaux: verdieping in voorbereiding");
     await expect(
       generateNarrativeMetadata({
-        params: Promise.resolve({ narrativeType: "lessons", slug: "unknown" }),
+        params: Promise.resolve({ lang: "nl", narrativeType: "lessons", slug: "unknown" }),
       }),
     ).resolves.toEqual({});
   });
@@ -131,11 +133,42 @@ describe("application metadata", () => {
     );
     await expect(
       generateLearningPathMetadata({
-        params: Promise.resolve({ slug: "from-grape-to-still-wine" }),
+        params: Promise.resolve({ lang: "nl", slug: "from-grape-to-still-wine" }),
       }),
     ).resolves.toMatchObject({
       title: "Van druif naar stille wijn — hoe wijn wordt gemaakt",
       alternates: { canonical: "/learn/from-grape-to-still-wine" },
     });
+  });
+});
+
+it("uses English metadata and reciprocal alternates without indexing drafts", async () => {
+  const active = await generateEntityMetadata({
+    params: Promise.resolve({ lang: "en", entityType: "concepts", slug: "winemaking-routes" }),
+  });
+  expect(active.title).toBe("Still wine production routes: concept");
+  expect(active.openGraph).toMatchObject({
+    locale: "en_US",
+    url: "/en/concepts/winemaking-routes",
+  });
+  expect(active.alternates).toEqual({
+    canonical: "/en/concepts/winemaking-routes",
+    languages: {
+      nl: "/concepts/winemaking-routes",
+      en: "/en/concepts/winemaking-routes",
+      "x-default": "/concepts/winemaking-routes",
+    },
+  });
+  const draft = await generateNarrativeMetadata({
+    params: Promise.resolve({
+      lang: "en",
+      narrativeType: "regional-deep-dives",
+      slug: "bordeaux-pipeline-proof",
+    }),
+  });
+  expect(draft.title).toBe("Bordeaux: deep dive in preparation");
+  expect(draft.robots).toEqual({ index: false, follow: true });
+  expect(draft.alternates).toEqual({
+    canonical: "/en/verdiepingen/regional-deep-dives/bordeaux-pipeline-proof",
   });
 });

@@ -1,8 +1,9 @@
 "use client";
 
+import { useLearningProgress } from "@/hooks/use-learning-progress";
+import { useLocale } from "@/i18n/locale-context";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useLearningProgress } from "@/hooks/use-learning-progress";
 
 export interface LearningPathContextOption {
   pathId: string;
@@ -46,6 +47,7 @@ export function LearningPathContext({ options, placement }: LearningPathContextP
 }
 
 function LessonCompletionToggle({ context }: { context: LearningPathContextOption }) {
+  const locale = useLocale();
   const progress = useLearningProgress({ pathId: context.pathId, stepIds: context.stepIds });
   const completed = progress.isStepComplete(context.stepId);
 
@@ -61,8 +63,24 @@ function LessonCompletionToggle({ context }: { context: LearningPathContextOptio
         {completed ? "✓" : ""}
       </span>
       <span>
-        <strong>{completed ? "Les voltooid" : "Nog te leren"}</strong>
-        <small>{completed ? "Markeer als nog te leren" : "Markeer als voltooid"}</small>
+        <strong>
+          {completed
+            ? locale === "nl"
+              ? "Les voltooid"
+              : "Lesson complete"
+            : locale === "nl"
+              ? "Nog te leren"
+              : "Still to learn"}
+        </strong>
+        <small>
+          {completed
+            ? locale === "nl"
+              ? "Markeer als nog te leren"
+              : "Mark as still to learn"
+            : locale === "nl"
+              ? "Markeer als voltooid"
+              : "Mark as complete"}
+        </small>
       </span>
     </button>
   );
@@ -75,15 +93,24 @@ function LearningPathContextView({
   context: LearningPathContextOption;
   placement: LearningPathContextProps["placement"];
 }) {
+  const locale = useLocale();
   if (placement === "header") {
     return (
-      <section className="lesson-path-context" aria-label="Positie binnen het leerpad">
+      <section
+        className="lesson-path-context"
+        aria-label={
+          locale === "nl" ? "Positie binnen het leerpad" : "Position in the learning path"
+        }
+      >
         <div>
-          <p className="eyebrow">Onderdeel van het leerpad</p>
+          <p className="eyebrow">
+            {locale === "nl" ? "Onderdeel van het leerpad" : "Part of the learning path"}
+          </p>
           <Link href={context.pathHref}>{context.pathTitle}</Link>
         </div>
         <p>
-          Les <strong>{context.position}</strong> van {context.total}
+          {locale === "nl" ? "Les" : "Lesson"} <strong>{context.position}</strong>{" "}
+          {locale === "nl" ? "van" : "of"} {context.total}
         </p>
         <LessonCompletionToggle context={context} />
       </section>
@@ -94,23 +121,35 @@ function LearningPathContextView({
     <div className="lesson-path-footer">
       <div className="lesson-completion-footer">
         <div>
-          <p className="eyebrow">Rond deze les af</p>
-          <p>Markeer de les bewust wanneer je klaar bent. Navigeren alleen telt niet mee.</p>
+          <p className="eyebrow">{locale === "nl" ? "Rond deze les af" : "Complete this lesson"}</p>
+          <p>
+            {locale === "nl"
+              ? "Markeer de les bewust wanneer je klaar bent. Navigeren alleen telt niet mee."
+              : "Mark the lesson as complete when you are ready. Opening a page alone does not count."}
+          </p>
         </div>
         <LessonCompletionToggle context={context} />
       </div>
-      <nav className="lesson-path-navigation" aria-label="Verder binnen het leerpad">
+      <nav
+        className="lesson-path-navigation"
+        aria-label={
+          locale === "nl" ? "Verder binnen het leerpad" : "Continue through the learning path"
+        }
+      >
         <div className="lesson-path-navigation-heading">
-          <p className="eyebrow">Verder leren</p>
+          <p className="eyebrow">{locale === "nl" ? "Verder leren" : "Continue learning"}</p>
           <p>
-            Les {context.position} van {context.total} ·{" "}
-            <Link href={context.pathHref}>bekijk het leerpad</Link>
+            {locale === "nl" ? "Les" : "Lesson"} {context.position} {locale === "nl" ? "van" : "of"}{" "}
+            {context.total} ·{" "}
+            <Link href={context.pathHref}>
+              {locale === "nl" ? "bekijk het leerpad" : "view the learning path"}
+            </Link>
           </p>
         </div>
         <div className="lesson-path-navigation-links">
           {context.previous ? (
             <Link className="lesson-path-navigation-link previous" href={context.previous.href}>
-              <span>← Vorige les</span>
+              <span>{locale === "nl" ? "← Vorige les" : "← Previous lesson"}</span>
               <strong>{context.previous.title}</strong>
             </Link>
           ) : (
@@ -118,7 +157,14 @@ function LearningPathContextView({
           )}
           <Link className="lesson-path-navigation-link next" href={context.next.href}>
             <span>
-              {context.next.kind === "completion" ? "Naar de afsluiting" : "Volgende les"} →
+              {context.next.kind === "completion"
+                ? locale === "nl"
+                  ? "Naar de afsluiting"
+                  : "Go to the conclusion"
+                : locale === "nl"
+                  ? "Volgende les"
+                  : "Next lesson"}{" "}
+              →
             </span>
             <strong>{context.next.title}</strong>
           </Link>

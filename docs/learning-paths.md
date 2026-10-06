@@ -279,11 +279,11 @@ worden nergens als dubbele authored of progressdata opgeslagen.
 - de queryparameter maakt geen tweede contentroute en wordt niet opgenomen in
   canonical metadata.
 
-De toekomstige Engelse presentatie volgt het
+De Engelse presentatie volgt het
 [taal- en URL-contract](localization-routing.md): `/en` vóór dezelfde routes,
 gedeelde path-/step-ID's en voortgang, en behoud van geldige lessoncontext bij
-taalwisselen. Dit is het implementatiecontract voor `MNT-046`, nog geen
-beschrijving van een werkende taalwisselaar.
+taalwisselen. `MNT-046` implementeert dit voor clientnavigatie en directe
+bezoeken, inclusief tijdelijke voortgang bij geblokkeerde browseropslag.
 
 ## 9. Anonieme voortgang en vervangbare opslaggrens
 

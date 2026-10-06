@@ -1,4 +1,3 @@
-import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/config/brand";
 import { DISCOVERY_CATEGORIES } from "@/content/discovery";
 import {
@@ -7,6 +6,8 @@ import {
   getPublishedStandaloneEntities,
 } from "@/content/repository";
 import { entityHref, learningPathHref, narrativeHref } from "@/content/routing";
+import { languageAlternates, locales, localizedHref } from "@/i18n/routing";
+import type { MetadataRoute } from "next";
 
 const staticPaths = [
   "/",
@@ -18,16 +19,26 @@ const staticPaths = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const indexableEntityPaths = getPublishedStandaloneEntities().map(entityHref);
-  const indexableNarrativePaths = getPublishedNarratives().map(narrativeHref);
-  const indexableLearningPaths = getPublishedLearningPaths().map(learningPathHref);
+  const indexableEntityPaths = getPublishedStandaloneEntities().map((item) => entityHref(item));
+  const indexableNarrativePaths = getPublishedNarratives().map((item) => narrativeHref(item));
+  const indexableLearningPaths = getPublishedLearningPaths().map((item) => learningPathHref(item));
 
   return [
     ...staticPaths,
     ...indexableEntityPaths,
     ...indexableNarrativePaths,
     ...indexableLearningPaths,
-  ].map((pathname) => ({
-    url: new URL(pathname, SITE_URL).toString(),
-  }));
+  ].flatMap((pathname) =>
+    locales.map((locale) => ({
+      url: new URL(localizedHref(pathname, locale), SITE_URL).toString(),
+      alternates: {
+        languages: Object.fromEntries(
+          Object.entries(languageAlternates(pathname, locale).languages).map(([language, href]) => [
+            language,
+            new URL(href, SITE_URL).toString(),
+          ]),
+        ),
+      },
+    })),
+  );
 }

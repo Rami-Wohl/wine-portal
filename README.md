@@ -7,11 +7,12 @@ zowel gestructureerd leren als vrij verkennen. Entities, narratives,
 kennisdiepte en bronverwijzingen vormen samen één kennisgraaf voor Explore,
 Learn en de toekomstige geografische Atlas.
 
-De publieke interface is momenteel Nederlandstalig. Canonical feiten en
-relaties zijn taaloverstijgend; Nederlandse en Engelse content worden beide
-expliciet geschreven en gevalideerd. Engelse slugs vormen de canonical publieke
-URLs en eventuele afwijkende Nederlandse slugs blijven als legacyredirects
-werken.
+De publieke interface en content zijn beschikbaar in Nederlands en Engels.
+Nederlandse URLs blijven ongewijzigd; Engelse pagina's staan onder `/en`.
+De taalwisselaar behoudt hetzelfde onderwerp en geldige leerpadcontext.
+Canonical feiten, relaties en voortgang blijven gedeeld. Beide talen gebruiken
+Engelse slugs; afwijkende Nederlandse slugs blijven permanente redirects binnen
+de gekozen taal. Zie [taalkeuze en routing](docs/localization-routing.md).
 
 ## Snel starten
 

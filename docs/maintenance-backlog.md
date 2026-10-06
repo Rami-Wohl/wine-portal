@@ -25,17 +25,17 @@ Peildatum: 2026-10-06.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 5 | `MNT-046`, `MNT-048`, `MNT-051` t/m `MNT-053` |
+| Open | 4 | `MNT-048`, `MNT-051` t/m `MNT-053` |
 | Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 43 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-045`, `MNT-047`, `MNT-049`, `MNT-054` |
+| Afgerond | 44 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-047`, `MNT-049`, `MNT-054` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
-taken. Het taalcontract (`MNT-045`) is vastgelegd; het eerstvolgende uitvoerbare
-werk is de publieke taalpresentatie (`MNT-046`), na het afgeronde CSS-onderhoud
-(`MNT-049`). Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
+taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
+(`MNT-049`) zijn afgerond. Het eerstvolgende uitvoerbare werk is de
+organisatie van pipeline/model (`MNT-048`). Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
@@ -79,32 +79,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   5.0.12 binnen bestaande semverranges bijgewerkt, zonder overrides. De
   volledige audit daalt van zes naar vijf dependencyvermeldingen. De
   incompatibele downgrade en een ongeteste major-upgrade zijn niet toegepast.
-
-### `MNT-046` — Volledige NL/EN-presentatie en taalwisselaar bouwen
-
-- **Status:** open
-- **Prioriteit:** hoog
-- **Scope:** publieke NL/EN-interface en contentpresentatie
-- **Categorie:** product-ux, accessibility, engineering, testing
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Afhankelijkheid:** `MNT-045` (afgerond); volg het
-  [taal- en routingcontract](localization-routing.md).
-- **Klaar wanneer:** een toegankelijke taalwisselaar de equivalente entity,
-  narrative of Learnpagina opent; interface, captions, alttekst, zoekresultaten,
-  foutmeldingen en metadata de gekozen taal volgen. Anchors, query/pathcontext,
-  browsergeschiedenis, redirects en gedeelde voortgang op stable IDs blijven
-  correct. Beide talen zijn op mobiel/desktop en zonder JavaScript getest.
-- **Uitvoeringsvolgorde:** bewijs eerst de gedeelde locale-routeboom, publieke
-  NL-rewrite en routehelpers met clientnavigatie en metadata. Lokaliseer daarna
-  alle UI-/contentlinks, zoeken en Learn; controleer ook ingebakken beeldtekst.
-  Rond af met de contractmatrix in beide talen, inclusief no-JS, embedded
-  producenten en tijdelijke voortgang bij geblokkeerde storage. Het contract
-  specificeert de fragmentbeperking van een taalwissel zonder JavaScript.
-- **Planning:** aanbevolen vóór `EXP-020`, zodat Engelse presentatie vóór de
-  laatste grote contentfase echt gebruikt en gereviewd wordt; vertalingen zijn
-  expliciet gereviewd, geen runtime-machinevertaling.
-- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
-  volgt de overkoepelende productplanning.
 
 ### `MNT-048` — Contentpipeline en model in herkenbare modules verdelen
 
@@ -207,6 +181,12 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   geen bestaande beelden opnieuw gegenereerd.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
+
+- **Inventaris 2026-10-06:** zes actieve SVG's. De beelden bij Bordeaux,
+  Bordeaux Supérieur en Crémant de Bordeaux bevatten Engelse proceswoorden;
+  de andere drie gebruiken nummers/symbolen of tekstloze labels. Houd bij de
+  rastermigratie de uitleg in gelokaliseerde HTML. Details staan in de
+  [lokalisatiereview](../editorial/localization-review-2026-10-06.md).
 
 ### `MNT-056` — CI extern activeren en deploymentruntime bevestigen
 
@@ -332,6 +312,39 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-046` — Volledige NL/EN-presentatie en taalwisselaar bouwen
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Scope:** publieke NL/EN-interface en contentpresentatie
+- **Categorie:** product-ux, accessibility, engineering, testing
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Afhankelijkheid:** `MNT-045` (afgerond); volg het
+  [taal- en routingcontract](localization-routing.md).
+- **Klaar wanneer:** een toegankelijke taalwisselaar de equivalente entity,
+  narrative of Learnpagina opent; interface, captions, alttekst, zoekresultaten,
+  foutmeldingen en metadata de gekozen taal volgen. Anchors, query/pathcontext,
+  browsergeschiedenis, redirects en gedeelde voortgang op stable IDs blijven
+  correct. Beide talen zijn op mobiel/desktop en zonder JavaScript getest.
+- **Uitvoeringsvolgorde:** bewijs eerst de gedeelde locale-routeboom, publieke
+  NL-rewrite en routehelpers met clientnavigatie en metadata. Lokaliseer daarna
+  alle UI-/contentlinks, zoeken en Learn; controleer ook ingebakken beeldtekst.
+  Rond af met de contractmatrix in beide talen, inclusief no-JS, embedded
+  producenten en tijdelijke voortgang bij geblokkeerde storage. Het contract
+  specificeert de fragmentbeperking van een taalwissel zonder JavaScript.
+- **Planning:** aanbevolen vóór `EXP-020`, zodat Engelse presentatie vóór de
+  laatste grote contentfase echt gebruikt en gereviewd wordt; vertalingen zijn
+  expliciet gereviewd, geen runtime-machinevertaling.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+- **Uitvoering 2026-10-06:** één gedeelde NL/EN-routeboom, taalwisselaar,
+  gelokaliseerde content/UI, zoeken, metadata en sitemap. Bestaande Nederlandse
+  URLs, aliases, anchors en voortgang blijven werken. Query-/lessoncontext wordt
+  gevalideerd; tijdelijk opgeslagen voortgang overleeft clientwissels. Zie
+  [implementatie- en mediareview](../editorial/localization-review-2026-10-06.md)
+  voor de controles en de afbakening van de Engelse contentreview.
 
 ### `MNT-049` — Stylesheet langs bestaande UI-grenzen organiseren
 

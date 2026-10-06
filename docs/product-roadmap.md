@@ -7,7 +7,7 @@ De onderbouwing staat in [de sanity review](../editorial/platform-sanity-review-
 De [runtime-/CI-review](../editorial/runtime-ci-review-2026-10-04.md) beschrijft
 de inmiddels uitgevoerde eerste platformstap. Ook het
 [taal- en URL-contract](localization-routing.md) is vastgelegd (`MNT-045`);
-de publieke taalwisselaar volgt afzonderlijk in `MNT-046`. De stylesheet is
+de publieke NL/EN-presentatie en taalwisselaar zijn gebouwd (`MNT-046`). De stylesheet is
 inmiddels georganiseerd langs bestaande UI-grenzen (`MNT-049`), met behoud van
 de volledige gebouwde CSS.
 
@@ -18,9 +18,9 @@ haar uit en een gevalideerde build levert de runtimebundle. Explore, zoeken,
 verdiepingen en de eerste Learn-pilot werken op dezelfde graph. Voortgang staat
 los van content en wordt anoniem in de browser opgeslagen.
 
-De publieke applicatie presenteert nog alleen Nederlands. Atlas heeft nog geen
+De publieke applicatie presenteert Nederlands en Engels. Atlas heeft nog geen
 geverifieerde dataset. Er is een Next.js-server, maar geen accountdatabase,
-remote voortgang, redactiebackend of externe publieke API. Engelse authoring en
+remote voortgang, redactiebackend of externe publieke API. Gedeelde authoring en
 een async repositoryinterface bereiden uitbreidingen voor; zij maken deze
 features niet automatisch gereed.
 
@@ -29,8 +29,7 @@ features niet automatisch gereed.
 | Moment | Werk | Reden en grens |
 | --- | --- | --- |
 | Eerstvolgende externe vrijgave, zodra toegang werkt | `MNT-056`: eerste GitHub-run, mergebescherming en deployment bevestigen | Node 24 en CI zijn lokaal gereed (`MNT-047`); de ongepatchte ontwikkelketen blijft bij `MNT-055` |
-| Eerstvolgende uitvoerbare ontwikkeltaak, vóór `EXP-020` | `MNT-046`: NL/EN-presentatie en taalwisselaar | CSS is voorbereid; toets Engelse content in het echte product en neem routing, metadata, zoeken en Learn mee |
-| Vóór volgende schema-/GIS-uitbreiding | `MNT-048`: pipeline/model organiseren | Houd verantwoordelijkheden voor menselijke reviewers herkenbaar, met behoud van gedrag |
+| Eerstvolgende ontwikkeltaak, vóór `EXP-020` en schema-/GIS-uitbreiding | `MNT-048`: pipeline/model organiseren | Houd verantwoordelijkheden voor menselijke reviewers herkenbaar, met behoud van gedrag |
 | Samen met pilotevaluatie, vroegst 2026-10-22 bij genoeg gebruik | `LRN-012` en `MNT-050`: Learn-vervolg en platformopslag besluiten | Accounts, cross-device voortgang, quizzen en personalisatie moeten een bewezen doel dienen; vervroeg het opslagbesluit bij een concrete consumer |
 | Bronverkenning vóór `EXP-027` | `MNT-051`: beperkte Atlaspilot | Geef de drie geblokkeerde kaarttickets een uitvoerbaar datatraject; wereldwijde druivenverspreiding vraagt andere gegevens dan appellationgrenzen |
 | Vóór grootschalige uitbreiding naar volgende regio's | `MNT-052`: performance- en mediabudgetten | Meet build, serverzoekwerk, browserbundles en beelden voordat storage-/searcharchitectuur verandert |
@@ -42,7 +41,7 @@ inhoudelijke volgorde `EXP-020` t/m `EXP-028` blijft intact.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-Er staan 23 niet-afgeronde tickets geregistreerd: 13 onderhoudsacties, 9
+Er staan 22 niet-afgeronde tickets geregistreerd: 12 onderhoudsacties, 9
 Explore-tickets en één Learn-evaluatie. Een geblokkeerde of geplande actie telt
 mee. Deze momentopname wordt bij wijziging van de uitvoeringsvolgorde bijgewerkt;
 de gekoppelde backlogs blijven leidend voor actuele status.
@@ -52,20 +51,19 @@ en vrijgekomen externe controles mogen deze volgorde onderbreken.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `MNT-046` | NL/EN-presentatie en taalwisselaar, vóór EXP-020 |
-| 2 | `MNT-048` | Pipeline/model organiseren vóór verdere schema-/GIS-uitbreiding |
-| 3 | `EXP-020` | Opvoeding en zuurstof |
-| 4 | `EXP-021` | Stabilisatie en verpakking |
-| 5 | `EXP-022` | Kelderhygiëne en wijnfouten |
-| 6 | `EXP-023` | Zoete, mousserende en versterkte wijn |
-| 7 | `EXP-024` | Wijnsamenstelling |
-| 8 | `EXP-025` | Waarneming en ontwikkeling |
-| 9 | `EXP-026` | Integratie graph, links, media en terminologie |
-| 10 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
-| 11 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
-| 12 | `EXP-027` | Mondiale toets en regiokeuze |
-| 13 | `EXP-028` | Integrale redactionele en product-QA |
-| 14 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
+| 1 | `MNT-048` | Pipeline/model organiseren vóór verdere schema-/GIS-uitbreiding |
+| 2 | `EXP-020` | Opvoeding en zuurstof |
+| 3 | `EXP-021` | Stabilisatie en verpakking |
+| 4 | `EXP-022` | Kelderhygiëne en wijnfouten |
+| 5 | `EXP-023` | Zoete, mousserende en versterkte wijn |
+| 6 | `EXP-024` | Wijnsamenstelling |
+| 7 | `EXP-025` | Waarneming en ontwikkeling |
+| 8 | `EXP-026` | Integratie graph, links, media en terminologie |
+| 9 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
+| 10 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
+| 11 | `EXP-027` | Mondiale toets en regiokeuze |
+| 12 | `EXP-028` | Integrale redactionele en product-QA |
+| 13 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
 
 Tijdgebonden, in deze onderlinge volgorde:
 

@@ -75,14 +75,14 @@ geordende, tweetalige YAML-routes langs zulke lessen; entitypagina's blijven
 naslag, tellen niet mee voor voortgang en worden geen pathstep. Het volledige
 contract staat in `learning-paths.md`.
 
-NL en EN zijn beide verplichte, gevalideerde authoringlagen. De huidige publieke
-interface en contentpresentatie zijn uitsluitend Nederlands. Engelse presentatie is een
-bewuste volgende productstap, geen al werkende feature of automatische fallback.
-Publieke entity- en narrativeroutes gebruiken wel consequent de Engelse slug als
-taalonafhankelijke canonieke URL. Eventueel afwijkende Nederlandse slugs blijven
-als permanente legacy-redirect bestaan. Het besloten
-[taal- en URL-contract](localization-routing.md) beschrijft de uitbreiding onder
-`/en` en de acceptatiecriteria voor `MNT-046`; deze uitbreiding is nog niet gebouwd.
+NL en EN zijn beide verplichte, gevalideerde authoringlagen én publieke
+presentaties. Nederlandse URLs blijven ongewijzigd; Engels gebruikt `/en` vóór
+dezelfde route. Eén gedeelde `src/app/[lang]`-boom rendert beide talen, met
+centrale helpers in `src/i18n` en `src/content/routing.ts`. De proxy herschrijft
+NL-routes intern en verwijst externe `/nl`-aliases permanent terug. Feiten,
+blockankers, bronnenvolgorde en browservoortgang blijven gedeeld. Het
+[taal- en URL-contract](localization-routing.md) bevat de details en verwijst
+naar de implementatiecontrole van `MNT-046`.
 
 ## Dagelijkse contentworkflow
 
