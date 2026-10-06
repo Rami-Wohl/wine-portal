@@ -1,3 +1,5 @@
+import "server-only";
+
 import knowledgeBaseJson from "../generated/content/knowledge-base.json";
 import type {
   Entity,

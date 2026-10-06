@@ -120,10 +120,7 @@
 .content-block-detail:is(.content-depth-intermediate, .content-depth-advanced) h3 {
   display: none;
 }
-.content-block:target {
-  outline: 2px solid color-mix(in srgb, var(--brand) 45%, transparent);
-  outline-offset: 10px;
-}
+
 .content-block > :last-child {
   margin-bottom: 0;
 }

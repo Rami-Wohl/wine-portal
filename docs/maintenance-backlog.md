@@ -25,17 +25,18 @@ Peildatum: 2026-10-06.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 4 | `MNT-048`, `MNT-051` t/m `MNT-053` |
+| Open | 3 | `MNT-051` t/m `MNT-053` |
 | Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 44 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-047`, `MNT-049`, `MNT-054` |
+| Afgerond | 45 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
-(`MNT-049`) zijn afgerond. Het eerstvolgende uitvoerbare werk is de
-organisatie van pipeline/model (`MNT-048`). Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
+(`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
+Het eerstvolgende uitvoerbare werk is opvoeding en zuurstof (`EXP-020`).
+Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
@@ -79,27 +80,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   5.0.12 binnen bestaande semverranges bijgewerkt, zonder overrides. De
   volledige audit daalt van zes naar vijf dependencyvermeldingen. De
   incompatibele downgrade en een ongeteste major-upgrade zijn niet toegepast.
-
-### `MNT-048` — Contentpipeline en model in herkenbare modules verdelen
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Scope:** `scripts/content/pipeline.ts`, `src/content/model.ts` en importgrenzen
-- **Categorie:** engineering, testing, knowledge-data
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** `pipeline.ts` telt 1.339 regels en combineert discovery,
-  validatie, contentplannen, graphopbouw en searchindexing; `model.ts` telt 912
-  regels met schema's, constants en runtimevormen. Dit bemoeilijkt lokale review.
-- **Klaar wanneer:** planvalidatie en searchindexing eigen modules hebben en de
-  pipeline als leesbare orchestration fungeert; modellen langs bestaande
-  verantwoordelijkheden zijn gegroepeerd zonder importcycli. Bestaande exports,
-  foutmeldingen, deterministische output en inhoud blijven gelijk. Vergelijk
-  bundles vóór/na en behoud de huidige fixturetests. Borg dat de repository en
-  generated bundle niet vanuit clientmodules geïmporteerd kunnen worden.
-- **Planning:** incrementeel vóór volgende schema-/GIS-uitbreiding; geen volledige
-  herschrijving of nieuwe abstractielaag zonder concrete use-case.
-- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
-  volgt de overkoepelende productplanning.
 
 ### `MNT-050` — Beslismoment voor backend, API en database
 
@@ -312,6 +292,39 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-048` — Contentpipeline en model in herkenbare modules verdelen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Scope:** `scripts/content/pipeline.ts`, `src/content/model.ts` en importgrenzen
+- **Categorie:** engineering, testing, knowledge-data
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** `pipeline.ts` telt 1.339 regels en combineert discovery,
+  validatie, contentplannen, graphopbouw en searchindexing; `model.ts` telt 912
+  regels met schema's, constants en runtimevormen. Dit bemoeilijkt lokale review.
+- **Klaar wanneer:** planvalidatie en searchindexing eigen modules hebben en de
+  pipeline als leesbare orchestration fungeert; modellen langs bestaande
+  verantwoordelijkheden zijn gegroepeerd zonder importcycli. Bestaande exports,
+  foutmeldingen, deterministische output en inhoud blijven gelijk. Vergelijk
+  bundles vóór/na en behoud de huidige fixturetests. Borg dat de repository en
+  generated bundle niet vanuit clientmodules geïmporteerd kunnen worden.
+- **Planning:** incrementeel vóór volgende schema-/GIS-uitbreiding; geen volledige
+  herschrijving of nieuwe abstractielaag zonder concrete use-case.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+- **Uitvoering 2026-10-06:** publieke pipeline-ingang van 1.339 naar 48 regels;
+  laden/schrijven, diagnostics, documenten, plannen, relaties, graph en search
+  hebben eigen modules. Het model heeft acht modules achter dezelfde publieke
+  exports. Alle 94 bestaande declaraties zijn inhoudelijk gelijk; geen
+  importcycli gevonden. De volledige bundle is byte-identiek vóór/na.
+- **Borging:** `server-only` op de repository en een geteste ESLint-grens voor
+  directe bundelimports. De geïsoleerde buildcontrole weigert een indirecte
+  clientimport; de gewone productiebuild slaagt.
+- **Controle:** formatting, volledige check (148 tests), productiebuild en alle
+  117 browsertests geslaagd. Zie de
+  [pipeline-/modelreview](../editorial/pipeline-model-review-2026-10-06.md).
 
 ### `MNT-046` — Volledige NL/EN-presentatie en taalwisselaar bouwen
 

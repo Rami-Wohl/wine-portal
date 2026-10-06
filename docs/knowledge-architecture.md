@@ -4,7 +4,7 @@ purpose: "Actieve content-, data- en provenancearchitectuur voor Oenocademy"
 status: "active"
 version: "1.1"
 created: "2026-08-25"
-last_updated: "2026-09-23"
+last_updated: "2026-10-06"
 ---
 
 # Knowledge architecture
@@ -694,8 +694,11 @@ project/
 ├── scripts/content/
 │   ├── cli.ts
 │   ├── generator.ts
-│   └── pipeline.ts
-├── src/content/model.ts            # strict uitvoerbaar v1-schema
+│   ├── pipeline.ts                # publieke build-ingang / orchestration
+│   └── pipeline/                   # laden, validatie, graph en zoekindex
+├── src/content/model.ts            # stabiele publieke schema-/type-exports
+├── src/content/model/              # strict v1-contract per verantwoordelijkheid
+├── src/content/repository.ts       # server-only toegang tot de bundle
 └── src/generated/content/
     └── knowledge-base.json         # afgeleid, deterministisch, niet canonical
 ```
@@ -880,13 +883,13 @@ De architectuur wordt vóór grootschalige regio-authoring aangepast als deze sl
 - inverse relations, localized slug/search/geography-indexes;
 - learning-pathschema, targetvalidatie, pathlookups en reverse lessonmembership;
 - Learn-navigatie, pathgebonden lessoncontext en anonieme lokale browservoortgang;
+- publieke NL/EN-presentatie, locale-aware routing en toegankelijke taalkeuze;
 - één deterministische gegenereerde runtimebundle;
 - een entitypackagegenerator en validation/buildcommands.
 
 ### Besloten principe, implementatie pending
 
 - verified-data-only geography en Atlas;
-- een Engelse applicatiepresentatie en locale-aware publieke routing;
 - niet-destructieve import en vervanging wanneer later externe of bestaande content in scope komt.
 
 ### Open roadmapontwerp

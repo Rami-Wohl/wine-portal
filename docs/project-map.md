@@ -84,6 +84,28 @@ blockankers, bronnenvolgorde en browservoortgang blijven gedeeld. Het
 [taal- en URL-contract](localization-routing.md) bevat de details en verwijst
 naar de implementatiecontrole van `MNT-046`.
 
+## Leesbare codegrenzen
+
+`MNT-048` verdeelt de implementatie langs bestaande verantwoordelijkheden:
+
+- `src/content/model.ts` bewaart het publieke importcontract. De schema's en
+  typen wonen onder `src/content/model/`: common, documents, entities,
+  narratives, learning paths, provenance, content plans en generated vormen.
+  Deze modules importeren elkaar rechtstreeks, niet via hun eigen publieke ingang.
+- `scripts/content/pipeline.ts` stuurt laden, valideren, afleiden en schrijven
+  aan. Onder `scripts/content/pipeline/` staan bestands-I/O, diagnostics,
+  documentvalidatie, planvalidatie, relatiecontrole, graphopbouw en searchindexing.
+  De bestaande pipelinefixturetests blijven het integratiecontract bewaken.
+- `src/content/repository.ts` is de enige runtime-ingang naar de gegenereerde
+  kennisbundel en heeft een `server-only`-grens. ESLint blokkeert rechtstreekse
+  bundelimports elders; Next.js blokkeert ook indirecte repositoryimports vanuit
+  clientcomponenten. Geef kleine geserialiseerde resultaten door als props.
+  Alleen Vitest vervangt de marker omdat de tests in Node draaien.
+
+De module-indeling verandert geen canonical schema's, validatieregels of
+bundleformaat. De controle staat in de
+[pipeline-/modelreview](../editorial/pipeline-model-review-2026-10-06.md).
+
 ## Dagelijkse contentworkflow
 
 1. Maak voor een grote overzichtspagina eerst de contentbrief, dekkingsmatrix en
