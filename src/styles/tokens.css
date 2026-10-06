@@ -1,0 +1,33 @@
+/* Shared design tokens. Keep colour, type, spacing and motion values here. */
+
+:root {
+  color-scheme: light;
+  --canvas: #f4f1eb;
+  --surface: #fbfaf7;
+  --raised: #fff;
+  --ink: #252823;
+  --muted: #686b63;
+  --muted-strong: #62655d;
+  --faint: #74776f;
+  --line: #dedbd3;
+  --line-strong: #c9c5bb;
+  --brand: #6d2638;
+  --brand-dark: #511827;
+  --brand-soft: #efe3e5;
+  --leaf: #526451;
+  --leaf-soft: #e5ebe2;
+  --font-body: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --wide: 1220px;
+  --reading: 720px;
+  --section: clamp(4rem, 8vw, 7rem);
+  --space-heading-copy: 1rem;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow: 0 18px 60px rgb(45 39 32 / 8%);
+  --motion-fast: 160ms;
+  --motion-panel-in: 280ms;
+  --motion-panel-out: 220ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

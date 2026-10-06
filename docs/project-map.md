@@ -49,6 +49,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Geverifieerde geografie | `data/geography/` | Toekomstige factual Atlasdata |
 | Runtimebundle | `src/generated/content/knowledge-base.json` | Afgeleid buildresultaat, niet canonical |
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
+| Stijlen | `src/styles/`, geordend via `src/app/globals.css` | Tokens, basis, UI-patronen en overrides; verantwoordelijkheden en cascade staan in `design-system-plan.md` |
 | Kwaliteitsreviews | `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
 | Overkoepelende productvolgorde | `docs/product-roadmap.md` | Prioriteiten en beslismomenten tussen platform, Explore, Learn en Atlas; ticketstatus blijft in de eigen backlog |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |

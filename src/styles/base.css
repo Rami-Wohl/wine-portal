@@ -1,0 +1,78 @@
+/* Document defaults, media sizing, keyboard focus and the skip link. */
+
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 16px/1.65 var(--font-body);
+}
+button,
+input {
+  font: inherit;
+}
+a {
+  color: inherit;
+}
+svg {
+  display: block;
+}
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+::selection {
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+}
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 64%, white);
+  outline-offset: 4px;
+}
+main#main-content:focus {
+  outline: none;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: var(--space-heading-copy);
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  transform: translateY(-180%);
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+  text-decoration: none;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}

@@ -416,5 +416,5 @@ planning actief en geen bestaande ID of route wordt verwijderd.
 
 De volgende inhoudelijke taak is `EXP-020`: de bestaande élevage-owner
 uitbreiden tot systeemhub. De [productplanning](product-roadmap.md) plaatst
-eerst CSS-onderhoud (`MNT-049`), taalpresentatie (`MNT-046`) en pipelineonderhoud
-(`MNT-048`) vóór verdere contentuitbreiding.
+eerst taalpresentatie (`MNT-046`) en pipelineonderhoud (`MNT-048`) vóór verdere
+contentuitbreiding. Het voorafgaande CSS-onderhoud (`MNT-049`) is afgerond.

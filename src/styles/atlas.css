@@ -1,0 +1,60 @@
+/* Atlas shell and the current geographic-data empty state. */
+
+.atlas-shell {
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.atlas-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.atlas-toolbar div {
+  display: grid;
+}
+.atlas-toolbar span {
+  color: var(--faint);
+  font-size: 0.68rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+.atlas-toolbar strong {
+  font-size: 0.82rem;
+}
+.atlas-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  min-height: 520px;
+}
+.map-empty-state {
+  display: grid;
+  place-content: center;
+  padding: clamp(2rem, 7vw, 6rem);
+  background: linear-gradient(135deg, var(--leaf-soft), var(--canvas));
+}
+.map-empty-state > * {
+  max-width: 650px;
+}
+.map-empty-state h2 {
+  margin-bottom: var(--space-heading-copy);
+  font: 500 clamp(2.5rem, 5vw, 4.5rem)/1 var(--font-display);
+}
+.map-empty-state p:last-child {
+  color: var(--ink);
+}
+.atlas-detail {
+  padding: 2rem;
+  border-left: 1px solid var(--line);
+}
+.atlas-detail h3 {
+  font: 1.8rem/1.1 var(--font-display);
+}
+.atlas-detail p:last-child {
+  color: var(--ink);
+  font-size: 0.86rem;
+}

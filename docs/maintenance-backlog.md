@@ -21,21 +21,21 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-05.
+Peildatum: 2026-10-06.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 6 | `MNT-046`, `MNT-048`, `MNT-049`, `MNT-051` t/m `MNT-053` |
+| Open | 5 | `MNT-046`, `MNT-048`, `MNT-051` t/m `MNT-053` |
 | Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 42 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-045`, `MNT-047`, `MNT-054` |
+| Afgerond | 43 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-045`, `MNT-047`, `MNT-049`, `MNT-054` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Het taalcontract (`MNT-045`) is vastgelegd; het eerstvolgende uitvoerbare
-werk is de CSS organiseren (`MNT-049`), vóór de publieke taalpresentatie
-(`MNT-046`). Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
+werk is de publieke taalpresentatie (`MNT-046`), na het afgeronde CSS-onderhoud
+(`MNT-049`). Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
@@ -124,25 +124,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   generated bundle niet vanuit clientmodules geïmporteerd kunnen worden.
 - **Planning:** incrementeel vóór volgende schema-/GIS-uitbreiding; geen volledige
   herschrijving of nieuwe abstractielaag zonder concrete use-case.
-- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
-  volgt de overkoepelende productplanning.
-
-### `MNT-049` — Stylesheet langs bestaande UI-grenzen organiseren
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Scope:** `src/app/globals.css` en componentstijlen
-- **Categorie:** engineering, product-ux, testing
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** `globals.css` telt 2.853 regels; tokens, globale basis en
-  componentpatronen staan in één bestand.
-- **Klaar wanneer:** tokens en basis globaal herkenbaar blijven, componentstijlen
-  logisch te vinden zijn en cascade/importvolgorde expliciet behouden blijven;
-  desktop, mobiel, kennisdiepte, print en Learn geen visuele regressie tonen.
-  Kies gewone stylesheets of CSS Modules passend bij de bestaande stack;
-  introduceer geen nieuw stylingframework om alleen bestanden te splitsen.
-- **Planning:** bij de eerstvolgende bredere UI-uitbreiding; geen verplichte
-  voorwaarde voor een kleine contentwijziging.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
 
@@ -351,6 +332,40 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-049` — Stylesheet langs bestaande UI-grenzen organiseren
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Scope:** `src/app/globals.css` en componentstijlen
+- **Categorie:** engineering, product-ux, testing
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** `globals.css` telt 2.853 regels; tokens, globale basis en
+  componentpatronen staan in één bestand.
+- **Klaar wanneer:** tokens en basis globaal herkenbaar blijven, componentstijlen
+  logisch te vinden zijn en cascade/importvolgorde expliciet behouden blijven;
+  desktop, mobiel, kennisdiepte, print en Learn geen visuele regressie tonen.
+  Kies gewone stylesheets of CSS Modules passend bij de bestaande stack;
+  introduceer geen nieuw stylingframework om alleen bestanden te splitsen.
+- **Planning:** bij de eerstvolgende bredere UI-uitbreiding; geen verplichte
+  voorwaarde voor een kleine contentwijziging.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+- **Uitvoering:** 2026-10-06 — `globals.css` teruggebracht van 2.853 naar 17
+  regels als enige importingang; twaalf stylesheets onder `src/styles/` met
+  herkenbare UI-verantwoordelijkheden. De volgorde van alle 438 oorspronkelijke
+  top-level CSS-nodes en hun geneste declaraties is behouden. Geen wijziging aan
+  classnamen, React-componenten, stylingframework of routeafhankelijke imports.
+  De indeling en onderhoudsregels staan in [het designplan](design-system-plan.md#stylesheetindeling-en-cascade).
+- **Verificatie:** `npm run format`, `npm run check` (133 tests), productiebuild
+  met webpack en de volledige Playwright-suite (85 tests) geslaagd. De minified
+  productie-CSS is byte-identiek aan de vorige build:
+  `56f2946fcde55c014cd07267589b7777ca54ed6272b5af02cbcefb4216a8fc46` (SHA-256).
+  Dit omvat de cascade, mediaqueries, keyframes, no-JS en reduced motion; ook
+  de bestaande printtoepassing van deze regels blijft daardoor gelijk.
+  Homepage, mobiel menu, Learn en artikelverdieping aanvullend in de browser
+  gecontroleerd. Geen nieuwe printvormgeving of snapshotbaseline geïntroduceerd.
 
 ### `MNT-045` — Contract voor taalkeuze, URLs en publicatie vastleggen
 
