@@ -9,10 +9,10 @@ Tijdens de opvoeding begeleidt de wijnmaker jonge wijn richting botteling. Vat, 
 - Leg de basisrol van bescherming tegen ongewenste oxidatie en microbiële ontwikkeling uit.
 :::
 
-:::section{#elevage-als-begeleiding depth="foundation" source_refs="source.awri-pre-packaging"}
+:::section{#elevage-als-begeleiding depth="foundation" source_refs="source.awri-pre-packaging source.awri-mlf-success-2020"}
 ## Élevage begeleidt jonge wijn
 
-[[concept.elevage|Élevage of opvoeding]] omvat de periode en handelingen tussen gisting en uiteindelijke botteling. De wijn kan rusten, bezinksel vormen, worden overgeheveld, gemengd of beschermd. De wijnmaker volgt hoe aroma, zuur, tannine en textuur zich tot een samenhangend geheel ontwikkelen.
+[[concept.elevage|Élevage of opvoeding]] omvat de begeleiding van jonge wijn richting uiteindelijke botteling. Sommige keuzes beginnen al tijdens de gisting. [@source.awri-mlf-success-2020] De wijn kan rusten, bezinksel vormen, worden overgeheveld, gemengd of beschermd. De wijnmaker volgt hoe aroma, zuur, tannine en textuur zich tot een samenhangend geheel ontwikkelen.
 
 De duur volgt niet uit prestige. Een frisse, aromatische wijn kan baat hebben bij korte opslag in een neutrale tank; een gestructureerde wijn kan meer tijd nodig hebben om bestanddelen te laten verbinden. Te lang wachten kan juist fruit en energie kosten.
 :::

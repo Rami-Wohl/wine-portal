@@ -16,6 +16,7 @@ related_entities:
   - concept.bottling
   - concept.sulfur-dioxide
 source_refs:
+  - source.awri-mlf-success-2020
   - source.oiv-blending-code
   - source.awri-fining-agents
   - source.oiv-fining-practices

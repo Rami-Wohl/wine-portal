@@ -1,0 +1,29 @@
+id: media.concept.elevage.maturation-decisions
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/elevage/maturation-decisions.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 5f1ddbe019b5b8a027b31345fba513621ef08f893e962a7ce9ac8c30af3d11d8
+alt:
+  nl: Vier genummerde scènes tonen tank en vat, wijn boven gistbezinksel,
+    bijvullen en kleine proefmengsels.
+  en: Four numbered scenes show a tank and barrel, wine above yeast sediment,
+    topping up and small trial blends.
+caption:
+  nl: Vergelijk de vier keuzegroepen met de legenda. De opengewerkte vaten maken
+    bezinksel en vulniveau schematisch zichtbaar; verhoudingen en kleuren zijn
+    vereenvoudigd.
+  en: Compare the four groups of decisions using the legend. Cutaway barrels
+    reveal sediment and fill level schematically; proportions and colours are
+    simplified.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-06
+changes: Generated plate, revised to correct fill levels and remove a duplicate
+  bung. Prompt set and visual review retained in the content brief.

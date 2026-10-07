@@ -1,5 +1,5 @@
-:::summary{#orientatie depth="foundation" source_refs="source.awri-mlf-style-2020"}
-After alcoholic fermentation, a second microbial process can change the wine's character. Malolactic fermentation converts malic acid into lactic acid: acidity falls and the mouthfeel may become rounder. For many reds this is routine cellar work; for whites and sparkling base wines it is an important stylistic choice.
+:::summary{#orientatie depth="foundation" source_refs="source.awri-mlf-style-2020 source.awri-mlf-success-2020"}
+During or after alcoholic fermentation, another microbial process can change the wine's character. Malolactic fermentation converts malic acid into lactic acid: acidity falls and the mouthfeel may become rounder. For many reds this is routine cellar work; for whites and sparkling base wines it is an important stylistic choice.
 :::
 
 :::section{#appelzuur-naar-melkzuur depth="foundation" source_refs="source.oiv-microbiological-deacidification source.awri-mlf-success-2020"}

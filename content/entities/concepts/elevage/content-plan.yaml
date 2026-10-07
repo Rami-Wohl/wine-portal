@@ -1,0 +1,326 @@
+schema_version: 2
+package_id: concept.elevage
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - jonge-wijn-begeleiden
+    target_ids: []
+    completeness_questions:
+      - Wat omvat opvoeding van jonge wijn?
+    layers:
+      foundation:
+        - Wat omvat opvoeding van jonge wijn?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat omvat opvoeding van jonge wijn?
+        source_refs:
+          - source.oiv-oak-maturation
+          - source.wset-oak-winemaking
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Hoe beïnvloeden omzetting, contact en ingrijpen elkaar?
+    layers:
+      foundation:
+        - Hoe beïnvloeden omzetting, contact en ingrijpen elkaar?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe beïnvloeden omzetting, contact en ingrijpen elkaar?
+        source_refs:
+          - source.awri-mlf-success-2020
+          - source.oiv-blending-code
+          - source.wre-cellar-practices-2018
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe werken zuur, lies, hout en zuurstof samen?
+      - Waarom kan MLF al tijdens vergisting beginnen?
+    layers:
+      foundation:
+        - Hoe werken zuur, lies, hout en zuurstof samen?
+      intermediate:
+        - Waarom kan MLF al tijdens vergisting beginnen?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe werken zuur, lies, hout en zuurstof samen?
+        source_refs:
+          - source.awri-lees-contact-2020
+          - source.oiv-oak-maturation
+      specific_claims:
+        - claim: Co-inoculatie kan MLF tijdens de alcoholische vergisting laten beginnen.
+          status: supported
+          source_refs:
+            - source.awri-mlf-success-2020
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - vatkeuze
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen vatmateriaal en houtbijdrage?
+      - Hoe verschillen maat, vatleeftijd en toast?
+    layers:
+      foundation:
+        - Hoe verschillen vatmateriaal en houtbijdrage?
+      intermediate:
+        - Hoe verschillen maat, vatleeftijd en toast?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen vatmateriaal en houtbijdrage?
+        source_refs:
+          - source.wset-oak-winemaking
+          - source.napa-oak-maturation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - werk-in-de-kelder
+    target_ids: []
+    completeness_questions:
+      - Hoe verbind je bijvullen, overhevelen en bescherming?
+      - Hoe grijpen liescontact en zuurstofbeheer in elkaar?
+      - Waarom is vatleeftijd geen vaste zuurstofdosis?
+    layers:
+      foundation:
+        - Hoe verbind je bijvullen, overhevelen en bescherming?
+      intermediate:
+        - Hoe grijpen liescontact en zuurstofbeheer in elkaar?
+      advanced:
+        - Waarom is vatleeftijd geen vaste zuurstofdosis?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verbind je bijvullen, overhevelen en bescherming?
+        source_refs:
+          - source.oiv-oak-maturation
+          - source.wre-cellar-practices-2018
+          - source.awri-lees-contact-2020
+      specific_claims:
+        - claim: Nieuw hout bevat zuurstof en neemt aanvankelijk wijn op; vatleeftijd
+            geeft geen vaste zuurstofdosis.
+          status: supported
+          source_refs:
+            - source.awri-oak-queries-2013
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Welke praktijken laten verschillende contactomgevingen zien?
+    layers:
+      foundation:
+        - Welke praktijken laten verschillende contactomgevingen zien?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke praktijken laten verschillende contactomgevingen zien?
+        source_refs:
+          - source.wset-oak-winemaking
+          - source.napa-oak-maturation
+          - source.champagne-maturation-on-lees
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Waarom hoort de productiefase bij een onderzoeksresultaat?
+      - Wat kun je concluderen wanneer twee variabelen tegelijk veranderen?
+    layers:
+      foundation:
+        - Waarom hoort de productiefase bij een onderzoeksresultaat?
+      intermediate: []
+      advanced:
+        - Wat kun je concluderen wanneer twee variabelen tegelijk veranderen?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Waarom hoort de productiefase bij een onderzoeksresultaat?
+        source_refs:
+          - source.wine-australia-oxygen-style
+      specific_claims:
+        - claim: De AWRI Chardonnay-liesbehandeling onderging tevens spontane MLF; het
+            lieseffect was daardoor niet afzonderlijk geïsoleerd.
+          status: supported
+          source_refs:
+            - source.awri-lees-contact-2020
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - richting-botteling
+    target_ids: []
+    completeness_questions:
+      - Hoe lees je een technische fiche en volg je de wijn naar botteling?
+      - Wat wordt richting verpakking opnieuw beoordeeld?
+    layers:
+      foundation:
+        - Hoe lees je een technische fiche en volg je de wijn naar botteling?
+      intermediate:
+        - Wat wordt richting verpakking opnieuw beoordeeld?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe lees je een technische fiche en volg je de wijn naar botteling?
+        source_refs:
+          - source.oiv-blending-code
+          - source.awri-pre-packaging
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link
+  - id: concept.malolactic-fermentation
+    names:
+      nl: Malolactische omzetting
+      en: Malolactic fermentation
+    slugs:
+      nl: malolactische-omzetting
+      en: malolactic-fermentation
+    disposition: link
+  - id: concept.lees-ageing
+    names:
+      nl: Rijping op de lies
+      en: Lees ageing
+    slugs:
+      nl: rijping-op-de-lies
+      en: lees-ageing
+    disposition: link
+  - id: concept.autolysis
+    names:
+      nl: Autolyse
+      en: Autolysis
+    slugs:
+      nl: autolyse
+      en: autolysis
+    disposition: link
+  - id: concept.batonnage
+    names:
+      nl: Bâtonnage
+      en: Bâtonnage
+    slugs:
+      nl: batonnage
+      en: batonnage
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.sulfur-dioxide
+    names:
+      nl: Zwaveldioxide
+      en: Sulfur dioxide
+    slugs:
+      nl: zwaveldioxide
+      en: sulfur-dioxide
+    disposition: link
+  - id: concept.traditional-method
+    names:
+      nl: Traditionele methode
+      en: Traditional method
+    slugs:
+      nl: traditionele-methode
+      en: traditional-method
+    disposition: link
+  - id: concept.bottling
+    names:
+      nl: Botteling
+      en: Bottling
+    slugs:
+      nl: botteling
+      en: bottling
+    disposition: link
+  - id: concept.clarification-and-fining
+    names:
+      nl: Klaring en fining
+      en: Clarification and fining
+    slugs:
+      nl: klaring-en-fining
+      en: clarification-and-fining
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

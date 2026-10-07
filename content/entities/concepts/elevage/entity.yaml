@@ -18,6 +18,12 @@ relations:
     target: concept.extraction
   - type: related_to
     target: concept.malolactic-fermentation
+  - type: related_to
+    target: concept.autolysis
+  - type: related_to
+    target: concept.bottling
+  - type: related_to
+    target: concept.sulfur-dioxide
 assertions: []
 source_refs:
   - source.awri-pre-packaging
@@ -26,5 +32,10 @@ source_refs:
   - source.napa-oak-maturation
   - source.awri-oak-queries-2013
   - source.awri-lees-contact-2020
+  - source.awri-mlf-success-2020
+  - source.wine-australia-oxygen-style
+  - source.oiv-blending-code
+  - source.champagne-maturation-on-lees
+  - source.wre-cellar-practices-2018
 depth: foundation
-last_reviewed: 2026-09-16
+last_reviewed: 2026-10-06

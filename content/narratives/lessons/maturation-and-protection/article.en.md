@@ -9,10 +9,10 @@ During maturation, a winemaker guides young wine towards bottling. Vessel, time,
 - Explain the basic role of protection against unwanted oxidation and microbial development.
 :::
 
-:::section{#elevage-als-begeleiding depth="foundation" source_refs="source.awri-pre-packaging"}
+:::section{#elevage-als-begeleiding depth="foundation" source_refs="source.awri-pre-packaging source.awri-mlf-success-2020"}
 ## Maturation guides young wine
 
-[[concept.elevage|Maturation, or élevage]], covers the period and operations between fermentation and final bottling. Wine may rest, form sediment, be racked, blended or protected. The winemaker follows how aroma, acidity, tannin and texture develop into a coherent whole.
+[[concept.elevage|Maturation, or élevage]], covers the care of young wine towards final bottling. Some decisions begin during fermentation. [@source.awri-mlf-success-2020] Wine may rest, form sediment, be racked, blended or protected. The winemaker follows how aroma, acidity, tannin and texture develop into a coherent whole.
 
 Duration does not follow prestige. A fresh aromatic wine may benefit from short storage in a neutral tank; a structured wine may need more time for components to integrate. Waiting too long can instead cost fruit and energy.
 :::

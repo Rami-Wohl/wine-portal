@@ -154,7 +154,7 @@ Statussen:
 | `EXP-017` | Ontvangst, sortering en mostvoorbereiding | Actieve hub `grape-reception-must-preparation`; bestaande `pressing`, rijpheids-/risicohubs en vroege lesson | volledig binnen scope | Tweetalige ontvangsthub, materiaal-PNG, mostbezinking, bescherming en juridisch begrensde correcties; directe rosépersing en naslaglinks in perspagina/lesson gecontroleerd | voltooid |
 | `EXP-018` | Gist, microbiologie en alcoholische vergisting | Actieve systeemhub `fermentation`; lesson `alcoholic-fermentation` | volledig binnen scope | Tweetalige hub voor gistecologie, voeding, groei/activiteit en monitoring; hergebruik proces-PNG, oude anchors behouden en les gekoppeld | voltooid |
 | `EXP-019` | Hoofdroutes, schilcontact en extractie | Actieve `winemaking-routes` en `carbonic-maceration`; gereviewde `maceration`, `extraction`, `pressing` en route-lesson | volledig binnen scope | Tweetalige vierroutehub, carbonische satellite en twee PNG-platen; rosévarianten, délestage en persmoment verduidelijkt met behoud van anchors en lesdoel | voltooid |
-| `EXP-020` | Na vergisting, zuurstof en rijping | Bestaande owner `elevage`; `malolactic-fermentation`, `lees-ageing`, `batonnage`, `autolysis`, `oxidation`, `assemblage` | sterke basis | Élevage zelf tot systeemhub uitbreiden, gericht detail bij bestaande satellites houden; timing kan overlappen met vergisting | P1 |
+| `EXP-020` | Na vergisting, zuurstof en rijping | Bestaande owner `elevage`; `malolactic-fermentation`, `lees-ageing`, `batonnage`, `autolysis`, `oxidation`, `assemblage` | volledig binnen scope | Bestaande élevage-owner tweetalig uitgebouwd met PNG, behoud van mechanisme-eigenaars, expliciete co-inoculatie en gereviewde leslinks | voltooid |
 | `EXP-021` | Stabilisatie, klaring, filtratie en verpakking | Bestaande owner `bottling`; `clarification-and-fining`, `sulfur-dioxide`; cellar-to-bottle-lesson | sterke basis | Botteling uitbreiden met systeemmodel voor stabiliteit, filtratie, gassen en sluitingen; geen extra afwerkingshub; fining en SO₂ bij bestaande owners | P1 |
 | `EXP-022` | Hygiëne, microbiële risico's en fouten | Nieuwe owner `cellar-hygiene-wine-faults`; `oxidation`, `sulfur-dioxide`, `fermentation`, MLF en risicopassages | fragmenten | Preventie en diagnose samenbrengen; reductie, VA, Brett, TCA en hergisting onderzoeken; mechanismeowners blijven behouden | P1 |
 | `EXP-023` | Zoete, mousserende en versterkte families | Nieuwe owner `sweet-sparkling-fortified-wines`; droog-, botrytis- en traditional-methodfamilies; drie drafts | sterke fragmenten | Eén vergelijkende hub; fortification gericht invullen, passito/Spätlese op eigen termscope beoordelen; tank/carbonatie en overige relevante families onderzoeken; vijf NL/EN-linkverschillen reviewen | P1 |
@@ -211,13 +211,13 @@ de Explore-roadmap; zij is geen volledige actuele entitylijst.
 | `concept.extraction` | actief | Overdracht en hoedbeheer, inclusief délestage en zuurstofafweging | `EXP-019` voltooid |
 | `concept.pressing` | actief | Scheiding, timing en fracties; verdere gisting na persen verduidelijkt | `EXP-019` voltooid |
 | `concept.carbonic-maceration` | actief | Intracellulaire omzetting, carbonisch en semi-carbonisch, gistvergisting en meetgrenzen | `EXP-019` voltooid |
-| `concept.malolactic-fermentation` | actief | Omzetting, stijl en stabiliteit | `EXP-020` |
-| `concept.elevage` | actief | Bestaande owner wordt zelf de opvoedingshub; geen parallelle rijpingshub | `EXP-020` |
-| `concept.lees-ageing` | actief | Liescontact over vat, tank en fles | `EXP-020` |
-| `concept.batonnage` | actief | Gerichte bewerking tijdens liescontact | `EXP-020` |
-| `concept.autolysis` | actief | Onderliggend gistcelmechanisme | `EXP-020/023` |
-| `concept.oxidation` | actief | Zuurstofeffect en fout/stijlgrens | `EXP-020/022/025` |
-| `concept.assemblage` | actief | Partijen samenstellen; visuele proceskans | `EXP-020` |
+| `concept.malolactic-fermentation` | actief | Omzetting, stijl en stabiliteit | `EXP-020` voltooid |
+| `concept.elevage` | actief | Bestaande owner is de opvoedingshub; geen parallelle rijpingshub | `EXP-020` voltooid |
+| `concept.lees-ageing` | actief | Liescontact over vat, tank en fles | `EXP-020` voltooid |
+| `concept.batonnage` | actief | Gerichte bewerking tijdens liescontact | `EXP-020` voltooid |
+| `concept.autolysis` | actief | Onderliggend gistcelmechanisme | `EXP-020` gereviewd; vervolg `EXP-023` |
+| `concept.oxidation` | actief | Zuurstofeffect en fout/stijlgrens | `EXP-020` gereviewd; vervolg `EXP-022/025` |
+| `concept.assemblage` | actief | Partijen samenstellen; proefmengsels in de opvoedingsillustratie | `EXP-020` voltooid |
 | `concept.clarification-and-fining` | actief | Klaring en fining; filtratie nog elders | `EXP-021` |
 | `concept.sulfur-dioxide` | actief | Antioxidatieve en microbiële bescherming; visuele proceskans | `EXP-021/022` |
 | `concept.bottling` | actief | Bestaande owner wordt hub voor bottelvoorbereiding, stabiliteit en verpakking | `EXP-021` |
@@ -277,9 +277,9 @@ de kernruggengraat van wijnstok–omgeving–wijnmaken–waarneming.
 | `narrative.lesson.grape-to-must` | actief | Ontvangst en persen | Consumer van de actieve EXP-017-hub; naslaglink en directe rosépersing toegevoegd |
 | `narrative.lesson.alcoholic-fermentation` | actief | Vergisting als kernstap | Consumer van `EXP-018`; naslaglink naar fermentation-hub en brondekking gereviewd |
 | `narrative.lesson.three-still-wine-routes` | actief | Wit, rosé en rood; maceratie, extractie en persen | Consumer van `EXP-019`; directe rosépersing, afbeeldingsscope en hubverwijzing gereviewd |
-| `narrative.lesson.after-main-fermentation` | actief | MLF en bâtonnage | Consumer van `EXP-020`; kan later explicieter naar lies/autolyse verwijzen |
-| `narrative.lesson.maturation-and-protection` | actief | Élevage, oxidatie en zwaveldioxide | Sterke consumer van `EXP-020/021` |
-| `narrative.lesson.cellar-to-bottle` | actief | Assemblage, klaring, zwavel en botteling | Sterke consumer van `EXP-020/021` |
+| `narrative.lesson.after-main-fermentation` | actief | MLF en bâtonnage | Consumer van `EXP-020`; lies/autolyse/opvoeding gelinkt, MLF-overlap verduidelijkt |
+| `narrative.lesson.maturation-and-protection` | actief | Élevage, oxidatie en zwaveldioxide | `EXP-020`-timing gereviewd; verdere voorbereiding bij `EXP-021` |
+| `narrative.lesson.cellar-to-bottle` | actief | Assemblage, klaring, zwavel en botteling | `EXP-020`-timing gereviewd; verdere voorbereiding bij `EXP-021` |
 | `narrative.regional.bordeaux-proof` | draft | Technische Bordeaux-proef | Geen foundationdependency; buiten huidige scope |
 
 De lessen bewijzen dat de entity-first grens werkt: zij ordenen en contextualiseren
@@ -360,7 +360,7 @@ later hun eigen scopebrief.
 | `concept.grape-reception-must-preparation` (actief) | Ontvangst, selectie en mostvoorbereiding; persmechaniek blijft bij `pressing` | `EXP-017` | Systeemhub |
 | `concept.fermentation` (bestaand) | Alcoholische vergisting, gist, voeding en kinetiek; bederfdiagnose bij EXP-022 | `EXP-018` voltooid | Bestaande entity actief als systeemhub |
 | `concept.winemaking-routes` (actief) | Volledige routeoriëntatie en vergelijking wit, rosé, rood en schilvergist wit; mechanismen blijven satellites | `EXP-019` voltooid | Systeemhub; geen extra algemene vinificatiehub |
-| `concept.elevage` (bestaand) | Samenhang van MLF, lies, vat, tijd, zuurstof en assemblage; detail bij bestaande concepts | `EXP-020` | Bestaande entity uitbreiden tot systeemhub |
+| `concept.elevage` (bestaand) | Samenhang van MLF, lies, vat, tijd, zuurstof en assemblage; detail bij bestaande concepts | `EXP-020` voltooid | Bestaande entity actief als systeemhub |
 | `concept.bottling` (bestaand) | Stabiliteit, filtratie, opgeloste gassen, verpakking en sluiting; fining/SO₂ bij eigen owners | `EXP-021` | Bestaande entity uitbreiden tot systeemhub |
 | `concept.cellar-hygiene-wine-faults` (nieuw) | Preventie, foutfamilies en diagnostische grenzen; oxidatiechemie bij `oxidation` | `EXP-022` | Systeemhub; gerichte satellites alleen na entitytoets |
 | `concept.sweet-sparkling-fortified-wines` (nieuw) | Vergelijking restsuiker, mousse en versterking; specialistische methoden bij eigen concepts | `EXP-023` | Eén vergelijkende systeemhub met drie families |
@@ -414,7 +414,11 @@ planning actief en geen bestaande ID of route wordt verwijderd.
    met twee PNG-platen en gerichte reviews van maceratie, extractie, persen en
    de introductieles. Wit, rosé, rood en schilvergist wit zijn expliciet vergeleken.
 
-De volgende inhoudelijke taak is `EXP-020`: de bestaande élevage-owner
-uitbreiden tot systeemhub. De [productplanning](product-roadmap.md) plaatst
-eerst taalpresentatie (`MNT-046`) en pipelineonderhoud (`MNT-048`) vóór verdere
-contentuitbreiding. Het voorafgaande CSS-onderhoud (`MNT-049`) is afgerond.
+8. `EXP-020` heeft élevage zelf uitgebreid tot tweetalige systeemhub, met
+   een PNG-keuzevergelijking en behoud van alle oude anchors. MLF-timing en
+   leslinks naar lies, autolyse en opvoeding zijn gereviewd.
+
+De volgende inhoudelijke taak is `EXP-021`: de bestaande bottling-owner
+uitbreiden tot systeemhub voor stabilisatie en verpakking. Taalpresentatie
+(`MNT-046`), pipeline/model (`MNT-048`) en CSS-onderhoud (`MNT-049`) zijn afgerond.
+De [productplanning](product-roadmap.md) bewaakt de afwisseling met platformwerk.

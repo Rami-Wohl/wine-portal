@@ -44,12 +44,12 @@ Pompen, filtreren en vullen kunnen zuurstof toevoegen. Daarom worden luchtcontac
 :::figure{#eindroute depth="foundation" media_id="media.lesson.cellar-to-bottle.final-preparation-and-bottling"}
 :::
 
-:::section{#hele-route depth="foundation"}
+:::section{#hele-route depth="foundation" source_refs="source.awri-mlf-success-2020"}
 ## De volledige route van druif tot fles
 
 Het leerpad begon met druiven die al suiker, zuren, schillen, pitten, aroma en een bepaalde gezondheid meebrachten. Sorteren, ontstelen, kneuzen en persen bepaalden welke delen samen verdergingen. Gist zette suiker om; schilcontact en extractie maakten wit, rosé en rood tot verschillende hoofdroutes.
 
-Daarna veranderden malolactische omzetting, liescontact, vat, tijd en zuurstof het jonge product verder. Assemblage en voorbereiding brachten gekozen componenten als één stabiele wijn naar de bottellijn. Iedere fase beperkte én opende de keuzes voor de volgende.
+Malolactische omzetting, liescontact, vat, tijd en zuurstof vormden het jonge product verder, met processen die deels konden overlappen. Assemblage en voorbereiding brachten gekozen componenten als één stabiele wijn naar de bottellijn. Iedere fase beperkte én opende de keuzes voor de volgende.
 :::
 
 :::comparison{#beslismodel depth="foundation"}

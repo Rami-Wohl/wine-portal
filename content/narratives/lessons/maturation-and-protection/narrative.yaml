@@ -15,6 +15,7 @@ related_entities:
   - concept.oxidation
   - concept.sulfur-dioxide
 source_refs:
+  - source.awri-mlf-success-2020
   - source.awri-pre-packaging
   - source.oiv-oak-maturation
   - source.wset-oak-winemaking

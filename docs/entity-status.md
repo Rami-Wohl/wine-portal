@@ -78,7 +78,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Dégorgement](../content/entities/concepts/disgorgement/entity.yaml) | Concept | Zelfstandige pagina | `concept.disgorgement` | Ja | `/concepts/disgorgement` | 2026-09-20 |
 | [Dosage](../content/entities/concepts/dosage/entity.yaml) | Concept | Zelfstandige pagina | `concept.dosage` | Ja | `/concepts/dosage` | 2026-09-20 |
 | [Druifluis (phylloxera)](../content/entities/concepts/phylloxera/entity.yaml) | Concept | Zelfstandige pagina | `concept.phylloxera` | Ja | `/concepts/phylloxera` | 2026-09-22 |
-| [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | Zelfstandige pagina | `concept.elevage` | Ja | `/concepts/maturation` | 2026-09-16 |
+| [Élevage](../content/entities/concepts/elevage/entity.yaml) | Concept | Zelfstandige pagina | `concept.elevage` | Ja | `/concepts/maturation` | 2026-10-06 |
 | [En primeur](../content/entities/concepts/en-primeur/entity.yaml) | Concept | Zelfstandige pagina | `concept.en-primeur` | Ja | `/concepts/en-primeur` | 2026-09-14 |
 | [Extractie](../content/entities/concepts/extraction/entity.yaml) | Concept | Zelfstandige pagina | `concept.extraction` | Ja | `/concepts/extraction` | 2026-10-05 |
 | [Franc de pied](../content/entities/concepts/franc-de-pied/entity.yaml) | Concept | Zelfstandige pagina | `concept.franc-de-pied` | Ja | `/concepts/franc-de-pied` | 2026-09-22 |
@@ -92,7 +92,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Koolzuurmaceratie](../content/entities/concepts/carbonic-maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.carbonic-maceration` | Ja | `/concepts/carbonic-maceration` | 2026-10-05 |
 | [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Ja | `/concepts/late-harvest` | 2026-09-14 |
 | [Liqueur de tirage](../content/entities/concepts/liqueur-de-tirage/entity.yaml) | Concept | Zelfstandige pagina | `concept.liqueur-de-tirage` | Ja | `/concepts/liqueur-de-tirage` | 2026-09-20 |
-| [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Ja | `/concepts/malolactic-fermentation` | 2026-09-16 |
+| [Malolactische omzetting](../content/entities/concepts/malolactic-fermentation/entity.yaml) | Concept | Zelfstandige pagina | `concept.malolactic-fermentation` | Ja | `/concepts/malolactic-fermentation` | 2026-10-06 |
 | [Methoxypyrazinen](../content/entities/concepts/methoxypyrazines/entity.yaml) | Concept | Zelfstandige pagina | `concept.methoxypyrazines` | Ja | `/concepts/methoxypyrazines` | 2026-09-22 |
 | [Millerandage](../content/entities/concepts/millerandage/entity.yaml) | Concept | Zelfstandige pagina | `concept.millerandage` | Ja | `/concepts/millerandage` | 2026-09-25 |
 | [Négociant](../content/entities/concepts/negociant/entity.yaml) | Concept | Zelfstandige pagina | `concept.negociant` | Ja | `/concepts/negociant` | 2026-09-14 |

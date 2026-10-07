@@ -1,72 +1,123 @@
 :::summary{#orientatie depth="foundation"}
-**Élevage** literally means upbringing. In wine, it describes guiding young wine towards bottling: choosing vessels, time and cellar operations to develop and prepare it. The word conjures oak barrels, but a wine can be carefully raised without obvious oak flavour.
+**Élevage** means upbringing: guiding young wine with suitable vessels, time and cellar operations. Acidity, yeast sediment, wood and oxygen interact along the way. The winemaker follows development, keeps lots separate where useful and chooses how they come together towards bottling.
 :::
 
 :::section{#jonge-wijn-begeleiden depth="foundation" source_refs="source.oiv-oak-maturation source.wset-oak-winemaking"}
-## Guiding young wine
+## Overview — guiding young wine
 
-After [[concept.fermentation|alcoholic fermentation]] there is wine, but not necessarily wine ready to bottle. The winemaker chooses how the batch will spend its next phase, how it is monitored and which operations suit the intended style. Resting in a tank may be just as deliberate as months in oak.
+After [[concept.fermentation|alcoholic fermentation]], further stylistic choices remain. Resting in a tank, keeping wine on yeast sediment and maturing it in oak offer different possibilities. The intended wine determines which combination makes sense. Wood can contribute aroma; time allows development. Both call for tasting and monitoring. [@source.wset-oak-winemaking]
 
-Cellar maturation is different from subsequent bottle development. In the cellar, the winemaker can still separate, taste, rack or blend lots. After bottling, wine continues to change under different conditions. Longer maturation is not an automatic improvement: time and wood must suit the wine. [@source.wset-oak-winemaking]
+This page connects cellar decisions. Individual transformations have their own explanations. The later development of bottled still wine falls outside this cellar phase: topping up, racking and blending lots are then no longer available.
+:::
+
+:::section{#opbouw-en-samenhang depth="foundation" source_refs="source.awri-mlf-success-2020 source.oiv-blending-code source.wre-cellar-practices-2018"}
+## Structure and relationships — decisions that interact
+
+Think of three questions: **what may change, what stays in contact with the wine and when should you intervene?** Malolactic fermentation changes the acid profile. Lees and wood shape the contact environment. Topping up, racking and blending then change the conditions in which the lot develops.
+
+For example, racking can leave sediment behind, ending part of the lees contact while also introducing oxygen. A clean transfer and checks on protection therefore belong to the same decision. [@source.wre-cellar-practices-2018]
+
+Lots can be monitored separately before [[concept.assemblage|blending]] brings them together. Their different maturation provides components for the final composition. The chosen blend is assessed as a whole. [@source.oiv-blending-code]
+:::
+
+:::figure{#opvoedingskeuzes-in-beeld depth="foundation" media_id="media.concept.elevage.maturation-decisions"}
+**Four connected decisions**
+
+1. **Vessel.** A tank and a wooden barrel offer different contact environments.
+2. **Lees.** Yeast sediment can remain with the wine; duration and condition guide the decision.
+3. **Fill level.** Topping up reduces the space above the wine. The operation itself also calls for careful air management.
+4. **Composition.** Small trial blends help determine which lots and proportions work together.
+
+The numbers identify groups of decisions, not consecutive steps.
+:::
+
+:::section{#werking depth="foundation" source_refs="source.awri-mlf-success-2020 source.awri-lees-contact-2020 source.oiv-oak-maturation"}
+## How it works — acidity, contact and development
+
+During [[concept.malolactic-fermentation|malolactic fermentation]], bacteria convert malic acid into lactic acid. This changes acidity. The producer may encourage or prevent this conversion to suit the wine and its protection. [@source.awri-mlf-success-2020]
+
+[[concept.lees-ageing|Lees ageing]] means keeping wine with yeast sediment; [[concept.autolysis|autolysis]] is the gradual breakdown of dead yeast cells. [[concept.batonnage|Bâtonnage]] brings settled lees back into suspension. Contact, cell breakdown and stirring are therefore different parts of the same environment. [@source.awri-lees-contact-2020]
+
+Wood can release compounds, while oxygen reactions help change colour and structure. The producer balances desired development with protection against unwanted [[concept.oxidation|oxidation]]. [@source.oiv-oak-maturation]
+:::
+
+:::detail{#overlappende-timing parent="werking" depth="intermediate" source_refs="source.awri-mlf-success-2020"}
+### MLF can begin during the main fermentation
+
+Co-inoculation introduces lactic acid bacteria during alcoholic fermentation; a sequential approach introduces them later. Yeast and bacterial strains, temperature and wine composition influence which approach works. “After fermentation” is therefore a way of organising decisions, not a mandatory starting point for every process. [@source.awri-mlf-success-2020]
 :::
 
 :::figure{#vatenkelder depth="foundation" media_id="media.concept.elevage.barrels-and-vats"}
 :::
 
 :::section{#vatkeuze depth="foundation" source_refs="source.wset-oak-winemaking source.napa-oak-maturation"}
-## Tanks, barrels and oak influence
+## Conditions and variation — tanks, barrels and wood
 
-Stainless steel does not release oak aromas. A wooden vessel can release compounds that suggest vanilla, spice or toast, for example. Heating the wood during cooperage—*toasting*—helps shape that contribution. Oak is a stylistic tool, not evidence of a higher category of wine. [@source.wset-oak-winemaking]
-
-This is not confined to [[region.bordeaux|Bordeaux]]. Oak also plays a role in red Rioja and white Burgundy, for example, while many other wines find their appeal in more immediate fruit expression. Usage may vary even within one region. “Oak-aged” tells you something about the route to the bottle, not the complete flavour. [@source.wset-oak-winemaking]
+Stainless steel contributes no oak aroma. Oak can add vanilla, spice and toasted notes; heating the wood during cooperage is called **toasting**. Its contribution depends on wood species, toast, barrel age and residence time, among other factors. Used barrels generally release less oak aroma than new ones. [@source.wset-oak-winemaking] [@source.napa-oak-maturation]
 :::
 
 :::detail{#maat-leeftijd-en-toast parent="vatkeuze" depth="intermediate" source_refs="source.napa-oak-maturation"}
 ### Size, age and toast
 
-New barrels generally release more oak aroma than used barrels. Wood choice, toast, duration and vessel size also affect the contribution. A large cask has less wood surface area per litre than a small barrel. “Oak” therefore encompasses several decisions, not one flavour.
+A large cask has proportionally less wood surface per litre than a small barrel. Size and barrel age describe different properties: a large new cask and a small used barrel therefore provide different combinations of contact and available wood compounds.
 
-A percentage of new oak generally describes the proportion of a batch held in new barrels. It is not a measurement of oak aroma concentration in the final blend. You also need to know which barrels were used, for how long and with which wine. [@source.napa-oak-maturation]
+A percentage of new oak describes the share of a lot held in new barrels. Wood choice, toast, time and the wine itself also matter for the final oak contribution. [@source.napa-oak-maturation]
 :::
 
-:::section{#werk-in-de-kelder depth="foundation" source_refs="source.oiv-oak-maturation source.awri-lees-contact-2020"}
-## Work in the cellar
+:::section{#werk-in-de-kelder depth="foundation" source_refs="source.oiv-oak-maturation source.wre-cellar-practices-2018"}
+## Decisions and trade-offs — guiding and protecting
 
-Élevage means active care, even when a barrel stays in the same place for weeks. The winemaker checks and tastes the batch and monitors condition and fill level. Topping up keeps a barrel sufficiently full; racking transfers wine into another vessel and may separate it from sediment. How these operations are performed also influences oxygen exposure. [@source.oiv-oak-maturation]
+**Topping up** reduces the headspace above the wine. **Racking** moves wine and can separate sediment. The lot's condition determines when that is useful. The producer checks fill level, aroma and vessel condition, keeps equipment clean and monitors protection with [[concept.sulfur-dioxide|sulfur dioxide]]. Air exposure during a transfer can reduce free SO₂. [@source.oiv-oak-maturation] [@source.wre-cellar-practices-2018]
 
-The sediment is called **lees** and includes yeast cells. Wine may deliberately remain with suitable lees: [[concept.lees-ageing|lees ageing]]. [[concept.batonnage|Bâtonnage]] stirs that sediment. It is not the same as pushing skins down during red fermentation: the material and production phase are different. [@source.awri-lees-contact-2020]
+More operations also mean more occasions when the environment changes. Retaining lees calls for continued tasting; removing them changes both sediment contact and subsequent oxygen management.
 :::
 
-:::detail{#lies-en-zuurstof parent="werk-in-de-kelder" depth="intermediate" source_refs="source.awri-lees-contact-2020 source.oiv-oak-maturation"}
-### Different wines need different care
+:::detail{#lies-en-zuurstof parent="werk-in-de-kelder" depth="intermediate" source_refs="source.awri-lees-contact-2020"}
+### Considering lees contact and oxygen together
 
-Lees contact can influence mouthfeel and aroma development; [[concept.autolysis|autolysis]], the breakdown of yeast cells, is one process that may contribute. Lees contact does not automatically make every wine creamy, and stirring is not always wanted. Sediment condition and the winemaker's aim remain decisive. [@source.awri-lees-contact-2020]
-
-Oxygen also needs management. During oak maturation, limited exposure may form part of colour and structural development. Unwanted oxidation is a different matter. “Wine needs to breathe” is too broad an instruction for a process that depends on careful control. [@source.oiv-oak-maturation]
+Lees can consume oxygen, while stirring and topping up can also introduce it. The balance depends on the wine and the operation. Sulfidic or unusual smells call for reassessment of the regime; more frequent stirring is no general solution. [@source.awri-lees-contact-2020]
 :::
 
 :::detail{#zuurstof-is-meer-dan-vatwand parent="werk-in-de-kelder" depth="advanced" source_refs="source.awri-oak-queries-2013"}
-### A barrel is not a constant oxygen machine
+### Barrel walls, filling and cellar operations
 
-Oxygen exposure is not confined to the wood during residence: filling and cellar operations may also contribute. New wood additionally contains oxygen within its structure and around joints, and initially absorbs wine. Fill level and protective sulfur dioxide may therefore evolve differently from those in used barrels. Barrel age does not translate into one fixed oxygen dose; the winemaker follows the batch. [@source.awri-oak-queries-2013]
+New wood contains oxygen within its structure and around joints, and initially absorbs wine. This affects both fill level and changes in free SO₂. Oxygen exposure therefore results from the vessel and its use. Barrel age or a number of months cannot be converted into a single fixed oxygen dose. [@source.awri-oak-queries-2013]
 :::
 
-:::section{#richting-botteling depth="foundation"}
-## Towards bottling
+:::section{#wereldwijde-context depth="foundation" source_refs="source.wset-oak-winemaking source.napa-oak-maturation source.champagne-maturation-on-lees"}
+## Global context — the same questions, different combinations
 
-Élevage leads towards wine that suits the intended style and release. That may be a young, fruity wine or one with longer cellar development. [[concept.assemblage|Blending]] combines selected lots; it is a different operation from maturation, even though tasting during élevage often has a future blend in mind.
+Red Rioja and white Burgundy show different uses of oak. Napa Valley Vintners describes how producers match wood species, toast and barrel age to their wine. These examples place oak within a stylistic decision made in many places. [@source.wset-oak-winemaking] [@source.napa-oak-maturation]
 
-A technical sheet may give vessel choice and duration. Read these as explanations of decisions, not a points system: more months or more new oak does not automatically mean more pleasure in the glass.
+Champagne shows another contact environment: after the second fermentation, wine matures on yeast in the bottle. [[concept.traditional-method|The traditional method]] connects lees contact with further development in a sealed bottle. That particular production process has its own explanation. [@source.champagne-maturation-on-lees]
+:::
+
+:::section{#bewijs-en-grenzen depth="foundation" source_refs="source.wine-australia-oxygen-style"}
+## Evidence and limits — conditions belong with the result
+
+A trial with oxygen during active fermentation answers a different question from oxygen exposure during storage. Wine Australia's oxygen-management research examined those early production stages. A favourable result there does not provide a general instruction to aerate maturing wine. [@source.wine-australia-oxygen-style]
+:::
+
+:::detail{#proefopzet-en-samenlopende-keuzes parent="bewijs-en-grenzen" depth="advanced" source_refs="source.awri-lees-contact-2020"}
+### When two variables change together
+
+In an AWRI Chardonnay trial, the intended lees treatment also underwent spontaneous MLF. A difference from the control wine could therefore not be attributed solely to lees contact. Such a trial shows interaction but does not isolate the contribution of one decision. [@source.awri-lees-contact-2020]
+:::
+
+:::section{#richting-botteling depth="foundation" source_refs="source.oiv-blending-code"}
+## Significance for wine — learning to read the choices
+
+Read a technical sheet as a connected account. Which vessel was used, for how long, with which lees and which MLF decision? Were lots matured separately and blended later? These questions help connect aroma and texture to possible causes; tasting alone rarely reveals the complete cellar route.
+
+Blending combines selected lots to form the intended wine. That combination then needs its own assessment towards [[concept.bottling|bottling]]. [@source.oiv-blending-code]
 :::
 
 :::detail{#voorbereiden-is-geen-uniform-recept parent="richting-botteling" depth="intermediate" source_refs="source.awri-pre-packaging"}
-### Preparation is not one uniform recipe
+### From maturation to preparation
 
-Clarity and stability are also assessed before bottling. Settling, fining and filtration are possible tools; not every wine receives the same combination. Style, condition and subsequent storage help determine appropriate preparation. Élevage is therefore broader than ageing alone: it includes preparing wine for its next phase. [@source.awri-pre-packaging]
-
-[[concept.malolactic-fermentation|Malolactic conversion]] changes acidity and may take place during the cellar phase, but is not a synonym for élevage. The technique has its own explanation; legal maturation minimums belong to the relevant appellation.
+Before packaging, clarity and different forms of stability are assessed. [[concept.clarification-and-fining|Clarification]], filtration, gas management and microbiological checks each answer their own question. Bottling preparation connects that assessment to the package and intended storage. [@source.awri-pre-packaging]
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}
-Élevage means guiding young wine, not simply adding wood or waiting. Vessel choice, time and cellar work must serve the wine's character together.
+Élevage means guiding young wine. Vessel, lees, time, oxygen and composition gain meaning through their interaction and through the wine the producer has in mind.
 :::

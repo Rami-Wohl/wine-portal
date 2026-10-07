@@ -17,18 +17,18 @@ After fermentation, yeast cells and grape particles settle to the bottom. The he
 Smaller yeast particles make up **fine lees**. They may be retained deliberately when the wine is sound and regular monitoring remains possible. The decision is therefore not simply “sediment is good” or “sediment is bad”, but which material remains in contact under which conditions.
 :::
 
-:::section{#malolactische-omzetting depth="foundation" source_refs="source.oiv-microbiological-deacidification source.awri-mlf-style-2020"}
+:::section{#malolactische-omzetting depth="foundation" source_refs="source.oiv-microbiological-deacidification source.awri-mlf-style-2020 source.awri-mlf-success-2020"}
 ## Malolactic conversion changes the acid profile
 
 During [[concept.malolactic-fermentation|malolactic conversion]], lactic acid bacteria convert sharper malic acid into softer lactic acid and carbon dioxide. This is not a second alcoholic fermentation: bacteria change an acid rather than grape sugar into alcohol. [@source.oiv-microbiological-deacidification]
 
-Complete conversion is common in many red wines for a softer acid impression and microbiological stability. In white wine it may be complete, partial or blocked, depending on intended freshness, texture and aroma. Temperature, pH, alcohol and protection strategy affect whether the bacteria can work successfully.
+Complete conversion is common in many red wines for a softer acid impression and microbiological stability. In white wine it may be complete, partial or blocked, depending on intended freshness, texture and aroma. Temperature, pH, alcohol and protection strategy affect whether the bacteria can work successfully. Co-inoculation introduces them during alcoholic fermentation, so both processes can overlap. [@source.awri-mlf-success-2020]
 :::
 
 :::section{#lies-en-autolyse depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Fine lees and gradual yeast breakdown
 
-When wine remains on fine lees, yeast cells change over time and cell components may be released into the wine. This gradual breakdown is called **autolysis**. Contact time, temperature, vessel, wine composition and lees condition determine how noticeable the effect becomes.
+During [[concept.lees-ageing|lees ageing]], wine remains with fine lees: yeast cells change over time and cell components may be released into the wine. This gradual breakdown is called [[concept.autolysis|autolysis]]. Contact time, temperature, vessel, wine composition and lees condition determine how noticeable the effect becomes.
 
 Lees contact can contribute to texture and development and under some conditions can affect oxygen reactions. It also requires tasting, smelling and microbiological attention: reductive or sulfurous aromas signal that the approach should be reassessed. [@source.awri-lees-contact-2020]
 :::
@@ -58,7 +58,7 @@ The decisions can occur together, but they are not the same process and need not
 :::
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}
-Malolactic conversion can soften the acid impression and affect aroma; fine lees can help shape texture and development. Attention then shifts to longer guidance: in which vessel will the wine mature, how much oxygen will it receive and how will it remain protected?
+Malolactic conversion can soften the acid impression and affect aroma; fine lees can help shape texture and development. These decisions connect to further [[concept.elevage|maturation]]: in which vessel will the wine mature, how much oxygen will it receive and how will it remain protected?
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}

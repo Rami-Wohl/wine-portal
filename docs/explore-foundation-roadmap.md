@@ -181,7 +181,8 @@ unplanned standalone pages.
 | `EXP-017` | complete | Bilingual reception and must-preparation hub, three-state PNG illustration, legal context and corrected early rosé routes in pressing and the lesson |
 | `EXP-018` | complete | Bilingual fermentation system hub, nine additional sources, reused process PNG, preserved anchors and reviewed lesson link |
 | `EXP-019` | complete | Bilingual route hub and carbonic concept, two PNG comparisons, targeted satellite and introductory lesson review |
-| `EXP-020`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-020` | complete | Existing maturation hub expanded in NL/EN, PNG decision comparison, timing and lesson links reviewed |
+| `EXP-021`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -575,6 +576,13 @@ blending and élevage as a connected decision field.
 
 **Done when:** existing concepts remain canonical and the hub explains their
 interaction without promising a fixed sensory result.
+
+**Execution — 2026-10-07:** complete. Existing `concept.elevage` expanded in
+place with a system content plan, eight coverage dimensions and a PNG comparison.
+All old block anchors, route aliases and the cellar photograph retained. Targeted
+MLF timing and three lesson reviews preserve overlapping processes and link
+lees/autolysis to their existing owners. Research and validation are recorded in
+[the content brief](../editorial/briefs/concept.elevage.md). EXP-021 follows.
 
 #### EXP-021 — Stabilization, clarification, filtration and packaging
 

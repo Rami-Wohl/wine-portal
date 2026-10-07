@@ -35,7 +35,8 @@ Peildatum: 2026-10-06.
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is opvoeding en zuurstof (`EXP-020`).
+Het eerstvolgende uitvoerbare werk is stabilisatie en verpakking (`EXP-021`);
+de opvoedingshub is afgerond (`EXP-020`).
 Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.

@@ -1,5 +1,5 @@
-:::summary{#orientatie depth="foundation" source_refs="source.awri-mlf-style-2020"}
-Na de alcoholische vergisting kan een tweede microbiologisch proces het karakter van de wijn veranderen. Malolactische omzetting verandert appelzuur in melkzuur: de zuurgraad neemt af en het mondgevoel kan ronder worden. Voor veel rode wijnen hoort dit bij het normale kelderwerk; bij wit en mousserende basiswijn is het een belangrijke stijlkeuze.
+:::summary{#orientatie depth="foundation" source_refs="source.awri-mlf-style-2020 source.awri-mlf-success-2020"}
+Tijdens of na de alcoholische vergisting kan een ander microbiologisch proces het karakter van de wijn veranderen. Malolactische omzetting verandert appelzuur in melkzuur: de zuurgraad neemt af en het mondgevoel kan ronder worden. Voor veel rode wijnen hoort dit bij het normale kelderwerk; bij wit en mousserende basiswijn is het een belangrijke stijlkeuze.
 :::
 
 :::section{#appelzuur-naar-melkzuur depth="foundation" source_refs="source.oiv-microbiological-deacidification source.awri-mlf-success-2020"}

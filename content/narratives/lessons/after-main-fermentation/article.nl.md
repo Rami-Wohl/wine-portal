@@ -17,18 +17,18 @@ Na vergisting zakken gistcellen en druivendeeltjes naar de bodem. Het zwaarste, 
 Kleinere gistdeeltjes vormen **fijne lies**. Die kan bewust worden behouden wanneer de wijn gezond is en regelmatige controle mogelijk blijft. De keuze is dus niet simpelweg “bezinksel goed” of “bezinksel slecht”, maar welk materiaal onder welke omstandigheden contact houdt met de wijn.
 :::
 
-:::section{#malolactische-omzetting depth="foundation" source_refs="source.oiv-microbiological-deacidification source.awri-mlf-style-2020"}
+:::section{#malolactische-omzetting depth="foundation" source_refs="source.oiv-microbiological-deacidification source.awri-mlf-style-2020 source.awri-mlf-success-2020"}
 ## Malolactische omzetting verandert het zuurprofiel
 
 Tijdens [[concept.malolactic-fermentation|malolactische omzetting]] zetten melkzuurbacteriën het scherpere appelzuur om in zachter melkzuur en koolzuurgas. Dit is geen tweede alcoholische vergisting: bacteriën veranderen een zuur, geen druivensuiker in alcohol. [@source.oiv-microbiological-deacidification]
 
-Bij veel rode wijnen is volledige omzetting gebruikelijk voor een zachtere zuurindruk en microbiologische stabiliteit. Bij witte wijn kan zij volledig, gedeeltelijk of geblokkeerd worden, afhankelijk van de gewenste frisheid, textuur en aroma. Temperatuur, pH, alcohol en beschermingsstrategie beïnvloeden of de bacteriën goed kunnen werken.
+Bij veel rode wijnen is volledige omzetting gebruikelijk voor een zachtere zuurindruk en microbiologische stabiliteit. Bij witte wijn kan zij volledig, gedeeltelijk of geblokkeerd worden, afhankelijk van de gewenste frisheid, textuur en aroma. Temperatuur, pH, alcohol en beschermingsstrategie beïnvloeden of de bacteriën goed kunnen werken. Bij co-inoculatie worden zij al tijdens de alcoholische vergisting ingebracht; beide processen kunnen dus overlappen. [@source.awri-mlf-success-2020]
 :::
 
 :::section{#lies-en-autolyse depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Fijne lies en geleidelijke gistafbraak
 
-Wanneer wijn op fijne lies blijft, veranderen gistcellen na verloop van tijd en kunnen celbestanddelen in de wijn vrijkomen. Die geleidelijke afbraak heet **autolyse**. Contactduur, temperatuur, vat, wijnsamenstelling en toestand van de lies bepalen hoe merkbaar het effect wordt.
+Bij [[concept.lees-ageing|liesrijping]] blijft wijn bij fijne lies. Gistcellen veranderen na verloop van tijd en celbestanddelen kunnen in de wijn vrijkomen. Die geleidelijke afbraak heet [[concept.autolysis|autolyse]]. Contactduur, temperatuur, vat, wijnsamenstelling en toestand van de lies bepalen hoe merkbaar het effect wordt.
 
 Liescontact kan bijdragen aan textuur en ontwikkeling en kan in sommige omstandigheden invloed hebben op zuurstofreacties. Het vraagt tegelijk proeven, ruiken en microbiologische aandacht: afsluitende of zwavelige aroma's zijn signalen om de aanpak opnieuw te beoordelen. [@source.awri-lees-contact-2020]
 :::
@@ -58,7 +58,7 @@ De beslissingen kunnen samen voorkomen, maar zijn niet hetzelfde proces en hoeve
 :::
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}
-Malolactische omzetting kan de zuurindruk verzachten en aroma beïnvloeden; fijne lies kan textuur en ontwikkeling mede vormen. Daarna verschuift de aandacht naar langere begeleiding: in welk vat rijpt de wijn, hoeveel zuurstof krijgt hij en hoe blijft hij beschermd?
+Malolactische omzetting kan de zuurindruk verzachten en aroma beïnvloeden; fijne lies kan textuur en ontwikkeling mede vormen. Deze keuzes hangen samen met de verdere [[concept.elevage|opvoeding]]: in welk vat rijpt de wijn, hoeveel zuurstof krijgt hij en hoe blijft hij beschermd?
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}

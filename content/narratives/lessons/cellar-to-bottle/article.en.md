@@ -44,12 +44,12 @@ Pumping, filtration and filling can introduce oxygen. Air contact and headspace 
 :::figure{#eindroute depth="foundation" media_id="media.lesson.cellar-to-bottle.final-preparation-and-bottling"}
 :::
 
-:::section{#hele-route depth="foundation"}
+:::section{#hele-route depth="foundation" source_refs="source.awri-mlf-success-2020"}
 ## The complete route from grape to bottle
 
 The path began with grapes that already carried sugar, acids, skins, seeds, aroma and a particular condition. Sorting, destemming, crushing and pressing determined which parts continued together. Yeast converted sugar; skin contact and extraction made white, rosé and red into distinct principal routes.
 
-Malolactic conversion, lees contact, vessel, time and oxygen then changed the young product further. Blending and preparation carried selected components as one stable wine to the bottling line. Each stage both limited and opened choices for the next.
+Malolactic conversion, lees contact, vessel, time and oxygen further shaped the young product, with some processes overlapping. Blending and preparation carried selected components as one stable wine to the bottling line. Each stage both limited and opened choices for the next.
 :::
 
 :::comparison{#beslismodel depth="foundation"}
