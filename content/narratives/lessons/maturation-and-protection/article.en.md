@@ -49,7 +49,7 @@ Small, controlled amounts of oxygen can support reactions that change colour and
 
 [[concept.sulfur-dioxide|Sulfur dioxide]] helps protect wine from oxidative reactions and unwanted yeasts and bacteria. The free fraction is chiefly active; pH and wine composition affect how much protection a measured concentration provides. Values are therefore monitored and adjusted to the particular wine. [@source.awri-sulfur-dioxide]
 
-SO₂ does not operate alone. Clean equipment, suitable temperature, full and well-sealed vessels and rapid response to unusual aroma or activity reduce the pressure on any individual protective measure.
+SO₂ does not operate alone. [[concept.cellar-hygiene-wine-faults|Clean equipment and cellar hygiene]], suitable temperature, full and well-sealed vessels and rapid response to unusual aroma or activity reduce the pressure on any individual protective measure.
 :::
 
 :::comparison{#vatkeuze-zonder-ladder depth="foundation"}

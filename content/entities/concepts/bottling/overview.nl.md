@@ -13,7 +13,7 @@ De gekozen [[concept.assemblage|assemblage]] is het uitgangspunt voor de eindcon
 :::section{#schone-overdracht depth="foundation" source_refs="source.awri-microbiological-stability source.oiv-filtration-wine"}
 ## Opbouw en samenhang
 
-Wijn, tank, leidingen, eventuele filters, vulmachine en verpakking vormen één keten. Voorbereiding in de tank, verwijdering van ongewenst materiaal en hygiëne bij het vullen moeten op elkaar aansluiten. Micro-organismen verwijderen heeft weinig waarde als de wijn daarna via vervuilde apparatuur opnieuw wordt besmet.
+Wijn, tank, leidingen, eventuele filters, vulmachine en verpakking vormen één keten. Voorbereiding in de tank, verwijdering van ongewenst materiaal en hygiëne bij het vullen moeten op elkaar aansluiten. Bij [[concept.cellar-hygiene-wine-faults|microbiële beheersing]] hoort ook bescherming tegen nieuwe besmetting. Verwijderen heeft weinig waarde als de wijn daarna via vervuilde apparatuur opnieuw wordt besmet.
 
 Bescherming bestaat daarom uit meerdere maatregelen. Filtratie kan een bepaald materiaal tegenhouden, SO₂ helpt ongewenste microbiële activiteit en oxidatieve verandering beheersen, en schoon werken beperkt nieuwe besmetting. Geen van die maatregelen maakt de andere controles overbodig.
 :::

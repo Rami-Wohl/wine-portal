@@ -216,6 +216,14 @@ coverage:
       nl: complete
       en: complete
 entity_dependencies:
+  - id: concept.cellar-hygiene-wine-faults
+    names:
+      nl: Kelderhygiëne en wijnfouten
+      en: Cellar hygiene and wine faults
+    slugs:
+      nl: kelderhygiene-en-wijnfouten
+      en: cellar-hygiene-wine-faults
+    disposition: link
   - id: concept.clarification-and-fining
     names:
       nl: Klaring en fining

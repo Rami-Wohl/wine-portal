@@ -1,0 +1,305 @@
+schema_version: 2
+package_id: concept.cellar-hygiene-wine-faults
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat verbinden kelderhygiëne, afwijking en wijnfout?
+    layers:
+      foundation:
+        - Wat verbinden kelderhygiëne, afwijking en wijnfout?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat verbinden kelderhygiëne, afwijking en wijnfout?
+        source_refs:
+          - source.awri-wine-faults
+          - source.uc-davis-winery-sanitation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Hoe werken contactketen en wijnconditie samen?
+      - Waarom verdienen naden en gedeelde hulpmiddelen aandacht?
+    layers:
+      foundation:
+        - Hoe werken contactketen en wijnconditie samen?
+      intermediate:
+        - Waarom verdienen naden en gedeelde hulpmiddelen aandacht?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe werken contactketen en wijnconditie samen?
+        source_refs:
+          - source.awri-winery-cleaning
+          - source.uc-davis-winery-sanitation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett,
+        TCA, hergisting en muizigheid?
+      - Wat is het verschil tussen levende cellen en hun gevormde stoffen?
+    layers:
+      foundation:
+        - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett,
+          TCA, hergisting en muizigheid?
+      intermediate:
+        - Wat is het verschil tussen levende cellen en hun gevormde stoffen?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett,
+            TCA, hergisting en muizigheid?
+        source_refs:
+          - source.awri-wine-faults
+          - source.awri-volatile-sulfur-removal
+          - source.awri-microbiological-stability
+      specific_claims:
+        - claim: VA en ethylacetaat zijn verschillende analytische vragen; ethylacetaat
+            beïnvloedt wel de waarneming.
+          status: supported
+          source_refs:
+            - source.awri-volatile-acidity-2018
+        - claim: Brettcellen en gevormde vluchtige fenolen zijn afzonderlijke onderdelen
+            van de diagnose.
+          status: supported
+          source_refs:
+            - source.awri-brett-control-2023
+        - claim: TCA kan vanuit besmet eikenhout in wijn terechtkomen.
+          status: supported
+          source_refs:
+            - source.awri-oak-taints-2023
+        - claim: Muizigheid kan pas na het proeven duidelijk worden door de
+            pH-afhankelijke waarneming.
+          status: supported
+          source_refs:
+            - source.awri-mousy-off-flavours-2015
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Wat veranderen pH, substraat, tijd en waarnemer?
+      - Waarom zijn SO₂ en ongewenste zwavelaroma’s verschillende zaken?
+    layers:
+      foundation:
+        - Wat veranderen pH, substraat, tijd en waarnemer?
+      intermediate:
+        - Waarom zijn SO₂ en ongewenste zwavelaroma’s verschillende zaken?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat veranderen pH, substraat, tijd en waarnemer?
+        source_refs:
+          - source.awri-microbiological-stability
+          - source.awri-sulfur-dioxide
+          - source.awri-volatile-acidity-2018
+      specific_claims:
+        - claim: Vluchtige zwavelverbindingen omvatten zowel gewenste rassenaroma’s als
+            reductieve afwijkingen.
+          status: supported
+          source_refs:
+            - source.wine-australia-sulfur-compounds-2022
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Hoe volgt een gerichte actie uit onderzoek?
+    layers:
+      foundation:
+        - Hoe volgt een gerichte actie uit onderzoek?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe volgt een gerichte actie uit onderzoek?
+        source_refs:
+          - source.awri-winery-cleaning
+          - source.awri-brett-control-2023
+          - source.awri-volatile-sulfur-removal
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Wat leren gedeelde apparatuur, bijvulwijn en veranderende
+        wittewijnpraktijk?
+    layers:
+      foundation:
+        - Wat leren gedeelde apparatuur, bijvulwijn en veranderende
+          wittewijnpraktijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat leren gedeelde apparatuur, bijvulwijn en veranderende
+            wittewijnpraktijk?
+        source_refs:
+          - source.uc-davis-winery-sanitation
+          - source.awri-brett-control-2023
+          - source.awri-mousy-off-flavours-2015
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Welke vraag kan een waarneming of analyse werkelijk beantwoorden?
+      - Wat laten latente zwavelbronnen zien over een tijdelijke verbetering?
+    layers:
+      foundation:
+        - Welke vraag kan een waarneming of analyse werkelijk beantwoorden?
+      intermediate: []
+      advanced:
+        - Wat laten latente zwavelbronnen zien over een tijdelijke verbetering?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke vraag kan een waarneming of analyse werkelijk beantwoorden?
+        source_refs:
+          - source.awri-wine-faults
+          - source.awri-brett-control-2023
+      specific_claims:
+        - claim: AWRI-project 1701-3.4.2 identificeert polysulfiden als latente bronnen
+            van H₂S na botteling.
+          status: supported
+          source_refs:
+            - source.wine-australia-sulfur-compounds-2022
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe gebruik je een afwijking als startpunt voor onderzoek?
+    layers:
+      foundation:
+        - Hoe gebruik je een afwijking als startpunt voor onderzoek?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe gebruik je een afwijking als startpunt voor onderzoek?
+        source_refs:
+          - source.awri-wine-faults
+          - source.awri-oak-taints-2023
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.sulfur-dioxide
+    names:
+      nl: Zwaveldioxide
+      en: Sulfur dioxide
+    slugs:
+      nl: zwaveldioxide
+      en: sulfur-dioxide
+    disposition: link
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.malolactic-fermentation
+    names:
+      nl: Malolactische omzetting
+      en: Malolactic fermentation
+    slugs:
+      nl: malolactische-omzetting
+      en: malolactic-fermentation
+    disposition: link
+  - id: concept.bottling
+    names:
+      nl: Botteling
+      en: Bottling
+    slugs:
+      nl: botteling
+      en: bottling
+    disposition: link
+  - id: concept.volatile-thiols
+    names:
+      nl: Vluchtige thiolen
+      en: Volatile thiols
+    slugs:
+      nl: vluchtige-thiolen
+      en: volatile-thiols
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

@@ -13,7 +13,7 @@ The chosen [[concept.assemblage|blend]] is the starting point for the final asse
 :::section{#schone-overdracht depth="foundation" source_refs="source.awri-microbiological-stability source.oiv-filtration-wine"}
 ## Structure and relationships
 
-Wine, tank, hoses, any filters, filling machine and package form one chain. Tank preparation, removal of unwanted material and hygiene during filling must work together. Removing microorganisms has little value if dirty equipment contaminates the wine again afterwards.
+Wine, tank, hoses, any filters, filling machine and package form one chain. Tank preparation, removal of unwanted material and hygiene during filling must work together. [[concept.cellar-hygiene-wine-faults|Microbial control]] includes protection against new contamination. Removal has little value if dirty equipment contaminates the wine again afterwards.
 
 Protection therefore combines several measures. Filtration can retain particular material, SO₂ helps control unwanted microbial activity and oxidative change, and clean handling limits new contamination. None makes the other checks redundant.
 :::

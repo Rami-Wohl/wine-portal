@@ -9,6 +9,8 @@
 ## Herkennen — als frisheid verdwijnt
 
 Een onbedoeld geoxideerde wijn kan minder fris fruit tonen en geuren ontwikkelen die aan gekneusde appel, noten of karton doen denken. Witte wijn kan donkerder worden; ook rode wijn verandert in kleur en geur. Geen enkel aroma bewijst op zichzelf oxidatie: leeftijd, druif, houtgebruik en gekozen stijl geven belangrijke context. [@source.awri-wine-faults]
+
+Een [[concept.cellar-hygiene-wine-faults|onderzoek naar wijnfouten]] verbindt zulke waarnemingen met procesgegevens en gerichte analyse.
 :::
 
 :::detail{#kwetsbaarheid parent="herkennen" depth="intermediate" source_refs="source.awri-wine-faults"}

@@ -21,7 +21,7 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-07.
+Peildatum: 2026-10-08.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
@@ -35,8 +35,8 @@ Peildatum: 2026-10-07.
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is kelderhygiëne en wijnfouten (`EXP-022`);
-de opvoedings- en bottelingshubs zijn afgerond (`EXP-020/021`).
+Het eerstvolgende uitvoerbare werk is zoete, mousserende en versterkte wijn
+(`EXP-023`); opvoeding, botteling en kelderhygiëne zijn afgerond (`EXP-020–022`).
 Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.

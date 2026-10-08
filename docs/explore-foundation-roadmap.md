@@ -183,7 +183,8 @@ unplanned standalone pages.
 | `EXP-019` | complete | Bilingual route hub and carbonic concept, two PNG comparisons, targeted satellite and introductory lesson review |
 | `EXP-020` | complete | Existing maturation hub expanded in NL/EN, PNG decision comparison, timing and lesson links reviewed |
 | `EXP-021` | complete | Existing bottling hub expanded in NL/EN; stability, gases, closures and lesson links reviewed |
-| `EXP-022`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-022` | complete | Bilingual hygiene and fault-investigation hub; seven causal families, PNG teaching plate and targeted lesson/mechanism links |
+| `EXP-023`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -622,6 +623,14 @@ fault families; distinguish fault, style choice and threshold.
 
 **Done when:** readers understand causal routes and controls without using an
 aroma checklist as diagnosis.
+
+**Execution — 2026-10-08:** complete. New bilingual system hub connects
+cleaning, sanitation, contact chains, seven fault families and diagnostic
+limits. Eight primary source records and one language-neutral PNG added;
+oxidation, bottling and the maturation lesson link to the hub. Existing
+mechanism owners retained; no unnecessary fault satellites created. Validation
+is recorded in [the brief](../editorial/briefs/concept.cellar-hygiene-wine-faults.md).
+EXP-023 follows.
 
 #### EXP-023 — Sweet, sparkling and fortified method families
 

@@ -1,0 +1,30 @@
+id: media.concept.cellar-hygiene-wine-faults.prevention-and-investigation
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/cellar-hygiene-wine-faults/prevention-and-investigation.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 727bf829f2a628e95293b50213d277a8028ec26d99a9f3f8305af785f33ad183
+alt:
+  nl: "Vier genummerde scènes: een koppeling schoonborstelen, een opgehangen slang
+    naast een tank, twee wijnmonsters vergelijken en een monster bij een
+    microscoop."
+  en: "Four numbered scenes: brushing a coupling clean, a suspended hose beside a
+    tank, comparing two wine samples and a sample beside a microscope."
+caption:
+  nl: De vier scènes verbinden preventie met onderzoek. De microscoop staat voor
+    aanvullend laboratoriumonderzoek; de onderzoeksvraag bepaalt welke methode
+    nodig is.
+  en: The four scenes connect prevention with investigation. The microscope
+    represents additional laboratory work; the question determines which method
+    is needed.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-08
+changes: Generated educational comparison; prompt and visual review retained in
+  the content brief.

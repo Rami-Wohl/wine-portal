@@ -9,6 +9,8 @@
 ## Recognition — when freshness fades
 
 Unintentionally oxidised wine may show less fresh fruit and develop aromas reminiscent of bruised apple, nuts or cardboard. White wine may darken; red wine changes in colour and aroma too. No single aroma proves oxidation on its own: age, variety, oak and intended style provide essential context. [@source.awri-wine-faults]
+
+An [[concept.cellar-hygiene-wine-faults|investigation of wine faults]] connects such observations with processing records and targeted analysis.
 :::
 
 :::detail{#kwetsbaarheid parent="herkennen" depth="intermediate" source_refs="source.awri-wine-faults"}

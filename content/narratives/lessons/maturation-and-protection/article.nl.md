@@ -49,7 +49,7 @@ Kleine, beheerste hoeveelheden zuurstof kunnen reacties ondersteunen die kleur e
 
 [[concept.sulfur-dioxide|Zwaveldioxide]] helpt wijn beschermen tegen oxidatieve reacties en ongewenste gisten en bacteriën. Vooral de vrije fractie is werkzaam; pH en wijnsamenstelling beïnvloeden hoeveel bescherming een gemeten hoeveelheid geeft. Daarom worden waarden gecontroleerd en aan de concrete wijn aangepast. [@source.awri-sulfur-dioxide]
 
-SO₂ staat niet op zichzelf. Schone apparatuur, passende temperatuur, volle en goed gesloten vaten en snelle reactie op afwijkende geur of activiteit verminderen de druk op iedere afzonderlijke beschermingsmaatregel.
+SO₂ staat niet op zichzelf. [[concept.cellar-hygiene-wine-faults|Schone apparatuur en kelderhygiëne]], passende temperatuur, volle en goed gesloten vaten en snelle reactie op afwijkende geur of activiteit verminderen de druk op iedere afzonderlijke beschermingsmaatregel.
 :::
 
 :::comparison{#vatkeuze-zonder-ladder depth="foundation"}
