@@ -29,7 +29,7 @@ That makes a fixed dose without wine context misleading. Intended protection, pH
 :::section{#momenten-en-botteling depth="foundation" source_refs="source.oiv-sulphiting-wine source.awri-sulfur-dioxide"}
 ## Adding and checking again
 
-SO₂ may be used on grapes or must, after fermentation, during maturation and around bottling. The immediate purpose differs at each stage: controlling wild microbial activity, protecting fruit during a vulnerable operation or carrying a finished wine safely into bottle.
+SO₂ may be used on grapes or must, after fermentation, during maturation and around [[concept.bottling|bottling]]. The immediate purpose differs at each stage: controlling wild microbial activity, protecting fruit during a vulnerable operation or carrying a finished wine safely into bottle.
 
 Transfers and bottling can introduce additional oxygen. Checks before and after such operations show whether the intended free protection actually remains. [@source.awri-sulfur-dioxide]
 :::

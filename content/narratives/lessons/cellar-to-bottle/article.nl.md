@@ -28,7 +28,7 @@ Het doel kan helderheid, eiwitstabiliteit of het verminderen van overtollige bit
 :::section{#stabilisatie-en-filtratie depth="foundation" source_refs="source.oiv-filtration-wine source.awri-pre-packaging source.awri-microbiological-stability"}
 ## Stabilisatie en filtratie beantwoorden verschillende risico's
 
-Een wijn kan helder lijken en toch later troebel worden, kristallen vormen, opnieuw vergisten of microbiologisch veranderen. **Stabilisatie** is daarom een verzameldoel: de wijn zo voorbereiden dat voorzienbare fysische, chemische of microbiologische veranderingen binnen de beoogde bewaring worden beheerst.
+Een wijn kan helder lijken en toch later troebel worden, kristallen vormen, opnieuw vergisten of microbiologisch veranderen. [[concept.bottling|Stabilisatie vóór botteling]] is daarom een verzameldoel: de wijn zo voorbereiden dat voorzienbare fysische, chemische of microbiologische veranderingen binnen de beoogde bewaring worden beheerst.
 
 Filtratie laat wijn door een medium of membraan stromen dat deeltjes vasthoudt. Een grove filtratie ondersteunt helderheid; een passende membraanfiltratie kan micro-organismen verwijderen vóór botteling. Niet iedere wijn vraagt dezelfde filtratie, maar restsuiker, instabiele microbiologie en lange distributie vergroten de behoefte aan zekerheid. [@source.oiv-filtration-wine]
 :::

@@ -29,7 +29,7 @@ Dat maakt een vaste dosis zonder wijncontext misleidend. De gewenste bescherming
 :::section{#momenten-en-botteling depth="foundation" source_refs="source.oiv-sulphiting-wine source.awri-sulfur-dioxide"}
 ## Toevoegen en opnieuw controleren
 
-SO₂ kan worden ingezet bij druiven of most, na vergisting, tijdens rijping en rond botteling. Op ieder moment is de vraag anders: wilde microbiële activiteit beheersen, fruit beschermen tijdens een kwetsbare handeling of een afgewerkte wijn stabiel in de fles brengen.
+SO₂ kan worden ingezet bij druiven of most, na vergisting, tijdens rijping en rond [[concept.bottling|botteling]]. Op ieder moment is de vraag anders: wilde microbiële activiteit beheersen, fruit beschermen tijdens een kwetsbare handeling of een afgewerkte wijn stabiel in de fles brengen.
 
 Overhevelen en bottelen kunnen extra zuurstof in de wijn brengen. Controle vóór en na zulke handelingen laat zien of de beoogde vrije bescherming werkelijk overblijft. [@source.awri-sulfur-dioxide]
 :::

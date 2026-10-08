@@ -21,7 +21,7 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-06.
+Peildatum: 2026-10-07.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
@@ -29,14 +29,14 @@ Peildatum: 2026-10-06.
 | Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 45 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054` |
+| Afgerond | 46 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054`, `MNT-057` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is stabilisatie en verpakking (`EXP-021`);
-de opvoedingshub is afgerond (`EXP-020`).
+Het eerstvolgende uitvoerbare werk is kelderhygiëne en wijnfouten (`EXP-022`);
+de opvoedings- en bottelingshubs zijn afgerond (`EXP-020/021`).
 Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
 Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
 en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
@@ -81,6 +81,11 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   5.0.12 binnen bestaande semverranges bijgewerkt, zonder overrides. De
   volledige audit daalt van zes naar vijf dependencyvermeldingen. De
   incompatibele downgrade en een ongeteste major-upgrade zijn niet toegepast.
+
+- **Hercontrole 2026-10-07:** braces blijft op 3.0.3 zonder gepubliceerde patch;
+  de React ESLint-plugin ondersteunt ESLint 10 nog niet. Na MNT-057 blijven
+  vijf high ontwikkelvermeldingen en nul productiemeldingen over. Hercontroledatum
+  2026-10-18 blijft staan. Zie [health review](../editorial/health-review-2026-10-07.md).
 
 ### `MNT-050` — Beslismoment voor backend, API en database
 
@@ -293,6 +298,24 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-057` — Productiedependency-patches en gerichte health check
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Scope:** sharp, source-map-js, lockfile, lokale checks en documentatielinks
+- **Categorie:** engineering, testing, operations
+- **Herkomst:** `QCR-2026-10-07-01`
+- **Uitvoering 2026-10-07:** sharp 0.35.4 → 0.35.5, bijbehorende libvips-pakketten
+  1.3.3 → 1.3.4 en source-map-js 1.2.1 → 1.2.2 binnen bestaande ranges.
+  Geen package.json-migratie of overrides. Anonieme default-export van de eigen
+  ESLint-plugin benoemd zodat lint weer zonder waarschuwingen slaagt.
+- **Validatie:** schone npm ci, npm ls, productieaudit nul; volledige audit vijf
+  bekende high ontwikkelvermeldingen bij MNT-055. Content, format, lint,
+  typecheck, 148 unit-tests, productiebuild en 125 browsertests geslaagd.
+  Worktree- en documentatielinkcontrole uitgevoerd. Details en grenzen staan
+  in [de health review](../editorial/health-review-2026-10-07.md).
+
 
 ### `MNT-048` — Contentpipeline en model in herkenbare modules verdelen
 

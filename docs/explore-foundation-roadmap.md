@@ -1,7 +1,7 @@
 # Explore foundation roadmap
 
 Status: active execution roadmap  
-Last reviewed: 2026-10-05
+Last reviewed: 2026-10-07
 
 This roadmap turns Oenocademy's existing concept collection into a systematic,
 globally useful foundation for viticulture, vinification and wine science. It
@@ -182,7 +182,8 @@ unplanned standalone pages.
 | `EXP-018` | complete | Bilingual fermentation system hub, nine additional sources, reused process PNG, preserved anchors and reviewed lesson link |
 | `EXP-019` | complete | Bilingual route hub and carbonic concept, two PNG comparisons, targeted satellite and introductory lesson review |
 | `EXP-020` | complete | Existing maturation hub expanded in NL/EN, PNG decision comparison, timing and lesson links reviewed |
-| `EXP-021`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-021` | complete | Existing bottling hub expanded in NL/EN; stability, gases, closures and lesson links reviewed |
+| `EXP-022`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -598,6 +599,14 @@ filtration, sulfur management, dissolved gases, bottling and closure choices.
 
 **Done when:** risk, intervention and trade-off are understandable and existing
 pages are linked rather than copied.
+
+**Execution — 2026-10-07:** complete. Existing bottling owner expanded in
+NL/EN with eight coverage dimensions, three stability questions, gas management
+and packaging trade-offs. Nine published anchors and the existing PNG retained;
+fining and SO₂ retain mechanism ownership. Six primary source records added;
+lesson/SO₂ links reviewed and the unsupported universal post-bottling recovery
+claim removed. Validation is recorded in [the brief](../editorial/briefs/concept.bottling.md).
+Targeted dependency maintenance is recorded separately as MNT-057. EXP-022 follows.
 
 #### EXP-022 — Cellar hygiene, microbial risk and wine faults
 

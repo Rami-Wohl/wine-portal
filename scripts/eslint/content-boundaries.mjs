@@ -7,7 +7,7 @@ const generatedDirectory = path.join(root, "src/generated/content") + path.sep;
 
 // The repository is the single runtime entry to generated data. Its server-only
 // marker then protects every transitive client import, including via re-exports.
-export default {
+const contentBoundaries = {
   rules: {
     "generated-content": {
       meta: {
@@ -48,3 +48,5 @@ export default {
     },
   },
 };
+
+export default contentBoundaries;

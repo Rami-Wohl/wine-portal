@@ -65,7 +65,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Besontwikkeling, véraison en rijpheid](../content/entities/concepts/berry-development-ripeness/entity.yaml) | Concept | Zelfstandige pagina | `concept.berry-development-ripeness` | Ja | `/concepts/berry-development-veraison-ripeness` | 2026-09-25 |
 | [Bloei, vruchtzetting en opbrengstvorming](../content/entities/concepts/flowering-fruit-set-yield/entity.yaml) | Concept | Zelfstandige pagina | `concept.flowering-fruit-set-yield` | Ja | `/concepts/flowering-fruit-set-yield` | 2026-09-25 |
 | [Botrytis en edele rotting](../content/entities/concepts/botrytis/entity.yaml) | Concept | Zelfstandige pagina | `concept.botrytis` | Ja | `/concepts/botrytis-noble-rot` | 2026-09-13 |
-| [Botteling](../content/entities/concepts/bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.bottling` | Ja | `/concepts/bottling` | 2026-09-23 |
+| [Botteling](../content/entities/concepts/bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.bottling` | Ja | `/concepts/bottling` | 2026-10-07 |
 | [Botteling op het château](../content/entities/concepts/estate-bottling/entity.yaml) | Concept | Zelfstandige pagina | `concept.estate-bottling` | Ja | `/concepts/estate-bottling` | 2026-09-08 |
 | [Château als wijnnaam](../content/entities/concepts/chateau/entity.yaml) | Concept | Zelfstandige pagina | `concept.chateau` | Ja | `/concepts/chateau-wine-term` | 2026-09-14 |
 | [Clairet](../content/entities/concepts/clairet/entity.yaml) | Concept | Zelfstandige pagina | `concept.clairet` | Ja | `/concepts/clairet` | 2026-09-20 |
@@ -121,7 +121,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Weerrisico's, ziekten, plagen en stoornissen](../content/entities/concepts/vineyard-hazards-diseases-pests-disorders/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-hazards-diseases-pests-disorders` | Ja | `/concepts/vineyard-hazards-diseases-pests-disorders` | 2026-10-02 |
 | [Wijngaardbodems](../content/entities/concepts/vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-soils` | Ja | `/concepts/vineyard-soils` | 2026-09-26 |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/acidity-in-wine` | 2026-09-16 |
-| [Zwaveldioxide](../content/entities/concepts/sulfur-dioxide/entity.yaml) | Concept | Zelfstandige pagina | `concept.sulfur-dioxide` | Ja | `/concepts/sulfur-dioxide` | 2026-09-23 |
+| [Zwaveldioxide](../content/entities/concepts/sulfur-dioxide/entity.yaml) | Concept | Zelfstandige pagina | `concept.sulfur-dioxide` | Ja | `/concepts/sulfur-dioxide` | 2026-10-07 |
 | [Cabernet Franc](../content/entities/grapes/cabernet-franc/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-franc` | Ja | `/grapes/cabernet-franc` | 2026-09-07 |
 | [Cabernet Sauvignon](../content/entities/grapes/cabernet-sauvignon/entity.yaml) | Druif | Zelfstandige pagina | `grape.cabernet-sauvignon` | Ja | `/grapes/cabernet-sauvignon` | 2026-09-07 |
 | [Carménère](../content/entities/grapes/carmenere/entity.yaml) | Druif | Zelfstandige pagina | `grape.carmenere` | Ja | `/grapes/carmenere` | 2026-09-20 |

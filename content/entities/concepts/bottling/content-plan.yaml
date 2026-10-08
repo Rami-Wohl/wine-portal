@@ -1,0 +1,263 @@
+schema_version: 2
+package_id: concept.bottling
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - klaar-voor-verpakken
+    target_ids: []
+    completeness_questions:
+      - Wat betekent klaar voor verpakking?
+    layers:
+      foundation:
+        - Wat betekent klaar voor verpakking?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat betekent klaar voor verpakking?
+        source_refs:
+          - source.awri-pre-packaging
+          - source.awri-pre-bottling-specifications
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - schone-overdracht
+    target_ids: []
+    completeness_questions:
+      - Welke schakels moeten samen beheerst worden?
+    layers:
+      foundation:
+        - Welke schakels moeten samen beheerst worden?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke schakels moeten samen beheerst worden?
+        source_refs:
+          - source.awri-microbiological-stability
+          - source.oiv-filtration-wine
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen microbiële, eiwit- en tartraatstabiliteit?
+      - Waarom heeft een tartraattest een afgebakend doel?
+    layers:
+      foundation:
+        - Hoe verschillen microbiële, eiwit- en tartraatstabiliteit?
+      intermediate:
+        - Waarom heeft een tartraattest een afgebakend doel?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen microbiële, eiwit- en tartraatstabiliteit?
+        source_refs:
+          - source.awri-microbiological-stability
+          - source.awri-heat-stability
+          - source.awri-cold-stabilisation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Wat veranderen samenstelling, gas en distributie?
+      - Hoe beïnvloedt CO₂ de bedoelde stijl?
+    layers:
+      foundation:
+        - Wat veranderen samenstelling, gas en distributie?
+      intermediate:
+        - Hoe beïnvloedt CO₂ de bedoelde stijl?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat veranderen samenstelling, gas en distributie?
+        source_refs:
+          - source.awri-gas-adjustment
+          - source.awri-microbiological-stability
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Hoe kies je tussen bezinken, fining en filtratie?
+      - Wat zegt het filterdoel over de behandeling?
+    layers:
+      foundation:
+        - Hoe kies je tussen bezinken, fining en filtratie?
+      intermediate:
+        - Wat zegt het filterdoel over de behandeling?
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe kies je tussen bezinken, fining en filtratie?
+        source_refs:
+          - source.oiv-filtration-wine
+          - source.awri-fining-agents
+          - source.awri-pre-bottling-specifications
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Hoe verhouden internationaal behandeldoel en lokale verpakkingspraktijk
+        zich?
+    layers:
+      foundation:
+        - Hoe verhouden internationaal behandeldoel en lokale
+          verpakkingspraktijk zich?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verhouden internationaal behandeldoel en lokale
+            verpakkingspraktijk zich?
+        source_refs:
+          - source.oiv-filtration-wine
+          - source.awri-screw-cap-closures
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Wat toont een stabiliteitstest wel en niet?
+      - Waarom horen methode en monster bij de uitslag?
+    layers:
+      foundation:
+        - Wat toont een stabiliteitstest wel en niet?
+      intermediate: []
+      advanced:
+        - Waarom horen methode en monster bij de uitslag?
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat toont een stabiliteitstest wel en niet?
+        source_refs:
+          - source.awri-heat-stability
+          - source.awri-pre-bottling-specifications
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe lees je voorbereiding en verpakking op een technische fiche?
+    layers:
+      foundation:
+        - Hoe lees je voorbereiding en verpakking op een technische fiche?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe lees je voorbereiding en verpakking op een technische fiche?
+        source_refs:
+          - source.awri-pre-bottling-specifications
+          - source.awri-microbiological-stability
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.clarification-and-fining
+    names:
+      nl: Klaring en fining
+      en: Clarification and fining
+    slugs:
+      nl: klaring-en-fining
+      en: clarification-and-fining
+    disposition: link
+  - id: concept.sulfur-dioxide
+    names:
+      nl: Zwaveldioxide
+      en: Sulfur dioxide
+    slugs:
+      nl: zwaveldioxide
+      en: sulfur-dioxide
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link
+  - id: concept.estate-bottling
+    names:
+      nl: Botteling op het château
+      en: Estate bottling
+    slugs:
+      nl: botteling-op-het-chateau
+      en: estate-bottling
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

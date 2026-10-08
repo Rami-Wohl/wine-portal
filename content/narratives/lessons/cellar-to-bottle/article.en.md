@@ -28,7 +28,7 @@ The objective may be clarity, protein stability or reduction of excessive bitter
 :::section{#stabilisatie-en-filtratie depth="foundation" source_refs="source.oiv-filtration-wine source.awri-pre-packaging source.awri-microbiological-stability"}
 ## Stabilisation and filtration address different risks
 
-A wine can look clear yet later become hazy, form crystals, ferment again or change microbiologically. **Stabilisation** is therefore an umbrella objective: preparing wine so that foreseeable physical, chemical or microbiological changes are controlled for its intended storage.
+A wine can look clear yet later become hazy, form crystals, ferment again or change microbiologically. [[concept.bottling|Stabilisation before bottling]] is therefore an umbrella objective: preparing wine so that foreseeable physical, chemical or microbiological changes are controlled for its intended storage.
 
 Filtration passes wine through a medium or membrane that retains particles. Coarser filtration supports clarity; suitable membrane filtration can remove microorganisms before bottling. Not every wine needs the same filtration, but residual sugar, unstable microbiology and long distribution increase the need for assurance. [@source.oiv-filtration-wine]
 :::
