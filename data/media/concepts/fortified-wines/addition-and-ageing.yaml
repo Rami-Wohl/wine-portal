@@ -1,0 +1,29 @@
+id: media.concept.fortified-wines.addition-and-ageing
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/fortified-wines/addition-and-ageing.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: f42bfab9b9d7502cb68b426d258239650038ee00bb6bd454c201cb871aaa4140
+alt:
+  nl: "Twee genummerde scènes: kleurloze spirit wordt bij rode wijn gegoten; twee
+    schematische vatdoorsneden vergelijken wijn met een dunne florlaag en wijn
+    zonder die laag."
+  en: "Two numbered scenes: colourless spirit is poured into red wine; two
+    schematic barrel cutaways compare wine with a thin flor layer and wine
+    without it."
+caption:
+  nl: Alcohol toevoegen en een rijpingsomgeving kiezen beantwoorden verschillende
+    procesvragen.
+  en: Adding alcohol and choosing an ageing environment answer different process
+    questions.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-08
+changes: Generated educational comparison; full prompt and visual review in
+  editorial/briefs/concept.fortified-wines.md.

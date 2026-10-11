@@ -1,6 +1,6 @@
 # Overkoepelende productplanning
 
-Bijgewerkt: 2026-10-08. Deze kaart verbindt platformwerk met de bestaande
+Bijgewerkt: 2026-10-09. Deze kaart verbindt platformwerk met de bestaande
 content- en Learn-roadmaps. Ticketstatus en acceptatiecriteria blijven uitsluitend
 in de gekoppelde backlog; dit document maakt de prioriteit en timing expliciet.
 De onderbouwing staat in [de sanity review](../editorial/platform-sanity-review-2026-10-04.md).
@@ -16,6 +16,12 @@ systeemhub met behoud van de bestaande mechanisme-eigenaars en routes (`EXP-020`
 Botteling verbindt nu stabiliteit en verpakking (`EXP-021`); de gerichte
 dependency-health-check heeft twee productiepatches opgeleverd (`MNT-057`).
 Kelderhygiëne en wijnfouten verbinden preventie met gericht onderzoek (`EXP-022`).
+Versterken, passito en Spätlese hebben elk hun eigen gereviewde pagina (`EXP-023`).
+Zoete, mousserende en versterkte wijnen hebben drie zelfstandige familiepagina's,
+ieder met eigen NL/EN-uitleg en PNG (`EXP-029–031`). De eerdere gecombineerde
+overzichtspagina is op verzoek verwijderd (`DEC-EXP-007`); verwijzingen gaan
+rechtstreeks naar de relevante familie. Individuele wijnen en stijlen krijgen
+een gefaseerde eigen publicatieronde (`EXP-032`).
 
 ## Waar we staan
 
@@ -35,7 +41,7 @@ features niet automatisch gereed.
 | Moment | Werk | Reden en grens |
 | --- | --- | --- |
 | Eerstvolgende externe vrijgave, zodra toegang werkt | `MNT-056`: eerste GitHub-run, mergebescherming en deployment bevestigen | Node 24 en CI zijn lokaal gereed (`MNT-047`); de ongepatchte ontwikkelketen blijft bij `MNT-055` |
-| Eerstvolgende ontwikkeltaak | `EXP-023`: zoete, mousserende en versterkte wijn | Preventie en diagnose zijn uitgewerkt; de drie bijzondere methodefamilies krijgen nu een vergelijkende hub |
+| Eerstvolgende ontwikkeltaak | `EXP-024`: wijnsamenstelling als systeem | De methodefamilies zijn verbonden; samenstelling krijgt nu één model voor herkomst, interacties en metingen |
 | Samen met pilotevaluatie, vroegst 2026-10-22 bij genoeg gebruik | `LRN-012` en `MNT-050`: Learn-vervolg en platformopslag besluiten | Accounts, cross-device voortgang, quizzen en personalisatie moeten een bewezen doel dienen; vervroeg het opslagbesluit bij een concrete consumer |
 | Bronverkenning vóór `EXP-027` | `MNT-051`: beperkte Atlaspilot | Geef de drie geblokkeerde kaarttickets een uitvoerbaar datatraject; wereldwijde druivenverspreiding vraagt andere gegevens dan appellationgrenzen |
 | Vóór grootschalige uitbreiding naar volgende regio's | `MNT-052`: performance- en mediabudgetten | Meet build, serverzoekwerk, browserbundles en beelden voordat storage-/searcharchitectuur verandert |
@@ -43,7 +49,9 @@ features niet automatisch gereed.
 
 Dit is een aanbevolen afwisseling van platform- en contentwerk, geen eis om
 alle content stil te leggen tot elk onderhoudsticket af is. De onderlinge
-inhoudelijke volgorde `EXP-023` t/m `EXP-028` blijft intact.
+inhoudelijke volgorde is `EXP-024`, `EXP-025`, `EXP-032`, `EXP-026`,
+`EXP-027`, `EXP-028`. De afzonderlijke familiepagina's (`EXP-029–031`) zijn
+al uitgevoerd na de scopeaanvulling op `EXP-023`.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
@@ -57,9 +65,9 @@ en vrijgekomen externe controles mogen deze volgorde onderbreken.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `EXP-023` | Zoete, mousserende en versterkte wijn |
-| 2 | `EXP-024` | Wijnsamenstelling |
-| 3 | `EXP-025` | Waarneming en ontwikkeling |
+| 1 | `EXP-024` | Wijnsamenstelling |
+| 2 | `EXP-025` | Waarneming en ontwikkeling |
+| 3 | `EXP-032` | Individuele wijnpagina's: inventaris, Port/Sherry/Champagne als eerste batch, verdere batches blijven open |
 | 4 | `EXP-026` | Integratie graph, links, media en terminologie |
 | 5 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
 | 6 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |

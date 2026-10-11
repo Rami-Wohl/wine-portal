@@ -1,6 +1,6 @@
 id: concept.passito
 type: concept
-status: draft
+status: active
 canonical_name: Passito
 names:
   nl: Passito
@@ -11,6 +11,14 @@ slugs:
 locales:
   nl: overview.nl.md
   en: overview.en.md
-relations: []
+relations:
+  - type: related_to
+    target: concept.passerillage
+  - type: related_to
+    target: concept.vin-de-paille
 assertions: []
-source_refs: []
+source_refs:
+  - source.sanmartin-postharvest-water-loss-2021
+  - source.masaf-pantelleria-specification-2024
+depth: foundation
+last_reviewed: 2026-10-08

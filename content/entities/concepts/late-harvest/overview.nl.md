@@ -52,7 +52,7 @@ Producenten kunnen beschadigd fruit uitsorteren of in meerdere rondes alleen ges
 
 Een droge herfst kan geduld belonen; een naderend regenfront kan vroegere pluk verstandig maken. Trosdichtheid, schilsterkte, loofwand, wind en plaatselijke vochtigheid veranderen het risico zelfs binnen één bedrijf.
 
-Daarom is late oogst eerder een jaarlijkse selectie dan een vaste kwaliteitsladder. Afzien van de stijl kan in een moeilijk jaar de betere wijnbouwbeslissing zijn.
+Daarom is late oogst eerder een selectie per [[concept.vintage|oogstjaar]] dan een vaste kwaliteitsladder. Afzien van de stijl kan in een moeilijk jaar de betere wijnbouwbeslissing zijn.
 :::
 
 :::section{#van-rijpe-druif-naar-wijn depth="foundation" source_refs="source.sanmartin-postharvest-water-loss-2021"}

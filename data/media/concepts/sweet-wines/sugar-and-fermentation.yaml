@@ -1,0 +1,27 @@
+id: media.concept.sweet-wines.sugar-and-fermentation
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/sweet-wines/sugar-and-fermentation.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 1f77260fa4ab8484a508603eab8d0edb23d25abfeaff3bca644e4cd254ae2045
+alt:
+  nl: "Twee genummerde scènes: verse druiven en gedroogde druiven op een rek, en
+    een gistingsvat met waterslot naast een glas gouden wijn."
+  en: "Two numbered scenes: fresh grapes and dried grapes on a tray, and a
+    fermentation vessel with an airlock beside a glass of golden wine."
+caption:
+  nl: Concentratie vóór de gisting en suikeromzetting tijdens de gisting zijn
+    verschillende momenten.
+  en: Concentration before fermentation and sugar conversion during fermentation
+    are different moments.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-08
+changes: Generated educational comparison; full prompt and visual review in
+  editorial/briefs/concept.sweet-wines.md.

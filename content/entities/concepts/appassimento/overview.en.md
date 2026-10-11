@@ -85,6 +85,8 @@ The terms overlap but are not fully interchangeable. An Italian appellation may 
 :::section{#in-het-glas depth="foundation" source_refs="source.sanmartin-postharvest-water-loss-2021"}
 ## In the glass — richness without a fixed aroma list
 
+The [[concept.sweet-wines|sweet wine page]] connects concentration before fermentation with sugar retention in the finished wine.
+
 Appassimento wines may show ripe or dried fruit, spice, cocoa, flowers, nuts or candied peel. They often feel fuller and may carry more alcohol, residual sugar or tannin than wine from comparable fresh grapes.
 
 These are possibilities, not a diagnosis. Variety, origin, drying rate, mould, oxidation, fermentation, oak and bottle age all shape the result. A raisin note does not prove appassimento, and a carefully made appassimento wine need not taste of raisins.

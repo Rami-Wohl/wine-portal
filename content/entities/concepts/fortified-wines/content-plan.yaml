@@ -1,0 +1,266 @@
+schema_version: 2
+package_id: concept.fortified-wines
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat verbindt versterkte wijnen en waar ligt de grens met zoete wijn?
+    layers:
+      foundation:
+        - Wat verbindt versterkte wijnen en waar ligt de grens met zoete wijn?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat verbindt versterkte wijnen en waar ligt de grens met zoete wijn?
+        source_refs:
+          - source.oiv-fortification
+          - source.oiv-liqueur-wine
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Hoe hangen grondstof, alcoholtoevoeging, suiker en rijping samen?
+    layers:
+      foundation:
+        - Hoe hangen grondstof, alcoholtoevoeging, suiker en rijping samen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe hangen grondstof, alcoholtoevoeging, suiker en rijping samen?
+        source_refs:
+          - source.ivdp-port-vinification
+          - source.sherry-fortification
+          - source.sherry-ageing
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe sturen gisting en alcoholtoevoeging de uitgangswijn?
+    layers:
+      foundation:
+        - Hoe sturen gisting en alcoholtoevoeging de uitgangswijn?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe sturen gisting en alcoholtoevoeging de uitgangswijn?
+        source_refs:
+          - source.ivdp-port-vinification
+          - source.sherry-fortification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen biologische en oxidatieve rijpingsomgevingen?
+    layers:
+      foundation:
+        - Hoe verschillen biologische en oxidatieve rijpingsomgevingen?
+      intermediate:
+        - Flor verandert de rijpingsomgeving; solera organiseert fractioneel
+          mengen en kan beide routes dienen.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen biologische en oxidatieve rijpingsomgevingen?
+        source_refs:
+          - source.sherry-ageing
+          - source.wine-australia-rutherglen
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Welke afwegingen horen bij toevoegen, rijpen en mengen?
+    layers:
+      foundation:
+        - Welke afwegingen horen bij toevoegen, rijpen en mengen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke afwegingen horen bij toevoegen, rijpen en mengen?
+        source_refs:
+          - source.sherry-ageing
+          - source.sherry-fortification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Wat tonen Port, Sherry, Pantelleria en Rutherglen?
+    layers:
+      foundation:
+        - Wat tonen Port, Sherry, Pantelleria en Rutherglen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat tonen Port, Sherry, Pantelleria en Rutherglen?
+        source_refs:
+          - source.ivdp-port-vinification
+          - source.sherry-fortification
+          - source.masaf-pantelleria-specification-2024
+          - source.wine-australia-rutherglen
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Hoe onderscheid je techniek, wettelijke categorie en concrete
+        productregels?
+    layers:
+      foundation:
+        - Hoe onderscheid je techniek, wettelijke categorie en concrete
+          productregels?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe onderscheid je techniek, wettelijke categorie en concrete
+            productregels?
+        source_refs:
+          - source.oiv-liqueur-wine
+          - source.oiv-fortification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe lees je zoetheid, alcohol en rijping afzonderlijk?
+    layers:
+      foundation:
+        - Hoe lees je zoetheid, alcohol en rijping afzonderlijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe lees je zoetheid, alcohol en rijping afzonderlijk?
+        source_refs:
+          - source.ivdp-port-vinification
+          - source.sherry-ageing
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link
+  - id: concept.fortification
+    names:
+      nl: Versterking
+      en: Fortification
+    slugs:
+      nl: fortification
+      en: fortification
+    disposition: link
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.passito
+    names:
+      nl: Passito
+      en: Passito
+    slugs:
+      nl: passito
+      en: passito
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

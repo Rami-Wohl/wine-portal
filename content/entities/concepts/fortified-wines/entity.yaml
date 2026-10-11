@@ -1,0 +1,33 @@
+id: concept.fortified-wines
+type: concept
+canonical_name: Fortified wines
+names:
+  nl: Versterkte wijnen
+  en: Fortified wines
+slugs:
+  nl: versterkte-wijnen
+  en: fortified-wines
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+assertions: []
+status: active
+relations:
+  - type: related_to
+    target: concept.fortification
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.oxidation
+source_refs:
+  - source.oiv-fortification
+  - source.oiv-liqueur-wine
+  - source.ivdp-port-vinification
+  - source.sherry-fortification
+  - source.sherry-ageing
+  - source.wine-australia-rutherglen
+  - source.masaf-pantelleria-specification-2024
+depth: foundation
+last_reviewed: 2026-10-08

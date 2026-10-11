@@ -11,10 +11,10 @@ A **second fermentation** is a new alcoholic fermentation of a wine that has alr
 A still base wine has already undergone its first [[concept.fermentation|alcoholic fermentation]]. For the second fermentation, the producer gives yeast more fermentable sugar, often through a [[concept.liqueur-de-tirage|liqueur de tirage]]. The yeast produces alcohol and carbon dioxide, among other things. Because the vessel is sealed, much of the gas dissolves in the wine and appears as bubbles when it is opened. [@source.champagne-bottling-second-fermentation]
 :::
 
-:::detail{#waar-gebeurt-het parent="werking" depth="intermediate" source_refs="source.champagne-bottling-second-fermentation"}
+:::detail{#waar-gebeurt-het parent="werking" depth="intermediate" source_refs="source.champagne-bottling-second-fermentation source.oiv-sparkling-production"}
 ### Where it happens changes the process
 
-In the [[concept.traditional-method|traditional method]], fermentation takes place in the bottle in which the wine will be sold. In the tank method it takes place in a pressure tank, followed by bottling under pressure. Second fermentation therefore names a **stage**, not one particular production method. [@source.champagne-bottling-second-fermentation]
+In the [[concept.traditional-method|traditional method]], fermentation takes place in the bottle in which the wine will be sold. In the tank method it takes place in a pressure tank, followed by bottling under pressure. Second fermentation therefore names a **stage**, not one particular production method. [@source.champagne-bottling-second-fermentation] [@source.oiv-sparkling-production]
 :::
 
 :::section{#niet-verwarren depth="foundation" source_refs="source.champagne-bottling-second-fermentation"}

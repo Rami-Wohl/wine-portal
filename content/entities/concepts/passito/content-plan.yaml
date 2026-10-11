@@ -1,0 +1,205 @@
+schema_version: 2
+package_id: concept.passito
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Hoe verschilt de wijnterm van het droogproces?
+    layers:
+      foundation:
+        - Hoe verschilt de wijnterm van het droogproces?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschilt de wijnterm van het droogproces?
+        source_refs:
+          - source.sanmartin-postharvest-water-loss-2021
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Wat verklaart de procesowner?
+    layers:
+      foundation:
+        - Wat verklaart de procesowner?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat verklaart de procesowner?
+        source_refs:
+          - source.sanmartin-postharvest-water-loss-2021
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Welke gegevens ontbreken in de term alleen?
+    layers:
+      foundation:
+        - Welke gegevens ontbreken in de term alleen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke gegevens ontbreken in de term alleen?
+        source_refs:
+          - source.sanmartin-postharvest-water-loss-2021
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids:
+      - toepassing-en-keuzes
+    target_ids: []
+    completeness_questions:
+      - Wat toont de passito-liquoroso-variant van Pantelleria?
+    layers:
+      foundation:
+        - Wat toont de passito-liquoroso-variant van Pantelleria?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat toont de passito-liquoroso-variant van Pantelleria?
+        source_refs: []
+      specific_claims:
+        - claim: "Pantelleria-specificatie geconsolideerd augustus 2024, art. 5: passito
+            liquoroso omvat alcoholtoevoeging tijdens of na gisting."
+          status: supported
+          source_refs:
+            - source.masaf-pantelleria-specification-2024
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Wat is de scope en versie van de etiketclaim?
+    layers:
+      foundation:
+        - Wat is de scope en versie van de etiketclaim?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat is de scope en versie van de etiketclaim?
+        source_refs:
+          - source.masaf-pantelleria-specification-2024
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe combineer je naam en procesgegevens?
+    layers:
+      foundation:
+        - Hoe combineer je naam en procesgegevens?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe combineer je naam en procesgegevens?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.appassimento
+    names:
+      nl: Appassimento
+      en: Appassimento
+    slugs:
+      nl: appassimento
+      en: appassimento
+    disposition: link
+  - id: concept.passerillage
+    names:
+      nl: Passerillage
+      en: Passerillage
+    slugs:
+      nl: passerillage
+      en: passerillage
+    disposition: link
+  - id: concept.fortification
+    names:
+      nl: Versterking
+      en: Fortification
+    slugs:
+      nl: fortification
+      en: fortification
+    disposition: link
+  - id: concept.vin-de-paille
+    names:
+      nl: Vin de paille
+      en: Vin de paille
+    slugs:
+      nl: vin-de-paille
+      en: vin-de-paille
+    disposition: link
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

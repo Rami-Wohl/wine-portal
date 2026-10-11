@@ -1,0 +1,186 @@
+schema_version: 2
+package_id: concept.spatlese
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat is de Duitse juridische scope?
+    layers:
+      foundation:
+        - Wat is de Duitse juridische scope?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat is de Duitse juridische scope?
+        source_refs: []
+      specific_claims:
+        - claim: Duitse WeinG §20 vereist volledig rijpe druiven bij late oogst voor
+            Spätlese; alleen Duitse scope.
+          status: supported
+          source_refs:
+            - source.german-wine-law-pradikate-2026
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen mostgewicht en restsuiker?
+    layers:
+      foundation:
+        - Hoe verschillen mostgewicht en restsuiker?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen mostgewicht en restsuiker?
+        source_refs:
+          - source.dwi-praedikate
+          - source.dwi-wine-taste-categories
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Waarom is één algemeen Oechslegetal onjuist?
+    layers:
+      foundation:
+        - Waarom is één algemeen Oechslegetal onjuist?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Waarom is één algemeen Oechslegetal onjuist?
+        source_refs:
+          - source.dwi-praedikate
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids:
+      - toepassing-en-keuzes
+    target_ids: []
+    completeness_questions:
+      - Waar zoek je aanvullende zoetheidsinformatie?
+    layers:
+      foundation:
+        - Waar zoek je aanvullende zoetheidsinformatie?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Waar zoek je aanvullende zoetheidsinformatie?
+        source_refs:
+          - source.dwi-wine-taste-categories
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Welke wetversie en verrijkingsgrens gelden in de gebruikte bron?
+    layers:
+      foundation:
+        - Welke wetversie en verrijkingsgrens gelden in de gebruikte bron?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke wetversie en verrijkingsgrens gelden in de gebruikte bron?
+        source_refs: []
+      specific_claims:
+        - claim: WeinG-versie gewijzigd in januari 2026 verbiedt verrijking voor
+            Prädikatswein.
+          status: supported
+          source_refs:
+            - source.german-wine-law-pradikate-2026
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe combineer je oogstbegrip en vinificatie?
+    layers:
+      foundation:
+        - Hoe combineer je oogstbegrip en vinificatie?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe combineer je oogstbegrip en vinificatie?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.late-harvest
+    names:
+      nl: Late oogst
+      en: Late harvest
+    slugs:
+      nl: late-oogst
+      en: late-harvest
+    disposition: link
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

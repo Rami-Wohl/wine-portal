@@ -1,7 +1,7 @@
 # Explore foundation roadmap
 
 Status: active execution roadmap  
-Last reviewed: 2026-10-07
+Last reviewed: 2026-10-08
 
 This roadmap turns Oenocademy's existing concept collection into a systematic,
 globally useful foundation for viticulture, vinification and wine science. It
@@ -184,7 +184,12 @@ unplanned standalone pages.
 | `EXP-020` | complete | Existing maturation hub expanded in NL/EN, PNG decision comparison, timing and lesson links reviewed |
 | `EXP-021` | complete | Existing bottling hub expanded in NL/EN; stability, gases, closures and lesson links reviewed |
 | `EXP-022` | complete | Bilingual hygiene and fault-investigation hub; seven causal families, PNG teaching plate and targeted lesson/mechanism links |
-| `EXP-023`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-023` | complete | Comparative NL/EN method hub, PNG, three reviewed focused owners and five language-link differences resolved |
+| `EXP-029` | complete | Separate bilingual sweet-wine family hub; sugar/fermentation PNG and existing process owners reused |
+| `EXP-030` | complete | Separate bilingual sparkling-wine family hub; bottle/tank/carbonation PNG and method boundaries reviewed |
+| `EXP-031` | complete | Separate bilingual fortified-wine family hub; addition/ageing PNG and flor/solera ownership clarified |
+| `EXP-032` | open | Inventory individual wines/styles, reuse existing identities and publish bounded batches after EXP-025 |
+| `EXP-024`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -636,9 +641,10 @@ EXP-023 follows.
 
 **Depends on:** EXP-017–022.
 
-**Owner:** one new comparative system hub,
-`concept.sweet-sparkling-fortified-wines`, with three clearly distinguished
-families. Retain existing drying and sparkling-method owners. Research and
+**Owners:** `concept.fortification`, `concept.passito` and `concept.spatlese`.
+Family-level explanation belongs to the independent owners in EXP-029–031;
+the initial combined overview was removed on 2026-10-09 (DEC-EXP-007).
+Retain existing drying and sparkling-method owners. Research and
 complete the `fortification` draft; review `passito` as a wine-term candidate
 and `spatlese` as a legal/label candidate before publication or an explicit
 non-destructive consolidation decision. Review the five EN-only entitytargets
@@ -648,14 +654,77 @@ listed in the EXP-016 audit; EXP-026 verifies their disposition.
 fermentation, dosage, traditional and tank methods, carbonation, fortification
 timing and biological or oxidative maturation where relevant.
 
-**Done when:** method families form a reusable global overview and existing
-specialized concepts retain their own depth.
+**Done when:** the wine methods and terms have reusable explanations and links
+to their relevant family owners; specialized concepts retain their own depth.
+
+**Completed 2026-10-08:** bilingual comparison of sugar concentration/retention,
+fermentation and exogenous CO₂, fortification timing and ageing. One PNG with
+a localized HTML equivalent. The three existing drafts are active: fortification
+owns alcohol addition, passito owns a wine term, Spätlese owns the German
+legal/label distinction. Tank/carbonation, flor and solera remain hub-owned.
+Traditional-method and appassimento have comparison links; existing anchors
+remain. All five EXP-016 EN-only targets now have their NL counterparts.
+Twelve new primary source records; six new browser tests. Full suite: 135
+passed; all 148 unit tests, relation audit, content validation and webpackbuild
+passed. [Source, visual and publication review](../editorial/briefs/exp-023-method-family-review.md).
+EXP-024 follows.
+
+**Scope extension approved and executed 2026-10-08 (`DEC-EXP-006`):** the
+comparison is an entry point, not the sole owner for all three large subjects.
+Each family now has its own system overview under EXP-029–031. Named wines
+and styles receive their own researched pages in the staged EXP-032 follow-up.
+The initial completion record above describes the delivery before this extension.
+
+**Removal approved 2026-10-09 (`DEC-EXP-007`):** the user removed the combined
+overview. The three independent family pages retain the relevant factual
+explanations and sources. Content links, plans and public discovery use those
+owners directly; the unused comparison illustration and media record are removed.
+The initial completion record remains a historical research/publication snapshot.
+
+#### EXP-029 — Sweet wines as an independent family
+
+**Status:** complete on 2026-10-08. **Depends on:** EXP-023; approved DEC-EXP-006.
+
+**Owner:** `concept.sweet-wines`, a system overview of grape concentration,
+fermentation, residual sugar, labels and stability. Existing drying, botrytis,
+harvest-term and fortification owners retain their detailed explanation.
+
+**Result:** eight coverage sections, an intermediate explanation of must sugar
+versus residual sugar, global examples, bilingual content and a two-scene PNG.
+[Brief and publication review](../editorial/briefs/concept.sweet-wines.md).
+
+#### EXP-030 — Sparkling wines as an independent family
+
+**Status:** complete on 2026-10-08. **Depends on:** EXP-023; approved DEC-EXP-006.
+
+**Owner:** `concept.sparkling-wines`, a system overview comparing bottle, tank,
+ongoing-fermentation, transfer and carbonation routes, with lees and sweetness.
+Traditional-method, tirage, second-fermentation, remuage, disgorgement, dosage
+and lees-ageing keep their process depth.
+
+**Result:** eight coverage sections, an intermediate timing/transfer explanation,
+French and South African examples, bilingual content and a three-route PNG.
+[Brief and publication review](../editorial/briefs/concept.sparkling-wines.md).
+
+#### EXP-031 — Fortified wines as an independent family
+
+**Status:** complete on 2026-10-08. **Depends on:** EXP-023; approved DEC-EXP-006.
+
+**Owner:** `concept.fortified-wines`, a system overview connecting alcohol
+addition, sweetness, ageing and wine families. Fortification keeps addition
+timing; general oxidation/elevage remain existing owners. This family page owns
+the current flor/solera explanation; technique pages contextualize
+and link instead of maintaining full parallel explanations.
+
+**Result:** eight coverage sections, intermediate flor/solera explanation,
+Iberian, Italian and Australian examples, bilingual content and an addition/ageing
+PNG. [Brief and publication review](../editorial/briefs/concept.fortified-wines.md).
 
 ### Phase E — composition, perception and integration
 
 #### EXP-024 — Wine composition as a system
 
-**Depends on:** EXP-007 and EXP-018–023.
+**Depends on:** EXP-007, EXP-018–023 and EXP-029–031.
 
 **Coverage:** water, ethanol, acids, sugars, phenolics, aroma compounds,
 polysaccharides, proteins, minerals and dissolved gases; origin, interaction
@@ -674,15 +743,47 @@ interactions, adaptation, context, balance, evolution and ageing potential.
 **Done when:** chemical composition, perception and quality judgement remain
 distinct and bottle development builds on rather than duplicates oxidation.
 
+#### EXP-032 — Individual sweet, sparkling and fortified wines
+
+**Status:** open. **Depends on:** EXP-025 and EXP-029–031. Execute before EXP-026.
+
+**Work:** inventory named wines across all three families, record their true
+identity and existing destination, then order bounded publication batches.
+Candidates include Sauternes, Tokaji Aszú, Eiswein, Vin Santo, passito/vin de paille;
+Champagne, Prosecco, Cava, Asti and Cap Classique; Port, Sherry, Madeira and
+Rutherglen Muscat. This is a research inventory, not a claim that each term is
+the same kind of entity or an exclusive member of one family.
+
+Reuse `appellation.sauternes`, `region.tokaj`, `concept.passito` and
+`concept.vin-de-paille` where their actual scope matches; a region page is not
+automatically a page about a particular wine. Distinguish protected origin,
+regional wine family, label category, grape, technique and individual product.
+Preserve existing IDs, provenance and active content. The three family pages
+remain useful without waiting for the full catalogue.
+
+**First publication batch:** Port, Sherry and Champagne, each with an explicit
+identity/scope brief before scaffolding, appropriate primary sources, equivalent
+NL/EN, own PNG or documentary media where useful, and family/process links.
+Then prioritize contrasting wines from the remaining inventory. If research
+identifies an existing suitable owner, expand it rather than publish a duplicate.
+No `wine_style` model change without demonstrated browse/compare requirements.
+
+**Done when:** the inventory assigns every candidate a destination and ordered
+follow-up, publication batches have substantive active pages, and later batches
+remain explicitly open until published or individually resolved. A planning list
+alone does not complete the wine-page work.
+
 #### EXP-026 — Integrate graph, links, media and terminology
 
-**Depends on:** EXP-004–025.
+**Depends on:** EXP-004–025 and EXP-029–032.
 
 **Work:** audit reciprocal relations, contextual links, related-topic groups,
 media records, captions, terminology, NL/EN parity and search discoverability.
 
 **Input:** use the EXP-016 audit's owner/consumer boundaries and verify the
 assigned lesson links and five NL/EN link differences after EXP-017–023.
+Include the independent family owners (EXP-029–031) and individual wine pages
+(EXP-032), keeping family, process and protected-name scope distinct.
 
 **Done when:** every foundational concept has an intentional place and the user
 can move from regions and lessons into the foundation without dead ends.
@@ -718,6 +819,8 @@ current and the foundation is ready to support new regions and Learn paths.
 | `DEC-EXP-003` | Approve which soil terms become entities versus hub-owned entries | End of EXP-010 | Approved 2026-09-26: only `concept.calcareous-vineyard-soils` and `concept.volcanic-vineyard-soils` become satellites; all other terms remain hub-owned entries |
 | `DEC-EXP-004` | Use existing content blocks for the soil directory before adding specialized UI | EXP-010/011 | Approved 2026-09-26: validate the directory with canonical blocks before considering new UI |
 | `DEC-EXP-005` | Confirm the regions and climates used for the global-bias stress test | Start of EXP-027 | Open; Loire provisional |
+| `DEC-EXP-006` | Give sweet, sparkling and fortified wines separate family pages and stage individual wine/style pages beneath them, reusing existing owners | After EXP-023 | Approved by the user 2026-10-08; EXP-029–031 published, individual pages tracked in EXP-032 |
+| `DEC-EXP-007` | Remove the combined overview and point references directly to the independent sweet, sparkling and fortified family pages | After EXP-029–031 | Approved by the user 2026-10-09; combined content and media removed, references retargeted |
 
 The `EXP-003` review gate is closed. `DEC-EXP-003` and `DEC-EXP-004` are also
 closed; `EXP-011` publishes the approved soil hub and two satellites with the

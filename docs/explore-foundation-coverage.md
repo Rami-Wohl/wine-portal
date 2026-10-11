@@ -157,7 +157,11 @@ Statussen:
 | `EXP-020` | Na vergisting, zuurstof en rijping | Bestaande owner `elevage`; `malolactic-fermentation`, `lees-ageing`, `batonnage`, `autolysis`, `oxidation`, `assemblage` | volledig binnen scope | Bestaande élevage-owner tweetalig uitgebouwd met PNG, behoud van mechanisme-eigenaars, expliciete co-inoculatie en gereviewde leslinks | voltooid |
 | `EXP-021` | Stabilisatie, klaring, filtratie en verpakking | Bestaande owner `bottling`; `clarification-and-fining`, `sulfur-dioxide`; cellar-to-bottle-lesson | volledig binnen scope | Bestaande bottling-owner tweetalig uitgebouwd; drie stabiliteitsvragen, scheiding, gassen en sluitingen; fining/SO₂ bij eigen owners, PNG hergebruikt en leslink gereviewd | voltooid |
 | `EXP-022` | Hygiëne, microbiële risico's en fouten | `cellar-hygiene-wine-faults`; bestaande mechanismeowners behouden | volledig | Afgerond: zeven foutfamilies, preventie en diagnostische grenzen; acht bronnen, PNG en les-/hubverwijzingen gereviewd | afgerond |
-| `EXP-023` | Zoete, mousserende en versterkte families | Nieuwe owner `sweet-sparkling-fortified-wines`; droog-, botrytis- en traditional-methodfamilies; drie drafts | sterke fragmenten | Eén vergelijkende hub; fortification gericht invullen, passito/Spätlese op eigen termscope beoordelen; tank/carbonatie en overige relevante families onderzoeken; vijf NL/EN-linkverschillen reviewen | P1 |
+| `EXP-023` | Bijzondere wijnmethoden en termen | Actieve `fortification`, `passito` en `spatlese`; familie-uitleg bij EXP-029–031, bestaande mechanismeowners behouden | volledig binnen scope | Drie drafts gericht gepubliceerd en vijf NL/EN-linkverschillen opgelost; de oorspronkelijke gecombineerde pagina is op 2026-10-09 verwijderd, alle verwijzingen gaan naar de individuele families | voltooid |
+| `EXP-029` | Zoete wijnen als eigen familie | Actieve `sweet-wines` met bestaande droog-, oogst-, botrytis- en versterkingsowners | volledig binnen scope | Acht coveragevragen, concentratie versus restsuiker, wereldwijde voorbeelden en eigen PNG in NL/EN | voltooid |
+| `EXP-030` | Mousserende wijnen als eigen familie | Actieve `sparkling-wines` met bestaande flesmethode-, tirage-, lies- en dosageowners | volledig binnen scope | Fles/tank/voortgezette gisting, transfer en carbonatie, met eigen PNG en NL/EN | voltooid |
+| `EXP-031` | Versterkte wijnen als eigen familie | Actieve `fortified-wines`; `fortification` blijft techniekowner | volledig binnen scope | Zoetheid en rijping verbonden; flor/solera primair hier uitgelegd; eigen PNG en NL/EN | voltooid |
+| `EXP-032` | Individuele zoete, mousserende en versterkte wijnpagina's | Bestaande Sauternes-, Tokaj-, passito- en vin-de-paillebestemmingen eerst beoordelen | gedeeltelijk | Inventaris en geordende publicatiebatches; Port/Sherry/Champagne eerst, daarna contrasterende kandidaten | P1 na EXP-025 |
 | `EXP-024` | Wijnsamenstelling als systeem | `acidity`, `tannin`, `methoxypyrazines`, `volatile-thiols`, `sulfur-dioxide` | fragmenten | Volledige compositiekaart en interacties zonder component-aromalijst | P1 |
 | `EXP-025` | Waarneming, balans en flesontwikkeling | Sensorische passages in concepts, grapes en lessons | afwezig | Zintuigen, thresholds, interactie, context, textuur, balans, kwaliteitsoordeel en ontwikkeling | P1 |
 
@@ -226,6 +230,7 @@ de Explore-roadmap; zij is geen volledige actuele entitylijst.
 
 | Concept | Status | Foundationrol | Volgende eigenaar |
 | --- | --- | --- | --- |
+| `concept.sparkling-wines` | actief | Zelfstandige familiehub en routevergelijking | `EXP-030` voltooid |
 | `concept.second-fermentation` | actief | Gas en alcohol uit een tweede vergisting | `EXP-023` |
 | `concept.traditional-method` | actief | Methodefamilie en afbakening van herkomst | `EXP-023` |
 | `concept.liqueur-de-tirage` | actief | Start van flesgisting | `EXP-023` |
@@ -238,12 +243,14 @@ de Explore-roadmap; zij is geen volledige actuele entitylijst.
 | Concept | Status | Foundationrol | Volgende eigenaar |
 | --- | --- | --- | --- |
 | `concept.late-harvest` | actief | Later oogsten en uiteenlopende uitkomsten | `EXP-007/023` |
+| `concept.sweet-wines` | actief | Zelfstandige familiehub van grondstof tot restsuiker en stabiliteit | `EXP-029` voltooid |
+| `concept.fortified-wines` | actief | Zelfstandige familiehub; zoetheid, rijping en flor/solera | `EXP-031` voltooid |
 | `concept.passerillage` | actief | Concentratie door waterverlies | `EXP-023` |
 | `concept.appassimento` | actief | Italiaanse uitvoering en terminologie | `EXP-023` |
 | `concept.vin-de-paille` | actief | Meerdere strowijntradities | `EXP-023` |
-| `concept.passito` | lege draft | Gerichte terminologische kandidaat behouden; geen extra droogmechanismeowner | `EXP-023` |
-| `concept.spatlese` | lege draft | Gerichte juridische/etiketkandidaat behouden; officiële scope onderzoeken | `EXP-023` |
-| `concept.fortification` | lege draft | Behouden als gerichte hoofdtechniek; nog bronnen en volledige uitleg nodig | `EXP-023` |
+| `concept.passito` | actief | Gerichte wijntermowner; appassimento behoudt het droogmechanisme, lokale Pantelleria-scope expliciet | `EXP-023` voltooid |
+| `concept.spatlese` | actief | Duitse juridische/etiketowner; mostgewicht en uiteindelijke zoetheid onderscheiden | `EXP-023` voltooid |
+| `concept.fortification` | actief | Gerichte alcoholtoevoegingsowner; timingtabel en afzonderlijke rijpingskeuzes | `EXP-023` voltooid |
 
 `concept.botrytis` hoort inhoudelijk ook bij deze familie, maar blijft hierboven
 één keer als bestaande entity geïnventariseerd.
@@ -363,7 +370,9 @@ later hun eigen scopebrief.
 | `concept.elevage` (bestaand) | Samenhang van MLF, lies, vat, tijd, zuurstof en assemblage; detail bij bestaande concepts | `EXP-020` voltooid | Bestaande entity actief als systeemhub |
 | `concept.bottling` (bestaand) | Stabiliteit, filtratie, opgeloste gassen, verpakking en sluiting; fining/SO₂ bij eigen owners | `EXP-021` voltooid | Bestaande entity actief als systeemhub |
 | `concept.cellar-hygiene-wine-faults` (nieuw) | Preventie, foutfamilies en diagnostische grenzen; oxidatiechemie bij `oxidation` | `EXP-022` voltooid | Tweetalige systeemhub actief; geen extra satellites nodig voor de huidige scope |
-| `concept.sweet-sparkling-fortified-wines` (nieuw) | Vergelijking restsuiker, mousse en versterking; specialistische methoden bij eigen concepts | `EXP-023` | Eén vergelijkende systeemhub met drie families |
+| `concept.sweet-wines` (actief) | Samenhang druifconcentratie, gisting, restsuiker, labels en stabiliteit | `EXP-029` voltooid | Zelfstandige systeemhub |
+| `concept.sparkling-wines` (actief) | Bruisroutes, liescontact, sediment en zoetheid | `EXP-030` voltooid | Zelfstandige systeemhub |
+| `concept.fortified-wines` (actief) | Samenhang alcoholtoevoeging, zoetheid en rijping; flor/solera | `EXP-031` voltooid | Zelfstandige systeemhub |
 | Wine composition | Stoffamilies, herkomst en interactie | `EXP-024` | Hub |
 | Sensory perception and development | Waarneming, balans en tijd | `EXP-025` | Hub |
 
@@ -380,9 +389,13 @@ legt de bewijsplekken en toewijzing van overlap, bron-/beeldhiaten en lessons
 vast. EXP-023 beoordeelt de vijf EN-only entitytargets bij `disgorgement`,
 `late-harvest`, `second-fermentation` en `vin-de-paille`; EXP-026 controleert de
 uitkomst. Carbonic maceration is na bronreview en authoring gepubliceerd in EXP-019.
-Fortification blijft een gerichte draft voor EXP-023; passito en Spätlese blijven terminologische/juridische
-kandidaten voor expliciete review in EXP-023. Geen draft wordt op basis van deze
-planning actief en geen bestaande ID of route wordt verwijderd.
+Bij de EXP-016-audit waren fortification, passito en Spätlese nog drafts of
+kandidaten. EXP-023 heeft ze na bronreview gepubliceerd; ID's en routes zijn
+behouden. DEC-EXP-006 voegt drie zelfstandige familieowners toe (EXP-029–031).
+DEC-EXP-007 verwijdert op 2026-10-09 de gecombineerde pagina; links gaan direct
+naar de relevante familieowner, zonder extra bovenliggende vergelijkingspagina.
+Individuele wijnnamen volgen gefaseerd in EXP-032, met hergebruik van bestaande
+identities waar de scope overeenkomt.
 
 ## 9. Uitvoeringsvolgorde na deze audit
 
@@ -427,6 +440,12 @@ planning actief en geen bestaande ID of route wordt verwijderd.
     Preventie, waarneming en gericht onderzoek zijn verbonden; bestaande
     mechanisme-eigenaren en de les verwijzen naar de nieuwe hub.
 
-De volgende inhoudelijke taak is `EXP-023`: zoete, mousserende en versterkte wijn. Taalpresentatie
+11. `EXP-023` heeft de vergelijking en drie bestaande draftowners gepubliceerd.
+    `EXP-029–031` hebben daarna op verzoek drie zelfstandige familiepagina's
+    toegevoegd, met eigen PNG's en NL/EN. De gecombineerde pagina en haar beeld
+    zijn op 2026-10-09 verwijderd (DEC-EXP-007); de families behouden de uitleg.
+    Individuele wijnpagina's staan in EXP-032.
+
+De volgende inhoudelijke taak is `EXP-024`: wijnsamenstelling als systeem. Taalpresentatie
 (`MNT-046`), pipeline/model (`MNT-048`) en CSS-onderhoud (`MNT-049`) zijn afgerond.
 De [productplanning](product-roadmap.md) bewaakt de afwisseling met platformwerk.

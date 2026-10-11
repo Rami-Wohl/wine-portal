@@ -1,0 +1,306 @@
+schema_version: 2
+package_id: concept.sparkling-wines
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat verbindt mousserende wijnen en welke voorkennis is nodig?
+    layers:
+      foundation:
+        - Wat verbindt mousserende wijnen en welke voorkennis is nodig?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat verbindt mousserende wijnen en welke voorkennis is nodig?
+        source_refs:
+          - source.oiv-sparkling-production
+          - source.oiv-carbonated-wines
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Hoe verhouden basiswijn, suiker, gist, gas, lies en verpakking zich?
+    layers:
+      foundation:
+        - Hoe verhouden basiswijn, suiker, gist, gas, lies en verpakking zich?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verhouden basiswijn, suiker, gist, gas, lies en verpakking zich?
+        source_refs:
+          - source.champagne-bottling-second-fermentation
+          - source.champagne-dosage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Hoe verschillen traditionele, tank-, voortgezette en carbonatieroutes?
+    layers:
+      foundation:
+        - Hoe verschillen traditionele, tank-, voortgezette en carbonatieroutes?
+      intermediate:
+        - Voortgezette gisting en transfer verschillen van tweede gisting en
+          verkoop in dezelfde fles.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschillen traditionele, tank-, voortgezette en
+            carbonatieroutes?
+        source_refs:
+          - source.oiv-sparkling-production
+          - source.oiv-carbonated-wines
+          - source.limoux-ancestral-method
+          - source.champagne-bottling-second-fermentation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Wat veranderen liescontact, grondstof en timing?
+    layers:
+      foundation:
+        - Wat veranderen liescontact, grondstof en timing?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat veranderen liescontact, grondstof en timing?
+        source_refs:
+          - source.awri-lees-contact-2020
+          - source.champagne-bottling-second-fermentation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Welke keuzes bepalen gasroute, sedimentverwijdering en zoetheid?
+    layers:
+      foundation:
+        - Welke keuzes bepalen gasroute, sedimentverwijdering en zoetheid?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke keuzes bepalen gasroute, sedimentverwijdering en zoetheid?
+        source_refs:
+          - source.champagne-dosage
+          - source.oiv-sparkling-production
+          - source.awri-microbiological-stability
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Wat laten Champagne, Limoux en Zuid-Afrika zien?
+    layers:
+      foundation:
+        - Wat laten Champagne, Limoux en Zuid-Afrika zien?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat laten Champagne, Limoux en Zuid-Afrika zien?
+        source_refs:
+          - source.champagne-bottling-second-fermentation
+          - source.limoux-ancestral-method
+          - source.wosa-wine-styles
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Hoe onderscheid je proces, beschermde naam en smaakterm?
+    layers:
+      foundation:
+        - Hoe onderscheid je proces, beschermde naam en smaakterm?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe onderscheid je proces, beschermde naam en smaakterm?
+        source_refs:
+          - source.champagne-dosage
+          - source.oiv-carbonated-wines
+          - source.eu-wine-sugar-labelling-2025
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe lees je methode, dosage en rijping op een wijnfiche?
+    layers:
+      foundation:
+        - Hoe lees je methode, dosage en rijping op een wijnfiche?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe lees je methode, dosage en rijping op een wijnfiche?
+        source_refs:
+          - source.champagne-dosage
+          - source.oiv-sparkling-production
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.traditional-method
+    names:
+      nl: Traditionele methode
+      en: Traditional method
+    slugs:
+      nl: traditionele-methode
+      en: traditional-method
+    disposition: link
+  - id: concept.second-fermentation
+    names:
+      nl: Tweede vergisting
+      en: Second fermentation
+    slugs:
+      nl: tweede-vergisting
+      en: second-fermentation
+    disposition: link
+  - id: concept.liqueur-de-tirage
+    names:
+      nl: Liqueur de tirage
+      en: Liqueur de tirage
+    slugs:
+      nl: liqueur-de-tirage
+      en: liqueur-de-tirage
+    disposition: link
+  - id: concept.remuage
+    names:
+      nl: Remuage
+      en: Riddling
+    slugs:
+      nl: remuage
+      en: riddling
+    disposition: link
+  - id: concept.disgorgement
+    names:
+      nl: Dégorgement
+      en: Disgorgement
+    slugs:
+      nl: degorgement
+      en: disgorgement
+    disposition: link
+  - id: concept.dosage
+    names:
+      nl: Dosage
+      en: Dosage
+    slugs:
+      nl: dosage
+      en: dosage
+    disposition: link
+  - id: concept.lees-ageing
+    names:
+      nl: Rijping op de lies
+      en: Lees ageing
+    slugs:
+      nl: rijping-op-de-lies
+      en: lees-ageing
+    disposition: link
+  - id: concept.autolysis
+    names:
+      nl: Autolyse
+      en: Autolysis
+    slugs:
+      nl: autolyse
+      en: autolysis
+    disposition: link
+  - id: concept.bottling
+    names:
+      nl: Botteling
+      en: Bottling
+    slugs:
+      nl: botteling
+      en: bottling
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

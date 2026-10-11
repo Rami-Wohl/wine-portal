@@ -1,0 +1,40 @@
+id: concept.sweet-wines
+type: concept
+canonical_name: Sweet wines
+names:
+  nl: Zoete wijnen
+  en: Sweet wines
+slugs:
+  nl: zoete-wijnen
+  en: sweet-wines
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+assertions: []
+status: active
+relations:
+  - type: related_to
+    target: concept.sparkling-wines
+  - type: related_to
+    target: concept.fortified-wines
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.late-harvest
+  - type: related_to
+    target: concept.passerillage
+source_refs:
+  - source.dwi-wine-taste-categories
+  - source.oiv-fermentation-interruption
+  - source.sanmartin-postharvest-water-loss-2021
+  - source.awri-microbiological-stability
+  - source.dwi-praedikate
+  - source.blanco-ulate-noble-rot-2015
+  - source.champagne-dosage
+  - source.ivdp-port-vinification
+  - source.masaf-pantelleria-specification-2024
+  - source.wosa-wine-styles
+  - source.german-wine-law-pradikate-2026
+  - source.eu-wine-sugar-labelling-2025
+depth: foundation
+last_reviewed: 2026-10-08

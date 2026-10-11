@@ -1,0 +1,330 @@
+schema_version: 2
+package_id: concept.sweet-wines
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat maakt wijn zoet, en hoe overlapt dit met bruis en versterken?
+    layers:
+      foundation:
+        - Wat maakt wijn zoet, en hoe overlapt dit met bruis en versterken?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat maakt wijn zoet, en hoe overlapt dit met bruis en versterken?
+        source_refs:
+          - source.dwi-wine-taste-categories
+          - source.oiv-fermentation-interruption
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Hoe hangen druif, gisting, restsuiker en stabiliteit samen?
+    layers:
+      foundation:
+        - Hoe hangen druif, gisting, restsuiker en stabiliteit samen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe hangen druif, gisting, restsuiker en stabiliteit samen?
+        source_refs:
+          - source.sanmartin-postharvest-water-loss-2021
+          - source.awri-microbiological-stability
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Welke routes concentreren suiker en welke behouden of voegen suiker toe?
+    layers:
+      foundation:
+        - Welke routes concentreren suiker en welke behouden of voegen suiker
+          toe?
+      intermediate:
+        - Concentratie vóór gisting en suiker ná gisting hebben verschillende
+          meetmomenten.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke routes concentreren suiker en welke behouden of voegen suiker
+            toe?
+        source_refs:
+          - source.dwi-praedikate
+          - source.blanco-ulate-noble-rot-2015
+          - source.sanmartin-postharvest-water-loss-2021
+          - source.oiv-fermentation-interruption
+          - source.champagne-dosage
+          - source.ivdp-port-vinification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de
+        uitkomst?
+    layers:
+      foundation:
+        - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de
+          uitkomst?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de
+            uitkomst?
+        source_refs:
+          - source.sanmartin-postharvest-water-loss-2021
+          - source.blanco-ulate-noble-rot-2015
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Welke afwegingen horen bij concentreren, onderbreken en bottelen?
+    layers:
+      foundation:
+        - Welke afwegingen horen bij concentreren, onderbreken en bottelen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke afwegingen horen bij concentreren, onderbreken en bottelen?
+        source_refs:
+          - source.awri-microbiological-stability
+          - source.oiv-fermentation-interruption
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Wat tonen Duitsland, Italië, Frankrijk, Portugal en Zuid-Afrika?
+    layers:
+      foundation:
+        - Wat tonen Duitsland, Italië, Frankrijk, Portugal en Zuid-Afrika?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat tonen Duitsland, Italië, Frankrijk, Portugal en Zuid-Afrika?
+        source_refs:
+          - source.dwi-praedikate
+          - source.masaf-pantelleria-specification-2024
+          - source.ivdp-port-vinification
+          - source.wosa-wine-styles
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Wat bewijzen oogstterm, suikeranalyse en etiket elk afzonderlijk?
+    layers:
+      foundation:
+        - Wat bewijzen oogstterm, suikeranalyse en etiket elk afzonderlijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat bewijzen oogstterm, suikeranalyse en etiket elk afzonderlijk?
+        source_refs:
+          - source.dwi-wine-taste-categories
+          - source.german-wine-law-pradikate-2026
+          - source.champagne-dosage
+          - source.eu-wine-sugar-labelling-2025
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Welke gegevens helpen een concrete zoete wijn begrijpen?
+    layers:
+      foundation:
+        - Welke gegevens helpen een concrete zoete wijn begrijpen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke gegevens helpen een concrete zoete wijn begrijpen?
+        source_refs:
+          - source.dwi-wine-taste-categories
+          - source.dwi-praedikate
+          - source.champagne-dosage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.sparkling-wines
+    names:
+      nl: Mousserende wijnen
+      en: Sparkling wines
+    slugs:
+      nl: mousserende-wijnen
+      en: sparkling-wines
+    disposition: link
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
+    disposition: link
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.late-harvest
+    names:
+      nl: Late oogst
+      en: Late harvest
+    slugs:
+      nl: late-oogst
+      en: late-harvest
+    disposition: link
+  - id: concept.passerillage
+    names:
+      nl: Passerillage
+      en: Passerillage
+    slugs:
+      nl: passerillage
+      en: passerillage
+    disposition: link
+  - id: concept.appassimento
+    names:
+      nl: Appassimento
+      en: Appassimento
+    slugs:
+      nl: appassimento
+      en: appassimento
+    disposition: link
+  - id: concept.botrytis
+    names:
+      nl: Botrytis en edele rotting
+      en: Botrytis and noble rot
+    slugs:
+      nl: botrytis-edele-rotting
+      en: botrytis-noble-rot
+    disposition: link
+  - id: concept.fortification
+    names:
+      nl: Versterking
+      en: Fortification
+    slugs:
+      nl: fortification
+      en: fortification
+    disposition: link
+  - id: concept.dosage
+    names:
+      nl: Dosage
+      en: Dosage
+    slugs:
+      nl: dosage
+      en: dosage
+    disposition: link
+  - id: concept.bottling
+    names:
+      nl: Botteling
+      en: Bottling
+    slugs:
+      nl: botteling
+      en: bottling
+    disposition: link
+  - id: concept.spatlese
+    names:
+      nl: Spätlese
+      en: Spätlese
+    slugs:
+      nl: spatlese
+      en: spatlese
+    disposition: link
+  - id: concept.passito
+    names:
+      nl: Passito
+      en: Passito
+    slugs:
+      nl: passito
+      en: passito
+    disposition: link
+  - id: concept.vin-de-paille
+    names:
+      nl: Vin de paille
+      en: Vin de paille
+    slugs:
+      nl: vin-de-paille
+      en: vin-de-paille
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

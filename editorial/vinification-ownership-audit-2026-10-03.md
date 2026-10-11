@@ -61,7 +61,7 @@ deze audit maakt geen lege publieke pagina's.
 | EXP-020 | **Uitbreiden:** `concept.elevage` | Deze pagina is de canonical eigenaar van de samenhang tussen vat, tijd, zuurstofbeheer, overhevelen, bijvullen, lies, MLF en assemblage tijdens opvoeding. De bestaande gerichte concepts behouden hun mechanismen. Geen tweede `post-fermentation`- of `maturation`-hub. |
 | EXP-021 | **Uitbreiden:** `concept.bottling` | Deze pagina is de canonical eigenaar van de beslisroute voor bottelvoorbereiding, stabiliteit, filtratie, opgeloste gassen, verpakking en sluiting. Eiwit-, tartraat- en microbiële stabiliteit krijgen herkenbare secties. Fining blijft bij `clarification-and-fining`, SO₂ bij `sulfur-dioxide`, latere flesontwikkeling bij EXP-025. Geen aparte afwerkingshub. |
 | EXP-022 | **Nieuw:** `concept.cellar-hygiene-wine-faults` | Deze pagina is de canonical eigenaar van preventie, hygiëne, monitoring en het onderscheiden van foutfamilies, stijl en diagnostische onzekerheid. Oxidatiechemie blijft bij `oxidation`; SO₂-werking bij `sulfur-dioxide`; gistkinetiek bij `fermentation`. |
-| EXP-023 | **Nieuw:** `concept.sweet-sparkling-fortified-wines` | Deze pagina is de canonical eigenaar van de vergelijking van routes naar restsuiker, mousse en versterking, met de samenhang tussen grondstof, vergisting en verdere rijping. Eén vergelijkende hub met drie herkenbare families volstaat; de bestaande methodeconcepts dragen detail. |
+| EXP-023 | **Oorspronkelijk voorstel:** één vergelijkende hub | De inventaris van 3 oktober stelde één vergelijking van restsuiker, mousse en versterking voor. Dit voorstel is opgevolgd door drie zelfstandige familieowners (EXP-029–031); de gecombineerde pagina is op gebruikersverzoek verwijderd op 2026-10-09. Bestaande methodeconcepts dragen detail. |
 
 Alle zeven krijgen bij authoring `concept-system-overview` en de acht vereiste
 coveragevragen. Een bestaande pagina wordt pas als herziene hub aangemerkt
@@ -297,3 +297,32 @@ als gecontroleerde kennis gepubliceerd. Er is geen technische blocker gevonden.
   gewijzigd; daarom zijn geen nieuwe tests toegevoegd en geen E2E-tests gedraaid.
   Er is geen gewijzigd browsergedrag om in deze ronde te testen.
 - Geen commit of deployment uitgevoerd.
+
+## Addendum — EXP-023, 2026-10-08
+
+De oorspronkelijke inventaris hierboven blijft de momentopname van 3 oktober.
+EXP-023 heeft de vergelijkende hub en de drie behouden drafts gepubliceerd:
+fortification als procesowner, passito als wijntermowner en Spätlese met Duitse
+juridische scope. Alle vijf EN-only targets uit §4 hebben nu hun NL-tegenhanger.
+Tank/carbonatie en flor/solera blijven hub-owned. De bron-, beeld- en
+publicatiecontrole staat in [de EXP-023 brief](briefs/exp-023-method-family-review.md).
+EXP-026 controleert de uiteindelijke samenhang van de volledige graaf.
+
+## Addendum — familiepagina's, 2026-10-08
+
+DEC-EXP-006 vult de oorspronkelijke zeven-hubindeling aan op gebruikersverzoek.
+Zoete, mousserende en versterkte wijn hebben elk een zelfstandige systeemowner
+(`concept.sweet-wines`, `concept.sparkling-wines`, `concept.fortified-wines`;
+EXP-029–031). De EXP-023-vergelijking blijft bestaan. Mechanismeowners blijven
+behouden; de uitgebreide flor/solera-uitleg hoort nu bij versterkte wijnen.
+Individuele wijn- en stijlpagina's volgen in EXP-032, na identiteit-/overlapreview
+en met behoud van bestaande appellation-, regio- en conceptrecords.
+
+## Addendum — directe familieroutes, 2026-10-09
+
+DEC-EXP-007 verwijdert op gebruikersverzoek de gecombineerde overzichtspagina
+en de ongebruikte illustratie. De drie zelfstandige familieowners bevatten alle
+relevante uitleg en behouden hun bronnen. Bestaande links en dependencyplannen
+wijzen rechtstreeks naar zoete, mousserende of versterkte wijnen. De eerdere
+addenda blijven gedateerde momentopnames; de gecombineerde pagina is geen
+actuele owner of publicatiebestemming meer.

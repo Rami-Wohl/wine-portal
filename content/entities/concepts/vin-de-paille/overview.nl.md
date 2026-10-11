@@ -9,7 +9,7 @@ De naam heeft twee schalen. “Strowijn” is een internationale wijnfamilie, te
 
 Stro bood ooit een droge, luchtige ondergrond waarop trossen na de oogst konden verschrompelen. De naam bleef bestaan toen rekken, matten, kratten en hangende trossen dezelfde taak gingen uitvoeren. Het wezenlijke punt is [[concept.passerillage|indroging buiten de wijnstok]], niet het materiaal onder de druif.
 
-Vergelijkbare wijnen bestaan onder namen als straw wine, Strohwein, slámové víno, *liastos* en [[concept.passito|passito]]. Zij delen een procesfamilie, maar niet automatisch dezelfde druiven, minimale droogduur, zoetheid, rijping of wettelijke bescherming.
+Vergelijkbare wijnen bestaan onder namen als straw wine, Strohwein, slámové víno, *liastos* en [[concept.passito|passito]]. Zij delen een procesfamilie, maar niet automatisch dezelfde druiven, minimale droogduur, zoetheid, [[concept.elevage|rijping]] of wettelijke bescherming.
 :::
 
 :::section{#drogen-buiten-de-stok depth="foundation" source_refs="source.oiv-passerillage-oeno-2-93 source.sanmartin-postharvest-water-loss-2021"}

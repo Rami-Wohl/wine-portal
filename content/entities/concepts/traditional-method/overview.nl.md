@@ -20,6 +20,8 @@ Tijdens de flesrijping blijft de wijn in contact met de afgestorven gistcellen, 
 :::section{#afbakening depth="foundation" source_refs="source.champagne-bottling-second-fermentation source.inao-cremant-bordeaux-specification-2026"}
 ## Afbakening — methode is geen herkomstbenaming
 
+De familiepagina [[concept.sparkling-wines|mousserende wijnen]] vergelijkt de flesroute met tankgisting, voortgezette gisting en carbonatie.
+
 ‘Traditionele methode’ zegt **hoe** de bubbels ontstaan, niet **waar** de wijn vandaan komt of hoe goed hij is. Bij de tankmethode vindt de tweede vergisting juist in een afgesloten tank plaats. Voor Champagne en afzonderlijke crémants gelden bovendien eigen herkomst- en productievoorschriften; die zijn niet automatisch regels voor alle traditioneel gemaakte mousserende wijn. [@source.champagne-bottling-second-fermentation] [@source.inao-cremant-bordeaux-specification-2026]
 :::
 

@@ -1,0 +1,29 @@
+id: media.concept.sparkling-wines.bubble-routes
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/sparkling-wines/bubble-routes.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 2afd0bcae43ed68fcd305f202ea5a18ac1b4e8089606e282d2e8f3432c48a472
+alt:
+  nl: "Drie genummerde scènes: een gesloten kroonkurkfles, een gesloten druktank
+    en een gascilinder die met een gesloten wijnvat is verbonden; naast iedere
+    scène staat een glas met bruis."
+  en: "Three numbered scenes: a closed crown-capped bottle, a closed pressure tank
+    and a gas cylinder connected to a closed wine vessel; each scene has a glass
+    with bubbles."
+caption:
+  nl: Flesgisting, tankgisting en toegevoegd CO₂ vergelijken de oorsprong en
+    opvang van het gas.
+  en: Bottle fermentation, tank fermentation and added CO₂ compare the origin and
+    retention of gas.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-08
+changes: Generated educational comparison; full prompt and visual review in
+  editorial/briefs/concept.sparkling-wines.md.

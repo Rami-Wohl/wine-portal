@@ -1,0 +1,35 @@
+id: concept.sparkling-wines
+type: concept
+canonical_name: Sparkling wines
+names:
+  nl: Mousserende wijnen
+  en: Sparkling wines
+slugs:
+  nl: mousserende-wijnen
+  en: sparkling-wines
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+assertions: []
+status: active
+relations:
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.traditional-method
+  - type: related_to
+    target: concept.second-fermentation
+  - type: related_to
+    target: concept.liqueur-de-tirage
+source_refs:
+  - source.oiv-sparkling-production
+  - source.oiv-carbonated-wines
+  - source.champagne-bottling-second-fermentation
+  - source.champagne-dosage
+  - source.limoux-ancestral-method
+  - source.awri-lees-contact-2020
+  - source.awri-microbiological-stability
+  - source.wosa-wine-styles
+  - source.eu-wine-sugar-labelling-2025
+depth: foundation
+last_reviewed: 2026-10-08

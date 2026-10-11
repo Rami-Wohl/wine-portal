@@ -1,10 +1,30 @@
 id: concept.fortification
 type: concept
-status: draft
+status: active
 canonical_name: Fortification
-names: { nl: Versterking, en: Fortification }
-slugs: { nl: fortification, en: fortification }
-locales: { nl: overview.nl.md, en: overview.en.md }
-relations: []
+names:
+  nl: Versterking
+  en: Fortification
+slugs:
+  nl: fortification
+  en: fortification
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.passito
 assertions: []
-source_refs: []
+source_refs:
+  - source.oiv-fortification
+  - source.oiv-liqueur-wine
+  - source.ivdp-port-vinification
+  - source.sherry-fortification
+  - source.sherry-ageing
+  - source.champagne-dosage
+depth: foundation
+last_reviewed: 2026-10-08

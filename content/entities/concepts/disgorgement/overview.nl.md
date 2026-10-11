@@ -20,7 +20,7 @@ Er bestaat ook *dégorgement à la volée*, waarbij de hals niet eerst wordt bev
 :::section{#betekenis depth="foundation" source_refs="source.champagne-disgorgement source.champagne-dosage"}
 ## Betekenis — een nieuw moment in het leven van de wijn
 
-Na dégorgement heeft de wijn geen lang contact met dat gistdepot meer. Een datum van dégorgement vertelt daarom iets anders dan het oogstjaar: hij markeert het einde van de rijping op die lies in de fles. De uiteindelijke smaak hangt ook af van de basiswijn, de duur van rijping, de eventuele dosage en de bewaring erna. [@source.champagne-disgorgement] [@source.champagne-dosage]
+Na dégorgement heeft de wijn geen lang contact met dat gistdepot meer. Een datum van dégorgement vertelt daarom iets anders dan het [[concept.vintage|oogstjaar]]: hij markeert het einde van de [[concept.lees-ageing|rijping op die lies]] in de fles. De uiteindelijke smaak hangt ook af van de basiswijn, de duur van rijping, de eventuele dosage en de bewaring erna. [@source.champagne-disgorgement] [@source.champagne-dosage]
 :::
 
 :::detail{#zuurstof parent="betekenis" depth="advanced" source_refs="source.champagne-disgorgement source.awri-wine-faults"}

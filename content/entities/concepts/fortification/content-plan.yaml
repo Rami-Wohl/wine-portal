@@ -1,0 +1,218 @@
+schema_version: 2
+package_id: concept.fortification
+archetype: concept-focused-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat onderscheidt toevoegen van vergisten?
+    layers:
+      foundation:
+        - Wat onderscheidt toevoegen van vergisten?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat onderscheidt toevoegen van vergisten?
+        source_refs:
+          - source.oiv-fortification
+          - source.oiv-liqueur-wine
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanism-and-function
+    disposition: on-page
+    block_ids:
+      - werking
+    target_ids: []
+    completeness_questions:
+      - Wat verandert vóór, tijdens en na gisting?
+    layers:
+      foundation:
+        - Wat verandert vóór, tijdens en na gisting?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat verandert vóór, tijdens en na gisting?
+        source_refs:
+          - source.oiv-liqueur-wine
+          - source.ivdp-port-vinification
+          - source.sherry-fortification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Wat verklaren suiker en rijpingsomgeving afzonderlijk?
+      - Biologische en oxidatieve rijping
+    layers:
+      foundation:
+        - Wat verklaren suiker en rijpingsomgeving afzonderlijk?
+      intermediate:
+        - Biologische en oxidatieve rijping
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat verklaren suiker en rijpingsomgeving afzonderlijk?
+        source_refs:
+          - source.ivdp-port-vinification
+          - source.sherry-ageing
+          - source.sherry-fortification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: application-and-decisions
+    disposition: on-page
+    block_ids:
+      - toepassing-en-keuzes
+    target_ids: []
+    completeness_questions:
+      - Hoe verschilt het doel bij Port en droge Sherry?
+    layers:
+      foundation:
+        - Hoe verschilt het doel bij Port en droge Sherry?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verschilt het doel bij Port en droge Sherry?
+        source_refs:
+          - source.ivdp-port-vinification
+          - source.sherry-fortification
+          - source.champagne-dosage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+    target_ids: []
+    completeness_questions:
+      - Wat is de grens tussen OIV-beschrijving en lokale toestemming?
+    layers:
+      foundation:
+        - Wat is de grens tussen OIV-beschrijving en lokale toestemming?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat is de grens tussen OIV-beschrijving en lokale toestemming?
+        source_refs:
+          - source.oiv-liqueur-wine
+      specific_claims:
+        - claim: OIV II.3.5.1 onderscheidt versterken voor bijzondere wijncategorieën
+            (admitted) van alleen alcohol verhogen (not admitted); geen lokale
+            toestemming afgeleid.
+          status: supported
+          source_refs:
+            - source.oiv-fortification
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe lees je alcohol, suiker en rijping afzonderlijk?
+    layers:
+      foundation:
+        - Hoe lees je alcohol, suiker en rijping afzonderlijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe lees je alcohol, suiker en rijping afzonderlijk?
+        source_refs:
+          - source.ivdp-port-vinification
+          - source.sherry-fortification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
+    disposition: link
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.dosage
+    names:
+      nl: Dosage
+      en: Dosage
+    slugs:
+      nl: dosage
+      en: dosage
+    disposition: link
+  - id: concept.passito
+    names:
+      nl: Passito
+      en: Passito
+    slugs:
+      nl: passito
+      en: passito
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

@@ -85,6 +85,8 @@ De woorden overlappen, maar zijn niet volledig uitwisselbaar. Een Italiaanse app
 :::section{#in-het-glas depth="foundation" source_refs="source.sanmartin-postharvest-water-loss-2021"}
 ## In het glas — rijkdom zonder vaste aromalijst
 
+De pagina over [[concept.sweet-wines|zoete wijnen]] verbindt concentratie vóór de gisting met suikerbehoud in de afgewerkte wijn.
+
 Appassimentowijnen kunnen rijp of gedroogd fruit, specerijen, cacao, bloemen, noten of gekonfijte schil laten zien. Ze voelen vaak voller aan en kunnen meer alcohol, restsuiker of tannine dragen dan een wijn van vergelijkbare verse druiven.
 
 Dat zijn mogelijkheden, geen diagnose. Druivenras, herkomst, droogsnelheid, schimmel, oxidatie, vergisting, hout en flesleeftijd kleuren het resultaat. Een rozijntoon bewijst geen appassimento, en een zorgvuldig gemaakte appassimentowijn hoeft niet naar rozijnen te smaken.

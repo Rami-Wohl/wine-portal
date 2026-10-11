@@ -20,6 +20,8 @@ During bottle ageing, the wine remains in contact with spent yeast cells, or *le
 :::section{#afbakening depth="foundation" source_refs="source.champagne-bottling-second-fermentation source.inao-cremant-bordeaux-specification-2026"}
 ## Scope — a method is not an origin
 
+The [[concept.sparkling-wines|sparkling wine family page]] compares the bottle route with tank fermentation, ongoing fermentation and carbonation.
+
 ‘Traditional method’ tells you **how** the bubbles form, not **where** the wine comes from or how good it is. With the tank method, the second fermentation takes place in a sealed tank instead. Champagne and individual crémants also have their own origin and production rules; those rules do not automatically apply to every traditionally made sparkling wine. [@source.champagne-bottling-second-fermentation] [@source.inao-cremant-bordeaux-specification-2026]
 :::
 
