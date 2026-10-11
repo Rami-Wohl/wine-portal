@@ -31,7 +31,7 @@
     "content:link-audit": "node --import tsx scripts/content/cli.ts link-audit",
     "content:relation-audit": "node --import tsx scripts/content/cli.ts relation-audit",
     "content:language-audit": "node --import tsx scripts/content/cli.ts language-audit",
-    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run content:relation-audit"
+    "check": "npm run format:check && npm run lint && npm run content:build -- --audit-relations && next typegen && tsc --noEmit && vitest run"
   },
   "dependencies": {
     "next": "16.3.8",

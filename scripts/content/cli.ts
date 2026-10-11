@@ -1,5 +1,5 @@
 import path from "node:path";
-import type { EntityPresentation } from "../../src/content/model";
+import type { Entity, EntityPresentation } from "../../src/content/model";
 import { buildContent, ContentValidationError } from "./pipeline";
 import { generateEntityPackage } from "./generator";
 import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
@@ -18,6 +18,22 @@ import {
   type LinkAuditStatus,
 } from "./link-audit";
 
+function reportRelationAudit(entities: Entity[]): void {
+  const findings = auditActiveRelationCoverage(entities);
+  if (findings.length === 0) {
+    const activeCount = entities.filter(({ status }) => status === "active").length;
+    console.log(
+      `Relation audit passed: ${activeCount} active entities meet the structural coverage minimums.`,
+    );
+    return;
+  }
+  console.log(`Relation audit found ${findings.length} issue(s):`);
+  for (const finding of findings) {
+    console.log(`- ${finding.entityId}: ${finding.message}`);
+  }
+  process.exitCode = 1;
+}
+
 async function main(): Promise<void> {
   const [command, first, second, third, fourth, fifth] = process.argv.slice(2);
   if (command === "check") {
@@ -28,11 +44,15 @@ async function main(): Promise<void> {
     return;
   }
   if (command === "build") {
+    if (process.argv.slice(3).some((argument) => argument !== "--audit-relations")) {
+      throw new Error("Usage: npm run content:build -- [--audit-relations]");
+    }
     const result = await buildContent();
     await writeEntityStatus(result.knowledgeBase.entities);
     console.log(
       `Generated content graph: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.learning_paths.length} learning paths, ${result.knowledgeBase.media.length} media assets, ${result.knowledgeBase.relations.forward.length} forward relations.`,
     );
+    if (first === "--audit-relations") reportRelationAudit(result.knowledgeBase.entities);
     return;
   }
   if (command === "status") {
@@ -131,21 +151,7 @@ async function main(): Promise<void> {
   }
   if (command === "relation-audit") {
     const result = await buildContent({ write: false });
-    const activeEntities = result.knowledgeBase.entities.filter(
-      ({ status }) => status === "active",
-    );
-    const findings = auditActiveRelationCoverage(result.knowledgeBase.entities);
-    if (findings.length === 0) {
-      console.log(
-        `Relation audit passed: ${activeEntities.length} active entities meet the structural coverage minimums.`,
-      );
-    } else {
-      console.log(`Relation audit found ${findings.length} issue(s):`);
-      for (const finding of findings) {
-        console.log(`- ${finding.entityId}: ${finding.message}`);
-      }
-      process.exitCode = 1;
-    }
+    reportRelationAudit(result.knowledgeBase.entities);
     return;
   }
   if (command === "language-audit") {

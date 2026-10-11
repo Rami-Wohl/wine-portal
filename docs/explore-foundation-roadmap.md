@@ -809,6 +809,14 @@ assigned lesson links and five NL/EN link differences after EXP-017–023.
 Include the independent family owners (EXP-029–031) and individual wine pages
 (EXP-032), keeping family, process and protected-name scope distinct.
 
+**Health-review input (2026-10-11):** check stable, localized destinations for
+climate classifications and aroma origins, oak/vessel terminology and the
+still-wine family. Existing hub-owned explanations can remain the owner;
+create satellites only when independent retrieval/reuse warrants them. Record
+explicit ownership decisions rather than adding pages for symmetry. Broader
+law, genetics, establishment and harvest dependency planning belongs to
+`REG-003` in [the regional roadmap](region-expansion-roadmap.md).
+
 **Done when:** every foundational concept has an intentional place and the user
 can move from regions and lessons into the foundation without dead ends.
 
@@ -818,7 +826,10 @@ can move from regions and lessons into the foundation without dead ends.
 
 **Work:** test examples and claims against a non-Bordeaux set spanning cool and
 warm, humid and arid, Old and New World contexts. Loire is the provisional first
-region; add contrasting cases where it cannot expose a bias.
+region; pair it with a warm, dry case (Mendoza is provisional, using its
+existing draft identity if appropriate). Confirm actual scope and sources in
+DEC-EXP-005; the stress test does not require complete regional publications.
+The subsequent publication phase is tracked in REG-004/005.
 
 **Done when:** regional assumptions, legal shorthand and climate defaults have
 been removed or bounded; examples illuminate rather than dominate.
@@ -842,7 +853,7 @@ current and the foundation is ready to support new regions and Learn paths.
 | `DEC-EXP-002` | Prefer language-neutral marks in shared diagrams and put the complete localized explanation in HTML | Validate in EXP-003 | Approved and validated in the accepted pilot |
 | `DEC-EXP-003` | Approve which soil terms become entities versus hub-owned entries | End of EXP-010 | Approved 2026-09-26: only `concept.calcareous-vineyard-soils` and `concept.volcanic-vineyard-soils` become satellites; all other terms remain hub-owned entries |
 | `DEC-EXP-004` | Use existing content blocks for the soil directory before adding specialized UI | EXP-010/011 | Approved 2026-09-26: validate the directory with canonical blocks before considering new UI |
-| `DEC-EXP-005` | Confirm the regions and climates used for the global-bias stress test | Start of EXP-027 | Open; Loire provisional |
+| `DEC-EXP-005` | Confirm the regions and climates used for the global-bias stress test | Start of EXP-027 | Open; Loire plus a warm/dry contrast, provisionally Mendoza; confirm scope and sources |
 | `DEC-EXP-006` | Give sweet, sparkling and fortified wines separate family pages and stage individual wine/style pages beneath them, reusing existing owners | After EXP-023 | Approved by the user 2026-10-08; EXP-029–031 published, individual pages tracked in EXP-032 |
 | `DEC-EXP-007` | Remove the combined overview and point references directly to the independent sweet, sparkling and fortified family pages | After EXP-029–031 | Approved by the user 2026-10-09; combined content and media removed, references retargeted |
 

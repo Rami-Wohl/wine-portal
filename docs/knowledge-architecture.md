@@ -682,13 +682,7 @@ project/
 │   ├── media/
 │   └── geography/                  # roadmap zodra verified data is gekozen
 ├── public/media/                   # huidige lokale storage adapter
-├── docs/
-│   ├── content-authoring.md
-│   ├── geography-policy.md
-│   ├── knowledge-architecture.md
-│   ├── project-map.md
-│   ├── product-principles.md
-│   └── visual-language.md
+├── docs/                          # actuele documentindex: project-map.md
 ├── editorial/
 │   └── research-policy.md
 ├── scripts/content/
@@ -702,6 +696,8 @@ project/
 └── src/generated/content/
     └── knowledge-base.json         # afgeleid, deterministisch, niet canonical
 ```
+
+De volledige policy-, contract- en roadmapindex staat in [project-map.md](project-map.md); deze structuur toont alleen de architectuurgrenzen.
 
 YAML-metadata plus gelokaliseerde Markdownpackages en file-backed canonical content met build-time indexing zijn voor v1 besloten en geïmplementeerd. Een latere database of PostGIS-runtime kan nuttig worden bij schaal, querying of geografie, maar is geen open keuze die huidige authoring of canonical ownership blokkeert. Zo'n verandering vereist een expliciet, niet-destructief overgangsontwerp.
 

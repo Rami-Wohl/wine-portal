@@ -37,7 +37,7 @@ export async function buildContent(options: BuildOptions = {}): Promise<BuildRes
   if (issues.length > 0) throw new ContentValidationError(issues.sort());
 
   const knowledgeBase = buildKnowledgeGraph(records, parsed);
-  const outputs = { [GENERATED_BUNDLE_FILENAME]: `${JSON.stringify(knowledgeBase, null, 2)}\n` };
+  const outputs = { [GENERATED_BUNDLE_FILENAME]: `${JSON.stringify(knowledgeBase)}\n` };
   if (options.write !== false) {
     const outputDirectory = path.resolve(
       options.outputDirectory ?? path.join(root, "src", "generated", "content"),

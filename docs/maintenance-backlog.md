@@ -25,19 +25,20 @@ Peildatum: 2026-10-11.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 3 | `MNT-051` t/m `MNT-053` |
+| Open | 6 | `MNT-051` t/m `MNT-053`, `MNT-060` t/m `MNT-062` |
 | Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 47 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054`, `MNT-057–058` |
+| Afgerond | 48 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054`, `MNT-057–059` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is de eerste batch individuele wijnpagina's
-(`EXP-032`: Port/Sherry/Champagne); wijnsamenstelling (`EXP-024`) en waarneming,
-balans en flesontwikkeling (`EXP-025`) zijn afgerond.
+Het eerstvolgende uitvoerbare werk is de reproduceerbare schaalmeting
+(`MNT-052`), gevolgd door de eerste batch individuele wijnpagina's (`EXP-032`).
+De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
+de prioriteitswijziging; de regionale fase staat in een eigen `REG-*`-planning.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
 (`EXP-020–023`), met drie zelfstandige familiepagina's (`EXP-029–031`).
 Individuele wijnpagina's volgen gefaseerd binnen `EXP-032`.
@@ -47,6 +48,57 @@ en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 
 ## Open werk
+
+### `MNT-060` — Documentatieconsolidatie zonder contractverlies
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** engineering, content, operations
+- **Herkomst:** `QCR-2026-10-11-03`
+- **Bevinding en scope:** dubbele labels, uitvoeringshistorie en snapshots maken
+  navigatie zwaarder; actuele ticketstatus hoort bij één domeinbacklog.
+- **Klaar wanneer:** dubbele coverage-labeltabellen zijn vervangen door een
+  gedeelde verwijzing of gecontroleerde generatie uit het schema, actieve
+  Explore-dekking duidelijk van historische snapshots is gescheiden, en
+  onderhoud-/Explore-historie met behoud van IDs en links compacter vindbaar is.
+  Behoud normatieve dekkingsvragen en gedateerde reviews. Learn-historie blijft
+  conform `LRN-012` in de Learn-roadmap; geen algemene archiveerregel daaroverheen.
+- **Log 2026-10-11:** hiërarchie/taalregel, korte Engelse developer guide,
+  layoutpad en architectuurindex nu hersteld; productplanning ontdaan van het
+  lange uitvoeringschangelog. Resterende consolidatie blijft open.
+
+### `MNT-061` — Getypeerde catalogus voor interfaceberichten
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** engineering, localization, accessibility
+- **Herkomst:** `QCR-2026-10-11-03`
+- **Bevinding en scope:** 282 `locale === "nl"`-voorkomens zijn een signaal van
+  verspreide taalkeuzes, geen telling van 282 unieke vertaalberichten.
+- **Klaar wanneer:** een getypeerde NL/EN-catalogus de terugkerende UI-berichten,
+  interpolatie en toegankelijkheidslabels centraal beheert, zonder authored
+  wijncontent te dupliceren; server/clientgrenzen en bestaande teksten/routes
+  blijven gecontroleerd. Migreer langs componentgrenzen en test localepariteit.
+- **Planning:** vóór een derde taal en vóór aanzienlijke nieuwe UI-uitbreiding;
+  na de huidige Explore-integratie, zonder bestaande tweetaalspublicatie stil te leggen.
+- **Log 2026-10-11:** geregistreerd; nog geen catalogus of derde locale gebouwd.
+
+### `MNT-062` — Browsertests op contract en redactionele regressie verdelen
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** engineering, testing
+- **Herkomst:** `QCR-2026-10-11-03`
+- **Bevinding en scope:** veel contentgerichte specs kunnen bij uitbreiding
+  dezelfde renderercontracten herhalen en op koptekstwijzigingen breken.
+- **Klaar wanneer:** gedeelde archetypechecks representatieve regio-,
+  appellation-, hub- en lespagina's testen; structurele publicatieregels op de
+  passende pipelinegrens liggen; risicogerichte content-/linkregressies en
+  NL/EN, keyboard, no-JS en responsive cases behouden zijn. Leg selectie en
+  aanvullende sampling vast en voorkom dat sampling dode links verbergt.
+- **Planning:** vóór grootschalige regiobatches, na `EXP-028` als baseline.
+  Niet alle actieve hubs hebben automatisch een nieuwe figuurplicht.
+- **Log 2026-10-11:** geregistreerd; bestaande tests niet verwijderd.
 
 ### `MNT-055` — Kwetsbare ontwikkeldependencies gericht herstellen
 
@@ -141,16 +193,30 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 - **Scope:** search, builds, runtimebundles en media
 - **Categorie:** engineering, operations, media
 - **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** lokale media nemen circa 311 MiB in, de gegenereerde JSON circa
-  16 MiB; dit zijn schijfvolumes, geen gemeten browserdownloads. De zoekcode
-  normaliseert passages tijdens iedere zoekactie.
+- **Bevinding:** de review van 2026-10-11 meet vóór compactie 17,3 MB JSON
+  en een lokale zoekmediaan van circa 66 ms op 302 gepubliceerde documenten.
+  De compacte JSON is circa 10,4 MB; schijfbytes zijn geen browserdownloads of
+  processgeheugen. Zoekpassages worden nog bij iedere query genormaliseerd.
 - **Klaar wanneer:** buildduur, route-/clientbundles, beeldbytes en zoeklatentie
   met een reproduceerbare workload zijn gemeten en passende budgetten gekozen.
   Optimaliseer alleen aangetoonde knelpunten. Een eventuele CDN-stap omvat
   synchronisatie, checksums, cachebeleid en rollback; `MEDIA_BASE_URL` alleen
   uploadt niets. Bewaar bronmetadata en canonical media-ID's.
-- **Planning:** vóór de volgende grootschalige regio-uitbreiding en bij Atlas-
-  datasetkeuze; grote bronbestanden alleen rechtvaardigen geen databasemigratie.
+- **Uitwerking 2026-10-11 (`QCR-2026-10-11-03`):** meet echte 1× en geïsoleerde
+  synthetische 3×/8×-workloads. Genereer unieke identities/routes en commit geen
+  gekloonde canonical packages. Scheid buildtijd, gecomprimeerde transportbytes,
+  getraceerde deploymentfiles, koude start, warm processgeheugen en zoek-p50/p95;
+  test NL/EN, hits/misses en querylengtes. Meet clone-/mediakosten afzonderlijk.
+  Leg reproductie, omgeving, budgetten en foutmarges vast. Vergelijk daarna
+  gecachte/precomputed normalisatie met een index en zo nodig shards of afgeleide
+  SQLite/FTS. De huidige contentrepository is synchroon: lazy I/O achter een
+  onveranderd contract is geen vanzelfsprekendheid. Mediawerk omvat varianten,
+  upload/synchronisatie, integriteit, caching en rollback; een uniforme limiet
+  van 2500 pixels of verplichte CDN vóór iedere nieuwe regio is niet besloten.
+- **Planning:** eerstvolgende ontwikkeltaak; lever metingen, budgetten en een
+  gemotiveerd optimalisatiebesluit. Voer bewezen kleine verbeteringen binnen
+  dit ticket uit; splits een omvangrijke architectuurmigratie vóór uitvoering.
+  Grote bronbestanden alleen rechtvaardigen geen databasemigratie.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
 
@@ -302,6 +368,23 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-059` — Compacte bundle en één corpusbuild per check
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** engineering, testing
+- **Herkomst:** `QCR-2026-10-11-03`
+- **Bevinding:** de genegeerde runtime-JSON bevat inspringing; `check` bouwt het
+  productiecorpus tweemaal plus eenmaal voor de relation-audit.
+- **Klaar wanneer:** compact deterministisch outputformaat, één corpusbuild
+  binnen `check`, dezelfde relationele foutdetectie en werkende standalone hooks.
+- **Uitvoering 2026-10-11:** compacte serialisatie en gedeelde CLI-audit via
+  `content:build -- --audit-relations`; `check` gebruikt de afgeleide graph
+  rechtstreeks voor de audit. `npm test`, `typecheck` en de zelfstandige audit
+  behouden hun bestaande voorbereidingsgedrag. Parsed JSON is identiek;
+  volledige verificatie staat in het gekoppelde reviewrapport.
+
 
 ### `MNT-058` — Tekst in inhoudstabellen leesbaar laten afbreken
 

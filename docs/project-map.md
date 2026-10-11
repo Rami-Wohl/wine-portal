@@ -7,6 +7,29 @@ ouder curriculum dat eerst hoeft te worden omgezet.
 Dit document is de korte mentale kaart. De bindende policies bevatten de
 details en blijven leidend wanneer een taak meer precisie nodig heeft.
 
+## Documenthiërarchie en taal
+
+1. **Policies:** de zeven in `AGENTS.md` genoemde beleidsdocumenten bepalen
+   product, feiten, content, geografie en presentatie.
+2. **Domeincontracten:** `content-authoring.md`, `content-blocks.md`,
+   `explore-foundation-authoring.md`, `learning-paths.md` en
+   `localization-routing.md` werken die regels uit voor hun eigen scope. Lees
+   het relevante contract naast de policies; het vervangt ze niet.
+3. **Plannen en backlogs:** prioriteiten en actuele ticketstatus; geen nieuwe
+   feitenbron of stilzwijgende wijziging van een policy.
+4. **Reviews en briefs:** gedateerde onderbouwing en publicatiecontrole; geen
+   actuele statusadministratie. `entity-status.md` is een gegenereerde index.
+
+Bij een conflict blijven feiten en provenance behouden en wordt het conflict
+expliciet opgelost. Een hoger document maakt een specifiek domeincontract niet
+optioneel. De gebruikersopdracht blijft leidend voor de werkscope.
+
+Nieuwe technische onboarding schrijven we in het Engels; planning en
+uitvoeringsnotities mogen Nederlands blijven. Bestaande policies behouden hun
+taal totdat een gecontroleerde vertaling zinvol is. Canonical content blijft
+verplicht NL/EN. Begin voor de technische request flow bij de korte
+[English developer guide](developer-guide.md).
+
 ## De kern in één beeld
 
 ```text
@@ -51,6 +74,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
 | Stijlen | `src/styles/`, geordend via `src/app/globals.css` | Tokens, basis, UI-patronen en overrides; verantwoordelijkheden en cascade staan in `design-system-plan.md` |
 | Kwaliteitsreviews | `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
+| Regionale uitbreidingsfase | `docs/region-expansion-roadmap.md` | Beslispoorten, druivenprioriteiten en definitie van gereed vóór verdere regiogroei |
 | Overkoepelende productvolgorde | `docs/product-roadmap.md` | Prioriteiten en beslismomenten tussen platform, Explore, Learn en Atlas; ticketstatus blijft in de eigen backlog |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
 | Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus geordende `LRN-*`-tickets, beslismomenten en acceptatiecriteria voor de anonieme Learn-MVP |
@@ -156,11 +180,11 @@ bevat een werkend leerpad met zeven lessen en lokale browservoortgang.
 | `npm run content:deps -- scaffold <entity-id>` | Maakt ontbrekende dependencies als lege drafts en neemt verplichte producentenbestemmingen uit het contentplan over |
 | `npm run content:check` | Valideert authored content en schrijft niets |
 | `npm run content:link-audit` | Inventariseert ongekoppelde bekende entitynamen en scheidt nieuwe, pending en beoordeelde kandidaten via het redactionele beslisregister |
-| `npm run content:build` | Valideert en genereert de runtimebundle |
+| `npm run content:build` | Valideert en genereert de compacte runtimebundle; `-- --audit-relations` controleert dezelfde graph ook relationeel |
 | `npm run content:status` | Vernieuwt `docs/entity-status.md` vanuit alle canonical entity-YAML |
 | `npm run format` | Format code, CSS, JSON en YAML met de vastgepinde Prettier-versie |
 | `npm run format:check` | Controleert die formatting zonder bestanden te wijzigen |
-| `npm run check` | Draait formattingcheck, lint, typecheck, unit-tests en relationele audit |
+| `npm run check` | Draait formattingcheck, lint, één corpusbuild met relationele audit, typecheck en unit-tests |
 | `npm test` | Test parser, graph, routing, search en rendererlogica snel |
 | `npm run test:e2e` | Bouwt de productieapp en draait de volledige Playwright-suite in Chromium |
 
@@ -191,6 +215,8 @@ Markdownformatter worden herschreven.
   kwaliteitschecks.
 - Gebruik `product-roadmap.md` voor de samenhang en prioriteit van platform- en
   contentwerk.
+- Gebruik [region-expansion-roadmap.md](region-expansion-roadmap.md) voor de
+  beslispoorten en publicatievoorwaarden van de volgende regionale fase.
 - Gebruik `maintenance-backlog.md` om actiepunten uit reviews te volgen tot en
   met afronding of een gemotiveerd vervalbesluit.
 - Gebruik `learn-roadmap.md` voor de vaste uitvoervolgorde en open

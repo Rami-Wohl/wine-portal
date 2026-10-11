@@ -1,126 +1,120 @@
 # Overkoepelende productplanning
 
-Bijgewerkt: 2026-10-11. Deze kaart verbindt platformwerk met de bestaande
-content- en Learn-roadmaps. Ticketstatus en acceptatiecriteria blijven uitsluitend
-in de gekoppelde backlog; dit document maakt de prioriteit en timing expliciet.
-De onderbouwing staat in [de sanity review](../editorial/platform-sanity-review-2026-10-04.md).
-De [runtime-/CI-review](../editorial/runtime-ci-review-2026-10-04.md) beschrijft
-de inmiddels uitgevoerde eerste platformstap. Ook het
-[taal- en URL-contract](localization-routing.md) is vastgelegd (`MNT-045`);
-de publieke NL/EN-presentatie en taalwisselaar zijn gebouwd (`MNT-046`). De stylesheet is
-inmiddels georganiseerd langs bestaande UI-grenzen (`MNT-049`), met behoud van
-de volledige gebouwde CSS. Pipeline en model zijn opgesplitst met behoud van
-exports, validatie en byte-identieke output (`MNT-048`); de repository en
-bundelimports hebben expliciete servergrenzen. Élevage is nu een tweetalige
-systeemhub met behoud van de bestaande mechanisme-eigenaars en routes (`EXP-020`).
-Botteling verbindt nu stabiliteit en verpakking (`EXP-021`); de gerichte
-dependency-health-check heeft twee productiepatches opgeleverd (`MNT-057`).
-Kelderhygiëne en wijnfouten verbinden preventie met gericht onderzoek (`EXP-022`).
-Versterken, passito en Spätlese hebben elk hun eigen gereviewde pagina (`EXP-023`).
-Zoete, mousserende en versterkte wijnen hebben drie zelfstandige familiepagina's,
-ieder met eigen NL/EN-uitleg en PNG (`EXP-029–031`). De eerdere gecombineerde
-overzichtspagina is op verzoek verwijderd (`DEC-EXP-007`); verwijzingen gaan
-rechtstreeks naar de relevante familie. Individuele wijnen en stijlen krijgen
-een gefaseerde eigen publicatieronde (`EXP-032`).
-Wijnsamenstelling heeft nu een eigen tweetalige systeemhub met stoffamilies,
-interacties, meetgrenzen en PNG (`EXP-024`). Waarneming, balans en
-flesontwikkeling vormen nu een aansluitende tweetalige systeemhub, met drempels,
-proefcontext, minerality en een eigen PNG (`EXP-025`).
+Bijgewerkt: 2026-10-11. Deze kaart bepaalt volgorde en timing; actuele
+status en acceptatiecriteria staan uitsluitend in de gekoppelde domeinbacklogs.
+De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
+de huidige bijstelling. Eerdere uitvoeringsresultaten staan in het
+[reviewregister](quality-assurance.md#reviewregister), niet opnieuw in dit plan.
 
 ## Waar we staan
 
-De entity-first basis werkt: YAML bewaart gedeelde kennis, NL/EN-Markdown legt
-haar uit en een gevalideerde build levert de runtimebundle. Explore, zoeken,
-verdiepingen en de eerste Learn-pilot werken op dezelfde graph. Voortgang staat
-los van content en wordt anoniem in de browser opgeslagen.
+De entity-first basis werkt: gedeelde YAML, gelijkwaardige NL/EN-Markdown,
+strict gevalideerde graph, server-only repository en gedeelde presentatie.
+Explore, zoeken, verdiepingen en één Learn-pilot gebruiken deze basis.
+Browservoortgang staat los van authored content. De conceptuele keten van
+wijngaard tot waarneming is gepubliceerd; mondiale dekking vraagt nog een
+expliciete dependency- en ownershipcontrole.
 
-De publieke applicatie presenteert Nederlands en Engels. Atlas heeft nog geen
-geverifieerde dataset. Er is een Next.js-server, maar geen accountdatabase,
-remote voortgang, redactiebackend of externe publieke API. Gedeelde authoring en
-een async repositoryinterface bereiden uitbreidingen voor; zij maken deze
-features niet automatisch gereed.
+Atlas heeft geen geverifieerde dataset. Er is een Next.js-server, maar geen
+accountdatabase, remote voortgang, redactiebackend of externe publieke API.
+De contentrepository heeft synchrone lookups; de voortgangsadapter heeft een
+async interface. Dat onderscheid telt bij toekomstige lazy loading of opslag.
 
-## Aanbevolen uitvoeringsvolgorde
+## Eerstvolgende werk en beslismomenten
 
-| Moment | Werk | Reden en grens |
-| --- | --- | --- |
-| Eerstvolgende externe vrijgave, zodra toegang werkt | `MNT-056`: eerste GitHub-run, mergebescherming en deployment bevestigen | Node 24 en CI zijn lokaal gereed (`MNT-047`); de ongepatchte ontwikkelketen blijft bij `MNT-055` |
-| Eerstvolgende ontwikkeltaak | `EXP-032`: individuele wijnpagina's | Begin met identiteit en inventaris, publiceer Port/Sherry/Champagne als eerste afgebakende batch en houd de overige batches expliciet open |
-| Samen met pilotevaluatie, vroegst 2026-10-22 bij genoeg gebruik | `LRN-012` en `MNT-050`: Learn-vervolg en platformopslag besluiten | Accounts, cross-device voortgang, quizzen en personalisatie moeten een bewezen doel dienen; vervroeg het opslagbesluit bij een concrete consumer |
-| Bronverkenning vóór `EXP-027` | `MNT-051`: beperkte Atlaspilot | Geef de drie geblokkeerde kaarttickets een uitvoerbaar datatraject; wereldwijde druivenverspreiding vraagt andere gegevens dan appellationgrenzen |
-| Vóór grootschalige uitbreiding naar volgende regio's | `MNT-052`: performance- en mediabudgetten | Meet build, serverzoekwerk, browserbundles en beelden voordat storage-/searcharchitectuur verandert |
-| Afzonderlijke illustratieronde | `MNT-053`: resterende SVG-diagrammen vervangen | Sluit aan op de gewenste rasterstijl met behoud van de didactische betekenis |
+- **Volgende ontwikkeltaak: `MNT-052`.** Meet 1×/3×/8×, stel budgetten vast en
+  kies op bewijs welke search-/bundle-/mediaoptimalisatie nodig is. Compacte
+  JSON en één corpusbuild per `check` zijn nu uitgevoerd (`MNT-059`); zij
+  bewijzen geen kleinere serverchunk of lager processgeheugen.
+- **Daarna `EXP-032` en `EXP-026`.** Publiceer de eerste afgebakende individuele
+  wijnbatch en controleer vervolgens integratie, terminologie en owners.
+  De overige wijnbatches blijven zichtbaar open; geen `wine_style`-type op
+  basis van alleen behoefte aan een pagina.
+- **Vóór regionale publicatie: `REG-001–003`.** Besluit landen-/plaatshiërarchie,
+  druivenprioriteiten en mondiale dependencies. Voer de geverifieerde Atlaspilot
+  (`MNT-051`), mondiale stresstest (`EXP-027`) en integrale QA (`EXP-028`) uit.
+  De [regionale roadmap](region-expansion-roadmap.md) bevat publicatiegates en
+  de definitie van gereed. Loire en Mendoza zijn voorlopige pilotkandidaten.
+- **Tijdgebonden:** `MNT-055` hercontroleren uiterlijk 2026-10-18;
+  `LRN-012` vroegst 2026-10-22 bij voldoende werkelijk gebruik. Kies het volgende
+  leerpad vanuit die evaluatie. `MNT-050` volgt daarbij of eerder zodra een
+  concrete API-/account-/redactieconsumer ontstaat.
+- **Externe vrijgave:** `MNT-056` zodra toegang beschikbaar is. Lokale tests
+  bevestigen geen GitHub-run, branch protection of Vercel-runtime.
 
-Dit is een aanbevolen afwisseling van platform- en contentwerk, geen eis om
-alle content stil te leggen tot elk onderhoudsticket af is. De onderlinge
-inhoudelijke volgorde is `EXP-032`, `EXP-026`,
-`EXP-027`, `EXP-028`. De afzonderlijke familiepagina's (`EXP-029–031`) zijn
-al uitgevoerd na de scopeaanvulling op `EXP-023`.
+Dit is een aanbevolen afwisseling, geen algemene stop op content totdat ieder
+onderhoudsticket klaar is. Grote schema-, opslag- en curriculumwijzigingen
+vereisen hun eigen gemotiveerde besluit; planningswerk kan naast authoring lopen.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-Er staan 16 niet-afgeronde tickets geregistreerd: 11 onderhoudsacties, 4
-Explore-tickets en één Learn-evaluatie. Een geblokkeerde of geplande actie telt
-mee. Deze momentopname wordt bij wijziging van de uitvoeringsvolgorde bijgewerkt;
-de gekoppelde backlogs blijven leidend voor actuele status.
-
-De onderstaande ontwikkelvolgorde is het uitgangspunt. Tijdgebonden evaluaties
-en vrijgekomen externe controles mogen deze volgorde onderbreken.
+24 niet-afgeronde tickets: 14 onderhoudsacties, 4 Explore-tickets, 5 regionale
+planning-/publicatietickets en één Learn-evaluatie. Geplande en geblokkeerde
+acties tellen mee. Tijdgebonden of vrijgekomen externe controles mogen de
+onderstaande ontwikkelvolgorde onderbreken.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `EXP-032` | Individuele wijnpagina's: inventaris, Port/Sherry/Champagne als eerste batch, verdere batches blijven open |
-| 2 | `EXP-026` | Integratie graph, links, media en terminologie |
-| 3 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
-| 4 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
-| 5 | `EXP-027` | Mondiale toets en regiokeuze |
-| 6 | `EXP-028` | Integrale redactionele en product-QA |
-| 7 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
+| 1 | `MNT-052` | Reproduceerbare schaalmeting, budgetten en gerichte optimalisatiekeuze |
+| 2 | `EXP-032` | Individuele wijnen: inventaris, Port/Sherry/Champagne als eerste batch; vervolg blijft open |
+| 3 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren |
+| 4 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
+| 5 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
+| 6 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
+| 7 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen |
+| 8 | `MNT-051` | Geverifieerde Bordeaux-Atlaspilot afbakenen vóór EXP-027 |
+| 9 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
+| 10 | `EXP-028` | Integrale redactionele en product-QA |
+| 11 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
+| 12 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
+| 13 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
+| 14 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na de publicatiegates |
+| 15 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
 
-Tijdgebonden, in deze onderlinge volgorde:
+`REG-003` is een planningticket: de nog te schrijven content wordt vóór uitvoering
+in afzonderlijke batches/tickets opgesplitst. De huidige telling claimt dus niet
+dat alle toekomstige mondiale content al als afzonderlijk ticket bestaat.
+
+Tijdgebonden:
 
 | Moment | Ticket | Werk |
 | --- | --- | --- |
-| Vroegst 2026-10-22 bij voldoende werkelijk gebruik | `LRN-012` | Learn-pilot evalueren en vervolg kiezen |
-| Aansluitend, of eerder bij een concrete consumer | `MNT-050` | Backend/API/databasebesluit |
+| Vroegst 2026-10-22 bij voldoende werkelijk gebruik | `LRN-012` | Learn-pilot evalueren en vervolg kiezen, inclusief kandidaat-wijngaardleerpad |
+| Aansluitend, of eerder bij concrete consumer | `MNT-050` | Backend/API/databasebesluit |
 
-Geblokkeerd, in aanbevolen oppakvolgorde zodra de genoemde afhankelijkheid
-beschikbaar is:
+Geblokkeerd, in aanbevolen oppakvolgorde zodra de afhankelijkheid beschikbaar is:
 
 | Prioriteit bij vrijgave | Ticket | Afhankelijkheid |
 | ---: | --- | --- |
-| 1 | `MNT-056` | Gepushte workflow en toegang tot GitHub/Vercel voor externe verificatie |
+| 1 | `MNT-056` | Toegang tot GitHub/Vercel voor externe CI-/deploymentverificatie |
 | 2 | `MNT-055` | Compatibele upstreampatch voor braces; handmatige hercontrole uiterlijk 2026-10-18 |
 | 3 | `MNT-002` | Geverifieerde Atlasdata voor Bordeauxkaart |
 | 4 | `MNT-014` | Officiële Barsac-/Sauternes-geometrie |
 | 5 | `MNT-013` | Wereldwijde druivenverspreidingsdata |
-| 6 | `MNT-020` | Ontbrekende producentenfoto's met aantoonbare hergebruikrechten |
+| 6 | `MNT-020` | Producentenfoto's met aantoonbare hergebruikrechten |
 | 7 | `MNT-039` | Definitief officieel EU-besluit Graves Supérieures |
 
-Status en acceptatiecriteria staan in de [onderhoudsbacklog](maintenance-backlog.md),
-[Explore-roadmap](explore-foundation-roadmap.md) en [Learn-roadmap](learn-roadmap.md).
+Ticketstatus en acceptatiecriteria staan in de
+[onderhoudsbacklog](maintenance-backlog.md),
+[Explore-roadmap](explore-foundation-roadmap.md),
+[Learn-roadmap](learn-roadmap.md) en
+[regionale roadmap](region-expansion-roadmap.md).
+Draftentities vormen een voorraad, geen automatische publicatiebelofte.
 
-De regiokeuze in `DEC-EXP-005` hoort bij `EXP-027`, niet bij een extra los
-uitvoeringsticket. Overige Learn-productkeuzes blijven bij `LRN-012`. Draftentities
-zijn een contentvoorraad; ieder draftrecord is niet automatisch een te schrijven
-zelfstandige pagina.
+## Wanneer backend of database nodig wordt
 
-## Wanneer een backend of database wél nodig wordt
+- **Accounts en synchronisatie:** gebruikersopslag met authenticatie,
+  autorisatie en voortgangs-/conflictenbeheer, inclusief migratie van bestaande
+  browservoortgang en behoud van path-/step-ID's.
+- **Redactionele samenwerking:** rollen, review/publicatie, audittrail, export,
+  backups en canonical ownership afspreken vóór een CMS of schrijf-API.
+- **Externe consumers:** versieerbaar contract voor een echte afnemer; de
+  serverrenderer hoeft zijn eigen data niet eerst via een eigen REST-API te lezen.
+- **Search en geografie:** aanvullende querying op gemeten volume en vereiste
+  queries. Afgeleide SQLite/FTS is iets anders dan migratie van authored content;
+  een kleine geverifieerde Atlasdataset vereist niet automatisch PostGIS.
 
-- **Accounts en synchronisatie:** een aparte gebruikersdatalaag met authenticatie,
-  autorisatie en betrouwbaar voortgangs-/conflictenbeheer. Behoud stable path- en
-  step-ID's en ontwerp migratie van bestaande browservoortgang.
-- **Redactionele samenwerking:** bespreek rollen, review/publicatie, audittrail en
-  export voordat een CMS of schrijf-API canonical ownership overneemt.
-- **Externe consumers:** ontwerp een versieerbaar API-contract wanneer er een
-  echte afnemer is; de huidige serverrenderer hoeft niet eerst via een eigen
-  REST-API zijn eigen data terug te lezen.
-- **Zoeken en geografie:** kies aanvullende opslag/querying op gemeten volume en
-  vereiste queries. Een kleine geverifieerde Atlasdataset kan starten zonder
-  PostGIS; omvang alleen is onvoldoende reden om alle authored content te migreren.
-
-De uitkomst kan bewust uitstel zijn, mits de trigger voor herbeoordeling vastligt.
-Bestaande research, bronnen en canonical content blijven bij elke migratie
-behouden. Communitycorrecties, fijnmaziger framework alignment en vergelijkings-
-functies blijven mogelijke vervolgrichtingen uit de architectuur, zonder huidige
-uitvoeringsbelofte.
+Bewust uitstel krijgt een toetsbare trigger. Research, bronnen en canonical
+content blijven bij iedere migratie behouden. Communitycorrecties, verdere
+framework alignment en vergelijkingsfuncties blijven mogelijke vervolgrichtingen
+zonder huidige uitvoeringsbelofte.

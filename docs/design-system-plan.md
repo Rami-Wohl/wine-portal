@@ -25,7 +25,7 @@ te veranderen.
 
 ## Stylesheetindeling en cascade
 
-`src/app/layout.tsx` importeert uitsluitend `src/app/globals.css`. Dat bestand
+`src/app/[lang]/layout.tsx` importeert als gedeelde stylesheet `src/app/globals.css`. Dat bestand
 is de geordende ingang voor Tailwind en de onderstaande gewone stylesheets.
 Er zijn geen routeafhankelijke CSS-imports: dezelfde stijlen gelden ook na
 clientnavigatie. De bestanden houden de bestaande semantische classnamen aan.
