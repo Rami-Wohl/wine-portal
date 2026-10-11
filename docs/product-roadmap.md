@@ -2,8 +2,9 @@
 
 Bijgewerkt: 2026-10-11. Deze kaart bepaalt volgorde en timing; actuele
 status en acceptatiecriteria staan uitsluitend in de gekoppelde domeinbacklogs.
-De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
-de huidige bijstelling. Eerdere uitvoeringsresultaten staan in het
+De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) en
+[performancereview](../editorial/performance-review-2026-10-11.md) motiveren
+de huidige volgorde. Eerdere uitvoeringsresultaten staan in het
 [reviewregister](quality-assurance.md#reviewregister), niet opnieuw in dit plan.
 
 ## Waar we staan
@@ -22,14 +23,15 @@ async interface. Dat onderscheid telt bij toekomstige lazy loading of opslag.
 
 ## Eerstvolgende werk en beslismomenten
 
-- **Volgende ontwikkeltaak: `MNT-052`.** Meet 1×/3×/8×, stel budgetten vast en
-  kies op bewijs welke search-/bundle-/mediaoptimalisatie nodig is. Compacte
-  JSON en één corpusbuild per `check` zijn nu uitgevoerd (`MNT-059`); zij
-  bewijzen geen kleinere serverchunk of lager processgeheugen.
-- **Daarna `EXP-032` en `EXP-026`.** Publiceer de eerste afgebakende individuele
-  wijnbatch en controleer vervolgens integratie, terminologie en owners.
-  De overige wijnbatches blijven zichtbaar open; geen `wine_style`-type op
-  basis van alleen behoefte aan een pagina.
+- **Volgende ontwikkeltaak: `EXP-032`.** Begin met identiteit, inventaris en de
+  afgebakende Port/Sherry/Champagne-batch. De overige wijnbatches blijven open;
+  geen `wine_style`-type op basis van alleen behoefte aan een pagina.
+- **Daarna `EXP-026`.** Integreer de foundation en eerste wijnbatch; het volledige
+  latere wijncataloguswerk blokkeert die integratie niet.
+- **Schaalbasis getoetst (`MNT-052`).** 1×/3×/8× voldoen lokaal aan de budgetten
+  na gerichte search-, repository- en mediavalidatieverbeteringen. Herhaal volgens
+  [performance-budgets.md](performance-budgets.md) vóór grote regiobatches en bij
+  relevante wijzigingen. Er is nu geen performancegedreven databasemigratie nodig.
 - **Vóór regionale publicatie: `REG-001–003`.** Besluit landen-/plaatshiërarchie,
   druivenprioriteiten en mondiale dependencies. Voer de geverifieerde Atlaspilot
   (`MNT-051`), mondiale stresstest (`EXP-027`) en integrale QA (`EXP-028`) uit.
@@ -48,28 +50,27 @@ vereisen hun eigen gemotiveerde besluit; planningswerk kan naast authoring lopen
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-24 niet-afgeronde tickets: 14 onderhoudsacties, 4 Explore-tickets, 5 regionale
+23 niet-afgeronde tickets: 13 onderhoudsacties, 4 Explore-tickets, 5 regionale
 planning-/publicatietickets en één Learn-evaluatie. Geplande en geblokkeerde
 acties tellen mee. Tijdgebonden of vrijgekomen externe controles mogen de
 onderstaande ontwikkelvolgorde onderbreken.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `MNT-052` | Reproduceerbare schaalmeting, budgetten en gerichte optimalisatiekeuze |
-| 2 | `EXP-032` | Individuele wijnen: inventaris, Port/Sherry/Champagne als eerste batch; vervolg blijft open |
-| 3 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren |
-| 4 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
-| 5 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
-| 6 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
-| 7 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen |
-| 8 | `MNT-051` | Geverifieerde Bordeaux-Atlaspilot afbakenen vóór EXP-027 |
-| 9 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
-| 10 | `EXP-028` | Integrale redactionele en product-QA |
-| 11 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
-| 12 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
-| 13 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
-| 14 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na de publicatiegates |
-| 15 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
+| 1 | `EXP-032` | Individuele wijnen: inventaris, Port/Sherry/Champagne als eerste batch; vervolg blijft open |
+| 2 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren |
+| 3 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
+| 4 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
+| 5 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
+| 6 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen |
+| 7 | `MNT-051` | Geverifieerde Bordeaux-Atlaspilot afbakenen vóór EXP-027 |
+| 8 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
+| 9 | `EXP-028` | Integrale redactionele en product-QA |
+| 10 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
+| 11 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
+| 12 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
+| 13 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na de publicatiegates |
+| 14 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
 
 `REG-003` is een planningticket: de nog te schrijven content wordt vóór uitvoering
 in afzonderlijke batches/tickets opgesplitst. De huidige telling claimt dus niet

@@ -1,6 +1,7 @@
 import "server-only";
 
-import knowledgeBaseJson from "../generated/content/knowledge-base.json";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import type {
   Entity,
   EntityType,
@@ -18,7 +19,20 @@ import type {
 import { entityPresentationMode } from "./model";
 import { NARRATIVE_ROUTE_SEGMENTS, entityHref, entityTypeFromRouteSegment } from "./routing";
 
-const knowledgeBase = knowledgeBaseJson as GeneratedKnowledgeBase;
+function loadKnowledgeBase(): GeneratedKnowledgeBase {
+  if (process.env.NODE_ENV === "development") {
+    // Keep the generated file in the dev dependency graph so content rebuilds trigger HMR.
+    // require has no inferred giant JSON type; this branch is eliminated in production.
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    return require("../generated/content/knowledge-base.json") as GeneratedKnowledgeBase;
+  }
+  // Keep production data out of JS/TS compilation. next.config.ts traces this file.
+  return JSON.parse(
+    readFileSync(path.join(process.cwd(), "src/generated/content/knowledge-base.json"), "utf8"),
+  ) as GeneratedKnowledgeBase;
+}
+
+const knowledgeBase = loadKnowledgeBase();
 const entitiesById = new Map(knowledgeBase.entities.map((entity) => [entity.id, entity]));
 const narrativesById = new Map(
   knowledgeBase.narratives.map((narrative) => [narrative.id, narrative]),

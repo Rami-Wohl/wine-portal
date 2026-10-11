@@ -342,9 +342,9 @@ async function addSource(
 
 async function addMedia(
   root: string,
-  options: { checksum?: string; sourceUrl?: string; writeAsset?: boolean } = {},
+  options: { checksum?: string; sourceUrl?: string; writeAsset?: boolean; bytes?: Buffer } = {},
 ): Promise<void> {
-  const bytes = Buffer.from("test image bytes");
+  const bytes = options.bytes ?? Buffer.from("test image bytes");
   const metadataDirectory = path.join(root, "data", "media", "example");
   const assetDirectory = path.join(root, "public", "media", "example");
   await mkdir(metadataDirectory, { recursive: true });
@@ -1213,6 +1213,19 @@ describe("content pipeline validation", () => {
     const changedRoot = await temporaryRoot();
     await addMedia(changedRoot, { checksum: "0".repeat(64) });
     await expect(buildContent({ root: changedRoot, write: false })).rejects.toThrow(
+      /checksum_sha256 does not match/,
+    );
+  });
+
+  it("verifies the entire streamed media file, including bytes beyond the first chunk", async () => {
+    const root = await temporaryRoot();
+    const bytes = Buffer.alloc(200_000, 17);
+    await addMedia(root, { bytes });
+    await expect(buildContent({ root, write: false })).resolves.toBeDefined();
+
+    bytes[150_000] = 18;
+    await writeFile(path.join(root, "public/media/example/photo.jpg"), bytes);
+    await expect(buildContent({ root, write: false })).rejects.toThrow(
       /checksum_sha256 does not match/,
     );
   });

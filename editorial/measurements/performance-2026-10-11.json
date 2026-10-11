@@ -1,0 +1,2535 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-11T19:16:30.367Z",
+  "revision": "7cf03c1bf582dd6248a2eeb25067969f227928eb",
+  "dirty": true,
+  "searchSourceSha256": "681fd07f493276108a2de3ebd4ac5ec3033575a10d5d2942da9661b620962694",
+  "reference": "7cf03c1",
+  "environment": {
+    "node": "v24.21.0",
+    "platform": "darwin",
+    "release": "27.0.0",
+    "cpu": "Apple M4 Pro",
+    "logicalCpus": 14,
+    "totalMemoryBytes": 51539607552
+  },
+  "method": {
+    "production": true,
+    "searchRounds": 5,
+    "httpRounds": 3,
+    "sharedSourcesAndMedia": true,
+    "cold": "fresh process, warm OS filesystem; not a cloud cold start",
+    "compression": "JSON gzip/Brotli estimates; HTTP values are actual compressed body bytes"
+  },
+  "inventory": {
+    "media": {
+      "files": 188,
+      "bytes": 351367887,
+      "trackedBytes": 351367887,
+      "over2MiB": 77,
+      "largest": [
+        {
+          "key": "producers/chateau-palmer/estate-2015.jpg",
+          "bytes": 14341560
+        },
+        {
+          "key": "concepts/vine-nutrition-soil-management-vineyard-floor/cultivated-vineyard-floor.jpg",
+          "bytes": 10812950
+        },
+        {
+          "key": "producers/chateau-ducru-beaucaillou/grand-vin-1986.jpg",
+          "bytes": 6424991
+        },
+        {
+          "key": "concepts/vineyard-soils/rocks/tuff.jpg",
+          "bytes": 5603282
+        },
+        {
+          "key": "producers/chateau-montrose/grand-vin-1975.jpg",
+          "bytes": 5232135
+        }
+      ]
+    },
+    "gitObjectBytes": 376628270
+  },
+  "scales": [
+    {
+      "scale": 1,
+      "fixtureMs": 347.26295799999997,
+      "content": {
+        "ms": 1702.106084,
+        "maxRssKiB": 488704,
+        "memory": {
+          "rss": 500432896,
+          "heapTotal": 233422848,
+          "heapUsed": 105505104,
+          "external": 19068752,
+          "arrayBuffers": 16415695
+        },
+        "counts": {
+          "entities": 359,
+          "activeEntities": 295,
+          "narratives": 8,
+          "paths": 1,
+          "sources": 612,
+          "media": 188
+        },
+        "bundleBytes": 10439080,
+        "processMs": 1897.3995
+      },
+      "transportEstimate": {
+        "gzipBytes": 2525534,
+        "brotliBytes": 1703259
+      },
+      "search": {
+        "publishedDocuments": 302,
+        "parseAndReadMs": 28.048959000000004,
+        "beforeLoad": {
+          "rss": 69500928,
+          "heapTotal": 13189120,
+          "heapUsed": 7501624,
+          "external": 4926935,
+          "arrayBuffers": 2241023
+        },
+        "afterLoad": {
+          "rss": 128188416,
+          "heapTotal": 115769344,
+          "heapUsed": 47217976,
+          "external": 5419335,
+          "arrayBuffers": 2241039
+        },
+        "afterPreparation": {
+          "rss": 180338688,
+          "heapTotal": 121946112,
+          "heapUsed": 52633168,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterWarm": {
+          "rss": 188989440,
+          "heapTotal": 121159680,
+          "heapUsed": 52762512,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "maxRssKiB": 184560,
+        "cold": [
+          {
+            "locale": "nl",
+            "ms": 69.503375
+          },
+          {
+            "locale": "en",
+            "ms": 57.15104199999999
+          }
+        ],
+        "results": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "hits": 65,
+            "p50Ms": 3.4179169999999885,
+            "p95Ms": 8.192499999999995,
+            "samplesMs": [
+              8.192499999999995, 3.593999999999994, 3.4179169999999885, 3.405583999999976,
+              3.3112079999999935
+            ],
+            "fingerprint": "1c9250c7fff5c088d9dabe6c803ed9cb9fa757bc802ba88299199c7a5d0298e7"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "hits": 18,
+            "p50Ms": 3.770667000000003,
+            "p95Ms": 4.00408299999998,
+            "samplesMs": [
+              4.00408299999998, 3.8411669999999845, 3.7653329999999983, 3.770667000000003,
+              3.7414579999999944
+            ],
+            "fingerprint": "279527a1699b9f36e4cd28c8e3134f3f26c8d1d560e0fcb7a06ed4d480f64bda"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "hits": 112,
+            "p50Ms": 4.158583999999962,
+            "p95Ms": 4.383832999999981,
+            "samplesMs": [
+              4.117041999999998, 4.383832999999981, 4.158583999999962, 3.8551250000000437,
+              4.161917000000017
+            ],
+            "fingerprint": "a7fff39730b03f8f7d38a20ad7ac776ef7ce42d2404e7948ae527f65d965215e"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "hits": 1,
+            "p50Ms": 1.9475830000000087,
+            "p95Ms": 2.143957999999998,
+            "samplesMs": [
+              2.143957999999998, 2.028333000000032, 1.9017499999999927, 1.8589999999999804,
+              1.9475830000000087
+            ],
+            "fingerprint": "3006a0860b9e92b52ec256468e95b8e731005ed706212f994dc0c4faad25a1a1"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "hits": 0,
+            "p50Ms": 3.498708000000022,
+            "p95Ms": 3.6929999999999836,
+            "samplesMs": [
+              3.6929999999999836, 3.4282079999999837, 3.4466659999999933, 3.5766249999999786,
+              3.498708000000022
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "hits": 7,
+            "p50Ms": 0.1847909999999615,
+            "p95Ms": 0.41800000000000637,
+            "samplesMs": [
+              0.22666700000002038, 0.16612499999996544, 0.1847909999999615, 0.41800000000000637,
+              0.12750000000005457
+            ],
+            "fingerprint": "207da5060d723327e50d54578c64acb513a70a0c4f9ab824d3a04b7ffd13687b"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "nl",
+            "hits": 5,
+            "p50Ms": 0.06933300000002873,
+            "p95Ms": 0.08183400000001484,
+            "samplesMs": [
+              0.08183400000001484, 0.06104200000004312, 0.05937499999998863, 0.06933300000002873,
+              0.07045900000002803
+            ],
+            "fingerprint": "ef73379e21b32062eee95aa262f52b00073419dab01303cf132cf868c09ec8f8"
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "hits": 65,
+            "p50Ms": 3.573208999999963,
+            "p95Ms": 3.7454999999999927,
+            "samplesMs": [
+              3.7454999999999927, 3.573208999999963, 3.587582999999995, 3.489582999999982,
+              3.5672500000000014
+            ],
+            "fingerprint": "7f204a8d3c1658d2504d98436e7900b2016cb10d76cc5382e6a7b15bda13563b"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "hits": 19,
+            "p50Ms": 3.6113750000000095,
+            "p95Ms": 4.411749999999984,
+            "samplesMs": [
+              4.411749999999984, 3.546958000000018, 3.6113750000000095, 3.7401249999999777,
+              3.407000000000039
+            ],
+            "fingerprint": "abf410d4f1a43be3a71b3c135f83e1e9f2bda58deaac9f3a4235fedce83aac77"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "hits": 108,
+            "p50Ms": 3.5407089999999926,
+            "p95Ms": 3.714041000000009,
+            "samplesMs": [
+              3.6131670000000327, 3.3797500000000014, 3.714041000000009, 3.5407089999999926,
+              3.3944999999999936
+            ],
+            "fingerprint": "9154729515b13c7f360ac2d6baaf9dd1650e3523337e3990144a03c8cdaeccc1"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 1.7012920000000236,
+            "p95Ms": 1.7218330000000037,
+            "samplesMs": [
+              1.7218330000000037, 1.7132500000000164, 1.7012920000000236, 1.6017499999999814,
+              1.6006669999999872
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 3.027582999999993,
+            "p95Ms": 3.1199169999999867,
+            "samplesMs": [
+              3.1199169999999867, 3.0485419999999976, 3.027582999999993, 3.0190000000000055,
+              3.0229170000000067
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "hits": 7,
+            "p50Ms": 0.12241699999998445,
+            "p95Ms": 0.20137499999998454,
+            "samplesMs": [
+              0.20137499999998454, 0.140041999999994, 0.11912500000005366, 0.11212499999999181,
+              0.12241699999998445
+            ],
+            "fingerprint": "2804afc4f8f1e7de68dd1720fcc4718d76a2ab3af5dd468ddcc5add38566bd78"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "en",
+            "hits": 5,
+            "p50Ms": 0.05712499999998499,
+            "p95Ms": 0.07341600000000881,
+            "samplesMs": [
+              0.06741699999997763, 0.05712499999998499, 0.04991699999999355, 0.04933299999999008,
+              0.07341600000000881
+            ],
+            "fingerprint": "9649744de95bab5feb1c7e3cd270e9b28ed05239ecefa6d7e9dc20f82d4265ed"
+          }
+        ]
+      },
+      "referenceSearch": {
+        "publishedDocuments": 302,
+        "parseAndReadMs": 28.692583,
+        "beforeLoad": {
+          "rss": 70713344,
+          "heapTotal": 12926976,
+          "heapUsed": 7651360,
+          "external": 4926803,
+          "arrayBuffers": 2241023
+        },
+        "afterLoad": {
+          "rss": 129269760,
+          "heapTotal": 115769344,
+          "heapUsed": 47398552,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterPreparation": {
+          "rss": 176963584,
+          "heapTotal": 115769344,
+          "heapUsed": 47478048,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterWarm": {
+          "rss": 182468608,
+          "heapTotal": 117080064,
+          "heapUsed": 47592784,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "maxRssKiB": 178192,
+        "cold": [
+          {
+            "locale": "nl",
+            "ms": 69.34670799999999
+          },
+          {
+            "locale": "en",
+            "ms": 56.362375000000014
+          }
+        ],
+        "results": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "hits": 65,
+            "p50Ms": 64.92204199999998,
+            "p95Ms": 69.89070800000002,
+            "samplesMs": [
+              69.89070800000002, 65.830917, 64.72779099999997, 64.92204199999998, 64.59716600000002
+            ],
+            "fingerprint": "1c9250c7fff5c088d9dabe6c803ed9cb9fa757bc802ba88299199c7a5d0298e7"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "hits": 18,
+            "p50Ms": 65.23033399999997,
+            "p95Ms": 66.82954200000006,
+            "samplesMs": [
+              65.23033399999997, 64.87187500000005, 64.96666699999992, 65.32654200000002,
+              66.82954200000006
+            ],
+            "fingerprint": "279527a1699b9f36e4cd28c8e3134f3f26c8d1d560e0fcb7a06ed4d480f64bda"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "hits": 112,
+            "p50Ms": 66.24133400000005,
+            "p95Ms": 70.53599999999994,
+            "samplesMs": [
+              65.422417, 70.53599999999994, 66.24133400000005, 66.84416600000009, 65.81120899999996
+            ],
+            "fingerprint": "a7fff39730b03f8f7d38a20ad7ac776ef7ce42d2404e7948ae527f65d965215e"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "hits": 1,
+            "p50Ms": 62.86379099999999,
+            "p95Ms": 64.26324999999997,
+            "samplesMs": [
+              64.26324999999997, 63.259166999999934, 62.707374999999956, 62.86379099999999,
+              62.85166600000002
+            ],
+            "fingerprint": "3006a0860b9e92b52ec256468e95b8e731005ed706212f994dc0c4faad25a1a1"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "hits": 0,
+            "p50Ms": 65.27029199999993,
+            "p95Ms": 65.85070799999994,
+            "samplesMs": [
+              64.80133300000011, 65.85070799999994, 65.27029199999993, 65.59850000000006,
+              65.25512499999991
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "hits": 7,
+            "p50Ms": 4.862791000000016,
+            "p95Ms": 4.953917000000047,
+            "samplesMs": [
+              4.862791000000016, 4.816000000000031, 4.85029099999997, 4.953917000000047,
+              4.934709000000112
+            ],
+            "fingerprint": "207da5060d723327e50d54578c64acb513a70a0c4f9ab824d3a04b7ffd13687b"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "nl",
+            "hits": 5,
+            "p50Ms": 0.0728750000000673,
+            "p95Ms": 0.10508299999992232,
+            "samplesMs": [
+              0.10508299999992232, 0.06095899999991161, 0.058209000000033484, 0.07520799999997507,
+              0.0728750000000673
+            ],
+            "fingerprint": "ef73379e21b32062eee95aa262f52b00073419dab01303cf132cf868c09ec8f8"
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "hits": 65,
+            "p50Ms": 56.50037499999985,
+            "p95Ms": 58.45529199999987,
+            "samplesMs": [
+              58.45529199999987, 56.41662500000007, 56.69058300000006, 56.50037499999985,
+              55.84837500000003
+            ],
+            "fingerprint": "7f204a8d3c1658d2504d98436e7900b2016cb10d76cc5382e6a7b15bda13563b"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "hits": 19,
+            "p50Ms": 57.46833300000026,
+            "p95Ms": 59.80912499999977,
+            "samplesMs": [
+              55.91579199999978, 56.47870799999964, 57.46833300000026, 57.870208000000275,
+              59.80912499999977
+            ],
+            "fingerprint": "abf410d4f1a43be3a71b3c135f83e1e9f2bda58deaac9f3a4235fedce83aac77"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "hits": 108,
+            "p50Ms": 56.70183300000008,
+            "p95Ms": 58.90729199999987,
+            "samplesMs": [
+              57.58329099999992, 58.90729199999987, 56.70183300000008, 55.76887500000021,
+              55.626500000000306
+            ],
+            "fingerprint": "9154729515b13c7f360ac2d6baaf9dd1650e3523337e3990144a03c8cdaeccc1"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 53.82362499999999,
+            "p95Ms": 56.2395419999998,
+            "samplesMs": [
+              53.78429200000028, 53.82362499999999, 56.2395419999998, 53.737540999999965,
+              54.37583399999994
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 55.580167000000074,
+            "p95Ms": 56.3723329999998,
+            "samplesMs": [
+              55.88774999999987, 56.3723329999998, 55.49612500000012, 55.580167000000074,
+              55.17420799999991
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "hits": 7,
+            "p50Ms": 4.18120799999997,
+            "p95Ms": 4.276832999999897,
+            "samplesMs": [
+              4.2479999999995925, 4.1386249999995925, 4.276832999999897, 4.145375000000058,
+              4.18120799999997
+            ],
+            "fingerprint": "2804afc4f8f1e7de68dd1720fcc4718d76a2ab3af5dd468ddcc5add38566bd78"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "en",
+            "hits": 5,
+            "p50Ms": 0.052290999999968335,
+            "p95Ms": 0.06216600000016115,
+            "samplesMs": [
+              0.06216600000016115, 0.05099999999993088, 0.05058400000007168, 0.052290999999968335,
+              0.053541999999652035
+            ],
+            "fingerprint": "9649744de95bab5feb1c7e3cd270e9b28ed05239ecefa6d7e9dc20f82d4265ed"
+          }
+        ]
+      },
+      "referenceParity": true,
+      "productionBuildMs": 5923.901707999999,
+      "artifacts": {
+        "generatedBundleTraced": true,
+        "prerenderedRoutes": 465,
+        "largestServerChunks": [
+          {
+            "file": ".next/server/chunks/946.js",
+            "bytes": 437111
+          },
+          {
+            "file": ".next/server/chunks/594.js",
+            "bytes": 192901
+          },
+          {
+            "file": ".next/server/chunks/482.js",
+            "bytes": 93124
+          }
+        ],
+        "clientChunks": {
+          "count": 35,
+          "bytes": 950792,
+          "gzipBytes": 296369
+        },
+        "largestTracedClosures": [
+          {
+            "route": "server/app/[lang]/[entityType]/[slug]/page.js.nft.json",
+            "bytes": 11374807,
+            "files": 37
+          },
+          {
+            "route": "server/app/[lang]/verdiepingen/[narrativeType]/[slug]/page.js.nft.json",
+            "bytes": 11373903,
+            "files": 37
+          },
+          {
+            "route": "server/app/[lang]/page.js.nft.json",
+            "bytes": 11353803,
+            "files": 36
+          }
+        ]
+      },
+      "server": {
+        "cold": {
+          "readyMs": 101.22266700000182,
+          "firstRequestMs": 234.28900000000067,
+          "processToFirstResponseMs": 335.77137500000026,
+          "rssBytes": 214859776
+        },
+        "firstEnglishRequestMs": 67.33212500000081,
+        "searches": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 12.263999999999214,
+            "p95Ms": 12.738540999998804,
+            "samplesMs": [11.94800000000032, 12.263999999999214, 12.738540999998804],
+            "wireBytes": 13311
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 10.345790999999736,
+            "p95Ms": 10.348916000002646,
+            "samplesMs": [10.345790999999736, 9.323749999999563, 10.348916000002646],
+            "wireBytes": 11856
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 9.834500000000844,
+            "p95Ms": 10.498875000001135,
+            "samplesMs": [10.498875000001135, 9.834500000000844, 8.982083000002604],
+            "wireBytes": 14062
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 5.640082999998413,
+            "p95Ms": 5.740249999998923,
+            "samplesMs": [5.24054199999955, 5.640082999998413, 5.740249999998923],
+            "wireBytes": 6773
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 7.086416000001918,
+            "p95Ms": 7.166583999998693,
+            "samplesMs": [7.166583999998693, 6.538625000001048, 7.086416000001918],
+            "wireBytes": 6364
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "p50Ms": 3.8461669999996957,
+            "p95Ms": 3.8622079999986454,
+            "samplesMs": [3.8461669999996957, 3.610833000002458, 3.8622079999986454],
+            "wireBytes": 8564
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 7.739958000001934,
+            "p95Ms": 9.880583000001934,
+            "samplesMs": [9.880583000001934, 7.739958000001934, 7.614417000000685],
+            "wireBytes": 13064
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 7.08820900000137,
+            "p95Ms": 7.631666999997833,
+            "samplesMs": [7.631666999997833, 7.08820900000137, 6.7815410000002885],
+            "wireBytes": 12144
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 7.841291999997338,
+            "p95Ms": 7.969958000001498,
+            "samplesMs": [7.567291999999725, 7.969958000001498, 7.841291999997338],
+            "wireBytes": 14031
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 5.225125000000844,
+            "p95Ms": 6.023083000000042,
+            "samplesMs": [4.843124999999418, 6.023083000000042, 5.225125000000844],
+            "wireBytes": 6254
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 5.800167000001238,
+            "p95Ms": 6.269749999999476,
+            "samplesMs": [6.269749999999476, 5.800167000001238, 5.757750000000669],
+            "wireBytes": 6230
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "p50Ms": 3.928750000002765,
+            "p95Ms": 4.50512499999968,
+            "samplesMs": [3.928750000002765, 4.50512499999968, 3.875832999998238],
+            "wireBytes": 8502
+          }
+        ],
+        "warmRssBytes": 352239616,
+        "article": {
+          "htmlWireBytes": 21282,
+          "htmlDecodedBytes": 95759,
+          "resources": [
+            {
+              "path": "/_next/static/css/1130954eb2430e98.css",
+              "wireBytes": 5832
+            },
+            {
+              "path": "/_next/static/css/8695206cc2416bd0.css",
+              "wireBytes": 10946
+            },
+            {
+              "path": "/_next/static/chunks/webpack-f11a4d587c516c7d.js",
+              "wireBytes": 1681
+            },
+            {
+              "path": "/_next/static/chunks/48cbb800-ba92bee4485302fc.js",
+              "wireBytes": 63295
+            },
+            {
+              "path": "/_next/static/chunks/698-0579fb47524cb9e0.js",
+              "wireBytes": 65922
+            },
+            {
+              "path": "/_next/static/chunks/main-app-cd2db1bffe4317f4.js",
+              "wireBytes": 511
+            },
+            {
+              "path": "/_next/static/chunks/688-9f0ef46711ef7807.js",
+              "wireBytes": 3568
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/layout-d878fa553a0f94be.js",
+              "wireBytes": 2833
+            },
+            {
+              "path": "/_next/static/chunks/897-8ac4befc5e4d495f.js",
+              "wireBytes": 5489
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/%5BentityType%5D/%5Bslug%5D/page-c8201bfd170ef587.js",
+              "wireBytes": 1949
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/not-found-559e1d3c23bb121a.js",
+              "wireBytes": 786
+            },
+            {
+              "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+              "wireBytes": 39627
+            }
+          ],
+          "jsWireBytes": 185661
+        },
+        "images": [
+          {
+            "id": "media.concept.wine-perception-and-development.smelling-tasting-and-time",
+            "width": 828,
+            "rawBytes": 2664015,
+            "wireBytes": 42760,
+            "contentType": "image/webp",
+            "firstMs": 64.11062499999753,
+            "warmMs": 1.057541999998648
+          },
+          {
+            "id": "media.concept.wine-perception-and-development.smelling-tasting-and-time",
+            "width": 1920,
+            "rawBytes": 2664015,
+            "wireBytes": 121730,
+            "contentType": "image/webp",
+            "firstMs": 88.13666599999851,
+            "warmMs": 0.8253750000003492
+          },
+          {
+            "id": "media.concept.vineyard-soils.rock-basalt",
+            "width": 828,
+            "rawBytes": 212985,
+            "wireBytes": 13182,
+            "contentType": "image/webp",
+            "firstMs": 31.04004200000054,
+            "warmMs": 0.6065830000006827
+          },
+          {
+            "id": "media.concept.vineyard-soils.rock-basalt",
+            "width": 1920,
+            "rawBytes": 212985,
+            "wireBytes": 25604,
+            "contentType": "image/webp",
+            "firstMs": 58.98054200000115,
+            "warmMs": 0.6772089999976743
+          }
+        ]
+      }
+    },
+    {
+      "scale": 3,
+      "fixtureMs": 1316.1340830000008,
+      "content": {
+        "ms": 4495.1955,
+        "maxRssKiB": 717920,
+        "memory": {
+          "rss": 735150080,
+          "heapTotal": 423608320,
+          "heapUsed": 238859176,
+          "external": 35569362,
+          "arrayBuffers": 32916281
+        },
+        "counts": {
+          "entities": 1077,
+          "activeEntities": 885,
+          "narratives": 24,
+          "paths": 3,
+          "sources": 612,
+          "media": 188
+        },
+        "bundleBytes": 30675242,
+        "processMs": 4665.041416
+      },
+      "transportEstimate": {
+        "gzipBytes": 5207701,
+        "brotliBytes": 1929221
+      },
+      "search": {
+        "publishedDocuments": 906,
+        "parseAndReadMs": 80.763417,
+        "beforeLoad": {
+          "rss": 71483392,
+          "heapTotal": 13451264,
+          "heapUsed": 7527784,
+          "external": 4926935,
+          "arrayBuffers": 2241023
+        },
+        "afterLoad": {
+          "rss": 229392384,
+          "heapTotal": 259358720,
+          "heapUsed": 124084296,
+          "external": 5419335,
+          "arrayBuffers": 2241039
+        },
+        "afterPreparation": {
+          "rss": 339050496,
+          "heapTotal": 276414464,
+          "heapUsed": 140386984,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterWarm": {
+          "rss": 359530496,
+          "heapTotal": 276152320,
+          "heapUsed": 140520360,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "maxRssKiB": 351760,
+        "cold": [
+          {
+            "locale": "nl",
+            "ms": 209.361042
+          },
+          {
+            "locale": "en",
+            "ms": 170.08525000000003
+          }
+        ],
+        "results": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "hits": 195,
+            "p50Ms": 10.561374999999998,
+            "p95Ms": 16.46191699999997,
+            "samplesMs": [
+              16.46191699999997, 10.561374999999998, 10.609375, 9.99854199999993, 9.92512499999998
+            ],
+            "fingerprint": "5dc6345cfd3d44fb57aeab54da82ccbfa8a9c4877010401734fb1a9abe98bcea"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "hits": 54,
+            "p50Ms": 11.212958999999955,
+            "p95Ms": 11.5122080000001,
+            "samplesMs": [
+              11.35941600000001, 11.212958999999955, 11.5122080000001, 11.041999999999916,
+              10.714790999999991
+            ],
+            "fingerprint": "1b14b13dfe52e4c4357e7b6068a393b6c1ee295bdc0b48944b85aeedb37b5ed0"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "hits": 336,
+            "p50Ms": 11.949375000000032,
+            "p95Ms": 12.608208000000104,
+            "samplesMs": [
+              11.524749999999926, 12.117166999999995, 11.949375000000032, 11.747165999999993,
+              12.608208000000104
+            ],
+            "fingerprint": "1094551ffa5830de995f0899ad83fdb01f67926b40639f4896982354a51cf4d2"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "hits": 3,
+            "p50Ms": 6.555165999999986,
+            "p95Ms": 6.875499999999988,
+            "samplesMs": [
+              6.555165999999986, 6.875499999999988, 6.640374999999949, 6.220459000000005,
+              5.9121659999999565
+            ],
+            "fingerprint": "b03ab91968998410d44b281c6ba1ee1c73e48a8ae28b5c715004d5dc6cbe54d9"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "hits": 0,
+            "p50Ms": 10.03666700000008,
+            "p95Ms": 10.496208000000024,
+            "samplesMs": [
+              10.03666700000008, 10.082167000000027, 9.931540999999925, 9.890084000000002,
+              10.496208000000024
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "hits": 21,
+            "p50Ms": 0.45125000000007276,
+            "p95Ms": 0.619542000000024,
+            "samplesMs": [
+              0.619542000000024, 0.4560420000000249, 0.4222499999999627, 0.4445419999999558,
+              0.45125000000007276
+            ],
+            "fingerprint": "661918d7096a069a944dd5c797059e8819a034cca35ea789bc11e40a8ee45b6c"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "nl",
+            "hits": 15,
+            "p50Ms": 0.19591700000000856,
+            "p95Ms": 0.26233400000000984,
+            "samplesMs": [
+              0.26233400000000984, 0.2106660000000602, 0.19591700000000856, 0.17541700000003857,
+              0.18354200000010223
+            ],
+            "fingerprint": "624d2d5b2e7ff3c5ba974fd579d4167b4543112dbd51dbac6fec1037175ae969"
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "hits": 195,
+            "p50Ms": 10.282500000000027,
+            "p95Ms": 10.772833999999989,
+            "samplesMs": [
+              10.772833999999989, 10.282500000000027, 10.273042000000032, 10.316374999999994,
+              10.203207999999904
+            ],
+            "fingerprint": "742e090c2a98d832cee2a54916defe6ab84e95485202c46bb1bb95ee1bb22ea6"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "hits": 57,
+            "p50Ms": 10.19279199999994,
+            "p95Ms": 10.477750000000015,
+            "samplesMs": [
+              10.064875000000029, 10.477750000000015, 10.263249999999971, 10.19279199999994,
+              10.170749999999998
+            ],
+            "fingerprint": "169a2a414c11fad1b2dab988fa84497c48868f1739d4cfaa42d9d49678b16506"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "hits": 324,
+            "p50Ms": 10.382332999999903,
+            "p95Ms": 10.914333000000056,
+            "samplesMs": [
+              10.471291999999949, 10.382332999999903, 10.360958000000096, 10.306249999999977,
+              10.914333000000056
+            ],
+            "fingerprint": "2e21325fdc88398f0a588c0bb77e0b06f2b09a8123aa4051fa9234bc2a70eef5"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 5.258249999999975,
+            "p95Ms": 5.3793750000000955,
+            "samplesMs": [
+              5.370374999999967, 5.3793750000000955, 5.255125000000021, 5.229167000000075,
+              5.258249999999975
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 8.776041999999961,
+            "p95Ms": 9.27491699999996,
+            "samplesMs": [
+              8.797958999999992, 8.776041999999961, 8.588166999999999, 8.680332999999905,
+              9.27491699999996
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "hits": 21,
+            "p50Ms": 0.3930000000000291,
+            "p95Ms": 0.4965830000001006,
+            "samplesMs": [
+              0.4965830000001006, 0.41220799999996416, 0.3930000000000291, 0.3917919999998958,
+              0.387958000000026
+            ],
+            "fingerprint": "923ffb4fcf4262b7229503b22a58334268f4d659b4d4c158ed5c4d3db3426b7a"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "en",
+            "hits": 15,
+            "p50Ms": 0.171875,
+            "p95Ms": 0.18620799999996507,
+            "samplesMs": [
+              0.18620799999996507, 0.16004100000009203, 0.171875, 0.18479200000001583,
+              0.16591700000003584
+            ],
+            "fingerprint": "0841fee719ed3825c0e3866b1fe794db2221a35faa72b090ee993cd5a04be9bf"
+          }
+        ]
+      },
+      "referenceSearch": {
+        "publishedDocuments": 906,
+        "parseAndReadMs": 76.273,
+        "beforeLoad": {
+          "rss": 71041024,
+          "heapTotal": 13189120,
+          "heapUsed": 7649976,
+          "external": 4926803,
+          "arrayBuffers": 2241023
+        },
+        "afterLoad": {
+          "rss": 228835328,
+          "heapTotal": 259358720,
+          "heapUsed": 124234544,
+          "external": 5419335,
+          "arrayBuffers": 2241039
+        },
+        "afterPreparation": {
+          "rss": 324075520,
+          "heapTotal": 260145152,
+          "heapUsed": 124316104,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterWarm": {
+          "rss": 341245952,
+          "heapTotal": 264339456,
+          "heapUsed": 124438072,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "maxRssKiB": 333408,
+        "cold": [
+          {
+            "locale": "nl",
+            "ms": 204.544375
+          },
+          {
+            "locale": "en",
+            "ms": 172.04970899999995
+          }
+        ],
+        "results": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "hits": 195,
+            "p50Ms": 193.15216700000008,
+            "p95Ms": 199.35554100000002,
+            "samplesMs": [
+              199.35554100000002, 193.15216700000008, 193.38858400000004, 192.83179199999995,
+              192.75754200000006
+            ],
+            "fingerprint": "5dc6345cfd3d44fb57aeab54da82ccbfa8a9c4877010401734fb1a9abe98bcea"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "hits": 54,
+            "p50Ms": 197.32683300000008,
+            "p95Ms": 201.47362500000008,
+            "samplesMs": [
+              197.32683300000008, 201.47362500000008, 195.8344169999998, 196.71845900000017,
+              198.44225000000006
+            ],
+            "fingerprint": "1b14b13dfe52e4c4357e7b6068a393b6c1ee295bdc0b48944b85aeedb37b5ed0"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "hits": 336,
+            "p50Ms": 195.69533300000012,
+            "p95Ms": 198.71566699999994,
+            "samplesMs": [
+              195.69533300000012, 198.71566699999994, 195.6043340000001, 196.33058299999993,
+              195.17000000000007
+            ],
+            "fingerprint": "1094551ffa5830de995f0899ad83fdb01f67926b40639f4896982354a51cf4d2"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "hits": 3,
+            "p50Ms": 189.23908400000028,
+            "p95Ms": 190.78991700000006,
+            "samplesMs": [
+              189.23908400000028, 190.20749999999998, 185.9758340000003, 188.79683299999988,
+              190.78991700000006
+            ],
+            "fingerprint": "b03ab91968998410d44b281c6ba1ee1c73e48a8ae28b5c715004d5dc6cbe54d9"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "hits": 0,
+            "p50Ms": 194.0855419999998,
+            "p95Ms": 196.86541699999998,
+            "samplesMs": [
+              192.80054199999995, 194.0855419999998, 195.50325000000066, 196.86541699999998,
+              192.87324999999964
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "hits": 21,
+            "p50Ms": 14.407791000000543,
+            "p95Ms": 15.09741699999995,
+            "samplesMs": [
+              15.09741699999995, 14.331624999999804, 14.589665999999852, 14.181125000000065,
+              14.407791000000543
+            ],
+            "fingerprint": "661918d7096a069a944dd5c797059e8819a034cca35ea789bc11e40a8ee45b6c"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "nl",
+            "hits": 15,
+            "p50Ms": 0.18120899999939866,
+            "p95Ms": 0.2525420000001759,
+            "samplesMs": [
+              0.2525420000001759, 0.1802079999997659, 0.18120899999939866, 0.1864580000001297,
+              0.17454199999974662
+            ],
+            "fingerprint": "624d2d5b2e7ff3c5ba974fd579d4167b4543112dbd51dbac6fec1037175ae969"
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "hits": 195,
+            "p50Ms": 164.9098329999997,
+            "p95Ms": 167.45891699999993,
+            "samplesMs": [
+              164.59395799999947, 164.73325000000023, 164.9098329999997, 165.2709159999995,
+              167.45891699999993
+            ],
+            "fingerprint": "742e090c2a98d832cee2a54916defe6ab84e95485202c46bb1bb95ee1bb22ea6"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "hits": 57,
+            "p50Ms": 167.01458300000013,
+            "p95Ms": 173.0881249999993,
+            "samplesMs": [
+              167.01458300000013, 164.36383399999977, 167.6713749999999, 166.54591600000003,
+              173.0881249999993
+            ],
+            "fingerprint": "169a2a414c11fad1b2dab988fa84497c48868f1739d4cfaa42d9d49678b16506"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "hits": 324,
+            "p50Ms": 166.9517910000004,
+            "p95Ms": 172.36362499999996,
+            "samplesMs": [
+              167.0136250000005, 165.89962500000001, 165.1564589999998, 172.36362499999996,
+              166.9517910000004
+            ],
+            "fingerprint": "2e21325fdc88398f0a588c0bb77e0b06f2b09a8123aa4051fa9234bc2a70eef5"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 164.62133299999914,
+            "p95Ms": 166.28262499999983,
+            "samplesMs": [
+              165.62983299999996, 166.28262499999983, 164.62133299999914, 159.73662500000137,
+              159.66145799999867
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 164.3531669999993,
+            "p95Ms": 165.79991599999994,
+            "samplesMs": [
+              164.3531669999993, 165.79991599999994, 165.34104200000002, 164.14533299999857,
+              163.86575000000084
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "hits": 21,
+            "p50Ms": 12.707792000001064,
+            "p95Ms": 13.095417000000452,
+            "samplesMs": [
+              12.581832999998369, 12.707792000001064, 13.095417000000452, 12.559624999999869,
+              13.06970899999942
+            ],
+            "fingerprint": "923ffb4fcf4262b7229503b22a58334268f4d659b4d4c158ed5c4d3db3426b7a"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "en",
+            "hits": 15,
+            "p50Ms": 0.14383299999826704,
+            "p95Ms": 0.20083399999930407,
+            "samplesMs": [
+              0.20083399999930407, 0.14554099999986647, 0.14383299999826704, 0.14304200000151468,
+              0.1428749999995489
+            ],
+            "fingerprint": "0841fee719ed3825c0e3866b1fe794db2221a35faa72b090ee993cd5a04be9bf"
+          }
+        ]
+      },
+      "referenceParity": true,
+      "productionBuildMs": 7720.6005829999995,
+      "artifacts": {
+        "generatedBundleTraced": true,
+        "prerenderedRoutes": 1361,
+        "largestServerChunks": [
+          {
+            "file": ".next/server/chunks/946.js",
+            "bytes": 437111
+          },
+          {
+            "file": ".next/server/chunks/594.js",
+            "bytes": 192901
+          },
+          {
+            "file": ".next/server/chunks/482.js",
+            "bytes": 93124
+          }
+        ],
+        "clientChunks": {
+          "count": 35,
+          "bytes": 950790,
+          "gzipBytes": 296358
+        },
+        "largestTracedClosures": [
+          {
+            "route": "server/app/[lang]/[entityType]/[slug]/page.js.nft.json",
+            "bytes": 31610974,
+            "files": 37
+          },
+          {
+            "route": "server/app/[lang]/verdiepingen/[narrativeType]/[slug]/page.js.nft.json",
+            "bytes": 31610070,
+            "files": 37
+          },
+          {
+            "route": "server/app/[lang]/page.js.nft.json",
+            "bytes": 31589968,
+            "files": 36
+          }
+        ]
+      },
+      "server": {
+        "cold": {
+          "readyMs": 104.08574999999837,
+          "firstRequestMs": 445.32020800000464,
+          "processToFirstResponseMs": 549.4675829999978,
+          "rssBytes": 420659200
+        },
+        "firstEnglishRequestMs": 183.78883399999904,
+        "searches": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 18.321374999999534,
+            "p95Ms": 19.614875000006577,
+            "samplesMs": [19.614875000006577, 18.321374999999534, 16.63495800000237],
+            "wireBytes": 10437
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 17.15579200000502,
+            "p95Ms": 17.467624999997497,
+            "samplesMs": [17.467624999997497, 17.15579200000502, 16.958542000000307],
+            "wireBytes": 10502
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 17.619707999998354,
+            "p95Ms": 19.683375000000524,
+            "samplesMs": [19.683375000000524, 17.619707999998354, 17.137792000001355],
+            "wireBytes": 10602
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 10.776291000001947,
+            "p95Ms": 11.407665999999153,
+            "samplesMs": [9.955040999993798, 11.407665999999153, 10.776291000001947],
+            "wireBytes": 7142
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 13.95866599999863,
+            "p95Ms": 14.29120800000237,
+            "samplesMs": [13.95866599999863, 13.779916999999841, 14.29120800000237],
+            "wireBytes": 6654
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "p50Ms": 5.10283299999719,
+            "p95Ms": 5.135708000001614,
+            "samplesMs": [5.135708000001614, 5.10283299999719, 4.601249999999709],
+            "wireBytes": 9325
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 16.604167000004963,
+            "p95Ms": 17.714874999997846,
+            "samplesMs": [16.604167000004963, 17.714874999997846, 15.748708000006445],
+            "wireBytes": 10200
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 15.430958999997529,
+            "p95Ms": 16.0389159999977,
+            "samplesMs": [15.430958999997529, 15.071833999994851, 16.0389159999977],
+            "wireBytes": 10406
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 15.365499999999884,
+            "p95Ms": 15.824333000004117,
+            "samplesMs": [15.824333000004117, 15.365499999999884, 15.270707999996375],
+            "wireBytes": 10428
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 9.419374999997672,
+            "p95Ms": 10.816791999997804,
+            "samplesMs": [10.816791999997804, 9.163708000000042, 9.419374999997672],
+            "wireBytes": 6549
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 13.175250000000233,
+            "p95Ms": 13.29737500000192,
+            "samplesMs": [12.462790999998106, 13.175250000000233, 13.29737500000192],
+            "wireBytes": 6525
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "p50Ms": 4.673290999999153,
+            "p95Ms": 5.340125000002445,
+            "samplesMs": [4.654207999999926, 5.340125000002445, 4.673290999999153],
+            "wireBytes": 9269
+          }
+        ],
+        "warmRssBytes": 456851456,
+        "article": {
+          "htmlWireBytes": 21634,
+          "htmlDecodedBytes": 98752,
+          "resources": [
+            {
+              "path": "/_next/static/css/1130954eb2430e98.css",
+              "wireBytes": 5832
+            },
+            {
+              "path": "/_next/static/css/8695206cc2416bd0.css",
+              "wireBytes": 10946
+            },
+            {
+              "path": "/_next/static/chunks/webpack-f11a4d587c516c7d.js",
+              "wireBytes": 1681
+            },
+            {
+              "path": "/_next/static/chunks/48cbb800-ba92bee4485302fc.js",
+              "wireBytes": 63295
+            },
+            {
+              "path": "/_next/static/chunks/698-0579fb47524cb9e0.js",
+              "wireBytes": 65922
+            },
+            {
+              "path": "/_next/static/chunks/main-app-cd2db1bffe4317f4.js",
+              "wireBytes": 511
+            },
+            {
+              "path": "/_next/static/chunks/688-9f0ef46711ef7807.js",
+              "wireBytes": 3568
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/layout-92d4c1f8ceffd5f4.js",
+              "wireBytes": 2830
+            },
+            {
+              "path": "/_next/static/chunks/897-8ac4befc5e4d495f.js",
+              "wireBytes": 5489
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/%5BentityType%5D/%5Bslug%5D/page-b5f2c86ceb5907e1.js",
+              "wireBytes": 1948
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/not-found-35422817954ab8c4.js",
+              "wireBytes": 784
+            },
+            {
+              "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+              "wireBytes": 39627
+            }
+          ],
+          "jsWireBytes": 185655
+        },
+        "images": []
+      }
+    },
+    {
+      "scale": 8,
+      "fixtureMs": 3934.412000000004,
+      "content": {
+        "ms": 11134.400375000001,
+        "maxRssKiB": 1322608,
+        "memory": {
+          "rss": 1354366976,
+          "heapTotal": 740245504,
+          "heapUsed": 594969800,
+          "external": 86180177,
+          "arrayBuffers": 83506686
+        },
+        "counts": {
+          "entities": 2872,
+          "activeEntities": 2360,
+          "narratives": 64,
+          "paths": 8,
+          "sources": 612,
+          "media": 188
+        },
+        "bundleBytes": 81265647,
+        "processMs": 11346.130999999994
+      },
+      "transportEstimate": {
+        "gzipBytes": 11795659,
+        "brotliBytes": 2158697
+      },
+      "search": {
+        "publishedDocuments": 2416,
+        "parseAndReadMs": 201.606958,
+        "beforeLoad": {
+          "rss": 69369856,
+          "heapTotal": 13189120,
+          "heapUsed": 7502432,
+          "external": 4926935,
+          "arrayBuffers": 2241023
+        },
+        "afterLoad": {
+          "rss": 507068416,
+          "heapTotal": 452182016,
+          "heapUsed": 316482504,
+          "external": 5419335,
+          "arrayBuffers": 2241039
+        },
+        "afterPreparation": {
+          "rss": 560906240,
+          "heapTotal": 494927872,
+          "heapUsed": 359075704,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterWarm": {
+          "rss": 585515008,
+          "heapTotal": 495452160,
+          "heapUsed": 359165536,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "maxRssKiB": 651424,
+        "cold": [
+          {
+            "locale": "nl",
+            "ms": 537.544125
+          },
+          {
+            "locale": "en",
+            "ms": 445.508459
+          }
+        ],
+        "results": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "hits": 520,
+            "p50Ms": 24.820832999999993,
+            "p95Ms": 32.3068330000001,
+            "samplesMs": [
+              32.3068330000001, 24.88979200000017, 24.820832999999993, 23.99700000000007,
+              24.07033300000012
+            ],
+            "fingerprint": "e87a3fdebe1918e50bfca74cec1be9cd031b5358eee8b0461ce133ac3cd5e632"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "hits": 144,
+            "p50Ms": 27.88820799999985,
+            "p95Ms": 28.296583000000055,
+            "samplesMs": [
+              28.296583000000055, 27.626166000000012, 27.88820799999985, 27.89541600000007,
+              27.448082999999997
+            ],
+            "fingerprint": "547cd8eb179e5648a11a8cec2200f5bac058c2c0672c440fc3e409317c5ff919"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "hits": 896,
+            "p50Ms": 30.95616700000005,
+            "p95Ms": 31.644166999999925,
+            "samplesMs": [
+              29.971500000000106, 31.644166999999925, 31.349459000000024, 30.95616700000005,
+              30.067833000000064
+            ],
+            "fingerprint": "e725adf9111549636d4828699fcb244afe1d4478d4ac1cdf864f79814de21116"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "hits": 8,
+            "p50Ms": 15.239749999999958,
+            "p95Ms": 18.37479099999996,
+            "samplesMs": [
+              18.37479099999996, 15.147208999999975, 15.068166999999903, 15.239749999999958,
+              15.555209000000104
+            ],
+            "fingerprint": "a234eb839dded1060c0050c516536104fbd215adc336c25cf14cdb4d1147b902"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "hits": 0,
+            "p50Ms": 24.060375000000022,
+            "p95Ms": 24.3029590000001,
+            "samplesMs": [
+              24.3029590000001, 24.060375000000022, 23.982999999999947, 24.070416999999907,
+              23.851750000000038
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "hits": 56,
+            "p50Ms": 1.2290420000001632,
+            "p95Ms": 1.4774580000000697,
+            "samplesMs": [
+              1.4774580000000697, 1.2919580000000224, 1.2017080000000533, 1.2221669999998994,
+              1.2290420000001632
+            ],
+            "fingerprint": "ec93a2caf4742ee2527aeca1f56cabfc323de3d3730414c812a1162d3394c278"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "nl",
+            "hits": 40,
+            "p50Ms": 0.6873749999999745,
+            "p95Ms": 2.296040999999832,
+            "samplesMs": [
+              0.5729580000001988, 2.296040999999832, 0.7561670000000049, 0.6575840000000426,
+              0.6873749999999745
+            ],
+            "fingerprint": "af893a03a6e20911fcfdbe4b9100c4005895c6740525c4997cfc0e3aad998075"
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "hits": 520,
+            "p50Ms": 25.425666999999976,
+            "p95Ms": 27.825916000000007,
+            "samplesMs": [
+              27.825916000000007, 25.425666999999976, 24.995249999999942, 25.593166999999994,
+              24.769999999999982
+            ],
+            "fingerprint": "9b2604ef4a0be5d58e8ee87595f1046841f79fc19641fe1df9eb52803275d6dd"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "hits": 152,
+            "p50Ms": 25.515292000000045,
+            "p95Ms": 26.249667000000045,
+            "samplesMs": [
+              25.351791999999932, 25.463999999999942, 25.955375000000004, 26.249667000000045,
+              25.515292000000045
+            ],
+            "fingerprint": "05174e3a6c7155e126bdbbd5069dc117431f4505e16e6871b7e02b30d2e50d3d"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "hits": 864,
+            "p50Ms": 25.89358399999992,
+            "p95Ms": 26.58508299999994,
+            "samplesMs": [
+              26.351208999999926, 25.294542000000092, 25.89358399999992, 26.58508299999994,
+              25.596416999999747
+            ],
+            "fingerprint": "0a6997a73476c744c22b7b4f3d3a86baccf0b74b4ff517bb943143061a8992a9"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 13.911625000000186,
+            "p95Ms": 15.24350000000004,
+            "samplesMs": [
+              15.24350000000004, 13.471250000000055, 13.911625000000186, 14.282249999999749,
+              13.703207999999904
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 22.483416000000034,
+            "p95Ms": 23.453125,
+            "samplesMs": [
+              22.152082999999948, 23.453125, 22.43054200000006, 22.630416999999852,
+              22.483416000000034
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "hits": 56,
+            "p50Ms": 1.1535409999996773,
+            "p95Ms": 1.389625000000251,
+            "samplesMs": [
+              1.2943340000001626, 1.1274999999995998, 1.061083999999937, 1.1535409999996773,
+              1.389625000000251
+            ],
+            "fingerprint": "98da0aa8bc8c71c0d68d669edda05e8328a3e63440d6b188b9f5456352f85755"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "en",
+            "hits": 40,
+            "p50Ms": 0.40645900000026813,
+            "p95Ms": 0.44570900000007896,
+            "samplesMs": [
+              0.44570900000007896, 0.40133300000024974, 0.4135409999998956, 0.39745799999991505,
+              0.40645900000026813
+            ],
+            "fingerprint": "7f259e7f5cf8df4335c6670c53652fe60c7b3780c09ad380f6f5e780209815bd"
+          }
+        ]
+      },
+      "referenceSearch": {
+        "publishedDocuments": 2416,
+        "parseAndReadMs": 212.020542,
+        "beforeLoad": {
+          "rss": 71516160,
+          "heapTotal": 13713408,
+          "heapUsed": 7630704,
+          "external": 4926803,
+          "arrayBuffers": 2241023
+        },
+        "afterLoad": {
+          "rss": 508215296,
+          "heapTotal": 452182016,
+          "heapUsed": 316642352,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterPreparation": {
+          "rss": 520142848,
+          "heapTotal": 451919872,
+          "heapUsed": 316727688,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "afterWarm": {
+          "rss": 556449792,
+          "heapTotal": 461619200,
+          "heapUsed": 316813480,
+          "external": 4894896,
+          "arrayBuffers": 2241039
+        },
+        "maxRssKiB": 543536,
+        "cold": [
+          {
+            "locale": "nl",
+            "ms": 522.924833
+          },
+          {
+            "locale": "en",
+            "ms": 439.62700000000007
+          }
+        ],
+        "results": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "hits": 520,
+            "p50Ms": 511.0005000000001,
+            "p95Ms": 520.0757080000001,
+            "samplesMs": [
+              520.0757080000001, 514.1971659999997, 511.0005000000001, 509.7027499999999,
+              508.37183300000015
+            ],
+            "fingerprint": "e87a3fdebe1918e50bfca74cec1be9cd031b5358eee8b0461ce133ac3cd5e632"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "hits": 144,
+            "p50Ms": 514.5834580000001,
+            "p95Ms": 521.0805419999997,
+            "samplesMs": [
+              521.0805419999997, 515.3352500000001, 513.3389579999994, 511.07166700000016,
+              514.5834580000001
+            ],
+            "fingerprint": "547cd8eb179e5648a11a8cec2200f5bac058c2c0672c440fc3e409317c5ff919"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "hits": 896,
+            "p50Ms": 516.8724160000002,
+            "p95Ms": 522.0802090000007,
+            "samplesMs": [
+              509.90499999999975, 516.8676249999999, 522.0802090000007, 521.5968750000011,
+              516.8724160000002
+            ],
+            "fingerprint": "e725adf9111549636d4828699fcb244afe1d4478d4ac1cdf864f79814de21116"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "hits": 8,
+            "p50Ms": 502.07033299999966,
+            "p95Ms": 504.3072090000005,
+            "samplesMs": [
+              504.2850419999995, 502.07033299999966, 504.3072090000005, 500.22591699999975,
+              501.74116700000013
+            ],
+            "fingerprint": "a234eb839dded1060c0050c516536104fbd215adc336c25cf14cdb4d1147b902"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "hits": 0,
+            "p50Ms": 514.7729170000002,
+            "p95Ms": 516.6571249999997,
+            "samplesMs": [
+              516.6571249999997, 514.7729170000002, 515.485917, 511.7375830000001, 508.5989580000005
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "hits": 56,
+            "p50Ms": 38.9049159999995,
+            "p95Ms": 39.09200000000055,
+            "samplesMs": [
+              38.8739170000008, 38.925333999999566, 38.9049159999995, 37.850540999999794,
+              39.09200000000055
+            ],
+            "fingerprint": "ec93a2caf4742ee2527aeca1f56cabfc323de3d3730414c812a1162d3394c278"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "nl",
+            "hits": 40,
+            "p50Ms": 0.5558750000000146,
+            "p95Ms": 0.6351669999985461,
+            "samplesMs": [
+              0.6351669999985461, 0.5789169999989099, 0.5119590000012977, 0.532666999999492,
+              0.5558750000000146
+            ],
+            "fingerprint": "af893a03a6e20911fcfdbe4b9100c4005895c6740525c4997cfc0e3aad998075"
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "hits": 520,
+            "p50Ms": 436.9405420000003,
+            "p95Ms": 441.8150000000005,
+            "samplesMs": [
+              436.66412499999933, 436.9405420000003, 433.8727909999998, 441.8150000000005,
+              439.29558299999917
+            ],
+            "fingerprint": "9b2604ef4a0be5d58e8ee87595f1046841f79fc19641fe1df9eb52803275d6dd"
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "hits": 152,
+            "p50Ms": 436.7671249999985,
+            "p95Ms": 441.2125410000008,
+            "samplesMs": [
+              439.23925000000236, 435.6994999999988, 434.41404200000034, 441.2125410000008,
+              436.7671249999985
+            ],
+            "fingerprint": "05174e3a6c7155e126bdbbd5069dc117431f4505e16e6871b7e02b30d2e50d3d"
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "hits": 864,
+            "p50Ms": 439.10629100000006,
+            "p95Ms": 444.4103749999995,
+            "samplesMs": [
+              436.32329200000095, 434.9147919999996, 439.6254999999983, 444.4103749999995,
+              439.10629100000006
+            ],
+            "fingerprint": "0a6997a73476c744c22b7b4f3d3a86baccf0b74b4ff517bb943143061a8992a9"
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 425.1990420000002,
+            "p95Ms": 428.1887499999975,
+            "samplesMs": [
+              427.3263340000012, 424.1527920000008, 423.16400000000067, 428.1887499999975,
+              425.1990420000002
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "hits": 0,
+            "p50Ms": 433.30020800000057,
+            "p95Ms": 440.50775000000067,
+            "samplesMs": [
+              433.11083300000246, 434.9947919999977, 440.50775000000067, 433.30020800000057,
+              430.76433299999917
+            ],
+            "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "hits": 56,
+            "p50Ms": 33.81049999999959,
+            "p95Ms": 34.29112499999974,
+            "samplesMs": [
+              33.71929200000159, 34.143082999999024, 33.24066700000185, 34.29112499999974,
+              33.81049999999959
+            ],
+            "fingerprint": "98da0aa8bc8c71c0d68d669edda05e8328a3e63440d6b188b9f5456352f85755"
+          },
+          {
+            "query": "",
+            "type": "classification",
+            "locale": "en",
+            "hits": 40,
+            "p50Ms": 0.37966599999708706,
+            "p95Ms": 0.45095800000126474,
+            "samplesMs": [
+              0.45095800000126474, 0.3765839999978198, 0.37966599999708706, 0.37645799999882,
+              0.39037500000267755
+            ],
+            "fingerprint": "7f259e7f5cf8df4335c6670c53652fe60c7b3780c09ad380f6f5e780209815bd"
+          }
+        ]
+      },
+      "referenceParity": true,
+      "productionBuildMs": 13134.829458999986,
+      "artifacts": {
+        "generatedBundleTraced": true,
+        "prerenderedRoutes": 3601,
+        "largestServerChunks": [
+          {
+            "file": ".next/server/chunks/946.js",
+            "bytes": 437111
+          },
+          {
+            "file": ".next/server/chunks/594.js",
+            "bytes": 192901
+          },
+          {
+            "file": ".next/server/chunks/482.js",
+            "bytes": 93124
+          }
+        ],
+        "clientChunks": {
+          "count": 35,
+          "bytes": 950790,
+          "gzipBytes": 296365
+        },
+        "largestTracedClosures": [
+          {
+            "route": "server/app/[lang]/[entityType]/[slug]/page.js.nft.json",
+            "bytes": 82201375,
+            "files": 37
+          },
+          {
+            "route": "server/app/[lang]/verdiepingen/[narrativeType]/[slug]/page.js.nft.json",
+            "bytes": 82200474,
+            "files": 37
+          },
+          {
+            "route": "server/app/[lang]/page.js.nft.json",
+            "bytes": 82180373,
+            "files": 36
+          }
+        ]
+      },
+      "server": {
+        "cold": {
+          "readyMs": 117.390625,
+          "firstRequestMs": 966.8102080000099,
+          "processToFirstResponseMs": 1084.2822499999893,
+          "rssBytes": 692551680
+        },
+        "firstEnglishRequestMs": 481.0191660000128,
+        "searches": [
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 33.833958999981405,
+            "p95Ms": 37.33808300000965,
+            "samplesMs": [37.33808300000965, 32.702707999997074, 33.833958999981405],
+            "wireBytes": 9659
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 37.40724999998929,
+            "p95Ms": 37.91783300001407,
+            "samplesMs": [37.91783300001407, 37.40724999998929, 36.75566600001184],
+            "wireBytes": 9825
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 39.18041599998833,
+            "p95Ms": 40.33466700001736,
+            "samplesMs": [40.33466700001736, 37.81129099999089, 39.18041599998833],
+            "wireBytes": 9818
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 22.180790999991586,
+            "p95Ms": 22.495083999994677,
+            "samplesMs": [22.180790999991586, 22.495083999994677, 21.85349999999744],
+            "wireBytes": 7837
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "nl",
+            "p50Ms": 30.731041999999434,
+            "p95Ms": 33.15137499998673,
+            "samplesMs": [33.15137499998673, 30.731041999999434, 30.374666999996407],
+            "wireBytes": 7177
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "nl",
+            "p50Ms": 7.759749999997439,
+            "p95Ms": 8.249665999988792,
+            "samplesMs": [7.508791000000201, 8.249665999988792, 7.759749999997439],
+            "wireBytes": 9476
+          },
+          {
+            "query": "Cabernet Sauvignon",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 31.59695800000918,
+            "p95Ms": 31.94375000000582,
+            "samplesMs": [31.59695800000918, 31.94375000000582, 31.50570800001151],
+            "wireBytes": 9505
+          },
+          {
+            "query": "ÉLEVAGE",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 33.93058299997938,
+            "p95Ms": 33.969249999994645,
+            "samplesMs": [33.93058299997938, 33.16345900000306, 33.969249999994645],
+            "wireBytes": 9631
+          },
+          {
+            "query": "water",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 33.05683300000965,
+            "p95Ms": 33.373832999990555,
+            "samplesMs": [33.05683300000965, 33.373832999990555, 32.62116700000479],
+            "wireBytes": 9716
+          },
+          {
+            "query": "biologie en wortelschade",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 20.31341699999757,
+            "p95Ms": 21.30804200001876,
+            "samplesMs": [21.30804200001876, 20.31341699999757, 19.666333000001032],
+            "wireBytes": 7071
+          },
+          {
+            "query": "nonexistent-query-82719",
+            "type": "all",
+            "locale": "en",
+            "p50Ms": 27.832208999985596,
+            "p95Ms": 28.06708399998024,
+            "samplesMs": [28.06708399998024, 27.131292000005487, 27.832208999985596],
+            "wireBytes": 7046
+          },
+          {
+            "query": "bordeaux",
+            "type": "region",
+            "locale": "en",
+            "p50Ms": 7.104084000020521,
+            "p95Ms": 7.1799579999933485,
+            "samplesMs": [7.1799579999933485, 6.651459000015166, 7.104084000020521],
+            "wireBytes": 9414
+          }
+        ],
+        "warmRssBytes": 755597312,
+        "article": {
+          "htmlWireBytes": 22490,
+          "htmlDecodedBytes": 106137,
+          "resources": [
+            {
+              "path": "/_next/static/css/1130954eb2430e98.css",
+              "wireBytes": 5832
+            },
+            {
+              "path": "/_next/static/css/8695206cc2416bd0.css",
+              "wireBytes": 10946
+            },
+            {
+              "path": "/_next/static/chunks/webpack-f11a4d587c516c7d.js",
+              "wireBytes": 1681
+            },
+            {
+              "path": "/_next/static/chunks/48cbb800-ba92bee4485302fc.js",
+              "wireBytes": 63295
+            },
+            {
+              "path": "/_next/static/chunks/698-0579fb47524cb9e0.js",
+              "wireBytes": 65922
+            },
+            {
+              "path": "/_next/static/chunks/main-app-cd2db1bffe4317f4.js",
+              "wireBytes": 511
+            },
+            {
+              "path": "/_next/static/chunks/688-9f0ef46711ef7807.js",
+              "wireBytes": 3568
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/layout-4feaf084f4ea8c82.js",
+              "wireBytes": 2830
+            },
+            {
+              "path": "/_next/static/chunks/897-8ac4befc5e4d495f.js",
+              "wireBytes": 5489
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/%5BentityType%5D/%5Bslug%5D/page-5cd74f2238e1a62f.js",
+              "wireBytes": 1949
+            },
+            {
+              "path": "/_next/static/chunks/app/%5Blang%5D/not-found-e1ff10b4c151062f.js",
+              "wireBytes": 784
+            },
+            {
+              "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+              "wireBytes": 39627
+            }
+          ],
+          "jsWireBytes": 185656
+        },
+        "images": []
+      }
+    }
+  ],
+  "localClone": {
+    "ms": 1560.153083000012,
+    "method": "local full-history copy with checkout and no hardlinks; not a network clone"
+  },
+  "budgets": [
+    {
+      "scenario": "1x",
+      "metric": "content build",
+      "actual": 1702.106084,
+      "limit": 15000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "content build peak RSS",
+      "actual": 500432896,
+      "limit": 1610612736,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "warm search worst case p95",
+      "actual": 8.192499999999995,
+      "limit": 50,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "first search per locale",
+      "actual": 69.503375,
+      "limit": 1000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "normalized passage heap",
+      "actual": 5415192,
+      "limit": 67108864,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "production build",
+      "actual": 5923.901707999999,
+      "limit": 120000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "largest local traced closure",
+      "actual": 11374807,
+      "limit": 157286400,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "process to first search response",
+      "actual": 335.77137500000026,
+      "limit": 2000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "warm server RSS",
+      "actual": 352239616,
+      "limit": 1073741824,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "warm HTTP search worst case p95",
+      "actual": 12.738540999998804,
+      "limit": 200,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "article referenced JS transfer",
+      "actual": 185661,
+      "limit": 225280,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "article HTML transfer",
+      "actual": 21282,
+      "limit": 65536,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "sampled image media.concept.wine-perception-and-development.smelling-tasting-and-time at 828px",
+      "actual": 42760,
+      "limit": 256000,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "sampled image media.concept.wine-perception-and-development.smelling-tasting-and-time at 1920px",
+      "actual": 121730,
+      "limit": 512000,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "sampled image media.concept.vineyard-soils.rock-basalt at 828px",
+      "actual": 13182,
+      "limit": 256000,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "1x",
+      "metric": "sampled image media.concept.vineyard-soils.rock-basalt at 1920px",
+      "actual": 25604,
+      "limit": 512000,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "content build",
+      "actual": 4495.1955,
+      "limit": 15000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "content build peak RSS",
+      "actual": 735150080,
+      "limit": 1610612736,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "warm search worst case p95",
+      "actual": 16.46191699999997,
+      "limit": 50,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "first search per locale",
+      "actual": 209.361042,
+      "limit": 1000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "normalized passage heap",
+      "actual": 16302688,
+      "limit": 67108864,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "production build",
+      "actual": 7720.6005829999995,
+      "limit": 120000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "largest local traced closure",
+      "actual": 31610974,
+      "limit": 157286400,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "process to first search response",
+      "actual": 549.4675829999978,
+      "limit": 2000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "warm server RSS",
+      "actual": 456851456,
+      "limit": 1073741824,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "warm HTTP search worst case p95",
+      "actual": 19.683375000000524,
+      "limit": 200,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "article referenced JS transfer",
+      "actual": 185655,
+      "limit": 225280,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "3x",
+      "metric": "article HTML transfer",
+      "actual": 21634,
+      "limit": 65536,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "content build",
+      "actual": 11134.400375000001,
+      "limit": 15000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "content build peak RSS",
+      "actual": 1354350592,
+      "limit": 1610612736,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "warm search worst case p95",
+      "actual": 32.3068330000001,
+      "limit": 50,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "first search per locale",
+      "actual": 537.544125,
+      "limit": 1000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "normalized passage heap",
+      "actual": 42593200,
+      "limit": 67108864,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "production build",
+      "actual": 13134.829458999986,
+      "limit": 120000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "largest local traced closure",
+      "actual": 82201375,
+      "limit": 157286400,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "process to first search response",
+      "actual": 1084.2822499999893,
+      "limit": 2000,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "warm server RSS",
+      "actual": 755597312,
+      "limit": 1073741824,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "warm HTTP search worst case p95",
+      "actual": 40.33466700001736,
+      "limit": 200,
+      "unit": "ms",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "article referenced JS transfer",
+      "actual": 185656,
+      "limit": 225280,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "8x",
+      "metric": "article HTML transfer",
+      "actual": 22490,
+      "limit": 65536,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "repository",
+      "metric": "raw media review trigger",
+      "actual": 351367887,
+      "limit": 524288000,
+      "unit": "bytes",
+      "passed": true
+    },
+    {
+      "scenario": "repository",
+      "metric": "git objects review trigger",
+      "actual": 376628270,
+      "limit": 536870912,
+      "unit": "bytes",
+      "passed": true
+    }
+  ]
+}

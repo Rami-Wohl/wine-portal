@@ -769,7 +769,8 @@ EXP-032 follows with Port, Sherry and Champagne as its first bounded batch.
 
 #### EXP-032 — Individual sweet, sparkling and fortified wines
 
-**Status:** open. **Depends on:** EXP-025 and EXP-029–031. Execute before EXP-026.
+**Status:** open. **Depends on:** EXP-025 and EXP-029–031. Execute the inventory
+and first publication batch before EXP-026; later batches remain explicitly open.
 
 **Work:** inventory named wines across all three families, record their true
 identity and existing destination, then order bounded publication batches.
@@ -799,7 +800,9 @@ alone does not complete the wine-page work.
 
 #### EXP-026 — Integrate graph, links, media and terminology
 
-**Depends on:** EXP-004–025 and EXP-029–032.
+**Depends on:** EXP-004–025, EXP-029–031, and the inventory/first publication
+batch of EXP-032. Remaining EXP-032 catalogue batches do not block this
+foundation integration; audit them when their publication follows.
 
 **Work:** audit reciprocal relations, contextual links, related-topic groups,
 media records, captions, terminology, NL/EN parity and search discoverability.
@@ -836,7 +839,8 @@ been removed or bounded; examples illuminate rather than dominate.
 
 #### EXP-028 — Integral editorial and product QA
 
-**Depends on:** all prior tickets.
+**Depends on:** the preceding foundation tickets and the first EXP-032
+publication batch. Later catalogue batches keep their own open follow-up and QA.
 
 **Work:** run factual, source, completeness, depth, media, accessibility,
 responsive, search, link and performance reviews; log findings through the

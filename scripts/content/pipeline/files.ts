@@ -1,5 +1,6 @@
-import { createHash } from "node:crypto";
-import { mkdir, readFile, readdir, unlink, writeFile } from "node:fs/promises";
+import { createHash, randomUUID } from "node:crypto";
+import { createReadStream } from "node:fs";
+import { mkdir, readFile, readdir, rename, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
 import { z } from "zod";
@@ -144,27 +145,34 @@ export async function validateMediaFiles(
   issues: string[],
 ): Promise<void> {
   if (!requireLocalMedia) return;
-  await Promise.all(
-    records.map(async ({ file, value }) => {
-      const assetPath = path.join(root, "public", "media", value.storage_key);
-      try {
-        const bytes = await readFile(assetPath);
-        const checksum = createHash("sha256").update(bytes).digest("hex");
-        if (checksum !== value.checksum_sha256) {
-          issues.push(`${file}: checksum_sha256 does not match public/media/${value.storage_key}`);
+  // Bound file handles and stream bytes instead of retaining the whole media corpus.
+  const concurrency = 8;
+  for (let offset = 0; offset < records.length; offset += concurrency) {
+    await Promise.all(
+      records.slice(offset, offset + concurrency).map(async ({ file, value }) => {
+        const assetPath = path.join(root, "public", "media", value.storage_key);
+        try {
+          const hash = createHash("sha256");
+          for await (const chunk of createReadStream(assetPath)) hash.update(chunk);
+          const checksum = hash.digest("hex");
+          if (checksum !== value.checksum_sha256) {
+            issues.push(
+              `${file}: checksum_sha256 does not match public/media/${value.storage_key}`,
+            );
+          }
+        } catch (error) {
+          if (isNodeError(error) && error.code === "ENOENT") {
+            issues.push(
+              `${file}: storage_key '${value.storage_key}' is missing under public/media; ` +
+                "set MEDIA_BASE_URL only when the same key exists in remote storage",
+            );
+            return;
+          }
+          throw error;
         }
-      } catch (error) {
-        if (isNodeError(error) && error.code === "ENOENT") {
-          issues.push(
-            `${file}: storage_key '${value.storage_key}' is missing under public/media; ` +
-              "set MEDIA_BASE_URL only when the same key exists in remote storage",
-          );
-          return;
-        }
-        throw error;
-      }
-    }),
-  );
+      }),
+    );
+  }
 }
 
 async function removeRetiredGeneratedFiles(outputDirectory: string): Promise<void> {
@@ -186,8 +194,18 @@ export async function writeGeneratedFiles(
   await mkdir(outputDirectory, { recursive: true });
   await removeRetiredGeneratedFiles(outputDirectory);
   await Promise.all(
-    Object.entries(outputs).map(([filename, contents]) =>
-      writeFile(path.join(outputDirectory, filename), contents, "utf8"),
-    ),
+    Object.entries(outputs).map(async ([filename, contents]) => {
+      const destination = path.join(outputDirectory, filename);
+      const temporary = `${destination}.${randomUUID()}.tmp`;
+      try {
+        await writeFile(temporary, contents, "utf8");
+        // A server must see a complete old or new snapshot, never a truncated JSON file.
+        await rename(temporary, destination);
+      } finally {
+        await unlink(temporary).catch((error: unknown) => {
+          if (!isNodeError(error) || error.code !== "ENOENT") throw error;
+        });
+      }
+    }),
   );
 }

@@ -37,6 +37,32 @@ export function searchEntryTitle(entry: SearchIndexEntry, locale: Locale): strin
   return entry.kind === "entity" ? entry.names[locale] : entry.titles[locale];
 }
 
+interface NormalizedPassage {
+  originalHeading: string | null;
+  originalText: string;
+  heading: string;
+  text: string;
+}
+
+// The generated passages are reused across requests. Cache by object, not query,
+// so memory is bounded by live content and discarded snapshots can be collected.
+const normalizedPassages = new WeakMap<SearchPassage, NormalizedPassage>();
+
+function normalizePassage(passage: SearchPassage): NormalizedPassage {
+  const cached = normalizedPassages.get(passage);
+  if (cached?.originalHeading === passage.heading && cached.originalText === passage.text) {
+    return cached;
+  }
+  const normalized = {
+    originalHeading: passage.heading,
+    originalText: passage.text,
+    heading: passage.heading ? normalizeSearchValue(passage.heading) : "",
+    text: normalizeSearchValue(passage.text),
+  };
+  normalizedPassages.set(passage, normalized);
+  return normalized;
+}
+
 function fieldScore(value: string, query: string, exact: number): number {
   const normalized = normalizeSearchValue(value);
   if (!normalized || !query) return 0;
@@ -75,8 +101,7 @@ function passageScore(
   query: string,
   tokens: string[],
 ): { score: number; kind: Exclude<SearchMatchKind, "metadata"> } | null {
-  const heading = passage.heading ? normalizeSearchValue(passage.heading) : "";
-  const text = normalizeSearchValue(passage.text);
+  const { heading, text } = normalizePassage(passage);
   const phraseInHeading = Boolean(heading && heading.includes(query));
   const phraseInText = text.includes(query);
   const allTokensInHeading = Boolean(heading && tokens.every((token) => heading.includes(token)));

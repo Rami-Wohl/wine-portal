@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
     ? { remotePatterns: [new URL(`${mediaBaseUrl}/**`)] }
     : { localPatterns: [{ pathname: "/media/**" }] },
   outputFileTracingRoot: projectRoot,
+  outputFileTracingIncludes: {
+    "/*": ["./src/generated/content/knowledge-base.json"],
+  },
   turbopack: {
     root: projectRoot,
   },

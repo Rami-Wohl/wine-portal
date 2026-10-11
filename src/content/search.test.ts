@@ -79,4 +79,44 @@ describe("knowledge search", () => {
     expect(parseEntityTypeFilter("invalid")).toBe("all");
     expect(parseEntityTypeFilter("toString")).toBe("all");
   });
+
+  it("keeps cached passages isolated by locale and refreshes changed content", () => {
+    const original = getPublishedSearchIndex().find(({ id }) => id === "concept.phylloxera")!;
+    const entry = structuredClone(original);
+    entry.passages = {
+      nl: [
+        {
+          block_id: "nl-example",
+          kind: "content",
+          depth: "advanced",
+          heading: "Één voorbeeld",
+          text: "Een unieke proefpassage.",
+        },
+      ],
+      en: [
+        {
+          block_id: "en-example",
+          kind: "content",
+          depth: "foundation",
+          heading: null,
+          text: "An isolated sample passage.",
+        },
+      ],
+    };
+
+    expect(searchKnowledge([entry], "unieke proefpassage", "all", "nl")[0]?.anchor).toBe(
+      "nl-example",
+    );
+    expect(searchKnowledge([entry], "unieke proefpassage", "all", "en")).toEqual([]);
+    expect(searchKnowledge([entry], "EEN VOORBEELD", "all", "nl")[0]?.match_kind).toBe("heading");
+
+    entry.passages.nl[0].text = "Een vervangen passage.";
+    entry.passages.nl[0].heading = "Nieuwe titel";
+    expect(searchKnowledge([entry], "unieke proefpassage", "all", "nl")).toEqual([]);
+    expect(searchKnowledge([entry], "een voorbeeld", "all", "nl")).toEqual([]);
+    expect(searchKnowledge([entry], "vervangen passage", "all", "nl")[0]?.snippet).toBe(
+      "Een vervangen passage.",
+    );
+    expect(searchKnowledge([entry], "nieuwe titel", "all", "nl")[0]?.match_kind).toBe("heading");
+  });
 });

@@ -31,8 +31,11 @@ including `/verdiepingen`. Page content and metadata use the same locale.
   the graph, backlinks and passage search index. Its modules live under
   `scripts/content/pipeline/`; public model exports live in
   `src/content/model.ts`. The deterministic compact bundle is replaceable.
-- **Runtime:** only `src/content/repository.ts` imports the generated bundle.
-  Its content lookups are currently synchronous. ESLint and `server-only`
+- **Runtime:** only `src/content/repository.ts` loads the generated JSON data file.
+  Production reads once per server module; `next.config.ts` includes the data in
+  deployment traces. Development retains a watched module dependency so content
+  rebuilds refresh pages without restarting. Generated snapshots are replaced
+  atomically. Its content lookups are currently synchronous. ESLint and `server-only`
   protect the boundary; client components receive small serialized props.
   `src/components/content-document.tsx` renders the shared block AST. Browser
   learning progress has a separate versioned adapter and no account backend.
@@ -59,3 +62,8 @@ constraint, not evidence that a production deployment has passed.
 Use [product-roadmap.md](product-roadmap.md) for priorities and the linked
 backlogs for current status. Deployment verification remains a separate
 external check; a green local suite does not establish GitHub or Vercel state.
+
+Performance changes also require `npm run benchmark -- --scales=1`; use the
+[performance guide](performance-budgets.md) for full scale/production runs and
+budget checks. Large JSON is deliberately kept out of production JavaScript and
+inferred TypeScript types.

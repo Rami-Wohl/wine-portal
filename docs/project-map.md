@@ -73,7 +73,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Runtimebundle | `src/generated/content/knowledge-base.json` | Afgeleid buildresultaat, niet canonical |
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
 | Stijlen | `src/styles/`, geordend via `src/app/globals.css` | Tokens, basis, UI-patronen en overrides; verantwoordelijkheden en cascade staan in `design-system-plan.md` |
-| Kwaliteitsreviews | `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
+| Kwaliteitsreviews | `editorial/*review*.md`, `editorial/*audit*.md` en het register in `docs/quality-assurance.md` | Gedateerde, blijvende momentopnames van controles en bevindingen |
 | Regionale uitbreidingsfase | `docs/region-expansion-roadmap.md` | Beslispoorten, druivenprioriteiten en definitie van gereed vóór verdere regiogroei |
 | Overkoepelende productvolgorde | `docs/product-roadmap.md` | Prioriteiten en beslismomenten tussen platform, Explore, Learn en Atlas; ticketstatus blijft in de eigen backlog |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
@@ -125,6 +125,13 @@ naar de implementatiecontrole van `MNT-046`.
   bundelimports elders; Next.js blokkeert ook indirecte repositoryimports vanuit
   clientcomponenten. Geef kleine geserialiseerde resultaten door als props.
   Alleen Vitest vervangt de marker omdat de tests in Node draaien.
+
+De productierepository leest de gevalideerde JSON als databestand, eenmaal per
+servermodule; Next-deploymenttraces nemen het expliciet mee. Development bewaart
+de dependency voor automatische verversing na een contentbuild; de pipeline
+vervangt gegenereerde snapshots atomisch. De zoekfunctie
+cachet genormaliseerde passages zonder een zoektermcache. Metingen, budgetten
+en herhaalcommando's staan in [performance-budgets.md](performance-budgets.md).
 
 De module-indeling verandert geen canonical schema's, validatieregels of
 bundleformaat. De controle staat in de
@@ -186,6 +193,7 @@ bevat een werkend leerpad met zeven lessen en lokale browservoortgang.
 | `npm run format:check` | Controleert die formatting zonder bestanden te wijzigen |
 | `npm run check` | Draait formattingcheck, lint, één corpusbuild met relationele audit, typecheck en unit-tests |
 | `npm test` | Test parser, graph, routing, search en rendererlogica snel |
+| `npm run benchmark -- --scales=1` | Meet content en zoeken in geïsoleerde processen; `--production` voegt productiebuilds, HTTP en traces toe |
 | `npm run test:e2e` | Bouwt de productieapp en draait de volledige Playwright-suite in Chromium |
 
 Browsertests zijn bedoeld voor integratiegrenzen zoals routing, gelokaliseerde

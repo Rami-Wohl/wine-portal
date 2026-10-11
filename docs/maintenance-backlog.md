@@ -25,18 +25,19 @@ Peildatum: 2026-10-11.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 6 | `MNT-051` t/m `MNT-053`, `MNT-060` t/m `MNT-062` |
+| Open | 5 | `MNT-051`, `MNT-053`, `MNT-060` t/m `MNT-062` |
 | Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 48 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054`, `MNT-057–059` |
+| Afgerond | 49 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is de reproduceerbare schaalmeting
-(`MNT-052`), gevolgd door de eerste batch individuele wijnpagina's (`EXP-032`).
+De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
+Het eerstvolgende uitvoerbare werk is de eerste batch individuele wijnpagina's
+(`EXP-032`: Port/Sherry/Champagne), met voorafgaande identiteit-/scopecontrole.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
 de prioriteitswijziging; de regionale fase staat in een eigen `REG-*`-planning.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
@@ -186,40 +187,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
 
-### `MNT-052` — Meetbare performance- en mediabudgetten vastleggen
-
-- **Status:** open
-- **Prioriteit:** middel
-- **Scope:** search, builds, runtimebundles en media
-- **Categorie:** engineering, operations, media
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** de review van 2026-10-11 meet vóór compactie 17,3 MB JSON
-  en een lokale zoekmediaan van circa 66 ms op 302 gepubliceerde documenten.
-  De compacte JSON is circa 10,4 MB; schijfbytes zijn geen browserdownloads of
-  processgeheugen. Zoekpassages worden nog bij iedere query genormaliseerd.
-- **Klaar wanneer:** buildduur, route-/clientbundles, beeldbytes en zoeklatentie
-  met een reproduceerbare workload zijn gemeten en passende budgetten gekozen.
-  Optimaliseer alleen aangetoonde knelpunten. Een eventuele CDN-stap omvat
-  synchronisatie, checksums, cachebeleid en rollback; `MEDIA_BASE_URL` alleen
-  uploadt niets. Bewaar bronmetadata en canonical media-ID's.
-- **Uitwerking 2026-10-11 (`QCR-2026-10-11-03`):** meet echte 1× en geïsoleerde
-  synthetische 3×/8×-workloads. Genereer unieke identities/routes en commit geen
-  gekloonde canonical packages. Scheid buildtijd, gecomprimeerde transportbytes,
-  getraceerde deploymentfiles, koude start, warm processgeheugen en zoek-p50/p95;
-  test NL/EN, hits/misses en querylengtes. Meet clone-/mediakosten afzonderlijk.
-  Leg reproductie, omgeving, budgetten en foutmarges vast. Vergelijk daarna
-  gecachte/precomputed normalisatie met een index en zo nodig shards of afgeleide
-  SQLite/FTS. De huidige contentrepository is synchroon: lazy I/O achter een
-  onveranderd contract is geen vanzelfsprekendheid. Mediawerk omvat varianten,
-  upload/synchronisatie, integriteit, caching en rollback; een uniforme limiet
-  van 2500 pixels of verplichte CDN vóór iedere nieuwe regio is niet besloten.
-- **Planning:** eerstvolgende ontwikkeltaak; lever metingen, budgetten en een
-  gemotiveerd optimalisatiebesluit. Voer bewezen kleine verbeteringen binnen
-  dit ticket uit; splits een omvangrijke architectuurmigratie vóór uitvoering.
-  Grote bronbestanden alleen rechtvaardigen geen databasemigratie.
-- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
-  volgt de overkoepelende productplanning.
-
 ### `MNT-053` — Bestaande SVG-diagrammen naar de gewenste rasterstijl migreren
 
 - **Status:** open
@@ -258,7 +225,10 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   GitHub heeft; repositoryrechten en Actions-instellingen zijn gecontroleerd;
   de passende branch protection/required check is expliciet beoordeeld; en de
   eerstvolgende toegestane Vercel-deployment Node 24 in zijn buildlog toont en
-  de Learn-live-smoke doorstaat. Vercel kiest de patch binnen `24.x` zelf.
+  de Learn-live-smoke doorstaat. Controleer na `MNT-052` ook dat het externe
+  JSON-databestand in de gedeployde function aanwezig is en NL/EN-search werkt;
+  lokale tracing bewijst geen cloud cold-start of function-packagegrootte.
+  Vercel kiest de patch binnen `24.x` zelf.
 - **Blokkade:** geauthenticeerde toegang en een gepushte commit/deployment zijn
   vereist. Geen credentials aangemaakt en geen deployment of permissiewijziging
   uitgevoerd tijdens lokaal ontwikkelwerk.
@@ -368,6 +338,47 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-052` — Meetbare performance- en mediabudgetten vastleggen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Scope:** search, builds, runtimebundles en media
+- **Categorie:** engineering, operations, media
+- **Herkomst:** `QCR-2026-10-04-01`, `QCR-2026-10-11-03/04`
+- **Bevinding:** de review van 2026-10-11 meet vóór compactie 17,3 MB JSON
+  en een lokale zoekmediaan van circa 66 ms op 302 gepubliceerde documenten.
+  De compacte JSON is circa 10,4 MB; schijfbytes zijn geen browserdownloads of
+  processgeheugen. Zoekpassages worden nog bij iedere query genormaliseerd.
+- **Klaar wanneer:** buildduur, route-/clientbundles, beeldbytes en zoeklatentie
+  met een reproduceerbare workload zijn gemeten en passende budgetten gekozen.
+  Optimaliseer alleen aangetoonde knelpunten. Een eventuele CDN-stap omvat
+  synchronisatie, checksums, cachebeleid en rollback; `MEDIA_BASE_URL` alleen
+  uploadt niets. Bewaar bronmetadata en canonical media-ID's.
+- **Uitwerking 2026-10-11 (`QCR-2026-10-11-03`):** meet echte 1× en geïsoleerde
+  synthetische 3×/8×-workloads. Genereer unieke identities/routes en commit geen
+  gekloonde canonical packages. Scheid buildtijd, gecomprimeerde transportbytes,
+  getraceerde deploymentfiles, koude start, warm processgeheugen en zoek-p50/p95;
+  test NL/EN, hits/misses en querylengtes. Meet clone-/mediakosten afzonderlijk.
+  Leg reproductie, omgeving, budgetten en foutmarges vast. Vergelijk daarna
+  gecachte/precomputed normalisatie met een index en zo nodig shards of afgeleide
+  SQLite/FTS. De huidige contentrepository is synchroon: lazy I/O achter een
+  onveranderd contract is geen vanzelfsprekendheid. Mediawerk omvat varianten,
+  upload/synchronisatie, integriteit, caching en rollback; een uniforme limiet
+  van 2500 pixels of verplichte CDN vóór iedere nieuwe regio is niet besloten.
+- **Uitvoering 2026-10-11:** reproduceerbare 1×/3×/8×-fixtures, productiebuilds,
+  zoekpariteit, HTTP, traces, client-/beeldbytes, clone- en geheugenmetingen.
+  Alle 42 guardrails gehaald. Passage-normalisatie gecachet; JSON uit productie-JS
+  en afgeleide TS-types gehaald met behoud van de serverrepository; mediahashes gestreamd
+  met begrensde gelijktijdigheid. Alle synchrone lookups en canonical data behouden.
+  De eerdere 8×-typecheck-OOM is verholpen. Bewijs en beperkingen staan in de
+  [performancereview](../editorial/performance-review-2026-10-11.md).
+- **Herhaling:** volgens [performance-budgets.md](performance-budgets.md), vóór
+  grote regiobatches, bij relevante code-/corpuswijziging en bij Atlasdata.
+  Een reproduceerbare budgetbreuk krijgt een nieuwe concrete onderhoudsactie.
+  Externe packaging en cloudgedrag blijven bij `MNT-056`; gebruikersopslag bij `MNT-050`.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
 
 ### `MNT-059` — Compacte bundle en één corpusbuild per check
 
