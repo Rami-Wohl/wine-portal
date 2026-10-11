@@ -88,6 +88,8 @@ Tijdens overdracht en vullen kan zuurstof in de wijn komen. Ook de kopruimte ond
 Fles, vulniveau, temperatuur en sluiting moeten bij elkaar passen. Kopruimte laat uitzetting toe; de hoeveelheid zuurstof daarin vraagt tegelijk beheersing. Meer afvullen om alle gasruimte weg te nemen is dus geen algemene oplossing.
 
 De naam van een sluiting zegt minder dan haar specificatie en toepassing. Bij een schroefdop bepaalt onder meer de afdichtende liner mede de gasoverdracht. Een correct aangebrachte sluiting ondersteunt het bewaardoel; het uiterlijk van kurk of dop is geen kwaliteitsbewijs. Verdere flesontwikkeling hangt ook af van de wijn en de bewaaromstandigheden.
+
+Ga voor de beoordeling van verdere flesverandering naar [[concept.wine-perception-and-development|waarneming en wijnontwikkeling]].
 :::
 
 :::figure{#van-kelder-naar-fles depth="foundation" media_id="media.lesson.cellar-to-bottle.final-preparation-and-bottling"}

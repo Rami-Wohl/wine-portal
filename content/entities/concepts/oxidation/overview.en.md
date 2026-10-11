@@ -23,6 +23,8 @@ Wines differ in sensitivity. Phenolic compounds can buffer oxygen reactions; the
 ## Choice or fault — oxygen is not simply the enemy
 
 Some wine styles deliberately seek nutty, savoury or dried-fruit character through controlled oxygen contact. In a young, fruit-led wine, the same loss of freshness would be unwelcome. Judge oxidation against the **intended style** and the wine's balance, not merely the presence of air. [@source.awri-wine-faults] [@source.wine-australia-oxygen-style]
+
+[[concept.wine-perception-and-development|Sensory perception and wine development]] places oxidation alongside other bottle changes and distinguishes description from appreciation.
 :::
 
 :::detail{#chemie parent="keuze-of-fout" depth="advanced" source_refs="source.awri-wine-faults source.wine-australia-oxygen-style"}

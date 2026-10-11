@@ -1,0 +1,327 @@
+schema_version: 2
+package_id: concept.wine-perception-and-development
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Hoe verhouden samenstelling, proever en ontwikkeling zich?
+    layers:
+      foundation:
+        - Hoe verhouden samenstelling, proever en ontwikkeling zich?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verhouden samenstelling, proever en ontwikkeling zich?
+        source_refs:
+          - source.spence-wine-psychology-2020
+          - source.echave-bottle-ageing-storage-2021
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Welke zintuiglijke bijdragen vormen de ervaring?
+    layers:
+      foundation:
+        - Welke zintuiglijke bijdragen vormen de ervaring?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke zintuiglijke bijdragen vormen de ervaring?
+        source_refs:
+          - source.awri-wine-sensory-assessment-2022
+          - source.spence-wine-psychology-2020
+          - source.wset-mouthfeel-2026
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+      - drempels-en-mengsels
+      - ruiken-proeven-en-tijd
+    target_ids: []
+    completeness_questions:
+      - Hoe werken mengsels, balans en flesveranderingen?
+    layers:
+      foundation:
+        - Hoe werken mengsels, balans en flesveranderingen?
+      intermediate:
+        - Detectie, herkenning en afwijzing verschillen; mengsels veranderen
+          drempels.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe werken mengsels, balans en flesveranderingen?
+        source_refs:
+          - source.awri-wine-sensory-assessment-2022
+      specific_claims:
+        - claim: Geurmengsels kunnen versterken en maskeren.
+          status: supported
+          source_refs:
+            - source.ilc-wine-aroma-meta-analysis-2016
+        - claim: Flesbewaring verandert fenolen en pigmenten; TDN ontstaat via
+            zuurgekatalyseerde omzettingen, niet uitsluitend oxidatie.
+          status: supported
+          source_refs:
+            - source.echave-bottle-ageing-storage-2021
+            - source.tarasov-riesling-tdn-thresholds-2020
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Hoe beïnvloeden proeven en bewaren de uitkomst?
+    layers:
+      foundation:
+        - Hoe beïnvloeden proeven en bewaren de uitkomst?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe beïnvloeden proeven en bewaren de uitkomst?
+        source_refs:
+          - source.awri-wine-sensory-assessment-2022
+          - source.spence-wine-psychology-2020
+          - source.awri-wine-transport-storage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Hoe scheid je beschrijving, kwaliteit, voorkeur en bewaarkeuze?
+    layers:
+      foundation:
+        - Hoe scheid je beschrijving, kwaliteit, voorkeur en bewaarkeuze?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe scheid je beschrijving, kwaliteit, voorkeur en bewaarkeuze?
+        source_refs:
+          - source.awri-wine-sensory-assessment-2022
+          - source.spence-wine-psychology-2020
+          - source.awri-wine-transport-storage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Wat leren afgebakende Riesling- en bewaarproeven?
+    layers:
+      foundation:
+        - Wat leren afgebakende Riesling- en bewaarproeven?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat leren afgebakende Riesling- en bewaarproeven?
+        source_refs:
+          - source.tarasov-riesling-tdn-thresholds-2020
+          - source.awri-wine-transport-storage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+      - minerality-als-proefwoord
+      - vergelijkbaar-onderzoek
+    target_ids: []
+    completeness_questions:
+      - Wat bewijzen analyse, proeven en een bewaarproef ieder?
+    layers:
+      foundation:
+        - Wat bewijzen analyse, proeven en een bewaarproef ieder?
+      intermediate:
+        - Minerality is een variabel proefwoord, geen meting of bewijs van
+          gesteentesmaak.
+      advanced:
+        - Blindproeven, herhaling, volgorde en bewaargeschiedenis begrenzen
+          conclusies.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat bewijzen analyse, proeven en een bewaarproef ieder?
+        source_refs:
+          - source.awri-wine-sensory-assessment-2022
+          - source.spence-wine-psychology-2020
+          - source.ilc-wine-aroma-meta-analysis-2016
+          - source.tarasov-riesling-tdn-thresholds-2020
+      specific_claims:
+        - claim: Minerality kent verschillende definities en verbanden met meerdere
+            wijnbestanddelen.
+          status: supported
+          source_refs:
+            - source.parr-maltman-minerality-2018
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe verbind je een waarneming aan een gerichte vervolgvraag?
+    layers:
+      foundation:
+        - Hoe verbind je een waarneming aan een gerichte vervolgvraag?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verbind je een waarneming aan een gerichte vervolgvraag?
+        source_refs:
+          - source.awri-wine-sensory-assessment-2022
+          - source.awri-wine-transport-storage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.wine-composition
+    names:
+      nl: Wijnsamenstelling
+      en: Wine composition
+    slugs:
+      nl: wijnsamenstelling
+      en: wine-composition
+    disposition: link
+  - id: concept.acidity
+    names:
+      nl: Zuur in wijn
+      en: Acidity in wine
+    slugs:
+      nl: zuur-in-wijn
+      en: acidity-in-wine
+    disposition: link
+  - id: concept.tannin
+    names:
+      nl: Tannine
+      en: Tannin
+    slugs:
+      nl: tannine
+      en: tannin
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link
+  - id: concept.bottling
+    names:
+      nl: Botteling
+      en: Bottling
+    slugs:
+      nl: botteling
+      en: bottling
+    disposition: link
+  - id: concept.sulfur-dioxide
+    names:
+      nl: Zwaveldioxide
+      en: Sulfur dioxide
+    slugs:
+      nl: zwaveldioxide
+      en: sulfur-dioxide
+    disposition: link
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link
+  - id: concept.sparkling-wines
+    names:
+      nl: Mousserende wijnen
+      en: Sparkling wines
+    slugs:
+      nl: mousserende-wijnen
+      en: sparkling-wines
+    disposition: link
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
+    disposition: link
+  - id: concept.vineyard-soils
+    names:
+      nl: Wijngaardbodems
+      en: Vineyard soils
+    slugs:
+      nl: wijngaardbodems
+      en: vineyard-soils
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

@@ -122,6 +122,8 @@ Brix and related must scales use density or refractive-index measurements with c
 Start with **origin**: what did the grape supply and what arose through fermentation or cellar treatment? Then ask about **state**: what amount and chemical form are present at the sampling point? Connect that with **conditions** such as pH, temperature, gas management and ageing.
 
 A tasting note offers the next perspective. Aromatic and non-volatile constituents interact; a single chemical name cannot fully describe the experience. [@source.awri-flavour-precursors] A technical sheet thus helps frame focused questions about wine. Judging quality additionally requires an assessment of the whole.
+
+[[concept.wine-perception-and-development|Sensory perception and wine development]] connects that composition with tasting, balance and change in the bottle.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}

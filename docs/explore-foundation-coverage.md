@@ -163,7 +163,7 @@ Statussen:
 | `EXP-031` | Versterkte wijnen als eigen familie | Actieve `fortified-wines`; `fortification` blijft techniekowner | volledig binnen scope | Zoetheid en rijping verbonden; flor/solera primair hier uitgelegd; eigen PNG en NL/EN | voltooid |
 | `EXP-032` | Individuele zoete, mousserende en versterkte wijnpagina's | Bestaande Sauternes-, Tokaj-, passito- en vin-de-paillebestemmingen eerst beoordelen | gedeeltelijk | Inventaris en geordende publicatiebatches; Port/Sherry/Champagne eerst, daarna contrasterende kandidaten | P1 na EXP-025 |
 | `EXP-024` | Wijnsamenstelling als systeem | Actieve `wine-composition`; bestaande stof- en procesowners behouden | volledig binnen scope | Tien stoffamilies plus glycerol, herkomst en interacties, vrije/gebonden vormen, meetgrenzen, PNG en concept-/leslinks in NL/EN | voltooid |
-| `EXP-025` | Waarneming, balans en flesontwikkeling | Sensorische passages in concepts, grapes en lessons | afwezig | Zintuigen, thresholds, interactie, context, textuur, balans, kwaliteitsoordeel en ontwikkeling | P1 |
+| `EXP-025` | Waarneming, balans en flesontwikkeling | Actieve `wine-perception-and-development`; bestaande stof-, bodem- en procesowners behouden | volledig binnen scope | Zintuigen, drempels, mengsels, adaptatie, context, balans, minerality, bewaring en beoordelingsgrenzen; PNG en concept-/leslinks in NL/EN | voltooid |
 
 ## 5. Bouwstenen uit de baseline en gerichte aanvullingen
 
@@ -220,7 +220,7 @@ de Explore-roadmap; zij is geen volledige actuele entitylijst.
 | `concept.lees-ageing` | actief | Liescontact over vat, tank en fles | `EXP-020` voltooid |
 | `concept.batonnage` | actief | Gerichte bewerking tijdens liescontact | `EXP-020` voltooid |
 | `concept.autolysis` | actief | Onderliggend gistcelmechanisme | `EXP-020` gereviewd; vervolg `EXP-023` |
-| `concept.oxidation` | actief | Zuurstofeffect en fout/stijlgrens | `EXP-022` diagnoselink gereviewd; vervolg `EXP-025` |
+| `concept.oxidation` | actief | Zuurstofeffect en fout/stijlgrens | `EXP-022` diagnoselink en `EXP-025` ontwikkelingslink gereviewd |
 | `concept.assemblage` | actief | Partijen samenstellen; proefmengsels in de opvoedingsillustratie | `EXP-020` voltooid |
 | `concept.clarification-and-fining` | actief | Mechanisme-eigenaar voor klaring/fining; systeemafweging bij bottling | `EXP-021` gereviewd |
 | `concept.sulfur-dioxide` | actief | Antioxidatieve en microbiële bescherming; bottling-link toegevoegd | `EXP-022` mechanisme hergebruikt; SO₂ blijft eigen owner |
@@ -374,7 +374,7 @@ later hun eigen scopebrief.
 | `concept.sparkling-wines` (actief) | Bruisroutes, liescontact, sediment en zoetheid | `EXP-030` voltooid | Zelfstandige systeemhub |
 | `concept.fortified-wines` (actief) | Samenhang alcoholtoevoeging, zoetheid en rijping; flor/solera | `EXP-031` voltooid | Zelfstandige systeemhub |
 | `concept.wine-composition` (actief) | Stoffamilies, herkomst, interactie en meetgrenzen | `EXP-024` voltooid | Zelfstandige systeemhub |
-| Sensory perception and development | Waarneming, balans en tijd | `EXP-025` | Hub |
+| `concept.wine-perception-and-development` (actief) | Waarneming, balans, minerality en tijd | `EXP-025` voltooid | Zelfstandige systeemhub |
 
 De tien verplichte owners uit EXP-016 blijven `fermentation`, `extraction`,
 `pressing`, `malolactic-fermentation`, `elevage`, `lees-ageing`,
@@ -382,7 +382,8 @@ De tien verplichte owners uit EXP-016 blijven `fermentation`, `extraction`,
 `maceration` bezit het contactregime; `extraction` de overdracht en cap management;
 `autolysis` de celafbraak en `batonnage` de handeling binnen liescontact.
 `sulfur-dioxide` is geen owner voor alle zwavelverbindingen. Bottelvoorbereiding
-en stabiliteit komen bij `bottling`, algemene flesontwikkeling bij EXP-025.
+en stabiliteit komen bij `bottling`, algemene flesontwikkeling bij
+`wine-perception-and-development` (EXP-025 voltooid).
 
 De [audit, §4–7](../editorial/vinification-ownership-audit-2026-10-03.md#4-overlap-en-concrete-vervolgacties)
 legt de bewijsplekken en toewijzing van overlap, bron-/beeldhiaten en lessons
@@ -450,8 +451,14 @@ identities waar de scope overeenkomt.
     met tien stoffamilies, interacties en meetgrenzen. Een nieuwe PNG verbindt
     druif, vergisting en liescontact; zes bestaande concepts en de grondstofles
     verwijzen naar de hub. Waarneming en kwaliteit blijven onderscheiden van
-    chemische analyse en volgen verder in EXP-025.
+    chemische analyse; de vervolgowner is gepubliceerd binnen EXP-025.
 
-De volgende inhoudelijke taak is `EXP-025`: waarneming, balans en flesontwikkeling. Taalpresentatie
+13. `EXP-025` heeft waarneming en wijnontwikkeling gepubliceerd, met onderscheid
+    tussen analyse, waarneming, kwaliteitsoordeel en voorkeur. Drempels,
+    mengsels, minerality en onderzoeksopzet hebben eigen verdiepingsblocks;
+    zeven owners en de laatste kelderles verwijzen naar de hub.
+
+De volgende inhoudelijke taak is `EXP-032`: individuele wijnpagina's, met
+Port/Sherry/Champagne als eerste afgebakende batch. Taalpresentatie
 (`MNT-046`), pipeline/model (`MNT-048`) en CSS-onderhoud (`MNT-049`) zijn afgerond.
 De [productplanning](product-roadmap.md) bewaakt de afwisseling met platformwerk.

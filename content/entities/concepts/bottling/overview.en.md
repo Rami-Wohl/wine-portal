@@ -88,6 +88,8 @@ Oxygen can enter wine during transfer and filling. The headspace beneath the clo
 Bottle, fill height, temperature and closure must suit one another. Headspace allows expansion, while the oxygen it contains also needs control. Filling higher to eliminate all gas space is therefore not a general solution.
 
 A closure's name tells you less than its specification and application. With screw caps, the sealing liner is among the factors determining gas transmission. A correctly applied closure supports the storage objective; the appearance of a cork or cap is not proof of quality. Later bottle development also depends on the wine and storage conditions.
+
+For the assessment of further bottle changes, continue to [[concept.wine-perception-and-development|sensory perception and wine development]].
 :::
 
 :::figure{#van-kelder-naar-fles depth="foundation" media_id="media.lesson.cellar-to-bottle.final-preparation-and-bottling"}

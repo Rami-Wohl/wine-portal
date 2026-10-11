@@ -70,6 +70,8 @@ Dit model is een manier om kelderkeuzes te ordenen. Het is geen recept waarin ie
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}
 De uiteindelijke wijn draagt sporen van de hele route. Assemblage kan balans vormen; klaring en filtratie kunnen helderheid en stabiliteit bewaken; zorgvuldige botteling helpt fruit, kleur en textuur behouden. Vanuit het glas kun je plausibele procesvragen stellen, maar de route alleen uit smaak reconstrueren blijft onzeker.
+
+Na de kelderroute volgt de vraag hoe je de wijn ervaart en hoe hij verder verandert. [[concept.wine-perception-and-development|Waarneming en wijnontwikkeling]] verbindt proeven, balans en flesbewaring.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}

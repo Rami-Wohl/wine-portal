@@ -51,6 +51,8 @@ Cellar trials consequently assess both the measurements and the sensory result. 
 In a sweet wine, acidity counterbalances sugar; in a dry wine the same amount of acidity has less shelter. Fruit, alcohol and mouthfeel also influence how sharp or harmonious the whole seems. A refreshing wine need not taste *sour* in the everyday negative sense.
 
 Acidity helps wine retain freshness during development. Ageing potential also requires sufficient flavour intensity and appropriate structure. A lean, unbalanced young wine therefore needs more than high acidity to develop with interest. [@source.wset-tasting-guide-2018]
+
+[[concept.wine-perception-and-development|Sensory perception and wine development]] explains how acidity relates to other impressions and what can support a claim about ageing potential.
 :::
 
 :::section{#kelderkeuzes depth="intermediate" source_refs="source.awri-deacidification source.wset-acidity-2026"}

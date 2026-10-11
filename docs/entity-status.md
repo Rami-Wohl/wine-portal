@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 358 entities — 294 active, 64 draft, 0 deprecated.
+**Totaal:** 359 entities — 295 active, 64 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (294)
+## Actief — publiek vindbaar (295)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -123,6 +123,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Vluchtige thiolen](../content/entities/concepts/volatile-thiols/entity.yaml) | Concept | Zelfstandige pagina | `concept.volatile-thiols` | Ja | `/concepts/volatile-thiols` | 2026-09-22 |
 | [Voeding van de wijnstok, bodembeheer en wijngaardvloer](../content/entities/concepts/vine-nutrition-soil-management-vineyard-floor/entity.yaml) | Concept | Zelfstandige pagina | `concept.vine-nutrition-soil-management-vineyard-floor` | Ja | `/concepts/vine-nutrition-soil-management-vineyard-floor` | 2026-10-02 |
 | [Vulkanische wijngaardbodems](../content/entities/concepts/volcanic-vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.volcanic-vineyard-soils` | Ja | `/concepts/volcanic-vineyard-soils` | 2026-09-26 |
+| [Waarneming en wijnontwikkeling](../content/entities/concepts/wine-perception-and-development/entity.yaml) | Concept | Zelfstandige pagina | `concept.wine-perception-and-development` | Ja | `/concepts/wine-perception-and-development` | 2026-10-11 |
 | [Waterrelaties, droogte en irrigatie bij de wijnstok](../content/entities/concepts/vine-water-relations/entity.yaml) | Concept | Zelfstandige pagina | `concept.vine-water-relations` | Ja | `/concepts/vine-water-relations-drought-irrigation` | 2026-09-25 |
 | [Weerrisico's, ziekten, plagen en stoornissen](../content/entities/concepts/vineyard-hazards-diseases-pests-disorders/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-hazards-diseases-pests-disorders` | Ja | `/concepts/vineyard-hazards-diseases-pests-disorders` | 2026-10-02 |
 | [Wijngaardbodems](../content/entities/concepts/vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-soils` | Ja | `/concepts/vineyard-soils` | 2026-09-26 |

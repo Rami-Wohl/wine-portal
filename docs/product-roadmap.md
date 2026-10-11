@@ -23,7 +23,9 @@ overzichtspagina is op verzoek verwijderd (`DEC-EXP-007`); verwijzingen gaan
 rechtstreeks naar de relevante familie. Individuele wijnen en stijlen krijgen
 een gefaseerde eigen publicatieronde (`EXP-032`).
 Wijnsamenstelling heeft nu een eigen tweetalige systeemhub met stoffamilies,
-interacties, meetgrenzen en PNG (`EXP-024`).
+interacties, meetgrenzen en PNG (`EXP-024`). Waarneming, balans en
+flesontwikkeling vormen nu een aansluitende tweetalige systeemhub, met drempels,
+proefcontext, minerality en een eigen PNG (`EXP-025`).
 
 ## Waar we staan
 
@@ -43,7 +45,7 @@ features niet automatisch gereed.
 | Moment | Werk | Reden en grens |
 | --- | --- | --- |
 | Eerstvolgende externe vrijgave, zodra toegang werkt | `MNT-056`: eerste GitHub-run, mergebescherming en deployment bevestigen | Node 24 en CI zijn lokaal gereed (`MNT-047`); de ongepatchte ontwikkelketen blijft bij `MNT-055` |
-| Eerstvolgende ontwikkeltaak | `EXP-025`: waarneming, balans en flesontwikkeling | Het samenstellingsmodel is gereed; verbind nu analyse, proefwaarneming en ontwikkeling met behoud van bestaande mechanismeowners |
+| Eerstvolgende ontwikkeltaak | `EXP-032`: individuele wijnpagina's | Begin met identiteit en inventaris, publiceer Port/Sherry/Champagne als eerste afgebakende batch en houd de overige batches expliciet open |
 | Samen met pilotevaluatie, vroegst 2026-10-22 bij genoeg gebruik | `LRN-012` en `MNT-050`: Learn-vervolg en platformopslag besluiten | Accounts, cross-device voortgang, quizzen en personalisatie moeten een bewezen doel dienen; vervroeg het opslagbesluit bij een concrete consumer |
 | Bronverkenning vóór `EXP-027` | `MNT-051`: beperkte Atlaspilot | Geef de drie geblokkeerde kaarttickets een uitvoerbaar datatraject; wereldwijde druivenverspreiding vraagt andere gegevens dan appellationgrenzen |
 | Vóór grootschalige uitbreiding naar volgende regio's | `MNT-052`: performance- en mediabudgetten | Meet build, serverzoekwerk, browserbundles en beelden voordat storage-/searcharchitectuur verandert |
@@ -51,13 +53,13 @@ features niet automatisch gereed.
 
 Dit is een aanbevolen afwisseling van platform- en contentwerk, geen eis om
 alle content stil te leggen tot elk onderhoudsticket af is. De onderlinge
-inhoudelijke volgorde is `EXP-025`, `EXP-032`, `EXP-026`,
+inhoudelijke volgorde is `EXP-032`, `EXP-026`,
 `EXP-027`, `EXP-028`. De afzonderlijke familiepagina's (`EXP-029–031`) zijn
 al uitgevoerd na de scopeaanvulling op `EXP-023`.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-Er staan 17 niet-afgeronde tickets geregistreerd: 11 onderhoudsacties, 5
+Er staan 16 niet-afgeronde tickets geregistreerd: 11 onderhoudsacties, 4
 Explore-tickets en één Learn-evaluatie. Een geblokkeerde of geplande actie telt
 mee. Deze momentopname wordt bij wijziging van de uitvoeringsvolgorde bijgewerkt;
 de gekoppelde backlogs blijven leidend voor actuele status.
@@ -67,14 +69,13 @@ en vrijgekomen externe controles mogen deze volgorde onderbreken.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `EXP-025` | Waarneming, balans en flesontwikkeling |
-| 2 | `EXP-032` | Individuele wijnpagina's: inventaris, Port/Sherry/Champagne als eerste batch, verdere batches blijven open |
-| 3 | `EXP-026` | Integratie graph, links, media en terminologie |
-| 4 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
-| 5 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
-| 6 | `EXP-027` | Mondiale toets en regiokeuze |
-| 7 | `EXP-028` | Integrale redactionele en product-QA |
-| 8 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
+| 1 | `EXP-032` | Individuele wijnpagina's: inventaris, Port/Sherry/Champagne als eerste batch, verdere batches blijven open |
+| 2 | `EXP-026` | Integratie graph, links, media en terminologie |
+| 3 | `MNT-051` | Geverifieerde Atlaspilot afbakenen vóór EXP-027 |
+| 4 | `MNT-052` | Performance- en mediabudgetten vóór grootschalige regiogroei |
+| 5 | `EXP-027` | Mondiale toets en regiokeuze |
+| 6 | `EXP-028` | Integrale redactionele en product-QA |
+| 7 | `MNT-053` | Afzonderlijke migratieronde voor bestaande SVG-illustraties |
 
 Tijdgebonden, in deze onderlinge volgorde:
 

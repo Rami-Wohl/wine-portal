@@ -8,6 +8,8 @@
 Na de [[concept.fermentation|alcoholische vergisting]] ligt de verdere stijl nog open. Rust in een tank, verblijf op gistbezinksel en opvoeding in eikenhout bieden verschillende mogelijkheden. De beoogde wijn bepaalt welke combinatie zinvol is. Hout kan aroma bijdragen; tijd geeft ruimte voor ontwikkeling. Beide vragen proeven en controle. [@source.wset-oak-winemaking]
 
 Deze pagina verbindt de keuzes in de kelder. De afzonderlijke omzettingen hebben hun eigen uitleg. De latere ontwikkeling van een gebottelde stille wijn valt buiten deze kelderfase: dan zijn de mogelijkheden om bij te vullen, over te hevelen of partijen te mengen verdwenen.
+
+De interpretatie van latere flesverandering hoort bij [[concept.wine-perception-and-development|waarneming en wijnontwikkeling]].
 :::
 
 :::section{#opbouw-en-samenhang depth="foundation" source_refs="source.awri-mlf-success-2020 source.oiv-blending-code source.wre-cellar-practices-2018"}

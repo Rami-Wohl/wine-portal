@@ -15,6 +15,7 @@ related_entities:
   - concept.clarification-and-fining
   - concept.bottling
   - concept.sulfur-dioxide
+  - concept.wine-perception-and-development
 source_refs:
   - source.awri-mlf-success-2020
   - source.oiv-blending-code

@@ -8,6 +8,8 @@
 After [[concept.fermentation|alcoholic fermentation]], further stylistic choices remain. Resting in a tank, keeping wine on yeast sediment and maturing it in oak offer different possibilities. The intended wine determines which combination makes sense. Wood can contribute aroma; time allows development. Both call for tasting and monitoring. [@source.wset-oak-winemaking]
 
 This page connects cellar decisions. Individual transformations have their own explanations. The later development of bottled still wine falls outside this cellar phase: topping up, racking and blending lots are then no longer available.
+
+The interpretation of later bottle changes belongs to [[concept.wine-perception-and-development|sensory perception and wine development]].
 :::
 
 :::section{#opbouw-en-samenhang depth="foundation" source_refs="source.awri-mlf-success-2020 source.oiv-blending-code source.wre-cellar-practices-2018"}

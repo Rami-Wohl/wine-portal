@@ -70,6 +70,8 @@ This model is a way to organise winery decisions. It is not a recipe in which ev
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}
 The final wine carries traces of the whole route. Blending can shape balance; clarification and filtration can protect clarity and stability; careful bottling helps retain fruit, colour and texture. The glass can prompt plausible process questions, but reconstructing the route from taste alone remains uncertain.
+
+After the cellar route comes the question of how you experience the wine and how it changes further. [[concept.wine-perception-and-development|Sensory perception and wine development]] connects tasting, balance and bottle storage.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}

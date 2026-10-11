@@ -51,6 +51,8 @@ Daarom beoordelen kelderproeven zowel de metingen als het smaakresultaat. Eén u
 Bij een zoete wijn vormt zuur tegenwicht aan de suiker; bij een droge wijn staat dezelfde hoeveelheid zuur minder beschut. Ook fruit, alcohol en mondgevoel bepalen hoe scherp of harmonieus het geheel overkomt. Een frisse wijn hoeft dus niet zuur te *smaken* in de alledaagse, negatieve betekenis.
 
 Zuur helpt een wijn zijn frisheid tijdens ontwikkeling te behouden. Bewaarpotentieel vraagt daarnaast voldoende smaakintensiteit en een passende structuur. Een schrale, onevenwichtige jonge wijn heeft dus meer nodig dan veel zuur om boeiend te kunnen rijpen. [@source.wset-tasting-guide-2018]
+
+[[concept.wine-perception-and-development|Waarneming en wijnontwikkeling]] werkt uit hoe zuur met andere indrukken samenhangt en wat een uitspraak over bewaarpotentieel kan dragen.
 :::
 
 :::section{#kelderkeuzes depth="intermediate" source_refs="source.awri-deacidification source.wset-acidity-2026"}

@@ -35,8 +35,9 @@ Peildatum: 2026-10-11.
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is waarneming, balans en flesontwikkeling
-(`EXP-025`); wijnsamenstelling als systeem (`EXP-024`) is afgerond.
+Het eerstvolgende uitvoerbare werk is de eerste batch individuele wijnpagina's
+(`EXP-032`: Port/Sherry/Champagne); wijnsamenstelling (`EXP-024`) en waarneming,
+balans en flesontwikkeling (`EXP-025`) zijn afgerond.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
 (`EXP-020–023`), met drie zelfstandige familiepagina's (`EXP-029–031`).
 Individuele wijnpagina's volgen gefaseerd binnen `EXP-032`.

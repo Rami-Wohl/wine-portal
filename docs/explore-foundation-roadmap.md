@@ -190,7 +190,8 @@ unplanned standalone pages.
 | `EXP-031` | complete | Separate bilingual fortified-wine family hub; addition/ageing PNG and flor/solera ownership clarified |
 | `EXP-032` | open | Inventory individual wines/styles, reuse existing identities and publish bounded batches after EXP-025 |
 | `EXP-024` | complete | Bilingual composition hub, ten constituent groups, measurement limits, PNG and existing owner/lesson links |
-| `EXP-025`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-025` | complete | Bilingual perception/development hub; senses, thresholds, balance, context, minerality, bottle development and PNG |
+| `EXP-026`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -748,13 +749,23 @@ change was needed. [Brief and publication review](../editorial/briefs/concept.wi
 
 #### EXP-025 — Sensory perception, balance and bottle development
 
-**Depends on:** EXP-020 and EXP-024.
+**Status:** complete on 2026-10-11. **Depends on:** EXP-020 and EXP-024.
+
+**Owner:** `concept.wine-perception-and-development`.
 
 **Coverage:** taste, aroma, trigeminal sensations, texture, thresholds,
 interactions, adaptation, context, balance, evolution and ageing potential.
 
 **Done when:** chemical composition, perception and quality judgement remain
 distinct and bottle development builds on rather than duplicates oxidation.
+
+**Execution — 2026-10-11:** eight bilingual coverage sections, intermediate
+threshold/mixture and minerality explanations, advanced study-design detail,
+new numbered PNG with equivalent HTML, seven existing owner links and final
+lesson link. Composition, perception, judgement and preference remain distinct;
+oxidation retains mechanism ownership. Six new sources and two reused sources;
+no new satellite or runtime model. [Brief and publication review](../editorial/briefs/concept.wine-perception-and-development.md).
+EXP-032 follows with Port, Sherry and Champagne as its first bounded batch.
 
 #### EXP-032 — Individual sweet, sparkling and fortified wines
 

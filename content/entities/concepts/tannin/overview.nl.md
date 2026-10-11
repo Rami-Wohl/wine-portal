@@ -53,6 +53,8 @@ De rode kleurstoffen uit de druif, anthocyanen, behoren tot een andere groep dan
 Bij ontwikkeling kan de grip van een rode wijn soepeler worden. Mooie rijping vraagt daarnaast voldoende fruit en smaak om de structuur te blijven dragen. Beoordeel stevige tannine daarom samen met de volledige wijn voordat je een fles jarenlang weglegt.
 
 Tannine hoort bij de beoordeling van bewaarpotentieel, naast zuur en smaakintensiteit. Een direct drinkbare rode wijn met weinig grip kan precies zijn bedoeling vervullen. Een wijn met veel fijne grip kan rijk en harmonieus overkomen. Beoordeel de balans, niet één eigenschap als score. [@source.wset-tasting-guide-2018]
+
+De gezamenlijke beoordeling van tannine, aroma en tijd hoort bij [[concept.wine-perception-and-development|waarneming en wijnontwikkeling]].
 :::
 
 :::detail{#zachter-is-niet-alleen-minder parent="ontwikkeling" depth="advanced" source_refs="source.awri-tannin-value-chain-2014"}

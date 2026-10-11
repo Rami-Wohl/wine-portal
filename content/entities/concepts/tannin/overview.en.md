@@ -53,6 +53,8 @@ Grape-derived red pigments, anthocyanins, belong to a different group from tanni
 As a red wine develops, its grip may become more supple. Beautiful ageing also requires sufficient fruit and flavour to keep supporting the structure. Assess firm tannin with the complete wine before putting a bottle away for years.
 
 Tannin belongs in assessing ageing potential, alongside acidity and flavour intensity. An immediately enjoyable red with little grip can fulfil its purpose perfectly. A wine with abundant fine grip may feel rich and harmonious. Assess balance, rather than scoring a single property. [@source.wset-tasting-guide-2018]
+
+The combined assessment of tannin, aroma and time belongs to [[concept.wine-perception-and-development|sensory perception and wine development]].
 :::
 
 :::detail{#zachter-is-niet-alleen-minder parent="ontwikkeling" depth="advanced" source_refs="source.awri-tannin-value-chain-2014"}

@@ -102,6 +102,8 @@ Gravel in the Médoc, slate beside the Mosel, terra rossa in Coonawarra and volc
 A soil photograph can show colour, fragments and visible structure. Claims about water, nutrition or roots require profile description and measurement. A regional tradition may make a soil–style relationship plausible, but does not prove that one rock causes an aroma.
 
 Plants selectively take up dissolved elements. Those elements are altered by soil chemistry, root regulation, grape physiology and winemaking. The sensory term *minerality* is also used differently by different tasters. A literal route from slate to ‘slate flavour’, or limestone to ‘chalk’, is therefore not a supported explanatory model. [@source.maltman-vineyards-rocks-soils-2018] [@source.parr-maltman-minerality-2018]
+
+How tasters use such words is explored further in [[concept.wine-perception-and-development|sensory perception and wine development]].
 :::
 
 :::detail{#gesteente-en-smaak parent="bewijs-en-grenzen" depth="advanced" source_refs="source.maltman-vineyards-rocks-soils-2018 source.parr-maltman-minerality-2018"}

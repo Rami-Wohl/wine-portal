@@ -1,0 +1,40 @@
+id: concept.wine-perception-and-development
+type: concept
+status: active
+canonical_name: Sensory perception and wine development
+names:
+  nl: Waarneming en wijnontwikkeling
+  en: Sensory perception and wine development
+slugs:
+  nl: waarneming-en-wijnontwikkeling
+  en: wine-perception-and-development
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.wine-composition
+  - type: related_to
+    target: concept.acidity
+  - type: related_to
+    target: concept.tannin
+  - type: related_to
+    target: concept.oxidation
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.bottling
+  - type: related_to
+    target: concept.vineyard-soils
+assertions: []
+source_refs:
+  - source.awri-wine-sensory-assessment-2022
+  - source.spence-wine-psychology-2020
+  - source.ilc-wine-aroma-meta-analysis-2016
+  - source.tarasov-riesling-tdn-thresholds-2020
+  - source.echave-bottle-ageing-storage-2021
+  - source.awri-wine-transport-storage
+  - source.wset-mouthfeel-2026
+  - source.parr-maltman-minerality-2018
+depth: foundation
+last_reviewed: 2026-10-11

@@ -1,0 +1,27 @@
+id: media.concept.wine-perception-and-development.smelling-tasting-and-time
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/wine-perception-and-development/smelling-tasting-and-time.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: f723c19755e4dfa5f67a1ede21df42a3eefc30d5881018f18f58cc2849557f69
+alt:
+  nl: "Drie genummerde scènes: een vrouw ruikt aan een glas wijn, dezelfde vrouw
+    houdt na een slok het glas lager, en een gesloten fles staat naast een glas
+    en zandloper."
+  en: "Three numbered scenes: a woman smells a glass of wine, the same woman holds
+    the glass lower after a sip, and a sealed bottle stands beside a glass and
+    hourglass."
+caption:
+  nl: Ruiken, proeven en verandering door de tijd zijn verschillende vragen.
+  en: Smelling, tasting and change over time are different questions.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-11
+changes: Generated educational comparison; full prompt and review in
+  editorial/briefs/concept.wine-perception-and-development.md.

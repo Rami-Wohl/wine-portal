@@ -122,6 +122,8 @@ Brix en verwante mostschalen gebruiken een meting van dichtheid of brekingsindex
 Begin bij **oorsprong**: wat leverde de druif en wat kwam door vergisting of kelderbehandeling tot stand? Vraag vervolgens naar **toestand**: welke hoeveelheid en stofvorm is op het meetmoment aanwezig? Verbind dat met **omstandigheden** zoals pH, temperatuur, gasbeheer en rijping.
 
 Een proefnotitie is de volgende invalshoek. De aromatische en niet-vluchtige bestanddelen werken samen; één chemische naam vormt geen volledige beschrijving van de ervaring. [@source.awri-flavour-precursors] Een fiche helpt zo gerichte vragen stellen over wijn. Het kwaliteitsoordeel vraagt daarnaast een beoordeling van het geheel.
+
+[[concept.wine-perception-and-development|Waarneming en wijnontwikkeling]] verbindt die samenstelling met proeven, balans en verandering in de fles.
 :::
 
 :::key-idea{#centraal-inzicht depth="foundation"}

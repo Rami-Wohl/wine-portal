@@ -102,6 +102,8 @@ Grind in de Médoc, leisteen aan de Moezel, terra rossa in Coonawarra en vulkani
 Een bodemfoto kan kleur, fragmenten en zichtbare structuur tonen. Voor uitspraken over water, voeding of wortels zijn profielbeschrijving en metingen nodig. Een regionale traditie kan een verband tussen bodem en stijl plausibel maken, maar bewijst niet dat één steen een aroma veroorzaakt.
 
 Planten nemen opgeloste elementen selectief op. Die elementen veranderen onderweg door bodemchemie, wortelregulatie, druiffysiologie en vinificatie. De sensorische term *minerality* wordt bovendien niet door alle proevers hetzelfde gebruikt. Een letterlijke route van leisteen naar ‘leisteensmaak’, of van kalksteen naar ‘krijt’, is daarom geen gedragen verklaringsmodel. [@source.maltman-vineyards-rocks-soils-2018] [@source.parr-maltman-minerality-2018]
+
+Hoe proevers zulke woorden gebruiken, wordt verder uitgewerkt bij [[concept.wine-perception-and-development|waarneming en wijnontwikkeling]].
 :::
 
 :::detail{#gesteente-en-smaak parent="bewijs-en-grenzen" depth="advanced" source_refs="source.maltman-vineyards-rocks-soils-2018 source.parr-maltman-minerality-2018"}

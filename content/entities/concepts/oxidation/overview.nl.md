@@ -23,6 +23,8 @@ Wijnen verschillen in hun gevoeligheid. Fenolische stoffen kunnen zuurstofreacti
 ## Keuze of fout — zuurstof is geen simpele vijand
 
 Sommige wijnstijlen zoeken bewust een nootachtig, hartig of gedroogd-fruitkarakter door gecontroleerd contact met zuurstof. Bij een jonge, fruitgedreven wijn zou hetzelfde verlies aan frisheid juist ongewenst zijn. Beoordeel oxidatie daarom aan de hand van de **bedoelde stijl** en de balans in het glas, niet alleen aan de aanwezigheid van lucht. [@source.awri-wine-faults] [@source.wine-australia-oxygen-style]
+
+[[concept.wine-perception-and-development|Waarneming en wijnontwikkeling]] plaatst oxidatie naast andere flesveranderingen en maakt onderscheid tussen beschrijven en waarderen.
 :::
 
 :::detail{#chemie parent="keuze-of-fout" depth="advanced" source_refs="source.awri-wine-faults source.wine-australia-oxygen-style"}
