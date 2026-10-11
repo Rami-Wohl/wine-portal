@@ -5,6 +5,8 @@ Tannine geeft wijn grip. Je merkt haar als een drogend, soms fijnkorrelig en som
 :::section{#mondgevoel depth="foundation" source_refs="source.wset-mouthfeel-2026 source.wset-tasting-guide-2018"}
 ## Tannine herkennen
 
+Het overzicht van [[concept.wine-composition|wijnsamenstelling]] plaatst tannine binnen de bredere fenolenfamilie en verbindt haar met andere bestanddelen.
+
 Tanninen zijn een groep plantaardige stoffen uit de familie van de **fenolen**. In wijn dragen zij bij aan *astringentie*: het stroeve, drogende gevoel aan tandvlees en binnenkant van de mond. Astringentie is vooral een tastwaarneming.
 
 Bitterheid kan tegelijk optreden, maar proef je anders. Ook [[concept.acidity|zuur]], dat de mond doet wateren, en de warmte van alcohol zijn afzonderlijke gewaarwordingen. Een tanninerijke wijn kan volledig droog zijn of toch zoetheid bevatten; *droog* verwijst in een wijnbeschrijving naar suiker, terwijl *drogend* het mondgevoel benoemt.

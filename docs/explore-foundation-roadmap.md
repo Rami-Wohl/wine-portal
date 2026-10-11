@@ -1,7 +1,7 @@
 # Explore foundation roadmap
 
 Status: active execution roadmap  
-Last reviewed: 2026-10-08
+Last reviewed: 2026-10-11
 
 This roadmap turns Oenocademy's existing concept collection into a systematic,
 globally useful foundation for viticulture, vinification and wine science. It
@@ -184,12 +184,13 @@ unplanned standalone pages.
 | `EXP-020` | complete | Existing maturation hub expanded in NL/EN, PNG decision comparison, timing and lesson links reviewed |
 | `EXP-021` | complete | Existing bottling hub expanded in NL/EN; stability, gases, closures and lesson links reviewed |
 | `EXP-022` | complete | Bilingual hygiene and fault-investigation hub; seven causal families, PNG teaching plate and targeted lesson/mechanism links |
-| `EXP-023` | complete | Comparative NL/EN method hub, PNG, three reviewed focused owners and five language-link differences resolved |
+| `EXP-023` | complete | Three reviewed focused owners and five language-link differences resolved; comparison retired under DEC-EXP-007, family coverage owned by EXP-029–031 |
 | `EXP-029` | complete | Separate bilingual sweet-wine family hub; sugar/fermentation PNG and existing process owners reused |
 | `EXP-030` | complete | Separate bilingual sparkling-wine family hub; bottle/tank/carbonation PNG and method boundaries reviewed |
 | `EXP-031` | complete | Separate bilingual fortified-wine family hub; addition/ageing PNG and flor/solera ownership clarified |
 | `EXP-032` | open | Inventory individual wines/styles, reuse existing identities and publish bounded batches after EXP-025 |
-| `EXP-024`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-024` | complete | Bilingual composition hub, ten constituent groups, measurement limits, PNG and existing owner/lesson links |
+| `EXP-025`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -724,7 +725,12 @@ PNG. [Brief and publication review](../editorial/briefs/concept.fortified-wines.
 
 #### EXP-024 — Wine composition as a system
 
+**Status:** complete on 2026-10-11.
+
 **Depends on:** EXP-007, EXP-018–023 and EXP-029–031.
+
+**Owner:** `concept.wine-composition`. Existing acidity, tannin, aroma and
+process owners retain their detailed explanations.
 
 **Coverage:** water, ethanol, acids, sugars, phenolics, aroma compounds,
 polysaccharides, proteins, minerals and dissolved gases; origin, interaction
@@ -732,6 +738,13 @@ and appropriate measurement claims.
 
 **Done when:** acidity, tannin, methoxypyrazines and thiols fit one navigable
 model without reducing wine to a flavor-component list.
+
+**Result:** eight coverage sections in NL/EN, ten constituent groups plus
+glycerol, origins and interactions, intermediate free/bound forms and advanced
+measurement limits. A new three-scene PNG has equivalent localized HTML;
+six existing concepts and the raw-material lesson link to the hub. Nine new
+source records supplement the existing evidence. No extra satellite or model
+change was needed. [Brief and publication review](../editorial/briefs/concept.wine-composition.md).
 
 #### EXP-025 — Sensory perception, balance and bottle development
 

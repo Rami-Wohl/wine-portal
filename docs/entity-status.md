@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 357 entities — 293 active, 64 draft, 0 deprecated.
+**Totaal:** 358 entities — 294 active, 64 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (293)
+## Actief — publiek vindbaar (294)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -126,6 +126,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Waterrelaties, droogte en irrigatie bij de wijnstok](../content/entities/concepts/vine-water-relations/entity.yaml) | Concept | Zelfstandige pagina | `concept.vine-water-relations` | Ja | `/concepts/vine-water-relations-drought-irrigation` | 2026-09-25 |
 | [Weerrisico's, ziekten, plagen en stoornissen](../content/entities/concepts/vineyard-hazards-diseases-pests-disorders/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-hazards-diseases-pests-disorders` | Ja | `/concepts/vineyard-hazards-diseases-pests-disorders` | 2026-10-02 |
 | [Wijngaardbodems](../content/entities/concepts/vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-soils` | Ja | `/concepts/vineyard-soils` | 2026-09-26 |
+| [Wijnsamenstelling](../content/entities/concepts/wine-composition/entity.yaml) | Concept | Zelfstandige pagina | `concept.wine-composition` | Ja | `/concepts/wine-composition` | 2026-10-11 |
 | [Zoete wijnen](../content/entities/concepts/sweet-wines/entity.yaml) | Concept | Zelfstandige pagina | `concept.sweet-wines` | Ja | `/concepts/sweet-wines` | 2026-10-08 |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/acidity-in-wine` | 2026-09-16 |
 | [Zwaveldioxide](../content/entities/concepts/sulfur-dioxide/entity.yaml) | Concept | Zelfstandige pagina | `concept.sulfur-dioxide` | Ja | `/concepts/sulfur-dioxide` | 2026-10-07 |

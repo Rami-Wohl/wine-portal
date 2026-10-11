@@ -5,6 +5,8 @@ Zwaveldioxide, meestal afgekort als SO₂, is een van de belangrijkste beschermi
 :::section{#waarom-wijnmakers-so2-gebruiken depth="foundation" source_refs="source.oiv-sulphiting-wine source.awri-sulfur-dioxide"}
 ## Bescherming tegen zuurstof en micro-organismen
 
+De pagina over [[concept.wine-composition|wijnsamenstelling]] plaatst vrije en gebonden stofvormen in de context van het volledige mengsel.
+
 SO₂ wordt tijdens verschillende fasen van het wijnmaken gebruikt vanwege zijn antioxiderende en antimicrobiële werking. De OIV noemt onder meer het beperken van ongewenste gisten en bacteriën, het tegengaan van oxidatieve activiteit en toepassing rond botteling. [@source.oiv-sulphiting-wine]
 
 De toevoeging vervangt geen schoon kelderwerk, gezonde druiven of zorgvuldig overhevelen. Zij is één onderdeel van een beschermingsstrategie waarin temperatuur, zuurstofcontact, helderheid en microbiologische toestand eveneens meetellen.

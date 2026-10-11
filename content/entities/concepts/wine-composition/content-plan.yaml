@@ -1,0 +1,403 @@
+schema_version: 2
+package_id: concept.wine-composition
+archetype: concept-system-overview
+coverage:
+  - key: identity-and-scope
+    disposition: on-page
+    block_ids:
+      - overzicht
+    target_ids: []
+    completeness_questions:
+      - Wat betekent samenstelling, en waar komen de bestanddelen van wijn
+        vandaan?
+    layers:
+      foundation:
+        - Wat betekent samenstelling, en waar komen de bestanddelen van wijn
+          vandaan?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat betekent samenstelling, en waar komen de bestanddelen van wijn
+            vandaan?
+        source_refs:
+          - source.wset-wine-composition
+          - source.oiv-alcoholic-fermentation
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: system-components-and-relationships
+    disposition: on-page
+    block_ids:
+      - opbouw-en-samenhang
+    target_ids: []
+    completeness_questions:
+      - Welke rol hebben water, ethanol, zuren, suikers, fenolen, geurstoffen,
+        polysachariden, eiwitten, mineralen, gassen en glycerol?
+    layers:
+      foundation:
+        - Welke rol hebben water, ethanol, zuren, suikers, fenolen, geurstoffen,
+          polysachariden, eiwitten, mineralen, gassen en glycerol?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke rol hebben water, ethanol, zuren, suikers, fenolen,
+            geurstoffen, polysachariden, eiwitten, mineralen, gassen en
+            glycerol?
+        source_refs:
+          - source.wset-wine-composition
+          - source.uc-davis-wine-tannin
+          - source.uc-davis-wine-anthocyanins
+          - source.uc-davis-wine-glycerol
+          - source.uc-davis-wine-minerals
+          - source.wine-polysaccharides-review-2019
+          - source.awri-heat-stability
+          - source.awri-gas-adjustment
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: mechanisms-and-interactions
+    disposition: on-page
+    block_ids:
+      - werking
+      - vrij-en-gebonden
+      - druif-gisting-en-rijping
+    target_ids: []
+    completeness_questions:
+      - Hoe veranderen vergisting, extractie, zuurverandering en rijping het
+        mengsel?
+    layers:
+      foundation:
+        - Hoe veranderen vergisting, extractie, zuurverandering en rijping het
+          mengsel?
+      intermediate:
+        - Vrije en gebonden stofvormen hebben verschillende functies; pH
+          beïnvloedt SO₂.
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe veranderen vergisting, extractie, zuurverandering en rijping het
+            mengsel?
+        source_refs:
+          - source.uc-davis-wine-pyrazines
+          - source.uc-davis-volatile-thiols
+          - source.awri-mlf-style-2020
+      specific_claims:
+        - claim: pH en TA zijn verschillende meetgrootheden; SO₂ komt vrij en gebonden
+            voor.
+          status: supported
+          source_refs:
+            - source.awri-acidity-ph
+            - source.awri-sulfur-dioxide
+        - claim: Gisting vormt ethanol, CO₂ en glycerol; liescontact verandert de
+            samenstelling.
+          status: supported
+          source_refs:
+            - source.oiv-alcoholic-fermentation
+            - source.uc-davis-wine-glycerol
+            - source.awri-lees-contact-2020
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: conditions-and-variation
+    disposition: on-page
+    block_ids:
+      - omstandigheden-en-variatie
+    target_ids: []
+    completeness_questions:
+      - Hoe beïnvloeden temperatuur, druk en het mengsel gas, kristallen,
+        eiwithaze en textuur?
+    layers:
+      foundation:
+        - Hoe beïnvloeden temperatuur, druk en het mengsel gas, kristallen,
+          eiwithaze en textuur?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe beïnvloeden temperatuur, druk en het mengsel gas, kristallen,
+            eiwithaze en textuur?
+        source_refs:
+          - source.awri-gas-adjustment
+          - source.wine-polysaccharides-review-2019
+      specific_claims:
+        - claim: Kaliumwaterstoftartraat kan kristalliseren en eiwitten kunnen haze
+            veroorzaken.
+          status: supported
+          source_refs:
+            - source.awri-cold-stabilisation
+            - source.awri-heat-stability
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: decisions-and-trade-offs
+    disposition: on-page
+    block_ids:
+      - keuzes-en-afwegingen
+    target_ids: []
+    completeness_questions:
+      - Welke samenhangende gevolgen hebben oogst-, extractie-, gistings- en
+        bottelkeuzes?
+    layers:
+      foundation:
+        - Welke samenhangende gevolgen hebben oogst-, extractie-, gistings- en
+          bottelkeuzes?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke samenhangende gevolgen hebben oogst-, extractie-, gistings- en
+            bottelkeuzes?
+        source_refs:
+          - source.awri-fermentation-temperature
+          - source.awri-lees-contact-2020
+          - source.awri-heat-stability
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: global-context-and-examples
+    disposition: on-page
+    block_ids:
+      - wereldwijde-context
+    target_ids: []
+    completeness_questions:
+      - Welke contrasterende druiven, wijnfamilies en onderzoeksmonsters tonen
+        de grenzen van een universeel model?
+    layers:
+      foundation:
+        - Welke contrasterende druiven, wijnfamilies en onderzoeksmonsters tonen
+          de grenzen van een universeel model?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Welke contrasterende druiven, wijnfamilies en onderzoeksmonsters
+            tonen de grenzen van een universeel model?
+        source_refs:
+          - source.uc-davis-volatile-thiols
+      specific_claims:
+        - claim: AWRI gebruikte circa 10.000 Australische rode/witte wijnen uit 2016–2020
+            en een aparte glycerolsurvey; de liesproef betreft Chardonnay uit
+            2019, waarbij ook MLF optrad en het textuureffect niet alleen aan
+            liescontact kan worden toegeschreven.
+          status: supported
+          source_refs:
+            - source.awri-wine-composition-survey-2021
+            - source.awri-lees-contact-2020
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: evidence-and-limits
+    disposition: on-page
+    block_ids:
+      - bewijs-en-grenzen
+      - wat-een-meetmethode-telt
+    target_ids: []
+    completeness_questions:
+      - Wat vertellen alcohol, restsuiker, pH, titreerbaar zuur en
+        stabiliteitsmetingen, en welke methode meet wat?
+    layers:
+      foundation:
+        - Wat vertellen alcohol, restsuiker, pH, titreerbaar zuur en
+          stabiliteitsmetingen, en welke methode meet wat?
+      intermediate: []
+      advanced:
+        - Reducerende suikers, glucose/fructose en TSS bepalen verschillende
+          meetgrootheden.
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Wat vertellen alcohol, restsuiker, pH, titreerbaar zuur en
+            stabiliteitsmetingen, en welke methode meet wat?
+        source_refs:
+          - source.awri-acidity-ph
+          - source.awri-heat-stability
+          - source.awri-cold-stabilisation
+          - source.uc-davis-wine-glycerol
+          - source.wset-wine-composition
+          - source.awri-sulfur-dioxide
+      specific_claims:
+        - claim: Reducerende-suikermethoden tellen meer mee dan specifieke
+            glucose/fructosebepaling; TSS gebruikt dichtheid of brekingsindex.
+          status: supported
+          source_refs:
+            - source.awri-residual-sugar-measurement
+            - source.awri-tss-measurement
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: practical-interpretation
+    disposition: on-page
+    block_ids:
+      - betekenis-voor-wijn
+    target_ids: []
+    completeness_questions:
+      - Hoe verbind je meetgegevens, productieroute en proefwaarneming?
+    layers:
+      foundation:
+        - Hoe verbind je meetgegevens, productieroute en proefwaarneming?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Hoe verbind je meetgegevens, productieroute en proefwaarneming?
+        source_refs:
+          - source.awri-flavour-precursors
+          - source.awri-residual-sugar-measurement
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.berry-development-ripeness
+    names:
+      nl: Besontwikkeling, véraison en rijpheid
+      en: Berry development, veraison and ripeness
+    slugs:
+      nl: besontwikkeling-veraison-en-rijpheid
+      en: berry-development-veraison-ripeness
+    disposition: link
+  - id: concept.fermentation
+    names:
+      nl: Alcoholische vergisting
+      en: Alcoholic fermentation
+    slugs:
+      nl: alcoholische-vergisting
+      en: alcoholic-fermentation
+    disposition: link
+  - id: concept.extraction
+    names:
+      nl: Extractie
+      en: Extraction
+    slugs:
+      nl: extractie
+      en: extraction
+    disposition: link
+  - id: concept.acidity
+    names:
+      nl: Zuur in wijn
+      en: Acidity in wine
+    slugs:
+      nl: zuur-in-wijn
+      en: acidity-in-wine
+    disposition: link
+  - id: concept.tannin
+    names:
+      nl: Tannine
+      en: Tannin
+    slugs:
+      nl: tannine
+      en: tannin
+    disposition: link
+  - id: concept.methoxypyrazines
+    names:
+      nl: Methoxypyrazinen
+      en: Methoxypyrazines
+    slugs:
+      nl: methoxypyrazinen
+      en: methoxypyrazines
+    disposition: link
+  - id: concept.volatile-thiols
+    names:
+      nl: Vluchtige thiolen
+      en: Volatile thiols
+    slugs:
+      nl: vluchtige-thiolen
+      en: volatile-thiols
+    disposition: link
+  - id: concept.malolactic-fermentation
+    names:
+      nl: Malolactische omzetting
+      en: Malolactic fermentation
+    slugs:
+      nl: malolactische-omzetting
+      en: malolactic-fermentation
+    disposition: link
+  - id: concept.lees-ageing
+    names:
+      nl: Rijping op de lies
+      en: Lees ageing
+    slugs:
+      nl: rijping-op-de-lies
+      en: lees-ageing
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.sulfur-dioxide
+    names:
+      nl: Zwaveldioxide
+      en: Sulfur dioxide
+    slugs:
+      nl: zwaveldioxide
+      en: sulfur-dioxide
+    disposition: link
+  - id: concept.bottling
+    names:
+      nl: Botteling
+      en: Bottling
+    slugs:
+      nl: botteling
+      en: bottling
+    disposition: link
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link
+  - id: concept.sparkling-wines
+    names:
+      nl: Mousserende wijnen
+      en: Sparkling wines
+    slugs:
+      nl: mousserende-wijnen
+      en: sparkling-wines
+    disposition: link
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
+    disposition: link
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

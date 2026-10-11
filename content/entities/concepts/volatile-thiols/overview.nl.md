@@ -5,6 +5,8 @@
 :::section{#betekenis-en-geur depth="foundation" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012"}
 ## Betekenis en geur — een diverse zwavelfamilie
 
+De pagina over [[concept.wine-composition|wijnsamenstelling]] verbindt deze aromaketen met de andere stoffen die druif en vergisting aan wijn bijdragen.
+
 Een thiol is een chemische verbinding met een zwavelhoudende groep. *Vluchtig* betekent hier dat een stof gemakkelijk in de lucht boven het glas terechtkomt en de neus kan bereiken. De familie is groot: sommige thiolen dragen geliefde fruitige of kruidige aroma's, andere zwavelverbindingen kunnen juist aan ui, kool of rotte eieren doen denken.
 
 Het woord “zwavel” benoemt dus een chemisch element, terwijl de precieze verbinding, concentratie en omgeving bepalen wat iemand ruikt. Ook andere verbindingen mengen zich in dat aroma; wijngeur ontstaat uit vele moleculen tegelijk. [@source.coetzee-du-toit-sauvignon-aroma-2012]

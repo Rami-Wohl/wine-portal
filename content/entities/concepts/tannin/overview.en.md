@@ -5,6 +5,8 @@ Tannin gives wine grip. You notice it as a drying mouthfeel, sometimes fine-grai
 :::section{#mondgevoel depth="foundation" source_refs="source.wset-mouthfeel-2026 source.wset-tasting-guide-2018"}
 ## Recognising tannin
 
+The overview of [[concept.wine-composition|wine composition]] places tannin within the broader phenolic family and connects it with other constituents.
+
 Tannins are a group of plant compounds belonging to the **phenolic** family. In wine they contribute to *astringency*: the rough, drying sensation on the gums and inside the mouth. Astringency is primarily a tactile perception.
 
 Bitterness can occur at the same time, but you perceive it differently. [[concept.acidity|Acidity]], which makes the mouth water, and alcoholic warmth are separate sensations too. A tannic wine may be completely dry or contain sweetness; *dry* in a wine description refers to sugar, while *drying* describes mouthfeel.

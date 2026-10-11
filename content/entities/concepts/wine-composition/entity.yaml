@@ -1,0 +1,59 @@
+id: concept.wine-composition
+type: concept
+status: active
+canonical_name: Wine composition
+names:
+  nl: Wijnsamenstelling
+  en: Wine composition
+slugs:
+  nl: wijnsamenstelling
+  en: wine-composition
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: related_to
+    target: concept.fermentation
+  - type: related_to
+    target: concept.extraction
+  - type: related_to
+    target: concept.acidity
+  - type: related_to
+    target: concept.tannin
+  - type: related_to
+    target: concept.methoxypyrazines
+  - type: related_to
+    target: concept.volatile-thiols
+  - type: related_to
+    target: concept.sulfur-dioxide
+  - type: related_to
+    target: concept.sweet-wines
+  - type: related_to
+    target: concept.sparkling-wines
+  - type: related_to
+    target: concept.fortified-wines
+assertions: []
+source_refs:
+  - source.wset-wine-composition
+  - source.awri-flavour-precursors
+  - source.uc-davis-wine-tannin
+  - source.uc-davis-wine-anthocyanins
+  - source.wine-polysaccharides-review-2019
+  - source.uc-davis-wine-minerals
+  - source.uc-davis-wine-glycerol
+  - source.awri-heat-stability
+  - source.awri-gas-adjustment
+  - source.oiv-alcoholic-fermentation
+  - source.uc-davis-wine-pyrazines
+  - source.uc-davis-volatile-thiols
+  - source.awri-mlf-style-2020
+  - source.awri-lees-contact-2020
+  - source.awri-acidity-ph
+  - source.awri-sulfur-dioxide
+  - source.awri-cold-stabilisation
+  - source.awri-fermentation-temperature
+  - source.awri-wine-composition-survey-2021
+  - source.awri-residual-sugar-measurement
+  - source.awri-tss-measurement
+depth: foundation
+last_reviewed: 2026-10-11

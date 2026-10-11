@@ -162,7 +162,7 @@ Statussen:
 | `EXP-030` | Mousserende wijnen als eigen familie | Actieve `sparkling-wines` met bestaande flesmethode-, tirage-, lies- en dosageowners | volledig binnen scope | Fles/tank/voortgezette gisting, transfer en carbonatie, met eigen PNG en NL/EN | voltooid |
 | `EXP-031` | Versterkte wijnen als eigen familie | Actieve `fortified-wines`; `fortification` blijft techniekowner | volledig binnen scope | Zoetheid en rijping verbonden; flor/solera primair hier uitgelegd; eigen PNG en NL/EN | voltooid |
 | `EXP-032` | Individuele zoete, mousserende en versterkte wijnpagina's | Bestaande Sauternes-, Tokaj-, passito- en vin-de-paillebestemmingen eerst beoordelen | gedeeltelijk | Inventaris en geordende publicatiebatches; Port/Sherry/Champagne eerst, daarna contrasterende kandidaten | P1 na EXP-025 |
-| `EXP-024` | Wijnsamenstelling als systeem | `acidity`, `tannin`, `methoxypyrazines`, `volatile-thiols`, `sulfur-dioxide` | fragmenten | Volledige compositiekaart en interacties zonder component-aromalijst | P1 |
+| `EXP-024` | Wijnsamenstelling als systeem | Actieve `wine-composition`; bestaande stof- en procesowners behouden | volledig binnen scope | Tien stoffamilies plus glycerol, herkomst en interacties, vrije/gebonden vormen, meetgrenzen, PNG en concept-/leslinks in NL/EN | voltooid |
 | `EXP-025` | Waarneming, balans en flesontwikkeling | Sensorische passages in concepts, grapes en lessons | afwezig | Zintuigen, thresholds, interactie, context, textuur, balans, kwaliteitsoordeel en ontwikkeling | P1 |
 
 ## 5. Bouwstenen uit de baseline en gerichte aanvullingen
@@ -373,7 +373,7 @@ later hun eigen scopebrief.
 | `concept.sweet-wines` (actief) | Samenhang druifconcentratie, gisting, restsuiker, labels en stabiliteit | `EXP-029` voltooid | Zelfstandige systeemhub |
 | `concept.sparkling-wines` (actief) | Bruisroutes, liescontact, sediment en zoetheid | `EXP-030` voltooid | Zelfstandige systeemhub |
 | `concept.fortified-wines` (actief) | Samenhang alcoholtoevoeging, zoetheid en rijping; flor/solera | `EXP-031` voltooid | Zelfstandige systeemhub |
-| Wine composition | Stoffamilies, herkomst en interactie | `EXP-024` | Hub |
+| `concept.wine-composition` (actief) | Stoffamilies, herkomst, interactie en meetgrenzen | `EXP-024` voltooid | Zelfstandige systeemhub |
 | Sensory perception and development | Waarneming, balans en tijd | `EXP-025` | Hub |
 
 De tien verplichte owners uit EXP-016 blijven `fermentation`, `extraction`,
@@ -446,6 +446,12 @@ identities waar de scope overeenkomt.
     zijn op 2026-10-09 verwijderd (DEC-EXP-007); de families behouden de uitleg.
     Individuele wijnpagina's staan in EXP-032.
 
-De volgende inhoudelijke taak is `EXP-024`: wijnsamenstelling als systeem. Taalpresentatie
+12. `EXP-024` heeft wijnsamenstelling als tweetalige systeemhub gepubliceerd,
+    met tien stoffamilies, interacties en meetgrenzen. Een nieuwe PNG verbindt
+    druif, vergisting en liescontact; zes bestaande concepts en de grondstofles
+    verwijzen naar de hub. Waarneming en kwaliteit blijven onderscheiden van
+    chemische analyse en volgen verder in EXP-025.
+
+De volgende inhoudelijke taak is `EXP-025`: waarneming, balans en flesontwikkeling. Taalpresentatie
 (`MNT-046`), pipeline/model (`MNT-048`) en CSS-onderhoud (`MNT-049`) zijn afgerond.
 De [productplanning](product-roadmap.md) bewaakt de afwisseling met platformwerk.

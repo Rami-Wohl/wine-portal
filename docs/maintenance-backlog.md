@@ -21,7 +21,7 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-08.
+Peildatum: 2026-10-11.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
@@ -29,14 +29,15 @@ Peildatum: 2026-10-08.
 | Gepland | 1 | `MNT-050` |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 46 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054`, `MNT-057` |
+| Afgerond | 47 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-054`, `MNT-057–058` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is wijnsamenstelling als systeem (`EXP-024`);
-opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
+Het eerstvolgende uitvoerbare werk is waarneming, balans en flesontwikkeling
+(`EXP-025`); wijnsamenstelling als systeem (`EXP-024`) is afgerond.
+Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
 (`EXP-020–023`), met drie zelfstandige familiepagina's (`EXP-029–031`).
 Individuele wijnpagina's volgen gefaseerd binnen `EXP-032`.
 Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
@@ -300,6 +301,24 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-058` — Tekst in inhoudstabellen leesbaar laten afbreken
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Scope:** gedeelde contenttabelstijl, NL/EN, desktop en smalle schermen
+- **Categorie:** product-ux, accessibility, testing
+- **Herkomst:** `QCR-2026-10-11-01`
+- **Bevinding:** de gedeelde `text-wrap: nowrap` maakte ook korte
+  vergelijkings- en meettabellen met langere cellen breder dan de artikelkolom
+  op desktop. Relevante informatie bleef daardoor buiten beeld tot scrollen.
+- **Klaar wanneer:** tekstcellen kunnen afbreken binnen de beschikbare ruimte;
+  semantische tabelstructuur, focus en horizontale toetsenbordnavigatie blijven
+  behouden op mobiel; nieuwe en representatieve bestaande tabellen zijn getest.
+- **Uitvoering 2026-10-11:** tekstomloop toegestaan in de bestaande tabelwrapper;
+  minimale tabelbreedte en toegankelijke scrollregio behouden. Geen nieuw
+  component of inhoudsverlies. Browserchecks en visuele vergelijking staan in
+  [de publicatiereview](../editorial/briefs/concept.wine-composition.md).
 
 ### `MNT-057` — Productiedependency-patches en gerichte health check
 

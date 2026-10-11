@@ -1,0 +1,26 @@
+id: media.concept.wine-composition.grape-fermentation-and-ageing
+kind: illustration
+role: educational
+status: active
+storage_key: concepts/wine-composition/grape-fermentation-and-ageing.png
+mime_type: image/png
+width: 1536
+height: 1024
+checksum_sha256: 67026d2efcdee1fe25b66ddf04e1b88399a5f34c6a24594fbf81d5341375d228
+alt:
+  nl: "Drie genummerde scènes: druiven met een doorgesneden bes en sap, troebele
+    vergistende most onder een waterslot en heldere rode wijn boven een laag
+    bezonken lies."
+  en: "Three numbered scenes: grapes with a cut berry and juice, cloudy fermenting
+    must under an airlock, and clear red wine above settled lees."
+caption:
+  nl: Van grondstof naar vergisting en één mogelijke rijpingsroute.
+  en: From raw material through fermentation to one possible ageing route.
+rights:
+  status: generated
+  creator: OpenAI image generation, directed by Oenocademy editorial
+  license_name: Project-owned generated asset
+  credit_line: Generated with OpenAI for Oenocademy
+acquired_at: 2026-10-11
+changes: Generated educational comparison; prompt and visual review in
+  editorial/briefs/concept.wine-composition.md.

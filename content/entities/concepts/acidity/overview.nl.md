@@ -5,6 +5,8 @@ Zuur geeft wijn vaart: het maakt een slok verfrissend en houdt zoetheid en rijkd
 :::section{#zuur-proeven depth="foundation" source_refs="source.wset-acidity-2026 source.wset-mouthfeel-2026"}
 ## Zuur herkennen
 
+De pagina over [[concept.wine-composition|wijnsamenstelling]] plaatst zuren naast suiker, alcohol en andere bestanddelen van hetzelfde mengsel.
+
 Neem een slok en let op wat er gebeurt nadat je hebt doorgeslikt of uitgespuugd. Zuur wekt speekselvorming op; je mond gaat wateren. Een wijn met uitgesproken zuur kan levendig en strak overkomen. Balans vraagt voldoende fruit, zoetheid of structuur als tegenwicht, ongeacht of de wijn strak of zacht aanvoelt.
 
 Zuur is iets anders dan bitterheid, de warmte van alcohol of de drogende grip van [[concept.tannin|tannine]]. Ook een volledig droge wijn kan veel zuur hebben: *droog* beschrijft hier de afwezigheid van merkbare zoetheid, niet een droog mondgevoel. Het helpt om deze waarnemingen eerst apart te benoemen voordat je het geheel beoordeelt. [@source.wset-mouthfeel-2026]

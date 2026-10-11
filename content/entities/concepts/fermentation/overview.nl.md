@@ -5,6 +5,8 @@ Tijdens alcoholische vergisting zet gist druivensuikers om in alcohol en koolzuu
 :::section{#van-suiker-naar-wijn depth="foundation" source_refs="source.oiv-alcoholic-fermentation source.awri-fermentation-temperature"}
 ## Overzicht — van suiker naar wijn
 
+Het overzicht van [[concept.wine-composition|wijnsamenstelling]] volgt welke stoffen de druif meebrengt, welke de gisting vormt en hoe het mengsel verder verandert.
+
 Gist is een eencellig micro-organisme. Tijdens de vergisting vormt hij uit de suikers in druivenmost **ethanol**, de alcohol in wijn, en **koolzuurgas** of CO₂. Daarnaast ontstaan nevenproducten die aan het karakter van de wijn bijdragen. Bij stille wijn ontsnapt veel van het gas; een bruisende kuip kondigt dus niet automatisch een mousserende wijn aan. [@source.oiv-alcoholic-fermentation]
 
 De omzetting produceert warmte. Daardoor kan een actieve gisting zichzelf opwarmen, wat de snelheid weer beïnvloedt. De wijnmaker volgt die wisselwerking en kan met koeling bijsturen. Deze pagina behandelt de biologische omzetting en haar begeleiding; [[concept.grape-reception-must-preparation|ontvangst en mostvoorbereiding]] verklaren hoe het uitgangsmateriaal de kuip bereikt. [@source.awri-fermentation-temperature]

@@ -5,6 +5,8 @@
 :::section{#betekenis-en-herkenning depth="foundation" source_refs="source.zhao-methoxypyrazines-review-2019"}
 ## Meaning and recognition — much aroma from very little material
 
+The overview of [[concept.wine-composition|wine composition]] connects these aroma compounds with the other constituents of wine and their origins.
+
 Methoxypyrazines are a group of aromatic nitrogen compounds with very low perception thresholds. An extremely small amount may therefore be detectable. **IBMP** is studied particularly often in wine; its long chemical name matters less than the insight that one potent compound can leave a large sensory trace. [@source.zhao-methoxypyrazines-review-2019]
 
 How that trace is experienced depends on concentration and context. A subtle herbal or leafy note may support freshness and varietal recognition; dominant capsicum may obscure fruit. The transition has no universal boundary for every wine or taster.

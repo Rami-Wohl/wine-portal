@@ -5,6 +5,8 @@
 :::section{#betekenis-en-herkenning depth="foundation" source_refs="source.zhao-methoxypyrazines-review-2019"}
 ## Betekenis en herkenning — veel geur uit heel weinig stof
 
+Het overzicht van [[concept.wine-composition|wijnsamenstelling]] verbindt deze geurstoffen met de andere bestanddelen van wijn en hun oorsprong.
+
 Methoxypyrazinen vormen een groep aromatische stikstofverbindingen met zeer lage waarnemingsdrempels. Dat betekent dat een uiterst kleine hoeveelheid al ruikbaar kan zijn. In wijn wordt vooral **IBMP** vaak onderzocht; de lange chemische naam is minder belangrijk dan het inzicht dat één krachtige verbinding een groot sensorisch spoor kan trekken. [@source.zhao-methoxypyrazines-review-2019]
 
 Hoe dat spoor wordt ervaren hangt af van concentratie en context. Een subtiele kruidige of bladachtige toon kan frisheid en rasherkenning ondersteunen; een dominante paprikageur kan fruit overschaduwen. De overgang heeft geen universele grens voor iedere wijn of proever.

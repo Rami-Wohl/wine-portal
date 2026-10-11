@@ -5,6 +5,8 @@ Acidity gives wine momentum: it refreshes a sip and keeps sweetness and richness
 :::section{#zuur-proeven depth="foundation" source_refs="source.wset-acidity-2026 source.wset-mouthfeel-2026"}
 ## Recognising acidity
 
+The page on [[concept.wine-composition|wine composition]] places acids alongside sugar, alcohol and other constituents of the same mixture.
+
 Take a sip and notice what happens after swallowing or spitting. Acidity stimulates saliva; your mouth waters. Pronounced acidity can make a wine feel lively and taut. Balance requires enough fruit, sweetness or structure as a counterweight, whether the wine feels taut or soft.
 
 Acidity differs from bitterness, alcoholic warmth and the drying grip of [[concept.tannin|tannin]]. A completely dry wine can still have high acidity: *dry* here describes the absence of noticeable sweetness, not a drying mouthfeel. It helps to name these sensations separately before judging the whole. [@source.wset-mouthfeel-2026]

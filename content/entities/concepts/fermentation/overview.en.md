@@ -5,6 +5,8 @@ During alcoholic fermentation, yeast converts grape sugars into alcohol and carb
 :::section{#van-suiker-naar-wijn depth="foundation" source_refs="source.oiv-alcoholic-fermentation source.awri-fermentation-temperature"}
 ## Overview — from sugar to wine
 
+The overview of [[concept.wine-composition|wine composition]] follows the substances supplied by grapes, those formed by fermentation and how the mixture changes further.
+
 Yeast is a single-celled microorganism. During fermentation it converts sugars in grape must into **ethanol**, the alcohol in wine, and **carbon dioxide**, or CO₂. By-products also contribute to the wine's character. In still wine much of the gas escapes; a bubbling vessel does not automatically herald a sparkling wine. [@source.oiv-alcoholic-fermentation]
 
 The conversion generates heat. An active fermentation can therefore warm itself, which in turn affects its rate. The winemaker monitors this interaction and can intervene through cooling. This page covers the biological conversion and its management; [[concept.grape-reception-must-preparation|grape reception and must preparation]] explain how the starting material reaches the vessel. [@source.awri-fermentation-temperature]

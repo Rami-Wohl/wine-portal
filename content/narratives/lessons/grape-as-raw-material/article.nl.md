@@ -57,6 +57,8 @@ Hele, gezonde bessen geven de kelder een beheerste uitgangspositie. Beschadiging
 | Een bepaalde rijpheid en gezondheid | Sorteren en de productieroute daarop afstemmen |
 
 Wijnmaken is daarmee geen correctie van een lege basis. Het is het gericht begeleiden van materiaal dat al structuur, kansen en beperkingen bezit.
+
+Het overzicht van [[concept.wine-composition|wijnsamenstelling]] volgt hoe deze bestanddelen tijdens vergisting en verdere kelderbehandeling veranderen.
 :::
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}

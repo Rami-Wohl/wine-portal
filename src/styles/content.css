@@ -258,7 +258,7 @@
 }
 .content-table-scroll {
   max-width: 100%;
-  text-wrap: nowrap;
+  text-wrap: wrap;
   margin: 1.5rem 0;
   overflow-x: auto;
   border: 1px solid var(--line);

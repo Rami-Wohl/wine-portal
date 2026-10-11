@@ -5,6 +5,8 @@ Sulfur dioxide, usually abbreviated to SO₂, is one of the principal protective
 :::section{#waarom-wijnmakers-so2-gebruiken depth="foundation" source_refs="source.oiv-sulphiting-wine source.awri-sulfur-dioxide"}
 ## Protection from oxygen and microorganisms
 
+The page on [[concept.wine-composition|wine composition]] places free and bound chemical forms in the context of the whole mixture.
+
 SO₂ is used at several stages of winemaking for its antioxidant and antimicrobial action. The OIV lists purposes including limiting unwanted yeasts and bacteria, inhibiting oxidative activity and use around bottling. [@source.oiv-sulphiting-wine]
 
 The addition does not replace clean cellar work, sound grapes or careful transfers. It forms one part of a protection strategy in which temperature, oxygen exposure, clarity and microbiological condition also matter.

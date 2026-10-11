@@ -5,6 +5,8 @@
 :::section{#betekenis-en-geur depth="foundation" source_refs="source.coetzee-du-toit-sauvignon-aroma-2012"}
 ## Meaning and aroma — a diverse sulphur family
 
+The page on [[concept.wine-composition|wine composition]] connects this aroma pathway with the other substances that grapes and fermentation contribute to wine.
+
 A thiol is a chemical compound containing a sulphur-bearing group. *Volatile* means here that a substance readily enters the air above the glass and can reach the nose. The family is broad: some thiols contribute prized fruity or herbal aromas, while other sulphur compounds may instead recall onion, cabbage or rotten eggs.
 
 “Sulphur” therefore names a chemical element, while the exact compound, concentration and surrounding wine determine what someone smells. Other compounds blend into the aroma too; wine scent arises from many molecules at once. [@source.coetzee-du-toit-sauvignon-aroma-2012]

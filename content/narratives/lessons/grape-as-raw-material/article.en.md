@@ -57,6 +57,8 @@ Intact, healthy berries give the winery a controlled starting point. Damage, fun
 | A particular maturity and state of health | Sort and adapt the production route |
 
 Winemaking is therefore not the correction of an empty base. It is the purposeful guidance of material that already contains structure, opportunities and constraints.
+
+The overview of [[concept.wine-composition|wine composition]] follows how these constituents change during fermentation and subsequent cellar treatment.
 :::
 
 :::in-the-glass{#waarom-in-het-glas depth="foundation"}
