@@ -36,8 +36,10 @@ De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
 De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
-Het eerstvolgende uitvoerbare werk is de eerste batch individuele wijnpagina's
+Het eerstvolgende inhoudelijke werk is de eerste batch individuele wijnpagina's
 (`EXP-032`: Port/Sherry/Champagne), met voorafgaande identiteit-/scopecontrole.
+De tussengevoegde [feedbackvoorbereiding](feedback-roadmap.md) werkt eerst de
+product-/versie-/privacygates uit en vervroegt `MNT-050` naar die fase 0.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
 de prioriteitswijziging; de regionale fase staat in een eigen `REG-*`-planning.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
@@ -154,19 +156,26 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 - **Bevinding:** de Next.js-server en contentrepository bestaan; een aparte
   account-/voortgangsbackend bestaat nog niet. Lokale voortgang heeft een
   repositoryinterface, maar netwerkfouten, authenticatie en conflicten zijn nog
-  geen uitgewerkt contract.
+  geen uitgewerkt contract. De gebruikersbrief van 2026-10-11 geeft nu een
+  concrete consumer: private correcties/suggesties met accounts en moderatie;
+  accountgebonden Learn-progress is de tweede consumer, in een latere fase.
 - **Klaar wanneer:** een besluit de concrete use-cases en invoertriggers benoemt:
   accounts/cross-device voortgang, redactionele samenwerking, externe consumers
   of bewezen query-/GIS-behoefte. Vergelijk file-backed content plus een aparte
   gebruikersdatabase met verdere migratie. Leg zo nodig autorisatie, retries,
   offlinegedrag, conflicten, export/verwijdering, backups en migratie vast.
   Ook bewust uitstel krijgt een volgende toetsbare trigger.
-- **Planning:** samen met `LRN-012` (vroegst 2026-10-22 bij genoeg gebruik), of
-  eerder zodra een genoemde use-case wordt ingepland. Dit ticket bewaakt het
-  platformbesluit; `LRN-012` blijft eigenaar van de pilotevaluatie. Geen tweede
-  handmatig onderhouden feitenbron en geen verplichte REST-laag zonder consumer.
+- **Planning:** vervroegd naar fase 0 van de
+  [feedbackroadmap](feedback-roadmap.md): `FBK-004/005` onderbouwen provider-,
+  privacy- en operationele keuzes vóór `FBK-006`. Dit ticket bewaakt het
+  platformbesluit; de 34 `FBK-*`-slices bezitten de implementatie. Het wacht niet
+  meer op `LRN-012`; die blijft eigenaar van de pilotevaluatie en de latere
+  syncafweging. Canonical content blijft file-backed; één private EU-Postgres
+  is ontwerpvoorkeur, geen gekozen leverancier of goedgekeurde publieke API.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
+  2026-10-11 — feedback als concrete eerste consumer geregistreerd; platformgate
+  naar feedbackfase 0 vervroegd, geen infrastructuur gebouwd of provider gekozen.
 
 ### `MNT-051` — Eerste verifieerbare Atlasdataset en kleine pilot afbakenen
 

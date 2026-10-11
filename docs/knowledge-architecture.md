@@ -4,7 +4,7 @@ purpose: "Actieve content-, data- en provenancearchitectuur voor Oenocademy"
 status: "active"
 version: "1.1"
 created: "2026-08-25"
-last_updated: "2026-10-06"
+last_updated: "2026-10-11"
 ---
 
 # Knowledge architecture
@@ -801,6 +801,10 @@ graph bestaat.
 ## 16. Correcties, imports en vervanging
 
 Gebruikers wijzigen canonical data niet rechtstreeks. Een toekomstige correction flow kan change proposals gebruiken, maar het reviewproces is nog niet als applicatiefunctie geïmplementeerd.
+
+De [feedbackroadmap](feedback-roadmap.md) werkt dit uit als voorgestelde,
+gefaseerde functie met private gebruikersopslag en stabiele blockreferenties.
+Contenthashes, accounts en moderatie daarin zijn nog geen geïmplementeerd v1-contract.
 
 Oenocademy heeft geen ouder curriculum dat nog moet worden omgezet. Nieuwe
 wijnkennis wordt direct volgens het huidige canonical authoringcontract

@@ -23,7 +23,13 @@ async interface. Dat onderscheid telt bij toekomstige lazy loading of opslag.
 
 ## Eerstvolgende werk en beslismomenten
 
-- **Volgende ontwikkeltaak: `EXP-032`.** Begin met identiteit, inventaris en de
+- **Tussengevoegd: feedbackfase 0.** De
+  [feedbackroadmap](feedback-roadmap.md) bevat 34 open slices en 19 open
+  beslisgates voor correcties/suggesties. Eerst `DEC-FBK-012/014` en `FBK-001`
+  (flow/copy), daarnaast `DEC-FBK-011` vóór `FBK-003` (contentversies).
+  `FBK-002/004/005` werken beleid, providerproef en privacy-/operationsgates uit.
+  Dit plan is geen opdracht om al accounts of mail live te zetten.
+- **Volgende inhoudelijke ontwikkeltaak: `EXP-032`.** Begin met identiteit, inventaris en de
   afgebakende Port/Sherry/Champagne-batch. De overige wijnbatches blijven open;
   geen `wine_style`-type op basis van alleen behoefte aan een pagina.
 - **Daarna `EXP-026`.** Integreer de foundation en eerste wijnbatch; het volledige
@@ -39,8 +45,9 @@ async interface. Dat onderscheid telt bij toekomstige lazy loading of opslag.
   de definitie van gereed. Loire en Mendoza zijn voorlopige pilotkandidaten.
 - **Tijdgebonden:** `MNT-055` hercontroleren uiterlijk 2026-10-18;
   `LRN-012` vroegst 2026-10-22 bij voldoende werkelijk gebruik. Kies het volgende
-  leerpad vanuit die evaluatie. `MNT-050` volgt daarbij of eerder zodra een
-  concrete API-/account-/redactieconsumer ontstaat.
+  leerpad vanuit die evaluatie. `MNT-050` is nu vervroegd naar feedbackfase 0:
+  feedback is de eerste concrete backendconsumer; Learn-sync volgt pas na eigen
+  pilot-/conflictbesluit. Geen performancegedreven migratie van wijncontent.
 - **Externe vrijgave:** `MNT-056` zodra toegang beschikbaar is. Lokale tests
   bevestigen geen GitHub-run, branch protection of Vercel-runtime.
 
@@ -50,10 +57,27 @@ vereisen hun eigen gemotiveerde besluit; planningswerk kan naast authoring lopen
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-23 niet-afgeronde tickets: 13 onderhoudsacties, 4 Explore-tickets, 5 regionale
-planning-/publicatietickets en één Learn-evaluatie. Geplande en geblokkeerde
+57 niet-afgeronde tickets: 13 onderhoudsacties, 4 Explore-tickets, 5 regionale
+planning-/publicatietickets, één Learn-evaluatie en 34 feedbacktickets.
+De 19 `DEC-FBK-*`-besluiten tellen als gates, niet als extra implementatietickets.
+Geplande en geblokkeerde
 acties tellen mee. Tijdgebonden of vrijgekomen externe controles mogen de
 onderstaande ontwikkelvolgorde onderbreken.
+
+Het feedbackspoor wordt per fase vrijgegeven; het vervangt de bestaande
+content-/onderhoudsvolgorde niet door 34 onvoorwaardelijke vóórtaken:
+
+| Volgorde binnen feedback | Werk en gate |
+| --- | --- |
+| Fase 0: `FBK-001–005` | Productflow/beleid, deterministische contentversies, providerproef en privacy-/operationele keuzes; `MNT-050` sluiten vóór databasebouw |
+| Fase 1: `FBK-006–025` | Accounts, vijf meldsoorten, moderatie, mail, misbruik/beroep en rechten; stagingbouw na fase-0-gate, publieke lancering pas via `FBK-025` en `MNT-056` |
+| Fase 2: `FBK-026–031` | Selectie, Mijn meldingen, versieverschil, correctielog, opt-in-credit en GitHubkoppeling |
+| Fase 3: `FBK-032–034` | Vertrouwde bijdragers en Learn-sync; sync wacht ook op `LRN-012` en `DEC-FBK-019` |
+
+Eerst deze tussenronde afbakenen, daarna het inhoudelijke spoor voortzetten;
+de bouw-/lanceringsronde voor feedbackfase 1 wordt afzonderlijk ingepland.
+Provider- en privacygates blijven expliciet open totdat besloten. Het bestaande
+content-/onderhoudsspoor blijft:
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
@@ -81,7 +105,9 @@ Tijdgebonden:
 | Moment | Ticket | Werk |
 | --- | --- | --- |
 | Vroegst 2026-10-22 bij voldoende werkelijk gebruik | `LRN-012` | Learn-pilot evalueren en vervolg kiezen, inclusief kandidaat-wijngaardleerpad |
-| Aansluitend, of eerder bij concrete consumer | `MNT-050` | Backend/API/databasebesluit |
+
+Vervroegde platformgate: `MNT-050` bij feedbackfase 0, vóór `FBK-006`.
+Het is al meegeteld bij de 13 onderhoudsacties en wordt niet dubbel als FBK-ticket geteld.
 
 Geblokkeerd, in aanbevolen oppakvolgorde zodra de afhankelijkheid beschikbaar is:
 
@@ -99,7 +125,8 @@ Ticketstatus en acceptatiecriteria staan in de
 [onderhoudsbacklog](maintenance-backlog.md),
 [Explore-roadmap](explore-foundation-roadmap.md),
 [Learn-roadmap](learn-roadmap.md) en
-[regionale roadmap](region-expansion-roadmap.md).
+[regionale roadmap](region-expansion-roadmap.md), plus de
+[feedbackroadmap](feedback-roadmap.md).
 Draftentities vormen een voorraad, geen automatische publicatiebelofte.
 
 ## Wanneer backend of database nodig wordt
@@ -115,7 +142,8 @@ Draftentities vormen een voorraad, geen automatische publicatiebelofte.
   queries. Afgeleide SQLite/FTS is iets anders dan migratie van authored content;
   een kleine geverifieerde Atlasdataset vereist niet automatisch PostGIS.
 
-Bewust uitstel krijgt een toetsbare trigger. Research, bronnen en canonical
-content blijven bij iedere migratie behouden. Communitycorrecties, verdere
-framework alignment en vergelijkingsfuncties blijven mogelijke vervolgrichtingen
-zonder huidige uitvoeringsbelofte.
+Bewust uitstel krijgt een toetsbare trigger. Feedback heeft nu een concrete
+gefaseerde backlog; het backendbesluit daarvoor kan niet meer op een ontbrekende
+consumer worden uitgesteld. Research, bronnen en canonical content blijven bij
+iedere migratie behouden. Verdere framework alignment en vergelijkingsfuncties
+blijven mogelijke vervolgrichtingen zonder huidige uitvoeringsbelofte.
