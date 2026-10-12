@@ -55,9 +55,11 @@ bewijs van gebruik en geen zelfstandige reden voor accounts of een database.
   bewaart voortgang, besluiten, ontbrekend werk en hervatprocedure. Herbespreken
   bij review van een volgende les-/contentlevering of Atlaspilot; hervatten pas
   na expliciet prioriteitsbesluit, niet automatisch bij het halen van een mijlpaal.
-- **Schaalbasis getoetst (`MNT-052`).** Geen performancegedreven database nodig.
+- **Schaalbasis getoetst (`MNT-052`), harness aangescherpt (`MNT-063`).** Geen performancegedreven database nodig.
   Herhaal [performance-budgets.md](performance-budgets.md) vóór grote regiobatches
-  en bij relevante corpus-/codewijzigingen.
+  en bij relevante corpus-/codewijzigingen. `MNT-065` breidt vóór grote batches
+  de representativiteit van scenario's uit; `MNT-064` optimaliseert fixture-I/O
+  alleen bij gemeten kosten. Beide blokkeren de huidige lessen niet.
 - **Vóór regionale publicatie: `REG-001–003`, `EXP-027/028`.** Besluit plaatsmodel,
   druivenprioriteiten en mondiale dependencies; toets mondiale claims en publicatie.
   [Regionale gates](region-expansion-roadmap.md) blijven gelden; Loire/Mendoza zijn kandidaten.
@@ -73,7 +75,7 @@ Grote schema-, opslag- en curriculumwijzigingen houden hun eigen besluitpoort.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-60 niet-afgeronde tickets: 13 onderhoudsacties, 4 Explore-tickets, 5 regionale
+62 niet-afgeronde tickets: 15 onderhoudsacties, 4 Explore-tickets, 5 regionale
 planning-/publicatietickets, 5 Learn-tickets (evaluatie plus vier uitvoeringsslices)
 en 33 feedbacktickets. Die 33 feedbacktickets en MNT-050 zijn bewust geparkeerd;
 ze blijven meetellen als resterend werk, niet als huidige uitvoeringsopdracht.
@@ -113,15 +115,18 @@ in de aanbevolen volgorde naar voren gehaald.
 | 11 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen |
 | 12 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
 | 13 | `EXP-028` | Integrale redactionele en product-QA |
-| 14 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
-| 15 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
-| 16 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
-| 17 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na publicatiegates |
-| 18 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
+| 14 | `MNT-065` | Representatieve benchmarkscenario's en workloadversies vóór grote corpus-/Atlasuitbreiding |
+| 15 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
+| 16 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
+| 17 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
+| 18 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na publicatiegates |
+| 19 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
+| 20 | `MNT-064` | Fixture-I/O alleen optimaliseren bij gemeten setupkosten; geen voorganger van andere leveringen |
 
 LRN-013 is afgerond; de brede LRN-014-scope is vóór uitvoering opgesplitst naar
 LRN-014–017. Daarom stijgt de totale resterende voorraad netto met twee tickets
-(één afgerond, drie toegevoegd), zonder nieuwe productfeatures. REG-003 blijft
+(één afgerond, drie toegevoegd), zonder nieuwe productfeatures. De benchmarkreview voegde daarna twee uitgestelde
+acties toe (`MNT-064/065`); de directe correcties zijn afgerond in `MNT-063`. REG-003 blijft
 een planningticket: toekomstige mondiale content krijgt vóór uitvoering eigen
 batches/tickets. De huidige telling is geen volledige mondiale authoringlijst.
 

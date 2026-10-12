@@ -1,3 +1,9 @@
+// Hier meten we de gebouwde website, niet alleen de losse zoekfunctie.
+// measureBuildArtifacts bekijkt welke bestanden de bouw heeft opgeleverd.
+// measureServer start de website en vraagt pagina's op via HTTP: dezelfde soort
+// verzoeken die een browser verstuurt. We meten ontvangst, niet tekenen op het scherm.
+// Zie processes.ts voor het starten/stoppen van programma's en search-worker.ts
+// voor de vaste zoekvoorbeelden en de uitleg van p50/p95.
 import { spawn, execFileSync } from "node:child_process";
 import { readFile, stat } from "node:fs/promises";
 import { get } from "node:http";
@@ -5,12 +11,15 @@ import path from "node:path";
 import { performance } from "node:perf_hooks";
 import { gunzipSync, gzipSync } from "node:zlib";
 import { filesUnder } from "./fixtures";
+import { stopProcess } from "./processes";
 import { percentile, SEARCH_CASES } from "./search-worker";
 import type { MediaAsset } from "../../src/content/model";
 
 export async function measureBuildArtifacts(root: string) {
   const nextDirectory = path.join(root, ".next");
   const files = await filesUnder(nextDirectory);
+  // Chunks zijn gebouwde codebestanden. Serverchunks draaien op de server;
+  // clientchunks gaan naar de browser. Daarom meten we bij clientcode ook gzip.
   const serverChunks = await Promise.all(
     files
       .filter((file) => /server\/chunks\/.*\.js$/.test(file))
@@ -28,8 +37,13 @@ export async function measureBuildArtifacts(root: string) {
         };
       }),
   );
+  // Een .nft.json-trace is een lijst bestanden die een serverroute nodig heeft.
+  // Samen vormen die een schatting van het pakket voor deployment. Dat is nog
+  // niet de werkelijk door Vercel geleverde pakketgrootte.
   const traces = files.filter((file) => file.endsWith(".nft.json"));
   const commonTrace = path.join(nextDirectory, "next-server.js.nft.json");
+  // Namen in een trace zijn relatief aan dat bestand. Maak er volledige paden
+  // van, anders zouden we per ongeluk bestanden in de verkeerde map tellen.
   const traceFiles = async (filename: string) => {
     const trace = JSON.parse(await readFile(filename, "utf8")) as { files: string[] };
     return trace.files.map((file) => path.resolve(path.dirname(filename), file));
@@ -37,21 +51,34 @@ export async function measureBuildArtifacts(root: string) {
   const common = await traceFiles(commonTrace);
   const bundleFile = path.join(root, "src/generated/content/knowledge-base.json");
   const searchTrace = path.join(nextDirectory, "server/app/[lang]/search/page.js.nft.json");
+  // De dynamische zoekroute moet de JSON-bundel meekrijgen bij deployment.
+  // Zonder die bundel kan een lokale app werken terwijl de gedeployde route faalt.
   if (!(await traceFiles(searchTrace)).includes(bundleFile)) {
     throw new Error("The dynamic search deployment trace is missing its generated data file.");
   }
+  // Routes delen veel bestanden. Cache de Promise van elke groottebepaling:
+  // ook gelijktijdige verzoeken naar hetzelfde bestand doen dan maar één stat-oproep.
+  const fileSizes = new Map<string, Promise<number>>();
+  const sizeOf = (file: string) => {
+    if (!fileSizes.has(file))
+      fileSizes.set(
+        file,
+        stat(file).then(({ size }) => size),
+      );
+    return fileSizes.get(file)!;
+  };
   const closures = await Promise.all(
     traces
       .filter((file) => file.includes("/server/app/"))
       .map(async (filename) => {
+        // Een Set is een verzameling zonder dubbelen. Eén gedeeld bestand telt
+        // binnen deze route dus eenmaal mee, ook als meerdere traces het noemen.
         const uniqueFiles = new Set([
           ...common,
           ...(await traceFiles(filename)),
           filename.slice(0, -".nft.json".length),
         ]);
-        const sizes = await Promise.all(
-          [...uniqueFiles].map(async (file) => (await stat(file)).size),
-        );
+        const sizes = await Promise.all([...uniqueFiles].map(sizeOf));
         return {
           route: path.relative(nextDirectory, filename),
           bytes: sizes.reduce((sum, value) => sum + value, 0),
@@ -59,6 +86,7 @@ export async function measureBuildArtifacts(root: string) {
         };
       }),
   );
+  // Het prerender-manifest noemt pagina's die al tijdens de build zijn gemaakt.
   const manifest = JSON.parse(
     await readFile(path.join(nextDirectory, "prerender-manifest.json"), "utf8"),
   );
@@ -75,6 +103,9 @@ export async function measureBuildArtifacts(root: string) {
   };
 }
 
+// HTTP is het vraag/antwoordprotocol van de browser. Vraag gzip-compressie aan.
+// wireBytes telt de ontvangen bytes; body bevat de uitgepakte tekst voor inspectie.
+// De stopwatch loopt tot het hele antwoord binnen is, niet alleen tot de eerste byte.
 function request(url: string, accept = "text/html") {
   return new Promise<{
     ms: number;
@@ -104,11 +135,15 @@ function request(url: string, accept = "text/html") {
         response.on("error", reject);
       },
     );
+    // Een timeoutmelding stopt een verzoek niet automatisch. destroy sluit het
+    // verzoek en laat de Promise mislukken, zodat we niet eindeloos blijven wachten.
     req.on("timeout", () => req.destroy(new Error(`Request timeout: ${url}`)));
     req.on("error", reject);
   });
 }
 
+// ps vraagt het besturingssysteem hoeveel RAM dit proces nu gebruikt.
+// Het antwoord is in KiB; vermenigvuldigen met 1024 geeft bytes. Dit is geen piekmeting.
 function rssBytes(pid: number) {
   return (
     Number(execFileSync("ps", ["-o", "rss=", "-p", String(pid)], { encoding: "utf8" }).trim()) *
@@ -123,6 +158,8 @@ export async function measureServer(
   measureImages: boolean,
 ) {
   const started = performance.now();
+  // Start Next als apart programma. 127.0.0.1 is alleen deze computer:
+  // de tijdelijke meetserver wordt daarmee niet op het netwerk aangeboden.
   const server = spawn(
     process.execPath,
     [
@@ -138,6 +175,8 @@ export async function measureServer(
   let log = "";
   const origin = `http://127.0.0.1:${port}`;
   try {
+    // Wacht op Nexts 'Ready in'-melding. Een Promise bewaart het toekomstige
+    // resultaat: resolve meldt succes, reject een fout. Na 30 seconden geven we op.
     await new Promise<void>((resolve, reject) => {
       const timer = setTimeout(() => {
         reject(new Error(`Server readiness timed out: ${log}`));
@@ -161,6 +200,8 @@ export async function measureServer(
       });
     });
     const readyMs = performance.now() - started;
+    // Het eerste zoekverzoek betaalt ook het laden van code en data.
+    // Meet dat apart van de volgende verzoeken, die voorbereid werk kunnen hergebruiken.
     const first = await request(`${origin}/search?q=nonexistent-query-82719`);
     if (first.status !== 200) throw new Error(`First search returned ${first.status}`);
     const cold = {
@@ -169,15 +210,20 @@ export async function measureServer(
       processToFirstResponseMs: performance.now() - started,
       rssBytes: rssBytes(server.pid!),
     };
+    // Bereid ook Engels voor, zodat beide talen in de volgende lus warm zijn.
     const firstEnglish = await request(`${origin}/en/search?q=nonexistent-query-82719`);
     if (firstEnglish.status !== 200)
       throw new Error(`English search returned ${firstEnglish.status}`);
     const searches = [];
     for (const locale of ["nl", "en"]) {
+      // Een lege zoekterm toont op de website een startscherm, geen zoekresultaten.
+      // Die laten we hier weg. Doe verzoeken na elkaar: anders meten ze ook elkaars belasting.
       for (const sample of SEARCH_CASES.filter(({ query }) => query)) {
         const times = [];
         let wireBytes = 0;
         for (let round = 0; round < 3; round += 1) {
+          // Dit is dezelfde soort beeld-URL als next/image maakt. Next verkleint
+          // en comprimeert het bronbeeld; de bronbestanden blijven ongewijzigd.
           const params = new URLSearchParams({ q: sample.query, type: sample.type });
           const response = await request(
             `${origin}${locale === "en" ? "/en" : ""}/search?${params}`,
@@ -196,6 +242,9 @@ export async function measureServer(
         });
       }
     }
+    // Vraag één voorbeeldartikel op en lees welke JS-/CSS-bestanden het noemt.
+    // Haal die ook op: zo benaderen we de overdracht voor één paginaweergave.
+    // We voeren geen JavaScript in een browser uit en meten geen schermopbouw.
     const page = await request(`${origin}/concepts/wine-perception-and-development`);
     if (page.status !== 200) throw new Error(`Article returned ${page.status}`);
     const resourcePaths = [
@@ -208,6 +257,8 @@ export async function measureServer(
         throw new Error(`Resource returned ${response.status}: ${resource}`);
       resources.push({ path: resource, wireBytes: response.wireBytes });
     }
+    // Test bij 1× twee bestaande beelden op twee breedtes. Media zijn bij grotere
+    // schalen hetzelfde. De tweede aanvraag laat zien wat caching oplevert.
     const images = [];
     if (measureImages) {
       const illustration = assets.find(({ id }) => id.includes("wine-perception"));
@@ -243,6 +294,7 @@ export async function measureServer(
       cold,
       firstEnglishRequestMs: firstEnglish.ms,
       searches,
+      // RAM na de verzoeken. Dit bewijst niet wat de piek was of dat er geen lek is.
       warmRssBytes: rssBytes(server.pid!),
       article: {
         htmlWireBytes: page.wireBytes,
@@ -255,12 +307,8 @@ export async function measureServer(
       images,
     };
   } finally {
-    if (server.exitCode === null) {
-      const stopped = new Promise<void>((resolve) => server.once("exit", () => resolve()));
-      server.kill("SIGTERM");
-      const timer = setTimeout(() => server.kill("SIGKILL"), 5_000);
-      await stopped;
-      clearTimeout(timer);
-    }
+    // finally draait ook bij een meetfout. De helper stopt begrensd en herkent
+    // een al beëindigd proces; zie processes.ts voor de uitleg van signalen.
+    await stopProcess(server);
   }
 }

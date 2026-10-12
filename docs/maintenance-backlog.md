@@ -25,17 +25,20 @@ Peildatum: 2026-10-12.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 6 | `MNT-050`, `MNT-051`, `MNT-053`, `MNT-060` t/m `MNT-062` |
+| Open | 8 | `MNT-050`, `MNT-051`, `MNT-053`, `MNT-060` t/m `MNT-062`, `MNT-064/065` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 49 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059` |
+| Afgerond | 50 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
 De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
+Benchmarkbetrouwbaarheid en Nederlandse uitleg zijn in `MNT-063` aangescherpt.
+Goedkopere fixture-I/O (`MNT-064`) blijft laag geprioriteerd; representatievere
+meetgevallen (`MNT-065`) volgen vóór grote corpus-/Atlasuitbreidingen, niet vóór lessen.
 Curriculumvoorbereiding (`LRN-013`) is afgerond; het achtlessenvoorstel wacht
 op DEC-LRN-015-akkoord. Daarna volgen drie lesbatches en pathpublicatie
 (`LRN-014–017`). `EXP-032/026` kunnen onafhankelijk doorgaan, Atlasafbakening
@@ -53,6 +56,48 @@ en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
 De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 
 ## Open werk
+
+### `MNT-065` — Benchmarkscenario's bij echte corpus- en Atlasgroei uitbreiden
+
+- **Status:** open
+- **Prioriteit:** middel
+- **Categorie:** engineering, testing
+- **Herkomst:** `QCR-2026-10-12-03`
+- **Bevinding en scope:** de vaste zoekvoorbeelden en synthetisch gekopieerde
+  content bewaken regressie en volumegroei, maar voorspellen geen echte groei
+  in taalgebruik, relaties, artikelvormen of geografie. Vijf/ drie samples leveren
+  geen statistisch stabiele p95 voor gebruikersverkeer.
+- **Klaar wanneer:** vóór een grote contentbatch een gemotiveerde set NL/EN-queries,
+  trefferdichtheden en representatieve pagina's is vastgelegd; workloadversie,
+  cases en herhalingen reizen met het rapport mee, inclusief expliciet beleid
+  voor historische rapporten bij gewijzigde cases. Behoud de vaste regressieset.
+  Kies aantallen herhalingen op de benodigde conclusie, zonder timings als fragiele
+  gewone CI-tests te behandelen. Voor geografie is eerst een geverifieerd
+  fixturecontract nodig; behoud anders de weigering om geografische IDs te klonen.
+- **Planning:** na inhoudelijke gap-/batchafbakening (`REG-003`), vóór grote
+  regionale batches en relevante Atlas-schaalclaims. Geen gate voor de huidige
+  wijngaardlessen of een kleine 1×-Atlaspilot. Cloudgedrag blijft `MNT-056`.
+- **Log 2026-10-12:** geregistreerd; lokale 1×/3×/8× blijven synthetische
+  referentiemetingen, geen bewijs voor werkelijk verkeer of cloudcapaciteit.
+
+### `MNT-064` — Fixture-I/O alleen bij gemeten kosten optimaliseren
+
+- **Status:** open
+- **Prioriteit:** laag
+- **Categorie:** engineering
+- **Herkomst:** `QCR-2026-10-12-03`
+- **Bevinding en scope:** elke extra corpusversie leest dezelfde packagebestanden
+  en maakt deels dezelfde bovenliggende mappen opnieuw aan. De eerdere 8×-setup
+  kostte circa vier seconden; dit ligt buiten content-/zoektiming.
+- **Klaar wanneer:** bij een aangetoonde bottleneck bestandslijsten, mappen en
+  eventueel brontekst per package gecontroleerd worden hergebruikt; aantoonbare
+  tijdwinst is afgewogen tegen extra geheugen. ID-/slug-/provenancepariteit,
+  brononveranderlijkheid en foutopruiming blijven getest.
+- **Planning:** bij de volgende grote schaalronde alleen uitvoeren als fixtureMs
+  een merkbare kostenpost wordt (richtpunt >10 seconden of >15% van de hele run).
+  Anders expliciet herbeoordelen; geen voorganger van content- of Atlaslevering.
+- **Log 2026-10-12:** trace-groottecache, lichtere Brotli en minder bundelretentie
+  zijn al uitgevoerd in `MNT-063`; alleen herhaald lezen/schrijven blijft hier over.
 
 ### `MNT-060` — Documentatieconsolidatie zonder contractverlies
 
@@ -361,6 +406,25 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-063` — Benchmarkfouten herstellen en code begrijpelijk uitleggen
+
+- **Status:** afgerond
+- **Prioriteit:** middel
+- **Categorie:** engineering, testing
+- **Herkomst:** `QCR-2026-10-12-03`, analyse en expliciete onderhoudsopdracht gebruiker
+- **Bevinding en scope:** uitvoer werd vóór gesloten pipes gebruikt; de appfixture
+  miste PostCSS; shutdown kon op een al afgelopen signaalexit wachten; ontbrekende
+  meetgegevens konden budgetten laten slagen. Opruimen omvatte setupfouten niet.
+- **Klaar wanneer:** deze paden regressietests hebben; de echte productiefixture
+  en schalen zijn gemeten; comments in scripts/performance zijn begrijpelijk
+  Nederlands met korte uitleg van Node-/TypeScriptbegrippen; vervolgwerk is geprioriteerd.
+- **Log 2026-10-12:** volledige UTF-8-uitvoer via close, begrensde procesopruiming,
+  PostCSS-configuratie, symlinkbewuste uitvoermapcontrole en cleanup bij setupfouten
+  ingevoerd. Budgetten bewaken schalen, cases, samples, traces, artikel/beelden en
+  ongeldige getallen. Brotli-kwaliteit 4 wordt vastgelegd; traces delen een
+  groottecache en de bestuurder houdt alleen noodzakelijke bundeldata vast.
+  Validatie en beperkingen staan in het [reviewrapport](../editorial/benchmark-harness-review-2026-10-12.md).
 
 ### `MNT-052` — Meetbare performance- en mediabudgetten vastleggen
 

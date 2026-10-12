@@ -1,6 +1,7 @@
 # Performance budgets and measurement
 
-Engineering reference for `MNT-052`, completed 2026-10-11. Canonical facts remain
+Engineering reference for `MNT-052` (2026-10-11), hardened in `MNT-063`
+(2026-10-12). Canonical facts remain
 in authored packages. These guardrails concern resource use, not wine quality
 or a promise of cloud capacity. Current limits live in
 [`scripts/performance/budgets.ts`](../scripts/performance/budgets.ts); the dated
@@ -25,10 +26,17 @@ repository loader or perform a historical deployment.
 
 Results and logs go to a new directory under the system temp directory. Use
 `--output=/absolute/new/empty/directory` to choose an output outside the repo.
-Fixtures are removed after each scale unless `--keep-fixtures` is requested.
+Output paths are checked using resolved filesystem locations, including symlinks.
+Fixtures, including partially created fixtures, are removed after each scale unless
+`--keep-fixtures` is requested.
 `--enforce` returns a failing exit code on a budget breach; `--check` evaluates
 saved measurements against current limits without rebuilding. Interrupted
-production runs cannot pass by omitting their missing measurements.
+production runs cannot pass by omitting their missing measurements. Checks reject
+empty/duplicate scales, missing query/locale cases or samples, missing traces,
+missing article/image workload data and non-finite or negative budget measurements.
+The application fixture includes the project PostCSS configuration; local `.env`
+files are deliberately excluded. Processes are read through stdio closure and
+shutdown is bounded, including already signal-terminated children.
 
 No canonical files, Git settings, public hosting or remote storage are changed.
 The synthetic copies have unique entity/narrative/path/assertion IDs and slugs,
@@ -49,8 +57,10 @@ geographic fixture contract is added. A 1× measurement remains available.
   their p95 is likewise the observed maximum. Process-to-first-response includes
   startup and the first Dutch search. OS filesystem caches are warm: this is
   not a serverless cold-start measurement.
-- JSON gzip/Brotli sizes are transport estimates. JSON is not downloaded to the
-  browser. Article HTML and referenced JS/CSS use actual gzip response-body
+- JSON gzip/Brotli sizes are transport estimates. New runs record Brotli quality 4
+  in `method.brotliQuality`; the 2026-10-11 reports used default quality 11. Do not
+  attribute changes in these estimates solely to corpus changes across that boundary.
+  JSON is not downloaded to the browser. Article HTML and referenced JS/CSS use actual gzip response-body
   bytes; the JS inventory conservatively includes legacy `nomodule` scripts.
   Fonts, images and headers are separate, and browser execution time is not measured.
 - Local trace sizes deduplicate a route trace and the Next server trace. They
@@ -85,4 +95,22 @@ when adding Atlas data. A breach produces a concrete maintenance action before
 that expansion. Run the full benchmark manually on a comparable idle machine;
 ordinary CI keeps deterministic checks and browser behavior, without fragile
 wall-clock thresholds on shared runners. External deployment/cold-start
+verification remains `MNT-056`.
+
+## Harness regression checks and remaining work
+
+Run `npx vitest run scripts/performance` for process lifecycle, output collection,
+fixture configuration/cleanup and report completeness checks. These are deterministic
+behavior checks, not performance thresholds for a shared CI runner.
+
+The [2026-10-12 harness review](../editorial/benchmark-harness-review-2026-10-12.md)
+records corrected production measurements. Earlier reports remain historical;
+the missing PostCSS configuration limits their CSS comparability. Corpus and
+search figures are still evidence for the measured source and workload.
+
+`MNT-065` adds representative cases and an explicit versioned workload contract
+before major expansion. The current report checker expects the fixed case set
+and sample counts in this code; future changes must deliberately address old reports.
+`MNT-064` optimizes repeated fixture reads only when measured setup costs justify it.
+Neither is a prerequisite for the current lesson batches. External cloud/CI
 verification remains `MNT-056`.
