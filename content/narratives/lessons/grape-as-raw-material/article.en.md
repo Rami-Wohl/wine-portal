@@ -33,6 +33,8 @@ Winemakers taste as well as measure. They may consider acidity, aroma, skin text
 More time on the vine may bring additional sugar and further aromatic and phenolic development, while acids and freshness continue to evolve as well. Earlier picking will often retain a firmer acid balance and lower potential alcohol. The winemaker looks for a moment when the relevant properties suit the intended style.
 
 That moment occurs within a real growing season. Heat, rain and the course of ripening can produce different proportions in each [[concept.vintage|vintage]]. Bunches and sections of a vineyard do not always ripen at the same time either. Harvest may consequently be spread across several days or selective passes.
+
+The lesson [Assessing ripeness and choosing when to harvest](narrative.lesson.ripeness-and-harvest) explores the vineyard decision: how do you connect measurements and tasting with fruit health and the risk of waiting? Here we follow what the chosen fruit means for the winery.
 :::
 
 :::section{#gezond-fruit-geeft-speelruimte depth="foundation" source_refs="source.awri-managing-botrytis-fruit-2023 source.penn-state-grape-sour-rot"}

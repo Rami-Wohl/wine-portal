@@ -57,9 +57,8 @@ geografiedata of ongeschreven regiopagina's dragend bewijs moeten leveren.
 
 ## Voorgestelde lesvolgorde
 
-De eerste zes onderstaande lesson-IDs zijn in LRN-014/015 vastgelegd en actief.
-De twee overige zijn **reserveringsvoorstellen** tot hun authoringbatch; na
-publicatie blijven IDs stabiel. Er is nog geen wijngaardpath of bijbehorende
+Alle acht onderstaande lesson-IDs zijn in LRN-014–016 vastgelegd en actief.
+De IDs blijven stabiel; de drie authoringbatches zijn afgerond. Er is nog geen wijngaardpath of bijbehorende
 gebruikersvoortgang. Voorgesteld path-ID:
 `learning-path.vine-and-vineyard`, met dezelfde Engelse canonical slug.
 Elke step-ID hieronder verwijst naar `narrative.lesson.<step-id>`.
@@ -214,10 +213,10 @@ waarneming, ingreep en toetsing; geen score, examen of universeel beste systeem.
 
 | Bevinding | Actie en eigenaar | Blokkeert |
 | --- | --- | --- |
-| Lessen 1–6 actief via LRN-014/015; twee lessonpackages ontbreken nog | Resterende didactische synthese in LRN-016; bestaande kennisowners behouden | Betreffende batch en volledige pathactivatie |
+| Alle acht lessonpackages actief via LRN-014–016 | Eigen didactische synthese en kennisowners behouden; integrale routecontrole resteert | LRN-017 |
 | Introductie plant én jaarcyclus kan te vol worden | Les 1 beperkt tot herkenning, ritme en verbinding tussen jaren; specialistische transport-/dormantiemodellen blijven naslag. Herbeoordeel outline vóór prose | Les 1-review; zo nodig curriculumwijziging vóór uitvoering |
 | Bestaande hubs zijn naslag, geen afgeronde lessentekst | Schrijf per les een eigen verklaringsboog met expliciete leerbakens, verbindingsproza, kernidee en glas-koppeling | Alle lessen |
-| Gekozen toepascasus/tegenvoorbeeld is nog niet geschreven of geverifieerd | Beperk tot expliciet hypothetische kwalitatieve situatie; controleer iedere causale uitleg bij de bestaande primaire/vakbron | Betreffende les; geen verzonnen meetdata |
+| Kwalitatieve toepascasussen in alle acht lessen geschreven en gereviewd | Hypothetische situaties, onderbouwde mechanismen en geen verzonnen meetdata; samenhang nog integraal toetsen | LRN-017 |
 | Oogst komt al in het vinificatiepad voor | Review les 7 samen met bestaande grondstofles; gerichte wederzijdse links, behoud oude IDs en zelfstandige uitleg | LRN-016/017, geen herpublicatie van het hele eerste pad nodig |
 | Massale selectie is draft; volledige aanleg, plantdichtheid/rijoriëntatie/leeftijd en oogsttechniek vragen breder werk | REG-003 houdt de planning; geen essentiële link naar de draft, geen nieuwe clone-/harvestentity om de outline op te vullen | Buiten deze afgebakende batch; bij scope-uitbreiding eerst expliciet nieuwe dependency |
 | Normen en regionale regels hebben eigen datum/scope | Research in les 8; beperk uitleg tot aantoonbaar ondersteunde versie/scope en registreer nieuwe provenance waar nodig | LRN-016, niet heel Atlas of regionale fase |
@@ -335,3 +334,11 @@ zijn actief in NL/EN, met eigen toepassingen en gecontroleerd bron-/PNG-hergebru
 De [batchreview QCR-2026-10-12-05](../vineyard-lessons-batch-2-review-2026-10-12.md)
 bewaart de verificatie. De zes lesson-IDs liggen nu vast; alleen 7/8 zijn nog
 reserveringen. Volgende werk is LRN-016; volledige pathpublicatie blijft LRN-017.
+
+**Publicatieaddendum batch 3, 2026-10-12:** LRN-016 afgerond. Lessen 7–8
+zijn actieve NL/EN-lessons met eigen uitleg, PNG-legenda en kwalitatieve toepassing.
+Alle acht lesson-IDs liggen vast. Oogstoverlap en wederzijdse verwijzingen met
+de grondstofles zijn gecontroleerd; actuele EU-/Demeter-scope is benoemd.
+[Batchreview 3](../vineyard-lessons-batch-3-review-2026-10-12.md) bewaart bronnen
+en verificatie. Eerstvolgend: LRN-017, integrale review en pathpublicatie;
+59 niet-afgeronde tickets in de productplanning.

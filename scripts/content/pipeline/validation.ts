@@ -187,6 +187,7 @@ export async function validateContentRecords(
       entityIdSet,
       sourceIdSet,
       mediaIdSet,
+      narrativeById,
       issues,
     );
     entityContentMap.set(record.value.id, parsed.content);
@@ -231,6 +232,7 @@ export async function validateContentRecords(
       entityIdSet,
       sourceIdSet,
       mediaIdSet,
+      narrativeById,
       issues,
     );
     const mentions = parsed.mentions;

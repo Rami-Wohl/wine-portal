@@ -53,6 +53,7 @@ export function parseLocalizedContent<T extends Entity | Narrative>(
   entityIdSet: Set<string>,
   sourceIdSet: Set<string>,
   mediaIdSet: Set<string>,
+  narrativeById: Map<string, Narrative>,
   issues: string[],
 ): { content: Record<Locale, ContentDocument>; mentions: NarrativeMention[] } {
   const content: Record<Locale, ContentDocument> = {
@@ -68,6 +69,15 @@ export function parseLocalizedContent<T extends Entity | Narrative>(
     content[locale] = parsed.document;
     mentions.push(...parsed.mentions);
     issues.push(...parsed.issues);
+
+    for (const targetId of parsed.narrativeLinks) {
+      const target = narrativeById.get(targetId);
+      if (!target) {
+        issues.push(`${file}: Unknown narrative link '${targetId}'.`);
+      } else if (record.value.status === "active" && target.status !== "active") {
+        issues.push(`${file}: active content cannot link to inactive narrative '${targetId}'.`);
+      }
+    }
 
     for (const mention of parsed.mentions) {
       if (!entityIdSet.has(mention.entity_id)) {

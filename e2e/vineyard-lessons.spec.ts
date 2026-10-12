@@ -55,6 +55,24 @@ const lessons = [
     markers: 5,
     reference: "/concepts/vineyard-hazards-diseases-pests-disorders",
   },
+  {
+    slug: "ripeness-and-harvest",
+    alias: "rijpheid-beoordelen-en-het-oogstmoment-kiezen",
+    nl: "Rijpheid beoordelen en het oogstmoment kiezen",
+    en: "Assessing ripeness and choosing when to harvest",
+    figure: "rijpheid-in-beeld",
+    markers: 7,
+    reference: "/concepts/berry-development-veraison-ripeness",
+  },
+  {
+    slug: "vineyard-systems-and-adaptation",
+    alias: "teeltsystemen-duurzaamheid-en-aanpassen",
+    nl: "Teeltsystemen, duurzaamheid en aanpassen",
+    en: "Growing systems, sustainability and adaptation",
+    figure: "praktijk-controle-resultaat",
+    markers: 3,
+    reference: "/concepts/vineyard-systems-sustainability-adaptation",
+  },
 ] as const;
 
 for (const locale of ["nl", "en"] as const) {
@@ -120,6 +138,22 @@ for (const locale of ["nl", "en"] as const) {
     }
   });
 
+  test(`harvest and raw-material lessons link reciprocally without borrowing path context in ${locale}`, async ({
+    page,
+  }) => {
+    await page.goto(
+      `${prefix}/verdiepingen/lessons/grape-as-raw-material?path=from-grape-to-still-wine`,
+    );
+    await expect(page.locator(".lesson-path-context")).toBeVisible();
+    await page.locator('#oogsten-is-kiezen a[href$="/lessons/ripeness-and-harvest"]').click();
+    await expect(page).toHaveURL(`${prefix}/verdiepingen/lessons/ripeness-and-harvest`);
+    await expect(page.locator(".lesson-path-context, .lesson-path-footer")).toHaveCount(0);
+    await page.locator('#waarom-in-het-glas a[href$="/lessons/grape-as-raw-material"]').click();
+    await expect(page).toHaveURL(`${prefix}/verdiepingen/lessons/grape-as-raw-material`);
+    await expect(page.locator("#oogsten-is-kiezen")).toBeVisible();
+    await expect(page.locator(".lesson-path-context, .lesson-path-footer")).toHaveCount(0);
+  });
+
   test.describe(`without JavaScript (${locale})`, () => {
     test.use({ javaScriptEnabled: false });
 
@@ -140,6 +174,14 @@ for (const locale of ["nl", "en"] as const) {
           .poll(() => illustration.evaluate((img) => (img as HTMLImageElement).naturalWidth))
           .toBeGreaterThan(0);
         await expect(page.locator(".lesson-path-context, .lesson-path-footer")).toHaveCount(0);
+        if (lesson.slug === "ripeness-and-harvest") {
+          await page
+            .locator('#waarom-in-het-glas a[href$="/lessons/grape-as-raw-material"]')
+            .click();
+          await expect(page).toHaveURL(`${prefix}/verdiepingen/lessons/grape-as-raw-material`);
+          await page.locator('#oogsten-is-kiezen a[href$="/lessons/ripeness-and-harvest"]').click();
+          await expect(page).toHaveURL(`${prefix}/verdiepingen/lessons/ripeness-and-harvest`);
+        }
         await page.locator(`article a[href="${prefix}${lesson.reference}"]`).first().click();
         await expect(page).toHaveURL(`${prefix}${lesson.reference}`);
       }

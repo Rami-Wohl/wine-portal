@@ -103,7 +103,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 13 | `LRN-013` | Volgend curriculum en concrete lessonbatches voorbereiden | Bestaande contentinventaris; geen gebruiksgate | afgerond, curriculum goedgekeurd |
 | 14 | `LRN-014` | Wijngaardlessen 1–3: plant/jaarcyclus, klimaat/plek, bodem/water | Goedgekeurd `DEC-LRN-015` | afgerond |
 | 15 | `LRN-015` | Wijngaardlessen 4–6: loofwand, voeding/vloer en risico | `LRN-014`, goedgekeurd curriculum | afgerond |
-| 16 | `LRN-016` | Wijngaardlessen 7–8: rijpheid/oogst en teeltsystemen | `LRN-015`, goedgekeurd curriculum | open |
+| 16 | `LRN-016` | Wijngaardlessen 7–8: rijpheid/oogst en teeltsystemen | `LRN-015`, goedgekeurd curriculum | afgerond |
 | 17 | `LRN-017` | Volledig wijngaardpad integreren, toetsen en publiceren | `LRN-014–016`, goedgekeurd curriculum | open |
 
 `LRN-001–011` vormen de afgeronde MVP-volgorde. Vanaf het prioriteitsbesluit
@@ -591,7 +591,7 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
 
 ### `LRN-016` — Wijngaardbatch 3: rijpheid, oogst en teeltsystemen
 
-- **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, testing.
+- **Status:** afgerond; **prioriteit:** hoog; **categorieën:** content, research, testing.
 - **Herkomst/log:** 2026-10-12 — laatste inhoudelijke batch uit LRN-013.
 - **Doel/scope:** twee lessen **Rijpheid beoordelen en het oogstmoment kiezen**
   en **Teeltsystemen, duurzaamheid en aanpassen**.
@@ -604,6 +604,12 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
   gecontroleerd, norm-/versiescope correct en geen ongeverifieerde cijfers/cases.
 - **Verificatie:** bron-/overlap-/NL/EN-/mediareview en format/check/relevante e2e;
   beide talen, mobiel, toetsenbord en no-JS. Pathactivatie blijft LRN-017.
+
+- **Uitvoering 2026-10-12:** twee actieve NL/EN-lessen, acht heropende bronrecords,
+  twee herbeoordeelde PNG’s; wederzijdse stable-ID-links met de grondstofles.
+  [Batchreview 3](../editorial/vineyard-lessons-batch-3-review-2026-10-12.md)
+  bewaart overlap-/normreview en verificatie. Alle acht lessen zijn nu actief;
+  LRN-017 is de eerstvolgende taak.
 
 ### `LRN-017` — Wijngaardleerpad integraal toetsen en publiceren
 
@@ -652,6 +658,7 @@ aanbeveling richtinggevend maar niet bindend.
 
 | Datum | Besluit | Motivatie |
 | --- | --- | --- |
+| 2026-10-12 | LRN-016 afgerond; LRN-017 volgt. | Alle acht wijngaardlessen actief. Oogstoverlap, actuele normscope en wederzijdse stable-ID-links gecontroleerd; integrale route, recap en voortgang volgen nu. |
 | 2026-10-12 | LRN-015 afgerond; LRN-016 is de volgende inhoudelijke batch. | Zes van acht wijngaardlessen actief. De laatste twee vragen expliciete overlapreview rond oogst en actualiteits-/scopereview van teeltnormen; volledige pathpublicatie blijft LRN-017. |
 | 2026-10-12 | LRN-014 afgerond; LRN-015 is de volgende inhoudelijke batch. | Drie complete standalone lessen zijn technisch en redactioneel gereviewd. De vijf resterende lessen en pathintegratie behouden eigen tickets; geen nieuwe generieke platformafhankelijkheid. |
 | 2026-10-12 | DEC-LRN-015 gesloten: gebruiker keurt onderwerp, niveau, achtlessenvolgorde en publicatiebatches expliciet goed; LRN-014 gestart. | De vereiste curriculumgate is gehaald. Per batch blijven feitelijke, didactische en technische publicatiechecks nodig; het volledige path volgt in LRN-017. |

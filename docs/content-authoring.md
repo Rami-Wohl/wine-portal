@@ -650,6 +650,11 @@ Link entities in Markdown without application routes:
 
 The first form lets the renderer choose a localized label later. The second supplies the displayed label. Both forms are validated and generate narrative backlinks.
 
+For another narrative or lesson, use `[Localized title](narrative.lesson.example)`.
+The target must exist and be active when linked from active content; the renderer
+derives its localized canonical route. This does not carry learning-path context
+or create an entity backlink. See [the link contract](content-blocks.md#links-naar-narratives-en-lessen).
+
 ## Write Markdown bodies
 
 Canonical entity overviews and narratives follow `content-blocks.md`. That

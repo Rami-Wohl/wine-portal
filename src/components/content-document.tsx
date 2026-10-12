@@ -9,7 +9,8 @@ import type {
   MediaAsset,
   Source,
 } from "@/content/model";
-import { getEntityById, getEntityPublicHref } from "@/content/repository";
+import { getEntityById, getEntityPublicHref, getNarrativeById } from "@/content/repository";
+import { narrativeHref } from "@/content/routing";
 import { localizedHref } from "@/i18n/routing";
 import Image from "next/image";
 import Link from "next/link";
@@ -86,6 +87,19 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
         return <strong key={key}>{renderInline(node.children, context)}</strong>;
       case "link": {
         const children = renderInline(node.children, context);
+        if (node.url.startsWith("narrative.")) {
+          const narrative = getNarrativeById(node.url);
+          if (!narrative || narrative.status !== "active") return children;
+          return (
+            <Link
+              href={narrativeHref(narrative, context.locale)}
+              key={key}
+              title={node.title ?? undefined}
+            >
+              {children}
+            </Link>
+          );
+        }
         if (node.url.startsWith("/") || node.url.startsWith("#")) {
           return (
             <Link

@@ -160,6 +160,10 @@ naslag worden gelinkt. Zij verschijnen niet in `steps`, tellen niet mee voor
 voortgang en krijgen geen voltooiingsstatus. Zo blijft voor gebruikers helder
 wat de leerroute vormt en wat vrijwillige verdieping is.
 
+Een relevante andere les mag een zelfstandige verwijzing krijgen via haar
+stable narrative-ID volgens `content-blocks.md`. Die verwijzing maakt haar
+geen extra pathstep en draagt geen pathcontext of voltooiingsstatus over.
+
 V1 voegt geen aparte pathbrede `references`-lijst toe. De auteur plaatst een
 naslaglink waar die inhoudelijk nodig is; de lessonbrief bewaart de bewuste
 block- en claimselectie. Een later overzicht van alle naslag kan desgewenst uit

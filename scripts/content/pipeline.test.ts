@@ -1378,6 +1378,32 @@ describe("content pipeline derivation", () => {
     expect(knowledgeBase.backlinks["producer.example"]).toEqual(["narrative.proof"]);
   });
 
+  it("keeps a stable narrative link independent of the target route slug and entity mentions", async () => {
+    const root = await temporaryRoot();
+    await addNarrative(root, { id: "narrative.target", slug: "a-different-slug" });
+    await addNarrative(root, {
+      markdown: "Lees [de les](narrative.target).",
+      englishMarkdown: "Read [the lesson](narrative.target).",
+    });
+    const { knowledgeBase } = await buildContent({ root, write: false });
+    const narrative = knowledgeBase.narratives.find((item) => item.id === "narrative.proof");
+    expect(narrative?.mentions).toEqual([]);
+    expect(JSON.stringify(narrative?.content.nl)).toContain('"url":"narrative.target"');
+    expect(JSON.stringify(narrative?.content.en)).toContain('"url":"narrative.target"');
+  });
+
+  it.each([
+    ["narrative.missing", /Unknown narrative link/],
+    ["narrative.invalid!", /must be a narrative ID/],
+    ["narrative.target", /active content cannot link to inactive narrative/],
+  ])("rejects an unpublishable narrative link to %s", async (target, error) => {
+    const root = await temporaryRoot();
+    await addNarrative(root, { id: "narrative.target" });
+    const article = `:::summary{#orientatie}\nIntro.\n:::\n\n:::section{#uitleg}\n## Uitleg\n\nLees [de les](${target}).\n:::\n`;
+    await addNarrative(root, { markdown: article, status: "active" });
+    await expect(buildContent({ root, write: false })).rejects.toThrow(error);
+  });
+
   it("rejects unknown and malformed narrative entity links", async () => {
     const unknownRoot = await temporaryRoot();
     await addEntity(unknownRoot, { id: "producer.example" });

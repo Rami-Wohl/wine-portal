@@ -405,6 +405,20 @@ De bestaande, geïmplementeerde syntax blijft ongewijzigd:
 
 Een custom label mag grammaticaal helpen, maar mag de identiteit of aard van de target niet verdraaien.
 
+### Links naar narratives en lessen
+
+Gebruik een Markdownlink met de stabiele narrative-ID als bestemming:
+
+```md
+[De druif als grondstof](narrative.lesson.grape-as-raw-material)
+```
+
+De pipeline controleert de ID; actieve content mag alleen naar een actieve
+narrative verwijzen. De renderer leidt de canonical route in de huidige taal af.
+Deze link draagt geen leerpadcontext of voltooiingsstatus over en is geen entity-
+mention/backlink. Het zichtbare label wordt per taal geschreven. Gebruik geen
+hardgecodeerde applicatieroute, query of anchor in deze vorm.
+
 ## 9. Citations en blockprovenance
 
 Inline citations gebruiken een compacte, niet-uitvoerbare extensie:

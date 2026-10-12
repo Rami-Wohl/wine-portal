@@ -1,0 +1,22 @@
+id: narrative.lesson.ripeness-and-harvest
+type: lesson
+status: active
+title:
+  nl: Rijpheid beoordelen en het oogstmoment kiezen
+  en: Assessing ripeness and choosing when to harvest
+slugs:
+  nl: rijpheid-beoordelen-en-het-oogstmoment-kiezen
+  en: ripeness-and-harvest
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.berry-development-ripeness
+  - concept.acidity
+  - concept.tannin
+  - concept.vintage
+source_refs:
+  - source.awri-berry-ripening
+  - source.awri-berry-sampling-maturity
+  - source.osu-harvest-grape-chemistry-2023
+depth: foundation

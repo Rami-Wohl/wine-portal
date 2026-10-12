@@ -8,6 +8,7 @@ import {
   CONTENT_BLOCK_TYPES,
   DEPTHS,
   entityIdPattern,
+  narrativeIdSchema,
   mediaIdSchema,
   sourceIdSchema,
   type CaveatVariant,
@@ -30,6 +31,7 @@ export interface ParsedContentDocument {
   document: ContentDocument;
   mentions: NarrativeMention[];
   citations: ContentCitationNode[];
+  narrativeLinks: string[];
   issues: string[];
 }
 
@@ -39,6 +41,7 @@ interface ParseState {
   issues: string[];
   mentions: NarrativeMention[];
   citations: ContentCitationNode[];
+  narrativeLinks: string[];
 }
 
 function issue(state: ParseState, message: string): void {
@@ -139,14 +142,16 @@ function normalizeInline(nodes: PhrasingContent[], state: ParseState): ContentIn
       case "break":
         return [{ type: "break" }];
       case "link": {
-        const allowed = /^(?:https?:|mailto:|\/|#)/.test(node.url);
+        const narrativeLink = narrativeIdSchema.safeParse(node.url).success;
+        const allowed = narrativeLink || /^(?:https?:|mailto:|\/|#)/.test(node.url);
         if (!allowed) {
           issue(
             state,
-            `link URL '${node.url}' must be http(s), mailto, root-relative, or an anchor`,
+            `link URL '${node.url}' must be a narrative ID, http(s), mailto, root-relative, or an anchor`,
           );
           return normalizeInline(node.children, state);
         }
+        if (narrativeLink) state.narrativeLinks.push(node.url);
         return [
           {
             type: "link",
@@ -320,7 +325,14 @@ export function parseContentDocument(
   file: string,
   locale: Locale,
 ): ParsedContentDocument {
-  const state: ParseState = { file, locale, issues: [], mentions: [], citations: [] };
+  const state: ParseState = {
+    file,
+    locale,
+    issues: [],
+    mentions: [],
+    citations: [],
+    narrativeLinks: [],
+  };
   const root = unified().use(remarkParse).use(remarkDirective).use(remarkGfm).parse(markdown);
   const blocks: ContentBlock[] = [];
   const seenIds = new Set<string>();
@@ -464,6 +476,7 @@ export function parseContentDocument(
     document: { blocks },
     mentions: state.mentions,
     citations: state.citations,
+    narrativeLinks: state.narrativeLinks,
     issues: state.issues,
   };
 }

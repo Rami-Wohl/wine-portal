@@ -1,0 +1,26 @@
+id: narrative.lesson.vineyard-systems-and-adaptation
+type: lesson
+status: active
+title:
+  nl: Teeltsystemen, duurzaamheid en aanpassen
+  en: Growing systems, sustainability and adaptation
+slugs:
+  nl: teeltsystemen-duurzaamheid-en-aanpassen
+  en: vineyard-systems-and-adaptation
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.vineyard-systems-sustainability-adaptation
+  - concept.vine-nutrition-soil-management-vineyard-floor
+  - concept.vine-water-relations
+  - concept.pruning-training-canopy-crop-load
+source_refs:
+  - source.oiv-sustainability-principles-2016
+  - source.oiv-sustainability-implementation-2020
+  - source.ec-organic-production-products
+  - source.demeter-biodynamic-standard-2026
+  - source.newton-regenerative-definitions-2020
+  - source.abad-cover-crops-viticulture-soil-2021
+  - source.abad-cover-crops-agronomic-performance-2021
+depth: foundation

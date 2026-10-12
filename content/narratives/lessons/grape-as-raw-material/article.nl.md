@@ -33,6 +33,8 @@ Wijnmakers proeven daarom ook. Ze letten onder meer op zuurindruk, aroma, schilt
 Langer laten hangen kan meer suiker en een andere aromatische en fenolische rijpheid brengen, terwijl zuren en frisheid zich eveneens blijven ontwikkelen. Eerder oogsten bewaart vaak een strakkere zuurbalans en een lager alcoholpotentieel. De wijnmaker zoekt het moment waarop de relevante eigenschappen bij de voorgenomen stijl passen.
 
 Dat moment ontstaat in een echt groeiseizoen. Warmte, regen en het verloop van de rijping kunnen per [[concept.vintage|jaargang]] andere verhoudingen opleveren. Ook binnen één wijngaard rijpen trossen en perceeldelen niet altijd tegelijk. Oogsten kan daarom over meerdere dagen of selectierondes worden verdeeld.
+
+De les [Rijpheid beoordelen en het oogstmoment kiezen](narrative.lesson.ripeness-and-harvest) werkt de afweging in de wijngaard uit: hoe verbind je metingen en proeven met fruitgezondheid en het risico van wachten? Hier volgen we wat het gekozen fruit voor de kelder betekent.
 :::
 
 :::section{#gezond-fruit-geeft-speelruimte depth="foundation" source_refs="source.awri-managing-botrytis-fruit-2023 source.penn-state-grape-sour-rot"}
