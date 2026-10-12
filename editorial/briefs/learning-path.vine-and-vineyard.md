@@ -57,8 +57,8 @@ geografiedata of ongeschreven regiopagina's dragend bewijs moeten leveren.
 
 ## Voorgestelde lesvolgorde
 
-De eerste drie onderstaande lesson-IDs zijn in LRN-014 vastgelegd en actief.
-De vijf overige zijn **reserveringsvoorstellen** tot hun authoringbatch; na
+De eerste zes onderstaande lesson-IDs zijn in LRN-014/015 vastgelegd en actief.
+De twee overige zijn **reserveringsvoorstellen** tot hun authoringbatch; na
 publicatie blijven IDs stabiel. Er is nog geen wijngaardpath of bijbehorende
 gebruikersvoortgang. Voorgesteld path-ID:
 `learning-path.vine-and-vineyard`, met dezelfde Engelse canonical slug.
@@ -214,7 +214,7 @@ waarneming, ingreep en toetsing; geen score, examen of universeel beste systeem.
 
 | Bevinding | Actie en eigenaar | Blokkeert |
 | --- | --- | --- |
-| Lessen 1–3 actief via LRN-014; vijf lessonpackages ontbreken nog | Resterende didactische synthese in LRN-015/016; bestaande kennisowners behouden | Betreffende batch en volledige pathactivatie |
+| Lessen 1–6 actief via LRN-014/015; twee lessonpackages ontbreken nog | Resterende didactische synthese in LRN-016; bestaande kennisowners behouden | Betreffende batch en volledige pathactivatie |
 | Introductie plant én jaarcyclus kan te vol worden | Les 1 beperkt tot herkenning, ritme en verbinding tussen jaren; specialistische transport-/dormantiemodellen blijven naslag. Herbeoordeel outline vóór prose | Les 1-review; zo nodig curriculumwijziging vóór uitvoering |
 | Bestaande hubs zijn naslag, geen afgeronde lessentekst | Schrijf per les een eigen verklaringsboog met expliciete leerbakens, verbindingsproza, kernidee en glas-koppeling | Alle lessen |
 | Gekozen toepascasus/tegenvoorbeeld is nog niet geschreven of geverifieerd | Beperk tot expliciet hypothetische kwalitatieve situatie; controleer iedere causale uitleg bij de bestaande primaire/vakbron | Betreffende les; geen verzonnen meetdata |
@@ -329,3 +329,9 @@ blijven per batch vereist. Het volledige path wordt pas in LRN-017 actief.
 actief in NL/EN met eigen oefeningen, bronreview en drie hergebruikte PNG's.
 [Batchreview QCR-2026-10-12-04](../vineyard-lessons-batch-1-review-2026-10-12.md)
 legt de inhoudelijke en technische controles vast. LRN-015 is de volgende batch.
+
+**Publicatieaddendum batch 2, 2026-10-12:** LRN-015 afgerond. Ook lessen 4–6
+zijn actief in NL/EN, met eigen toepassingen en gecontroleerd bron-/PNG-hergebruik.
+De [batchreview QCR-2026-10-12-05](../vineyard-lessons-batch-2-review-2026-10-12.md)
+bewaart de verificatie. De zes lesson-IDs liggen nu vast; alleen 7/8 zijn nog
+reserveringen. Volgende werk is LRN-016; volledige pathpublicatie blijft LRN-017.

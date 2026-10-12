@@ -77,7 +77,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Regionale uitbreidingsfase | `docs/region-expansion-roadmap.md` | Beslispoorten, druivenprioriteiten en definitie van gereed vóór verdere regiogroei |
 | Overkoepelende productvolgorde | `docs/product-roadmap.md` | Prioriteiten en beslismomenten tussen platform, Explore, Learn en Atlas; ticketstatus blijft in de eigen backlog |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
-| Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus `LRN-*`-tickets voor anonieme Learn en inhoudelijke uitbreiding; [goedgekeurd wijngaardcurriculum, eerste drie lessen actief](../editorial/briefs/learning-path.vine-and-vineyard.md) |
+| Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus `LRN-*`-tickets voor anonieme Learn en inhoudelijke uitbreiding; [goedgekeurd wijngaardcurriculum, eerste zes lessen actief](../editorial/briefs/learning-path.vine-and-vineyard.md) |
 | Correcties en suggesties | `docs/feedback-roadmap.md` | Feedbackcontract, `FBK-*`-uitvoeringsslices en `DEC-FBK-*`-gates; [flow en lokale ontwerpproef](feedback-flow.md); bewust geparkeerd na ontwerp, overdracht bovenaan; geen geïntegreerde feedbackfunctie |
 | Conceptuele Explore-basis | `docs/explore-foundation-roadmap.md`, `docs/explore-foundation-coverage.md` en `docs/explore-foundation-authoring.md` | Geordende `EXP-*`-tickets, actuele dekkingsmatrix en bindend authoringcontract voor systeemhubs en gerichte concepts |
 

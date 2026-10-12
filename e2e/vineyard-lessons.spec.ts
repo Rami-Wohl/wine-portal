@@ -28,6 +28,33 @@ const lessons = [
     markers: 6,
     reference: "/concepts/vineyard-soils",
   },
+  {
+    slug: "pruning-canopy-and-crop",
+    alias: "snoei-loofwand-en-gewasbelasting",
+    nl: "Snoei, loofwand en gewasbelasting",
+    en: "Pruning, canopy and crop load",
+    figure: "werk-door-het-jaar",
+    markers: 5,
+    reference: "/concepts/pruning-training-canopy-crop-load",
+  },
+  {
+    slug: "nutrition-and-vineyard-floor",
+    alias: "voeding-en-leven-op-de-wijngaardvloer",
+    nl: "Voeding en leven op de wijngaardvloer",
+    en: "Nutrition and the vineyard floor",
+    figure: "voeding-in-beeld",
+    markers: 6,
+    reference: "/concepts/vine-nutrition-soil-management-vineyard-floor",
+  },
+  {
+    slug: "vineyard-risks-and-protection",
+    alias: "risico-herkennen-en-de-wijngaard-beschermen",
+    nl: "Risico herkennen en de wijngaard beschermen",
+    en: "Recognising risks and protecting the vineyard",
+    figure: "onderzoek-in-beeld",
+    markers: 5,
+    reference: "/concepts/vineyard-hazards-diseases-pests-disorders",
+  },
 ] as const;
 
 for (const locale of ["nl", "en"] as const) {
@@ -120,17 +147,21 @@ for (const locale of ["nl", "en"] as const) {
   });
 }
 
-test("language switching retains the lesson and shared block anchor", async ({ page }) => {
-  await page.goto("/verdiepingen/lessons/soil-roots-and-water#probeer-het-zelf");
-  const trigger = page.getByRole("banner").getByLabel(/Taal kiezen/);
-  await trigger.focus();
-  await page.keyboard.press("Enter");
-  await page.getByRole("link", { name: "English", exact: true }).focus();
-  await page.keyboard.press("Enter");
-  await expect(page).toHaveURL("/en/verdiepingen/lessons/soil-roots-and-water#probeer-het-zelf");
-  await expect(page.locator("#probeer-het-zelf")).toBeVisible();
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText(lessons[2].en);
-});
+for (const lesson of lessons.slice(3)) {
+  test(`language switching retains ${lesson.slug} and its shared block anchor`, async ({
+    page,
+  }) => {
+    await page.goto(`/verdiepingen/lessons/${lesson.slug}#probeer-het-zelf`);
+    const trigger = page.getByRole("banner").getByLabel(/Taal kiezen/);
+    await trigger.focus();
+    await page.keyboard.press("Enter");
+    await page.getByRole("link", { name: "English", exact: true }).focus();
+    await page.keyboard.press("Enter");
+    await expect(page).toHaveURL(`/en/verdiepingen/lessons/${lesson.slug}#probeer-het-zelf`);
+    await expect(page.locator("#probeer-het-zelf")).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(lesson.en);
+  });
+}
 
 test("localized aliases redirect permanently to the lesson's canonical route", async ({
   request,

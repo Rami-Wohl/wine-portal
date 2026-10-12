@@ -102,7 +102,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 12 | `LRN-012` | Werkelijk gebruik evalueren en product-/architectuurvervolg toetsen | `LRN-011` + werkelijk gebruik | gepland, tijdgebonden |
 | 13 | `LRN-013` | Volgend curriculum en concrete lessonbatches voorbereiden | Bestaande contentinventaris; geen gebruiksgate | afgerond, curriculum goedgekeurd |
 | 14 | `LRN-014` | Wijngaardlessen 1–3: plant/jaarcyclus, klimaat/plek, bodem/water | Goedgekeurd `DEC-LRN-015` | afgerond |
-| 15 | `LRN-015` | Wijngaardlessen 4–6: loofwand, voeding/vloer en risico | `LRN-014`, goedgekeurd curriculum | open |
+| 15 | `LRN-015` | Wijngaardlessen 4–6: loofwand, voeding/vloer en risico | `LRN-014`, goedgekeurd curriculum | afgerond |
 | 16 | `LRN-016` | Wijngaardlessen 7–8: rijpheid/oogst en teeltsystemen | `LRN-015`, goedgekeurd curriculum | open |
 | 17 | `LRN-017` | Volledig wijngaardpad integreren, toetsen en publiceren | `LRN-014–016`, goedgekeurd curriculum | open |
 
@@ -566,7 +566,7 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
 
 ### `LRN-015` — Wijngaardbatch 2: werk aan stok en bodem, risico
 
-- **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, testing.
+- **Status:** afgerond; **prioriteit:** hoog; **categorieën:** content, research, testing.
 - **Herkomst/log:** 2026-10-12 — zelfstandig uitvoerbare tweede batch uit LRN-013.
 - **Doel/scope:** drie lessen **Snoei, loofwand en gewasbelasting**, **Voeding en
   leven op de wijngaardvloer**, **Risico herkennen en de wijngaard beschermen**.
@@ -579,6 +579,15 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
   beelden, begrijpelijke overgangen en betekenis-equivalente NL/EN-opbouw.
 - **Verificatie:** dezelfde lesson-/source-/mediareview en format/check/e2e als
   LRN-014, inclusief responsive, toetsenbord en no-JS. Nog geen pathactivatie.
+
+- **Uitvoering 2026-10-12:** drie complete standalone lessen in NL/EN actief,
+  met eigen verklaringsboog, leerdoelen, beredeneerde oefening en glas-koppeling.
+  Elf bestaande bronrecords heropend en drie PNG's opnieuw beoordeeld; geen
+  nieuwe entities, assets of runtimewijzigingen. Naslag, teruglinks en discovery
+  gebruiken bestaande afleiding. [Batchreview QCR-2026-10-12-05](../editorial/vineyard-lessons-batch-2-review-2026-10-12.md):
+  format/check, 184 unit-tests, productiebuild en 173 browsertests geslaagd;
+  NL/EN, 320/1440px, keyboard, no-JS en visuele steekproef gecontroleerd.
+  Zes van acht wijngaardlessen actief; LRN-016 volgt, pathactivatie blijft LRN-017.
 
 ### `LRN-016` — Wijngaardbatch 3: rijpheid, oogst en teeltsystemen
 
@@ -643,6 +652,7 @@ aanbeveling richtinggevend maar niet bindend.
 
 | Datum | Besluit | Motivatie |
 | --- | --- | --- |
+| 2026-10-12 | LRN-015 afgerond; LRN-016 is de volgende inhoudelijke batch. | Zes van acht wijngaardlessen actief. De laatste twee vragen expliciete overlapreview rond oogst en actualiteits-/scopereview van teeltnormen; volledige pathpublicatie blijft LRN-017. |
 | 2026-10-12 | LRN-014 afgerond; LRN-015 is de volgende inhoudelijke batch. | Drie complete standalone lessen zijn technisch en redactioneel gereviewd. De vijf resterende lessen en pathintegratie behouden eigen tickets; geen nieuwe generieke platformafhankelijkheid. |
 | 2026-10-12 | DEC-LRN-015 gesloten: gebruiker keurt onderwerp, niveau, achtlessenvolgorde en publicatiebatches expliciet goed; LRN-014 gestart. | De vereiste curriculumgate is gehaald. Per batch blijven feitelijke, didactische en technische publicatiechecks nodig; het volledige path volgt in LRN-017. |
 | 2026-10-12 | LRN-013 gereed met achtlessenvoorstel; brede LRN-014 vóór uitvoering gesplitst in drie authoringbatches en aparte pathpublicatie (LRN-014–017). DEC-LRN-015 blijft open. | Concrete inventaris toont beschikbare naslag, maar acht tweetalige lessen plus integratie is te groot voor één slice. Publicatie wacht op curriculumakkoord; geen generieke afhankelijkheid van wijnpagina's of Atlas. |

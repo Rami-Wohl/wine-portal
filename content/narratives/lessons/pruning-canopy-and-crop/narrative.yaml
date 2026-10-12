@@ -1,0 +1,24 @@
+id: narrative.lesson.pruning-canopy-and-crop
+type: lesson
+status: active
+title:
+  nl: Snoei, loofwand en gewasbelasting
+  en: Pruning, canopy and crop load
+slugs:
+  nl: snoei-loofwand-en-gewasbelasting
+  en: pruning-canopy-and-crop
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.pruning-training-canopy-crop-load
+  - concept.vine-as-living-system
+  - concept.grapevine-phenology
+  - concept.climate-weather-site-microclimate
+  - concept.berry-development-ripeness
+  - concept.vine-nutrition-soil-management-vineyard-floor
+source_refs:
+  - source.uga-dormant-pruning-2022
+  - source.gambetta-grape-sunburn-review-2021
+  - source.vanderweide-cluster-thinning-meta-analysis-2024
+depth: foundation

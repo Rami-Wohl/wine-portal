@@ -1,0 +1,28 @@
+id: narrative.lesson.vineyard-risks-and-protection
+type: lesson
+status: active
+title:
+  nl: Risico herkennen en de wijngaard beschermen
+  en: Recognising risks and protecting the vineyard
+slugs:
+  nl: risico-herkennen-en-de-wijngaard-beschermen
+  en: vineyard-risks-and-protection
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.vineyard-hazards-diseases-pests-disorders
+  - concept.rootstock
+  - concept.phylloxera
+  - concept.botrytis
+  - concept.sweet-wines
+  - concept.vine-nutrition-soil-management-vineyard-floor
+  - concept.vine-water-relations
+source_refs:
+  - source.oiv-plant-protection-good-practices-2018
+  - source.uc-ipm-pierces-disease
+  - source.inrae-ephytia-phylloxera
+  - source.vaczy-noble-grey-rot-2024
+  - source.osu-monitoring-vineyard-nutrition-2024
+  - source.awri-waterlogged-vineyards
+depth: foundation
