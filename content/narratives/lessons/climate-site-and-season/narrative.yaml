@@ -1,0 +1,23 @@
+id: narrative.lesson.climate-site-and-season
+type: lesson
+status: active
+title:
+  nl: Klimaat, weer en de plek van de stok
+  en: Climate, weather and the vine’s site
+slugs:
+  nl: klimaat-weer-en-de-plek-van-de-stok
+  en: climate-site-and-season
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.climate-weather-site-microclimate
+  - concept.grapevine-phenology
+  - concept.vine-water-relations
+  - concept.berry-development-ripeness
+source_refs:
+  - source.wmo-climatological-normals
+  - source.nmsu-grapevine-phenology
+  - source.pena-vineyard-canopy-temperature-2020
+  - source.gambetta-grapevine-drought-physiology-2020
+depth: foundation

@@ -1,6 +1,7 @@
 # Curriculumvoorstel — Wijnstok en wijngaard
 
-Status: voorstel ter review; **niet goedgekeurd voor authoring/publicatie**.
+Status: **curriculum goedgekeurd voor authoring**, DEC-LRN-015 gesloten op
+2026-10-12. Publicatie blijft per lessonbatch aan inhoudelijke en technische QA gebonden.
 Datum: 2026-10-12. Voorbereiding: `LRN-013`; besluit: `DEC-LRN-015`.
 Actuele ticketstatus staat in [de Learn-roadmap](../../docs/learn-roadmap.md).
 
@@ -56,9 +57,10 @@ geografiedata of ongeschreven regiopagina's dragend bewijs moeten leveren.
 
 ## Voorgestelde lesvolgorde
 
-Onderstaande IDs zijn **reserveringsvoorstellen**, nog geen canonical packages
-of gebruikersvoortgang. Na curriculumgoedkeuring worden ze gecontroleerd en
-vastgelegd; na publicatie blijven ze stabiel. Voorgesteld path-ID:
+De eerste drie onderstaande lesson-IDs zijn in LRN-014 vastgelegd en actief.
+De vijf overige zijn **reserveringsvoorstellen** tot hun authoringbatch; na
+publicatie blijven IDs stabiel. Er is nog geen wijngaardpath of bijbehorende
+gebruikersvoortgang. Voorgesteld path-ID:
 `learning-path.vine-and-vineyard`, met dezelfde Engelse canonical slug.
 Elke step-ID hieronder verwijst naar `narrative.lesson.<step-id>`.
 
@@ -212,7 +214,7 @@ waarneming, ingreep en toetsing; geen score, examen of universeel beste systeem.
 
 | Bevinding | Actie en eigenaar | Blokkeert |
 | --- | --- | --- |
-| Alle acht voorgestelde lessonpackages ontbreken | Nieuwe didactische synthese in LRN-014/015/016; bestaande kennisowners behouden | Betreffende batch en volledige pathactivatie |
+| Lessen 1–3 actief via LRN-014; vijf lessonpackages ontbreken nog | Resterende didactische synthese in LRN-015/016; bestaande kennisowners behouden | Betreffende batch en volledige pathactivatie |
 | Introductie plant én jaarcyclus kan te vol worden | Les 1 beperkt tot herkenning, ritme en verbinding tussen jaren; specialistische transport-/dormantiemodellen blijven naslag. Herbeoordeel outline vóór prose | Les 1-review; zo nodig curriculumwijziging vóór uitvoering |
 | Bestaande hubs zijn naslag, geen afgeronde lessentekst | Schrijf per les een eigen verklaringsboog met expliciete leerbakens, verbindingsproza, kernidee en glas-koppeling | Alle lessen |
 | Gekozen toepascasus/tegenvoorbeeld is nog niet geschreven of geverifieerd | Beperk tot expliciet hypothetische kwalitatieve situatie; controleer iedere causale uitleg bij de bestaande primaire/vakbron | Betreffende les; geen verzonnen meetdata |
@@ -311,14 +313,19 @@ LRN-013 is afgerond; LRN-014 is vóór uitvoering gesplitst naar LRN-014–017.
 De resterende voorraad is daardoor 60 tickets (één afgerond, drie toegevoegd).
 Feedback/MNT-050 blijven geparkeerd; geen nieuwe gebruikers-/GIS-infrastructuur.
 
-## Review en besluitvraag
+## Curriculumakkoord — addendum 2026-10-12
 
-LRN-013 levert deze brief, vergelijking, blockselectie, gaps, visualaudit en
-kleinere uitvoeringsslices. Er zijn geen nieuwe lessen, pathpackages, routes,
-runtimewijzigingen of media gepubliceerd. DEC-LRN-015 blijft open.
+De gebruiker heeft expliciet ingestemd met het lescontentvoorstel: wijnstok en
+wijngaard op **Wijn begrijpen**, de acht lessen in bovenstaande volgorde en
+uitvoering via drie authoringbatches plus integratie. Daarmee is DEC-LRN-015
+gesloten en mag LRN-014 beginnen. De voorbereidingsreview hierboven bewaart de
+stand vóór dit akkoord.
 
-Te beoordelen: **akkoord met wijnstok/wijngaard op Wijn begrijpen, de acht
-lessen in deze volgorde en uitvoering via drie authoringbatches plus integratie?**
-Pas een expliciet akkoord sluit het curriculumbesluit. De bestaande authoringregel
-blijft: [learning-paths.md](../../docs/learning-paths.md#9-authoringworkflow)
-“Keur eerst curriculumbrief, lesvolgorde en contentgaps goed.”
+De drie lessonbriefs voor batch 1 concretiseren deze goedgekeurde scope; zij
+vragen geen nieuw curriculumbesluit. Bron-, didactiek-, beeld- en publicatie-QA
+blijven per batch vereist. Het volledige path wordt pas in LRN-017 actief.
+
+**Publicatieaddendum 2026-10-12:** LRN-014 afgerond; de eerste drie lessen zijn
+actief in NL/EN met eigen oefeningen, bronreview en drie hergebruikte PNG's.
+[Batchreview QCR-2026-10-12-04](../vineyard-lessons-batch-1-review-2026-10-12.md)
+legt de inhoudelijke en technische controles vast. LRN-015 is de volgende batch.

@@ -100,8 +100,8 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | afgerond |
 | 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | afgerond |
 | 12 | `LRN-012` | Werkelijk gebruik evalueren en product-/architectuurvervolg toetsen | `LRN-011` + werkelijk gebruik | gepland, tijdgebonden |
-| 13 | `LRN-013` | Volgend curriculum en concrete lessonbatches voorbereiden | Bestaande contentinventaris; geen gebruiksgate | afgerond, voorstel ter review |
-| 14 | `LRN-014` | Wijngaardlessen 1–3: plant/jaarcyclus, klimaat/plek, bodem/water | Goedgekeurd `DEC-LRN-015` | open |
+| 13 | `LRN-013` | Volgend curriculum en concrete lessonbatches voorbereiden | Bestaande contentinventaris; geen gebruiksgate | afgerond, curriculum goedgekeurd |
+| 14 | `LRN-014` | Wijngaardlessen 1–3: plant/jaarcyclus, klimaat/plek, bodem/water | Goedgekeurd `DEC-LRN-015` | afgerond |
 | 15 | `LRN-015` | Wijngaardlessen 4–6: loofwand, voeding/vloer en risico | `LRN-014`, goedgekeurd curriculum | open |
 | 16 | `LRN-016` | Wijngaardlessen 7–8: rijpheid/oogst en teeltsystemen | `LRN-015`, goedgekeurd curriculum | open |
 | 17 | `LRN-017` | Volledig wijngaardpad integreren, toetsen en publiceren | `LRN-014–016`, goedgekeurd curriculum | open |
@@ -531,12 +531,12 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
   gereed: vergelijking met methode-, waarnemings- en regionale curricula; acht
   voorgestelde lessen; bestaande NL/EN-blocks, bronrecords en media gecontroleerd;
   gaps en buiten-scope REG-003-werk onderscheiden. Oorspronkelijk te grote LRN-014
-  gesplitst naar LRN-014–017. DEC-LRN-015 blijft open; geen canonical lesson/path
+  gesplitst naar LRN-014–017. DEC-LRN-015 was toen nog open; geen canonical lesson/path
   aangemaakt en geen gebruikersonderzoek geclaimd.
 
 ### `LRN-014` — Wijngaardbatch 1: plant, jaarcyclus en omgeving
 
-- **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, testing.
+- **Status:** afgerond; **prioriteit:** hoog; **categorieën:** content, research, testing.
 - **Herkomst/log:** 2026-10-12 — oorspronkelijke brede publicatiescope opgesplitst
   na LRN-013; deze ID blijft eigenaar van de eerste batch.
 - **Doel/scope:** schrijf en publiceer de drie complete standalone lessen
@@ -554,6 +554,15 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
   Dit sluit het volledige leerpad niet; pathactivatie hoort bij LRN-017.
 - **Verificatie:** bron-/didactiek-/NL/EN-review, npm run format/check en relevante
   e2e; desktop/mobile/keyboard/no-JS. Nieuwe PNG alleen bij echte teaching gap.
+- **Uitvoering 2026-10-12:** drie actieve NL/EN-lessons gepubliceerd onder
+  `narrative.lesson.vine-through-year`, `narrative.lesson.climate-site-and-season`
+  en `narrative.lesson.soil-roots-and-water`. Eigen uitleg, oefeningen met
+  beredeneerde antwoorden en drie herbeoordeelde PNG's; tien bestaande
+  bronrecords opnieuw geraadpleegd. Learn-losse-lessen, Verdiepingen, zoeken en
+  naslagteruglinks werken. [Batchreview QCR-2026-10-12-04](../editorial/vineyard-lessons-batch-1-review-2026-10-12.md):
+  format/check, 184 unit-tests, productiebuild en 171 browsertests geslaagd;
+  NL/EN op 320/1440px, keyboard, no-JS en visuele steekproef gecontroleerd.
+  Eén bestaand path blijft actief; geen nieuw path of voortgangsclaim.
 
 ### `LRN-015` — Wijngaardbatch 2: werk aan stok en bodem, risico
 
@@ -628,12 +637,14 @@ aanbeveling richtinggevend maar niet bindend.
 | `DEC-LRN-012` | Exact lokaal progressrecord en versiebeleid | `LRN-009` | Path-ID, schema-versie, voltooide step-ID's en `updated_at`; overige waarden afleiden; repositorygrens blijft vervangbaar door API/database | besloten 2026-09-23 |
 | `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete omkeerbare toggle boven en onder de lesson; openen of navigeren voltooit niets | besloten 2026-09-23 |
 | `DEC-LRN-014` | Publieke namen voor de drie curriculumniveaus | `LRN-002` | **Wijn begrijpen**, **Wijn verklaren** en **Wijn doorgronden**, met WSET 2+/3+/4+ als kalibrerende toelichting | besloten 2026-09-23 |
-| `DEC-LRN-015` | Volgend curriculum: onderwerp, niveau, lesvolgorde en eerste publicatiebatch | Voorstel in `LRN-013`, sluiten vóór `LRN-014–017` | [Wijnstok en wijngaard](../editorial/briefs/learning-path.vine-and-vineyard.md): Wijn begrijpen, acht lessen, drie authoringbatches plus integratie | open; voorstel gereed 2026-10-12 |
+| `DEC-LRN-015` | Volgend curriculum: onderwerp, niveau, lesvolgorde en eerste publicatiebatch | Voorstel in `LRN-013`, sluiten vóór `LRN-014–017` | [Wijnstok en wijngaard](../editorial/briefs/learning-path.vine-and-vineyard.md): Wijn begrijpen, acht lessen, drie authoringbatches plus integratie | besloten 2026-10-12; expliciet gebruikersakkoord |
 
 ## Besluitenlog
 
 | Datum | Besluit | Motivatie |
 | --- | --- | --- |
+| 2026-10-12 | LRN-014 afgerond; LRN-015 is de volgende inhoudelijke batch. | Drie complete standalone lessen zijn technisch en redactioneel gereviewd. De vijf resterende lessen en pathintegratie behouden eigen tickets; geen nieuwe generieke platformafhankelijkheid. |
+| 2026-10-12 | DEC-LRN-015 gesloten: gebruiker keurt onderwerp, niveau, achtlessenvolgorde en publicatiebatches expliciet goed; LRN-014 gestart. | De vereiste curriculumgate is gehaald. Per batch blijven feitelijke, didactische en technische publicatiechecks nodig; het volledige path volgt in LRN-017. |
 | 2026-10-12 | LRN-013 gereed met achtlessenvoorstel; brede LRN-014 vóór uitvoering gesplitst in drie authoringbatches en aparte pathpublicatie (LRN-014–017). DEC-LRN-015 blijft open. | Concrete inventaris toont beschikbare naslag, maar acht tweetalige lessen plus integratie is te groot voor één slice. Publicatie wacht op curriculumakkoord; geen generieke afhankelijkheid van wijnpagina's of Atlas. |
 | 2026-10-12 | Meer lessen voorbereiden via LRN-013/014 zonder te wachten op LRN-012; curriculumgoedkeuring blijft vereist. | Gebruiker heeft nog geen gebruikers en wil eerst inhoudelijk aanbod vergroten; werkelijk gebruik blijft nodig om latere product-/architectuurkeuzes te toetsen. |
 | 2026-09-23 | De eerste Learn-versie is anoniem en gebruikt geen accounts, API of database. | Eerst de didactische en navigatie-ervaring bewijzen; infrastructuur volgt pas uit aangetoonde gebruikersbehoefte. |

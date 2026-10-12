@@ -39,9 +39,9 @@ De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
 Benchmarkbetrouwbaarheid en Nederlandse uitleg zijn in `MNT-063` aangescherpt.
 Goedkopere fixture-I/O (`MNT-064`) blijft laag geprioriteerd; representatievere
 meetgevallen (`MNT-065`) volgen vóór grote corpus-/Atlasuitbreidingen, niet vóór lessen.
-Curriculumvoorbereiding (`LRN-013`) is afgerond; het achtlessenvoorstel wacht
-op DEC-LRN-015-akkoord. Daarna volgen drie lesbatches en pathpublicatie
-(`LRN-014–017`). `EXP-032/026` kunnen onafhankelijk doorgaan, Atlasafbakening
+Curriculumvoorbereiding (`LRN-013`) en de eerste drie tweetalige wijngaardlessen
+(`LRN-014`) zijn afgerond; DEC-LRN-015 is expliciet goedgekeurd. Volgende werk:
+lessen 4–6 (`LRN-015`), daarna 7–8 en pathpublicatie (`LRN-016/017`). `EXP-032/026` kunnen onafhankelijk doorgaan, Atlasafbakening
 (`MNT-051`) mag als bronverkenning naast lessen lopen. De [feedbackvoorbereiding](feedback-roadmap.md)
 is na de lokale productflow (`FBK-001`) bewust geparkeerd; ook hashes (`FBK-003`)
 en het platformbesluit (`MNT-050`) zijn geen huidige vóórtaken.

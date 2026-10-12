@@ -47,7 +47,8 @@ feitelijke scope volgt uit onderzoek, niet uit een vooraf gekozen aantal landen.
 
 ## Learn en backend
 
-Het achtlessenvoorstel uit `LRN-013` is gereed; `DEC-LRN-015` blijft open.
+Het achtlessencurriculum uit `LRN-013` is goedgekeurd via `DEC-LRN-015`;
+de eerste drie NL/EN-lessen zijn actief (`LRN-014`).
 Wijngaardlessen en pathpublicatie via `LRN-014–017` mogen sinds het
 gebruikersbesluit van 2026-10-12 vóór werkelijk pilotgebruik; `LRN-012` blijft
 het afzonderlijke evaluatiebesluit. Atlasafbakening via `MNT-051` krijgt een

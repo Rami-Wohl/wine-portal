@@ -165,8 +165,9 @@ geïmplementeerd. [De pilotrelease](learn-pilot-release.md) bewaart de
 release- en observatieafspraken. `LRN-012` in de
 [Learn-roadmap](learn-roadmap.md) toetst op basis van werkelijk gebruik welke
 product-/architectuuruitbreiding nodig is. Sinds het gebruikersbesluit van
-2026-10-12 heeft extra lescontent voorrang: LRN-013 levert het curriculumvoorstel;
-LRN-014–017 leveren na curriculumakkoord drie lesbatches en pathpublicatie,
+2026-10-12 heeft extra lescontent voorrang. Het achtlessencurriculum uit LRN-013
+is expliciet goedgekeurd; LRN-014 levert drie actieve standalone wijngaardlessen.
+LRN-015/016 leveren de vijf resterende lessen en LRN-017 de pathpublicatie,
 onafhankelijk van die gebruiksevaluatie.
 Curriculumgoedkeuring en het bestaande anonieme productcontract blijven gelden. Het platformbrede beslismoment voor taalondersteuning en
 serveropslag staat in [de productplanning](product-roadmap.md).

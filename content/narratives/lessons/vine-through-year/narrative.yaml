@@ -1,0 +1,23 @@
+id: narrative.lesson.vine-through-year
+type: lesson
+status: active
+title:
+  nl: De wijnstok door het jaar
+  en: The vine through the year
+slugs:
+  nl: de-wijnstok-door-het-jaar
+  en: vine-through-year
+locales:
+  nl: article.nl.md
+  en: article.en.md
+related_entities:
+  - concept.vine-as-living-system
+  - concept.grapevine-phenology
+  - concept.berry-development-ripeness
+source_refs:
+  - source.cornell-grapevine-roots
+  - source.cornell-grapevine-flowers
+  - source.nmsu-grapevine-phenology
+  - source.awri-grapevine-growth-stages
+  - source.pellegrino-vine-carbohydrate-status-2014
+depth: foundation
