@@ -21,12 +21,12 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-11.
+Peildatum: 2026-10-12.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 5 | `MNT-051`, `MNT-053`, `MNT-060` t/m `MNT-062` |
-| Gepland | 1 | `MNT-050` |
+| Open | 6 | `MNT-050`, `MNT-051`, `MNT-053`, `MNT-060` t/m `MNT-062` |
+| Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
 | Afgerond | 49 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059` |
@@ -36,10 +36,11 @@ De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
 De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
-Het eerstvolgende inhoudelijke werk is de eerste batch individuele wijnpagina's
-(`EXP-032`: Port/Sherry/Champagne), met voorafgaande identiteit-/scopecontrole.
-De tussengevoegde [feedbackvoorbereiding](feedback-roadmap.md) werkt eerst de
-product-/versie-/privacygates uit en vervroegt `MNT-050` naar die fase 0.
+Eerst volgt curriculumvoorbereiding voor meer lessen (`LRN-013`), naast de
+bestaande contentvolgorde (`EXP-032/026`), daarna lespublicatie (`LRN-014`) en
+Atlasafbakening (`MNT-051`). De [feedbackvoorbereiding](feedback-roadmap.md)
+is na de lokale productflow (`FBK-001`) bewust geparkeerd; ook hashes (`FBK-003`)
+en het platformbesluit (`MNT-050`) zijn geen huidige vóórtaken.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
 de prioriteitswijziging; de regionale fase staat in een eigen `REG-*`-planning.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
@@ -148,7 +149,7 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 
 ### `MNT-050` — Beslismoment voor backend, API en database
 
-- **Status:** gepland
+- **Status:** open
 - **Prioriteit:** middel
 - **Scope:** gebruikersdata, redactionele samenwerking en toekomstige API-consumers
 - **Categorie:** engineering, operations, product-ux
@@ -165,22 +166,26 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   gebruikersdatabase met verdere migratie. Leg zo nodig autorisatie, retries,
   offlinegedrag, conflicten, export/verwijdering, backups en migratie vast.
   Ook bewust uitstel krijgt een volgende toetsbare trigger.
-- **Planning:** vervroegd naar fase 0 van de
-  [feedbackroadmap](feedback-roadmap.md): `FBK-004/005` onderbouwen provider-,
-  privacy- en operationele keuzes vóór `FBK-006`. Dit ticket bewaakt het
-  platformbesluit; de 34 `FBK-*`-slices bezitten de implementatie. Het wacht niet
-  meer op `LRN-012`; die blijft eigenaar van de pilotevaluatie en de latere
-  syncafweging. Canonical content blijft file-backed; één private EU-Postgres
-  is ontwerpvoorkeur, geen gekozen leverancier of goedgekeurde publieke API.
+- **Planning:** bewust geparkeerd met feedback op 2026-10-12. Hervatten bij
+  expliciete prioritering van feedback, aangetoonde cross-device behoefte vanuit
+  LRN-012 of een afzonderlijk bewezen redactie-/API-/queryvraagstuk. Een live URL
+  zonder gebruikers is op zichzelf geen bouwtrigger. Bij feedbackhervatting
+  onderbouwen FBK-004/005 de keuzes; MNT-050 sluit vóór FBK-006. Meer lessen en
+  een kleine geverifieerde Atlaspilot vereisen dit gebruikersplatform niet.
+  Canonical content blijft file-backed; EU-Postgres blijft slechts ontwerpvoorkeur.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
   2026-10-11 — feedback als concrete eerste consumer geregistreerd; platformgate
   naar feedbackfase 0 vervroegd, geen infrastructuur gebouwd of provider gekozen.
 
+  2026-10-12 — gebruiker geeft lessen/content en waarschijnlijke Atlasingebruikname
+  voorrang; feedback stilgezet. Status terug naar open, planning geparkeerd;
+  concrete consumer behouden, geen huidige infrastructuuruitvoering.
+
 ### `MNT-051` — Eerste verifieerbare Atlasdataset en kleine pilot afbakenen
 
 - **Status:** open
-- **Prioriteit:** middel
+- **Prioriteit:** hoog; voorbereidend spoor voor mogelijke ingebruikname
 - **Scope:** geverifieerde geography-data en eerste Atlaslevering
 - **Categorie:** atlas-gis, research, engineering
 - **Herkomst:** `QCR-2026-10-04-01`
@@ -192,9 +197,17 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   welke oude kaarttickets hierdoor wel/niet kunnen volgen. Punten, appellation-
   geometrie en wereldwijde druivenverspreiding zijn afzonderlijke dataproblemen.
 - **Planning:** bronverkenning vóór `EXP-027`; bouw pas op geverifieerde data.
+  Bronverkenning mag naast les-/contentwerk lopen; volledige Atlasbouw is nog
+  geen vrijgegeven scope. Na deze afbakening volgt de eerste kaart via MNT-002
+  zodra data geverifieerd beschikbaar is. Splits eventuele zelfstandige import-,
+  geografiemodel- en Atlas-UI-slices vóór uitvoering uit met eigen acceptatiecriteria;
+  sluit dit afbakeningsticket niet alsof daarmee Atlas al in gebruik is.
   PostGIS is een mogelijke latere keuze, geen vereiste voor de eerste pilot.
 - **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
   volgt de overkoepelende productplanning.
+
+  2026-10-12 — Atlasvoorbereiding zichtbaarder geprioriteerd vanuit gebruikersdoel;
+  geverifieerde dataset en expliciete bouwscope blijven voorwaarden.
 
 ### `MNT-053` — Bestaande SVG-diagrammen naar de gewenste rasterstijl migreren
 

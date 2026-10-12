@@ -32,7 +32,9 @@
     "content:relation-audit": "node --import tsx scripts/content/cli.ts relation-audit",
     "content:language-audit": "node --import tsx scripts/content/cli.ts language-audit",
     "check": "npm run format:check && npm run lint && npm run content:build -- --audit-relations && next typegen && tsc --noEmit && vitest run",
-    "benchmark": "node --import tsx scripts/performance/benchmark.ts"
+    "benchmark": "node --import tsx scripts/performance/benchmark.ts",
+    "prototype:feedback": "node --import tsx prototypes/feedback/server.ts",
+    "test:feedback-prototype": "playwright test --config prototypes/feedback/playwright.config.ts"
   },
   "dependencies": {
     "next": "16.3.8",

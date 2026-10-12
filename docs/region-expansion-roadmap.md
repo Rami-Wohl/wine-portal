@@ -1,6 +1,6 @@
 # Regionale uitbreidingsfase
 
-Bijgewerkt: 2026-10-11. Deze fase volgt op de Explore-basis; de prioriteit ten
+Bijgewerkt: 2026-10-12. Deze fase volgt op de Explore-basis; de prioriteit ten
 opzichte van platformwerk staat in [product-roadmap.md](product-roadmap.md).
 Onderbouwing: [codebase-review](../editorial/codebase-health-review-2026-10-11.md).
 Dit plan wijzigt geen canonical schema, publicatiecontract of geverifieerd feit.
@@ -47,7 +47,10 @@ feitelijke scope volgt uit onderzoek, niet uit een vooraf gekozen aantal landen.
 
 ## Learn en backend
 
-Een wijngaardleerpad is een kandidaat voor `LRN-012`, geen automatische tweede
-bouwstroom vóór voldoende werkelijk pilotgebruik. Accounts, API en databases
+Een wijngaardleerpad is een kandidaat voor `LRN-013`, geen al gekozen curriculum.
+Meer lessen voorbereiden/publiceren via `LRN-013/014` mag sinds het
+gebruikersbesluit van 2026-10-12 vóór werkelijk pilotgebruik; `LRN-012` blijft
+het afzonderlijke evaluatiebesluit. Atlasafbakening via `MNT-051` krijgt een
+zichtbare plaats vóór brede regiogroei; bouw vereist geverifieerde data. Accounts, API en databases
 blijven bij `MNT-050`. Een afgeleide searchdatabase kan een afzonderlijke
 performanceoplossing zijn zonder canonical Markdown/YAML naar een CMS te migreren.

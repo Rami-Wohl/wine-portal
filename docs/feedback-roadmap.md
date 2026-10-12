@@ -1,9 +1,47 @@
 # Correcties en suggesties
 
-Peildatum: 2026-10-11. Herkomst: gebruikersbrief van 2026-10-11.
-Status: voorgesteld productcontract en open uitvoeringsbacklog; geen gelanceerde
-functie of gekozen provider. Dit is de enige statusadministratie voor `FBK-*`
+Peildatum: 2026-10-12. Herkomst: gebruikersbrief van 2026-10-11.
+Status: bewust geparkeerd na lokale productflow; overige uitvoeringsbacklog open. Geen
+gelanceerde functie of gekozen provider. Dit is de enige statusadministratie voor `FBK-*`
 en `DEC-FBK-*`. De [productroadmap](product-roadmap.md) bepaalt de samenhang.
+
+## Prioriteit en hervatpunt — besluit 2026-10-12
+
+De gebruiker heeft aangegeven dat de site al een live URL heeft, maar nog geen
+gebruikers. Meer content, vooral lessen, gaat voor; Atlas is een waarschijnlijke
+voorwaarde voor bredere ingebruikname. Daarom staat **het gehele resterende
+feedbackspoor stil**, inclusief FBK-003, beleidconcepten en providerproeven.
+De 33 tickets blijven administratief `open`, met planning **geparkeerd**;
+FBK-001 blijft afgerond. Er zijn geen annuleringen of stilzwijgende vrijgaven.
+
+Dit spoor is geen dependency voor nieuwe lessen, Explore-content of de eerste
+Atlaspilot. Ook MNT-050 wordt niet meer vooruitgetrokken vanwege feedback.
+Geen geplande hervatdatum: bij de review van de volgende les-/contentlevering
+of de afgebakende Atlaspilot wordt de behoefte opnieuw benoemd; hervatten gebeurt
+pas bij een expliciet prioriteitsbesluit van de gebruiker. De afronding van één
+van die leveringen start feedback niet automatisch. Geen automation of monitor.
+
+### Overdracht voor later
+
+- **Bewaren:** [flowcontract](feedback-flow.md), [ontwerpreview](../editorial/feedback-flow-review-2026-10-12.md),
+  [prototype met start-/testcommando's](../prototypes/feedback/README.md), alle
+  FBK-tickets en het beslisregister hieronder. Het prototype blijft los van de
+  productiesite; een open previewserver is geen vereiste om het te bewaren.
+- **Klaar:** vijf tweetalige formulieren, context, fout-/uitkomstvoorbeelden en
+  statusmatrix; DEC-FBK-012 ontwerp besloten, DEC-FBK-014 productdeel vastgelegd.
+- **Niet klaar:** hashes/build-ID, accounts, database, mail, moderatie,
+  operationele limieten, retentie/rechten, juridische teksten en live integratie.
+  Gebruikstest binnen 30 seconden en echte screenreaderproef zijn niet uitgevoerd.
+- **Bij hervatten:** lees deze overdracht en het flowcontract; draai de proef en
+  `npm run test:feedback-prototype`; vergelijk huisstijl, routing, contentmodel en
+  dependencyversies met de dan actuele site. Herbevestig deadline-/limietcopy en
+  open beleidskeuzes. Oude QA-resultaten bewijzen geen actuele compatibiliteit.
+- **Eerste uitvoeringsslice ná herprioritering:** FBK-003 met DEC-FBK-011 als
+  voorafgaand hashbesluit. Daarna FBK-002/004/005 en MNT-050; fase 1 pas na die
+  gates. Providerinformatie, prijzen en verwerkersvoorwaarden opnieuw onderzoeken.
+- **Productintegratie:** prototype als ontwerpbron gebruiken, geen parallelle
+  app onderhouden. Draag copy/tests over naar de normale applicatiegrenzen en
+  verwijder de tijdelijke proef pas wanneer die rol volledig is overgenomen.
 
 ## Featurebrief
 
@@ -71,8 +109,21 @@ vóór lancering specifiek worden beoordeeld in `FBK-005`.
 
 ## Beslisregister
 
-Alle besluiten zijn **open**. “Voorkeur” is een aanbeveling, geen goedkeuring.
+`DEC-FBK-012` is besloten voor het productontwerp; `DEC-FBK-014` is gedeeltelijk
+besloten (formulier/copy, operationele limieten nog open). De overige 17 besluiten
+zijn **open**. “Voorkeur” is bij open besluiten een aanbeveling, geen goedkeuring.
 Leg bij sluiting eigenaar, datum, onderbouwing en eventuele afwijking vast.
+
+Besluitlog 2026-10-12 — Codex, binnen gedelegeerde uitvoering van FBK-001:
+- **DEC-FBK-012:** open = received/in_review/needs_info; acceptatie heeft werklink,
+  geen oplossingsclaim; change_state blijft onafhankelijk. Toegestane overgangen
+  en menselijke herroeping staan in [feedback-flow.md](feedback-flow.md#statusmatrix--dec-fbk-012).
+- **DEC-FBK-014, productdeel:** body/reply 30–4000, bron en formulering elk 2000
+  tekens, vijf links, 16 KiB request, één antwoord binnen 14 dagen, geen SLA.
+  Onderbouwing en byte-/tekenafweging staan in [het formuliercontract](feedback-flow.md#formuliergrenzen--productdeel-dec-fbk-014).
+  Operationele gebruikers-/IP-/globale quota en capaciteit blijven gates voor
+  FBK-004/005/008/014/025. Dit is geen vrijgave van providers, privacybeleid of lancering.
+
 Een implementatieticket start pas nadat zijn beslisafhankelijkheden zijn gesloten.
 FBK-004/005 werken juist de genoemde besluiten uit; hun uitkomst is een gate
 voor de volgende fase, geen circulaire startvoorwaarde voor het onderzoek zelf.
@@ -90,9 +141,9 @@ voor de volgende fase, geen circulaire startvoorwaarde voor het onderzoek zelf.
 | `DEC-FBK-009` | Acceptatie → werk en veilig GitHubgebruik; blokkeert FBK-018/031 | Eén bestaand/nieuw MNT-ticket voor onderhoud, EXP/LRN/REG voor domeinwerk; GitHub issue is uitvoeringsverwijzing, geen tweede statuswaarheid. Mens publiceert uitsluitend zelfstandig geformuleerde, geanonimiseerde probleemsamenvatting | Alleen GitHub als werkadministratie na expliciete aanpassing van het backlogcontract. Private report-ID's, accountdata en letterlijke inzendingen blijven buiten Git |
 | `DEC-FBK-010` | Contributor credit versus minimaal profiel; blokkeert FBK-030 | Afzonderlijke, intrekbare opt-in per correctie met optionele publieke alias in database; nooit e-mailadres publiceren | Geen credit, of collectief “met dank aan lezers”. Bij vasthouden aan uitsluitend e-mail als profieldata blijft individuele credit uit |
 | `DEC-FBK-011` | Versioneringscontract; blokkeert FBK-003/011/028 | Versieerbare SHA-256 over deterministische, gelokaliseerde blockinhoud plus relevante bron-/mediametadata; bundle-ID over volledige deterministische bundle zonder eigen manifest-ID | Hash over alleen AST, met expliciet geaccepteerde blinde vlekken; deployment-ID apart. Geen kloktijd of Git-SHA als enige contentidentiteit |
-| `DEC-FBK-012` | Statusmatrix, “open” en gewijzigd-signaal; blokkeert FBK-014/017–019/028 | Open = ontvangen/in behandeling/meer informatie nodig; acceptatie is een teruggekoppelde uitkomst met werklink. Hashwijziging is een onafhankelijk signaal; alleen review mag “opgelost” verklaren | Acceptatie open houden tot levering: vereist andere uniciteits-/sluitregels. Nooit automatisch een melding opgelost noemen op basis van een hash |
+| `DEC-FBK-012` | **Besloten voor productontwerp, zie besluitlog.** Statusmatrix, “open” en gewijzigd-signaal; blokkeert FBK-014/017–019/028 | Open = ontvangen/in behandeling/meer informatie nodig; acceptatie is een teruggekoppelde uitkomst met werklink. Hashwijziging is een onafhankelijk signaal; alleen review mag “opgelost” verklaren | Acceptatie open houden tot levering: vereist andere uniciteits-/sluitregels. Nooit automatisch een melding opgelost noemen op basis van een hash |
 | `DEC-FBK-013` | AI bij triage en gegevensdeling; blokkeert eventuele AI-uitvoering | Handmatige triage bij lancering; AI nooit bron, reviewer of beslisser. Geen inzendingen naar een modelprovider zonder apart privacy-/verwerkersbesluit | Later alleen classificatie, duplicatekandidaten en conceptantwoord onder menselijke review; geen AI-ticket in deze eerste uitvoeringsset |
-| `DEC-FBK-014` | Limieten, replydeadline en reactietijd; blokkeert FBK-001/012–015/017 | Voorstel: 30–4000 tekens body, 1000 quote, 2000 bronreferentie, maximaal 5 links en 16 KiB request; 5 meldingen/uur en 20/dag per gebruiker; IP-plafond met ruimte voor gedeelde netwerken. Eén reply binnen 14 dagen; streefreactie 5 werkdagen alleen na capaciteitstoets | Andere meetbare limieten/deadlines; geen beloofde SLA zonder beheerdercapaciteit |
+| `DEC-FBK-014` | **Deels besloten, zie besluitlog.** Limieten, replydeadline en reactietijd; blokkeert FBK-001/012–015/017 | Voorstel: 30–4000 tekens body, 1000 quote, 2000 bronreferentie/voorgestelde formulering, maximaal 5 links en 16 KiB request; 5 meldingen/uur en 20/dag per gebruiker; IP-plafond met ruimte voor gedeelde netwerken. Eén reply binnen 14 dagen; streefreactie 5 werkdagen alleen na capaciteitstoets | Andere meetbare limieten/deadlines; geen beloofde SLA zonder beheerdercapaciteit |
 | `DEC-FBK-015` | Correctierecord en publicatiebridge; blokkeert FBK-019/029 | Private koppeling report → redactioneel record. Canonical wijziging via normale gitreview; record bewaart oud/nieuw begrip, bronnen, datum, reviewer en rebuild/retranslation. Publieke projectie bevat alleen goedgekeurde redactionele feiten | Bestaand reviewrecord hergebruiken als het alle velden heeft; precieze storagekeuze in MNT-050. Meldtekst is geen bron |
 | `DEC-FBK-016` | Privacygrondslag, doelgroep, verantwoordelijke en leveranciers; blokkeert FBK-002/005 en publieke lancering | Benoem verantwoordelijke/contact, doeleinden/rechtsgrond per verwerking, doelgroep-/leeftijdsbeleid, verwerkers en doorgiften; afzonderlijke credittoestemming | Andere onderbouwde inrichting na privacyreview. Een EU-databaseregio alleen sluit andere doorgiften niet uit |
 | `DEC-FBK-017` | Betrouwbare achtergrondtaken en incidentgedrag; blokkeert FBK-010/022–024/028/031 | Postgres-outbox met unieke eventkeys plus geauthenticeerde scheduler/worker, retries en monitoring zonder reportbody; pauzeknop voor inzendingen en uitgaande mail | Beheerde queue na behoefte-/kostenbewijs; niet vertrouwen op werk na het beëindigen van een serverless response |
@@ -107,9 +158,9 @@ Next.js-, privacy- of beheervereisten; daarvoor bestaat `FBK-004`.
 
 ## Ticketcontract en fasering
 
-34 tickets: fase 0 vijf, fase 1 twintig, fase 2 zes, fase 3 drie. Alle staan
-**open**, inclusief werk met onbesloten afhankelijkheden; niets is hiermee
-stilzwijgend gestart. Ieder ticket is gericht op circa 1–3 ontwikkel-/reviewdagen
+34 tickets: fase 0 vijf, fase 1 twintig, fase 2 zes, fase 3 drie. FBK-001 is
+**afgerond**; de overige 33 staan **open**, inclusief werk met onbesloten
+afhankelijkheden. Ieder ticket is gericht op circa 1–3 ontwikkel-/reviewdagen
 na vrijgave. Externe contract- of legalwachttijd valt daarbuiten. Blijkt de slice
 groter, splits hem met nieuwe permanente IDs vóór uitvoering.
 
@@ -131,16 +182,24 @@ gebruikersgegevens verwerkt. Geografische correcties volgen aanvullend
 
 ### `FBK-001` — Productflow en toetsbare copy vastleggen
 
-- **Status:** open; **prioriteit:** hoog; **categorieën:** product-ux, accessibility.
+- **Status:** afgerond; **prioriteit:** hoog; **categorieën:** product-ux, accessibility.
 - **Scope:** brief concretiseren naar NL/EN-flow; **doel:** snel melden met herkenbare context.
 - **Werk:**
   - Werk vijf minimale formulieren, bevestiging, context en responsverwachting uit.
   - Maak keyboard/mobile/no-JS-taakproef en menselijk status-/redenwoordenboek.
 - **Klaar wanneer:** goedgekeurde flow de vijf soorten, bronplicht, één reply en fout/lege states toont; tijdmeting start na login met bron paraat; geen interne IDs in copy.
-- **Afhankelijkheden:** DEC-FBK-012/014.
+- **Afhankelijkheden:** DEC-FBK-012 en het product-/copydeel van DEC-FBK-014; operationele quota zijn geen ontwerpproefvoorwaarde.
 - **Buiten scope:** werkende accounts, analytics, publiceren van feedback.
 - **Policies:** P, V, R, W, L.
 - **Verificatie:** handmatige walkthrough NL/EN; accessibility- en no-JS-ontwerpreview; unit/e2e bij implementatieslices.
+
+- **Uitvoeringslog 2026-10-12:** vijf NL/EN-formulieren, drie instappen,
+  invoerbehoud, bronplicht en 19 voorbeeldstates uitgewerkt in een geïsoleerde
+  loopbackproef. [Flowcontract](feedback-flow.md) legt statusovergangen,
+  redenenwoordenboek, limieten en het tijdmeetprotocol vast. Ontwerpreview binnen
+  gedelegeerde uitvoering afgerond; dit claimt geen menselijke gebruikerstudie
+  of productielancering. [QCR-2026-10-12-01](../editorial/feedback-flow-review-2026-10-12.md)
+  bevat browser-/visueel bewijs en resterende launchchecks.
 
 ### `FBK-002` — Feedbackregels en juridische pagina's voorbereiden
 
@@ -658,9 +717,9 @@ Dit ontwerp maakt geen extra geografie-, entity- of reportkennisstelsel.
 | `abuse` | Melding in strijd met de regels / Report breaches the rules | Menselijke misbruikbeslissing + strike; geen uitkomstmail; accountwaarschuwing/beroep bereikbaar |
 | Afzonderlijk `change_state` | Sectie gewijzigd sinds je melding / Section updated since your report | Automatisch versieverschil, geen resolutie; dedupliceerde mail behalve bij abuse/deleted; removed/unknown eerlijk benoemen |
 
-FBK-017 legt toegestane overgangen expliciet vast, inclusief menselijke
-herroeping en accepted → fixed_directly bij latere daadwerkelijk gepubliceerde
-correctie. Status, besluit, audit en outboxevent worden in één transactie
+De gekozen [statusmatrix](feedback-flow.md#statusmatrix--dec-fbk-012) bevat
+menselijke herroeping en accepted/duplicate → fixed_directly bij latere
+daadwerkelijk gepubliceerde correctie. FBK-017 implementeert die overgangen. Status, besluit, audit en outboxevent worden in één transactie
 geschreven. Iedere send doet een laatste suppression/deletioncheck; een extern
 mailverzoek dat al verzonden is kan niet achteraf ongedaan worden gemaakt.
 
@@ -693,9 +752,10 @@ mailverzoek dat al verzonden is kan niet achteraf ongedaan worden gemaakt.
 Geen antwoord is geen toestemming. Onderstaande defaults zijn voorstellen;
 provider-, privacy- en launchgates blijven open totdat het besluit is vastgelegd.
 
-1. **Wanneer wil je feedback live, ten opzichte van de wijnbatch/regiopilots?**
-   Bepaalt capaciteit en volgorde. Default: fase 0 vóór nieuwe backendbouw,
-   daarna EXP-032/026 door; fase 1 afzonderlijk inplannen, niet stilzwijgend nu bouwen.
+1. **Prioriteit beantwoord op 2026-10-12:** meer content en vooral lessen gaan
+   voor; Atlas waarschijnlijk ook vóór bredere ingebruikname. Feedback volledig
+   parkeren na FBK-001. De exacte hervat-/lanceerplanning blijft later te kiezen;
+   zie de overdracht bovenaan. Geen resterende fase-0-bouw als tussentaak.
 2. **Wie beoordeelt en wie vervangt diegene bij afwezigheid?** Nodig voor
    responsverwachting en beroep. Default: geen publieke SLA of lancering zonder
    benoemde beheerder; 5 werkdagen slechts als streefwaarde na capaciteitstoets.
@@ -767,13 +827,15 @@ provider-, privacy- en launchgates blijven open totdat het besluit is vastgelegd
   staging/deployment-/worker-/mail-/databasechecks zijn geregistreerd. Publieke
   fase-1-vrijgave via FBK-025 claimt niet dat fase 2/3 al voltooid zijn.
 
-## Voorraad en eerstvolgende slice
+## Voorraad en hervatvolgorde
 
-Eerst product-/status-/limietbesluiten (DEC-FBK-012/014) voor FBK-001, naast het
-hashbesluit DEC-FBK-011 voor FBK-003. Daarna feedback-/privacyconcepten en de
-providerproef. MNT-050 wordt hierdoor vervroegd: feedback is zijn eerste concrete
-consumer, accountgebonden Learn-progress de tweede. MNT-050 is het platformbesluit,
-geen dubbel implementatieticket voor FBK-006–025.
+FBK-001 is afgerond; de overige 33 slices zijn open en bewust geparkeerd.
+Er is **nu geen eerstvolgende feedbacktaak**. De actuele ontwikkelvolgorde staat
+in de [productroadmap](product-roadmap.md); eerst meer lessen en content,
+met een afzonderlijk af te bakenen Atlaspilot.
 
-Deze planningsronde implementeert nog geen hashes, accounts, database, mail of
-publieke formulieren. De bovenstaande 34 uitvoeringsslices blijven open.
+Alleen na expliciete herprioritering volgt FBK-003 / DEC-FBK-011, daarna
+FBK-002/004/005 en platformbesluit MNT-050. Feedback blijft een concrete
+mogelijke backendconsumer, Learn-sync een latere; dat is geen huidige bouwtrigger.
+MNT-050 is geen dubbel implementatieticket voor FBK-006–025. De proef bevat nog
+geen hashes, accounts, database, mail of publieke formulieren.

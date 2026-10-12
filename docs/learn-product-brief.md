@@ -163,6 +163,9 @@ navigatie te valideren.
 Het eerste leerpad, de zeven lessen, navigatie en lokale browservoortgang zijn
 geïmplementeerd. [De pilotrelease](learn-pilot-release.md) bewaart de
 release- en observatieafspraken. `LRN-012` in de
-[Learn-roadmap](learn-roadmap.md) bepaalt op basis van werkelijk gebruik welke
-uitbreiding nodig is. Het platformbrede beslismoment voor taalondersteuning en
+[Learn-roadmap](learn-roadmap.md) toetst op basis van werkelijk gebruik welke
+product-/architectuuruitbreiding nodig is. Sinds het gebruikersbesluit van
+2026-10-12 heeft extra lescontent voorrang: LRN-013/014 bereiden een volgende
+curriculumbrief en publicatiebatch voor, onafhankelijk van die gebruiksevaluatie.
+Curriculumgoedkeuring en het bestaande anonieme productcontract blijven gelden. Het platformbrede beslismoment voor taalondersteuning en
 serveropslag staat in [de productplanning](product-roadmap.md).

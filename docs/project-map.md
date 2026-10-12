@@ -78,7 +78,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Overkoepelende productvolgorde | `docs/product-roadmap.md` | Prioriteiten en beslismomenten tussen platform, Explore, Learn en Atlas; ticketstatus blijft in de eigen backlog |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
 | Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus geordende `LRN-*`-tickets, beslismomenten en acceptatiecriteria voor de anonieme Learn-MVP |
-| Correcties en suggesties | `docs/feedback-roadmap.md` | Voorgesteld feedbackcontract, `FBK-*`-uitvoeringsslices en `DEC-FBK-*`-gates; eerste concrete consumer voor het backendbesluit, nog geen geïmplementeerde functie |
+| Correcties en suggesties | `docs/feedback-roadmap.md` | Feedbackcontract, `FBK-*`-uitvoeringsslices en `DEC-FBK-*`-gates; [flow en lokale ontwerpproef](feedback-flow.md); bewust geparkeerd na ontwerp, overdracht bovenaan; geen geïntegreerde feedbackfunctie |
 | Conceptuele Explore-basis | `docs/explore-foundation-roadmap.md`, `docs/explore-foundation-coverage.md` en `docs/explore-foundation-authoring.md` | Geordende `EXP-*`-tickets, actuele dekkingsmatrix en bindend authoringcontract voor systeemhubs en gerichte concepts |
 
 Een stabiel feit heeft één canonical eigenaar. Narratives en pagina's mogen dat

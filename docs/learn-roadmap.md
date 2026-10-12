@@ -1,9 +1,9 @@
 # Learn-roadmap
 
 Status: actieve productroadmap  
-Peildatum: 2026-09-24
+Peildatum: 2026-10-12
 
-Dit document ordent de eerste volwaardige Learn-implementatie van Oenocademy.
+Dit document ordent de Learn-MVP en de daaropvolgende inhoudelijke uitbreiding.
 Het is de enige actuele ticketlijst voor deze capability. Reguliere
 kwaliteitsbevindingen blijven thuishoren in `maintenance-backlog.md`; afgeronde
 Learn-tickets blijven hier als historisch spoor staan.
@@ -99,11 +99,17 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 9 | `LRN-009` | Anonieme, vervangbare lokale voortgang | `LRN-007`, `LRN-008` | afgerond |
 | 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | afgerond |
 | 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | afgerond |
-| 12 | `LRN-012` | Werkelijk gebruik evalueren en vervolg besluiten | `LRN-011` | gepland |
+| 12 | `LRN-012` | Werkelijk gebruik evalueren en product-/architectuurvervolg toetsen | `LRN-011` + werkelijk gebruik | gepland, tijdgebonden |
+| 13 | `LRN-013` | Volgend curriculum en concrete lessonbatches voorbereiden | Bestaande contentinventaris; geen gebruiksgate | open, eerstvolgend |
+| 14 | `LRN-014` | Eerste nieuwe lessonbatch en leerpad publiceren | `LRN-013`, goedgekeurd `DEC-LRN-015`, noodzakelijke contentgaps | open |
 
-Tickets worden in deze volgorde uitgevoerd. Een later ticket mag wel worden
-voorbereid, maar niet stilzwijgend keuzes vastzetten die bij een eerder
-beslismoment horen.
+`LRN-001–011` vormen de afgeronde MVP-volgorde. Vanaf het prioriteitsbesluit
+van 2026-10-12 loopt **inhoudelijke uitbreiding via LRN-013/014 onafhankelijk
+van LRN-012**: een site zonder gebruikers hoeft niet op gebruiksdata te wachten
+om meer lessen te krijgen. Gebruiksevaluatie, accounts, sync en personalisatie
+blijven afzonderlijke beslissingen. De [productroadmap](product-roadmap.md)
+ordent dit werk naast Explore en Atlas; geen volgende lessonbatch wordt
+stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
 
 ## Tickets
 
@@ -478,7 +484,8 @@ beslismoment horen.
     gebruikssignalen vast;
   - beoordeel of leslengte, volgorde, lokale voortgang en entityverwijzingen
     werken zoals bedoeld;
-  - bepaal het volgende inhoudelijke leerpad;
+  - toets huidige en voorgenomen leerpaden aan werkelijk gebruik; inhoudelijke
+    voorbereiding/publicatie via LRN-013/014 hoeft hier niet op te wachten;
   - neem afzonderlijke go/no-go-besluiten over accounts, remote progress, API,
     database, quizzen en andere personalisatie;
   - maak bij een backendbesluit een nieuwe roadmap met authenticatie, privacy,
@@ -489,9 +496,51 @@ beslismoment horen.
   publicatie vastgelegd.
 - **Vroegste evaluatiemoment:** 2026-10-22, mits er voldoende werkelijk gebruik
   of gerichte gebruiksgesprekken zijn vastgelegd; anders blijft het ticket
-  gepland en wordt de observatieperiode verlengd.
+  gepland en wordt de observatieperiode verlengd. Gebruikersmelding 2026-10-12:
+  er zijn nog geen gebruikers; een verstreken kalendertermijn is geen evaluatiebewijs.
 - **Klaar wanneer:** de pilotuitkomst is vastgelegd en ieder vervolg een
   expliciet besluit heeft in plaats van een impliciete uitbreiding van de MVP.
+
+### `LRN-013` — Volgend curriculum en lessonbatches voorbereiden
+
+- **Status:** open; **prioriteit:** hoog; **categorieën:** content, product-ux.
+- **Herkomst/log:** gebruikersprioriteit 2026-10-12 — meer content, vooral lessen,
+  vóór feedback en backend; als concrete volgende voorbereidingsronde geregistreerd.
+- **Doel:** van de brede wens voor meer lessen naar een reviewbare curriculumbrief
+  en afgebakende publicatiebatch, zonder nieuw LMS- of opslagmodel.
+- **Werk:** vergelijk leerwaarde en beschikbare naslag van kandidaatonderwerpen
+  (waaronder een wijngaardleerpad); kies een gemotiveerd voorstel voor doelgroep,
+  niveau, leerdoelen, lesvolgorde en zelfstandige leswaarde. Inventariseer per les
+  bestaande canonical owners/blocks, noodzakelijke gaps, bronnen, NL/EN en visuals.
+  Maak concrete batches/volgorde, inclusief raakvlakken met EXP-032/026 en Atlas.
+  Een wijngaardpad is kandidaat, nog geen gekozen curriculum.
+- **Afhankelijkheden:** bestaande Learn-/contentcontracten; geen LRN-012-,
+  feedback-, account-, database- of Atlasvoorwaarde voor de brief.
+- **Klaar wanneer:** één onderbouwde brief met gap-analyse en uitvoerbare eerste
+  lessonbatch ter review klaarstaat; DEC-LRN-015 is expliciet gekozen of nog open
+  gemarkeerd, geen stilzwijgende authoringvrijgave. Blijkt de publicatiebatch te
+  groot, splits LRN-014 vóór uitvoering met nieuwe permanente IDs.
+- **Verificatie:** handmatige curriculum-/ownershipreview tegen
+  learning-paths.md, content-blocks.md en de redactionele policies. Geen claim
+  dat dit gebruikersonderzoek of gepubliceerde lessen oplevert.
+
+### `LRN-014` — Eerste nieuwe lessonbatch en leerpad publiceren
+
+- **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, testing.
+- **Herkomst/log:** gebruikersprioriteit 2026-10-12; uitvoering wacht op LRN-013
+  en goedgekeurde curriculumbrief, niet op gebruikersaantallen.
+- **Doel:** een samenhangende nieuwe leerroute met echte, gereviewde lessen
+  leveren op het bestaande anonieme Learn-platform.
+- **Werk:** author/review de goedgekeurde afgebakende batch in NL/EN, vul alleen
+  noodzakelijke canonical gaps en voeg passende beelden toe. Publiceer lessons
+  en path met leerdoelen, lesovergangen, completion en contextuele naslag.
+- **Afhankelijkheden:** LRN-013, gesloten DEC-LRN-015 en noodzakelijke contentgaps
+  uit de brief; geen generieke eis dat EXP-032 volledig, Atlas of feedback klaar is.
+- **Klaar wanneer:** alle core lessons en completiontargets actief en inhoudelijk
+  gereviewd zijn, de leerroute compleet is, bestaande IDs/progressie intact blijven
+  en catalogus, navigatie en anonieme voortgang in beide talen werken.
+- **Verificatie:** bron-/didactiek-/NL/EN-review, npm run format/check en relevante
+  e2e; desktop/mobile/keyboard/no-JS. Geen accounts, toetsen of nieuwe opslaglaag.
 
 ## Beslisregister
 
@@ -515,11 +564,13 @@ aanbeveling richtinggevend maar niet bindend.
 | `DEC-LRN-012` | Exact lokaal progressrecord en versiebeleid | `LRN-009` | Path-ID, schema-versie, voltooide step-ID's en `updated_at`; overige waarden afleiden; repositorygrens blijft vervangbaar door API/database | besloten 2026-09-23 |
 | `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete omkeerbare toggle boven en onder de lesson; openen of navigeren voltooit niets | besloten 2026-09-23 |
 | `DEC-LRN-014` | Publieke namen voor de drie curriculumniveaus | `LRN-002` | **Wijn begrijpen**, **Wijn verklaren** en **Wijn doorgronden**, met WSET 2+/3+/4+ als kalibrerende toelichting | besloten 2026-09-23 |
+| `DEC-LRN-015` | Volgend curriculum: onderwerp, niveau, lesvolgorde en eerste publicatiebatch | Voorstel in `LRN-013`, sluiten vóór `LRN-014` | Vergelijk kandidaten op leerwaarde, samenhang en bestaande naslag; wijngaard is kandidaat, geen vastgesteld vervolg | open |
 
 ## Besluitenlog
 
 | Datum | Besluit | Motivatie |
 | --- | --- | --- |
+| 2026-10-12 | Meer lessen voorbereiden via LRN-013/014 zonder te wachten op LRN-012; curriculumgoedkeuring blijft vereist. | Gebruiker heeft nog geen gebruikers en wil eerst inhoudelijk aanbod vergroten; werkelijk gebruik blijft nodig om latere product-/architectuurkeuzes te toetsen. |
 | 2026-09-23 | De eerste Learn-versie is anoniem en gebruikt geen accounts, API of database. | Eerst de didactische en navigatie-ervaring bewijzen; infrastructuur volgt pas uit aangetoonde gebruikersbehoefte. |
 | 2026-09-23 | De tijdelijke progressimplementatie moet via een afgebakende opslaginterface vervangbaar zijn. | Een toekomstige account- of API-adapter mag geen herschrijving van canonical content of de volledige Learn-UI vereisen. |
 | 2026-09-23 | Learn en fundamentele content worden als één vertical slice ontwikkeld. | Het pilotcurriculum bepaalt welke ontbrekende viticultuur- en vinificatiekennis werkelijk noodzakelijk is. |
@@ -554,6 +605,9 @@ De anonieme Learn-MVP is gereed wanneer:
   zijn beoordeeld;
 - de releasecriteria van `LRN-011` zijn gehaald.
 
-De bredere Learn-roadmap is pas administratief afgerond nadat `LRN-012` op basis
+De oorspronkelijke MVP-evaluatie is pas afgerond nadat `LRN-012` op basis
 van werkelijk gebruik afzonderlijke vervolg- of uitstelbesluiten heeft
 vastgelegd voor accounts, API, database en toetsing.
+
+De nieuwe inhoudelijke uitbreiding heeft eigen voltooiingsvoorwaarden in
+LRN-013/014; de afgeronde MVP wordt daardoor niet opnieuw als onvoltooid aangemerkt.
