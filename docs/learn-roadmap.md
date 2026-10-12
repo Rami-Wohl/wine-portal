@@ -100,11 +100,14 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 10 | `LRN-010` | Integrale UX-, accessibility- en content-QA | `LRN-008`, `LRN-009` | afgerond |
 | 11 | `LRN-011` | Anonieme pilot publiceren | `LRN-010` | afgerond |
 | 12 | `LRN-012` | Werkelijk gebruik evalueren en product-/architectuurvervolg toetsen | `LRN-011` + werkelijk gebruik | gepland, tijdgebonden |
-| 13 | `LRN-013` | Volgend curriculum en concrete lessonbatches voorbereiden | Bestaande contentinventaris; geen gebruiksgate | open, eerstvolgend |
-| 14 | `LRN-014` | Eerste nieuwe lessonbatch en leerpad publiceren | `LRN-013`, goedgekeurd `DEC-LRN-015`, noodzakelijke contentgaps | open |
+| 13 | `LRN-013` | Volgend curriculum en concrete lessonbatches voorbereiden | Bestaande contentinventaris; geen gebruiksgate | afgerond, voorstel ter review |
+| 14 | `LRN-014` | Wijngaardlessen 1–3: plant/jaarcyclus, klimaat/plek, bodem/water | Goedgekeurd `DEC-LRN-015` | open |
+| 15 | `LRN-015` | Wijngaardlessen 4–6: loofwand, voeding/vloer en risico | `LRN-014`, goedgekeurd curriculum | open |
+| 16 | `LRN-016` | Wijngaardlessen 7–8: rijpheid/oogst en teeltsystemen | `LRN-015`, goedgekeurd curriculum | open |
+| 17 | `LRN-017` | Volledig wijngaardpad integreren, toetsen en publiceren | `LRN-014–016`, goedgekeurd curriculum | open |
 
 `LRN-001–011` vormen de afgeronde MVP-volgorde. Vanaf het prioriteitsbesluit
-van 2026-10-12 loopt **inhoudelijke uitbreiding via LRN-013/014 onafhankelijk
+van 2026-10-12 loopt **inhoudelijke uitbreiding via LRN-013–017 onafhankelijk
 van LRN-012**: een site zonder gebruikers hoeft niet op gebruiksdata te wachten
 om meer lessen te krijgen. Gebruiksevaluatie, accounts, sync en personalisatie
 blijven afzonderlijke beslissingen. De [productroadmap](product-roadmap.md)
@@ -485,7 +488,7 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
   - beoordeel of leslengte, volgorde, lokale voortgang en entityverwijzingen
     werken zoals bedoeld;
   - toets huidige en voorgenomen leerpaden aan werkelijk gebruik; inhoudelijke
-    voorbereiding/publicatie via LRN-013/014 hoeft hier niet op te wachten;
+    voorbereiding/publicatie via LRN-013–017 hoeft hier niet op te wachten;
   - neem afzonderlijke go/no-go-besluiten over accounts, remote progress, API,
     database, quizzen en andere personalisatie;
   - maak bij een backendbesluit een nieuwe roadmap met authenticatie, privacy,
@@ -503,7 +506,7 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
 
 ### `LRN-013` — Volgend curriculum en lessonbatches voorbereiden
 
-- **Status:** open; **prioriteit:** hoog; **categorieën:** content, product-ux.
+- **Status:** afgerond; **prioriteit:** hoog; **categorieën:** content, product-ux.
 - **Herkomst/log:** gebruikersprioriteit 2026-10-12 — meer content, vooral lessen,
   vóór feedback en backend; als concrete volgende voorbereidingsronde geregistreerd.
 - **Doel:** van de brede wens voor meer lessen naar een reviewbare curriculumbrief
@@ -524,23 +527,84 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
   learning-paths.md, content-blocks.md en de redactionele policies. Geen claim
   dat dit gebruikersonderzoek of gepubliceerde lessen oplevert.
 
-### `LRN-014` — Eerste nieuwe lessonbatch en leerpad publiceren
+- **Uitvoering 2026-10-12:** [curriculumvoorstel](../editorial/briefs/learning-path.vine-and-vineyard.md)
+  gereed: vergelijking met methode-, waarnemings- en regionale curricula; acht
+  voorgestelde lessen; bestaande NL/EN-blocks, bronrecords en media gecontroleerd;
+  gaps en buiten-scope REG-003-werk onderscheiden. Oorspronkelijk te grote LRN-014
+  gesplitst naar LRN-014–017. DEC-LRN-015 blijft open; geen canonical lesson/path
+  aangemaakt en geen gebruikersonderzoek geclaimd.
+
+### `LRN-014` — Wijngaardbatch 1: plant, jaarcyclus en omgeving
 
 - **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, testing.
-- **Herkomst/log:** gebruikersprioriteit 2026-10-12; uitvoering wacht op LRN-013
-  en goedgekeurde curriculumbrief, niet op gebruikersaantallen.
-- **Doel:** een samenhangende nieuwe leerroute met echte, gereviewde lessen
-  leveren op het bestaande anonieme Learn-platform.
-- **Werk:** author/review de goedgekeurde afgebakende batch in NL/EN, vul alleen
-  noodzakelijke canonical gaps en voeg passende beelden toe. Publiceer lessons
-  en path met leerdoelen, lesovergangen, completion en contextuele naslag.
-- **Afhankelijkheden:** LRN-013, gesloten DEC-LRN-015 en noodzakelijke contentgaps
-  uit de brief; geen generieke eis dat EXP-032 volledig, Atlas of feedback klaar is.
-- **Klaar wanneer:** alle core lessons en completiontargets actief en inhoudelijk
-  gereviewd zijn, de leerroute compleet is, bestaande IDs/progressie intact blijven
-  en catalogus, navigatie en anonieme voortgang in beide talen werken.
+- **Herkomst/log:** 2026-10-12 — oorspronkelijke brede publicatiescope opgesplitst
+  na LRN-013; deze ID blijft eigenaar van de eerste batch.
+- **Doel/scope:** schrijf en publiceer de drie complete standalone lessen
+  **De wijnstok door het jaar**, **Klimaat, weer en de plek van de stok** en
+  **Bodem, wortels en beschikbaar water** uit de
+  [curriculumbrief](../editorial/briefs/learning-path.vine-and-vineyard.md).
+- **Werk:** verifieer gekozen input per les; schrijf eigen NL/EN-uitleg, leerdoelen,
+  kernidee, glas-koppeling, gerichte naslag en beoordeel bestaand beeld. Leg de
+  gekozen lesson-IDs na akkoord vast. Nog geen path met onbekende lessontargets.
+- **Afhankelijkheden:** LRN-013 afgerond en DEC-LRN-015 expliciet goedgekeurd;
+  noodzakelijke nieuw ontdekte gaps vóór publicatie een owner geven. EXP-032/026,
+  Atlas, feedback en gebruikersaantallen zijn geen generieke voorgangers.
+- **Klaar wanneer:** drie actieve, complete tweetalige lessen hun eigen leervragen
+  beantwoorden, bronnen/beelden gereviewd zijn en standalone discovery werkt.
+  Dit sluit het volledige leerpad niet; pathactivatie hoort bij LRN-017.
 - **Verificatie:** bron-/didactiek-/NL/EN-review, npm run format/check en relevante
-  e2e; desktop/mobile/keyboard/no-JS. Geen accounts, toetsen of nieuwe opslaglaag.
+  e2e; desktop/mobile/keyboard/no-JS. Nieuwe PNG alleen bij echte teaching gap.
+
+### `LRN-015` — Wijngaardbatch 2: werk aan stok en bodem, risico
+
+- **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, testing.
+- **Herkomst/log:** 2026-10-12 — zelfstandig uitvoerbare tweede batch uit LRN-013.
+- **Doel/scope:** drie lessen **Snoei, loofwand en gewasbelasting**, **Voeding en
+  leven op de wijngaardvloer**, **Risico herkennen en de wijngaard beschermen**.
+- **Werk:** gecontroleerde NL/EN-synthese, verbinding met batch 1, beperkte
+  hypothetische toepassingen en bestaande media. Behandel symptomen/meetwaarden
+  als onderzoeksvragen; geen uitvoerende doserings- of bestrijdingsrecepten.
+- **Afhankelijkheden:** LRN-014 en goedgekeurd DEC-LRN-015; hergebruik canonical
+  owners, scheid bredere REG-003-gaps van deze basisroute.
+- **Klaar wanneer:** drie complete actieve lessen, gecontroleerde bronnen en
+  beelden, begrijpelijke overgangen en betekenis-equivalente NL/EN-opbouw.
+- **Verificatie:** dezelfde lesson-/source-/mediareview en format/check/e2e als
+  LRN-014, inclusief responsive, toetsenbord en no-JS. Nog geen pathactivatie.
+
+### `LRN-016` — Wijngaardbatch 3: rijpheid, oogst en teeltsystemen
+
+- **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, testing.
+- **Herkomst/log:** 2026-10-12 — laatste inhoudelijke batch uit LRN-013.
+- **Doel/scope:** twee lessen **Rijpheid beoordelen en het oogstmoment kiezen**
+  en **Teeltsystemen, duurzaamheid en aanpassen**.
+- **Werk:** bronvaste NL/EN-uitleg, begrensde oogstbeslissing, praktijk/controle/
+  resultaat onderscheiden; actuele normbronnen heropenen. Bewaak overlap met
+  bestaande grondstofles en behoud haar IDs, zelfstandigheid en keldergerichte rol.
+- **Afhankelijkheden:** LRN-015, goedgekeurd DEC-LRN-015 en passende research;
+  geen verplichting de volledige oogst-/aanplantcatalogus van REG-003 af te maken.
+- **Klaar wanneer:** beide lessen compleet actief, wederzijdse relevante links
+  gecontroleerd, norm-/versiescope correct en geen ongeverifieerde cijfers/cases.
+- **Verificatie:** bron-/overlap-/NL/EN-/mediareview en format/check/relevante e2e;
+  beide talen, mobiel, toetsenbord en no-JS. Pathactivatie blijft LRN-017.
+
+### `LRN-017` — Wijngaardleerpad integraal toetsen en publiceren
+
+- **Status:** open; **prioriteit:** hoog; **categorieën:** content, product-ux, testing.
+- **Herkomst/log:** 2026-10-12 — integratie/publicatie apart van de drie
+  authoringbatches vastgelegd; geen onvolledig leerpad publiek presenteren.
+- **Doel/scope:** acht goedgekeurde lessen tot één volledige anonieme leerroute
+  verbinden volgens learning-paths.md en de curriculumbrief.
+- **Werk:** maak het pathpackage met stabiele IDs en tweetalig contextproza,
+  leerdoelen, recap en actieve vervolgtargets; controleer didactische boog,
+  herhaling, naslag en glas-koppelingen over de hele route. Activeer na integrale QA.
+- **Afhankelijkheden:** LRN-014/015/016 en goedgekeurd DEC-LRN-015; alle steps en
+  completiontargets actief. Geen account-, feedback-, database- of Atlasgate.
+- **Klaar wanneer:** route actief/vindbaar, iedere kernles in volgorde bruikbaar,
+  afsluiting betekenisvol en lokale voortgang in beide talen werkt zonder oude
+  pilotprogressie/IDs te wijzigen; inhoudelijke en productreview geregistreerd.
+- **Verificatie:** volledige curriculum-/NL/EN-review, format/check en Learn-
+  e2e voor discovery, pathcontext, vorige/volgende, completion, hervatten/reset,
+  taalwissel, keyboard/mobile/no-JS en geblokkeerde opslag; media/rights/altreview.
 
 ## Beslisregister
 
@@ -564,12 +628,13 @@ aanbeveling richtinggevend maar niet bindend.
 | `DEC-LRN-012` | Exact lokaal progressrecord en versiebeleid | `LRN-009` | Path-ID, schema-versie, voltooide step-ID's en `updated_at`; overige waarden afleiden; repositorygrens blijft vervangbaar door API/database | besloten 2026-09-23 |
 | `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete omkeerbare toggle boven en onder de lesson; openen of navigeren voltooit niets | besloten 2026-09-23 |
 | `DEC-LRN-014` | Publieke namen voor de drie curriculumniveaus | `LRN-002` | **Wijn begrijpen**, **Wijn verklaren** en **Wijn doorgronden**, met WSET 2+/3+/4+ als kalibrerende toelichting | besloten 2026-09-23 |
-| `DEC-LRN-015` | Volgend curriculum: onderwerp, niveau, lesvolgorde en eerste publicatiebatch | Voorstel in `LRN-013`, sluiten vóór `LRN-014` | Vergelijk kandidaten op leerwaarde, samenhang en bestaande naslag; wijngaard is kandidaat, geen vastgesteld vervolg | open |
+| `DEC-LRN-015` | Volgend curriculum: onderwerp, niveau, lesvolgorde en eerste publicatiebatch | Voorstel in `LRN-013`, sluiten vóór `LRN-014–017` | [Wijnstok en wijngaard](../editorial/briefs/learning-path.vine-and-vineyard.md): Wijn begrijpen, acht lessen, drie authoringbatches plus integratie | open; voorstel gereed 2026-10-12 |
 
 ## Besluitenlog
 
 | Datum | Besluit | Motivatie |
 | --- | --- | --- |
+| 2026-10-12 | LRN-013 gereed met achtlessenvoorstel; brede LRN-014 vóór uitvoering gesplitst in drie authoringbatches en aparte pathpublicatie (LRN-014–017). DEC-LRN-015 blijft open. | Concrete inventaris toont beschikbare naslag, maar acht tweetalige lessen plus integratie is te groot voor één slice. Publicatie wacht op curriculumakkoord; geen generieke afhankelijkheid van wijnpagina's of Atlas. |
 | 2026-10-12 | Meer lessen voorbereiden via LRN-013/014 zonder te wachten op LRN-012; curriculumgoedkeuring blijft vereist. | Gebruiker heeft nog geen gebruikers en wil eerst inhoudelijk aanbod vergroten; werkelijk gebruik blijft nodig om latere product-/architectuurkeuzes te toetsen. |
 | 2026-09-23 | De eerste Learn-versie is anoniem en gebruikt geen accounts, API of database. | Eerst de didactische en navigatie-ervaring bewijzen; infrastructuur volgt pas uit aangetoonde gebruikersbehoefte. |
 | 2026-09-23 | De tijdelijke progressimplementatie moet via een afgebakende opslaginterface vervangbaar zijn. | Een toekomstige account- of API-adapter mag geen herschrijving van canonical content of de volledige Learn-UI vereisen. |
@@ -610,4 +675,4 @@ van werkelijk gebruik afzonderlijke vervolg- of uitstelbesluiten heeft
 vastgelegd voor accounts, API, database en toetsing.
 
 De nieuwe inhoudelijke uitbreiding heeft eigen voltooiingsvoorwaarden in
-LRN-013/014; de afgeronde MVP wordt daardoor niet opnieuw als onvoltooid aangemerkt.
+LRN-013–017; de afgeronde MVP wordt daardoor niet opnieuw als onvoltooid aangemerkt.

@@ -36,9 +36,10 @@ De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
 taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
 De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
-Eerst volgt curriculumvoorbereiding voor meer lessen (`LRN-013`), naast de
-bestaande contentvolgorde (`EXP-032/026`), daarna lespublicatie (`LRN-014`) en
-Atlasafbakening (`MNT-051`). De [feedbackvoorbereiding](feedback-roadmap.md)
+Curriculumvoorbereiding (`LRN-013`) is afgerond; het achtlessenvoorstel wacht
+op DEC-LRN-015-akkoord. Daarna volgen drie lesbatches en pathpublicatie
+(`LRN-014–017`). `EXP-032/026` kunnen onafhankelijk doorgaan, Atlasafbakening
+(`MNT-051`) mag als bronverkenning naast lessen lopen. De [feedbackvoorbereiding](feedback-roadmap.md)
 is na de lokale productflow (`FBK-001`) bewust geparkeerd; ook hashes (`FBK-003`)
 en het platformbesluit (`MNT-050`) zijn geen huidige vóórtaken.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert

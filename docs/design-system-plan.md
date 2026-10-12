@@ -92,7 +92,7 @@ wordt pas toegevoegd wanneer echte content een herhaalde, geteste use-case toont
 
 De Learn-pilot heeft pathnavigatie, previous/next-links en anonieme lokale
 voortgang. Gebruiksevaluatie volgt `LRN-012`; inhoudelijke uitbreiding kan
-onafhankelijk daarvan via `LRN-013/014` in
+onafhankelijk daarvan via `LRN-013–017` in
 [de Learn-roadmap](learn-roadmap.md). De
 [productplanning](product-roadmap.md) zet taalkeuze en Atlas op de juiste plek.
 

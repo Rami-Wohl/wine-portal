@@ -47,8 +47,8 @@ feitelijke scope volgt uit onderzoek, niet uit een vooraf gekozen aantal landen.
 
 ## Learn en backend
 
-Een wijngaardleerpad is een kandidaat voor `LRN-013`, geen al gekozen curriculum.
-Meer lessen voorbereiden/publiceren via `LRN-013/014` mag sinds het
+Het achtlessenvoorstel uit `LRN-013` is gereed; `DEC-LRN-015` blijft open.
+Wijngaardlessen en pathpublicatie via `LRN-014–017` mogen sinds het
 gebruikersbesluit van 2026-10-12 vóór werkelijk pilotgebruik; `LRN-012` blijft
 het afzonderlijke evaluatiebesluit. Atlasafbakening via `MNT-051` krijgt een
 zichtbare plaats vóór brede regiogroei; bouw vereist geverifieerde data. Accounts, API en databases
