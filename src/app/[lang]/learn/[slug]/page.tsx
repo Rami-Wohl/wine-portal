@@ -84,7 +84,8 @@ export default async function LearningPathPage({ params, searchParams }: Learnin
 
       <header className="learning-path-hero">
         <p className="eyebrow">
-          Leerpad · {contentLabels(locale).curriculum[learningPath.curriculum_level]}
+          {locale === "nl" ? "Leerpad" : "Learning path"} ·{" "}
+          {contentLabels(locale).curriculum[learningPath.curriculum_level]}
         </p>
         <h1>{learningPath.title[locale]}</h1>
         <p className="learning-path-summary">{learningPath.summary[locale]}</p>

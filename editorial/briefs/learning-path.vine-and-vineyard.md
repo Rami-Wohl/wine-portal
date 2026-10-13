@@ -1,7 +1,7 @@
 # Curriculumvoorstel — Wijnstok en wijngaard
 
-Status: **curriculum goedgekeurd voor authoring**, DEC-LRN-015 gesloten op
-2026-10-12. Publicatie blijft per lessonbatch aan inhoudelijke en technische QA gebonden.
+Status: **curriculum goedgekeurd en volledig leerpad actief**, DEC-LRN-015
+gesloten op 2026-10-12; LRN-014–017 afgerond na inhoudelijke en technische QA.
 Datum: 2026-10-12. Voorbereiding: `LRN-013`; besluit: `DEC-LRN-015`.
 Actuele ticketstatus staat in [de Learn-roadmap](../../docs/learn-roadmap.md).
 
@@ -55,12 +55,12 @@ Geen nieuwe schema's, accounts, feedbackfunctie, API of database. Atlas is
 optionele latere verrijking. Geen named-region-case waarvoor nog ontbrekende
 geografiedata of ongeschreven regiopagina's dragend bewijs moeten leveren.
 
-## Voorgestelde lesvolgorde
+## Goedgekeurde lesvolgorde
 
 Alle acht onderstaande lesson-IDs zijn in LRN-014–016 vastgelegd en actief.
-De IDs blijven stabiel; de drie authoringbatches zijn afgerond. Er is nog geen wijngaardpath of bijbehorende
-gebruikersvoortgang. Voorgesteld path-ID:
-`learning-path.vine-and-vineyard`, met dezelfde Engelse canonical slug.
+De IDs blijven stabiel; de drie authoringbatches en integrale publicatiereview
+zijn afgerond. Actief path-ID: `learning-path.vine-and-vineyard`, met dezelfde
+Engelse canonical slug en afzonderlijke lokale voortgang.
 Elke step-ID hieronder verwijst naar `narrative.lesson.<step-id>`.
 
 ### 1. De wijnstok door het jaar
@@ -213,13 +213,13 @@ waarneming, ingreep en toetsing; geen score, examen of universeel beste systeem.
 
 | Bevinding | Actie en eigenaar | Blokkeert |
 | --- | --- | --- |
-| Alle acht lessonpackages actief via LRN-014–016 | Eigen didactische synthese en kennisowners behouden; integrale routecontrole resteert | LRN-017 |
-| Introductie plant én jaarcyclus kan te vol worden | Les 1 beperkt tot herkenning, ritme en verbinding tussen jaren; specialistische transport-/dormantiemodellen blijven naslag. Herbeoordeel outline vóór prose | Les 1-review; zo nodig curriculumwijziging vóór uitvoering |
-| Bestaande hubs zijn naslag, geen afgeronde lessentekst | Schrijf per les een eigen verklaringsboog met expliciete leerbakens, verbindingsproza, kernidee en glas-koppeling | Alle lessen |
-| Kwalitatieve toepascasussen in alle acht lessen geschreven en gereviewd | Hypothetische situaties, onderbouwde mechanismen en geen verzonnen meetdata; samenhang nog integraal toetsen | LRN-017 |
-| Oogst komt al in het vinificatiepad voor | Review les 7 samen met bestaande grondstofles; gerichte wederzijdse links, behoud oude IDs en zelfstandige uitleg | LRN-016/017, geen herpublicatie van het hele eerste pad nodig |
+| Alle acht lessonpackages en het volledige path actief | Eigen didactische synthese en kennisowners behouden; integrale routecontrole afgerond | Afgerond via LRN-017 |
+| Introductie plant én jaarcyclus op volledigheid/omvang beoordeeld | Les 1 beperkt tot herkenning, ritme en verbinding tussen jaren; specialistische transport-/dormantiemodellen blijven naslag | Afgerond via LRN-014/017 |
+| Bestaande hubs blijven naslag | Alle acht lessen hebben eigen verklaringsboog, leerbakens, kernidee en glas-koppeling | Afgerond via LRN-014–017 |
+| Kwalitatieve toepascasussen in alle acht lessen geschreven en integraal gereviewd | Hypothetische situaties en onderbouwde mechanismen; slotles verbindt eerdere afwegingen | Afgerond via LRN-017 |
+| Oogst komt al in het vinificatiepad voor | Kelder-/veldperspectief onderscheiden, wederzijdse links gereviewd en oude IDs/zelfstandigheid behouden | Afgerond via LRN-016/017 |
 | Massale selectie is draft; volledige aanleg, plantdichtheid/rijoriëntatie/leeftijd en oogsttechniek vragen breder werk | REG-003 houdt de planning; geen essentiële link naar de draft, geen nieuwe clone-/harvestentity om de outline op te vullen | Buiten deze afgebakende batch; bij scope-uitbreiding eerst expliciet nieuwe dependency |
-| Normen en regionale regels hebben eigen datum/scope | Research in les 8; beperk uitleg tot aantoonbaar ondersteunde versie/scope en registreer nieuwe provenance waar nodig | LRN-016, niet heel Atlas of regionale fase |
+| Normen en regionale regels hebben eigen datum/scope | Les 8 beperkt tot gereviewde EU-/Demeter-scope en gedateerde OIV-/reviewkaders; provenance in batchreview 3 | Afgerond via LRN-016; geen ongedateerde wereldwijde rechtsclaim |
 | Atlas en individuele wijnpagina's nog onvolledig | Tekstuele, kwalitatieve toepassing en bestaande actieve naslag volstaan | Geen generieke dependency op MNT-051/002 of EXP-032 |
 
 Er is op basis van deze inventaris **geen verplichte nieuwe conceptentity**
@@ -342,3 +342,11 @@ de grondstofles zijn gecontroleerd; actuele EU-/Demeter-scope is benoemd.
 [Batchreview 3](../vineyard-lessons-batch-3-review-2026-10-12.md) bewaart bronnen
 en verificatie. Eerstvolgend: LRN-017, integrale review en pathpublicatie;
 59 niet-afgeronde tickets in de productplanning.
+
+**Publicatieaddendum volledig pad, 2026-10-13:** LRN-017 afgerond.
+`learning-path.vine-and-vineyard` is actief met de acht goedgekeurde steps,
+zes leerdoelen, acht recapitems en vier actieve vervolgtargets. De
+[integrale review QCR-2026-10-13-01](../vineyard-path-release-review-2026-10-13.md)
+bewaart didactiek, NL/EN, beeld-/provenancehergebruik en browsercontrole.
+Het oorspronkelijke stille-wijnpad en zijn lokale voortgang blijven behouden.
+Eerstvolgend productwerk: EXP-032; 58 niet-afgeronde tickets.

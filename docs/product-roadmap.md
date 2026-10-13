@@ -1,6 +1,6 @@
 # Overkoepelende productplanning
 
-Bijgewerkt: 2026-10-12. Deze kaart bepaalt volgorde en timing; actuele
+Bijgewerkt: 2026-10-13. Deze kaart bepaalt volgorde en timing; actuele
 status en acceptatiecriteria staan uitsluitend in de gekoppelde domeinbacklogs.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) en
 [performancereview](../editorial/performance-review-2026-10-11.md) motiveren
@@ -11,7 +11,7 @@ de huidige volgorde. Eerdere uitvoeringsresultaten staan in het
 
 De entity-first basis werkt: gedeelde YAML, gelijkwaardige NL/EN-Markdown,
 strict gevalideerde graph, server-only repository en gedeelde presentatie.
-Explore, zoeken, vijftien actieve lessen en één Learn-pilot gebruiken deze basis.
+Explore, zoeken, vijftien actieve lessen en twee Learn-paden gebruiken deze basis.
 Browservoortgang staat los van authored content. De conceptuele keten van
 wijngaard tot waarneming is gepubliceerd; mondiale dekking vraagt nog een
 expliciete dependency- en ownershipcontrole.
@@ -28,21 +28,17 @@ geen gebruikers. Eerst meer inhoud, vooral lessen; Atlas waarschijnlijk ook
 vóór bredere ingebruikname. Geen haast met feedback. Het openbare adres is geen
 bewijs van gebruik en geen zelfstandige reden voor accounts of een database.
 
-- **Alle acht wijngaardlessen actief.** Het goedgekeurde curriculum
+- **Het volledige wijngaardpad is actief.** Het goedgekeurde curriculum
   [Wijnstok en wijngaard](../editorial/briefs/learning-path.vine-and-vineyard.md)
-  is via `LRN-014–016` als complete NL/EN-lessen geleverd. De laatste batch
-  behandelt rijpheid/oogst en teeltsystemen, met overlap-/normreview en gerichte
-  wederzijdse links naar de grondstofles. Eerstvolgend: `LRN-017`, integrale
-  review en pathpublicatie. [Batchreview 3](../editorial/vineyard-lessons-batch-3-review-2026-10-12.md).
-- **Contentbasis: `EXP-032/026`.** Inventaris en eerste afgebakende
-  Port/Sherry/Champagne-batch, daarna graph-/link-/ownershipintegratie. De volledige
-  toekomstige wijncatalogus blokkeert lessen of integratie niet. Laat de
-  curriculumbrief zien welke naslag werkelijk nodig is; geen algemene contentstop.
-- **Leerroute publiceren: `LRN-017`.** Alle acht losse lessen zijn gereed;
-  pathcontext, recap, vervolgsuggesties en lokale voortgang volgen na integrale QA.
-  De bestaande zevenlessenroute en haar voortgang blijven behouden.
-  De wijngaardlessen vereisen geen Port/Sherry/Champagne-pagina's.
-  Het anonieme Learn-platform volstaat; geen gebruiks-, feedback- of Atlasgate.
+  is via `LRN-014–017` geleverd: acht NL/EN-lessen, leercontext, terugblik,
+  vervolgsuggesties en eigen lokale voortgang naast het stille-wijnpad.
+  [Integrale publicatiereview](../editorial/vineyard-path-release-review-2026-10-13.md).
+- **Eerstvolgend: `EXP-032`, daarna `EXP-026`.** Inventariseer individuele
+  wijnen en hun juiste identiteit/owner; publiceer de eerste afgebakende
+  Port/Sherry/Champagne-batch. Integreer daarna graph, links, media en
+  terminologie. Latere wijncatalogusbatches blijven zichtbaar open; de eerste
+  batch sluit EXP-032 niet zolang die voorraad resteert. Een regionale
+  naam, beschermde herkomst en methode krijgen hun eigen passende scope.
 - **Atlas expliciet voorbereiden: `MNT-051`.** Bronverkenning mag naast lessen
   lopen. Kies een kleine geverifieerde Bordeauxscope met provenance/licentie en
   afgebakende bouwtickets. Daarna kan `MNT-002` de eerste kaart leveren zodra
@@ -75,8 +71,8 @@ Grote schema-, opslag- en curriculumwijzigingen houden hun eigen besluitpoort.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-59 niet-afgeronde tickets: 15 onderhoudsacties, 4 Explore-tickets, 5 regionale
-planning-/publicatietickets, 2 Learn-tickets (evaluatie plus pathpublicatie)
+58 niet-afgeronde tickets: 15 onderhoudsacties, 4 Explore-tickets, 5 regionale
+planning-/publicatietickets, 1 Learn-ticket (gebruiksevaluatie)
 en 33 feedbacktickets. Die 33 feedbacktickets en MNT-050 zijn bewust geparkeerd;
 ze blijven meetellen als resterend werk, niet als huidige uitvoeringsopdracht.
 De 19 `DEC-FBK-*`-besluiten tellen als gates, niet als extra implementatietickets.
@@ -95,33 +91,31 @@ Het feedbackspoor is geparkeerd. Onderstaande fasevolgorde geldt uitsluitend
 | Fase 3: `FBK-032–034` | Vertrouwde bijdragers en Learn-sync; sync wacht ook op `LRN-012` en `DEC-FBK-019` |
 
 De aanbevolen inhoudelijke/voorbereidende volgorde is hieronder weergegeven.
-Het curriculumakkoord is vastgelegd en alle drie lesbatches zijn afgerond.
-EXP-032/026 kunnen onafhankelijk doorgaan. De LRN-013-inventaris toont dat zij geen
-algemene voorgangers zijn voor deze wijngaardlessen; daarom is lespublicatie
-in de aanbevolen volgorde naar voren gehaald.
+Het curriculumakkoord, de drie lesbatches en pathpublicatie zijn afgerond.
+Nu volgt de eerste EXP-032-batch, daarna de integratie in EXP-026.
+Atlasbronverkenning kan naast dit contentwerk lopen.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `LRN-017` | Volledig achtlessenpad integreren, toetsen en publiceren |
-| 2 | `EXP-032` | Individuele wijnen: inventaris en eerste Port/Sherry/Champagne-batch; onafhankelijk van de lesbatches oppakbaar |
-| 3 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren |
-| 4 | `MNT-051` | Kleine geverifieerde Bordeaux-Atlaspilot en bouwscope afbakenen; bronverkenning kan naast lessen lopen |
-| 5 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
-| 6 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
-| 7 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
-| 8 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen |
-| 9 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
-| 10 | `EXP-028` | Integrale redactionele en product-QA |
-| 11 | `MNT-065` | Representatieve benchmarkscenario's en workloadversies vóór grote corpus-/Atlasuitbreiding |
-| 12 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
-| 13 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
-| 14 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
-| 15 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na publicatiegates |
-| 16 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
-| 17 | `MNT-064` | Fixture-I/O alleen optimaliseren bij gemeten setupkosten; geen voorganger van andere leveringen |
+| 1 | `EXP-032` | Individuele wijnen: inventaris en eerste Port/Sherry/Champagne-batch; onafhankelijk van de lesbatches oppakbaar |
+| 2 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren |
+| 3 | `MNT-051` | Kleine geverifieerde Bordeaux-Atlaspilot en bouwscope afbakenen; bronverkenning kan naast lessen lopen |
+| 4 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
+| 5 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
+| 6 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
+| 7 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen |
+| 8 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
+| 9 | `EXP-028` | Integrale redactionele en product-QA |
+| 10 | `MNT-065` | Representatieve benchmarkscenario's en workloadversies vóór grote corpus-/Atlasuitbreiding |
+| 11 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
+| 12 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
+| 13 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
+| 14 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na publicatiegates |
+| 15 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
+| 16 | `MNT-064` | Fixture-I/O alleen optimaliseren bij gemeten setupkosten; geen voorganger van andere leveringen |
 
-LRN-013–016 zijn afgerond. De splitsing naar LRN-014–017 blijft behouden;
-alle acht wijngaardlessen zijn actief, het volledige path nog niet.
+LRN-013–017 zijn afgerond; alle acht wijngaardlessen en het volledige path
+zijn actief. De oorspronkelijke zevenlessenroute behoudt haar eigen voortgang.
 De benchmarkreview voegde twee uitgestelde acties toe (`MNT-064/065`); de directe
 correcties zijn afgerond in `MNT-063`. REG-003 blijft
 een planningticket: toekomstige mondiale content krijgt vóór uitvoering eigen

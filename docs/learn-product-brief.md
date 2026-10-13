@@ -160,14 +160,16 @@ navigatie te valideren.
 
 ## Gevolg voor het vervolg
 
-Het eerste leerpad, de zeven lessen, navigatie en lokale browservoortgang zijn
-geïmplementeerd. [De pilotrelease](learn-pilot-release.md) bewaart de
+Twee leerpaden, vijftien lessen, navigatie en lokale browservoortgang zijn
+geïmplementeerd. Het wijngaardpad heeft acht lessen en eigen voortgang naast
+het oorspronkelijke zevenlessenpad over wijnmaken. [De pilotrelease](learn-pilot-release.md) bewaart de
 release- en observatieafspraken. `LRN-012` in de
 [Learn-roadmap](learn-roadmap.md) toetst op basis van werkelijk gebruik welke
 product-/architectuuruitbreiding nodig is. Sinds het gebruikersbesluit van
 2026-10-12 heeft extra lescontent voorrang. Het achtlessencurriculum uit LRN-013
-is expliciet goedgekeurd; LRN-014–016 leveren alle acht actieve standalone wijngaardlessen.
-LRN-017 levert nu de integrale pathpublicatie,
-onafhankelijk van die gebruiksevaluatie.
+is expliciet goedgekeurd; LRN-014–016 leveren alle acht actieve wijngaardlessen.
+LRN-017 levert het volledige pad, de terugblik en vervolgsuggesties. De
+[publicatiereview](../editorial/vineyard-path-release-review-2026-10-13.md)
+bewaart de integrale controle, onafhankelijk van die gebruiksevaluatie.
 Curriculumgoedkeuring en het bestaande anonieme productcontract blijven gelden. Het platformbrede beslismoment voor taalondersteuning en
 serveropslag staat in [de productplanning](product-roadmap.md).

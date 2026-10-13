@@ -1,0 +1,123 @@
+schema_version: 1
+id: learning-path.vine-and-vineyard
+status: active
+curriculum_level: understand
+title:
+  nl: Wijnstok en wijngaard — hoe druiven groeien
+  en: Vine and vineyard — how grapes grow
+slugs:
+  nl: wijnstok-en-wijngaard
+  en: vine-and-vineyard
+summary:
+  nl: Volg de wijnstok door het seizoen en verbind omgeving, wijngaardwerk en oogst tot een onderbouwde keuze voor het fruit.
+  en: Follow the vine through the season and connect its environment, vineyard work and harvest in a reasoned decision about the fruit.
+audience:
+  nl: Voor wijnliefhebbers die willen begrijpen hoe druiven groeien en hoe je keuzes in de wijngaard beoordeelt.
+  en: For wine lovers who want to understand how grapes grow and how to assess vineyard decisions.
+prerequisites:
+  nl:
+    - Je weet globaal wat druivenrassen, zuur, tannine en alcohol zijn.
+    - Je hoeft het leerpad over wijnmaken niet eerst te volgen.
+  en:
+    - You broadly understand grape varieties, acidity, tannin and alcohol.
+    - You do not need to complete the winemaking path first.
+objectives:
+  nl:
+    - Herken de belangrijkste plantorganen en leg de jaarcyclus en verbinding tussen seizoenen uit.
+    - Onderscheid een waarneming, een mogelijke verklaring en een beheerkeuze.
+    - Beoordeel een wijngaardvraag vanuit doel, plek, ontwikkelingsfase en passende waarnemingen.
+    - Verbind bodem en water, loofwand en fruitbelasting, en voeding en vloerbeheer met elkaar.
+    - Benoem welke informatie nog nodig is om schade te verklaren.
+    - Onderbouw een oogstafweging en onderscheid een teeltpraktijk, keurmerk en gemeten resultaat.
+  en:
+    - Recognise the main plant organs and explain the annual cycle and connections between seasons.
+    - Distinguish an observation, a possible explanation and a management choice.
+    - Assess a vineyard question through its goal, place, developmental stage and suitable observations.
+    - Connect soil and water, canopy and crop load, and nutrition and floor management.
+    - Identify the information still needed to explain damage.
+    - Support a harvest decision and distinguish a growing practice, certification label and measured result.
+steps:
+  - id: vine-through-year
+    target: narrative.lesson.vine-through-year
+    context:
+      nl: Begin bij de organen van de stok en volg hoe nieuwe groei en blijvend hout opeenvolgende seizoenen verbinden.
+      en: Begin with the vine’s organs and follow how new growth and permanent wood connect successive seasons.
+  - id: climate-site-and-season
+    target: narrative.lesson.climate-site-and-season
+    context:
+      nl: Plaats de groeiende stok in zijn omgeving en kies de tijdsduur en ruimtelijke schaal die bij je vraag passen.
+      en: Place the growing vine in its environment and choose the time window and spatial scale that fit your question.
+  - id: soil-roots-and-water
+    target: narrative.lesson.soil-roots-and-water
+    context:
+      nl: Verbind die omgeving met de wortelzone en volg water van bodemvoorraad tot plantreactie.
+      en: Connect that environment with the root zone and follow water from soil storage to plant response.
+  - id: pruning-canopy-and-crop
+    target: narrative.lesson.pruning-canopy-and-crop
+    context:
+      nl: Ga van de wortelzone naar scheuten, bladeren en trossen en onderzoek wat snoei en groen werk veranderen.
+      en: Move from the root zone to shoots, leaves and bunches and investigate what pruning and canopy work change.
+  - id: nutrition-and-vineyard-floor
+    target: narrative.lesson.nutrition-and-vineyard-floor
+    context:
+      nl: Voeg voeding en begroeiing toe aan het groeimodel en beoordeel metingen naast beschikbaarheid, opname en plantgroei.
+      en: Add nutrients and vegetation to the growth model and assess measurements alongside availability, uptake and vine growth.
+  - id: vineyard-risks-and-protection
+    target: narrative.lesson.vineyard-risks-and-protection
+    context:
+      nl: Gebruik je kennis van plant en omgeving om mogelijke schadeoorzaken te ordenen en een gerichte vervolgvraag te stellen.
+      en: Use your knowledge of plant and environment to organise possible causes of damage and ask a focused follow-up question.
+  - id: ripeness-and-harvest
+    target: narrative.lesson.ripeness-and-harvest
+    context:
+      nl: Breng groei, omstandigheden en fruitgezondheid samen in de afweging wanneer je voor het beoogde wijndoel oogst.
+      en: Bring growth, conditions and fruit health together when weighing harvest timing against the intended wine.
+  - id: vineyard-systems-and-adaptation
+    target: narrative.lesson.vineyard-systems-and-adaptation
+    context:
+      nl: Verbind de afzonderlijke keuzes tot beheer over meerdere seizoenen en werk één keuze uit van doel tot nacontrole.
+      en: Connect the individual decisions into management across seasons and develop one choice from goal to follow-up.
+completion:
+  recap:
+    nl:
+      - Je hebt de organen en jaarcyclus gevolgd, met knoppen en reserves als verbinding tussen seizoenen.
+      - Je hebt klimaat, weer en lokale omstandigheden onderscheiden om een passende waarneming te kiezen.
+      - Je hebt water gevolgd van bodemvoorraad via actieve wortels naar de reactie van de plant.
+      - Je hebt snoei, loofwandwerk en fruitbelasting beoordeeld vanuit hun aangrijpingspunt en timing.
+      - Je hebt voeding en wijngaardvloer verbonden met opname, groei en de betekenis van een meting.
+      - Je hebt schade geordend en geoefend welke informatie nodig is vóór een diagnose of maatregel.
+      - Je hebt een oogstafweging opgebouwd uit meerdere rijpheidseigenschappen, fruitgezondheid en het risico van wachten.
+      - Je hebt praktijk, controle en resultaat onderscheiden en een wijngaardkeuze uitgewerkt van doel tot nacontrole.
+    en:
+      - You have followed the organs and annual cycle, with buds and reserves connecting seasons.
+      - You have distinguished climate, weather and local conditions to choose a suitable observation.
+      - You have followed water from soil storage through active roots to the plant’s response.
+      - You have assessed pruning, canopy work and crop load through what they change and when.
+      - You have connected nutrition and the vineyard floor with uptake, growth and the meaning of a measurement.
+      - You have organised causes of damage and practised identifying the information needed before a diagnosis or intervention.
+      - You have built a harvest decision from several ripeness properties, fruit health and the risk of waiting.
+      - You have distinguished practice, checks and results and developed a vineyard choice from goal to follow-up.
+  encouragement:
+    nl: Neem een vraag over een wijngaard mee en orden haar langs doel, plek, fase en waarneming. De lessen en naslag helpen je de afweging verder onderzoeken.
+    en: Take a vineyard question and organise it by goal, place, stage and observation. The lessons and references help you explore the decision further.
+  suggestions:
+    - id: follow-winemaking
+      target: learning-path.from-grape-to-still-wine
+      context:
+        nl: Volg wat er met het geoogste fruit gebeurt, van ontvangst tot gebottelde stille wijn.
+        en: Follow what happens to the harvested fruit, from reception to bottled still wine.
+    - id: explore-terroir
+      target: concept.terroir
+      context:
+        nl: Onderzoek de samenhang tussen plaats, plant, mens en wijn verder.
+        en: Explore the connections between place, plant, people and wine further.
+    - id: explore-ripeness
+      target: concept.berry-development-ripeness
+      context:
+        nl: Verdiep je in de verschillende rijpheidsprocessen en waarnemingen vóór de oogst.
+        en: Explore the different ripening processes and observations before harvest in greater depth.
+    - id: explore-vineyard-systems
+      target: concept.vineyard-systems-sustainability-adaptation
+      context:
+        nl: Vergelijk teeltbenaderingen en lees verder over de scope van normen en uitkomsten.
+        en: Compare growing approaches and read further about the scope of standards and outcomes.

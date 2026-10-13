@@ -104,7 +104,7 @@ for (const locale of ["nl", "en"] as const) {
         // Follow a real reference and its generated backlink, preserving language.
         await page.locator(`article a[href="${prefix}${lesson.reference}"]`).first().click();
         await expect(page).toHaveURL(`${prefix}${lesson.reference}`);
-        const selector = `a[href="${prefix}/verdiepingen/lessons/${lesson.slug}"]`;
+        const selector = `a[href="${prefix}/verdiepingen/lessons/${lesson.slug}?path=vine-and-vineyard"]`;
         const backlink = page.getByRole("main").locator(selector);
         await expect(backlink).toHaveCount(1);
         const disclosure = page.locator("main details").filter({ has: page.locator(selector) });
@@ -114,6 +114,7 @@ for (const locale of ["nl", "en"] as const) {
         await expect(backlink).toBeVisible();
         await backlink.click();
         await expect(page.getByRole("heading", { level: 1 })).toHaveText(lesson[locale]);
+        await expect(page.locator(".lesson-path-context")).toBeVisible();
       }
     });
   }
@@ -126,9 +127,10 @@ for (const locale of ["nl", "en"] as const) {
       await page.goto(`${prefix}/verdiepingen`);
       await expect(page.locator(`.learning-list a[href="${route}"]`)).toContainText(lesson[locale]);
       await page.goto(`${prefix}/learn`);
-      await expect(page.locator(`.standalone-lesson-list a[href="${route}"]`)).toContainText(
-        lesson[locale],
-      );
+      await page.locator(`.learning-path-card a[href="${prefix}/learn/vine-and-vineyard"]`).click();
+      await expect(
+        page.locator(`.learning-step-list a[href="${route}?path=vine-and-vineyard"]`),
+      ).toContainText(lesson[locale]);
       await page.goto(`${prefix}/search?q=${encodeURIComponent(lesson[locale])}`);
       const result = page.locator(`.search-result-card[href="${route}"]`);
       await expect(result).toBeVisible();

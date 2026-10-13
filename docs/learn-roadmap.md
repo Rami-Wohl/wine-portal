@@ -1,7 +1,7 @@
 # Learn-roadmap
 
 Status: actieve productroadmap  
-Peildatum: 2026-10-12
+Peildatum: 2026-10-13
 
 Dit document ordent de Learn-MVP en de daaropvolgende inhoudelijke uitbreiding.
 Het is de enige actuele ticketlijst voor deze capability. Reguliere
@@ -104,7 +104,7 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 14 | `LRN-014` | Wijngaardlessen 1–3: plant/jaarcyclus, klimaat/plek, bodem/water | Goedgekeurd `DEC-LRN-015` | afgerond |
 | 15 | `LRN-015` | Wijngaardlessen 4–6: loofwand, voeding/vloer en risico | `LRN-014`, goedgekeurd curriculum | afgerond |
 | 16 | `LRN-016` | Wijngaardlessen 7–8: rijpheid/oogst en teeltsystemen | `LRN-015`, goedgekeurd curriculum | afgerond |
-| 17 | `LRN-017` | Volledig wijngaardpad integreren, toetsen en publiceren | `LRN-014–016`, goedgekeurd curriculum | open |
+| 17 | `LRN-017` | Volledig wijngaardpad integreren, toetsen en publiceren | `LRN-014–016`, goedgekeurd curriculum | afgerond |
 
 `LRN-001–011` vormen de afgeronde MVP-volgorde. Vanaf het prioriteitsbesluit
 van 2026-10-12 loopt **inhoudelijke uitbreiding via LRN-013–017 onafhankelijk
@@ -613,7 +613,7 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
 
 ### `LRN-017` — Wijngaardleerpad integraal toetsen en publiceren
 
-- **Status:** open; **prioriteit:** hoog; **categorieën:** content, product-ux, testing.
+- **Status:** afgerond; **prioriteit:** hoog; **categorieën:** content, product-ux, testing.
 - **Herkomst/log:** 2026-10-12 — integratie/publicatie apart van de drie
   authoringbatches vastgelegd; geen onvolledig leerpad publiek presenteren.
 - **Doel/scope:** acht goedgekeurde lessen tot één volledige anonieme leerroute
@@ -629,6 +629,13 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
 - **Verificatie:** volledige curriculum-/NL/EN-review, format/check en Learn-
   e2e voor discovery, pathcontext, vorige/volgende, completion, hervatten/reset,
   taalwissel, keyboard/mobile/no-JS en geblokkeerde opslag; media/rights/altreview.
+
+- **Uitvoering 2026-10-13:** actief tweetalig `learning-path.vine-and-vineyard`
+  met acht stabiele steps, zes leerdoelen, acht recapitems en vier actieve
+  vervolgtargets. Bestaande path-/step-IDs en voortgang behouden; expliciete
+  browserchecks voor onafhankelijke records/reset, beide talen en no-JS.
+  [Integrale publicatiereview](../editorial/vineyard-path-release-review-2026-10-13.md).
+  Volgende producttaak: EXP-032; LRN-012 blijft afzonderlijk tijd-/gebruiksgebonden.
 
 ## Beslisregister
 
@@ -658,6 +665,7 @@ aanbeveling richtinggevend maar niet bindend.
 
 | Datum | Besluit | Motivatie |
 | --- | --- | --- |
+| 2026-10-13 | LRN-017 afgerond; EXP-032 volgt in de productplanning. | Het volledige achtlessenpad is actief met eigen voortgang en actieve vervolgsuggesties. LRN-012 blijft een afzonderlijke gebruiksevaluatie; feedback blijft geparkeerd. |
 | 2026-10-12 | LRN-016 afgerond; LRN-017 volgt. | Alle acht wijngaardlessen actief. Oogstoverlap, actuele normscope en wederzijdse stable-ID-links gecontroleerd; integrale route, recap en voortgang volgen nu. |
 | 2026-10-12 | LRN-015 afgerond; LRN-016 is de volgende inhoudelijke batch. | Zes van acht wijngaardlessen actief. De laatste twee vragen expliciete overlapreview rond oogst en actualiteits-/scopereview van teeltnormen; volledige pathpublicatie blijft LRN-017. |
 | 2026-10-12 | LRN-014 afgerond; LRN-015 is de volgende inhoudelijke batch. | Drie complete standalone lessen zijn technisch en redactioneel gereviewd. De vijf resterende lessen en pathintegratie behouden eigen tickets; geen nieuwe generieke platformafhankelijkheid. |

@@ -21,7 +21,7 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-12.
+Peildatum: 2026-10-13.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
@@ -29,7 +29,7 @@ Peildatum: 2026-10-12.
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 50 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063` |
+| Afgerond | 51 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063`, `MNT-066` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
@@ -37,11 +37,14 @@ taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 (`MNT-049`) en de organisatie van pipeline/model (`MNT-048`) zijn afgerond.
 De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
 Benchmarkbetrouwbaarheid en Nederlandse uitleg zijn in `MNT-063` aangescherpt.
+De reproduceerbare Next-afbeeldingsvastloper is via `MNT-066` hersteld;
+een nieuwe geslaagde GitHub-run blijft onderdeel van `MNT-056`.
 Goedkopere fixture-I/O (`MNT-064`) blijft laag geprioriteerd; representatievere
 meetgevallen (`MNT-065`) volgen vóór grote corpus-/Atlasuitbreidingen, niet vóór lessen.
 Curriculumvoorbereiding (`LRN-013`) en alle acht tweetalige wijngaardlessen
 (`LRN-014–016`) zijn afgerond; DEC-LRN-015 is expliciet goedgekeurd. Volgende werk:
-integrale review en pathpublicatie (`LRN-017`). `EXP-032/026` kunnen onafhankelijk doorgaan, Atlasafbakening
+individuele wijnpagina’s (`EXP-032`), daarna Explore-integratie (`EXP-026`).
+Het volledige wijngaardpad is gepubliceerd via `LRN-017`; Atlasafbakening
 (`MNT-051`) mag als bronverkenning naast lessen lopen. De [feedbackvoorbereiding](feedback-roadmap.md)
 is na de lokale productflow (`FBK-001`) bewust geparkeerd; ook hashes (`FBK-003`)
 en het platformbesluit (`MNT-050`) zijn geen huidige vóórtaken.
@@ -193,6 +196,14 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   vijf high ontwikkelvermeldingen en nul productiemeldingen over. Hercontroledatum
   2026-10-18 blijft staan. Zie [health review](../editorial/health-review-2026-10-07.md).
 
+- **Hercontrole 2026-10-13:** na de gerichte Next-/ESLint-configupgrade naar
+  16.4.0 blijven vijf high ontwikkelvermeldingen en nul productiemeldingen over.
+  npm meldt `braces` 3.0.3 als nieuwste release; de
+  [advisory](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm) noemt nog geen patch.
+  Hercontroledatum 2026-10-18 blijft staan. Lint, build en lokale tests slagen;
+  de extra Linux-controles en hun grenzen staan in de
+  [CI-afbeeldingsreview](../editorial/ci-image-optimizer-review-2026-10-13.md).
+
 ### `MNT-050` — Beslismoment voor backend, API en database
 
 - **Status:** open
@@ -279,16 +290,17 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   rastermigratie de uitleg in gelokaliseerde HTML. Details staan in de
   [lokalisatiereview](../editorial/localization-review-2026-10-06.md).
 
-### `MNT-056` — CI extern activeren en deploymentruntime bevestigen
+### `MNT-056` — Externe CI- en deploymentacceptatie bevestigen
 
 - **Status:** geblokkeerd
 - **Prioriteit:** hoog; afronden zodra de commit is gepusht en toegang werkt
 - **Scope:** GitHub Actions, repositoryrechten/branch protection en Vercel
 - **Categorie:** operations, testing
 - **Herkomst:** afgesplitst van de externe acceptatiestappen van `MNT-047`
-- **Bevinding:** de lokale implementatie is gereed, maar SSH-authenticatie faalt
-  en de beschikbare browser is niet ingelogd op GitHub of Vercel. Een workflow
-  in een lokale commit bewijst nog geen geslaagde Ubuntu-run of mergebescherming.
+- **Bevinding:** de gedeelde GitHub-output bevestigt op 2026-10-13 dat de workflow
+  draait, met vijf falende browsertests. `MNT-066` herstelt een reproduceerbare
+  afbeeldingsvastloper. Een actuele geslaagde Ubuntu-run, mergebescherming en
+  de onderstaande deploymentacceptatie zijn hier nog niet bevestigd.
 - **Klaar wanneer:** de gepushte commit een geslaagde **Quality checks**-run op
   GitHub heeft; repositoryrechten en Actions-instellingen zijn gecontroleerd;
   de passende branch protection/required check is expliciet beoordeeld; en de
@@ -302,6 +314,13 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerd tijdens lokaal ontwikkelwerk.
 - **Log:** 2026-10-04 — SSH en browsertoegang read-only geprobeerd; externe
   controle blijft open. Volg de runbookstappen in README en het runtime-reviewrapport.
+- **Log 2026-10-13:** aangeleverde Actions-output: 172/177 geslaagd. Na `MNT-066`
+  slagen lokaal 190 unit-tests en alle 188 huidige e2e-tests zonder retries;
+  de gerichte Linux-regressie en HTTP-abortproef slagen ook. De extra suite
+  tegen geëmuleerd Linux haalt 180/188 en is geen vervanging voor de externe
+  acceptatie. Commit/push de fix en controleer de nieuwe **Quality checks**-run;
+  bij resterende fouten het trace-archief beoordelen. Zie de
+  [CI-afbeeldingsreview](../editorial/ci-image-optimizer-review-2026-10-13.md).
 
 ### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
 
@@ -406,6 +425,28 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-066` — Vastlopende Next-afbeeldingsaanvragen herstellen
+
+- **Status:** afgerond
+- **Prioriteit:** hoog
+- **Categorie:** engineering, testing
+- **Herkomst:** `QCR-2026-10-13-02`, door gebruiker aangeleverde Actions-output
+- **Bevinding en scope:** Next 16.3.8 kan na een afgebroken koude beeldrequest
+  de gedeelde cachebewerking permanent laten wachten. Volgende requests en
+  testretries voor dezelfde beeldvariant herstellen dit niet.
+- **Klaar wanneer:** de upstreamfix is opgenomen in de vastgepinde runtime;
+  een gerichte regressietest faalt vóór en slaagt na de wijziging; lokale
+  kwaliteitschecks en de volledige browsersuite slagen. Externe acceptatie
+  blijft afzonderlijk bij `MNT-056`.
+- **Log 2026-10-13:** Next en `eslint-config-next` naar 16.4.0; lockfile
+  bijgewerkt en twee cases met echte bestandsstreams toegevoegd. De verbroken
+  verbinding faalt op 16.3.8 en slaagt op 16.4.0 in Linux; vier echte afgebroken
+  WebP-aanvragen worden daarna binnen een seconde succesvol opnieuw bediend.
+  Format/check met 190 tests, productiebuild en alle 188 lokale browsertests
+  zonder retries geslaagd. De aanvullende geëmuleerde Linux-suite is niet
+  volledig groen; details en beperkingen staan in het
+  [reviewrapport](../editorial/ci-image-optimizer-review-2026-10-13.md).
 
 ### `MNT-063` — Benchmarkfouten herstellen en code begrijpelijk uitleggen
 

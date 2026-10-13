@@ -77,7 +77,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Regionale uitbreidingsfase | `docs/region-expansion-roadmap.md` | Beslispoorten, druivenprioriteiten en definitie van gereed vóór verdere regiogroei |
 | Overkoepelende productvolgorde | `docs/product-roadmap.md` | Prioriteiten en beslismomenten tussen platform, Explore, Learn en Atlas; ticketstatus blijft in de eigen backlog |
 | Onderhoudsacties | `docs/maintenance-backlog.md` | Actuele status, uitvoering en historie van concrete vervolgacties |
-| Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus `LRN-*`-tickets voor anonieme Learn en inhoudelijke uitbreiding; [goedgekeurd wijngaardcurriculum, alle acht lessen actief](../editorial/briefs/learning-path.vine-and-vineyard.md) |
+| Learn-productwerk | `docs/learn-product-brief.md` en `docs/learn-roadmap.md` | Goedgekeurd productcontract plus `LRN-*`-tickets voor anonieme Learn en inhoudelijke uitbreiding; [wijngaardcurriculum en volledig leerpad actief](../editorial/briefs/learning-path.vine-and-vineyard.md) |
 | Correcties en suggesties | `docs/feedback-roadmap.md` | Feedbackcontract, `FBK-*`-uitvoeringsslices en `DEC-FBK-*`-gates; [flow en lokale ontwerpproef](feedback-flow.md); bewust geparkeerd na ontwerp, overdracht bovenaan; geen geïntegreerde feedbackfunctie |
 | Conceptuele Explore-basis | `docs/explore-foundation-roadmap.md`, `docs/explore-foundation-coverage.md` en `docs/explore-foundation-authoring.md` | Geordende `EXP-*`-tickets, actuele dekkingsmatrix en bindend authoringcontract voor systeemhubs en gerichte concepts |
 
@@ -178,7 +178,8 @@ Bordeaux is inmiddels een uitgebreide actieve authoringslice; daarnaast groeit
 de wereldwijde conceptuele Explore-basis. Resterende draftbestemmingen worden
 pas actief na eigen onderzoek en review. De gegenereerde
 [`entity-status.md`](entity-status.md) toont de actuele stand. De Learn-pilot
-bevat een werkend leerpad met zeven lessen en lokale browservoortgang.
+is uitgebreid tot twee actieve leerpaden: zeven wijnmaaklessen en acht
+wijngaardlessen, elk met eigen lokale browservoortgang.
 
 ## Welk commando doet wat?
 

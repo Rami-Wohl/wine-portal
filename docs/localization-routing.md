@@ -124,7 +124,7 @@ toekomstige `/api`-routes krijgen geen taalprefix.
 
 ## 5. Implementatiegrens en acceptatie
 
-De geïnstalleerde Next.js 16.3.8-documentatie is getoetst: App Router ondersteunt
+Tijdens `MNT-046` is de Next.js 16.3.8-documentatie getoetst: App Router ondersteunt
 een gedeelde `[lang]`-boom, async routeparams, Proxy en serverdictionaries;
 Metadata en sitemap ondersteunen `alternates.languages`. De beschreven
 headeronderhandeling uit de frameworkgids is bewust geen productkeuze hier.

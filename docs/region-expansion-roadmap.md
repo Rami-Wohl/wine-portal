@@ -48,7 +48,7 @@ feitelijke scope volgt uit onderzoek, niet uit een vooraf gekozen aantal landen.
 ## Learn en backend
 
 Het achtlessencurriculum uit `LRN-013` is goedgekeurd via `DEC-LRN-015`;
-alle acht NL/EN-lessen zijn actief (`LRN-014–016`); integrale pathpublicatie volgt in `LRN-017`.
+alle acht NL/EN-lessen en het volledige wijngaardpad zijn actief (`LRN-014–017`).
 Wijngaardlessen en pathpublicatie via `LRN-014–017` mogen sinds het
 gebruikersbesluit van 2026-10-12 vóór werkelijk pilotgebruik; `LRN-012` blijft
 het afzonderlijke evaluatiebesluit. Atlasafbakening via `MNT-051` krijgt een

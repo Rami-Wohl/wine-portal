@@ -40,7 +40,7 @@ for (const viewport of [
         name: "Van druif naar stille wijn — hoe wijn wordt gemaakt",
       }),
     ).toBeVisible();
-    const pathLink = page.getByRole("link", { name: /Bekijk het leerpad/ });
+    const pathLink = page.locator('.learning-path-card a[href="/learn/from-grape-to-still-wine"]');
     await pathLink.focus();
     await expect(pathLink).toBeFocused();
     await pathLink.click();
@@ -246,8 +246,10 @@ test("published Learn pages keep a coherent document structure", async ({ page }
   for (const route of [
     "/learn",
     "/learn/from-grape-to-still-wine",
+    "/learn/vine-and-vineyard",
     ...lessonRoutes,
     "/learn/from-grape-to-still-wine/complete",
+    "/learn/vine-and-vineyard/complete",
   ]) {
     await page.goto(route);
 
@@ -350,8 +352,10 @@ test("the Learn flow reflows at a 200 percent zoom-equivalent width", async ({ p
   for (const route of [
     "/learn",
     "/learn/from-grape-to-still-wine",
+    "/learn/vine-and-vineyard",
     lessonRoutes[0],
     "/learn/from-grape-to-still-wine/complete",
+    "/learn/vine-and-vineyard/complete",
   ]) {
     await page.goto(route);
     expect(
@@ -367,8 +371,11 @@ test("the complete Learn journey has no horizontal overflow at release breakpoin
   const routes = [
     "/learn",
     "/learn/from-grape-to-still-wine",
+    "/learn/vine-and-vineyard",
+    "/verdiepingen/lessons/vineyard-systems-and-adaptation?path=vine-and-vineyard",
     ...lessonRoutes,
     "/learn/from-grape-to-still-wine/complete",
+    "/learn/vine-and-vineyard/complete",
   ];
 
   for (const width of [375, 768, 1024, 1440]) {
