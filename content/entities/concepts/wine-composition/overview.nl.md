@@ -33,14 +33,16 @@ De fenolen vormen een brede familie: tanninen en rode druifkleurstoffen, de anth
 **Glycerol** is een andere alcohol dan ethanol en ontstaat eveneens bij gistingsactiviteit. Een glycerolgehalte alleen verklaart de textuur van een wijn niet; ethanol, fenolen en grotere moleculen horen ook bij dat vraagstuk. [@source.uc-davis-wine-glycerol]
 :::
 
-:::section{#werking depth="foundation" source_refs="source.oiv-alcoholic-fermentation source.uc-davis-wine-glycerol source.uc-davis-wine-pyrazines source.uc-davis-volatile-thiols source.awri-mlf-style-2020 source.awri-lees-contact-2020 source.awri-acidity-ph source.awri-sulfur-dioxide"}
+:::section{#werking depth="foundation" source_refs="source.oiv-alcoholic-fermentation source.uc-davis-wine-glycerol source.uc-davis-wine-pyrazines source.uc-davis-volatile-thiols source.awri-mlf-style-2020 source.awri-lees-contact-2020 source.awri-acidity-ph source.awri-sulfur-dioxide source.wset-aroma-origins-2016"}
 ## Werking — meenemen, omzetten en verder veranderen
 
 **De druif levert een vertrekpunt.** Sap bevat water, suiker en zuren; vaste delen leveren onder meer fenolen en aromatisch materiaal. [[concept.berry-development-ripeness|Besontwikkeling en rijpheid]] helpen begrijpen waarom die voorraad bij de oogst verschilt. Methoxypyrazinen zijn een voorbeeld van geurstoffen die al in de druif aanwezig kunnen zijn. Veel belangrijke Sauvignonthiolen worden daarentegen tijdens de vergisting uit voorlopers vrijgemaakt. [@source.uc-davis-wine-pyrazines] [@source.uc-davis-volatile-thiols]
 
 **Micro-organismen veranderen de voorraad.** Gist zet suiker om in ethanol en CO₂ en vormt daarnaast onder meer glycerol. [@source.oiv-alcoholic-fermentation] [@source.uc-davis-wine-glycerol] Bij [[concept.malolactic-fermentation|malolactische omzetting]] wordt het zuurprofiel verder veranderd. Dat is een ander proces dan de alcoholische vergisting. [@source.awri-mlf-style-2020]
 
-**De kelderroute blijft invloed houden.** Extractie, [[concept.lees-ageing|contact met de lies]], mengen en andere behandelingen veranderen welke stoffen en vormen aanwezig blijven. Bij liescontact kunnen bestanddelen van gistcellen aan de wijn worden afgegeven. [@source.awri-lees-contact-2020] De wijn is daarmee meer dan een verdund of geconcentreerd beeld van de druif.
+**De kelderroute blijft invloed houden.** Extractie, [[concept.lees-ageing|contact met de lies]], [[concept.assemblage|mengen]] en andere behandelingen veranderen welke stoffen en vormen aanwezig blijven. Bij liescontact kunnen bestanddelen van gistcellen aan de wijn worden afgegeven. [@source.awri-lees-contact-2020] De wijn is daarmee meer dan een verdund of geconcentreerd beeld van de druif.
+
+Bij proeven worden aroma’s vaak als **primair, secundair of tertiair** beschreven. In de WSET-indeling horen druif én alcoholische vergisting bij primair; verdere wijnbereiding bij secundair; rijpingsontwikkeling bij tertiair. Deze woorden helpen de vermoedelijke oorsprong bespreken, maar vervangen geen chemische analyse. [@source.wset-aroma-origins-2016; p. 2]
 :::
 
 :::detail{#vrij-en-gebonden parent="werking" depth="intermediate" source_refs="source.awri-sulfur-dioxide source.awri-acidity-ph"}
@@ -49,6 +51,20 @@ De fenolen vormen een brede familie: tanninen en rode druifkleurstoffen, de anth
 Een totaalgehalte vertelt niet altijd hoeveel van een stof op een bepaald moment werkzaam is. [[concept.sulfur-dioxide|Zwaveldioxide]] bestaat in vrije en gebonden vormen. Binnen de vrije fractie hangt het aandeel van de antimicrobieel belangrijke moleculaire vorm samen met de pH. Hetzelfde totale SO₂-gehalte kan daarom een andere beschermingssituatie betekenen. [@source.awri-sulfur-dioxide]
 
 pH beschrijft de zuurgraad van de chemische omgeving; titreerbaar zuur beschrijft de hoeveelheid zuur die met een bepaalde titratie wordt gemeten. De verhouding tussen zuren en zouten doet ertoe. Samen meten geeft meer inzicht dan één van beide cijfers als vervanging voor het andere gebruiken. [@source.awri-acidity-ph]
+:::
+
+:::detail{#aroma-oorsprong parent="werking" depth="intermediate" source_refs="source.wset-aroma-origins-2016 source.uc-davis-volatile-thiols"}
+### Aroma-oorsprong — primair, secundair en tertiair
+
+De WSET-proefindeling groepeert aroma’s naar hun relatie met druif, wijnbereiding en rijping:
+
+- **Primair:** druif en alcoholische vergisting. Denk aan druifstoffen, vrijgekomen aromavoorlopers en door gist gevormde aroma’s.
+- **Secundair:** wijnbereiding na alcoholische vergisting. Lies en [[concept.autolysis|autolyse]], malolactische omzetting en eikenhout kunnen bijdragen.
+- **Tertiair:** ontwikkeling tijdens rijping. Denk aan verandering van fruitkarakter, oxidatieve ontwikkeling en flesrijping.
+
+Dit is een proefkader, geen opdeling in drie afgesloten chemische fasen. Zo kunnen aromavoorlopers uit de druif pas tijdens vergisting worden vrijgemaakt. En een houtaroma kan naast primair fruit aanwezig zijn terwijl de wijn verder rijpt. [@source.wset-aroma-origins-2016; p. 2] [@source.uc-davis-volatile-thiols]
+
+Voor de kelderkeuze hoort hout bij [[concept.elevage|opvoeding en vatkeuze]]. Voor wat je ruikt en hoe de wijn verder verandert, ga je naar [[concept.wine-perception-and-development|waarneming en wijnontwikkeling]].
 :::
 
 :::figure{#druif-gisting-en-rijping depth="foundation" media_id="media.concept.wine-composition.grape-fermentation-and-ageing" source_refs="source.oiv-alcoholic-fermentation source.awri-lees-contact-2020"}
@@ -72,7 +88,7 @@ Polysachariden kunnen samenwerken met tanninen, eiwitten en andere deeltjes. Hun
 :::section{#keuzes-en-afwegingen depth="foundation" source_refs="source.awri-fermentation-temperature source.awri-lees-contact-2020 source.awri-heat-stability"}
 ## Keuzes en afwegingen — één ingreep raakt meerdere onderdelen
 
-De oogst kiest de grondstof; persen en schilcontact bepalen mede welke delen daarvan de wijn bereiken. Tijdens vergisting verandert niet alleen de suiker. Temperatuur beïnvloedt ook gistactiviteit en de overdracht van kleur- en tanninestoffen in rode wijn. De gedetailleerde keuzes horen bij vergisting en extractie. [@source.awri-fermentation-temperature]
+De oogst kiest de grondstof; [[concept.pressing|persen]] en schilcontact bepalen mede welke delen daarvan de wijn bereiken. Tijdens vergisting verandert niet alleen de suiker. Temperatuur beïnvloedt ook gistactiviteit en de overdracht van kleur- en tanninestoffen in rode wijn. De gedetailleerde keuzes horen bij vergisting en extractie. [@source.awri-fermentation-temperature]
 
 Liescontact kan grotere moleculen vrijmaken en tegelijk andere interacties in de wijn veranderen. De maker beoordeelt daarom de ontwikkeling van de partij, in plaats van alleen een gewenst stofgehalte na te jagen. [@source.awri-lees-contact-2020]
 
@@ -82,7 +98,7 @@ Vóór botteling komt de vraag of het gekozen mengsel zijn toestand kan behouden
 :::section{#wereldwijde-context depth="foundation" source_refs="source.uc-davis-volatile-thiols source.awri-wine-composition-survey-2021 source.awri-lees-contact-2020"}
 ## Wereldwijde context — dezelfde kaart, andere verhoudingen
 
-**Sauvignon Blanc, onder meer uit Nieuw-Zeeland**, laat de rol van aromavoorlopers en thiolen zien. Deze stoffen komen ook bij andere druivenrassen voor. Het algemene mechanisme behoort dus niet exclusief aan één land of ras. [@source.uc-davis-volatile-thiols]
+**[[grape.sauvignon-blanc|Sauvignon Blanc]], onder meer uit Nieuw-Zeeland**, laat de rol van aromavoorlopers en thiolen zien. Deze stoffen komen ook bij andere druivenrassen voor. Het algemene mechanisme behoort dus niet exclusief aan één land of ras. [@source.uc-davis-volatile-thiols]
 
 Bij [[concept.fortified-wines|versterkte wijnen]] helpen alcoholtoevoeging, overgebleven suiker en rijping ieder een ander onderdeel begrijpen. Bij [[concept.sweet-wines|zoete wijnen]] draait de eerste vraag om de suikerroute; bij [[concept.sparkling-wines|mousserende wijnen]] om de oorsprong en het behoud van CO₂. De familiepagina's verbinden die vragen met concrete wijnen.
 

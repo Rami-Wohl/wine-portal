@@ -25,7 +25,7 @@ These components change at the same time, but not in the same way. Sugar may ris
 
 Juice may be central to white-wine production, whereas skin contact in red, rosé and orange wines has much more influence on which compounds reach the must. That distinction does not arise only in the cellar: skin thickness and condition, pigment content, tannin types and aroma or flavour precursors are already properties of the harvested berry. [[concept.tannin|Tannin]] is not one uniform reserve either; skins and seeds contribute different fractions that become available differently during processing.
 
-Seed colour and texture can provide additional clues, but they are not a universal ripeness meter. Research on Carménère found relationships between seed appearance and aspects of phenolic development without one visible seed class explaining all chemical variation. Tasting, crushing and measurement therefore complement each other. [@source.fredes-carmenere-seed-maturity-2010]
+Seed colour and texture can provide additional clues, but they are not a universal ripeness meter. Research on [[grape.carmenere|Carménère]] found relationships between seed appearance and aspects of phenolic development without one visible seed class explaining all chemical variation. Tasting, crushing and measurement therefore complement each other. [@source.fredes-carmenere-seed-maturity-2010]
 :::
 
 :::section{#werking depth="foundation" source_refs="source.coombe-mccarthy-berry-growth-2000 source.awri-berry-ripening source.sweetman-malate-metabolism-2009"}
@@ -41,7 +41,7 @@ After ripening starts, the berry imports substantial carbon from active leaves t
 
 In coloured cultivars, anthocyanins begin accumulating in the skin around véraison. White cultivars do not produce these purple pigments in the same way, but also soften and become more translucent. Other phenolics may already be present before véraison and continue to change later. [[concept.tannin|Tannin]] development concerns more than quantity: extractability, tissue structure and the balance between skin and seed also matter for winemaking.
 
-“Aromatic ripeness” is not a general molecular switch either. Cultivars build up, break down or transform different aroma-active compounds and odourless precursors. Methoxypyrazines, terpenes, thiol precursors and norisoprenoids each follow different patterns and respond differently to light, temperature, water and time. A central ripeness question for one cultivar may offer little guidance for another. [@source.gouot-grape-secondary-metabolites-2021]
+“Aromatic ripeness” is not a general molecular switch either. Cultivars build up, break down or transform different aroma-active compounds and odourless precursors. [[concept.methoxypyrazines|Methoxypyrazines]], terpenes, thiol precursors and norisoprenoids each follow different patterns and respond differently to light, temperature, water and time. A central ripeness question for one cultivar may offer little guidance for another. [@source.gouot-grape-secondary-metabolites-2021]
 :::
 
 :::detail{#water-en-groei-zijn-geen-eenvoudige-pomp parent="werking" depth="advanced" source_refs="source.dai-grape-berry-water-carbon-fluxes-2010 source.coombe-mccarthy-berry-growth-2000"}

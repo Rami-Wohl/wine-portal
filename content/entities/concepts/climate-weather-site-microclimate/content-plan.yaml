@@ -4,15 +4,18 @@ archetype: concept-system-overview
 coverage:
   - key: identity-and-scope
     disposition: on-page
-    block_ids: [overzicht]
+    block_ids: [overzicht, schaalnamen-zijn-gereedschap, klimaatklassen-en-indices]
     target_ids: [concept.vintage]
     completeness_questions:
-      - Kan de lezer klimaat, weer, jaargang, standplaats en microklimaat uit elkaar houden?
+      - Kan de lezer klimaat, weer, jaargang, standplaats en microklimaat uit
+        elkaar houden?
     layers:
       foundation: [Definieer de tijd- en ruimteschalen in gewone taal.]
-      intermediate:
-        [
-          Laat zien dat grenzen tussen ruimtelijke schaaltermen functioneel en contextafhankelijk zijn.,
+      intermediate: [
+          Laat zien dat grenzen tussen ruimtelijke schaaltermen functioneel en
+          contextafhankelijk zijn.,
+          Onderscheid Köppen-Geiger-klimaatklassen van Winkler- en
+          Huglinindices.,
         ]
       advanced: []
       specialist: []
@@ -20,18 +23,27 @@ coverage:
       general_synthesis:
         topics: [Klimaatnormalen, weer en viticulturele schaal.]
         source_refs: [source.wmo-climatological-normals, source.oiv-climate-variability-2015]
-      specific_claims: []
+      specific_claims:
+        - claim: Köppen-Geiger ordent temperatuur en neerslag; Winkler telt warmte op en
+            Huglin gebruikt ook maxima en daglengte.
+          status: supported
+          source_refs: [source.peel-koppen-geiger-2007, source.oiv-climate-zoning-2012]
     review: { outline: complete, nl: complete, en: complete }
   - key: system-components-and-relationships
     disposition: on-page
     block_ids: [opbouw-en-samenhang]
     target_ids: [concept.grapevine-phenology, concept.vine-as-living-system]
     completeness_questions:
-      - Zijn atmosfeer, standplaats, loofwand en troszone als geneste maar verbonden omgevingen uitgelegd?
-      - Zijn warmte, licht, water, vocht en wind als samenwerkende drivers aanwezig?
+      - Zijn atmosfeer, standplaats, loofwand en troszone als geneste maar
+        verbonden omgevingen uitgelegd?
+      - Zijn warmte, licht, water, vocht en wind als samenwerkende drivers
+        aanwezig?
     layers:
       foundation: [Introduceer de vijf drivers en vier geneste schalen.]
-      intermediate: [Leg uit waarom ruimtelijke schaal en meetdoel bij elkaar moeten passen.]
+      intermediate: [
+          Leg uit waarom ruimtelijke schaal en meetdoel bij elkaar moeten
+          passen.,
+        ]
       advanced: []
       specialist: []
     evidence:
@@ -49,7 +61,8 @@ coverage:
     block_ids: [werking]
     target_ids: [concept.vine-as-living-system, concept.berry-development-ripeness]
     completeness_questions:
-      - Is per driver een begrijpelijke route naar plant en bes beschreven zonder directe smaakoorsprong te suggereren?
+      - Is per driver een begrijpelijke route naar plant en bes beschreven
+        zonder directe smaakoorsprong te suggereren?
       - Worden interacties en timing belangrijker gemaakt dan losse gemiddelden?
     layers:
       foundation: [Verbind iedere driver aan hoofdroutes in plant, blad en tros.]
@@ -72,8 +85,10 @@ coverage:
     block_ids: [omstandigheden-en-variatie]
     target_ids: [concept.terroir]
     completeness_questions:
-      - Zijn hoogte, helling, expositie, koude-luchtafvoer, beschutting en waterlichamen mondiaal correct begrensd?
-      - Is het microklimaat van loofwand en tros als veranderlijke uitkomst behandeld?
+      - Zijn hoogte, helling, expositie, koude-luchtafvoer, beschutting en
+        waterlichamen mondiaal correct begrensd?
+      - Is het microklimaat van loofwand en tros als veranderlijke uitkomst
+        behandeld?
     layers:
       foundation: [Laat zien waarom één regionaal klimaat meerdere standplaatsen bevat.]
       intermediate: [Werk topografie, water en loofwand uit met hemisfeer- en contextnuance.]
@@ -94,7 +109,8 @@ coverage:
     block_ids: [keuzes-en-afwegingen]
     target_ids: []
     completeness_questions:
-      - Is duidelijk wat al bij standplaatskeuze wordt vastgelegd en wat later via inrichting, monitoring en loofwand kan worden gestuurd?
+      - Is duidelijk wat al bij standplaatskeuze wordt vastgelegd en wat later
+        via inrichting, monitoring en loofwand kan worden gestuurd?
     layers:
       foundation: [Koppel standplaats en waarneming aan risico en timing.]
       intermediate:
@@ -116,12 +132,13 @@ coverage:
     block_ids: [wereldwijde-context]
     target_ids: []
     completeness_questions:
-      - Bevat de pagina maritiem/continentaal, hoog/laag, droog/vochtig en beide hemisferen zonder één ideaal klimaat?
+      - Bevat de pagina maritiem/continentaal, hoog/laag, droog/vochtig en beide
+        hemisferen zonder één ideaal klimaat?
     layers:
       foundation: [Gebruik wereldwijde contrasten als verklarende assen.]
-      intermediate:
-        [
-          Laat zien dat tropische en subtropische cycli niet altijd in het gematigde kalenderbeeld passen.,
+      intermediate: [
+          Laat zien dat tropische en subtropische cycli niet altijd in het
+          gematigde kalenderbeeld passen.,
         ]
       advanced: []
       specialist: []
@@ -136,8 +153,10 @@ coverage:
     block_ids: [meten-en-modelleren]
     target_ids: []
     completeness_questions:
-      - Begrijpt de lezer dat sensorplaatsing, resolutie, periode en indexdefinitie de uitkomst bepalen?
-      - Is klimaatverandering onderscheiden van afzonderlijk weer en is attributie zorgvuldig begrensd?
+      - Begrijpt de lezer dat sensorplaatsing, resolutie, periode en
+        indexdefinitie de uitkomst bepalen?
+      - Is klimaatverandering onderscheiden van afzonderlijk weer en is
+        attributie zorgvuldig begrensd?
     layers:
       foundation: []
       intermediate: [Vergelijk station, logger en ruimtelijk model; verklaar referentieperioden.]
@@ -153,7 +172,8 @@ coverage:
             source.ipcc-ar6-wgi-chapter-11,
           ]
       specific_claims:
-        - claim: Lucht in een loofwand kan systematisch andere minima en maxima hebben dan een nabij standaardweerstation.
+        - claim: Lucht in een loofwand kan systematisch andere minima en maxima hebben dan
+            een nabij standaardweerstation.
           status: supported
           source_refs: [source.pena-vineyard-canopy-temperature-2020]
     review: { outline: complete, nl: complete, en: complete }
@@ -162,7 +182,8 @@ coverage:
     block_ids: [betekenis-voor-wijn]
     target_ids: [concept.vintage, concept.terroir]
     completeness_questions:
-      - Leert de lezer klimaat- en standplaatsclaims als causale context lezen zonder smaak of kwaliteit rechtstreeks uit het landschap af te leiden?
+      - Leert de lezer klimaat- en standplaatsclaims als causale context lezen
+        zonder smaak of kwaliteit rechtstreeks uit het landschap af te leiden?
     layers:
       foundation: [Geef een praktisch leesraam voor regio, jaargang en perceel.]
       intermediate: [Vraag bij claims altijd om schaal, periode, route en beheerscontext.]

@@ -77,7 +77,7 @@ Na droging zijn de bessen taai, suikerhoudend en saparm. Persen vraagt tijd en l
 :::detail{#balans-en-stabiliteit parent="selectie-en-risico" depth="intermediate" source_refs="source.sanmartin-postharvest-water-loss-2021"}
 ### Concentratie versterkt ook zwakke plekken
 
-Zuur en fenolische structuur kunnen rijkdom dragen, maar een al laag zuur wordt niet vanzelf verfrist door droging. Oxidatie, ongewenste micro-organismen en vluchtig zuur vragen eveneens aandacht. Bij zoete wijn moet de producent voorkomen dat resterende gist later opnieuw begint te vergisten.
+Zuur en fenolische structuur kunnen rijkdom dragen, maar een al laag zuur wordt niet vanzelf verfrist door droging. Oxidatie, ongewenste micro-organismen en vluchtig zuur vragen eveneens aandacht. Bij [[concept.sweet-wines|zoete wijn]] moet de producent voorkomen dat resterende gist later opnieuw begint te vergisten.
 
 De kelder kan dus richting geven met persing, temperatuur, vergisting en [[concept.elevage|opvoeding]], maar niet iedere onbalans uit het fruit herstellen.
 :::
@@ -101,7 +101,7 @@ Voor [[appellation.amarone-della-valpolicella|Amarone della Valpolicella]] droge
 :::detail{#geen-wereldwijd-recept parent="wijntradities" depth="intermediate" source_refs="source.inao-cotes-du-jura-vin-de-paille source.valpolicella-consortium-amarone-appassimento"}
 ### Een familiegelijkenis, geen wereldwijd recept
 
-Strowijn, passito, appassimento en aan de stok ingedroogde laatgeoogste wijn delen waterverlies, maar niet noodzakelijk druiven, klimaat, droogplaats, duur, zoetheid of opvoeding. Sommige stijlen zoeken parfum en restsuiker; andere kleur, alcohol en structuur.
+Strowijn, [[concept.passito|passito]], appassimento en aan de stok ingedroogde laatgeoogste wijn delen waterverlies, maar niet noodzakelijk druiven, klimaat, droogplaats, duur, zoetheid of opvoeding. Sommige stijlen zoeken parfum en restsuiker; andere kleur, alcohol en structuur.
 
 De procesfamilie helpt vergelijken. De herkomstentity blijft nodig om te begrijpen welke variant werkelijk in de fles zit.
 :::

@@ -44,13 +44,13 @@ Bij het bottelen worden gist en suiker toegevoegd voor de [[concept.second-ferme
 :::section{#appellationregels depth="foundation" source_refs="source.champagne-region source.champagne-maturation-on-lees source.champagne-bottling-second-fermentation"}
 ## Appellationregels
 
-De beschermde herkomst combineert een afgebakend gebied met voorwaarden voor druiven en productie, waaronder de tweede gisting in de fles. Voor Champagne zonder oogstjaar geldt minimaal vijftien maanden kelderrijping; voor een millésimé, Champagne van één oogstjaar, minimaal drie jaar. Producenten kunnen langer rijpen. Deze minima zijn een vertrekpunt voor het begrijpen van de wijn, geen exacte voorspelling van zijn smaak. [@source.champagne-region] [@source.champagne-bottling-second-fermentation] [@source.champagne-maturation-on-lees]
+De beschermde herkomst combineert een afgebakend gebied met voorwaarden voor druiven en productie, waaronder de tweede gisting in de fles. Voor Champagne zonder [[concept.vintage|oogstjaar]] geldt minimaal vijftien maanden kelderrijping; voor een millésimé, Champagne van één oogstjaar, minimaal drie jaar. Producenten kunnen langer rijpen. Deze minima zijn een vertrekpunt voor het begrijpen van de wijn, geen exacte voorspelling van zijn smaak. [@source.champagne-region] [@source.champagne-bottling-second-fermentation] [@source.champagne-maturation-on-lees]
 :::
 
 :::section{#classificatie-en-producenten depth="foundation" source_refs="source.champagne-label-faq"}
 ## Classificatie en producenten
 
-Een **cru** is in Champagne een wijnbouwgemeente. Grand cru en premier cru verwijzen naar herkomst uit daarvoor aangewezen gemeenten. De termen geven een ander soort informatie dan de naam van een producent of een afzonderlijke cuvée. [@source.champagne-label-faq]
+Een **cru** is in Champagne een wijnbouwgemeente. Grand cru en premier cru verwijzen naar herkomst uit daarvoor aangewezen gemeenten. De termen geven een ander soort informatie dan de naam van een producent of een afzonderlijke [[concept.cuvee|cuvée]]. [@source.champagne-label-faq]
 
 Op het etiket kunnen beroepscodes staan. **RM**, récoltant-manipulant, duidt een wijnbouwer aan die Champagne onder eigen naam maakt van eigen druiven. **NM**, négociant-manipulant, kan naast eventuele eigen druiven ook druiven, most of wijn aankopen. Coöperaties spelen eveneens een rol in de productie. Die bedrijfsvormen vertellen hoe een onderneming werkt; de stijl moet je per wijn beoordelen. [@source.champagne-label-faq]
 :::

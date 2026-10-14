@@ -31,7 +31,7 @@ Possible outcomes include fuller mouthfeel, different integration of fruit and o
 
 Mannoproteins are large molecules from yeast cell walls. Alongside polysaccharides, amino acids, fatty acids and other components, they may enter wine during lees contact. They are studied for effects on mouthfeel, stability and interactions with aromas and phenolics. [@source.awri-lees-contact-2020]
 
-That mechanism does not justify a simple formula in which more lees means more body. Release is slow and depends on yeast, time, temperature, movement and wine composition. [[concept.malolactic-fermentation|Malolactic fermentation]], wood and oxygen may also alter texture at the same time.
+That mechanism does not justify a simple formula in which more lees means more body. Release is slow and depends on yeast, time, temperature, movement and [[concept.wine-composition|wine composition]]. [[concept.malolactic-fermentation|Malolactic fermentation]], wood and oxygen may also alter texture at the same time.
 :::
 
 :::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
@@ -56,7 +56,7 @@ The answer is not simply stirring more or less often. The amount of solids, vess
 :::section{#toepassingen depth="foundation" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
 ## Applications — bottle, barrel and tank each create different contact
 
-**In bottle**, lees ageing belongs to sparkling wine made by the [[concept.traditional-method|traditional method]]. After second fermentation, the wine remains with its yeast deposit until riddling and [[concept.disgorgement|disgorgement]]. In Champagne, this legally bounded phase lasts long enough for autolysis to play a substantial part; other traditionally made sparkling wines follow the same main logic under their own maturation rules. [@source.champagne-maturation-on-lees]
+**In bottle**, lees ageing belongs to [[concept.sparkling-wines|sparkling wine]] made by the [[concept.traditional-method|traditional method]]. After [[concept.second-fermentation|second fermentation]], the wine remains with its yeast deposit until [[concept.remuage|riddling]] and [[concept.disgorgement|disgorgement]]. In [[appellation.champagne|Champagne]], this legally bounded phase lasts long enough for autolysis to play a substantial part; other traditionally made sparkling wines follow the same main logic under their own maturation rules. [@source.champagne-maturation-on-lees]
 
 **In wooden barrel**, the technique is common in dry white wine, with barrel-fermented Chardonnay a familiar but not exclusive example. Wine may rest quietly on fine lees or be stirred periodically. Lees, wood, oxygen and any malolactic fermentation then develop together. [@source.awri-lees-contact-2020]
 

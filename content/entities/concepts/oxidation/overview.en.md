@@ -30,7 +30,7 @@ Some wine styles deliberately seek nutty, savoury or dried-fruit character throu
 :::detail{#chemie parent="keuze-of-fout" depth="advanced" source_refs="source.awri-wine-faults source.wine-australia-oxygen-style"}
 ### Time, dose and protection interact
 
-Oxygen reacts through a network of wine compounds; aldehydes can form and aromas can be lost. Winemakers manage the process through vessel choice, racking, measured oxygen supply, sulfur dioxide, bottling and closures. ‘No oxygen’ is therefore not a useful universal ideal: control suited to the wine is what matters. [@source.awri-wine-faults] [@source.wine-australia-oxygen-style]
+Oxygen reacts through a network of wine compounds; aldehydes can form and aromas can be lost. Winemakers manage the process through vessel choice, racking, measured oxygen supply, [[concept.sulfur-dioxide|sulfur dioxide]], bottling and closures. ‘No oxygen’ is therefore not a useful universal ideal: control suited to the wine is what matters. [@source.awri-wine-faults] [@source.wine-australia-oxygen-style]
 :::
 
 :::key-idea{#kern depth="foundation"}

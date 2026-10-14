@@ -28,7 +28,7 @@ Bij veel rode wijnen is volledige omzetting gebruikelijk voor een zachtere zuuri
 :::section{#lies-en-autolyse depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Fijne lies en geleidelijke gistafbraak
 
-Bij [[concept.lees-ageing|liesrijping]] blijft wijn bij fijne lies. Gistcellen veranderen na verloop van tijd en celbestanddelen kunnen in de wijn vrijkomen. Die geleidelijke afbraak heet [[concept.autolysis|autolyse]]. Contactduur, temperatuur, vat, wijnsamenstelling en toestand van de lies bepalen hoe merkbaar het effect wordt.
+Bij [[concept.lees-ageing|liesrijping]] blijft wijn bij fijne lies. Gistcellen veranderen na verloop van tijd en celbestanddelen kunnen in de wijn vrijkomen. Die geleidelijke afbraak heet [[concept.autolysis|autolyse]]. Contactduur, temperatuur, vat, [[concept.wine-composition|wijnsamenstelling]] en toestand van de lies bepalen hoe merkbaar het effect wordt.
 
 Liescontact kan bijdragen aan textuur en ontwikkeling en kan in sommige omstandigheden invloed hebben op zuurstofreacties. Het vraagt tegelijk proeven, ruiken en microbiologische aandacht: afsluitende of zwavelige aroma's zijn signalen om de aanpak opnieuw te beoordelen. [@source.awri-lees-contact-2020]
 :::

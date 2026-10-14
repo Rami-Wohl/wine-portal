@@ -6,12 +6,13 @@ coverage:
     disposition: on-page
     block_ids:
       - overzicht
-    target_ids: []
+    target_ids: [concept.sparkling-wines, concept.sweet-wines, concept.fortified-wines]
     completeness_questions:
       - Welke route verbindt druif, schilcontact en persen?
     layers:
       foundation:
         - Welke route verbindt druif, schilcontact en persen?
+        - Stille wijn onderscheiden van droogheid en van absolute afwezigheid van opgelost CO₂.
       intermediate: []
       advanced: []
       specialist: []
@@ -24,7 +25,9 @@ coverage:
           - source.oiv-pressing
           - source.awri-amber-wine
           - source.ifv-rose-production
-      specific_claims: []
+      specific_claims:
+        [{ claim: "Stille wijn kan opgelost CO₂ bevatten; bruis, zoetheid en alcoholtoevoeging zijn
+              verschillende dimensies.", status: supported, source_refs: [source.wset-tasting-guide-2018, source.awri-gas-adjustment] }]
     review:
       outline: complete
       nl: complete
@@ -183,9 +186,9 @@ coverage:
         source_refs:
           - source.awri-extended-maceration-2019
       specific_claims:
-        - claim: OIV I.4.9 vereist uitsluitend witte druiven en minimaal één maand
-            maceratie binnen die specifieke categorie; dit is geen universele
-            minimumduur voor iedere stijlterm orange.
+        - claim:
+            OIV I.4.9 vereist uitsluitend witte druiven en minimaal één maand maceratie binnen die
+            specifieke categorie; dit is geen universele minimumduur voor iedere stijlterm orange.
           status: supported
           source_refs:
             - source.oiv-white-wine-maceration
@@ -299,6 +302,38 @@ entity_dependencies:
     slugs:
       nl: chardonnay
       en: chardonnay
+    disposition: link
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link
+  - id: concept.sparkling-wines
+    names:
+      nl: Mousserende wijnen
+      en: Sparkling wines
+    slugs:
+      nl: mousserende-wijnen
+      en: sparkling-wines
+    disposition: link
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
     disposition: link
 review:
   outline: complete

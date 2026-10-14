@@ -2,7 +2,7 @@
 Een wijnstok groeit tegelijk in meerdere omgevingen. Hij staat in het klimaat van een streek, beleeft het weer van dit seizoen, wortelt op een specifieke standplaats en draagt bladeren en trossen met een eigen microklimaat. Die schalen zijn met elkaar verbonden, maar niet uitwisselbaar. **Klimaat, weer, standplaats en microklimaat** leert je daarom niet één etiket op een wijngaard plakken, maar volgen hoe warmte, licht, water, vocht en wind de plant werkelijk bereiken. [@source.wmo-climatological-normals] [@source.oiv-climate-variability-2015]
 :::
 
-:::section{#overzicht depth="foundation" source_refs="source.wmo-climatological-normals source.oiv-climate-variability-2015"}
+:::section{#overzicht depth="foundation" source_refs="source.wmo-climatological-normals source.oiv-climate-variability-2015 source.peel-koppen-geiger-2007"}
 ## Overzicht
 
 **Weer** is de toestand en opeenvolging van de atmosfeer op korte termijn: een warme middag, drie natte weken, nachtvorst of een windrijke bloeiperiode. **Klimaat** beschrijft de verdeling van zulke omstandigheden over een lange reeks jaren. Het gaat niet alleen om gemiddelden, maar ook om seizoensritme, spreiding en de kans op extremen. Een klimaatnormaal gebruikt daarvoor volgens de WMO een vaste periode van dertig jaar, zodat plaatsen en perioden op een herkenbare basis kunnen worden vergeleken. [@source.wmo-climatological-normals]
@@ -10,6 +10,8 @@ Een wijnstok groeit tegelijk in meerdere omgevingen. Hij staat in het klimaat va
 Een [[concept.vintage|jaargang]] is vervolgens geen synoniem voor weer of klimaat. Hij is de uitkomst van één [[concept.grapevine-phenology|groeicyclus]] waarin het weer binnen een langer klimaatpatroon op een bepaald ras, perceel en teeltsysteem inwerkt. **Standplaats** voegt de concrete ligging toe: hoogte, helling, expositie, vorm van het terrein, nabij water, beschutting en de ruimtelijke relatie met de omgeving. **Microklimaat** zoomt nog verder in op de omstandigheden rond een rij, blad, bloem of tros.
 
 Deze woorden hebben dus ieder een andere vraag. Klimaat helpt verwachtingen over jaren formuleren; weer verklaart wat zich op een bepaald moment voordoet; standplaats verklaart waarom nabijgelegen percelen andere omstandigheden kunnen krijgen; microklimaat beschrijft wat het plantenweefsel zelf ervaart.
+
+Klimaatclassificaties ordenen zulke patronen. Köppen-Geiger groepeert klimaten op basis van temperatuur en neerslag; wijnbouwindices vatten juist geselecteerde omstandigheden van het groeiseizoen samen. Een klimaatklasse en een warmte-index vertellen dus verschillende dingen. [@source.peel-koppen-geiger-2007] [@source.oiv-climate-variability-2015]
 :::
 
 :::detail{#schaalnamen-zijn-gereedschap parent="overzicht" depth="intermediate" source_refs="source.sturman-high-resolution-vineyard-climate-2017 source.oiv-climate-variability-2015"}
@@ -18,6 +20,16 @@ Deze woorden hebben dus ieder een andere vraag. Klimaat helpt verwachtingen over
 In wijnliteratuur verschijnen termen als macroklimaat, mesoklimaat, topoklimaat en microklimaat. Ze helpen van regio naar perceel en tros in te zoomen, maar auteurs trekken de grenzen niet altijd op precies dezelfde plaats. Een “mesoklimaat” kan een wijnstreek, vallei of afzonderlijke wijngaard bedoelen; “microklimaat” kan slaan op een perceel, een loofwand of enkele centimeters rond een bes.
 
 Daarom is de schaal zelf belangrijker dan het woord. Vraag steeds: over welk oppervlak, welke hoogte, welke periode en welk plantdeel gaat de waarneming? Atmosferische modellen met een raster van kilometers kunnen regionale patronen tonen, terwijl lokale topografie en loofwanden variatie op tientallen meters of centimeters veroorzaken. [@source.sturman-high-resolution-vineyard-climate-2017]
+:::
+
+:::detail{#klimaatklassen-en-indices parent="overzicht" depth="intermediate" source_refs="source.peel-koppen-geiger-2007 source.oiv-climate-zoning-2012 source.oiv-climate-variability-2015"}
+### Klimaatklassen en wijnbouwindices
+
+Woorden als oceanisch, continentaal en mediterraan geven een eerste oriëntatie op brede klimaatpatronen. Voor een meetbare vergelijking moet je weten welke indeling wordt gebruikt. **Köppen-Geiger** gebruikt maandelijkse temperatuur- en neerslaggegevens om klimaatklassen af te bakenen, met criteria voor onder meer seizoensdroogte. Die indeling is geen ranglijst van wijnkwaliteit. [@source.peel-koppen-geiger-2007; §2 en tabel 1]
+
+**Wijnbouwindices** stellen een gerichtere vraag. De Winkler-index telt warmte boven een basiswaarde op over een afgesproken groeiseizoen; de Huglin-index gebruikt daarnaast dagelijkse maximumtemperaturen en een correctie voor daglengte. Zulke indices helpen thermische omstandigheden vergelijken, maar beschrijven niet de hele waterbalans, vorstkans of het microklimaat van een tros. De gebruikte periode en meetmethode horen daarom bij het getal. [@source.oiv-climate-zoning-2012; pp. 12–14] [@source.oiv-climate-variability-2015; pp. 4–5]
+
+Een klimaatklasse helpt dus een breed patroon plaatsen. Een index vat bepaalde meetgegevens samen. Voor de concrete wijngaard blijft de stap naar standplaats, seizoen en plant nodig.
 :::
 
 :::section{#opbouw-en-samenhang depth="foundation" source_refs="source.oiv-climate-variability-2015 source.sturman-high-resolution-vineyard-climate-2017"}

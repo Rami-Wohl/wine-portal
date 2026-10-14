@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.bivb-burgundy-aoc-levels source.champagne-cru-faq source.gcc1855-classification-overview"}
-**Cru** is one of those wine words that sounds familiar yet acquires meaning only once you know where you are. In Bordeaux it may refer to a wine estate, in Burgundy to a closely delimited origin within the appellation structure, and in Champagne to a wine-growing commune. *Cru* by itself is therefore not a universal seal of quality.
+**Cru** is one of those wine words that sounds familiar yet acquires meaning only once you know where you are. In Bordeaux it may refer to a wine estate, in Burgundy to a closely delimited origin within the appellation structure, and in [[appellation.champagne|Champagne]] to a wine-growing commune. *Cru* by itself is therefore not a universal seal of quality.
 
 Always read the complete phrase: *grand cru*, *premier cru*, *cru classé* and *cru bourgeois* do not belong to one worldwide ladder. Each region and system asks its own question—about place, producer, origin or rank.
 :::

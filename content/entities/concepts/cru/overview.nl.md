@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.bivb-burgundy-aoc-levels source.champagne-cru-faq source.gcc1855-classification-overview"}
-**Cru** is een van die wijnwoorden die vertrouwd klinken en toch pas betekenis krijgen zodra je weet waar je bent. In Bordeaux kan het woord naar een wijndomein verwijzen, in Bourgogne naar een nauw begrensde herkomst binnen de appellationstructuur en in Champagne naar een wijnbouwgemeente. *Cru* alleen is daarom geen universeel kwaliteitszegel.
+**Cru** is een van die wijnwoorden die vertrouwd klinken en toch pas betekenis krijgen zodra je weet waar je bent. In Bordeaux kan het woord naar een wijndomein verwijzen, in Bourgogne naar een nauw begrensde herkomst binnen de appellationstructuur en in [[appellation.champagne|Champagne]] naar een wijnbouwgemeente. *Cru* alleen is daarom geen universeel kwaliteitszegel.
 
 Lees altijd de hele formulering: *grand cru*, *premier cru*, *cru classé* en *cru bourgeois* behoren niet tot één wereldwijde ladder. Iedere streek en ieder systeem stelt zijn eigen vraag — over plaats, producent, herkomst of rang.
 :::

@@ -6,6 +6,8 @@ Owner: `docs/explore-foundation-roadmap.md`
 
 Latest vinification ownership audit: 2026-10-03 (`EXP-016`)
 
+Latest foundation integration: 2026-10-14 (`EXP-026`)
+
 Dit document is de uitvoer van `EXP-001`. Het legt vast wat Oenocademy al bezit,
 waar de conceptuele basis nog gaten heeft en welk toekomstig ticket eigenaar is
 van ieder deel. Het is een planningsmatrix, geen nieuwe feitenbron en geen
@@ -398,6 +400,27 @@ naar de relevante familieowner, zonder extra bovenliggende vergelijkingspagina.
 Individuele wijnnamen volgen gefaseerd in EXP-032, met hergebruik van bestaande
 identities waar de scope overeenkomt.
 
+### Integratiebesluiten EXP-026 — 2026-10-14
+
+De [integratiereview](../editorial/foundation-integration-review-2026-10-14.md)
+beschrijft de rol van alle 68 geselecteerde foundationconcepts, drie appellations
+en vijftien lessen. Alle packages zijn via actieve routes verbonden; NL/EN delen
+blockstructuur, sources, media en entitytargets. De vijf EXP-016-linkverschillen
+zijn bevestigd opgelost; de resterende Cuvée-jaarganglink is gelijkgetrokken.
+
+| Vraag uit de health review | Owner en stabiele bestemming | Uitkomst |
+| --- | --- | --- |
+| Klimaatclassificaties | `concept.climate-weather-site-microclimate#klimaatklassen-en-indices` | Basisoriëntatie en intermediate verschil tussen Köppen-Geiger en wijnbouwindices |
+| Aroma-oorsprong | `concept.wine-composition#aroma-oorsprong` | WSET-indeling expliciet; druif én alcoholische vergisting behoren tot primair |
+| Eikenhout/vaten/toast | `concept.elevage#vatkeuze` en `#maat-leeftijd-en-toast` | Bestaande uitleg; eikenhout/oak in de kop verbetert de vindbaarheid |
+| Stille wijn | `concept.winemaking-routes#overzicht` | Categorie expliciet, los van droogheid en absolute afwezigheid van opgelost CO₂ |
+
+Geen keywordaliases of dunne extra entities. Canonical draftmentions zijn behouden,
+maar publieke inline verwijzingen zijn voorlopig tekst (MNT-068). Voor media zijn
+112 figuregebruiken en 87 unieke records gecontroleerd; de ene SVG binnen deze
+scope blijft onderdeel van MNT-053. Mondiale claimstress is EXP-027; brede
+law/genetics/establishment/harvestdependencies blijven REG-003.
+
 ## 9. Uitvoeringsvolgorde na deze audit
 
 1. `EXP-002` heeft het proportionele authoringcontract voor hubs en satellites,
@@ -460,7 +483,8 @@ identities waar de scope overeenkomt.
 
 De eerste `EXP-032`-batch is op 2026-10-13 gepubliceerd: Port, Sherry en Champagne
 als zelfstandige NL/EN-appellations. De [inventaris](../editorial/briefs/exp-032-wine-inventory.md)
-bewaart identiteit, hergebruik en drie resterende batches. De volgende taak is
-`EXP-026`: integratie van owners, graph, links, media en terminologie. Taalpresentatie
+bewaart identiteit, hergebruik en drie resterende batches. `EXP-026` heeft op
+2026-10-14 de owners, graph, links, media en terminologie geïntegreerd; nu volgt
+Atlasafbakening (`MNT-051`). Taalpresentatie
 (`MNT-046`), pipeline/model (`MNT-048`) en CSS-onderhoud (`MNT-049`) zijn afgerond.
 De [productplanning](product-roadmap.md) bewaakt de afwisseling met platformwerk.

@@ -130,13 +130,16 @@ function renderInline(nodes: ContentInlineNode[], context: RenderContext): React
       case "entity-link": {
         const entity = getEntityById(node.entity_id);
         if (!entity) return null;
+        const label = node.label ?? entity.names[context.locale];
+        // Keep canonical mentions for future publication without sending readers to drafts.
+        if (entity.status !== "active") return <Fragment key={key}>{label}</Fragment>;
         return (
           <Link
             className="content-entity-link"
             href={getEntityPublicHref(entity, context.locale)}
             key={key}
           >
-            {node.label ?? entity.names[context.locale]}
+            {label}
           </Link>
         );
       }

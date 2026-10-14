@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import type { Depth } from "@/content/model";
 
 const STORAGE_KEY = "oenocademy:knowledge-depth";
@@ -63,6 +63,14 @@ export function usePersistedKnowledgeDepth(options: Depth[], fallback: Depth) {
     targetDepth && DEPTH_ORDER.indexOf(targetDepth) > DEPTH_ORDER.indexOf(preferredDepth)
       ? targetDepth
       : preferredDepth;
+
+  useEffect(() => {
+    if (!getHashTargetDepth(hash)) return;
+    // Native hash scrolling can run while hydration still hides this block.
+    // Retry after the depth-controlled content has been revealed.
+    const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    target?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [hash]);
 
   const selectDepth = (depth: Depth) => {
     inMemoryDepth = depth;

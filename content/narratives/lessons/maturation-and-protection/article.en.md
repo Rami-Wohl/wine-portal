@@ -39,7 +39,7 @@ A higher proportion of new oak or longer contact is not an automatic improvement
 :::section{#zuurstof-beheren depth="foundation" source_refs="source.wine-australia-oxygen-style source.awri-wine-faults"}
 ## Allowing and limiting oxygen
 
-Small, controlled amounts of oxygen can support reactions that change colour and tannin structure during maturation. Racking, bâtonnage, vessel material and empty headspace affect exposure. Without control, the same oxygen can encourage accelerated ageing, browning and loss of fresh aroma.
+Small, controlled amounts of oxygen can support reactions that change colour and tannin structure during maturation. Racking, [[concept.batonnage|bâtonnage]], vessel material and empty headspace affect exposure. Without control, the same oxygen can encourage accelerated ageing, browning and loss of fresh aroma.
 
 [[concept.oxidation|Oxidation]] is therefore not simply present or absent. The winemaker decides where contact is useful, keeps vessels properly closed, tops up space created by evaporation and limits air during vulnerable transfers.
 :::
@@ -47,7 +47,7 @@ Small, controlled amounts of oxygen can support reactions that change colour and
 :::section{#so2-en-hygiene depth="foundation" source_refs="source.oiv-sulphiting-wine source.awri-sulfur-dioxide"}
 ## Sulfur dioxide, temperature and hygiene
 
-[[concept.sulfur-dioxide|Sulfur dioxide]] helps protect wine from oxidative reactions and unwanted yeasts and bacteria. The free fraction is chiefly active; pH and wine composition affect how much protection a measured concentration provides. Values are therefore monitored and adjusted to the particular wine. [@source.awri-sulfur-dioxide]
+[[concept.sulfur-dioxide|Sulfur dioxide]] helps protect wine from oxidative reactions and unwanted yeasts and bacteria. The free fraction is chiefly active; pH and [[concept.wine-composition|wine composition]] affect how much protection a measured concentration provides. Values are therefore monitored and adjusted to the particular wine. [@source.awri-sulfur-dioxide]
 
 SO₂ does not operate alone. [[concept.cellar-hygiene-wine-faults|Clean equipment and cellar hygiene]], suitable temperature, full and well-sealed vessels and rapid response to unusual aroma or activity reduce the pressure on any individual protective measure.
 :::

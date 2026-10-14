@@ -21,7 +21,7 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-13.
+Peildatum: 2026-10-14.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
@@ -29,7 +29,7 @@ Peildatum: 2026-10-13.
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 52 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063`, `MNT-066/067` |
+| Afgerond | 54 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063`, `MNT-066–069` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
@@ -44,7 +44,8 @@ Goedkopere fixture-I/O (`MNT-064`) blijft laag geprioriteerd; representatievere
 meetgevallen (`MNT-065`) volgen vóór grote corpus-/Atlasuitbreidingen, niet vóór lessen.
 Curriculumvoorbereiding (`LRN-013`) en alle acht tweetalige wijngaardlessen
 (`LRN-014–016`) zijn afgerond; DEC-LRN-015 is expliciet goedgekeurd. Volgende werk:
-Explore-integratie (`EXP-026`); de eerste Port/Sherry/Champagne-batch van
+Atlasafbakening (`MNT-051`), na de afgeronde Explore-integratie (`EXP-026`);
+de eerste Port/Sherry/Champagne-batch van
 `EXP-032` is geleverd, de resterende catalogus volgt na EXP-028.
 Het volledige wijngaardpad is gepubliceerd via `LRN-017`; Atlasafbakening
 (`MNT-051`) mag als bronverkenning naast lessen lopen. De [feedbackvoorbereiding](feedback-roadmap.md)
@@ -435,6 +436,45 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-069` — Diepe links na hydration op hun passage laten landen
+
+- **Status:** afgerond op 2026-10-14
+- **Prioriteit:** hoog
+- **Scope:** kennisdiepte, directe fragmentlinks, beide talen
+- **Categorie:** product-ux, accessibility, testing
+- **Herkomst:** `QCR-2026-10-14-01`, visuele mobiele controle
+- **Bevinding:** een direct geladen fragment kon een verdiepingsblok correct
+  zichtbaar maken, terwijl de pagina bovenaan bleef. Native hashscrolling liep
+  vóór het onthullen van de inhoud tijdens hydration.
+- **Klaar wanneer:** directe links en herladen hun passage zichtbaar in het
+  scherm plaatsen, ook als de gekozen kennisdiepte eerst lager was.
+- **Log:** de bestaande kennishook herhaalt de scroll naar depth-controlled
+  targets na de fragmentgestuurde render. Handmatige dieptekeuzes veranderen
+  de fragmentwaarde niet en veroorzaken geen nieuwe scroll. Twee NL/EN-
+  browsercases toetsen de daadwerkelijke positie na openen en herladen.
+  De projectcheck (192 unit-tests), productiebuild en volledige suite
+  (205/205 zonder retries) slagen; mobiele en desktopcontrole bevestigen de positie.
+
+
+### `MNT-068` — Inline draftmentions leesbaar houden zonder publieke draftlinks
+
+- **Status:** afgerond op 2026-10-14
+- **Prioriteit:** hoog
+- **Scope:** gedeelde entity-/narrativerenderer, beide talen
+- **Categorie:** product-ux, knowledge-data, testing
+- **Herkomst:** `QCR-2026-10-14-01`, EXP-026-integratie na MNT-067
+- **Bevinding:** broodkruimels en gerelateerde clusters filterden al drafts,
+  maar 64 oudere inline mentions binnen de foundationscope stuurden bezoekers
+  nog naar 24 ongepubliceerde bestemmingen.
+- **Klaar wanneer:** inline links naar niet-actieve entities als leesbare tekst
+  verschijnen, auteurslabels en nadruk behouden blijven, en canonical mentions
+  plus directe noindexreviewroutes intact blijven.
+- **Log:** de gedeelde renderer toetst status vóór linkweergave. Twee NL/EN-unitcases
+  bewaken gelokaliseerde namen, labels, nadruk en actieve links; browsertests
+  toetsen drafttekst en bruikbare vervolgroutes. Bestaande Tokaj-/Amarone-testverwachtingen
+  zijn aangepast. 192 unit-tests, productionbuild en 203 e2e-tests slagen zonder retries.
+
 
 ### `MNT-067` — Draftbestemmingen uit publieke entitynavigatie houden
 

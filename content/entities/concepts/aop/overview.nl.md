@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.inao-aop-overview source.eurlex-wine-pdo-regulation-2026"}
-Een **appellation d’origine protégée**, afgekort **AOP**, beschermt de naam van een product waarvan oorsprong, productie en kenmerkende eigenschappen volgens vastgelegde regels met een afgebakend gebied zijn verbonden. Voor wijn is het de Europese juridische ruggengraat achter namen als Bordeaux, Champagne, Barolo en Rioja.
+Een **appellation d’origine protégée**, afgekort **AOP**, beschermt de naam van een product waarvan oorsprong, productie en kenmerkende eigenschappen volgens vastgelegde regels met een afgebakend gebied zijn verbonden. Voor wijn is het de Europese juridische ruggengraat achter namen als Bordeaux, [[appellation.champagne|Champagne]], Barolo en Rioja.
 
 Een AOP vertelt dus veel meer dan “gemaakt in de buurt van”. Toch is zij geen proefscore: de naam garandeert naleving van een herkomst- en productiedossier, niet dat iedere fles dezelfde stijl heeft of iedere drinker hem even goed vindt.
 :::

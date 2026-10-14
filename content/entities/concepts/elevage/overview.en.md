@@ -46,14 +46,14 @@ Wood can release compounds, while oxygen reactions help change colour and struct
 :::detail{#overlappende-timing parent="werking" depth="intermediate" source_refs="source.awri-mlf-success-2020"}
 ### MLF can begin during the main fermentation
 
-Co-inoculation introduces lactic acid bacteria during alcoholic fermentation; a sequential approach introduces them later. Yeast and bacterial strains, temperature and wine composition influence which approach works. “After fermentation” is therefore a way of organising decisions, not a mandatory starting point for every process. [@source.awri-mlf-success-2020]
+Co-inoculation introduces lactic acid bacteria during alcoholic fermentation; a sequential approach introduces them later. Yeast and bacterial strains, temperature and [[concept.wine-composition|wine composition]] influence which approach works. “After fermentation” is therefore a way of organising decisions, not a mandatory starting point for every process. [@source.awri-mlf-success-2020]
 :::
 
 :::figure{#vatenkelder depth="foundation" media_id="media.concept.elevage.barrels-and-vats"}
 :::
 
 :::section{#vatkeuze depth="foundation" source_refs="source.wset-oak-winemaking source.napa-oak-maturation"}
-## Conditions and variation — tanks, barrels and wood
+## Conditions and variation — tanks, barrels and oak
 
 Stainless steel contributes no oak aroma. Oak can add vanilla, spice and toasted notes; heating the wood during cooperage is called **toasting**. Its contribution depends on wood species, toast, barrel age and residence time, among other factors. Used barrels generally release less oak aroma than new ones. [@source.wset-oak-winemaking] [@source.napa-oak-maturation]
 :::
@@ -91,7 +91,7 @@ New wood contains oxygen within its structure and around joints, and initially a
 
 Red Rioja and white Burgundy show different uses of oak. Napa Valley Vintners describes how producers match wood species, toast and barrel age to their wine. These examples place oak within a stylistic decision made in many places. [@source.wset-oak-winemaking] [@source.napa-oak-maturation]
 
-Champagne shows another contact environment: after the second fermentation, wine matures on yeast in the bottle. [[concept.traditional-method|The traditional method]] connects lees contact with further development in a sealed bottle. That particular production process has its own explanation. [@source.champagne-maturation-on-lees]
+[[appellation.champagne|Champagne]] shows another contact environment: after the second fermentation, wine matures on yeast in the bottle. [[concept.traditional-method|The traditional method]] connects lees contact with further development in a sealed bottle. That particular production process has its own explanation. [@source.champagne-maturation-on-lees]
 :::
 
 :::section{#bewijs-en-grenzen depth="foundation" source_refs="source.wine-australia-oxygen-style"}

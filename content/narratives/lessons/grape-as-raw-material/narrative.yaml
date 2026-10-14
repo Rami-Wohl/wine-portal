@@ -15,6 +15,8 @@ related_entities:
   - concept.tannin
   - concept.vintage
   - concept.botrytis
+  - concept.berry-development-ripeness
+  - concept.vine-as-living-system
 source_refs:
   - source.wset-wine-composition
   - source.awri-berry-ripening

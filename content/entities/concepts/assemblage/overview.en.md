@@ -17,7 +17,7 @@ Working separately preserves differences until the maker knows what each compone
 
 Separation is not an end in itself. It keeps choices open: a lot can play the leading role, make a small contribution, go into another [[concept.cuvee|cuvée]] — a separately composed wine —, or stay out of the final wine altogether.
 
-That principle belongs to no single region or wine type. In Champagne, still base wines can differ by grape variety, cru — here a village or vineyard origin within the appellation —, parcel and harvest year. Blending there takes place before bottling and the second fermentation that makes the wine sparkling. [@source.champagne-blending]
+That principle belongs to no single region or wine type. In [[appellation.champagne|Champagne]], still base wines can differ by grape variety, cru — here a village or vineyard origin within the appellation —, parcel and harvest year. Blending there takes place before bottling and the [[concept.second-fermentation|second fermentation]] that makes the wine sparkling. [@source.champagne-blending]
 :::
 
 :::detail{#juridische-definities parent="bouwstenen" depth="advanced" source_refs="source.oiv-blending-code source.eu-wine-coupage-regulation-2019"}

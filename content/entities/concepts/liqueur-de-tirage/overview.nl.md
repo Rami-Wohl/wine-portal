@@ -26,7 +26,7 @@ Tiragelikeur gaat **vóór** de tweede vergisting in de wijn. [[concept.dosage|D
 :::detail{#geen-recept parent="onderscheid" depth="advanced" source_refs="source.champagne-bottling-second-fermentation"}
 ### Geen universeel recept
 
-De benodigde hoeveelheid suiker hangt af van de beoogde druk en van wat al in de basiswijn aanwezig is. Een exacte formule uit Champagne of een specifieke appellatie is daarom geen algemene definitie van tiragelikeur. Productregels en kelderkeuzes moeten afzonderlijk worden gelezen. [@source.champagne-bottling-second-fermentation]
+De benodigde hoeveelheid suiker hangt af van de beoogde druk en van wat al in de basiswijn aanwezig is. Een exacte formule uit [[appellation.champagne|Champagne]] of een specifieke appellatie is daarom geen algemene definitie van tiragelikeur. Productregels en kelderkeuzes moeten afzonderlijk worden gelezen. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::key-idea{#kern depth="foundation"}

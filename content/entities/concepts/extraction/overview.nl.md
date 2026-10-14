@@ -7,7 +7,7 @@ Extractie is de overdracht van stoffen uit vast materiaal naar sap of wijn. In d
 
 Bij rode wijn draagt extractie bij aan kleur en [[concept.tannin|tannine]], de stoffen die een drogend of stroef mondgevoel kunnen geven. Ook aromastoffen en hun voorlopers kunnen uit druivendelen worden vrijgemaakt. De wijnmaker werkt dus aan verschillende eigenschappen tegelijk: een donkere wijn is niet automatisch de meest tanninerijke wijn.
 
-[[concept.maceration|Schilinweking]] is het contact tussen vloeistof en druivendelen; extractie is wat daarbij overgaat. Persen oefent druk uit om vloeistof van vaste delen te scheiden. Dat kan de samenstelling beïnvloeden, maar extractie gebeurt ook zonder persen, gewoon tijdens het verblijf op de schillen. [@source.oiv-maceration]
+[[concept.maceration|Schilinweking]] is het contact tussen vloeistof en druivendelen; extractie is wat daarbij overgaat. [[concept.pressing|Persen]] oefent druk uit om vloeistof van vaste delen te scheiden. Dat kan de samenstelling beïnvloeden, maar extractie gebeurt ook zonder persen, gewoon tijdens het verblijf op de schillen. [@source.oiv-maceration]
 :::
 
 :::section{#sturen-in-de-kuip depth="foundation" source_refs="source.wre-cap-management"}

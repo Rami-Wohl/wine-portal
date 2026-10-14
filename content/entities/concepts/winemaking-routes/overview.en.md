@@ -2,8 +2,10 @@
 A press can stand at the beginning of winemaking, or come into use only after grapes are already fermenting. This distinction connects white, rosé, red and skin-fermented white wine: which grape parts remain together while yeast converts sugar? That question turns cellar operations into a comprehensible route.
 :::
 
-:::section{#overzicht depth="foundation" source_refs="source.oiv-maceration source.oiv-pressing source.awri-amber-wine source.ifv-rose-production"}
-## Overview — four routes from the grape
+:::section{#overzicht depth="foundation" source_refs="source.oiv-maceration source.oiv-pressing source.awri-amber-wine source.ifv-rose-production source.wset-tasting-guide-2018 source.awri-gas-adjustment"}
+## Overview — still wine and four routes from the grape
+
+**Still wine** is wine without the characteristic effervescence of sparkling wine. This does not mean that no dissolved CO₂ is present, or that the wine must be dry. Effervescence, sweetness and added spirit are separate questions; the pages on [[concept.sparkling-wines|sparkling]], [[concept.sweet-wines|sweet]] and [[concept.fortified-wines|fortified wines]] explore their respective production routes. [@source.wset-tasting-guide-2018; p. 12] [@source.awri-gas-adjustment]
 
 For many white wines, juice is separated from grape solids first and fermentation then takes place mainly in the liquid. Red wine instead ferments with black grape skins. Rosé offers several ways of separating pink juice early; in skin-fermented white wine, white grape skins remain during fermentation. The defining distinction combines grape colour, contact and the point of separation. [@source.awri-amber-wine] [@source.ifv-rose-production]
 
@@ -52,7 +54,7 @@ The plate simplifies the main sequence. Sorting, juice preparation, optional sho
 
 An intact berry initially keeps its juice inside; crushing makes it available immediately. Whole bunches bring stems into the vat too. They alter contact and drainage and can release compounds into the wine. The proportion of bunches, their condition and their position in the vat therefore matter. [@source.awri-whole-bunch-fermentation]
 
-Fruit health and ripeness help determine how much contact is desirable. For white skin contact, phenolic extraction and protection against oxidation are relevant considerations. [[concept.carbonic-maceration|Carbonic maceration]] adds a different start: intact berries undergo changes in an oxygen-poor atmosphere, alongside or before yeast fermentation in released juice. [@source.awri-skin-contact] [@source.ifv-carbonic-maceration]
+Fruit health and ripeness help determine how much contact is desirable. For white skin contact, phenolic extraction and protection against [[concept.oxidation|oxidation]] are relevant considerations. [[concept.carbonic-maceration|Carbonic maceration]] adds a different start: intact berries undergo changes in an oxygen-poor atmosphere, alongside or before yeast fermentation in released juice. [@source.awri-skin-contact] [@source.ifv-carbonic-maceration]
 :::
 
 :::detail{#bes-en-tros parent="omstandigheden-en-variatie" depth="intermediate" source_refs="source.awri-whole-bunch-fermentation source.ifv-carbonic-maceration"}

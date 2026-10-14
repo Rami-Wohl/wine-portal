@@ -32,7 +32,7 @@ A year's influence begins well before picking. Conditions around budbreak and fl
 
 ‘Good year’ sounds attractively simple, but which wine are we talking about? A wet spell can affect vineyards and grapes differently even within one region. A careful producer can make a lovely wine in a difficult year; favourable weather cannot replace good work. Nor can the date tell you how a bottle has been stored since. [@source.oiv-climate-variability-2015]
 
-Not every wine carries a vintage. Many non-vintage Champagnes bring together wines from different harvests to achieve a desired house style. That is no hidden flaw, but a deliberate form of [[concept.assemblage|blending]]. [@source.champagne-non-vintage-brut]
+Not every wine carries a vintage. Many non-vintage [[appellation.champagne|Champagnes]] bring together wines from different harvests to achieve a desired house style. That is no hidden flaw, but a deliberate form of [[concept.assemblage|blending]]. [@source.champagne-non-vintage-brut]
 :::
 
 :::detail{#schaal-van-oordeel parent="lezen-zonder-ranglijst" depth="advanced" source_refs="source.oiv-climate-variability-2015"}

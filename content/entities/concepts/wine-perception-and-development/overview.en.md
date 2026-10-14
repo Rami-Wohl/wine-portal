@@ -8,6 +8,8 @@ A wine has a composition; a taster experiences aroma, taste and mouthfeel in a p
 **Perception** arises when wine meets a taster. Its [[concept.wine-composition|composition]] supplies stimuli, while attention, experience and expectations also influence what someone experiences and names. **Wine development** is the change in wine over time. A difference between two tasting notes can therefore come from the wine, the taster or the conditions.
 
 This page connects those perspectives. [[concept.acidity|Acidity]], [[concept.tannin|tannin]] and [[concept.oxidation|oxidation]] have their own detail pages. [[concept.elevage|Élevage]] covers cellar work before bottling; [[concept.bottling|bottling]] covers stability and packaging. The focus here is how to interpret their effects in the glass.
+
+The origin classification in [[concept.wine-composition|wine composition]] helps place primary, secondary and tertiary aromas; here we follow how you experience those stimuli and how the wine changes.
 :::
 
 :::section{#opbouw-en-samenhang depth="foundation" source_refs="source.awri-wine-sensory-assessment-2022 source.spence-wine-psychology-2020 source.wset-mouthfeel-2026"}

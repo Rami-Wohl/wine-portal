@@ -33,14 +33,16 @@ Phenols are a broad family: tannins and red grape pigments, the anthocyanins, be
 **Glycerol** is an alcohol distinct from ethanol and is also produced through yeast activity. A glycerol concentration alone cannot explain a wine's texture; ethanol, phenols and larger molecules also belong to that question. [@source.uc-davis-wine-glycerol]
 :::
 
-:::section{#werking depth="foundation" source_refs="source.oiv-alcoholic-fermentation source.uc-davis-wine-glycerol source.uc-davis-wine-pyrazines source.uc-davis-volatile-thiols source.awri-mlf-style-2020 source.awri-lees-contact-2020 source.awri-acidity-ph source.awri-sulfur-dioxide"}
+:::section{#werking depth="foundation" source_refs="source.oiv-alcoholic-fermentation source.uc-davis-wine-glycerol source.uc-davis-wine-pyrazines source.uc-davis-volatile-thiols source.awri-mlf-style-2020 source.awri-lees-contact-2020 source.awri-acidity-ph source.awri-sulfur-dioxide source.wset-aroma-origins-2016"}
 ## How it works — carrying over, transforming and developing
 
 **Grapes supply a starting point.** Juice contains water, sugar and acids; solid parts supply phenols and aromatic material among other constituents. [[concept.berry-development-ripeness|Berry development and ripeness]] help explain why that supply differs at harvest. Methoxypyrazines are an example of aroma compounds that can already be present in grapes. Many important Sauvignon thiols, by contrast, are released from precursors during fermentation. [@source.uc-davis-wine-pyrazines] [@source.uc-davis-volatile-thiols]
 
 **Microorganisms change the supply.** Yeast converts sugar into ethanol and CO₂ and also produces substances including glycerol. [@source.oiv-alcoholic-fermentation] [@source.uc-davis-wine-glycerol] [[concept.malolactic-fermentation|Malolactic fermentation]] changes the acid profile further. This is a separate process from alcoholic fermentation. [@source.awri-mlf-style-2020]
 
-**The cellar route continues to matter.** Extraction, [[concept.lees-ageing|lees contact]], blending and other treatments alter the substances and forms that remain. During lees contact, constituents of yeast cells can be released into wine. [@source.awri-lees-contact-2020] Wine is therefore more than a diluted or concentrated reflection of grapes.
+**The cellar route continues to matter.** Extraction, [[concept.lees-ageing|lees contact]], [[concept.assemblage|blending]] and other treatments alter the substances and forms that remain. During lees contact, constituents of yeast cells can be released into wine. [@source.awri-lees-contact-2020] Wine is therefore more than a diluted or concentrated reflection of grapes.
+
+In tasting, aromas are often described as **primary, secondary or tertiary**. In the WSET classification, grape and alcoholic fermentation belong to primary; further winemaking to secondary; maturation development to tertiary. These terms help discuss likely origins but do not replace chemical analysis. [@source.wset-aroma-origins-2016; p. 2]
 :::
 
 :::detail{#vrij-en-gebonden parent="werking" depth="intermediate" source_refs="source.awri-sulfur-dioxide source.awri-acidity-ph"}
@@ -49,6 +51,20 @@ Phenols are a broad family: tannins and red grape pigments, the anthocyanins, be
 A total concentration does not always reveal how much of a substance is active at a given moment. [[concept.sulfur-dioxide|Sulfur dioxide]] exists in free and bound forms. Within the free fraction, the proportion of the molecular form important for antimicrobial action depends on pH. The same total SO₂ concentration can therefore represent a different level of protection. [@source.awri-sulfur-dioxide]
 
 pH describes the acidity of the chemical environment; titratable acidity describes the amount of acid measured by a particular titration. The balance of acids and salts matters. Measuring both gives more insight than treating either figure as a substitute for the other. [@source.awri-acidity-ph]
+:::
+
+:::detail{#aroma-oorsprong parent="werking" depth="intermediate" source_refs="source.wset-aroma-origins-2016 source.uc-davis-volatile-thiols"}
+### Aroma origins — primary, secondary and tertiary
+
+The WSET tasting classification groups aromas by their relationship to grapes, winemaking and maturation:
+
+- **Primary:** grapes and alcoholic fermentation. This includes grape compounds, released aroma precursors and yeast-produced aromas.
+- **Secondary:** winemaking after alcoholic fermentation. Lees and [[concept.autolysis|autolysis]], malolactic fermentation and oak can contribute.
+- **Tertiary:** development during maturation. This includes changes in fruit character, oxidative development and bottle ageing.
+
+This is a tasting framework, rather than a division into three closed chemical phases. Grape aroma precursors, for example, may only be released during fermentation. An oak aroma can also coexist with primary fruit while the wine continues to mature. [@source.wset-aroma-origins-2016; p. 2] [@source.uc-davis-volatile-thiols]
+
+For the cellar decision, oak belongs to [[concept.elevage|maturation and vessel choice]]. For what you smell and how the wine continues to change, explore [[concept.wine-perception-and-development|wine perception and development]].
 :::
 
 :::figure{#druif-gisting-en-rijping depth="foundation" media_id="media.concept.wine-composition.grape-fermentation-and-ageing" source_refs="source.oiv-alcoholic-fermentation source.awri-lees-contact-2020"}
@@ -72,7 +88,7 @@ Polysaccharides can interact with tannins, proteins and other particles. Their o
 :::section{#keuzes-en-afwegingen depth="foundation" source_refs="source.awri-fermentation-temperature source.awri-lees-contact-2020 source.awri-heat-stability"}
 ## Decisions and trade-offs — one intervention affects several parts
 
-Harvest selects the raw material; pressing and skin contact help determine which parts reach the wine. During fermentation, more than sugar changes. Temperature also influences yeast activity and the transfer of colour and tannin compounds in red wine. Fermentation and extraction explain these choices in detail. [@source.awri-fermentation-temperature]
+Harvest selects the raw material; [[concept.pressing|pressing]] and skin contact help determine which parts reach the wine. During fermentation, more than sugar changes. Temperature also influences yeast activity and the transfer of colour and tannin compounds in red wine. Fermentation and extraction explain these choices in detail. [@source.awri-fermentation-temperature]
 
 Lees contact can release larger molecules while changing other interactions in the wine. The maker therefore assesses how the batch develops, rather than pursuing just one desired concentration. [@source.awri-lees-contact-2020]
 
@@ -82,7 +98,7 @@ Before bottling, the question becomes whether the chosen mixture can maintain it
 :::section{#wereldwijde-context depth="foundation" source_refs="source.uc-davis-volatile-thiols source.awri-wine-composition-survey-2021 source.awri-lees-contact-2020"}
 ## Global context — the same map, different proportions
 
-**Sauvignon Blanc, including wines from New Zealand**, illustrates the role of aroma precursors and thiols. These substances also occur in other grape varieties. The general mechanism therefore belongs to more than one country or variety. [@source.uc-davis-volatile-thiols]
+**[[grape.sauvignon-blanc|Sauvignon Blanc]], including wines from New Zealand**, illustrates the role of aroma precursors and thiols. These substances also occur in other grape varieties. The general mechanism therefore belongs to more than one country or variety. [@source.uc-davis-volatile-thiols]
 
 In [[concept.fortified-wines|fortified wines]], alcohol addition, retained sugar and ageing each help explain a different aspect. For [[concept.sweet-wines|sweet wines]], the first question concerns the sugar route; for [[concept.sparkling-wines|sparkling wines]], it concerns the origin and retention of CO₂. The family pages connect those questions with particular wines.
 

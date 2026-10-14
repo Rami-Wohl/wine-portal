@@ -1,6 +1,6 @@
 # Overkoepelende productplanning
 
-Bijgewerkt: 2026-10-13. Deze kaart bepaalt volgorde en timing; actuele
+Bijgewerkt: 2026-10-14. Deze kaart bepaalt volgorde en timing; actuele
 status en acceptatiecriteria staan uitsluitend in de gekoppelde domeinbacklogs.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) en
 [performancereview](../editorial/performance-review-2026-10-11.md) motiveren
@@ -33,14 +33,14 @@ bewijs van gebruik en geen zelfstandige reden voor accounts of een database.
   is via `LRN-014–017` geleverd: acht NL/EN-lessen, leercontext, terugblik,
   vervolgsuggesties en eigen lokale voortgang naast het stille-wijnpad.
   [Integrale publicatiereview](../editorial/vineyard-path-release-review-2026-10-13.md).
-- **Eerstvolgend: `EXP-026`.** De eerste `EXP-032`-batch is gepubliceerd:
-  Port, Sherry en Champagne hebben zelfstandige NL/EN-appellationpagina’s.
-  De [inventaris](../editorial/briefs/exp-032-wine-inventory.md) onderscheidt
-  herkomstnamen, families, categorieën en technieken en hergebruikt bestaande
-  owners. Integreer nu graph, links, media en terminologie. De resterende
-  catalogusbatches volgen na EXP-028, vóór de regionale pilots; EXP-032 blijft
-  daarvoor open. De nieuw gescaffolde regio-/druivenrecords blijven drafts.
-- **Atlas expliciet voorbereiden: `MNT-051`.** Bronverkenning mag naast lessen
+- **Explore-integratie afgerond: `EXP-026`.** De 68 foundationconcepts,
+  vijftien lessen en eerste Port/Sherry/Champagne-batch hebben gelijke NL/EN-
+  targets en gecontroleerde publieke routes. Klimaatclassificaties, aroma-oorsprong,
+  eikenhout/vatkeuze en stille wijn hebben expliciete bestaande owners.
+  [Integratiereview](../editorial/foundation-integration-review-2026-10-14.md).
+  De resterende catalogusbatches volgen na EXP-028, vóór de regionale pilots;
+  EXP-032 blijft daarvoor open. Regionale/druivendrafts behouden hun eigen publicatiegate.
+- **Eerstvolgend: Atlas afbakenen (`MNT-051`).** Bronverkenning mag naast lessen
   lopen. Kies een kleine geverifieerde Bordeauxscope met provenance/licentie en
   afgebakende bouwtickets. Daarna kan `MNT-002` de eerste kaart leveren zodra
   data beschikbaar is; afbakening alleen betekent niet dat Atlas al bruikbaar is.
@@ -74,7 +74,7 @@ Grote schema-, opslag- en curriculumwijzigingen houden hun eigen besluitpoort.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-58 niet-afgeronde tickets: 15 onderhoudsacties, 4 Explore-tickets, 5 regionale
+57 niet-afgeronde tickets: 15 onderhoudsacties, 3 Explore-tickets, 5 regionale
 planning-/publicatietickets, 1 Learn-ticket (gebruiksevaluatie)
 en 33 feedbacktickets. Die 33 feedbacktickets en MNT-050 zijn bewust geparkeerd;
 ze blijven meetellen als resterend werk, niet als huidige uitvoeringsopdracht.
@@ -95,27 +95,26 @@ Het feedbackspoor is geparkeerd. Onderstaande fasevolgorde geldt uitsluitend
 
 De aanbevolen inhoudelijke/voorbereidende volgorde is hieronder weergegeven.
 Het curriculumakkoord, de drie lesbatches en pathpublicatie zijn afgerond.
-De eerste EXP-032-batch is geleverd; nu volgt de integratie in EXP-026.
+De eerste EXP-032-batch en de integratie in EXP-026 zijn geleverd; nu volgt Atlasafbakening.
 Atlasbronverkenning kan naast dit contentwerk lopen.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren, inclusief de drie nieuwe wijnpagina’s |
-| 2 | `MNT-051` | Kleine geverifieerde Bordeaux-Atlaspilot en bouwscope afbakenen; bronverkenning kan naast content lopen |
-| 3 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
-| 4 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
-| 5 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
-| 6 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen, inclusief nieuwe regionale/druivendrafts |
-| 7 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
-| 8 | `EXP-028` | Integrale redactionele en product-QA |
-| 9 | `EXP-032` | Resterende catalogus: batch 2 zoetheidscontrasten → batch 3 mousserend → batch 4 versterkt/Manzanilla; eerste batch afgerond |
-| 10 | `MNT-065` | Representatieve benchmarkscenario’s en workloadversies vóór grote corpus-/Atlasuitbreiding |
-| 11 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
-| 12 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
-| 13 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
-| 14 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na publicatiegates |
-| 15 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
-| 16 | `MNT-064` | Fixture-I/O alleen optimaliseren bij gemeten setupkosten; geen voorganger van andere leveringen |
+| 1 | `MNT-051` | Kleine geverifieerde Bordeaux-Atlaspilot en bouwscope afbakenen; bronverkenning kan naast content lopen |
+| 2 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
+| 3 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
+| 4 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
+| 5 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen, inclusief nieuwe regionale/druivendrafts |
+| 6 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
+| 7 | `EXP-028` | Integrale redactionele en product-QA |
+| 8 | `EXP-032` | Resterende catalogus: batch 2 zoetheidscontrasten → batch 3 mousserend → batch 4 versterkt/Manzanilla; eerste batch afgerond |
+| 9 | `MNT-065` | Representatieve benchmarkscenario’s en workloadversies vóór grote corpus-/Atlasuitbreiding |
+| 10 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
+| 11 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
+| 12 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
+| 13 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na publicatiegates |
+| 14 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
+| 15 | `MNT-064` | Fixture-I/O alleen optimaliseren bij gemeten setupkosten; geen voorganger van andere leveringen |
 
 LRN-013–017 zijn afgerond; alle acht wijngaardlessen en het volledige path
 zijn actief. De oorspronkelijke zevenlessenroute behoudt haar eigen voortgang.

@@ -32,7 +32,7 @@ De invloed van een jaar begint lang vóór de oogst. Omstandigheden rond uitlope
 
 ‘Goed jaar’ klinkt verleidelijk eenvoudig, maar over welke wijn hebben we het? Een natte periode kan binnen één streek wijngaarden en druivenrassen verschillend raken. Een zorgvuldige producent kan in een lastig jaar een prachtige wijn maken; een gunstig seizoen vervangt geen goed werk. En hoe een fles sindsdien is bewaard, lees je niet van het jaartal af. [@source.oiv-climate-variability-2015]
 
-Niet iedere wijn draagt een jaargang. Bij veel Champagne zonder jaargang worden wijnen van verschillende oogsten samengebracht om een gewenste huisstijl te bereiken. Dat is geen verborgen gebrek, maar een bewuste vorm van [[concept.assemblage|assemblage]]. [@source.champagne-non-vintage-brut]
+Niet iedere wijn draagt een jaargang. Bij veel [[appellation.champagne|Champagne]] zonder jaargang worden wijnen van verschillende oogsten samengebracht om een gewenste huisstijl te bereiken. Dat is geen verborgen gebrek, maar een bewuste vorm van [[concept.assemblage|assemblage]]. [@source.champagne-non-vintage-brut]
 :::
 
 :::detail{#schaal-van-oordeel parent="lezen-zonder-ranglijst" depth="advanced" source_refs="source.oiv-climate-variability-2015"}

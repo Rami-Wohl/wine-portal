@@ -66,7 +66,7 @@ for (const locale of ["nl", "en"] as const) {
         }
       }
     }
-    await page.locator(`#overzicht a[href="${prefix}/concepts/wine-composition"]`).click();
+    await page.locator(`#overzicht a[href="${prefix}/concepts/wine-composition"]`).first().click();
     await expect(page).toHaveURL(`${prefix}/concepts/wine-composition`);
   });
 
@@ -81,7 +81,11 @@ for (const locale of ["nl", "en"] as const) {
       "vineyard-soils",
     ]) {
       await page.goto(`${prefix}/concepts/${owner}`);
-      await page.locator(`article a[href="${prefix}/concepts/${slug}"]`).click();
+      await page
+        .locator(`article a[href="${prefix}/concepts/${slug}"]`)
+        .filter({ visible: true })
+        .first()
+        .click();
       await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
     }
     await page.goto(

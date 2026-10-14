@@ -30,7 +30,7 @@ Sommige wijnstijlen zoeken bewust een nootachtig, hartig of gedroogd-fruitkarakt
 :::detail{#chemie parent="keuze-of-fout" depth="advanced" source_refs="source.awri-wine-faults source.wine-australia-oxygen-style"}
 ### Tijd, dosis en bescherming werken samen
 
-Zuurstof reageert via een netwerk van wijnbestanddelen; daarbij kunnen onder meer aldehyden ontstaan of aroma's verloren gaan. Wijnmakers sturen het proces met vatkeuze, overhevelen, gecontroleerde zuurstoftoevoer, zwaveldioxide, botteling en afsluiting. Dat maakt ‘zuurstofvrij’ geen zinvol universeel ideaal: het gaat om beheersing passend bij de wijn. [@source.awri-wine-faults] [@source.wine-australia-oxygen-style]
+Zuurstof reageert via een netwerk van wijnbestanddelen; daarbij kunnen onder meer aldehyden ontstaan of aroma's verloren gaan. Wijnmakers sturen het proces met vatkeuze, overhevelen, gecontroleerde zuurstoftoevoer, [[concept.sulfur-dioxide|zwaveldioxide]], botteling en afsluiting. Dat maakt ‘zuurstofvrij’ geen zinvol universeel ideaal: het gaat om beheersing passend bij de wijn. [@source.awri-wine-faults] [@source.wine-australia-oxygen-style]
 :::
 
 :::key-idea{#kern depth="foundation"}

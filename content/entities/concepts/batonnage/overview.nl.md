@@ -46,7 +46,7 @@ Een wijnmaker kan bâtonnage inzetten om liescontact te sturen, maar kan net zo 
 :::detail{#zuurstof-en-microbiologie parent="keuze-en-risico" depth="advanced" source_refs="source.awri-lees-contact-2020"}
 ### Tussen reductie, oxidatie en microbiële activiteit
 
-Roeren kan zuurstof inbrengen, vooral wanneer een vat wordt geopend, en kan tegelijk bezonken materiaal opnieuw beschikbaar maken voor chemische en microbiële reacties. Te weinig passende zuurstof kan reductieve geuren laten opvallen; te veel blootstelling kan oxidatie, verlies van beschermend sulfiet of vorming van vluchtige zuren bevorderen. [@source.awri-lees-contact-2020]
+Roeren kan zuurstof inbrengen, vooral wanneer een vat wordt geopend, en kan tegelijk bezonken materiaal opnieuw beschikbaar maken voor chemische en microbiële reacties. Te weinig passende zuurstof kan reductieve geuren laten opvallen; te veel blootstelling kan [[concept.oxidation|oxidatie]], verlies van beschermend sulfiet of vorming van vluchtige zuren bevorderen. [@source.awri-lees-contact-2020]
 
 Daarom bestaat geen universeel ideale frequentie. De wijnmaker volgt geur, smaak, temperatuur, vrije sulfiet en microbiële toestand en past de handeling aan de concrete wijn aan.
 :::

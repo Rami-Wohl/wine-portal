@@ -6,14 +6,14 @@ coverage:
     disposition: on-page
     block_ids: [overzicht]
     target_ids: [concept.grapevine-phenology, concept.flowering-fruit-set-yield]
-    completeness_questions:
-      [
-        Begrijpt de lezer besontwikkeling als een proces en oogstrijpheid als een doelgebonden beslissing?,
+    completeness_questions: [
+        Begrijpt de lezer besontwikkeling als een proces en oogstrijpheid als een doelgebonden
+        beslissing?,
       ]
     layers:
-      foundation:
-        [
-          Plaats besontwikkeling tussen vruchtzetting en oogst en definieer véraison als overgangsperiode.,
+      foundation: [
+          Plaats besontwikkeling tussen vruchtzetting en oogst en definieer véraison als
+          overgangsperiode.,
         ]
       intermediate: []
       advanced: []
@@ -119,10 +119,10 @@ coverage:
     disposition: on-page
     block_ids: [keuzes-en-afwegingen, rijpheid-als-meervoudige-afweging]
     target_ids: [concept.late-harvest]
-    completeness_questions:
-      [
+    completeness_questions: [
         Kan de lezer technologische,
-        fenolische en aromatische rijpheid als beoordelingslenzen gebruiken en begrijpen waarom oogsttiming stijl,
+        fenolische en aromatische rijpheid als beoordelingslenzen gebruiken en begrijpen waarom
+        oogsttiming stijl,
         gezondheid,
         weer en logistiek afweegt?,
       ]
@@ -194,9 +194,9 @@ coverage:
     disposition: on-page
     block_ids: [betekenis-voor-wijn]
     target_ids: [concept.acidity, concept.tannin, concept.late-harvest]
-    completeness_questions:
-      [
-        Kan de lezer rijpheidsinformatie vertalen naar mogelijke grondstof- en stijlgevolgen zonder smaak of kwaliteit als zekerheid te behandelen?,
+    completeness_questions: [
+        Kan de lezer rijpheidsinformatie vertalen naar mogelijke grondstof- en stijlgevolgen
+        zonder smaak of kwaliteit als zekerheid te behandelen?,
       ]
     layers:
       foundation: [Verbind oogstmoment met de samenstelling en conditie die de kelder binnenkomen.]
@@ -244,4 +244,20 @@ entity_dependencies:
     names: { nl: Late oogst, en: Late harvest }
     slugs: { nl: late-oogst, en: late-harvest }
     disposition: link-and-relation
+  - id: concept.methoxypyrazines
+    names:
+      nl: Methoxypyrazinen
+      en: Methoxypyrazines
+    slugs:
+      nl: methoxypyrazinen
+      en: methoxypyrazines
+    disposition: link
+  - id: grape.carmenere
+    names:
+      nl: Carménère
+      en: Carménère
+    slugs:
+      nl: carmenere
+      en: carmenere
+    disposition: link
 review: { outline: complete, dependencies: complete, nl: complete, en: complete }

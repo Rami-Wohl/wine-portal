@@ -1,5 +1,5 @@
 # Baseline en handmatige beslissingen voor npm run content:link-audit.
-# --sync voegt alleen nieuwe IDs aan known_candidates toe. Voeg een besluit handmatig toe onder decisions.
+# --sync voegt alleen nieuwe IDs toe; EXP-026 registreert contextuele besluiten binnen de foundationscope.
 version: 1
 known_candidates:
   - appellation.barsac:en->concept.oxidation
@@ -118,6 +118,20 @@ known_candidates:
   - appellation.cerons:nl->concept.passerillage
   - appellation.cerons:nl->concept.vintage
   - appellation.cerons:nl->region.bordeaux
+  - appellation.champagne:en->concept.bottling
+  - appellation.champagne:en->concept.cuvee
+  - appellation.champagne:en->concept.negociant
+  - appellation.champagne:en->concept.vintage
+  - appellation.champagne:en->grape.chardonnay
+  - appellation.champagne:en->grape.meunier
+  - appellation.champagne:en->grape.pinot-noir
+  - appellation.champagne:en->region.champagne
+  - appellation.champagne:nl->concept.cuvee
+  - appellation.champagne:nl->concept.negociant
+  - appellation.champagne:nl->grape.chardonnay
+  - appellation.champagne:nl->grape.meunier
+  - appellation.champagne:nl->grape.pinot-noir
+  - appellation.champagne:nl->region.champagne
   - appellation.cotes-de-bordeaux:en->appellation.cadillac
   - appellation.cotes-de-bordeaux:en->concept.cuvee
   - appellation.cotes-de-bordeaux:en->concept.elevage
@@ -452,6 +466,17 @@ known_candidates:
   - appellation.pessac-leognan:nl->region.medoc
   - appellation.pomerol:en->appellation.correze
   - appellation.pomerol:nl->appellation.correze
+  - appellation.port:en->concept.bottling
+  - appellation.port:en->concept.vintage
+  - appellation.port:en->grape.tempranillo
+  - appellation.port:en->grape.touriga-franca
+  - appellation.port:en->grape.touriga-nacional
+  - appellation.port:en->region.douro
+  - appellation.port:nl->concept.bottling
+  - appellation.port:nl->grape.tempranillo
+  - appellation.port:nl->grape.touriga-franca
+  - appellation.port:nl->grape.touriga-nacional
+  - appellation.port:nl->region.douro
   - appellation.puisseguin-saint-emilion:en->appellation.saint-emilion-grand-cru
   - appellation.puisseguin-saint-emilion:en->concept.cuvee
   - appellation.puisseguin-saint-emilion:en->concept.elevage
@@ -516,6 +541,15 @@ known_candidates:
   - appellation.sainte-foy-cotes-de-bordeaux:nl->region.bordeaux
   - appellation.sauternes:en->concept.grand-vin
   - appellation.sauternes:nl->concept.grand-vin
+  - appellation.sherry:en->concept.assemblage
+  - appellation.sherry:en->concept.bottling
+  - appellation.sherry:en->grape.palomino
+  - appellation.sherry:en->grape.pedro-ximenez
+  - appellation.sherry:en->region.jerez
+  - appellation.sherry:nl->concept.bottling
+  - appellation.sherry:nl->grape.palomino
+  - appellation.sherry:nl->grape.pedro-ximenez
+  - appellation.sherry:nl->region.jerez
   - classification.bordeaux-1855:en->producer.chateau-haut-brion
   - classification.bordeaux-1855:nl->producer.chateau-haut-brion
   - classification.crus-artisans-du-medoc:en->region.medoc
@@ -533,19 +567,108 @@ known_candidates:
   - classification.graves:nl->appellation.sauternes
   - classification.graves:nl->classification.saint-emilion
   - classification.graves:nl->concept.vintage
+  - concept.acidity:en->concept.sparkling-wines
+  - concept.acidity:en->concept.sulfur-dioxide
+  - concept.acidity:nl->concept.sulfur-dioxide
+  - concept.aop:en->appellation.champagne
+  - concept.aop:en->region.champagne
+  - concept.aop:nl->appellation.champagne
+  - concept.aop:nl->region.champagne
   - concept.appassimento:en->concept.oxidation
+  - concept.appassimento:en->concept.pressing
   - concept.appassimento:nl->concept.oxidation
+  - concept.appassimento:nl->concept.pressing
+  - concept.assemblage:en->appellation.champagne
+  - concept.assemblage:en->concept.bottling
   - concept.assemblage:en->concept.second-fermentation
+  - concept.assemblage:en->region.champagne
+  - concept.assemblage:nl->appellation.champagne
+  - concept.assemblage:nl->region.champagne
+  - concept.autolysis:en->appellation.champagne
   - concept.autolysis:en->concept.second-fermentation
+  - concept.autolysis:en->concept.sparkling-wines
   - concept.autolysis:en->grape.chardonnay
+  - concept.autolysis:en->region.champagne
+  - concept.autolysis:nl->appellation.champagne
   - concept.autolysis:nl->concept.second-fermentation
   - concept.autolysis:nl->grape.chardonnay
+  - concept.autolysis:nl->region.champagne
   - concept.batonnage:en->concept.oxidation
   - concept.batonnage:nl->concept.oxidation
+  - concept.berry-development-ripeness:en->concept.elevage
+  - concept.berry-development-ripeness:en->concept.extraction
+  - concept.berry-development-ripeness:en->concept.maceration
+  - concept.berry-development-ripeness:en->concept.methoxypyrazines
+  - concept.berry-development-ripeness:en->concept.pressing
+  - concept.berry-development-ripeness:en->grape.carmenere
+  - concept.berry-development-ripeness:nl->concept.extraction
+  - concept.berry-development-ripeness:nl->concept.methoxypyrazines
+  - concept.berry-development-ripeness:nl->concept.pressing
+  - concept.berry-development-ripeness:nl->grape.carmenere
+  - concept.botrytis:en->concept.sweet-wines
+  - concept.botrytis:nl->concept.pressing
+  - concept.botrytis:nl->concept.sweet-wines
+  - concept.bottling:en->grape.riesling
+  - concept.bottling:nl->grape.riesling
+  - concept.cellar-hygiene-wine-faults:en->concept.elevage
+  - concept.cellar-hygiene-wine-faults:en->concept.wine-composition
+  - concept.cellar-hygiene-wine-faults:nl->concept.wine-composition
+  - concept.chateau:en->appellation.port
+  - concept.chateau:en->concept.bottling
+  - concept.chateau:nl->concept.bottling
+  - concept.clairet:en->concept.pressing
+  - concept.clairet:nl->concept.pressing
+  - concept.clarification-and-fining:en->concept.wine-composition
+  - concept.climate-weather-site-microclimate:en->concept.rootstock
+  - concept.climate-weather-site-microclimate:en->grape.chardonnay
+  - concept.climate-weather-site-microclimate:nl->concept.rootstock
+  - concept.climate-weather-site-microclimate:nl->grape.chardonnay
   - concept.courtier:en->region.bordeaux
   - concept.courtier:nl->region.bordeaux
+  - concept.cru:en->appellation.champagne
+  - concept.cru:en->region.champagne
+  - concept.cru:nl->appellation.champagne
+  - concept.cru:nl->region.champagne
+  - concept.cuvee:en->appellation.champagne
+  - concept.cuvee:en->concept.bottling
+  - concept.cuvee:en->concept.pressing
+  - concept.cuvee:en->region.champagne
+  - concept.cuvee:nl->appellation.champagne
+  - concept.cuvee:nl->concept.bottling
+  - concept.cuvee:nl->concept.pressing
+  - concept.cuvee:nl->region.champagne
+  - concept.elevage:en->appellation.champagne
+  - concept.elevage:en->appellation.napa-valley
   - concept.elevage:en->concept.oxidation
+  - concept.elevage:en->concept.second-fermentation
+  - concept.elevage:en->concept.wine-composition
+  - concept.elevage:en->grape.chardonnay
+  - concept.elevage:en->region.champagne
+  - concept.elevage:nl->appellation.champagne
+  - concept.elevage:nl->appellation.napa-valley
   - concept.elevage:nl->concept.oxidation
+  - concept.elevage:nl->concept.second-fermentation
+  - concept.elevage:nl->concept.wine-composition
+  - concept.elevage:nl->grape.chardonnay
+  - concept.elevage:nl->region.champagne
+  - concept.extraction:en->concept.bottling
+  - concept.extraction:en->concept.pressing
+  - concept.extraction:nl->concept.bottling
+  - concept.extraction:nl->concept.pressing
+  - concept.fermentation:en->appellation.champagne
+  - concept.fermentation:en->region.champagne
+  - concept.fermentation:nl->appellation.champagne
+  - concept.fermentation:nl->region.champagne
+  - concept.flowering-fruit-set-yield:en->concept.rootstock
+  - concept.fortification:en->concept.disgorgement
+  - concept.fortification:nl->concept.disgorgement
+  - concept.fortified-wines:en->concept.assemblage
+  - concept.fortified-wines:en->grape.muscadelle
+  - concept.fortified-wines:en->region.jerez
+  - concept.fortified-wines:en->region.rutherglen
+  - concept.fortified-wines:nl->grape.muscadelle
+  - concept.fortified-wines:nl->region.jerez
+  - concept.fortified-wines:nl->region.rutherglen
   - concept.grand-vin:en->appellation.bordeaux
   - concept.grand-vin:en->appellation.pauillac
   - concept.grand-vin:en->region.medoc
@@ -555,31 +678,145 @@ known_candidates:
   - concept.grapevine-phenology:en->concept.elevage
   - concept.grapevine-phenology:en->concept.late-harvest
   - concept.grapevine-phenology:nl->concept.late-harvest
+  - concept.lees-ageing:en->appellation.champagne
+  - concept.lees-ageing:en->concept.bottling
   - concept.lees-ageing:en->concept.oxidation
   - concept.lees-ageing:en->concept.remuage
   - concept.lees-ageing:en->concept.second-fermentation
+  - concept.lees-ageing:en->concept.sparkling-wines
+  - concept.lees-ageing:en->concept.wine-composition
   - concept.lees-ageing:en->grape.chardonnay
+  - concept.lees-ageing:en->region.champagne
+  - concept.lees-ageing:nl->appellation.champagne
+  - concept.lees-ageing:nl->concept.bottling
   - concept.lees-ageing:nl->concept.oxidation
   - concept.lees-ageing:nl->concept.remuage
   - concept.lees-ageing:nl->concept.second-fermentation
+  - concept.lees-ageing:nl->concept.sparkling-wines
+  - concept.lees-ageing:nl->concept.wine-composition
   - concept.lees-ageing:nl->grape.chardonnay
+  - concept.lees-ageing:nl->region.champagne
+  - concept.liqueur-de-tirage:en->appellation.champagne
+  - concept.liqueur-de-tirage:en->concept.bottling
+  - concept.liqueur-de-tirage:en->region.champagne
+  - concept.liqueur-de-tirage:nl->appellation.champagne
+  - concept.liqueur-de-tirage:nl->region.champagne
   - concept.maceration:en->concept.oxidation
+  - concept.maceration:en->concept.pressing
+  - concept.maceration:en->grape.pinot-noir
   - concept.maceration:nl->concept.oxidation
+  - concept.maceration:nl->concept.pressing
+  - concept.maceration:nl->grape.pinot-noir
+  - concept.malolactic-fermentation:en->concept.bottling
+  - concept.malolactic-fermentation:nl->concept.bottling
+  - concept.oxidation:en->concept.bottling
+  - concept.oxidation:en->concept.sulfur-dioxide
+  - concept.oxidation:nl->concept.bottling
+  - concept.oxidation:nl->concept.sulfur-dioxide
   - concept.passerillage:en->concept.oxidation
   - concept.passerillage:en->concept.passito
+  - concept.passerillage:en->concept.pressing
+  - concept.passerillage:en->concept.sweet-wines
   - concept.passerillage:nl->concept.oxidation
   - concept.passerillage:nl->concept.passito
+  - concept.passerillage:nl->concept.pressing
+  - concept.pressing:en->concept.tannin
+  - concept.pruning-training-canopy-crop-load:en->concept.rootstock
+  - concept.pruning-training-canopy-crop-load:nl->concept.rootstock
+  - concept.remuage:en->concept.bottling
+  - concept.remuage:nl->concept.bottling
+  - concept.second-fermentation:en->concept.bottling
+  - concept.second-fermentation:en->concept.sparkling-wines
+  - concept.second-fermentation:nl->concept.sparkling-wines
+  - concept.sparkling-wines:en->region.champagne
+  - concept.sparkling-wines:nl->region.champagne
+  - concept.sulfur-dioxide:en->concept.elevage
+  - concept.sulfur-dioxide:en->concept.oxidation
+  - concept.sulfur-dioxide:nl->concept.oxidation
+  - concept.sweet-wines:en->concept.pressing
+  - concept.sweet-wines:en->concept.vintage
+  - concept.sweet-wines:nl->concept.pressing
+  - concept.tannin:en->concept.bottling
+  - concept.tannin:nl->concept.bottling
+  - concept.traditional-method:en->concept.bottling
   - concept.traditional-method:en->region.bordeaux
+  - concept.traditional-method:en->region.champagne
   - concept.traditional-method:nl->region.bordeaux
+  - concept.traditional-method:nl->region.champagne
   - concept.vin-de-paille:en->concept.oxidation
+  - concept.vin-de-paille:en->concept.pressing
   - concept.vin-de-paille:nl->concept.oxidation
+  - concept.vin-de-paille:nl->concept.pressing
+  - concept.vine-as-living-system:en->appellation.stellenbosch
+  - concept.vine-as-living-system:en->region.marlborough
+  - concept.vine-as-living-system:en->region.mendoza
+  - concept.vine-as-living-system:en->region.mosel
+  - concept.vine-as-living-system:nl->appellation.stellenbosch
+  - concept.vine-as-living-system:nl->region.marlborough
+  - concept.vine-as-living-system:nl->region.mendoza
+  - concept.vine-as-living-system:nl->region.mosel
+  - concept.vine-nutrition-soil-management-vineyard-floor:en->concept.elevage
+  - concept.vine-nutrition-soil-management-vineyard-floor:en->concept.extraction
+  - concept.vineyard-soils:en->appellation.coonawarra
+  - concept.vineyard-soils:en->region.medoc
+  - concept.vineyard-soils:en->region.mosel
+  - concept.vineyard-soils:nl->appellation.coonawarra
+  - concept.vineyard-soils:nl->region.medoc
+  - concept.vineyard-soils:nl->region.mosel
+  - concept.vineyard-systems-sustainability-adaptation:en->concept.vintage
+  - concept.vintage:en->concept.bottling
+  - concept.vintage:nl->appellation.champagne
+  - concept.vintage:nl->region.champagne
   - concept.volatile-thiols:en->concept.oxidation
+  - concept.volatile-thiols:en->concept.pressing
   - concept.volatile-thiols:nl->concept.oxidation
+  - concept.wine-composition:en->concept.assemblage
+  - concept.wine-composition:en->concept.pressing
+  - concept.wine-composition:en->grape.chardonnay
+  - concept.wine-composition:en->grape.sauvignon-blanc
+  - concept.wine-composition:nl->concept.pressing
+  - concept.wine-composition:nl->grape.chardonnay
+  - concept.wine-composition:nl->grape.sauvignon-blanc
+  - concept.wine-perception-and-development:en->grape.chardonnay
+  - concept.wine-perception-and-development:en->grape.riesling
+  - concept.wine-perception-and-development:nl->grape.chardonnay
+  - concept.wine-perception-and-development:nl->grape.riesling
+  - concept.winemaking-routes:en->concept.oxidation
+  - concept.winemaking-routes:nl->concept.oxidation
   - grape.colombard:en->concept.vintage
   - grape.colombard:nl->concept.vintage
   - grape.merlot-blanc:en->concept.assemblage
   - grape.semillon:en->grape.riesling
   - grape.semillon:nl->grape.riesling
+  - narrative.lesson.after-main-fermentation:en->concept.fermentation
+  - narrative.lesson.after-main-fermentation:en->concept.wine-composition
+  - narrative.lesson.after-main-fermentation:nl->concept.fermentation
+  - narrative.lesson.after-main-fermentation:nl->concept.wine-composition
+  - narrative.lesson.cellar-to-bottle:en->concept.elevage
+  - narrative.lesson.cellar-to-bottle:en->concept.extraction
+  - narrative.lesson.cellar-to-bottle:en->concept.pressing
+  - narrative.lesson.cellar-to-bottle:en->concept.tannin
+  - narrative.lesson.cellar-to-bottle:nl->concept.extraction
+  - narrative.lesson.cellar-to-bottle:nl->concept.malolactic-fermentation
+  - narrative.lesson.cellar-to-bottle:nl->concept.pressing
+  - narrative.lesson.cellar-to-bottle:nl->concept.tannin
+  - narrative.lesson.grape-as-raw-material:en->concept.elevage
+  - narrative.lesson.grape-as-raw-material:en->concept.extraction
+  - narrative.lesson.grape-as-raw-material:nl->concept.extraction
+  - narrative.lesson.grape-as-raw-material:nl->concept.pressing
+  - narrative.lesson.grape-to-must:en->concept.tannin
+  - narrative.lesson.grape-to-must:nl->concept.tannin
+  - narrative.lesson.maturation-and-protection:en->concept.batonnage
+  - narrative.lesson.maturation-and-protection:en->concept.bottling
+  - narrative.lesson.maturation-and-protection:en->concept.tannin
+  - narrative.lesson.maturation-and-protection:en->concept.wine-composition
+  - narrative.lesson.maturation-and-protection:nl->concept.batonnage
+  - narrative.lesson.maturation-and-protection:nl->concept.bottling
+  - narrative.lesson.maturation-and-protection:nl->concept.tannin
+  - narrative.lesson.maturation-and-protection:nl->concept.wine-composition
+  - narrative.lesson.three-still-wine-routes:en->concept.fermentation
+  - narrative.lesson.three-still-wine-routes:en->concept.tannin
+  - narrative.lesson.three-still-wine-routes:nl->concept.fermentation
   - producer.chateau-cos-d-estournel:en->concept.elevage
   - producer.chateau-cos-d-estournel:en->concept.tannin
   - producer.chateau-cos-d-estournel:en->concept.terroir
@@ -774,6 +1011,698 @@ known_candidates:
   - region.medoc:nl->concept.terroir
   - region.medoc:nl->concept.vintage
 decisions:
+  - id: appellation.champagne:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier onderdeel van de flesroute; de négociant-code wordt ter plaatse uitgelegd binnen
+      Champagne, zonder de Bordeaux-handelscontext als volledige verklaring te presenteren.
+  - id: appellation.champagne:en->concept.cuvee
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: appellation.champagne:en->concept.negociant
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier onderdeel van de flesroute; de négociant-code wordt ter plaatse uitgelegd binnen
+      Champagne, zonder de Bordeaux-handelscontext als volledige verklaring te presenteren.
+  - id: appellation.champagne:en->concept.vintage
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: appellation.champagne:en->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.champagne:en->grape.meunier
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.meunier is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.champagne:en->grape.pinot-noir
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.pinot-noir is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.champagne:en->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: appellation.champagne:nl->concept.cuvee
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: appellation.champagne:nl->concept.negociant
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier onderdeel van de flesroute; de négociant-code wordt ter plaatse uitgelegd binnen
+      Champagne, zonder de Bordeaux-handelscontext als volledige verklaring te presenteren.
+  - id: appellation.champagne:nl->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.champagne:nl->grape.meunier
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.meunier is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.champagne:nl->grape.pinot-noir
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.pinot-noir is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.champagne:nl->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: appellation.port:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelmomenten worden op deze pagina per Portcategorie uitgelegd; de directe vervolgroute gaat naar
+      algemene flesontwikkeling en niet naar elk genoemd kelderstadium.
+  - id: appellation.port:en->concept.vintage
+    status: false-positive
+    reviewed_at: 2026-10-14
+    reason: Vintage is hier de specifieke Portcategorie, niet een alternatieve naam van de algemene jaargangentity.
+  - id: appellation.port:en->grape.tempranillo
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.tempranillo is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.port:en->grape.touriga-franca
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.touriga-franca is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.port:en->grape.touriga-nacional
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.touriga-nacional is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.port:en->region.douro
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.douro is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.port:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelmomenten worden op deze pagina per Portcategorie uitgelegd; de directe vervolgroute gaat naar
+      algemene flesontwikkeling en niet naar elk genoemd kelderstadium.
+  - id: appellation.port:nl->grape.tempranillo
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.tempranillo is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.port:nl->grape.touriga-franca
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.touriga-franca is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.port:nl->grape.touriga-nacional
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.touriga-nacional is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.port:nl->region.douro
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.douro is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.sherry:en->concept.assemblage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Fractioneel mengen hoort hier bij het uitgelegde criadera-/solerasysteem; bottelen is een volgende
+      stap. De uitleg en vervolgroute blijven bij de Sherryrijping.
+  - id: appellation.sherry:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Fractioneel mengen hoort hier bij het uitgelegde criadera-/solerasysteem; bottelen is een volgende
+      stap. De uitleg en vervolgroute blijven bij de Sherryrijping.
+  - id: appellation.sherry:en->grape.palomino
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.palomino is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.sherry:en->grape.pedro-ximenez
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.pedro-ximenez is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.sherry:en->region.jerez
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.jerez is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.sherry:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Fractioneel mengen hoort hier bij het uitgelegde criadera-/solerasysteem; bottelen is een volgende
+      stap. De uitleg en vervolgroute blijven bij de Sherryrijping.
+  - id: appellation.sherry:nl->grape.palomino
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.palomino is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.sherry:nl->grape.pedro-ximenez
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.pedro-ximenez is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: appellation.sherry:nl->region.jerez
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.jerez is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.acidity:en->concept.sparkling-wines
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De pH-/SO₂-verhouding en de rol van zuur in mousserende basiswijn worden lokaal kort uitgelegd; de
+      noodzakelijke vervolgroute naar samenstelling en wijnwaarneming is aanwezig.
+  - id: concept.acidity:en->concept.sulfur-dioxide
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De pH-/SO₂-verhouding en de rol van zuur in mousserende basiswijn worden lokaal kort uitgelegd; de
+      noodzakelijke vervolgroute naar samenstelling en wijnwaarneming is aanwezig.
+  - id: concept.acidity:nl->concept.sulfur-dioxide
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De pH-/SO₂-verhouding en de rol van zuur in mousserende basiswijn worden lokaal kort uitgelegd; de
+      noodzakelijke vervolgroute naar samenstelling en wijnwaarneming is aanwezig.
+  - id: concept.aop:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.aop:en->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.aop:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.aop:nl->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.appassimento:en->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie staan als proceskeuzes in een uitgelegde indroogroute; de leestaak blijft
+      concentratie vóór vergisting, met links naar de familie en de indroogowners.
+  - id: concept.appassimento:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie staan als proceskeuzes in een uitgelegde indroogroute; de leestaak blijft
+      concentratie vóór vergisting, met links naar de familie en de indroogowners.
+  - id: concept.appassimento:nl->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie staan als proceskeuzes in een uitgelegde indroogroute; de leestaak blijft
+      concentratie vóór vergisting, met links naar de familie en de indroogowners.
+  - id: concept.appassimento:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie staan als proceskeuzes in een uitgelegde indroogroute; de leestaak blijft
+      concentratie vóór vergisting, met links naar de familie en de indroogowners.
+  - id: concept.assemblage:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.assemblage:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason: Bottelen is het volgordemoment na de assemblage, niet een nieuwe uitlegstap in deze passage.
+  - id: concept.assemblage:en->concept.second-fermentation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.assemblage:en->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.assemblage:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.assemblage:nl->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.autolysis:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.autolysis:en->concept.second-fermentation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.autolysis:en->concept.sparkling-wines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.autolysis:en->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.autolysis:en->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.autolysis:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.autolysis:nl->concept.second-fermentation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.autolysis:nl->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.autolysis:nl->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.batonnage:en->concept.oxidation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.batonnage:nl->concept.oxidation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.berry-development-ripeness:en->concept.elevage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is een opsomming van latere kelderstappen die het geoogste fruit veranderen. De noodzakelijke
+      uitleg blijft besontwikkeling; voor de kelderroute bestaan de aparte owners.
+  - id: concept.berry-development-ripeness:en->concept.extraction
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is een opsomming van latere kelderstappen die het geoogste fruit veranderen. De noodzakelijke
+      uitleg blijft besontwikkeling; voor de kelderroute bestaan de aparte owners.
+  - id: concept.berry-development-ripeness:en->concept.maceration
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is een opsomming van latere kelderstappen die het geoogste fruit veranderen. De noodzakelijke
+      uitleg blijft besontwikkeling; voor de kelderroute bestaan de aparte owners.
+  - id: concept.berry-development-ripeness:en->concept.methoxypyrazines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.berry-development-ripeness:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is een opsomming van latere kelderstappen die het geoogste fruit veranderen. De noodzakelijke
+      uitleg blijft besontwikkeling; voor de kelderroute bestaan de aparte owners.
+  - id: concept.berry-development-ripeness:en->grape.carmenere
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.berry-development-ripeness:nl->concept.extraction
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is een opsomming van latere kelderstappen die het geoogste fruit veranderen. De noodzakelijke
+      uitleg blijft besontwikkeling; voor de kelderroute bestaan de aparte owners.
+  - id: concept.berry-development-ripeness:nl->concept.methoxypyrazines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.berry-development-ripeness:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is een opsomming van latere kelderstappen die het geoogste fruit veranderen. De noodzakelijke
+      uitleg blijft besontwikkeling; voor de kelderroute bestaan de aparte owners.
+  - id: concept.berry-development-ripeness:nl->grape.carmenere
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.botrytis:en->concept.sweet-wines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.botrytis:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Het persen illustreert hier de lage sapopbrengst van aangetaste en ingedroogde bessen; die relatie
+      wordt in de alinea zelf uitgelegd.
+  - id: concept.botrytis:nl->concept.sweet-wines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.bottling:en->grape.riesling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.riesling is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.bottling:nl->grape.riesling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.riesling is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.cellar-hygiene-wine-faults:en->concept.elevage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Opvoeding is hier de stijlcontext van zuurstofgebruik; de pagina legt het onderscheid tussen bedoelde
+      ontwikkeling en wijnfouten zelf uit.
+  - id: concept.cellar-hygiene-wine-faults:en->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cellar-hygiene-wine-faults:nl->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.chateau:en->appellation.port
+    status: false-positive
+    reviewed_at: 2026-10-14
+    reason: Port is hier het Engelse woord voor de haven van Bordeaux, niet de Portugese wijn.
+  - id: concept.chateau:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen onder verantwoordelijkheid van het domein is historische/identiteitscontext; de verwijzing
+      naar estate bottling is de specifieke owner.
+  - id: concept.chateau:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen onder verantwoordelijkheid van het domein is historische/identiteitscontext; de verwijzing
+      naar estate bottling is de specifieke owner.
+  - id: concept.clairet:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen is één factor in de lokaal uitgelegde kleurvariatie, zonder dat dit een les over de
+      pershandeling wordt.
+  - id: concept.clairet:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen is één factor in de lokaal uitgelegde kleurvariatie, zonder dat dit een les over de
+      pershandeling wordt.
+  - id: concept.clarification-and-fining:en->concept.wine-composition
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Samenstelling is hier de samenstelling van de concrete behandelde partij; het lokale proef- en
+      behandelmodel verklaart de benodigde afweging.
+  - id: concept.climate-weather-site-microclimate:en->concept.rootstock
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Onderstam is een voorbeeld van aanpassing aan lokale omstandigheden; de kernroute naar plant, water en
+      standplaats blijft zichtbaar.
+  - id: concept.climate-weather-site-microclimate:en->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.climate-weather-site-microclimate:nl->concept.rootstock
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Onderstam is een voorbeeld van aanpassing aan lokale omstandigheden; de kernroute naar plant, water en
+      standplaats blijft zichtbaar.
+  - id: concept.climate-weather-site-microclimate:nl->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.cru:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cru:en->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.cru:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cru:nl->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.cuvee:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cuvee:en->concept.bottling
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cuvee:en->concept.pressing
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cuvee:en->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.cuvee:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cuvee:nl->concept.bottling
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cuvee:nl->concept.pressing
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.cuvee:nl->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.elevage:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.elevage:en->appellation.napa-valley
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      appellation.napa-valley is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.elevage:en->concept.second-fermentation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tweede vergisting is context bij het Champagnevoorbeeld; de algemene opvoedingspagina verwijst nu naar
+      de actieve Champagneowner en naar liescontact.
+  - id: concept.elevage:en->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.elevage:en->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.elevage:en->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.elevage:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.elevage:nl->appellation.napa-valley
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      appellation.napa-valley is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.elevage:nl->concept.second-fermentation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tweede vergisting is context bij het Champagnevoorbeeld; de algemene opvoedingspagina verwijst nu naar
+      de actieve Champagneowner en naar liescontact.
+  - id: concept.elevage:nl->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.elevage:nl->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.elevage:nl->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.extraction:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier het eindpunt van een reeks latere veranderingen; de passage legt geen nieuwe
+      bottelstap uit.
+  - id: concept.extraction:en->concept.pressing
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.extraction:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier het eindpunt van een reeks latere veranderingen; de passage legt geen nieuwe
+      bottelstap uit.
+  - id: concept.extraction:nl->concept.pressing
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.fermentation:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.fermentation:en->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.fermentation:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.fermentation:nl->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.flowering-fruit-set-yield:en->concept.rootstock
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Onderstam staat in een reeks verklarende plant-/teeltfactoren; de passage blijft gericht op bloei,
+      vruchtzetting en opbrengst.
+  - id: concept.fortification:en->concept.disgorgement
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dégorgement wordt in een contrast met mousserende productie genoemd; het is geen deel van versterken.
+      De afzonderlijke families zijn de vervolgowners.
+  - id: concept.fortification:nl->concept.disgorgement
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dégorgement wordt in een contrast met mousserende productie genoemd; het is geen deel van versterken.
+      De afzonderlijke families zijn de vervolgowners.
+  - id: concept.fortified-wines:en->concept.assemblage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Mengen hoort in dit Sherryvoorbeeld bij het lokaal uitgelegde solerasysteem; de familieroute verwijst
+      rechtstreeks naar Sherry.
+  - id: concept.fortified-wines:en->grape.muscadelle
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Mengen hoort in dit Sherryvoorbeeld bij het lokaal uitgelegde solerasysteem; de familieroute verwijst
+      rechtstreeks naar Sherry.
+  - id: concept.fortified-wines:en->region.jerez
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.jerez is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.fortified-wines:en->region.rutherglen
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.rutherglen is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.fortified-wines:nl->grape.muscadelle
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Mengen hoort in dit Sherryvoorbeeld bij het lokaal uitgelegde solerasysteem; de familieroute verwijst
+      rechtstreeks naar Sherry.
+  - id: concept.fortified-wines:nl->region.jerez
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.jerez is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.fortified-wines:nl->region.rutherglen
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.rutherglen is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
   - id: concept.grapevine-phenology:en->concept.elevage
     status: false-positive
     reviewed_at: 2026-09-25
@@ -786,3 +1715,725 @@ decisions:
     status: false-positive
     reviewed_at: 2026-09-25
     reason: Late oogst beschrijft hier oogsttiming en verwijst niet naar het zelfstandige wijnstijlconcept.
+  - id: concept.lees-ageing:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen en oxidatie begrenzen hier het uitgelegde liescontact. De noodzakelijke contactroute is
+      voorzien van autolyse-, dégorgement- en nu remuagelinks.
+  - id: concept.lees-ageing:en->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen en oxidatie begrenzen hier het uitgelegde liescontact. De noodzakelijke contactroute is
+      voorzien van autolyse-, dégorgement- en nu remuagelinks.
+  - id: concept.lees-ageing:en->concept.remuage
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:en->concept.second-fermentation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:en->concept.sparkling-wines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:en->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:en->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.lees-ageing:en->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen en oxidatie begrenzen hier het uitgelegde liescontact. De noodzakelijke contactroute is
+      voorzien van autolyse-, dégorgement- en nu remuagelinks.
+  - id: concept.lees-ageing:nl->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen en oxidatie begrenzen hier het uitgelegde liescontact. De noodzakelijke contactroute is
+      voorzien van autolyse-, dégorgement- en nu remuagelinks.
+  - id: concept.lees-ageing:nl->concept.remuage
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:nl->concept.second-fermentation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:nl->concept.sparkling-wines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:nl->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.lees-ageing:nl->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.lees-ageing:nl->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.liqueur-de-tirage:en->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.liqueur-de-tirage:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier de plaats van toevoeging vóór de reeds gelinkte tweede vergisting; tirage blijft de
+      specifieke owner.
+  - id: concept.liqueur-de-tirage:en->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.liqueur-de-tirage:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.liqueur-de-tirage:nl->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.maceration:en->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn context bij contact beëindigen of beschermen; de alinea legt de lokale functie
+      uit en behoudt de afzonderlijke contact-/extractieowners.
+  - id: concept.maceration:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn context bij contact beëindigen of beschermen; de alinea legt de lokale functie
+      uit en behoudt de afzonderlijke contact-/extractieowners.
+  - id: concept.maceration:en->grape.pinot-noir
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.pinot-noir is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.maceration:nl->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn context bij contact beëindigen of beschermen; de alinea legt de lokale functie
+      uit en behoudt de afzonderlijke contact-/extractieowners.
+  - id: concept.maceration:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn context bij contact beëindigen of beschermen; de alinea legt de lokale functie
+      uit en behoudt de afzonderlijke contact-/extractieowners.
+  - id: concept.maceration:nl->grape.pinot-noir
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.pinot-noir is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.malolactic-fermentation:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason: Bottelen is een tijdsgrens bij microbiële stabiliteit, geen nieuwe bottelinstructie in deze passage.
+  - id: concept.malolactic-fermentation:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason: Bottelen is een tijdsgrens bij microbiële stabiliteit, geen nieuwe bottelinstructie in deze passage.
+  - id: concept.oxidation:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen verschijnt als zuurstofblootstellingsmoment; de passage volgt zuurstofbeheer, zonder iedere
+      procesnaam als vervolgroute aan te bieden.
+  - id: concept.oxidation:en->concept.sulfur-dioxide
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.oxidation:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen verschijnt als zuurstofblootstellingsmoment; de passage volgt zuurstofbeheer, zonder iedere
+      procesnaam als vervolgroute aan te bieden.
+  - id: concept.oxidation:nl->concept.sulfur-dioxide
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.passerillage:en->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn gevolgen/afwegingen van ingedroogd fruit; indrogen en de toepasselijke
+      wijnfamilie blijven de directe uitlegowners.
+  - id: concept.passerillage:en->concept.passito
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.passerillage:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn gevolgen/afwegingen van ingedroogd fruit; indrogen en de toepasselijke
+      wijnfamilie blijven de directe uitlegowners.
+  - id: concept.passerillage:en->concept.sweet-wines
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.passerillage:nl->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn gevolgen/afwegingen van ingedroogd fruit; indrogen en de toepasselijke
+      wijnfamilie blijven de directe uitlegowners.
+  - id: concept.passerillage:nl->concept.passito
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.passerillage:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn gevolgen/afwegingen van ingedroogd fruit; indrogen en de toepasselijke
+      wijnfamilie blijven de directe uitlegowners.
+  - id: concept.pressing:en->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tannine is één bestanddeel in de lokaal uitgelegde keuze van persfractie; de passage blijft een uitleg
+      van druk en scheiding.
+  - id: concept.pruning-training-canopy-crop-load:en->concept.rootstock
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Onderstam is een achtergrondfactor bij groeikracht, naast bodem en ras; de owner op deze pagina is de
+      teeltkeuze.
+  - id: concept.pruning-training-canopy-crop-load:nl->concept.rootstock
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Onderstam is een achtergrondfactor bij groeikracht, naast bodem en ras; de owner op deze pagina is de
+      teeltkeuze.
+  - id: concept.remuage:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier alleen het eerdere procesmoment. Remuage, dégorgement en de traditionele methode zijn
+      de relevante vervolgstappen.
+  - id: concept.remuage:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is hier alleen het eerdere procesmoment. Remuage, dégorgement en de traditionele methode zijn
+      de relevante vervolgstappen.
+  - id: concept.second-fermentation:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Mousserende wijn is het resultaat van de uitgelegde tweede vergisting; de directe vergelijking gaat
+      naar fles-/tankmethode. Bottelen is een procesmoment.
+  - id: concept.second-fermentation:en->concept.sparkling-wines
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Mousserende wijn is het resultaat van de uitgelegde tweede vergisting; de directe vergelijking gaat
+      naar fles-/tankmethode. Bottelen is een procesmoment.
+  - id: concept.second-fermentation:nl->concept.sparkling-wines
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Mousserende wijn is het resultaat van de uitgelegde tweede vergisting; de directe vergelijking gaat
+      naar fles-/tankmethode. Bottelen is een procesmoment.
+  - id: concept.sparkling-wines:en->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.sparkling-wines:nl->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.sulfur-dioxide:en->concept.elevage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Oxidatie en opvoeding zijn lokale gebruiksdoelen en momenten van SO₂; de passage verklaart het
+      mechanisme en behoudt botteling/samenstelling als gerichte vervolgowners.
+  - id: concept.sulfur-dioxide:en->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Oxidatie en opvoeding zijn lokale gebruiksdoelen en momenten van SO₂; de passage verklaart het
+      mechanisme en behoudt botteling/samenstelling als gerichte vervolgowners.
+  - id: concept.sulfur-dioxide:nl->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Oxidatie en opvoeding zijn lokale gebruiksdoelen en momenten van SO₂; de passage verklaart het
+      mechanisme en behoudt botteling/samenstelling als gerichte vervolgowners.
+  - id: concept.sweet-wines:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oogstjaar zijn onderdelen van het lokaal uitgelegde lezen van een zoete wijn; suikerroute en
+      de individuele wijnowner bepalen de vervolgstap.
+  - id: concept.sweet-wines:en->concept.vintage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oogstjaar zijn onderdelen van het lokaal uitgelegde lezen van een zoete wijn; suikerroute en
+      de individuele wijnowner bepalen de vervolgstap.
+  - id: concept.sweet-wines:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oogstjaar zijn onderdelen van het lokaal uitgelegde lezen van een zoete wijn; suikerroute en
+      de individuele wijnowner bepalen de vervolgstap.
+  - id: concept.tannin:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is het eindpunt van verdere tanninereacties; algemene ontwikkeling en extractie hebben al
+      gerichte links.
+  - id: concept.tannin:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is het eindpunt van verdere tanninereacties; algemene ontwikkeling en extractie hebben al
+      gerichte links.
+  - id: concept.traditional-method:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is een stadium binnen de uitgelegde flesroute; Bordeaux duidt hier Crémant de Bordeaux aan,
+      waarvan de appellationowner al direct is gelinkt.
+  - id: concept.traditional-method:en->region.bordeaux
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is een stadium binnen de uitgelegde flesroute; Bordeaux duidt hier Crémant de Bordeaux aan,
+      waarvan de appellationowner al direct is gelinkt.
+  - id: concept.traditional-method:en->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.traditional-method:nl->region.bordeaux
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is een stadium binnen de uitgelegde flesroute; Bordeaux duidt hier Crémant de Bordeaux aan,
+      waarvan de appellationowner al direct is gelinkt.
+  - id: concept.traditional-method:nl->region.champagne
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      De beschermde wijn heeft de actieve appellationowner Champagne; de regionale bestemming blijft draft.
+      Geen identiteitsverwisseling tussen wijn en regio. Regionale publicatie volgt REG-003.
+  - id: concept.vin-de-paille:en->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn lokaal uitgelegde gevolgen/keuzes van indrogen; vin de paille behoudt de
+      indroog- en familieowners als vervolgroute.
+  - id: concept.vin-de-paille:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn lokaal uitgelegde gevolgen/keuzes van indrogen; vin de paille behoudt de
+      indroog- en familieowners als vervolgroute.
+  - id: concept.vin-de-paille:nl->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn lokaal uitgelegde gevolgen/keuzes van indrogen; vin de paille behoudt de
+      indroog- en familieowners als vervolgroute.
+  - id: concept.vin-de-paille:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie zijn lokaal uitgelegde gevolgen/keuzes van indrogen; vin de paille behoudt de
+      indroog- en familieowners als vervolgroute.
+  - id: concept.vine-as-living-system:en->appellation.stellenbosch
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      appellation.stellenbosch is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke
+      verwijzing wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-as-living-system:en->region.marlborough
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.marlborough is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-as-living-system:en->region.mendoza
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.mendoza is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-as-living-system:en->region.mosel
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.mosel is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-as-living-system:nl->appellation.stellenbosch
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      appellation.stellenbosch is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke
+      verwijzing wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-as-living-system:nl->region.marlborough
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.marlborough is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-as-living-system:nl->region.mendoza
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.mendoza is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-as-living-system:nl->region.mosel
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.mosel is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vine-nutrition-soil-management-vineyard-floor:en->concept.elevage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Maturation verwijst hier naar de latere wijnroute in de afbakening van bodemsmaak; deze pagina blijft
+      owner van nutriënten en bodemleven.
+  - id: concept.vine-nutrition-soil-management-vineyard-floor:en->concept.extraction
+    status: false-positive
+    reviewed_at: 2026-10-14
+    reason: Extraction is hier een bodemanalytische extractiemethode, niet extractie tijdens wijnbereiding.
+  - id: concept.vineyard-soils:en->appellation.coonawarra
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      appellation.coonawarra is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vineyard-soils:en->region.medoc
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.vineyard-soils:en->region.mosel
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.mosel is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vineyard-soils:nl->appellation.coonawarra
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      appellation.coonawarra is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing
+      wacht op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vineyard-soils:nl->region.medoc
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.vineyard-soils:nl->region.mosel
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      region.mosel is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.vineyard-systems-sustainability-adaptation:en->concept.vintage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Vintage is hier één opbrengstjaar binnen vergelijking van teeltsystemen; de passage maakt geen los
+      jaargangonderwerp van die meetcontext.
+  - id: concept.vintage:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Bottelen is een productie-/etiketmoment in de jaarganguitleg; de wijnnaam heeft nu een directe link
+      naar Champagne.
+  - id: concept.vintage:nl->appellation.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.vintage:nl->region.champagne
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.volatile-thiols:en->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie vormen lokale afwegingen rond voorlopers en thiolen; de alinea beschrijft die
+      functie zonder een tweede algemene kelderroute te introduceren.
+  - id: concept.volatile-thiols:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie vormen lokale afwegingen rond voorlopers en thiolen; de alinea beschrijft die
+      functie zonder een tweede algemene kelderroute te introduceren.
+  - id: concept.volatile-thiols:nl->concept.oxidation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen en oxidatie vormen lokale afwegingen rond voorlopers en thiolen; de alinea beschrijft die
+      functie zonder een tweede algemene kelderroute te introduceren.
+  - id: concept.wine-composition:en->concept.assemblage
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.wine-composition:en->concept.pressing
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.wine-composition:en->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.wine-composition:en->grape.sauvignon-blanc
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.wine-composition:nl->concept.pressing
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.wine-composition:nl->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.wine-composition:nl->grape.sauvignon-blanc
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.wine-perception-and-development:en->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.wine-perception-and-development:en->grape.riesling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.riesling is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.wine-perception-and-development:nl->grape.chardonnay
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.chardonnay is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht
+      op het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.wine-perception-and-development:nl->grape.riesling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      grape.riesling is nog draft. De tekst behoudt het inhoudelijke voorbeeld; publieke verwijzing wacht op
+      het eigen publicatiecontract in REG-003/EXP-032.
+  - id: concept.winemaking-routes:en->concept.oxidation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: concept.winemaking-routes:nl->concept.oxidation
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: narrative.lesson.after-main-fermentation:en->concept.fermentation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Alcoholische vergisting staat hier als al behandelde lesstap en als contrast met MLF; de reader volgt
+      de bestaande lesroute of de reeds gelinkte specifieke omzettingsowner.
+  - id: narrative.lesson.after-main-fermentation:en->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: narrative.lesson.after-main-fermentation:nl->concept.fermentation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Alcoholische vergisting staat hier als al behandelde lesstap en als contrast met MLF; de reader volgt
+      de bestaande lesroute of de reeds gelinkte specifieke omzettingsowner.
+  - id: narrative.lesson.after-main-fermentation:nl->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: narrative.lesson.cellar-to-bottle:en->concept.elevage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.cellar-to-bottle:en->concept.extraction
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.cellar-to-bottle:en->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.cellar-to-bottle:en->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.cellar-to-bottle:nl->concept.extraction
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.cellar-to-bottle:nl->concept.malolactic-fermentation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.cellar-to-bottle:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.cellar-to-bottle:nl->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Dit is de terugblik op eerder behandelde lesstappen. De lessonroute en de assemblage-/bottelowners
+      verzorgen de vervolgroute; de recap krijgt geen link voor ieder herhaald begrip.
+  - id: narrative.lesson.grape-as-raw-material:en->concept.elevage
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen, extractie en opvoeding staan als vooruitblik op het leerpad; de les is nu direct verbonden met
+      besrijpheid en het plantsysteem, naast samenstelling.
+  - id: narrative.lesson.grape-as-raw-material:en->concept.extraction
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen, extractie en opvoeding staan als vooruitblik op het leerpad; de les is nu direct verbonden met
+      besrijpheid en het plantsysteem, naast samenstelling.
+  - id: narrative.lesson.grape-as-raw-material:nl->concept.extraction
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen, extractie en opvoeding staan als vooruitblik op het leerpad; de les is nu direct verbonden met
+      besrijpheid en het plantsysteem, naast samenstelling.
+  - id: narrative.lesson.grape-as-raw-material:nl->concept.pressing
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Persen, extractie en opvoeding staan als vooruitblik op het leerpad; de les is nu direct verbonden met
+      besrijpheid en het plantsysteem, naast samenstelling.
+  - id: narrative.lesson.grape-to-must:en->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tannine wordt in de glasbetekenis kort genoemd als gevolg van de al gelinkte verwerking/contactkeuzes;
+      de volgende les behandelt die route verder.
+  - id: narrative.lesson.grape-to-must:nl->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tannine wordt in de glasbetekenis kort genoemd als gevolg van de al gelinkte verwerking/contactkeuzes;
+      de volgende les behandelt die route verder.
+  - id: narrative.lesson.maturation-and-protection:en->concept.batonnage
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: narrative.lesson.maturation-and-protection:en->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tannine en bottelen staan als onderdeel van het lokaal uitgelegde begeleidingsmodel; de les verbindt
+      al opvoeding, vatkeuze, zuurstof, lies en bescherming met hun owners.
+  - id: narrative.lesson.maturation-and-protection:en->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tannine en bottelen staan als onderdeel van het lokaal uitgelegde begeleidingsmodel; de les verbindt
+      al opvoeding, vatkeuze, zuurstof, lies en bescherming met hun owners.
+  - id: narrative.lesson.maturation-and-protection:en->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: narrative.lesson.maturation-and-protection:nl->concept.batonnage
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: narrative.lesson.maturation-and-protection:nl->concept.bottling
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tannine en bottelen staan als onderdeel van het lokaal uitgelegde begeleidingsmodel; de les verbindt
+      al opvoeding, vatkeuze, zuurstof, lies en bescherming met hun owners.
+  - id: narrative.lesson.maturation-and-protection:nl->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Tannine en bottelen staan als onderdeel van het lokaal uitgelegde begeleidingsmodel; de les verbindt
+      al opvoeding, vatkeuze, zuurstof, lies en bescherming met hun owners.
+  - id: narrative.lesson.maturation-and-protection:nl->concept.wine-composition
+    status: link
+    reviewed_at: 2026-10-14
+    reason: Gerichte canonical verwijzing toegevoegd of door hetzelfde gelokaliseerde linkpaar opgelost in EXP-026.
+  - id: narrative.lesson.three-still-wine-routes:en->concept.fermentation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Alcoholische vergisting is de bekende lesstap; tannine is een gevolg van schilcontact. De relevante
+      contact-/extractieowners en lesvolgorde zijn al gelinkt.
+  - id: narrative.lesson.three-still-wine-routes:en->concept.tannin
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Alcoholische vergisting is de bekende lesstap; tannine is een gevolg van schilcontact. De relevante
+      contact-/extractieowners en lesvolgorde zijn al gelinkt.
+  - id: narrative.lesson.three-still-wine-routes:nl->concept.fermentation
+    status: skip
+    reviewed_at: 2026-10-14
+    reason:
+      Alcoholische vergisting is de bekende lesstap; tannine is een gevolg van schilcontact. De relevante
+      contact-/extractieowners en lesvolgorde zijn al gelinkt.

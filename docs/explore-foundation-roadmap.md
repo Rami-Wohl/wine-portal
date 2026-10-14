@@ -191,7 +191,8 @@ unplanned standalone pages.
 | `EXP-032` | partial | Inventory and first bilingual Port/Sherry/Champagne batch published 2026-10-13; three catalogue batches remain open after EXP-028 |
 | `EXP-024` | complete | Bilingual composition hub, ten constituent groups, measurement limits, PNG and existing owner/lesson links |
 | `EXP-025` | complete | Bilingual perception/development hub; senses, thresholds, balance, context, minerality, bottle development and PNG |
-| `EXP-026`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
+| `EXP-026` | complete | Foundation integration reviewed 2026-10-14: 86 packages, equal NL/EN targets, explicit terminology owners and active public navigation |
+| `EXP-027`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
 
 ### Phase A — coverage and contracts
 
@@ -765,13 +766,13 @@ new numbered PNG with equivalent HTML, seven existing owner links and final
 lesson link. Composition, perception, judgement and preference remain distinct;
 oxidation retains mechanism ownership. Six new sources and two reused sources;
 no new satellite or runtime model. [Brief and publication review](../editorial/briefs/concept.wine-perception-and-development.md).
-EXP-032 has published Port, Sherry and Champagne as its first bounded batch. EXP-026 follows.
+EXP-032 has published Port, Sherry and Champagne as its first bounded batch. EXP-026 integrated that batch on 2026-10-14.
 
 #### EXP-032 — Individual sweet, sparkling and fortified wines
 
 **Status:** partial. Inventory and first publication batch complete on 2026-10-13;
 three follow-up batches remain open. **Depends on:** EXP-025 and EXP-029–031.
-EXP-026 is now unblocked and is the next task. Follow-up catalogue batches run
+EXP-026 completed its integration on 2026-10-14. Follow-up catalogue batches run
 after EXP-028 and before the regional publication pilots; they do not postpone
 the next Atlas-scoping task.
 
@@ -821,6 +822,15 @@ publication checks. The current inventory does not pre-approve a new entity type
 or individual product catalogue.
 
 #### EXP-026 — Integrate graph, links, media and terminology
+
+**Status:** complete on 2026-10-14. [Integration review](../editorial/foundation-integration-review-2026-10-14.md)
+covers 68 concepts, three appellations and fifteen lessons. Two hub explanations
+were added, oak/still-wine headings improved, 85 contextual candidates resolved
+and the other 184 triaged. NL/EN structure, sources and targets agree; canonical
+draftmentions remain readable without public draftlinks (MNT-068); direct depth
+anchors land on their revealed passage after hydration (MNT-069). Projectcheck,
+192 unit-tests and the complete 205-test browsersuite pass without retries.
+Atlas scoping MNT-051 follows in the product order; EXP-027 retains global claimstress.
 
 **Depends on:** EXP-004–025, EXP-029–031, and the inventory/first publication
 batch of EXP-032. Remaining EXP-032 catalogue batches do not block this

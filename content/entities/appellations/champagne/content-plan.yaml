@@ -113,12 +113,10 @@ coverage:
       - concept.dosage
       - concept.assemblage
     completeness_questions:
-      - Kan de lezer basiswijn, assemblage, tweede gisting, remuage, dégorgement en dosage
-        volgen?
+      - Kan de lezer basiswijn, assemblage, tweede gisting, remuage, dégorgement en dosage volgen?
     layers:
       foundation:
-        - Kan de lezer basiswijn, assemblage, tweede gisting, remuage, dégorgement en dosage
-          volgen?
+        - Kan de lezer basiswijn, assemblage, tweede gisting, remuage, dégorgement en dosage volgen?
       intermediate: []
       advanced: []
       specialist: []
@@ -145,12 +143,10 @@ coverage:
       - appellationregels
     target_ids: []
     completeness_questions:
-      - Zijn herkomst/productie en minimale rijping van gewone versus vintage Champagne
-        duidelijk?
+      - Zijn herkomst/productie en minimale rijping van gewone versus vintage Champagne duidelijk?
     layers:
       foundation:
-        - Zijn herkomst/productie en minimale rijping van gewone versus vintage Champagne
-          duidelijk?
+        - Zijn herkomst/productie en minimale rijping van gewone versus vintage Champagne duidelijk?
       intermediate: []
       advanced: []
       specialist: []
@@ -299,8 +295,7 @@ coverage:
     evidence:
       general_synthesis:
         topics:
-          - Illustreert het hergebruikte rek remuage zonder de foto als plaatsbewijs te
-            gebruiken?
+          - Illustreert het hergebruikte rek remuage zonder de foto als plaatsbewijs te gebruiken?
         source_refs: []
       specific_claims: []
     review:
@@ -431,6 +426,22 @@ entity_dependencies:
       nl: assemblage
       en: blending
     disposition: link-and-relation
+  - id: concept.cuvee
+    names:
+      nl: Cuvée
+      en: Cuvée
+    slugs:
+      nl: cuvee
+      en: cuvee
+    disposition: link
+  - id: concept.vintage
+    names:
+      nl: Jaargang
+      en: Vintage
+    slugs:
+      nl: jaargang
+      en: vintage
+    disposition: link
 review:
   outline: complete
   dependencies: complete

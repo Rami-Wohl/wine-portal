@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.uc-davis-winery-sanitation source.awri-wine-faults"}
-A musty smell, unexpected bubbles or fading fruit can prompt a closer look at a wine. Cellar hygiene helps prevent such problems; diagnosis connects the observation with wine composition, contact materials and processing history. Together, these determine which checks and possible interventions are useful.
+A musty smell, unexpected bubbles or fading fruit can prompt a closer look at a wine. Cellar hygiene helps prevent such problems; diagnosis connects the observation with [[concept.wine-composition|wine composition]], contact materials and processing history. Together, these determine which checks and possible interventions are useful.
 :::
 
 :::section{#overzicht depth="foundation" source_refs="source.awri-wine-faults source.uc-davis-winery-sanitation"}

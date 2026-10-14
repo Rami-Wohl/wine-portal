@@ -93,7 +93,7 @@ A grower can change cover, organic inputs, traffic, drainage and cultivation, bu
 :::section{#wereldwijde-context depth="intermediate" source_refs="source.white-soil-terroir-2020 source.van-leeuwen-soil-terroir-2018"}
 ## Global context — different routes to a root environment
 
-Gravel in the Médoc, slate beside the Mosel, terra rossa in Coonawarra and volcanic material on islands are useful study examples, not fixed recipes. Climate, slope, profile depth, fine matrix and management change function in every case. An example succeeds when it clarifies a mechanism and remains replaceable by a comparable profile elsewhere.
+Gravel in the [[region.medoc|Médoc]], slate beside the Mosel, terra rossa in Coonawarra and volcanic material on islands are useful study examples, not fixed recipes. Climate, slope, profile depth, fine matrix and management change function in every case. An example succeeds when it clarifies a mechanism and remains replaceable by a comparable profile elsewhere.
 :::
 
 :::section{#bewijs-en-grenzen depth="foundation" source_refs="source.maltman-vineyards-rocks-soils-2018 source.parr-maltman-minerality-2018"}

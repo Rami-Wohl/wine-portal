@@ -60,13 +60,13 @@ coverage:
       - werking
     target_ids: []
     completeness_questions:
-      - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett,
-        TCA, hergisting en muizigheid?
+      - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett, TCA, hergisting en
+        muizigheid?
       - Wat is het verschil tussen levende cellen en hun gevormde stoffen?
     layers:
       foundation:
-        - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett,
-          TCA, hergisting en muizigheid?
+        - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett, TCA, hergisting en
+          muizigheid?
       intermediate:
         - Wat is het verschil tussen levende cellen en hun gevormde stoffen?
       advanced: []
@@ -74,20 +74,20 @@ coverage:
     evidence:
       general_synthesis:
         topics:
-          - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett,
-            TCA, hergisting en muizigheid?
+          - Hoe verschillen de causale routes van oxidatie, reductie, VA, Brett, TCA, hergisting en
+            muizigheid?
         source_refs:
           - source.awri-wine-faults
           - source.awri-volatile-sulfur-removal
           - source.awri-microbiological-stability
       specific_claims:
-        - claim: VA en ethylacetaat zijn verschillende analytische vragen; ethylacetaat
-            beïnvloedt wel de waarneming.
+        - claim:
+            VA en ethylacetaat zijn verschillende analytische vragen; ethylacetaat beïnvloedt wel de
+            waarneming.
           status: supported
           source_refs:
             - source.awri-volatile-acidity-2018
-        - claim: Brettcellen en gevormde vluchtige fenolen zijn afzonderlijke onderdelen
-            van de diagnose.
+        - claim: Brettcellen en gevormde vluchtige fenolen zijn afzonderlijke onderdelen van de diagnose.
           status: supported
           source_refs:
             - source.awri-brett-control-2023
@@ -95,8 +95,7 @@ coverage:
           status: supported
           source_refs:
             - source.awri-oak-taints-2023
-        - claim: Muizigheid kan pas na het proeven duidelijk worden door de
-            pH-afhankelijke waarneming.
+        - claim: Muizigheid kan pas na het proeven duidelijk worden door de pH-afhankelijke waarneming.
           status: supported
           source_refs:
             - source.awri-mousy-off-flavours-2015
@@ -128,8 +127,8 @@ coverage:
           - source.awri-sulfur-dioxide
           - source.awri-volatile-acidity-2018
       specific_claims:
-        - claim: Vluchtige zwavelverbindingen omvatten zowel gewenste rassenaroma’s als
-            reductieve afwijkingen.
+        - claim: Vluchtige zwavelverbindingen omvatten zowel gewenste rassenaroma’s als reductieve
+            afwijkingen.
           status: supported
           source_refs:
             - source.wine-australia-sulfur-compounds-2022
@@ -169,20 +168,17 @@ coverage:
       - wereldwijde-context
     target_ids: []
     completeness_questions:
-      - Wat leren gedeelde apparatuur, bijvulwijn en veranderende
-        wittewijnpraktijk?
+      - Wat leren gedeelde apparatuur, bijvulwijn en veranderende wittewijnpraktijk?
     layers:
       foundation:
-        - Wat leren gedeelde apparatuur, bijvulwijn en veranderende
-          wittewijnpraktijk?
+        - Wat leren gedeelde apparatuur, bijvulwijn en veranderende wittewijnpraktijk?
       intermediate: []
       advanced: []
       specialist: []
     evidence:
       general_synthesis:
         topics:
-          - Wat leren gedeelde apparatuur, bijvulwijn en veranderende
-            wittewijnpraktijk?
+          - Wat leren gedeelde apparatuur, bijvulwijn en veranderende wittewijnpraktijk?
         source_refs:
           - source.uc-davis-winery-sanitation
           - source.awri-brett-control-2023
@@ -215,8 +211,7 @@ coverage:
           - source.awri-wine-faults
           - source.awri-brett-control-2023
       specific_claims:
-        - claim: AWRI-project 1701-3.4.2 identificeert polysulfiden als latente bronnen
-            van H₂S na botteling.
+        - claim: AWRI-project 1701-3.4.2 identificeert polysulfiden als latente bronnen van H₂S na botteling.
           status: supported
           source_refs:
             - source.wine-australia-sulfur-compounds-2022
@@ -297,6 +292,14 @@ entity_dependencies:
     slugs:
       nl: vluchtige-thiolen
       en: volatile-thiols
+    disposition: link
+  - id: concept.wine-composition
+    names:
+      nl: Wijnsamenstelling
+      en: Wine composition
+    slugs:
+      nl: wijnsamenstelling
+      en: wine-composition
     disposition: link
 review:
   outline: complete

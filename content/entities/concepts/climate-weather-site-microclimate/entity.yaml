@@ -27,5 +27,7 @@ source_refs:
   - source.hunter-row-orientation-microclimate-2020
   - source.van-leeuwen-climate-adaptation-2017
   - source.ipcc-ar6-wgi-chapter-11
+  - source.peel-koppen-geiger-2007
+  - source.oiv-climate-zoning-2012
 depth: foundation
-last_reviewed: 2026-09-25
+last_reviewed: 2026-10-14

@@ -2,7 +2,7 @@
 A vine grows in several environments at once. It stands within a region's climate, experiences this season's weather, occupies a particular site, and carries leaves and bunches with their own microclimate. These scales are connected but not interchangeable. **Climate, weather, site and microclimate** therefore teaches you to follow how heat, light, water, moisture and wind actually reach the plant rather than attaching one label to a vineyard. [@source.wmo-climatological-normals] [@source.oiv-climate-variability-2015]
 :::
 
-:::section{#overzicht depth="foundation" source_refs="source.wmo-climatological-normals source.oiv-climate-variability-2015"}
+:::section{#overzicht depth="foundation" source_refs="source.wmo-climatological-normals source.oiv-climate-variability-2015 source.peel-koppen-geiger-2007"}
 ## Overview
 
 **Weather** is the short-term state and sequence of the atmosphere: a hot afternoon, three wet weeks, a night frost or a windy flowering period. **Climate** describes the distribution of such conditions across a long series of years. It includes not only averages but seasonal rhythm, variability and the probability of extremes. A climate normal uses a fixed thirty-year period under WMO practice, allowing places and periods to be compared on a recognizable basis. [@source.wmo-climatological-normals]
@@ -10,6 +10,8 @@ A vine grows in several environments at once. It stands within a region's climat
 A [[concept.vintage|vintage]] is not a synonym for weather or climate. It is the outcome of one [[concept.grapevine-phenology|growing cycle]] in which weather acts within a longer climate pattern upon a particular cultivar, parcel and farming system. **Site** adds the concrete setting: elevation, slope, aspect, terrain form, nearby water, shelter and spatial relationship with the surroundings. **Microclimate** zooms in further on conditions around a row, leaf, flower or bunch.
 
 Each word therefore answers a different question. Climate helps frame expectations across years; weather explains what happens at a particular moment; site explains why nearby parcels can receive different conditions; microclimate describes what plant tissue itself experiences.
+
+Climate classifications organise these patterns. Köppen-Geiger groups climates using temperature and precipitation; viticultural indices instead summarise selected conditions of the growing season. A climate class and a heat index therefore convey different information. [@source.peel-koppen-geiger-2007] [@source.oiv-climate-variability-2015]
 :::
 
 :::detail{#schaalnamen-zijn-gereedschap parent="overzicht" depth="intermediate" source_refs="source.sturman-high-resolution-vineyard-climate-2017 source.oiv-climate-variability-2015"}
@@ -18,6 +20,16 @@ Each word therefore answers a different question. Climate helps frame expectatio
 Wine literature uses terms such as macroclimate, mesoclimate, topoclimate and microclimate. They help zoom from region to parcel and bunch, but authors do not always draw their boundaries in exactly the same place. A “mesoclimate” may mean a wine region, valley or individual vineyard; “microclimate” may refer to a parcel, canopy or a few centimetres around a berry.
 
 The scale itself therefore matters more than the label. Always ask: what area, height, period and plant organ does an observation describe? Atmospheric models on kilometre-scale grids can reveal regional patterns, while local topography and canopies create variation over tens of metres or centimetres. [@source.sturman-high-resolution-vineyard-climate-2017]
+:::
+
+:::detail{#klimaatklassen-en-indices parent="overzicht" depth="intermediate" source_refs="source.peel-koppen-geiger-2007 source.oiv-climate-zoning-2012 source.oiv-climate-variability-2015"}
+### Climate classifications and viticultural indices
+
+Terms such as oceanic, continental and Mediterranean provide an initial orientation to broad climate patterns. For a measurable comparison, identify the classification being used. **Köppen-Geiger** uses monthly temperature and precipitation data to define climate classes, with criteria including seasonal dryness. It is not a ranking of wine quality. [@source.peel-koppen-geiger-2007; §2 and Table 1]
+
+**Viticultural indices** ask a more focused question. The Winkler index accumulates heat above a baseline during a defined growing season; the Huglin index also uses daily maximum temperatures and a day-length correction. Such indices help compare thermal conditions but do not describe the full water balance, frost risk or bunch microclimate. The period and measurement method therefore belong alongside the figure. [@source.oiv-climate-zoning-2012; pp. 12–14] [@source.oiv-climate-variability-2015; pp. 4–5]
+
+A climate class helps place a broad pattern. An index summarises particular measurements. Understanding the actual vineyard still requires the step to site, season and plant.
 :::
 
 :::section{#opbouw-en-samenhang depth="foundation" source_refs="source.oiv-climate-variability-2015 source.sturman-high-resolution-vineyard-climate-2017"}

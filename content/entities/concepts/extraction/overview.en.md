@@ -7,7 +7,7 @@ Extraction is the transfer of compounds from solid material into juice or wine. 
 
 In red wine, extraction contributes colour and [[concept.tannin|tannins]], compounds that can produce a drying or grippy mouthfeel. Aroma compounds and their precursors can also be released from grape material. The winemaker is therefore working on several properties together: a dark wine is not automatically the most tannic wine.
 
-[[concept.maceration|Maceration]] is contact between liquid and grape solids; extraction is what passes into the liquid. Pressing applies pressure to separate liquid from solids. It can affect composition, but extraction also happens without pressing, during skin contact itself. [@source.oiv-maceration]
+[[concept.maceration|Maceration]] is contact between liquid and grape solids; extraction is what passes into the liquid. [[concept.pressing|Pressing]] applies pressure to separate liquid from solids. It can affect composition, but extraction also happens without pressing, during skin contact itself. [@source.oiv-maceration]
 :::
 
 :::section{#sturen-in-de-kuip depth="foundation" source_refs="source.wre-cap-management"}

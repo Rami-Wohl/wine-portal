@@ -20,8 +20,7 @@ coverage:
         topics: []
         source_refs: []
       specific_claims:
-        - claim: Gist zet druivensuikers om in ethanol, CO₂ en nevenproducten; warmte komt
-            vrij.
+        - claim: Gist zet druivensuikers om in ethanol, CO₂ en nevenproducten; warmte komt vrij.
           status: supported
           source_refs:
             - source.oiv-alcoholic-fermentation
@@ -48,8 +47,9 @@ coverage:
         topics: []
         source_refs: []
       specific_claims:
-        - claim: Suiker alleen bepaalt geen succesvolle gisting; stam, mostsamenstelling
-            en beheer werken samen.
+        - claim:
+            Suiker alleen bepaalt geen succesvolle gisting; stam, mostsamenstelling en beheer werken
+            samen.
           status: supported
           source_refs:
             - source.awri-yeast-choice
@@ -96,8 +96,7 @@ coverage:
       - Hoe veranderen startkeuze, voeding, temperatuur en zuurstof het verloop?
     layers:
       foundation:
-        - Hoe veranderen startkeuze, voeding, temperatuur en zuurstof het
-          verloop?
+        - Hoe veranderen startkeuze, voeding, temperatuur en zuurstof het verloop?
       intermediate:
         - Wat meet YAN en waarom doet timing van voeding ertoe?
       advanced:
@@ -108,8 +107,9 @@ coverage:
         topics: []
         source_refs: []
       specific_claims:
-        - claim: YAN-vraag is contextafhankelijk; populaties veranderen en zuurstof kan
-            gist op geschikte momenten ondersteunen.
+        - claim:
+            YAN-vraag is contextafhankelijk; populaties veranderen en zuurstof kan gist op geschikte
+            momenten ondersteunen.
           status: supported
           source_refs:
             - source.awri-yeast-choice
@@ -134,17 +134,16 @@ coverage:
         - Hoe verschillen droog uitgisten, gepland stoppen en eindcontrole?
       intermediate: []
       advanced:
-        - Hoe verschillen dichtheid, glucose/fructose en reducerende suikers als
-          eindmeting?
+        - Hoe verschillen dichtheid, glucose/fructose en reducerende suikers als eindmeting?
       specialist: []
     evidence:
       general_synthesis:
         topics: []
         source_refs: []
       specific_claims:
-        - claim: Een geplande stop laat vergistbare suiker achter;
-            glucose/fructose-analyse heeft een andere meetscope dan totale
-            reducerende suikers.
+        - claim:
+            Een geplande stop laat vergistbare suiker achter; glucose/fructose-analyse heeft een andere
+            meetscope dan totale reducerende suikers.
           status: supported
           source_refs:
             - source.oiv-fermentation-interruption
@@ -163,8 +162,7 @@ coverage:
       - Waarom vragen verschillende mosten en startkeuzes een eigen vergelijking?
     layers:
       foundation:
-        - Waarom vragen verschillende mosten en startkeuzes een eigen
-          vergelijking?
+        - Waarom vragen verschillende mosten en startkeuzes een eigen vergelijking?
       intermediate: []
       advanced: []
       specialist: []
@@ -173,8 +171,9 @@ coverage:
         topics: []
         source_refs: []
       specific_claims:
-        - claim: De UC Davis Grenache-vergelijking en AWRI-voedingscontexten leveren geen
-            universele duur of dosering.
+        - claim:
+            De UC Davis Grenache-vergelijking en AWRI-voedingscontexten leveren geen universele duur of
+            dosering.
           status: supported
           source_refs:
             - source.uc-davis-problem-fermentations
@@ -204,8 +203,9 @@ coverage:
         topics: []
         source_refs: []
       specific_claims:
-        - claim: Temperatuur, voeding, stress en levensvatbaarheid vragen gezamenlijke
-            diagnose; herstart kan acclimatisatie vergen.
+        - claim:
+            Temperatuur, voeding, stress en levensvatbaarheid vragen gezamenlijke diagnose; herstart kan
+            acclimatisatie vergen.
           status: supported
           source_refs:
             - source.awri-stuck-fermentations-2013
@@ -221,12 +221,10 @@ coverage:
       - andere-processen
     target_ids: []
     completeness_questions:
-      - Wat verklaart vergisting aan wijnstijl en wat doen aangrenzende
-        processen?
+      - Wat verklaart vergisting aan wijnstijl en wat doen aangrenzende processen?
     layers:
       foundation:
-        - Wat verklaart vergisting aan wijnstijl en wat doen aangrenzende
-          processen?
+        - Wat verklaart vergisting aan wijnstijl en wat doen aangrenzende processen?
       intermediate: []
       advanced: []
       specialist: []
@@ -235,8 +233,8 @@ coverage:
         topics: []
         source_refs: []
       specific_claims:
-        - claim: Alcoholische gisting, bacteriële zuurconversie, tweede gisting en
-            liescontact zijn verschillende processen.
+        - claim: Alcoholische gisting, bacteriële zuurconversie, tweede gisting en liescontact zijn
+            verschillende processen.
           status: supported
           source_refs:
             - source.oiv-alcoholic-fermentation
@@ -344,6 +342,14 @@ entity_dependencies:
     slugs:
       nl: chardonnay
       en: chardonnay
+    disposition: link
+  - id: appellation.champagne
+    names:
+      nl: Champagne
+      en: Champagne
+    slugs:
+      nl: champagne
+      en: champagne
     disposition: link
 review:
   outline: complete

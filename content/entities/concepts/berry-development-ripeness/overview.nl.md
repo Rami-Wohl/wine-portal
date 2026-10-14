@@ -25,7 +25,7 @@ Deze onderdelen veranderen tegelijk, maar niet gelijk. Suiker kan snel toenemen 
 
 Voor witte wijn kan vooral het sap centraal staan, terwijl schilcontact bij rode, rosé- en orange-wijnen veel sterker mee bepaalt welke stoffen de most bereikt. Dat verschil ontstaat niet pas in de kelder: dikte en toestand van de schil, hoeveelheid kleurstoffen, soort tanninen en aroma- of smaakprecursoren zijn al kenmerken van de geoogste bes. [[concept.tannin|Tannine]] komt bovendien niet uit één uniforme voorraad; schillen en zaden dragen verschillende fracties die tijdens verwerking anders beschikbaar worden.
 
-Zaadkleur en -textuur kunnen aanvullende aanwijzingen geven, maar vormen geen universele rijpheidsmeter. Onderzoek aan Carménère vond verbanden tussen het uiterlijk van zaden en delen van de fenolische ontwikkeling, zonder dat één zichtbare zaadklasse alle chemische variatie verklaarde. Proeven, kneuzen en meten vullen elkaar daarom aan. [@source.fredes-carmenere-seed-maturity-2010]
+Zaadkleur en -textuur kunnen aanvullende aanwijzingen geven, maar vormen geen universele rijpheidsmeter. Onderzoek aan [[grape.carmenere|Carménère]] vond verbanden tussen het uiterlijk van zaden en delen van de fenolische ontwikkeling, zonder dat één zichtbare zaadklasse alle chemische variatie verklaarde. Proeven, kneuzen en meten vullen elkaar daarom aan. [@source.fredes-carmenere-seed-maturity-2010]
 :::
 
 :::section{#werking depth="foundation" source_refs="source.coombe-mccarthy-berry-growth-2000 source.awri-berry-ripening source.sweetman-malate-metabolism-2009"}
@@ -41,7 +41,7 @@ Na het begin van de rijping importeert de bes via het floëem veel koolstof uit 
 
 Bij blauwe rassen begint rond véraison de opbouw van anthocyanen in de schil. Witte rassen maken deze paarse kleurstoffen niet op dezelfde manier aan, maar worden eveneens zachter en doorschijnender. Andere fenolen kunnen al vóór véraison aanwezig zijn en daarna verder veranderen. De ontwikkeling van [[concept.tannin|tanninen]] gaat niet alleen over hoeveelheid: extracteerbaarheid, weefselstructuur en de verhouding tussen schil en zaad zijn voor vinificatie eveneens relevant.
 
-Ook “aromatische rijpheid” is geen algemene moleculaire schakelaar. Druivenrassen bouwen verschillende aroma-actieve stoffen en geurloze voorlopers op, af of om. Methoxypyrazinen, terpenen, thiolprecursoren en norisoprenoïden hebben elk een ander verloop en reageren anders op licht, temperatuur, water en timing. Wat bij één ras een centrale rijpingsvraag is, kan bij een ander nauwelijks richting geven. [@source.gouot-grape-secondary-metabolites-2021]
+Ook “aromatische rijpheid” is geen algemene moleculaire schakelaar. Druivenrassen bouwen verschillende aroma-actieve stoffen en geurloze voorlopers op, af of om. [[concept.methoxypyrazines|Methoxypyrazinen]], terpenen, thiolprecursoren en norisoprenoïden hebben elk een ander verloop en reageren anders op licht, temperatuur, water en timing. Wat bij één ras een centrale rijpingsvraag is, kan bij een ander nauwelijks richting geven. [@source.gouot-grape-secondary-metabolites-2021]
 :::
 
 :::detail{#water-en-groei-zijn-geen-eenvoudige-pomp parent="werking" depth="advanced" source_refs="source.dai-grape-berry-water-carbon-fluxes-2010 source.coombe-mccarthy-berry-growth-2000"}

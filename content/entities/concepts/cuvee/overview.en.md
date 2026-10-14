@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.champagne-blending source.champagne-pressing"}
-**Cuvée** is a word whose meaning changes with context. On a label it may identify a producer's particular wine or selection. In Champagne pressing it also specifically means the first portion of juice. The word alone guarantees neither special quality, a blend of grapes nor a production method. [@source.champagne-blending] [@source.champagne-pressing]
+**Cuvée** is a word whose meaning changes with context. On a label it may identify a producer's particular wine or selection. In [[appellation.champagne|Champagne]] [[concept.pressing|pressing]] it also specifically means the first portion of juice. The word alone guarantees neither special quality, a blend of grapes nor a production method. [@source.champagne-blending] [@source.champagne-pressing]
 :::
 
 :::figure{#afzonderlijke-partijen depth="foundation" media_id="media.concept.cuvee.barrels-by-vineyard"}
@@ -8,7 +8,7 @@
 :::section{#etiket depth="foundation" source_refs="source.champagne-blending"}
 ## On a label — a recognisable wine
 
-A producer may use ‘cuvée’ for a distinct bottling: perhaps a particular selection, vineyard, [[concept.vintage|vintage]] or [[concept.assemblage|blend]] (a combination of different wine lots). Which is meant must be clear from the rest of the label or the producer's information. ‘Cuvée’ is not, by itself, a legal quality rank. [@source.champagne-blending]
+A producer may use ‘cuvée’ for a distinct [[concept.bottling|bottling]]: perhaps a particular selection, vineyard, [[concept.vintage|vintage]] or [[concept.assemblage|blend]] (a combination of different wine lots). Which is meant must be clear from the rest of the label or the producer's information. ‘Cuvée’ is not, by itself, a legal quality rank. [@source.champagne-blending]
 :::
 
 :::detail{#geen-garantie parent="etiket" depth="intermediate" source_refs="source.champagne-blending"}

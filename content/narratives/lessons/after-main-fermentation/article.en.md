@@ -28,7 +28,7 @@ Complete conversion is common in many red wines for a softer acid impression and
 :::section{#lies-en-autolyse depth="foundation" source_refs="source.awri-lees-contact-2020"}
 ## Fine lees and gradual yeast breakdown
 
-During [[concept.lees-ageing|lees ageing]], wine remains with fine lees: yeast cells change over time and cell components may be released into the wine. This gradual breakdown is called [[concept.autolysis|autolysis]]. Contact time, temperature, vessel, wine composition and lees condition determine how noticeable the effect becomes.
+During [[concept.lees-ageing|lees ageing]], wine remains with fine lees: yeast cells change over time and cell components may be released into the wine. This gradual breakdown is called [[concept.autolysis|autolysis]]. Contact time, temperature, vessel, [[concept.wine-composition|wine composition]] and lees condition determine how noticeable the effect becomes.
 
 Lees contact can contribute to texture and development and under some conditions can affect oxygen reactions. It also requires tasting, smelling and microbiological attention: reductive or sulfurous aromas signal that the approach should be reassessed. [@source.awri-lees-contact-2020]
 :::

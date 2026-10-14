@@ -46,14 +46,14 @@ Hout kan stoffen afgeven, terwijl zuurstofreacties kleur en structuur mede veran
 :::detail{#overlappende-timing parent="werking" depth="intermediate" source_refs="source.awri-mlf-success-2020"}
 ### MLF kan al tijdens de hoofdgisting beginnen
 
-Bij co-inoculatie worden melkzuurbacteriën tijdens de alcoholische vergisting ingebracht; bij een sequentiële aanpak volgt hun toevoeging later. Gist- en bacteriestam, temperatuur en wijnsamenstelling beïnvloeden welke aanpak werkt. “Na vergisting” is daarom een manier om keuzes te ordenen, geen verplicht startmoment voor ieder proces. [@source.awri-mlf-success-2020]
+Bij co-inoculatie worden melkzuurbacteriën tijdens de alcoholische vergisting ingebracht; bij een sequentiële aanpak volgt hun toevoeging later. Gist- en bacteriestam, temperatuur en [[concept.wine-composition|wijnsamenstelling]] beïnvloeden welke aanpak werkt. “Na vergisting” is daarom een manier om keuzes te ordenen, geen verplicht startmoment voor ieder proces. [@source.awri-mlf-success-2020]
 :::
 
 :::figure{#vatenkelder depth="foundation" media_id="media.concept.elevage.barrels-and-vats"}
 :::
 
 :::section{#vatkeuze depth="foundation" source_refs="source.wset-oak-winemaking source.napa-oak-maturation"}
-## Omstandigheden en variatie — tank, vat en hout
+## Omstandigheden en variatie — tank, vat en eikenhout
 
 Roestvrij staal draagt geen eikenaroma bij. Eikenhout kan vanille, specerijen en geroosterde tonen toevoegen; de verwarming van het hout bij de kuiper heet **toasting**. De invloed hangt onder meer af van houtsoort, toast, vatleeftijd en verblijfsduur. Gebruikte vaten geven doorgaans minder houtaroma af dan nieuwe. [@source.wset-oak-winemaking] [@source.napa-oak-maturation]
 :::
@@ -91,7 +91,7 @@ Nieuw hout bevat zuurstof in zijn structuur en rond verbindingen en neemt aanvan
 
 Rode Rioja en witte Bourgogne laten verschillende toepassingen van hout zien. Napa Valley Vintners beschrijft hoe makers houtsoort, toast en vatleeftijd afstemmen op hun wijn. Die voorbeelden plaatsen eiken in een stijlkeuze die op veel plaatsen wordt gemaakt. [@source.wset-oak-winemaking] [@source.napa-oak-maturation]
 
-Champagne laat een andere contactomgeving zien: na de tweede vergisting rijpt de wijn in de fles op de gist. [[concept.traditional-method|De traditionele methode]] verbindt daar liescontact en verdere ontwikkeling in een afgesloten fles. Dat bijzondere productieproces heeft zijn eigen uitleg. [@source.champagne-maturation-on-lees]
+[[appellation.champagne|Champagne]] laat een andere contactomgeving zien: na de tweede vergisting rijpt de wijn in de fles op de gist. [[concept.traditional-method|De traditionele methode]] verbindt daar liescontact en verdere ontwikkeling in een afgesloten fles. Dat bijzondere productieproces heeft zijn eigen uitleg. [@source.champagne-maturation-on-lees]
 :::
 
 :::section{#bewijs-en-grenzen depth="foundation" source_refs="source.wine-australia-oxygen-style"}

@@ -44,13 +44,13 @@ Yeast and sugar are added at bottling for the [[concept.second-fermentation|seco
 :::section{#appellationregels depth="foundation" source_refs="source.champagne-region source.champagne-maturation-on-lees source.champagne-bottling-second-fermentation"}
 ## Appellation rules
 
-The protected origin combines a delimited area with conditions for grapes and production, including the second fermentation in the bottle. Non-vintage Champagne requires at least fifteen months of cellar ageing; a millésimé, Champagne from one harvest year, requires at least three years. Producers can age their wines longer. These minima provide a starting point for understanding the wine, rather than an exact prediction of its flavour. [@source.champagne-region] [@source.champagne-bottling-second-fermentation] [@source.champagne-maturation-on-lees]
+The protected origin combines a delimited area with conditions for grapes and production, including the second fermentation in the bottle. Non-vintage Champagne requires at least fifteen months of cellar ageing; a millésimé, Champagne from one [[concept.vintage|harvest year]], requires at least three years. Producers can age their wines longer. These minima provide a starting point for understanding the wine, rather than an exact prediction of its flavour. [@source.champagne-region] [@source.champagne-bottling-second-fermentation] [@source.champagne-maturation-on-lees]
 :::
 
 :::section{#classificatie-en-producenten depth="foundation" source_refs="source.champagne-label-faq"}
 ## Classification and producers
 
-In Champagne, a **cru** is a wine-growing municipality. Grand cru and premier cru refer to origin in designated municipalities. These terms give a different kind of information from a producer's name or an individual cuvée. [@source.champagne-label-faq]
+In Champagne, a **cru** is a wine-growing municipality. Grand cru and premier cru refer to origin in designated municipalities. These terms give a different kind of information from a producer's name or an individual [[concept.cuvee|cuvée]]. [@source.champagne-label-faq]
 
 Professional codes can appear on labels. **RM**, récoltant-manipulant, denotes a grower making own-label Champagne from their own grapes. **NM**, négociant-manipulant, may purchase grapes, must or wine alongside any own-grown grapes. Cooperatives also play a role in production. These business forms explain how an enterprise operates; style needs to be assessed wine by wine. [@source.champagne-label-faq]
 :::

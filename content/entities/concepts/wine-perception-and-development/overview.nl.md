@@ -8,6 +8,8 @@ Een wijn heeft een samenstelling; een proever ervaart geur, smaak en mondgevoel 
 **Waarneming** ontstaat uit de ontmoeting tussen wijn en proever. De [[concept.wine-composition|samenstelling]] levert prikkels, maar ook aandacht, ervaring en verwachtingen beïnvloeden wat iemand ervaart en benoemt. **Wijnontwikkeling** is de verandering van de wijn door de tijd. Een verschil tussen twee proefnotities kan dus uit de wijn, de proever of de omstandigheden komen.
 
 Deze pagina verbindt die invalshoeken. [[concept.acidity|Zuur]], [[concept.tannin|tannine]] en [[concept.oxidation|oxidatie]] hebben eigen detailpagina's. [[concept.elevage|Élevage]] behandelt het kelderwerk vóór botteling; [[concept.bottling|botteling]] behandelt stabiliteit en verpakking. Hier staat centraal hoe je hun gevolgen in het glas interpreteert.
+
+De oorsprongsindeling in [[concept.wine-composition|wijnsamenstelling]] helpt primaire, secundaire en tertiaire aroma’s plaatsen; hier volgen we hoe je die prikkels ervaart en hoe de wijn verandert.
 :::
 
 :::section{#opbouw-en-samenhang depth="foundation" source_refs="source.awri-wine-sensory-assessment-2022 source.spence-wine-psychology-2020 source.wset-mouthfeel-2026"}

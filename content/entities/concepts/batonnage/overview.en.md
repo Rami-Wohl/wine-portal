@@ -46,7 +46,7 @@ A winemaker may use bâtonnage to direct lees contact, but can equally make a de
 :::detail{#zuurstof-en-microbiologie parent="keuze-en-risico" depth="advanced" source_refs="source.awri-lees-contact-2020"}
 ### Between reduction, oxidation and microbial activity
 
-Stirring can introduce oxygen, particularly when a barrel is opened, while returning settled material to chemical and microbial reactions. Insufficient appropriate oxygen can allow reductive odours to stand out; excessive exposure can encourage oxidation, consume protective sulphur dioxide or promote volatile acidity. [@source.awri-lees-contact-2020]
+Stirring can introduce oxygen, particularly when a barrel is opened, while returning settled material to chemical and microbial reactions. Insufficient appropriate oxygen can allow reductive odours to stand out; excessive exposure can encourage [[concept.oxidation|oxidation]], consume protective sulphur dioxide or promote volatile acidity. [@source.awri-lees-contact-2020]
 
 There is consequently no universally ideal frequency. The winemaker follows aroma, flavour, temperature, free sulphur dioxide and microbial condition, adapting the action to the particular wine.
 :::

@@ -154,6 +154,52 @@ const document: ContentDocument = {
 };
 
 describe("ContentDocumentView", () => {
+  it.each(["nl", "en"] as const)(
+    "keeps draft mentions readable without a public link in %s",
+    (locale) => {
+      const mentionsDocument: ContentDocument = {
+        blocks: [
+          {
+            ...document.blocks[0],
+            nodes: [
+              {
+                type: "paragraph",
+                children: [
+                  {
+                    type: "strong",
+                    children: [
+                      {
+                        type: "entity-link",
+                        entity_id: "concept.massal-selection",
+                        label: "selectie uit meerdere stokken",
+                      },
+                    ],
+                  },
+                  { type: "text", value: " en " },
+                  { type: "entity-link", entity_id: "concept.massal-selection", label: null },
+                  { type: "text", value: "; lees ook " },
+                  {
+                    type: "entity-link",
+                    entity_id: "concept.clonal-selection",
+                    label: "klonale selectie",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      };
+      const html = renderToStaticMarkup(
+        <ContentDocumentView document={mentionsDocument} locale={locale} media={[]} sources={[]} />,
+      );
+      expect(html).toContain("<strong>selectie uit meerdere stokken</strong>");
+      expect(html).toContain(locale === "nl" ? "Massale selectie" : "Massal selection");
+      expect(html).not.toContain('href="/concepts/massal-selection"');
+      expect(html).not.toContain('href="/en/concepts/massal-selection"');
+      expect(html).toContain(`href="${locale === "en" ? "/en" : ""}/concepts/clonal-selection"`);
+    },
+  );
+
   it("renders semantic blocks, canonical entity routes, and accessible citations", () => {
     const html = renderToStaticMarkup(
       <ContentDocumentView document={document} locale="nl" media={[]} sources={[source]} />,

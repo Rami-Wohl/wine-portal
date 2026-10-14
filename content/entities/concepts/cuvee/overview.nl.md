@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.champagne-blending source.champagne-pressing"}
-**Cuvée** is een woord waarvan de betekenis met de context verschuift. Op een etiket kan het een bepaalde wijn of selectie van een producent aanduiden. In Champagne betekent het bij het persen ook specifiek het eerste deel van het sap. Het woord alleen garandeert geen speciale kwaliteit, druivenmix of productiewijze. [@source.champagne-blending] [@source.champagne-pressing]
+**Cuvée** is een woord waarvan de betekenis met de context verschuift. Op een etiket kan het een bepaalde wijn of selectie van een producent aanduiden. In [[appellation.champagne|Champagne]] betekent het bij het [[concept.pressing|persen]] ook specifiek het eerste deel van het sap. Het woord alleen garandeert geen speciale kwaliteit, druivenmix of productiewijze. [@source.champagne-blending] [@source.champagne-pressing]
 :::
 
 :::figure{#afzonderlijke-partijen depth="foundation" media_id="media.concept.cuvee.barrels-by-vineyard"}
@@ -8,7 +8,7 @@
 :::section{#etiket depth="foundation" source_refs="source.champagne-blending"}
 ## Op het etiket — een herkenbare wijn
 
-Een producent kan ‘cuvée’ gebruiken voor een afzonderlijke botteling: bijvoorbeeld een wijn van een bepaalde selectie, wijngaard, oogst of [[concept.assemblage|assemblage]] (het samenstellen uit verschillende partijen). Welke daarvan bedoeld is, moet uit de rest van het etiket of uit producentinformatie blijken. ‘Cuvée’ is op zichzelf geen wettelijke kwaliteitsrang. [@source.champagne-blending]
+Een producent kan ‘cuvée’ gebruiken voor een afzonderlijke [[concept.bottling|botteling]]: bijvoorbeeld een wijn van een bepaalde selectie, wijngaard, [[concept.vintage|oogst]] of [[concept.assemblage|assemblage]] (het samenstellen uit verschillende partijen). Welke daarvan bedoeld is, moet uit de rest van het etiket of uit producentinformatie blijken. ‘Cuvée’ is op zichzelf geen wettelijke kwaliteitsrang. [@source.champagne-blending]
 :::
 
 :::detail{#geen-garantie parent="etiket" depth="intermediate" source_refs="source.champagne-blending"}

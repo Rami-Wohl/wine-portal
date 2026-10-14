@@ -91,7 +91,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Kalkrijke wijngaardbodems](../content/entities/concepts/calcareous-vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.calcareous-vineyard-soils` | Ja | `/concepts/calcareous-vineyard-soils` | 2026-09-26 |
 | [Kelderhygiëne en wijnfouten](../content/entities/concepts/cellar-hygiene-wine-faults/entity.yaml) | Concept | Zelfstandige pagina | `concept.cellar-hygiene-wine-faults` | Ja | `/concepts/cellar-hygiene-wine-faults` | 2026-10-08 |
 | [Klaring en fining](../content/entities/concepts/clarification-and-fining/entity.yaml) | Concept | Zelfstandige pagina | `concept.clarification-and-fining` | Ja | `/concepts/clarification-and-fining` | 2026-09-23 |
-| [Klimaat, weer, standplaats en microklimaat](../content/entities/concepts/climate-weather-site-microclimate/entity.yaml) | Concept | Zelfstandige pagina | `concept.climate-weather-site-microclimate` | Ja | `/concepts/climate-weather-site-microclimate` | 2026-09-25 |
+| [Klimaat, weer, standplaats en microklimaat](../content/entities/concepts/climate-weather-site-microclimate/entity.yaml) | Concept | Zelfstandige pagina | `concept.climate-weather-site-microclimate` | Ja | `/concepts/climate-weather-site-microclimate` | 2026-10-14 |
 | [Klonale selectie](../content/entities/concepts/clonal-selection/entity.yaml) | Concept | Zelfstandige pagina | `concept.clonal-selection` | Ja | `/concepts/clonal-selection` | 2026-09-24 |
 | [Koolzuurmaceratie](../content/entities/concepts/carbonic-maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.carbonic-maceration` | Ja | `/concepts/carbonic-maceration` | 2026-10-05 |
 | [Late oogst](../content/entities/concepts/late-harvest/entity.yaml) | Concept | Zelfstandige pagina | `concept.late-harvest` | Ja | `/concepts/late-harvest` | 2026-09-14 |
@@ -108,7 +108,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Passito](../content/entities/concepts/passito/entity.yaml) | Concept | Zelfstandige pagina | `concept.passito` | Ja | `/concepts/passito` | 2026-10-08 |
 | [Persen](../content/entities/concepts/pressing/entity.yaml) | Concept | Zelfstandige pagina | `concept.pressing` | Ja | `/concepts/pressing` | 2026-10-05 |
 | [Place de Bordeaux](../content/entities/concepts/place-de-bordeaux/entity.yaml) | Concept | Zelfstandige pagina | `concept.place-de-bordeaux` | Ja | `/concepts/place-de-bordeaux` | 2026-09-14 |
-| [Productieroutes voor stille wijn](../content/entities/concepts/winemaking-routes/entity.yaml) | Concept | Zelfstandige pagina | `concept.winemaking-routes` | Ja | `/concepts/winemaking-routes` | 2026-10-05 |
+| [Productieroutes voor stille wijn](../content/entities/concepts/winemaking-routes/entity.yaml) | Concept | Zelfstandige pagina | `concept.winemaking-routes` | Ja | `/concepts/winemaking-routes` | 2026-10-14 |
 | [Remuage](../content/entities/concepts/remuage/entity.yaml) | Concept | Zelfstandige pagina | `concept.remuage` | Ja | `/concepts/riddling` | 2026-09-20 |
 | [Rijping op de lies](../content/entities/concepts/lees-ageing/entity.yaml) | Concept | Zelfstandige pagina | `concept.lees-ageing` | Ja | `/concepts/lees-ageing` | 2026-09-22 |
 | [Schilinweking](../content/entities/concepts/maceration/entity.yaml) | Concept | Zelfstandige pagina | `concept.maceration` | Ja | `/concepts/maceration` | 2026-10-05 |
@@ -130,7 +130,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Waterrelaties, droogte en irrigatie bij de wijnstok](../content/entities/concepts/vine-water-relations/entity.yaml) | Concept | Zelfstandige pagina | `concept.vine-water-relations` | Ja | `/concepts/vine-water-relations-drought-irrigation` | 2026-09-25 |
 | [Weerrisico's, ziekten, plagen en stoornissen](../content/entities/concepts/vineyard-hazards-diseases-pests-disorders/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-hazards-diseases-pests-disorders` | Ja | `/concepts/vineyard-hazards-diseases-pests-disorders` | 2026-10-02 |
 | [Wijngaardbodems](../content/entities/concepts/vineyard-soils/entity.yaml) | Concept | Zelfstandige pagina | `concept.vineyard-soils` | Ja | `/concepts/vineyard-soils` | 2026-09-26 |
-| [Wijnsamenstelling](../content/entities/concepts/wine-composition/entity.yaml) | Concept | Zelfstandige pagina | `concept.wine-composition` | Ja | `/concepts/wine-composition` | 2026-10-11 |
+| [Wijnsamenstelling](../content/entities/concepts/wine-composition/entity.yaml) | Concept | Zelfstandige pagina | `concept.wine-composition` | Ja | `/concepts/wine-composition` | 2026-10-14 |
 | [Zoete wijnen](../content/entities/concepts/sweet-wines/entity.yaml) | Concept | Zelfstandige pagina | `concept.sweet-wines` | Ja | `/concepts/sweet-wines` | 2026-10-08 |
 | [Zuur in wijn](../content/entities/concepts/acidity/entity.yaml) | Concept | Zelfstandige pagina | `concept.acidity` | Ja | `/concepts/acidity-in-wine` | 2026-09-16 |
 | [Zwaveldioxide](../content/entities/concepts/sulfur-dioxide/entity.yaml) | Concept | Zelfstandige pagina | `concept.sulfur-dioxide` | Ja | `/concepts/sulfur-dioxide` | 2026-10-07 |

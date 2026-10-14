@@ -26,7 +26,7 @@ Liqueur de tirage goes into the wine **before** the second fermentation. [[conce
 :::detail{#geen-recept parent="onderscheid" depth="advanced" source_refs="source.champagne-bottling-second-fermentation"}
 ### No universal recipe
 
-The sugar required depends on the desired pressure and on what is already present in the base wine. An exact formula from Champagne or another appellation is therefore not a general definition of liqueur de tirage. Production rules and cellar decisions must be read separately. [@source.champagne-bottling-second-fermentation]
+The sugar required depends on the desired pressure and on what is already present in the base wine. An exact formula from [[appellation.champagne|Champagne]] or another appellation is therefore not a general definition of liqueur de tirage. Production rules and cellar decisions must be read separately. [@source.champagne-bottling-second-fermentation]
 :::
 
 :::key-idea{#kern depth="foundation"}

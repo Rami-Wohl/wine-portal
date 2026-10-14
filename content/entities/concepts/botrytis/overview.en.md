@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.blanco-ulate-noble-rot-2015 source.vaczy-noble-grey-rot-2024"}
-**Botrytis cinerea** is usually a feared fungal disease. Under an exceptional combination of ripe grapes, moisture and subsequent drying, however, the same fungus can produce **noble rot**: berries lose water, shrivel and yield intensely concentrated juice for certain sweet wines. [@source.blanco-ulate-noble-rot-2015]
+**Botrytis cinerea** is usually a feared fungal disease. Under an exceptional combination of ripe grapes, moisture and subsequent drying, however, the same fungus can produce **noble rot**: berries lose water, shrivel and yield intensely concentrated juice for certain [[concept.sweet-wines|sweet wines]]. [@source.blanco-ulate-noble-rot-2015]
 
 “Noble” is not the name of a friendly fungal strain. It describes a favourable outcome that can fail afresh in every [[concept.vintage|vintage]].
 :::

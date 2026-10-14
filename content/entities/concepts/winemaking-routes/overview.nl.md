@@ -2,8 +2,10 @@
 Een pers kan aan het begin van de wijnbereiding staan, of pas wanneer de druiven al vergisten. Dat verschil verbindt wit, rosé, rood en schilvergist wit: welke delen van de druif blijven samen terwijl gist suiker omzet? Vanuit die vraag worden kelderhandelingen een begrijpelijke route.
 :::
 
-:::section{#overzicht depth="foundation" source_refs="source.oiv-maceration source.oiv-pressing source.awri-amber-wine source.ifv-rose-production"}
-## Overzicht — vier wegen vanuit dezelfde druif
+:::section{#overzicht depth="foundation" source_refs="source.oiv-maceration source.oiv-pressing source.awri-amber-wine source.ifv-rose-production source.wset-tasting-guide-2018 source.awri-gas-adjustment"}
+## Overzicht — stille wijn en vier routes vanuit de druif
+
+**Stille wijn** is wijn zonder de kenmerkende bruis van mousserende wijn. Dat betekent niet dat er helemaal geen opgeloste CO₂ aanwezig is, en ook niet dat de wijn droog moet zijn. Bruis, zoetheid en alcoholtoevoeging zijn verschillende vragen; de pagina’s over [[concept.sparkling-wines|mousserende]], [[concept.sweet-wines|zoete]] en [[concept.fortified-wines|versterkte wijnen]] werken hun eigen productieroutes uit. [@source.wset-tasting-guide-2018; p. 12] [@source.awri-gas-adjustment]
 
 Bij veel witte wijn wordt eerst sap van vaste druivendelen gescheiden en vergist vervolgens vooral de vloeistof. Rode wijn vergist juist met blauwe schillen. Rosé kent meerdere manieren om vroeg roze sap af te scheiden; bij schilvergist wit blijven witte schillen tijdens de gisting aanwezig. Het beslissende onderscheid is het samenspel van druivenkleur, contact en scheidingsmoment. [@source.awri-amber-wine] [@source.ifv-rose-production]
 
@@ -52,7 +54,7 @@ De plaat vereenvoudigt de hoofdvolgorde. Sortering, sapvoorbereiding, eventuele 
 
 Een intacte bes houdt haar sap aanvankelijk binnen; een gekneusde bes maakt het meteen beschikbaar. Met hele trossen komen ook stelen in de kuip. Zij veranderen contact en afvoer en kunnen stoffen aan de wijn afgeven. Het gekozen aandeel trossen, hun toestand en de manier waarop zij in de kuip liggen, doen daardoor mee. [@source.awri-whole-bunch-fermentation]
 
-Fruitgezondheid en rijpheid helpen bepalen hoeveel contact wenselijk is. Bij witte schilinweking zijn bijvoorbeeld fenolische extractie en bescherming tegen oxidatie relevante afwegingen. [[concept.carbonic-maceration|Koolzuurmaceratie]] voegt een ander begin toe: intacte bessen ondergaan omzettingen in een zuurstofarme atmosfeer, naast of voorafgaand aan gistvergisting van vrij sap. [@source.awri-skin-contact] [@source.ifv-carbonic-maceration]
+Fruitgezondheid en rijpheid helpen bepalen hoeveel contact wenselijk is. Bij witte schilinweking zijn bijvoorbeeld fenolische extractie en bescherming tegen [[concept.oxidation|oxidatie]] relevante afwegingen. [[concept.carbonic-maceration|Koolzuurmaceratie]] voegt een ander begin toe: intacte bessen ondergaan omzettingen in een zuurstofarme atmosfeer, naast of voorafgaand aan gistvergisting van vrij sap. [@source.awri-skin-contact] [@source.ifv-carbonic-maceration]
 :::
 
 :::detail{#bes-en-tros parent="omstandigheden-en-variatie" depth="intermediate" source_refs="source.awri-whole-bunch-fermentation source.ifv-carbonic-maceration"}

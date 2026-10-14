@@ -39,7 +39,7 @@ Een hoger aandeel nieuw hout of langere contactduur is geen automatische verbete
 :::section{#zuurstof-beheren depth="foundation" source_refs="source.wine-australia-oxygen-style source.awri-wine-faults"}
 ## Zuurstof toelaten en begrenzen
 
-Kleine, beheerste hoeveelheden zuurstof kunnen reacties ondersteunen die kleur en tanninestructuur tijdens rijping veranderen. Overhevelen, bâtonnage, vatmateriaal en lege ruimte in een vat beïnvloeden blootstelling. Dezelfde zuurstof kan bij onvoldoende controle echter versnelde veroudering, bruining en verlies van frisse aroma's bevorderen.
+Kleine, beheerste hoeveelheden zuurstof kunnen reacties ondersteunen die kleur en tanninestructuur tijdens rijping veranderen. Overhevelen, [[concept.batonnage|bâtonnage]], vatmateriaal en lege ruimte in een vat beïnvloeden blootstelling. Dezelfde zuurstof kan bij onvoldoende controle echter versnelde veroudering, bruining en verlies van frisse aroma's bevorderen.
 
 [[concept.oxidation|Oxidatie]] is daarom niet simpelweg aanwezig of afwezig. De wijnmaker bepaalt waar contact nuttig is, sluit vaten en tanks goed af, vult verdampingsruimte aan en beperkt lucht bij kwetsbare transfers.
 :::
@@ -47,7 +47,7 @@ Kleine, beheerste hoeveelheden zuurstof kunnen reacties ondersteunen die kleur e
 :::section{#so2-en-hygiene depth="foundation" source_refs="source.oiv-sulphiting-wine source.awri-sulfur-dioxide"}
 ## Zwaveldioxide, temperatuur en hygiëne
 
-[[concept.sulfur-dioxide|Zwaveldioxide]] helpt wijn beschermen tegen oxidatieve reacties en ongewenste gisten en bacteriën. Vooral de vrije fractie is werkzaam; pH en wijnsamenstelling beïnvloeden hoeveel bescherming een gemeten hoeveelheid geeft. Daarom worden waarden gecontroleerd en aan de concrete wijn aangepast. [@source.awri-sulfur-dioxide]
+[[concept.sulfur-dioxide|Zwaveldioxide]] helpt wijn beschermen tegen oxidatieve reacties en ongewenste gisten en bacteriën. Vooral de vrije fractie is werkzaam; pH en [[concept.wine-composition|wijnsamenstelling]] beïnvloeden hoeveel bescherming een gemeten hoeveelheid geeft. Daarom worden waarden gecontroleerd en aan de concrete wijn aangepast. [@source.awri-sulfur-dioxide]
 
 SO₂ staat niet op zichzelf. [[concept.cellar-hygiene-wine-faults|Schone apparatuur en kelderhygiëne]], passende temperatuur, volle en goed gesloten vaten en snelle reactie op afwijkende geur of activiteit verminderen de druk op iedere afzonderlijke beschermingsmaatregel.
 :::

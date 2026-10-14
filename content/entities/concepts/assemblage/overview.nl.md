@@ -17,7 +17,7 @@ Afzonderlijk werken geeft ruimte om verschil te bewaren tot de maker weet wat ie
 
 Die scheiding is geen doel op zichzelf. Zij houdt keuzes open: een partij kan een hoofdrol krijgen, slechts een kleine aanvulling leveren, naar een andere [[concept.cuvee|cuvée]] — een afzonderlijk samengestelde wijn — gaan of helemaal niet in de uiteindelijke wijn terechtkomen.
 
-Dat principe is niet gebonden aan één streek of één type wijn. In Champagne kunnen stille basiswijnen verschillen naar druivenras, cru — hier een dorp of wijngaardherkomst binnen de appellation —, perceel en oogstjaar. De assemblage vindt daar plaats vóór het bottelen en de tweede gisting die de wijn mousserend maakt. [@source.champagne-blending]
+Dat principe is niet gebonden aan één streek of één type wijn. In [[appellation.champagne|Champagne]] kunnen stille basiswijnen verschillen naar druivenras, cru — hier een dorp of wijngaardherkomst binnen de appellation —, perceel en oogstjaar. De assemblage vindt daar plaats vóór het bottelen en de [[concept.second-fermentation|tweede gisting]] die de wijn mousserend maakt. [@source.champagne-blending]
 :::
 
 :::detail{#juridische-definities parent="bouwstenen" depth="advanced" source_refs="source.oiv-blending-code source.eu-wine-coupage-regulation-2019"}

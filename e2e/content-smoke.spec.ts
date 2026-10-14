@@ -990,10 +990,8 @@ test("Botrytis distinguishes noble and grey rot across knowledge depths", async 
   await expect(page.locator("#gezonde-druiven img")).toHaveJSProperty("complete", true);
   await expect(page.locator("#edele-rotting img")).toHaveJSProperty("complete", true);
   await expect(page.locator("#grijze-rotting img")).toHaveJSProperty("complete", true);
-  await expect(page.getByRole("link", { name: "Tokaj", exact: true })).toHaveAttribute(
-    "href",
-    "/regions/tokaj",
-  );
+  await expect(page.locator("#waar-edele-rotting-wijn-maakt")).toContainText("Tokaj");
+  await expect(page.getByRole("link", { name: "Tokaj", exact: true })).toHaveCount(0);
 
   const intermediate = page.locator("#weer-rijpheid-en-timing");
   const advanced = page.locator("#geen-twee-soorten");
@@ -1028,9 +1026,10 @@ test("Passerillage compares on-vine and postharvest drying without implying swee
     "href",
     "/concepts/botrytis-noble-rot",
   );
+  await expect(page.locator("#wijntradities")).toContainText("Amarone della Valpolicella");
   await expect(
     page.getByRole("link", { name: "Amarone della Valpolicella", exact: true }),
-  ).toHaveAttribute("href", "/appellations/amarone-della-valpolicella");
+  ).toHaveCount(0);
 
   const intermediate = page.locator("#lucht-temperatuur-en-tijd");
   const advanced = page.locator("#geen-universele-techniek");

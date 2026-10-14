@@ -77,7 +77,7 @@ After drying, berries are tough, sugar-rich and short of juice. Pressing takes t
 :::detail{#balans-en-stabiliteit parent="selectie-en-risico" depth="intermediate" source_refs="source.sanmartin-postharvest-water-loss-2021"}
 ### Concentration also magnifies weaknesses
 
-Acidity and phenolic structure can carry richness, but already-low acidity is not automatically refreshed through drying. Oxidation, unwanted microorganisms and volatile acidity likewise require attention. In sweet wine, the producer must prevent remaining yeast from restarting fermentation later.
+Acidity and phenolic structure can carry richness, but already-low acidity is not automatically refreshed through drying. Oxidation, unwanted microorganisms and volatile acidity likewise require attention. In [[concept.sweet-wines|sweet wine]], the producer must prevent remaining yeast from restarting fermentation later.
 
 The cellar can guide the result through pressing, temperature, fermentation and [[concept.elevage|maturation]], but it cannot repair every imbalance in the fruit.
 :::
@@ -101,7 +101,7 @@ For [[appellation.amarone-della-valpolicella|Amarone della Valpolicella]], harve
 :::detail{#geen-wereldwijd-recept parent="wijntradities" depth="intermediate" source_refs="source.inao-cotes-du-jura-vin-de-paille source.valpolicella-consortium-amarone-appassimento"}
 ### A family resemblance, not a global recipe
 
-Straw wine, passito, appassimento and late-harvest wine dried on the vine share water loss, but not necessarily grapes, climate, drying place, duration, sweetness or maturation. Some styles pursue perfume and residual sugar; others colour, alcohol and structure.
+Straw wine, [[concept.passito|passito]], appassimento and late-harvest wine dried on the vine share water loss, but not necessarily grapes, climate, drying place, duration, sweetness or maturation. Some styles pursue perfume and residual sugar; others colour, alcohol and structure.
 
 The process family enables comparison. The origin entity remains necessary to understand which version is actually in the bottle.
 :::

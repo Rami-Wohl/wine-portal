@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.uc-davis-winery-sanitation source.awri-wine-faults"}
-Een muffe geur, onverwachte belletjes of verdwijnend fruit geven aanleiding om een wijn nader te bekijken. Kelderhygiëne helpt zulke problemen voorkomen; diagnose verbindt de waarneming met wijnsamenstelling, contactmaterialen en procesverloop. Die samenhang bepaalt welke controle en eventuele ingreep zinvol zijn.
+Een muffe geur, onverwachte belletjes of verdwijnend fruit geven aanleiding om een wijn nader te bekijken. Kelderhygiëne helpt zulke problemen voorkomen; diagnose verbindt de waarneming met [[concept.wine-composition|wijnsamenstelling]], contactmaterialen en procesverloop. Die samenhang bepaalt welke controle en eventuele ingreep zinvol zijn.
 :::
 
 :::section{#overzicht depth="foundation" source_refs="source.awri-wine-faults source.uc-davis-winery-sanitation"}

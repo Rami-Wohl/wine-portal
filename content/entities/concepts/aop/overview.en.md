@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.inao-aop-overview source.eurlex-wine-pdo-regulation-2026"}
-A **protected designation of origin**, or **PDO**, protects the name of a product whose origin, production and distinctive characteristics are connected to a delimited area under recorded rules. For wine, it is the European legal foundation beneath names such as Bordeaux, Champagne, Barolo and Rioja.
+A **protected designation of origin**, or **PDO**, protects the name of a product whose origin, production and distinctive characteristics are connected to a delimited area under recorded rules. For wine, it is the European legal foundation beneath names such as Bordeaux, [[appellation.champagne|Champagne]], Barolo and Rioja.
 
 A PDO therefore says much more than “made nearby”. The name guarantees compliance with an origin and production specification, while producer, vintage and drinker still shape the style and its appreciation.
 :::

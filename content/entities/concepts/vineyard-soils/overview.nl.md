@@ -93,7 +93,7 @@ Een teler kan bedekking, organische aanvoer, verkeer, drainage en bewerking vera
 :::section{#wereldwijde-context depth="intermediate" source_refs="source.white-soil-terroir-2020 source.van-leeuwen-soil-terroir-2018"}
 ## Wereldwijde context — verschillende routes naar een wortelomgeving
 
-Grind in de Médoc, leisteen aan de Moezel, terra rossa in Coonawarra en vulkanisch materiaal op eilanden zijn bruikbare studievoorbeelden, maar geen vaste recepten. In ieder geval veranderen klimaat, helling, profieldiepte, fijne matrix en beheer de functie. Het voorbeeld is geslaagd wanneer het een mechanisme verduidelijkt en vervangbaar blijft door een vergelijkbaar profiel elders.
+Grind in de [[region.medoc|Médoc]], leisteen aan de Moezel, terra rossa in Coonawarra en vulkanisch materiaal op eilanden zijn bruikbare studievoorbeelden, maar geen vaste recepten. In ieder geval veranderen klimaat, helling, profieldiepte, fijne matrix en beheer de functie. Het voorbeeld is geslaagd wanneer het een mechanisme verduidelijkt en vervangbaar blijft door een vergelijkbaar profiel elders.
 :::
 
 :::section{#bewijs-en-grenzen depth="foundation" source_refs="source.maltman-vineyards-rocks-soils-2018 source.parr-maltman-minerality-2018"}

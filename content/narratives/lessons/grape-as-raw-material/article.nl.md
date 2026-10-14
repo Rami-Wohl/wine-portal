@@ -22,7 +22,7 @@ De schil omsluit meer dan het sappige binnenste. Zij bevat kleurstoffen bij blau
 :::section{#rijpheid-heeft-meerdere-kanten depth="foundation" source_refs="source.awri-berry-ripening"}
 ## Suiker, zuur en fenolische rijpheid
 
-Tijdens het rijpen nemen de suikers toe, verandert de zuursamenstelling en ontwikkelen schil, pitten en aromatische verbindingen zich verder. Die veranderingen lopen naast elkaar, ieder in een eigen tempo. Een suikerwaarde alleen vertelt dus niet hoe rijp de volledige druif is. [@source.awri-berry-ripening]
+Tijdens de [[concept.berry-development-ripeness|rijping]] nemen de suikers toe, verandert de zuursamenstelling en ontwikkelen schil, pitten en aromatische verbindingen zich verder. Die veranderingen lopen naast elkaar, ieder in een eigen tempo. Een suikerwaarde alleen vertelt dus niet hoe rijp de volledige druif is. [@source.awri-berry-ripening]
 
 Wijnmakers proeven daarom ook. Ze letten onder meer op zuurindruk, aroma, schiltextuur en de smaak en kleur van de pitten. Bij blauwe druiven is **fenolische rijpheid** de verzamelnaam voor de ontwikkeling van kleur- en tanninerijke delen van de bes. De gewenste balans hangt samen met de beoogde wijn: druiven voor een lichte, frisse stijl vragen een ander oogstvenster dan fruit voor een geconcentreerde rode wijn.
 :::
@@ -35,6 +35,8 @@ Langer laten hangen kan meer suiker en een andere aromatische en fenolische rijp
 Dat moment ontstaat in een echt groeiseizoen. Warmte, regen en het verloop van de rijping kunnen per [[concept.vintage|jaargang]] andere verhoudingen opleveren. Ook binnen één wijngaard rijpen trossen en perceeldelen niet altijd tegelijk. Oogsten kan daarom over meerdere dagen of selectierondes worden verdeeld.
 
 De les [Rijpheid beoordelen en het oogstmoment kiezen](narrative.lesson.ripeness-and-harvest) werkt de afweging in de wijngaard uit: hoe verbind je metingen en proeven met fruitgezondheid en het risico van wachten? Hier volgen we wat het gekozen fruit voor de kelder betekent.
+
+De [[concept.vine-as-living-system|wijnstok als levend systeem]] verklaart hoe bladeren, wortels en transportweefsels deze grondstof voeden.
 :::
 
 :::section{#gezond-fruit-geeft-speelruimte depth="foundation" source_refs="source.awri-managing-botrytis-fruit-2023 source.penn-state-grape-sour-rot"}

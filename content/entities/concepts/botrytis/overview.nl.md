@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.blanco-ulate-noble-rot-2015 source.vaczy-noble-grey-rot-2024"}
-**Botrytis cinerea** is meestal een gevreesde schimmelziekte. Onder een uitzonderlijke combinatie van rijpe druiven, vocht en daaropvolgende droging kan dezelfde schimmel echter **edele rotting** veroorzaken: de bes verliest water, verschrompelt en levert uiterst geconcentreerd sap voor bepaalde zoete wijnen. [@source.blanco-ulate-noble-rot-2015]
+**Botrytis cinerea** is meestal een gevreesde schimmelziekte. Onder een uitzonderlijke combinatie van rijpe druiven, vocht en daaropvolgende droging kan dezelfde schimmel echter **edele rotting** veroorzaken: de bes verliest water, verschrompelt en levert uiterst geconcentreerd sap voor bepaalde [[concept.sweet-wines|zoete wijnen]]. [@source.blanco-ulate-noble-rot-2015]
 
 “Edel” is dus geen naam voor een vriendelijk schimmelras. Het beschrijft een gunstige uitkomst die ieder [[concept.vintage|oogstjaar]] opnieuw kan mislukken.
 :::

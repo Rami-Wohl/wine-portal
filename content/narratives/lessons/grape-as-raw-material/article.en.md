@@ -22,7 +22,7 @@ The skin encloses more than juicy flesh. In black grapes, it contains pigments, 
 :::section{#rijpheid-heeft-meerdere-kanten depth="foundation" source_refs="source.awri-berry-ripening"}
 ## Sugar, acidity and phenolic maturity
 
-As grapes ripen, sugars increase, acid composition changes and skins, seeds and aromatic compounds continue to develop. Those changes run alongside one another, each at its own pace. A sugar reading alone therefore cannot describe the maturity of the whole grape. [@source.awri-berry-ripening]
+During [[concept.berry-development-ripeness|grape ripening]], sugars increase, acid composition changes and skins, seeds and aromatic compounds continue to develop. Those changes run alongside one another, each at its own pace. A sugar reading alone therefore cannot describe the maturity of the whole grape. [@source.awri-berry-ripening]
 
 Winemakers taste as well as measure. They may consider acidity, aroma, skin texture, and the flavour and colour of seeds. In black grapes, **phenolic maturity** is a collective term for the development of the colour- and tannin-bearing parts of the berry. The desired balance depends on the intended wine: grapes for a light, fresh style require a different harvest window from fruit intended for a concentrated red.
 :::
@@ -35,6 +35,8 @@ More time on the vine may bring additional sugar and further aromatic and phenol
 That moment occurs within a real growing season. Heat, rain and the course of ripening can produce different proportions in each [[concept.vintage|vintage]]. Bunches and sections of a vineyard do not always ripen at the same time either. Harvest may consequently be spread across several days or selective passes.
 
 The lesson [Assessing ripeness and choosing when to harvest](narrative.lesson.ripeness-and-harvest) explores the vineyard decision: how do you connect measurements and tasting with fruit health and the risk of waiting? Here we follow what the chosen fruit means for the winery.
+
+The [[concept.vine-as-living-system|vine as a living system]] explains how leaves, roots and transport tissues supply this raw material.
 :::
 
 :::section{#gezond-fruit-geeft-speelruimte depth="foundation" source_refs="source.awri-managing-botrytis-fruit-2023 source.penn-state-grape-sour-rot"}

@@ -31,7 +31,7 @@ Mogelijke resultaten zijn een voller mondgevoel, andere integratie van fruit en 
 
 Mannoproteïnen zijn grote moleculen uit de wand van gistcellen. Samen met polysachariden, aminozuren, vetzuren en andere bestanddelen kunnen ze tijdens liescontact in wijn terechtkomen. Ze worden onderzocht vanwege effecten op mondgevoel, stabiliteit en interactie met aroma en fenolen. [@source.awri-lees-contact-2020]
 
-Dat mechanisme rechtvaardigt geen eenvoudige formule “meer lies is meer body”. Afgifte verloopt langzaam en hangt af van gist, tijd, temperatuur, beweging en wijnsamenstelling. Bovendien kunnen [[concept.malolactic-fermentation|malolactische omzetting]], hout en zuurstof tegelijk de textuur veranderen.
+Dat mechanisme rechtvaardigt geen eenvoudige formule “meer lies is meer body”. Afgifte verloopt langzaam en hangt af van gist, tijd, temperatuur, beweging en [[concept.wine-composition|wijnsamenstelling]]. Bovendien kunnen [[concept.malolactic-fermentation|malolactische omzetting]], hout en zuurstof tegelijk de textuur veranderen.
 :::
 
 :::figure{#procesvergelijking depth="foundation" media_id="media.concept.lees-autolysis-batonnage.process-comparison" source_refs="source.awri-lees-contact-2020"}
@@ -56,7 +56,7 @@ De oplossing is niet simpelweg vaker of minder vaak roeren. Hoeveel vaste stof d
 :::section{#toepassingen depth="foundation" source_refs="source.champagne-maturation-on-lees source.awri-lees-contact-2020"}
 ## Toepassingen — fles, vat en tank geven ieder een ander contact
 
-**In de fles** hoort liesrijping bij mousserende wijn volgens de [[concept.traditional-method|traditionele methode]]. Na de tweede vergisting blijft de wijn bij het gistbezinksel tot remuage en [[concept.disgorgement|dégorgement]]. In Champagne duurt die wettelijk begrensde fase lang genoeg om autolyse een wezenlijke rol te geven; andere traditioneel gemaakte mousserende wijnen volgen dezelfde hoofdlogica met hun eigen rijpingsregels. [@source.champagne-maturation-on-lees]
+**In de fles** hoort liesrijping bij [[concept.sparkling-wines|mousserende wijn]] volgens de [[concept.traditional-method|traditionele methode]]. Na de [[concept.second-fermentation|tweede vergisting]] blijft de wijn bij het gistbezinksel tot [[concept.remuage|remuage]] en [[concept.disgorgement|dégorgement]]. In [[appellation.champagne|Champagne]] duurt die wettelijk begrensde fase lang genoeg om autolyse een wezenlijke rol te geven; andere traditioneel gemaakte mousserende wijnen volgen dezelfde hoofdlogica met hun eigen rijpingsregels. [@source.champagne-maturation-on-lees]
 
 **In houten vat** komt de techniek veel voor bij droge witte wijn, met vatvergiste Chardonnay als bekend maar niet exclusief voorbeeld. De wijn kan rustig op fijne lies blijven of periodiek worden geroerd. Lies, hout, zuurstof en eventuele malolactische omzetting ontwikkelen zich dan gezamenlijk. [@source.awri-lees-contact-2020]
 
