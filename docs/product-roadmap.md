@@ -33,12 +33,13 @@ bewijs van gebruik en geen zelfstandige reden voor accounts of een database.
   is via `LRN-014–017` geleverd: acht NL/EN-lessen, leercontext, terugblik,
   vervolgsuggesties en eigen lokale voortgang naast het stille-wijnpad.
   [Integrale publicatiereview](../editorial/vineyard-path-release-review-2026-10-13.md).
-- **Eerstvolgend: `EXP-032`, daarna `EXP-026`.** Inventariseer individuele
-  wijnen en hun juiste identiteit/owner; publiceer de eerste afgebakende
-  Port/Sherry/Champagne-batch. Integreer daarna graph, links, media en
-  terminologie. Latere wijncatalogusbatches blijven zichtbaar open; de eerste
-  batch sluit EXP-032 niet zolang die voorraad resteert. Een regionale
-  naam, beschermde herkomst en methode krijgen hun eigen passende scope.
+- **Eerstvolgend: `EXP-026`.** De eerste `EXP-032`-batch is gepubliceerd:
+  Port, Sherry en Champagne hebben zelfstandige NL/EN-appellationpagina’s.
+  De [inventaris](../editorial/briefs/exp-032-wine-inventory.md) onderscheidt
+  herkomstnamen, families, categorieën en technieken en hergebruikt bestaande
+  owners. Integreer nu graph, links, media en terminologie. De resterende
+  catalogusbatches volgen na EXP-028, vóór de regionale pilots; EXP-032 blijft
+  daarvoor open. De nieuw gescaffolde regio-/druivenrecords blijven drafts.
 - **Atlas expliciet voorbereiden: `MNT-051`.** Bronverkenning mag naast lessen
   lopen. Kies een kleine geverifieerde Bordeauxscope met provenance/licentie en
   afgebakende bouwtickets. Daarna kan `MNT-002` de eerste kaart leveren zodra
@@ -63,7 +64,9 @@ bewijs van gebruik en geen zelfstandige reden voor accounts of een database.
   `LRN-012` vroegst 2026-10-22 én alleen met genoeg werkelijk gebruik of gerichte
   gebruiksgesprekken. Geen gebruikers betekent evaluatie uitstellen, niet lessen
   uitstellen. `MNT-056` uitvoeren zodra toegang beschikbaar is; lokale tests zijn
-  geen bewijs van GitHub-/Vercel-gedrag.
+  geen bewijs van GitHub-/Vercel-gedrag. De gebruiker bevestigde op
+  2026-10-13 na commit/push een geslaagde Actions-run; overige externe
+  acceptatiepunten blijven open.
 
 Dit is een aanbevolen afwisseling tussen lessen, naslag en Atlasvoorbereiding.
 Curriculumgaps kunnen de volgorde van inhoudelijke batches gemotiveerd wijzigen.
@@ -92,21 +95,21 @@ Het feedbackspoor is geparkeerd. Onderstaande fasevolgorde geldt uitsluitend
 
 De aanbevolen inhoudelijke/voorbereidende volgorde is hieronder weergegeven.
 Het curriculumakkoord, de drie lesbatches en pathpublicatie zijn afgerond.
-Nu volgt de eerste EXP-032-batch, daarna de integratie in EXP-026.
+De eerste EXP-032-batch is geleverd; nu volgt de integratie in EXP-026.
 Atlasbronverkenning kan naast dit contentwerk lopen.
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `EXP-032` | Individuele wijnen: inventaris en eerste Port/Sherry/Champagne-batch; onafhankelijk van de lesbatches oppakbaar |
-| 2 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren |
-| 3 | `MNT-051` | Kleine geverifieerde Bordeaux-Atlaspilot en bouwscope afbakenen; bronverkenning kan naast lessen lopen |
-| 4 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
-| 5 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
-| 6 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
-| 7 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen |
-| 8 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
-| 9 | `EXP-028` | Integrale redactionele en product-QA |
-| 10 | `MNT-065` | Representatieve benchmarkscenario's en workloadversies vóór grote corpus-/Atlasuitbreiding |
+| 1 | `EXP-026` | Graph, links, media, terminologie en expliciete owners integreren, inclusief de drie nieuwe wijnpagina’s |
+| 2 | `MNT-051` | Kleine geverifieerde Bordeaux-Atlaspilot en bouwscope afbakenen; bronverkenning kan naast content lopen |
+| 3 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
+| 4 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
+| 5 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
+| 6 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen, inclusief nieuwe regionale/druivendrafts |
+| 7 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
+| 8 | `EXP-028` | Integrale redactionele en product-QA |
+| 9 | `EXP-032` | Resterende catalogus: batch 2 zoetheidscontrasten → batch 3 mousserend → batch 4 versterkt/Manzanilla; eerste batch afgerond |
+| 10 | `MNT-065` | Representatieve benchmarkscenario’s en workloadversies vóór grote corpus-/Atlasuitbreiding |
 | 11 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
 | 12 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
 | 13 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
@@ -135,7 +138,7 @@ Geblokkeerd, in aanbevolen oppakvolgorde zodra de afhankelijkheid beschikbaar is
 
 | Prioriteit bij vrijgave | Ticket | Afhankelijkheid |
 | ---: | --- | --- |
-| 1 | `MNT-056` | Toegang tot GitHub/Vercel voor externe CI-/deploymentverificatie |
+| 1 | `MNT-056` | Actions geslaagd volgens gebruikersbevestiging; repository-/branchbescherming en Vercel-acceptatie nog te controleren |
 | 2 | `MNT-055` | Compatibele upstreampatch voor braces; handmatige hercontrole uiterlijk 2026-10-18 |
 | 3 | `MNT-002` | Geverifieerde Atlasdata voor Bordeauxkaart |
 | 4 | `MNT-014` | Officiële Barsac-/Sauternes-geometrie |

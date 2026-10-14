@@ -1,0 +1,17 @@
+id: region.douro
+type: region
+status: draft
+canonical_name: Douro
+names:
+  nl: Douro
+  en: Douro
+slugs:
+  nl: douro
+  en: douro
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.ivdp-douro-characteristics

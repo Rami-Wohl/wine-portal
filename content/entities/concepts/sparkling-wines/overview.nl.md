@@ -64,7 +64,7 @@ Bij dosage gaat het om de zoetheid na dégorgement. Bij [[concept.bottling|botte
 :::section{#wereldwijde-context depth="foundation" source_refs="source.champagne-bottling-second-fermentation source.limoux-ancestral-method source.wosa-wine-styles"}
 ## Wereldwijde context
 
-**Champagne** laat de traditionele route zien: tweede vergisting en verkoop in dezelfde fles. **Limoux Méthode Ancestrale** laat voortgezette gisting zien. Beide Franse voorbeelden maken een verschil in gistingsmoment zichtbaar. [@source.champagne-bottling-second-fermentation] [@source.limoux-ancestral-method]
+**[[appellation.champagne|Champagne]]** laat de traditionele route zien: tweede vergisting en verkoop in dezelfde fles. **Limoux Méthode Ancestrale** laat voortgezette gisting zien. Beide Franse voorbeelden maken een verschil in gistingsmoment zichtbaar. [@source.champagne-bottling-second-fermentation] [@source.limoux-ancestral-method]
 
 In **Zuid-Afrika** gebruikt Cap Classique de traditionele flesroute. De lokale stijlomschrijving onderscheidt daarnaast tankgisting en carbonatie. Het principe van de bruisroutes reist dus mee, terwijl iedere naam haar eigen herkomst en voorwaarden heeft. [@source.wosa-wine-styles]
 

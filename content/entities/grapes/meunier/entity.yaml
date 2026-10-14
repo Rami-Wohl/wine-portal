@@ -1,0 +1,21 @@
+id: grape.meunier
+type: grape
+status: draft
+canonical_name: Meunier
+names:
+  nl: Meunier
+  en: Meunier
+aliases:
+  nl: &a1
+    - Pinot Meunier
+  en: *a1
+slugs:
+  nl: meunier
+  en: meunier
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.champagne-grapes

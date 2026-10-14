@@ -29,7 +29,7 @@ Peildatum: 2026-10-13.
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 51 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063`, `MNT-066` |
+| Afgerond | 52 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063`, `MNT-066/067` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
@@ -38,12 +38,14 @@ taken. Taalkeuze en NL/EN-presentatie (`MNT-045/046`) en CSS-onderhoud
 De schaalmeting en gerichte optimalisaties (`MNT-052`) zijn afgerond.
 Benchmarkbetrouwbaarheid en Nederlandse uitleg zijn in `MNT-063` aangescherpt.
 De reproduceerbare Next-afbeeldingsvastloper is via `MNT-066` hersteld;
-een nieuwe geslaagde GitHub-run blijft onderdeel van `MNT-056`.
+de gebruiker bevestigde op 2026-10-13 een geslaagde GitHub-run na commit/push.
+Repository-/branchbescherming en Vercel-acceptatie blijven onderdeel van `MNT-056`.
 Goedkopere fixture-I/O (`MNT-064`) blijft laag geprioriteerd; representatievere
 meetgevallen (`MNT-065`) volgen vóór grote corpus-/Atlasuitbreidingen, niet vóór lessen.
 Curriculumvoorbereiding (`LRN-013`) en alle acht tweetalige wijngaardlessen
 (`LRN-014–016`) zijn afgerond; DEC-LRN-015 is expliciet goedgekeurd. Volgende werk:
-individuele wijnpagina’s (`EXP-032`), daarna Explore-integratie (`EXP-026`).
+Explore-integratie (`EXP-026`); de eerste Port/Sherry/Champagne-batch van
+`EXP-032` is geleverd, de resterende catalogus volgt na EXP-028.
 Het volledige wijngaardpad is gepubliceerd via `LRN-017`; Atlasafbakening
 (`MNT-051`) mag als bronverkenning naast lessen lopen. De [feedbackvoorbereiding](feedback-roadmap.md)
 is na de lokale productflow (`FBK-001`) bewust geparkeerd; ook hashes (`FBK-003`)
@@ -298,9 +300,10 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 - **Categorie:** operations, testing
 - **Herkomst:** afgesplitst van de externe acceptatiestappen van `MNT-047`
 - **Bevinding:** de gedeelde GitHub-output bevestigt op 2026-10-13 dat de workflow
-  draait, met vijf falende browsertests. `MNT-066` herstelt een reproduceerbare
-  afbeeldingsvastloper. Een actuele geslaagde Ubuntu-run, mergebescherming en
-  de onderstaande deploymentacceptatie zijn hier nog niet bevestigd.
+  draaide, met vijf falende browsertests. `MNT-066` herstelde een reproduceerbare
+  afbeeldingsvastloper. De gebruiker bevestigde daarna op 2026-10-13 een
+  geslaagde GitHub-run na commit/push. Die bevestiging is geen eigen inspectie
+  van repositoryinstellingen of de onderstaande deploymentacceptatie.
 - **Klaar wanneer:** de gepushte commit een geslaagde **Quality checks**-run op
   GitHub heeft; repositoryrechten en Actions-instellingen zijn gecontroleerd;
   de passende branch protection/required check is expliciet beoordeeld; en de
@@ -310,7 +313,9 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   lokale tracing bewijst geen cloud cold-start of function-packagegrootte.
   Vercel kiest de patch binnen `24.x` zelf.
 - **Blokkade:** geauthenticeerde toegang en een gepushte commit/deployment zijn
-  vereist. Geen credentials aangemaakt en geen deployment of permissiewijziging
+  vereist voor de resterende repository-/deploymentcontroles. Actions draait
+  inmiddels succesvol volgens de gebruikersbevestiging. Geen credentials
+  aangemaakt en geen deployment of permissiewijziging
   uitgevoerd tijdens lokaal ontwikkelwerk.
 - **Log:** 2026-10-04 — SSH en browsertoegang read-only geprobeerd; externe
   controle blijft open. Volg de runbookstappen in README en het runtime-reviewrapport.
@@ -321,6 +326,11 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   acceptatie. Commit/push de fix en controleer de nieuwe **Quality checks**-run;
   bij resterende fouten het trace-archief beoordelen. Zie de
   [CI-afbeeldingsreview](../editorial/ci-image-optimizer-review-2026-10-13.md).
+
+- **Aanvullend log 2026-10-13:** gebruiker heeft gecommit/gepusht en meldt dat de
+  GitHub Actions-workflow goed doorloopt. CI-uitvoering daarmee door gebruiker
+  bevestigd; branch protection, required checks, Vercel Node 24, functionbundle
+  en live NL/EN-search/Learn-smoke blijven open.
 
 ### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
 
@@ -425,6 +435,26 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
 ## Historie
+
+### `MNT-067` — Draftbestemmingen uit publieke entitynavigatie houden
+
+- **Status:** afgerond op 2026-10-13
+- **Prioriteit:** hoog
+- **Categorie:** product-ux, knowledge-data, testing
+- **Scope:** entitypagina's, broodkruimelpad en gerelateerde onderwerpen
+- **Herkomst:** `QCR-2026-10-13-03`, visuele controle van de eerste EXP-032-batch
+- **Bevinding:** de renderer gebruikte alle graphrelaties op actieve pagina's.
+  Nieuwe regionale ouders en hoofddruiven verschenen daardoor als links naar
+  lege draftpagina's, terwijl publieke discovery actieve content hoort te tonen.
+- **Klaar wanneer:** actieve entitypagina's alleen actieve relatietargets
+  aanbieden, canonical relaties behouden blijven, en de afzonderlijke
+  draftreviewroutes bereikbaar en noindex blijven.
+- **Log:** de publicatiestatus wordt nu vóór broodkruimel- en clustervorming
+  gefilterd. Draftpagina's behouden hun volledige relatiecontext voor review.
+  Browsertests controleren de drie wijnpagina's in NL/EN, plus discovery,
+  kennisdiepte en no-JS. Directe draftreview en noindex zijn in de browser
+  geverifieerd. De volledige projectcheck (190 tests) en browsersuite
+  (199/199 zonder retries) slagen na de correctie.
 
 ### `MNT-066` — Vastlopende Next-afbeeldingsaanvragen herstellen
 

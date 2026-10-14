@@ -1,0 +1,47 @@
+id: appellation.port
+type: appellation
+status: active
+canonical_name: Porto
+names:
+  nl: Port
+  en: Port
+aliases:
+  nl: &a1
+    - Porto
+    - Port wine
+  en: *a1
+slugs:
+  nl: port
+  en: port
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: part_of
+    target: region.douro
+  - type: important_grape
+    target: grape.touriga-nacional
+  - type: important_grape
+    target: grape.touriga-franca
+  - type: important_grape
+    target: grape.tempranillo
+  - type: related_to
+    target: concept.fortified-wines
+  - type: related_to
+    target: concept.sweet-wines
+  - type: related_to
+    target: concept.fortification
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.oxidation
+assertions: []
+source_refs:
+  - source.ivdp-port-introduction
+  - source.ivdp-port-categories
+  - source.ivdp-port-history
+  - source.ivdp-douro-characteristics
+  - source.ivdp-douro-grapes
+  - source.ivdp-port-vinification
+depth: foundation
+last_reviewed: 2026-10-13

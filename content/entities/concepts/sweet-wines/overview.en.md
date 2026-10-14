@@ -66,7 +66,7 @@ Concentration meanwhile calls for selection, time and management of fruit health
 - **Germany:** Eiswein shows concentration through frozen pressing; Spätlese shows that a harvest term and sweetness provide different information. [@source.dwi-praedikate]
 - **Italy:** [[concept.passito|Passito]] connects wine with dried grapes. Pantelleria also has a fortified passito liquoroso variant. [@source.masaf-pantelleria-specification-2024]
 - **France:** [[concept.vin-de-paille|Vin de paille]] leads into different local dried-grape traditions.
-- **Portugal:** Port demonstrates sugar retention by fortification during fermentation. [@source.ivdp-port-vinification]
+- **Portugal:** [[appellation.port|Port]] demonstrates sugar retention by fortification during fermentation. [@source.ivdp-port-vinification]
 - **South Africa:** Noble Late Harvest provides a local context for wine from botrytis-affected grapes. Local label conditions belong to that category. [@source.wosa-wine-styles]
 
 The routes make the family recognizable; individual origins and wine names add grapes, rules and the maker's choices.

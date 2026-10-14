@@ -1,0 +1,400 @@
+schema_version: 2
+package_id: appellation.port
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids:
+      - ligging-en-afbakening
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer de wijnnaam Port onderscheiden van Porto als handelsstad en Douro als
+        regio/wijnnaam?
+    layers:
+      foundation:
+        - Kan de lezer de wijnnaam Port onderscheiden van Porto als handelsstad en Douro als
+          regio/wijnnaam?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer de wijnnaam Port onderscheiden van Porto als handelsstad en Douro als
+            regio/wijnnaam?
+        source_refs:
+          - source.ivdp-port-introduction
+          - source.ivdp-douro-characteristics
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: historical-development
+    disposition: on-page
+    block_ids:
+      - geschiedenis
+    target_ids: []
+    completeness_questions:
+      - Verklaart de tekst de rol van export en demarcatie in 1756 zonder oorsprongsmythe?
+    layers:
+      foundation:
+        - Verklaart de tekst de rol van export en demarcatie in 1756 zonder oorsprongsmythe?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Verklaart de tekst de rol van export en demarcatie in 1756 zonder oorsprongsmythe?
+        source_refs: []
+      specific_claims:
+        - claim: De demarcatie-instelling werd in 1756 opgericht.
+          status: supported
+          source_refs:
+            - source.ivdp-port-history
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - landschap-klimaat-en-bodem
+    target_ids: []
+    completeness_questions:
+      - Zijn helling, regencontrast en bodem voorstelbaar zonder fictieve kaart of
+        aromadeterminisme?
+    layers:
+      foundation:
+        - Zijn helling, regencontrast en bodem voorstelbaar zonder fictieve kaart of
+          aromadeterminisme?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn helling, regencontrast en bodem voorstelbaar zonder fictieve kaart of
+            aromadeterminisme?
+        source_refs:
+          - source.ivdp-douro-characteristics
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids:
+      - druivenrassen
+    target_ids: []
+    completeness_questions:
+      - Zijn belangrijkste rode en witte rassen benoemd zonder universeel blendrecept?
+    layers:
+      foundation:
+        - Zijn belangrijkste rode en witte rassen benoemd zonder universeel blendrecept?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn belangrijkste rode en witte rassen benoemd zonder universeel blendrecept?
+        source_refs:
+          - source.ivdp-douro-grapes
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids:
+      - wijnbouw-en-wijnmaken
+    target_ids:
+      - concept.fortification
+    completeness_questions:
+      - Begrijpt de lezer de gistingsstop en het verschil tussen grote recipiënten en langdurige
+        houtrijping?
+    layers:
+      foundation:
+        - Begrijpt de lezer de gistingsstop en het verschil tussen grote recipiënten en
+          langdurige houtrijping?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Begrijpt de lezer de gistingsstop en het verschil tussen grote recipiënten en
+            langdurige houtrijping?
+        source_refs:
+          - source.ivdp-port-vinification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids:
+      - appellationregels
+    target_ids: []
+    completeness_questions:
+      - Is duidelijk waarom categorie en oogstjaar samen moeten worden gelezen?
+    layers:
+      foundation:
+        - Is duidelijk waarom categorie en oogstjaar samen moeten worden gelezen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Is duidelijk waarom categorie en oogstjaar samen moeten worden gelezen?
+        source_refs:
+          - source.ivdp-port-introduction
+          - source.ivdp-port-categories
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      - classificatie-en-producenten
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer categorie, bedrijf en individuele fles onderscheiden zonder
+        producentenranglijst?
+    layers:
+      foundation:
+        - Kan de lezer categorie, bedrijf en individuele fles onderscheiden zonder
+          producentenranglijst?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer categorie, bedrijf en individuele fles onderscheiden zonder
+            producentenranglijst?
+        source_refs:
+          - source.ivdp-port-categories
+          - source.ivdp-port-history
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids:
+      - wijnstijl-en-flesontwikkeling
+    target_ids: []
+    completeness_questions:
+      - Zijn ruby, tawny, wit en rosé en hout- tegenover flesontwikkeling begrijpelijk?
+    layers:
+      foundation:
+        - Zijn ruby, tawny, wit en rosé en hout- tegenover flesontwikkeling begrijpelijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn ruby, tawny, wit en rosé en hout- tegenover flesontwikkeling begrijpelijk?
+        source_refs:
+          - source.ivdp-port-introduction
+          - source.ivdp-port-categories
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids:
+      - etiket-en-aankoop
+      - bottelmoment
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer Vintage, LBV, colheita en een leeftijdsaanduiding onderscheiden?
+    layers:
+      foundation:
+        - Kan de lezer Vintage, LBV, colheita en een leeftijdsaanduiding onderscheiden?
+      intermediate:
+        - Het bottelmoment achter de naam
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer Vintage, LBV, colheita en een leeftijdsaanduiding onderscheiden?
+        source_refs: []
+      specific_claims:
+        - claim: Colheita is één oogst en rijpt minstens zeven jaar in hout.
+          status: supported
+          source_refs:
+            - source.ivdp-port-categories
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - hedendaagse-ontwikkelingen
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer de huidige zeer oude leeftijdscategorieën onderscheiden van een oude Vintage?
+    layers:
+      foundation:
+        - Kan de lezer de huidige zeer oude leeftijdscategorieën onderscheiden van een oude Vintage?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer de huidige zeer oude leeftijdscategorieën onderscheiden van een oude Vintage?
+        source_refs:
+          - source.ivdp-port-categories
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - portvaten
+    target_ids: []
+    completeness_questions:
+      - Maakt de foto echte keldervaten voorstelbaar zonder leeftijd of kwaliteit uit het
+        uiterlijk af te leiden?
+    layers:
+      foundation:
+        - Maakt de foto echte keldervaten voorstelbaar zonder leeftijd of kwaliteit uit het
+          uiterlijk af te leiden?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Maakt de foto echte keldervaten voorstelbaar zonder leeftijd of kwaliteit uit het
+            uiterlijk af te leiden?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: child-knowledge
+    disposition: on-page
+    block_ids:
+      - verder-ontdekken
+    target_ids:
+      - concept.fortified-wines
+      - concept.sweet-wines
+      - concept.elevage
+      - concept.oxidation
+    completeness_questions:
+      - Leiden de vervolglinks naar actieve family- en procesowners?
+    layers:
+      foundation:
+        - Leiden de vervolglinks naar actieve family- en procesowners?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Leiden de vervolglinks naar actieve family- en procesowners?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.fortification
+    names:
+      nl: Versterking
+      en: Fortification
+    slugs:
+      nl: fortification
+      en: fortification
+    disposition: link-and-relation
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
+    disposition: link-and-relation
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link-and-relation
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: link-and-relation
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link-and-relation
+  - id: region.douro
+    names:
+      nl: Douro
+      en: Douro
+    slugs:
+      nl: douro
+      en: douro
+    disposition: relation
+  - id: grape.touriga-nacional
+    names:
+      nl: Touriga Nacional
+      en: Touriga Nacional
+    slugs:
+      nl: touriga-nacional
+      en: touriga-nacional
+    disposition: relation
+  - id: grape.touriga-franca
+    names:
+      nl: Touriga Franca
+      en: Touriga Franca
+    slugs:
+      nl: touriga-franca
+      en: touriga-franca
+    disposition: relation
+  - id: grape.tempranillo
+    names:
+      nl: Tempranillo
+      en: Tempranillo
+    slugs:
+      nl: tempranillo
+      en: tempranillo
+    disposition: relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

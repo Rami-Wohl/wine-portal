@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.champagne-bottling-second-fermentation source.inao-cremant-bordeaux-specification-2026"}
-In the **traditional method**, a still base wine acquires its bubbles through a **[[concept.second-fermentation|second fermentation]] in the bottle**. It then ages on its yeast sediment. Only after that sediment has been removed and the bottle sealed is the wine ready for release. Champagne is the best-known example, but the method is also used elsewhere, including for [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.champagne-bottling-second-fermentation] [@source.inao-cremant-bordeaux-specification-2026]
+In the **traditional method**, a still base wine acquires its bubbles through a **[[concept.second-fermentation|second fermentation]] in the bottle**. It then ages on its yeast sediment. Only after that sediment has been removed and the bottle sealed is the wine ready for release. [[appellation.champagne|Champagne]] is the best-known example, but the method is also used elsewhere, including for [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.champagne-bottling-second-fermentation] [@source.inao-cremant-bordeaux-specification-2026]
 :::
 
 :::figure{#proces-in-een-oogopslag depth="foundation" media_id="media.appellation.cremant-de-bordeaux.traditional-method"}

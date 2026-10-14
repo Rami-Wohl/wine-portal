@@ -1,0 +1,17 @@
+id: grape.palomino
+type: grape
+status: draft
+canonical_name: Palomino
+names:
+  nl: Palomino
+  en: Palomino
+slugs:
+  nl: palomino
+  en: palomino
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.junta-sherry-specification

@@ -1,0 +1,438 @@
+schema_version: 2
+package_id: appellation.champagne
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids:
+      - ligging-en-afbakening
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer wijnstreek, deelgebieden en beschermde wijnnaam onderscheiden?
+    layers:
+      foundation:
+        - Kan de lezer wijnstreek, deelgebieden en beschermde wijnnaam onderscheiden?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer wijnstreek, deelgebieden en beschermde wijnnaam onderscheiden?
+        source_refs:
+          - source.champagne-region
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: historical-development
+    disposition: on-page
+    block_ids:
+      - geschiedenis
+    target_ids: []
+    completeness_questions:
+      - Verklaart de tekst technische en juridische ontwikkeling zonder uitvindersmythe?
+    layers:
+      foundation:
+        - Verklaart de tekst technische en juridische ontwikkeling zonder uitvindersmythe?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Verklaart de tekst technische en juridische ontwikkeling zonder uitvindersmythe?
+        source_refs:
+          - source.champagne-history
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - landschap-klimaat-en-bodem
+    target_ids: []
+    completeness_questions:
+      - Zijn koel klimaat, helling en variabele bodems uitgelegd zonder krijt als universele
+        smaakoorzaak?
+    layers:
+      foundation:
+        - Zijn koel klimaat, helling en variabele bodems uitgelegd zonder krijt als universele
+          smaakoorzaak?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn koel klimaat, helling en variabele bodems uitgelegd zonder krijt als universele
+            smaakoorzaak?
+        source_refs:
+          - source.champagne-climate
+          - source.champagne-soil
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids:
+      - druivenrassen
+    target_ids: []
+    completeness_questions:
+      - Zijn de drie hoofdrassen en ruimte voor andere toegestane rassen duidelijk?
+    layers:
+      foundation:
+        - Zijn de drie hoofdrassen en ruimte voor andere toegestane rassen duidelijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn de drie hoofdrassen en ruimte voor andere toegestane rassen duidelijk?
+        source_refs:
+          - source.champagne-grapes
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids:
+      - wijnbouw-en-wijnmaken
+    target_ids:
+      - concept.second-fermentation
+      - concept.remuage
+      - concept.disgorgement
+      - concept.dosage
+      - concept.assemblage
+    completeness_questions:
+      - Kan de lezer basiswijn, assemblage, tweede gisting, remuage, dégorgement en dosage
+        volgen?
+    layers:
+      foundation:
+        - Kan de lezer basiswijn, assemblage, tweede gisting, remuage, dégorgement en dosage
+          volgen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer basiswijn, assemblage, tweede gisting, remuage, dégorgement en dosage
+            volgen?
+        source_refs:
+          - source.champagne-pressing
+          - source.champagne-blending
+          - source.champagne-bottling-second-fermentation
+          - source.champagne-riddling
+          - source.champagne-disgorgement
+          - source.champagne-dosage
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids:
+      - appellationregels
+    target_ids: []
+    completeness_questions:
+      - Zijn herkomst/productie en minimale rijping van gewone versus vintage Champagne
+        duidelijk?
+    layers:
+      foundation:
+        - Zijn herkomst/productie en minimale rijping van gewone versus vintage Champagne
+          duidelijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn herkomst/productie en minimale rijping van gewone versus vintage Champagne
+            duidelijk?
+        source_refs:
+          - source.champagne-region
+          - source.champagne-bottling-second-fermentation
+      specific_claims:
+        - claim: Minimale kelderrijping is vijftien maanden voor non-vintage en drie jaar voor vintage.
+          status: supported
+          source_refs:
+            - source.champagne-maturation-on-lees
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      - classificatie-en-producenten
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer cru, producentenrol en cuvée uit elkaar houden zonder codes als
+        kwaliteitsrangorde?
+    layers:
+      foundation:
+        - Kan de lezer cru, producentenrol en cuvée uit elkaar houden zonder codes als
+          kwaliteitsrangorde?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer cru, producentenrol en cuvée uit elkaar houden zonder codes als
+            kwaliteitsrangorde?
+        source_refs:
+          - source.champagne-label-faq
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids:
+      - wijnstijl-en-flesontwikkeling
+      - rijping-voor-en-na-degorgement
+    target_ids:
+      - concept.lees-ageing
+    completeness_questions:
+      - Zijn assemblage, gistrijping en de overgang bij dégorgement uitgelegd?
+    layers:
+      foundation:
+        - Zijn assemblage, gistrijping en de overgang bij dégorgement uitgelegd?
+      intermediate:
+        - Rijping vóór en na dégorgement
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn assemblage, gistrijping en de overgang bij dégorgement uitgelegd?
+        source_refs:
+          - source.champagne-blending
+          - source.champagne-maturation-on-lees
+          - source.champagne-label-faq
+          - source.champagne-disgorgement
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids:
+      - etiket-en-aankoop
+    target_ids: []
+    completeness_questions:
+      - Zijn druif, oogstjaar en zoetheidsklasse als onafhankelijke etiketvragen leesbaar?
+    layers:
+      foundation:
+        - Zijn druif, oogstjaar en zoetheidsklasse als onafhankelijke etiketvragen leesbaar?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn druif, oogstjaar en zoetheidsklasse als onafhankelijke etiketvragen leesbaar?
+        source_refs:
+          - source.champagne-label-faq
+          - source.champagne-blending
+      specific_claims:
+        - claim:
+            Extra dry is zoeter dan brut; brut nature vereist minder dan 3 g/L en geen toegevoegde
+            suiker.
+          status: supported
+          source_refs:
+            - source.champagne-dosage
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - hedendaagse-ontwikkelingen
+    target_ids: []
+    completeness_questions:
+      - Is klimaatadaptatie begrensd tot onderbouwde oogst-/weerseffecten?
+    layers:
+      foundation:
+        - Is klimaatadaptatie begrensd tot onderbouwde oogst-/weerseffecten?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Is klimaatadaptatie begrensd tot onderbouwde oogst-/weerseffecten?
+        source_refs:
+          - source.champagne-climate
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - remuagerek
+    target_ids: []
+    completeness_questions:
+      - Illustreert het hergebruikte rek remuage zonder de foto als plaatsbewijs te gebruiken?
+    layers:
+      foundation:
+        - Illustreert het hergebruikte rek remuage zonder de foto als plaatsbewijs te gebruiken?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Illustreert het hergebruikte rek remuage zonder de foto als plaatsbewijs te
+            gebruiken?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: child-knowledge
+    disposition: on-page
+    block_ids:
+      - verder-ontdekken
+    target_ids:
+      - concept.sparkling-wines
+      - concept.traditional-method
+      - concept.lees-ageing
+      - concept.dosage
+    completeness_questions:
+      - Zijn family en procesowners via actieve links bereikbaar?
+    layers:
+      foundation:
+        - Zijn family en procesowners via actieve links bereikbaar?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn family en procesowners via actieve links bereikbaar?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.traditional-method
+    names:
+      nl: Traditionele methode
+      en: Traditional method
+    slugs:
+      nl: traditionele-methode
+      en: traditional-method
+    disposition: link-and-relation
+  - id: concept.second-fermentation
+    names:
+      nl: Tweede vergisting
+      en: Second fermentation
+    slugs:
+      nl: tweede-vergisting
+      en: second-fermentation
+    disposition: link-and-relation
+  - id: concept.remuage
+    names:
+      nl: Remuage
+      en: Riddling
+    slugs:
+      nl: remuage
+      en: riddling
+    disposition: link-and-relation
+  - id: concept.disgorgement
+    names:
+      nl: Dégorgement
+      en: Disgorgement
+    slugs:
+      nl: degorgement
+      en: disgorgement
+    disposition: link-and-relation
+  - id: concept.dosage
+    names:
+      nl: Dosage
+      en: Dosage
+    slugs:
+      nl: dosage
+      en: dosage
+    disposition: link-and-relation
+  - id: concept.lees-ageing
+    names:
+      nl: Rijping op de lies
+      en: Lees ageing
+    slugs:
+      nl: rijping-op-de-lies
+      en: lees-ageing
+    disposition: link-and-relation
+  - id: concept.sparkling-wines
+    names:
+      nl: Mousserende wijnen
+      en: Sparkling wines
+    slugs:
+      nl: mousserende-wijnen
+      en: sparkling-wines
+    disposition: link-and-relation
+  - id: region.champagne
+    names:
+      nl: Champagne
+      en: Champagne
+    slugs:
+      nl: champagne
+      en: champagne
+    disposition: relation
+  - id: grape.chardonnay
+    names:
+      nl: Chardonnay
+      en: Chardonnay
+    slugs:
+      nl: chardonnay
+      en: chardonnay
+    disposition: relation
+  - id: grape.pinot-noir
+    names:
+      nl: Pinot Noir
+      en: Pinot Noir
+    slugs:
+      nl: pinot-noir
+      en: pinot-noir
+    disposition: relation
+  - id: grape.meunier
+    names:
+      nl: Meunier
+      en: Meunier
+    slugs:
+      nl: meunier
+      en: meunier
+    disposition: relation
+  - id: concept.assemblage
+    names:
+      nl: Assemblage
+      en: Blending
+    slugs:
+      nl: assemblage
+      en: blending
+    disposition: link-and-relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

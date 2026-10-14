@@ -1,0 +1,58 @@
+id: appellation.sherry
+type: appellation
+status: active
+canonical_name: Jerez-Xérès-Sherry
+names:
+  nl: Sherry
+  en: Sherry
+aliases:
+  nl: &a1
+    - Jerez
+    - Xérès
+    - Jerez-Xérès-Sherry
+  en: *a1
+slugs:
+  nl: sherry
+  en: sherry
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: part_of
+    target: region.jerez
+  - type: important_grape
+    target: grape.palomino
+  - type: important_grape
+    target: grape.pedro-ximenez
+  - type: related_to
+    target: concept.fortified-wines
+  - type: related_to
+    target: concept.sweet-wines
+  - type: related_to
+    target: concept.fortification
+  - type: related_to
+    target: concept.elevage
+  - type: related_to
+    target: concept.oxidation
+  - type: important_grape
+    target: grape.muscat-of-alexandria
+assertions:
+  - id: assertion.sherry.fortification-optional
+    predicate: dry_wines_may_be_unfortified
+    value: true
+    status: verified
+    sources:
+      - source.junta-sherry-specification
+      - source.eu-sherry-amendment-2025
+    last_verified: 2026-10-13
+source_refs:
+  - source.junta-sherry-specification
+  - source.junta-sherry-document-history-2025
+  - source.eu-sherry-amendment-2025
+  - source.sherry-types
+  - source.sherry-viticulture
+  - source.sherry-history
+  - source.sherry-labels
+  - source.sherry-ageing
+depth: foundation
+last_reviewed: 2026-10-13

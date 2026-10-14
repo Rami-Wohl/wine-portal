@@ -29,5 +29,7 @@ source_refs:
   - source.sherry-ageing
   - source.wine-australia-rutherglen
   - source.masaf-pantelleria-specification-2024
+  - source.junta-sherry-specification
+  - source.eu-sherry-amendment-2025
 depth: foundation
 last_reviewed: 2026-10-08

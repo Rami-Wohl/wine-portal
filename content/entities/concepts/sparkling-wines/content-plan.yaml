@@ -63,15 +63,14 @@ coverage:
       foundation:
         - Hoe verschillen traditionele, tank-, voortgezette en carbonatieroutes?
       intermediate:
-        - Voortgezette gisting en transfer verschillen van tweede gisting en
-          verkoop in dezelfde fles.
+        - Voortgezette gisting en transfer verschillen van tweede gisting en verkoop in dezelfde
+          fles.
       advanced: []
       specialist: []
     evidence:
       general_synthesis:
         topics:
-          - Hoe verschillen traditionele, tank-, voortgezette en
-            carbonatieroutes?
+          - Hoe verschillen traditionele, tank-, voortgezette en carbonatieroutes?
         source_refs:
           - source.oiv-sparkling-production
           - source.oiv-carbonated-wines
@@ -298,6 +297,14 @@ entity_dependencies:
     slugs:
       nl: botteling
       en: bottling
+    disposition: link
+  - id: appellation.champagne
+    names:
+      nl: Champagne
+      en: Champagne
+    slugs:
+      nl: champagne
+      en: champagne
     disposition: link
 review:
   outline: complete

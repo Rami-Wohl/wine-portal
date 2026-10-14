@@ -12,10 +12,10 @@ Bij versterking komt een deel van het alcohol uit toegevoegde spirit of een ande
 Hier staat het toevoegmoment centraal.
 :::
 
-:::section{#werking depth="foundation" source_refs="source.oiv-liqueur-wine source.ivdp-port-vinification source.sherry-fortification"}
+:::section{#werking depth="foundation" source_refs="source.oiv-liqueur-wine source.ivdp-port-vinification source.sherry-fortification source.junta-sherry-specification"}
 ## Werking
 
-Toevoegen verhoogt het alcoholgehalte van het mengsel. Tijdens actieve gisting kan die verandering de gistwerking stoppen, zodat nog aanwezige druivensuiker overblijft. Port is een concreet voorbeeld. De uitleg geeft geen universele alcoholgrens of doseringsrecept.
+Toevoegen verhoogt het alcoholgehalte van het mengsel. Tijdens actieve gisting kan die verandering de gistwerking stoppen, zodat nog aanwezige druivensuiker overblijft. [[appellation.port|Port]] is een concreet voorbeeld. De uitleg geeft geen universele alcoholgrens of doseringsrecept.
 
 | Moment | Uitgangsmateriaal | Betekenis |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ Toevoegen verhoogt het alcoholgehalte van het mengsel. Tijdens actieve gisting k
 | Tijdens gisting | Gedeeltelijk vergiste most | Onderbreking kan druivensuiker behouden |
 | Na gisting | Uitgegiste wijn | Versterken hoeft geen zoetheid te geven |
 
-De OIV-definitie van likeurwijn omvat die drie uitgangsmaterialen. Voor droge Sherry wordt uitgegiste basiswijn versterkt. De tabel ordent mogelijke momenten; zij is geen toestemming voor elk producttype.
+De OIV-definitie van likeurwijn omvat die drie uitgangsmaterialen. Bij de versterkte route voor droge [[appellation.sherry|Sherry]] wordt uitgegiste basiswijn versterkt. De huidige herkomstregels laten ook droge Sherry zonder versterking toe. [@source.junta-sherry-specification; B.1 en C.2] De tabel ordent mogelijke momenten; zij is geen toestemming voor elk producttype.
 :::
 
 :::section{#omstandigheden-en-variatie depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-ageing"}
@@ -35,7 +35,7 @@ De suiker die bij alcoholtoevoeging nog aanwezig is, helpt Ports zoetheid verkla
 :::detail{#rijping-na-versterken parent="omstandigheden-en-variatie" depth="intermediate" source_refs="source.sherry-fortification source.sherry-ageing"}
 ### Biologische en oxidatieve rijping
 
-In Sherry ondersteunt de gekozen versterking een route onder flor of zonder deze gistlaag. De [[concept.fortified-wines|familiepagina]] verklaart biologische en [[concept.oxidation|oxidatieve rijping]] en het afzonderlijke solerasysteem.
+Bij versterkte Sherry ondersteunt de gekozen versterking een route onder flor of zonder deze gistlaag. De [[concept.fortified-wines|familiepagina]] verklaart biologische en [[concept.oxidation|oxidatieve rijping]] en het afzonderlijke solerasysteem.
 :::
 
 :::section{#toepassing-en-keuzes depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.champagne-dosage"}

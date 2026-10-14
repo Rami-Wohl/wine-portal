@@ -188,7 +188,7 @@ unplanned standalone pages.
 | `EXP-029` | complete | Separate bilingual sweet-wine family hub; sugar/fermentation PNG and existing process owners reused |
 | `EXP-030` | complete | Separate bilingual sparkling-wine family hub; bottle/tank/carbonation PNG and method boundaries reviewed |
 | `EXP-031` | complete | Separate bilingual fortified-wine family hub; addition/ageing PNG and flor/solera ownership clarified |
-| `EXP-032` | open | Inventory individual wines/styles, reuse existing identities and publish bounded batches after EXP-025 |
+| `EXP-032` | partial | Inventory and first bilingual Port/Sherry/Champagne batch published 2026-10-13; three catalogue batches remain open after EXP-028 |
 | `EXP-024` | complete | Bilingual composition hub, ten constituent groups, measurement limits, PNG and existing owner/lesson links |
 | `EXP-025` | complete | Bilingual perception/development hub; senses, thresholds, balance, context, minerality, bottle development and PNG |
 | `EXP-026`–`EXP-028` | open | Execute in the dependency order below after the applicable decision gates |
@@ -765,12 +765,15 @@ new numbered PNG with equivalent HTML, seven existing owner links and final
 lesson link. Composition, perception, judgement and preference remain distinct;
 oxidation retains mechanism ownership. Six new sources and two reused sources;
 no new satellite or runtime model. [Brief and publication review](../editorial/briefs/concept.wine-perception-and-development.md).
-EXP-032 follows with Port, Sherry and Champagne as its first bounded batch.
+EXP-032 has published Port, Sherry and Champagne as its first bounded batch. EXP-026 follows.
 
 #### EXP-032 — Individual sweet, sparkling and fortified wines
 
-**Status:** open. **Depends on:** EXP-025 and EXP-029–031. Execute the inventory
-and first publication batch before EXP-026; later batches remain explicitly open.
+**Status:** partial. Inventory and first publication batch complete on 2026-10-13;
+three follow-up batches remain open. **Depends on:** EXP-025 and EXP-029–031.
+EXP-026 is now unblocked and is the next task. Follow-up catalogue batches run
+after EXP-028 and before the regional publication pilots; they do not postpone
+the next Atlas-scoping task.
 
 **Work:** inventory named wines across all three families, record their true
 identity and existing destination, then order bounded publication batches.
@@ -797,6 +800,25 @@ No `wine_style` model change without demonstrated browse/compare requirements.
 follow-up, publication batches have substantive active pages, and later batches
 remain explicitly open until published or individually resolved. A planning list
 alone does not complete the wine-page work.
+
+**Delivery:** [scope brief](../editorial/briefs/exp-032-first-wines.md),
+[complete inventory and ordered batches](../editorial/briefs/exp-032-wine-inventory.md),
+and [publication review](../editorial/individual-wines-review-2026-10-13.md).
+Port, Sherry and Champagne are active appellations with reviewed NL/EN, all twelve
+coverage dimensions, documentary media and family/process links. Three regional
+parents and seven reusable grapes were scaffolded as drafts; their monographs are
+part of REG-002/003 prioritisation. Sauternes, passito and vin de paille reuse
+existing owners; Tokaj remains a regional parent rather than an Aszú substitute.
+
+**Remaining batches, in order:**
+
+1. Tokaji Aszú, Eiswein/Icewine and Vin Santo; existing sweet-wine owners reused.
+2. Prosecco DOC with separate DOCG scope review, Cava, Asti and Cap Classique.
+3. Madeira, Rutherglen Muscat and the separate Manzanilla appellation.
+
+Each future page requires its own scope, primary research, equivalent NL/EN and
+publication checks. The current inventory does not pre-approve a new entity type
+or individual product catalogue.
 
 #### EXP-026 — Integrate graph, links, media and terminology
 

@@ -12,10 +12,10 @@ In fortification, some alcohol comes from an added spirit or another permitted a
 This page focuses on addition timing.
 :::
 
-:::section{#werking depth="foundation" source_refs="source.oiv-liqueur-wine source.ivdp-port-vinification source.sherry-fortification"}
+:::section{#werking depth="foundation" source_refs="source.oiv-liqueur-wine source.ivdp-port-vinification source.sherry-fortification source.junta-sherry-specification"}
 ## How it works
 
-Addition increases the mixture’s alcohol content. During active fermentation, this change can stop yeast activity, leaving remaining grape sugar unfermented. Port provides a concrete example. This explanation supplies no universal alcohol threshold or dosing recipe.
+Addition increases the mixture’s alcohol content. During active fermentation, this change can stop yeast activity, leaving remaining grape sugar unfermented. [[appellation.port|Port]] provides a concrete example. This explanation supplies no universal alcohol threshold or dosing recipe.
 
 | Timing | Starting material | Significance |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ Addition increases the mixture’s alcohol content. During active fermentation, 
 | During fermentation | Partially fermented must | Interruption can retain grape sugar |
 | After fermentation | Fully fermented wine | Fortification need not produce sweetness |
 
-The OIV definition of liqueur wine includes these three starting materials. For dry Sherry, fully fermented base wine is fortified. The table organizes possible timings; it does not grant permission for every product type.
+The OIV definition of liqueur wine includes these three starting materials. In the fortified route for dry [[appellation.sherry|Sherry]], fully fermented base wine is fortified. Current origin rules also allow dry Sherry without fortification. [@source.junta-sherry-specification; B.1 and C.2] The table organizes possible timings; it does not grant permission for every product type.
 :::
 
 :::section{#omstandigheden-en-variatie depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-ageing"}
@@ -35,7 +35,7 @@ Sugar still present at alcohol addition helps explain Port’s sweetness. Subseq
 :::detail{#rijping-na-versterken parent="omstandigheden-en-variatie" depth="intermediate" source_refs="source.sherry-fortification source.sherry-ageing"}
 ### Biological and oxidative ageing
 
-In Sherry, the chosen fortification supports ageing under flor or without this yeast layer. The [[concept.fortified-wines|family page]] explains biological and [[concept.oxidation|oxidative ageing]] and the separate solera system.
+In fortified Sherry, the chosen fortification supports ageing under flor or without this yeast layer. The [[concept.fortified-wines|family page]] explains biological and [[concept.oxidation|oxidative ageing]] and the separate solera system.
 :::
 
 :::section{#toepassing-en-keuzes depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.champagne-dosage"}

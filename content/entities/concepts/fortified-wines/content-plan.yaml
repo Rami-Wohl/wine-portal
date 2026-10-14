@@ -34,6 +34,8 @@ coverage:
     target_ids: []
     completeness_questions:
       - Hoe hangen grondstof, alcoholtoevoeging, suiker en rijping samen?
+      - Is de versterkte Sherryroute onderscheiden van de huidige mogelijkheid van onversterkte
+        droge wijn?
     layers:
       foundation:
         - Hoe hangen grondstof, alcoholtoevoeging, suiker en rijping samen?
@@ -48,6 +50,8 @@ coverage:
           - source.ivdp-port-vinification
           - source.sherry-fortification
           - source.sherry-ageing
+          - source.junta-sherry-specification
+          - source.eu-sherry-amendment-2025
       specific_claims: []
     review:
       outline: complete
@@ -60,6 +64,8 @@ coverage:
     target_ids: []
     completeness_questions:
       - Hoe sturen gisting en alcoholtoevoeging de uitgangswijn?
+      - Is de versterkte Sherryroute onderscheiden van de huidige mogelijkheid van onversterkte
+        droge wijn?
     layers:
       foundation:
         - Hoe sturen gisting en alcoholtoevoeging de uitgangswijn?
@@ -73,6 +79,8 @@ coverage:
         source_refs:
           - source.ivdp-port-vinification
           - source.sherry-fortification
+          - source.junta-sherry-specification
+          - source.eu-sherry-amendment-2025
       specific_claims: []
     review:
       outline: complete
@@ -89,8 +97,8 @@ coverage:
       foundation:
         - Hoe verschillen biologische en oxidatieve rijpingsomgevingen?
       intermediate:
-        - Flor verandert de rijpingsomgeving; solera organiseert fractioneel
-          mengen en kan beide routes dienen.
+        - Flor verandert de rijpingsomgeving; solera organiseert fractioneel mengen en kan beide
+          routes dienen.
       advanced: []
       specialist: []
     evidence:
@@ -163,20 +171,17 @@ coverage:
       - bewijs-en-grenzen
     target_ids: []
     completeness_questions:
-      - Hoe onderscheid je techniek, wettelijke categorie en concrete
-        productregels?
+      - Hoe onderscheid je techniek, wettelijke categorie en concrete productregels?
     layers:
       foundation:
-        - Hoe onderscheid je techniek, wettelijke categorie en concrete
-          productregels?
+        - Hoe onderscheid je techniek, wettelijke categorie en concrete productregels?
       intermediate: []
       advanced: []
       specialist: []
     evidence:
       general_synthesis:
         topics:
-          - Hoe onderscheid je techniek, wettelijke categorie en concrete
-            productregels?
+          - Hoe onderscheid je techniek, wettelijke categorie en concrete productregels?
         source_refs:
           - source.oiv-liqueur-wine
           - source.oiv-fortification
@@ -258,6 +263,22 @@ entity_dependencies:
     slugs:
       nl: passito
       en: passito
+    disposition: link
+  - id: appellation.port
+    names:
+      nl: Port
+      en: Port
+    slugs:
+      nl: port
+      en: port
+    disposition: link
+  - id: appellation.sherry
+    names:
+      nl: Sherry
+      en: Sherry
+    slugs:
+      nl: sherry
+      en: sherry
     disposition: link
 review:
   outline: complete

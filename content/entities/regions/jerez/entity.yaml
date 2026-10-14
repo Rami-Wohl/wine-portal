@@ -1,0 +1,17 @@
+id: region.jerez
+type: region
+status: draft
+canonical_name: Jerez
+names:
+  nl: Jerez
+  en: Jerez
+slugs:
+  nl: jerez
+  en: jerez
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.junta-sherry-specification

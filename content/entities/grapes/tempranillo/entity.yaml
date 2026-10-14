@@ -1,0 +1,22 @@
+id: grape.tempranillo
+type: grape
+status: draft
+canonical_name: Tempranillo
+names:
+  nl: Tempranillo
+  en: Tempranillo
+aliases:
+  nl: &a1
+    - Tinta Roriz
+    - Aragonês
+  en: *a1
+slugs:
+  nl: tempranillo
+  en: tempranillo
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.ivdp-douro-grapes

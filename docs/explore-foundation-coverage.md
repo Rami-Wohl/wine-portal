@@ -161,7 +161,7 @@ Statussen:
 | `EXP-029` | Zoete wijnen als eigen familie | Actieve `sweet-wines` met bestaande droog-, oogst-, botrytis- en versterkingsowners | volledig binnen scope | Acht coveragevragen, concentratie versus restsuiker, wereldwijde voorbeelden en eigen PNG in NL/EN | voltooid |
 | `EXP-030` | Mousserende wijnen als eigen familie | Actieve `sparkling-wines` met bestaande flesmethode-, tirage-, lies- en dosageowners | volledig binnen scope | Fles/tank/voortgezette gisting, transfer en carbonatie, met eigen PNG en NL/EN | voltooid |
 | `EXP-031` | Versterkte wijnen als eigen familie | Actieve `fortified-wines`; `fortification` blijft techniekowner | volledig binnen scope | Zoetheid en rijping verbonden; flor/solera primair hier uitgelegd; eigen PNG en NL/EN | voltooid |
-| `EXP-032` | Individuele zoete, mousserende en versterkte wijnpagina's | Bestaande Sauternes-, Tokaj-, passito- en vin-de-paillebestemmingen eerst beoordelen | gedeeltelijk | Inventaris en geordende publicatiebatches; Port/Sherry/Champagne eerst, daarna contrasterende kandidaten | P1 na EXP-025 |
+| `EXP-032` | Individuele zoete, mousserende en versterkte wijnpagina's | Port, Sherry en Champagne actief in NL/EN; Sauternes/passito/vin de paille hergebruikt, Tokaj regionale ouder | gedeeltelijk | [Inventaris](../editorial/briefs/exp-032-wine-inventory.md): eerste batch gereed, drie vervolgbatches open | Na EXP-028, vóór regionale pilots |
 | `EXP-024` | Wijnsamenstelling als systeem | Actieve `wine-composition`; bestaande stof- en procesowners behouden | volledig binnen scope | Tien stoffamilies plus glycerol, herkomst en interacties, vrije/gebonden vormen, meetgrenzen, PNG en concept-/leslinks in NL/EN | voltooid |
 | `EXP-025` | Waarneming, balans en flesontwikkeling | Actieve `wine-perception-and-development`; bestaande stof-, bodem- en procesowners behouden | volledig binnen scope | Zintuigen, drempels, mengsels, adaptatie, context, balans, minerality, bewaring en beoordelingsgrenzen; PNG en concept-/leslinks in NL/EN | voltooid |
 
@@ -458,7 +458,9 @@ identities waar de scope overeenkomt.
     mengsels, minerality en onderzoeksopzet hebben eigen verdiepingsblocks;
     zeven owners en de laatste kelderles verwijzen naar de hub.
 
-De volgende inhoudelijke taak is `EXP-032`: individuele wijnpagina's, met
-Port/Sherry/Champagne als eerste afgebakende batch. Taalpresentatie
+De eerste `EXP-032`-batch is op 2026-10-13 gepubliceerd: Port, Sherry en Champagne
+als zelfstandige NL/EN-appellations. De [inventaris](../editorial/briefs/exp-032-wine-inventory.md)
+bewaart identiteit, hergebruik en drie resterende batches. De volgende taak is
+`EXP-026`: integratie van owners, graph, links, media en terminologie. Taalpresentatie
 (`MNT-046`), pipeline/model (`MNT-048`) en CSS-onderhoud (`MNT-049`) zijn afgerond.
 De [productplanning](product-roadmap.md) bewaakt de afwisseling met platformwerk.

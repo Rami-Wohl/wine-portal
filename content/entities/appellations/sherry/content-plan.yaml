@@ -1,0 +1,405 @@
+schema_version: 2
+package_id: appellation.sherry
+archetype: appellation-overview
+coverage:
+  - key: identity-and-orientation
+    disposition: on-page
+    block_ids:
+      - ligging-en-afbakening
+    target_ids: []
+    completeness_questions:
+      - Zijn de zone en de aparte juridische identiteit van Manzanilla duidelijk?
+    layers:
+      foundation:
+        - Zijn de zone en de aparte juridische identiteit van Manzanilla duidelijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn de zone en de aparte juridische identiteit van Manzanilla duidelijk?
+        source_refs:
+          - source.junta-sherry-specification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: historical-development
+    disposition: on-page
+    block_ids:
+      - geschiedenis
+    target_ids: []
+    completeness_questions:
+      - Verbindt de tekst handel, regelgeving en de ontwikkeling van rijpingsvoorraden?
+    layers:
+      foundation:
+        - Verbindt de tekst handel, regelgeving en de ontwikkeling van rijpingsvoorraden?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Verbindt de tekst handel, regelgeving en de ontwikkeling van rijpingsvoorraden?
+        source_refs:
+          - source.sherry-history
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: landscape-climate-and-soils
+    disposition: on-page
+    block_ids:
+      - landschap-klimaat-en-bodem
+    target_ids: []
+    completeness_questions:
+      - Zijn albariza, winterwater, zomer en Atlantische winden begrijpelijk?
+    layers:
+      foundation:
+        - Zijn albariza, winterwater, zomer en Atlantische winden begrijpelijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn albariza, winterwater, zomer en Atlantische winden begrijpelijk?
+        source_refs:
+          - source.sherry-viticulture
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: grape-varieties
+    disposition: on-page
+    block_ids:
+      - druivenrassen
+    target_ids: []
+    completeness_questions:
+      - Zijn Palomino, PX en Moscatel lokaal uitgelegd zonder de volledige wettelijke
+        rassenlijst te claimen?
+    layers:
+      foundation:
+        - Zijn Palomino, PX en Moscatel lokaal uitgelegd zonder de volledige wettelijke
+          rassenlijst te claimen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn Palomino, PX en Moscatel lokaal uitgelegd zonder de volledige wettelijke
+            rassenlijst te claimen?
+        source_refs:
+          - source.sherry-viticulture
+          - source.junta-sherry-specification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: viticulture-and-winemaking
+    disposition: on-page
+    block_ids:
+      - wijnbouw-en-wijnmaken
+    target_ids: []
+    completeness_questions:
+      - Zijn flor, oxidatieve rijping, solera, añada en de zoete uitgangsroute begrijpelijk?
+    layers:
+      foundation:
+        - Zijn flor, oxidatieve rijping, solera, añada en de zoete uitgangsroute begrijpelijk?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn flor, oxidatieve rijping, solera, añada en de zoete uitgangsroute begrijpelijk?
+        source_refs:
+          - source.sherry-ageing
+          - source.sherry-types
+          - source.junta-sherry-specification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: appellation-rules
+    disposition: on-page
+    block_ids:
+      - appellationregels
+      - rijping-en-oogstjaar
+    target_ids: []
+    completeness_questions:
+      - Blijft duidelijk dat de huidige DOP ook droge onversterkte uitvoeringen omvat?
+    layers:
+      foundation:
+        - Blijft duidelijk dat de huidige DOP ook droge onversterkte uitvoeringen omvat?
+      intermediate:
+        - Gemiddelde leeftijd en afzonderlijke oogst
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Blijft duidelijk dat de huidige DOP ook droge onversterkte uitvoeringen omvat?
+        source_refs:
+          - source.eu-sherry-amendment-2025
+      specific_claims:
+        - claim: Droge generoso-wijnen kunnen binnen de DOP ook zonder versterking worden gemaakt.
+          status: supported
+          source_refs:
+            - source.junta-sherry-specification
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: classification-and-producers
+    disposition: on-page
+    block_ids:
+      - classificatie-en-producenten
+    target_ids: []
+    completeness_questions:
+      - Zijn wijntype, bodega, merk en waarborgzegel van elkaar onderscheiden?
+    layers:
+      foundation:
+        - Zijn wijntype, bodega, merk en waarborgzegel van elkaar onderscheiden?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Zijn wijntype, bodega, merk en waarborgzegel van elkaar onderscheiden?
+        source_refs:
+          - source.sherry-labels
+          - source.sherry-types
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: style-and-glass-context
+    disposition: on-page
+    block_ids:
+      - wijnstijl-en-flesontwikkeling
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer de droge typen, zoete typen en betekenis van kleur interpreteren?
+    layers:
+      foundation:
+        - Kan de lezer de droge typen, zoete typen en betekenis van kleur interpreteren?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer de droge typen, zoete typen en betekenis van kleur interpreteren?
+        source_refs:
+          - source.sherry-ageing
+          - source.sherry-types
+          - source.junta-sherry-specification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: labels-and-buying
+    disposition: on-page
+    block_ids:
+      - etiket-en-aankoop
+    target_ids: []
+    completeness_questions:
+      - Kan de lezer type en rijpingsinformatie lezen zonder een merkjaartal tot oogstjaar te
+        maken?
+    layers:
+      foundation:
+        - Kan de lezer type en rijpingsinformatie lezen zonder een merkjaartal tot oogstjaar te
+          maken?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Kan de lezer type en rijpingsinformatie lezen zonder een merkjaartal tot oogstjaar
+            te maken?
+        source_refs:
+          - source.sherry-labels
+          - source.junta-sherry-specification
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: modern-developments
+    disposition: on-page
+    block_ids:
+      - hedendaagse-ontwikkelingen
+    target_ids: []
+    completeness_questions:
+      - Is de mogelijkheid van onversterkte wijn onderbouwd met een definitief besluit in plaats
+        van nieuws over voorstellen?
+    layers:
+      foundation:
+        - Is de mogelijkheid van onversterkte wijn onderbouwd met een definitief besluit in
+          plaats van nieuws over voorstellen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Is de mogelijkheid van onversterkte wijn onderbouwd met een definitief besluit in
+            plaats van nieuws over voorstellen?
+        source_refs:
+          - source.junta-sherry-document-history-2025
+          - source.junta-sherry-specification
+      specific_claims:
+        - claim: De Europese wijziging werd definitief goedgekeurd in 2025.
+          status: supported
+          source_refs:
+            - source.eu-sherry-amendment-2025
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: visuals
+    disposition: on-page
+    block_ids:
+      - sherrykelder
+    target_ids: []
+    completeness_questions:
+      - Verheldert de foto kelderarchitectuur en rijpingsvoorraden zonder onzichtbare flor te
+        claimen?
+    layers:
+      foundation:
+        - Verheldert de foto kelderarchitectuur en rijpingsvoorraden zonder onzichtbare flor te
+          claimen?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Verheldert de foto kelderarchitectuur en rijpingsvoorraden zonder onzichtbare flor
+            te claimen?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+  - key: child-knowledge
+    disposition: on-page
+    block_ids:
+      - verder-ontdekken
+    target_ids:
+      - concept.fortified-wines
+      - concept.fortification
+      - concept.oxidation
+      - concept.sweet-wines
+    completeness_questions:
+      - Blijft algemene flor/solerauitleg bij de family-owner en leiden vervolglinks naar
+        actieve uitleg?
+    layers:
+      foundation:
+        - Blijft algemene flor/solerauitleg bij de family-owner en leiden vervolglinks naar
+          actieve uitleg?
+      intermediate: []
+      advanced: []
+      specialist: []
+    evidence:
+      general_synthesis:
+        topics:
+          - Blijft algemene flor/solerauitleg bij de family-owner en leiden vervolglinks naar
+            actieve uitleg?
+        source_refs: []
+      specific_claims: []
+    review:
+      outline: complete
+      nl: complete
+      en: complete
+entity_dependencies:
+  - id: concept.fortified-wines
+    names:
+      nl: Versterkte wijnen
+      en: Fortified wines
+    slugs:
+      nl: versterkte-wijnen
+      en: fortified-wines
+    disposition: link-and-relation
+  - id: concept.fortification
+    names:
+      nl: Versterking
+      en: Fortification
+    slugs:
+      nl: fortification
+      en: fortification
+    disposition: link-and-relation
+  - id: concept.oxidation
+    names:
+      nl: Oxidatie
+      en: Oxidation
+    slugs:
+      nl: oxidation
+      en: oxidation
+    disposition: link-and-relation
+  - id: concept.sweet-wines
+    names:
+      nl: Zoete wijnen
+      en: Sweet wines
+    slugs:
+      nl: zoete-wijnen
+      en: sweet-wines
+    disposition: link-and-relation
+  - id: region.jerez
+    names:
+      nl: Jerez
+      en: Jerez
+    slugs:
+      nl: jerez
+      en: jerez
+    disposition: relation
+  - id: grape.palomino
+    names:
+      nl: Palomino
+      en: Palomino
+    slugs:
+      nl: palomino
+      en: palomino
+    disposition: relation
+  - id: grape.pedro-ximenez
+    names:
+      nl: Pedro Ximénez
+      en: Pedro Ximénez
+    slugs:
+      nl: pedro-ximenez
+      en: pedro-ximenez
+    disposition: relation
+  - id: concept.elevage
+    names:
+      nl: Élevage
+      en: Maturation
+    slugs:
+      nl: elevage
+      en: maturation
+    disposition: relation
+  - id: grape.muscat-of-alexandria
+    names:
+      nl: Muscat of Alexandria
+      en: Muscat of Alexandria
+    slugs:
+      nl: muscat-of-alexandria
+      en: muscat-of-alexandria
+    disposition: relation
+review:
+  outline: complete
+  dependencies: complete
+  nl: complete
+  en: complete

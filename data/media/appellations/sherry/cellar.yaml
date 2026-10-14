@@ -1,0 +1,26 @@
+id: media.appellation.sherry.cellar
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/sherry/cellar.jpg
+mime_type: image/jpeg
+width: 1600
+height: 1066
+checksum_sha256: ba664f51e84a8eb339c117c9b1c55db0023ad14519038410822a357023534b3c
+alt:
+  nl: Rijen gestapelde Sherryvaten tussen hoge bogen in een kelder van Lustau in Jerez
+  en: Rows of stacked Sherry casks beneath tall arches in a Lustau cellar in Jerez
+caption:
+  nl: "Een kelder van Lustau in Jerez de la Frontera. Op de vaten zijn onder meer solera en
+    criadera te lezen: verschillende rijpingsvoorraden binnen het mengsysteem."
+  en: A Lustau cellar in Jerez de la Frontera. The casks include solera and criadera markings,
+    identifying different ageing stocks within the blending system.
+rights:
+  status: open-licensed
+  creator: Anual
+  source_url: https://commons.wikimedia.org/wiki/File:Lustau_003An2019.jpg
+  license_name: Creative Commons Attribution-ShareAlike 4.0 International
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  credit_line: Anual via Wikimedia Commons, CC BY-SA 4.0
+acquired_at: 2026-10-13
+changes: Resized to 1600 pixels wide from the current Wikimedia Commons file; no crop or editorial colour alteration.

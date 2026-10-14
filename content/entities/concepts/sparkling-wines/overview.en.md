@@ -64,7 +64,7 @@ Dosage concerns sweetness after disgorgement. [[concept.bottling|Bottling]] also
 :::section{#wereldwijde-context depth="foundation" source_refs="source.champagne-bottling-second-fermentation source.limoux-ancestral-method source.wosa-wine-styles"}
 ## Global context
 
-**Champagne** demonstrates the traditional route: second fermentation and sale in the same bottle. **Limoux Méthode Ancestrale** demonstrates ongoing fermentation. These French examples reveal a difference in fermentation timing. [@source.champagne-bottling-second-fermentation] [@source.limoux-ancestral-method]
+**[[appellation.champagne|Champagne]]** demonstrates the traditional route: second fermentation and sale in the same bottle. **Limoux Méthode Ancestrale** demonstrates ongoing fermentation. These French examples reveal a difference in fermentation timing. [@source.champagne-bottling-second-fermentation] [@source.limoux-ancestral-method]
 
 In **South Africa**, Cap Classique uses the traditional bottle route. The local style description also distinguishes tank fermentation and carbonation. The principles of sparkling routes thus travel, while each name has its own origin and conditions. [@source.wosa-wine-styles]
 

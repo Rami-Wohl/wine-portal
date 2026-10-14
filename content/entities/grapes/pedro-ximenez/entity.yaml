@@ -1,0 +1,17 @@
+id: grape.pedro-ximenez
+type: grape
+status: draft
+canonical_name: Pedro Ximénez
+names:
+  nl: Pedro Ximénez
+  en: Pedro Ximénez
+slugs:
+  nl: pedro-ximenez
+  en: pedro-ximenez
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.junta-sherry-specification

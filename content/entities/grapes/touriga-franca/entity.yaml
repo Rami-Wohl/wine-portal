@@ -1,0 +1,17 @@
+id: grape.touriga-franca
+type: grape
+status: draft
+canonical_name: Touriga Franca
+names:
+  nl: Touriga Franca
+  en: Touriga Franca
+slugs:
+  nl: touriga-franca
+  en: touriga-franca
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.ivdp-douro-grapes

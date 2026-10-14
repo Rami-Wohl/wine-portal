@@ -1,0 +1,22 @@
+id: grape.muscat-of-alexandria
+type: grape
+status: draft
+canonical_name: Muscat of Alexandria
+names:
+  nl: Muscat of Alexandria
+  en: Muscat of Alexandria
+aliases:
+  nl:
+    - Moscatel de Alejandría
+  en:
+    - Moscatel de Alejandría
+slugs:
+  nl: muscat-of-alexandria
+  en: muscat-of-alexandria
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.junta-sherry-specification

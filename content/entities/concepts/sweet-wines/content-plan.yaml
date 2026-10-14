@@ -61,18 +61,15 @@ coverage:
       - Welke routes concentreren suiker en welke behouden of voegen suiker toe?
     layers:
       foundation:
-        - Welke routes concentreren suiker en welke behouden of voegen suiker
-          toe?
+        - Welke routes concentreren suiker en welke behouden of voegen suiker toe?
       intermediate:
-        - Concentratie vóór gisting en suiker ná gisting hebben verschillende
-          meetmomenten.
+        - Concentratie vóór gisting en suiker ná gisting hebben verschillende meetmomenten.
       advanced: []
       specialist: []
     evidence:
       general_synthesis:
         topics:
-          - Welke routes concentreren suiker en welke behouden of voegen suiker
-            toe?
+          - Welke routes concentreren suiker en welke behouden of voegen suiker toe?
         source_refs:
           - source.dwi-praedikate
           - source.blanco-ulate-noble-rot-2015
@@ -91,20 +88,17 @@ coverage:
       - omstandigheden-en-variatie
     target_ids: []
     completeness_questions:
-      - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de
-        uitkomst?
+      - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de uitkomst?
     layers:
       foundation:
-        - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de
-          uitkomst?
+        - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de uitkomst?
       intermediate: []
       advanced: []
       specialist: []
     evidence:
       general_synthesis:
         topics:
-          - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de
-            uitkomst?
+          - Hoe veranderen fruitgezondheid, droogomstandigheden en gisting de uitkomst?
         source_refs:
           - source.sanmartin-postharvest-water-loss-2021
           - source.blanco-ulate-noble-rot-2015
@@ -322,6 +316,14 @@ entity_dependencies:
     slugs:
       nl: vin-de-paille
       en: vin-de-paille
+    disposition: link
+  - id: appellation.port
+    names:
+      nl: Port
+      en: Port
+    slugs:
+      nl: port
+      en: port
     disposition: link
 review:
   outline: complete

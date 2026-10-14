@@ -66,7 +66,7 @@ Concentreren vraagt intussen selectie, tijd en beheersing van fruitgezondheid. M
 - **Duitsland:** Eiswein laat concentratie door bevroren persen zien; Spätlese laat zien dat een oogstterm en zoetheid verschillende gegevens zijn. [@source.dwi-praedikate]
 - **Italië:** [[concept.passito|Passito]] verbindt wijn met gedroogde druiven. Op Pantelleria bestaat daarnaast een versterkte passito liquoroso-variant. [@source.masaf-pantelleria-specification-2024]
 - **Frankrijk:** [[concept.vin-de-paille|Vin de paille]] geeft toegang tot verschillende lokale tradities met gedroogde druiven.
-- **Portugal:** Port laat suikerbehoud door versterken tijdens de gisting zien. [@source.ivdp-port-vinification]
+- **Portugal:** [[appellation.port|Port]] laat suikerbehoud door versterken tijdens de gisting zien. [@source.ivdp-port-vinification]
 - **Zuid-Afrika:** Noble Late Harvest is een lokale context voor wijn van door botrytis aangetaste druiven. De plaatselijke labelvoorwaarden horen bij die categorie. [@source.wosa-wine-styles]
 
 De routes maken de familie herkenbaar; de afzonderlijke herkomst en wijnnaam voegen druiven, regels en keuzes van de maker toe.

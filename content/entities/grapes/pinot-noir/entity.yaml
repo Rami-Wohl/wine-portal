@@ -1,0 +1,17 @@
+id: grape.pinot-noir
+type: grape
+status: draft
+canonical_name: Pinot Noir
+names:
+  nl: Pinot Noir
+  en: Pinot Noir
+slugs:
+  nl: pinot-noir
+  en: pinot-noir
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.champagne-grapes

@@ -10,10 +10,12 @@ The technique of [[concept.fortification|fortification]] connects the family. Ad
 This page connects the technique with sweetness, ageing and different wine families. [[concept.sweet-wines|Sweet wine]] overlaps with it, while dry fortified wine also belongs.
 :::
 
-:::section{#opbouw-en-samenhang depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.sherry-ageing"}
+:::section{#opbouw-en-samenhang depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.sherry-ageing source.junta-sherry-specification source.eu-sherry-amendment-2025"}
 ## Structure and relationships
 
-Read a fortified wine through three moments: **raw material and fermentation, alcohol addition, ageing and blending**. In Port, spirit is added during fermentation, retaining sugar. For dry Sherry, the base wine first ferments fully. [@source.ivdp-port-vinification] [@source.sherry-fortification]
+Read a fortified wine through three moments: **raw material and fermentation, alcohol addition, ageing and blending**. In [[appellation.port|Port]], spirit is added during fermentation, retaining sugar. For fortified dry [[appellation.sherry|Sherry]], the base wine first ferments fully. [@source.ivdp-port-vinification] [@source.sherry-fortification]
+
+Current Sherry rules also allow dry expressions without added alcohol. Sherry is an origin name; this family page discusses the fortified route. [@source.junta-sherry-specification; B.1 and C.2] [@source.eu-sherry-amendment-2025]
 
 Subsequent [[concept.elevage|maturation]] develops the wine further. In Jerez, this can involve a yeast layer, flor, or an oxidative environment. Sweetness and ageing choices therefore provide different information. Fortified wines can follow different ageing routes from one another.
 :::
@@ -26,7 +28,7 @@ Alcohol addition changes the environment in which yeast works. During fermentati
 | Process question | Example | Significance |
 | --- | --- | --- |
 | Was fermentation interrupted by fortification? | Port | Some grape sugar is retained |
-| Was dry base wine fortified? | Dry Sherry | Added alcohol accompanies a dry starting wine |
+| Was dry base wine fortified? | Fortified dry Sherry | Added alcohol accompanies a dry starting wine |
 | What ageing follows? | Flor or oxidative ageing in Jerez | The environment develops the wine further |
 
 These examples clarify connections between steps. Implementation follows the conditions of the particular product. [@source.ivdp-port-vinification] [@source.sherry-fortification]
@@ -56,7 +58,7 @@ A barrel-ageing duration and a solera description therefore provide different in
 :::section{#keuzes-en-afwegingen depth="foundation" source_refs="source.sherry-ageing source.sherry-fortification"}
 ## Decisions and trade-offs
 
-The maker connects alcohol addition with the intended ageing environment. For Sherry, the chosen fortification supports ageing under flor or without that layer. Ageing conditions and blending then help maintain and develop the intended profile. [@source.sherry-fortification] [@source.sherry-ageing]
+The maker connects alcohol addition with the intended ageing environment. For fortified Sherry, the chosen fortification supports ageing under flor or without that layer. Ageing conditions and blending then help maintain and develop the intended profile. [@source.sherry-fortification] [@source.sherry-ageing]
 
 General [[concept.oxidation|oxidation]] and biological ageing each involve their own processes. Deliberately oxidative maturation receives a different judgement from unintended oxidation. Examine the intended route and wine condition, rather than using colour or alcohol percentage as the whole explanation.
 :::
@@ -64,8 +66,8 @@ General [[concept.oxidation|oxidation]] and biological ageing each involve their
 :::section{#wereldwijde-context depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.masaf-pantelleria-specification-2024 source.wine-australia-rutherglen"}
 ## Global context
 
-- **Port, Portugal:** fortification during fermentation retains grape sugar. [@source.ivdp-port-vinification]
-- **Sherry, Spain:** dry base wine and different ageing routes reveal breadth within one wine family. [@source.sherry-fortification]
+- **[[appellation.port|Port]], Portugal:** fortification during fermentation retains grape sugar. [@source.ivdp-port-vinification]
+- **[[appellation.sherry|Sherry]], Spain:** dry base wine and different ageing routes reveal breadth within one wine family. [@source.sherry-fortification]
 - **Pantelleria, Italy:** the passito liquoroso variant combines dried grapes with fortification. [[concept.passito|Passito]] explains the wine term. [@source.masaf-pantelleria-specification-2024]
 - **Rutherglen, Australia:** sweet fortified Muscat and Muscadelle add different varieties and a southern hemisphere context. [@source.wine-australia-rutherglen]
 

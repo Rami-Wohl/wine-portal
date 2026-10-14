@@ -1,0 +1,55 @@
+id: appellation.champagne
+type: appellation
+status: active
+canonical_name: Champagne
+names:
+  nl: Champagne
+  en: Champagne
+slugs:
+  nl: champagne
+  en: champagne
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations:
+  - type: part_of
+    target: region.champagne
+  - type: important_grape
+    target: grape.chardonnay
+  - type: important_grape
+    target: grape.pinot-noir
+  - type: important_grape
+    target: grape.meunier
+  - type: related_to
+    target: concept.sparkling-wines
+  - type: related_to
+    target: concept.traditional-method
+  - type: related_to
+    target: concept.second-fermentation
+  - type: related_to
+    target: concept.lees-ageing
+  - type: related_to
+    target: concept.remuage
+  - type: related_to
+    target: concept.disgorgement
+  - type: related_to
+    target: concept.dosage
+  - type: related_to
+    target: concept.assemblage
+assertions: []
+source_refs:
+  - source.champagne-region
+  - source.champagne-grapes
+  - source.champagne-history
+  - source.champagne-climate
+  - source.champagne-soil
+  - source.champagne-label-faq
+  - source.champagne-pressing
+  - source.champagne-blending
+  - source.champagne-maturation-on-lees
+  - source.champagne-dosage
+  - source.champagne-bottling-second-fermentation
+  - source.champagne-riddling
+  - source.champagne-disgorgement
+depth: foundation
+last_reviewed: 2026-10-13

@@ -123,7 +123,10 @@ export default async function EntityPage({ params, searchParams }: EntityPagePro
         related: getEntityById(isForward ? relation.target : relation.source),
       };
     })
-    .filter((item): item is typeof item & { related: Entity } => Boolean(item.related));
+    .filter(
+      (item): item is typeof item & { related: Entity } =>
+        Boolean(item.related) && (entity.status !== "active" || item.related?.status === "active"),
+    );
   const parent = relations.find(
     ({ direction, relation }) =>
       direction === "forward" &&

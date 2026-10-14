@@ -10,10 +10,12 @@ De techniek [[concept.fortification|versterken]] verbindt de familie. Toegevoegd
 Deze pagina verbindt de techniek met zoetheid, rijping en verschillende wijnfamilies. [[concept.sweet-wines|Zoete wijn]] overlapt ermee, maar droge versterkte wijn hoort er evengoed bij.
 :::
 
-:::section{#opbouw-en-samenhang depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.sherry-ageing"}
+:::section{#opbouw-en-samenhang depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.sherry-ageing source.junta-sherry-specification source.eu-sherry-amendment-2025"}
 ## Opbouw en samenhang
 
-Lees een versterkte wijn langs drie momenten: **grondstof en gisting, alcoholtoevoeging, rijping en mengen**. Bij Port wordt spirit tijdens de gisting toegevoegd, waardoor suiker behouden blijft. Voor droge Sherry wordt de basiswijn eerst volledig vergist. [@source.ivdp-port-vinification] [@source.sherry-fortification]
+Lees een versterkte wijn langs drie momenten: **grondstof en gisting, alcoholtoevoeging, rijping en mengen**. Bij [[appellation.port|Port]] wordt spirit tijdens de gisting toegevoegd, waardoor suiker behouden blijft. Voor versterkte droge [[appellation.sherry|Sherry]] wordt de basiswijn eerst volledig vergist. [@source.ivdp-port-vinification] [@source.sherry-fortification]
+
+De huidige Sherryregels laten daarnaast droge uitvoeringen zonder alcoholtoevoeging toe. Sherry is een herkomstnaam; deze familiepagina bespreekt de versterkte route. [@source.junta-sherry-specification; B.1 en C.2] [@source.eu-sherry-amendment-2025]
 
 De daaropvolgende [[concept.elevage|opvoeding]] ontwikkelt de wijn verder. In Jerez kan dat onder een gistlaag, flor, of met een oxidatieve omgeving. De keuze voor zoetheid en de keuze voor rijping geven dus verschillende informatie. Een versterkte wijn hoeft niet langs dezelfde rijpingsroute als een andere versterkte wijn te gaan.
 :::
@@ -26,7 +28,7 @@ Alcoholtoevoeging verandert de omgeving waarin gist werkt. Tijdens de gisting ka
 | Procesvraag | Voorbeeld | Betekenis |
 | --- | --- | --- |
 | Is gisting onderbroken door versterken? | Port | Een deel van de druivensuiker blijft behouden |
-| Is droge basiswijn versterkt? | Droge Sherry | Toegevoegde alcohol gaat samen met een droge uitgangswijn |
+| Is droge basiswijn versterkt? | Versterkte droge Sherry | Toegevoegde alcohol gaat samen met een droge uitgangswijn |
 | Welke rijping volgt? | Flor of oxidatief in Jerez | De omgeving ontwikkelt de wijn verder |
 
 Deze voorbeelden verduidelijken het verband tussen stappen. Voor de uitvoering gelden de voorwaarden van het betreffende product. [@source.ivdp-port-vinification] [@source.sherry-fortification]
@@ -56,7 +58,7 @@ Een vatrijpingsduur en een soleraomschrijving geven daarom verschillende informa
 :::section{#keuzes-en-afwegingen depth="foundation" source_refs="source.sherry-ageing source.sherry-fortification"}
 ## Keuzes en afwegingen
 
-De maker verbindt alcoholtoevoeging met de gewenste rijpingsomgeving. Voor Sherry ondersteunt de gekozen versterking een route onder flor of zonder die laag. De rijpingsomstandigheden en het mengen horen vervolgens bij het onderhouden en ontwikkelen van het gekozen profiel. [@source.sherry-fortification] [@source.sherry-ageing]
+De maker verbindt alcoholtoevoeging met de gewenste rijpingsomgeving. Bij versterkte Sherry ondersteunt de gekozen versterking een route onder flor of zonder die laag. De rijpingsomstandigheden en het mengen horen vervolgens bij het onderhouden en ontwikkelen van het gekozen profiel. [@source.sherry-fortification] [@source.sherry-ageing]
 
 Algemene [[concept.oxidation|oxidatie]] en biologische rijping hebben ieder hun eigen processen. Bewust gekozen oxidatieve opvoeding krijgt een ander oordeel dan onbedoelde oxidatie. Kijk daarom naar de bedoelde route en de toestand van de wijn, in plaats van kleur of alcoholpercentage als volledige verklaring te gebruiken.
 :::
@@ -64,8 +66,8 @@ Algemene [[concept.oxidation|oxidatie]] en biologische rijping hebben ieder hun 
 :::section{#wereldwijde-context depth="foundation" source_refs="source.ivdp-port-vinification source.sherry-fortification source.masaf-pantelleria-specification-2024 source.wine-australia-rutherglen"}
 ## Wereldwijde context
 
-- **Port, Portugal:** versterken tijdens de gisting behoudt druivensuiker. [@source.ivdp-port-vinification]
-- **Sherry, Spanje:** droge basiswijn en verschillende rijpingsroutes maken de breedte binnen één wijnfamilie zichtbaar. [@source.sherry-fortification]
+- **[[appellation.port|Port]], Portugal:** versterken tijdens de gisting behoudt druivensuiker. [@source.ivdp-port-vinification]
+- **[[appellation.sherry|Sherry]], Spanje:** droge basiswijn en verschillende rijpingsroutes maken de breedte binnen één wijnfamilie zichtbaar. [@source.sherry-fortification]
 - **Pantelleria, Italië:** de passito liquoroso-variant combineert gedroogde druiven met versterken. [[concept.passito|Passito]] legt de wijnterm uit. [@source.masaf-pantelleria-specification-2024]
 - **Rutherglen, Australië:** zoete versterkte Muscat en Muscadelle voegen andere druiven en een zuidelijk-halfrondcontext toe. [@source.wine-australia-rutherglen]
 

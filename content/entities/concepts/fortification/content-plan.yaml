@@ -34,6 +34,8 @@ coverage:
     target_ids: []
     completeness_questions:
       - Wat verandert vóór, tijdens en na gisting?
+      - Is de versterkte Sherryroute onderscheiden van de huidige mogelijkheid van onversterkte
+        droge wijn?
     layers:
       foundation:
         - Wat verandert vóór, tijdens en na gisting?
@@ -48,6 +50,8 @@ coverage:
           - source.oiv-liqueur-wine
           - source.ivdp-port-vinification
           - source.sherry-fortification
+          - source.junta-sherry-specification
+          - source.eu-sherry-amendment-2025
       specific_claims: []
     review:
       outline: complete
@@ -127,9 +131,8 @@ coverage:
         source_refs:
           - source.oiv-liqueur-wine
       specific_claims:
-        - claim: OIV II.3.5.1 onderscheidt versterken voor bijzondere wijncategorieën
-            (admitted) van alleen alcohol verhogen (not admitted); geen lokale
-            toestemming afgeleid.
+        - claim: OIV II.3.5.1 onderscheidt versterken voor bijzondere wijncategorieën (admitted) van
+            alleen alcohol verhogen (not admitted); geen lokale toestemming afgeleid.
           status: supported
           source_refs:
             - source.oiv-fortification
@@ -210,6 +213,22 @@ entity_dependencies:
     slugs:
       nl: passito
       en: passito
+    disposition: link
+  - id: appellation.port
+    names:
+      nl: Port
+      en: Port
+    slugs:
+      nl: port
+      en: port
+    disposition: link
+  - id: appellation.sherry
+    names:
+      nl: Sherry
+      en: Sherry
+    slugs:
+      nl: sherry
+      en: sherry
     disposition: link
 review:
   outline: complete

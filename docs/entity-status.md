@@ -2,11 +2,11 @@
 
 Dit overzicht wordt automatisch uit de canonical `entity.yaml`-bestanden opgebouwd door `npm run content:status` en iedere `content:build`. Bewerk de tabellen niet handmatig.
 
-**Totaal:** 359 entities — 295 active, 64 draft, 0 deprecated.
+**Totaal:** 372 entities — 298 active, 74 draft, 0 deprecated.
 
 **Producentenrecords:** 157 — 20 monografie, 35 collectieprofiel, 102 registervermelding.
 
-## Actief — publiek vindbaar (295)
+## Actief — publiek vindbaar (298)
 
 Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectieprofielen en registervermeldingen zijn vindbaar via zoeken, links en hun eigenaarpagina.
 
@@ -23,6 +23,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Canon-Fronsac](../content/entities/appellations/canon-fronsac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.canon-fronsac` | Ja | `/appellations/canon-fronsac` | 2026-09-13 |
 | [Castillon Côtes de Bordeaux](../content/entities/appellations/castillon-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.castillon-cotes-de-bordeaux` | Ja | `/appellations/castillon-cotes-de-bordeaux` | 2026-09-12 |
 | [Cérons](../content/entities/appellations/cerons/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cerons` | Ja | `/appellations/cerons` | 2026-09-13 |
+| [Champagne](../content/entities/appellations/champagne/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.champagne` | Ja | `/appellations/champagne` | 2026-10-13 |
 | [Côtes de Bordeaux](../content/entities/appellations/cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bordeaux` | Ja | `/appellations/cotes-de-bordeaux` | 2026-09-12 |
 | [Côtes de Bourg](../content/entities/appellations/cotes-de-bourg/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cotes-de-bourg` | Ja | `/appellations/cotes-de-bourg` | 2026-09-12 |
 | [Crémant de Bordeaux](../content/entities/appellations/cremant-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.cremant-de-bordeaux` | Ja | `/appellations/cremant-de-bordeaux` | 2026-09-12 |
@@ -41,6 +42,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Pauillac](../content/entities/appellations/pauillac/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pauillac` | Ja | `/appellations/pauillac` | 2026-09-22 |
 | [Pessac-Léognan](../content/entities/appellations/pessac-leognan/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pessac-leognan` | Ja | `/appellations/pessac-leognan` | 2026-09-14 |
 | [Pomerol](../content/entities/appellations/pomerol/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.pomerol` | Ja | `/appellations/pomerol` | 2026-09-09 |
+| [Port](../content/entities/appellations/port/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.port` | Ja | `/appellations/port` | 2026-10-13 |
 | [Puisseguin-Saint-Émilion](../content/entities/appellations/puisseguin-saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.puisseguin-saint-emilion` | Ja | `/appellations/puisseguin-saint-emilion` | 2026-09-13 |
 | [Saint-Émilion](../content/entities/appellations/saint-emilion/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-emilion` | Ja | `/appellations/saint-emilion` | 2026-09-08 |
 | [Saint-Émilion Grand Cru](../content/entities/appellations/saint-emilion-grand-cru/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.saint-emilion-grand-cru` | Ja | `/appellations/saint-emilion-grand-cru` | 2026-09-08 |
@@ -50,6 +52,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Sainte-Croix-du-Mont](../content/entities/appellations/sainte-croix-du-mont/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sainte-croix-du-mont` | Ja | `/appellations/sainte-croix-du-mont` | 2026-09-13 |
 | [Sainte-Foy Côtes de Bordeaux](../content/entities/appellations/sainte-foy-cotes-de-bordeaux/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sainte-foy-cotes-de-bordeaux` | Ja | `/appellations/sainte-foy-cotes-de-bordeaux` | 2026-09-12 |
 | [Sauternes](../content/entities/appellations/sauternes/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sauternes` | Ja | `/appellations/sauternes` | 2026-09-14 |
+| [Sherry](../content/entities/appellations/sherry/entity.yaml) | Appellatie | Zelfstandige pagina | `appellation.sherry` | Ja | `/appellations/sherry` | 2026-10-13 |
 | [Bordeaux 1855](../content/entities/classifications/bordeaux-1855/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.bordeaux-1855` | Ja | `/classifications/bordeaux-1855` | 2026-09-08 |
 | [Classificatie van Graves](../content/entities/classifications/graves/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.graves` | Ja | `/classifications/graves-classification` | 2026-09-14 |
 | [Classificatie van Saint-Émilion](../content/entities/classifications/saint-emilion/entity.yaml) | Classificatie | Zelfstandige pagina | `classification.saint-emilion` | Ja | `/classifications/saint-emilion-classification` | 2026-09-08 |
@@ -308,7 +311,7 @@ Actieve monografieën zijn zichtbaar in Explore en de sitemap. Actieve collectie
 | [Libournais](../content/entities/regions/libournais/entity.yaml) | Regio | Zelfstandige pagina | `region.libournais` | Ja | `/regions/libournais` | 2026-09-09 |
 | [Médoc](../content/entities/regions/medoc/entity.yaml) | Regio | Zelfstandige pagina | `region.medoc` | Ja | `/regions/medoc` | 2026-09-09 |
 
-## Draft — nog uit te werken (64)
+## Draft — nog uit te werken (74)
 
 Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een incomplete state en krijgen `noindex`.
 
@@ -350,8 +353,13 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Liliorila](../content/entities/grapes/liliorila/entity.yaml) | Druif | Zelfstandige pagina | `grape.liliorila` | Nee — reviewroute | `/grapes/liliorila` | — |
 | [Magdeleine Noire des Charentes](../content/entities/grapes/magdeleine-noire-des-charentes/entity.yaml) | Druif | Zelfstandige pagina | `grape.magdeleine-noire-des-charentes` | Nee — reviewroute | `/grapes/magdeleine-noire-des-charentes` | — |
 | [Marselan](../content/entities/grapes/marselan/entity.yaml) | Druif | Zelfstandige pagina | `grape.marselan` | Nee — reviewroute | `/grapes/marselan` | — |
+| [Meunier](../content/entities/grapes/meunier/entity.yaml) | Druif | Zelfstandige pagina | `grape.meunier` | Nee — reviewroute | `/grapes/meunier` | — |
 | [Muscat Blanc à Petits Grains](../content/entities/grapes/muscat-blanc-a-petits-grains/entity.yaml) | Druif | Zelfstandige pagina | `grape.muscat-blanc-a-petits-grains` | Nee — reviewroute | `/grapes/muscat-blanc-a-petits-grains` | — |
+| [Muscat of Alexandria](../content/entities/grapes/muscat-of-alexandria/entity.yaml) | Druif | Zelfstandige pagina | `grape.muscat-of-alexandria` | Nee — reviewroute | `/grapes/muscat-of-alexandria` | — |
+| [Palomino](../content/entities/grapes/palomino/entity.yaml) | Druif | Zelfstandige pagina | `grape.palomino` | Nee — reviewroute | `/grapes/palomino` | — |
+| [Pedro Ximénez](../content/entities/grapes/pedro-ximenez/entity.yaml) | Druif | Zelfstandige pagina | `grape.pedro-ximenez` | Nee — reviewroute | `/grapes/pedro-ximenez` | — |
 | [Pinot Gris](../content/entities/grapes/pinot-gris/entity.yaml) | Druif | Zelfstandige pagina | `grape.pinot-gris` | Nee — reviewroute | `/grapes/pinot-gris` | — |
+| [Pinot Noir](../content/entities/grapes/pinot-noir/entity.yaml) | Druif | Zelfstandige pagina | `grape.pinot-noir` | Nee — reviewroute | `/grapes/pinot-noir` | — |
 | [Poulsard](../content/entities/grapes/poulsard/entity.yaml) | Druif | Zelfstandige pagina | `grape.poulsard` | Nee — reviewroute | `/grapes/poulsard` | — |
 | [Prunelard](../content/entities/grapes/prunelard/entity.yaml) | Druif | Zelfstandige pagina | `grape.prunelard` | Nee — reviewroute | `/grapes/prunelard` | — |
 | [Riesling](../content/entities/grapes/riesling/entity.yaml) | Druif | Zelfstandige pagina | `grape.riesling` | Nee — reviewroute | `/grapes/riesling` | — |
@@ -359,13 +367,18 @@ Deze entities zijn alleen via hun directe reviewroute bereikbaar, tonen een inco
 | [Sauvignac](../content/entities/grapes/sauvignac/entity.yaml) | Druif | Zelfstandige pagina | `grape.sauvignac` | Nee — reviewroute | `/grapes/sauvignac` | — |
 | [Savagnin](../content/entities/grapes/savagnin/entity.yaml) | Druif | Zelfstandige pagina | `grape.savagnin` | Nee — reviewroute | `/grapes/savagnin` | — |
 | [Souvignier Gris](../content/entities/grapes/souvignier-gris/entity.yaml) | Druif | Zelfstandige pagina | `grape.souvignier-gris` | Nee — reviewroute | `/grapes/souvignier-gris` | — |
+| [Tempranillo](../content/entities/grapes/tempranillo/entity.yaml) | Druif | Zelfstandige pagina | `grape.tempranillo` | Nee — reviewroute | `/grapes/tempranillo` | — |
+| [Touriga Franca](../content/entities/grapes/touriga-franca/entity.yaml) | Druif | Zelfstandige pagina | `grape.touriga-franca` | Nee — reviewroute | `/grapes/touriga-franca` | — |
 | [Touriga Nacional](../content/entities/grapes/touriga-nacional/entity.yaml) | Druif | Zelfstandige pagina | `grape.touriga-nacional` | Nee — reviewroute | `/grapes/touriga-nacional` | — |
 | [Trousseau](../content/entities/grapes/trousseau/entity.yaml) | Druif | Zelfstandige pagina | `grape.trousseau` | Nee — reviewroute | `/grapes/trousseau` | — |
 | [Liber Pater](../content/entities/producers/liber-pater/entity.yaml) | Producent | Monografie | `producer.liber-pater` | Nee — reviewroute | `/producers/liber-pater` | 2026-09-22 |
 | [Bergerac](../content/entities/regions/bergerac/entity.yaml) | Regio | Zelfstandige pagina | `region.bergerac` | Nee — reviewroute | `/regions/bergerac` | — |
+| [Champagne](../content/entities/regions/champagne/entity.yaml) | Regio | Zelfstandige pagina | `region.champagne` | Nee — reviewroute | `/regions/champagne` | — |
 | [Colchagua](../content/entities/regions/colchagua/entity.yaml) | Regio | Zelfstandige pagina | `region.colchagua` | Nee — reviewroute | `/regions/colchagua` | — |
+| [Douro](../content/entities/regions/douro/entity.yaml) | Regio | Zelfstandige pagina | `region.douro` | Nee — reviewroute | `/regions/douro` | — |
 | [Elzas](../content/entities/regions/alsace/entity.yaml) | Regio | Zelfstandige pagina | `region.alsace` | Nee — reviewroute | `/regions/alsace` | — |
 | [Hunter Valley](../content/entities/regions/hunter-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.hunter-valley` | Nee — reviewroute | `/regions/hunter-valley` | — |
+| [Jerez](../content/entities/regions/jerez/entity.yaml) | Regio | Zelfstandige pagina | `region.jerez` | Nee — reviewroute | `/regions/jerez` | — |
 | [Jura](../content/entities/regions/jura/entity.yaml) | Regio | Zelfstandige pagina | `region.jura` | Nee — reviewroute | `/regions/jura` | — |
 | [Loirevallei](../content/entities/regions/loire-valley/entity.yaml) | Regio | Zelfstandige pagina | `region.loire-valley` | Nee — reviewroute | `/regions/loire-valley` | — |
 | [Luján de Cuyo](../content/entities/regions/lujan-de-cuyo/entity.yaml) | Regio | Zelfstandige pagina | `region.lujan-de-cuyo` | Nee — reviewroute | `/regions/lujan-de-cuyo` | — |

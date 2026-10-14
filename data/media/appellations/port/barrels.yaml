@@ -1,0 +1,26 @@
+id: media.appellation.port.barrels
+kind: photo
+role: documentary
+status: active
+storage_key: appellations/port/barrels.jpg
+mime_type: image/jpeg
+width: 1600
+height: 1062
+checksum_sha256: 45e0d2f4d4c15b073df5c3e38f1aa3b8a2b679ca2c5e0c73715071e0b5eb08c1
+alt:
+  nl: Portvaten, met op de kopse kanten de naam Sandeman Porto
+  en: Port casks with Sandeman Porto marked on their ends
+caption:
+  nl: Houten Portvaten in een kelder van Sandeman, met de producentennaam op de kopse kanten.
+  en: Wooden Port casks in a Sandeman cellar, with the producer's name marked on their ends.
+rights:
+  status: open-licensed
+  creator: Alex Ristea
+  source_url: https://commons.wikimedia.org/wiki/File:Barrels_of_Port_Wine_(5813179914).jpg
+  license_name: Creative Commons Attribution-ShareAlike 2.0 Generic
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  credit_line: Alex Ristea via Wikimedia Commons, CC BY-SA 2.0
+acquired_at: 2026-10-13
+changes: Resized to 1600 pixels wide from the current Wikimedia Commons file; no crop or
+  editorial colour alteration. The Port source version already has its watermark removed by its
+  Commons contributor.

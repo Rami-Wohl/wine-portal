@@ -1,5 +1,5 @@
 :::summary{#orientatie depth="foundation" source_refs="source.champagne-bottling-second-fermentation source.inao-cremant-bordeaux-specification-2026"}
-Bij de **traditionele methode** krijgt een al vergiste, stille wijn zijn bubbels door een **[[concept.second-fermentation|tweede vergisting]] in de fles**. Daarna rijpt hij op zijn gistbezinksel. Pas na het verwijderen daarvan en het afsluiten is de wijn klaar voor verkoop. Champagne is het bekendste voorbeeld, maar de methode wordt ook elders gebruikt, onder meer voor [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.champagne-bottling-second-fermentation] [@source.inao-cremant-bordeaux-specification-2026]
+Bij de **traditionele methode** krijgt een al vergiste, stille wijn zijn bubbels door een **[[concept.second-fermentation|tweede vergisting]] in de fles**. Daarna rijpt hij op zijn gistbezinksel. Pas na het verwijderen daarvan en het afsluiten is de wijn klaar voor verkoop. [[appellation.champagne|Champagne]] is het bekendste voorbeeld, maar de methode wordt ook elders gebruikt, onder meer voor [[appellation.cremant-de-bordeaux|Crémant de Bordeaux]]. [@source.champagne-bottling-second-fermentation] [@source.inao-cremant-bordeaux-specification-2026]
 :::
 
 :::figure{#proces-in-een-oogopslag depth="foundation" media_id="media.appellation.cremant-de-bordeaux.traditional-method"}

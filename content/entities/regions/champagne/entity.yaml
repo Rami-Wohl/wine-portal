@@ -1,0 +1,17 @@
+id: region.champagne
+type: region
+status: draft
+canonical_name: Champagne
+names:
+  nl: Champagne
+  en: Champagne
+slugs:
+  nl: champagne
+  en: champagne
+locales:
+  nl: overview.nl.md
+  en: overview.en.md
+relations: []
+assertions: []
+source_refs:
+  - source.champagne-region

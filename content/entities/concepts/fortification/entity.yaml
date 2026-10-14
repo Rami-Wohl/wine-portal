@@ -26,5 +26,7 @@ source_refs:
   - source.sherry-fortification
   - source.sherry-ageing
   - source.champagne-dosage
+  - source.junta-sherry-specification
+  - source.eu-sherry-amendment-2025
 depth: foundation
 last_reviewed: 2026-10-08
