@@ -1,7 +1,7 @@
 # Learn-roadmap
 
 Status: actieve productroadmap  
-Peildatum: 2026-10-13
+Peildatum: 2026-10-30
 
 Dit document ordent de Learn-MVP en de daaropvolgende inhoudelijke uitbreiding.
 Het is de enige actuele ticketlijst voor deze capability. Reguliere
@@ -11,6 +11,17 @@ Learn-tickets blijven hier als historisch spoor staan.
 De eerste versie is anoniem en file-backed. Zij moet echte lessen en leerpaden
 bruikbaar maken zonder accounts, API of database, maar mag een latere overgang
 naar gesynchroniseerde gebruikersvoortgang niet onnodig bemoeilijken.
+
+## Actuele inhoudsprioriteit — besluit 2026-10-30
+
+De twee bestaande paden blijven actief. Atlas is uitgesteld; Leren en Ontdekken
+krijgen opnieuw voorrang. **LRN-018** bereidt het volgende curriculum voor;
+LRN-012 is een afzonderlijke gebruiksevaluatie en geen wachtkamer voor meer lessen.
+Onderzoek kandidaten zoals mousserende wijn, zoete/versterkte wijn en waarneming,
+met hergebruik van de bestaande familiepagina's en nieuwe EXP-032-naslag.
+Kies de didactische boog op leerwaarde en bewijsbare gaps; maak geen samengestelde
+verzamelroute alleen omdat onderwerpen tegelijk op de backlog staan.
+De bestaande eis van curriculumgoedkeuring vóór nieuwe lessonbatches blijft gelden.
 
 ## Doel en afbakening
 
@@ -105,13 +116,14 @@ backendachtige abstractielaag, netwerkclient of database-entiteiten te bouwen.
 | 15 | `LRN-015` | Wijngaardlessen 4–6: loofwand, voeding/vloer en risico | `LRN-014`, goedgekeurd curriculum | afgerond |
 | 16 | `LRN-016` | Wijngaardlessen 7–8: rijpheid/oogst en teeltsystemen | `LRN-015`, goedgekeurd curriculum | afgerond |
 | 17 | `LRN-017` | Volledig wijngaardpad integreren, toetsen en publiceren | `LRN-014–016`, goedgekeurd curriculum | afgerond |
+| 18 | `LRN-018` | Volgend curriculum, canonical owners en eerste lessonbatch voorstellen | Bestaande inhoud; geen Atlas-, account- of gebruiksgate | open |
 
 `LRN-001–011` vormen de afgeronde MVP-volgorde. Vanaf het prioriteitsbesluit
 van 2026-10-12 loopt **inhoudelijke uitbreiding via LRN-013–017 onafhankelijk
 van LRN-012**: een site zonder gebruikers hoeft niet op gebruiksdata te wachten
 om meer lessen te krijgen. Gebruiksevaluatie, accounts, sync en personalisatie
 blijven afzonderlijke beslissingen. De [productroadmap](product-roadmap.md)
-ordent dit werk naast Explore en Atlas; geen volgende lessonbatch wordt
+ordent dit werk naast Explore; Atlas staat achteraan geparkeerd. Geen volgende lessonbatch wordt
 stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
 
 ## Tickets
@@ -637,6 +649,26 @@ stilzwijgend gebouwd vóór goedkeuring van haar curriculumbrief.
   [Integrale publicatiereview](../editorial/vineyard-path-release-review-2026-10-13.md).
   Volgende producttaak: EXP-032; LRN-012 blijft afzonderlijk tijd-/gebruiksgebonden.
 
+### `LRN-018` — Volgend inhoudelijk leerpad en eerste lessonbatch afbakenen
+
+- **Status:** open; **prioriteit:** hoog; **categorieën:** content, research, product-ux.
+- **Herkomst:** gebruikersbesluit 2026-10-30 — Atlas uitstellen, Leren en Ontdekken voorrang.
+- **Doel:** een concreet volgend curriculumvoorstel, niet wachten op gebruiksdata,
+  feedback, accounts, kaartdata of de volledige EXP-032-catalogus.
+- **Werk:** vergelijk kandidaatonderwerpen op leerwaarde, voorkennis, beschikbare
+  canonical naslag en benodigde research. Leg voor één gemotiveerd voorstel niveau,
+  leerdoelen, zelfstandige leswaarde, volgorde, owner-/blocklinks, echte gaps,
+  bronnenbehoefte, NL/EN, bestaande media en een kleine eerste batch vast.
+  Plan de noodzakelijke Explore-aanvullingen naast de lessen, niet alle drafts vooraf.
+- **Afhankelijkheden:** bestaande Learn-/contentcontracten. Geen volledige
+  regionale publicatie, Atlas-, backend- of LRN-012-voorwaarde.
+- **Klaar wanneer:** een reviewbare curriculumbrief en afgebakende uitvoertickets
+  klaarstaan; het nieuwe curriculum is expliciet goedgekeurd of als voorstel
+  gemarkeerd. Voorbereiding is geen toestemming om ongereviewde lessen te publiceren.
+- **Beslispunt:** DEC-LRN-016; geen gebruikersakkoord op een onderwerp suggereren.
+- **Verificatie:** handmatige didactische, ownership- en dependencyreview;
+  de latere publicatiebatches krijgen eigen bron-, NL/EN-, media- en browserchecks.
+
 ## Beslisregister
 
 Open beslissingen worden genomen in het genoemde ticket, vastgelegd met datum en
@@ -660,11 +692,13 @@ aanbeveling richtinggevend maar niet bindend.
 | `DEC-LRN-013` | Wat betekent een step voltooien? | `LRN-009` | Expliciete omkeerbare toggle boven en onder de lesson; openen of navigeren voltooit niets | besloten 2026-09-23 |
 | `DEC-LRN-014` | Publieke namen voor de drie curriculumniveaus | `LRN-002` | **Wijn begrijpen**, **Wijn verklaren** en **Wijn doorgronden**, met WSET 2+/3+/4+ als kalibrerende toelichting | besloten 2026-09-23 |
 | `DEC-LRN-015` | Volgend curriculum: onderwerp, niveau, lesvolgorde en eerste publicatiebatch | Voorstel in `LRN-013`, sluiten vóór `LRN-014–017` | [Wijnstok en wijngaard](../editorial/briefs/learning-path.vine-and-vineyard.md): Wijn begrijpen, acht lessen, drie authoringbatches plus integratie | besloten 2026-10-12; expliciet gebruikersakkoord |
+| `DEC-LRN-016` | Volgend curriculum, onderwerp, lesvolgorde en eerste publicatiebatch | Voorstel in `LRN-018`, vóór nieuwe lessonbatches | Kandidaten op leerwaarde en beschikbare naslag vergelijken; Atlas niet als voorganger | open |
 
 ## Besluitenlog
 
 | Datum | Besluit | Motivatie |
 | --- | --- | --- |
+| 2026-10-30 | Leren/consistent Explore-content vóór Atlas; LRN-018 toegevoegd. | Gebruiker stelt Atlas uit en wil een andere aanpak. Meer lessen vragen een concreet curriculumvoorstel; LRN-012 blijft gebruiksgebonden en blokkeert geen inhoud. |
 | 2026-10-13 | LRN-017 afgerond; EXP-032 volgt in de productplanning. | Het volledige achtlessenpad is actief met eigen voortgang en actieve vervolgsuggesties. LRN-012 blijft een afzonderlijke gebruiksevaluatie; feedback blijft geparkeerd. |
 | 2026-10-12 | LRN-016 afgerond; LRN-017 volgt. | Alle acht wijngaardlessen actief. Oogstoverlap, actuele normscope en wederzijdse stable-ID-links gecontroleerd; integrale route, recap en voortgang volgen nu. |
 | 2026-10-12 | LRN-015 afgerond; LRN-016 is de volgende inhoudelijke batch. | Zes van acht wijngaardlessen actief. De laatste twee vragen expliciete overlapreview rond oogst en actualiteits-/scopereview van teeltnormen; volledige pathpublicatie blijft LRN-017. |

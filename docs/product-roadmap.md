@@ -1,157 +1,142 @@
 # Overkoepelende productplanning
 
-Bijgewerkt: 2026-10-14. Deze kaart bepaalt volgorde en timing; actuele
-status en acceptatiecriteria staan uitsluitend in de gekoppelde domeinbacklogs.
-De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) en
-[performancereview](../editorial/performance-review-2026-10-11.md) motiveren
-de huidige volgorde. Eerdere uitvoeringsresultaten staan in het
-[reviewregister](quality-assurance.md#reviewregister), niet opnieuw in dit plan.
+Bijgewerkt: 2026-10-30. Deze kaart bepaalt volgorde en timing; actuele status
+en acceptatiecriteria staan in de gekoppelde domeinbacklogs. Gedateerde
+onderzoeksresultaten blijven in het [reviewregister](quality-assurance.md#reviewregister).
 
 ## Waar we staan
 
 De entity-first basis werkt: gedeelde YAML, gelijkwaardige NL/EN-Markdown,
 strict gevalideerde graph, server-only repository en gedeelde presentatie.
-Explore, zoeken, vijftien actieve lessen en twee Learn-paden gebruiken deze basis.
-Browservoortgang staat los van authored content. De conceptuele keten van
-wijngaard tot waarneming is gepubliceerd; mondiale dekking vraagt nog een
-expliciete dependency- en ownershipcontrole.
+Ontdekken, zoeken, vijftien actieve lessen en twee Learn-paden gebruiken deze
+basis. Browservoortgang staat los van authored content. Het volledige
+wijngaardpad en de eerste Port/Sherry/Champagne-batch zijn gepubliceerd;
+EXP-026 heeft hun graph, links en terminologie geïntegreerd.
 
-Atlas heeft geen geverifieerde dataset. Er is een Next.js-server, maar geen
-accountdatabase, remote voortgang, redactiebackend of externe publieke API.
-De contentrepository heeft synchrone lookups; de voortgangsadapter heeft een
-async interface. Dat onderscheid telt bij toekomstige lazy loading of opslag.
+Er is een Next.js-server, maar geen accountdatabase, remote voortgang,
+redactiebackend of externe publieke API. De contentrepository heeft synchrone
+lookups; de voortgangsadapter heeft een async interface.
 
-## Eerstvolgende werk en beslismomenten
+## Gebruikersbesluit 2026-10-30: inhoud eerst, Atlas achteraan
 
-**Prioriteitsbesluit 2026-10-12:** de gebruiker heeft al een live URL, maar nog
-geen gebruikers. Eerst meer inhoud, vooral lessen; Atlas waarschijnlijk ook
-vóór bredere ingebruikname. Geen haast met feedback. Het openbare adres is geen
-bewijs van gebruik en geen zelfstandige reden voor accounts of een database.
+**Leren en Ontdekken krijgen voorrang.** Atlas wordt uitgesteld omdat de
+gebruiker een andere aanpak wil, zonder al een nieuw ontwerp te kiezen.
+De Atlaspagina, navigatielinks, home-ingang en specifieke styling zijn verwijderd;
+`/atlas` en `/en/atlas` zijn geen beschikbare productroutes meer.
+Geen Atlasvoorbereiding, geografiemodel, import of kaartwerk als voorwaarde
+voor nieuwe lessen, cataloguspagina's of regionale content.
 
-- **Het volledige wijngaardpad is actief.** Het goedgekeurde curriculum
-  [Wijnstok en wijngaard](../editorial/briefs/learning-path.vine-and-vineyard.md)
-  is via `LRN-014–017` geleverd: acht NL/EN-lessen, leercontext, terugblik,
-  vervolgsuggesties en eigen lokale voortgang naast het stille-wijnpad.
-  [Integrale publicatiereview](../editorial/vineyard-path-release-review-2026-10-13.md).
-- **Explore-integratie afgerond: `EXP-026`.** De 68 foundationconcepts,
-  vijftien lessen en eerste Port/Sherry/Champagne-batch hebben gelijke NL/EN-
-  targets en gecontroleerde publieke routes. Klimaatclassificaties, aroma-oorsprong,
-  eikenhout/vatkeuze en stille wijn hebben expliciete bestaande owners.
-  [Integratiereview](../editorial/foundation-integration-review-2026-10-14.md).
-  De resterende catalogusbatches volgen na EXP-028, vóór de regionale pilots;
-  EXP-032 blijft daarvoor open. Regionale/druivendrafts behouden hun eigen publicatiegate.
-- **Eerstvolgend: Atlas afbakenen (`MNT-051`).** Bronverkenning mag naast lessen
-  lopen. Kies een kleine geverifieerde Bordeauxscope met provenance/licentie en
-  afgebakende bouwtickets. Daarna kan `MNT-002` de eerste kaart leveren zodra
-  data beschikbaar is; afbakening alleen betekent niet dat Atlas al bruikbaar is.
-  Volledige Atlasscope en datum staan nog niet vast. Geen verzonnen geografie.
-- **Feedback bewust geparkeerd, inclusief fase 0.** `FBK-001` blijft afgerond als
-  [lokale ontwerpproef](feedback-flow.md). De overige 33 slices, hashes (`FBK-003`),
-  provideronderzoek en de bijbehorende platformgate `MNT-050` zijn geen huidige
-  vóórtaken. De [feedbackroadmap](feedback-roadmap.md#prioriteit-en-hervatpunt--besluit-2026-10-12)
-  bewaart voortgang, besluiten, ontbrekend werk en hervatprocedure. Herbespreken
-  bij review van een volgende les-/contentlevering of Atlaspilot; hervatten pas
-  na expliciet prioriteitsbesluit, niet automatisch bij het halen van een mijlpaal.
-- **Schaalbasis getoetst (`MNT-052`), harness aangescherpt (`MNT-063`).** Geen performancegedreven database nodig.
-  Herhaal [performance-budgets.md](performance-budgets.md) vóór grote regiobatches
-  en bij relevante corpus-/codewijzigingen. `MNT-065` breidt vóór grote batches
-  de representativiteit van scenario's uit; `MNT-064` optimaliseert fixture-I/O
-  alleen bij gemeten kosten. Beide blokkeren de huidige lessen niet.
-- **Vóór regionale publicatie: `REG-001–003`, `EXP-027/028`.** Besluit plaatsmodel,
-  druivenprioriteiten en mondiale dependencies; toets mondiale claims en publicatie.
-  [Regionale gates](region-expansion-roadmap.md) blijven gelden; Loire/Mendoza zijn kandidaten.
-- **Tijdgebonden/externe checks:** `MNT-055` hercontroleren uiterlijk 2026-10-18;
-  `LRN-012` vroegst 2026-10-22 én alleen met genoeg werkelijk gebruik of gerichte
-  gebruiksgesprekken. Geen gebruikers betekent evaluatie uitstellen, niet lessen
-  uitstellen. `MNT-056` uitvoeren zodra toegang beschikbaar is; lokale tests zijn
-  geen bewijs van GitHub-/Vercel-gedrag. De gebruiker bevestigde op
-  2026-10-13 na commit/push een geslaagde Actions-run; overige externe
-  acceptatiepunten blijven open.
+De afbakening uit MNT-051 blijft afgeronde research. Het
+[oude pilotvoorstel](atlas-pilot-contract.md) is **geen actief implementatiecontract**.
+De vijf overgebleven Atlastickets staan onderaan, na alle overige werksporen.
+Hervatting vereist een expliciete gebruikersopdracht, een nieuwe scope-/ontwerpkeuze
+en hercontrole van bronversies, rechten en bruikbaarheid. Geen automatische hervatting.
 
-Dit is een aanbevolen afwisseling tussen lessen, naslag en Atlasvoorbereiding.
-Curriculumgaps kunnen de volgorde van inhoudelijke batches gemotiveerd wijzigen.
-Grote schema-, opslag- en curriculumwijzigingen houden hun eigen besluitpoort.
+- **Bestaande contentkwaliteit eerst:** MNT-072 corrigeert het Pomerol-brongebruik
+  en blijft urgent, ook zonder Atlas. De bronlabelcorrectie alleen voltooit
+  de NL/EN-claimreview niet.
+- **Leren:** LRN-018 bereidt een volgend curriculum en concrete lessonbatches
+  voor op basis van bestaande naslag en leervragen. De curriculumbrief vraagt
+  eigen goedkeuring vóór authoring; accounts, Atlas en werkelijk pilotgebruik
+  zijn geen voorwaarden voor voorbereiding of meer lessen.
+- **Ontdekken:** EXP-027 toetst mondiale aannames; EXP-028 controleert de
+  foundation. Daarna volgen de drie resterende EXP-032-batches: zoet,
+  mousserend en versterkt. REG-001–003 bereiden regionale content voor;
+  kaartbouw maakt geen deel uit van hun huidige opdracht.
+- **Feedback en platform blijven geparkeerd:** FBK-001 is een lokale ontwerpproef;
+  FBK-002–034 en MNT-050 worden niet stilzwijgend hervat. Zie de
+  [overdracht](feedback-roadmap.md#prioriteit-en-hervatpunt--besluit-2026-10-12).
+- **Onderhoud volgt concrete noodzaak:** MNT-065 vóór grote corpusbatches;
+  MNT-064 alleen bij gemeten kosten. Geen brede platformronde vóór iedere les.
+- **Securityronde 2026-10-30:** Next 16.4.3, Node 24.22.2 LTS en compatibele
+  dependency-updates; volledige en productieaudit schoon. MNT-055 afgerond,
+  ESLint-10-peercompatibiliteit apart als MNT-073 (hercontrole uiterlijk 30 november).
+  [Review en auditbewijs](../editorial/dependency-security-review-2026-10-30.md).
+- **Tijdgebonden checks:** LRN-012 vereist werkelijk gebruik of gerichte
+  gesprekken, niet alleen een verstreken datum. Daarover is geen nieuw bewijs
+  aangeleverd. MNT-056 bewaart de resterende externe acceptatie. De gebruiker
+  bevestigde eerder geslaagde Actions; de huidige update moet nog gecommit,
+  gepusht en gedeployd worden voor externe verificatie.
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-57 niet-afgeronde tickets: 15 onderhoudsacties, 3 Explore-tickets, 5 regionale
-planning-/publicatietickets, 1 Learn-ticket (gebruiksevaluatie)
-en 33 feedbacktickets. Die 33 feedbacktickets en MNT-050 zijn bewust geparkeerd;
-ze blijven meetellen als resterend werk, niet als huidige uitvoeringsopdracht.
-De 19 `DEC-FBK-*`-besluiten tellen als gates, niet als extra implementatietickets.
-Geplande en geblokkeerde
-acties tellen mee. Tijdgebonden of vrijgekomen externe controles mogen de
-onderstaande ontwikkelvolgorde onderbreken.
+60 niet-afgeronde tickets: 17 onderhoudsacties, 3 Explore-tickets, 5 regionale
+planning-/publicatietickets, 2 Learn-tickets en 33 feedbacktickets. LRN-018 is
+nieuw toegevoegd zodat Leren een concreet vervolg heeft naast gebruiksevaluatie.
+Beslispunten zijn gates, geen extra implementatietickets; toekomstige authoringbatches
+krijgen eigen tickets zodra hun scope vaststaat. Dit is geen volledige mondiale contentlijst.
 
-Het feedbackspoor is geparkeerd. Onderstaande fasevolgorde geldt uitsluitend
-**na expliciete hervatting**, niet vóór nieuwe content of Atlas:
-
-| Volgorde bij feedbackhervatting | Werk en gate |
-| --- | --- |
-| Fase 0: `FBK-002–005` | Eerst FBK-003/DEC-FBK-011; daarna beleid, providerproef en privacy-/operationele keuzes; `MNT-050` sluiten vóór databasebouw |
-| Fase 1: `FBK-006–025` | Accounts, meldingen, moderatie, mail, misbruik/beroep en rechten; staging na fase 0, publieke lancering pas via `FBK-025` en `MNT-056` |
-| Fase 2: `FBK-026–031` | Selectie, Mijn meldingen, versieverschil, correctielog, opt-in-credit en GitHubkoppeling |
-| Fase 3: `FBK-032–034` | Vertrouwde bijdragers en Learn-sync; sync wacht ook op `LRN-012` en `DEC-FBK-019` |
-
-De aanbevolen inhoudelijke/voorbereidende volgorde is hieronder weergegeven.
-Het curriculumakkoord, de drie lesbatches en pathpublicatie zijn afgerond.
-De eerste EXP-032-batch en de integratie in EXP-026 zijn geleverd; nu volgt Atlasafbakening.
-Atlasbronverkenning kan naast dit contentwerk lopen.
+## Actieve volgorde: Leren en Ontdekken
 
 | Volgorde | Ticket | Werk |
 | ---: | --- | --- |
-| 1 | `MNT-051` | Kleine geverifieerde Bordeaux-Atlaspilot en bouwscope afbakenen; bronverkenning kan naast content lopen |
-| 2 | `MNT-060` | Resterende documentatieconsolidatie met behoud van contracten en historie |
-| 3 | `REG-001` | Landen-/plaatshiërarchie en regionale geografiestrategie besluiten |
-| 4 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
-| 5 | `REG-003` | Mondiale inhoudsgaten afbakenen en uitvoerbare contentbatches plannen, inclusief nieuwe regionale/druivendrafts |
-| 6 | `EXP-027` | Mondiale claims toetsen, inclusief koel en warm/droog contrast; regiokeuze bevestigen |
-| 7 | `EXP-028` | Integrale redactionele en product-QA |
-| 8 | `EXP-032` | Resterende catalogus: batch 2 zoetheidscontrasten → batch 3 mousserend → batch 4 versterkt/Manzanilla; eerste batch afgerond |
-| 9 | `MNT-065` | Representatieve benchmarkscenario’s en workloadversies vóór grote corpus-/Atlasuitbreiding |
-| 10 | `MNT-061` | Getypeerde UI-berichtencatalogus vóór derde taal of forse nieuwe UI |
-| 11 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling vóór grote regiobatches |
-| 12 | `MNT-053` | Bestaande SVG-illustraties naar passende rasterstijl migreren |
-| 13 | `REG-004` | Eerste regionale pilot publiceren, voorlopig Loire, na publicatiegates |
-| 14 | `REG-005` | Contrasterende tweede pilot, voorlopig Mendoza; daarna volgende regiobatches kiezen |
-| 15 | `MNT-064` | Fixture-I/O alleen optimaliseren bij gemeten setupkosten; geen voorganger van andere leveringen |
+| 1 | `MNT-072` | Pomerol-bron en afhankelijke NL/EN-claims en assertion controleren |
+| 2 | `LRN-018` | Volgend curriculum en eerste lessonbatch voorstellen; bestaande naslag en echte gaps afwegen |
+| 3 | `EXP-027` | Mondiale claims toetsen; klimaat-/regiocontrasten en DEC-EXP-005 bevestigen |
+| 4 | `EXP-028` | Integrale redactionele en product-QA van de foundation |
+| 5 | `EXP-032` | Resterende catalogusbatches: zoetheidscontrasten → mousserend → versterkt/Manzanilla |
+| 6 | `REG-003` | Mondiale inhoudsgaten omzetten in concrete contentbatches |
+| 7 | `REG-002` | Druivenprioriteiten en proportioneel publicatiecontract toetsen |
+| 8 | `REG-001` | Landen-/plaatsidentiteit en relaties voor tekstuele regionale publicatie besluiten, zonder Atlasbouw |
+| 9 | `REG-004` | Eerste regionale pilot, voorlopig Loire, na inhoudelijke publicatiegates |
+| 10 | `REG-005` | Contrasterende regionale pilot, voorlopig Mendoza |
+| 11 | `MNT-060` | Documentatieconsolidatie met behoud van contracten en historie |
+| 12 | `MNT-065` | Representatieve benchmarks; vóór een daadwerkelijk grote corpusbatch uitvoeren |
+| 13 | `MNT-061` | Getypeerde UI-berichtencatalogus |
+| 14 | `MNT-062` | Browsertestcontracten en risicogerichte contentsampling |
+| 15 | `MNT-053` | Bestaande SVG-illustraties naar rasterstijl migreren |
+| 16 | `MNT-064` | Fixture-I/O alleen optimaliseren bij gemeten setupkosten |
 
-LRN-013–017 zijn afgerond; alle acht wijngaardlessen en het volledige path
-zijn actief. De oorspronkelijke zevenlessenroute behoudt haar eigen voortgang.
-De benchmarkreview voegde twee uitgestelde acties toe (`MNT-064/065`); de directe
-correcties zijn afgerond in `MNT-063`. REG-003 blijft
-een planningticket: toekomstige mondiale content krijgt vóór uitvoering eigen
-batches/tickets. De huidige telling is geen volledige mondiale authoringlijst.
+Na curriculumakkoord krijgen concrete Learn-authoringbatches direct een plek
+naast de toepasselijke Explore-batch; ze wachten niet op de volledige catalogus
+of regionale publicaties. De volgorde bewaart inhoudelijke publicatiegates,
+maar maakt geparkeerde Atlas- of feedbackbouw geen voorganger.
 
-Tijdgebonden:
+Tijdgebonden: **LRN-012**, vroegst 2026-10-22 en alleen met voldoende werkelijk
+gebruik of gerichte gesprekken. Zonder bewijs blijft het ticket gepland;
+nieuwe lessen hoeven daarop niet te wachten.
 
-| Moment | Ticket | Werk |
-| --- | --- | --- |
-| Vroegst 2026-10-22 bij voldoende werkelijk gebruik | `LRN-012` | Learn-pilot en product-/architectuurvervolg toetsen; bij onvoldoende gebruik verlengen, geen gate voor meer lessen |
+## Externe afhankelijkheden
 
-Geparkeerde platformgate: `MNT-050`, heropenen bij expliciet gekozen feedback-
-of andere concrete gebruikers-/redactie-/API-behoefte. Bij feedbackhervatting
-blijft dit besluit vóór `FBK-006` vereist. Al meegeteld bij de 15 onderhoudsacties.
+In aanbevolen oppakvolgorde zodra beschikbaar; geen Atlaswerk in deze groep.
 
-Geblokkeerd, in aanbevolen oppakvolgorde zodra de afhankelijkheid beschikbaar is:
-
-| Prioriteit bij vrijgave | Ticket | Afhankelijkheid |
+| Volgorde bij vrijgave | Ticket | Afhankelijkheid |
 | ---: | --- | --- |
-| 1 | `MNT-056` | Actions geslaagd volgens gebruikersbevestiging; repository-/branchbescherming en Vercel-acceptatie nog te controleren |
-| 2 | `MNT-055` | Compatibele upstreampatch voor braces; handmatige hercontrole uiterlijk 2026-10-18 |
-| 3 | `MNT-002` | Geverifieerde Atlasdata voor Bordeauxkaart |
-| 4 | `MNT-014` | Officiële Barsac-/Sauternes-geometrie |
-| 5 | `MNT-013` | Wereldwijde druivenverspreidingsdata |
-| 6 | `MNT-020` | Producentenfoto's met aantoonbare hergebruikrechten |
-| 7 | `MNT-039` | Definitief officieel EU-besluit Graves Supérieures |
+| 1 | `MNT-056` | Repository-/branchbescherming en Vercel-acceptatie; Actions eerder door gebruiker bevestigd |
+| 2 | `MNT-073` | ESLint 10 zodra de lintpluginpeerketen compatibel is; hercontrole uiterlijk 2026-11-30 |
+| 3 | `MNT-020` | Producentenfoto's met aantoonbare hergebruikrechten |
+| 4 | `MNT-039` | Definitief officieel EU-besluit Graves Supérieures |
 
-Ticketstatus en acceptatiecriteria staan in de
-[onderhoudsbacklog](maintenance-backlog.md),
-[Explore-roadmap](explore-foundation-roadmap.md),
-[Learn-roadmap](learn-roadmap.md) en
-[regionale roadmap](region-expansion-roadmap.md), plus de
-[feedbackroadmap](feedback-roadmap.md).
-Draftentities vormen een voorraad, geen automatische publicatiebelofte.
+## Geparkeerd platform en feedback
+
+MNT-050 blijft de platformgate vóór eventuele databasebouw. Feedback hervat
+uitsluitend op expliciet prioriteitsbesluit, in deze volgorde:
+
+| Fase | Tickets | Werk |
+| --- | --- | --- |
+| 0 | `FBK-002–005` | Eerst FBK-003/DEC-FBK-011; daarna beleid, providerproef en privacy-/operationele keuzes |
+| 1 | `FBK-006–025` | Accounts, meldingen, moderatie, mail, misbruik/beroep en rechten; lancering via FBK-025 en MNT-056 |
+| 2 | `FBK-026–031` | Selectie, Mijn meldingen, versieverschil, correctielog, opt-in-credit en GitHubkoppeling |
+| 3 | `FBK-032–034` | Vertrouwde bijdragers en Learn-sync; sync wacht op LRN-012 en DEC-FBK-019 |
+
+## Atlas — achteraan, uitsluitend na nieuwe ontwerpkeuze
+
+Alle vijf tickets zijn **geparkeerd**, ook als hun oude datablokkade oplost.
+Onderstaande volgorde is alleen een historisch aanknopingspunt; eerst opnieuw
+ontwerpen en bepalen welke tickets nog passen. Het negen-appellationvoorstel
+is geen vastgelegde toekomstkeuze.
+
+| Eerder verband | Ticket | Te herbeoordelen richting |
+| ---: | --- | --- |
+| 1 | `MNT-070` | Geografiemodel en repositorygrens |
+| 2 | `MNT-071` | Gecontroleerde data-import en publicatiereview |
+| 3 | `MNT-002` | Publieke Atlas-/Bordeauxkaart |
+| 4 | `MNT-014` | Kaartintegratie Barsac/Sauternes |
+| 5 | `MNT-013` | Wereldwijde druivenverspreidingsdata |
+
+Status en acceptatiecriteria staan in de [onderhoudsbacklog](maintenance-backlog.md),
+[Explore-roadmap](explore-foundation-roadmap.md), [Learn-roadmap](learn-roadmap.md),
+[regionale roadmap](region-expansion-roadmap.md) en [feedbackroadmap](feedback-roadmap.md).
 
 ## Wanneer backend of database nodig wordt
 
@@ -169,7 +154,7 @@ Draftentities vormen een voorraad, geen automatische publicatiebelofte.
 Bewust uitstel krijgt een toetsbare trigger. Feedback heeft een concrete
 gefaseerde backlog, maar is op gebruikersprioriteit geparkeerd; een bekende
 mogelijke consumer is geen opdracht om de infrastructuur nu al te bouwen.
-Content, anoniem Learn en de eerste beperkte Atlaslevering blijven file-backed
-uitvoerbaar zolang geverifieerde data en gemeten budgetten dat toelaten. Research, bronnen en canonical content blijven bij
+Content en anoniem Learn blijven file-backed uitvoerbaar zolang de gemeten
+budgetten dat toelaten. Atlas is geen huidige consumer voor infrastructuurbouw. Research, bronnen en canonical content blijven bij
 iedere migratie behouden. Verdere framework alignment en vergelijkingsfuncties
 blijven mogelijke vervolgrichtingen zonder huidige uitvoeringsbelofte.

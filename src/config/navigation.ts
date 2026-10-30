@@ -30,7 +30,6 @@ export const PRIMARY_NAVIGATION: NavigationItem[] = [
     ],
   },
   { href: "/learn", label: "Leren", activePrefixes: ["/learn"] },
-  { href: "/atlas", label: "Atlas", activePrefixes: ["/atlas"] },
 ];
 
 export const SEARCH_NAVIGATION_ITEM: NavigationItem = {
@@ -48,7 +47,6 @@ export function localizedNavigation(items: NavigationItem[], locale: Locale): Na
   const english: Record<string, string> = {
     "/explore": "Explore",
     "/learn": "Learn",
-    "/atlas": "Atlas",
     "/search": "Search",
     "/about": "About Oenocademy",
   };

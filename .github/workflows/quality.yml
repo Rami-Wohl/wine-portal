@@ -32,8 +32,8 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci
-      - name: Check production dependencies
-        run: npm audit --omit=dev --audit-level=high
+      - name: Check dependency advisories
+        run: npm audit --audit-level=low
       - name: Check formatting, lint, types, unit tests and content relations
         run: npm run check
       - name: Install Chromium

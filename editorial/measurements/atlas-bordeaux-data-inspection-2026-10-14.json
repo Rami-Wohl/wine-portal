@@ -1,0 +1,458 @@
+{
+  "review_id": "QCR-2026-10-14-02",
+  "reviewed_at": "2026-10-14",
+  "status": "research-inspection-not-publication-approval",
+  "catalogue_url": "https://www.data.gouv.fr/datasets/delimitation-des-aires-geographiques-des-siqo",
+  "dataset_id": "5d7fb2856f444171a5f2780b",
+  "resource_id": "687d62d7-8ee6-4997-a47a-81e3183be31b",
+  "release": "2026-10-12",
+  "source_bytes": 88984476,
+  "source_sha256": "e9ea8b48c507da006774ad460d03619b464ca6598956ac7fd319f36af4f56bc4",
+  "source_crs_wkt": "PROJCS[\"RGF93_Lambert_93\",GEOGCS[\"GCS_RGF_1993\",DATUM[\"D_RGF_1993\",SPHEROID[\"GRS_1980\",6378137.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Lambert_Conformal_Conic\"],PARAMETER[\"False_Easting\",700000.0],PARAMETER[\"False_Northing\",6600000.0],PARAMETER[\"Central_Meridian\",3.0],PARAMETER[\"Standard_Parallel_1\",44.0],PARAMETER[\"Standard_Parallel_2\",49.0],PARAMETER[\"Latitude_Of_Origin\",46.5],UNIT[\"Meter\",1.0]]",
+  "recognized_authority": ["IGNF", "LAMB93"],
+  "equivalent_epsg": 2154,
+  "equals_epsg2154": true,
+  "source_encoding": "UTF-8",
+  "transformation": "pyproj Transformer.from_crs(source WKT, EPSG:4326, always_xy=True); no repair or simplification",
+  "tools": [
+    "certifi==2026.7.22",
+    "numpy==2.5.4",
+    "pillow==12.3.0",
+    "pyproj==3.8.0",
+    "pyshp==3.1.6",
+    "shapely==2.2.0"
+  ],
+  "checks": {
+    "total_source_features": 1852,
+    "selected_features": 9,
+    "total_vertices": 11122,
+    "all_valid_native": true,
+    "all_valid_wgs84": true,
+    "geojson_bytes": 453592,
+    "geojson_gzip_bytes": 179873,
+    "barsac_covered_by_sauternes": true,
+    "barsac_outside_sauternes_m2": 0.0,
+    "mapping_keys_unique": true,
+    "max_roundtrip_hausdorff_m": 3.729380778884829e-9
+  },
+  "features": [
+    {
+      "entity_id": "appellation.bordeaux",
+      "id_app": 14,
+      "id_denom": 67,
+      "app": "Bordeaux",
+      "denom": "Bordeaux",
+      "source_record_index": 174,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin tranquille",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 14,
+        "app": "Bordeaux",
+        "id_denom": 67,
+        "denom": "Bordeaux",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "Polygon",
+      "parts": 1,
+      "vertices": 6521,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [373064.33300000016, 6363748.281997896, 487885.50999999885, 6505262.274998144],
+      "bbox_wgs84": [
+        -1.1695024069526163, 44.32413759297859, 0.31506033318692583, 45.57358629425601
+      ],
+      "roundtrip_hausdorff_m": 3.729380778884829e-9
+    },
+    {
+      "entity_id": "appellation.margaux",
+      "id_app": 52,
+      "id_denom": 111,
+      "app": "Margaux",
+      "denom": "Margaux",
+      "source_record_index": 230,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin tranquille",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 52,
+        "app": "Margaux",
+        "id_denom": 111,
+        "denom": "Margaux",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "Polygon",
+      "parts": 1,
+      "vertices": 479,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [404079.9500000007, 6435502.018998022, 415051.6049999993, 6448919.293998045],
+      "bbox_wgs84": [
+        -0.7545417033155482, 44.95635415800859, -0.6185610260903975, 45.07894241495922
+      ],
+      "roundtrip_hausdorff_m": 2.7994193733695543e-9
+    },
+    {
+      "entity_id": "appellation.pauillac",
+      "id_app": 59,
+      "id_denom": 118,
+      "app": "Pauillac",
+      "denom": "Pauillac",
+      "source_record_index": 243,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin tranquille",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 59,
+        "app": "Pauillac",
+        "id_denom": 118,
+        "denom": "Pauillac",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "MultiPolygon",
+      "parts": 79,
+      "vertices": 1756,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [398072.0499999988, 6458881.055998063, 408472.38899999874, 6469973.663998085],
+      "bbox_wgs84": [
+        -0.846623164573271, 45.165680834784915, -0.7132129623986452, 45.26594966589302
+      ],
+      "roundtrip_hausdorff_m": 3.727108843992958e-9
+    },
+    {
+      "entity_id": "appellation.saint-julien",
+      "id_app": 71,
+      "id_denom": 168,
+      "app": "Saint-Julien",
+      "denom": "Saint-Julien",
+      "source_record_index": 260,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin tranquille",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 71,
+        "app": "Saint-Julien",
+        "id_denom": 168,
+        "denom": "Saint-Julien",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "MultiPolygon",
+      "parts": 12,
+      "vertices": 442,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [400251.94099999854, 6451816.001998049, 409832.8409999996, 6460769.880998067],
+      "bbox_wgs84": [
+        -0.8160919621645807, 45.10229827085635, -0.6932590140805367, 45.18453624793583
+      ],
+      "roundtrip_hausdorff_m": 2.8036522163991574e-9
+    },
+    {
+      "entity_id": "appellation.saint-estephe",
+      "id_app": 69,
+      "id_denom": 166,
+      "app": "Saint-Estèphe",
+      "denom": "Saint-Estèphe",
+      "source_record_index": 258,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin tranquille",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 69,
+        "app": "Saint-Estèphe",
+        "id_denom": 166,
+        "denom": "Saint-Estèphe",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "Polygon",
+      "parts": 1,
+      "vertices": 216,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [400726.37099999934, 6465267.816998074, 406049.10899999976, 6471988.998998088],
+      "bbox_wgs84": [
+        -0.8159040774820592, 45.22238153638741, -0.7469649569417725, 45.283883362547584
+      ],
+      "roundtrip_hausdorff_m": 2.8036522163991574e-9
+    },
+    {
+      "entity_id": "appellation.pomerol",
+      "id_app": 62,
+      "id_denom": 121,
+      "app": "Pomerol",
+      "denom": "Pomerol",
+      "source_record_index": 248,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin tranquille",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 62,
+        "app": "Pomerol",
+        "id_denom": 121,
+        "denom": "Pomerol",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "Polygon",
+      "parts": 1,
+      "vertices": 377,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [442605.990999999, 6424577.811998006, 449632.425, 6433379.0989980195],
+      "bbox_wgs84": [
+        -0.2631618982636546, 44.872792115114784, -0.17424483182539652, 44.95214467934119
+      ],
+      "roundtrip_hausdorff_m": 2.83250703024595e-9
+    },
+    {
+      "entity_id": "appellation.saint-emilion",
+      "id_app": 67,
+      "id_denom": 162,
+      "app": "Saint-Emilion",
+      "denom": "Saint-Emilion",
+      "source_record_index": 256,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin tranquille",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 67,
+        "app": "Saint-Emilion",
+        "id_denom": 162,
+        "denom": "Saint-Emilion",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "Polygon",
+      "parts": 1,
+      "vertices": 694,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [442605.990999999, 6419895.350997999, 457850.7240000003, 6433379.0989980195],
+      "bbox_wgs84": [
+        -0.2631618982636546, 44.83248852951632, -0.06765766487067257, 44.95214467934119
+      ],
+      "roundtrip_hausdorff_m": 2.7994193733695543e-9
+    },
+    {
+      "entity_id": "appellation.barsac",
+      "id_app": 8,
+      "id_denom": 60,
+      "app": "Barsac",
+      "denom": "Barsac",
+      "source_record_index": 171,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin de triees successives",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 8,
+        "app": "Barsac",
+        "id_denom": 60,
+        "denom": "Barsac",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "Polygon",
+      "parts": 1,
+      "vertices": 159,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [433995.6079999985, 6391785.67699795, 438204.7729999994, 6398065.7619979605],
+      "bbox_wgs84": [
+        -0.3522218177797212, 44.575250776432625, -0.29974172039821845, 44.631880429818715
+      ],
+      "roundtrip_hausdorff_m": 2.794573987870897e-9
+    },
+    {
+      "entity_id": "appellation.sauternes",
+      "id_app": 75,
+      "id_denom": 172,
+      "app": "Sauternes",
+      "denom": "Sauternes",
+      "source_record_index": 262,
+      "source_properties": {
+        "dt": "Bordeaux",
+        "type_prod": "",
+        "categorie": "Vin de triees successives",
+        "type_denom": "appellation",
+        "signe": "AOC",
+        "id_app": 75,
+        "app": "Sauternes",
+        "id_denom": 172,
+        "denom": "Sauternes",
+        "insee": "",
+        "cvi": "",
+        "nomcom": "",
+        "insee2011": "",
+        "nomcom2011": "",
+        "id_aire": null,
+        "crinao": "",
+        "grp_name1": "",
+        "grp_name2": ""
+      },
+      "geometry_type": "Polygon",
+      "parts": 1,
+      "vertices": 478,
+      "valid_native": true,
+      "valid_wgs84": true,
+      "validity": "Valid Geometry",
+      "bbox_native": [
+        431926.14600000146, 6384236.5929979365, 440927.86799999967, 6398065.7619979605
+      ],
+      "bbox_wgs84": [
+        -0.37436391335110364, 44.5076148529422, -0.2614057633383594, 44.631880429818715
+      ],
+      "roundtrip_hausdorff_m": 2.794573987870897e-9
+    }
+  ],
+  "resource_url": "https://static.data.gouv.fr/resources/delimitation-des-aires-geographiques-des-siqo/20261012-213517/2026-10-12-delim-aire-geographique-shp.zip",
+  "resource_last_modified": "2026-10-12T21:35:31.248000+00:00",
+  "license": {
+    "catalogue_id": "lov2",
+    "name": "Licence Ouverte 2.0",
+    "url": "https://www.data.gouv.fr/pages/legal/licences/etalab-2.0",
+    "required_credit": "INAO; source URL; reused update date; no endorsement implied"
+  },
+  "catalogue_sha1": "cb8f0b4c122f51e8ede8b6368fbbca50921183a5",
+  "sha1_matches_catalogue": true,
+  "source_precision": "Not specified by catalogue; regional orientation only, publication review pending",
+  "commune_table_comparison": {
+    "release": "2025-10-09",
+    "resource_id": "0ba4fed3-a5f7-4189-a1a3-2eebabc6296f",
+    "bytes": 3632054,
+    "sha256": "7e2472ab7550d8cc3426816040310952365148b5483d0b6cb9a7e70c33fa9cbe",
+    "interpretation": "comparison only; IDA has a separate namespace; no geometries constructed",
+    "observed_decoding": "ISO-8859-1 compatible, no text transcoding used to derive geometry",
+    "matching_rows": {
+      "Bordeaux": {
+        "rows": 501,
+        "IDA": ["63"]
+      },
+      "Margaux": {
+        "rows": 5,
+        "IDA": ["99"]
+      },
+      "Pauillac": {
+        "rows": 5,
+        "IDA": ["106"]
+      },
+      "Saint-Julien": {
+        "rows": 4,
+        "IDA": ["153"]
+      },
+      "Saint-Estèphe": {
+        "rows": 1,
+        "IDA": ["151"]
+      },
+      "Pomerol": {
+        "rows": 8,
+        "IDA": ["109"]
+      },
+      "Saint-Emilion": {
+        "rows": 9,
+        "IDA": ["150"]
+      },
+      "Barsac": {
+        "rows": 1,
+        "IDA": ["58"]
+      },
+      "Sauternes": {
+        "rows": 5,
+        "IDA": ["157"]
+      }
+    }
+  },
+  "preview": {
+    "path": "atlas-bordeaux-data-preview-2026-10-14.png",
+    "format": "PNG",
+    "meaning": "research-only view of source geometries; not runtime Atlas geography",
+    "projection": "EPSG:2154, equal x/y scale; no basemap or added physical features",
+    "labels": "Shapely representative_point inside each area; crowded labels use screen-space callouts; no point is a winery or vineyard",
+    "source_geometry_changes": "none; projection roundtrip used for preview; no simplification or repair"
+  }
+}

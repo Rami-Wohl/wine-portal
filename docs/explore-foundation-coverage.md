@@ -484,7 +484,8 @@ law/genetics/establishment/harvestdependencies blijven REG-003.
 De eerste `EXP-032`-batch is op 2026-10-13 gepubliceerd: Port, Sherry en Champagne
 als zelfstandige NL/EN-appellations. De [inventaris](../editorial/briefs/exp-032-wine-inventory.md)
 bewaart identiteit, hergebruik en drie resterende batches. `EXP-026` heeft op
-2026-10-14 de owners, graph, links, media en terminologie geïntegreerd; nu volgt
-Atlasafbakening (`MNT-051`). Taalpresentatie
+2026-10-14 de owners, graph, links, media en terminologie geïntegreerd. Sinds
+2026-10-30 staat Atlas achteraan geparkeerd; EXP-027/028, de resterende catalogus
+en nieuw Learn-curriculumwerk krijgen voorrang, zonder Atlasvoorwaarde. Taalpresentatie
 (`MNT-046`), pipeline/model (`MNT-048`) en CSS-onderhoud (`MNT-049`) zijn afgerond.
 De [productplanning](product-roadmap.md) bewaakt de afwisseling met platformwerk.

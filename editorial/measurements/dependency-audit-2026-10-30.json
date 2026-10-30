@@ -1,0 +1,482 @@
+{
+  "review_id": "QCR-2026-10-30-02",
+  "date": "2026-10-30",
+  "scope": "npm registry advisory snapshots for the local dependency tree; not deployment verification or a guarantee of absence of unknown vulnerabilities",
+  "registry": "https://registry.npmjs.org",
+  "node": {
+    "before": "24.21.0",
+    "after": "24.22.2"
+  },
+  "npm": {
+    "before": "11.19.0",
+    "after": "11.19.1"
+  },
+  "lock_sha256": {
+    "before": "eabea3d8db90afadbd3d67a59bcd5478ab50eba5684e5d70671150804d68c3ab",
+    "after": "45932c4bf9c000a574b615b5a3ef1f5d286064adedca2e1a51675b3677750626"
+  },
+  "packages": {
+    "next": {
+      "before": "16.4.0",
+      "after": "16.4.3"
+    },
+    "eslint-config-next": {
+      "before": "16.4.0",
+      "after": "16.4.3"
+    },
+    "react": {
+      "before": "19.2.8",
+      "after": "19.3.1"
+    },
+    "react-dom": {
+      "before": "19.2.8",
+      "after": "19.3.1"
+    },
+    "zod": {
+      "before": "4.5.4",
+      "after": "4.6.7"
+    },
+    "vitest": {
+      "before": "4.1.11",
+      "after": "4.1.12"
+    },
+    "@vitest/mocker": {
+      "before": "4.1.11",
+      "after": "4.1.12"
+    },
+    "vite": {
+      "before": "8.2.2",
+      "after": "8.3.5"
+    },
+    "sharp": {
+      "before": "0.35.5",
+      "after": "0.35.5"
+    },
+    "@playwright/test": {
+      "before": "1.62.1",
+      "after": "1.64.1"
+    },
+    "prettier": {
+      "before": "3.9.6",
+      "after": "3.9.10"
+    },
+    "yaml": {
+      "before": "2.9.0",
+      "after": "2.9.1"
+    },
+    "tsx": {
+      "before": "4.23.13",
+      "after": "4.23.15"
+    },
+    "@types/node": {
+      "before": "24.19.1",
+      "after": "24.19.2"
+    },
+    "@types/react": {
+      "before": "19.2.18",
+      "after": "19.3.0"
+    },
+    "@types/react-dom": {
+      "before": "19.2.5",
+      "after": "19.3.0"
+    }
+  },
+  "audit_before": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+      "@vitest/mocker": {
+        "name": "@vitest/mocker",
+        "severity": "moderate",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1242767,
+            "name": "@vitest/mocker",
+            "dependency": "@vitest/mocker",
+            "title": "Vitest: Code injection via unauthenticated manual mock registration",
+            "url": "https://github.com/advisories/GHSA-qxg6-89mg-rqv8",
+            "severity": "moderate",
+            "cwe": ["CWE-94", "CWE-116", "CWE-306"],
+            "cvss": {
+              "score": 4.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "range": ">=2.1.0-beta.7 <4.1.12"
+          },
+          {
+            "source": 1242769,
+            "name": "@vitest/mocker",
+            "dependency": "@vitest/mocker",
+            "title": "Vitest: Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix",
+            "url": "https://github.com/advisories/GHSA-xp26-3454-mjgp",
+            "severity": "moderate",
+            "cwe": ["CWE-22"],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+            },
+            "range": ">=4.1.11 <4.1.12"
+          }
+        ],
+        "effects": ["vitest"],
+        "range": "<=4.1.11",
+        "nodes": ["node_modules/@vitest/mocker"],
+        "fixAvailable": true
+      },
+      "next": {
+        "name": "next",
+        "severity": "critical",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1242816,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used",
+            "url": "https://github.com/advisories/GHSA-2464-fhr4-w9xw",
+            "severity": "critical",
+            "cwe": ["CWE-1395"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=16.0.0 <=16.4.0"
+          },
+          {
+            "source": 1242818,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: Denial of Service in App Router using Server Actions",
+            "url": "https://github.com/advisories/GHSA-p3m5-59mp-jv5r",
+            "severity": "high",
+            "cwe": ["CWE-770"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=16.0.0 <=16.4.0"
+          },
+          {
+            "source": 1242859,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays",
+            "url": "https://github.com/advisories/GHSA-673q-mjm6-r5xr",
+            "severity": "critical",
+            "cwe": ["CWE-502"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=16.0.0 <=16.4.0"
+          }
+        ],
+        "effects": [],
+        "range": "16.0.0 - 16.4.0",
+        "nodes": ["node_modules/next"],
+        "fixAvailable": {
+          "name": "next",
+          "version": "16.4.3",
+          "isSemVerMajor": false
+        }
+      },
+      "vite": {
+        "name": "vite",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1242625,
+            "name": "vite",
+            "dependency": "vite",
+            "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+            "url": "https://github.com/advisories/GHSA-698v-4r3x-3vcv",
+            "severity": "moderate",
+            "cwe": ["CWE-78"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=8.2.0 <=8.2.3"
+          },
+          {
+            "source": 1242654,
+            "name": "vite",
+            "dependency": "vite",
+            "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors",
+            "url": "https://github.com/advisories/GHSA-r825-w8mm-5pxw",
+            "severity": "moderate",
+            "cwe": ["CWE-88"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=8.2.0 <=8.2.3"
+          },
+          {
+            "source": 1242661,
+            "name": "vite",
+            "dependency": "vite",
+            "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+            "url": "https://github.com/advisories/GHSA-587h-7wmj-h5pm",
+            "severity": "high",
+            "cwe": ["CWE-77"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=8.2.0 <=8.2.3"
+          },
+          {
+            "source": 1242727,
+            "name": "vite",
+            "dependency": "vite",
+            "title": "Vite: Cross origin script execution through Vite custom middleware",
+            "url": "https://github.com/advisories/GHSA-9jrq-w75r-8gcw",
+            "severity": "low",
+            "cwe": ["CWE-80"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=8.2.0 <=8.2.3"
+          },
+          {
+            "source": 1242733,
+            "name": "vite",
+            "dependency": "vite",
+            "title": "Vite: Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+            "url": "https://github.com/advisories/GHSA-rq7h-c2jc-7f22",
+            "severity": "moderate",
+            "cwe": ["CWE-22", "CWE-284"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=8.2.0 <=8.2.3"
+          },
+          {
+            "source": 1242736,
+            "name": "vite",
+            "dependency": "vite",
+            "title": "Vite: First 4 bytes of files outside of `server.fs` setting is exposed by `?vite-wasm-instance`",
+            "url": "https://github.com/advisories/GHSA-vfpm-58rq-9qcg",
+            "severity": "moderate",
+            "cwe": ["CWE-22", "CWE-200", "CWE-209"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=8.2.0 <=8.2.3"
+          }
+        ],
+        "effects": [],
+        "range": "8.2.0 - 8.2.2",
+        "nodes": ["node_modules/vite"],
+        "fixAvailable": true
+      },
+      "vitest": {
+        "name": "vitest",
+        "severity": "moderate",
+        "isDirect": true,
+        "via": ["@vitest/mocker"],
+        "effects": [],
+        "range": "2.1.0-beta.1 - 4.1.11",
+        "nodes": ["node_modules/vitest"],
+        "fixAvailable": true
+      },
+      "zod": {
+        "name": "zod",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1243066,
+            "name": "zod",
+            "dependency": "zod",
+            "title": "Zod can exhaust memory while validating oversized constrained collections",
+            "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+            "severity": "high",
+            "cwe": ["CWE-770"],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<4.6.6"
+          }
+        ],
+        "effects": [],
+        "range": "<4.6.6",
+        "nodes": ["node_modules/zod"],
+        "fixAvailable": true
+      }
+    },
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 2,
+        "high": 2,
+        "critical": 1,
+        "total": 5
+      },
+      "dependencies": {
+        "prod": 103,
+        "dev": 471,
+        "optional": 144,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 612
+      }
+    }
+  },
+  "audit_production_before": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+      "next": {
+        "name": "next",
+        "severity": "critical",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1242816,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: Unauthenticated Remote Code Execution in Image Optimization API when SVG files are used",
+            "url": "https://github.com/advisories/GHSA-2464-fhr4-w9xw",
+            "severity": "critical",
+            "cwe": ["CWE-1395"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=16.0.0 <=16.4.0"
+          },
+          {
+            "source": 1242818,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: Denial of Service in App Router using Server Actions",
+            "url": "https://github.com/advisories/GHSA-p3m5-59mp-jv5r",
+            "severity": "high",
+            "cwe": ["CWE-770"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=16.0.0 <=16.4.0"
+          },
+          {
+            "source": 1242859,
+            "name": "next",
+            "dependency": "next",
+            "title": "Next.js: Unauthenticated Remote Code Execution in `use cache` functions returning typed arrays",
+            "url": "https://github.com/advisories/GHSA-673q-mjm6-r5xr",
+            "severity": "critical",
+            "cwe": ["CWE-502"],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=16.0.0 <=16.4.0"
+          }
+        ],
+        "effects": [],
+        "range": "16.0.0 - 16.4.0",
+        "nodes": ["node_modules/next"],
+        "fixAvailable": {
+          "name": "next",
+          "version": "16.4.3",
+          "isSemVerMajor": false
+        }
+      },
+      "zod": {
+        "name": "zod",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1243066,
+            "name": "zod",
+            "dependency": "zod",
+            "title": "Zod can exhaust memory while validating oversized constrained collections",
+            "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+            "severity": "high",
+            "cwe": ["CWE-770"],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<4.6.6"
+          }
+        ],
+        "effects": [],
+        "range": "<4.6.6",
+        "nodes": ["node_modules/zod"],
+        "fixAvailable": true
+      }
+    },
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 1,
+        "critical": 1,
+        "total": 2
+      },
+      "dependencies": {
+        "prod": 103,
+        "dev": 471,
+        "optional": 144,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 612
+      }
+    }
+  },
+  "audit_after": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 104,
+        "dev": 469,
+        "optional": 141,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 610
+      }
+    }
+  },
+  "audit_production_after": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 104,
+        "dev": 469,
+        "optional": 141,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 610
+      }
+    }
+  }
+}

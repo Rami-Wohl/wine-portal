@@ -30,6 +30,14 @@ taal totdat een gecontroleerde vertaling zinvol is. Canonical content blijft
 verplicht NL/EN. Begin voor de technische request flow bij de korte
 [English developer guide](developer-guide.md).
 
+## Huidige prioriteit
+
+Gebruikersbesluit 2026-10-30: Leren en Ontdekken eerst. Atlas is geparkeerd,
+zonder gekozen vervangend ontwerp; de pagina, links en specifieke styling zijn
+verwijderd. Brononderzoek blijft naslag, geen actieve bouwopdracht of voorganger
+van content. De [productroadmap](product-roadmap.md) ordent het vervolg, met
+LRN-018 voor het volgende curriculumvoorstel.
+
 ## De kern in één beeld
 
 ```text
@@ -49,7 +57,7 @@ generated en vervangbaar
                          v
 applicatie
 
-  repository -> routes -> React-renderer -> Explore / Verdiepingen / Learn / Atlas
+  repository -> routes -> React-renderer -> Explore / Verdiepingen / Learn
 ```
 
 YAML beschrijft wat iets is en hoe het verbonden is. Markdown legt dezelfde
@@ -69,7 +77,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Herbruikbare bronnen | `data/sources/` | Provenance voor claims en contentblocks |
 | Mediametadata | `data/media/` | Stabiele media-ID, opslagkey, afmetingen, alttekst en rechten |
 | Lokale mediabytes | `public/media/` | Huidige opslagadapter; later vervangbaar door object storage/CDN |
-| Geverifieerde geografie | `data/geography/` | Toekomstige factual Atlasdata |
+| Geografieonderzoek, geen runtimegeometrie | `data/geography/` | Atlas uitgesteld (2026-10-30); [historisch pilotvoorstel](atlas-pilot-contract.md), vijf Atlastickets achteraan; nieuwe aanpak nog te bepalen |
 | Runtimebundle | `src/generated/content/knowledge-base.json` | Afgeleid buildresultaat, niet canonical |
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
 | Stijlen | `src/styles/`, geordend via `src/app/globals.css` | Tokens, basis, UI-patronen en overrides; verantwoordelijkheden en cascade staan in `design-system-plan.md` |

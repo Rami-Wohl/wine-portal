@@ -21,15 +21,16 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-14.
+Peildatum: 2026-10-30.
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 8 | `MNT-050`, `MNT-051`, `MNT-053`, `MNT-060` t/m `MNT-062`, `MNT-064/065` |
+| Open | 8 | `MNT-050`, `MNT-053`, `MNT-060` t/m `MNT-062`, `MNT-064/065`, `MNT-072` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
-| Geblokkeerd | 7 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-020`, `MNT-039`, `MNT-055`, `MNT-056` |
-| Afgerond | 54 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-052`, `MNT-054`, `MNT-057–059`, `MNT-063`, `MNT-066–069` |
+| Geblokkeerd | 4 | `MNT-020`, `MNT-039`, `MNT-056`, `MNT-073` |
+| Geparkeerd | 5 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-070/071` (achteraan) |
+| Afgerond | 56 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-051/052`, `MNT-054/055`, `MNT-057–059`, `MNT-063`, `MNT-066–069` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
@@ -43,25 +44,48 @@ Repository-/branchbescherming en Vercel-acceptatie blijven onderdeel van `MNT-05
 Goedkopere fixture-I/O (`MNT-064`) blijft laag geprioriteerd; representatievere
 meetgevallen (`MNT-065`) volgen vóór grote corpus-/Atlasuitbreidingen, niet vóór lessen.
 Curriculumvoorbereiding (`LRN-013`) en alle acht tweetalige wijngaardlessen
-(`LRN-014–016`) zijn afgerond; DEC-LRN-015 is expliciet goedgekeurd. Volgende werk:
-Atlasafbakening (`MNT-051`), na de afgeronde Explore-integratie (`EXP-026`);
-de eerste Port/Sherry/Champagne-batch van
-`EXP-032` is geleverd, de resterende catalogus volgt na EXP-028.
-Het volledige wijngaardpad is gepubliceerd via `LRN-017`; Atlasafbakening
-(`MNT-051`) mag als bronverkenning naast lessen lopen. De [feedbackvoorbereiding](feedback-roadmap.md)
-is na de lokale productflow (`FBK-001`) bewust geparkeerd; ook hashes (`FBK-003`)
-en het platformbesluit (`MNT-050`) zijn geen huidige vóórtaken.
+(`LRN-014–017`) zijn afgerond. Na de bestaande Pomerol-broncorrectie (`MNT-072`)
+krijgt inhoudelijk Learn-/Explore-werk voorrang, met nieuw curriculumvoorbereidend
+werk `LRN-018` en `EXP-027/028/032`. Onderhoud volgt proportioneel aan de content.
+Atlas (`MNT-002/013/014/070/071`) staat bewust achteraan in de aparte groep
+onderaan de actuele backlog; de afbakening `MNT-051` blijft historische research.
+Het [oude pilotcontract](atlas-pilot-contract.md) is geen actieve bouwopdracht.
+De [feedbackvoorbereiding](feedback-roadmap.md) en platformgate `MNT-050`
+blijven eveneens geparkeerd, vóór Atlas maar zonder huidige uitvoeropdracht.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
 de prioriteitswijziging; de regionale fase staat in een eigen `REG-*`-planning.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
 (`EXP-020–023`), met drie zelfstandige familiepagina's (`EXP-029–031`).
 Individuele wijnpagina's volgen gefaseerd binnen `EXP-032`.
 Ontvangst, vergisting en productieroutes (`EXP-017–019`) zijn afgerond.
-Runtime en lokale CI-implementatie zijn afgerond; externe activatie (`MNT-056`)
-en de ongepatchte ontwikkeltoolketen (`MNT-055`) blijven zichtbaar geblokkeerd.
-De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
+Runtime en dependencies zijn op 2026-10-30 bijgewerkt; volledige en productieaudit
+zijn schoon en MNT-055 is afgerond. ESLint-10-compatibiliteit volgt via MNT-073;
+externe CI-/deploymentacceptatie blijft MNT-056. De overige externe blokkades
+zijn deze ronde niet inhoudelijk herbeoordeeld.
 
 ## Open werk
+
+### `MNT-072` — Pomerolregels toetsen aan de gehomologeerde bron
+
+- **Status:** open
+- **Prioriteit:** hoog; bestaande contentcorrectie, onafhankelijk van Atlas
+- **Categorie:** content, research, knowledge-data
+- **Herkomst:** `QCR-2026-10-14-02`
+- **Scope en bevinding:** het bestaande bronrecord noemt een PNO-voorstel als
+  gehomologeerd cahier. Het label en de onbewezen publicatiedatum zijn direct
+  gecorrigeerd; Pomerolproza en een verified dichtheidsassertion verwijzen nog
+  naar dit voorstel. Dit vraagt claimreview, geen aanname dat alle regels onjuist zijn.
+- **Klaar wanneer:** de door INAO/Légifrance aangewezen goedgekeurde tekst of
+  een equivalente bevoegde officiële publicatie werkelijk is geraadpleegd;
+  betrokken NL/EN-claims, scalar assertion en plan-evidence zijn gecontroleerd;
+  verwijzingen wijzen naar de juiste bronstage met behoud van het PNO-record
+  en correctiehistorie. Geef onzekerheid een expliciet besluit als bewijs ontbreekt.
+- **Bijzonderheid:** de ministerie-download liep in de webreader én directe
+  HTTPS-download vast. Zoek een bevoegde alternatieve publicatieroute of
+  hercontroleer de download; een timeout bewijst niet dat de bron verdwenen is.
+- **Log 2026-10-14:** geregistreerd uit Atlasresearch; title/accessdatum gecorrigeerd
+  en committee-avisdatum uit het publicatiedatumveld gehaald. Nog geen
+  wijnregel veranderd of opnieuw geverifieerd verklaard.
 
 ### `MNT-065` — Benchmarkscenario's bij echte corpus- en Atlasgroei uitbreiden
 
@@ -156,57 +180,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   Niet alle actieve hubs hebben automatisch een nieuwe figuurplicht.
 - **Log 2026-10-11:** geregistreerd; bestaande tests niet verwijderd.
 
-### `MNT-055` — Kwetsbare ontwikkeldependencies gericht herstellen
-
-- **Status:** geblokkeerd
-- **Prioriteit:** hoog
-- **Scope:** lint-/ontwikkelketen: `brace-expansion`, `braces`, `micromatch`,
-  `fast-glob` en de bovenliggende Next ESLint-packages
-- **Categorie:** engineering, testing, operations
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** na de Next.js-patch meldt de volledige npm-audit zes high
-  dependencyvermeldingen, deels door dezelfde transitieve oorzaak. De
-  productieaudit is schoon. Advisories betreffen onder meer stack exhaustion en
-  dure expansie bij kwaadaardige bracepatronen; dit zijn ontwikkeltools, geen
-  aangetoonde publieke applicatieroute.
-- **Klaar wanneer:** de dependencyketens en bereikbaarheid zijn getrieerd,
-  compatibele patches zijn toegepast en lint, tests en build blijven slagen.
-  Waar een upstreamfix ontbreekt, documenteer de begrensde blootstelling en een
-  concrete hercontrole; verlaag niet blind `eslint-config-next` naar versie 14
-  en gebruik geen ongecontroleerde `npm audit fix --force`.
-- **Blokkade:** voor `braces <=3.0.3` (`GHSA-vfj7-8cjw-p6xm`) bestaat op
-  2026-10-04 geen gepubliceerde upstreampatch. De vijf resterende high meldingen
-  komen uit dezelfde ontwikkelketen; productieaudit blijft schoon. De Next-rule
-  gebruikt fast-glob voor een expliciete `settings.next.rootDir`; de huidige
-  ESLint-config stelt die niet in. CI heeft geen secrets, schrijfrechten of
-  bewaarde credentials en heeft een timeout.
-- **Hercontrole:** uiterlijk 2026-10-18 en bij wijziging van lintconfig of
-  dependencies: controleer de advisory en npm-release, pas een compatibele fix
-  toe en herhaal de volledige audit plus lint/build/tests. Dit is een handmatig
-  controlepunt, geen ingestelde automation. Neem daarbij de ESLint 10-migratie
-  mee zodra de React-plugin die major ondersteunt; versie 9 wordt inmiddels
-  door npm als unsupported gemeld.
-- **Log:** 2026-10-04 — volledige audit na `MNT-054` getrieerd; apart gehouden van
-  de geslaagde productiepatch. Adviesdetails staan in het reviewrapport.
-
-- **Uitvoering 2026-10-04:** `brace-expansion` 1.1.18 → 1.1.21 en 5.0.9 →
-  5.0.12 binnen bestaande semverranges bijgewerkt, zonder overrides. De
-  volledige audit daalt van zes naar vijf dependencyvermeldingen. De
-  incompatibele downgrade en een ongeteste major-upgrade zijn niet toegepast.
-
-- **Hercontrole 2026-10-07:** braces blijft op 3.0.3 zonder gepubliceerde patch;
-  de React ESLint-plugin ondersteunt ESLint 10 nog niet. Na MNT-057 blijven
-  vijf high ontwikkelvermeldingen en nul productiemeldingen over. Hercontroledatum
-  2026-10-18 blijft staan. Zie [health review](../editorial/health-review-2026-10-07.md).
-
-- **Hercontrole 2026-10-13:** na de gerichte Next-/ESLint-configupgrade naar
-  16.4.0 blijven vijf high ontwikkelvermeldingen en nul productiemeldingen over.
-  npm meldt `braces` 3.0.3 als nieuwste release; de
-  [advisory](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm) noemt nog geen patch.
-  Hercontroledatum 2026-10-18 blijft staan. Lint, build en lokale tests slagen;
-  de extra Linux-controles en hun grenzen staan in de
-  [CI-afbeeldingsreview](../editorial/ci-image-optimizer-review-2026-10-13.md).
-
 ### `MNT-050` — Beslismoment voor backend, API en database
 
 - **Status:** open
@@ -241,33 +214,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   2026-10-12 — gebruiker geeft lessen/content en waarschijnlijke Atlasingebruikname
   voorrang; feedback stilgezet. Status terug naar open, planning geparkeerd;
   concrete consumer behouden, geen huidige infrastructuuruitvoering.
-
-### `MNT-051` — Eerste verifieerbare Atlasdataset en kleine pilot afbakenen
-
-- **Status:** open
-- **Prioriteit:** hoog; voorbereidend spoor voor mogelijke ingebruikname
-- **Scope:** geverifieerde geography-data en eerste Atlaslevering
-- **Categorie:** atlas-gis, research, engineering
-- **Herkomst:** `QCR-2026-10-04-01`
-- **Bevinding:** Atlas heeft nog geen data; drie oudere kaarttickets blijven
-  daardoor geblokkeerd zonder een concrete eerste datalevering.
-- **Klaar wanneer:** een beperkte dataset voor Bordeaux is gekozen op officiële
-  provenance, licentie, schaal, CRS, versie en updatepad; een import- en
-  validatiecontract plus eerste publiek bruikbare kaart zijn afgebakend. Leg vast
-  welke oude kaarttickets hierdoor wel/niet kunnen volgen. Punten, appellation-
-  geometrie en wereldwijde druivenverspreiding zijn afzonderlijke dataproblemen.
-- **Planning:** bronverkenning vóór `EXP-027`; bouw pas op geverifieerde data.
-  Bronverkenning mag naast les-/contentwerk lopen; volledige Atlasbouw is nog
-  geen vrijgegeven scope. Na deze afbakening volgt de eerste kaart via MNT-002
-  zodra data geverifieerd beschikbaar is. Splits eventuele zelfstandige import-,
-  geografiemodel- en Atlas-UI-slices vóór uitvoering uit met eigen acceptatiecriteria;
-  sluit dit afbakeningsticket niet alsof daarmee Atlas al in gebruik is.
-  PostGIS is een mogelijke latere keuze, geen vereiste voor de eerste pilot.
-- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
-  volgt de overkoepelende productplanning.
-
-  2026-10-12 — Atlasvoorbereiding zichtbaarder geprioriteerd vanuit gebruikersdoel;
-  geverifieerde dataset en expliciete bouwscope blijven voorwaarden.
 
 ### `MNT-053` — Bestaande SVG-diagrammen naar de gewenste rasterstijl migreren
 
@@ -333,55 +279,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   bevestigd; branch protection, required checks, Vercel Node 24, functionbundle
   en live NL/EN-search/Learn-smoke blijven open.
 
-### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
-
-- **Status:** geblokkeerd
-- **Prioriteit:** afhankelijk
-- **Categorie:** atlas-gis, media
-- **Scope:** `region.bordeaux`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de overzichtspagina mist de belangrijkste geografische
-  oriëntatie, maar grenzen mogen niet worden geïmproviseerd.
-- **Klaar wanneer:** Bordeaux een kaart heeft uit de geverifieerde Atlaslaag met
-  vastgelegde databron, schaalbetekenis, toegankelijke legenda en gecontroleerd
-  responsive gedrag.
-- **Blokkade:** de geverifieerde geography- en Atlas-datalaag is nog niet
-  beschikbaar.
-- **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
-  generatief verzonnen grenzen.
-
-### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
-
-- **Status:** geblokkeerd
-- **Prioriteit:** afhankelijk
-- **Categorie:** atlas-gis, media
-- **Scope:** actieve druivenentities
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** foto's tonen het ras, maar niet de wereldwijde geografische
-  spreiding en relatieve zwaartepunten.
-- **Klaar wanneer:** relevante druivenpagina's geverifieerde, vergelijkbare
-  verspreidingskaarten uit de Atlaslaag tonen met bronjaar, scope en heldere
-  legenda.
-- **Blokkade:** er is nog geen geverifieerde dataset en kaartconventie voor deze
-  wereldwijde laag.
-- **Log:** 2026-09-08 — geregistreerd als latere Atlascapability.
-
-### `MNT-014` — Grenzen van Barsac en Sauternes via Atlas
-
-- **Status:** geblokkeerd
-- **Prioriteit:** afhankelijk
-- **Categorie:** atlas-gis, media
-- **Scope:** `appellation.barsac`, `appellation.sauternes`
-- **Herkomst:** `QCR-2026-09-08-01`
-- **Bevinding:** de verhouding tussen gemeenten, appellationzones en toegestane
-  productie is belangrijk maar mag niet uit een onbetrouwbare schets worden
-  afgeleid.
-- **Klaar wanneer:** beide pagina's officiële, geverifieerde geometrie tonen en
-  visueel ondubbelzinnig maken welk type grens of productiezone zichtbaar is.
-- **Blokkade:** officiële geometrie, schaalbetekenis en Atlasweergave zijn nog
-  niet als betrouwbare keten beschikbaar.
-- **Log:** 2026-09-08 — geregistreerd; uitvoering wacht op Atlas.
-
 ### `MNT-020` — Ideale beeldparen voor Ausone, Angélus en Canon
 
 - **Status:** geblokkeerd
@@ -435,7 +332,251 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
 - **Log:** 2026-09-22 — externe afhankelijkheid expliciet afgesplitst zodat de
   uitgevoerde periodieke hercontrole traceerbaar kan worden afgesloten.
 
+### `MNT-073` — ESLint 10 migreren zodra de lintplugins compatibel zijn
+
+- **Status:** geblokkeerd
+- **Prioriteit:** middel; compatibiliteitsonderhoud, geen huidige auditmelding
+- **Categorie:** engineering, testing, operations
+- **Herkomst:** `QCR-2026-10-30-02`; zelfstandig vervolg uit MNT-055
+- **Scope:** ESLint en de React-/import-/Next-lintketen; geen nieuwe applicatiefunctie.
+- **Bevinding:** ESLint 9.39.5 is de laatste compatibele 9.x-versie maar de lijn
+  is unsupported. De actuele React-plugin 7.37.5 accepteert ESLint tot `^9.7`,
+  terwijl npm ESLint 10.13.0 aanbiedt. De volledige audit is nul; dit ticket
+  vervangt de eerdere braces-blokkade niet door een fictieve vulnerability.
+- **Blokkade:** minstens eslint-plugin-react ondersteunt ESLint 10 nog niet.
+  Geen geforceerde peer-conflicten of override toevoegen om de major te installeren.
+- **Klaar wanneer:** de volledige pluginpeerketen ESLint 10 ondersteunt, een
+  schone installatie zonder dependencyconflicten lukt, lint/boundaryregels,
+  typecheck, unit-tests en build slagen en de volledige audit schoon blijft.
+- **Hercontrole:** bij de volgende dependencyronde of pluginupdate, uiterlijk
+  2026-11-30; handmatig, geen automation. Bij een nieuwe advisory meteen triëren.
+- **Planning:** na het huidige contentwerk, zodra compatibel; Atlas blijft achteraan.
+
+## Geparkeerde Atlas — achteraan de backlog
+
+**Gebruikersbesluit 2026-10-30:** Atlas uitstellen en anders gaan ontwerpen.
+De huidige pagina, navigatie en styling zijn verwijderd. Geen automatische
+hervatting bij beschikbare data, een afgerond contentticket of regiogroei.
+Eerst Leren en Ontdekken; ook overige geparkeerde sporen staan vóór deze groep.
+Onderzoek blijft naslag. De oude pilot en onderstaande acceptatiecriteria zijn
+kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
+
+### `MNT-070` — Minimaal geografiemodel en repositorygrens voor de Atlaspilot
+
+- **Status:** geparkeerd
+- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Categorie:** knowledge-data, atlas-gis, engineering, testing
+- **Herkomst:** `QCR-2026-10-14-02`
+- **Scope:** de negen bestaande appellationidentities uit het
+  [pilotcontract](atlas-pilot-contract.md); geen nieuw country-/plaatsmodel.
+- **Klaar wanneer:** strict typed records voor betekenis, geometryreferentie,
+  entityowner, datasetversie, CRS, licentie/provenance en publicatiereview zijn
+  geïmplementeerd; bestaande geography-ID/indexgrens is additief uitgebreid;
+  ontbrekende of dubbele referenties en verkeerde status worden geweigerd.
+  Geometrie blijft buiten de gewone kennis-/zoekbundle. Tests bewaken foutpaden
+  en behoud van bestaande IDs/corpus; contract/documentatie beschrijven de werkelijke implementatie.
+- **Planning:** basis voor MNT-071. REG-001 behoudt de brede landen-/plaatshiërarchie;
+  deze app-only slice mag die beslissing niet stilzwijgend vastzetten.
+- **Log 2026-10-14:** zelfstandig model-/validatiewerk afgesplitst van MNT-051.
+- **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
+  is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
+  een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+
+### `MNT-071` — INAO-Bordeauxsnapshot gecontroleerd importeren en publiceren
+
+- **Status:** geparkeerd
+- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Categorie:** atlas-gis, research, engineering, testing
+- **Herkomst:** `QCR-2026-10-14-02`
+- **Scope:** vastgepinde SHP-versie 2026-10-12, negen reviewed identifierparen;
+  de [inspectie](../editorial/measurements/atlas-bordeaux-data-inspection-2026-10-14.json)
+  bewijst vindbaarheid en basistopologie, niet publicatiegereedheid.
+- **Klaar wanneer:** reproduceerbare offline/staging-import checksums, encoding,
+  CRS/asvolgorde, identiteit en topology controleert; oorspronkelijke bron/referentie
+  blijft herstelbaar; geometrie krijgt afzonderlijke inhoudelijke publicatiereview;
+  geen silent repair of gemeentelijke union. Fail bij een ambigu, ontbrekend of
+  gewijzigd record. Generated metadata/displayasset verschijnen atomisch;
+  regressies testen corrupte input, verkeerde keys/assen en onvolledige runs.
+  Alle negen entities/geometryrefs zijn correct gekoppeld zonder nieuwe
+  containmentclaims. Budget en provenance/credits uit het contract blijven gehaald.
+- **Planning:** geparkeerd, niet vóór regiogroei. Het vroegere verband met
+  MNT-070/002/014 moet bij een nieuwe ontwerpkeuze worden herbeoordeeld.
+  MNT-072 blijft onafhankelijk daarvan een bestaande contentcorrectie.
+- **Log 2026-10-14:** zelfstandig import-/publicatiewerk afgesplitst van MNT-051;
+  bronvormen en source-IDmapping gecontroleerd, productie-import nog niet gebouwd.
+- **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
+  is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
+  een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+
+### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
+
+- **Status:** geparkeerd
+- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Categorie:** atlas-gis, media
+- **Scope:** `region.bordeaux`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** de overzichtspagina mist de belangrijkste geografische
+  oriëntatie, maar grenzen mogen niet worden geïmproviseerd.
+- **Klaar wanneer:** Bordeaux een kaart heeft uit de geverifieerde Atlaslaag met
+  vastgelegde databron, schaalbetekenis, toegankelijke legenda en gecontroleerd
+  responsive gedrag.
+- **Blokkade:** de geverifieerde geography- en Atlas-datalaag is nog niet
+  beschikbaar.
+- **Log:** 2026-09-08 — geregistreerd; bewust niet opgelost met handgetekende of
+  generatief verzonnen grenzen.
+
+  2026-10-14 — MNT-051 is afgerond. De negen-appellationpilot is afgebakend in
+  het [Atlascontract](atlas-pilot-contract.md). MNT-070/071 moeten eerst model,
+  gecontroleerde import en publicatie leveren. Dit bestaande ticket bezit
+  daarna `/atlas`, `/en/atlas` en de Bordeauxintegratie: map/listselectie,
+  overlapkeuze, bron-/datumlegenda, no-JS/keyboard/mobile en budgetcontrole.
+  De datasetkeuze alleen heft de actuele runtime-datablokkade niet op.
+- **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
+  is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
+  een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+
+### `MNT-014` — Grenzen van Barsac en Sauternes via Atlas
+
+- **Status:** geparkeerd
+- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Categorie:** atlas-gis, media
+- **Scope:** `appellation.barsac`, `appellation.sauternes`
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** de verhouding tussen gemeenten, appellationzones en toegestane
+  productie is belangrijk maar mag niet uit een onbetrouwbare schets worden
+  afgeleid.
+- **Klaar wanneer:** beide pagina's officiële, geverifieerde geometrie tonen en
+  visueel ondubbelzinnig maken welk type grens of productiezone zichtbaar is.
+- **Blokkade:** officiële geometrie, schaalbetekenis en Atlasweergave zijn nog
+  niet als betrouwbare keten beschikbaar.
+- **Log:** 2026-09-08 — geregistreerd; uitvoering wacht op Atlas.
+
+  2026-10-14 — de gekozen geografische bron bevat beide vormen; Barsac is
+  geometrisch door Sauternes gedekt in deze snapshot. MNT-071 bezit de import
+  en verificatie, MNT-002 de kaartinteractie. Dit ticket blijft de afzonderlijke
+  pagina-integratie leveren, met onderscheid tussen geografisch gebied en
+  perceelgeschiktheid. Een latere perceellaag krijgt eerst een eigen bronreview.
+- **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
+  is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
+  een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+
+### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
+
+- **Status:** geparkeerd
+- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Categorie:** atlas-gis, media
+- **Scope:** actieve druivenentities
+- **Herkomst:** `QCR-2026-09-08-01`
+- **Bevinding:** foto's tonen het ras, maar niet de wereldwijde geografische
+  spreiding en relatieve zwaartepunten.
+- **Klaar wanneer:** relevante druivenpagina's geverifieerde, vergelijkbare
+  verspreidingskaarten uit de Atlaslaag tonen met bronjaar, scope en heldere
+  legenda.
+- **Blokkade:** er is nog geen geverifieerde dataset en kaartconventie voor deze
+  wereldwijde laag.
+- **Log:** 2026-09-08 — geregistreerd als latere Atlascapability.
+- **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
+  is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
+  een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+
 ## Historie
+
+### `MNT-055` — Kwetsbare ontwikkeldependencies gericht herstellen
+
+- **Status:** afgerond op 2026-10-30
+- **Prioriteit:** hoog
+- **Scope:** lint-/ontwikkelketen: `brace-expansion`, `braces`, `micromatch`,
+  `fast-glob` en de bovenliggende Next ESLint-packages
+- **Categorie:** engineering, testing, operations
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** na de Next.js-patch meldt de volledige npm-audit zes high
+  dependencyvermeldingen, deels door dezelfde transitieve oorzaak. De
+  productieaudit is schoon. Advisories betreffen onder meer stack exhaustion en
+  dure expansie bij kwaadaardige bracepatronen; dit zijn ontwikkeltools, geen
+  aangetoonde publieke applicatieroute.
+- **Klaar wanneer:** de dependencyketens en bereikbaarheid zijn getrieerd,
+  compatibele patches zijn toegepast en lint, tests en build blijven slagen.
+  Waar een upstreamfix ontbreekt, documenteer de begrensde blootstelling en een
+  concrete hercontrole; verlaag niet blind `eslint-config-next` naar versie 14
+  en gebruik geen ongecontroleerde `npm audit fix --force`.
+- **Voormalige blokkade (2026-10-04):** voor `braces <=3.0.3` (`GHSA-vfj7-8cjw-p6xm`) bestaat op
+  2026-10-04 geen gepubliceerde upstreampatch. De vijf resterende high meldingen
+  komen uit dezelfde ontwikkelketen; productieaudit blijft schoon. De Next-rule
+  gebruikt fast-glob voor een expliciete `settings.next.rootDir`; de huidige
+  ESLint-config stelt die niet in. CI heeft geen secrets, schrijfrechten of
+  bewaarde credentials en heeft een timeout.
+- **Hercontrole:** uiterlijk 2026-10-18 en bij wijziging van lintconfig of
+  dependencies: controleer de advisory en npm-release, pas een compatibele fix
+  toe en herhaal de volledige audit plus lint/build/tests. Dit is een handmatig
+  controlepunt, geen ingestelde automation. Neem daarbij de ESLint 10-migratie
+  mee zodra de React-plugin die major ondersteunt; versie 9 wordt inmiddels
+  door npm als unsupported gemeld.
+- **Log:** 2026-10-04 — volledige audit na `MNT-054` getrieerd; apart gehouden van
+  de geslaagde productiepatch. Adviesdetails staan in het reviewrapport.
+
+- **Uitvoering 2026-10-04:** `brace-expansion` 1.1.18 → 1.1.21 en 5.0.9 →
+  5.0.12 binnen bestaande semverranges bijgewerkt, zonder overrides. De
+  volledige audit daalt van zes naar vijf dependencyvermeldingen. De
+  incompatibele downgrade en een ongeteste major-upgrade zijn niet toegepast.
+
+- **Hercontrole 2026-10-07:** braces blijft op 3.0.3 zonder gepubliceerde patch;
+  de React ESLint-plugin ondersteunt ESLint 10 nog niet. Na MNT-057 blijven
+  vijf high ontwikkelvermeldingen en nul productiemeldingen over. Hercontroledatum
+  2026-10-18 blijft staan. Zie [health review](../editorial/health-review-2026-10-07.md).
+
+- **Hercontrole 2026-10-13:** na de gerichte Next-/ESLint-configupgrade naar
+  16.4.0 blijven vijf high ontwikkelvermeldingen en nul productiemeldingen over.
+  npm meldt `braces` 3.0.3 als nieuwste release; de
+  [advisory](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm) noemt nog geen patch.
+  Hercontroledatum 2026-10-18 blijft staan. Lint, build en lokale tests slagen;
+  de extra Linux-controles en hun grenzen staan in de
+  [CI-afbeeldingsreview](../editorial/ci-image-optimizer-review-2026-10-13.md).
+
+- **Afronding 2026-10-30:** volledige en productieaudit melden na compatibele
+  dependency-updates nul kwetsbaarheden. De eerdere braces-advisory
+  [GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm)
+  is op 2026-10-23 ingetrokken als niet praktisch exploiteerbaar; er is geen
+  verzonnen braces-patch of audit-uitzondering toegepast. Next 16.4.3, Zod 4.6.7,
+  Vitest 4.1.12 en Vite 8.3.5 behandelen de actuele meldingen. De oorspronkelijke
+  hercontrole is uitgevoerd. ESLint-10-compatibiliteit is afzonderlijk MNT-073,
+  zodat afgeronde securitytriage niet op een toekomstige major blijft wachten.
+  Zie de [dependencyreview](../editorial/dependency-security-review-2026-10-30.md).
+
+### `MNT-051` — Eerste verifieerbare Atlasdataset en kleine pilot afbakenen
+
+- **Status:** afgerond op 2026-10-14
+- **Prioriteit:** hoog; voorbereidend spoor voor mogelijke ingebruikname
+- **Scope:** geverifieerde geography-data en eerste Atlaslevering
+- **Categorie:** atlas-gis, research, engineering
+- **Herkomst:** `QCR-2026-10-04-01`
+- **Bevinding:** Atlas heeft nog geen data; drie oudere kaarttickets blijven
+  daardoor geblokkeerd zonder een concrete eerste datalevering.
+- **Klaar wanneer:** een beperkte dataset voor Bordeaux is gekozen op officiële
+  provenance, licentie, schaal, CRS, versie en updatepad; een import- en
+  validatiecontract plus eerste publiek bruikbare kaart zijn afgebakend. Leg vast
+  welke oude kaarttickets hierdoor wel/niet kunnen volgen. Punten, appellation-
+  geometrie en wereldwijde druivenverspreiding zijn afzonderlijke dataproblemen.
+- **Planning:** bronverkenning vóór `EXP-027`; bouw pas op geverifieerde data.
+  Bronverkenning mag naast les-/contentwerk lopen; volledige Atlasbouw is nog
+  geen vrijgegeven scope. Na deze afbakening volgt de eerste kaart via MNT-002
+  zodra data geverifieerd beschikbaar is. Splits eventuele zelfstandige import-,
+  geografiemodel- en Atlas-UI-slices vóór uitvoering uit met eigen acceptatiecriteria;
+  sluit dit afbakeningsticket niet alsof daarmee Atlas al in gebruik is.
+  PostGIS is een mogelijke latere keuze, geen vereiste voor de eerste pilot.
+- **Log:** 2026-10-04 — geregistreerd vanuit de platformreview; uitvoering
+  volgt de overkoepelende productplanning.
+
+  2026-10-12 — Atlasvoorbereiding zichtbaarder geprioriteerd vanuit gebruikersdoel;
+  geverifieerde dataset en expliciete bouwscope blijven voorwaarden.
+
+  2026-10-14 — INAO geografische SHP-versie 2026-10-12 gekozen voor negen
+  bestaande appellations; licentie, bronhash, CRS, mapping en geometrie werkelijk
+  geïnspecteerd. [Contract](atlas-pilot-contract.md) en
+  [bronreview](../editorial/atlas-bordeaux-data-review-2026-10-14.md) bewaren de
+  scope en acceptatiecriteria. MNT-070/071 splitsen model en import; MNT-002
+  behoudt de eerste publieke kaart, MNT-014 de beide appellationpagina's.
+  MNT-013 blijft een andere dataset vragen. Pomerol-PNO-bronlabel direct
+  gecorrigeerd; claimreview volgt als MNT-072. Afbakening voltooid, kaart nog niet live.
 
 ### `MNT-069` — Diepe links na hydration op hun passage laten landen
 
@@ -456,7 +597,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   De projectcheck (192 unit-tests), productiebuild en volledige suite
   (205/205 zonder retries) slagen; mobiele en desktopcontrole bevestigen de positie.
 
-
 ### `MNT-068` — Inline draftmentions leesbaar houden zonder publieke draftlinks
 
 - **Status:** afgerond op 2026-10-14
@@ -474,7 +614,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   bewaken gelokaliseerde namen, labels, nadruk en actieve links; browsertests
   toetsen drafttekst en bruikbare vervolgroutes. Bestaande Tokaj-/Amarone-testverwachtingen
   zijn aangepast. 192 unit-tests, productionbuild en 203 e2e-tests slagen zonder retries.
-
 
 ### `MNT-067` — Draftbestemmingen uit publieke entitynavigatie houden
 
@@ -594,7 +733,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   behouden hun bestaande voorbereidingsgedrag. Parsed JSON is identiek;
   volledige verificatie staat in het gekoppelde reviewrapport.
 
-
 ### `MNT-058` — Tekst in inhoudstabellen leesbaar laten afbreken
 
 - **Status:** afgerond
@@ -629,7 +767,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   typecheck, 148 unit-tests, productiebuild en 125 browsertests geslaagd.
   Worktree- en documentatielinkcontrole uitgevoerd. Details en grenzen staan
   in [de health review](../editorial/health-review-2026-10-07.md).
-
 
 ### `MNT-048` — Contentpipeline en model in herkenbare modules verdelen
 
@@ -785,7 +922,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   (eerste GitHub-run, rechten/branch protection en deploymentverificatie) zijn
   expliciet afgesplitst naar `MNT-056`; dit ticket sluit het lokale werk af.
 
-
 ### `MNT-054` — Next.js-securitypatch gericht toepassen
 
 - **Status:** afgerond
@@ -804,7 +940,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   en browsersuite op de gepatchte versie slagen.
 - **Log:** 2026-10-04 — lokaal bijgewerkt en gecontroleerd; dit ticket omvat geen
   productiedeployment. Resultaten en beperkingen staan in het reviewrapport.
-
 
 ### `MNT-043` — Documentatie en overkoepelende planning opschonen
 
@@ -836,7 +971,6 @@ De vijf oudere blokkades zijn behouden zonder nieuwe externe contentreview.
   voortgang bij een nieuw bezoek kan terugkomen. Drie unitregressies en drie
   browserregressies dekken gedeeltelijk falende opslag.
 - **Log:** 2026-10-04 — gereproduceerd en hersteld; validatie staat in het rapport.
-
 
 ### `MNT-030` — Markdown-linkaudit triageerbaar maken
 

@@ -773,8 +773,9 @@ EXP-032 has published Port, Sherry and Champagne as its first bounded batch. EXP
 **Status:** partial. Inventory and first publication batch complete on 2026-10-13;
 three follow-up batches remain open. **Depends on:** EXP-025 and EXP-029–031.
 EXP-026 completed its integration on 2026-10-14. Follow-up catalogue batches run
-after EXP-028 and before the regional publication pilots; they do not postpone
-the next Atlas-scoping task.
+after EXP-028 and before the regional publication pilots. Learn curriculum
+preparation (LRN-018) runs alongside this work; Atlas is parked by user decision
+(2026-10-30) and is not a prerequisite for any content batch.
 
 **Work:** inventory named wines across all three families, record their true
 identity and existing destination, then order bounded publication batches.
@@ -830,7 +831,9 @@ and the other 184 triaged. NL/EN structure, sources and targets agree; canonical
 draftmentions remain readable without public draftlinks (MNT-068); direct depth
 anchors land on their revealed passage after hydration (MNT-069). Projectcheck,
 192 unit-tests and the complete 205-test browsersuite pass without retries.
-Atlas scoping MNT-051 follows in the product order; EXP-027 retains global claimstress.
+MNT-051 remains completed research. Atlas implementation is parked at the end
+of the backlog (2026-10-30); no model/import/map prerequisite remains for content.
+EXP-027 retains global claimstress and is the next Explore task.
 
 **Depends on:** EXP-004–025, EXP-029–031, and the inventory/first publication
 batch of EXP-032. Remaining EXP-032 catalogue batches do not block this

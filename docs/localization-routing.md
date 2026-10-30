@@ -27,7 +27,7 @@ en [het blockcontract](content-blocks.md) blijven leidend.
 | Bestemming | Nederlands | Engels |
 | --- | --- | --- |
 | Home | `/` | `/en` |
-| Statische pagina/index | `/about`, `/explore`, `/regions`, `/atlas` | `/en/about`, `/en/explore`, `/en/regions`, `/en/atlas` |
+| Statische pagina/index | `/about`, `/explore`, `/regions` | `/en/about`, `/en/explore`, `/en/regions` |
 | Entity | `/concepts/<english-slug>` | `/en/concepts/<english-slug>` |
 | Narrative-index | `/verdiepingen` | `/en/verdiepingen` |
 | Narrative | `/verdiepingen/<type>/<english-slug>` | `/en/verdiepingen/<type>/<english-slug>` |
@@ -107,7 +107,7 @@ toekomstige `/api`-routes krijgen geen taalprefix.
 - Eén sitemap bevat beide versies van actieve zelfstandige entities, narratives,
   paths en indexeerbare statische pagina's, met wederkerige taalalternatieven.
   Redirectaliases en ingebedde producenten worden geen eigen sitemapvermelding.
-  Search, de huidige lege Atlas, Learn-afronding, drafts en foutpagina's blijven
+  Search, Learn-afronding, drafts en foutpagina's blijven
   `noindex` en buiten de sitemap; genereer daarvoor geen SEO-taalalternatieven.
   De gewone taalwisselaar blijft waar mogelijk beschikbaar.
 - Gebruik de ingestelde publieke origin voor absolute metadata-/sitemap-URLs;

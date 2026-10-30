@@ -37,6 +37,11 @@ automatically dominate Explore or Atlas. A user should be able to reach useful
 entity knowledge without entering a course, and a learning path may reuse an
 entity or narrative without changing its canonical ownership.
 
+Atlas is a deferred product direction, not a currently available mode. By user
+decision on 2026-10-30, its shell was removed and implementation is parked at the
+end of the backlog pending a new approach. Explore and Learn content can grow
+without Atlas. These shared-knowledge principles still apply to any future design.
+
 ## 3. Progressive depth, not artificial silos
 
 Serve newcomers and specialists through progressive disclosure. Lead with a

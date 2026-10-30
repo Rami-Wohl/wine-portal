@@ -1,5 +1,10 @@
 # Correcties en suggesties
 
+**Aanvullend prioriteitsbesluit 2026-10-30:** Atlas is eveneens uitgesteld en
+staat achteraan de backlog; een Atlaspilot is geen huidige mijlpaal of trigger.
+Feedback blijft geparkeerd. De voortgang en hervatprocedure hieronder blijven
+naslag; Leren en Ontdekken krijgen voorrang.
+
 Peildatum: 2026-10-12. Herkomst: gebruikersbrief van 2026-10-11.
 Status: bewust geparkeerd na lokale productflow; overige uitvoeringsbacklog open. Geen
 gelanceerde functie of gekozen provider. Dit is de enige statusadministratie voor `FBK-*`
@@ -8,16 +13,16 @@ en `DEC-FBK-*`. De [productroadmap](product-roadmap.md) bepaalt de samenhang.
 ## Prioriteit en hervatpunt — besluit 2026-10-12
 
 De gebruiker heeft aangegeven dat de site al een live URL heeft, maar nog geen
-gebruikers. Meer content, vooral lessen, gaat voor; Atlas is een waarschijnlijke
-voorwaarde voor bredere ingebruikname. Daarom staat **het gehele resterende
+gebruikers (melding 2026-10-12). Meer content, vooral lessen, gaat voor; Atlas
+is sinds 2026-10-30 eveneens uitgesteld. Daarom staat **het gehele resterende
 feedbackspoor stil**, inclusief FBK-003, beleidconcepten en providerproeven.
 De 33 tickets blijven administratief `open`, met planning **geparkeerd**;
 FBK-001 blijft afgerond. Er zijn geen annuleringen of stilzwijgende vrijgaven.
 
-Dit spoor is geen dependency voor nieuwe lessen, Explore-content of de eerste
-Atlaspilot. Ook MNT-050 wordt niet meer vooruitgetrokken vanwege feedback.
-Geen geplande hervatdatum: bij de review van de volgende les-/contentlevering
-of de afgebakende Atlaspilot wordt de behoefte opnieuw benoemd; hervatten gebeurt
+Dit spoor is geen dependency voor nieuwe lessen of Explore-content. Ook
+MNT-050 wordt niet vooruitgetrokken vanwege feedback. Geen geplande hervatdatum:
+bij de review van een volgende les-/contentlevering kan de behoefte opnieuw
+worden benoemd; hervatten gebeurt
 pas bij een expliciet prioriteitsbesluit van de gebruiker. De afronding van één
 van die leveringen start feedback niet automatisch. Geen automation of monitor.
 

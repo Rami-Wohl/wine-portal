@@ -5,7 +5,9 @@
 Oenocademy is een meertalig, entity-first kennisplatform voor wijn, gericht op
 zowel gestructureerd leren als vrij verkennen. Entities, narratives,
 kennisdiepte en bronverwijzingen vormen samen één kennisgraaf voor Explore,
-Learn en de toekomstige geografische Atlas.
+Learn. Atlas is op gebruikersverzoek uitgesteld (2026-10-30); de huidige
+pagina en navigatie zijn verwijderd. De [productplanning](docs/product-roadmap.md)
+geeft inhoud voor Leren en Ontdekken voorrang.
 
 De publieke interface en content zijn beschikbaar in Nederlands en Engels.
 Nederlandse URLs blijven ongewijzigd; Engelse pagina's staan onder `/en`.
@@ -18,8 +20,8 @@ de gekozen taal. Zie [taalkeuze en routing](docs/localization-routing.md).
 
 Vereisten:
 
-- Node.js **24.21.0 LTS**, vastgelegd in `.nvmrc`;
-- npm **11.19.0**, meegeleverd met deze Node-versie;
+- Node.js **24.22.2 LTS**, vastgelegd in `.nvmrc`;
+- npm **11.19.1**, meegeleverd met deze Node-versie;
 - npm en Git;
 - Chromium voor de optionele end-to-endtests.
 
@@ -35,7 +37,7 @@ npm run dev
 
 De eerste twee opdrachten gebruiken [nvm](https://github.com/nvm-sh/nvm).
 Gebruik je een andere version manager, selecteer dan de versie uit `.nvmrc`.
-`node --version` moet `v24.21.0` tonen. `.npmrc` laat installaties met een andere
+`node --version` moet `v24.22.2` tonen. `.npmrc` laat installaties met een andere
 Node-major of npm-major expliciet stoppen. De exacte ontwikkel-/CI-pin staat in
 `.nvmrc`; `package.json` houdt de ondersteunde reeks op Node `24.x` en npm `11.x`.
 
@@ -100,7 +102,7 @@ npm run test:e2e
 
 [De Quality-workflow](.github/workflows/quality.yml) draait na pushes naar `main`,
 bij pull requests en op handmatig verzoek in GitHub Actions. Eén job
-**Quality checks** gebruikt de versie uit `.nvmrc`, `npm ci`, een productieaudit,
+**Quality checks** gebruikt de versie uit `.nvmrc`, `npm ci`, een volledige dependency-audit,
 `npm run check` en de volledige productiebuild/browsersuite. Twee browserworkers
 begrenzen het geheugengebruik; foutdiagnostiek blijft zeven dagen beschikbaar.
 Een afsluitende `git diff --exit-code` detecteert ook achterlopende gevolgde
@@ -112,10 +114,12 @@ credentials en gebruikt vastgepinde Action-commits. Een workflowbestand maakt
 zijn resultaat niet automatisch verplicht voor merges: de eerste GitHub-run en
 branch protection moeten nog worden bevestigd (`MNT-056`).
 
-`npm audit --omit=dev --audit-level=high` blokkeert CI bij nieuwe high/critical
-productiemeldingen. De volledige `npm audit` heeft nog een bekende, ongepatchte
-ontwikkeltoolketen (`MNT-055`); die wordt apart getrieerd en niet als schone audit
-voorgesteld. Hercontroleer die bij dependencywijzigingen en uiterlijk 2026-10-18.
+`npm audit --audit-level=low` controleert productie- én ontwikkeldependencies
+en blokkeert CI bij iedere gemelde kwetsbaarheid vanaf low. De volledige en
+productieaudit zijn op 2026-10-30 schoon na de beveiligingsupdates. De eerdere
+`braces`-advisory is ingetrokken; de compatibiliteitsgate voor ESLint 10 wordt
+afzonderlijk gevolgd via `MNT-073`. Zie de
+[dependencyreview](editorial/dependency-security-review-2026-10-30.md).
 
 Vercel gebruikt voor volgende deployments de Node `24.x`-reeks uit
 `package.json`; Vercel beheert de patchversie. `npm run build` logt daarvoor de

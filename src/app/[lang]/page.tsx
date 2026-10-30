@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: LocalePageProps): Promise<Met
   return {
     description:
       locale === "nl"
-        ? "Oenocademy verbindt wijnkennis, gestructureerde leerpaden, vrije verkenning en geografische ontdekking in één kennisplatform."
-        : "Oenocademy brings wine knowledge, structured learning paths, free exploration and geographic discovery together in one platform.",
+        ? "Oenocademy verbindt wijnkennis, gestructureerde leerpaden en vrije verkenning in één kennisplatform."
+        : "Oenocademy brings wine knowledge, structured learning paths and free exploration together in one platform.",
     alternates: languageAlternates("/", locale),
   };
 }
@@ -39,15 +39,6 @@ export default async function Home({ params }: LocalePageProps) {
           ? "Volg gestructureerde leerpaden in een logische volgorde en op een passend kennisniveau."
           : "Follow structured learning paths in a logical order and at a suitable level.",
     },
-    {
-      href: "/atlas",
-      label: "Atlas",
-      title: locale === "nl" ? "Ontdek wijn geografisch" : "Explore wine geographically",
-      description:
-        locale === "nl"
-          ? "Verken wijngebieden, appellaties en producenten via gecontroleerde geografische data."
-          : "Explore wine regions, appellations and producers through verified geographic data.",
-    },
   ];
 
   const [heroImage] = getMediaByIds(["media.home.vineyard-hero"]);
@@ -72,8 +63,8 @@ export default async function Home({ params }: LocalePageProps) {
         <p className="home-tagline">{BRAND.tagline[locale]}</p>
         <p className="home-description">
           {locale === "nl"
-            ? "Oenocademy brengt verbonden wijnkennis, gestructureerd leren, vrije verkenning en geografische ontdekking samen. Kies hoe je vandaag door hetzelfde kennisnetwerk wilt navigeren."
-            : "Oenocademy brings connected wine knowledge, structured learning, free exploration and geographic discovery together. Choose how you would like to navigate this shared knowledge network today."}{" "}
+            ? "Oenocademy brengt verbonden wijnkennis, gestructureerd leren en vrije verkenning samen. Kies hoe je vandaag door hetzelfde kennisnetwerk wilt navigeren."
+            : "Oenocademy brings connected wine knowledge, structured learning and free exploration together. Choose how you would like to navigate this shared knowledge network today."}{" "}
         </p>
       </section>
 

@@ -8,8 +8,8 @@ export async function generateMetadata({ params }: LocalePageProps): Promise<Met
     title: locale === "nl" ? "Over Oenocademy" : "About Oenocademy",
     description:
       locale === "nl"
-        ? "Lees waarom Oenocademy is gebouwd en hoe leren, vrije verkenning, bronnen en geografische data samenkomen in één wijnkennisplatform."
-        : "Discover why Oenocademy was built and how learning, free exploration, sources and geographic data come together in one wine knowledge platform.",
+        ? "Lees waarom Oenocademy is gebouwd en hoe leren, vrije verkenning en bronnen samenkomen in één wijnkennisplatform."
+        : "Discover why Oenocademy was built and how learning, free exploration and sources come together in one wine knowledge platform.",
     alternates: languageAlternates("/about", locale),
   };
 }

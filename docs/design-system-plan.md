@@ -18,10 +18,10 @@ te veranderen.
 3. **Contentpatronen** — summaries, sections, kernideeën, caveats, figures,
    citations, bronnen en kennisdiepte worden uit canonical content blocks
    gerenderd.
-4. **Paginasamenstellingen** — Explore, Verdiepingen, Learn, Atlas en entitypagina's
+4. **Paginasamenstellingen** — Explore, Verdiepingen, Learn en entitypagina's
    gebruiken dezelfde visuele taal. Entity- en narrative-routing is actief;
-   learning paths, lesnavigatie en lokale voortgang zijn actief. Atlasdata is
-   nog roadmap.
+   learning paths, lesnavigatie en lokale voortgang zijn actief. Atlas is sinds
+   2026-10-30 geparkeerd; de pagina, links en specifieke styling zijn verwijderd.
 
 ## Stylesheetindeling en cascade
 
@@ -38,7 +38,6 @@ clientnavigatie. De bestanden houden de bestaande semantische classnamen aan.
 | `page-intros.css` | Homehero, moduskeuze en gedeelde paginakoppen |
 | `discovery.css` | Explore, zoeken, filters, paginatie, entitylinks en lege toestanden |
 | `learning-paths.css` | Learn-catalogus, leerpad, voortgang, afronding en gedeelde acties |
-| `atlas.css` | Atlasschil en huidige lege geografische toestand |
 | `article-layouts.css` | About, breadcrumbs, entitykoppen, dieptebediening, relaties en bronnen |
 | `lessons.css` | Lescontext, voltooiing, vorige/volgende en gedeelde Learn-hoverstaten |
 | `content.css` | Contentblocks, dieptezichtbaarheid, tabellen, figuren en citations |

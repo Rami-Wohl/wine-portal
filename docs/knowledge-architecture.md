@@ -711,7 +711,11 @@ Geografie is first-class kennis, maar de volledige geographydatalaag is nog niet
 - uniquenessvalidatie voor geography-IDs;
 - een geography lookup in de gegenereerde bundle.
 
-Er staan nog geen geverifieerde Bordeauxgrenzen, producentcoördinaten of andere Atlasgeometrieën in het huidige prototype.
+Er staan geen productiegeometrieën of Atlasimports in de applicatie. Sinds het
+gebruikersbesluit van 2026-10-30 zijn de Atlaspagina, links en specifieke styling
+verwijderd. Atlas staat achteraan geparkeerd; het eerdere pilotonderzoek blijft
+naslag en kiest geen toekomstig ontwerp. Het bestaande geography-ID/indexcontract
+is gedeelde v1-infrastructuur, geen actieve Atlasimplementatie.
 
 Wanneer geography wordt toegevoegd, gelden `geography-policy.md` en `../editorial/research-policy.md`. De kernregel blijft:
 
