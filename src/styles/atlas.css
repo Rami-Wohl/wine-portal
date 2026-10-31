@@ -1,0 +1,842 @@
+/* Atlas scenes: server-rendered SVG map, list alternative, legend and enhancement controls.
+ * Map colours are scoped here; colour never carries meaning alone (patterns, outlines, labels do).
+ */
+
+.atlas-scene {
+  /* Estimated rendered map width in CSS px per breakpoint (see responsive.css). It sizes
+   * labels and markers before JavaScript measures the real width. It is deliberately
+   * different from ASSUMED_RENDER_PX in labels.ts (640): that constant is the fixed
+   * reference width the server plans label visibility against; the client scales those
+   * thresholds by the measured width, so the two never need to agree.
+   */
+  --atlas-render-px: 760;
+  /* Layout knobs: the responsive overrides and the embedded variant set only these
+   * custom properties, so every selector stays at single-class specificity.
+   */
+  --atlas-list-column: minmax(230px, 300px);
+  --atlas-body-columns: var(--atlas-list-column) minmax(0, 1fr);
+  --atlas-area-columns: 1fr;
+  --atlas-canvas: var(--surface);
+  --atlas-area-fill: color-mix(in srgb, var(--leaf) 26%, var(--surface));
+  --atlas-area-fill-strong: color-mix(in srgb, var(--leaf) 46%, var(--surface));
+  --atlas-area-line: var(--leaf);
+  --atlas-highlight-fill: color-mix(in srgb, var(--brand) 20%, var(--surface));
+  --atlas-highlight-line: var(--brand-dark);
+  --atlas-context-line: var(--line-strong);
+  --atlas-hatch: color-mix(in srgb, var(--muted) 55%, var(--surface));
+  --atlas-water-fill: var(--water);
+  --atlas-water-line: var(--water-line);
+  --atlas-water-label: var(--water-label);
+  --atlas-place: var(--ink);
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin: 0;
+  min-width: 0;
+}
+.atlas-scene-heading {
+  max-width: var(--reading);
+}
+.atlas-scene-title {
+  margin-bottom: 0.6rem;
+  font: 500 clamp(1.8rem, 3vw, 2.5rem) / 1.08 var(--font-display);
+  letter-spacing: -0.025em;
+}
+.atlas-scene-embedded .atlas-scene-title {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+}
+.atlas-scene-intro {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.atlas-scene-notice {
+  margin: 0.9rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--brand);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+/* Body: list first in DOM order; beside the map on wide screens, above it when stacked. */
+.atlas-scene-body {
+  display: grid;
+  grid-template-columns: var(--atlas-body-columns);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+  min-width: 0;
+}
+/* Embedded in a reading column: the folded list sits above a full-width map, kept compact. */
+.atlas-scene-embedded {
+  --atlas-body-columns: 1fr;
+  --atlas-area-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.atlas-scene-embedded .atlas-feature-list {
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+.atlas-scene-embedded .atlas-list-title {
+  font-size: 1rem;
+}
+.atlas-scene-embedded .atlas-scene-intro {
+  font-size: 0.9rem;
+}
+.atlas-scene-link {
+  margin: 0.6rem 0 0;
+  font-size: 0.86rem;
+  font-weight: 720;
+}
+.atlas-scene-link a {
+  /* Standalone link: at least a 24px target. */
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  color: var(--brand);
+  text-decoration: none;
+}
+.atlas-scene-link a:hover {
+  color: var(--brand-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+/* Entity pages embed the owner region's scene in the reading flow, after the summary. */
+.entity-atlas {
+  min-width: 0;
+}
+
+/* List alternative */
+.atlas-feature-list {
+  display: grid;
+  gap: 1.1rem;
+  min-width: 0;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.atlas-list-title,
+.atlas-legend-title {
+  margin: 0;
+  font: 520 1.2rem/1.2 var(--font-display);
+}
+.atlas-list-group {
+  display: grid;
+  gap: 0.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+.atlas-list-group-title {
+  margin: 0;
+  color: var(--muted);
+  font: 720 0.7rem/1.2 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.atlas-area-list,
+.atlas-missing-list {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-area-list {
+  grid-template-columns: var(--atlas-area-columns);
+  column-gap: 1rem;
+}
+.atlas-area-list-current {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+/* Folded list (embedded variant): closed by default, native disclosure, no script needed. */
+.atlas-list-disclosure > summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--brand-dark);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 720;
+  list-style: none;
+}
+.atlas-list-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.atlas-list-disclosure > summary::after {
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: none;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: rotate(45deg) translateY(-0.12rem);
+}
+.atlas-list-disclosure[open] > summary::after {
+  transform: rotate(225deg) translate(-0.12rem, -0.12rem);
+}
+.atlas-list-disclosure[open] > summary {
+  margin-bottom: 0.9rem;
+}
+.atlas-list-disclosure-body {
+  display: grid;
+  gap: 1.1rem;
+}
+.atlas-area-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.6rem;
+  min-width: 0;
+  padding: 0.15rem 0.5rem;
+  margin-inline: -0.5rem;
+  border-radius: 8px;
+}
+.atlas-area-item.is-active,
+.atlas-area-item.is-highlighted {
+  background: color-mix(in srgb, var(--leaf-soft) 70%, var(--surface));
+}
+.atlas-area-item.is-highlighted {
+  box-shadow: inset 3px 0 var(--brand);
+}
+.atlas-area-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--brand-dark);
+  font-size: 0.95rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+a.atlas-area-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+.atlas-area-link-static {
+  color: var(--ink);
+  font-weight: 600;
+}
+.atlas-area-type,
+.atlas-area-state {
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+.atlas-area-state {
+  font-weight: 650;
+}
+.atlas-area-item.is-highlighted .atlas-area-state {
+  color: var(--brand);
+}
+.atlas-missing-list li {
+  color: var(--ink);
+  font-size: 0.88rem;
+}
+.atlas-missing-name {
+  font-weight: 650;
+}
+.atlas-missing-reason,
+.atlas-list-empty {
+  color: var(--muted);
+}
+.atlas-list-empty {
+  margin: 0;
+  font-size: 0.88rem;
+}
+.atlas-orientation {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+}
+.atlas-orientation div {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.5rem;
+  font-size: 0.86rem;
+}
+.atlas-orientation dt {
+  color: var(--muted);
+  font-weight: 650;
+}
+.atlas-orientation dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Map panel, toolbar and frame */
+.atlas-map-panel,
+.atlas-map-enhancer {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+}
+.atlas-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+/* Pointer-only instructions and controls need the enhancement: hidden without
+ * scripting, and until the enhancer has mounted (data-ready), so a failed or
+ * pending script never offers controls that do nothing. */
+@media (scripting: none) {
+  .atlas-toolbar,
+  .atlas-needs-script {
+    display: none;
+  }
+}
+.atlas-map-enhancer:not([data-ready]) .atlas-toolbar,
+.atlas-scene:not(:has(.atlas-map-enhancer[data-ready])) .atlas-needs-script {
+  display: none;
+}
+.atlas-toolbar button {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--brand-dark);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 720;
+}
+.atlas-toolbar button:hover {
+  border-color: var(--brand);
+}
+.atlas-toolbar button[aria-pressed="true"] {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: white;
+}
+.atlas-toolbar button[aria-disabled="true"] {
+  color: var(--muted);
+  cursor: default;
+}
+.atlas-toolbar-zoom {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+.atlas-toolbar-zoom button span {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.atlas-toolbar-level {
+  min-width: 5ch;
+  padding-inline: 0.35rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+}
+.atlas-toolbar-status {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+.atlas-map-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--atlas-canvas);
+}
+.atlas-map-frame[data-engaged="true"] {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+  touch-action: none;
+  cursor: grab;
+}
+.atlas-map-frame:focus-visible {
+  outline-offset: 2px;
+}
+.atlas-map {
+  /* User units per CSS pixel; JS overrides with the measured value when it zooms or resizes. */
+  --atlas-u: calc(var(--atlas-view-width) / var(--atlas-render-px));
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  aspect-ratio: var(--atlas-base-width) / var(--atlas-base-height);
+}
+
+/* Features. Strokes stay crisp at any zoom; fills are translucent so overlaps darken. */
+.atlas-feature {
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.atlas-layer-water .atlas-geometry-area {
+  stroke: var(--atlas-water-line);
+  stroke-width: 0.75px;
+}
+.atlas-layer-water .atlas-geometry-line {
+  /* Dashed so rivers differ from area outlines by shape, not colour or width alone. */
+  fill: none;
+  stroke: var(--atlas-water-line);
+  stroke-width: 2px;
+  stroke-dasharray: 7 4;
+}
+.atlas-water-base {
+  fill: var(--atlas-water-fill);
+}
+.atlas-water-line {
+  fill: none;
+  stroke: var(--atlas-water-line);
+  stroke-width: 0.6;
+  opacity: 0.75;
+}
+.atlas-hatch-line {
+  stroke: var(--atlas-hatch);
+  stroke-width: 0.9;
+}
+.atlas-layer-context .atlas-geometry-area {
+  stroke: var(--atlas-context-line);
+  stroke-width: 1px;
+}
+.atlas-layer-selectable .atlas-geometry-area {
+  fill: var(--atlas-area-fill);
+  fill-opacity: 0.72;
+  stroke: var(--atlas-area-line);
+  stroke-width: 1.25px;
+}
+.atlas-link {
+  cursor: pointer;
+}
+.atlas-link:hover .atlas-geometry-area,
+.atlas-link:focus-visible .atlas-geometry-area,
+.atlas-link.is-active .atlas-geometry-area,
+.atlas-feature.is-active {
+  fill: var(--atlas-area-fill-strong);
+  stroke-width: 2.25px;
+}
+.atlas-link:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 64%, white);
+  outline-offset: 2px;
+}
+.atlas-link:focus-visible .atlas-geometry-area {
+  stroke: var(--brand);
+  stroke-dasharray: 6 3;
+}
+.atlas-layer-selectable [data-highlighted="true"] .atlas-geometry-area,
+.atlas-layer-selectable .atlas-geometry-area[data-highlighted="true"],
+.atlas-layer-context [data-highlighted="true"] .atlas-geometry-area,
+.atlas-layer-context .atlas-geometry-area[data-highlighted="true"] {
+  fill: var(--atlas-highlight-fill);
+  fill-opacity: 0.85;
+  stroke: var(--atlas-highlight-line);
+  stroke-width: 3px;
+}
+.atlas-place circle {
+  r: calc(3.5px * var(--atlas-u));
+  fill: var(--atlas-place);
+  stroke: var(--atlas-canvas);
+  stroke-width: calc(1.5px * var(--atlas-u));
+}
+/* Towns read as towns: a dot plus smaller, lighter text than the area names (labels.ts PLACE_FONT_PX). */
+.atlas-place text {
+  fill: var(--muted-strong);
+  font: 500 calc(10.5px * var(--atlas-u)) var(--font-body);
+  dominant-baseline: middle;
+  paint-order: stroke;
+  stroke: var(--atlas-canvas);
+  stroke-width: calc(3px * var(--atlas-u));
+  stroke-linejoin: round;
+  transform: translate(calc(6.5px * var(--atlas-u)), 0);
+  pointer-events: none;
+}
+/* Orientation layers never take a click or hover: they sit above the area fills, and
+ * their names live in the list. A click on a river, the estuary or a town falls
+ * through to the area underneath. */
+.atlas-layer-water,
+.atlas-layer-places,
+.atlas-place,
+.atlas-highlight-overlay {
+  pointer-events: none;
+}
+/* The highlighted outline repeated above water (atlas-scene.tsx). */
+.atlas-highlight-outline {
+  fill: none;
+  stroke: var(--atlas-highlight-line);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.atlas-labels {
+  pointer-events: none;
+}
+.atlas-label {
+  fill: var(--ink);
+  font: 650 calc(12px * var(--atlas-u)) var(--font-body);
+  text-anchor: middle;
+  dominant-baseline: middle;
+  paint-order: stroke;
+  stroke: var(--atlas-canvas);
+  stroke-width: calc(3.5px * var(--atlas-u));
+  stroke-linejoin: round;
+}
+/* Planner-chosen offset off a town marker, one label line in screen px (labels.ts LABEL_SHIFT_PX). */
+.atlas-label[data-shift="-1"] {
+  transform: translateY(calc(-15px * var(--atlas-u)));
+}
+.atlas-label[data-shift="1"] {
+  transform: translateY(calc(15px * var(--atlas-u)));
+}
+.atlas-label-context {
+  fill: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.atlas-label-water {
+  fill: var(--atlas-water-label);
+  font-style: italic;
+  font-weight: 600;
+}
+.atlas-label-highlight {
+  fill: var(--brand-dark);
+  font-weight: 760;
+}
+.atlas-label[data-visible="false"],
+.atlas-place text[data-visible="false"] {
+  display: none;
+}
+
+/* Overlap chooser */
+.atlas-chooser {
+  position: absolute;
+  z-index: 2;
+  width: min(280px, calc(100% - 16px));
+  padding: 0.9rem 1rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--raised);
+  box-shadow: 0 12px 32px rgb(37 40 35 / 16%);
+}
+.atlas-chooser-title {
+  margin: 0 0 0.2rem;
+  font: 600 1rem/1.25 var(--font-display);
+}
+.atlas-chooser-intro {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.atlas-chooser ul {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-chooser li a,
+.atlas-chooser li span {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  color: var(--brand-dark);
+  font-weight: 650;
+  text-decoration: none;
+}
+.atlas-chooser li span {
+  color: var(--muted);
+}
+.atlas-chooser-context {
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--line);
+}
+.atlas-chooser-context a {
+  color: var(--muted-strong);
+  font-weight: 600;
+}
+.atlas-chooser li a:hover {
+  background: var(--canvas);
+}
+.atlas-chooser-close {
+  min-height: 44px;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Legend */
+.atlas-scene-caption {
+  display: grid;
+  gap: 1rem;
+  max-width: 100%;
+}
+.atlas-legend {
+  display: grid;
+  gap: 1rem;
+}
+.atlas-legend-coverage p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+.atlas-legend-coverage .atlas-legend-missing {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+.atlas-legend-section,
+.atlas-legend-disclosure {
+  display: grid;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.atlas-legend-disclosure summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--ink);
+  cursor: pointer;
+  font: 520 1.05rem/1.2 var(--font-display);
+  list-style: none;
+}
+.atlas-legend-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+.atlas-legend-disclosure summary::after {
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: none;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: rotate(45deg) translateY(-0.12rem);
+}
+.atlas-legend-disclosure[open] summary::after {
+  transform: rotate(225deg) translate(-0.12rem, -0.12rem);
+}
+.atlas-legend-disclosure .atlas-legend-title {
+  font-size: 1.05rem;
+}
+.atlas-legend-keys {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 0.9rem 1.5rem;
+  margin: 0;
+}
+.atlas-legend-keys dt {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.atlas-legend-keys dd {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.atlas-swatch {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+.atlas-swatch-shape {
+  stroke-width: 1.25;
+}
+.atlas-swatch-area .atlas-swatch-shape {
+  fill: var(--atlas-area-fill);
+  stroke: var(--atlas-area-line);
+}
+.atlas-swatch-context .atlas-swatch-shape {
+  stroke: var(--atlas-context-line);
+}
+.atlas-swatch-water .atlas-swatch-shape {
+  stroke: var(--atlas-water-line);
+}
+.atlas-swatch-river {
+  fill: none;
+  stroke: var(--atlas-water-line);
+  stroke-width: 1.6;
+  stroke-dasharray: 3 2;
+  stroke-linecap: round;
+}
+.atlas-swatch-place-dot {
+  fill: var(--atlas-place);
+  stroke: var(--atlas-canvas);
+  stroke-width: 1.5;
+}
+.atlas-legend-scale {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.atlas-legend-credits {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+.atlas-legend-label {
+  margin: 0;
+  color: var(--muted);
+  font: 720 0.7rem/1.2 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.atlas-legend-credits ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-legend-credits li,
+.atlas-legend-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.atlas-legend-credits a {
+  color: var(--brand-dark);
+}
+.atlas-legend-disclosure-body {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Forced colours: meaning stays in patterns, outlines and labels. */
+@media (forced-colors: active) {
+  .atlas-map-frame {
+    border-color: CanvasText;
+  }
+  /* Transparent fills: stacked and overlapping areas stay visible as outlines, and
+   * the whole area stays hit-testable (a fill of none would leave only the stroke). */
+  .atlas-layer-selectable .atlas-geometry-area,
+  .atlas-layer-context .atlas-geometry-area,
+  .atlas-swatch-area .atlas-swatch-shape,
+  .atlas-swatch-context .atlas-swatch-shape {
+    fill: Canvas;
+    fill-opacity: 0;
+    stroke: CanvasText;
+    pointer-events: visible;
+  }
+  .atlas-layer-context .atlas-geometry-area,
+  .atlas-swatch-context .atlas-swatch-shape {
+    stroke-dasharray: 4 3;
+  }
+  .atlas-pattern-note {
+    display: none;
+  }
+  .atlas-pattern-note-forced {
+    display: inline;
+  }
+  .atlas-highlight-outline {
+    stroke: Highlight;
+    stroke-width: 4px;
+  }
+  .atlas-layer-water .atlas-geometry-line,
+  .atlas-water-line,
+  .atlas-swatch-river,
+  .atlas-hatch-line,
+  .atlas-layer-context .atlas-geometry-area,
+  .atlas-layer-water .atlas-geometry-area {
+    stroke: CanvasText;
+  }
+  .atlas-water-base {
+    fill: Canvas;
+  }
+  .atlas-link:hover .atlas-geometry-area,
+  .atlas-link:focus-visible .atlas-geometry-area,
+  .atlas-link.is-active .atlas-geometry-area,
+  .atlas-feature.is-active {
+    fill-opacity: 0;
+    stroke: Highlight;
+    stroke-width: 3px;
+  }
+  .atlas-layer-selectable [data-highlighted="true"] .atlas-geometry-area,
+  .atlas-layer-selectable .atlas-geometry-area[data-highlighted="true"],
+  .atlas-layer-context [data-highlighted="true"] .atlas-geometry-area,
+  .atlas-layer-context .atlas-geometry-area[data-highlighted="true"] {
+    fill-opacity: 0;
+    stroke: Highlight;
+    stroke-width: 4px;
+    stroke-dasharray: none;
+  }
+  .atlas-label-water,
+  .atlas-label-highlight {
+    fill: CanvasText;
+  }
+  .atlas-label,
+  .atlas-place text {
+    fill: CanvasText;
+    stroke: Canvas;
+  }
+  .atlas-place circle,
+  .atlas-swatch-place-dot {
+    fill: CanvasText;
+    stroke: Canvas;
+  }
+}
+
+/* The hatching note in the legend; forced colours swap it for the dashed-outline note. */
+.atlas-pattern-note-forced {
+  display: none;
+}
+
+/* Print: map, full list, legend and credits on paper; no controls. Disclosure bodies
+ * print open: ::details-content where supported, and the enhancer opens them on
+ * beforeprint everywhere else. */
+@media print {
+  .atlas-toolbar,
+  .atlas-chooser,
+  .atlas-list-disclosure > summary,
+  .atlas-legend-disclosure > summary {
+    display: none;
+  }
+  .atlas-scene {
+    --atlas-body-columns: 1fr;
+  }
+  .atlas-map {
+    max-height: none;
+  }
+  .atlas-map-panel,
+  .atlas-legend-keys > div {
+    break-inside: avoid;
+  }
+  .atlas-map-frame[data-engaged="true"] {
+    box-shadow: none;
+  }
+  .atlas-list-disclosure[open] > summary,
+  .atlas-legend-disclosure[open] > summary {
+    margin: 0;
+  }
+}
+@media print {
+  .atlas-list-disclosure::details-content,
+  .atlas-legend-disclosure::details-content {
+    display: contents;
+    content-visibility: visible;
+  }
+}

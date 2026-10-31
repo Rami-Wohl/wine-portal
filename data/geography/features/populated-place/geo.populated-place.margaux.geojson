@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.margaux",
+  "properties": {
+    "id": "geo.populated-place.margaux",
+    "kind": "populated-place",
+    "name_nl": "Margaux",
+    "name_en": "Margaux"
+  },
+  "bbox": [-0.67763081, 45.04201427, -0.67763081, 45.04201427],
+  "geometry": { "type": "Point", "coordinates": [-0.67763081, 45.04201427] }
+}

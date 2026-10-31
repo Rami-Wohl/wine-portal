@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.barsac",
+  "properties": {
+    "id": "geo.populated-place.barsac",
+    "kind": "populated-place",
+    "name_nl": "Barsac",
+    "name_en": "Barsac"
+  },
+  "bbox": [-0.31728451, 44.60786784, -0.31728451, 44.60786784],
+  "geometry": { "type": "Point", "coordinates": [-0.31728451, 44.60786784] }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.pauillac",
+  "properties": {
+    "id": "geo.populated-place.pauillac",
+    "kind": "populated-place",
+    "name_nl": "Pauillac",
+    "name_en": "Pauillac"
+  },
+  "bbox": [-0.7462981, 45.19951815, -0.7462981, 45.19951815],
+  "geometry": { "type": "Point", "coordinates": [-0.7462981, 45.19951815] }
+}

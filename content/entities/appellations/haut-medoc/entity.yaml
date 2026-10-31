@@ -50,5 +50,6 @@ source_refs:
   - source.crus-bourgeois-medoc-classification-2025
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.haut-medoc
 depth: foundation
 last_reviewed: 2026-09-09

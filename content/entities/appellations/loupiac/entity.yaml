@@ -39,5 +39,6 @@ source_refs:
   - source.boagri-loupiac-specification-2026
   - source.inrae-bordeaux-climate-adaptation
   - source.dgccrf-wine-labels-2025
+geography_id: geo.appellation-area.loupiac
 depth: foundation
 last_reviewed: 2026-09-13

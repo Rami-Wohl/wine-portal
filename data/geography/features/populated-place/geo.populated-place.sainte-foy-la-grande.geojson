@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.sainte-foy-la-grande",
+  "properties": {
+    "id": "geo.populated-place.sainte-foy-la-grande",
+    "kind": "populated-place",
+    "name_nl": "Sainte-Foy-la-Grande",
+    "name_en": "Sainte-Foy-la-Grande"
+  },
+  "bbox": [0.21503371, 44.84179873, 0.21503371, 44.84179873],
+  "geometry": { "type": "Point", "coordinates": [0.21503371, 44.84179873] }
+}

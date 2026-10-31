@@ -55,7 +55,7 @@
 }
 .mode-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-block: 1px solid var(--line-strong);
 }
 .mode-link {
@@ -78,6 +78,17 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+.mode-badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted-strong);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  vertical-align: middle;
 }
 .mode-link h2 {
   margin: 3rem 0 var(--space-heading-copy);

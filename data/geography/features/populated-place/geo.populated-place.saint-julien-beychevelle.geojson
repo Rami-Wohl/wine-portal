@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.saint-julien-beychevelle",
+  "properties": {
+    "id": "geo.populated-place.saint-julien-beychevelle",
+    "kind": "populated-place",
+    "name_nl": "Saint-Julien-Beychevelle",
+    "name_en": "Saint-Julien-Beychevelle"
+  },
+  "bbox": [-0.74095554, 45.1655576, -0.74095554, 45.1655576],
+  "geometry": { "type": "Point", "coordinates": [-0.74095554, 45.1655576] }
+}

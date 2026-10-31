@@ -47,11 +47,12 @@ Curriculumvoorbereiding (`LRN-013`) en alle acht tweetalige wijngaardlessen
 (`LRN-014–017`) zijn afgerond. Na de bestaande Pomerol-broncorrectie (`MNT-072`)
 krijgt inhoudelijk Learn-/Explore-werk voorrang, met nieuw curriculumvoorbereidend
 werk `LRN-018` en `EXP-027/028/032`. Onderhoud volgt proportioneel aan de content.
-Atlas (`MNT-002/013/014/070/071`) staat bewust achteraan in de aparte groep
-onderaan de actuele backlog; de afbakening `MNT-051` blijft historische research.
-Het [oude pilotcontract](atlas-pilot-contract.md) is geen actieve bouwopdracht.
+Atlas (`MNT-002/014/070/071`) is op de featurebranch `feat/attempt-at-atlas`
+afgerond volgens het [Atlas-contract](atlas-plan.md); het vervolg staat in
+`MNT-074–076`, `MNT-013` blijft geparkeerd en `MNT-051` blijft historische
+research. Op `main` geldt het uitstel tot de merge.
 De [feedbackvoorbereiding](feedback-roadmap.md) en platformgate `MNT-050`
-blijven eveneens geparkeerd, vóór Atlas maar zonder huidige uitvoeropdracht.
+blijven geparkeerd zonder huidige uitvoeropdracht.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
 de prioriteitswijziging; de regionale fase staat in een eigen `REG-*`-planning.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
@@ -352,19 +353,20 @@ zijn deze ronde niet inhoudelijk herbeoordeeld.
   2026-11-30; handmatig, geen automation. Bij een nieuwe advisory meteen triëren.
 - **Planning:** na het huidige contentwerk, zodra compatibel; Atlas blijft achteraan.
 
-## Geparkeerde Atlas — achteraan de backlog
+## Atlas — hervat op de featurebranch
 
-**Gebruikersbesluit 2026-10-30:** Atlas uitstellen en anders gaan ontwerpen.
-De huidige pagina, navigatie en styling zijn verwijderd. Geen automatische
-hervatting bij beschikbare data, een afgerond contentticket of regiogroei.
-Eerst Leren en Ontdekken; ook overige geparkeerde sporen staan vóór deze groep.
-Onderzoek blijft naslag. De oude pilot en onderstaande acceptatiecriteria zijn
-kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
+**Gebruikersbesluit 2026-10-30 (branch `feat/attempt-at-atlas`):** Atlas is
+gebouwd volgens het [Atlas-implementatiecontract](atlas-plan.md). Scope,
+acceptatiecriteria en fase per ticket staan in dat contract; de beschrijvingen
+hieronder bewaren de herkomst. MNT-070/071/002/014 zijn op 2026-10-31 afgerond
+([release-één-review](../editorial/atlas-release-one-review-2026-10-31.md));
+MNT-074–076 bevatten het vervolg; MNT-013 blijft geparkeerd. Op `main` blijft
+het uitstelbesluit gelden tot de merge.
 
 ### `MNT-070` — Minimaal geografiemodel en repositorygrens voor de Atlaspilot
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** knowledge-data, atlas-gis, engineering, testing
 - **Herkomst:** `QCR-2026-10-14-02`
 - **Scope:** de negen bestaande appellationidentities uit het
@@ -381,11 +383,17 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** geografierecord- en scènemodel (zod), pipelinevalidatie
+  in `content:check`, displaybuild met topologiebehoudende vereenvoudiging en
+  build-time projectie, server-only repository met previewschakelaar en
+  Nederlandse slugaliassen; acht scènes binnen budget (grootste 173 KiB gzip).
 
 ### `MNT-071` — INAO-Bordeauxsnapshot gecontroleerd importeren en publiceren
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** atlas-gis, research, engineering, testing
 - **Herkomst:** `QCR-2026-10-14-02`
 - **Scope:** vastgepinde SHP-versie 2026-10-12, negen reviewed identifierparen;
@@ -407,11 +415,17 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** 39 appellationgebieden (38 gepubliceerd, Côtes de
+  Bordeaux `held`), 8 rivieren, 9 waterlichamen, kustlijn en 29 plaatsen uit
+  INAO, IGN BD CARTO en Admin Express met volledige provenance en vastgepinde
+  ruwe responses; INAO-editie 2026-10-26 heeft lege sleutelvelden, zie `MNT-074`.
 
 ### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** atlas-gis, media
 - **Scope:** `region.bordeaux`
 - **Herkomst:** `QCR-2026-09-08-01`
@@ -434,11 +448,17 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** `/atlas`, `/en/atlas` en acht scèneroutes met
+  Bordeaux-overzicht, overlapkiezer, lijstalternatief als toetsenbordpad,
+  legenda, credits en berekende dekking; navigatie en home-ingang als
+  voorvertoning; inbedding op regio- en appellationpagina's na de summary.
 
 ### `MNT-014` — Grenzen van Barsac en Sauternes via Atlas
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** atlas-gis, media
 - **Scope:** `appellation.barsac`, `appellation.sauternes`
 - **Herkomst:** `QCR-2026-09-08-01`
@@ -459,6 +479,69 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** Barsac en Sauternes als afzonderlijke gebieden in
+  de Graves-Sauternais-scène, ingebed op beide appellationpagina's met
+  uitgelicht gebied en overlapkiezer; geen containment afgeleid.
+
+### `MNT-074` — Atlas-databronnen: INAO-sleutelvelden, Côtes de Bordeaux en niet-Franse appellations
+
+- **Status:** open
+- **Prioriteit:** middel; vóór het opheffen van de preview (`MNT-076`)
+- **Scope:** `data/geography/**`, geografische bronrecords in `data/sources/`
+- **Categorie:** atlas-gis, research
+- **Herkomst:** `QCR-2026-10-31-01`
+- **Bevinding:** de INAO-editie 2026-10-26 heeft in alle 1.852 records lege
+  sleutelvelden (`id_app`, `id_denom`, `app`, `signe`); identiteit steunt op
+  exacte denominatielabels plus het vastgepinde INAO-productregister. Het
+  appellationniveau van Côtes de Bordeaux mist de sector Sainte-Foy en staat
+  `held`. Port en Sherry hebben geen geverifieerde geometrie.
+- **Klaar wanneer:** een gecorrigeerde INAO-editie is herpind en met sleutelcontrole
+  opnieuw geïmporteerd, of het uitblijven is gedocumenteerd met een nieuwe
+  hercontroledatum; Côtes de Bordeaux is gepubliceerd of met bronbewijs
+  blijvend uitgesloten; voor Port en Sherry is een bronreview (licentie, CRS,
+  identiteit) gedaan of een eerlijke uitsluiting vastgelegd.
+- **Planning:** hercontrole INAO uiterlijk 2026-12-31; geen voorganger van content.
+- **Log:** 2026-10-31 — geregistreerd uit de release-één-review.
+
+### `MNT-075` — Atlas-presentatie: rivierlabels, vormtweelingen, smalle overzichtskaart en locator
+
+- **Status:** open
+- **Prioriteit:** laag; na gebruikersreview van de preview
+- **Scope:** `src/components/atlas/**`, `src/styles/atlas.css`, scènedefinities
+- **Categorie:** atlas-gis, media, engineering
+- **Herkomst:** `QCR-2026-10-31-01`
+- **Bevinding:** rivieren hebben geen naam langs de lijn; Graves Supérieures en
+  Saint-Émilion Grand Cru delen hun vorm met een andere appellation en openen
+  daardoor altijd de kiezer; het Bordeaux-overzicht is op 320 px druk (AOP Médoc
+  en AOP Entre-deux-Mers passen niet); zonder JavaScript benadert de
+  labelplanning brede schermen; er is geen locator-inzet.
+- **Klaar wanneer:** rivierlabels langs de lijn met botsingscontrole; een
+  afgesproken presentatie voor vormtweelingen; een labelstrategie voor het
+  overzicht op smalle schermen; een locator-inzet pas na eigen bronreview
+  (Natural Earth of IGN); printcontrole in echte browsers.
+- **Planning:** na `MNT-076` of op gebruikersverzoek.
+- **Log:** 2026-10-31 — geregistreerd uit de QA-browserronde.
+
+### `MNT-076` — Atlas-preview opheffen: releasegate, indexering en merge
+
+- **Status:** open
+- **Prioriteit:** gebruikersbesluit
+- **Scope:** `ATLAS_PREVIEW` in `src/content/geography.ts`, sitemap en metadata,
+  home-, About- en kopregelcopy
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-10-31-01`
+- **Bevinding:** alle Atlasroutes zijn `noindex` en buiten de sitemap zolang de
+  previewschakelaar aanstaat; home, About en de kopregels volgen dezelfde
+  schakelaar, zonder handgetypte dekkingsclaims.
+- **Klaar wanneer:** de gebruiker de preview heeft beoordeeld; `MNT-074` is
+  afgerond of bewust geaccepteerd; de schakelaar staat uit; `metadata.test.ts`
+  en `routing.test.ts` bevestigen de nieuwe stand; de volledige browsersuite
+  slaagt; de branch is naar `main` gemerged met bijgewerkte roadmap en
+  projectmap.
+- **Planning:** na de gebruikersdemo van release één.
+- **Log:** 2026-10-31 — geregistreerd uit de release-één-review.
 
 ### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
 

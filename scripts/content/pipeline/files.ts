@@ -11,6 +11,8 @@ import {
   contentPlanSchema,
   sourceSchema,
   mediaAssetSchema,
+  geographyRecordSchema,
+  sceneSchema,
   type MediaAsset,
 } from "../../../src/content/model";
 import type { LoadedRecord, LoadedContentRecords } from "./types";
@@ -64,6 +66,19 @@ async function discoverYamlFiles(directory: string): Promise<string[]> {
   }
 }
 
+async function discoverFlatYamlFiles(directory: string): Promise<string[]> {
+  try {
+    const entries = await readdir(directory, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isFile() && /\.ya?ml$/.test(entry.name))
+      .map((entry) => path.join(directory, entry.name))
+      .sort();
+  } catch (error) {
+    if (isNodeError(error) && error.code === "ENOENT") return [];
+    throw error;
+  }
+}
+
 export function isNodeError(error: unknown): error is NodeJS.ErrnoException {
   return typeof error === "object" && error !== null && "code" in error;
 }
@@ -104,15 +119,25 @@ export async function loadContentRecords(
   root: string,
   issues: string[],
 ): Promise<LoadedContentRecords> {
-  const [entityFiles, narrativeFiles, learningPathFiles, planFiles, sourceFiles, mediaFiles] =
-    await Promise.all([
-      discoverFiles(path.join(root, "content", "entities"), "entity.yaml"),
-      discoverFiles(path.join(root, "content", "narratives"), "narrative.yaml"),
-      discoverFiles(path.join(root, "content", "learning-paths"), "learning-path.yaml"),
-      discoverFiles(path.join(root, "content", "entities"), "content-plan.yaml"),
-      discoverYamlFiles(path.join(root, "data", "sources")),
-      discoverYamlFiles(path.join(root, "data", "media")),
-    ]);
+  const [
+    entityFiles,
+    narrativeFiles,
+    learningPathFiles,
+    planFiles,
+    sourceFiles,
+    mediaFiles,
+    geographyFiles,
+    sceneFiles,
+  ] = await Promise.all([
+    discoverFiles(path.join(root, "content", "entities"), "entity.yaml"),
+    discoverFiles(path.join(root, "content", "narratives"), "narrative.yaml"),
+    discoverFiles(path.join(root, "content", "learning-paths"), "learning-path.yaml"),
+    discoverFiles(path.join(root, "content", "entities"), "content-plan.yaml"),
+    discoverYamlFiles(path.join(root, "data", "sources")),
+    discoverYamlFiles(path.join(root, "data", "media")),
+    discoverYamlFiles(path.join(root, "data", "geography", "features")),
+    discoverFlatYamlFiles(path.join(root, "data", "geography", "scenes")),
+  ]);
   const [
     entityRecords,
     narrativeRecords,
@@ -120,6 +145,8 @@ export async function loadContentRecords(
     planRecords,
     sourceRecords,
     mediaRecords,
+    geographyRecords,
+    sceneRecords,
   ] = await Promise.all([
     loadYamlRecords(entityFiles, entitySchema, root, issues),
     loadYamlRecords(narrativeFiles, narrativeSchema, root, issues),
@@ -127,6 +154,8 @@ export async function loadContentRecords(
     loadYamlRecords(planFiles, contentPlanSchema, root, issues),
     loadYamlRecords(sourceFiles, sourceSchema, root, issues),
     loadYamlRecords(mediaFiles, mediaAssetSchema, root, issues),
+    loadYamlRecords(geographyFiles, geographyRecordSchema, root, issues),
+    loadYamlRecords(sceneFiles, sceneSchema, root, issues),
   ]);
 
   return {
@@ -136,6 +165,8 @@ export async function loadContentRecords(
     planRecords,
     sourceRecords,
     mediaRecords,
+    geographyRecords,
+    sceneRecords,
   };
 }
 export async function validateMediaFiles(
@@ -187,6 +218,21 @@ async function removeRetiredGeneratedFiles(outputDirectory: string): Promise<voi
   );
 }
 
+/** Write through a temporary file and rename, so a reader sees the old or the new file. */
+export async function writeAtomically(destination: string, contents: string): Promise<void> {
+  await mkdir(path.dirname(destination), { recursive: true });
+  const temporary = `${destination}.${randomUUID()}.tmp`;
+  try {
+    await writeFile(temporary, contents, "utf8");
+    // A server must see a complete old or new snapshot, never a truncated JSON file.
+    await rename(temporary, destination);
+  } finally {
+    await unlink(temporary).catch((error: unknown) => {
+      if (!isNodeError(error) || error.code !== "ENOENT") throw error;
+    });
+  }
+}
+
 export async function writeGeneratedFiles(
   outputDirectory: string,
   outputs: Record<string, string>,
@@ -194,18 +240,8 @@ export async function writeGeneratedFiles(
   await mkdir(outputDirectory, { recursive: true });
   await removeRetiredGeneratedFiles(outputDirectory);
   await Promise.all(
-    Object.entries(outputs).map(async ([filename, contents]) => {
-      const destination = path.join(outputDirectory, filename);
-      const temporary = `${destination}.${randomUUID()}.tmp`;
-      try {
-        await writeFile(temporary, contents, "utf8");
-        // A server must see a complete old or new snapshot, never a truncated JSON file.
-        await rename(temporary, destination);
-      } finally {
-        await unlink(temporary).catch((error: unknown) => {
-          if (!isNodeError(error) || error.code !== "ENOENT") throw error;
-        });
-      }
-    }),
+    Object.entries(outputs).map(([filename, contents]) =>
+      writeAtomically(path.join(outputDirectory, filename), contents),
+    ),
   );
 }

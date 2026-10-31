@@ -1,13 +1,29 @@
 import { BRAND, SITE_URL } from "@/config/brand";
 import { DISCOVERY_CATEGORIES } from "@/content/discovery";
+import {
+  ATLAS_PREVIEW,
+  atlasSceneHref,
+  getAtlasSceneSummaries,
+  getPublishedAtlasSceneSummaries,
+} from "@/content/geography";
 import { entityPresentationMode } from "@/content/model";
-import { getAllEntities, getAllLearningPaths, getAllNarratives } from "@/content/repository";
+import {
+  getAllEntities,
+  getAllLearningPaths,
+  getAllNarratives,
+  getEntityById,
+} from "@/content/repository";
 import { entityHref, learningPathHref, narrativeHref } from "@/content/routing";
 import { describe, expect, it } from "vitest";
 import {
   generateMetadata as generateEntityMetadata,
   generateStaticParams as generateEntityStaticParams,
 } from "./[lang]/[entityType]/[slug]/page";
+import { generateMetadata as generateAtlasMetadata } from "./[lang]/atlas/page";
+import {
+  generateMetadata as generateAtlasSceneMetadata,
+  generateStaticParams as generateAtlasSceneStaticParams,
+} from "./[lang]/atlas/[scene]/page";
 import { generateMetadata as generateRootMetadata } from "./[lang]/layout";
 import {
   generateMetadata as generateLearningPathMetadata,
@@ -51,7 +67,19 @@ describe("application metadata", () => {
       expect(paths.has(`/explore/${category.route_segment}`)).toBe(true);
     }
     expect(paths.has("/search")).toBe(false);
-    expect(paths.has("/atlas")).toBe(false);
+    // While Atlas is a preview no Atlas route is listed, whatever scenes exist; this matches
+    // the noindex metadata and flips together with it at the phase 3 release gate.
+    const publishedScenes = getPublishedAtlasSceneSummaries();
+    if (ATLAS_PREVIEW) {
+      expect(Array.from(paths).filter((path) => /^\/(?:en\/)?atlas(?:\/|$)/.test(path))).toEqual(
+        [],
+      );
+    } else {
+      expect(paths.has("/atlas")).toBe(publishedScenes.length > 0);
+      for (const scene of getAtlasSceneSummaries()) {
+        expect(paths.has(atlasSceneHref(scene.slug))).toBe(publishedScenes.includes(scene));
+      }
+    }
     for (const entity of getAllEntities()) {
       expect(paths.has(entityHref(entity))).toBe(
         entity.status === "active" && entityPresentationMode(entity) === "monograph",
@@ -119,6 +147,63 @@ describe("application metadata", () => {
         params: Promise.resolve({ lang: "nl", narrativeType: "lessons", slug: "unknown" }),
       }),
     ).resolves.toEqual({});
+  });
+
+  it("generates Atlas params for every scene and keeps the preview out of the index", async () => {
+    const scenes = getAtlasSceneSummaries();
+    // Both route slugs are prebuilt: the English one and the owner's Dutch alias.
+    expect(generateAtlasSceneStaticParams()).toEqual(
+      scenes.flatMap((scene) =>
+        Array.from(new Set([scene.slug, getEntityById(scene.owner)?.slugs.nl ?? scene.slug])).map(
+          (slug) => ({ scene: slug }),
+        ),
+      ),
+    );
+    await expect(
+      generateAtlasSceneMetadata({ params: Promise.resolve({ lang: "nl", scene: "unknown" }) }),
+    ).resolves.toEqual({});
+    const overview = await generateAtlasMetadata({ params: Promise.resolve({ lang: "en" }) });
+    const published = getPublishedAtlasSceneSummaries();
+    const noindex = { index: false, follow: true };
+    // Indexability and SEO language alternates are coupled: a noindex page carries only its
+    // canonical, like entity routes (docs/localization-routing.md §4).
+    const overviewIndexable = !ATLAS_PREVIEW && published.length > 0;
+    expect(overview.robots).toEqual(overviewIndexable ? undefined : noindex);
+    expect(overview.alternates).toEqual(
+      overviewIndexable
+        ? {
+            canonical: "/en/atlas",
+            languages: { nl: "/atlas", en: "/en/atlas", "x-default": "/atlas" },
+          }
+        : { canonical: "/en/atlas" },
+    );
+    for (const scene of scenes) {
+      const metadata = await generateAtlasSceneMetadata({
+        params: Promise.resolve({ lang: "nl", scene: scene.slug }),
+      });
+      expect(metadata.description).not.toMatch(/scene\.|geo\.|region\./);
+      const alias = getEntityById(scene.owner)?.slugs.nl;
+      if (alias && alias !== scene.slug) {
+        const aliased = await generateAtlasSceneMetadata({
+          params: Promise.resolve({ lang: "nl", scene: alias }),
+        });
+        expect(aliased.alternates?.canonical).toBe(`/atlas/${scene.slug}`);
+      }
+      if (!ATLAS_PREVIEW && published.includes(scene)) {
+        expect(metadata.robots).toBeUndefined();
+        expect(metadata.alternates).toEqual({
+          canonical: `/atlas/${scene.slug}`,
+          languages: {
+            nl: `/atlas/${scene.slug}`,
+            en: `/en/atlas/${scene.slug}`,
+            "x-default": `/atlas/${scene.slug}`,
+          },
+        });
+      } else {
+        expect(metadata.robots).toEqual(noindex);
+        expect(metadata.alternates).toEqual({ canonical: `/atlas/${scene.slug}` });
+      }
+    }
   });
 
   it("publishes only active learning-path routes", async () => {

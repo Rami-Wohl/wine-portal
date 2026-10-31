@@ -1,0 +1,55 @@
+# Scene definition (docs/atlas-plan.md §5). Drawing order is the layer order; within the
+# selectable layer the build draws larger areas first. Coverage is computed from intended_entities.
+id: scene.medoc
+owner: region.medoc
+extent:
+  mode: fit
+  padding: 0.08
+projection: mercator
+layers:
+  - id: context
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.bordeaux
+    role: context
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.medoc
+      - geo.appellation-area.haut-medoc
+      - geo.appellation-area.saint-estephe
+      - geo.appellation-area.pauillac
+      - geo.appellation-area.saint-julien
+      - geo.appellation-area.listrac-medoc
+      - geo.appellation-area.moulis-en-medoc
+      - geo.appellation-area.margaux
+    role: selectable
+  - id: water
+    kinds: [coastline, water-body, river]
+    features:
+      - geo.coastline.gironde-atlantic
+      - geo.water-body.gironde-estuary
+      - geo.water-body.lac-d-hourtin
+      - geo.water-body.lac-de-carcans
+      - geo.water-body.lac-de-lacanau
+      - geo.river.garonne
+      - geo.river.dordogne
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.lesparre-medoc
+      - geo.populated-place.saint-estephe
+      - geo.populated-place.pauillac
+      - geo.populated-place.saint-julien-beychevelle
+      - geo.populated-place.margaux
+      - geo.populated-place.blaye
+      - geo.populated-place.bordeaux
+intended_entities:
+  - appellation.medoc
+  - appellation.haut-medoc
+  - appellation.saint-estephe
+  - appellation.pauillac
+  - appellation.saint-julien
+  - appellation.listrac-medoc
+  - appellation.moulis-en-medoc
+  - appellation.margaux

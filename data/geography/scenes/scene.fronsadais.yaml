@@ -1,0 +1,33 @@
+# Scene definition (docs/atlas-plan.md §5). Drawing order is the layer order; within the
+# selectable layer the build draws larger areas first. Coverage is computed from intended_entities.
+id: scene.fronsadais
+owner: region.fronsadais
+extent:
+  mode: fit
+  padding: 0.1
+projection: mercator
+layers:
+  - id: context
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.bordeaux
+    role: context
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.fronsac
+      - geo.appellation-area.canon-fronsac
+    role: selectable
+  - id: water
+    kinds: [river]
+    features:
+      - geo.river.dordogne
+      - geo.river.isle
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.fronsac
+      - geo.populated-place.libourne
+intended_entities:
+  - appellation.fronsac
+  - appellation.canon-fronsac

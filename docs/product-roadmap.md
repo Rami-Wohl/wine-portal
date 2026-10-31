@@ -26,6 +26,11 @@ De Atlaspagina, navigatielinks, home-ingang en specifieke styling zijn verwijder
 Geen Atlasvoorbereiding, geografiemodel, import of kaartwerk als voorwaarde
 voor nieuwe lessen, cataloguspagina's of regionale content.
 
+**Featurebranch `feat/attempt-at-atlas` (besluit 2026-10-30):** op deze branch
+wordt Atlas wél gebouwd, volgens het [Atlas-implementatiecontract](atlas-plan.md).
+De Atlastickets zijn daar met nieuwe scope hervat; de content-eerst-volgorde voor
+Leren en Ontdekken op `main` verandert daardoor niet.
+
 De afbakening uit MNT-051 blijft afgeronde research. Het
 [oude pilotvoorstel](atlas-pilot-contract.md) is **geen actief implementatiecontract**.
 De vijf overgebleven Atlastickets staan onderaan, na alle overige werksporen.
@@ -60,7 +65,7 @@ en hercontrole van bronversies, rechten en bruikbaarheid. Geen automatische herv
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-60 niet-afgeronde tickets: 17 onderhoudsacties, 3 Explore-tickets, 5 regionale
+59 niet-afgeronde tickets: 16 onderhoudsacties, 3 Explore-tickets, 5 regionale
 planning-/publicatietickets, 2 Learn-tickets en 33 feedbacktickets. LRN-018 is
 nieuw toegevoegd zodat Leren een concreet vervolg heeft naast gebruiksevaluatie.
 Beslispunten zijn gates, geen extra implementatietickets; toekomstige authoringbatches
@@ -119,20 +124,25 @@ uitsluitend op expliciet prioriteitsbesluit, in deze volgorde:
 | 2 | `FBK-026–031` | Selectie, Mijn meldingen, versieverschil, correctielog, opt-in-credit en GitHubkoppeling |
 | 3 | `FBK-032–034` | Vertrouwde bijdragers en Learn-sync; sync wacht op LRN-012 en DEC-FBK-019 |
 
-## Atlas — achteraan, uitsluitend na nieuwe ontwerpkeuze
+## Atlas — hervat op de featurebranch
 
-Alle vijf tickets zijn **geparkeerd**, ook als hun oude datablokkade oplost.
-Onderstaande volgorde is alleen een historisch aanknopingspunt; eerst opnieuw
-ontwerpen en bepalen welke tickets nog passen. Het negen-appellationvoorstel
-is geen vastgelegde toekomstkeuze.
+Op `feat/attempt-at-atlas` is release één gebouwd volgens het
+[Atlas-implementatiecontract](atlas-plan.md): SVG-scènes uit geverifieerde lagen,
+Bordeaux-cluster plus Champagne, regio's als appellationmozaïek zonder eigen
+omtrek. De vier hervatte tickets zijn op 2026-10-31 afgerond
+([review](../editorial/atlas-release-one-review-2026-10-31.md)); de preview
+blijft `noindex` tot `MNT-076`. MNT-013 blijft geparkeerd tot een eigen datasetreview.
 
-| Eerder verband | Ticket | Te herbeoordelen richting |
+| Fase | Ticket | Stand |
 | ---: | --- | --- |
-| 1 | `MNT-070` | Geografiemodel en repositorygrens |
-| 2 | `MNT-071` | Gecontroleerde data-import en publicatiereview |
-| 3 | `MNT-002` | Publieke Atlas-/Bordeauxkaart |
-| 4 | `MNT-014` | Kaartintegratie Barsac/Sauternes |
-| 5 | `MNT-013` | Wereldwijde druivenverspreidingsdata |
+| 2 | `MNT-070` | Afgerond: geografierecord- en scènemodel, pipelinevalidatie, displaybuild, server-only repository |
+| 2 | `MNT-071` | Afgerond: 86 geverifieerde features uit INAO en IGN met provenance; vervolg in `MNT-074` |
+| 3 | `MNT-002` | Afgerond: Atlas-routes, overzichtsscène, kiezer, lijst, legenda, navigatie en home als voorvertoning |
+| 3 | `MNT-014` | Afgerond: Barsac en Sauternes afzonderlijk ingebed met overlapkiezer |
+| 4 | `MNT-074` | Open: INAO-herpin bij gecorrigeerde editie, Côtes de Bordeaux, bronreview Port en Sherry |
+| 4 | `MNT-075` | Open: rivierlabels, vormtweelingen, smalle overzichtskaart, locator-inzet, print |
+| 4 | `MNT-076` | Open, gebruikersbesluit: preview opheffen, indexering en merge naar `main` |
+| 4 | `MNT-013` | Geparkeerd; wereldwijde druivenverspreiding vereist eigen dataset en kaartconventie |
 
 Status en acceptatiecriteria staan in de [onderhoudsbacklog](maintenance-backlog.md),
 [Explore-roadmap](explore-foundation-roadmap.md), [Learn-roadmap](learn-roadmap.md),

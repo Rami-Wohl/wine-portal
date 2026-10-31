@@ -34,5 +34,6 @@ source_refs:
   - source.inao-lussac-saint-emilion-overview
   - source.inao-lussac-saint-emilion-specification-2024
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.lussac-saint-emilion
 depth: foundation
 last_reviewed: 2026-09-13

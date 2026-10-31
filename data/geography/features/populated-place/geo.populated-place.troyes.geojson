@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.troyes",
+  "properties": {
+    "id": "geo.populated-place.troyes",
+    "kind": "populated-place",
+    "name_nl": "Troyes",
+    "name_en": "Troyes"
+  },
+  "bbox": [4.07398934, 48.29765995, 4.07398934, 48.29765995],
+  "geometry": { "type": "Point", "coordinates": [4.07398934, 48.29765995] }
+}

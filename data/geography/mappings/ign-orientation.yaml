@@ -1,0 +1,707 @@
+# Reviewed orientation features for Atlas scenes: rivers, water bodies, coastline and
+# populated places (docs/atlas-plan.md §4 and §6). scripts/geography/import.ts reads this table.
+#
+# Every entry names the committed raw WFS response it is built from (data/geography/manifest.yaml,
+# `storage: raw`) and the selection rule the import re-applies to that response. Selection is by
+# source attribute values, never by feature position. Rivers and the coastline come as BD CARTO
+# segments: all segments whose attribute equals one of the listed values and that intersect the
+# envelope (whole features, no clipping) are kept, in `cleabs` order, as one MultiLineString.
+# Water bodies are single BD CARTO plan_d_eau objects identified by `cleabs`. Populated places are
+# ADMIN EXPRESS COG 2026 chef-lieu points identified by the commune's INSEE code; the import
+# verifies the dataset's official name against `expect` before writing the point.
+#
+# Names: the dataset's own toponym spelling is kept in the notes; `names` are the localized
+# labels, which only differ from the source name where Dutch or English usage differs
+# (estuary, coastline). A merged commune keeps the chef-lieu locality name the reader knows
+# (Margaux for Margaux-Cantenac) because the point is that locality; Cadillac is labelled by
+# its current official name Cadillac-sur-Garonne.
+reviewed_at: 2026-10-31
+entries:
+  # --- Bordeaux cluster: rivers (BD CARTO® V5 troncon_hydrographique) ---
+  - id: geo.river.garonne
+    kind: river
+    names: { nl: Garonne, en: Garonne }
+    resource: ign-bdcarto-river-garonne-bordeaux
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["la Garonne", "Fleuve la Garonne"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: >-
+        349 BD CARTO segments inside the Bordeaux envelope. INAO-independent IGN toponyms: "la
+        Garonne" upstream and "Fleuve la Garonne" for the last tidal stretch before the Bec
+        d'Ambès (26 segments), both kept; segments with other toponyms, such as side arms named
+        "Bras …" and the Canal latéral à la Garonne, are not requested. Segments of nature other
+        than natural flow are kept when they carry the river's name.
+  - id: geo.river.dordogne
+    kind: river
+    names: { nl: Dordogne, en: Dordogne }
+    resource: ign-bdcarto-river-dordogne-bordeaux
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["la Dordogne"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: >-
+        307 BD CARTO segments named "la Dordogne" inside the Bordeaux envelope, down to the Bec
+        d'Ambès; no side-arm names exist for this stretch in the source.
+  - id: geo.river.isle
+    kind: river
+    names: { nl: Isle, en: Isle }
+    resource: ign-bdcarto-river-isle-bordeaux
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["l'Isle"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: >-
+        548 BD CARTO segments named "l'Isle" inside the Bordeaux envelope, including secondary
+        arms the source names identically; segments with other toponyms, such as "Bras de l'Isle",
+        are not requested. The Isle joins the Dordogne at Libourne.
+  - id: geo.river.ciron
+    kind: river
+    names: { nl: Ciron, en: Ciron }
+    resource: ign-bdcarto-river-ciron-bordeaux
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["le Ciron"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: >-
+        275 BD CARTO segments named "le Ciron" inside the Bordeaux envelope; the Ciron joins the
+        Garonne between Barsac and Preignac and matters for orienting the Sauternais.
+  # --- Bordeaux cluster: water bodies and coastline ---
+  - id: geo.water-body.gironde-estuary
+    kind: water-body
+    names: { nl: Gironde-estuarium, en: Gironde estuary }
+    resource: ign-bdcarto-water-gironde-estuary
+    select:
+      property: toponyme
+      values: ["la Gironde"]
+      cleabs: PLANDEAU0000002292062751
+    geometry: MultiPolygon
+    meaning: estuary-water-surface
+    review:
+      status: published
+      notes: >-
+        One BD CARTO plan_d_eau object of nature "Estuaire" named "la Gironde", from the Bec
+        d'Ambès to the Pointe de Grave. Surface at the source's cartographic generalisation; not a
+        tidal or navigation limit.
+  - id: geo.water-body.lac-d-hourtin
+    kind: water-body
+    names: { nl: Lac d'Hourtin, en: Lac d'Hourtin }
+    resource: ign-bdcarto-water-lac-d-hourtin
+    select:
+      property: toponyme
+      values: ["Lac d'Hourtin"]
+      cleabs: PLANDEAU0000002000784182
+    geometry: MultiPolygon
+    meaning: lake-water-surface
+    review:
+      status: published
+      notes: >-
+        One BD CARTO plan_d_eau object of nature "Lac". The source splits the Hourtin-Carcans lake
+        into two named objects; both are imported as separate records.
+  - id: geo.water-body.lac-de-carcans
+    kind: water-body
+    names: { nl: Lac de Carcans, en: Lac de Carcans }
+    resource: ign-bdcarto-water-lac-de-carcans
+    select:
+      property: toponyme
+      values: ["Lac de Carcans"]
+      cleabs: PLANDEAU0000002000784193
+    geometry: MultiPolygon
+    meaning: lake-water-surface
+    review:
+      status: published
+      notes: >-
+        One BD CARTO plan_d_eau object of nature "Lac", the southern part of the Hourtin-Carcans
+        lake as the source names it.
+  - id: geo.water-body.lac-de-lacanau
+    kind: water-body
+    names: { nl: Lac de Lacanau, en: Lac de Lacanau }
+    resource: ign-bdcarto-water-lac-de-lacanau
+    select:
+      property: toponyme
+      values: ["Lac de Lacanau"]
+      cleabs: PLANDEAU0000002000784208
+    geometry: MultiPolygon
+    meaning: lake-water-surface
+    review:
+      status: published
+      notes: One BD CARTO plan_d_eau object of nature "Lac".
+  - id: geo.water-body.lac-de-cazaux-et-sanguinet
+    kind: water-body
+    names: { nl: Lac de Cazaux et de Sanguinet, en: Lac de Cazaux et de Sanguinet }
+    resource: ign-bdcarto-water-lac-de-cazaux-et-sanguinet
+    select:
+      property: toponyme
+      values: ["Lac de Cazaux et Sanguinet"]
+      cleabs: PLANDEAU0000002000784178
+    geometry: MultiPolygon
+    meaning: lake-water-surface
+    review:
+      status: published
+      notes: >-
+        One BD CARTO plan_d_eau object of nature "Lac", at the southern edge of the Bordeaux
+        envelope; the source spells it "Lac de Cazaux et Sanguinet".
+  - id: geo.coastline.gironde-atlantic
+    kind: coastline
+    names: { nl: Atlantische kust, en: Atlantic coast }
+    resource: ign-bdcarto-coastline-bordeaux
+    select:
+      property: niveau
+      values: ["Plus hautes eaux"]
+      type_de_limite: null
+    geometry: MultiLineString
+    meaning: high-water-shoreline-segments
+    review:
+      status: published
+      notes: >-
+        217 BD CARTO limite_terre_mer segments inside the Bordeaux envelope with niveau "Plus
+        hautes eaux" (high-water line) and no type_de_limite, which excludes the legal limits
+        (salinity, maritime affairs, transverse limit of the sea) and the low-water line. Covers
+        the Médoc Atlantic shore, the Arcachon basin and the estuary shores up to the salinity
+        limit; whole segments are kept, so the line runs a few kilometres beyond the envelope.
+  # --- Bordeaux cluster: populated places (ADMIN EXPRESS COG 2026 chef_lieu_de_commune) ---
+  - id: geo.populated-place.bordeaux
+    kind: populated-place
+    names: { nl: Bordeaux, en: Bordeaux }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33063"],
+        expect: { nom_officiel: Bordeaux, nom_du_chef_lieu: Bordeaux },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Bordeaux (INSEE 33063). }
+  - id: geo.populated-place.pauillac
+    kind: populated-place
+    names: { nl: Pauillac, en: Pauillac }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33314"],
+        expect: { nom_officiel: Pauillac, nom_du_chef_lieu: Pauillac },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Pauillac (INSEE 33314). }
+  - id: geo.populated-place.saint-estephe
+    kind: populated-place
+    names: { nl: Saint-Estèphe, en: Saint-Estèphe }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33395"],
+        expect: { nom_officiel: Saint-Estèphe, nom_du_chef_lieu: Canteloup },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      status: published
+      notes: >-
+        Chef-lieu point of the commune of Saint-Estèphe (INSEE 33395); the source names the
+        chef-lieu locality "Canteloup". The label uses the commune name.
+  - id: geo.populated-place.saint-julien-beychevelle
+    kind: populated-place
+    names: { nl: Saint-Julien-Beychevelle, en: Saint-Julien-Beychevelle }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33423"],
+        expect:
+          { nom_officiel: Saint-Julien-Beychevelle, nom_du_chef_lieu: Saint-Julien-Beychevelle },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      {
+        status: published,
+        notes: Chef-lieu point of the commune of Saint-Julien-Beychevelle (INSEE 33423).,
+      }
+  - id: geo.populated-place.margaux
+    kind: populated-place
+    names: { nl: Margaux, en: Margaux }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33268"],
+        expect: { nom_officiel: Margaux-Cantenac, nom_du_chef_lieu: Margaux },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      status: published
+      notes: >-
+        Chef-lieu point of the commune nouvelle Margaux-Cantenac (INSEE 33268); the source names
+        the chef-lieu locality "Margaux", which is the label. Margaux is no longer a commune of
+        its own.
+  - id: geo.populated-place.lesparre-medoc
+    kind: populated-place
+    names: { nl: Lesparre-Médoc, en: Lesparre-Médoc }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33240"],
+        expect: { nom_officiel: Lesparre-Médoc, nom_du_chef_lieu: Lesparre-Médoc },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      { status: published, notes: Chef-lieu point of the commune of Lesparre-Médoc (INSEE 33240). }
+  - id: geo.populated-place.libourne
+    kind: populated-place
+    names: { nl: Libourne, en: Libourne }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33243"],
+        expect: { nom_officiel: Libourne, nom_du_chef_lieu: Libourne },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Libourne (INSEE 33243). }
+  - id: geo.populated-place.saint-emilion
+    kind: populated-place
+    names: { nl: Saint-Émilion, en: Saint-Émilion }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33394"],
+        expect: { nom_officiel: Saint-Émilion, nom_du_chef_lieu: Saint-Émilion },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      { status: published, notes: Chef-lieu point of the commune of Saint-Émilion (INSEE 33394). }
+  - id: geo.populated-place.pomerol
+    kind: populated-place
+    names: { nl: Pomerol, en: Pomerol }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33328"],
+        expect: { nom_officiel: Pomerol, nom_du_chef_lieu: Trochau },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      status: published
+      notes: >-
+        Chef-lieu point of the commune of Pomerol (INSEE 33328); the source names the chef-lieu
+        locality "Trochau". The label uses the commune name.
+  - id: geo.populated-place.fronsac
+    kind: populated-place
+    names: { nl: Fronsac, en: Fronsac }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33174"],
+        expect: { nom_officiel: Fronsac, nom_du_chef_lieu: Fronsac },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Fronsac (INSEE 33174). }
+  - id: geo.populated-place.castillon-la-bataille
+    kind: populated-place
+    names: { nl: Castillon-la-Bataille, en: Castillon-la-Bataille }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33108"],
+        expect: { nom_officiel: Castillon-la-Bataille, nom_du_chef_lieu: Castillon-la-Bataille },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      {
+        status: published,
+        notes: Chef-lieu point of the commune of Castillon-la-Bataille (INSEE 33108).,
+      }
+  - id: geo.populated-place.langon
+    kind: populated-place
+    names: { nl: Langon, en: Langon }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33227"],
+        expect: { nom_officiel: Langon, nom_du_chef_lieu: Langon },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Langon (INSEE 33227). }
+  - id: geo.populated-place.cadillac-sur-garonne
+    kind: populated-place
+    names: { nl: Cadillac-sur-Garonne, en: Cadillac-sur-Garonne }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33081"],
+        expect: { nom_officiel: Cadillac-sur-Garonne, nom_du_chef_lieu: Cadillac-sur-Garonne },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      status: published
+      notes: >-
+        Chef-lieu point of the commune of Cadillac-sur-Garonne (INSEE 33081), the current official
+        name of the town of Cadillac; the appellations keep the name Cadillac.
+  - id: geo.populated-place.sauternes
+    kind: populated-place
+    names: { nl: Sauternes, en: Sauternes }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33504"],
+        expect: { nom_officiel: Sauternes, nom_du_chef_lieu: Sauternes },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Sauternes (INSEE 33504). }
+  - id: geo.populated-place.barsac
+    kind: populated-place
+    names: { nl: Barsac, en: Barsac }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33030"],
+        expect: { nom_officiel: Barsac, nom_du_chef_lieu: Barsac },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Barsac (INSEE 33030). }
+  - id: geo.populated-place.podensac
+    kind: populated-place
+    names: { nl: Podensac, en: Podensac }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33327"],
+        expect: { nom_officiel: Podensac, nom_du_chef_lieu: Podensac },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Podensac (INSEE 33327). }
+  - id: geo.populated-place.blaye
+    kind: populated-place
+    names: { nl: Blaye, en: Blaye }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33058"],
+        expect: { nom_officiel: Blaye, nom_du_chef_lieu: Blaye },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Blaye (INSEE 33058). }
+  - id: geo.populated-place.bourg
+    kind: populated-place
+    names: { nl: Bourg, en: Bourg }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33067"],
+        expect: { nom_officiel: Bourg, nom_du_chef_lieu: Bourg },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      status: published
+      notes: Chef-lieu point of the commune of Bourg, Gironde (INSEE 33067), also known as Bourg-sur-Gironde.
+  - id: geo.populated-place.la-reole
+    kind: populated-place
+    names: { nl: La Réole, en: La Réole }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33352"],
+        expect: { nom_officiel: La Réole, nom_du_chef_lieu: La Réole },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of La Réole (INSEE 33352). }
+  - id: geo.populated-place.sainte-foy-la-grande
+    kind: populated-place
+    names: { nl: Sainte-Foy-la-Grande, en: Sainte-Foy-la-Grande }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33402"],
+        expect: { nom_officiel: Sainte-Foy-la-Grande, nom_du_chef_lieu: Sainte-Foy-la-Grande },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      {
+        status: published,
+        notes: Chef-lieu point of the commune of Sainte-Foy-la-Grande (INSEE 33402).,
+      }
+  - id: geo.populated-place.creon
+    kind: populated-place
+    names: { nl: Créon, en: Créon }
+    resource: ign-adminexpress-places-bordeaux
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["33140"],
+        expect: { nom_officiel: Créon, nom_du_chef_lieu: Créon },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Créon (INSEE 33140). }
+  # --- Champagne: rivers ---
+  - id: geo.river.marne
+    kind: river
+    names: { nl: Marne, en: Marne }
+    resource: ign-bdcarto-river-marne-champagne
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["la Marne"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: >-
+        1,049 BD CARTO segments named "la Marne" inside the Champagne envelope, including the
+        secondary arms the source names identically; segments with other toponyms, such as "Bras
+        de la Marne" and the canals, are not requested.
+  - id: geo.river.aube
+    kind: river
+    names: { nl: Aube, en: Aube }
+    resource: ign-bdcarto-river-aube-champagne
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["l'Aube"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: >-
+        1,018 BD CARTO segments named "l'Aube" inside the Champagne envelope; "Bras de l'Aube",
+        "l'Aubette" and "l'Aubetin" carry other toponyms and are not requested.
+  - id: geo.river.seine
+    kind: river
+    names: { nl: Seine, en: Seine }
+    resource: ign-bdcarto-river-seine-champagne
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["la Seine"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: >-
+        1,240 BD CARTO segments named "la Seine" inside the Champagne envelope (Aube department
+        and the upper course); segments with other toponyms, such as "Bras de la Seine" and "la Petite Seine", are not
+        requested.
+  - id: geo.river.vesle
+    kind: river
+    names: { nl: Vesle, en: Vesle }
+    resource: ign-bdcarto-river-vesle-champagne
+    select:
+      property: cpx_toponyme_de_cours_d_eau
+      values: ["la Vesle"]
+    geometry: MultiLineString
+    meaning: watercourse-centreline-segments
+    review:
+      status: published
+      notes: 248 BD CARTO segments named "la Vesle" inside the Champagne envelope; the Vesle flows through Reims.
+  # --- Champagne: reservoir lakes ---
+  - id: geo.water-body.lac-du-der-chantecoq
+    kind: water-body
+    names: { nl: Lac du Der-Chantecoq, en: Lac du Der-Chantecoq }
+    resource: ign-bdcarto-water-lac-du-der-chantecoq
+    select:
+      property: toponyme
+      values: ["Lac du Der-Chantecoq"]
+      cleabs: PLANDEAU0000002000761196
+    geometry: MultiPolygon
+    meaning: reservoir-water-surface
+    review:
+      status: published
+      notes: One BD CARTO plan_d_eau object of nature "Retenue-digue" (the Marne reservoir).
+  - id: geo.water-body.lac-d-orient
+    kind: water-body
+    names: { nl: Lac d'Orient, en: Lac d'Orient }
+    resource: ign-bdcarto-water-lac-d-orient
+    select:
+      property: toponyme
+      values: ["Lac d'Orient (Réservoir Seine)"]
+      cleabs: PLANDEAU0000002000761613
+    geometry: MultiPolygon
+    meaning: reservoir-water-surface
+    review:
+      status: published
+      notes: One BD CARTO plan_d_eau object of nature "Retenue-digue", named "Lac d'Orient (Réservoir Seine)" in the source.
+  - id: geo.water-body.lac-d-auzon-temple
+    kind: water-body
+    names: { nl: Lac d'Auzon-Temple, en: Lac d'Auzon-Temple }
+    resource: ign-bdcarto-water-lac-d-auzon-temple
+    select:
+      property: toponyme
+      values: ["Lac d'Auzon-Temple (Réservoir Aube)"]
+      cleabs: PLANDEAU0000002000761426
+    geometry: MultiPolygon
+    meaning: reservoir-water-surface
+    review:
+      status: published
+      notes: One BD CARTO plan_d_eau object of nature "Retenue-digue", named "Lac d'Auzon-Temple (Réservoir Aube)" in the source.
+  - id: geo.water-body.lac-d-amance
+    kind: water-body
+    names: { nl: Lac d'Amance, en: Lac d'Amance }
+    resource: ign-bdcarto-water-lac-d-amance
+    select:
+      property: toponyme
+      values: ["Lac d'Amance (Réservoir Aube)"]
+      cleabs: PLANDEAU0000002000761531
+    geometry: MultiPolygon
+    meaning: reservoir-water-surface
+    review:
+      status: published
+      notes: One BD CARTO plan_d_eau object of nature "Retenue-digue", named "Lac d'Amance (Réservoir Aube)" in the source.
+  # --- Champagne: populated places ---
+  - id: geo.populated-place.reims
+    kind: populated-place
+    names: { nl: Reims, en: Reims }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["51454"],
+        expect: { nom_officiel: Reims, nom_du_chef_lieu: Reims },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Reims (INSEE 51454). }
+  - id: geo.populated-place.epernay
+    kind: populated-place
+    names: { nl: Épernay, en: Épernay }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["51230"],
+        expect: { nom_officiel: Épernay, nom_du_chef_lieu: Épernay },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Épernay (INSEE 51230). }
+  - id: geo.populated-place.chalons-en-champagne
+    kind: populated-place
+    names: { nl: Châlons-en-Champagne, en: Châlons-en-Champagne }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["51108"],
+        expect: { nom_officiel: Châlons-en-Champagne, nom_du_chef_lieu: Châlons-en-Champagne },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      {
+        status: published,
+        notes: Chef-lieu point of the commune of Châlons-en-Champagne (INSEE 51108).,
+      }
+  - id: geo.populated-place.troyes
+    kind: populated-place
+    names: { nl: Troyes, en: Troyes }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["10387"],
+        expect: { nom_officiel: Troyes, nom_du_chef_lieu: Troyes },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review: { status: published, notes: Chef-lieu point of the commune of Troyes (INSEE 10387). }
+  - id: geo.populated-place.bar-sur-aube
+    kind: populated-place
+    names: { nl: Bar-sur-Aube, en: Bar-sur-Aube }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["10033"],
+        expect: { nom_officiel: Bar-sur-Aube, nom_du_chef_lieu: Bar-sur-Aube },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      { status: published, notes: Chef-lieu point of the commune of Bar-sur-Aube (INSEE 10033). }
+  - id: geo.populated-place.bar-sur-seine
+    kind: populated-place
+    names: { nl: Bar-sur-Seine, en: Bar-sur-Seine }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["10034"],
+        expect: { nom_officiel: Bar-sur-Seine, nom_du_chef_lieu: Bar-sur-Seine },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      { status: published, notes: Chef-lieu point of the commune of Bar-sur-Seine (INSEE 10034). }
+  - id: geo.populated-place.chateau-thierry
+    kind: populated-place
+    names: { nl: Château-Thierry, en: Château-Thierry }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["02168"],
+        expect: { nom_officiel: Château-Thierry, nom_du_chef_lieu: Château-Thierry },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      { status: published, notes: Chef-lieu point of the commune of Château-Thierry (INSEE 02168). }
+  - id: geo.populated-place.vitry-le-francois
+    kind: populated-place
+    names: { nl: Vitry-le-François, en: Vitry-le-François }
+    resource: ign-adminexpress-places-champagne
+    select:
+      {
+        property: code_insee_de_la_commune,
+        values: ["51649"],
+        expect: { nom_officiel: Vitry-le-François, nom_du_chef_lieu: Vitry-le-François },
+      }
+    geometry: Point
+    meaning: commune-chef-lieu
+    review:
+      {
+        status: published,
+        notes: Chef-lieu point of the commune of Vitry-le-François (INSEE 51649).,
+      }

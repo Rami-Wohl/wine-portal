@@ -1,12 +1,10 @@
 # Bordeaux Atlas pilot contract
 
-Status: historical pilot proposal, parked on 2026-10-30; not an active implementation contract.
-The user deferred Atlas and wants a different approach. The design is undecided.
-Retain this research as a reference, not a specification to resume automatically.
-MNT-002/013/014/070/071 sit at the end of the backlog. Any resumption needs an
-explicit request, a fresh design/scope decision and source/version review.
-The application shell has been removed; no geography schema/import was implemented.
-Owner: MNT-051. Research date: 2026-10-14.
+Status: historical pilot proposal, superseded on 2026-10-30 by the active
+[Atlas implementation contract](atlas-plan.md) on branch `feat/attempt-at-atlas`.
+The dataset research, identity keys, licence and CRS findings below remain valid
+reference material; the nine-appellation scope and the ticket order no longer
+apply. Owner: MNT-051. Research date: 2026-10-14.
 
 The first pilot helps readers locate and compare a small set of Bordeaux
 appellations and open their existing knowledge pages. It will use shared entity

@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.saint-estephe",
+  "properties": {
+    "id": "geo.populated-place.saint-estephe",
+    "kind": "populated-place",
+    "name_nl": "Saint-Estèphe",
+    "name_en": "Saint-Estèphe"
+  },
+  "bbox": [-0.77246351, 45.25935146, -0.77246351, 45.25935146],
+  "geometry": { "type": "Point", "coordinates": [-0.77246351, 45.25935146] }
+}

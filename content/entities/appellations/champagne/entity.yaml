@@ -51,5 +51,6 @@ source_refs:
   - source.champagne-bottling-second-fermentation
   - source.champagne-riddling
   - source.champagne-disgorgement
+geography_id: geo.appellation-area.champagne
 depth: foundation
 last_reviewed: 2026-10-13

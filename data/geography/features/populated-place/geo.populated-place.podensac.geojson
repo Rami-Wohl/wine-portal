@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.podensac",
+  "properties": {
+    "id": "geo.populated-place.podensac",
+    "kind": "populated-place",
+    "name_nl": "Podensac",
+    "name_en": "Podensac"
+  },
+  "bbox": [-0.35441935, 44.65063698, -0.35441935, 44.65063698],
+  "geometry": { "type": "Point", "coordinates": [-0.35441935, 44.65063698] }
+}

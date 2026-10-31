@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.fronsac",
+  "properties": {
+    "id": "geo.populated-place.fronsac",
+    "kind": "populated-place",
+    "name_nl": "Fronsac",
+    "name_en": "Fronsac"
+  },
+  "bbox": [-0.27155567, 44.92439539, -0.27155567, 44.92439539],
+  "geometry": { "type": "Point", "coordinates": [-0.27155567, 44.92439539] }
+}

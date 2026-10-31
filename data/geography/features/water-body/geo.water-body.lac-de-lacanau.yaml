@@ -1,0 +1,49 @@
+id: geo.water-body.lac-de-lacanau
+kind: water-body
+names:
+  nl: Lac de Lacanau
+  en: Lac de Lacanau
+geometry:
+  file: geo.water-body.lac-de-lacanau.geojson
+  type: MultiPolygon
+  sha256: 92192d5e3e9eb8a29abb8167554b45368b7b607c8553b6e97649e35da6a0a299
+  vertex_count: 1411
+  bbox: [-1.14573886, 44.9252907, -1.09117342, 45.00565796]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:plan_d_eau
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: 11b505d6b2de5695db5151047e40d8697858ede552301ae2be38c9401cb9aff8
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:plan_d_eau
+    property: toponyme
+    values: Lac de Lacanau
+    feature_count: 1
+    cleabs: PLANDEAU0000002000784208
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: ring-orientation
+    convention: rfc7946
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: lake-water-surface
+precision: regional-orientation
+limitations: Cartographic water surface at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a tidal, flood, navigation or property limit.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-water-lac-de-lacanau (layer BDCARTO_V5:plan_d_eau; request, edition and checksum pinned in the manifest): the single object with toponyme ''Lac de Lacanau'' and cleabs PLANDEAU0000002000784208 intersecting the bordeaux envelope. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. One BD CARTO plan_d_eau object of nature "Lac".'
+supersedes: null

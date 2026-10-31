@@ -32,11 +32,13 @@ verplicht NL/EN. Begin voor de technische request flow bij de korte
 
 ## Huidige prioriteit
 
-Gebruikersbesluit 2026-10-30: Leren en Ontdekken eerst. Atlas is geparkeerd,
-zonder gekozen vervangend ontwerp; de pagina, links en specifieke styling zijn
-verwijderd. Brononderzoek blijft naslag, geen actieve bouwopdracht of voorganger
-van content. De [productroadmap](product-roadmap.md) ordent het vervolg, met
-LRN-018 voor het volgende curriculumvoorstel.
+Gebruikersbesluit 2026-10-30 op `main`: Leren en Ontdekken eerst; Atlas geparkeerd.
+Gebruikersbesluit 2026-10-30 op de branch `feat/attempt-at-atlas`: Atlas wordt
+daar gebouwd volgens het [Atlas-implementatiecontract](atlas-plan.md), met
+SVG-scènes uit geverifieerde lagen, eerst het Bordeaux-cluster plus Champagne en
+regio's als appellationmozaïek zonder eigen omtrek. De
+[productroadmap](product-roadmap.md) ordent het overige vervolg, met LRN-018
+voor het volgende curriculumvoorstel.
 
 ## De kern in één beeld
 
@@ -77,7 +79,7 @@ samen voor de applicatie en wordt nooit handmatig bewerkt.
 | Herbruikbare bronnen | `data/sources/` | Provenance voor claims en contentblocks |
 | Mediametadata | `data/media/` | Stabiele media-ID, opslagkey, afmetingen, alttekst en rechten |
 | Lokale mediabytes | `public/media/` | Huidige opslagadapter; later vervangbaar door object storage/CDN |
-| Geografieonderzoek, geen runtimegeometrie | `data/geography/` | Atlas uitgesteld (2026-10-30); [historisch pilotvoorstel](atlas-pilot-contract.md), vijf Atlastickets achteraan; nieuwe aanpak nog te bepalen |
+| Geverifieerde geografie: canonical features, provenance en scènes | `data/geography/` | Bron voor Atlas volgens het [Atlas-contract](atlas-plan.md); gegenereerde displayscènes in `src/generated/geography/`, nooit handmatig bewerkt |
 | Runtimebundle | `src/generated/content/knowledge-base.json` | Afgeleid buildresultaat, niet canonical |
 | Pagina's en componenten | `src/` | Presentatie en interactie, geen tweede feitenbron |
 | Stijlen | `src/styles/`, geordend via `src/app/globals.css` | Tokens, basis, UI-patronen en overrides; verantwoordelijkheden en cascade staan in `design-system-plan.md` |
@@ -228,6 +230,8 @@ Markdownformatter worden herschreven.
 - Gebruik [localization-routing.md](localization-routing.md) bij taalkeuze,
   publieke routing, metadata, zoeken of de implementatie van `MNT-046`.
 - Gebruik `geography-policy.md` voor plaatsen, coördinaten, grenzen en Atlas.
+- Gebruik [atlas-plan.md](atlas-plan.md) voor de actieve Atlas-scope, datastroom,
+  eigenaarschap per agent en acceptatiecriteria op de featurebranch.
 - Gebruik `visual-language.md` voor UI, responsive gedrag en visuals.
 - Gebruik `quality-assurance.md` voor het uitvoeren en registreren van periodieke
   kwaliteitschecks.

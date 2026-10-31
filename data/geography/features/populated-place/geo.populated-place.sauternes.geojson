@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.sauternes",
+  "properties": {
+    "id": "geo.populated-place.sauternes",
+    "kind": "populated-place",
+    "name_nl": "Sauternes",
+    "name_en": "Sauternes"
+  },
+  "bbox": [-0.34328698, 44.5311922, -0.34328698, 44.5311922],
+  "geometry": { "type": "Point", "coordinates": [-0.34328698, 44.5311922] }
+}

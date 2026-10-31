@@ -16,6 +16,11 @@
   --brand-soft: #efe3e5;
   --leaf: #526451;
   --leaf-soft: #e5ebe2;
+  --water: #dde6ea;
+  /* Rivers and shore strokes: 3.65:1 on --surface (non-text minimum 3:1). */
+  --water-line: #6a8794;
+  /* Water names: 5.92:1 on --surface, 4.88:1 on --water (text minimum 4.5:1). */
+  --water-label: #456673;
   --font-body: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --wide: 1220px;

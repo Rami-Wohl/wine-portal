@@ -29,5 +29,6 @@ source_refs:
   - source.inao-lalande-de-pomerol-overview
   - source.legifrance-lalande-de-pomerol-specification-2012
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.lalande-de-pomerol
 depth: foundation
 last_reviewed: 2026-09-13

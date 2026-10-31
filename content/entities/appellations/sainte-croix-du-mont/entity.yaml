@@ -38,5 +38,6 @@ source_refs:
   - source.boagri-sainte-croix-du-mont-specification-2026
   - source.inrae-bordeaux-climate-adaptation
   - source.dgccrf-wine-labels-2025
+geography_id: geo.appellation-area.sainte-croix-du-mont
 depth: foundation
 last_reviewed: 2026-09-13

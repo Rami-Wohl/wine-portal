@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.blaye",
+  "properties": {
+    "id": "geo.populated-place.blaye",
+    "kind": "populated-place",
+    "name_nl": "Blaye",
+    "name_en": "Blaye"
+  },
+  "bbox": [-0.66301635, 45.12680535, -0.66301635, 45.12680535],
+  "geometry": { "type": "Point", "coordinates": [-0.66301635, 45.12680535] }
+}

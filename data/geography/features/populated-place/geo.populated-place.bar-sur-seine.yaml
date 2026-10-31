@@ -1,0 +1,49 @@
+id: geo.populated-place.bar-sur-seine
+kind: populated-place
+names:
+  nl: Bar-sur-Seine
+  en: Bar-sur-Seine
+geometry:
+  file: geo.populated-place.bar-sur-seine.geojson
+  type: Point
+  sha256: 0467f0b5c1e2fb0f7f8f1445ec61bd404668327e6c859cbab6a2ef2b7092e1dd
+  vertex_count: 1
+  bbox: [4.37356376, 48.11425729, 4.37356376, 48.11425729]
+source:
+  source_id: source.ign-admin-express-cog-2026
+  dataset_id: IGNF_ADMIN-EXPRESS
+  resource_id: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+  release: 2026-01-01
+  retrieved_at: 2026-10-30
+  resource_sha256: fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+    property: code_insee_de_la_commune
+    values: "10034"
+    feature_count: 1
+    nom_officiel: Bar-sur-Seine
+    nom_du_chef_lieu: Bar-sur-Seine
+    cleabs: CHFL_COM0000000000010034
+licence:
+  id: etalab-2.0
+  attribution: IGN, ADMIN EXPRESS COG 2026 (code officiel géographique au 1er janvier 2026), service Géoplateforme consulté le 30 octobre 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: commune-chef-lieu
+precision: regional-orientation
+limitations: Position of the commune's chef-lieu in ADMIN EXPRESS for orientation; not a settlement extent, an address or a winery location.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: "Selected from the committed WFS response ign-adminexpress-places-champagne (layer ADMINEXPRESS-COG.2026:chef_lieu_de_commune; request, edition and checksum pinned in the manifest): the chef-lieu point with code_insee_de_la_commune '10034' (nom_officiel 'Bar-sur-Seine', nom_du_chef_lieu 'Bar-sur-Seine') intersecting the champagne envelope. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. Chef-lieu point of the commune of Bar-sur-Seine (INSEE 10034)."
+supersedes: null

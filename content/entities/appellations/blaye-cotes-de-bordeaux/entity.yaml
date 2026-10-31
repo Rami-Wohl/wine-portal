@@ -46,5 +46,6 @@ source_refs:
   - source.gironde-landscape-blayais-libournais
   - source.msha-bordeaux-wine-history
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.blaye-cotes-de-bordeaux
 depth: foundation
 last_reviewed: 2026-09-12

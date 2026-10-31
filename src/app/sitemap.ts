@@ -1,6 +1,11 @@
 import { SITE_URL } from "@/config/brand";
 import { DISCOVERY_CATEGORIES } from "@/content/discovery";
 import {
+  ATLAS_PREVIEW,
+  atlasSceneHref,
+  getPublishedAtlasSceneSummaries,
+} from "@/content/geography";
+import {
   getPublishedLearningPaths,
   getPublishedNarratives,
   getPublishedStandaloneEntities,
@@ -22,12 +27,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const indexableEntityPaths = getPublishedStandaloneEntities().map((item) => entityHref(item));
   const indexableNarrativePaths = getPublishedNarratives().map((item) => narrativeHref(item));
   const indexableLearningPaths = getPublishedLearningPaths().map((item) => learningPathHref(item));
+  // Atlas stays out of the sitemap while it is a preview, matching its noindex metadata. After
+  // the release gate it joins only once a scene with an active owner exists; drafts stay out.
+  const publishedScenes = ATLAS_PREVIEW ? [] : getPublishedAtlasSceneSummaries();
+  const indexableAtlasPaths =
+    publishedScenes.length > 0
+      ? ["/atlas", ...publishedScenes.map((scene) => atlasSceneHref(scene.slug))]
+      : [];
 
   return [
     ...staticPaths,
     ...indexableEntityPaths,
     ...indexableNarrativePaths,
     ...indexableLearningPaths,
+    ...indexableAtlasPaths,
   ].flatMap((pathname) =>
     locales.map((locale) => ({
       url: new URL(localizedHref(pathname, locale), SITE_URL).toString(),

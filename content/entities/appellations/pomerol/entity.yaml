@@ -58,5 +58,6 @@ source_refs:
   - source.moueix-trotanoy
   - source.chateau-clinet-history
   - source.chateau-gazin-estate
+geography_id: geo.appellation-area.pomerol
 depth: foundation
 last_reviewed: 2026-09-09

@@ -38,3 +38,28 @@ describe("generated content import boundary", () => {
     ).toHaveLength(0);
   });
 });
+
+describe("generated geography import boundary", () => {
+  it.each([
+    'import index from "@/generated/geography/index.json";',
+    'import scene from "../generated/geography/scenes/scene.medoc.json";',
+    'const scene = require("../generated/geography/scenes/scene.medoc.json");',
+    'const index = import("@/generated/geography/index.json");',
+  ])("blocks direct Atlas asset access: %s", async (code) => {
+    const errors = await boundaryErrors(code);
+    expect(errors).toHaveLength(1);
+    expect(errors[0].message).toMatch(/geography repository/);
+  });
+
+  it("allows only the geography repository to read Atlas assets", async () => {
+    const code = 'import index from "../generated/geography/index.json";';
+    expect(await boundaryErrors(code, "src/content/geography.ts")).toHaveLength(0);
+    expect(await boundaryErrors(code, "src/content/repository.ts")).toHaveLength(1);
+    expect(
+      await boundaryErrors(
+        'import data from "../generated/content/knowledge-base.json";',
+        "src/content/geography.ts",
+      ),
+    ).toHaveLength(1);
+  });
+});

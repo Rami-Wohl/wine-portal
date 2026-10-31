@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.creon",
+  "properties": {
+    "id": "geo.populated-place.creon",
+    "kind": "populated-place",
+    "name_nl": "Créon",
+    "name_en": "Créon"
+  },
+  "bbox": [-0.34852498, 44.77437108, -0.34852498, 44.77437108],
+  "geometry": { "type": "Point", "coordinates": [-0.34852498, 44.77437108] }
+}

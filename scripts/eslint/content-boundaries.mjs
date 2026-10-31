@@ -2,11 +2,23 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../../", import.meta.url));
-const repository = path.join(root, "src/content/repository.ts");
-const generatedDirectory = path.join(root, "src/generated/content") + path.sep;
 
-// The repository is the single runtime entry to generated data. Its server-only
-// marker then protects every transitive client import, including via re-exports.
+// Each generated directory has exactly one server-only repository that may read it. The
+// repository's server-only marker then protects every transitive client import, including
+// via re-exports.
+const generatedBoundaries = [
+  {
+    directory: path.join(root, "src/generated/content") + path.sep,
+    repository: path.join(root, "src/content/repository.ts"),
+    messageId: "repositoryOnly",
+  },
+  {
+    directory: path.join(root, "src/generated/geography") + path.sep,
+    repository: path.join(root, "src/content/geography.ts"),
+    messageId: "geographyRepositoryOnly",
+  },
+];
+
 const contentBoundaries = {
   rules: {
     "generated-content": {
@@ -16,11 +28,12 @@ const contentBoundaries = {
         messages: {
           repositoryOnly:
             "Read generated content through the server-only content repository; pass small, serializable results to client components.",
+          geographyRepositoryOnly:
+            "Read generated Atlas scenes through the server-only geography repository (src/content/geography.ts); pass one serialized scene view to components.",
         },
       },
       create(context) {
         const filename = path.resolve(context.filename);
-        if (filename === repository) return {};
         function check(node, source) {
           if (!source || typeof source.value !== "string") return;
           const specifier = source.value;
@@ -29,8 +42,11 @@ const contentBoundaries = {
             : specifier.startsWith(".") || path.isAbsolute(specifier)
               ? path.resolve(path.dirname(filename), specifier)
               : null;
-          if (target?.startsWith(generatedDirectory)) {
-            context.report({ node, messageId: "repositoryOnly" });
+          if (!target) return;
+          for (const boundary of generatedBoundaries) {
+            if (target.startsWith(boundary.directory) && filename !== boundary.repository) {
+              context.report({ node, messageId: boundary.messageId });
+            }
           }
         }
         return {

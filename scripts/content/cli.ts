@@ -1,5 +1,6 @@
 import path from "node:path";
 import type { Entity, EntityPresentation } from "../../src/content/model";
+import { AtlasBuildError } from "../geography/lib/errors";
 import { buildContent, ContentValidationError } from "./pipeline";
 import { generateEntityPackage } from "./generator";
 import { auditEntityLinks, scaffoldPlanDependencies } from "./dependencies";
@@ -41,6 +42,7 @@ async function main(): Promise<void> {
     console.log(
       `Content is valid: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.learning_paths.length} learning paths, ${result.knowledgeBase.sources.length} sources, ${result.knowledgeBase.media.length} media assets.`,
     );
+    for (const line of result.atlas.report) console.log(line);
     return;
   }
   if (command === "build") {
@@ -52,6 +54,7 @@ async function main(): Promise<void> {
     console.log(
       `Generated content graph: ${result.knowledgeBase.entities.length} entities, ${result.knowledgeBase.narratives.length} narratives, ${result.knowledgeBase.learning_paths.length} learning paths, ${result.knowledgeBase.media.length} media assets, ${result.knowledgeBase.relations.forward.length} forward relations.`,
     );
+    for (const line of result.atlas.report) console.log(line);
     if (first === "--audit-relations") reportRelationAudit(result.knowledgeBase.entities);
     return;
   }
@@ -177,7 +180,7 @@ async function main(): Promise<void> {
 
 main().catch((error: Error) => {
   console.error(
-    error instanceof ContentValidationError
+    error instanceof ContentValidationError || error instanceof AtlasBuildError
       ? error.message
       : `Content command failed: ${error.message}`,
   );

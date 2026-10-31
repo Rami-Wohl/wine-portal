@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.bordeaux",
+  "properties": {
+    "id": "geo.populated-place.bordeaux",
+    "kind": "populated-place",
+    "name_nl": "Bordeaux",
+    "name_en": "Bordeaux"
+  },
+  "bbox": [-0.57937892, 44.8378966, -0.57937892, 44.8378966],
+  "geometry": { "type": "Point", "coordinates": [-0.57937892, 44.8378966] }
+}

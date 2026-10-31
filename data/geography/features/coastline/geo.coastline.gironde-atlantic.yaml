@@ -1,0 +1,47 @@
+id: geo.coastline.gironde-atlantic
+kind: coastline
+names:
+  nl: Atlantische kust
+  en: Atlantic coast
+geometry:
+  file: geo.coastline.gironde-atlantic.geojson
+  type: MultiLineString
+  sha256: 19001dfec881f98d0be0ee9521b259afd8dc45becb3cce3b5eb33972778a85c4
+  vertex_count: 49382
+  bbox: [-1.35133398, 44.0014091, -0.18616944, 45.98191279]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:limite_terre_mer
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: c88e228c388a026df729cbe95c61fca7926203d4462713e95377d6befb5ac4d9
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:limite_terre_mer
+    property: niveau
+    values: Plus hautes eaux
+    feature_count: 217
+    type_de_limite: null
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: high-water-shoreline-segments
+precision: regional-orientation
+limitations: High-water shoreline at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a legal maritime or cadastral limit.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-coastline-bordeaux (layer BDCARTO_V5:limite_terre_mer; request, edition and checksum pinned in the manifest): all 217 features with niveau in {''Plus hautes eaux''} and no type_de_limite intersecting the bordeaux envelope, kept as whole features in verified cleabs order without clipping. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. 217 BD CARTO limite_terre_mer segments inside the Bordeaux envelope with niveau "Plus hautes eaux" (high-water line) and no type_de_limite, which excludes the legal limits (salinity, maritime affairs, transverse limit of the sea) and the low-water line. Covers the Médoc Atlantic shore, the Arcachon basin and the estuary shores up to the salinity limit; whole segments are kept, so the line runs a few kilometres beyond the envelope.'
+supersedes: null

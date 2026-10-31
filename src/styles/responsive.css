@@ -1,6 +1,15 @@
 /* Cross-component breakpoint overrides. Keep after all component defaults. */
 
 @media (max-width: 980px) {
+  /* Three mode cards become two plus one full-width card. */
+  .mode-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mode-link:nth-child(3) {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--line-strong);
+    border-left: 0;
+  }
   .entity-layout,
   .lesson-layout,
   .learning-path-layout {
@@ -120,6 +129,9 @@
   .mode-link + .mode-link {
     border-top: 1px solid var(--line-strong);
     border-left: 0;
+  }
+  .mode-link:nth-child(3) {
+    grid-column: auto;
   }
   .result-pagination {
     grid-template-areas:
@@ -305,5 +317,62 @@
   .language-switcher summary {
     min-width: 44px;
     gap: 0.3rem;
+  }
+}
+
+/* Atlas scenes. Grouped here so the map keeps the shared breakpoints. */
+@media (max-width: 980px) {
+  .atlas-scene {
+    --atlas-body-columns: 1fr;
+    --atlas-render-px: 760;
+    --atlas-area-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .atlas-scene {
+    --atlas-render-px: 620;
+  }
+  .atlas-legend-keys {
+    grid-template-columns: 1fr;
+  }
+  /* Before or without JavaScript the map cannot measure itself: the server planned
+   * each label for this breakpoint too (labels.ts NO_SCRIPT_ZOOM.medium). */
+  .atlas-map:not([data-zoom]) :is(.atlas-label, .atlas-place text)[data-visible-medium="false"] {
+    display: none;
+  }
+  .atlas-map:not([data-zoom]) :is(.atlas-label, .atlas-place text)[data-visible-medium="true"] {
+    display: inline;
+  }
+}
+
+@media (max-width: 620px) {
+  .atlas-scene {
+    --atlas-render-px: 320;
+  }
+  .atlas-scene {
+    --atlas-area-columns: 1fr;
+  }
+  /* Same, planned for a 320px viewport (labels.ts NO_SCRIPT_ZOOM.narrow). */
+  .atlas-map:not([data-zoom]) :is(.atlas-label, .atlas-place text)[data-visible-narrow="false"] {
+    display: none;
+  }
+  .atlas-map:not([data-zoom]) :is(.atlas-label, .atlas-place text)[data-visible-narrow="true"] {
+    display: inline;
+  }
+  .atlas-feature-list,
+  .atlas-legend-section,
+  .atlas-legend-disclosure {
+    padding: 1rem;
+  }
+  .atlas-map {
+    max-height: none;
+  }
+  .atlas-toolbar-status {
+    font-size: 0.74rem;
+  }
+  .atlas-orientation div {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
   }
 }

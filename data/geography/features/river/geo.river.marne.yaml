@@ -1,0 +1,46 @@
+id: geo.river.marne
+kind: river
+names:
+  nl: Marne
+  en: Marne
+geometry:
+  file: geo.river.marne.geojson
+  type: MultiLineString
+  sha256: b15d749784cc18d86db92cec4f9c6bdb3e4015fe0b3e5b9ef60bd07ed8dbc6c7
+  vertex_count: 6044
+  bbox: [2.8915661, 48.03889349, 5.23549386, 49.09850654]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:troncon_hydrographique
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: c9035bc9092bcd0d8b953c9251f64b8805e70c069a842cf16e2d02626557c887
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:troncon_hydrographique
+    property: cpx_toponyme_de_cours_d_eau
+    values: la Marne
+    feature_count: 1049
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: watercourse-centreline-segments
+precision: regional-orientation
+limitations: Cartographic centreline segments at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a hydrographic survey, a navigation line or a flood extent.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-river-marne-champagne (layer BDCARTO_V5:troncon_hydrographique; request, edition and checksum pinned in the manifest): all 1049 features with cpx_toponyme_de_cours_d_eau in {''la Marne''} intersecting the champagne envelope, kept as whole features in verified cleabs order without clipping. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. 1,049 BD CARTO segments named "la Marne" inside the Champagne envelope, including the secondary arms the source names identically; segments with other toponyms, such as "Bras de la Marne" and the canals, are not requested.'
+supersedes: null

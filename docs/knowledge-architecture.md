@@ -134,11 +134,11 @@ dezelfde keys later via object storage of een CDN leveren.
 
 #### Geography references
 
-Een entity kan een gevalideerde `geography_id` dragen en de bundle bouwt daar een index voor. Het beheer en importeren van echte geometrie is nog roadmap.
+Een entity kan een gevalideerde `geography_id` dragen en de bundle bouwt daar een index voor. Het beheer en importeren van echte geometrie volgt het [Atlas-contract](atlas-plan.md).
 
 ### Roadmap
 
-- een volwaardige, geverifieerde geography-datalaag;
+- een volwaardige, geverifieerde geography-datalaag, in uitvoering op de Atlas-featurebranch;
 - rijkere search, compare en bronweergave boven op de gegenereerde graph.
 
 ---
@@ -711,11 +711,12 @@ Geografie is first-class kennis, maar de volledige geographydatalaag is nog niet
 - uniquenessvalidatie voor geography-IDs;
 - een geography lookup in de gegenereerde bundle.
 
-Er staan geen productiegeometrieën of Atlasimports in de applicatie. Sinds het
-gebruikersbesluit van 2026-10-30 zijn de Atlaspagina, links en specifieke styling
-verwijderd. Atlas staat achteraan geparkeerd; het eerdere pilotonderzoek blijft
-naslag en kiest geen toekomstig ontwerp. Het bestaande geography-ID/indexcontract
-is gedeelde v1-infrastructuur, geen actieve Atlasimplementatie.
+Op de featurebranch `feat/attempt-at-atlas` wordt de geografielaag gebouwd
+volgens het [Atlas-implementatiecontract](atlas-plan.md): canonical features met
+provenance onder `data/geography/`, validatie in de contentpipeline, gegenereerde
+displayscènes onder `src/generated/geography/` en een aparte server-only
+repository. Geometrie komt nooit in `knowledge-base.json` of de zoekindex; het
+bestaande geography-ID/indexcontract blijft de koppeling tussen entity en feature.
 
 Wanneer geography wordt toegevoegd, gelden `geography-policy.md` en `../editorial/research-policy.md`. De kernregel blijft:
 

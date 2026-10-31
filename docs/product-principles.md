@@ -37,10 +37,11 @@ automatically dominate Explore or Atlas. A user should be able to reach useful
 entity knowledge without entering a course, and a learning path may reuse an
 entity or narrative without changing its canonical ownership.
 
-Atlas is a deferred product direction, not a currently available mode. By user
-decision on 2026-10-30, its shell was removed and implementation is parked at the
-end of the backlog pending a new approach. Explore and Learn content can grow
-without Atlas. These shared-knowledge principles still apply to any future design.
+Atlas is being built on the feature branch `feat/attempt-at-atlas` under the
+[Atlas implementation contract](atlas-plan.md), approved on 2026-10-30: server-
+rendered SVG scenes from verified layers, Bordeaux and Champagne first, regions
+as appellation mosaics without a drawn outline. Explore and Learn content keeps
+growing independently. These shared-knowledge principles bind that design.
 
 ## 3. Progressive depth, not artificial silos
 

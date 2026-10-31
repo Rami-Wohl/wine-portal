@@ -53,5 +53,6 @@ source_refs:
   - source.chateau-suduiraut-history
   - source.chateau-suduiraut-grand-vin
   - source.chateau-suduiraut-castelnau
+geography_id: geo.appellation-area.sauternes
 depth: foundation
 last_reviewed: 2026-09-14

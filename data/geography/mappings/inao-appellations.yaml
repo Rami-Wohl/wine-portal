@@ -1,0 +1,659 @@
+# Reviewed INAO identities for the active French appellation entities (docs/atlas-plan.md §6).
+#
+# scripts/geography/import.ts reads this table and selects one shapefile record per entry.
+# Identity is never a row position, the `dt` delegation field or a folder name.
+#
+# Edition note (2026-10-30): in the pinned 2026-10-26 edition the DBF carries values only in
+# `type_denom` and `denom`; `id_app`, `id_denom`, `app` and `signe` are blank in every record.
+# The import therefore matches on `type_denom` and `denom` (exact strings, unique in this
+# edition for every entry below), verifies any key field that is present, and confirms
+# `id_app`/`app`/`id_denom`/`denom`/`signe` against the pinned INAO product register of
+# 2025-12-31, whose `id_appellation`/`id_denomination_geo` namespace equals the shapefile's
+# (confirmed for nine pairs in the 2026-10-12 edition, see
+# editorial/measurements/atlas-bordeaux-data-inspection-2026-10-14.json).
+#
+# Fields per entry:
+#   entity              owning appellation entity; its geography_id must equal `id`
+#   id                  geography record id, geo.appellation-area.<slug>
+#   feature_key         reviewed INAO identity: id_app, id_denom, signe, type_denom, app, denom;
+#                       `denom` and `app` are the shapefile spellings
+#   register_labels     register spellings when they differ from the shapefile labels
+#   prior_edition_check edition in which the full key pair was observed on the same shape
+#   shares_geometry_with  entities whose own source row carries identical coordinates (observation)
+#   review              status and reviewer notes; the import prepends what it verified itself
+#
+# Hard cases, decided on 2026-10-30:
+#   - Bordeaux, Bordeaux supérieur and Crémant de Bordeaux are three source rows with identical
+#     coordinates; each entity points at its own row. The same holds for Saint-Emilion versus
+#     Saint-Emilion grand cru and for Graves versus Graves supérieures. No shape is borrowed.
+#   - Côtes de Bordeaux is one `appellation` row; its five complementary denominations are
+#     separate `dénomination géographique complémentaire` rows named "Côtes de Bordeaux <sector>".
+#     The appellation row is held: its shape omits the Sainte-Foy sector (see the entry).
+#   - Cadillac (AOC, sweet white) and Cadillac Côtes de Bordeaux (complementary denomination of
+#     Côtes de Bordeaux) are different rows with different shapes.
+#   - Médoc and Haut-Médoc are different rows; the Médoc area contains the Haut-Médoc area, as
+#     the INAO commune lists do (all 29 Haut-Médoc communes are in the 52 Médoc communes).
+#   - Entre-deux-Mers is the `appellation` row; the rows "Entre-deux-Mers Haut-Benauge" and
+#     "Bordeaux Haut-Benauge" are complementary denominations without an entity and are not used.
+#   - Champagne is the `appellation` row; "Champagne grand cru" and "Champagne premier cru" are
+#     complementary denominations without an entity and are not used.
+#   - Barsac and Sauternes stay two records; the geometric containment is an observation only.
+resource: inao-geographical-areas-2026-10-26
+register: inao-siqo-product-register-2025-12-31
+reviewed_at: 2026-10-30
+entries:
+  - entity: appellation.barsac
+    id: geo.appellation-area.barsac
+    feature_key:
+      id_app: 8
+      id_denom: 60
+      signe: AOC
+      type_denom: appellation
+      app: Barsac
+      denom: Barsac
+    prior_edition_check: 2026-10-12
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. One commune (Barsac) in the INAO commune list. Every vertex lies inside or on
+        the boundary of the Sauternes shape (maximum distance outside 0 m); Barsac and Sauternes
+        remain separate records and no containment relation is derived from this observation.
+  - entity: appellation.bordeaux
+    id: geo.appellation-area.bordeaux
+    feature_key:
+      id_app: 14
+      id_denom: 67
+      signe: AOC
+      type_denom: appellation
+      app: Bordeaux
+      denom: Bordeaux
+    prior_edition_check: 2026-10-12
+    shares_geometry_with: [appellation.bordeaux-superieur, appellation.cremant-de-bordeaux]
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. 501 Gironde communes in the INAO commune list. Every other Bordeaux-cluster
+        shape in this table lies inside or on the boundary of this shape (maximum distance
+        outside 0.22 m). This is the appellation area, not the cultural region or the Gironde.
+  - entity: appellation.bordeaux-superieur
+    id: geo.appellation-area.bordeaux-superieur
+    feature_key:
+      id_app: 585
+      id_denom: 1740
+      signe: AOC
+      type_denom: appellation
+      app: Bordeaux supérieur
+      denom: Bordeaux supérieur
+    shares_geometry_with: [appellation.bordeaux, appellation.cremant-de-bordeaux]
+    review:
+      status: published
+      notes: >-
+        Own source row; its coordinates are identical to the Bordeaux row, as expected for an
+        appellation whose area is the Bordeaux area (501 communes in both INAO commune lists).
+  - entity: appellation.cremant-de-bordeaux
+    id: geo.appellation-area.cremant-de-bordeaux
+    feature_key:
+      id_app: 31
+      id_denom: 89
+      signe: AOC
+      type_denom: appellation
+      app: Crémant de Bordeaux
+      denom: Crémant de Bordeaux
+    shares_geometry_with: [appellation.bordeaux, appellation.bordeaux-superieur]
+    review:
+      status: published
+      notes: >-
+        Own source row; its coordinates are identical to the Bordeaux row, as expected for an
+        appellation whose area is the Bordeaux area (501 communes in both INAO commune lists).
+  - entity: appellation.cotes-de-bordeaux
+    id: geo.appellation-area.cotes-de-bordeaux
+    feature_key:
+      id_app: 685
+      id_denom: 1849
+      signe: AOC
+      type_denom: appellation
+      app: Côtes de Bordeaux
+      denom: Côtes de Bordeaux
+    review:
+      status: held
+      notes: >-
+        Identity is confirmed, but the scope of the shape is not: the three parts of this
+        MultiPolygon cover the Blaye, Cadillac, Castillon and Francs sectors (each complementary
+        denomination shape lies inside it, maximum distance outside 0.013 m) and none of the
+        Sainte-Foy sector (all 1,248 vertices of the "Côtes de Bordeaux Sainte-Foy" shape lie
+        outside it, up to 26.4 km). The cahier des charges published in the BO Agri on
+        2026-06-11 (chapter I, IV.1°a) and the INAO commune list of 2025-10-09 (111 communes)
+        both include the 19 Sainte-Foy communes in the appellation area. Held until INAO
+        confirms or corrects the appellation-level shape; no union of the sector shapes is
+        made.
+  - entity: appellation.blaye-cotes-de-bordeaux
+    id: geo.appellation-area.blaye-cotes-de-bordeaux
+    feature_key:
+      id_app: 685
+      id_denom: 2079
+      signe: AOC
+      type_denom: dénomination géographique complémentaire
+      app: Côtes de Bordeaux
+      denom: Côtes de Bordeaux Blaye
+    review:
+      status: published
+      notes: >-
+        Complementary denomination of the Côtes de Bordeaux appellation; INAO labels it
+        "Côtes de Bordeaux Blaye". Lies inside or on the boundary of the Côtes de Bordeaux
+        appellation shape and of the Bordeaux shape (maximum distance outside 0.22 m).
+  - entity: appellation.cadillac-cotes-de-bordeaux
+    id: geo.appellation-area.cadillac-cotes-de-bordeaux
+    feature_key:
+      id_app: 685
+      id_denom: 2077
+      signe: AOC
+      type_denom: dénomination géographique complémentaire
+      app: Côtes de Bordeaux
+      denom: Côtes de Bordeaux Cadillac
+    review:
+      status: published
+      notes: >-
+        Complementary denomination of the Côtes de Bordeaux appellation; INAO labels it
+        "Côtes de Bordeaux Cadillac". Distinct from the Cadillac appellation row (sweet white
+        wine, 22 communes), whose coordinates differ. Lies inside or on the boundary of the
+        Côtes de Bordeaux appellation shape and of the Bordeaux shape.
+  - entity: appellation.castillon-cotes-de-bordeaux
+    id: geo.appellation-area.castillon-cotes-de-bordeaux
+    feature_key:
+      id_app: 685
+      id_denom: 2078
+      signe: AOC
+      type_denom: dénomination géographique complémentaire
+      app: Côtes de Bordeaux
+      denom: Côtes de Bordeaux Castillon
+    review:
+      status: published
+      notes: >-
+        Complementary denomination of the Côtes de Bordeaux appellation; INAO labels it
+        "Côtes de Bordeaux Castillon". Lies inside or on the boundary of the Côtes de Bordeaux
+        appellation shape and of the Bordeaux shape (maximum distance outside 0.07 m).
+  - entity: appellation.francs-cotes-de-bordeaux
+    id: geo.appellation-area.francs-cotes-de-bordeaux
+    feature_key:
+      id_app: 685
+      id_denom: 2080
+      signe: AOC
+      type_denom: dénomination géographique complémentaire
+      app: Côtes de Bordeaux
+      denom: Côtes de Bordeaux Francs
+    review:
+      status: published
+      notes: >-
+        Complementary denomination of the Côtes de Bordeaux appellation; INAO labels it
+        "Côtes de Bordeaux Francs". Lies inside or on the boundary of the Côtes de Bordeaux
+        appellation shape and of the Bordeaux shape (maximum distance outside 0.07 m).
+  - entity: appellation.sainte-foy-cotes-de-bordeaux
+    id: geo.appellation-area.sainte-foy-cotes-de-bordeaux
+    feature_key:
+      id_app: 685
+      id_denom: 2825
+      signe: AOC
+      type_denom: dénomination géographique complémentaire
+      app: Côtes de Bordeaux
+      denom: Côtes de Bordeaux Sainte-Foy
+    review:
+      status: published
+      notes: >-
+        Complementary denomination of the Côtes de Bordeaux appellation; INAO labels it
+        "Côtes de Bordeaux Sainte-Foy". One polygon in eastern Gironde, inside or on the
+        boundary of the Bordeaux shape; the INAO commune list and the cahier des charges name
+        19 communes for this sector. It lies entirely outside the published Côtes de Bordeaux
+        appellation shape, which is why that appellation record is held, not this one.
+  - entity: appellation.cadillac
+    id: geo.appellation-area.cadillac
+    feature_key:
+      id_app: 20
+      id_denom: 76
+      signe: AOC
+      type_denom: appellation
+      app: Cadillac
+      denom: Cadillac
+    review:
+      status: published
+      notes: >-
+        The Cadillac appellation (sweet white wine), 22 communes in the INAO commune list; not
+        the complementary denomination "Côtes de Bordeaux Cadillac", whose coordinates differ.
+        Lies inside or on the boundary of the Bordeaux shape.
+  - entity: appellation.canon-fronsac
+    id: geo.appellation-area.canon-fronsac
+    feature_key:
+      id_app: 22
+      id_denom: 78
+      signe: AOC
+      type_denom: appellation
+      app: Canon Fronsac
+      denom: Canon Fronsac
+    review:
+      status: published
+      notes: >-
+        INAO spells the denomination "Canon Fronsac" without a hyphen. Two communes in the
+        INAO commune list, both also in the Fronsac list; the shape lies inside or on the
+        boundary of the Fronsac shape and of the Bordeaux shape.
+  - entity: appellation.cerons
+    id: geo.appellation-area.cerons
+    feature_key:
+      id_app: 23
+      id_denom: 79
+      signe: AOC
+      type_denom: appellation
+      app: Cérons
+      denom: Cérons
+    review:
+      status: published
+      notes: >-
+        Three communes in the INAO commune list, all also in the Graves list; the shape lies
+        inside or on the boundary of the Graves shape and of the Bordeaux shape.
+  - entity: appellation.cotes-de-bourg
+    id: geo.appellation-area.cotes-de-bourg
+    feature_key:
+      id_app: 18
+      id_denom: 74
+      signe: AOC
+      type_denom: appellation
+      app: Côtes de Bourg, Bourg et Bourgeais
+      denom: Côtes de Bourg, Bourg et Bourgeais
+    review:
+      status: published
+      notes: >-
+        INAO labels the appellation with its three protected names "Côtes de Bourg, Bourg et
+        Bourgeais". 15 communes in the INAO commune list; the shape lies inside or on the
+        boundary of the Bordeaux shape.
+  - entity: appellation.champagne
+    id: geo.appellation-area.champagne
+    feature_key:
+      id_app: 5
+      id_denom: 55
+      signe: AOC
+      type_denom: appellation
+      app: Champagne
+      denom: Champagne
+    review:
+      status: published
+      notes: >-
+        The only `appellation` row named Champagne; "Champagne grand cru" and "Champagne premier
+        cru" are complementary denominations with their own rows and are not used. Nine
+        disjoint parts spanning roughly 47.9–49.5°N and 3.1–4.9°E, consistent with an area
+        whose INAO commune list names 635 communes in Marne, Aube, Aisne, Haute-Marne and
+        Seine-et-Marne. No earlier-edition key check or enclosing shape is available for this
+        feature, so identity rests on the exact label, the register and this extent check.
+  - entity: appellation.entre-deux-mers
+    id: geo.appellation-area.entre-deux-mers
+    feature_key:
+      id_app: 32
+      id_denom: 90
+      signe: AOC
+      type_denom: appellation
+      app: Entre-deux-Mers
+      denom: Entre-deux-Mers
+    review:
+      status: published
+      notes: >-
+        The `appellation` row; the complementary denomination rows "Entre-deux-Mers
+        Haut-Benauge" and "Bordeaux Haut-Benauge" are not used. 133 communes in the INAO
+        commune list; the shape lies inside or on the boundary of the Bordeaux shape.
+  - entity: appellation.fronsac
+    id: geo.appellation-area.fronsac
+    feature_key:
+      id_app: 33
+      id_denom: 92
+      signe: AOC
+      type_denom: appellation
+      app: Fronsac
+      denom: Fronsac
+    review:
+      status: published
+      notes: >-
+        Seven communes in the INAO commune list; the shape lies inside or on the boundary of
+        the Bordeaux shape and contains the Canon Fronsac shape.
+  - entity: appellation.graves
+    id: geo.appellation-area.graves
+    feature_key:
+      id_app: 37
+      id_denom: 96
+      signe: AOC
+      type_denom: appellation
+      app: Graves
+      denom: Graves
+    shares_geometry_with: [appellation.graves-superieures]
+    review:
+      status: published
+      notes: >-
+        42 communes in the INAO commune list; the shape lies inside or on the boundary of the
+        Bordeaux shape and contains the Pessac-Léognan and Cérons shapes. The Sauternes shape
+        extends up to 2.5 km beyond it, which matches the commune lists (no Sauternes commune is
+        in the Graves list).
+  - entity: appellation.graves-superieures
+    id: geo.appellation-area.graves-superieures
+    feature_key:
+      id_app: 855
+      id_denom: 2037
+      signe: AOC
+      type_denom: appellation
+      app: Graves supérieures
+      denom: Graves supérieures
+    shares_geometry_with: [appellation.graves]
+    review:
+      status: published
+      notes: >-
+        Own source row; its coordinates are identical to the Graves row. Both appellations share
+        one cahier des charges and one area; the INAO commune list has no separate Graves
+        supérieures entry.
+  - entity: appellation.haut-medoc
+    id: geo.appellation-area.haut-medoc
+    feature_key:
+      id_app: 39
+      id_denom: 98
+      signe: AOC
+      type_denom: appellation
+      app: Haut-Médoc
+      denom: Haut-Médoc
+    review:
+      status: published
+      notes: >-
+        29 communes in the INAO commune list, all also in the Médoc list; the shape lies inside
+        or on the boundary of the Médoc shape and of the Bordeaux shape. Distinct from the Médoc
+        row.
+  - entity: appellation.lalande-de-pomerol
+    id: geo.appellation-area.lalande-de-pomerol
+    feature_key:
+      id_app: 44
+      id_denom: 103
+      signe: AOC
+      type_denom: appellation
+      app: Lalande-de-Pomerol
+      denom: Lalande-de-Pomerol
+    review:
+      status: published
+      notes: >-
+        Two communes in the INAO commune list; the shape lies inside or on the boundary of the
+        Bordeaux shape.
+  - entity: appellation.listrac-medoc
+    id: geo.appellation-area.listrac-medoc
+    feature_key:
+      id_app: 45
+      id_denom: 104
+      signe: AOC
+      type_denom: appellation
+      app: Listrac-Médoc
+      denom: Listrac-Médoc
+    review:
+      status: published
+      notes: >-
+        One commune in the INAO commune list; the shape lies inside the Haut-Médoc shape and the
+        Bordeaux shape.
+  - entity: appellation.loupiac
+    id: geo.appellation-area.loupiac
+    feature_key:
+      id_app: 46
+      id_denom: 105
+      signe: AOC
+      type_denom: appellation
+      app: Loupiac
+      denom: Loupiac
+    review:
+      status: published
+      notes: >-
+        One commune in the INAO commune list; the shape lies inside or on the boundary of the
+        Bordeaux shape.
+  - entity: appellation.lussac-saint-emilion
+    id: geo.appellation-area.lussac-saint-emilion
+    feature_key:
+      id_app: 47
+      id_denom: 106
+      signe: AOC
+      type_denom: appellation
+      app: Lussac-Saint-Emilion
+      denom: Lussac-Saint-Emilion
+    register_labels:
+      appellation: Lussac Saint-Emilion
+      denomination: Lussac Saint-Emilion
+    review:
+      status: published
+      notes: >-
+        The shapefile and the INAO commune list spell the name "Lussac-Saint-Emilion"; the
+        product register spells it "Lussac Saint-Emilion" under the same id pair. One commune;
+        the shape lies inside or on the boundary of the Bordeaux shape.
+  - entity: appellation.margaux
+    id: geo.appellation-area.margaux
+    feature_key:
+      id_app: 52
+      id_denom: 111
+      signe: AOC
+      type_denom: appellation
+      app: Margaux
+      denom: Margaux
+    prior_edition_check: 2026-10-12
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. Five communes in the INAO commune list; the shape lies inside or on the
+        boundary of the Haut-Médoc shape and of the Bordeaux shape.
+  - entity: appellation.medoc
+    id: geo.appellation-area.medoc
+    feature_key:
+      id_app: 53
+      id_denom: 112
+      signe: AOC
+      type_denom: appellation
+      app: Médoc
+      denom: Médoc
+    review:
+      status: published
+      notes: >-
+        52 communes in the INAO commune list, including all 29 Haut-Médoc communes; the shape
+        contains the Haut-Médoc shape and lies inside or on the boundary of the Bordeaux shape.
+        Distinct from the Haut-Médoc row.
+  - entity: appellation.montagne-saint-emilion
+    id: geo.appellation-area.montagne-saint-emilion
+    feature_key:
+      id_app: 55
+      id_denom: 114
+      signe: AOC
+      type_denom: appellation
+      app: Montagne-Saint-Emilion
+      denom: Montagne-Saint-Emilion
+    review:
+      status: published
+      notes: >-
+        One commune in the INAO commune list; the shape lies inside or on the boundary of the
+        Bordeaux shape.
+  - entity: appellation.moulis-en-medoc
+    id: geo.appellation-area.moulis-en-medoc
+    feature_key:
+      id_app: 57
+      id_denom: 116
+      signe: AOC
+      type_denom: appellation
+      app: Moulis ou Moulis-en-Médoc
+      denom: Moulis ou Moulis-en-Médoc
+    review:
+      status: published
+      notes: >-
+        INAO labels the appellation with both protected names "Moulis ou Moulis-en-Médoc"; the
+        INAO commune list uses "Moulis" (five communes). The shape lies inside the Haut-Médoc
+        shape and the Bordeaux shape.
+  - entity: appellation.pauillac
+    id: geo.appellation-area.pauillac
+    feature_key:
+      id_app: 59
+      id_denom: 118
+      signe: AOC
+      type_denom: appellation
+      app: Pauillac
+      denom: Pauillac
+    prior_edition_check: 2026-10-12
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. Five communes in the INAO commune list; the shape lies inside or on the
+        boundary of the Haut-Médoc shape and of the Bordeaux shape.
+  - entity: appellation.pessac-leognan
+    id: geo.appellation-area.pessac-leognan
+    feature_key:
+      id_app: 61
+      id_denom: 120
+      signe: AOC
+      type_denom: appellation
+      app: Pessac-Léognan
+      denom: Pessac-Léognan
+    review:
+      status: published
+      notes: >-
+        Ten communes in the INAO commune list, all also in the Graves list; the shape lies inside
+        or on the boundary of the Graves shape and of the Bordeaux shape.
+  - entity: appellation.pomerol
+    id: geo.appellation-area.pomerol
+    feature_key:
+      id_app: 62
+      id_denom: 121
+      signe: AOC
+      type_denom: appellation
+      app: Pomerol
+      denom: Pomerol
+    prior_edition_check: 2026-10-12
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. Eight communes or parts of communes in the INAO commune list; the shape lies
+        inside or on the boundary of the Bordeaux shape. The commune list carries its own
+        IDA=109, which is not this key pair.
+  - entity: appellation.puisseguin-saint-emilion
+    id: geo.appellation-area.puisseguin-saint-emilion
+    feature_key:
+      id_app: 65
+      id_denom: 160
+      signe: AOC
+      type_denom: appellation
+      app: Puisseguin-Saint-Emilion
+      denom: Puisseguin-Saint-Emilion
+    register_labels:
+      appellation: Puisseguin Saint-Emilion
+      denomination: Puisseguin Saint-Emilion
+    review:
+      status: published
+      notes: >-
+        The shapefile and the INAO commune list spell the name "Puisseguin-Saint-Emilion"; the
+        product register spells it "Puisseguin Saint-Emilion" under the same id pair. One
+        commune; the shape lies inside or on the boundary of the Bordeaux shape.
+  - entity: appellation.saint-emilion
+    id: geo.appellation-area.saint-emilion
+    feature_key:
+      id_app: 67
+      id_denom: 162
+      signe: AOC
+      type_denom: appellation
+      app: Saint-Emilion
+      denom: Saint-Emilion
+    prior_edition_check: 2026-10-12
+    shares_geometry_with: [appellation.saint-emilion-grand-cru]
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. Nine communes in the INAO commune list; the shape lies inside or on the
+        boundary of the Bordeaux shape. The Saint-Emilion grand cru row has identical
+        coordinates but is a different record; it is not used for this entity.
+  - entity: appellation.saint-emilion-grand-cru
+    id: geo.appellation-area.saint-emilion-grand-cru
+    feature_key:
+      id_app: 68
+      id_denom: 163
+      signe: AOC
+      type_denom: appellation
+      app: Saint-Emilion grand cru
+      denom: Saint-Emilion grand cru
+    shares_geometry_with: [appellation.saint-emilion]
+    review:
+      status: published
+      notes: >-
+        Own source row with its own key pair; its coordinates are identical to the Saint-Emilion
+        row, as expected for an appellation that shares the Saint-Emilion area (nine communes in
+        both INAO commune lists) under stricter production rules.
+  - entity: appellation.saint-estephe
+    id: geo.appellation-area.saint-estephe
+    feature_key:
+      id_app: 69
+      id_denom: 166
+      signe: AOC
+      type_denom: appellation
+      app: Saint-Estèphe
+      denom: Saint-Estèphe
+    prior_edition_check: 2026-10-12
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. One commune in the INAO commune list; the shape lies inside or on the boundary
+        of the Haut-Médoc shape and of the Bordeaux shape.
+  - entity: appellation.saint-georges-saint-emilion
+    id: geo.appellation-area.saint-georges-saint-emilion
+    feature_key:
+      id_app: 70
+      id_denom: 167
+      signe: AOC
+      type_denom: appellation
+      app: Saint-Georges-Saint-Emilion
+      denom: Saint-Georges-Saint-Emilion
+    review:
+      status: published
+      notes: >-
+        One commune in the INAO commune list; the shape lies inside or on the boundary of the
+        Bordeaux shape.
+  - entity: appellation.saint-julien
+    id: geo.appellation-area.saint-julien
+    feature_key:
+      id_app: 71
+      id_denom: 168
+      signe: AOC
+      type_denom: appellation
+      app: Saint-Julien
+      denom: Saint-Julien
+    prior_edition_check: 2026-10-12
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. Four communes in the INAO commune list; the shape lies inside or on the
+        boundary of the Haut-Médoc shape (maximum distance outside 0.29 m) and of the Bordeaux
+        shape.
+  - entity: appellation.sainte-croix-du-mont
+    id: geo.appellation-area.sainte-croix-du-mont
+    feature_key:
+      id_app: 72
+      id_denom: 169
+      signe: AOC
+      type_denom: appellation
+      app: Sainte-Croix-du-Mont
+      denom: Sainte-Croix-du-Mont
+    review:
+      status: published
+      notes: >-
+        One commune in the INAO commune list; the shape lies inside or on the boundary of the
+        Bordeaux shape.
+  - entity: appellation.sauternes
+    id: geo.appellation-area.sauternes
+    feature_key:
+      id_app: 75
+      id_denom: 172
+      signe: AOC
+      type_denom: appellation
+      app: Sauternes
+      denom: Sauternes
+    prior_edition_check: 2026-10-12
+    review:
+      status: published
+      notes: >-
+        Same key pair, vertex count and native bbox as the record inspected in the 2026-10-12
+        edition. Five communes in the INAO commune list; the shape lies inside or on the
+        boundary of the Bordeaux shape and contains the Barsac shape. Barsac and Sauternes
+        remain separate records; no containment relation is derived.

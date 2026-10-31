@@ -1,0 +1,1057 @@
+# Pinned geography datasets for Atlas. See docs/atlas-plan.md §3 and §6.
+#
+# scripts/geography/fetch.ts downloads every resource into data/geography/cache/<id>/<filename>
+# and verifies byte count and SHA-256. A changed upstream file fails the fetch and needs a new
+# source review; nothing is replaced silently. scripts/geography/import.ts reads only verified
+# cache files and refuses a PRJ that differs from the verbatim WKT recorded here.
+#
+# Release decision 2026-10-30: the earlier edition of 2026-10-12 (88,984,476 bytes, SHA-256
+# e9ea8b48c507da006774ad460d03619b464ca6598956ac7fd319f36af4f56bc4) researched on 2026-10-14 is
+# no longer served by data.gouv.fr (HTTP 404, no archived copy). INAO replaced it in place, under
+# the same resource id, with the edition of 2026-10-26. Only that edition can be pinned. Its DBF
+# carries values solely in `type_denom` and `denom`; `dt`, `signe`, `id_app`, `app`, `id_denom`,
+# `categorie` and the commune fields are blank in all 1,852 records, unlike the 2026-10-12 edition
+# and unlike INAO's APIZPI export of the same day. The INAO product register (second resource) is
+# pinned as the authority for the id_app/id_denom identity of each mapped feature. Details:
+# editorial/atlas-geography-sources-review-2026-10-30.md.
+version: 1
+resources:
+  - id: inao-geographical-areas-2026-10-26
+    source_id: source.inao-geographical-areas-2026
+    publisher: Institut national de l’origine et de la qualité (INAO)
+    title: Délimitation des aires-géographiques des SIQO — shapefile, édition du 26 octobre 2026
+    dataset_id: 5d7fb2856f444171a5f2780b
+    dataset_url: https://www.data.gouv.fr/datasets/delimitation-des-aires-geographiques-des-siqo
+    resource_id: 687d62d7-8ee6-4997-a47a-81e3183be31b
+    url: https://static.data.gouv.fr/resources/delimitation-des-aires-geographiques-des-siqo/20261026-223158/2026-10-26-delim-aire-geographique-shp.zip
+    filename: 2026-10-26-delim-aire-geographique-shp.zip
+    format: shapefile-zip
+    bytes: 88937803
+    sha256: 36b95bd8e88dc0412c1e83c917907527105dc710d60f4d381502dcf0ec2551ef
+    catalogue_sha1: 103ebe8dda57af1158a058e637ea21ef609eb09b
+    release: 2026-10-26
+    upstream_last_modified: 2026-10-26T22:32:23.648Z
+    retrieved_at: 2026-10-30
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: "INAO, Délimitation des aires géographiques des SIQO, édition du 26 octobre 2026"
+      conditions: >-
+        Name the licensor (INAO) and the date of the last update of the reused information; the credit must not confer an official character on the reuse or suggest endorsement by INAO or any public body.
+      upstream_warning: >-
+        INAO publishes these shapes for information only; the official delimitation of each geographical area is the commune list in the cahier des charges.
+    encoding: UTF-8 # from the CPG member
+    crs:
+      recognised: IGNF:LAMB93
+      equivalent_epsg: EPSG:2154
+      units: metre
+      wkt: 'PROJCS["RGF93_Lambert_93",GEOGCS["GCS_RGF_1993",DATUM["D_RGF_1993",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",700000.0],PARAMETER["False_Northing",6600000.0],PARAMETER["Central_Meridian",3.0],PARAMETER["Standard_Parallel_1",44.0],PARAMETER["Standard_Parallel_2",49.0],PARAMETER["Latitude_Of_Origin",46.5],UNIT["Meter",1.0]]'
+      # EPSG:2154 as a PROJ string; the import projects from the PRJ WKT and refuses to run if
+      # this definition disagrees with it by more than 1e-9 degrees on a grid over the file bbox.
+      # No datum shift is applied: RGF93 is treated as WGS 84 (difference under one metre).
+      proj_definition: "+proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs"
+    # Metropolitan France and Corsica; a reprojected position outside this extent means a CRS
+    # or axis-order mistake, not a valid feature.
+    expected_extent_wgs84: [-6.0, 41.0, 10.5, 51.5]
+    members:
+      - name: 2026-10-26_delim-aire-geographique-shp.cpg
+        bytes: 5
+      - name: 2026-10-26_delim-aire-geographique-shp.dbf
+        bytes: 6271482
+      - name: 2026-10-26_delim-aire-geographique-shp.prj
+        bytes: 449
+      - name: 2026-10-26_delim-aire-geographique-shp.shp
+        bytes: 208740652
+      - name: 2026-10-26_delim-aire-geographique-shp.shx
+        bytes: 14916
+    record_count: 1852
+    attribute_fields:
+      - dt
+      - type_prod
+      - categorie
+      - type_denom
+      - signe
+      - id_app
+      - app
+      - id_denom
+      - denom
+      - insee
+      - cvi
+      - nomcom
+      - insee2011
+      - nomcom2011
+      - id_aire
+      - crinao
+      - grp_name1
+      - grp_name2
+    populated_attribute_fields: [type_denom, denom]
+  - id: inao-siqo-product-register-2025-12-31
+    source_id: source.inao-siqo-product-register-2025
+    publisher: Institut national de l’origine et de la qualité (INAO)
+    title: Référentiel des produits sous SIQO — extraction du 31 décembre 2025
+    dataset_id: 69538fa5e19db626e660563d
+    dataset_url: https://www.data.gouv.fr/datasets/referentiel-des-produits-sous-signe-officiel-didentification-de-la-qualite-et-de-lorigine-siqo
+    resource_id: 76e54568-9786-4e15-8e48-dc3b8f44011d
+    url: https://www.data.gouv.fr/api/1/datasets/r/76e54568-9786-4e15-8e48-dc3b8f44011d
+    filename: 2025-12-31-inao-ref-produit-siqo.csv
+    format: csv
+    bytes: 1114747
+    sha256: f095783bbb64a06efd299b622bb6cb797a78c5e166ab5f7e74bb6aa9f5fb2078
+    release: 2025-12-31
+    upstream_last_modified: 2025-12-31T16:37:33.377Z
+    retrieved_at: 2026-10-30
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: "INAO, Référentiel des produits sous SIQO, extraction du 31 décembre 2025"
+    encoding: UTF-8 # with byte-order mark
+    delimiter: ","
+    purpose: >-
+      Identity authority for the mapping table: `id_appellation`, `appellation`, `id_denomination_geo` and `denomination` share the namespace of the shapefile fields `id_app`, `app`, `id_denom` and `denom`, as confirmed for the nine pairs inspected in the 2026-10-12 shapefile edition. The register carries no geometry.
+  - id: ign-bdcarto-river-garonne-bordeaux
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river garonne bordeaux (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27la%20Garonne%27%2C%27Fleuve%20la%20Garonne%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Garonne','Fleuve la Garonne')
+      envelope: bordeaux
+    filename: ign-bdcarto-river-garonne-bordeaux.geojson
+    format: geojson
+    bytes: 346329
+    sha256: 4f28e36fe25dfcdcc37468f67bbf4d109f25b50ba45740d2238295cb83d0e01b
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:12.108Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 349
+  - id: ign-bdcarto-river-dordogne-bordeaux
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river dordogne bordeaux (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27la%20Dordogne%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Dordogne')
+      envelope: bordeaux
+    filename: ign-bdcarto-river-dordogne-bordeaux.geojson
+    format: geojson
+    bytes: 304224
+    sha256: 4727429f9143b8de66ef5ab9cee1d6bc015c25eab154d1c6f28845221e36d163
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:13.047Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 307
+  - id: ign-bdcarto-river-isle-bordeaux
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river isle bordeaux (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27l%27%27Isle%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('l''Isle')
+      envelope: bordeaux
+    filename: ign-bdcarto-river-isle-bordeaux.geojson
+    format: geojson
+    bytes: 550155
+    sha256: 27e35972400af16baaf441623ad2c0ce59baeffc39498285d0386fa187029027
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:17.781Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 548
+  - id: ign-bdcarto-river-ciron-bordeaux
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river ciron bordeaux (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27le%20Ciron%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('le Ciron')
+      envelope: bordeaux
+    filename: ign-bdcarto-river-ciron-bordeaux.geojson
+    format: geojson
+    bytes: 310177
+    sha256: 2fef036f5f1cf557df06ac465d11ab31c5a42f5ecb98a78cfb35af64bbe2dc6a
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:18.709Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 275
+  - id: ign-bdcarto-water-gironde-estuary
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water gironde estuary (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27la%20Gironde%27%20AND%20nature%3D%27Estuaire%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='la Gironde' AND nature='Estuaire'
+      envelope: bordeaux
+    filename: ign-bdcarto-water-gironde-estuary.geojson
+    format: geojson
+    bytes: 305505
+    sha256: 6f563b4a133735c39f18b2a97ca3955f6636b5529666dd2886455515f4cc577a
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:19.957Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-water-lac-d-hourtin
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac d hourtin (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20d%27%27Hourtin%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac d''Hourtin'
+      envelope: bordeaux
+    filename: ign-bdcarto-water-lac-d-hourtin.geojson
+    format: geojson
+    bytes: 50227
+    sha256: 1210a6adeec8e4544a914b0168de45f2ea4813074e29fcd87465d3663aa85bba
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:20.640Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-water-lac-de-carcans
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac de carcans (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20de%20Carcans%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac de Carcans'
+      envelope: bordeaux
+    filename: ign-bdcarto-water-lac-de-carcans.geojson
+    format: geojson
+    bytes: 37192
+    sha256: 8aef42ee3b4b219dc4b94282cc4f774c7a13c620d8752b593c82adb3790b9cc5
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:21.045Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-water-lac-de-lacanau
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac de lacanau (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20de%20Lacanau%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac de Lacanau'
+      envelope: bordeaux
+    filename: ign-bdcarto-water-lac-de-lacanau.geojson
+    format: geojson
+    bytes: 49737
+    sha256: 11b505d6b2de5695db5151047e40d8697858ede552301ae2be38c9401cb9aff8
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:21.407Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-water-lac-de-cazaux-et-sanguinet
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac de cazaux et sanguinet (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20de%20Cazaux%20et%20Sanguinet%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac de Cazaux et Sanguinet'
+      envelope: bordeaux
+    filename: ign-bdcarto-water-lac-de-cazaux-et-sanguinet.geojson
+    format: geojson
+    bytes: 47520
+    sha256: ea88253233acb6d5529a8d621d55c9b26cb4e9cca0bb28bfe1093cecc351afc1
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:21.769Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-coastline-bordeaux
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:limite_terre_mer — coastline bordeaux (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:limite_terre_mer
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Alimite_terre_mer&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C339900%2C6336487%2C509729%2C6532221%2C%27EPSG%3A2154%27%29%20AND%20type_de_limite%20IS%20NULL%20AND%20niveau%3D%27Plus%20hautes%20eaux%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:limite_terre_mer
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND type_de_limite IS NULL AND niveau='Plus hautes eaux'
+      envelope: bordeaux
+    filename: ign-bdcarto-coastline-bordeaux.geojson
+    format: geojson
+    bytes: 1787953
+    sha256: c88e228c388a026df729cbe95c61fca7926203d4462713e95377d6befb5ac4d9
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:22.317Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 217
+  - id: ign-adminexpress-places-bordeaux
+    storage: raw
+    source_id: source.ign-admin-express-cog-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: ADMINEXPRESS-COG.2026:chef_lieu_de_commune — places bordeaux (WFS GetFeature response)
+    dataset_id: IGNF_ADMIN-EXPRESS
+    raw_directory: ign-admin-express-cog-2026
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS
+    resource_id: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ADMINEXPRESS-COG.2026%3Achef_lieu_de_commune&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=code_insee_de_la_commune%20IN%20%28%2733063%27%2C%2733314%27%2C%2733395%27%2C%2733423%27%2C%2733268%27%2C%2733240%27%2C%2733243%27%2C%2733394%27%2C%2733328%27%2C%2733174%27%2C%2733108%27%2C%2733227%27%2C%2733081%27%2C%2733504%27%2C%2733030%27%2C%2733327%27%2C%2733058%27%2C%2733067%27%2C%2733352%27%2C%2733402%27%2C%2733140%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: code_insee_de_la_commune IN ('33063','33314','33395','33423','33268','33240','33243','33394','33328','33174','33108','33227','33081','33504','33030','33327','33058','33067','33352','33402','33140')
+      envelope: bordeaux
+    filename: ign-adminexpress-places-bordeaux.geojson
+    format: geojson
+    bytes: 11607
+    sha256: a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2
+    release: 2026-01-01
+    edition: "ADMIN EXPRESS COG 2026, code officiel géographique au 1er janvier 2026; the WFS layer abstract states 'ADMINEXPRESS COG 2026 Chef-lieu de commune ; édition 2026-01-01' (GetCapabilities checked 2026-10-31). No separate publication date is given by the service."
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:22.939Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, ADMIN EXPRESS COG 2026 (code officiel géographique au 1er janvier 2026), service Géoplateforme consulté le 30 octobre 2026
+      evidence: "Géoplateforme CSW record IGNF_ADMIN-EXPRESS, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 5808de39c751df1e0679df72 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 21
+  - id: ign-bdcarto-river-marne-champagne
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river marne champagne (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27la%20Marne%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Marne')
+      envelope: champagne
+    filename: ign-bdcarto-river-marne-champagne.geojson
+    format: geojson
+    bytes: 1101818
+    sha256: c9035bc9092bcd0d8b953c9251f64b8805e70c069a842cf16e2d02626557c887
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:23.630Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1049
+  - id: ign-bdcarto-river-aube-champagne
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river aube champagne (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27l%27%27Aube%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('l''Aube')
+      envelope: champagne
+    filename: ign-bdcarto-river-aube-champagne.geojson
+    format: geojson
+    bytes: 1099702
+    sha256: 2192a140faffc76ef4616e9dbc57cbb026d8c1658ce7c6e6334f554de72b5e52
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:25.839Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1018
+  - id: ign-bdcarto-river-seine-champagne
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river seine champagne (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27la%20Seine%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Seine')
+      envelope: champagne
+    filename: ign-bdcarto-river-seine-champagne.geojson
+    format: geojson
+    bytes: 1279771
+    sha256: a8450af4cf723a3c740efe44a9f2251571c5480e4747afe2e64f54aff8886927
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:27.868Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1240
+  - id: ign-bdcarto-river-vesle-champagne
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:troncon_hydrographique — river vesle champagne (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:troncon_hydrographique
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Atroncon_hydrographique&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20cpx_toponyme_de_cours_d_eau%20IN%20%28%27la%20Vesle%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:troncon_hydrographique
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Vesle')
+      envelope: champagne
+    filename: ign-bdcarto-river-vesle-champagne.geojson
+    format: geojson
+    bytes: 320358
+    sha256: 3d9c3b5e0734544fd39c3fba244f728c27090293a37b91ce5ccbb96d4464c590
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:28.934Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 248
+  - id: ign-bdcarto-water-lac-du-der-chantecoq
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac du der chantecoq (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20du%20Der-Chantecoq%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac du Der-Chantecoq'
+      envelope: champagne
+    filename: ign-bdcarto-water-lac-du-der-chantecoq.geojson
+    format: geojson
+    bytes: 46583
+    sha256: 2db5370bbea048f5b03b160e28abbd6c6ca747887251e1b0f5a70fce7e8d0eef
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:29.680Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-water-lac-d-orient
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac d orient (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20d%27%27Orient%20%28R%C3%A9servoir%20Seine%29%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac d''Orient (Réservoir Seine)'
+      envelope: champagne
+    filename: ign-bdcarto-water-lac-d-orient.geojson
+    format: geojson
+    bytes: 23643
+    sha256: 64f2d3bb3b51607140672d95889fef7befa72af3b64a3d93c2d63a575c9a437c
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:30.069Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-water-lac-d-auzon-temple
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac d auzon temple (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20d%27%27Auzon-Temple%20%28R%C3%A9servoir%20Aube%29%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac d''Auzon-Temple (Réservoir Aube)'
+      envelope: champagne
+    filename: ign-bdcarto-water-lac-d-auzon-temple.geojson
+    format: geojson
+    bytes: 34820
+    sha256: a337b08ed60512078fa8371bac4cf2174ad774d1dfbd51c7b840f90df8665f92
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:30.469Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-bdcarto-water-lac-d-amance
+    storage: raw
+    source_id: source.ign-bd-carto-v5-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: BDCARTO_V5:plan_d_eau — water lac d amance (WFS GetFeature response)
+    dataset_id: IGNF_BD-CARTO
+    raw_directory: ign-bd-carto-v5
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO
+    resource_id: BDCARTO_V5:plan_d_eau
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=BDCARTO_V5%3Aplan_d_eau&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=BBOX%28geometrie%2C692500%2C6733290%2C861234%2C6957774%2C%27EPSG%3A2154%27%29%20AND%20toponyme%3D%27Lac%20d%27%27Amance%20%28R%C3%A9servoir%20Aube%29%27
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: BDCARTO_V5:plan_d_eau
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac d''Amance (Réservoir Aube)'
+      envelope: champagne
+    filename: ign-bdcarto-water-lac-d-amance.geojson
+    format: geojson
+    bytes: 16112
+    sha256: d4b3246dd7fab205f987585db2c4b60ebd68751ce790e2f1ed2e0a13b8f5fae7
+    release: 2026-03-15
+    edition: BD CARTO® V5 2026-03-15 (edition named in the Géoplateforme WFS layer abstracts at retrieval)
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:30.811Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+      evidence: "Géoplateforme CSW record IGNF_BD-CARTO, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 675871b46e60265b46ab3562 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 1
+  - id: ign-adminexpress-places-champagne
+    storage: raw
+    source_id: source.ign-admin-express-cog-2026
+    publisher: Institut national de l’information géographique et forestière (IGN)
+    title: ADMINEXPRESS-COG.2026:chef_lieu_de_commune — places champagne (WFS GetFeature response)
+    dataset_id: IGNF_ADMIN-EXPRESS
+    raw_directory: ign-admin-express-cog-2026
+    dataset_url: https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS
+    resource_id: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+    url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ADMINEXPRESS-COG.2026%3Achef_lieu_de_commune&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A2154&SORTBY=cleabs&CQL_FILTER=code_insee_de_la_commune%20IN%20%28%2751454%27%2C%2751230%27%2C%2751108%27%2C%2751649%27%2C%2710387%27%2C%2710033%27%2C%2710034%27%2C%2702168%27%29
+    request:
+      service: https://data.geopf.fr/wfs/ows
+      protocol: WFS 2.0.0 GetFeature
+      typename: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+      output_format: application/json
+      srs: EPSG:2154
+      sort_by: cleabs
+      cql_filter: code_insee_de_la_commune IN ('51454','51230','51108','51649','10387','10033','10034','02168')
+      envelope: champagne
+    filename: ign-adminexpress-places-champagne.geojson
+    format: geojson
+    bytes: 4593
+    sha256: fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa
+    release: 2026-01-01
+    edition: "ADMIN EXPRESS COG 2026, code officiel géographique au 1er janvier 2026; the WFS layer abstract states 'ADMINEXPRESS COG 2026 Chef-lieu de commune ; édition 2026-01-01' (GetCapabilities checked 2026-10-31). No separate publication date is given by the service."
+    retrieved_at: 2026-10-30
+    retrieved_at_time: 2026-10-30T12:29:31.146Z
+    licence:
+      id: etalab-2.0
+      name: Licence Ouverte / Open Licence 2.0
+      url: https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+      attribution: IGN, ADMIN EXPRESS COG 2026 (code officiel géographique au 1er janvier 2026), service Géoplateforme consulté le 30 octobre 2026
+      evidence: "Géoplateforme CSW record IGNF_ADMIN-EXPRESS, otherConstraints: Licence Ouverte / Open License (compatible ODC-BY, CC-BY 2.0), no public access restriction; data.gouv.fr dataset 5808de39c751df1e0679df72 licence lov2"
+    encoding: UTF-8
+    crs:
+      recognised: EPSG:2154
+      equivalent_epsg: EPSG:2154
+      units: metre
+      urn: urn:ogc:def:crs:EPSG::2154
+      proj_definition: +proj=lcc +lat_0=46.5 +lon_0=3 +lat_1=49 +lat_2=44 +x_0=700000 +y_0=6600000 +ellps=GRS80 +units=m +no_defs
+    expected_extent_wgs84:
+      - -6
+      - 41
+      - 10.5
+      - 51.5
+    feature_count: 8
+envelopes:
+  bordeaux:
+    wgs84:
+      - -1.5
+      - 44.1
+      - 0.55
+      - 45.8
+    lambert93:
+      - 339900
+      - 6336487
+      - 509729
+      - 6532221
+    notes: Union of the 38 Bordeaux-cluster appellation bboxes [-1.1695, 44.3241, 0.3151, 45.5736] widened by about 0.3 degrees west (Atlantic coast and Arcachon basin) and 0.22 degrees elsewhere; lambert93 is the bounding rectangle of the projected envelope outline.
+  champagne:
+    wgs84:
+      - 2.9
+      - 47.7
+      - 5.15
+      - 49.7
+    lambert93:
+      - 692500
+      - 6733290
+      - 861234
+      - 6957774
+    notes: Champagne appellation bbox [3.1370, 47.9235, 4.8998, 49.4554] widened by about 0.24 degrees; lambert93 is the bounding rectangle of the projected envelope outline.
