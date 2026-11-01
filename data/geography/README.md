@@ -79,7 +79,7 @@ geometry helpers come from the build's `lib/geometry.ts`.
 
 Generated display assets live in `src/generated/geography/` and are never
 edited by hand. Besides one file per scene, `index.json` carries a small
-`thumbnail` per scene for the Atlas region chooser: `{ viewBox: { width: 160,
+`thumbnail` per scene for the Atlas portal cards: `{ viewBox: { width: 160,
 height }, paths: [string] }`, one path per selectable area. Overarching
 (context) areas, water and places never enter a thumbnail, and neither does any
 outline of its own; a scene without selectable areas has no thumbnail. It is

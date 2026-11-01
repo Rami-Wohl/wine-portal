@@ -334,6 +334,17 @@
     --atlas-render-px: 760;
     --atlas-area-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+  /* Portal: the lead card stacks above the section's cards. */
+  .atlas-portal {
+    --atlas-portal-columns: minmax(0, 1fr);
+    --atlas-portal-lead-position: relative;
+  }
+  .atlas-portal-card-lead {
+    top: auto;
+  }
+  .atlas-portal-section-compact .atlas-portal-section-body {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 760px) {
@@ -371,6 +382,13 @@
 @media (max-width: 620px) {
   .atlas-scene {
     --atlas-render-px: 320;
+  }
+  /* Portal cards keep two columns down to 390px; the lead card's map stays legible. */
+  .atlas-portal-card {
+    padding: 0.7rem;
+  }
+  .atlas-portal-thumb {
+    height: 96px;
   }
   .atlas-scene {
     --atlas-area-columns: 1fr;

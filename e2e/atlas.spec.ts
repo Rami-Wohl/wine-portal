@@ -267,7 +267,23 @@ for (const locale of ["nl", "en"] as const) {
           sceneOrientation: "als oriëntatie",
           wheelHint: /^Gebruik (Ctrl|⌘) \+ scrollen om te zoomen$/,
           touchHint: "Gebruik twee vingers om de kaart te bewegen",
-          chooseRegion: "Kies een regio",
+          portalTitle: "Wijnregio's op de kaart",
+          previewNote: "De atlas is al vroeg te zien",
+          scope: (regions: number, maps: number) =>
+            `Nu in de atlas: ${regions} regio's, ${maps === regions ? "alle" : maps} met een kaart.`,
+          cardCoverage: (shown: number, intended: number) =>
+            shown === intended
+              ? `${shown} appellaties op de kaart`
+              : `${shown} van ${intended} appellaties op de kaart`,
+          mapOf: "Kaart van",
+          finderLabel: "Zoek een regio of appellatie",
+          finderSubmit: "Zoeken",
+          found: (count: number) =>
+            count === 1 ? "1 regio gevonden" : `${count} regio's gevonden`,
+          shown: (count: number) => `, ${count} getoond`,
+          areaHit: (area: string) => `Met ${area}`,
+          readAboutBordeaux: "Lees over Bordeaux",
+          none: (query: string) => `Geen regio gevonden voor ‘${query}’.`,
         }
       : {
           overviewHeading: "Map of Bordeaux",
@@ -294,18 +310,33 @@ for (const locale of ["nl", "en"] as const) {
           sceneOrientation: "for orientation",
           wheelHint: /^Use (Ctrl|⌘) \+ scroll to zoom$/,
           touchHint: "Use two fingers to move the map",
-          chooseRegion: "Choose a region",
+          portalTitle: "Wine regions on the map",
+          previewNote: "The atlas is published early",
+          scope: (regions: number, maps: number) =>
+            `In the atlas so far: ${regions} regions, ${maps === regions ? "all" : maps} with a map.`,
+          cardCoverage: (shown: number, intended: number) =>
+            shown === intended
+              ? `${shown} appellations on the map`
+              : `${shown} of ${intended} appellations on the map`,
+          mapOf: "Map of",
+          finderLabel: "Find a region or appellation",
+          finderSubmit: "Search",
+          found: (count: number) => (count === 1 ? "1 region found" : `${count} regions found`),
+          shown: (count: number) => `, ${count} shown`,
+          areaHit: (area: string) => `With ${area}`,
+          readAboutBordeaux: "Read about Bordeaux",
+          none: (query: string) => `No region matches ‘${query}’.`,
         };
 
-  test(`${locale} Atlas overview renders the Bordeaux scene with legend and one credit line per source`, async ({
+  test(`${locale} the Bordeaux overview scene renders with legend and one credit line per source`, async ({
     page,
   }) => {
-    await page.goto(`${prefix}/atlas`);
+    await page.goto(`${prefix}/atlas/${scenes.bordeaux.slug}`);
     const scene = page.locator(`[data-atlas-scene="${scenes.bordeaux.id}"]`);
     await expect(scene).toBeVisible();
     await expect(
       scene.getByRole("heading", { level: 2, name: copy.overviewHeading }),
-    ).toBeVisible();
+    ).toBeAttached();
     await expect(scene.locator("svg.atlas-map")).toHaveAttribute("data-zoom", /^\d/);
 
     // Licence Ouverte 2.0: the verbatim attribution, linked to the dataset, plus the licence.
@@ -331,47 +362,92 @@ for (const locale of ["nl", "en"] as const) {
     await expect(credits).not.toContainText(copy.attributionLabel);
     const sceneText = await scene.innerText();
     expect(sceneText.match(copy.independence) ?? []).toHaveLength(1);
-  });
-
-  test(`${locale} Atlas overview lists every active-owner scene and not the draft one`, async ({
-    page,
-  }) => {
-    await page.goto(`${prefix}/atlas`);
-    const list = page.locator(".atlas-region-chooser");
-    for (const { slug } of activeOwnerScenes) {
-      await expect(list.locator(`a[href="${prefix}/atlas/${slug}"]`)).toHaveCount(1);
-    }
-    await expect(list.locator(`a[href="${prefix}/atlas/${scenes.champagne.slug}"]`)).toHaveCount(0);
-    await expect(
-      page.locator(`main a[href="${prefix}/atlas/${scenes.champagne.slug}"]`),
-    ).toHaveCount(0);
-  });
-
-  test(`${locale} Atlas overview opens with region cards, each with a thumbnail, before the map`, async ({
-    page,
-  }) => {
-    await page.goto(`${prefix}/atlas`);
-    const chooser = page.locator(".atlas-region-chooser");
-    await expect(chooser.getByRole("heading", { level: 2, name: copy.chooseRegion })).toBeVisible();
-    const cards = chooser.locator("a.atlas-region-card");
-    await expect(cards).toHaveCount(activeOwnerScenes.length);
-    for (const card of await cards.all()) {
-      await expect(card.locator("svg.atlas-region-thumb path").first()).toBeAttached();
-      expect(await card.locator("svg.atlas-region-thumb path").count()).toBeGreaterThan(0);
-    }
-    const overview = page.locator(`[data-atlas-scene="${scenes.bordeaux.id}"]`);
-    expect(await documentTop(chooser)).toBeLessThan(await documentTop(overview));
-    // The intro carries one sentence; the scale statement lives in the map's legend, once.
+    // The scale statement lives in the map's legend, once, never in the intro.
     await expect(page.locator(".page-intro")).not.toContainText(copy.scaleStatement);
     const text = (await page.locator("main").textContent()) ?? "";
     expect(text.split(copy.scaleStatement)).toHaveLength(2);
   });
 
-  test(`${locale} Atlas overview states coverage from computed data`, async ({ page }) => {
+  test(`${locale} the Atlas portal lists every active-owner scene once and nothing of drafts`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas`);
+    const portal = page.locator(".atlas-portal");
+    for (const { slug } of activeOwnerScenes) {
+      await expect(portal.locator(`a[href="${prefix}/atlas/${slug}"]`)).toHaveCount(1);
+    }
+    await expect(
+      page.locator(`main a[href="${prefix}/atlas/${scenes.champagne.slug}"]`),
+    ).toHaveCount(0);
+    await expect(page.locator("main")).not.toContainText(
+      readEntity("region.champagne").names[locale],
+    );
+    // The portal draws no map of its own and loads no scene.
+    await expect(page.locator("[data-atlas-scene]")).toHaveCount(0);
+    // Scope from data: every listed region is a portal node.
+    await expect(page.locator(".page-intro")).toContainText(
+      copy.scope(await page.locator("[data-portal-node]").count(), activeOwnerScenes.length),
+    );
+  });
+
+  test(`${locale} the Atlas portal: Bordeaux section, its own map card, cards, and Fronsadais inside Libournais`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas`);
+    await expect(page.getByRole("heading", { level: 1, name: copy.portalTitle })).toBeVisible();
+    await expect(page.locator(".page-intro")).toContainText(copy.previewNote);
+    const section = page.locator(".atlas-portal-section").filter({
+      has: page.getByRole("heading", { level: 2, name: "Bordeaux", exact: true }),
+    });
+    await expect(section).toHaveCount(1);
+    const lead = section.locator(".atlas-portal-card-lead");
+    await expect(lead.getByRole("link", { name: copy.overviewHeading })).toHaveAttribute(
+      "href",
+      `${prefix}/atlas/${scenes.bordeaux.slug}`,
+    );
+    // The intro promises reading about the region: the lead card links to its page too.
+    await expect(lead.getByRole("link", { name: copy.readAboutBordeaux })).toHaveAttribute(
+      "href",
+      `${prefix}/regions/bordeaux`,
+    );
+    const cards = section.locator(".atlas-portal-grid > li > .atlas-portal-card");
+    await expect(cards).toHaveCount(5);
+    for (const card of await cards.all()) {
+      // One link per card; a map card shows its thumbnail.
+      await expect(card.locator("a.atlas-portal-link")).toHaveCount(1);
+      expect(await card.locator("svg.atlas-portal-thumb path").count()).toBeGreaterThan(0);
+    }
+    const libournais = section.locator("li[data-portal-node]").filter({
+      has: page.locator(`a.atlas-portal-link[href="${prefix}/atlas/${scenes.libournais.slug}"]`),
+    });
+    const fronsadais = libournais.locator(".atlas-portal-sub a");
+    await expect(fronsadais).toHaveAttribute("href", `${prefix}/atlas/${scenes.fronsadais.slug}`);
+    await expect(fronsadais).toHaveText("Fronsadais");
+  });
+
+  test(`${locale} portal cards state coverage from computed data and read naturally`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas`);
+    for (const scene of activeOwnerScenes) {
+      const { coverage } = readScene(scene.id);
+      const link = page.locator(`.atlas-portal a[href="${prefix}/atlas/${scene.slug}"]`);
+      const state = page.locator(`#${await link.getAttribute("aria-describedby")}`);
+      await expect(state).toHaveText(
+        copy.cardCoverage(coverage.shown.length, coverage.intended.length),
+      );
+      // The name alone is the link text; the state is a separate description.
+      const owner = readEntity(scene.id.replace(/^scene\./, "region.")).names[locale];
+      const name = (await link.innerText()).trim();
+      expect([owner, `${copy.mapOf} ${owner}`]).toContain(name);
+    }
+  });
+
+  test(`${locale} the Bordeaux scene states coverage from computed data`, async ({ page }) => {
     // Expectations follow the scene data, so publishing a held record does not break the suite.
     const { coverage } = readScene(scenes.bordeaux.id);
     const missingNames = coverage.missing.map((entry) => readEntity(entry.entity).names[locale]);
-    await page.goto(`${prefix}/atlas`);
+    await page.goto(`${prefix}/atlas/${scenes.bordeaux.slug}`);
     const statement = page.locator(
       `[data-atlas-scene="${scenes.bordeaux.id}"] .atlas-legend-coverage`,
     );
@@ -395,18 +471,150 @@ for (const locale of ["nl", "en"] as const) {
     await expect(page.locator("[data-entity-atlas] .atlas-legend-coverage")).toHaveCount(0);
   });
 
-  test(`${locale} every scene route loads without pipeline vocabulary`, async ({ page }) => {
+  test(`${locale} the portal and every scene route load without pipeline vocabulary`, async ({
+    page,
+  }) => {
     for (const route of [
       `${prefix}/atlas`,
       ...Object.values(scenes).map(({ slug }) => `${prefix}/atlas/${slug}`),
     ]) {
       const response = await page.goto(route);
       expect(response?.status(), route).toBe(200);
-      await expect(page.locator("[data-atlas-scene]").first()).toBeVisible();
+      await expect(page.locator("[data-atlas-scene], .atlas-portal").first()).toBeVisible();
       const text = await page.locator("main").innerText();
       for (const term of forbiddenTerms) {
         expect(text.includes(term), `${route} shows "${term}"`).toBe(false);
       }
+    }
+  });
+
+  test(`${locale} the finder filters regions in place, ignoring case and accents`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas`);
+    const input = page.getByRole("searchbox", { name: copy.finderLabel });
+    const status = page.locator(".atlas-portal-status");
+    const visibleCards = page.locator(".atlas-portal-grid > li:visible");
+    const visibleNodes = page.locator("[data-portal-node]:visible");
+    await expect(visibleCards).toHaveCount(5);
+
+    // Case and accents are ignored: the same matches and the same status.
+    await input.fill("médoc");
+    await expect(status).not.toHaveText("");
+    const statusText = (await status.textContent()) ?? "";
+    for (const query of ["MEDOC", "Medoc"]) {
+      await input.fill(query);
+      await expect(status).toHaveText(statusText);
+    }
+    await expect(
+      page.locator(`a.atlas-portal-link[href="${prefix}/atlas/${scenes.medoc.slug}"]`),
+    ).toBeVisible();
+
+    // A match deeper down keeps its card and section as context, and the status says what is
+    // shown: one found, three entries on screen.
+    await input.fill("fronsadais");
+    await expect(visibleCards).toHaveCount(1);
+    await expect(page.locator(".atlas-portal-sub a:visible")).toHaveText("Fronsadais");
+    await expect(visibleNodes).toHaveCount(3);
+    await expect(status).toHaveText(`${copy.found(1)}${copy.shown(3)}`);
+
+    // An appellation finds the regions whose maps draw it: Médoc and the Bordeaux overview,
+    // each saying so, and nothing else (Bordeaux is the section, so no extra context).
+    await input.fill("pauillac");
+    await expect(visibleNodes).toHaveCount(2);
+    await expect(visibleCards).toHaveCount(1);
+    const medocCard = page.locator(".atlas-portal-grid > li:visible");
+    await expect(medocCard.locator("a.atlas-portal-link")).toHaveAttribute(
+      "href",
+      `${prefix}/atlas/${scenes.medoc.slug}`,
+    );
+    await expect(medocCard.locator("[data-area-hit]")).toHaveText(copy.areaHit("Pauillac"));
+    await expect(page.locator(".atlas-portal-card-lead [data-area-hit]")).toHaveText(
+      copy.areaHit("Pauillac"),
+    );
+    await expect(status).toHaveText(copy.found(2));
+    await expect(page.locator("[data-area-hit]:not(:empty)")).toHaveCount(2);
+
+    // A partial name still finds Fronsadais inside Libournais; the regions whose maps draw
+    // Fronsac show too, and the status counts exactly the entries on screen.
+    await input.fill("fronsa");
+    await expect(visibleCards).toHaveCount(1);
+    await expect(page.locator(".atlas-portal-sub a:visible")).toHaveText("Fronsadais");
+    const onScreen = await visibleNodes.count();
+    await expect(status).toHaveText(copy.found(onScreen));
+
+    // Escape clears the filter and the appellation lines.
+    await input.press("Escape");
+    await expect(input).toHaveValue("");
+    await expect(status).toHaveText("");
+    await expect(visibleCards).toHaveCount(5);
+    await expect(page.locator("[data-area-hit]:not(:empty)")).toHaveCount(0);
+
+    // No match: say so and offer the whole knowledge base.
+    await input.fill("xyzzy");
+    await expect(status).toContainText(copy.none("xyzzy"));
+    await expect(status.getByRole("link")).toHaveAttribute("href", `${prefix}/search?q=xyzzy`);
+    await expect(page.locator(".atlas-portal-section:visible")).toHaveCount(0);
+
+    // One match: Enter opens it.
+    await input.fill("fronsadais");
+    await input.press("Enter");
+    await expect(page).toHaveURL(`${prefix}/atlas/${scenes.fronsadais.slug}`);
+  });
+
+  test(`${locale} Enter with several matches searches regions on the search page`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas`);
+    const input = page.getByRole("searchbox", { name: copy.finderLabel });
+    await input.fill("pauillac");
+    await expect(page.locator(".atlas-portal-status")).not.toHaveText("");
+    await expect(page.locator(".atlas-portal-status")).not.toHaveText(copy.found(1));
+    await input.press("Enter");
+    await expect(page).toHaveURL(new RegExp(`${prefix}/search\\?q=pauillac&type=region$`));
+  });
+
+  test(`${locale} without JavaScript the finder searches regions on the search page`, async ({
+    browser,
+  }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false });
+    const page = await context.newPage();
+    try {
+      await page.goto(`${prefix}/atlas`);
+      await expect(page.locator(".atlas-portal-grid > li")).toHaveCount(5);
+      await page.getByRole("searchbox", { name: copy.finderLabel }).fill("Médoc");
+      await page.getByRole("button", { name: copy.finderSubmit }).click();
+      await expect(page).toHaveURL(new RegExp(`${prefix}/search\\?q=M%C3%A9doc&type=region$`));
+      await expect(page.locator(`main a[href="${prefix}/regions/medoc"]`).first()).toBeVisible();
+    } finally {
+      await context.close();
+    }
+  });
+
+  test(`${locale} the finder is the first stop after the header, then one stop per region`, async ({
+    page,
+  }) => {
+    for (const width of [390, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(`${prefix}/atlas`);
+      const input = page.getByRole("searchbox", { name: copy.finderLabel });
+      // Nothing in main is focusable before the finder.
+      const firstInMain = await page.evaluate(() => {
+        const focusable = document.querySelectorAll(
+          "main a[href], main button, main input:not([type=hidden]), main summary, main [tabindex]:not([tabindex='-1'])",
+        );
+        return focusable[0]?.id ?? focusable[0]?.tagName ?? null;
+      });
+      expect(firstInMain).toBe(await input.getAttribute("id"));
+      await input.focus();
+      await page.keyboard.press("Tab");
+      await expect(page.getByRole("button", { name: copy.finderSubmit })).toBeFocused();
+      await page.keyboard.press("Tab");
+      await expect(page.locator(".atlas-portal-card-lead a.atlas-portal-link")).toBeFocused();
+      await page.keyboard.press("Tab");
+      await expect(page.locator(".atlas-portal-card-lead .atlas-portal-about a")).toBeFocused();
+      await page.keyboard.press("Tab");
+      await expect(page.locator(".atlas-portal-grid a.atlas-portal-link").first()).toBeFocused();
     }
   });
 
@@ -848,6 +1056,8 @@ for (const locale of ["nl", "en"] as const) {
       await page.setViewportSize({ width, height: 1000 });
 
       await page.goto(`${prefix}/atlas`);
+      await noHorizontalOverflow(page, width);
+      await page.goto(`${prefix}/atlas/${scenes.bordeaux.slug}`);
       const overview = page.locator(`[data-atlas-scene="${scenes.bordeaux.id}"]`);
       await enhanced(overview);
       await noHorizontalOverflow(page, width);
@@ -896,7 +1106,8 @@ for (const locale of ["nl", "en"] as const) {
   }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${prefix}/atlas`);
-    expect(await documentTop(page.locator("a.atlas-region-card").first())).toBeLessThan(844);
+    // The portal's first region (the Bordeaux map card) starts within the first phone screen.
+    expect(await documentTop(page.locator(".atlas-portal-card").first())).toBeLessThan(844);
 
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
@@ -1028,6 +1239,121 @@ for (const locale of ["nl", "en"] as const) {
     }
   });
 
+  test(`${locale} the portal does not move when the script loads`, async ({ browser }) => {
+    const offsets = async (javaScriptEnabled: boolean, width: number) => {
+      const context = await browser.newContext({
+        javaScriptEnabled,
+        viewport: { width, height: 900 },
+      });
+      const page = await context.newPage();
+      try {
+        await page.goto(`${prefix}/atlas`);
+        if (javaScriptEnabled) await page.waitForLoadState("networkidle");
+        return await page
+          .locator(".atlas-portal a, .atlas-portal input, .atlas-portal-status")
+          .evaluateAll((elements) =>
+            elements.map((element) => {
+              const box = element.getBoundingClientRect();
+              return [Math.round(box.left), Math.round(box.top + window.scrollY)];
+            }),
+          );
+      } finally {
+        await context.close();
+      }
+    };
+    for (const width of [390, 1440]) {
+      expect(await offsets(true, width), `${width}px`).toEqual(await offsets(false, width));
+    }
+  });
+
+  for (const width of [320, 390, 768, 1440]) {
+    test(`${locale} the portal fits ${width}px: whole names, aligned state lines`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(`${prefix}/atlas`);
+      await noHorizontalOverflow(page, width);
+      // Nothing spills out of a card, not even a long unbreakable name.
+      for (const card of await page.locator(".atlas-portal-card").all()) {
+        expect(await card.evaluate((element) => element.scrollWidth - element.clientWidth)).toBe(0);
+      }
+      // Proper names with hyphens never break inside (Entre-deux-Mers).
+      for (const name of await page.locator(".atlas-portal-nobreak").all()) {
+        expect(await name.evaluate((element) => element.getClientRects().length)).toBe(1);
+      }
+      // The section's map card never overlaps its cards: above them when stacked, beside them
+      // on a wide screen.
+      const lead = await page.locator(".atlas-portal-card-lead").first().boundingBox();
+      const first = await page.locator(".atlas-portal-grid > li").first().boundingBox();
+      if (!lead || !first) throw new Error("Portal boxes are missing");
+      if (width <= 980) expect(lead.y + lead.height).toBeLessThanOrEqual(first.y);
+      else expect(lead.x + lead.width).toBeLessThanOrEqual(first.x);
+      // Cards in one row share their state line.
+      const rows = new Map<number, number[]>();
+      for (const card of await page.locator(".atlas-portal-grid > li > .atlas-portal-card").all()) {
+        const top = Math.round(await documentTop(card));
+        const state = Math.round(await documentTop(card.locator(":scope > .atlas-portal-state")));
+        rows.set(top, [...(rows.get(top) ?? []), state]);
+      }
+      for (const states of rows.values()) {
+        expect(Math.max(...states) - Math.min(...states)).toBeLessThanOrEqual(1);
+      }
+      // On a wide screen today's five Bordeaux cards share one row: no orphan card.
+      if (width === 1440) expect(rows.size).toBe(1);
+      await page.screenshot({
+        path: test.info().outputPath(`atlas-portal-${locale}-${width}.png`),
+        fullPage: true,
+      });
+    });
+  }
+
+  test(`${locale} the portal layout holds at the end-goal scale (synthetic data, not a route)`, async ({
+    page,
+  }) => {
+    // Clearly synthetic data rendered with the real component and the production CSS, loaded
+    // as a detached document: it never exists on a public route.
+    const { syntheticPortal } = await import("../src/components/atlas/fixtures/portal-scale");
+    const { AtlasPortalView } = await import("../src/components/atlas/atlas-portal");
+    const { renderToStaticMarkup } = await import("react-dom/server");
+    const { createElement } = await import("react");
+    const markup = renderToStaticMarkup(
+      createElement(AtlasPortalView, {
+        locale,
+        portal: syntheticPortal(),
+        searchAction: `${prefix}/search`,
+      }),
+    );
+    await page.goto(`${prefix}/atlas`);
+    const stylesheets = await page
+      .locator("link[rel='stylesheet']")
+      .evaluateAll((links) => links.map((link) => (link as HTMLLinkElement).href));
+    expect(stylesheets.length).toBeGreaterThan(0);
+    for (const width of [320, 390, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.setContent(
+        `<!doctype html><html lang="${locale}"><head><meta name="viewport" content="width=device-width, initial-scale=1">${stylesheets
+          .map((href) => `<link rel="stylesheet" href="${href}">`)
+          .join(
+            "",
+          )}</head><body><main class="page-shell atlas-page">${markup}</main></body></html>`,
+        { waitUntil: "load" },
+      );
+      await noHorizontalOverflow(page, width);
+      await expect(page.locator(".atlas-portal-section")).toHaveCount(15);
+      await expect(page.locator(".atlas-portal-grid > li")).toHaveCount(150);
+      await expect(page.locator(".atlas-portal-sub > li")).toHaveCount(450);
+      await expect(page.locator("details.atlas-portal-jump")).toHaveCount(1);
+      const boxes = await page
+        .locator(".atlas-portal-card")
+        .evaluateAll((cards) => cards.map((card) => card.getBoundingClientRect().width));
+      expect(Math.min(...boxes)).toBeGreaterThanOrEqual(140);
+      await page.screenshot({
+        path: test.info().outputPath(`atlas-portal-scale-${locale}-${width}.png`),
+        fullPage: width === 1440,
+      });
+    }
+  });
+
   test(`${locale} the map does not move when the script loads`, async ({ browser }) => {
     const offsets = async (javaScriptEnabled: boolean, width: number) => {
       const context = await browser.newContext({
@@ -1037,7 +1363,10 @@ for (const locale of ["nl", "en"] as const) {
       const page = await context.newPage();
       const result: number[] = [];
       try {
-        for (const route of [`${prefix}/atlas`, `${prefix}/atlas/${scenes.medoc.slug}`]) {
+        for (const route of [
+          `${prefix}/atlas/${scenes.bordeaux.slug}`,
+          `${prefix}/atlas/${scenes.medoc.slug}`,
+        ]) {
           await page.goto(route);
           const scene = page.locator("[data-atlas-scene]").first();
           if (javaScriptEnabled) await enhanced(scene);

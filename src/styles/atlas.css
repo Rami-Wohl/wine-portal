@@ -1,5 +1,5 @@
-/* Atlas scenes: server-rendered SVG map, list alternative, legend, overlay controls and the
- * region chooser.
+/* Atlas scenes: server-rendered SVG map, list alternative, legend and overlay controls; and the
+ * Atlas portal at /atlas.
  * Map colours are scoped here; colour never carries meaning alone (patterns, outlines, labels do).
  */
 
@@ -52,9 +52,9 @@
   margin: 0;
   min-width: 0;
 }
-/* Map colours, shared by the scenes and the region chooser's thumbnails. */
+/* Map colours, shared by the scenes and the portal's thumbnails. */
 .atlas-scene,
-.atlas-region-chooser {
+.atlas-portal {
   --atlas-canvas: var(--surface);
   --atlas-area-fill: color-mix(in srgb, var(--leaf) 26%, var(--surface));
   --atlas-area-fill-strong: color-mix(in srgb, var(--leaf) 46%, var(--surface));
@@ -1046,58 +1046,253 @@ a.atlas-area-link:hover {
   padding-block: clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2.25rem);
 }
 
-/* Region chooser on the Atlas overview: one card per scene with its verified areas in miniature. */
-.atlas-region-chooser {
-  margin-bottom: clamp(3rem, 7vw, 5rem);
+/* Atlas portal (/atlas): finder, then one section per top-level region (later: per place level
+ * above regions), each with its own lead card and a grid of cards for its children. Deeper
+ * levels are links inside a card. Every card has exactly one link; the link stretches over it. */
+.atlas-portal {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  margin-bottom: var(--section);
 }
-.atlas-region-grid {
+.atlas-portal [hidden] {
+  display: none !important;
+}
+.atlas-portal-preview-note {
+  color: var(--muted-strong);
+  font-size: 0.92rem;
+}
+.atlas-portal-empty {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+.atlas-portal-finder {
+  max-width: var(--reading);
+}
+.atlas-portal-finder > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.atlas-portal-finder .search-field input {
+  padding-block: 0.8rem;
+}
+/* The finder keeps its button beside the field at every width (the site search stacks them on
+ * phones), so the first region starts higher; higher specificity than responsive.css. */
+.atlas-portal-finder .search-field {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0;
+}
+.atlas-portal-finder .search-field input {
+  border-radius: 10px 0 0 10px;
+}
+.atlas-portal-finder .search-field button {
+  min-height: 48px;
+  padding-inline: 1.1rem;
+  border-radius: 0 10px 10px 0;
+}
+/* Reserved line: the count appears while typing without moving the page below. */
+.atlas-portal-status {
+  min-height: 1.5em;
+  margin: 0.5rem 0 0;
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+}
+.atlas-portal-status a {
+  color: var(--brand-dark);
+}
+.atlas-portal-jump summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.atlas-portal-jump ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-portal-section {
+  min-width: 0;
+  scroll-margin-top: 5rem;
+}
+.atlas-portal-section-title {
+  margin-bottom: 1rem;
+  font: 500 clamp(1.6rem, 3vw, 2.1rem)/1.1 var(--font-display);
+}
+/* Wide: the section's lead card beside its children; responsive.css stacks them. */
+.atlas-portal-section-body {
+  display: grid;
+  grid-template-columns: var(--atlas-portal-columns, minmax(220px, 2fr) minmax(0, 7fr));
+  gap: var(--atlas-portal-gap, clamp(0.75rem, 2vw, 1.25rem));
+  align-items: start;
+}
+.atlas-portal-section-compact .atlas-portal-section-body {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 380px;
+}
+.atlas-portal-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
-  gap: clamp(0.75rem, 2vw, 1.25rem);
+  gap: var(--atlas-portal-gap, clamp(0.75rem, 2vw, 1.25rem));
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.atlas-region-card {
+/* Cards in a row share their row tracks, so names and state lines line up across the row. */
+.atlas-portal-grid > li {
   display: grid;
-  height: 100%;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  min-width: 0;
+}
+.atlas-portal-card {
+  position: relative;
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
   align-content: start;
-  gap: 0.3rem;
+  row-gap: 0.3rem;
+  min-width: 0;
   padding: 0.85rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface);
   color: var(--ink);
-  text-decoration: none;
 }
-.atlas-region-card:hover {
+.atlas-portal-card-lead {
+  position: var(--atlas-portal-lead-position, sticky);
+  top: 5.5rem;
+  grid-template-rows: auto auto auto auto;
+  grid-row: auto;
+}
+/* A card without a map has no thumbnail row: it leaves the row's shared tracks and keeps only
+ * its own content, so nothing reads as a missing image. */
+.atlas-portal-card-text {
+  grid-template-rows: none;
+  align-self: start;
+}
+.atlas-portal-card.atlas-portal-card-text > * {
+  grid-row: auto;
+}
+.atlas-portal-about {
+  position: relative;
+  z-index: 1;
+  grid-row: 4;
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+.atlas-portal-about a {
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+.atlas-portal-card:hover {
   border-color: var(--brand);
 }
-.atlas-region-thumb {
+.atlas-portal-card:has(.atlas-portal-link:focus-visible) {
+  outline: 3px solid color-mix(in srgb, var(--brand) 64%, white);
+  outline-offset: 2px;
+}
+.atlas-portal-thumb {
   display: block;
+  grid-row: 1;
   width: 100%;
   height: 110px;
   margin-bottom: 0.35rem;
 }
-.atlas-region-thumb-area {
+.atlas-portal-card-lead .atlas-portal-thumb {
+  height: clamp(150px, 22vw, 230px);
+}
+.atlas-portal-thumb-area {
   fill: var(--atlas-area-fill);
   fill-opacity: 0.85;
   stroke: var(--atlas-area-line);
   stroke-linejoin: round;
   stroke-width: 0.6;
 }
-.atlas-region-name {
-  color: var(--brand-dark);
+.atlas-portal-card-title {
+  grid-row: 2;
+  margin: 0;
   font: 520 1.15rem/1.2 var(--font-display);
+  text-wrap: pretty;
 }
-.atlas-region-coverage {
-  color: var(--muted);
+.atlas-portal-grid .atlas-portal-card-title {
+  font-size: 1.05rem;
+}
+.atlas-portal-card-lead .atlas-portal-card-title {
+  font-size: 1.3rem;
+}
+.atlas-portal-link {
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+.atlas-portal-link:focus-visible {
+  outline: none;
+}
+/* The one link covers the card; links to deeper levels sit above it. */
+.atlas-portal-link::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+}
+.atlas-portal-nobreak {
+  white-space: nowrap;
+}
+.atlas-portal-state {
+  grid-row: 3;
+  color: var(--muted-strong);
+  font-size: 0.85rem;
+}
+.atlas-portal-sub {
+  position: relative;
+  z-index: 1;
+  grid-row: 4;
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0;
+  padding: 0.55rem 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+.atlas-portal-sub .atlas-portal-sub {
+  margin: 0.2rem 0 0 0.9rem;
+  padding-top: 0.2rem;
+  border-top: 0;
+}
+.atlas-portal-sub a {
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+/* The appellation that made the finder show a region; takes no space while empty. */
+.atlas-portal-area-hit {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+}
+.atlas-portal-area-hit:empty {
+  display: none;
+}
+.atlas-portal-sub .atlas-portal-state {
+  display: block;
   font-size: 0.8rem;
 }
 @media (forced-colors: active) {
-  .atlas-region-thumb-area {
+  .atlas-portal-thumb-area {
     fill: Canvas;
     stroke: CanvasText;
+  }
+  .atlas-portal-card:has(.atlas-portal-link:focus-visible) {
+    outline-color: Highlight;
+  }
+}
+@media print {
+  .atlas-portal-finder,
+  .atlas-portal-jump {
+    display: none;
+  }
+  .atlas-portal-card {
+    break-inside: avoid;
   }
 }
 

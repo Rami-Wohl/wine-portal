@@ -5,14 +5,22 @@ import path from "node:path";
 import type {
   AtlasFeatureView,
   AtlasIndex,
+  AtlasPortal,
   AtlasSceneSummary,
   AtlasSceneView,
   Entity,
+  EntityType,
   Locale,
   ResolvedRelation,
 } from "./model";
 import { localizedHref } from "@/i18n/routing";
-import { getEntityById, getRelationsForEntity } from "./repository";
+import { buildAtlasPortal, PORTAL_ENTITY_TYPES } from "./atlas-portal";
+import {
+  getEntityById,
+  getEntityPublicHref,
+  getPublishedEntitiesByType,
+  getRelationsForEntity,
+} from "./repository";
 
 // The only runtime entry to generated Atlas display assets. The index is small and loaded
 // once per server module; each scene is read from its own file on first use, never all at once.
@@ -20,6 +28,9 @@ import { getEntityById, getRelationsForEntity } from "./repository";
 export interface AtlasEntityLookups {
   getEntityById: (id: string) => Entity | undefined;
   getRelationsForEntity: (entityId: string) => ResolvedRelation[];
+  /** Needed by the portal only; repositories built without them return an empty portal. */
+  getPublishedEntitiesByType?: (type: EntityType) => Entity[];
+  getEntityPublicHref?: (entity: Entity, locale: Locale) => string;
 }
 
 export interface AtlasSceneForEntity {
@@ -42,6 +53,8 @@ export interface AtlasRepository {
   getAtlasSceneBySlug: (slug: string) => AtlasSceneView | undefined;
   getAtlasSceneForEntity: (entityId: string) => AtlasSceneForEntity | undefined;
   getAtlasFeatureForEntity: (entityId: string) => AtlasFeatureForEntity | undefined;
+  /** The Atlas portal for one locale, from scene summaries only; never loads a scene file. */
+  getAtlasPortal: (locale: Locale) => AtlasPortal;
 }
 
 interface AtlasRepositoryOptions {
@@ -65,10 +78,10 @@ export function createAtlasRepository(options: AtlasRepositoryOptions): AtlasRep
   const { directory, hotReload, lookups } = options;
 
   function loadIndex(): AtlasIndex {
-    if (process.env.NODE_ENV === "development") {
-      // require has no inferred giant JSON type; this branch is eliminated in production.
+    // require has no inferred giant JSON type; this branch is eliminated in production.
+    if (process.env.NODE_ENV === "development" && hotReload) {
       // eslint-disable-next-line @typescript-eslint/no-require-imports
-      if (hotReload) return require("../generated/geography/index.json") as AtlasIndex;
+      return require("../generated/geography/index.json") as AtlasIndex;
     }
     // Keep production data out of JS/TS compilation. next.config.ts traces this directory.
     const file = path.join(directory, "index.json");
@@ -88,10 +101,10 @@ export function createAtlasRepository(options: AtlasRepositoryOptions): AtlasRep
   }
 
   function loadScene(id: string): AtlasSceneView {
-    if (process.env.NODE_ENV === "development") {
-      // The static prefix keeps every scene file in the dev module graph for HMR.
+    // The static prefix keeps every scene file in the dev module graph for HMR.
+    if (process.env.NODE_ENV === "development" && hotReload) {
       // eslint-disable-next-line @typescript-eslint/no-require-imports
-      if (hotReload) return require(`../generated/geography/scenes/${id}.json`) as AtlasSceneView;
+      return require(`../generated/geography/scenes/${id}.json`) as AtlasSceneView;
     }
     return JSON.parse(
       readFileSync(path.join(directory, "scenes", `${id}.json`), "utf8"),
@@ -142,21 +155,29 @@ export function createAtlasRepository(options: AtlasRepositoryOptions): AtlasRep
     );
   }
 
-  function withFeature(summary: AtlasSceneSummary, entityId: string): AtlasSceneForEntity {
+  interface SceneMatch {
+    scene: AtlasSceneView;
+    feature: AtlasFeatureView | undefined;
+  }
+
+  function withFeature(summary: AtlasSceneSummary, entityId: string): SceneMatch {
     const scene = getAtlasSceneById(summary.id) as AtlasSceneView;
-    return { scene, featureId: findSceneFeature(scene, entityId)?.id };
+    return { scene, feature: findSceneFeature(scene, entityId) };
   }
 
   /**
-   * The scene for an entity. A region owner gets its own scene. Otherwise the scene definitions
-   * are the authority: among the scenes that list the entity in intended_entities (or draw it as
-   * a selectable feature), the one with the fewest intended entities wins; ties go to a scene
-   * whose owner the entity is part_of, then to the scene id. An entity no scene lists falls back
-   * to the scene of a region it is part_of. Containment is never inferred from geometry.
+   * The one rule for "which map shows this entity", on summaries only: entity pages embed it
+   * (findSceneForEntity) and the portal names it (getAtlasPortal). A region owner gets its own
+   * scene. Otherwise the scene definitions are the authority: among the scenes that list the
+   * entity in intended_entities (or draw it as a selectable feature), the one with the fewest
+   * intended entities wins; ties go to a scene whose owner the entity is part_of, then to the
+   * scene id. An entity no scene lists falls back to the scene of a region it is part_of, the
+   * most specific one first. Containment is never inferred from geometry. The answer may be a
+   * scene whose owner is a draft; callers that must not name drafts check the owner themselves.
    */
-  function getAtlasSceneForEntity(entityId: string): AtlasSceneForEntity | undefined {
+  function sceneSummaryForEntity(entityId: string): AtlasSceneSummary | undefined {
     const own = summariesByOwner.get(entityId);
-    if (own) return { scene: getAtlasSceneById(own.id) as AtlasSceneView, featureId: undefined };
+    if (own) return own;
     const parents = new Set(parentRegions(entityId));
     const listing = index.scenes
       .filter((summary) => sceneLists(summary, entityId))
@@ -166,8 +187,8 @@ export function createAtlasRepository(options: AtlasRepositoryOptions): AtlasRep
           Number(parents.has(right.owner)) - Number(parents.has(left.owner)) ||
           left.id.localeCompare(right.id),
       );
-    if (listing.length > 0) return withFeature(listing[0], entityId);
-    const parentScene = Array.from(parents)
+    if (listing.length > 0) return listing[0];
+    return Array.from(parents)
       .map((parent) => summariesByOwner.get(parent))
       .filter((summary): summary is AtlasSceneSummary => Boolean(summary))
       .sort(
@@ -177,7 +198,23 @@ export function createAtlasRepository(options: AtlasRepositoryOptions): AtlasRep
             Number(parentRegions(left.owner).includes(right.owner)) ||
           left.id.localeCompare(right.id),
       )[0];
-    return parentScene ? withFeature(parentScene, entityId) : undefined;
+  }
+
+  function findSceneForEntity(entityId: string): SceneMatch | undefined {
+    const summary = sceneSummaryForEntity(entityId);
+    if (!summary) return undefined;
+    if (summary.owner === entityId) {
+      return { scene: getAtlasSceneById(summary.id) as AtlasSceneView, feature: undefined };
+    }
+    return withFeature(summary, entityId);
+  }
+
+  /** Published names of the appellations a scene draws, for the portal's name filter. */
+  function shownAreaNames(summary: AtlasSceneSummary): string[] {
+    return summary.coverage.shown.flatMap((id) => {
+      const area = lookups.getEntityById(id);
+      return area?.status === "active" ? Object.values(area.names) : [];
+    });
   }
 
   return {
@@ -189,20 +226,40 @@ export function createAtlasRepository(options: AtlasRepositoryOptions): AtlasRep
       const summary = getAtlasSceneSummaryBySlug(slug);
       return summary ? getAtlasSceneById(summary.id) : undefined;
     },
-    getAtlasSceneForEntity,
-    getAtlasFeatureForEntity: (entityId) => {
-      const found = getAtlasSceneForEntity(entityId);
-      if (!found?.featureId) return undefined;
-      const feature = findSceneFeature(found.scene, entityId);
-      return feature ? { sceneId: found.scene.id, feature } : undefined;
+    getAtlasSceneForEntity: (entityId) => {
+      const found = findSceneForEntity(entityId);
+      return found ? { scene: found.scene, featureId: found.feature?.id } : undefined;
     },
+    getAtlasFeatureForEntity: (entityId) => {
+      const found = findSceneForEntity(entityId);
+      return found?.feature ? { sceneId: found.scene.id, feature: found.feature } : undefined;
+    },
+    getAtlasPortal: (locale) =>
+      lookups.getPublishedEntitiesByType && lookups.getEntityPublicHref
+        ? buildAtlasPortal({
+            locale,
+            entities: PORTAL_ENTITY_TYPES.flatMap(
+              (type) => lookups.getPublishedEntitiesByType?.(type) ?? [],
+            ),
+            getEntityById: lookups.getEntityById,
+            sceneFor: sceneSummaryForEntity,
+            sceneHref: (summary, targetLocale) => atlasSceneHref(summary.slug, targetLocale),
+            areaNames: shownAreaNames,
+            pageHref: lookups.getEntityPublicHref,
+          })
+        : { sections: [], regionCount: 0, mapCount: 0 },
   };
 }
 
 const atlas = createAtlasRepository({
   directory: path.join(process.cwd(), "src/generated/geography"),
   hotReload: true,
-  lookups: { getEntityById, getRelationsForEntity },
+  lookups: {
+    getEntityById,
+    getRelationsForEntity,
+    getPublishedEntitiesByType,
+    getEntityPublicHref,
+  },
 });
 
 export const getAtlasSceneSummaries = atlas.getAtlasSceneSummaries;
@@ -212,9 +269,7 @@ export const getAtlasSceneSummaryBySlug = atlas.getAtlasSceneSummaryBySlug;
 export const getAtlasSceneBySlug = atlas.getAtlasSceneBySlug;
 export const getAtlasSceneForEntity = atlas.getAtlasSceneForEntity;
 export const getAtlasFeatureForEntity = atlas.getAtlasFeatureForEntity;
-
-/** The Atlas overview scene when it exists: the Bordeaux region per docs/atlas-plan.md §2. */
-export const ATLAS_OVERVIEW_SCENE_ID = "scene.bordeaux";
+export const getAtlasPortal = atlas.getAtlasPortal;
 
 /**
  * Atlas is a labelled preview until the phase 3 release gate (docs/atlas-plan.md §10) flips

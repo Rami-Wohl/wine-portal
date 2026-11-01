@@ -33,6 +33,16 @@ The user decided on 2026-10-31, after the UX review `QCR-2026-10-31-02`:
    click, localised credit phrasing and the remaining proposals wait for a
    separate decision. §7 and §9 record the resulting rules.
 
+The user decided on 2026-11-01:
+
+6. **Atlas portal:** `/atlas` is the portal to every published wine region,
+   designed for the finished Atlas (`MNT-078`). The Bordeaux overview map
+   leaves the landing page; `scene.bordeaux` stays the overview of the
+   Bordeaux cluster at `/atlas/bordeaux`, reached through its section's map
+   card. The portal grows out of the knowledge graph's own hierarchy; what may
+   be drawn above region level and where country grouping comes from is a
+   separate decision (`MNT-082`, with `REG-001`). §8 and §9 record the rules.
+
 ## 2. What Atlas is
 
 Atlas is the geographic expression of the shared knowledge graph. It owns no
@@ -43,8 +53,8 @@ or legal evidence. The interface says so in human language.
 
 A **scene** is a composed map with a fixed extent: a set of layers, in drawing
 order, with one owning entity. Release one ships eight scenes: one per active
-Bordeaux region entity plus Champagne. The Bordeaux region scene is the Atlas
-overview.
+Bordeaux region entity plus Champagne. The Bordeaux region scene is the
+overview of the Bordeaux cluster; the Atlas landing page is the portal (§9).
 
 | Scene | Owner | Selectable appellation areas |
 | --- | --- | --- |
@@ -301,11 +311,14 @@ feature list for the non-map alternative.
   and carries the `server-only` marker. The content-boundaries ESLint rule
   covers it. Scenes are loaded per request from their own file, never all at
   once, and serialised results passed to components are small.
-- Routes: `/atlas` and `/en/atlas` show the overview scene and the scene list.
-  `/atlas/<region-slug>` and `/en/atlas/<region-slug>` show one scene. Scene
-  routes reuse the English region slug like other entity routes. Draft owners
-  follow the existing draft rules: reachable, `noindex`, honest preview state,
-  excluded from sitemap and public lists.
+- Routes: `/atlas` and `/en/atlas` are the Atlas portal: every published
+  region in its `part_of` hierarchy with its map state, assembled on the
+  server from scene summaries only (`getAtlasPortal`; no scene file is
+  loaded). `/atlas/<region-slug>` and `/en/atlas/<region-slug>` show one
+  scene. Scene routes reuse the English region slug like other entity routes.
+  Draft owners follow the existing draft rules: reachable, `noindex`, honest
+  preview state, excluded from sitemap and public lists; the portal neither
+  names nor counts them.
 - Region pages embed their scene. Appellation pages embed the parent region's
   scene with the appellation highlighted and a link to the scene route. An
   appellation without published geometry shows the scene with an explicit
@@ -382,10 +395,38 @@ feature list for the non-map alternative.
   keep the block from heading to map frame compact (target ≤ 600 px at 390 px
   wide) and fold areas, legend, scale statement and credits into one
   disclosure.
-- The Atlas overview page opens with the region chooser: one card per
-  published scene with a server-rendered thumbnail of that scene's verified
-  appellation shapes (a build artefact, §7), the name and the computed
-  coverage line; the Bordeaux overview map follows as a section.
+- The Atlas portal opens with a name finder, then one section per top-level
+  node of the hierarchy (today regions nested by `part_of`; a place level
+  decided under `REG-001` and `MNT-082` becomes the top level without a
+  redesign). Within a section the node's own entry is a lead card (its map when
+  it owns a published scene with drawn areas, otherwise its page); children
+  are cards with exactly one link each (the scene when a map with areas
+  exists, otherwise the page); deeper levels are links inside the card. Each
+  entry states its state as a separate phrase, from data: the computed
+  coverage ("8 appellaties op de kaart"; "37 van 38 …" only when something is
+  missing), map in preparation (a scene without drawn areas), on the map of a
+  containing region (the one the region page embeds), or no map yet. A region
+  with several published parents is placed once, under its most specific
+  published ancestor; at equal depth under the first parent by id.
+  A thumbnail of the scene's verified appellation shapes (a build artefact, §7)
+  is drawn only for a map. Order is alphabetical per language. The finder is a
+  search form for regions without JavaScript and filters the server-rendered
+  list in place with JavaScript, ignoring case and accents; no match offers the
+  site search. The intro states the computed scope (regions, regions with a
+  map) and, while Atlas is a preview, one status sentence. A childless
+  top-level node is a compact section; a folded jump list appears from four
+  sections. A section's map card also links to the region's page ("Lees over
+  X"); a section's own card without a map is titled "Over X"; a card without a
+  map has no thumbnail area. The finder also matches the published names of
+  the appellations a region's map draws; its status names the matches and how
+  many regions are shown; a region found through an appellation on its map
+  shows without its sub-regions and names the appellation that matched; Enter
+  opens a single match and otherwise searches regions on the search page. One repository rule decides which scene shows an
+  entity: entity pages embed it and the portal names it ("on the map of X"
+  only when that scene's owner is published and the map draws areas). A
+  containment cycle is broken by detaching its member with the smallest id. A
+  world locator may be added above the sections only from a verified, sourced
+  dataset; until then nothing is drawn in its place.
 - Colour never carries meaning alone: context areas use a pattern, selection
   uses outline weight plus a label, water uses a distinct texture or label.
 - Reviewed at 320, 768 and 1440 CSS pixels, with keyboard, zoom and reduced
@@ -400,8 +441,11 @@ feature list for the non-map alternative.
 Unit tests cover: schema failures, checksum and geometry mismatches, missing
 owners and dangling `geography_id`, ring orientation, coverage computation,
 scene fitting, simplification budgets, repository lookups and route helpers.
-Browser tests cover: Atlas overview and one scene in NL and EN, the region
-chooser with thumbnails before the overview map, no-JS selection through SVG
+Browser tests cover: the Atlas portal, the Bordeaux overview scene and one
+scene in NL and EN; the portal (published regions only, one entry per region,
+coverage lines from data, finder with and without JavaScript, tab order, no
+hydration shift, fit at 320/390/768/1440 including an end-goal-scale
+synthetic render that is never a route); no-JS selection through SVG
 links, keyboard selection and keyboard pan and zoom on the frame, the overlap
 chooser (Barsac and Sauternes; most specific area first with one context
 line), the gesture model (unmodified wheel scrolls the page and shows the

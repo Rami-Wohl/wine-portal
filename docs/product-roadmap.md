@@ -65,7 +65,7 @@ en hercontrole van bronversies, rechten en bruikbaarheid. Geen automatische herv
 
 ## Volledige uitvoeringsvoorraad op de peildatum
 
-59 niet-afgeronde tickets: 16 onderhoudsacties, 3 Explore-tickets, 5 regionale
+77 niet-afgeronde tickets: 34 onderhoudsacties, 3 Explore-tickets, 5 regionale
 planning-/publicatietickets, 2 Learn-tickets en 33 feedbacktickets. LRN-018 is
 nieuw toegevoegd zodat Leren een concreet vervolg heeft naast gebruiksevaluatie.
 Beslispunten zijn gates, geen extra implementatietickets; toekomstige authoringbatches
@@ -132,7 +132,9 @@ Bordeaux-cluster plus Champagne, regio's als appellationmozaïek zonder eigen
 omtrek. De vier hervatte tickets zijn op 2026-10-31 afgerond
 ([review](../editorial/atlas-release-one-review-2026-10-31.md)), gevolgd door
 UX-ronde A (`MNT-077`,
-[review](../editorial/atlas-ux-round-a-review-2026-10-31.md)); de preview
+[review](../editorial/atlas-ux-round-a-review-2026-10-31.md)) en op 2026-11-01
+door het portaal naar alle regio's (`MNT-078`,
+[rondereview](../editorial/atlas-portal-round-review-2026-11-01.md)); de preview
 blijft `noindex` tot `MNT-076`. MNT-013 blijft geparkeerd tot een eigen datasetreview.
 
 | Fase | Ticket | Stand |
@@ -145,6 +147,9 @@ blijft `noindex` tot `MNT-076`. MNT-013 blijft geparkeerd tot een eigen datasetr
 | 4 | `MNT-075` | Open: rivierlabels, vormtweelingen, smalle overzichtskaart, locator-inzet, print |
 | 4 | `MNT-076` | Open, gebruikersbesluit: preview opheffen, indexering en merge naar `main` |
 | 4 | `MNT-077` | Afgerond: UX-ronde A uit `QCR-2026-10-31-02` (kaart eerst, regiokiezer met miniaturen, bediening op de kaart, gebarenmodel, kiezervolgorde, compacte inbedding); rijen 10–21 van die review wachten op een gebruikersbesluit |
+| 4 | `MNT-078` | Afgerond: Atlas-portaal naar eindbeeld (ingang voor alle gepubliceerde regio's uit de kennisgraaf, zoeker, eerlijke kaartstaten, schaal bewezen in tests; `/atlas` van 371 naar 17 KB gzip), met schaalbaarheidsreview `QCR-2026-11-01-01`, QA-review `QCR-2026-11-01-02` en rondereview `QCR-2026-11-01-03` |
+| 4 | `MNT-079`–`MNT-082` | Open uit `QCR-2026-11-01-01`: index afslanken en budget per scène, legenda per betekenis en bron, geometrie bijsnijden en compact coderen; `MNT-082` wacht op een gebruikersbesluit over kaartvormen boven het regioniveau |
+| 4 | `MNT-083`–`MNT-096` | Open: cachebaar scène-asset (spike), dekking uit de graaf, manifest, incrementele build, bronadapters, copy, resolutiestap, laagregister, serializer, stijlen, documentatie en opruiming, skiplink en no-JS-kader, contrast, cycluscontrole op `part_of` |
 | 4 | `MNT-013` | Geparkeerd; wereldwijde druivenverspreiding vereist eigen dataset en kaartconventie |
 
 Status en acceptatiecriteria staan in de [onderhoudsbacklog](maintenance-backlog.md),

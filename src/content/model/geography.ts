@@ -517,3 +517,45 @@ export interface AtlasSceneSummary extends Omit<AtlasSceneView, "layers"> {
 export interface AtlasIndex {
   scenes: AtlasSceneSummary[];
 }
+
+/**
+ * How a region appears in the Atlas portal (docs/atlas-plan.md §9): a map with its computed
+ * coverage, a scene without drawn areas yet, a place on a containing region's map, or text only.
+ */
+export type AtlasPortalState =
+  | { kind: "map"; shown: number; intended: number; thumbnail?: AtlasThumbnail }
+  | { kind: "preparing" }
+  /** The containing region's scene, exactly the one the entity page embeds. */
+  | { kind: "parent-map"; parentName: string; sceneId: string }
+  | { kind: "text" };
+
+/**
+ * One published entity in the portal hierarchy, resolved for one locale on the server. Today the
+ * hierarchy is `part_of` between regions; a later place level (REG-001) becomes the top level.
+ */
+export interface AtlasPortalNode {
+  id: string;
+  name: string;
+  /** For the name filter only, never shown: the node's names in every locale. */
+  matchNames: string[];
+  /**
+   * The published names of the appellations its own map draws, for the filter. A match here
+   * shows the node (with the matched name) but not its descendants.
+   */
+  areaNames: string[];
+  /** The one entry: the scene when a map with areas exists, otherwise the entity page. */
+  href: string;
+  /** The entity page, when the entry is the map (a section's lead card links to both). */
+  pageHref?: string;
+  state: AtlasPortalState;
+  children: AtlasPortalNode[];
+}
+
+export interface AtlasPortal {
+  /** Top-level nodes, alphabetical; each renders as a section. */
+  sections: AtlasPortalNode[];
+  /** Every node in the tree. */
+  regionCount: number;
+  /** Nodes whose own map has drawn areas. */
+  mapCount: number;
+}

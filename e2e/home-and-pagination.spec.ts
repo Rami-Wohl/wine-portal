@@ -104,23 +104,22 @@ for (const locale of ["nl", "en"] as const) {
       }),
     ).toBeVisible();
     if (generatedAtlasScenes().includes("scene.bordeaux")) {
-      // With published scenes the overview shows the Bordeaux scene instead of the empty state.
-      await expect(page.locator('[data-atlas-scene="scene.bordeaux"]')).toBeVisible();
-      await expect(
-        page.getByRole("heading", {
-          level: 2,
-          name: locale === "nl" ? "Kaart van Bordeaux" : "Map of Bordeaux",
-        }),
-      ).toBeVisible();
+      // With published scenes the portal lists Bordeaux with its own map card; the map itself
+      // lives on its scene route, so /atlas renders no scene.
+      const bordeaux = page.locator(".atlas-portal-section").filter({
+        has: page.getByRole("heading", { level: 2, name: "Bordeaux", exact: true }),
+      });
+      await expect(bordeaux.locator(".atlas-portal-card-lead a.atlas-portal-link")).toHaveAttribute(
+        "href",
+        `${prefix}/atlas/bordeaux`,
+      );
+      await expect(page.locator("[data-atlas-scene]")).toHaveCount(0);
       await expect(page.locator(".empty-state")).toHaveCount(0);
     } else {
       await expect(
         page.getByRole("heading", {
-          level: 3,
-          name:
-            locale === "nl"
-              ? "Er zijn nog geen gepubliceerde kaarten."
-              : "There are no published maps yet.",
+          level: 2,
+          name: locale === "nl" ? "Er zijn nog geen kaarten" : "There are no maps yet",
         }),
       ).toBeVisible();
     }

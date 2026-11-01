@@ -123,4 +123,7 @@ export {
   type AtlasSceneView,
   type AtlasSceneSummary,
   type AtlasIndex,
+  type AtlasPortal,
+  type AtlasPortalNode,
+  type AtlasPortalState,
 } from "./model/geography";

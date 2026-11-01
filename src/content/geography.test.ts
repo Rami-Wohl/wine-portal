@@ -4,7 +4,7 @@ import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { fixtureEntity } from "../../scripts/content/fixtures/geography";
 import { atlasSceneHref, createAtlasRepository, type AtlasEntityLookups } from "./geography";
-import type { AtlasSceneView, Entity, ResolvedRelation } from "./model";
+import type { AtlasPortalNode, AtlasSceneView, Entity, ResolvedRelation } from "./model";
 
 const temporaryDirectories: string[] = [];
 
@@ -182,11 +182,14 @@ const scenes: AtlasSceneView[] = [
   ),
 ];
 
-async function fixtureRepository() {
+async function fixtureRepository(
+  sceneList: AtlasSceneView[] = scenes,
+  repositoryLookups: AtlasEntityLookups = lookups,
+) {
   const directory = await mkdtemp(path.join(os.tmpdir(), "oenocademy-atlas-repository-"));
   temporaryDirectories.push(directory);
   await mkdir(path.join(directory, "scenes"), { recursive: true });
-  const summaries = scenes.map(({ layers, ...rest }) => ({
+  const summaries = sceneList.map(({ layers, ...rest }) => ({
     ...rest,
     featureCount: layers.reduce((sum, layer) => sum + layer.features.length, 0),
     selectableEntities: Array.from(
@@ -198,10 +201,13 @@ async function fixtureRepository() {
     ).sort(),
   }));
   await writeFile(path.join(directory, "index.json"), JSON.stringify({ scenes: summaries }));
-  for (const scene of scenes) {
+  for (const scene of sceneList) {
     await writeFile(path.join(directory, "scenes", `${scene.id}.json`), JSON.stringify(scene));
   }
-  return { directory, repository: createAtlasRepository({ directory, hotReload: false, lookups }) };
+  return {
+    directory,
+    repository: createAtlasRepository({ directory, hotReload: false, lookups: repositoryLookups }),
+  };
 }
 
 describe("Atlas repository", () => {
@@ -321,5 +327,108 @@ describe("Atlas repository", () => {
   it("builds localized scene routes from the English region slug", () => {
     expect(atlasSceneHref("medoc")).toBe("/atlas/medoc");
     expect(atlasSceneHref("medoc", "en")).toBe("/en/atlas/medoc");
+  });
+});
+
+describe("Atlas portal in the repository", () => {
+  const portalLookups = (list: Entity[]): AtlasEntityLookups => ({
+    getEntityById: (id) => list.find((candidate) => candidate.id === id),
+    getRelationsForEntity: (entityId) =>
+      list.flatMap((candidate) =>
+        candidate.relations
+          .filter((relation) => candidate.id === entityId || relation.target === entityId)
+          .map((relation): ResolvedRelation => ({ source: candidate.id, ...relation })),
+      ),
+    getPublishedEntitiesByType: (type) =>
+      list.filter((candidate) => candidate.type === type && candidate.status === "active"),
+    getEntityPublicHref: (target, locale) =>
+      `${locale === "en" ? "/en" : ""}/regions/${target.slugs.en}`,
+  });
+
+  it("reads summaries only: building the portal loads no scene file", async () => {
+    const { directory } = await fixtureRepository();
+    await rm(path.join(directory, "scenes"), { recursive: true, force: true });
+    const repository = createAtlasRepository({
+      directory,
+      hotReload: false,
+      lookups: portalLookups(entities),
+    });
+    const portal = repository.getAtlasPortal("nl");
+    expect(portal.sections.map((section) => section.id)).toEqual(["region.bordeaux"]);
+    // Champagne's owner is a draft: neither named nor counted.
+    expect(portal.regionCount).toBe(4);
+    expect(JSON.stringify(portal)).not.toContain("champagne");
+    // Fixture scenes draw nothing, so every region links to its page.
+    expect(portal.mapCount).toBe(0);
+    expect(portal.sections[0].state).toEqual({ kind: "preparing" });
+  });
+
+  it("names exactly the map the region page embeds, and never a draft's", async () => {
+    // Regions without a scene of their own under parents with drawn maps, a draft-owned scene,
+    // and a parent whose map draws nothing yet.
+    const drawn = (id: string, owner: string, appellation: string) => ({
+      ...sceneView(id, owner, [], [appellation]),
+      coverage: { intended: [appellation], shown: [appellation], missing: [] },
+    });
+    const list = [
+      entity("region.bordeaux"),
+      entity("region.libournais", { relations: [{ type: "part_of", target: "region.bordeaux" }] }),
+      entity("region.pomerol-plateau", {
+        relations: [
+          { type: "part_of", target: "region.bordeaux" },
+          { type: "part_of", target: "region.libournais" },
+        ],
+      }),
+      entity("region.cotes", { relations: [{ type: "part_of", target: "region.bordeaux" }] }),
+      entity("region.drafted", { status: "draft" }),
+      entity("region.under-draft", {
+        relations: [{ type: "part_of", target: "region.drafted" }],
+      }),
+      entity("region.empty-map"),
+      entity("region.under-empty", {
+        relations: [{ type: "part_of", target: "region.empty-map" }],
+      }),
+      entity("appellation.a", { geography_id: "geo.appellation-area.a" }),
+    ];
+    const sceneList = [
+      drawn("scene.bordeaux", "region.bordeaux", "appellation.a"),
+      drawn("scene.libournais", "region.libournais", "appellation.a"),
+      drawn("scene.drafted", "region.drafted", "appellation.a"),
+      sceneView("scene.empty-map", "region.empty-map", [], ["appellation.a"]),
+    ];
+    const { repository } = await fixtureRepository(sceneList, portalLookups(list));
+    const portal = repository.getAtlasPortal("en");
+    const all: AtlasPortalNode[] = [];
+    const walk = (nodes: AtlasPortalNode[]) =>
+      nodes.forEach((item) => {
+        all.push(item);
+        walk(item.children);
+      });
+    walk(portal.sections);
+
+    const onParentMap = all.filter((item) => item.state.kind === "parent-map");
+    expect(onParentMap.map((item) => item.id).sort()).toEqual([
+      "region.cotes",
+      "region.pomerol-plateau",
+    ]);
+    for (const item of onParentMap) {
+      if (item.state.kind !== "parent-map") continue;
+      // The page embeds the very scene the portal names.
+      expect(repository.getAtlasSceneForEntity(item.id)?.scene.id).toBe(item.state.sceneId);
+    }
+    expect(all.find((item) => item.id === "region.pomerol-plateau")?.state).toMatchObject({
+      parentName: "libournais",
+      sceneId: "scene.libournais",
+    });
+    // The page embeds the draft-owned scene, but the portal does not name a draft.
+    expect(repository.getAtlasSceneForEntity("region.under-draft")?.scene.id).toBe("scene.drafted");
+    expect(all.find((item) => item.id === "region.under-draft")?.state).toEqual({ kind: "text" });
+    // A containing map that draws nothing is not offered as "on the map of".
+    expect(repository.getAtlasSceneForEntity("region.under-empty")?.scene.id).toBe(
+      "scene.empty-map",
+    );
+    expect(all.find((item) => item.id === "region.under-empty")?.state).toEqual({ kind: "text" });
+    // The appellations a map draws are part of its filter names (published ones only).
+    expect(all.find((item) => item.id === "region.bordeaux")?.areaNames).toEqual(["a"]);
   });
 });

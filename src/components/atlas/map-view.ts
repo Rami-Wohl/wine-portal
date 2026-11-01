@@ -1,4 +1,4 @@
-import { compareAreaNames } from "./copy";
+import { compareAreaNames } from "./area-names";
 import { ASSUMED_RENDER_PX } from "./labels";
 
 /**

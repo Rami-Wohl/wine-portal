@@ -29,6 +29,23 @@ export function orientationLayers(orientation: AtlasOrientation, locale: Locale)
   return parts.length > 0 ? joinNames(parts, locale) : null;
 }
 
+/**
+ * The portal finder's strings as plain data (templates with {count}, {found}, {shown} and
+ * {query}), so the server can pass them to the client finder as props.
+ */
+export interface AtlasFinderCopy {
+  label: string;
+  submit: string;
+  foundOne: string;
+  foundOther: string;
+  /** Appended when context regions are shown besides the matches, e.g. ", 7 getoond". */
+  shown: string;
+  /** Under a region found by an appellation on its map, e.g. "Met Pauillac". */
+  areaHit: string;
+  none: string;
+  searchAll: string;
+}
+
 /** Public map copy. Human, localized, honest about scale, source, date and gaps. */
 export interface AtlasCopy {
   mapHeading: (ownerName: string | null) => string;
@@ -108,16 +125,43 @@ export interface AtlasCopy {
   };
   /** Atlas route copy around the maps. */
   page: {
-    /** Atlas overview intro: one sentence naming only the layers every map draws. */
-    overviewIntro: (orientation: string | null) => string;
     /** Scene route intro: one sentence; the link to the owner follows as its own paragraph. */
     sceneIntro: (orientation: string | null) => string;
     draftSceneIntro: string;
     readAbout: (name: string) => string;
-    chooserEyebrow: string;
-    chooserHeading: string;
-    /** Computed per scene, e.g. "37 van 38 appellaties op de kaart". */
+    /**
+     * Computed per scene: "8 appellaties op de kaart" when complete, "37 van 38 appellaties op
+     * de kaart" only when something is missing (the rule the legend follows).
+     */
     coverageLine: (shown: number, intended: number) => string;
+  };
+  /** The Atlas portal at /atlas. Counts come from data, never from copy. */
+  portal: {
+    title: string;
+    eyebrow: (preview: boolean) => string;
+    intro: string;
+    /** Computed scope, e.g. "Nu in de atlas: 7 regio's, 7 met een kaart." */
+    scope: (regions: number, maps: number) => string;
+    /** Status of the preview, said once in the intro; no promise of dates or regions. */
+    previewNote: string;
+    /** Page metadata. */
+    metaTitle: string;
+    metaDescription: string;
+    /** Title of a section's own map card, e.g. "Kaart van Bordeaux". */
+    leadMap: (name: string) => string;
+    /** Title of a section's own card when it has no map, e.g. "Over Testland". */
+    leadAbout: (name: string) => string;
+    preparing: string;
+    parentMap: (name: string) => string;
+    textOnly: string;
+    /** Plain data: passed to the client finder as props, so copy.ts stays out of its chunk. */
+    finder: AtlasFinderCopy;
+    /** Summary of the folded jump list over the sections. */
+    jump: string;
+    jumpLabel: string;
+    emptyHeading: string;
+    emptyBody: string;
+    exploreRegions: string;
   };
 }
 
@@ -229,17 +273,54 @@ const nl: AtlasCopy = {
     close: "Sluiten",
   },
   page: {
-    overviewIntro: (orientation) =>
-      `Iedere kaart toont geverifieerde appellatiegebieden${orientation ? ` met ${orientation} als oriëntatie` : ""}.`,
     sceneIntro: (orientation) =>
       `Deze kaart toont de geverifieerde appellatiegebieden van de regio${orientation ? ` met ${orientation} als oriëntatie` : ""}.`,
     draftSceneIntro:
       "De pagina over deze regio is nog in voorbereiding; de kaart is al te bekijken.",
     readAbout: (name) => `Lees over ${name}`,
-    chooserEyebrow: "Kaarten",
-    chooserHeading: "Kies een regio",
     coverageLine: (shown, intended) =>
-      `${shown} van ${intended} ${intended === 1 ? "appellatie" : "appellaties"} op de kaart`,
+      shown === intended
+        ? `${shown} ${shown === 1 ? "appellatie" : "appellaties"} op de kaart`
+        : `${shown} van ${intended} ${intended === 1 ? "appellatie" : "appellaties"} op de kaart`,
+  },
+  portal: {
+    title: "Wijnregio's op de kaart",
+    eyebrow: (preview) => (preview ? "Atlas · voorvertoning" : "Atlas"),
+    intro: "Kies een wijnregio en bekijk de appellaties op de kaart, of lees over de regio.",
+    scope: (regions, maps) =>
+      `Nu in de atlas: ${regions === 1 ? "1 regio" : `${regions} regio's`}, ${
+        maps === regions && regions > 1
+          ? "alle met een kaart"
+          : maps === regions
+            ? "met een kaart"
+            : `${maps} met een kaart`
+      }.`,
+    previewNote:
+      "De atlas is al vroeg te zien en groeit naarmate er meer geverifieerde kaartgegevens worden gepubliceerd.",
+    metaTitle: "Wijnatlas",
+    metaDescription:
+      "Wijnregio's op de kaart: appellatiegebieden opgebouwd uit geverifieerde geografische data.",
+    leadMap: (name) => `Kaart van ${name}`,
+    leadAbout: (name) => `Over ${name}`,
+    preparing: "Kaart in voorbereiding",
+    parentMap: (name) => `Op de kaart van ${name}`,
+    textOnly: "Nog geen kaart",
+    finder: {
+      label: "Zoek een regio of appellatie",
+      submit: "Zoeken",
+      foundOne: "1 regio gevonden",
+      foundOther: "{count} regio's gevonden",
+      shown: ", {shown} getoond",
+      areaHit: "Met {area}",
+      none: "Geen regio gevonden voor ‘{query}’.",
+      searchAll: "Zoek ‘{query}’ in de hele kennisbank",
+    },
+    jump: "Ga naar…",
+    jumpLabel: "Regio's in de atlas",
+    emptyHeading: "Er zijn nog geen kaarten",
+    emptyBody:
+      "Kaarten verschijnen hier zodra hun geografische gegevens zijn geverifieerd en gepubliceerd.",
+    exploreRegions: "Verken de regio's",
   },
 };
 
@@ -351,17 +432,52 @@ const en: AtlasCopy = {
     close: "Close",
   },
   page: {
-    overviewIntro: (orientation) =>
-      `Each map shows verified appellation areas${orientation ? ` with ${orientation} for orientation` : ""}.`,
     sceneIntro: (orientation) =>
       `This map shows the region's verified appellation areas${orientation ? ` with ${orientation} for orientation` : ""}.`,
     draftSceneIntro:
       "The page about this region is still in preparation; the map can already be viewed.",
     readAbout: (name) => `Read about ${name}`,
-    chooserEyebrow: "Maps",
-    chooserHeading: "Choose a region",
     coverageLine: (shown, intended) =>
-      `${shown} of ${intended} ${intended === 1 ? "appellation" : "appellations"} mapped`,
+      shown === intended
+        ? `${shown} ${shown === 1 ? "appellation" : "appellations"} on the map`
+        : `${shown} of ${intended} ${intended === 1 ? "appellation" : "appellations"} on the map`,
+  },
+  portal: {
+    title: "Wine regions on the map",
+    eyebrow: (preview) => (preview ? "Atlas · preview" : "Atlas"),
+    intro: "Choose a wine region to see its appellations on the map, or read about the region.",
+    scope: (regions, maps) =>
+      `In the atlas so far: ${regions === 1 ? "1 region" : `${regions} regions`}, ${
+        maps === regions && regions > 1
+          ? "all with a map"
+          : maps === regions
+            ? "with a map"
+            : `${maps} with a map`
+      }.`,
+    previewNote: "The atlas is published early and grows as verified map data is added.",
+    metaTitle: "Wine atlas",
+    metaDescription:
+      "Wine regions on the map: appellation areas built from verified geographic data.",
+    leadMap: (name) => `Map of ${name}`,
+    leadAbout: (name) => `About ${name}`,
+    preparing: "Map in preparation",
+    parentMap: (name) => `On the map of ${name}`,
+    textOnly: "No map yet",
+    finder: {
+      label: "Find a region or appellation",
+      submit: "Search",
+      foundOne: "1 region found",
+      foundOther: "{count} regions found",
+      shown: ", {shown} shown",
+      areaHit: "With {area}",
+      none: "No region matches ‘{query}’.",
+      searchAll: "Search the whole knowledge base for ‘{query}’",
+    },
+    jump: "Go to…",
+    jumpLabel: "Regions in the atlas",
+    emptyHeading: "There are no maps yet",
+    emptyBody: "Maps appear here once their geographic data has been verified and published.",
+    exploreRegions: "Explore the regions",
   },
 };
 
@@ -376,12 +492,4 @@ export function joinNames(names: string[], locale: Locale): string {
   return `${names.slice(0, -1).join(", ")}${conjunction}${names[names.length - 1]}`;
 }
 
-/**
- * Alphabetical order of area names for readers: per language, ignoring a leading
- * "AOP "/"AOC " so "AOP Médoc" sorts under M.
- */
-export function compareAreaNames(locale: Locale) {
-  const collator = new Intl.Collator(locale === "nl" ? "nl-NL" : "en-GB");
-  const key = (name: string) => name.replace(/^(AOP|AOC)\s+/i, "");
-  return (left: string, right: string) => collator.compare(key(left), key(right));
-}
+export { compareAreaNames } from "./area-names";
