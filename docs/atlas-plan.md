@@ -324,7 +324,7 @@ feature list for the non-map alternative.
   alphabetical order, then the overarching
   context areas on one line ("Ligt ook in: …"), and let the reader choose. The
   chooser stays inside the map frame (clamped on both axes, flipped above the
-  pointer when needed) and becomes a bottom sheet of at most 60 % of the frame
+  pointer when needed) and becomes a bottom sheet of at most 85 % of the frame
   on screens up to 620 px. A single selectable area navigates directly. The
   list is the keyboard path: keyboard users reach every area through the list,
   in alphabetical order per language, and the map frame takes focus once for

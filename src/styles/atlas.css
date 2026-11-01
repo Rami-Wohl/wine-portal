@@ -59,6 +59,8 @@
   --atlas-area-fill: color-mix(in srgb, var(--leaf) 26%, var(--surface));
   --atlas-area-fill-strong: color-mix(in srgb, var(--leaf) 46%, var(--surface));
   --atlas-area-line: var(--leaf);
+  /* Rows in the area list and the chooser: hover, highlighted area, primary choice. */
+  --atlas-row-highlight: color-mix(in srgb, var(--leaf-soft) 50%, var(--surface));
   --atlas-highlight-fill: color-mix(in srgb, var(--brand) 20%, var(--surface));
   --atlas-highlight-line: var(--brand-dark);
   --atlas-context-line: var(--line-strong);
@@ -291,13 +293,12 @@
   align-items: baseline;
   gap: 0.25rem 0.6rem;
   min-width: 0;
-  padding: 0.15rem 0.5rem;
+  padding: 0.3rem 1rem;
   margin-inline: -0.5rem;
-  border-radius: 8px;
 }
 .atlas-area-item.is-active,
 .atlas-area-item.is-highlighted {
-  background: color-mix(in srgb, var(--leaf-soft) 70%, var(--surface));
+  background: var(--atlas-row-highlight);
 }
 .atlas-area-item.is-highlighted {
   box-shadow: inset 3px 0 var(--brand);
@@ -677,7 +678,7 @@ a.atlas-area-link:hover {
   bottom: 0;
   left: 0;
   width: auto;
-  max-height: 60%;
+  max-height: 85%;
   border-width: 1px 0 0;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 }
@@ -709,7 +710,6 @@ a.atlas-area-link:hover {
   min-height: 44px;
   align-items: center;
   padding: 0.3rem 0.6rem;
-  border-radius: 8px;
   color: var(--brand-dark);
   font-weight: 650;
   text-decoration: none;
@@ -720,7 +720,7 @@ a.atlas-area-link:hover {
 /* The most specific area is the likely aim: it reads as the primary choice. */
 .atlas-chooser-primary a,
 .atlas-chooser-primary span {
-  background: color-mix(in srgb, var(--leaf-soft) 70%, var(--surface));
+  background: var(--atlas-row-highlight);
   box-shadow: inset 3px 0 var(--brand);
   font-weight: 760;
 }

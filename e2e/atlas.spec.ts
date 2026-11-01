@@ -985,7 +985,8 @@ for (const locale of ["nl", "en"] as const) {
     expect(
       Math.abs(sheetBox.y + sheetBox.height - (frameBox.y + frameBox.height)),
     ).toBeLessThanOrEqual(2);
-    expect(sheetBox.height).toBeLessThanOrEqual(frameBox.height * 0.6 + 1);
+    // At most 85 % of the frame (atlas.css): a short embedded frame still shows a candidate.
+    expect(sheetBox.height).toBeLessThanOrEqual(frameBox.height * 0.85 + 1);
     // The close button is visible without scrolling the sheet: inside the sheet and the screen.
     const sheetClose = sheet.locator(".atlas-chooser-close");
     await expect(sheetClose).toBeInViewport({ ratio: 1 });

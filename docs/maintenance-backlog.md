@@ -590,6 +590,9 @@ het uitstelbesluit gelden tot de merge.
   `QCR-2026-10-31-03`. Open gebleven: scrollaanwijzing in het kiezerpaneel
   (klein, zie UX-review) en de beslispunten direct openen en vertaalde
   bronvermelding.
+  2026-11-01 — nazorg op verzoek van de eigenaar: lijstregels zonder
+  afgeronde hoeken en met lichtere markeerkleur; kiezerpaneel op telefoons
+  85 % (eigen wijziging eigenaar), contract §9 en Atlas-spec gelijkgetrokken.
 
 ### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
 

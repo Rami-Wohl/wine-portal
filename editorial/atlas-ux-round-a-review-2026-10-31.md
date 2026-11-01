@@ -198,3 +198,15 @@ in NL en EN.
   van geverifieerde vormen, tellingen en dekking berekend, copy zonder
   pipelinetaal in NL en EN, toetsenbordpad en no-JS intact. `MNT-077`
   afgerond; merge en opheffen van de preview blijven `MNT-076`.
+
+## Nazorg 2026-11-01
+
+Na de oplevering vroeg de eigenaar om een kleine bijstelling van de lijstregels
+in het zijpaneel, de vouwlijst, de inbedding ("Over deze kaart") en de kiezer
+("Meerdere gebieden op deze plek"): de afgeronde hoeken (8 px) van de regels
+zijn weg en de markeerkleur van een gemarkeerde, actieve of primaire regel is
+lichter (`--atlas-row-highlight`, 50 % `--leaf-soft` in plaats van 70 %). De
+eigenaar zette zelf het onderpaneel van de kiezer op telefoons van 60 % naar
+85 % van het kader: in een kort ingebed kader (Libournais op 390 px) toonde
+60 % geen enkele kandidaat. Contract §9 en de Atlas-spec volgen die 85 %.
+Verificatie: `npm run check` 403 tests, Atlas-spec 84 geslaagd.
