@@ -1,5 +1,6 @@
+import { AtlasRegionChooser } from "@/components/atlas/atlas-region-chooser";
 import { AtlasScene } from "@/components/atlas/atlas-scene";
-import { orientationLayers, scenesOrientation } from "@/components/atlas/copy";
+import { atlasCopy, orientationLayers, scenesOrientation } from "@/components/atlas/copy";
 import { PageIntro } from "@/components/page-intro";
 import {
   ATLAS_OVERVIEW_SCENE_ID,
@@ -32,14 +33,6 @@ export async function generateMetadata({ params }: LocalePageProps): Promise<Met
   };
 }
 
-/** "37 van 38 appellaties op de kaart"; computed, never hand-typed. */
-function coverageLine(shown: number, intended: number, locale: "nl" | "en") {
-  if (locale === "nl") {
-    return `${shown} van ${intended} ${intended === 1 ? "appellatie" : "appellaties"} op de kaart`;
-  }
-  return `${shown} of ${intended} ${intended === 1 ? "appellation" : "appellations"} mapped`;
-}
-
 export default async function AtlasPage({ params }: LocalePageProps) {
   const locale = await pageLocale(params);
   const scenes = getPublishedAtlasSceneSummaries().map((scene) => ({
@@ -60,6 +53,8 @@ export default async function AtlasPage({ params }: LocalePageProps) {
     ? getAtlasSceneById(ATLAS_OVERVIEW_SCENE_ID)
     : undefined;
 
+  const copy = atlasCopy(locale);
+
   return (
     <main id="main-content" className="page-shell atlas-page" tabIndex={-1}>
       <PageIntro
@@ -68,40 +63,30 @@ export default async function AtlasPage({ params }: LocalePageProps) {
         }
         title={locale === "nl" ? "Waar ligt wat?" : "Find your bearings"}
       >
-        <p>
-          {locale === "nl"
-            ? `Iedere kaart toont geverifieerde appellatiegebieden${orientation ? ` met ${orientation} als oriëntatie` : ""}. Kaarten zijn bedoeld om je te oriënteren, niet als perceelsgrens of juridisch bewijs.`
-            : `Each map shows verified appellation areas${orientation ? ` with ${orientation} for orientation` : ""}. Maps help you find your bearings; they are not parcel boundaries or legal evidence.`}{" "}
-        </p>
+        {/* The scale statement belongs to each map's legend, not to the intro. */}
+        <p>{copy.page.overviewIntro(orientation)}</p>
       </PageIntro>
 
-      {overview ? (
-        <AtlasScene scene={overview} locale={locale} variant="overview" headingLevel={2} />
-      ) : null}
-
-      <section className="atlas-scene-list" aria-labelledby="atlas-scenes-title">
-        <div className="section-heading-compact">
-          <p className="eyebrow">{locale === "nl" ? "Kaarten" : "Maps"}</p>
-          <h2 id="atlas-scenes-title">{locale === "nl" ? "Kies een regio" : "Choose a region"}</h2>
-        </div>
-        {scenes.length > 0 ? (
-          <ul className="learning-list">
-            {scenes.map(({ scene, name }) => (
-              <li key={scene.id}>
-                <Link href={atlasSceneHref(scene.slug, locale)}>
-                  <strong>{name}</strong>
-                  <span>
-                    {coverageLine(
-                      scene.coverage.shown.length,
-                      scene.coverage.intended.length,
-                      locale,
-                    )}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        ) : (
+      {scenes.length > 0 ? (
+        <AtlasRegionChooser
+          cards={scenes.map(({ scene, name }) => ({
+            id: scene.id,
+            href: atlasSceneHref(scene.slug, locale),
+            name,
+            coverage: {
+              shown: scene.coverage.shown.length,
+              intended: scene.coverage.intended.length,
+            },
+            thumbnail: scene.thumbnail,
+          }))}
+          locale={locale}
+        />
+      ) : (
+        <section aria-labelledby="atlas-scenes-title">
+          <div className="section-heading-compact">
+            <p className="eyebrow">{copy.page.chooserEyebrow}</p>
+            <h2 id="atlas-scenes-title">{copy.page.chooserHeading}</h2>
+          </div>
           <div className="empty-state">
             <p className="eyebrow">{locale === "nl" ? "In voorbereiding" : "In preparation"}</p>
             <h3>
@@ -118,8 +103,12 @@ export default async function AtlasPage({ params }: LocalePageProps) {
               {locale === "nl" ? "Verken de regio's →" : "Explore the regions →"}
             </Link>
           </div>
-        )}
-      </section>
+        </section>
+      )}
+
+      {overview ? (
+        <AtlasScene scene={overview} locale={locale} variant="overview" headingLevel={2} />
+      ) : null}
     </main>
   );
 }

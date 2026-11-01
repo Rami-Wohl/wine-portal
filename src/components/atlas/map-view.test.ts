@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { ASSUMED_RENDER_PX } from "./labels";
 import {
-  chooserPosition,
+  chooserPlacement,
+  compareAreaRank,
   clampView,
   effectiveZoom,
   exceedsDragThreshold,
@@ -15,7 +16,9 @@ import {
   unitsAt,
   viewMetrics,
   wheelZoomFactor,
+  wheelZooms,
   zoomFactor,
+  zoomModifierKey,
   zoomView,
 } from "./map-view";
 
@@ -103,6 +106,21 @@ describe("gesture helpers", () => {
     expect(exceedsDragThreshold(4, 0)).toBe(true);
   });
 
+  it("zooms with the wheel only while Ctrl or ⌘ is held, as trackpad pinches arrive", () => {
+    expect(wheelZooms({ ctrlKey: false, metaKey: false })).toBe(false);
+    expect(wheelZooms({ ctrlKey: true, metaKey: false })).toBe(true);
+    expect(wheelZooms({ ctrlKey: false, metaKey: true })).toBe(true);
+  });
+
+  it("names ⌘ on Apple platforms and Ctrl elsewhere", () => {
+    expect(zoomModifierKey("MacIntel")).toBe("⌘");
+    expect(zoomModifierKey("macOS")).toBe("⌘");
+    expect(zoomModifierKey("iPhone")).toBe("⌘");
+    expect(zoomModifierKey("Win32")).toBe("Ctrl");
+    expect(zoomModifierKey("Linux x86_64")).toBe("Ctrl");
+    expect(zoomModifierKey("")).toBe("Ctrl");
+  });
+
   it("passes modified clicks to the browser", () => {
     const plain = { button: 0, metaKey: false, ctrlKey: false, shiftKey: false, altKey: false };
     expect(isModifiedClick(plain)).toBe(false);
@@ -112,9 +130,10 @@ describe("gesture helpers", () => {
 });
 
 describe("chooser rules", () => {
-  const barsac = { id: "a", name: "Barsac", href: "/a", context: false };
-  const sauternes = { id: "b", name: "Sauternes", href: "/b", context: false };
-  const bordeaux = { id: "c", name: "Bordeaux", href: "/c", context: true };
+  // Ranks as the build assigns them per layer: largest area first, so higher is smaller.
+  const barsac = { id: "a", name: "Barsac", href: "/a", context: false, areaRank: 6 };
+  const sauternes = { id: "b", name: "Sauternes", href: "/b", context: false, areaRank: 4 };
+  const bordeaux = { id: "c", name: "Bordeaux", href: "/c", context: true, areaRank: 1 };
 
   it("opens only when two or more selectable areas overlap", () => {
     expect(shouldOpenChooser([barsac, sauternes, bordeaux])).toBe(true);
@@ -131,24 +150,89 @@ describe("chooser rules", () => {
     ]);
   });
 
-  it("orders candidates alphabetically per language, whatever the draw order", () => {
-    const entre = { id: "d", name: "Entre-deux-Mers", href: "/d", context: false };
-    const cerons = { id: "e", name: "Cérons", href: "/e", context: false };
+  it("puts the most specific (smallest) area first, whatever the draw or name order", () => {
+    // Pauillac over Haut-Médoc over Médoc: the area the reader aimed at leads.
+    const medoc = { id: "m", name: "Médoc", href: "/m", context: false, areaRank: 1 };
+    const hautMedoc = { id: "h", name: "Haut-Médoc", href: "/h", context: false, areaRank: 2 };
+    const pauillac = { id: "p", name: "Pauillac", href: "/p", context: false, areaRank: 5 };
+    const aop = { id: "b", name: "AOP Bordeaux", href: "/b", context: true, areaRank: 1 };
     expect(
-      orderCandidates([sauternes, entre, bordeaux, cerons, barsac], "en").map((item) => item.name),
-    ).toEqual(["Barsac", "Cérons", "Entre-deux-Mers", "Sauternes", "Bordeaux"]);
+      orderCandidates([medoc, aop, hautMedoc, pauillac], "nl").map((item) => item.name),
+    ).toEqual(["Pauillac", "Haut-Médoc", "Médoc", "AOP Bordeaux"]);
   });
 
-  it("keeps the popover inside the frame and flips above near the bottom", () => {
-    expect(chooserPosition({ x: 10, y: 10 }, { width: 800, height: 600 }, 2)).toEqual({
-      left: 8,
-      top: 22,
-    });
-    expect(chooserPosition({ x: 790, y: 590 }, { width: 800, height: 600 }, 2)).toEqual({
-      left: 512,
-      top: 386,
-    });
-    expect(chooserPosition({ x: 150, y: 100 }, { width: 300, height: 600 }, 1).left).toBe(10);
-    expect(chooserPosition({ x: 60, y: 100 }, { width: 300, height: 600 }, 1).left).toBe(8);
+  it("falls back to the list's alphabetical order for equal or missing ranks", () => {
+    const entre = { id: "d", name: "Entre-deux-Mers", href: "/d", context: false, areaRank: null };
+    const cerons = { id: "e", name: "Cérons", href: "/e", context: false, areaRank: null };
+    const superieur = {
+      id: "f",
+      name: "Bordeaux Supérieur",
+      href: "/f",
+      context: true,
+      areaRank: 2,
+    };
+    expect(
+      orderCandidates([entre, superieur, bordeaux, cerons], "en").map((item) => item.name),
+    ).toEqual(["Cérons", "Entre-deux-Mers", "Bordeaux", "Bordeaux Supérieur"]);
+    const twin = { ...barsac, id: "g", name: "Aardam (testdata)" };
+    expect(orderCandidates([barsac, twin], "nl").map((item) => item.id)).toEqual(["g", "a"]);
+  });
+
+  it("compares ranks explicitly: smaller area first, unranked last, ties equal", () => {
+    expect(compareAreaRank(5, 2)).toBeLessThan(0);
+    expect(compareAreaRank(2, 5)).toBeGreaterThan(0);
+    expect(compareAreaRank(3, 3)).toBe(0);
+    expect(compareAreaRank(null, 3)).toBeGreaterThan(0);
+    expect(compareAreaRank(3, null)).toBeLessThan(0);
+    expect(compareAreaRank(null, null)).toBe(0);
+  });
+
+  it("puts Saint-Émilion before Saint-Émilion Grand Cru when they share a shape and rank", () => {
+    const grandCru = {
+      id: "g",
+      name: "Saint-Émilion Grand Cru",
+      href: "/g",
+      context: false,
+      areaRank: 2,
+    };
+    const saintEmilion = {
+      id: "s",
+      name: "Saint-Émilion",
+      href: "/s",
+      context: false,
+      areaRank: 2,
+    };
+    const pomerol = { id: "p", name: "Pomerol", href: "/p", context: false, areaRank: 5 };
+    expect(
+      orderCandidates([grandCru, saintEmilion, pomerol], "nl").map((item) => item.name),
+    ).toEqual(["Pomerol", "Saint-Émilion", "Saint-Émilion Grand Cru"]);
+  });
+});
+
+describe("chooserPlacement", () => {
+  const frame = { width: 800, height: 600 };
+  const size = { width: 280, height: 200 };
+
+  it("sits below the click, centred and clamped to the frame's sides", () => {
+    expect(chooserPlacement({ x: 400, y: 100 }, size, frame)).toEqual({ left: 260, top: 112 });
+    expect(chooserPlacement({ x: 10, y: 100 }, size, frame).left).toBe(8);
+    expect(chooserPlacement({ x: 795, y: 100 }, size, frame).left).toBe(512);
+  });
+
+  it("flips above the click when it does not fit below", () => {
+    expect(chooserPlacement({ x: 400, y: 500 }, size, frame)).toEqual({ left: 260, top: 288 });
+  });
+
+  it("stays inside when it fits neither below nor above the click", () => {
+    const tall = { width: 280, height: 500 };
+    const placed = chooserPlacement({ x: 400, y: 300 }, tall, frame);
+    expect(placed.top).toBe(92);
+    expect(placed.top + tall.height).toBeLessThanOrEqual(frame.height - 8);
+    // Taller than the frame: pinned to the top margin; its max-height and scroll do the rest.
+    expect(chooserPlacement({ x: 400, y: 300 }, { width: 280, height: 900 }, frame).top).toBe(8);
+  });
+
+  it("keeps a frame narrower than the chooser at the left margin", () => {
+    expect(chooserPlacement({ x: 100, y: 10 }, size, { width: 200, height: 600 }).left).toBe(8);
   });
 });

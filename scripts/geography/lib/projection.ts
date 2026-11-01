@@ -20,8 +20,8 @@ export function round(value: number, decimals: number): number {
   return Object.is(rounded, -0) ? 0 : rounded;
 }
 
-function formatCoordinate(value: number): string {
-  return round(value, DISPLAY_DECIMALS).toString();
+function formatCoordinate(value: number, decimals: number): string {
+  return round(value, decimals).toString();
 }
 
 export function bboxCorners(bbox: LonLatBbox): Position[] {
@@ -92,17 +92,21 @@ export function pixelAreaSteradians(projection: GeoProjection, centerLatitude: n
   return (cosine * cosine) / (projection.scale() * projection.scale());
 }
 
-export function projectPosition(projection: GeoProjection, position: Position): Point2 {
+export function projectPosition(
+  projection: GeoProjection,
+  position: Position,
+  decimals: number = DISPLAY_DECIMALS,
+): Point2 {
   const projected = projection([position[0], position[1]]);
   if (!projected)
     throw new SceneBuildError(`position [${position.join(", ")}] cannot be projected`);
-  return [round(projected[0], DISPLAY_DECIMALS), round(projected[1], DISPLAY_DECIMALS)];
+  return [round(projected[0], decimals), round(projected[1], decimals)];
 }
 
-function projectLine(projection: GeoProjection, line: Position[]): Point2[] {
+function projectLine(projection: GeoProjection, line: Position[], decimals: number): Point2[] {
   const points: Point2[] = [];
   for (const position of line) {
-    const point = projectPosition(projection, position);
+    const point = projectPosition(projection, position, decimals);
     const previous = points[points.length - 1];
     if (previous && previous[0] === point[0] && previous[1] === point[1]) continue;
     points.push(point);
@@ -111,28 +115,25 @@ function projectLine(projection: GeoProjection, line: Position[]): Point2[] {
 }
 
 /** Projected ring without its closing point; consecutive duplicates are dropped. */
-function projectRing(projection: GeoProjection, ring: Position[]): Point2[] {
-  const points = projectLine(projection, ring);
+function projectRing(projection: GeoProjection, ring: Position[], decimals: number): Point2[] {
+  const points = projectLine(projection, ring, decimals);
   const first = points[0];
   const last = points[points.length - 1];
   if (points.length > 1 && first[0] === last[0] && first[1] === last[1]) points.pop();
   return points;
 }
 
-function ringPath(points: Point2[]): string {
-  return `${points
-    .map(
-      ([x, y], index) => `${index === 0 ? "M" : "L"}${formatCoordinate(x)} ${formatCoordinate(y)}`,
-    )
-    .join("")}Z`;
-}
-
-function linePath(points: Point2[]): string {
+function linePath(points: Point2[], decimals: number): string {
   return points
     .map(
-      ([x, y], index) => `${index === 0 ? "M" : "L"}${formatCoordinate(x)} ${formatCoordinate(y)}`,
+      ([x, y], index) =>
+        `${index === 0 ? "M" : "L"}${formatCoordinate(x, decimals)} ${formatCoordinate(y, decimals)}`,
     )
     .join("");
+}
+
+function ringPath(points: Point2[], decimals: number): string {
+  return `${linePath(points, decimals)}Z`;
 }
 
 function ringCentroid(points: Point2[]): Point2 {
@@ -177,13 +178,16 @@ function pointInPolygon(point: Point2, polygon: Point2[][]): boolean {
  * A display-only label anchor: the planar centroid when it lies inside the largest polygon,
  * otherwise the midpoint of the longest interior run along the centroid's horizontal.
  */
-export function labelAnchorForPolygons(polygons: Point2[][][]): Point2 {
+export function labelAnchorForPolygons(
+  polygons: Point2[][][],
+  decimals: number = DISPLAY_DECIMALS,
+): Point2 {
   const largest = polygons.reduce((best, polygon) =>
     Math.abs(planarSignedArea(polygon[0])) > Math.abs(planarSignedArea(best[0])) ? polygon : best,
   );
   const centroid = ringCentroid(largest[0]);
   if (pointInPolygon(centroid, largest)) {
-    return [round(centroid[0], DISPLAY_DECIMALS), round(centroid[1], DISPLAY_DECIMALS)];
+    return [round(centroid[0], decimals), round(centroid[1], decimals)];
   }
   const y = centroid[1];
   const crossings: number[] = [];
@@ -209,7 +213,7 @@ export function labelAnchorForPolygons(polygons: Point2[][][]): Point2 {
     }
   }
   const anchor = best ?? largest[0][0];
-  return [round(anchor[0], DISPLAY_DECIMALS), round(anchor[1], DISPLAY_DECIMALS)];
+  return [round(anchor[0], decimals), round(anchor[1], decimals)];
 }
 
 export interface ProjectedShape {
@@ -217,6 +221,8 @@ export interface ProjectedShape {
   labelAnchor?: Point2;
   /** Positions of the simplified geometry that remain drawn. */
   vertexCount: number;
+  /** Planar area in square viewBox units (exteriors minus holes); 0 for lines. */
+  area: number;
   /**
    * Sub-parts without extent at display resolution: a line segment, a hole, or a whole
    * exclave polygon (its holes included). Dropped from the drawing, counted per feature.
@@ -231,24 +237,28 @@ function distinctPoints(points: Point2[]): number {
 }
 
 /**
- * On the 0.1-unit display grid the smallest non-zero ring area is half a cell (0.005 square
- * units); collinear rounded rings compute to floating-point noise around 0 instead of exactly 0.
- * Half that minimum separates the two without dropping any ring that has real extent.
+ * On a grid of 10^-decimals units the smallest non-zero ring area is half a cell (0.005 square
+ * units at one decimal); collinear rounded rings compute to floating-point noise around 0 instead
+ * of exactly 0. Half that minimum separates the two without dropping any ring with real extent.
  */
-const MIN_RING_AREA = 0.5 * 0.5 * 10 ** (-2 * DISPLAY_DECIMALS);
+function minRingArea(decimals: number): number {
+  return 0.5 * 0.5 * 10 ** (-2 * decimals);
+}
 
-function ringCollapsed(ring: Point2[]): boolean {
-  return distinctPoints(ring) < 3 || Math.abs(planarSignedArea(ring)) < MIN_RING_AREA;
+function ringCollapsed(ring: Point2[], decimals: number): boolean {
+  return distinctPoints(ring) < 3 || Math.abs(planarSignedArea(ring)) < minRingArea(decimals);
 }
 
 /**
  * Project a simplified geometry into viewBox units and build its SVG path data. Source data
  * legitimately holds parts of a few metres (short river segments, small island holes); at
- * 0.1 viewBox units they have no extent and are left out rather than drawn as dots.
+ * 0.1 viewBox units they have no extent and are left out rather than drawn as dots. The
+ * region-chooser thumbnails pass a coarser grid through `decimals`.
  */
 export function projectShape(
   projection: GeoProjection,
   geometry: GeographyGeometry,
+  decimals: number = DISPLAY_DECIMALS,
 ): ProjectedShape {
   switch (geometry.type) {
     case "Polygon":
@@ -258,16 +268,16 @@ export function projectShape(
       let vertexCount = 0;
       let droppedParts = 0;
       for (const [exterior, ...holes] of polygons) {
-        const projectedExterior = projectRing(projection, exterior);
-        if (ringCollapsed(projectedExterior)) {
+        const projectedExterior = projectRing(projection, exterior, decimals);
+        if (ringCollapsed(projectedExterior, decimals)) {
           droppedParts += 1;
           continue;
         }
         vertexCount += exterior.length;
         const rings = [projectedExterior];
         for (const hole of holes) {
-          const projectedHole = projectRing(projection, hole);
-          if (ringCollapsed(projectedHole)) {
+          const projectedHole = projectRing(projection, hole, decimals);
+          if (ringCollapsed(projectedHole, decimals)) {
             droppedParts += 1;
             continue;
           }
@@ -280,13 +290,25 @@ export function projectShape(
         return {
           path: "",
           vertexCount: 0,
+          area: 0,
           droppedParts,
           collapsed: "no ring keeps an extent at display resolution",
         };
       }
+      const area = kept.reduce(
+        (sum, [exterior, ...holes]) =>
+          sum +
+          Math.abs(planarSignedArea(exterior)) -
+          holes.reduce((holeSum, hole) => holeSum + Math.abs(planarSignedArea(hole)), 0),
+        0,
+      );
       return {
-        path: kept.flat().map(ringPath).join(""),
-        labelAnchor: labelAnchorForPolygons(kept),
+        area,
+        path: kept
+          .flat()
+          .map((ring) => ringPath(ring, decimals))
+          .join(""),
+        labelAnchor: labelAnchorForPolygons(kept, decimals),
         vertexCount,
         droppedParts,
       };
@@ -298,7 +320,7 @@ export function projectShape(
       let vertexCount = 0;
       let droppedParts = 0;
       for (const line of lines) {
-        const projected = projectLine(projection, line);
+        const projected = projectLine(projection, line, decimals);
         if (distinctPoints(projected) < 2) {
           droppedParts += 1;
           continue;
@@ -310,11 +332,17 @@ export function projectShape(
         return {
           path: "",
           vertexCount: 0,
+          area: 0,
           droppedParts,
           collapsed: "no line keeps an extent at display resolution",
         };
       }
-      return { path: kept.map(linePath).join(""), vertexCount, droppedParts };
+      return {
+        path: kept.map((line) => linePath(line, decimals)).join(""),
+        vertexCount,
+        area: 0,
+        droppedParts,
+      };
     }
     case "Point":
       throw new SceneBuildError("points are projected directly, not as shapes");

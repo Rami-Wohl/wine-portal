@@ -34,8 +34,10 @@ export interface AtlasCopy {
   mapHeading: (ownerName: string | null) => string;
   /** Names only the orientation layers the scene actually draws. */
   mapIntro: (ownerName: string | null, orientation: AtlasOrientation) => string;
+  /** Said once per map: in the legend section, or in the embedded map's about disclosure. */
   scaleStatement: string;
-  regionNote: string;
+  /** Names the region; a one-area scene shows that area, not a mosaic. */
+  regionNote: (regionName: string | null, singleArea: string | null) => string;
   /** Link text from an embedded map to its full Atlas scene. */
   viewInAtlas: string;
   list: {
@@ -67,8 +69,8 @@ export interface AtlasCopy {
     overlap: string;
     /** Pointer-only instruction; hidden when scripting is unavailable. */
     overlapPointer: string;
+    /** Shown only when something is missing; complete coverage needs no statement. */
     coverage: (shown: number, intended: number) => string;
-    coverageComplete: (count: number) => string;
     coverageNone: string;
     missingIntro: string;
     missingReason: Record<AtlasMissingReason, string>;
@@ -81,26 +83,41 @@ export interface AtlasCopy {
     simplified: (pixels: number) => string;
     /** Shown when the build dropped sub-parts below display resolution; never names or counts them. */
     droppedParts: string;
+    /** Summary of the embedded map's single disclosure: areas, legend, scale and credits. */
     aboutSummary: string;
   };
   unavailable: (name: string, reason: AtlasMissingReason | null) => string;
   controls: {
-    /** Fixed toggle label; its state is carried by aria-pressed. */
-    activate: string;
-    idleStatus: string;
-    activeStatus: string;
     zoomIn: string;
     zoomOut: string;
     reset: string;
-    /** Template; the client replaces {zoom} with the formatted factor. */
-    zoomLevel: string;
     frame: string;
-    toolbar: string;
+    /** Accessible name of the overlaid zoom and reset buttons. */
+    controls: string;
+    /** Keyboard help for the focused frame, read through aria-describedby. */
+    keys: string;
+    /** Transient hint after an unmodified wheel turn; {key} is Ctrl or ⌘. */
+    wheelHint: string;
+    /** Transient hint after a one-finger drag on a touch screen. */
+    touchHint: string;
     chooserHeading: string;
     chooserIntro: string;
-    /** Prefix for an overarching (context) area in the chooser, e.g. "Overkoepelend gebied: Bordeaux". */
-    chooserContext: string;
+    /** Introduces the overarching areas on one line, e.g. "Ligt ook in: AOP Bordeaux · …". */
+    chooserAlsoWithin: string;
     close: string;
+  };
+  /** Atlas route copy around the maps. */
+  page: {
+    /** Atlas overview intro: one sentence naming only the layers every map draws. */
+    overviewIntro: (orientation: string | null) => string;
+    /** Scene route intro: one sentence; the link to the owner follows as its own paragraph. */
+    sceneIntro: (orientation: string | null) => string;
+    draftSceneIntro: string;
+    readAbout: (name: string) => string;
+    chooserEyebrow: string;
+    chooserHeading: string;
+    /** Computed per scene, e.g. "37 van 38 appellaties op de kaart". */
+    coverageLine: (shown: number, intended: number) => string;
   };
 }
 
@@ -112,8 +129,12 @@ const nl: AtlasCopy = {
   },
   scaleStatement:
     "Bedoeld voor regionale oriëntatie. De vlakken zijn voor weergave vereenvoudigd en zijn geen perceelsgrens of juridische afbakening; het officiële dossier van elke appellatie bevat de bindende begrenzing.",
-  regionNote:
-    "De regio zelf heeft op deze kaart geen eigen omtrek: je ziet het mozaïek van appellatiegebieden dat erin ligt.",
+  regionNote: (regionName, singleArea) =>
+    `${regionName ?? "De regio"} heeft op deze kaart geen eigen omtrek: ${
+      singleArea
+        ? `je ziet het productiegebied van de appellatie ${singleArea}.`
+        : "je ziet het mozaïek van appellatiegebieden dat erin ligt."
+    }`,
   viewInAtlas: "Bekijk in de Atlas",
   list: {
     heading: "Appellatiegebieden op deze kaart",
@@ -169,12 +190,6 @@ const nl: AtlasCopy = {
           ? "De appellatie van deze kaart is nog niet getekend."
           : "De appellatie van deze kaart is getekend."
         : `${shown} van de ${intended} appellaties van deze kaart ${shown === 1 ? "is" : "zijn"} getekend.`,
-    coverageComplete: (count) =>
-      count === 1
-        ? "De appellatie van deze kaart is getekend."
-        : count === 2
-          ? "Beide appellaties van deze kaart zijn getekend."
-          : `Alle ${count} appellaties van deze kaart zijn getekend.`,
     coverageNone: "Voor deze kaart zijn nog geen appellatiegebieden aangewezen.",
     missingIntro: "Nog niet op de kaart:",
     missingReason: {
@@ -193,28 +208,38 @@ const nl: AtlasCopy = {
         : "De vormen zijn niet verder vereenvoudigd.",
     droppedParts:
       "Heel kleine delen, zoals losse snippers van een appellatiegebied, korte rivierstukken of eilandjes, zijn op deze schaal niet getekend.",
-    aboutSummary: "Over deze kaart: legenda, bron en dekking",
+    aboutSummary: "Over deze kaart: gebieden, legenda en bron",
   },
   unavailable: (name, reason) =>
     reason
       ? `${name} staat nog niet op de kaart: ${nl.legend.missingReason[reason]}. De kaart toont de andere appellatiegebieden van de regio.`
       : `${name} staat nog niet op de kaart. De kaart toont de andere appellatiegebieden van de regio.`,
   controls: {
-    activate: "Kaart bedienen",
-    idleStatus:
-      "Klik op een gebied om het te openen, of activeer de kaart om te zoomen en te verschuiven.",
-    activeStatus:
-      "Kaart actief: scroll of knijp om te zoomen, sleep of gebruik de pijltjestoetsen om te verschuiven, + en − zoomen, 0 herstelt, Esc laat los.",
     zoomIn: "Inzoomen",
     zoomOut: "Uitzoomen",
-    reset: "Beginstand",
-    zoomLevel: "Zoom {zoom}×",
+    reset: "Herstel weergave",
     frame: "Interactieve kaart",
-    toolbar: "Kaartbediening",
+    controls: "Kaartbediening",
+    keys: "Pijltjestoetsen verschuiven de kaart, + en − zoomen, 0 herstelt de weergave.",
+    wheelHint: "Gebruik {key} + scrollen om te zoomen",
+    touchHint: "Gebruik twee vingers om de kaart te bewegen",
     chooserHeading: "Meerdere gebieden op deze plek",
     chooserIntro: "Kies welk gebied je wilt openen.",
-    chooserContext: "Overkoepelend gebied",
+    chooserAlsoWithin: "Ligt ook in:",
     close: "Sluiten",
+  },
+  page: {
+    overviewIntro: (orientation) =>
+      `Iedere kaart toont geverifieerde appellatiegebieden${orientation ? ` met ${orientation} als oriëntatie` : ""}.`,
+    sceneIntro: (orientation) =>
+      `Deze kaart toont de geverifieerde appellatiegebieden van de regio${orientation ? ` met ${orientation} als oriëntatie` : ""}.`,
+    draftSceneIntro:
+      "De pagina over deze regio is nog in voorbereiding; de kaart is al te bekijken.",
+    readAbout: (name) => `Lees over ${name}`,
+    chooserEyebrow: "Kaarten",
+    chooserHeading: "Kies een regio",
+    coverageLine: (shown, intended) =>
+      `${shown} van ${intended} ${intended === 1 ? "appellatie" : "appellaties"} op de kaart`,
   },
 };
 
@@ -226,8 +251,12 @@ const en: AtlasCopy = {
   },
   scaleStatement:
     "Meant for regional orientation. The areas are simplified for display and are not parcel boundaries or legal evidence; each appellation's official file holds the binding delimitation.",
-  regionNote:
-    "The region itself has no outline on this map: you see the mosaic of appellation areas that lie within it.",
+  regionNote: (regionName, singleArea) =>
+    `${regionName ?? "The region"} has no outline of its own on this map: ${
+      singleArea
+        ? `you see the production area of the ${singleArea} appellation.`
+        : "you see the mosaic of appellation areas that lie within it."
+    }`,
   viewInAtlas: "View in the Atlas",
   list: {
     heading: "Appellation areas on this map",
@@ -283,12 +312,6 @@ const en: AtlasCopy = {
           ? "This map's appellation is not drawn yet."
           : "This map's appellation is drawn."
         : `${shown} of this map's ${intended} appellations ${shown === 1 ? "is" : "are"} drawn.`,
-    coverageComplete: (count) =>
-      count === 1
-        ? "This map's appellation is drawn."
-        : count === 2
-          ? "Both of this map's appellations are drawn."
-          : `All ${count} of this map's appellations are drawn.`,
     coverageNone: "No appellation areas have been assigned to this map yet.",
     missingIntro: "Not yet on the map:",
     missingReason: {
@@ -307,27 +330,38 @@ const en: AtlasCopy = {
         : "Shapes are not further simplified.",
     droppedParts:
       "Very small parts, such as detached slivers of an appellation area, short river stretches or islets, are not drawn at this scale.",
-    aboutSummary: "About this map: legend, source and coverage",
+    aboutSummary: "About this map: areas, legend and source",
   },
   unavailable: (name, reason) =>
     reason
       ? `${name} is not on the map yet: ${en.legend.missingReason[reason]}. The map shows the region's other appellation areas.`
       : `${name} is not on the map yet. The map shows the region's other appellation areas.`,
   controls: {
-    activate: "Use the map",
-    idleStatus: "Click an area to open it, or activate the map to zoom and pan.",
-    activeStatus:
-      "Map active: scroll or pinch to zoom, drag or use the arrow keys to pan, + and − zoom, 0 resets, Esc releases.",
     zoomIn: "Zoom in",
     zoomOut: "Zoom out",
     reset: "Reset view",
-    zoomLevel: "Zoom {zoom}×",
     frame: "Interactive map",
-    toolbar: "Map controls",
+    controls: "Map controls",
+    keys: "Arrow keys move the map, + and − zoom, 0 resets the view.",
+    wheelHint: "Use {key} + scroll to zoom",
+    touchHint: "Use two fingers to move the map",
     chooserHeading: "Several areas at this spot",
     chooserIntro: "Choose which area to open.",
-    chooserContext: "Overarching area",
+    chooserAlsoWithin: "Also within:",
     close: "Close",
+  },
+  page: {
+    overviewIntro: (orientation) =>
+      `Each map shows verified appellation areas${orientation ? ` with ${orientation} for orientation` : ""}.`,
+    sceneIntro: (orientation) =>
+      `This map shows the region's verified appellation areas${orientation ? ` with ${orientation} for orientation` : ""}.`,
+    draftSceneIntro:
+      "The page about this region is still in preparation; the map can already be viewed.",
+    readAbout: (name) => `Read about ${name}`,
+    chooserEyebrow: "Maps",
+    chooserHeading: "Choose a region",
+    coverageLine: (shown, intended) =>
+      `${shown} of ${intended} ${intended === 1 ? "appellation" : "appellations"} mapped`,
   },
 };
 

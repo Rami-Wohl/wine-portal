@@ -21,16 +21,16 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-30.
+Peildatum: 2026-10-31 (featurebranch `feat/attempt-at-atlas`).
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 8 | `MNT-050`, `MNT-053`, `MNT-060` t/m `MNT-062`, `MNT-064/065`, `MNT-072` |
+| Open | 11 | `MNT-050`, `MNT-053`, `MNT-060` t/m `MNT-062`, `MNT-064/065`, `MNT-072`, `MNT-074` t/m `MNT-076` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
 | Geblokkeerd | 4 | `MNT-020`, `MNT-039`, `MNT-056`, `MNT-073` |
-| Geparkeerd | 5 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-070/071` (achteraan) |
-| Afgerond | 56 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-051/052`, `MNT-054/055`, `MNT-057–059`, `MNT-063`, `MNT-066–069` |
+| Geparkeerd | 1 | `MNT-013` (achteraan) |
+| Afgerond | 61 | `MNT-001` t/m `MNT-012`, `MNT-014` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-051/052`, `MNT-054/055`, `MNT-057–059`, `MNT-063`, `MNT-066–071`, `MNT-077` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
@@ -48,9 +48,12 @@ Curriculumvoorbereiding (`LRN-013`) en alle acht tweetalige wijngaardlessen
 krijgt inhoudelijk Learn-/Explore-werk voorrang, met nieuw curriculumvoorbereidend
 werk `LRN-018` en `EXP-027/028/032`. Onderhoud volgt proportioneel aan de content.
 Atlas (`MNT-002/014/070/071`) is op de featurebranch `feat/attempt-at-atlas`
-afgerond volgens het [Atlas-contract](atlas-plan.md); het vervolg staat in
-`MNT-074–076`, `MNT-013` blijft geparkeerd en `MNT-051` blijft historische
-research. Op `main` geldt het uitstel tot de merge.
+afgerond volgens het [Atlas-contract](atlas-plan.md), gevolgd door UX-ronde A
+(`MNT-077`, [review](../editorial/atlas-ux-round-a-review-2026-10-31.md));
+het vervolg staat in `MNT-074–076` en de open rijen van de
+[Atlas-UX-review](../editorial/atlas-ux-review-2026-10-31.md), `MNT-013`
+blijft geparkeerd en `MNT-051` blijft historische research. Op `main` geldt
+het uitstel tot de merge.
 De [feedbackvoorbereiding](feedback-roadmap.md) en platformgate `MNT-050`
 blijven geparkeerd zonder huidige uitvoeropdracht.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
@@ -542,6 +545,51 @@ het uitstelbesluit gelden tot de merge.
   projectmap.
 - **Planning:** na de gebruikersdemo van release één.
 - **Log:** 2026-10-31 — geregistreerd uit de release-één-review.
+
+### `MNT-077` — Atlas UX-ronde A: kaart eerst, bediening op de kaart, gebarenmodel, kiezer en compacte inbedding
+
+- **Status:** afgerond (2026-10-31)
+- **Prioriteit:** hoog; gebruikersbesluit 2026-10-31
+- **Scope:** `src/components/atlas/**`, `src/styles/atlas.css`, Atlas-sectie van
+  `src/styles/responsive.css`, `src/styles/page-intros.css` (linkregel),
+  `src/app/[lang]/atlas/**`, miniatuurartefact in `scripts/geography/lib/**`,
+  `scripts/geography/build.test.ts`, `src/content/model/geography.ts`
+  (miniatuurschema) en `src/generated/geography/index.json`,
+  `data/geography/README.md`, `e2e/atlas.spec.ts`, en in `src/styles/base.css`
+  alleen het token `--header-offset` en het verbergen van de skiplink bij printen
+- **Categorie:** atlas-gis, engineering, media
+- **Herkomst:** `QCR-2026-10-31-02`, voorstellen 1–9 van de prioriteitsvolgorde
+  (`UX-01`, `UX-02`, `UX-03`, `UX-04`, `UX-05`, `UX-06`, `UX-07`, `UX-08`,
+  `UX-15`, `UX-16`, `UX-17`, `UX-23`)
+- **Bevinding:** de kaart begint op de telefoon na 1,5 tot 4 schermen en op
+  desktop onder de vouw; de toggle "Kaart bedienen" is onbekend en laat na `+`
+  geen slepen toe; de kiezer zet het aangeklikte gebied als derde en herhaalt
+  "Overkoepelend gebied" per regel; de werkbalk verschuift de kaart na
+  hydratie; uitleg staat drie keer; "Lees over …" is onzichtbaar als link; de
+  legenda staat op desktop 1.900 px onder de kaart; tellingen van vouw en
+  dekkingsregel spreken elkaar tegen.
+- **Klaar wanneer:** op 390 px begint de kaart van elke scèneroute binnen
+  900 px en op 1440 px is minstens 60 % van het kader bij laden zichtbaar; op
+  `/atlas` geldt dat voor de regiokaarten, die vóór het overzicht staan; de
+  kaartpositie is met en zonder JavaScript gelijk; `/atlas` opent met
+  regiokaarten met miniaturen (alleen selecteerbare gebieden); de kiezer toont het
+  specifiekste gebied eerst en overkoepelende gebieden op één regel; slepen
+  verschuift direct, het wiel zoomt alleen met Ctrl/⌘ en één vinger scrolt de
+  pagina; het ingebedde Médoc-blok is op 390 px hoogstens 600 px van kop tot
+  kaderrand; geen dubbele oriëntatiezin; de dekkingsregel alleen bij een gat;
+  de introlink zichtbaar; lijstkolom begrensd en legenda onder de kaart op
+  desktop; unit- en browsertests dekken dit; `docs/atlas-plan.md` §7 en §9
+  beschrijven het; review- en QA-agent hebben afgetekend; gedateerde review.
+- **Planning:** één bouwronde (Opus), parallel UI/UX-review (Opus) en QA
+  (Fable) onder de orchestrator, één herstelronde.
+- **Log:** 2026-10-31 — geregistreerd en gestart na gebruikersbesluit op de
+  prioriteitsvolgorde van `QCR-2026-10-31-02`; contract §1, §7 en §9
+  bijgewerkt vóór de bouw. 2026-10-31 — afgerond in drie passen (bouw,
+  herstel na UI/UX- en QA-review, derde korte ronde); 403 unit-tests,
+  Atlas-spec 84, browsersuite 295/295; beide reviewers afgetekend; review
+  `QCR-2026-10-31-03`. Open gebleven: scrollaanwijzing in het kiezerpaneel
+  (klein, zie UX-review) en de beslispunten direct openen en vertaalde
+  bronvermelding.
 
 ### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
 

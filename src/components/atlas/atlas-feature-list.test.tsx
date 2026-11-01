@@ -1,8 +1,18 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { AtlasFeatureList } from "./atlas-feature-list";
+import { AtlasFeatureList, foldSummary } from "./atlas-feature-list";
 
 describe("AtlasFeatureList", () => {
+  const area = (id: string, name: string, highlighted = false) => ({
+    id: `geo.appellation-area.${id}`,
+    name,
+    href: `/appellations/${id}`,
+    state: "linked" as const,
+    highlighted,
+    typeLabel: null,
+    inCoverage: true,
+  });
+
   it("lists every area with its link and state, then orientation layers and gaps", () => {
     const html = renderToStaticMarkup(
       <AtlasFeatureList
@@ -14,6 +24,7 @@ describe("AtlasFeatureList", () => {
             state: "linked",
             highlighted: false,
             typeLabel: null,
+            inCoverage: true,
           },
           {
             id: "geo.appellation-area.barsac",
@@ -22,6 +33,7 @@ describe("AtlasFeatureList", () => {
             state: "linked",
             highlighted: true,
             typeLabel: null,
+            inCoverage: true,
           },
           {
             id: "geo.appellation-area.draft",
@@ -30,6 +42,7 @@ describe("AtlasFeatureList", () => {
             state: "preview",
             highlighted: false,
             typeLabel: null,
+            inCoverage: true,
           },
         ]}
         contextAreas={[
@@ -40,9 +53,10 @@ describe("AtlasFeatureList", () => {
             state: "linked",
             highlighted: false,
             typeLabel: null,
+            inCoverage: true,
           },
         ]}
-        collapsible={false}
+        mode="flat"
         headingLevel={3}
         idBase="atlas-test"
         locale="nl"
@@ -81,7 +95,7 @@ describe("AtlasFeatureList", () => {
       <AtlasFeatureList
         areas={[]}
         contextAreas={[]}
-        collapsible={false}
+        mode="flat"
         headingLevel={4}
         idBase="atlas-test"
         locale="en"
@@ -95,7 +109,7 @@ describe("AtlasFeatureList", () => {
     expect(html).not.toContain("For orientation");
   });
 
-  it("keeps the highlighted area visible and folds the rest when collapsible", () => {
+  it("keeps the highlighted area visible and folds the rest", () => {
     const html = renderToStaticMarkup(
       <AtlasFeatureList
         areas={[
@@ -106,6 +120,7 @@ describe("AtlasFeatureList", () => {
             state: "linked",
             highlighted: false,
             typeLabel: null,
+            inCoverage: true,
           },
           {
             id: "geo.appellation-area.barsac",
@@ -114,9 +129,10 @@ describe("AtlasFeatureList", () => {
             state: "linked",
             highlighted: true,
             typeLabel: null,
+            inCoverage: true,
           },
         ]}
-        collapsible={true}
+        mode="folded"
         contextAreas={[
           {
             id: "geo.appellation-area.bordeaux",
@@ -125,6 +141,7 @@ describe("AtlasFeatureList", () => {
             state: "linked",
             highlighted: false,
             typeLabel: null,
+            inCoverage: true,
           },
         ]}
         headingLevel={3}
@@ -140,25 +157,41 @@ describe("AtlasFeatureList", () => {
     expect(html).toContain('class="atlas-area-list atlas-area-list-current"');
     expect(html).toContain('<details class="atlas-list-disclosure"><summary>');
     expect(html).not.toContain("open=");
+    // Every folded area counts, the overarching one (under its own heading) included.
     expect(html).toContain("<summary>Show the other 2 areas</summary>");
     expect(html.indexOf('href="/appellations/graves"')).toBeGreaterThan(details);
+    expect(html.indexOf(">Overarching area<")).toBeGreaterThan(details);
+    expect(html.indexOf('href="/appellations/bordeaux-aop"')).toBeGreaterThan(details);
     expect(html.match(/href="\/appellations\/barsac"/g)).toHaveLength(1);
+    expect(html).not.toContain("data-atlas-wide-open");
   });
 
-  const area = (id: string, name: string, highlighted = false) => ({
-    id: `geo.appellation-area.${id}`,
-    name,
-    href: `/appellations/${id}`,
-    state: "linked" as const,
-    highlighted,
-    typeLabel: null,
+  it("marks the Atlas-page fold for the wide-screen enhancer, still closed in the markup", () => {
+    const html = renderToStaticMarkup(
+      <AtlasFeatureList
+        areas={[area("graves", "Graves"), area("barsac", "Barsac")]}
+        contextAreas={[area("bordeaux", "AOP Bordeaux")]}
+        headingLevel={3}
+        idBase="atlas-test"
+        locale="nl"
+        missing={[]}
+        mode="folded"
+        openWhenWide
+        places={[]}
+        water={[]}
+      />,
+    );
+    expect(html).toContain(
+      '<details class="atlas-list-disclosure" data-atlas-wide-open="true"><summary>Toon alle 3 gebieden</summary>',
+    );
+    expect(html).not.toMatch(/<details[^>]* open/);
   });
 
   it("keeps a highlighted overarching area out of the fold", () => {
     const html = renderToStaticMarkup(
       <AtlasFeatureList
         areas={[area("graves", "Graves"), area("barsac", "Barsac")]}
-        collapsible={true}
+        mode="folded"
         contextAreas={[area("bordeaux", "Bordeaux", true)]}
         headingLevel={3}
         idBase="atlas-test"
@@ -179,7 +212,7 @@ describe("AtlasFeatureList", () => {
     const orientationOnly = renderToStaticMarkup(
       <AtlasFeatureList
         areas={[area("champagne", "Champagne", true)]}
-        collapsible={true}
+        mode="folded"
         contextAreas={[]}
         headingLevel={3}
         idBase="atlas-test"
@@ -193,7 +226,7 @@ describe("AtlasFeatureList", () => {
     const nothing = renderToStaticMarkup(
       <AtlasFeatureList
         areas={[area("champagne", "Champagne", true)]}
-        collapsible={true}
+        mode="folded"
         contextAreas={[]}
         headingLevel={3}
         idBase="atlas-test"
@@ -205,5 +238,33 @@ describe("AtlasFeatureList", () => {
     );
     expect(nothing).not.toContain("<details");
     expect(nothing).toContain('href="/appellations/champagne"');
+  });
+});
+
+describe("foldSummary", () => {
+  it("counts the folded areas in the map's coverage, so it agrees with the coverage count", () => {
+    const none = { areas: 0, inCoverage: 0, water: false, places: false };
+    // Médoc: 8 selectable areas in coverage, AOP Bordeaux listed but outside it.
+    expect(foldSummary("nl", { ...none, areas: 9, inCoverage: 8 }, false)).toBe(
+      "Toon alle 8 gebieden",
+    );
+    // Libournais: 12 selectable areas in coverage, AOP Bordeaux outside it.
+    expect(foldSummary("nl", { ...none, areas: 13, inCoverage: 12 }, false)).toBe(
+      "Toon alle 12 gebieden",
+    );
+    // Bordeaux: 34 selectable and 3 overarching areas, all in coverage ("37 van 38").
+    expect(foldSummary("nl", { ...none, areas: 37, inCoverage: 37 }, false)).toBe(
+      "Toon alle 37 gebieden",
+    );
+    // Pauillac in the Médoc scene: the 7 other covered areas fold.
+    expect(foldSummary("en", { ...none, areas: 8, inCoverage: 7 }, true)).toBe(
+      "Show the other 7 areas",
+    );
+    // No covered area folded: fall back to every listed area.
+    expect(foldSummary("en", { ...none, areas: 1 }, true)).toBe("Show the other area");
+    expect(foldSummary("en", { ...none, water: true, places: true }, true)).toBe(
+      "Show water and towns",
+    );
+    expect(foldSummary("nl", none, true)).toBeNull();
   });
 });

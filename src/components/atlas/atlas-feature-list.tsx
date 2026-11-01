@@ -10,6 +10,8 @@ export interface AtlasListArea {
   state: AtlasAreaLinkState;
   highlighted: boolean;
   typeLabel: string | null;
+  /** True when the area belongs to the scene's computed coverage (intended and shown). */
+  inCoverage: boolean;
 }
 
 export interface AtlasMissingEntry {
@@ -28,11 +30,14 @@ export interface AtlasFeatureListProps {
   places: string[];
   missing: AtlasMissingEntry[];
   /**
-   * Embedded scenes keep the highlighted area visible and fold the rest into a
-   * native disclosure, closed by default at every width; it expands without
-   * JavaScript. Atlas pages render the full list open.
+   * `folded`: the highlighted area stays visible and the rest folds into a native
+   * disclosure, closed in the server markup, that expands without JavaScript. With
+   * `openWhenWide` the enhancer opens it on wide screens, where it sits beside the map.
+   * `flat`: everything listed, highlighted area first; used inside the embedded map's
+   * single "about" disclosure, which already folds it.
    */
-  collapsible: boolean;
+  mode: "folded" | "flat";
+  openWhenWide?: boolean;
 }
 
 function AreaItems({
@@ -87,9 +92,27 @@ export function sortAreas<T extends { name: string }>(areas: T[], locale: Locale
 }
 
 /**
+ * The fold summary counts the folded areas that belong to the map's computed coverage, drawn as
+ * selectable or overarching, so it agrees with the coverage count ("8 van 8" on Médoc, "37 van
+ * 38" on Bordeaux). An overarching area outside the coverage (AOP Bordeaux on Médoc) is listed
+ * under its own heading but not counted. A list with no covered area falls back to every area.
+ */
+export function foldSummary(
+  locale: Locale,
+  folded: { areas: number; inCoverage: number; water: boolean; places: boolean },
+  others: boolean,
+): string | null {
+  const copy = atlasCopy(locale);
+  const count = folded.inCoverage > 0 ? folded.inCoverage : folded.areas;
+  if (count > 0) return copy.list.showAreas(count, others);
+  if (folded.water || folded.places) return copy.list.showOrientation(folded.water, folded.places);
+  return null;
+}
+
+/**
  * Semantic alternative to the map: every selectable area with its link and
  * state, the orientation layers as text, and the coverage gaps with a reason.
- * It precedes the map in DOM order so narrow screens read it first.
+ * On Atlas pages it precedes the map in DOM order, folded on narrow screens.
  */
 export function AtlasFeatureList({
   locale,
@@ -100,7 +123,8 @@ export function AtlasFeatureList({
   water,
   places,
   missing,
-  collapsible,
+  mode,
+  openWhenWide = false,
 }: AtlasFeatureListProps) {
   const copy = atlasCopy(locale);
   const Title = `h${headingLevel}` as const;
@@ -108,9 +132,7 @@ export function AtlasFeatureList({
   const titleId = `${idBase}-list-title`;
   const hasOrientation = water.length > 0 || places.length > 0;
   // The highlighted entity may be an overarching area (e.g. the Bordeaux appellation page).
-  const current = collapsible
-    ? [...areas, ...contextAreas].find((area) => area.highlighted)
-    : undefined;
+  const current = [...areas, ...contextAreas].find((area) => area.highlighted);
   const listed = sortAreas(
     areas.filter((area) => area !== current),
     locale,
@@ -119,13 +141,16 @@ export function AtlasFeatureList({
     contextAreas.filter((area) => area !== current),
     locale,
   );
-  const foldedAreas = listed.length + listedContext.length;
-  const summary =
-    foldedAreas > 0
-      ? copy.list.showAreas(foldedAreas, Boolean(current))
-      : hasOrientation
-        ? copy.list.showOrientation(water.length > 0, places.length > 0)
-        : null;
+  const summary = foldSummary(
+    locale,
+    {
+      areas: listed.length + listedContext.length,
+      inCoverage: [...listed, ...listedContext].filter((area) => area.inCoverage).length,
+      water: water.length > 0,
+      places: places.length > 0,
+    },
+    Boolean(current),
+  );
 
   const body = (
     <>
@@ -190,12 +215,12 @@ export function AtlasFeatureList({
           locale={locale}
         />
       ) : null}
-      {collapsible && summary ? (
-        <details className="atlas-list-disclosure">
+      {mode === "folded" && summary ? (
+        <details className="atlas-list-disclosure" data-atlas-wide-open={openWhenWide || undefined}>
           <summary>{summary}</summary>
           <div className="atlas-list-disclosure-body">{body}</div>
         </details>
-      ) : collapsible && current && missing.length === 0 ? null : (
+      ) : mode === "folded" && current && missing.length === 0 ? null : (
         body
       )}
     </section>

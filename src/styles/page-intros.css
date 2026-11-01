@@ -119,6 +119,12 @@
 .page-intro-copy p:last-child {
   margin-bottom: 0;
 }
+/* Links in an intro read as links: the site's link colour and an underline. */
+.page-intro-copy a {
+  color: var(--brand-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
 .section-heading-compact {
   margin-bottom: 2rem;
 }

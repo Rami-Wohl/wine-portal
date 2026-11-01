@@ -114,8 +114,9 @@ describe("AtlasScene", () => {
   it("labels the region honestly and never shows raw identifiers or pipeline terms", () => {
     const text = visibleText(html);
     expect(text).toContain("Kaart van Graves en Sauternais");
-    expect(text).toContain("Productiegebieden van appellaties in Graves en Sauternais");
-    expect(text).toContain("regionale oriëntatie");
+    // Atlas pages state the orientation sentence in the page intro, not again in the figure.
+    expect(text).not.toContain("Productiegebieden van appellaties in Graves en Sauternais");
+    expect(text.match(/Bedoeld voor regionale oriëntatie/g)).toHaveLength(1);
     expect(text).toContain("4 van de 5 appellaties van deze kaart zijn getekend.");
     expect(text).toContain("Cérons (de kaartvorm wordt nog gecontroleerd)");
     expect(text).toContain("Licence Ouverte / Open Licence 2.0");
@@ -134,7 +135,7 @@ describe("AtlasScene", () => {
       expect(text, forbidden).not.toContain(forbidden);
     }
     expect(html).toContain(
-      '<figure aria-describedby="atlas-overview-graves-and-sauternais-intro" aria-labelledby="atlas-overview-graves-and-sauternais-title" class="atlas-scene atlas-scene-overview"',
+      '<figure aria-labelledby="atlas-overview-graves-and-sauternais-title" class="atlas-scene atlas-scene-overview"',
     );
     expect(html).toMatch(
       /<svg aria-labelledby="atlas-overview-graves-and-sauternais-title"[^>]*preserveAspectRatio="xMidYMid meet"[^>]*role="group"[^>]*viewBox="0 0 1000 700"/,
@@ -154,20 +155,125 @@ describe("AtlasScene", () => {
     expect(text).toContain("édition du 12 octobre 2026");
   });
 
-  it("supports an embedded variant with a deeper heading level and a folded legend", () => {
+  /** The opening tag of the first element matching a pattern, for attribute-level checks. */
+  const openingTag = (markup: string, pattern: RegExp) => markup.match(pattern)?.[0] ?? "";
+
+  it("folds the Atlas-page list closed in the markup, ahead of the map and legend", () => {
+    const details = openingTag(html, /<details [^>]*class="atlas-list-disclosure"[^>]*>/);
+    expect(details).toContain('data-atlas-wide-open="true"');
+    expect(details).not.toContain(" open");
+    // Barsac stays above the fold; the three other covered areas are counted. AOP Bordeaux
+    // folds too, under its own heading, but lies outside this scene's coverage.
+    expect(html).toContain("<summary>Toon de andere 3 gebieden</summary>");
+    expect(html.indexOf("atlas-list-disclosure")).toBeLessThan(html.indexOf("<svg"));
+    expect(html.indexOf('class="atlas-scene-legend"')).toBeGreaterThan(html.indexOf("</svg>"));
+  });
+
+  it("renders the map controls on the server, disabled until the enhancer is ready", () => {
+    const controls = html.match(/<button [^>]*class="atlas-map-control"[^>]*>/g) ?? [];
+    expect(controls).toHaveLength(3);
+    const labels = ["Inzoomen", "Uitzoomen", "Herstel weergave"];
+    controls.forEach((button, index) => {
+      expect(button).toContain('disabled=""');
+      expect(button).toContain(`aria-label="${labels[index]}"`);
+      expect(button).toContain(`title="${labels[index]}"`);
+    });
+    // The controls follow the frame in the server markup (an overlay on wide screens, a bar
+    // below it on narrow ones), so nothing above the map appears on hydration.
+    expect(html.indexOf('class="atlas-map-frame"')).toBeLessThan(
+      html.indexOf('class="atlas-map-controls"'),
+    );
+    expect(html.indexOf('class="atlas-map-controls"')).toBeLessThan(
+      html.indexOf('class="atlas-scene-legend"'),
+    );
+    expect(html).not.toContain("atlas-toolbar");
+    expect(html).not.toContain("data-engaged");
+    const hint = openingTag(html, /<p [^>]*class="atlas-map-hint"[^>]*>/);
+    expect(hint).toContain('aria-hidden="true"');
+    expect(hint).toContain('data-visible="false"');
+    // One keyboard-help element: the frame's description and its focus caption.
+    const frame = openingTag(html, /<div [^>]*class="atlas-map-frame"[^>]*>/);
+    expect(frame).toContain('aria-describedby="atlas-overview-graves-and-sauternais-map-keys"');
+    expect(frame).toContain('aria-label="Interactieve kaart"');
+    expect(html.match(/Pijltjestoetsen verschuiven de kaart/g)).toHaveLength(1);
+    const keys = openingTag(
+      html,
+      /<p [^>]*id="atlas-overview-graves-and-sauternais-map-keys"[^>]*>/,
+    );
+    expect(keys).toContain('class="atlas-map-keys-caption"');
+    expect(keys).not.toContain("aria-hidden");
+  });
+
+  it("exposes the build's area rank on every area path for the chooser order", () => {
+    for (const feature of sampleScene.layers.flatMap((layer) => layer.features)) {
+      if (feature.geometryType !== "area" || feature.areaRank === undefined) continue;
+      expect(html).toMatch(
+        new RegExp(
+          `data-feature-id="${feature.id.replace(/\./g, "\\.")}" data-area-rank="${feature.areaRank}"`,
+        ),
+      );
+    }
+  });
+
+  it("hides the figure heading on scene routes but keeps it as the figure's name", () => {
+    const hidden = renderToStaticMarkup(
+      <AtlasScene locale="nl" scene={sampleScene} titleHidden variant="overview" />,
+    );
+    expect(hidden).toContain(
+      '<h2 class="atlas-scene-title atlas-visually-hidden" id="atlas-overview-graves-and-sauternais-title">Kaart van Graves en Sauternais</h2>',
+    );
+    expect(hidden).not.toContain("atlas-scene-heading");
+    expect(hidden).toContain('aria-labelledby="atlas-overview-graves-and-sauternais-title"');
+  });
+
+  it("keeps the embedded map compact: caption, map, gaps, then one disclosure", () => {
     const embedded = renderToStaticMarkup(
       <AtlasScene headingLevel={3} locale="nl" scene={sampleScene} variant="embedded" />,
     );
+    const text = visibleText(embedded);
     expect(embedded).toContain('<h3 class="atlas-scene-title"');
-    expect(embedded).toContain('<h4 class="atlas-list-title"');
-    expect(embedded).toContain('<details class="atlas-legend-disclosure">');
-    expect(embedded).toContain('<details class="atlas-list-disclosure"><summary>');
-    expect(embedded).toContain("<summary>Toon alle 5 gebieden</summary>");
     expect(embedded).toContain(
-      '<details class="atlas-legend-disclosure"><summary>Over deze kaart: legenda, bron en dekking</summary>',
+      '<p class="atlas-scene-intro" id="atlas-embedded-graves-and-sauternais-caption">Productiegebieden van appellaties in Graves en Sauternais, met water en plaatsen ter oriëntatie.</p>',
     );
+    expect(embedded.match(/<details/g)).toHaveLength(1);
+    expect(embedded).toContain(
+      '<details class="atlas-about"><summary>Over deze kaart: gebieden, legenda en bron</summary>',
+    );
+    // Gaps sit between the map and the disclosure; the list inside does not repeat them.
+    const about = embedded.indexOf('<details class="atlas-about">');
+    expect(embedded.indexOf("atlas-legend-coverage")).toBeGreaterThan(embedded.indexOf("</svg>"));
+    expect(embedded.indexOf("atlas-legend-coverage")).toBeLessThan(about);
+    expect(text.match(/Cérons/g)).toHaveLength(1);
+    // Areas, overarching areas, orientation, legend, scale statement and credits fold inside.
+    for (const marker of [
+      'class="atlas-feature-list"',
+      ">Overkoepelend gebied<",
+      ">Ter oriëntatie<",
+      'class="atlas-legend-keys"',
+      "Bedoeld voor regionale oriëntatie",
+      'class="atlas-legend-credits"',
+    ]) {
+      expect(embedded.indexOf(marker), marker).toBeGreaterThan(about);
+    }
+    expect(text.match(/Bedoeld voor regionale oriëntatie/g)).toHaveLength(1);
+    expect(text.match(/ter oriëntatie\./g)).toHaveLength(1);
     expect(embedded).not.toContain("atlas-scene-link");
+    expect(embedded).toContain('<h4 class="atlas-list-title"');
     expect(embedded).toContain('class="atlas-scene atlas-scene-embedded"');
+  });
+
+  it("drops the coverage line for a complete map", () => {
+    const complete: AtlasSceneView = {
+      ...sampleScene,
+      coverage: { ...sampleScene.coverage, intended: sampleScene.coverage.shown, missing: [] },
+    };
+    for (const variant of ["overview", "embedded"] as const) {
+      const rendered = renderToStaticMarkup(
+        <AtlasScene locale="nl" scene={complete} variant={variant} />,
+      );
+      expect(rendered).not.toContain("atlas-legend-coverage");
+      expect(visibleText(rendered)).not.toContain("getekend");
+    }
   });
 
   it("links an embedded map to its Atlas scene when a route is given", () => {
@@ -339,7 +445,7 @@ describe("AtlasScene", () => {
       layers: sampleScene.layers.filter((layer) => layer.role !== "places"),
     };
     const text = visibleText(
-      renderToStaticMarkup(<AtlasScene locale="en" scene={noPlaces} variant="overview" />),
+      renderToStaticMarkup(<AtlasScene locale="en" scene={noPlaces} variant="embedded" />),
     );
     expect(text).toContain("with water for orientation.");
     expect(text).not.toContain("towns for orientation");

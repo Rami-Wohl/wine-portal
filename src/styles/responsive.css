@@ -321,17 +321,39 @@
 }
 
 /* Atlas scenes. Grouped here so the map keeps the shared breakpoints. */
+/* 980/981px is the Atlas wide breakpoint, shared with WIDE_QUERY in atlas-scene-enhancer.tsx
+ * and the min-width: 981px rule in atlas.css; change all three together. */
 @media (max-width: 980px) {
+  /* Stacked: heading, folded list, map, legend. The map follows the list's summary line. */
   .atlas-scene {
-    --atlas-body-columns: 1fr;
+    --atlas-body-columns: minmax(0, 1fr);
+    --atlas-body-areas: "list" "map" "legend";
+    --atlas-list-position: static;
+    --atlas-list-max-height: none;
+    --atlas-list-fade: none;
     --atlas-render-px: 760;
     --atlas-area-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 760px) {
+  /* Narrow maps: the controls leave the map for a slim bar attached below the frame, so they
+   * never cover an area or a label at any zoom; the keyboard help moves to the top. */
   .atlas-scene {
     --atlas-render-px: 620;
+    --atlas-controls-position: static;
+    --atlas-controls-inset: auto;
+    --atlas-controls-display: flex;
+    --atlas-controls-gap: 0;
+    --atlas-controls-surface: var(--atlas-canvas);
+    --atlas-controls-border: 1px solid var(--line);
+    --atlas-controls-radius: 0 0 var(--radius-md) var(--radius-md);
+    --atlas-control-border: 0;
+    --atlas-control-radius: 0;
+    --atlas-control-shadow: none;
+    --atlas-control-surface: transparent;
+    --atlas-frame-radius: var(--radius-md) var(--radius-md) 0 0;
+    --atlas-keys-inset: 8px auto auto 8px;
   }
   .atlas-legend-keys {
     grid-template-columns: 1fr;
@@ -362,17 +384,25 @@
   }
   .atlas-feature-list,
   .atlas-legend-section,
-  .atlas-legend-disclosure {
+  .atlas-about {
     padding: 1rem;
   }
-  .atlas-map {
-    max-height: none;
+  .atlas-scene {
+    --atlas-map-max-height: none;
   }
-  .atlas-toolbar-status {
-    font-size: 0.74rem;
+  /* Embedded maps stay compact in the reading flow; a tall scene letterboxes in its frame. */
+  .atlas-scene-embedded {
+    --atlas-map-max-height: min(52vh, 400px);
   }
   .atlas-orientation div {
     grid-template-columns: 1fr;
     gap: 0.1rem;
+  }
+}
+
+/* Without scripting there is no control bar: the frame keeps all four rounded corners. */
+@media (max-width: 760px) and (scripting: none) {
+  .atlas-scene {
+    --atlas-frame-radius: var(--radius-md);
   }
 }

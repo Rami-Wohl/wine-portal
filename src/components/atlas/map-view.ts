@@ -29,16 +29,23 @@ export interface Candidate {
   id: string;
   name: string;
   href: string | null;
-  /** Overarching (context) areas are listed last and marked. */
+  /** Overarching (context) areas are listed last, on one line. */
   context: boolean;
+  /**
+   * The build's scene-wide area rank (scripts/geography/lib/display.ts `rankAreas`): every area
+   * of every layer is numbered from 1, largest first, so a higher rank is a smaller area; areas
+   * with the same projected size share a rank. Null when the markup carries no rank.
+   */
+  areaRank: number | null;
 }
 
 export const MIN_ZOOM = 1;
 export const MAX_ZOOM = 8;
 export const ZOOM_STEP = 1.5;
 export const DRAG_THRESHOLD_PX = 4;
-export const CHOOSER_WIDTH_PX = 280;
 export const WHEEL_ZOOM_RATE = 0.0018;
+/** How long a gesture hint stays over the map. */
+export const HINT_DURATION_MS = 1600;
 
 export function parseViewBox(value: string | null | undefined): View | null {
   const parts = (value ?? "")
@@ -166,15 +173,47 @@ export function exceedsDragThreshold(dx: number, dy: number): boolean {
   return Math.hypot(dx, dy) >= DRAG_THRESHOLD_PX;
 }
 
-/** Alphabetical within each group; overarching areas come last so they never hide a candidate. */
-export function orderCandidates<T extends { context: boolean; name: string }>(
-  items: T[],
-  locale: "nl" | "en",
-): T[] {
-  // Alphabetical per language, like the list, so both keyboard-facing orders agree.
-  const compare = compareAreaNames(locale);
-  const sorted = [...items].sort((left, right) => compare(left.name, right.name));
-  return [...sorted.filter((item) => !item.context), ...sorted.filter((item) => item.context)];
+/** Higher rank (smaller area) first; an unranked candidate after every ranked one. */
+export function compareAreaRank(left: number | null, right: number | null): number {
+  if (left === right) return 0;
+  if (left === null) return 1;
+  if (right === null) return -1;
+  return right - left;
+}
+
+/**
+ * The chooser's order: the most specific area first. Selectable candidates sort by area,
+ * smallest first, so the area the reader most likely aimed at leads; equal or missing ranks
+ * fall back to the list's alphabetical order ("Saint-Émilion" before "Saint-Émilion Grand
+ * Cru"). Overarching areas follow, alphabetically, so they never hide a candidate.
+ */
+export function orderCandidates<
+  T extends { context: boolean; name: string; areaRank: number | null },
+>(items: T[], locale: "nl" | "en"): T[] {
+  const compareNames = compareAreaNames(locale);
+  const specific = items
+    .filter((item) => !item.context)
+    .sort(
+      (left, right) =>
+        compareAreaRank(left.areaRank, right.areaRank) || compareNames(left.name, right.name),
+    );
+  const overarching = items
+    .filter((item) => item.context)
+    .sort((left, right) => compareNames(left.name, right.name));
+  return [...specific, ...overarching];
+}
+
+/**
+ * Whether a wheel turn should zoom the map: only with Ctrl or ⌘ (which is also how trackpad
+ * pinches arrive), so an ordinary wheel or two-finger swipe keeps scrolling the page.
+ */
+export function wheelZooms(event: { ctrlKey: boolean; metaKey: boolean }): boolean {
+  return event.ctrlKey || event.metaKey;
+}
+
+/** The modifier readers press with the wheel: ⌘ on Apple platforms, Ctrl elsewhere. */
+export function zoomModifierKey(platform: string): string {
+  return /mac|iphone|ipad|ipod/i.test(platform) ? "⌘" : "Ctrl";
 }
 
 /** The chooser opens only for a real overlap: two or more selectable areas under the pointer. */
@@ -193,17 +232,32 @@ export function isModifiedClick(event: {
   return event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
 }
 
-/** Place the chooser near the click, inside the frame, flipping above when it would overflow. */
-export function chooserPosition(
-  local: Point,
+/** Gap between the chooser and the frame edge, and between the click and the chooser. */
+export const CHOOSER_MARGIN_PX = 8;
+export const CHOOSER_OFFSET_PX = 12;
+
+/**
+ * Place the measured chooser near the click and wholly inside the frame: centred on the click
+ * horizontally and clamped to the frame; below the click when it fits, above it when it fits
+ * there, otherwise as low as the frame allows (the chooser's own max-height and scroll keep a
+ * taller list inside).
+ */
+export function chooserPlacement(
+  click: Point,
+  size: { width: number; height: number },
   frame: { width: number; height: number },
-  itemCount: number,
 ): { left: number; top: number } {
-  const width = Math.min(CHOOSER_WIDTH_PX, frame.width - 16);
-  const left = Math.min(Math.max(local.x - width / 2, 8), Math.max(8, frame.width - width - 8));
-  const estimatedHeight = 96 + itemCount * 48;
-  const below = local.y + 12;
+  const margin = CHOOSER_MARGIN_PX;
+  const clamp = (value: number, min: number, max: number) =>
+    Math.min(Math.max(value, min), Math.max(min, max));
+  const left = clamp(click.x - size.width / 2, margin, frame.width - size.width - margin);
+  const below = click.y + CHOOSER_OFFSET_PX;
+  const above = click.y - CHOOSER_OFFSET_PX - size.height;
   const top =
-    below + estimatedHeight > frame.height ? Math.max(8, below - estimatedHeight - 24) : below;
+    below + size.height <= frame.height - margin
+      ? below
+      : above >= margin
+        ? above
+        : clamp(frame.height - size.height - margin, margin, frame.height - size.height - margin);
   return { left, top };
 }

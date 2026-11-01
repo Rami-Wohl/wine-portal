@@ -1,5 +1,5 @@
 import { AtlasScene } from "@/components/atlas/atlas-scene";
-import { orientationLayers, scenesOrientation } from "@/components/atlas/copy";
+import { atlasCopy, orientationLayers, scenesOrientation } from "@/components/atlas/copy";
 import { PageIntro } from "@/components/page-intro";
 import {
   ATLAS_PREVIEW,
@@ -77,6 +77,7 @@ export default async function AtlasScenePage({ params, searchParams }: AtlasScen
   const name = owner?.names[locale] ?? slug;
   const published = owner?.status === "active";
   const orientation = orientationLayers(scenesOrientation([scene]), locale);
+  const copy = atlasCopy(locale);
 
   return (
     <main id="main-content" className="page-shell atlas-page" tabIndex={-1}>
@@ -100,23 +101,17 @@ export default async function AtlasScenePage({ params, searchParams }: AtlasScen
         }
         title={name}
       >
-        <p>
-          {published
-            ? locale === "nl"
-              ? `Deze kaart toont de geverifieerde appellatiegebieden van de regio${orientation ? ` met ${orientation} als oriëntatie` : ""}.`
-              : `This map shows the region's verified appellation areas${orientation ? ` with ${orientation} for orientation` : ""}.`
-            : locale === "nl"
-              ? "Deze regio wordt nog voorbereid. De kaart is al te bekijken; de pagina over de regio volgt."
-              : "This region is still being prepared. The map can already be viewed; the page about the region follows."}{" "}
-          {owner ? (
-            <Link href={getEntityPublicHref(owner, locale)}>
-              {locale === "nl" ? `Lees over ${name}` : `Read about ${name}`}
-            </Link>
-          ) : null}
-        </p>
+        {/* One sentence; the scale statement is said once, in the map's legend. */}
+        <p>{published ? copy.page.sceneIntro(orientation) : copy.page.draftSceneIntro}</p>
+        {/* A draft owner's page is still in preparation: the intro says so and links nowhere. */}
+        {owner && published ? (
+          <p className="page-intro-link">
+            <Link href={getEntityPublicHref(owner, locale)}>{copy.page.readAbout(name)}</Link>
+          </p>
+        ) : null}
       </PageIntro>
 
-      <AtlasScene scene={scene} locale={locale} variant="overview" headingLevel={2} />
+      <AtlasScene scene={scene} locale={locale} variant="overview" headingLevel={2} titleHidden />
     </main>
   );
 }

@@ -9,6 +9,7 @@ import {
   AtlasBuildError,
   buildAtlasDisplay,
   fitProjection,
+  rankAreas,
   gzipSize,
   labelAnchorForPolygons,
   VIEWBOX_WIDTH,
@@ -24,6 +25,11 @@ import {
   type GeographyGeometry,
 } from "./lib/geometry";
 import { projectShape } from "./lib/projection";
+import { clipRing, encodeRings, thumbnailPath } from "./lib/thumbnail";
+import {
+  ATLAS_THUMBNAIL_PATH_BUDGET_BYTES,
+  atlasThumbnailSchema,
+} from "../../src/content/model/geography";
 import { writeAtlasDisplay } from "./lib/output";
 
 const temporaryRoots: string[] = [];
@@ -996,6 +1002,8 @@ describe("Atlas budgets and simplification", () => {
     expect(first.index.scenes[0]).not.toHaveProperty("layers");
     expect(first.index.scenes[0].featureCount).toBe(1);
     expect(first.index.scenes[0].selectableEntities).toEqual(["appellation.alpha"]);
+    expect(first.index.scenes[0].thumbnail).toEqual(second.index.scenes[0].thumbnail);
+    expect(first.report.join("\n")).toMatch(/thumbnail \d+\/3072 B path text at 0 px/);
     expect(first.report.join("\n")).toMatch(
       /scene\.fixture: 1 features, .* KiB gzip at 0 px tolerance/,
     );
@@ -1115,5 +1123,294 @@ describe("Atlas output files", () => {
     await writeAtlasDisplay(directory, buildAtlasDisplay(baseInput({ scenes: [] })));
     expect(await readdir(path.join(directory, "scenes"))).toEqual([]);
     expect(await readFile(path.join(directory, "index.json"), "utf8")).toBe('{"scenes":[]}\n');
+  });
+});
+
+describe("Atlas region-chooser thumbnails", () => {
+  /** Absolute points of a compact thumbnail path: a move, then relative offsets per ring. */
+  const decode = (path: string) =>
+    path
+      .split("z")
+      .filter(Boolean)
+      .map((ring) => {
+        const numbers = (ring.match(/-?\d+/g) ?? []).map(Number);
+        const points: Array<[number, number]> = [[numbers[0], numbers[1]]];
+        for (let index = 2; index + 1 < numbers.length; index += 2) {
+          const [x, y] = points[points.length - 1];
+          points.push([x + numbers[index], y + numbers[index + 1]]);
+        }
+        return points;
+      });
+
+  const twoLayerInput = (selectable: GeographyGeometry, umbrella: GeographyGeometry) =>
+    baseInput({
+      records: [
+        record({
+          id: "geo.appellation-area.alpha",
+          owner: "appellation.alpha",
+          geometry: selectable,
+        }),
+        record({
+          id: "geo.appellation-area.umbrella",
+          owner: "appellation.umbrella",
+          geometry: umbrella,
+        }),
+        record({
+          id: "geo.populated-place.town",
+          names: { nl: "Stad", en: "Town" },
+          geometry: { type: "Point", coordinates: [0.5, 0.5] },
+        }),
+      ],
+      scenes: [
+        scene({
+          layers: [
+            {
+              id: "context",
+              kinds: ["appellation-area"],
+              features: ["geo.appellation-area.umbrella"],
+              role: "context",
+            },
+            {
+              id: "appellations",
+              kinds: ["appellation-area"],
+              features: ["geo.appellation-area.alpha"],
+              role: "selectable",
+            },
+            { id: "places", kinds: ["populated-place"], features: ["geo.populated-place.town"] },
+          ],
+        }),
+      ],
+      entities: [
+        entity("region.fixture", { status: "active" }),
+        entity("appellation.alpha", { geography_id: "geo.appellation-area.alpha" }),
+        entity("appellation.umbrella", { geography_id: "geo.appellation-area.umbrella" }),
+      ],
+    });
+
+  it("writes one strict thumbnail per scene: selectable areas only, 160 units wide", () => {
+    const output = buildAtlasDisplay(twoLayerInput(square(0, 0, 1), square(-5, -5, 20)));
+    const [summary] = output.index.scenes;
+    const thumbnail = atlasThumbnailSchema.parse(summary.thumbnail);
+    expect(thumbnail.viewBox).toEqual({
+      width: 160,
+      height: Math.round((output.scenes[0].viewBox.height * 160) / VIEWBOX_WIDTH),
+    });
+    // The overarching umbrella and the town never enter the thumbnail.
+    expect(thumbnail.paths).toHaveLength(1);
+    // The selectable square fills the fitted frame inside its padding.
+    const selectable = decode(thumbnail.paths[0]).flat();
+    expect(Math.min(...selectable.map(([x]) => x))).toBeGreaterThan(0);
+    expect(Math.max(...selectable.map(([x]) => x))).toBeLessThan(160);
+    expect(output.scenes[0]).not.toHaveProperty("thumbnail");
+  });
+
+  it("simplifies with the scene ladder until the path text fits its budget", () => {
+    const output = buildAtlasDisplay(twoLayerInput(jaggedRing(4000), square(5, 40, 10)));
+    const thumbnail = atlasThumbnailSchema.parse(output.index.scenes[0].thumbnail);
+    const bytes = thumbnail.paths.reduce((sum, path) => sum + path.length, 0);
+    expect(bytes).toBeLessThanOrEqual(ATLAS_THUMBNAIL_PATH_BUDGET_BYTES);
+    expect(thumbnail.paths).toHaveLength(1);
+    expect(output.report.join("\n")).toMatch(
+      new RegExp(`thumbnail ${bytes}/3072 B path text at (0\\.25|0\\.5|[1-8]) px`),
+    );
+  });
+
+  it("draws a shared shape once and gives both areas the same scene-wide rank", () => {
+    const output = buildAtlasDisplay(
+      baseInput({
+        records: [
+          record({
+            id: "geo.appellation-area.alpha",
+            owner: "appellation.alpha",
+            geometry: square(0, 0, 1),
+          }),
+          record({
+            id: "geo.appellation-area.twin",
+            owner: "appellation.twin",
+            geometry: square(0, 0, 1),
+          }),
+        ],
+        scenes: [
+          scene({
+            layers: [
+              {
+                id: "appellations",
+                kinds: ["appellation-area"],
+                features: ["geo.appellation-area.alpha", "geo.appellation-area.twin"],
+                role: "selectable",
+              },
+            ],
+            intended_entities: ["appellation.alpha", "appellation.twin"],
+          }),
+        ],
+        entities: [
+          entity("region.fixture", { status: "active" }),
+          entity("appellation.alpha", { geography_id: "geo.appellation-area.alpha" }),
+          entity("appellation.twin", { geography_id: "geo.appellation-area.twin" }),
+        ],
+      }),
+    );
+    expect(output.scenes[0].layers[0].features).toHaveLength(2);
+    expect(output.index.scenes[0].thumbnail?.paths).toHaveLength(1);
+    expect(output.scenes[0].layers[0].features.map((feature) => feature.areaRank)).toEqual([1, 1]);
+  });
+
+  it("clips rings to a rectangle and drops what lies outside", () => {
+    const bounds: [number, number, number, number] = [0, 0, 10, 10];
+    expect(
+      clipRing(
+        [
+          [2, 2],
+          [8, 2],
+          [8, 8],
+          [2, 8],
+        ],
+        bounds,
+      ),
+    ).toEqual([
+      [2, 2],
+      [8, 2],
+      [8, 8],
+      [2, 8],
+    ]);
+    expect(
+      clipRing(
+        [
+          [20, 20],
+          [30, 20],
+          [30, 30],
+        ],
+        bounds,
+      ),
+    ).toEqual([]);
+    const clipped = clipRing(
+      [
+        [-10, 5],
+        [5, 5],
+        [5, 20],
+        [-10, 20],
+      ],
+      bounds,
+    );
+    expect(clipped.every(([x, y]) => x >= 0 && x <= 10 && y >= 0 && y <= 10)).toBe(true);
+    expect(clipped).toEqual(
+      expect.arrayContaining([
+        [0, 5],
+        [5, 5],
+        [5, 10],
+        [0, 10],
+      ]),
+    );
+  });
+
+  it("encodes rings compactly with relative offsets and merges straight runs", () => {
+    expect(
+      encodeRings([
+        [
+          [10, 20],
+          [13, 18],
+          [13, 25],
+        ],
+      ]),
+    ).toBe("M10 20l3-2 0 7z");
+    expect(thumbnailPath("M0 0L5 0L10 0L10 10L0 10Z", { width: 160, height: 100 })).toBe(
+      "M0 0l10 0 0 10-10 0z",
+    );
+    // A ring below one unit of area has no extent at thumbnail size.
+    expect(thumbnailPath("M0 0L1 0L0 1Z", { width: 160, height: 100 })).toBeNull();
+    expect(thumbnailPath("M500 500L600 500L600 600Z", { width: 160, height: 100 })).toBeNull();
+  });
+
+  it("clips an area that reaches beyond the frame to the viewBox plus a 2-unit margin", () => {
+    const path = thumbnailPath("M-400 -400L600 -400L600 600L-400 600Z", {
+      width: 160,
+      height: 100,
+    });
+    expect(path).toBe("M-2 102l0-104 164 0 0 104z");
+  });
+
+  it("ranks areas scene-wide, largest first, with equal shapes sharing a rank", () => {
+    const ranks = rankAreas([
+      { id: "c", area: 50 },
+      { id: "a", area: 400 },
+      { id: "b", area: 50 * (1 + 1e-9) },
+      { id: "d", area: 10 },
+    ]);
+    expect(Object.fromEntries(ranks)).toEqual({ a: 1, b: 2, c: 2, d: 3 });
+  });
+
+  it("ranks appellation areas only; a water polygon gets no rank", () => {
+    const output = buildAtlasDisplay(
+      baseInput({
+        records: [
+          record({
+            id: "geo.appellation-area.alpha",
+            owner: "appellation.alpha",
+            geometry: square(0, 0, 1),
+          }),
+          record({
+            id: "geo.water-body.lake",
+            names: { nl: "Meer", en: "Lake" },
+            geometry: square(-1, -1, 4),
+          }),
+        ],
+        scenes: [
+          scene({
+            layers: [
+              { id: "water", kinds: ["water-body"], features: ["geo.water-body.lake"] },
+              {
+                id: "appellations",
+                kinds: ["appellation-area"],
+                features: ["geo.appellation-area.alpha"],
+                role: "selectable",
+              },
+            ],
+          }),
+        ],
+      }),
+    );
+    const [water, areas] = output.scenes[0].layers;
+    expect(water.features[0].areaRank).toBeUndefined();
+    expect(areas.features[0].areaRank).toBe(1);
+  });
+
+  it("explains a thumbnail with nothing to draw instead of a byte count", () => {
+    // A sliver: drawable at scene resolution, flatter than one unit at thumbnail resolution.
+    const sliver: GeographyGeometry = {
+      type: "Polygon",
+      coordinates: [
+        [
+          [0, 0],
+          [1, 0],
+          [1, 0.0005],
+          [0, 0.0005],
+          [0, 0],
+        ],
+      ],
+    };
+    const input = baseInput({
+      records: [
+        record({ id: "geo.appellation-area.alpha", owner: "appellation.alpha", geometry: sliver }),
+      ],
+    });
+    expect(() => buildAtlasDisplay(input)).toThrow(
+      /no selectable area keeps an extent at thumbnail resolution/,
+    );
+  });
+
+  it("rejects thumbnails that break the schema or the byte budget", () => {
+    const valid = { viewBox: { width: 160, height: 90 }, paths: ["M10 20l3-2 0 7z"] };
+    expect(atlasThumbnailSchema.safeParse(valid).success).toBe(true);
+    expect(atlasThumbnailSchema.safeParse({ ...valid, outline: "M0 0z" }).success).toBe(false);
+    expect(
+      atlasThumbnailSchema.safeParse({ ...valid, viewBox: { width: 1000, height: 90 } }).success,
+    ).toBe(false);
+    expect(atlasThumbnailSchema.safeParse({ ...valid, paths: [] }).success).toBe(false);
+    expect(atlasThumbnailSchema.safeParse({ ...valid, paths: ["M 0 0 C 1 1"] }).success).toBe(
+      false,
+    );
+    const ring = `M0 0l${"1 1 ".repeat(800).trim()}z`;
+    expect(ring.length).toBeGreaterThan(ATLAS_THUMBNAIL_PATH_BUDGET_BYTES);
+    expect(atlasThumbnailSchema.safeParse({ ...valid, paths: [ring] }).success).toBe(false);
   });
 });

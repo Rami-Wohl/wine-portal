@@ -78,7 +78,24 @@ geometry helpers come from the build's `lib/geometry.ts`.
 `scripts/geography/fetch.ts` downloads and verifies the pinned resources.
 
 Generated display assets live in `src/generated/geography/` and are never
-edited by hand. Research history: the
+edited by hand. Besides one file per scene, `index.json` carries a small
+`thumbnail` per scene for the Atlas region chooser: `{ viewBox: { width: 160,
+height }, paths: [string] }`, one path per selectable area. Overarching
+(context) areas, water and places never enter a thumbnail, and neither does any
+outline of its own; a scene without selectable areas has no thumbnail. It is
+derived in `scripts/geography/lib/display.ts` (with the pure helpers in
+`lib/thumbnail.ts`) from the scene's own projection, scaled to a 160-unit-wide
+viewBox, and simplified with the scene's ladder (read as thumbnail pixels)
+until the path text is at most 3 KiB. Paths sit on a whole-unit grid, are
+clipped just outside the viewBox, drop rings smaller than one unit, and are
+written as compact relative path data; areas with an identical shape are drawn
+once, and a small area that a coarse rung would flatten keeps its unsimplified
+shape. The strict schema is `atlasThumbnailSchema` in
+`src/content/model/geography.ts`; the build report prints the bytes and rung
+per scene, and fails with "no selectable area keeps an extent at thumbnail
+resolution" when nothing can be drawn. Scene files also carry a scene-wide
+`areaRank` per appellation area (1 = largest; areas of the same projected size
+share a rank; water polygons get none) that orders the overlap chooser. Research history: the
 [source review of 2026-10-30 with its 2026-10-31 addendum](../../editorial/atlas-geography-sources-review-2026-10-30.md)
 with its inspection evidence for the [appellations](../../editorial/measurements/atlas-geography-sources-inspection-2026-10-30.json)
 and the [orientation features](../../editorial/measurements/atlas-orientation-sources-inspection-2026-10-31.json),

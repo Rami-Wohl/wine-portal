@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { AtlasLegend } from "./atlas-legend";
+import { AtlasLegend, coverageIsComplete } from "./atlas-legend";
 import { sampleScene } from "./fixtures/sample-scene";
 
 const layers = { context: true, water: true, places: true, overlap: true };
@@ -16,13 +16,13 @@ describe("AtlasLegend", () => {
   it("states computed coverage, human reasons and Licence Ouverte credits in Dutch", () => {
     const html = renderToStaticMarkup(
       <AtlasLegend
-        collapsible={false}
         coverage={{ intended: 5, shown: 4, missing: [{ name: "Cérons", reason: "held" }] }}
         credits={sampleScene.credits}
         headingLevel={3}
         idBase="atlas-test"
         layers={layers}
         locale="nl"
+        region={{ name: "Graves en Sauternais", singleArea: null }}
         partsDropped={false}
         simplificationPixels={1}
       />,
@@ -38,6 +38,8 @@ describe("AtlasLegend", () => {
       "De vormen zijn voor weergave vereenvoudigd; wie ver inzoomt, ziet randen grover dan in de bron.",
     );
     expect(text).not.toMatch(/pixel/i);
+    // The scale statement is said once per map, here in the legend.
+    expect(text.match(/Bedoeld voor regionale oriëntatie/g)).toHaveLength(1);
     expect(text).not.toContain("Heel kleine delen");
     expect(text).not.toContain("Brongegevens per");
     expect(text).not.toContain("Bronvermelding");
@@ -57,13 +59,13 @@ describe("AtlasLegend", () => {
   it("renders the English localization with the same facts", () => {
     const html = renderToStaticMarkup(
       <AtlasLegend
-        collapsible={false}
         coverage={{ intended: 5, shown: 4, missing: [{ name: "Cérons", reason: "no-record" }] }}
         credits={sampleScene.credits}
         headingLevel={3}
         idBase="atlas-test"
         layers={layers}
         locale="en"
+        region={{ name: "Graves and Sauternais", singleArea: null }}
         partsDropped={true}
         simplificationPixels={2.5}
       />,
@@ -83,31 +85,33 @@ describe("AtlasLegend", () => {
     expect(text).toContain("Appellation production area");
   });
 
-  it("describes complete coverage and keeps the summary plain with the heading inside", () => {
+  it("says nothing about coverage when every intended area is drawn", () => {
     const html = renderToStaticMarkup(
       <AtlasLegend
-        collapsible={true}
         coverage={{ intended: 2, shown: 2, missing: [] }}
         credits={sampleScene.credits}
         headingLevel={4}
         idBase="atlas-test"
         layers={{ context: false, water: false, places: false, overlap: false }}
         locale="nl"
+        region={{ name: "Graves en Sauternais", singleArea: null }}
         partsDropped={false}
         simplificationPixels={0}
       />,
     );
     const text = visibleText(html);
-    expect(text).toContain("Beide appellaties van deze kaart zijn getekend.");
+    expect(html).not.toContain("atlas-legend-coverage");
+    expect(text).not.toContain("getekend");
     expect(text).toContain("De vormen zijn niet verder vereenvoudigd.");
     expect(text).not.toContain("Nog niet op de kaart");
     expect(text).not.toContain("Overkoepelend gebied");
     expect(text).not.toContain("overlappen");
-    expect(html).toContain(
-      '<details class="atlas-legend-disclosure"><summary>Over deze kaart: legenda, bron en dekking</summary>',
-    );
     expect(html).toContain('<h4 class="atlas-legend-title"');
-    expect(html.indexOf("<h4")).toBeGreaterThan(html.indexOf("</summary>"));
+    expect(coverageIsComplete({ intended: 2, shown: 2, missing: [] })).toBe(true);
+    expect(coverageIsComplete({ intended: 0, shown: 0, missing: [] })).toBe(false);
+    expect(
+      coverageIsComplete({ intended: 2, shown: 1, missing: [{ name: "X", reason: "held" }] }),
+    ).toBe(false);
   });
 
   it("uses singular coverage for a one-appellation map", () => {
@@ -115,7 +119,6 @@ describe("AtlasLegend", () => {
       visibleText(
         renderToStaticMarkup(
           <AtlasLegend
-            collapsible={false}
             coverage={{
               intended: 1,
               shown,
@@ -126,20 +129,21 @@ describe("AtlasLegend", () => {
             idBase="atlas-test"
             layers={layers}
             locale={locale}
+            region={{ name: "Champagne", singleArea: "Champagne" }}
             partsDropped={false}
             simplificationPixels={0}
           />,
         ),
       );
-    expect(one(1, "nl")).toContain("De appellatie van deze kaart is getekend.");
-    expect(one(1, "en")).toContain("This map's appellation is drawn.");
+    expect(one(1, "nl")).not.toContain("getekend");
+    expect(one(1, "en")).not.toContain("drawn");
     expect(one(0, "nl")).toContain("De appellatie van deze kaart is nog niet getekend.");
+    expect(one(0, "en")).toContain("This map's appellation is not drawn yet.");
   });
 
   it("counts unresolved gaps without exposing their identifiers", () => {
     const html = renderToStaticMarkup(
       <AtlasLegend
-        collapsible={false}
         coverage={{
           intended: 3,
           shown: 1,
@@ -153,6 +157,7 @@ describe("AtlasLegend", () => {
         idBase="atlas-test"
         layers={layers}
         locale="nl"
+        region={{ name: "Graves en Sauternais", singleArea: null }}
         partsDropped={false}
         simplificationPixels={1}
       />,
@@ -168,7 +173,6 @@ describe("AtlasLegend", () => {
   it("keeps a source without a dataset page as plain text", () => {
     const html = renderToStaticMarkup(
       <AtlasLegend
-        collapsible={false}
         coverage={{ intended: 1, shown: 1, missing: [] }}
         credits={[
           {
@@ -180,6 +184,7 @@ describe("AtlasLegend", () => {
         idBase="atlas-test"
         layers={layers}
         locale="nl"
+        region={{ name: "Graves en Sauternais", singleArea: null }}
         partsDropped={false}
         simplificationPixels={1}
       />,
@@ -193,13 +198,13 @@ describe("AtlasLegend", () => {
   it("says when no appellation areas are assigned instead of claiming a complete set of zero", () => {
     const html = renderToStaticMarkup(
       <AtlasLegend
-        collapsible={false}
         coverage={{ intended: 0, shown: 0, missing: [] }}
         credits={[]}
         headingLevel={3}
         idBase="atlas-test"
         layers={{ context: false, water: false, places: false, overlap: false }}
         locale="en"
+        region={{ name: "Graves and Sauternais", singleArea: null }}
         partsDropped={false}
         simplificationPixels={0}
       />,
@@ -207,5 +212,37 @@ describe("AtlasLegend", () => {
     const text = visibleText(html);
     expect(text).toContain("No appellation areas have been assigned to this map yet.");
     expect(text).not.toContain("All 0");
+  });
+});
+
+describe("AtlasLegend region note", () => {
+  const render = (locale: "nl" | "en", name: string | null, singleArea: string | null) =>
+    visibleText(
+      renderToStaticMarkup(
+        <AtlasLegend
+          coverage={{ intended: 1, shown: 1, missing: [] }}
+          credits={[]}
+          headingLevel={3}
+          idBase="atlas-test"
+          layers={layers}
+          locale={locale}
+          partsDropped={false}
+          region={{ name, singleArea }}
+          simplificationPixels={0}
+        />,
+      ),
+    );
+
+  it("names the region and describes a mosaic or a single area", () => {
+    expect(render("nl", "Médoc", null)).toContain(
+      "Médoc heeft op deze kaart geen eigen omtrek: je ziet het mozaïek van appellatiegebieden dat erin ligt.",
+    );
+    expect(render("nl", "Champagne", "Champagne")).toContain(
+      "Champagne heeft op deze kaart geen eigen omtrek: je ziet het productiegebied van de appellatie Champagne.",
+    );
+    expect(render("en", "Champagne", "Champagne")).toContain(
+      "Champagne has no outline of its own on this map: you see the production area of the Champagne appellation.",
+    );
+    expect(render("en", null, null)).toContain("The region has no outline of its own on this map");
   });
 });

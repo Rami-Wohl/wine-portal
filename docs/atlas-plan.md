@@ -21,6 +21,18 @@ The user decided on 2026-10-30:
 4. **Visibility:** on this branch Atlas may return to navigation and home as
    soon as it is useful to inspect, labelled as a preview until release gates pass.
 
+The user decided on 2026-10-31, after the UX review `QCR-2026-10-31-02`:
+
+5. **Interface round A:** the nine "do first" proposals of that review are
+   built (`MNT-077`): map first with a folded list on narrow screens, region
+   chooser with thumbnails on the overview, controls overlaid on the map
+   without hydration shift, chooser ordered most specific first with context
+   on one line, the embedded-map gesture model instead of an engage toggle,
+   compact embedding, one explanation per map, a visible intro link and a
+   bounded list column. Direct opening of the most specific area on a plain
+   click, localised credit phrasing and the remaining proposals wait for a
+   separate decision. §7 and §9 record the resulting rules.
+
 ## 2. What Atlas is
 
 Atlas is the geographic expression of the shared knowledge graph. It owns no
@@ -256,6 +268,22 @@ feature list for the non-map alternative.
   credits (source id, publisher, licence, dataset url, verbatim attribution)
   and the simplification record (method, tolerance, pixels, vertex counts,
   dropped parts). Source-record titles and build timestamps stay out of it.
+- The scene index also carries one thumbnail per scene for the Atlas region
+  chooser (`thumbnail: { viewBox, paths }`): the selectable area paths only
+  (context areas are left out: at 160 px their clipped outlines read as stray
+  boundary lines) projected into a 160-px-wide viewBox and simplified with the
+  same ladder until the path text is at most 3 KiB per scene, clipped just
+  outside the viewBox, sub-parts below thumbnail resolution dropped as above.
+  An area that a coarser rung would flatten keeps its unsimplified shape; an
+  area with no extent at thumbnail resolution is omitted and counted in the
+  build report; identical shapes are drawn once; a scene without selectable
+  areas has no thumbnail. A thumbnail is a derived view of verified features
+  and never adds an outline or a shape of its own.
+- Every appellation-area feature carries a scene-wide `areaRank` (1 = largest
+  projected area, across the selectable and context layers; areas whose
+  projected size differs by less than a relative 1e-6 share a rank) so the
+  interface can order overlapping candidates by specificity without geometry
+  at runtime.
 - The scene extent fits the selectable areas only; context areas are drawn but
   clipped by the frame. An entity embeds the most specific scene that lists it
   in `intended_entities`; a region owner embeds its own scene.
@@ -291,16 +319,44 @@ feature list for the non-map alternative.
   areas an SVG link to the entity route so selection works without JavaScript.
 - Enhancement adds pan, zoom, reset, focus and hover highlighting, and an
   overlap chooser: when two or more selectable areas sit under the pointer,
-  list all candidates, with overarching context areas last, and let the
-  reader choose. The list is the keyboard path: keyboard users reach every
-  area through the list, in alphabetical order per language, and the map
-  frame takes focus once for pan and zoom; the SVG links stay out of the tab
-  sequence so the map does not double every tab stop. No shape is reachable
-  only by pointer.
-- A semantic list alternative sits next to the map and carries the same
-  features, states and links, alphabetically ordered. It is the primary order
-  on narrow screens. On entity pages the list folds natively below the
-  highlighted entry.
+  list all candidates, the most specific area first and visually primary
+  (the smallest area, that is the highest `areaRank`), equal ranks in
+  alphabetical order, then the overarching
+  context areas on one line ("Ligt ook in: …"), and let the reader choose. The
+  chooser stays inside the map frame (clamped on both axes, flipped above the
+  pointer when needed) and becomes a bottom sheet of at most 60 % of the frame
+  on screens up to 620 px. A single selectable area navigates directly. The
+  list is the keyboard path: keyboard users reach every area through the list,
+  in alphabetical order per language, and the map frame takes focus once for
+  pan and zoom; the SVG links stay out of the tab sequence so the map does not
+  double every tab stop. No shape is reachable only by pointer.
+- Interaction follows the gesture model readers know from embedded maps
+  (decision 2026-10-31, replacing the explicit "engage" toggle): dragging with
+  a pointer pans directly; the wheel zooms only with Ctrl or ⌘, otherwise the
+  page scrolls and a transient hint names the modifier; on touch one finger
+  scrolls the page and two fingers pan and pinch the map, with a hint on a
+  one-finger drag; the keyboard pans with the arrows and zooms with `+`, `-`
+  and `0` whenever the frame has focus. The controls (zoom in, zoom out,
+  reset) are an icon cluster overlaid on the map, rendered on the server so
+  the map never moves when the script loads, disabled until the enhancement
+  is ready and hidden without scripting: a column in the top-right corner on
+  wide screens, and on screens up to 760 px a slim bar attached directly
+  below the frame (44 px buttons) so the controls never cover map content at
+  any zoom level. Atlas pages tighten the generic page-intro spacing so a
+  scene map starts at or above 420 px on a 1440 × 900 viewport.
+- A semantic list alternative precedes the map in DOM order and carries the
+  same features, states and links, alphabetically ordered. It folds natively
+  (closed by default) on narrow screens in every variant so the map follows
+  the heading within one screen; on wide screens the enhancement opens it
+  beside the map, where it stays within the map's height with its own scroll,
+  and the legend sits directly under the map. The folded summary counts the
+  areas that belong to the map's computed coverage (intended and shown,
+  whether drawn as selectable or overarching), so it always equals the number
+  on the region card; an overarching area outside the map's coverage is
+  listed under its own heading but not counted. On entity pages the highlighted area is marked on the map itself
+  (outline, fill and label) and the list, including the highlighted entry,
+  sits inside the single "about" disclosure; a coverage gap is stated once,
+  above that disclosure.
 - Legend and copy explain layer meaning, scale and source in plain NL and EN.
   An appellation area is the INAO geographical area: the communes, or parts
   of communes, where all stages of producing the wine must take place; only
@@ -315,13 +371,27 @@ feature list for the non-map alternative.
   repository, never hand-typed copy. Active pages never link readers into a
   draft context; a draft scene page may link to its draft owner.
 - Coverage is stated from computed data: how many intended areas are shown
-  and which are missing, with the honest reason the reader can act on.
+  and which are missing, with the honest reason the reader can act on. The
+  statement is shown when something is missing or held; complete coverage
+  needs no line above the map.
+- Every map explains itself once: the page intro carries one orientation
+  sentence (plus, on scene pages, a visibly styled link to the owner's page),
+  the figure heading is visually hidden on scene pages, and the scale
+  statement appears exactly once per map, inside the legend section or the
+  embedded map's single "about" disclosure, never in the intro. Embedded maps
+  keep the block from heading to map frame compact (target ≤ 600 px at 390 px
+  wide) and fold areas, legend, scale statement and credits into one
+  disclosure.
+- The Atlas overview page opens with the region chooser: one card per
+  published scene with a server-rendered thumbnail of that scene's verified
+  appellation shapes (a build artefact, §7), the name and the computed
+  coverage line; the Bordeaux overview map follows as a section.
 - Colour never carries meaning alone: context areas use a pattern, selection
   uses outline weight plus a label, water uses a distinct texture or label.
 - Reviewed at 320, 768 and 1440 CSS pixels, with keyboard, zoom and reduced
   motion. The map never traps focus or displaces the reading path on small
-  screens. Pan and zoom do not take over page scrolling until the map is
-  explicitly engaged.
+  screens. One-finger touch and an unmodified wheel always keep scrolling the
+  page; hints never block input and respect reduced motion.
 - Styles live in `src/styles/atlas.css`, imported through `globals.css` in the
   documented order, using existing tokens.
 
@@ -330,10 +400,16 @@ feature list for the non-map alternative.
 Unit tests cover: schema failures, checksum and geometry mismatches, missing
 owners and dangling `geography_id`, ring orientation, coverage computation,
 scene fitting, simplification budgets, repository lookups and route helpers.
-Browser tests cover: Atlas overview and one scene in NL and EN, no-JS
-selection through SVG links, keyboard selection, overlap chooser with
-Barsac and Sauternes, region and appellation embedding, unavailable state,
-three viewports and draft-owner behaviour.
+Browser tests cover: Atlas overview and one scene in NL and EN, the region
+chooser with thumbnails before the overview map, no-JS selection through SVG
+links, keyboard selection and keyboard pan and zoom on the frame, the overlap
+chooser (Barsac and Sauternes; most specific area first with one context
+line), the gesture model (unmodified wheel scrolls the page and shows the
+hint, Ctrl/⌘ wheel zooms, drag pans, one finger scrolls, two fingers pan),
+the identical map offset with and without JavaScript, the folded list on
+narrow screens and the open sticky list with the legend under the map on
+wide screens, the compact embedded block, region and appellation embedding,
+unavailable state, three viewports and draft-owner behaviour.
 
 Each phase ends with `npm run format`, `npm run check`, the browser suite,
 reviewer and QA sign-off, an orchestrator integration review against the

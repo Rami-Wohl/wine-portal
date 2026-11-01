@@ -1,3 +1,4 @@
+import { geoMercator, type GeoProjection } from "d3-geo";
 import { gzipSync } from "fflate";
 import type { Position } from "geojson";
 import { feature as topologyFeature } from "topojson-client";
@@ -22,7 +23,14 @@ import {
   type Scene,
   type Source,
 } from "../../../src/content/model";
+import {
+  ATLAS_THUMBNAIL_PATH_BUDGET_BYTES,
+  ATLAS_THUMBNAIL_WIDTH,
+  atlasThumbnailSchema,
+  type AtlasThumbnail,
+} from "../../../src/content/model/geography";
 import { AtlasBuildError, SceneBuildError } from "./errors";
+import { thumbnailPath } from "./thumbnail";
 import {
   countVertices,
   geometryPositions,
@@ -53,6 +61,11 @@ export const INDEX_GZIP_BUDGET_BYTES = 20 * 1024;
 const PRE_QUANTIZATION = 1e5;
 /** Triangle-area thresholds in viewBox pixels, tried in order until the budget holds. */
 const SIMPLIFICATION_PIXEL_LADDER = [0, 0.25, 0.5, 1, 2, 4, 8] as const;
+/**
+ * Thumbnails draw on a whole-unit grid: in a 160-unit viewBox shown at roughly that many CSS
+ * pixels, a tenth of a unit is invisible and would only cost path bytes.
+ */
+const THUMBNAIL_DECIMALS = 0;
 const SIMPLIFICATION_METHOD =
   "topojson-simplify Visvalingam-Whyatt on spherical triangle area (steradians); topology preserved, no feature dropped; coordinates pre-quantized to 1e5 steps; display paths rounded to 0.1 viewBox units; sub-parts without extent at that resolution are left out and counted";
 
@@ -252,7 +265,139 @@ interface SceneBuild {
   gzipBytes: number;
 }
 
-function buildScene(input: AtlasBuildScene, context: SceneContext, report: string[]): SceneBuild {
+/** Relative difference below which two projected areas count as the same shape. */
+const SAME_AREA_EPSILON = 1e-6;
+
+/**
+ * Scene-wide area ranks for the overlap chooser: every appellation area of every layer, largest
+ * first, from
+ * rank 1. A higher rank is a smaller, more specific area. Areas whose projected size differs by
+ * less than SAME_AREA_EPSILON (relative) share a rank, so a cru and its grand cru drawn from one
+ * source shape tie and the reader-facing order falls back to their names.
+ */
+export function rankAreas(entries: Array<{ id: string; area: number }>): Map<string, number> {
+  const sorted = [...entries].sort(
+    (left, right) => right.area - left.area || left.id.localeCompare(right.id),
+  );
+  const ranks = new Map<string, number>();
+  let rank = 0;
+  let groupArea = Number.NaN;
+  for (const entry of sorted) {
+    const same =
+      Number.isFinite(groupArea) &&
+      Math.abs(groupArea - entry.area) <= SAME_AREA_EPSILON * Math.max(groupArea, entry.area);
+    if (!same) {
+      rank += 1;
+      groupArea = entry.area;
+    }
+    ranks.set(entry.id, rank);
+  }
+  return ranks;
+}
+
+interface ThumbnailBuild {
+  thumbnail: AtlasThumbnail;
+  pathBytes: number;
+  pixels: number;
+  /** Areas with no extent at thumbnail resolution; left out of the thumbnail, never replaced. */
+  omitted: number;
+}
+
+/**
+ * The region-chooser thumbnail (docs/atlas-plan.md §7): the scene's selectable areas, in draw
+ * order, projected into a 160-unit-wide viewBox by scaling the scene's own
+ * projection, and simplified with the same ladder (read as thumbnail pixels) until the path text
+ * fits its budget. Parts without extent at this resolution are dropped as in the scene; an area
+ * that vanishes entirely is left out and counted, because a thumbnail is a preview, not the map.
+ */
+function buildThumbnail(
+  layers: ResolvedLayer[],
+  base: Topology<Objects>,
+  projection: GeoProjection,
+  sceneHeight: number,
+  pixelArea: number,
+): ThumbnailBuild | undefined {
+  const factor = ATLAS_THUMBNAIL_WIDTH / VIEWBOX_WIDTH;
+  const [tx, ty] = projection.translate();
+  // fitProjection builds a plain Mercator from scale and translate; scaling both scales the map.
+  const thumbnailProjection = geoMercator()
+    .scale(projection.scale() * factor)
+    .translate([tx * factor, ty * factor]);
+  const height = Math.max(1, Math.round(sceneHeight * factor));
+  // Selectable areas only: clipped, unfilled overarching areas read as stray boundary lines.
+  const areas = layers
+    .filter((layer) => layer.role === "selectable")
+    .flatMap((layer) => layer.features.filter((feature) => feature.displayType === "area"));
+  // A scene with only overarching areas (a bbox extent) has nothing to preview.
+  if (areas.length === 0) return undefined;
+  const pathAt = (topology: Topology<Objects>, id: string): string | null => {
+    const shape = projectShape(
+      thumbnailProjection,
+      simplifiedGeometry(topology, id),
+      THUMBNAIL_DECIMALS,
+    );
+    return shape.collapsed
+      ? null
+      : thumbnailPath(shape.path, { width: ATLAS_THUMBNAIL_WIDTH, height });
+  };
+  const unsimplified = new Map<string, string | null>();
+  let smallest: ThumbnailBuild | undefined;
+  for (const pixels of SIMPLIFICATION_PIXEL_LADDER) {
+    // One thumbnail pixel is 1/factor scene pixels, so its area is 1/factor² scene pixel areas.
+    const tolerance = pixels === 0 ? 0 : ((pixels * pixels) / (factor * factor)) * pixelArea;
+    const simplified = simplify(base, tolerance);
+    let omitted = 0;
+    const drawn: AtlasThumbnail["paths"] = [];
+    // Areas that share one source shape (a cru and its grand cru) draw identically; one copy
+    // says the same at half the bytes.
+    const seen = new Set<string>();
+    for (const feature of areas) {
+      let path = pathAt(simplified, feature.id);
+      // A small area that this rung flattens keeps its unsimplified shape: a few bytes, and
+      // the thumbnail never loses an area that has extent at its resolution.
+      if (!path && pixels > 0) {
+        if (!unsimplified.has(feature.id)) unsimplified.set(feature.id, pathAt(base, feature.id));
+        path = unsimplified.get(feature.id) ?? null;
+      }
+      if (!path) {
+        omitted += 1;
+        continue;
+      }
+      if (seen.has(path)) continue;
+      seen.add(path);
+      drawn.push(path);
+    }
+    const pathBytes = drawn.reduce((sum, path) => sum + path.length, 0);
+    const candidate: ThumbnailBuild = {
+      thumbnail: { viewBox: { width: ATLAS_THUMBNAIL_WIDTH, height }, paths: drawn },
+      pathBytes,
+      pixels,
+      omitted,
+    };
+    if (!smallest || pathBytes < smallest.pathBytes) smallest = candidate;
+    if (pathBytes <= ATLAS_THUMBNAIL_PATH_BUDGET_BYTES && drawn.length > 0) {
+      const parsed = atlasThumbnailSchema.safeParse(candidate.thumbnail);
+      if (!parsed.success) {
+        throw new SceneBuildError(`thumbnail is invalid: ${parsed.error.issues[0]?.message}`);
+      }
+      return candidate;
+    }
+  }
+  if (!smallest || smallest.thumbnail.paths.length === 0) {
+    throw new SceneBuildError(
+      "thumbnail has nothing to draw: no selectable area keeps an extent at thumbnail resolution",
+    );
+  }
+  throw new SceneBuildError(
+    `thumbnail path text stays at ${smallest.pathBytes} bytes at the coarsest simplification, over the ${ATLAS_THUMBNAIL_PATH_BUDGET_BYTES}-byte budget`,
+  );
+}
+
+function buildScene(
+  input: AtlasBuildScene,
+  context: SceneContext,
+  report: string[],
+): SceneBuild & { thumbnail: AtlasThumbnail | undefined } {
   const { scene, file } = input;
   const owner = context.entitiesById.get(scene.owner);
   if (!owner) throw new SceneBuildError(`owner '${scene.owner}' is not a known entity`);
@@ -337,6 +482,12 @@ function buildScene(input: AtlasBuildScene, context: SceneContext, report: strin
     }
     if (collapsed) break;
     droppedParts.sort((left, right) => left.featureId.localeCompare(right.featureId));
+    const ranks = rankAreas(
+      // Appellation areas only: water polygons are never chooser candidates.
+      shaped
+        .filter((feature) => feature.record.kind === "appellation-area")
+        .map((feature) => ({ id: feature.id, area: shapes.get(feature.id)?.area ?? 0 })),
+    );
 
     const view: AtlasSceneView = {
       id: scene.id,
@@ -352,7 +503,7 @@ function buildScene(input: AtlasBuildScene, context: SceneContext, report: strin
       layers: layers.map((layer): AtlasLayerView => ({
         id: layer.id,
         role: layer.role,
-        features: layer.features.map((feature, index): AtlasFeatureView => {
+        features: layer.features.map((feature): AtlasFeatureView => {
           const view: AtlasFeatureView = {
             id: feature.id,
             kind: feature.record.kind,
@@ -371,7 +522,8 @@ function buildScene(input: AtlasBuildScene, context: SceneContext, report: strin
           if (!shape) throw new SceneBuildError(`no projected shape for '${feature.id}'`);
           view.path = shape.path;
           if (shape.labelAnchor) view.labelAnchor = shape.labelAnchor;
-          if (feature.displayType === "area") view.areaRank = index + 1;
+          const rank = ranks.get(feature.id);
+          if (rank !== undefined) view.areaRank = rank;
           return view;
         }),
       })),
@@ -406,6 +558,7 @@ function buildScene(input: AtlasBuildScene, context: SceneContext, report: strin
       }. Split the scene or reduce its extent instead of dropping features (${file}).`,
     );
   }
+  const thumbnail = buildThumbnail(layers, base, projection, height, pixelArea);
   const droppedTotal = chosen.view.simplification.droppedParts.reduce(
     (sum, entry) => sum + entry.parts,
     0,
@@ -415,9 +568,17 @@ function buildScene(input: AtlasBuildScene, context: SceneContext, report: strin
       droppedTotal > 0
         ? `, ${droppedTotal} part${droppedTotal === 1 ? "" : "s"} below display resolution dropped`
         : ""
+    }; ${
+      thumbnail
+        ? `thumbnail ${thumbnail.pathBytes}/${ATLAS_THUMBNAIL_PATH_BUDGET_BYTES} B path text at ${thumbnail.pixels} px${
+            thumbnail.omitted > 0
+              ? `, ${thumbnail.omitted} area${thumbnail.omitted === 1 ? "" : "s"} too small to draw`
+              : ""
+          }`
+        : "no thumbnail (no selectable area)"
     }`,
   );
-  return chosen;
+  return { ...chosen, thumbnail: thumbnail?.thumbnail };
 }
 
 export function sceneSummary(view: AtlasSceneView): AtlasSceneSummary {
@@ -451,6 +612,7 @@ export function buildAtlasDisplay(input: AtlasBuildInput): AtlasBuildOutput {
   const files: Record<string, string> = {};
   const sizes: AtlasBuildOutput["sizes"] = {};
   const scenes: AtlasSceneView[] = [];
+  const thumbnails = new Map<string, AtlasThumbnail>();
 
   for (const entry of [...input.scenes].sort((left, right) =>
     left.scene.id.localeCompare(right.scene.id),
@@ -458,6 +620,7 @@ export function buildAtlasDisplay(input: AtlasBuildInput): AtlasBuildOutput {
     try {
       const built = buildScene(entry, context, report);
       scenes.push(built.view);
+      if (built.thumbnail) thumbnails.set(built.view.id, built.thumbnail);
       const filename = `scenes/${built.view.id}.json`;
       files[filename] = built.json;
       sizes[filename] = { bytes: Buffer.byteLength(built.json), gzipBytes: built.gzipBytes };
@@ -467,7 +630,12 @@ export function buildAtlasDisplay(input: AtlasBuildInput): AtlasBuildOutput {
     }
   }
 
-  const index: AtlasIndex = { scenes: scenes.map(sceneSummary) };
+  const index: AtlasIndex = {
+    scenes: scenes.map((view) => {
+      const thumbnail = thumbnails.get(view.id);
+      return thumbnail ? { ...sceneSummary(view), thumbnail } : sceneSummary(view);
+    }),
+  };
   const indexJson = serializeDisplay(index);
   const indexGzip = gzipSize(indexJson);
   files["index.json"] = indexJson;

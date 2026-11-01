@@ -11,6 +11,7 @@ interface SceneFeature {
   owner?: string;
   labelAnchor?: [number, number];
   point?: [number, number];
+  areaRank?: number;
 }
 
 interface SceneCredit {
@@ -109,7 +110,7 @@ async function focusBeforeList(scene: Locator) {
   });
 }
 
-type FocusKind = "list" | "svg" | "toolbar" | "frame" | "chooser" | "other" | "none";
+type FocusKind = "list" | "svg" | "controls" | "frame" | "chooser" | "other" | "none";
 
 async function focusedTarget(page: Page): Promise<{ kind: FocusKind; href: string | null }> {
   return page.evaluate(() => {
@@ -120,7 +121,7 @@ async function focusedTarget(page: Page): Promise<{ kind: FocusKind; href: strin
     if (active.matches(".atlas-map-frame")) return { kind: "frame" as const, href };
     if (active.closest("svg")) return { kind: "svg" as const, href };
     if (active.matches("a.atlas-area-link")) return { kind: "list" as const, href };
-    if (active.closest(".atlas-toolbar")) return { kind: "toolbar" as const, href };
+    if (active.closest(".atlas-map-controls")) return { kind: "controls" as const, href };
     return { kind: "other" as const, href };
   });
 }
@@ -185,6 +186,16 @@ async function anchorPoint(scene: Locator, sceneId: string, featureId: string) {
   return clientPoint(scene.locator("svg.atlas-map"), anchor);
 }
 
+/** Document offset of an element's top edge, in CSS px. */
+async function documentTop(locator: Locator): Promise<number> {
+  return locator.evaluate((element) => element.getBoundingClientRect().top + window.scrollY);
+}
+
+/** The SVG's current viewBox as numbers. */
+async function viewBoxOf(map: Locator): Promise<number[]> {
+  return map.evaluate((svg) => (svg.getAttribute("viewBox") ?? "").split(/[\s,]+/).map(Number));
+}
+
 /** Click the Barsac label anchor, where Barsac and Sauternes overlap, and return the chooser. */
 async function openChooserAtBarsac(page: Page, scene: Locator): Promise<Locator> {
   await enhanced(scene);
@@ -234,46 +245,56 @@ for (const locale of ["nl", "en"] as const) {
       ? {
           overviewHeading: "Kaart van Bordeaux",
           medocHeading: "Kaart van Médoc",
-          useMap: "Kaart bedienen",
           zoomIn: "Inzoomen",
-          reset: "Beginstand",
+          zoomOut: "Uitzoomen",
+          reset: "Herstel weergave",
           coverage: (shown: number, intended: number) =>
             `${shown} van de ${intended} appellaties van deze kaart zijn getekend.`,
-          coverageComplete: (count: number) =>
-            `Alle ${count} appellaties van deze kaart zijn getekend.`,
           contextHeading: /^Overkoepelend/,
           missingIntro: "Nog niet op de kaart:",
           chooserHeading: "Meerdere gebieden op deze plek",
-          surrounding: "Overkoepelend gebied",
+          alsoWithin: "Ligt ook in:",
           reusedUnder: ", hergebruikt onder ",
           attributionLabel: "Bronvermelding",
           independence: /onafhankelijk/g,
-          foldOthers: /^Toon de andere (\d+) gebieden$/,
+          about: "Over deze kaart: gebieden, legenda en bron",
           unavailable: (name: string) => `${name} staat nog niet op de kaart: `,
           viewInAtlas: "Bekijk in de Atlas",
+          readAbout: "Lees over Médoc",
           draftIntro:
-            "Deze regio wordt nog voorbereid. De kaart is al te bekijken; de pagina over de regio volgt.",
+            "De pagina over deze regio is nog in voorbereiding; de kaart is al te bekijken.",
+          scaleStatement: "Bedoeld voor regionale oriëntatie.",
+          sceneOrientation: "als oriëntatie",
+          wheelHint: /^Gebruik (Ctrl|⌘) \+ scrollen om te zoomen$/,
+          touchHint: "Gebruik twee vingers om de kaart te bewegen",
+          chooseRegion: "Kies een regio",
         }
       : {
           overviewHeading: "Map of Bordeaux",
           medocHeading: "Map of Médoc",
-          useMap: "Use the map",
           zoomIn: "Zoom in",
+          zoomOut: "Zoom out",
           reset: "Reset view",
           coverage: (shown: number, intended: number) =>
             `${shown} of this map's ${intended} appellations are drawn.`,
-          coverageComplete: (count: number) => `All ${count} of this map's appellations are drawn.`,
           contextHeading: /^Overarching/,
           missingIntro: "Not yet on the map:",
           chooserHeading: "Several areas at this spot",
-          surrounding: "Overarching area",
+          alsoWithin: "Also within:",
           reusedUnder: ", reused under ",
           attributionLabel: "Attribution:",
           independence: /independently/g,
-          foldOthers: /^Show the other (\d+) areas$/,
+          about: "About this map: areas, legend and source",
           unavailable: (name: string) => `${name} is not on the map yet: `,
           viewInAtlas: "View in the Atlas",
-          draftIntro: "This region is still being prepared.",
+          readAbout: "Read about Médoc",
+          draftIntro:
+            "The page about this region is still in preparation; the map can already be viewed.",
+          scaleStatement: "Meant for regional orientation.",
+          sceneOrientation: "for orientation",
+          wheelHint: /^Use (Ctrl|⌘) \+ scroll to zoom$/,
+          touchHint: "Use two fingers to move the map",
+          chooseRegion: "Choose a region",
         };
 
   test(`${locale} Atlas overview renders the Bordeaux scene with legend and one credit line per source`, async ({
@@ -316,7 +337,7 @@ for (const locale of ["nl", "en"] as const) {
     page,
   }) => {
     await page.goto(`${prefix}/atlas`);
-    const list = page.locator(".atlas-scene-list");
+    const list = page.locator(".atlas-region-chooser");
     for (const { slug } of activeOwnerScenes) {
       await expect(list.locator(`a[href="${prefix}/atlas/${slug}"]`)).toHaveCount(1);
     }
@@ -324,6 +345,26 @@ for (const locale of ["nl", "en"] as const) {
     await expect(
       page.locator(`main a[href="${prefix}/atlas/${scenes.champagne.slug}"]`),
     ).toHaveCount(0);
+  });
+
+  test(`${locale} Atlas overview opens with region cards, each with a thumbnail, before the map`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas`);
+    const chooser = page.locator(".atlas-region-chooser");
+    await expect(chooser.getByRole("heading", { level: 2, name: copy.chooseRegion })).toBeVisible();
+    const cards = chooser.locator("a.atlas-region-card");
+    await expect(cards).toHaveCount(activeOwnerScenes.length);
+    for (const card of await cards.all()) {
+      await expect(card.locator("svg.atlas-region-thumb path").first()).toBeAttached();
+      expect(await card.locator("svg.atlas-region-thumb path").count()).toBeGreaterThan(0);
+    }
+    const overview = page.locator(`[data-atlas-scene="${scenes.bordeaux.id}"]`);
+    expect(await documentTop(chooser)).toBeLessThan(await documentTop(overview));
+    // The intro carries one sentence; the scale statement lives in the map's legend, once.
+    await expect(page.locator(".page-intro")).not.toContainText(copy.scaleStatement);
+    const text = (await page.locator("main").textContent()) ?? "";
+    expect(text.split(copy.scaleStatement)).toHaveLength(2);
   });
 
   test(`${locale} Atlas overview states coverage from computed data`, async ({ page }) => {
@@ -334,17 +375,24 @@ for (const locale of ["nl", "en"] as const) {
     const statement = page.locator(
       `[data-atlas-scene="${scenes.bordeaux.id}"] .atlas-legend-coverage`,
     );
-    await expect(statement.locator("p").first()).toHaveText(
-      missingNames.length === 0
-        ? copy.coverageComplete(coverage.shown.length)
-        : copy.coverage(coverage.shown.length, coverage.intended.length),
-    );
     if (missingNames.length === 0) {
-      await expect(statement.locator(".atlas-legend-missing")).toHaveCount(0);
-    } else {
-      await expect(statement).toContainText(`${copy.missingIntro} ${missingNames[0]}`);
-      for (const name of missingNames) await expect(statement).toContainText(name);
+      // Complete coverage needs no statement.
+      await expect(statement).toHaveCount(0);
+      return;
     }
+    await expect(statement.locator("p").first()).toHaveText(
+      copy.coverage(coverage.shown.length, coverage.intended.length),
+    );
+    await expect(statement).toContainText(`${copy.missingIntro} ${missingNames[0]}`);
+    for (const name of missingNames) await expect(statement).toContainText(name);
+  });
+
+  test(`${locale} a complete map says nothing about coverage`, async ({ page }) => {
+    expect(readScene(scenes.medoc.id).coverage.missing, "Test data: Médoc is complete").toEqual([]);
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    await expect(page.locator(".atlas-legend-coverage")).toHaveCount(0);
+    await page.goto(`${prefix}/appellations/pauillac`);
+    await expect(page.locator("[data-entity-atlas] .atlas-legend-coverage")).toHaveCount(0);
   });
 
   test(`${locale} every scene route loads without pipeline vocabulary`, async ({ page }) => {
@@ -367,7 +415,10 @@ for (const locale of ["nl", "en"] as const) {
   }) => {
     await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
     const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
-    await expect(scene.getByRole("heading", { level: 2, name: copy.medocHeading })).toBeVisible();
+    // The page title names the region; the map heading stays for assistive technology only.
+    const heading = scene.getByRole("heading", { level: 2, name: copy.medocHeading });
+    await expect(heading).toHaveCount(1);
+    await expect(heading).toHaveClass(/\batlas-visually-hidden\b/);
     const pauillac = `${prefix}/appellations/pauillac`;
     await expect(scene.locator(`a.atlas-link[href="${pauillac}"]`)).toHaveCount(1);
     await expect(scene.locator(`a.atlas-area-link[href="${pauillac}"]`)).toHaveCount(1);
@@ -376,18 +427,47 @@ for (const locale of ["nl", "en"] as const) {
       (await hrefs(scene.locator("a.atlas-area-link"))).sort(),
     );
     await enhanced(scene);
-    const frame = scene.locator(".atlas-map-frame");
-    await expect(frame).toHaveAttribute("data-engaged", "false");
-    // The toggle keeps one name; its state is carried by aria-pressed.
-    const toggle = scene.getByRole("button", { name: copy.useMap, exact: true });
-    await expect(toggle).toHaveAttribute("aria-pressed", "false");
-    await toggle.click();
-    await expect(toggle).toHaveAttribute("aria-pressed", "true");
-    await expect(frame).toHaveAttribute("data-engaged", "true");
-    await scene.getByRole("button", { name: copy.zoomIn, exact: true }).click();
+    const controls = scene.locator(".atlas-map-controls");
+    for (const name of [copy.zoomIn, copy.zoomOut, copy.reset]) {
+      // Ready: no longer disabled (zoom out still reports aria-disabled at the base view).
+      await expect(controls.getByRole("button", { name, exact: true })).not.toHaveAttribute(
+        "disabled",
+      );
+      await expect(controls.getByRole("button", { name, exact: true })).toHaveAttribute(
+        "title",
+        name,
+      );
+    }
+    await expect(scene.locator("[data-engaged]")).toHaveCount(0);
+    await controls.getByRole("button", { name: copy.zoomIn, exact: true }).click();
     await expect(scene.locator("svg.atlas-map")).toHaveAttribute("data-zoom", "1.50");
-    await scene.getByRole("button", { name: copy.reset, exact: true }).click();
+    await controls.getByRole("button", { name: copy.reset, exact: true }).click();
     await expect(scene.locator("svg.atlas-map")).toHaveAttribute("data-zoom", "1.00");
+  });
+
+  test(`${locale} scene intro says one thing once and its link reads as a link`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    const intro = page.locator(".page-intro-copy");
+    await expect(intro.locator("p")).toHaveCount(2);
+    const link = intro.getByRole("link", { name: copy.readAbout, exact: true });
+    await expect(link).toBeVisible();
+    const colours = await link.evaluate((element) => {
+      const paragraph = element.closest(".page-intro-copy") as HTMLElement;
+      const own = getComputedStyle(element);
+      return {
+        link: own.color,
+        text: getComputedStyle(paragraph).color,
+        underline: own.textDecorationLine,
+      };
+    });
+    expect(colours.link).not.toBe(colours.text);
+    expect(colours.underline).toContain("underline");
+    const text = (await page.locator("main").textContent()) ?? "";
+    expect(text.split(copy.sceneOrientation)).toHaveLength(2);
+    expect(text.split(copy.scaleStatement)).toHaveLength(2);
+    await expect(intro).not.toContainText(copy.scaleStatement);
   });
 
   test(`${locale} selection works without JavaScript through the SVG link`, async ({ browser }) => {
@@ -398,7 +478,7 @@ for (const locale of ["nl", "en"] as const) {
       const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
       await expect(scene).toBeVisible();
       await expect(scene.locator("svg.atlas-map")).not.toHaveAttribute("data-zoom", /./);
-      await expect(scene.locator(".atlas-toolbar")).toBeHidden();
+      await expect(scene.locator(".atlas-map-controls")).toBeHidden();
       const anchor = sceneFeature(
         readScene(scenes.medoc.id),
         "geo.appellation-area.pauillac",
@@ -431,7 +511,7 @@ for (const locale of ["nl", "en"] as const) {
     await expect(page).toHaveURL(new RegExp(`${focused.href}$`));
   });
 
-  test(`${locale} Tab walks the Médoc list, then the toolbar, then the map frame, never an SVG link`, async ({
+  test(`${locale} Tab walks the Médoc list, then the map frame, then its controls, never an SVG link`, async ({
     page,
   }) => {
     await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
@@ -443,24 +523,37 @@ for (const locale of ["nl", "en"] as const) {
 
     await focusBeforeList(scene);
     const steps: Array<{ kind: FocusKind; href: string | null }> = [];
-    for (let step = 0; step < listHrefs.length + 12; step += 1) {
+    for (let step = 0; step < listHrefs.length + 6; step += 1) {
       await page.keyboard.press("Tab");
-      const target = await focusedTarget(page);
-      steps.push(target);
-      if (target.kind === "frame") break;
+      steps.push(await focusedTarget(page));
     }
-    // One step past the frame still never lands inside the SVG.
-    await page.keyboard.press("Tab");
-    steps.push(await focusedTarget(page));
-
     expect(steps.map((step) => step.kind)).not.toContain("svg");
     expect(steps.slice(0, listHrefs.length)).toEqual(
       listHrefs.map((href) => ({ kind: "list", href })),
     );
-    const afterList = steps.slice(listHrefs.length, -1).map((step) => step.kind);
-    expect(afterList.at(-1)).toBe("frame");
-    expect(afterList.length).toBeGreaterThan(1);
-    expect(afterList.slice(0, -1).every((kind) => kind === "toolbar")).toBe(true);
+    const after = steps.slice(listHrefs.length).map((step) => step.kind);
+    expect(after.slice(0, 4)).toEqual(["frame", "controls", "controls", "controls"]);
+  });
+
+  test(`${locale} the focused frame pans with the arrows and zooms with + and 0, no engaging`, async ({
+    page,
+  }) => {
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
+    const map = scene.locator("svg.atlas-map");
+    await enhanced(scene);
+    const frame = scene.locator(".atlas-map-frame");
+    await expect(frame).toHaveAttribute("aria-describedby", /-map-keys$/);
+    const describedBy = await frame.getAttribute("aria-describedby");
+    await expect(page.locator(`[id="${describedBy}"]`)).toHaveText(/\+/);
+    await frame.focus();
+    await page.keyboard.press("+");
+    await expect(map).toHaveAttribute("data-zoom", "1.50");
+    const before = await viewBoxOf(map);
+    await page.keyboard.press("ArrowRight");
+    await expect.poll(async () => (await viewBoxOf(map))[0]).toBeGreaterThan(before[0]);
+    await page.keyboard.press("0");
+    await expect(map).toHaveAttribute("data-zoom", "1.00");
   });
 
   test(`${locale} hover and focus highlight the same area in the list and on the map`, async ({
@@ -492,21 +585,46 @@ for (const locale of ["nl", "en"] as const) {
     await expect(shape).toHaveClass(/\bis-active\b/);
   });
 
-  test(`${locale} overlap chooser lists Barsac, Sauternes and the surrounding area`, async ({
+  test(`${locale} overlap chooser lists the most specific area first and overarching areas on one line`, async ({
     page,
   }) => {
     await page.goto(`${prefix}/atlas/${scenes.gravesSauternais.slug}`);
     const scene = page.locator(`[data-atlas-scene="${scenes.gravesSauternais.id}"]`);
     const chooser = await openChooserAtBarsac(page, scene);
     await expect(chooser).toContainText(copy.chooserHeading);
+    // Expected order from the build's area rank: a higher rank is a smaller area.
+    const data = readScene(scenes.gravesSauternais.id);
+    const rank = (id: string) => sceneFeature(data, id).areaRank ?? 0;
+    const expected = ["geo.appellation-area.barsac", "geo.appellation-area.sauternes"].sort(
+      (left, right) => rank(right) - rank(left),
+    );
+    const names = expected.map((id) =>
+      id === "geo.appellation-area.barsac" ? "Barsac" : "Sauternes",
+    );
     const items = chooser.locator("li");
-    await expect(items.filter({ hasText: "Barsac" })).toHaveCount(1);
-    await expect(items.filter({ hasText: "Sauternes" })).toHaveCount(1);
-    await expect(items.last()).toHaveClass(/atlas-chooser-context/);
-    await expect(items.last()).toHaveText(new RegExp(`^${copy.surrounding}: .*Bordeaux`));
+    await expect(items).toHaveText(names);
+    await expect(items.first()).toHaveClass(/atlas-chooser-primary/);
+    const context = chooser.locator(".atlas-chooser-context");
+    await expect(context).toHaveCount(1);
+    await expect(context).toHaveText(new RegExp(`^${copy.alsoWithin} .*Bordeaux`));
     await expect(page).toHaveURL(new RegExp(`${prefix}/atlas/${scenes.gravesSauternais.slug}$`));
     await chooser.getByRole("link", { name: "Sauternes", exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`${prefix}/appellations/sauternes$`));
+  });
+
+  test(`${locale} the Médoc chooser at Pauillac leads with Pauillac`, async ({ page }) => {
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
+    await enhanced(scene);
+    const point = await anchorPoint(scene, scenes.medoc.id, "geo.appellation-area.pauillac");
+    const hits = await hitsAt(page, point);
+    expect(hits.selectable.length, "Test data: Pauillac overlaps Médoc areas").toBeGreaterThan(1);
+    await page.mouse.click(point.x, point.y);
+    const chooser = scene.locator(".atlas-chooser[role='dialog']");
+    await expect(chooser.locator("li").first()).toHaveText("Pauillac");
+    await expect(chooser.locator(".atlas-chooser-context")).toHaveCount(
+      hits.context.length > 0 ? 1 : 0,
+    );
   });
 
   test(`${locale} a single area over the overarching one opens directly, without the chooser`, async ({
@@ -545,30 +663,59 @@ for (const locale of ["nl", "en"] as const) {
     await expect(chooser).toHaveCount(0);
     const frame = scene.locator(".atlas-map-frame");
     await expect(frame).toBeFocused();
-    await expect(frame).not.toHaveAttribute("data-engaged", "true");
     const before = await scrollY(page);
     await wheelOverMap(page, scene.locator("svg.atlas-map"), 400);
     await expect.poll(() => scrollY(page)).toBeGreaterThan(before);
     await expect(scene.locator("svg.atlas-map")).toHaveAttribute("data-zoom", "1.00");
   });
 
-  test(`${locale} the wheel scrolls the page until the map is engaged, then zooms`, async ({
+  test(`${locale} the wheel scrolls the page with a hint; Ctrl + wheel zooms the map`, async ({
     page,
   }) => {
     await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
     const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
     const map = scene.locator("svg.atlas-map");
+    const hint = scene.locator(".atlas-map-hint");
     await enhanced(scene);
+    await expect(hint).toBeHidden();
     await map.scrollIntoViewIfNeeded();
     const before = await scrollY(page);
     await wheelOverMap(page, map, 300);
     await expect.poll(() => scrollY(page)).toBeGreaterThan(before);
     await expect(map).toHaveAttribute("data-zoom", "1.00");
+    await expect(hint).toBeVisible();
+    await expect(hint).toHaveText(copy.wheelHint);
+    await expect(hint).toHaveAttribute("aria-hidden", "true");
+    await expect(hint).toBeHidden({ timeout: 4000 });
 
-    await scene.getByRole("button", { name: copy.useMap, exact: true }).click();
-    await expect(scene.locator(".atlas-map-frame")).toHaveAttribute("data-engaged", "true");
-    await wheelOverMap(page, map, -400);
+    await wheelOverMap(page, map, 0);
+    const settled = await scrollY(page);
+    await page.keyboard.down("Control");
+    await page.mouse.wheel(0, -400);
+    await page.keyboard.up("Control");
     await expect(map).not.toHaveAttribute("data-zoom", "1.00");
+    expect(await scrollY(page)).toBe(settled);
+  });
+
+  test(`${locale} dragging the map pans it directly and never follows a link`, async ({ page }) => {
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
+    const map = scene.locator("svg.atlas-map");
+    await enhanced(scene);
+    // Start on Listrac-Médoc, a linked area: a drag must pan, not open the page.
+    const start = await anchorPoint(scene, scenes.medoc.id, "geo.appellation-area.listrac-medoc");
+    const before = await viewBoxOf(map);
+    const url = page.url();
+    await page.mouse.move(start.x, start.y);
+    await page.mouse.down();
+    await page.mouse.move(start.x + 40, start.y + 30, { steps: 5 });
+    await page.mouse.move(start.x + 80, start.y + 60, { steps: 5 });
+    await page.mouse.up();
+    const after = await viewBoxOf(map);
+    expect(after[0]).toBeLessThan(before[0]);
+    expect(after[1]).toBeLessThan(before[1]);
+    expect(page.url()).toBe(url);
+    await expect(scene.locator(".atlas-chooser")).toHaveCount(0);
   });
 
   test(`${locale} forced colours draw selectable areas as outlines`, async ({ page }) => {
@@ -612,6 +759,7 @@ for (const locale of ["nl", "en"] as const) {
     const chooser = scene.locator(".atlas-chooser[role='dialog']");
     await expect(chooser).toBeVisible();
     await expect(chooser.getByRole("link", { name: "Pauillac", exact: true })).toBeVisible();
+    await expect(scene.locator(".atlas-map-control").first()).toBeVisible();
   });
 
   test(`${locale} region and appellation pages embed their scene; grapes do not`, async ({
@@ -636,12 +784,18 @@ for (const locale of ["nl", "en"] as const) {
     await expect(
       embedded.getByRole("link", { name: copy.viewInAtlas, exact: true }),
     ).toHaveAttribute("href", `${prefix}/atlas/${scenes.gravesSauternais.slug}`);
-    // The highlighted entry stays visible; the others fold behind a summary that counts them.
-    const fold = embedded.locator(".atlas-feature-list details");
-    const summary = (await fold.locator("summary").innerText()).trim();
-    const folded = copy.foldOthers.exec(summary);
-    expect(folded, summary).not.toBeNull();
-    await expect(fold.locator("[data-feature-id]")).toHaveCount(Number(folded?.[1]));
+    // One disclosure after the map holds the areas, legend, scale statement and credits.
+    const about = embedded.locator("details.atlas-about");
+    await expect(embedded.locator("details")).toHaveCount(1);
+    await expect(about).not.toHaveAttribute("open", "");
+    await expect(about.locator("summary")).toHaveText(copy.about);
+    expect(await documentTop(about)).toBeGreaterThan(
+      await documentTop(embedded.locator(".atlas-map-frame")),
+    );
+    await about.locator("summary").click();
+    await expect(about.locator(".atlas-feature-list")).toBeVisible();
+    await expect(about).toContainText(copy.scaleStatement);
+    await expect(about.locator(".atlas-legend-credits")).toBeVisible();
 
     await page.goto(`${prefix}/grapes/merlot`);
     await expect(page.locator("[data-entity-atlas]")).toHaveCount(0);
@@ -680,14 +834,17 @@ for (const locale of ["nl", "en"] as const) {
     test(`${locale} overview and region embed fit ${width}px with the list before the map`, async ({
       page,
     }) => {
-      const listBeforeMap = (scene: Locator) =>
-        scene.evaluate((root) => {
-          const list = root.querySelector(".atlas-feature-list");
-          const map = root.querySelector(".atlas-map-panel");
-          return Boolean(
-            list && map && list.compareDocumentPosition(map) & Node.DOCUMENT_POSITION_FOLLOWING,
-          );
-        });
+      const before = (scene: Locator, first: string, second: string) =>
+        scene.evaluate(
+          (root, [a, b]) => {
+            const one = root.querySelector(a);
+            const two = root.querySelector(b);
+            return Boolean(
+              one && two && one.compareDocumentPosition(two) & Node.DOCUMENT_POSITION_FOLLOWING,
+            );
+          },
+          [first, second] as const,
+        );
       await page.setViewportSize({ width, height: 1000 });
 
       await page.goto(`${prefix}/atlas`);
@@ -695,24 +852,304 @@ for (const locale of ["nl", "en"] as const) {
       await enhanced(overview);
       await noHorizontalOverflow(page, width);
       await expect(overview.locator(".atlas-feature-list")).toBeVisible();
-      if (width === 320) expect(await listBeforeMap(overview)).toBe(true);
+      expect(await before(overview, ".atlas-feature-list", ".atlas-map-panel")).toBe(true);
+      expect(await before(overview, ".atlas-map-panel", ".atlas-scene-legend")).toBe(true);
 
       await page.goto(`${prefix}/regions/medoc`);
       const embedded = page.locator(`[data-entity-atlas="${scenes.medoc.id}"]`);
       await enhanced(embedded);
       await noHorizontalOverflow(page, width);
-      if (width === 320) {
-        expect(await listBeforeMap(embedded)).toBe(true);
-        await expect(embedded.locator(".atlas-feature-list details > summary")).toBeVisible();
-      }
+      expect(await before(embedded, ".atlas-map-panel", "details.atlas-about")).toBe(true);
+      await expect(embedded.locator("details.atlas-about > summary")).toBeVisible();
     });
   }
+
+  test(`${locale} the area list folds on a phone and opens beside the map on a desktop`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
+    await enhanced(scene);
+    const fold = scene.locator("details.atlas-list-disclosure");
+    await expect(fold).not.toHaveAttribute("open", "");
+    await expect(fold.locator("summary")).toBeVisible();
+    // Map first: the frame starts within the first screen (every scene route: see below).
+    expect(await documentTop(scene.locator(".atlas-map-frame"))).toBeLessThan(844);
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await expect(fold).toHaveAttribute("open", "");
+    const frame = await scene.locator(".atlas-map-frame").boundingBox();
+    const list = await scene.locator(".atlas-feature-list").boundingBox();
+    const legend = await scene.locator(".atlas-scene-legend").boundingBox();
+    if (!frame || !list || !legend) throw new Error("Atlas layout boxes are missing");
+    // The list sits left of the map and no taller than it; the legend sits directly under it.
+    expect(list.x + list.width).toBeLessThanOrEqual(frame.x);
+    expect(list.height).toBeLessThanOrEqual(frame.height + 1);
+    expect(Math.abs(legend.x - frame.x)).toBeLessThanOrEqual(1);
+    expect(legend.y - (frame.y + frame.height)).toBeGreaterThanOrEqual(0);
+    expect(legend.y - (frame.y + frame.height)).toBeLessThanOrEqual(48);
+  });
+
+  test(`${locale} Atlas pages show the map early: cards on a phone, most of the frame on a desktop`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${prefix}/atlas`);
+    expect(await documentTop(page.locator("a.atlas-region-card").first())).toBeLessThan(844);
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    const frame = page.locator(`[data-atlas-scene="${scenes.medoc.id}"] .atlas-map-frame`);
+    await enhanced(page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`));
+    const top = await documentTop(frame);
+    const box = await frame.boundingBox();
+    if (!box) throw new Error("The map frame has no box");
+    expect(top).toBeLessThanOrEqual(420);
+    expect(Math.min(900 - top, box.height) / box.height).toBeGreaterThanOrEqual(0.6);
+  });
+
+  test(`${locale} on a phone the map controls cover no area or town label`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+    const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
+    await enhanced(scene);
+    await expect(scene.locator("svg.atlas-map")).toHaveAttribute("data-zoom", "1.00");
+    const overlaps = await scene.evaluate((root) => {
+      const boxes = (selector: string) =>
+        Array.from(root.querySelectorAll(selector))
+          .map((element) => element.getBoundingClientRect())
+          .filter((box) => box.width > 0 && box.height > 0);
+      const labels = boxes(".atlas-labels text, .atlas-place text");
+      const hits: string[] = [];
+      for (const control of boxes(".atlas-map-control")) {
+        for (const label of labels) {
+          const separate =
+            control.right <= label.left ||
+            label.right <= control.left ||
+            control.bottom <= label.top ||
+            label.bottom <= control.top;
+          if (!separate) hits.push(`${Math.round(label.left)},${Math.round(label.top)}`);
+        }
+      }
+      return hits;
+    });
+    expect(overlaps).toEqual([]);
+  });
+
+  test(`${locale} the chooser stays inside the frame on a desktop and is a sheet on a phone`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto(`${prefix}/atlas/${scenes.bordeaux.slug}`);
+    const scene = page.locator(`[data-atlas-scene="${scenes.bordeaux.id}"]`);
+    await enhanced(scene);
+    const point = await anchorPoint(
+      scene,
+      scenes.bordeaux.id,
+      "geo.appellation-area.saint-emilion",
+    );
+    const hits = await hitsAt(page, point);
+    expect(hits.selectable.length, "Test data: Saint-Émilion overlaps").toBeGreaterThan(1);
+    await page.mouse.click(point.x, point.y);
+    const chooser = scene.locator(".atlas-chooser[role='dialog']");
+    await expect(chooser).toBeVisible();
+    // Saint-Émilion and its Grand Cru share one shape and rank: alphabetical between them.
+    await expect(chooser.locator("li").first()).toHaveText("Saint-Émilion");
+    const frame = await scene.locator(".atlas-map-frame").boundingBox();
+    const close = await chooser.locator(".atlas-chooser-close").boundingBox();
+    const box = await chooser.boundingBox();
+    if (!frame || !close || !box) throw new Error("Chooser boxes are missing");
+    for (const inner of [box, close]) {
+      expect(inner.x).toBeGreaterThanOrEqual(frame.x);
+      expect(inner.y).toBeGreaterThanOrEqual(frame.y);
+      expect(inner.x + inner.width).toBeLessThanOrEqual(frame.x + frame.width);
+      expect(inner.y + inner.height).toBeLessThanOrEqual(frame.y + frame.height);
+    }
+    await chooser.locator(".atlas-chooser-close").click();
+    await expect(chooser).toHaveCount(0);
+
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${prefix}/appellations/pauillac`);
+    const embedded = page.locator(`[data-entity-atlas="${scenes.medoc.id}"]`);
+    await enhanced(embedded);
+    const pauillac = await anchorPoint(embedded, scenes.medoc.id, "geo.appellation-area.pauillac");
+    await page.mouse.click(pauillac.x, pauillac.y);
+    const sheet = embedded.locator(".atlas-chooser[role='dialog']");
+    await expect(sheet).toHaveAttribute("data-sheet", "true");
+    const frameBox = await embedded.locator(".atlas-map-frame").boundingBox();
+    const sheetBox = await sheet.boundingBox();
+    if (!frameBox || !sheetBox) throw new Error("Sheet boxes are missing");
+    expect(Math.abs(sheetBox.x - frameBox.x)).toBeLessThanOrEqual(2);
+    expect(Math.abs(sheetBox.width - frameBox.width)).toBeLessThanOrEqual(3);
+    expect(
+      Math.abs(sheetBox.y + sheetBox.height - (frameBox.y + frameBox.height)),
+    ).toBeLessThanOrEqual(2);
+    expect(sheetBox.height).toBeLessThanOrEqual(frameBox.height * 0.6 + 1);
+    // The close button is visible without scrolling the sheet: inside the sheet and the screen.
+    const sheetClose = sheet.locator(".atlas-chooser-close");
+    await expect(sheetClose).toBeInViewport({ ratio: 1 });
+    const closeBox = await sheetClose.boundingBox();
+    if (!closeBox) throw new Error("The close button has no box");
+    expect(closeBox.y).toBeGreaterThanOrEqual(sheetBox.y);
+    expect(closeBox.y + closeBox.height).toBeLessThanOrEqual(sheetBox.y + sheetBox.height);
+    expect(await sheet.locator(".atlas-chooser-body").evaluate((body) => body.scrollTop)).toBe(0);
+    await page.keyboard.press("Escape");
+    await expect(sheet).toHaveCount(0);
+
+    // A resize invalidates the placement: the chooser closes instead of lingering.
+    await page.mouse.click(pauillac.x, pauillac.y);
+    await expect(sheet).toBeVisible();
+    await page.setViewportSize({ width: 420, height: 844 });
+    await expect(sheet).toHaveCount(0);
+  });
+
+  test(`${locale} the fold summary agrees with the coverage count`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    for (const { id, slug } of [scenes.medoc, scenes.libournais, scenes.bordeaux]) {
+      const shown = readScene(id).coverage.shown.length;
+      await page.goto(`${prefix}/atlas/${slug}`);
+      await expect(
+        page.locator(`[data-atlas-scene="${id}"] details.atlas-list-disclosure > summary`),
+        slug,
+      ).toHaveText(locale === "nl" ? `Toon alle ${shown} gebieden` : `Show all ${shown} areas`);
+    }
+  });
+
+  test(`${locale} every scene route starts its map within the first phone screen`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    for (const { id, slug } of activeOwnerScenes) {
+      await page.goto(`${prefix}/atlas/${slug}`);
+      const frame = page.locator(`[data-atlas-scene="${id}"] .atlas-map-frame`);
+      expect(await documentTop(frame), slug).toBeLessThan(900);
+    }
+  });
+
+  test(`${locale} the map does not move when the script loads`, async ({ browser }) => {
+    const offsets = async (javaScriptEnabled: boolean, width: number) => {
+      const context = await browser.newContext({
+        javaScriptEnabled,
+        viewport: { width, height: 900 },
+      });
+      const page = await context.newPage();
+      const result: number[] = [];
+      try {
+        for (const route of [`${prefix}/atlas`, `${prefix}/atlas/${scenes.medoc.slug}`]) {
+          await page.goto(route);
+          const scene = page.locator("[data-atlas-scene]").first();
+          if (javaScriptEnabled) await enhanced(scene);
+          result.push(await documentTop(scene.locator(".atlas-map-frame")));
+        }
+        // Entity pages: other blocks above the map may change; within the block nothing moves.
+        await page.goto(`${prefix}/appellations/pauillac`);
+        const embedded = page.locator("[data-entity-atlas]");
+        if (javaScriptEnabled) await enhanced(embedded);
+        result.push(
+          (await documentTop(embedded.locator(".atlas-map-frame"))) -
+            (await documentTop(embedded.locator(".atlas-scene-title"))),
+        );
+      } finally {
+        await context.close();
+      }
+      return result;
+    };
+    for (const width of [390, 1440]) {
+      expect(await offsets(true, width), `${width}px`).toEqual(await offsets(false, width));
+    }
+  });
+
+  test(`${locale} the embedded Médoc map stays compact on a phone`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${prefix}/appellations/pauillac`);
+    const embedded = page.locator(`[data-entity-atlas="${scenes.medoc.id}"]`);
+    await enhanced(embedded);
+    const top = await documentTop(embedded.locator(".atlas-scene-title"));
+    // On a phone the controls are a bar attached below the frame: measure to its bottom.
+    const bar = embedded.locator(".atlas-map-controls");
+    const frameBox = await embedded.locator(".atlas-map-frame").boundingBox();
+    const barBox = await bar.boundingBox();
+    if (!frameBox || !barBox) throw new Error("Map boxes are missing");
+    expect(Math.abs(barBox.y - (frameBox.y + frameBox.height))).toBeLessThanOrEqual(1);
+    expect(Math.abs(barBox.width - frameBox.width)).toBeLessThanOrEqual(1);
+    for (const button of await bar.locator(".atlas-map-control").all()) {
+      const box = await button.boundingBox();
+      expect(box?.width ?? 0).toBeGreaterThanOrEqual(44);
+      expect(box?.height ?? 0).toBeGreaterThanOrEqual(44);
+    }
+    const bottom = await bar.evaluate(
+      (element) => element.getBoundingClientRect().bottom + window.scrollY,
+    );
+    expect(bottom - top).toBeLessThanOrEqual(600);
+    const text = (await embedded.textContent()) ?? "";
+    expect(text.split(copy.scaleStatement)).toHaveLength(2);
+    await expect(embedded.locator(".atlas-scene-intro")).not.toContainText(copy.scaleStatement);
+  });
+
+  test(`${locale} touch: one finger hints, two fingers pan the map`, async ({ browser }) => {
+    const context = await browser.newContext({
+      hasTouch: true,
+      isMobile: true,
+      viewport: { width: 390, height: 844 },
+    });
+    const page = await context.newPage();
+    try {
+      await page.goto(`${prefix}/atlas/${scenes.medoc.slug}`);
+      const scene = page.locator(`[data-atlas-scene="${scenes.medoc.id}"]`);
+      const map = scene.locator("svg.atlas-map");
+      await enhanced(scene);
+      await expect(scene.locator(".atlas-map-frame")).toHaveCSS("touch-action", "pan-y");
+      await map.scrollIntoViewIfNeeded();
+      const box = await map.boundingBox();
+      if (!box) throw new Error("The map has no bounding box");
+      const viewport = page.viewportSize();
+      const cx = box.x + box.width / 2;
+      const cy = Math.min(box.y + box.height / 2, (viewport?.height ?? 844) - 120);
+      const cdp = await context.newCDPSession(page);
+      const touch = (
+        type: "touchStart" | "touchMove" | "touchEnd",
+        points: Array<[number, number]>,
+      ) =>
+        cdp.send("Input.dispatchTouchEvent", {
+          type,
+          touchPoints: points.map(([x, y], id) => ({ x, y, id })),
+        });
+
+      // One finger sideways: the map stays put and says how to move it.
+      const before = await viewBoxOf(map);
+      await touch("touchStart", [[cx, cy]]);
+      for (let step = 1; step <= 6; step += 1) await touch("touchMove", [[cx - step * 12, cy]]);
+      await touch("touchEnd", []);
+      await expect(scene.locator(".atlas-map-hint")).toHaveText(copy.touchHint);
+      await expect(scene.locator(".atlas-map-hint")).toBeVisible();
+      expect(await viewBoxOf(map)).toEqual(before);
+
+      // Two fingers moving together pan the map.
+      await touch("touchStart", [
+        [cx - 40, cy],
+        [cx + 40, cy],
+      ]);
+      for (let step = 1; step <= 6; step += 1) {
+        await touch("touchMove", [
+          [cx - 40 + step * 10, cy + step * 8],
+          [cx + 40 + step * 10, cy + step * 8],
+        ]);
+      }
+      await touch("touchEnd", []);
+      await expect.poll(async () => (await viewBoxOf(map))[0]).toBeLessThan(before[0]);
+    } finally {
+      await context.close();
+    }
+  });
 
   test(`${locale} draft owner scene is reachable but not indexed`, async ({ page }) => {
     const response = await page.goto(`${prefix}/atlas/${scenes.champagne.slug}`);
     expect(response?.status()).toBe(200);
     await expect(page.locator(`[data-atlas-scene="${scenes.champagne.id}"]`)).toBeVisible();
     await expect(page.locator(".page-intro")).toContainText(copy.draftIntro);
+    // The owner's page is still in preparation: the intro links nowhere.
+    await expect(page.locator(".page-intro-copy a")).toHaveCount(0);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
     await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
   });

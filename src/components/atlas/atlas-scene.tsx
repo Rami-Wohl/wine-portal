@@ -3,7 +3,7 @@ import { getEntityById } from "@/content/repository";
 import { contentLabels, entityHref } from "@/content/routing";
 import type { CSSProperties } from "react";
 import { AtlasFeatureList, type AtlasListArea } from "./atlas-feature-list";
-import { AtlasLegend } from "./atlas-legend";
+import { AtlasCoverageNotice, AtlasLegend, AtlasLegendExplanation } from "./atlas-legend";
 import { AtlasSceneEnhancer } from "./atlas-scene-enhancer";
 import { atlasCopy } from "./copy";
 import { labelVisibleAt, NO_SCRIPT_ZOOM, planLabels, type PlannedLabel } from "./labels";
@@ -17,6 +17,11 @@ export interface AtlasSceneProps {
   variant: "overview" | "embedded";
   /** Route of the full Atlas scene; embedded maps link to it. */
   sceneHref?: string;
+  /**
+   * Scene routes already name the region in the page title: the map heading stays for
+   * assistive technology (it labels the figure and the SVG) but is not shown.
+   */
+  titleHidden?: boolean;
 }
 
 interface ResolvedFeature {
@@ -61,8 +66,9 @@ function resolveFeature(
   };
 }
 
-function toListArea(resolved: ResolvedFeature): AtlasListArea {
+function toListArea(resolved: ResolvedFeature, covered: ReadonlySet<string>): AtlasListArea {
   return {
+    inCoverage: Boolean(resolved.feature.owner && covered.has(resolved.feature.owner)),
     id: resolved.feature.id,
     name: resolved.name,
     href: resolved.href,
@@ -139,6 +145,8 @@ function FeatureShape({
       className={`atlas-feature atlas-feature-${feature.kind} atlas-geometry-${feature.geometryType}`}
       d={feature.path}
       data-feature-id={feature.id}
+      // Scene-wide rank, largest area first; the chooser lists the highest (smallest) first.
+      data-area-rank={feature.geometryType === "area" ? feature.areaRank : undefined}
       data-highlighted={highlighted ? "true" : undefined}
       data-kind={feature.kind}
       data-role={role}
@@ -177,11 +185,12 @@ export function AtlasScene({
   headingLevel = 2,
   variant,
   sceneHref,
+  titleHidden = false,
 }: AtlasSceneProps) {
   const copy = atlasCopy(locale);
   const idBase = `atlas-${variant}-${scene.slug}`;
   const titleId = `${idBase}-title`;
-  const introId = `${idBase}-intro`;
+  const captionId = `${idBase}-caption`;
   const hatchId = `${idBase}-hatch`;
   const waterId = `${idBase}-water`;
   const Heading = `h${headingLevel}` as const;
@@ -243,154 +252,219 @@ export function AtlasScene({
   const orientation = { water: water.length > 0, places: places.length > 0 };
 
   const { width, height } = scene.viewBox;
-  const svgStyle = {
+  // The figure carries the scene's proportions: the SVG keeps its aspect ratio from them and,
+  // on wide screens, the area list beside the map is held to the map's height (atlas.css).
+  const figureStyle = {
     "--atlas-base-width": width,
     "--atlas-base-height": height,
-    "--atlas-view-width": width,
   } as CSSProperties;
+  const svgStyle = { "--atlas-view-width": width } as CSSProperties;
+  const coverage = {
+    intended: scene.coverage.intended.length,
+    shown: scene.coverage.shown.length,
+    missing,
+  };
+  const legendProps = {
+    credits: scene.credits,
+    idBase,
+    layers: {
+      context: context.length > 0,
+      water: water.length > 0,
+      places: places.length > 0,
+      overlap: selectable.length > 1,
+    },
+    locale,
+    region: { name: ownerName, singleArea: selectable.length === 1 ? selectable[0].name : null },
+    partsDropped: scene.simplification.droppedParts.length > 0,
+    simplificationPixels: scene.simplification.pixels,
+  };
+  const covered = new Set(scene.coverage.shown);
+  const listProps = {
+    areas: selectable.map((item) => toListArea(item, covered)),
+    contextAreas: context.map((item) => toListArea(item, covered)),
+    headingLevel: subLevel,
+    idBase,
+    locale,
+    places: places.map((item) => item.name),
+    water: water.map((item) => item.name),
+  };
+  const notice = unavailableNotice ? (
+    <p className="atlas-scene-notice" role="note">
+      {unavailableNotice}
+    </p>
+  ) : null;
+  const embedded = variant === "embedded";
+  const SubHeading = `h${subLevel}` as const;
 
+  const mapPanel = (
+    <div className="atlas-map-panel">
+      <AtlasSceneEnhancer idBase={idBase} labels={copy.controls} locale={locale}>
+        <svg
+          aria-labelledby={titleId}
+          className="atlas-map"
+          data-atlas-map={scene.id}
+          preserveAspectRatio="xMidYMid meet"
+          role="group"
+          style={svgStyle}
+          viewBox={`0 0 ${width} ${height}`}
+        >
+          <defs>
+            <pattern
+              height="7"
+              id={hatchId}
+              patternTransform="rotate(45)"
+              patternUnits="userSpaceOnUse"
+              width="7"
+            >
+              <line className="atlas-hatch-line" x1="0" x2="0" y1="0" y2="7" />
+            </pattern>
+            <pattern height="7" id={waterId} patternUnits="userSpaceOnUse" width="14">
+              <rect className="atlas-water-base" height="7" width="14" />
+              <path className="atlas-water-line" d="M0 3.5q3.5-2.4 7 0t7 0" />
+            </pattern>
+          </defs>
+          {layers.map(({ layer, features }) => (
+            <g
+              className={`atlas-layer atlas-layer-${layer.role}`}
+              data-layer={layer.id}
+              data-role={layer.role}
+              key={layer.id}
+            >
+              {features.map((resolved) => (
+                <FeatureShape
+                  hatchId={hatchId}
+                  key={resolved.feature.id}
+                  placeLabel={placeLabels.get(resolved.feature.id)}
+                  resolved={resolved}
+                  waterId={waterId}
+                />
+              ))}
+            </g>
+          ))}
+          {highlightOutlines.length > 0 ? (
+            <g aria-hidden="true" className="atlas-highlight-overlay">
+              {highlightOutlines.map((item) => (
+                <path
+                  className="atlas-highlight-outline"
+                  d={item.feature.path}
+                  data-outline-for={item.feature.id}
+                  key={item.feature.id}
+                />
+              ))}
+            </g>
+          ) : null}
+          <g aria-hidden="true" className="atlas-labels">
+            {labels.map((label) => (
+              <text
+                className={[
+                  "atlas-label",
+                  `atlas-label-${labelRole.get(label.featureId) ?? "selectable"}`,
+                  label.highlighted ? "atlas-label-highlight" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                data-label-for={label.featureId}
+                data-shift={label.shift === 0 ? undefined : label.shift}
+                {...labelVisibility(label)}
+                key={label.featureId}
+                x={label.x}
+                y={label.y}
+              >
+                {label.text}
+              </text>
+            ))}
+          </g>
+        </svg>
+      </AtlasSceneEnhancer>
+    </div>
+  );
+
+  if (embedded) {
+    // Entity pages: heading, one caption line, the Atlas link and the map; everything else
+    // (areas, legend, scale statement, credits) folds into one disclosure below the map.
+    return (
+      <figure
+        aria-describedby={captionId}
+        aria-labelledby={titleId}
+        className="atlas-scene atlas-scene-embedded"
+        data-atlas-scene={scene.id}
+        style={figureStyle}
+      >
+        <div className="atlas-scene-heading">
+          <Heading className="atlas-scene-title" id={titleId}>
+            {copy.mapHeading(ownerName)}
+          </Heading>
+          <p className="atlas-scene-intro" id={captionId}>
+            {copy.mapIntro(ownerName, orientation)}
+          </p>
+          {sceneHref ? (
+            <p className="atlas-scene-link">
+              <a href={sceneHref}>{copy.viewInAtlas}</a>
+            </p>
+          ) : null}
+          {notice}
+        </div>
+        {mapPanel}
+        <AtlasCoverageNotice coverage={coverage} locale={locale} />
+        <details className="atlas-about">
+          {/* Summary text stays plain; the headings sit inside the disclosed content. */}
+          <summary>{copy.legend.aboutSummary}</summary>
+          <div className="atlas-about-body">
+            {/* Gaps are already stated above the disclosure; the list does not repeat them. */}
+            <AtlasFeatureList {...listProps} missing={[]} mode="flat" />
+            <section aria-labelledby={`${idBase}-legend-title`} className="atlas-about-legend">
+              <SubHeading className="atlas-legend-title" id={`${idBase}-legend-title`}>
+                {copy.legend.heading}
+              </SubHeading>
+              <AtlasLegendExplanation {...legendProps} />
+            </section>
+          </div>
+        </details>
+      </figure>
+    );
+  }
+
+  // Atlas pages: list, map and legend in one grid. DOM order stays list, map, legend so the
+  // reading and keyboard order match; the list folds on narrow screens and opens beside the
+  // map on wide ones, with the legend directly under the map.
   return (
     <figure
-      aria-describedby={introId}
       aria-labelledby={titleId}
-      className={`atlas-scene atlas-scene-${variant}`}
+      className="atlas-scene atlas-scene-overview"
       data-atlas-scene={scene.id}
+      style={figureStyle}
     >
-      <div className="atlas-scene-heading">
-        <Heading className="atlas-scene-title" id={titleId}>
+      {titleHidden && !notice ? (
+        <Heading className="atlas-scene-title atlas-visually-hidden" id={titleId}>
           {copy.mapHeading(ownerName)}
         </Heading>
-        <p className="atlas-scene-intro" id={introId}>
-          {copy.mapIntro(ownerName, orientation)} {copy.scaleStatement}
-        </p>
-        {sceneHref ? (
-          <p className="atlas-scene-link">
-            <a href={sceneHref}>{copy.viewInAtlas}</a>
-          </p>
-        ) : null}
-        {unavailableNotice ? (
-          <p className="atlas-scene-notice" role="note">
-            {unavailableNotice}
-          </p>
-        ) : null}
-      </div>
+      ) : (
+        <div className="atlas-scene-heading">
+          <Heading
+            className={
+              titleHidden ? "atlas-scene-title atlas-visually-hidden" : "atlas-scene-title"
+            }
+            id={titleId}
+          >
+            {copy.mapHeading(ownerName)}
+          </Heading>
+          {notice}
+        </div>
+      )}
       <div className="atlas-scene-body">
         <AtlasFeatureList
-          areas={selectable.map(toListArea)}
-          collapsible={variant === "embedded"}
-          contextAreas={context.map(toListArea)}
-          headingLevel={subLevel}
-          idBase={idBase}
-          locale={locale}
+          {...listProps}
           missing={missing.flatMap((entry) =>
             entry.name ? [{ name: entry.name, reason: entry.reason }] : [],
           )}
-          places={places.map((item) => item.name)}
-          water={water.map((item) => item.name)}
+          mode="folded"
+          openWhenWide
         />
-        <div className="atlas-map-panel">
-          <AtlasSceneEnhancer idBase={idBase} labels={copy.controls} locale={locale}>
-            <svg
-              aria-labelledby={titleId}
-              className="atlas-map"
-              data-atlas-map={scene.id}
-              preserveAspectRatio="xMidYMid meet"
-              role="group"
-              style={svgStyle}
-              viewBox={`0 0 ${width} ${height}`}
-            >
-              <defs>
-                <pattern
-                  height="7"
-                  id={hatchId}
-                  patternTransform="rotate(45)"
-                  patternUnits="userSpaceOnUse"
-                  width="7"
-                >
-                  <line className="atlas-hatch-line" x1="0" x2="0" y1="0" y2="7" />
-                </pattern>
-                <pattern height="7" id={waterId} patternUnits="userSpaceOnUse" width="14">
-                  <rect className="atlas-water-base" height="7" width="14" />
-                  <path className="atlas-water-line" d="M0 3.5q3.5-2.4 7 0t7 0" />
-                </pattern>
-              </defs>
-              {layers.map(({ layer, features }) => (
-                <g
-                  className={`atlas-layer atlas-layer-${layer.role}`}
-                  data-layer={layer.id}
-                  data-role={layer.role}
-                  key={layer.id}
-                >
-                  {features.map((resolved) => (
-                    <FeatureShape
-                      hatchId={hatchId}
-                      key={resolved.feature.id}
-                      placeLabel={placeLabels.get(resolved.feature.id)}
-                      resolved={resolved}
-                      waterId={waterId}
-                    />
-                  ))}
-                </g>
-              ))}
-              {highlightOutlines.length > 0 ? (
-                <g aria-hidden="true" className="atlas-highlight-overlay">
-                  {highlightOutlines.map((item) => (
-                    <path
-                      className="atlas-highlight-outline"
-                      d={item.feature.path}
-                      data-outline-for={item.feature.id}
-                      key={item.feature.id}
-                    />
-                  ))}
-                </g>
-              ) : null}
-              <g aria-hidden="true" className="atlas-labels">
-                {labels.map((label) => (
-                  <text
-                    className={[
-                      "atlas-label",
-                      `atlas-label-${labelRole.get(label.featureId) ?? "selectable"}`,
-                      label.highlighted ? "atlas-label-highlight" : "",
-                    ]
-                      .filter(Boolean)
-                      .join(" ")}
-                    data-label-for={label.featureId}
-                    data-shift={label.shift === 0 ? undefined : label.shift}
-                    {...labelVisibility(label)}
-                    key={label.featureId}
-                    x={label.x}
-                    y={label.y}
-                  >
-                    {label.text}
-                  </text>
-                ))}
-              </g>
-            </svg>
-          </AtlasSceneEnhancer>
+        {mapPanel}
+        <div className="atlas-scene-legend">
+          <AtlasLegend {...legendProps} coverage={coverage} headingLevel={subLevel} />
         </div>
       </div>
-      <figcaption className="atlas-scene-caption">
-        <AtlasLegend
-          collapsible={variant === "embedded"}
-          coverage={{
-            intended: scene.coverage.intended.length,
-            shown: scene.coverage.shown.length,
-            missing,
-          }}
-          credits={scene.credits}
-          headingLevel={subLevel}
-          idBase={idBase}
-          partsDropped={scene.simplification.droppedParts.length > 0}
-          simplificationPixels={scene.simplification.pixels}
-          layers={{
-            context: context.length > 0,
-            water: water.length > 0,
-            places: places.length > 0,
-            overlap: selectable.length > 1,
-          }}
-          locale={locale}
-        />
-      </figcaption>
     </figure>
   );
 }

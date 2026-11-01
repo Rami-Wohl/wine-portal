@@ -8,11 +8,9 @@ export interface AtlasLegendCoverage {
   missing: Array<{ name: string | null; reason: AtlasMissingReason }>;
 }
 
-export interface AtlasLegendProps {
+export interface AtlasLegendExplanationProps {
   locale: Locale;
   idBase: string;
-  headingLevel: 3 | 4;
-  coverage: AtlasLegendCoverage;
   /** One line per source; each carries its own edition in the verbatim attribution. */
   credits: AtlasCreditView[];
   /** Simplification rung as a viewBox pixel length; 0 means the shapes were not simplified. */
@@ -20,8 +18,13 @@ export interface AtlasLegendProps {
   /** True when the build dropped sub-parts below display resolution. */
   partsDropped: boolean;
   layers: { context: boolean; water: boolean; places: boolean; overlap: boolean };
-  /** Embedded scenes fold the layer key and credits behind a disclosure. */
-  collapsible: boolean;
+  /** The owning region's name, and the area's name when the scene draws only one. */
+  region: { name: string | null; singleArea: string | null };
+}
+
+export interface AtlasLegendProps extends AtlasLegendExplanationProps {
+  headingLevel: 3 | 4;
+  coverage: AtlasLegendCoverage;
 }
 
 function Swatch({
@@ -76,13 +79,25 @@ function Swatch({
   );
 }
 
-function CoverageStatement({
+/** Complete coverage needs no statement: only a gap is news to the reader. */
+export function coverageIsComplete(coverage: AtlasLegendCoverage): boolean {
+  return (
+    coverage.intended > 0 && coverage.missing.length === 0 && coverage.shown >= coverage.intended
+  );
+}
+
+/**
+ * The computed coverage statement, shown only when an intended area is missing or held (or
+ * none was assigned); renders nothing for a complete map.
+ */
+export function AtlasCoverageNotice({
   coverage,
   locale,
 }: {
   coverage: AtlasLegendCoverage;
   locale: Locale;
 }) {
+  if (coverageIsComplete(coverage)) return null;
   const copy = atlasCopy(locale);
   const named = coverage.missing.filter(
     (entry): entry is { name: string; reason: AtlasMissingReason } => entry.name !== null,
@@ -91,9 +106,7 @@ function CoverageStatement({
   const statement =
     coverage.intended === 0
       ? copy.legend.coverageNone
-      : coverage.missing.length === 0 && coverage.shown >= coverage.intended
-        ? copy.legend.coverageComplete(coverage.shown)
-        : copy.legend.coverage(coverage.shown, coverage.intended);
+      : copy.legend.coverage(coverage.shown, coverage.intended);
   return (
     <div className="atlas-legend-coverage">
       <p>{statement}</p>
@@ -169,24 +182,20 @@ function Credits({
 }
 
 /**
- * Explains the layers, the scale, the computed coverage and the credits in
- * plain language. Raw IDs, CRS codes, enums and pipeline terms never appear.
+ * The legend body: layer keys, the scale statement (said once per map, here), the region and
+ * overlap notes and the credits, in plain language. Raw IDs, CRS codes, enums and pipeline
+ * terms never appear.
  */
-export function AtlasLegend({
+export function AtlasLegendExplanation({
   locale,
   idBase,
-  headingLevel,
-  coverage,
   credits,
   simplificationPixels,
   partsDropped,
   layers,
-  collapsible,
-}: AtlasLegendProps) {
+  region,
+}: AtlasLegendExplanationProps) {
   const copy = atlasCopy(locale);
-  const Title = `h${headingLevel}` as const;
-  const titleId = `${idBase}-legend-title`;
-
   const key = (
     <dl className="atlas-legend-keys">
       <div>
@@ -231,11 +240,11 @@ export function AtlasLegend({
     </dl>
   );
 
-  const explanation = (
+  return (
     <>
       {key}
       <p className="atlas-legend-scale">
-        {copy.regionNote}
+        {copy.scaleStatement} {copy.regionNote(region.name, region.singleArea)}
         {layers.overlap ? (
           <>
             {" "}
@@ -252,29 +261,22 @@ export function AtlasLegend({
       />
     </>
   );
+}
 
+/** The Atlas-page legend: a coverage notice when something is missing, then the legend section. */
+export function AtlasLegend({ headingLevel, coverage, ...explanation }: AtlasLegendProps) {
+  const copy = atlasCopy(explanation.locale);
+  const Title = `h${headingLevel}` as const;
+  const titleId = `${explanation.idBase}-legend-title`;
   return (
     <div className="atlas-legend">
-      <CoverageStatement coverage={coverage} locale={locale} />
-      {collapsible ? (
-        <details className="atlas-legend-disclosure">
-          {/* Summary text stays plain; the heading sits inside the disclosed content. */}
-          <summary>{copy.legend.aboutSummary}</summary>
-          <section aria-labelledby={titleId} className="atlas-legend-disclosure-body">
-            <Title className="atlas-legend-title" id={titleId}>
-              {copy.legend.heading}
-            </Title>
-            {explanation}
-          </section>
-        </details>
-      ) : (
-        <section aria-labelledby={titleId} className="atlas-legend-section">
-          <Title className="atlas-legend-title" id={titleId}>
-            {copy.legend.heading}
-          </Title>
-          {explanation}
-        </section>
-      )}
+      <AtlasCoverageNotice coverage={coverage} locale={explanation.locale} />
+      <section aria-labelledby={titleId} className="atlas-legend-section">
+        <Title className="atlas-legend-title" id={titleId}>
+          {copy.legend.heading}
+        </Title>
+        <AtlasLegendExplanation {...explanation} />
+      </section>
     </div>
   );
 }

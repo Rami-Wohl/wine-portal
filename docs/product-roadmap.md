@@ -130,7 +130,9 @@ Op `feat/attempt-at-atlas` is release één gebouwd volgens het
 [Atlas-implementatiecontract](atlas-plan.md): SVG-scènes uit geverifieerde lagen,
 Bordeaux-cluster plus Champagne, regio's als appellationmozaïek zonder eigen
 omtrek. De vier hervatte tickets zijn op 2026-10-31 afgerond
-([review](../editorial/atlas-release-one-review-2026-10-31.md)); de preview
+([review](../editorial/atlas-release-one-review-2026-10-31.md)), gevolgd door
+UX-ronde A (`MNT-077`,
+[review](../editorial/atlas-ux-round-a-review-2026-10-31.md)); de preview
 blijft `noindex` tot `MNT-076`. MNT-013 blijft geparkeerd tot een eigen datasetreview.
 
 | Fase | Ticket | Stand |
@@ -142,6 +144,7 @@ blijft `noindex` tot `MNT-076`. MNT-013 blijft geparkeerd tot een eigen datasetr
 | 4 | `MNT-074` | Open: INAO-herpin bij gecorrigeerde editie, Côtes de Bordeaux, bronreview Port en Sherry |
 | 4 | `MNT-075` | Open: rivierlabels, vormtweelingen, smalle overzichtskaart, locator-inzet, print |
 | 4 | `MNT-076` | Open, gebruikersbesluit: preview opheffen, indexering en merge naar `main` |
+| 4 | `MNT-077` | Afgerond: UX-ronde A uit `QCR-2026-10-31-02` (kaart eerst, regiokiezer met miniaturen, bediening op de kaart, gebarenmodel, kiezervolgorde, compacte inbedding); rijen 10–21 van die review wachten op een gebruikersbesluit |
 | 4 | `MNT-013` | Geparkeerd; wereldwijde druivenverspreiding vereist eigen dataset en kaartconventie |
 
 Status en acceptatiecriteria staan in de [onderhoudsbacklog](maintenance-backlog.md),

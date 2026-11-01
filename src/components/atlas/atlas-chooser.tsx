@@ -1,26 +1,36 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
-import type { Candidate } from "./map-view";
+import { Fragment, useEffect, useId, useLayoutEffect, useRef } from "react";
+import { chooserPlacement, type Candidate, type Point } from "./map-view";
+
+/** Narrow frames show the chooser as a sheet along the frame's bottom edge. */
+const SHEET_QUERY = "(max-width: 620px)";
 
 export interface AtlasChooserLabels {
   heading: string;
   intro: string;
-  /** Prefix for an overarching (context) area, e.g. "Overkoepelend gebied: Bordeaux". */
-  context: string;
+  /** Introduces the overarching areas on one line, e.g. "Ligt ook in:". */
+  alsoWithin: string;
   close: string;
 }
 
 export interface AtlasChooserState {
-  left: number;
-  top: number;
+  /** The click, in px from the frame's top-left corner. */
+  click: Point;
+  /** Ordered by orderCandidates: most specific first, overarching areas last. */
   items: Candidate[];
+}
+
+function CandidateLink({ item }: { item: Candidate }) {
+  return item.href ? <a href={item.href}>{item.name}</a> : <span>{item.name}</span>;
 }
 
 /**
  * Small non-modal popover listing every area under a click so the reader
- * chooses instead of the map guessing. Focus moves to the first link on open;
- * the parent closes it on Escape, outside clicks and focus leaving.
+ * chooses instead of the map guessing. The most specific area comes first and
+ * reads as the primary choice; overarching areas share one "also within" line.
+ * Focus moves to the first link on open; the parent closes it on Escape,
+ * outside clicks and focus leaving.
  */
 export function AtlasChooser({
   state,
@@ -33,6 +43,30 @@ export function AtlasChooser({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const titleId = useId();
+  const specific = state.items.filter((item) => !item.context);
+  const overarching = state.items.filter((item) => item.context);
+
+  // Measure before paint and place the chooser inside the frame; written to the element
+  // directly so the first paint is already in place.
+  useLayoutEffect(() => {
+    const element = ref.current;
+    const frame = element?.offsetParent;
+    if (!element || !(frame instanceof HTMLElement)) return;
+    const sheet = typeof window.matchMedia === "function" && window.matchMedia(SHEET_QUERY).matches;
+    element.dataset.sheet = sheet ? "true" : "false";
+    if (sheet) {
+      element.style.left = "";
+      element.style.top = "";
+      return;
+    }
+    const { left, top } = chooserPlacement(
+      state.click,
+      { width: element.offsetWidth, height: element.offsetHeight },
+      { width: frame.clientWidth, height: frame.clientHeight },
+    );
+    element.style.left = `${left}px`;
+    element.style.top = `${top}px`;
+  }, [state]);
 
   useEffect(() => {
     ref.current?.querySelector<HTMLElement>("a, button")?.focus({ preventScroll: true });
@@ -45,22 +79,32 @@ export function AtlasChooser({
       className="atlas-chooser"
       ref={ref}
       role="dialog"
-      style={{ left: state.left, top: state.top }}
     >
       <p className="atlas-chooser-title" id={titleId}>
         {labels.heading}
       </p>
       <p className="atlas-chooser-intro">{labels.intro}</p>
-      <ul>
-        {state.items.map((item) => {
-          const text = item.context ? `${labels.context}: ${item.name}` : item.name;
-          return (
-            <li className={item.context ? "atlas-chooser-context" : undefined} key={item.id}>
-              {item.href ? <a href={item.href}>{text}</a> : <span>{text}</span>}
+      {/* Only the candidates scroll; the title and the close button stay in view. */}
+      <div className="atlas-chooser-body">
+        <ul>
+          {specific.map((item, index) => (
+            <li className={index === 0 ? "atlas-chooser-primary" : undefined} key={item.id}>
+              <CandidateLink item={item} />
             </li>
-          );
-        })}
-      </ul>
+          ))}
+        </ul>
+        {overarching.length > 0 ? (
+          <p className="atlas-chooser-context">
+            {labels.alsoWithin}{" "}
+            {overarching.map((item, index) => (
+              <Fragment key={item.id}>
+                {index > 0 ? <span aria-hidden="true"> · </span> : null}
+                <CandidateLink item={item} />
+              </Fragment>
+            ))}
+          </p>
+        ) : null}
+      </div>
       <button className="atlas-chooser-close" onClick={onClose} type="button">
         {labels.close}
       </button>

@@ -469,10 +469,49 @@ export interface AtlasSceneView {
   };
 }
 
+/** Width of the region-chooser thumbnail viewBox in user units (docs/atlas-plan.md §7). */
+export const ATLAS_THUMBNAIL_WIDTH = 160;
+
+/** Path text budget per thumbnail; the build simplifies further until it holds. */
+export const ATLAS_THUMBNAIL_PATH_BUDGET_BYTES = 3 * 1024;
+
+/**
+ * A small derived view of a scene's verified selectable appellation areas for the Atlas region
+ * chooser:
+ * the same features as the scene, never an outline or shape of its own. Validated strictly
+ * because it is the one display view the build assembles specially for the index.
+ */
+export const atlasThumbnailSchema = z
+  .object({
+    viewBox: z
+      .object({
+        width: z.literal(ATLAS_THUMBNAIL_WIDTH),
+        height: z.number().int().positive(),
+      })
+      .strict(),
+    /** One path per selectable area: whole-unit rings, an absolute move, relative offsets. */
+    paths: z.array(z.string().regex(/^(?:M-?\d+[ -]?-?\d+(?:l[\d -]+)?z)+$/)).min(1),
+  })
+  .strict()
+  .superRefine((thumbnail, context) => {
+    const bytes = thumbnail.paths.reduce((sum, path) => sum + path.length, 0);
+    if (bytes > ATLAS_THUMBNAIL_PATH_BUDGET_BYTES) {
+      context.addIssue({
+        code: "custom",
+        path: ["paths"],
+        message: `path text is ${bytes} bytes, over the ${ATLAS_THUMBNAIL_PATH_BUDGET_BYTES}-byte budget`,
+      });
+    }
+  });
+
+export type AtlasThumbnail = z.infer<typeof atlasThumbnailSchema>;
+
 export interface AtlasSceneSummary extends Omit<AtlasSceneView, "layers"> {
   featureCount: number;
   /** Owners of the features drawn in a selectable layer, sorted; used to pick an entity's scene. */
   selectableEntities: string[];
+  /** Region-chooser thumbnail; optional so older index files and fixtures still read. */
+  thumbnail?: AtlasThumbnail;
 }
 
 export interface AtlasIndex {
