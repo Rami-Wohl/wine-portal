@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.bar-sur-seine",
+  "properties": {
+    "id": "geo.populated-place.bar-sur-seine",
+    "kind": "populated-place",
+    "name_nl": "Bar-sur-Seine",
+    "name_en": "Bar-sur-Seine"
+  },
+  "bbox": [4.37356376, 48.11425729, 4.37356376, 48.11425729],
+  "geometry": { "type": "Point", "coordinates": [4.37356376, 48.11425729] }
+}

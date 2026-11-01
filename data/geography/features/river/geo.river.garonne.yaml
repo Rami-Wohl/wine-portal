@@ -1,0 +1,46 @@
+id: geo.river.garonne
+kind: river
+names:
+  nl: Garonne
+  en: Garonne
+geometry:
+  file: geo.river.garonne.geojson
+  type: MultiLineString
+  sha256: 795c97fb6abf36a5399c116f85a0acf38f571f75bf09fa09b525590ff267e463
+  vertex_count: 1414
+  bbox: [-0.6807896, 44.15797769, 0.62766089, 45.08909474]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:troncon_hydrographique
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: 4f28e36fe25dfcdcc37468f67bbf4d109f25b50ba45740d2238295cb83d0e01b
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:troncon_hydrographique
+    property: cpx_toponyme_de_cours_d_eau
+    values: la Garonne | Fleuve la Garonne
+    feature_count: 349
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: watercourse-centreline-segments
+precision: regional-orientation
+limitations: Cartographic centreline segments at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a hydrographic survey, a navigation line or a flood extent.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-river-garonne-bordeaux (layer BDCARTO_V5:troncon_hydrographique; request, edition and checksum pinned in the manifest): all 349 features with cpx_toponyme_de_cours_d_eau in {''la Garonne'', ''Fleuve la Garonne''} intersecting the bordeaux envelope, kept as whole features in verified cleabs order without clipping. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. 349 BD CARTO segments inside the Bordeaux envelope. INAO-independent IGN toponyms: "la Garonne" upstream and "Fleuve la Garonne" for the last tidal stretch before the Bec d''Ambès (26 segments), both kept; segments with other toponyms, such as side arms named "Bras …" and the Canal latéral à la Garonne, are not requested. Segments of nature other than natural flow are kept when they carry the river''s name.'
+supersedes: null

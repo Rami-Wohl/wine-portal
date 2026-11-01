@@ -36,5 +36,6 @@ source_refs:
   - source.inao-fronsac-specification-2024
   - source.vins-fronsac-vineyard
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.fronsac
 depth: foundation
 last_reviewed: 2026-09-13

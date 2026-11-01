@@ -3,10 +3,14 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  /* Height reserved under the sticky site header for anchors and sticky columns. */
+  --header-offset: 96px;
+}
 html {
   overflow-x: clip;
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: var(--header-offset);
 }
 body {
   min-width: 320px;
@@ -75,4 +79,9 @@ h3 {
 }
 .skip-link:focus {
   transform: translateY(0);
+}
+@media print {
+  .skip-link {
+    display: none;
+  }
 }

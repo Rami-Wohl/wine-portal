@@ -11,6 +11,7 @@ import {
   unknownReferenceMessage,
 } from "./diagnostics";
 import { validateMediaFiles } from "./files";
+import { validateGeography } from "./geography";
 import {
   validateLocaleFiles,
   parseLocalizedContent,
@@ -33,6 +34,8 @@ export async function validateContentRecords(
     planRecords,
     sourceRecords,
     mediaRecords,
+    geographyRecords,
+    sceneRecords,
   } = records;
   findDuplicates(
     entityRecords.map(({ file, value }) => ({ key: value.id, file })),
@@ -337,5 +340,13 @@ export async function validateContentRecords(
     issues,
   );
 
-  return { entityIds, entityContentMap, narrativeContentMap, mentionMap };
+  const geography = await validateGeography(
+    geographyRecords,
+    sceneRecords,
+    entityRecords,
+    sourceRecords,
+    issues,
+  );
+
+  return { entityIds, entityContentMap, narrativeContentMap, mentionMap, geography };
 }

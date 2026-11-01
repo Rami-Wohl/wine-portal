@@ -1,0 +1,1682 @@
+{
+  "review_id": "QCR-2026-10-30-01",
+  "reviewed_at": "2026-10-30",
+  "status": "import-and-publication-review",
+  "catalogue_url": "https://www.data.gouv.fr/datasets/delimitation-des-aires-geographiques-des-siqo",
+  "dataset_id": "5d7fb2856f444171a5f2780b",
+  "resource_id": "687d62d7-8ee6-4997-a47a-81e3183be31b",
+  "release": "2026-10-26",
+  "source_bytes": 88937803,
+  "source_sha256": "36b95bd8e88dc0412c1e83c917907527105dc710d60f4d381502dcf0ec2551ef",
+  "catalogue_sha1": "103ebe8dda57af1158a058e637ea21ef609eb09b",
+  "resource_url": "https://static.data.gouv.fr/resources/delimitation-des-aires-geographiques-des-siqo/20261026-223158/2026-10-26-delim-aire-geographique-shp.zip",
+  "upstream_last_modified": "2026-10-26T22:32:23.648Z",
+  "superseded_edition": {
+    "release": "2026-10-12",
+    "bytes": 88984476,
+    "sha256": "e9ea8b48c507da006774ad460d03619b464ca6598956ac7fd319f36af4f56bc4",
+    "status": "HTTP 404 at its static URL on 2026-10-30; no Wayback Machine snapshot; replaced in place under the same resource id"
+  },
+  "source_crs_wkt": "PROJCS[\"RGF93_Lambert_93\",GEOGCS[\"GCS_RGF_1993\",DATUM[\"D_RGF_1993\",SPHEROID[\"GRS_1980\",6378137.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Lambert_Conformal_Conic\"],PARAMETER[\"False_Easting\",700000.0],PARAMETER[\"False_Northing\",6600000.0],PARAMETER[\"Central_Meridian\",3.0],PARAMETER[\"Standard_Parallel_1\",44.0],PARAMETER[\"Standard_Parallel_2\",49.0],PARAMETER[\"Latitude_Of_Origin\",46.5],UNIT[\"Meter\",1.0]]",
+  "recognized_authority": ["IGNF", "LAMB93"],
+  "equivalent_epsg": 2154,
+  "source_encoding": "UTF-8",
+  "dbf": {
+    "records": 1852,
+    "fields": [
+      "dt",
+      "type_prod",
+      "categorie",
+      "type_denom",
+      "signe",
+      "id_app",
+      "app",
+      "id_denom",
+      "denom",
+      "insee",
+      "cvi",
+      "nomcom",
+      "insee2011",
+      "nomcom2011",
+      "id_aire",
+      "crinao",
+      "grp_name1",
+      "grp_name2"
+    ],
+    "populated_fields": ["type_denom", "denom"],
+    "duplicate_type_denom_denom_pairs_in_file": [
+      {
+        "type_denom": "appellation",
+        "denom": "Eau-de-vie de cidre de Bretagne",
+        "count": 2
+      },
+      {
+        "type_denom": "appellation",
+        "denom": "Valençay",
+        "count": 2
+      },
+      {
+        "type_denom": "appellation",
+        "denom": "Coquille Saint-Jacques des Côtes-d’Armor",
+        "count": 2
+      },
+      {
+        "type_denom": "appellation",
+        "denom": "Comtés Rhodaniens",
+        "count": 2
+      },
+      {
+        "type_denom": "appellation",
+        "denom": "Tome fraîche de l’Aubrac",
+        "count": 2
+      }
+    ],
+    "note": "none of the duplicated labels is a mapped feature; the APIZPI export of the same day (resource 0cf78af0-1a97-413c-af55-1c11570c8dda) has populated dt/signe/id_app/app/id_denom fields, so the blanking is specific to this export"
+  },
+  "register": {
+    "resource_id": "76e54568-9786-4e15-8e48-dc3b8f44011d",
+    "release": "2025-12-31",
+    "bytes": 1114747,
+    "sha256": "f095783bbb64a06efd299b622bb6cb797a78c5e166ab5f7e74bb6aa9f5fb2078",
+    "rows": 5246,
+    "role": "identity authority for id_app/id_denom/app/denom/signe; namespace equality with the shapefile confirmed on the nine pairs of the 2026-10-12 inspection"
+  },
+  "commune_table_comparison": {
+    "resource_id": "0ba4fed3-a5f7-4189-a1a3-2eebabc6296f",
+    "release": "2025-10-09",
+    "sha256": "7e2472ab7550d8cc3426816040310952365148b5483d0b6cb9a7e70c33fa9cbe",
+    "role": "comparison only; no geometry derived",
+    "observations": {
+      "Côtes de Bordeaux": "111 communes including all 19 Sainte-Foy communes; the appellation shape covers none of them",
+      "Haut-Médoc in Médoc": "29/29 communes",
+      "Pessac-Léognan in Graves": "10/10 communes",
+      "Cérons in Graves": "3/3 communes",
+      "Canon Fronsac in Fronsac": "2/2 communes",
+      "Sauternes in Graves": "0/5 communes, consistent with the Sauternes shape extending beyond the Graves shape",
+      "Graves supérieures": "no separate entry",
+      "Moulis": "listed as Moulis (5 communes)"
+    }
+  },
+  "transformation": {
+    "reader": "shapefile@0.6.6 with UTF-8 TextDecoder, from fflate@0.8.3 unzip",
+    "projection": "proj4@2.22.0, PRJ WKT -> +proj=longlat +datum=WGS84 (lon-lat), no datum shift; agrees with the EPSG:2154 PROJ string within 2.13e-14 degrees over the file bbox; agrees with an independent EPSG method 9802 evaluation to 1e-10 degrees",
+    "ring_orientation": "RFC 7946 (exterior counterclockwise, holes clockwise); rings reversed in order only",
+    "coordinate_precision": "8 decimal degrees (about 1 mm); 7 decimals would merge one 2 mm source segment into a duplicate vertex",
+    "validation": "native and reprojected: Polygon/MultiPolygon, finite, closed, >= 4 positions, non-zero area, no consecutive duplicates, simple rings, holes inside or touching their exterior; then the content pipeline structure check"
+  },
+  "tools": [
+    "proj4@2.22.0",
+    "shapefile@0.6.6",
+    "fflate@0.8.3",
+    "yaml@2.9.1",
+    "prettier@3.9.10",
+    "node@24.22.2"
+  ],
+  "checks": {
+    "total_source_features": 1852,
+    "mapped_entries": 39,
+    "published": 38,
+    "held": 1,
+    "reviewed": 0,
+    "total_vertices": 63392,
+    "geojson_bytes_total": 2306350,
+    "identical_coordinate_rows": [
+      ["Bordeaux", "Bordeaux supérieur", "Crémant de Bordeaux"],
+      ["Saint-Emilion", "Saint-Emilion grand cru"],
+      ["Graves", "Graves supérieures"]
+    ],
+    "holes_touching_exterior_in_file": 119,
+    "holes_outside_exterior_in_file": 0,
+    "moulis_polygon_37_sliver_holes_m2": [0.3, 0.2],
+    "nine_prior_features_bbox_max_delta_degrees": 4.959218813382904e-9,
+    "hole_crossing_sweep_2026_10_31": {
+      "method": "segment sweep (findRingCrossing), proper crossings only; vertex or edge contact allowed",
+      "file": {
+        "records": 1852,
+        "polygons": 13761,
+        "holes": 3213,
+        "holes_touching_exterior": 119,
+        "hole_exterior_crossings": 0,
+        "hole_hole_crossings": 0
+      },
+      "mapped_39": {
+        "polygons": 214,
+        "holes": 7,
+        "holes_touching_exterior": 2,
+        "hole_exterior_crossings": 0,
+        "hole_hole_crossings": 0
+      },
+      "unmapped_records_failing_structural_validation": 12,
+      "note": "the 12 failing records (zero-area parts or repeated consecutive positions) are outside the mapping; none of the 39 mapped records is affected"
+    }
+  },
+  "nested_shape_checks": {
+    "Barsac": {
+      "total": 159,
+      "inside": 128,
+      "outside_or_boundary": 31,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Haut-Médoc in Médoc": {
+      "total": 979,
+      "inside": 501,
+      "outside_or_boundary": 478,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Canon Fronsac in Fronsac": {
+      "total": 220,
+      "inside": 154,
+      "outside_or_boundary": 66,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Pessac-Léognan in Graves": {
+      "total": 620,
+      "inside": 486,
+      "outside_or_boundary": 134,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Cérons in Graves": {
+      "total": 237,
+      "inside": 131,
+      "outside_or_boundary": 106,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Sauternes in Graves": {
+      "total": 478,
+      "inside": 172,
+      "outside_or_boundary": 306,
+      "max_outside_distance_m": 2531.697,
+      "outside_over_1m": 42,
+      "outside_over_10m": 42
+    },
+    "Listrac in Haut-Médoc": {
+      "total": 331,
+      "inside": 331,
+      "outside_or_boundary": 0,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Pauillac in Haut-Médoc": {
+      "total": 1756,
+      "inside": 1732,
+      "outside_or_boundary": 24,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Margaux in Haut-Médoc": {
+      "total": 479,
+      "inside": 446,
+      "outside_or_boundary": 33,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Saint-Julien in Haut-Médoc": {
+      "total": 442,
+      "inside": 436,
+      "outside_or_boundary": 6,
+      "max_outside_distance_m": 0.288,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Saint-Estèphe in Haut-Médoc": {
+      "total": 216,
+      "inside": 138,
+      "outside_or_boundary": 78,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Moulis in Haut-Médoc": {
+      "total": 1587,
+      "inside": 1587,
+      "outside_or_boundary": 0,
+      "max_outside_distance_m": 0,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "Loupiac in Entre-deux-Mers": {
+      "total": 188,
+      "inside": 0,
+      "outside_or_boundary": 188,
+      "max_outside_distance_m": 6740.777,
+      "outside_over_1m": 188,
+      "outside_over_10m": 188
+    },
+    "Cadillac(AOC) in Entre-deux-Mers": {
+      "total": 1080,
+      "inside": 331,
+      "outside_or_boundary": 749,
+      "max_outside_distance_m": 8069.376,
+      "outside_over_1m": 644,
+      "outside_over_10m": 644
+    },
+    "CdB Blaye in Côtes de Bordeaux": {
+      "total": 1971,
+      "inside": 965,
+      "outside_or_boundary": 1006,
+      "max_outside_distance_m": 0.013,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "CdB Cadillac in Côtes de Bordeaux": {
+      "total": 1412,
+      "inside": 645,
+      "outside_or_boundary": 767,
+      "max_outside_distance_m": 0.013,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "CdB Castillon in Côtes de Bordeaux": {
+      "total": 730,
+      "inside": 436,
+      "outside_or_boundary": 294,
+      "max_outside_distance_m": 0.013,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "CdB Francs in Côtes de Bordeaux": {
+      "total": 258,
+      "inside": 151,
+      "outside_or_boundary": 107,
+      "max_outside_distance_m": 0.013,
+      "outside_over_1m": 0,
+      "outside_over_10m": 0
+    },
+    "CdB Sainte-Foy in Côtes de Bordeaux": {
+      "total": 1248,
+      "inside": 0,
+      "outside_or_boundary": 1248,
+      "max_outside_distance_m": 26355.27,
+      "outside_over_1m": 1248,
+      "outside_over_10m": 1248
+    }
+  },
+  "features": [
+    {
+      "entity_id": "appellation.barsac",
+      "geography_id": "geo.appellation-area.barsac",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 8,
+        "id_denom": 60,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Barsac",
+        "denom": "Barsac"
+      },
+      "register_labels": null,
+      "source_record_index": 7,
+      "geometry_type": "Polygon",
+      "vertex_count": 159,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        433995.6079999985, 6391785.67699795, 438204.7729999994, 6398065.7619979605
+      ],
+      "bbox_wgs84": [-0.35222182, 44.57525078, -0.29974172, 44.63188043],
+      "geojson_bytes": 6034,
+      "geojson_sha256": "5fd3edc96cfd855ba978a216a89dc6b291bc57f0f8c9e35609880c99ebcc3bf1",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 8,
+        "id_denom": 60,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 3.567372175439232e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 159,
+        "inside": 159,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.bordeaux",
+      "geography_id": "geo.appellation-area.bordeaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 14,
+        "id_denom": 67,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Bordeaux",
+        "denom": "Bordeaux"
+      },
+      "register_labels": null,
+      "source_record_index": 11,
+      "geometry_type": "Polygon",
+      "vertex_count": 6521,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        373064.33300000016, 6363748.281997896, 487885.50999999885, 6505262.274998144
+      ],
+      "bbox_wgs84": [-1.16950241, 44.32413759, 0.31506033, 45.57358629],
+      "geojson_bytes": 231367,
+      "geojson_sha256": "b92ed719b40784a4edbb0cfdc8f198d6a0f4ef9ad42670bee1c4026a8e5ff559",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 14,
+        "id_denom": 67,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 4.256008878655848e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": null
+    },
+    {
+      "entity_id": "appellation.bordeaux-superieur",
+      "geography_id": "geo.appellation-area.bordeaux-superieur",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 585,
+        "id_denom": 1740,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Bordeaux supérieur",
+        "denom": "Bordeaux supérieur"
+      },
+      "register_labels": null,
+      "source_record_index": 431,
+      "geometry_type": "Polygon",
+      "vertex_count": 6521,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        373064.33300000016, 6363748.281997896, 487885.50999999885, 6505262.274998144
+      ],
+      "bbox_wgs84": [-1.16950241, 44.32413759, 0.31506033, 45.57358629],
+      "geojson_bytes": 231397,
+      "geojson_sha256": "94c40d7857744d959441016dbbb27f5953c045953816d59b5d8e32887737b784",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": null
+    },
+    {
+      "entity_id": "appellation.cremant-de-bordeaux",
+      "geography_id": "geo.appellation-area.cremant-de-bordeaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 31,
+        "id_denom": 89,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Crémant de Bordeaux",
+        "denom": "Crémant de Bordeaux"
+      },
+      "register_labels": null,
+      "source_record_index": 30,
+      "geometry_type": "Polygon",
+      "vertex_count": 6521,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        373064.33300000016, 6363748.281997896, 487885.50999999885, 6505262.274998144
+      ],
+      "bbox_wgs84": [-1.16950241, 44.32413759, 0.31506033, 45.57358629],
+      "geojson_bytes": 231400,
+      "geojson_sha256": "f16367cba3c94d5d6d82bb8c533c55a89080d2fb8da8614a98d1c162ba6d4332",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": null
+    },
+    {
+      "entity_id": "appellation.cotes-de-bordeaux",
+      "geography_id": "geo.appellation-area.cotes-de-bordeaux",
+      "review_status": "held",
+      "feature_key": {
+        "id_app": 685,
+        "id_denom": 1849,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Côtes de Bordeaux",
+        "denom": "Côtes de Bordeaux"
+      },
+      "register_labels": null,
+      "source_record_index": 480,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 4148,
+      "rings": 3,
+      "bbox_native_lambert93": [
+        406764.2850000011, 6389789.230997943, 466032.3940000003, 6478049.854998096
+      ],
+      "bbox_wgs84": [-0.73797151, 44.55932394, 0.03461257, 45.34442324],
+      "geojson_bytes": 156884,
+      "geojson_sha256": "0bd0616f17ff23956f49177f2f969e01eae9eb6b997a6b28877fc28909f3ecee",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 4148,
+        "inside": 3568,
+        "outside_or_boundary": 580,
+        "max_outside_distance_m": 0.215,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.blaye-cotes-de-bordeaux",
+      "geography_id": "geo.appellation-area.blaye-cotes-de-bordeaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 685,
+        "id_denom": 2079,
+        "signe": "AOC",
+        "type_denom": "dénomination géographique complémentaire",
+        "app": "Côtes de Bordeaux",
+        "denom": "Côtes de Bordeaux Blaye"
+      },
+      "register_labels": null,
+      "source_record_index": 703,
+      "geometry_type": "Polygon",
+      "vertex_count": 1971,
+      "rings": 1,
+      "bbox_native_lambert93": [406764.28, 6443812.36, 441018.47000000003, 6478049.86],
+      "bbox_wgs84": [-0.73797159, 45.04335032, -0.2946908, 45.34442328],
+      "geojson_bytes": 70888,
+      "geojson_sha256": "ff4ae8a86da92c537392f8240f3a8ef5662e1fe75e9d43167ac11e6ed8b48425",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1971,
+        "inside": 1548,
+        "outside_or_boundary": 423,
+        "max_outside_distance_m": 0.219,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.cadillac-cotes-de-bordeaux",
+      "geography_id": "geo.appellation-area.cadillac-cotes-de-bordeaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 685,
+        "id_denom": 2077,
+        "signe": "AOC",
+        "type_denom": "dénomination géographique complémentaire",
+        "app": "Côtes de Bordeaux",
+        "denom": "Côtes de Bordeaux Cadillac"
+      },
+      "register_labels": null,
+      "source_record_index": 701,
+      "geometry_type": "Polygon",
+      "vertex_count": 1412,
+      "rings": 1,
+      "bbox_native_lambert93": [419685.87, 6389789.24, 447132.10000000003, 6431427.23],
+      "bbox_wgs84": [-0.54983335, 44.55932402, -0.18814601, 44.92582634],
+      "geojson_bytes": 50966,
+      "geojson_sha256": "58ec48bd434067343840978f8c61a19a265a3bf96a2f44d37c46f94e731d23f8",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1412,
+        "inside": 1412,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.castillon-cotes-de-bordeaux",
+      "geography_id": "geo.appellation-area.castillon-cotes-de-bordeaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 685,
+        "id_denom": 2078,
+        "signe": "AOC",
+        "type_denom": "dénomination géographique complémentaire",
+        "app": "Côtes de Bordeaux",
+        "denom": "Côtes de Bordeaux Castillon"
+      },
+      "register_labels": null,
+      "source_record_index": 702,
+      "geometry_type": "Polygon",
+      "vertex_count": 730,
+      "rings": 1,
+      "bbox_native_lambert93": [455027.36, 6419696.79, 466032.39, 6433018.08],
+      "bbox_wgs84": [-0.10188372, 44.83363367, 0.03461249, 44.95468827],
+      "geojson_bytes": 26289,
+      "geojson_sha256": "83e055d9939cf10700cd5f39c91ca09e3269a022beaf4fd4ff0bfce166d3cc0f",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 730,
+        "inside": 603,
+        "outside_or_boundary": 127,
+        "max_outside_distance_m": 0.065,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.francs-cotes-de-bordeaux",
+      "geography_id": "geo.appellation-area.francs-cotes-de-bordeaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 685,
+        "id_denom": 2080,
+        "signe": "AOC",
+        "type_denom": "dénomination géographique complémentaire",
+        "app": "Côtes de Bordeaux",
+        "denom": "Côtes de Bordeaux Francs"
+      },
+      "register_labels": null,
+      "source_record_index": 704,
+      "geometry_type": "Polygon",
+      "vertex_count": 258,
+      "rings": 1,
+      "bbox_native_lambert93": [459645.06, 6429669.24, 464791.22000000003, 6435096.5600000005],
+      "bbox_wgs84": [-0.04879907, 44.92502763, 0.01821453, 44.97389063],
+      "geojson_bytes": 9526,
+      "geojson_sha256": "89f51a2f6163666b48d01617d90db0a0392bcfafd91d71064bd7f438c9913ba5",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 258,
+        "inside": 230,
+        "outside_or_boundary": 28,
+        "max_outside_distance_m": 0.067,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.sainte-foy-cotes-de-bordeaux",
+      "geography_id": "geo.appellation-area.sainte-foy-cotes-de-bordeaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 685,
+        "id_denom": 2825,
+        "signe": "AOC",
+        "type_denom": "dénomination géographique complémentaire",
+        "app": "Côtes de Bordeaux",
+        "denom": "Côtes de Bordeaux Sainte-Foy"
+      },
+      "register_labels": null,
+      "source_record_index": 481,
+      "geometry_type": "Polygon",
+      "vertex_count": 1248,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        464611.36800000124, 6404398.78899797, 487885.50999999885, 6423065.695998004
+      ],
+      "bbox_wgs84": [0.02396242, 44.70061186, 0.31506033, 44.87250113],
+      "geojson_bytes": 43808,
+      "geojson_sha256": "2c095eda161d32d6dcede573b80ffa38557a082f614e46ec5a7501be8dfc2225",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1248,
+        "inside": 660,
+        "outside_or_boundary": 588,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.cadillac",
+      "geography_id": "geo.appellation-area.cadillac",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 20,
+        "id_denom": 76,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Cadillac",
+        "denom": "Cadillac"
+      },
+      "register_labels": null,
+      "source_record_index": 14,
+      "geometry_type": "Polygon",
+      "vertex_count": 1080,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        426266.0299999996, 6389789.197997944, 447132.1420000007, 6412228.553997981
+      ],
+      "bbox_wgs84": [-0.45804771, 44.55932366, -0.18814549, 44.75862257],
+      "geojson_bytes": 38994,
+      "geojson_sha256": "4257e2bb1ff26f6730dd3cc9989cffd2ab3e255abdb8d9ee4c2ebe0a8034326c",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1080,
+        "inside": 1080,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.canon-fronsac",
+      "geography_id": "geo.appellation-area.canon-fronsac",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 22,
+        "id_denom": 78,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Canon Fronsac",
+        "denom": "Canon Fronsac"
+      },
+      "register_labels": null,
+      "source_record_index": 16,
+      "geometry_type": "Polygon",
+      "vertex_count": 220,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        438270.87000000104, 6426509.50099801, 444255.59799999994, 6433657.03399802
+      ],
+      "bbox_wgs84": [-0.31769137, 44.88892463, -0.24203026, 44.95375401],
+      "geojson_bytes": 8233,
+      "geojson_sha256": "4a21cbcd508cf568d983fb10435522035e1975d31c0ad075d7eef91cd221a120",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 220,
+        "inside": 220,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.cerons",
+      "geography_id": "geo.appellation-area.cerons",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 23,
+        "id_denom": 79,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Cérons",
+        "denom": "Cérons"
+      },
+      "register_labels": null,
+      "source_record_index": 17,
+      "geometry_type": "Polygon",
+      "vertex_count": 237,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        428389.94599999976, 6392070.851997949, 436764.3499999993, 6401939.74999797
+      ],
+      "bbox_wgs84": [-0.42347681, 44.57646864, -0.31974987, 44.66535148],
+      "geojson_bytes": 8819,
+      "geojson_sha256": "d432821b5a072c0116c3c9d0fbc90e6077328de27e90f9beb7500b0dd8a16501",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 237,
+        "inside": 237,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.cotes-de-bourg",
+      "geography_id": "geo.appellation-area.cotes-de-bourg",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 18,
+        "id_denom": 74,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Côtes de Bourg, Bourg et Bourgeais",
+        "denom": "Côtes de Bourg, Bourg et Bourgeais"
+      },
+      "register_labels": null,
+      "source_record_index": 12,
+      "geometry_type": "Polygon",
+      "vertex_count": 715,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        411543.594, 6439993.5979980305, 427029.12499999854, 6452712.513998054
+      ],
+      "bbox_wgs84": [-0.66660849, 45.00446133, -0.46974945, 45.11756853],
+      "geojson_bytes": 25942,
+      "geojson_sha256": "ab2a3aaaea41ac4b78e5d5e7c5506bd2431cc69f14e99692586ce8e19ac5d0fe",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 715,
+        "inside": 715,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.champagne",
+      "geography_id": "geo.appellation-area.champagne",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 5,
+        "id_denom": 55,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Champagne",
+        "denom": "Champagne"
+      },
+      "register_labels": null,
+      "source_record_index": 4,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 11173,
+      "rings": 9,
+      "bbox_native_lambert93": [
+        710027.0530000003, 6758888.074998524, 840992.3479999993, 6928554.248998733
+      ],
+      "bbox_wgs84": [3.13704426, 47.92347407, 4.89975999, 49.45542893],
+      "geojson_bytes": 411489,
+      "geojson_sha256": "d548009eefe5f014a444ee6246e4a9e9d6837df7a084dfc9f7b05c1625f462fb",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": null
+    },
+    {
+      "entity_id": "appellation.entre-deux-mers",
+      "geography_id": "geo.appellation-area.entre-deux-mers",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 32,
+        "id_denom": 90,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Entre-deux-Mers",
+        "denom": "Entre-deux-Mers"
+      },
+      "register_labels": null,
+      "source_record_index": 32,
+      "geometry_type": "Polygon",
+      "vertex_count": 2938,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        416296.26000000065, 6386950.71299794, 476762.62999999995, 6444516.865998037
+      ],
+      "bbox_wgs84": [-0.60367846, 44.54145437, 0.18351226, 45.04183822],
+      "geojson_bytes": 104563,
+      "geojson_sha256": "84959b260ec040b37b3bd9a7543951c3bb8d56e38428b8e710f90800e80f8b9e",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 2938,
+        "inside": 2456,
+        "outside_or_boundary": 482,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.fronsac",
+      "geography_id": "geo.appellation-area.fronsac",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 33,
+        "id_denom": 92,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Fronsac",
+        "denom": "Fronsac"
+      },
+      "register_labels": null,
+      "source_record_index": 33,
+      "geometry_type": "Polygon",
+      "vertex_count": 545,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        435840.7299999991, 6426509.50099801, 444294.0409999991, 6440386.479998038
+      ],
+      "bbox_wgs84": [-0.34943869, 44.88892463, -0.24203026, 45.01416642],
+      "geojson_bytes": 19861,
+      "geojson_sha256": "346c80764334bcbe470b142f8ab3978ea7b3d59a1591657de07d783496250f40",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 545,
+        "inside": 545,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.graves",
+      "geography_id": "geo.appellation-area.graves",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 37,
+        "id_denom": 96,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Graves",
+        "denom": "Graves"
+      },
+      "register_labels": null,
+      "source_record_index": 36,
+      "geometry_type": "Polygon",
+      "vertex_count": 1773,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        391364.76700000046, 6380046.429997924, 448129.487, 6428705.476998014
+      ],
+      "bbox_wgs84": [-0.90492411, 44.47224126, -0.1725987, 44.89820224],
+      "geojson_bytes": 63763,
+      "geojson_sha256": "943767a0117e2c77199f7b6236aa54516264af370ec71098558deea9fa904e54",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1773,
+        "inside": 1731,
+        "outside_or_boundary": 42,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.graves-superieures",
+      "geography_id": "geo.appellation-area.graves-superieures",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 855,
+        "id_denom": 2037,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Graves supérieures",
+        "denom": "Graves supérieures"
+      },
+      "register_labels": null,
+      "source_record_index": 510,
+      "geometry_type": "Polygon",
+      "vertex_count": 1773,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        391364.76700000046, 6380046.429997924, 448129.487, 6428705.476998014
+      ],
+      "bbox_wgs84": [-0.90492411, 44.47224126, -0.1725987, 44.89820224],
+      "geojson_bytes": 63799,
+      "geojson_sha256": "3946994dc9b27abc679e0a7bb3bc638adfb73bcbeec581ba7a82765bce920c93",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": null
+    },
+    {
+      "entity_id": "appellation.haut-medoc",
+      "geography_id": "geo.appellation-area.haut-medoc",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 39,
+        "id_denom": 98,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Haut-Médoc",
+        "denom": "Haut-Médoc"
+      },
+      "register_labels": null,
+      "source_record_index": 38,
+      "geometry_type": "Polygon",
+      "vertex_count": 979,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        385194.0880000005, 6423338.124998007, 421005.0179999994, 6474926.525998092
+      ],
+      "bbox_wgs84": [-0.99467532, 44.8469293, -0.53974121, 45.30970503],
+      "geojson_bytes": 35396,
+      "geojson_sha256": "c074663bebc40dea899d0ca13b62d888c1776a74f02ee5b41859218c8eccef73",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 979,
+        "inside": 863,
+        "outside_or_boundary": 116,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.lalande-de-pomerol",
+      "geography_id": "geo.appellation-area.lalande-de-pomerol",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 44,
+        "id_denom": 103,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Lalande-de-Pomerol",
+        "denom": "Lalande-de-Pomerol"
+      },
+      "register_labels": null,
+      "source_record_index": 42,
+      "geometry_type": "Polygon",
+      "vertex_count": 260,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        445179.9699999986, 6430825.048998012, 451511.85000000003, 6435105.925998024
+      ],
+      "bbox_wgs84": [-0.23165991, 44.93134911, -0.15118867, 44.96925698],
+      "geojson_bytes": 9683,
+      "geojson_sha256": "fd30fe9ee19e87cb51f310aedf26c9b221314ca0243e8ea3c2c7a4b138d16f25",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 260,
+        "inside": 260,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.listrac-medoc",
+      "geography_id": "geo.appellation-area.listrac-medoc",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 45,
+        "id_denom": 104,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Listrac-Médoc",
+        "denom": "Listrac-Médoc"
+      },
+      "register_labels": null,
+      "source_record_index": 44,
+      "geometry_type": "Polygon",
+      "vertex_count": 331,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        392199.6099999993, 6443732.7189980345, 405733.28800000064, 6453162.92799806
+      ],
+      "bbox_wgs84": [-0.91172837, 45.02605185, -0.74220681, 45.11344572],
+      "geojson_bytes": 12211,
+      "geojson_sha256": "f5aa47e1815fdd6415ed633ad66f4053b9f190e9d0a8874664af84979a4a9fb2",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 331,
+        "inside": 331,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.loupiac",
+      "geography_id": "geo.appellation-area.loupiac",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 46,
+        "id_denom": 105,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Loupiac",
+        "denom": "Loupiac"
+      },
+      "register_labels": null,
+      "source_record_index": 45,
+      "geometry_type": "Polygon",
+      "vertex_count": 188,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        437274.6529999994, 6394714.106997948, 441717.86700000113, 6399831.657997963
+      ],
+      "bbox_wgs84": [-0.31305228, 44.60223223, -0.25787007, 44.64908795],
+      "geojson_bytes": 7083,
+      "geojson_sha256": "9f70a1e446839e129b0180cd9bfc73a4bd6ebd6f5d846606d0eb23a48956f4fd",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 188,
+        "inside": 188,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.lussac-saint-emilion",
+      "geography_id": "geo.appellation-area.lussac-saint-emilion",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 47,
+        "id_denom": 106,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Lussac-Saint-Emilion",
+        "denom": "Lussac-Saint-Emilion"
+      },
+      "register_labels": {
+        "appellation": "Lussac Saint-Emilion",
+        "denomination": "Lussac Saint-Emilion"
+      },
+      "source_record_index": 46,
+      "geometry_type": "Polygon",
+      "vertex_count": 376,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        453217.47899999976, 6431157.819998016, 459926.69399999955, 6438177.508998028
+      ],
+      "bbox_wgs84": [-0.13044699, 44.93670338, -0.04504266, 44.99954656],
+      "geojson_bytes": 13831,
+      "geojson_sha256": "f27550ee229ccfcc34ca65dd634a274d9a34601868c1902181ef2325982549e1",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 376,
+        "inside": 376,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.margaux",
+      "geography_id": "geo.appellation-area.margaux",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 52,
+        "id_denom": 111,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Margaux",
+        "denom": "Margaux"
+      },
+      "register_labels": null,
+      "source_record_index": 51,
+      "geometry_type": "Polygon",
+      "vertex_count": 479,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        404079.9500000007, 6435502.018998022, 415051.6049999993, 6448919.293998045
+      ],
+      "bbox_wgs84": [-0.7545417, 44.95635416, -0.61856103, 45.07894241],
+      "geojson_bytes": 17483,
+      "geojson_sha256": "6db95151317bd884666034748e004d475738ef18ac47cd961c87228e71cc72a2",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 52,
+        "id_denom": 111,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 4.959218813382904e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 479,
+        "inside": 479,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.medoc",
+      "geography_id": "geo.appellation-area.medoc",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 53,
+        "id_denom": 112,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Médoc",
+        "denom": "Médoc"
+      },
+      "register_labels": null,
+      "source_record_index": 58,
+      "geometry_type": "Polygon",
+      "vertex_count": 1645,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        373064.33300000016, 6423338.124998007, 421005.0179999994, 6505262.274998144
+      ],
+      "bbox_wgs84": [-1.16950241, 44.8469293, -0.53974121, 45.57358629],
+      "geojson_bytes": 59225,
+      "geojson_sha256": "b43c590a9206d396985c2117384c8faa815aeb4c6aa4cf81b0be1e51cf2f0d9e",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1645,
+        "inside": 1039,
+        "outside_or_boundary": 606,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.montagne-saint-emilion",
+      "geography_id": "geo.appellation-area.montagne-saint-emilion",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 55,
+        "id_denom": 114,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Montagne-Saint-Emilion",
+        "denom": "Montagne-Saint-Emilion"
+      },
+      "register_labels": null,
+      "source_record_index": 61,
+      "geometry_type": "Polygon",
+      "vertex_count": 426,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        448805.7119999999, 6427086.921998009, 457379.6099999996, 6434522.434998025
+      ],
+      "bbox_wgs84": [-0.18610874, 44.89998267, -0.07460057, 44.96469551],
+      "geojson_bytes": 15634,
+      "geojson_sha256": "4257eddf3386360c9103634994ec4eb040551880177ed91834f645cf2905fa87",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 426,
+        "inside": 426,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.moulis-en-medoc",
+      "geography_id": "geo.appellation-area.moulis-en-medoc",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 57,
+        "id_denom": 116,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Moulis ou Moulis-en-Médoc",
+        "denom": "Moulis ou Moulis-en-Médoc"
+      },
+      "register_labels": null,
+      "source_record_index": 63,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 1587,
+      "rings": 84,
+      "bbox_native_lambert93": [
+        395631.2079999998, 6442700.612998038, 407176.06299999857, 6452140.23799805
+      ],
+      "bbox_wgs84": [-0.86537341, 45.01666659, -0.72421742, 45.10616828],
+      "geojson_bytes": 63327,
+      "geojson_sha256": "90ed6854ed57e0d3963e9d9628f19d21f515881f58a06b1486e39d5698dfd488",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1587,
+        "inside": 1587,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.pauillac",
+      "geography_id": "geo.appellation-area.pauillac",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 59,
+        "id_denom": 118,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Pauillac",
+        "denom": "Pauillac"
+      },
+      "register_labels": null,
+      "source_record_index": 64,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 1756,
+      "rings": 79,
+      "bbox_native_lambert93": [
+        398072.0499999988, 6458881.055998063, 408472.38899999874, 6469973.663998085
+      ],
+      "bbox_wgs84": [-0.84662316, 45.16568083, -0.71321296, 45.26594967],
+      "geojson_bytes": 69443,
+      "geojson_sha256": "fc77fde09c3971617879bf195fc20c6bbdb8ff0ed7aa965ab01ab04a8927d00e",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 59,
+        "id_denom": 118,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 4.784915574873594e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1756,
+        "inside": 1756,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.pessac-leognan",
+      "geography_id": "geo.appellation-area.pessac-leognan",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 61,
+        "id_denom": 120,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Pessac-Léognan",
+        "denom": "Pessac-Léognan"
+      },
+      "register_labels": null,
+      "source_record_index": 66,
+      "geometry_type": "Polygon",
+      "vertex_count": 620,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        402646.5400000003, 6404953.918997972, 424646.1330000005, 6424840.057998009
+      ],
+      "bbox_wgs84": [-0.75855854, 44.68355823, -0.47818547, 44.86266696],
+      "geojson_bytes": 22547,
+      "geojson_sha256": "b3a9f1eafed5fe5d3ff3459bd3d21f298d6ad5c116848a1eff0e963fc7efed26",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 620,
+        "inside": 620,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.pomerol",
+      "geography_id": "geo.appellation-area.pomerol",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 62,
+        "id_denom": 121,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Pomerol",
+        "denom": "Pomerol"
+      },
+      "register_labels": null,
+      "source_record_index": 68,
+      "geometry_type": "Polygon",
+      "vertex_count": 377,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        442605.990999999, 6424577.811998006, 449632.425, 6433379.0989980195
+      ],
+      "bbox_wgs84": [-0.2631619, 44.87279212, -0.17424483, 44.95214468],
+      "geojson_bytes": 13835,
+      "geojson_sha256": "eb1cefe4db4680601166ebd3edd6ed6c8f22f3752074dcce7ea59f1a9361a347",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 62,
+        "id_denom": 121,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 4.88521578745349e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 377,
+        "inside": 377,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.puisseguin-saint-emilion",
+      "geography_id": "geo.appellation-area.puisseguin-saint-emilion",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 65,
+        "id_denom": 160,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Puisseguin-Saint-Emilion",
+        "denom": "Puisseguin-Saint-Emilion"
+      },
+      "register_labels": {
+        "appellation": "Puisseguin Saint-Emilion",
+        "denomination": "Puisseguin Saint-Emilion"
+      },
+      "source_record_index": 70,
+      "geometry_type": "Polygon",
+      "vertex_count": 1183,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        455598.50300000154, 6427743.254998011, 460068.0009999992, 6433029.443998021
+      ],
+      "bbox_wgs84": [-0.09809886, 44.90634844, -0.04305377, 44.95479409],
+      "geojson_bytes": 42691,
+      "geojson_sha256": "5d89157fa1ff772abcabd3d356fd17a80d1d02ba6a2b0d66c125621751f7ac22",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 1183,
+        "inside": 1183,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.saint-emilion",
+      "geography_id": "geo.appellation-area.saint-emilion",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 67,
+        "id_denom": 162,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Saint-Emilion",
+        "denom": "Saint-Emilion"
+      },
+      "register_labels": null,
+      "source_record_index": 73,
+      "geometry_type": "Polygon",
+      "vertex_count": 694,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        442605.990999999, 6419895.350997999, 457850.7240000003, 6433379.0989980195
+      ],
+      "bbox_wgs84": [-0.2631619, 44.83248853, -0.06765766, 44.95214468],
+      "geojson_bytes": 25195,
+      "geojson_sha256": "c805ce2e302b119f7928e6d6a1d98ab0af5718ac300662dd8719ee897d85ba70",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 67,
+        "id_denom": 162,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 4.870672573598078e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 694,
+        "inside": 694,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.saint-emilion-grand-cru",
+      "geography_id": "geo.appellation-area.saint-emilion-grand-cru",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 68,
+        "id_denom": 163,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Saint-Emilion grand cru",
+        "denom": "Saint-Emilion grand cru"
+      },
+      "register_labels": null,
+      "source_record_index": 75,
+      "geometry_type": "Polygon",
+      "vertex_count": 694,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        442605.990999999, 6419895.350997999, 457850.7240000003, 6433379.0989980195
+      ],
+      "bbox_wgs84": [-0.2631619, 44.83248853, -0.06765766, 44.95214468],
+      "geojson_bytes": 25225,
+      "geojson_sha256": "cfe5d30563b2680ebfd81e41f27e6a03473abd7ab0e0f104f833edf186d8dff6",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": null
+    },
+    {
+      "entity_id": "appellation.saint-estephe",
+      "geography_id": "geo.appellation-area.saint-estephe",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 69,
+        "id_denom": 166,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Saint-Estèphe",
+        "denom": "Saint-Estèphe"
+      },
+      "register_labels": null,
+      "source_record_index": 77,
+      "geometry_type": "Polygon",
+      "vertex_count": 216,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        400726.37099999934, 6465267.816998074, 406049.10899999976, 6471988.998998088
+      ],
+      "bbox_wgs84": [-0.81590408, 45.22238154, -0.74696496, 45.28388336],
+      "geojson_bytes": 8086,
+      "geojson_sha256": "9e6a147f73e03481f40123093420f354145c4000536bf4d9026ecc04585a385e",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 69,
+        "id_denom": 166,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 3.6125911151430046e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 216,
+        "inside": 138,
+        "outside_or_boundary": 78,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.saint-georges-saint-emilion",
+      "geography_id": "geo.appellation-area.saint-georges-saint-emilion",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 70,
+        "id_denom": 167,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Saint-Georges-Saint-Emilion",
+        "denom": "Saint-Georges-Saint-Emilion"
+      },
+      "register_labels": null,
+      "source_record_index": 1846,
+      "geometry_type": "Polygon",
+      "vertex_count": 570,
+      "rings": 1,
+      "bbox_native_lambert93": [450971.24, 6428641.66, 453558.7, 6430942.61],
+      "bbox_wgs84": [-0.15674894, 44.91286162, -0.12393413, 44.93327306],
+      "geojson_bytes": 20816,
+      "geojson_sha256": "bf3c1e87cb834c1501fa5ed1aa27f0aafd6d8c21549be28e93b746069179ec3d",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 570,
+        "inside": 570,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.saint-julien",
+      "geography_id": "geo.appellation-area.saint-julien",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 71,
+        "id_denom": 168,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Saint-Julien",
+        "denom": "Saint-Julien"
+      },
+      "register_labels": null,
+      "source_record_index": 79,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 442,
+      "rings": 12,
+      "bbox_native_lambert93": [
+        400251.94099999854, 6451816.001998049, 409832.8409999996, 6460769.880998067
+      ],
+      "bbox_wgs84": [-0.81609196, 45.10229827, -0.69325901, 45.18453625],
+      "geojson_bytes": 17491,
+      "geojson_sha256": "d016377456e9e3749227fd3948ee9d5eafce7837ac4ada6b3ec806bf41f4f7f3",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 71,
+        "id_denom": 168,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 4.08053668632391e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 442,
+        "inside": 442,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.sainte-croix-du-mont",
+      "geography_id": "geo.appellation-area.sainte-croix-du-mont",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 72,
+        "id_denom": 169,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Sainte-Croix-du-Mont",
+        "denom": "Sainte-Croix-du-Mont"
+      },
+      "register_labels": null,
+      "source_record_index": 80,
+      "geometry_type": "Polygon",
+      "vertex_count": 148,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        438086.3450000004, 6392504.441997948, 442755.103, 6395651.363997953
+      ],
+      "bbox_wgs84": [-0.30133003, 44.58312062, -0.24281304, 44.61228327],
+      "geojson_bytes": 5681,
+      "geojson_sha256": "b52905a4665cd8e8947b6966afa8fe99cc879d0e0c3fe210bfc13073ae6931a9",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": null,
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 148,
+        "inside": 148,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    },
+    {
+      "entity_id": "appellation.sauternes",
+      "geography_id": "geo.appellation-area.sauternes",
+      "review_status": "published",
+      "feature_key": {
+        "id_app": 75,
+        "id_denom": 172,
+        "signe": "AOC",
+        "type_denom": "appellation",
+        "app": "Sauternes",
+        "denom": "Sauternes"
+      },
+      "register_labels": null,
+      "source_record_index": 83,
+      "geometry_type": "Polygon",
+      "vertex_count": 478,
+      "rings": 1,
+      "bbox_native_lambert93": [
+        431926.14600000146, 6384236.5929979365, 440927.86799999967, 6398065.7619979605
+      ],
+      "bbox_wgs84": [-0.37436391, 44.50761485, -0.26140576, 44.63188043],
+      "geojson_bytes": 17445,
+      "geojson_sha256": "217023d9e0eee9e75bfdc6383b582be9d2ff6a58630da8cdbc6b1408a89e02d4",
+      "dbf_fields_verified": ["type_denom", "denom"],
+      "dbf_fields_blank_in_edition": ["id_app", "id_denom", "app", "signe"],
+      "prior_edition_2026_10_12": {
+        "id_app": 75,
+        "id_denom": 172,
+        "vertices_equal": true,
+        "geometry_type_equal": true,
+        "max_bbox_wgs84_delta_degrees": 3.3511036168221153e-9
+      },
+      "vertices_within_bordeaux_aoc_shape": {
+        "total": 478,
+        "inside": 478,
+        "outside_or_boundary": 0,
+        "max_outside_distance_m": 0,
+        "outside_over_1m": 0,
+        "outside_over_10m": 0
+      }
+    }
+  ]
+}

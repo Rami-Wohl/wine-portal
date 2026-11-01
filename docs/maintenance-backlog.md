@@ -1,5 +1,4 @@
 # Algemene onderhoudsbacklog
-
 Dit is de centrale, levende lijst van kwaliteits- en onderhoudsacties voor
 Oenocademy. Gedateerde rapporten bewaren de oorspronkelijke controles en
 bevindingen; dit document bewaart de actuele status, uitvoering en resterende
@@ -21,16 +20,16 @@ werkvoorraad. De werkwijze en het reviewregister staan in
 
 ## Actuele stand
 
-Peildatum: 2026-10-30.
+Peildatum: 2026-11-01 (featurebranch `feat/attempt-at-atlas`).
 
 | Status | Aantal | Acties |
 | --- | ---: | --- |
-| Open | 8 | `MNT-050`, `MNT-053`, `MNT-060` t/m `MNT-062`, `MNT-064/065`, `MNT-072` |
+| Open | 28 | `MNT-050`, `MNT-053`, `MNT-060` t/m `MNT-062`, `MNT-064/065`, `MNT-072`, `MNT-074` t/m `MNT-076`, `MNT-079` t/m `MNT-081`, `MNT-083` t/m `MNT-096` |
 | Gepland | 0 | — |
 | Bezig | 0 | — |
-| Geblokkeerd | 4 | `MNT-020`, `MNT-039`, `MNT-056`, `MNT-073` |
-| Geparkeerd | 5 | `MNT-002`, `MNT-013`, `MNT-014`, `MNT-070/071` (achteraan) |
-| Afgerond | 56 | `MNT-001`, `MNT-003` t/m `MNT-012`, `MNT-015` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-051/052`, `MNT-054/055`, `MNT-057–059`, `MNT-063`, `MNT-066–069` |
+| Geblokkeerd | 5 | `MNT-020`, `MNT-039`, `MNT-056`, `MNT-073`, `MNT-082` (gebruikersbesluit) |
+| Geparkeerd | 1 | `MNT-013` (achteraan) |
+| Afgerond | 62 | `MNT-001` t/m `MNT-012`, `MNT-014` t/m `MNT-019`, `MNT-021` t/m `MNT-038`, `MNT-040` t/m `MNT-049`, `MNT-051/052`, `MNT-054/055`, `MNT-057–059`, `MNT-063`, `MNT-066–071`, `MNT-077`, `MNT-078` |
 | Vervallen | 0 | — |
 
 De [productplanning](product-roadmap.md) geeft de volgorde van alle resterende
@@ -47,11 +46,15 @@ Curriculumvoorbereiding (`LRN-013`) en alle acht tweetalige wijngaardlessen
 (`LRN-014–017`) zijn afgerond. Na de bestaande Pomerol-broncorrectie (`MNT-072`)
 krijgt inhoudelijk Learn-/Explore-werk voorrang, met nieuw curriculumvoorbereidend
 werk `LRN-018` en `EXP-027/028/032`. Onderhoud volgt proportioneel aan de content.
-Atlas (`MNT-002/013/014/070/071`) staat bewust achteraan in de aparte groep
-onderaan de actuele backlog; de afbakening `MNT-051` blijft historische research.
-Het [oude pilotcontract](atlas-pilot-contract.md) is geen actieve bouwopdracht.
+Atlas (`MNT-002/014/070/071`) is op de featurebranch `feat/attempt-at-atlas`
+afgerond volgens het [Atlas-contract](atlas-plan.md), gevolgd door UX-ronde A
+(`MNT-077`, [review](../editorial/atlas-ux-round-a-review-2026-10-31.md));
+het vervolg staat in `MNT-074–076` en de open rijen van de
+[Atlas-UX-review](../editorial/atlas-ux-review-2026-10-31.md), `MNT-013`
+blijft geparkeerd en `MNT-051` blijft historische research. Op `main` geldt
+het uitstel tot de merge.
 De [feedbackvoorbereiding](feedback-roadmap.md) en platformgate `MNT-050`
-blijven eveneens geparkeerd, vóór Atlas maar zonder huidige uitvoeropdracht.
+blijven geparkeerd zonder huidige uitvoeropdracht.
 De [codebase-review](../editorial/codebase-health-review-2026-10-11.md) motiveert
 de prioriteitswijziging; de regionale fase staat in een eigen `REG-*`-planning.
 Opvoeding, botteling, kelderhygiëne en bijzondere methodefamilies zijn afgerond
@@ -352,19 +355,20 @@ zijn deze ronde niet inhoudelijk herbeoordeeld.
   2026-11-30; handmatig, geen automation. Bij een nieuwe advisory meteen triëren.
 - **Planning:** na het huidige contentwerk, zodra compatibel; Atlas blijft achteraan.
 
-## Geparkeerde Atlas — achteraan de backlog
+## Atlas — hervat op de featurebranch
 
-**Gebruikersbesluit 2026-10-30:** Atlas uitstellen en anders gaan ontwerpen.
-De huidige pagina, navigatie en styling zijn verwijderd. Geen automatische
-hervatting bij beschikbare data, een afgerond contentticket of regiogroei.
-Eerst Leren en Ontdekken; ook overige geparkeerde sporen staan vóór deze groep.
-Onderzoek blijft naslag. De oude pilot en onderstaande acceptatiecriteria zijn
-kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
+**Gebruikersbesluit 2026-10-30 (branch `feat/attempt-at-atlas`):** Atlas is
+gebouwd volgens het [Atlas-implementatiecontract](atlas-plan.md). Scope,
+acceptatiecriteria en fase per ticket staan in dat contract; de beschrijvingen
+hieronder bewaren de herkomst. MNT-070/071/002/014 zijn op 2026-10-31 afgerond
+([release-één-review](../editorial/atlas-release-one-review-2026-10-31.md));
+MNT-074–076 bevatten het vervolg; MNT-013 blijft geparkeerd. Op `main` blijft
+het uitstelbesluit gelden tot de merge.
 
 ### `MNT-070` — Minimaal geografiemodel en repositorygrens voor de Atlaspilot
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** knowledge-data, atlas-gis, engineering, testing
 - **Herkomst:** `QCR-2026-10-14-02`
 - **Scope:** de negen bestaande appellationidentities uit het
@@ -381,11 +385,17 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** geografierecord- en scènemodel (zod), pipelinevalidatie
+  in `content:check`, displaybuild met topologiebehoudende vereenvoudiging en
+  build-time projectie, server-only repository met previewschakelaar en
+  Nederlandse slugaliassen; acht scènes binnen budget (grootste 173 KiB gzip).
 
 ### `MNT-071` — INAO-Bordeauxsnapshot gecontroleerd importeren en publiceren
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** atlas-gis, research, engineering, testing
 - **Herkomst:** `QCR-2026-10-14-02`
 - **Scope:** vastgepinde SHP-versie 2026-10-12, negen reviewed identifierparen;
@@ -407,11 +417,17 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** 39 appellationgebieden (38 gepubliceerd, Côtes de
+  Bordeaux `held`), 8 rivieren, 9 waterlichamen, kustlijn en 29 plaatsen uit
+  INAO, IGN BD CARTO en Admin Express met volledige provenance en vastgepinde
+  ruwe responses; INAO-editie 2026-10-26 heeft lege sleutelvelden, zie `MNT-074`.
 
 ### `MNT-002` — Geverifieerde Atlas-kaart voor Bordeaux
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** atlas-gis, media
 - **Scope:** `region.bordeaux`
 - **Herkomst:** `QCR-2026-09-08-01`
@@ -434,11 +450,17 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** `/atlas`, `/en/atlas` en acht scèneroutes met
+  Bordeaux-overzicht, overlapkiezer, lijstalternatief als toetsenbordpad,
+  legenda, credits en berekende dekking; navigatie en home-ingang als
+  voorvertoning; inbedding op regio- en appellationpagina's na de summary.
 
 ### `MNT-014` — Grenzen van Barsac en Sauternes via Atlas
 
-- **Status:** geparkeerd
-- **Prioriteit:** achteraan; alleen na expliciete herprioritering
+- **Status:** afgerond op 2026-10-31 op `feat/attempt-at-atlas`
+- **Prioriteit:** afgerond; vervolg via `MNT-074–076`
 - **Categorie:** atlas-gis, media
 - **Scope:** `appellation.barsac`, `appellation.sauternes`
 - **Herkomst:** `QCR-2026-09-08-01`
@@ -459,6 +481,468 @@ kandidaten om bij een expliciete hervatopdracht opnieuw te beoordelen.
 - **Besluit 2026-10-30:** op gebruikersverzoek geparkeerd. Bovenstaande scope
   is een eerder voorstel, geen vrijgegeven implementatie. Hervatting begint met
   een nieuwe ontwerpkeuze en bron-/scopehercontrole; geen voorganger van content.
+- **Hervat 2026-10-30:** op de featurebranch met nieuwe scope volgens
+  [atlas-plan.md](atlas-plan.md); fase en acceptatiecriteria staan daar.
+- **Afgerond 2026-10-31:** Barsac en Sauternes als afzonderlijke gebieden in
+  de Graves-Sauternais-scène, ingebed op beide appellationpagina's met
+  uitgelicht gebied en overlapkiezer; geen containment afgeleid.
+
+### `MNT-074` — Atlas-databronnen: INAO-sleutelvelden, Côtes de Bordeaux en niet-Franse appellations
+
+- **Status:** open
+- **Prioriteit:** middel; vóór het opheffen van de preview (`MNT-076`)
+- **Scope:** `data/geography/**`, geografische bronrecords in `data/sources/`
+- **Categorie:** atlas-gis, research
+- **Herkomst:** `QCR-2026-10-31-01`
+- **Bevinding:** de INAO-editie 2026-10-26 heeft in alle 1.852 records lege
+  sleutelvelden (`id_app`, `id_denom`, `app`, `signe`); identiteit steunt op
+  exacte denominatielabels plus het vastgepinde INAO-productregister. Het
+  appellationniveau van Côtes de Bordeaux mist de sector Sainte-Foy en staat
+  `held`. Port en Sherry hebben geen geverifieerde geometrie.
+- **Klaar wanneer:** een gecorrigeerde INAO-editie is herpind en met sleutelcontrole
+  opnieuw geïmporteerd, of het uitblijven is gedocumenteerd met een nieuwe
+  hercontroledatum; Côtes de Bordeaux is gepubliceerd of met bronbewijs
+  blijvend uitgesloten; voor Port en Sherry is een bronreview (licentie, CRS,
+  identiteit) gedaan of een eerlijke uitsluiting vastgelegd.
+- **Planning:** hercontrole INAO uiterlijk 2026-12-31; geen voorganger van content.
+- **Log:** 2026-10-31 — geregistreerd uit de release-één-review.
+
+### `MNT-075` — Atlas-presentatie: rivierlabels, vormtweelingen, smalle overzichtskaart en locator
+
+- **Status:** open
+- **Prioriteit:** laag; na gebruikersreview van de preview
+- **Scope:** `src/components/atlas/**`, `src/styles/atlas.css`, scènedefinities
+- **Categorie:** atlas-gis, media, engineering
+- **Herkomst:** `QCR-2026-10-31-01`
+- **Bevinding:** rivieren hebben geen naam langs de lijn; Graves Supérieures en
+  Saint-Émilion Grand Cru delen hun vorm met een andere appellation en openen
+  daardoor altijd de kiezer; het Bordeaux-overzicht is op 320 px druk (AOP Médoc
+  en AOP Entre-deux-Mers passen niet); zonder JavaScript benadert de
+  labelplanning brede schermen; er is geen locator-inzet.
+- **Klaar wanneer:** rivierlabels langs de lijn met botsingscontrole; een
+  afgesproken presentatie voor vormtweelingen; een labelstrategie voor het
+  overzicht op smalle schermen; een locator-inzet pas na eigen bronreview
+  (Natural Earth of IGN); printcontrole in echte browsers.
+- **Planning:** na `MNT-076` of op gebruikersverzoek.
+- **Log:** 2026-10-31 — geregistreerd uit de QA-browserronde.
+
+### `MNT-076` — Atlas-preview opheffen: releasegate, indexering en merge
+
+- **Status:** open
+- **Prioriteit:** gebruikersbesluit
+- **Scope:** `ATLAS_PREVIEW` in `src/content/geography.ts`, sitemap en metadata,
+  home-, About- en kopregelcopy
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-10-31-01`
+- **Bevinding:** alle Atlasroutes zijn `noindex` en buiten de sitemap zolang de
+  previewschakelaar aanstaat; home, About en de kopregels volgen dezelfde
+  schakelaar, zonder handgetypte dekkingsclaims.
+- **Klaar wanneer:** de gebruiker de preview heeft beoordeeld; `MNT-074` is
+  afgerond of bewust geaccepteerd; de schakelaar staat uit; `metadata.test.ts`
+  en `routing.test.ts` bevestigen de nieuwe stand; de volledige browsersuite
+  slaagt; de branch is naar `main` gemerged met bijgewerkte roadmap en
+  projectmap.
+- **Planning:** na de gebruikersdemo van release één.
+- **Log:** 2026-10-31 — geregistreerd uit de release-één-review.
+
+### `MNT-077` — Atlas UX-ronde A: kaart eerst, bediening op de kaart, gebarenmodel, kiezer en compacte inbedding
+
+- **Status:** afgerond (2026-10-31)
+- **Prioriteit:** hoog; gebruikersbesluit 2026-10-31
+- **Scope:** `src/components/atlas/**`, `src/styles/atlas.css`, Atlas-sectie van
+  `src/styles/responsive.css`, `src/styles/page-intros.css` (linkregel),
+  `src/app/[lang]/atlas/**`, miniatuurartefact in `scripts/geography/lib/**`,
+  `scripts/geography/build.test.ts`, `src/content/model/geography.ts`
+  (miniatuurschema) en `src/generated/geography/index.json`,
+  `data/geography/README.md`, `e2e/atlas.spec.ts`, en in `src/styles/base.css`
+  alleen het token `--header-offset` en het verbergen van de skiplink bij printen
+- **Categorie:** atlas-gis, engineering, media
+- **Herkomst:** `QCR-2026-10-31-02`, voorstellen 1–9 van de prioriteitsvolgorde
+  (`UX-01`, `UX-02`, `UX-03`, `UX-04`, `UX-05`, `UX-06`, `UX-07`, `UX-08`,
+  `UX-15`, `UX-16`, `UX-17`, `UX-23`)
+- **Bevinding:** de kaart begint op de telefoon na 1,5 tot 4 schermen en op
+  desktop onder de vouw; de toggle "Kaart bedienen" is onbekend en laat na `+`
+  geen slepen toe; de kiezer zet het aangeklikte gebied als derde en herhaalt
+  "Overkoepelend gebied" per regel; de werkbalk verschuift de kaart na
+  hydratie; uitleg staat drie keer; "Lees over …" is onzichtbaar als link; de
+  legenda staat op desktop 1.900 px onder de kaart; tellingen van vouw en
+  dekkingsregel spreken elkaar tegen.
+- **Klaar wanneer:** op 390 px begint de kaart van elke scèneroute binnen
+  900 px en op 1440 px is minstens 60 % van het kader bij laden zichtbaar; op
+  `/atlas` geldt dat voor de regiokaarten, die vóór het overzicht staan; de
+  kaartpositie is met en zonder JavaScript gelijk; `/atlas` opent met
+  regiokaarten met miniaturen (alleen selecteerbare gebieden); de kiezer toont het
+  specifiekste gebied eerst en overkoepelende gebieden op één regel; slepen
+  verschuift direct, het wiel zoomt alleen met Ctrl/⌘ en één vinger scrolt de
+  pagina; het ingebedde Médoc-blok is op 390 px hoogstens 600 px van kop tot
+  kaderrand; geen dubbele oriëntatiezin; de dekkingsregel alleen bij een gat;
+  de introlink zichtbaar; lijstkolom begrensd en legenda onder de kaart op
+  desktop; unit- en browsertests dekken dit; `docs/atlas-plan.md` §7 en §9
+  beschrijven het; review- en QA-agent hebben afgetekend; gedateerde review.
+- **Planning:** één bouwronde (Opus), parallel UI/UX-review (Opus) en QA
+  (Fable) onder de orchestrator, één herstelronde.
+- **Log:** 2026-10-31 — geregistreerd en gestart na gebruikersbesluit op de
+  prioriteitsvolgorde van `QCR-2026-10-31-02`; contract §1, §7 en §9
+  bijgewerkt vóór de bouw. 2026-10-31 — afgerond in drie passen (bouw,
+  herstel na UI/UX- en QA-review, derde korte ronde); 403 unit-tests,
+  Atlas-spec 84, browsersuite 295/295; beide reviewers afgetekend; review
+  `QCR-2026-10-31-03`. Open gebleven: scrollaanwijzing in het kiezerpaneel
+  (klein, zie UX-review) en de beslispunten direct openen en vertaalde
+  bronvermelding.
+  2026-11-01 — nazorg op verzoek van de eigenaar: lijstregels zonder
+  afgeronde hoeken en met lichtere markeerkleur; kiezerpaneel op telefoons
+  85 % (eigen wijziging eigenaar), contract §9 en Atlas-spec gelijkgetrokken.
+
+### `MNT-078` — Atlas-portaal naar eindbeeld: ingang voor alle wijnregio's
+
+- **Status:** afgerond (2026-11-01)
+- **Prioriteit:** hoog; gebruikersbesluit 2026-11-01
+- **Scope:** `src/app/[lang]/atlas/page.tsx`, de regiokiezer en nieuwe
+  portaalcomponenten in `src/components/atlas/**`, paginacopy in
+  `src/components/atlas/copy.ts`, het portaalblok van `src/styles/atlas.css` en
+  de Atlas-sectie van `src/styles/responsive.css`, zo nodig een server-only
+  portaalmodel in `src/content/**`, unit- en browsertests; geen scènepagina's,
+  geen enhancer, geen nieuwe geometrie
+- **Categorie:** atlas-gis, engineering, product
+- **Herkomst:** gebruikersverzoek 2026-11-01: het landingsportaal is nu alleen
+  Bordeaux (zeven scènekaarten en de overzichtskaart) en moet het portaal naar
+  alle regio's worden, ontworpen voor de afgeronde Atlas; parallel een
+  schaalbaarheidsreview (`QCR-2026-11-01-01`) en een QA-review vanuit menselijk
+  perspectief (`QCR-2026-11-01-02`)
+- **Bevinding:** de kennisbank telt 26 regio-entiteiten (7 actief, alle in het
+  Bordeaux-cluster; 19 concepten wereldwijd zonder inhoud), geen landentiteit
+  en geen landrelatie (`REG-001` open); acht scènes; concepten horen niet in
+  publieke lijsten. Het portaal moet dus groeien uit de `part_of`-hiërarchie
+  van de kennisgraaf en eerlijke kaartstaten tonen, zonder landen of
+  wereldkaart te verzinnen.
+- **Klaar wanneer:** `/atlas` en `/en/atlas` tonen één portaalstructuur die
+  ongewijzigd werkt bij ~15 landen, 150+ regio's en 1.500+ appellaties
+  (hiërarchie uit de kennisgraaf, vinden op naam zonder server, per regio één
+  duidelijke ingang en een eerlijke kaartstaat met berekende dekking); alleen
+  echte data op de publieke route, schaal bewezen met synthetische testdata in
+  tests; NL en EN gelijkwaardig zonder pipelinetaal; metadata, `noindex` en
+  voorvertoning zoals nu; beoordeeld op 320, 390, 768 en 1440 px, toetsenbord,
+  no-JS, reduced motion en print; Atlas-spec en browsersuite groen; contract §8
+  en §9 bijgewerkt; schaalbaarheids- en QA-review afgetekend; gedateerde review.
+- **Planning:** ontwerpnotitie van de bouwer (Opus) eerst, dan bouw;
+  schaalbaarheidsreview (Opus) en QA (Opus) parallel onder de orchestrator
+  (Fable); bevindingen via de orchestrator; één herstelronde.
+- **Log:** 2026-11-01 — geregistreerd en gestart op gebruikersverzoek; vorige
+  agents opgeruimd, nieuw team gestart. 2026-11-01 — afgerond: ontwerpnotitie,
+  bouw, twee herstelrondes; `/atlas` van 371 naar 17 KB gzip; 423 unit-tests,
+  Atlas-spec 106, browsersuite 317; schaalbaarheids- en QA-reviewer "ship";
+  rondereview `QCR-2026-11-01-03`; contract §1 besluit 6, §2, §8, §9, §10.
+  Open gebleven: `MNT-082` (gebruikersbesluit), Champagne (UX-19), miniaturen
+  via gecachete route (`MNT-079`).
+
+### `MNT-079` — Atlas-index afslanken en budget per scène
+
+- **Status:** open
+- **Prioriteit:** hoog; harde breuk bij circa 19 scènes
+- **Scope:** `scripts/geography/lib/display.ts`, `src/content/model/geography.ts`
+  (samenvattingsschema), `src/content/geography.ts`, `src/generated/geography/`,
+  `data/geography/README.md`, contract §7
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-01`, `SCL-05a`)
+- **Bevinding:** `index.json` kost ≈ 1,0 KiB gzip per scène omdat de
+  samenvatting credits, dekkingslijsten, het vereenvoudigingsrecord en de
+  miniatuur draagt; bij circa 19 scènes overschrijdt de index het harde budget
+  van 20 KiB gzip en faalt `content:build` en daarmee elke andere opdracht.
+  De home las bovendien elk scènebestand om twee vlaggen te bepalen.
+- **Klaar wanneer:** de samenvatting bevat alleen wat consumenten lezen, met
+  oriëntatievlaggen; miniaturen staan in een eigen bestand (en krijgen bij
+  circa 40 kaarten een gecachete route, zie `MNT-083`); het budget geldt per
+  scène in §7; geen pagina laadt alle scènes; unit-tests bewaken de indexgrootte
+  per scène.
+- **Planning:** direct na `MNT-078`; eerste kandidaat voor de volgende bouwronde.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-080` — Legenda en sortering per betekenis en bron
+
+- **Status:** open
+- **Prioriteit:** hoog; klein, voorkomt een onjuiste uitspraak buiten Frankrijk
+- **Scope:** `src/components/atlas/copy.ts`, `atlas-legend.tsx`, `scripts/geography/lib/display.ts`
+- **Categorie:** atlas-gis, redactie
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-07`)
+- **Bevinding:** de legendadefinitie van een appellatiegebied is één INAO-tekst
+  voor alle scènes; het veld `meaning` van het record wordt genegeerd en de
+  sortering filtert op Franse prefixen. De eerste niet-Franse scène zou iets
+  onwaars zeggen.
+- **Klaar wanneer:** legendacopy is gekoppeld aan `meaning` en bron; de build
+  faalt wanneer copy voor een betekenis ontbreekt; het prefixfilter is per
+  rechtsstelsel; NL en EN gelijkwaardig.
+- **Planning:** vóór de eerste scène buiten Frankrijk; kan met `MNT-079` mee.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-081` — Scènegeometrie bijsnijden en compact coderen
+
+- **Status:** open
+- **Prioriteit:** hoog; halveert de payload zonder architectuurbesluit
+- **Scope:** `scripts/geography/lib/display.ts`, `simplify`, `thumbnail.ts`
+  (hergebruik van `clipRing` en `encodeRings`), `scripts/geography/build.test.ts`, contract §7
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-03`)
+- **Bevinding:** 51–89 % van de vertices in de deelregioscènes ligt buiten
+  het kader dat nooit in beeld kan komen; water is 70–73 % van de padbytes in
+  Médoc en Champagne; zes van acht scènes verschepen op 0 px tolerantie omdat
+  het budget als doel werkt; relatieve padcodering bracht Médoc in een test van
+  168,6 naar 89,4 KB gzip.
+- **Klaar wanneer:** geometrie is bijgesneden tot kader plus marge; tolerantie
+  per laagrol op basis van zichtbaarheid; relatieve padcodering; padgrenzen
+  worden in de build berekend; deterministische uitvoer; budgetten en
+  browsertests (no-JS-selectie, kiezer, geforceerde kleuren) groen.
+- **Planning:** na `MNT-079`, vóór `MNT-083`.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-082` — Contractbesluit: kaartvormen boven het regioniveau en landgroepering
+
+- **Status:** geblokkeerd (gebruikersbesluit)
+- **Prioriteit:** hoog; bepaalt wat het portaal op land- en wereldniveau mag tonen
+- **Scope:** `docs/atlas-plan.md` §2 en §11, samenhang met `REG-001`
+- **Categorie:** atlas-gis, product
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-05b`), `QCR-2026-11-01-02` (B1), `MNT-078`
+- **Bevinding:** boven het regioniveau bestaat geen toegestane kaartvorm:
+  regio-omtrekken zijn verboden, een mozaïek op landniveau past niet in het
+  budget, de projectie is vast Mercator en het model kent geen landentiteit.
+  Het portaal groepeert daarom op de `part_of`-hiërarchie en tekent niets op
+  land- of wereldniveau.
+- **Klaar wanneer:** de gebruiker heeft besloten (a) of en hoe landen als
+  entiteiten boven regio's komen (`REG-001`), (b) wat het portaal op land- en
+  wereldniveau mag tekenen en uit welke geverifieerde bron (bijvoorbeeld een
+  locator uit Natural Earth of IGN na eigen bronreview), (c) hoe
+  grensoverschrijdende regio's worden behandeld; vastgelegd in §2 en §11.
+  Voor het portaal hoort daarbij (`QCR-2026-11-01-01`, fase 2): copy per
+  niveau (land, regio, deelregio) in plaats van "regio" overal, het
+  zoekfilter `type=region` van het zoekformulier, de presentatie per diepte
+  (met landen bovenaan zakken Médoc en zijn buren van kaart naar link) en de
+  regel "op de kaart van" over meer dan één niveau.
+- **Planning:** beslispunt bij de oplevering van `MNT-078`.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheids- en QA-review.
+
+### `MNT-083` — Spike: scènegeometrie als cachebaar asset met detailniveaus
+
+- **Status:** open
+- **Prioriteit:** hoog; belangrijkste structurele wijziging, na `MNT-081`
+- **Scope:** `scripts/geography/build.ts`, `src/components/atlas/atlas-scene.tsx`,
+  `atlas-scene-enhancer.tsx`, `src/content/geography.ts`, contract §7 en §9
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-02`, `SCL-11`), `QCR-2026-11-01-02` (`QA-18`)
+- **Bevinding:** iedere padtekst staat twee keer in elke pagina (HTML en
+  RSC-payload); `/atlas/medoc` is 1,05 MB HTML (360 KB gzip) voor een scène van
+  497 KB; de Pauillac-pagina kost 3,0 MiB prerender-uitvoer; op einddoelschaal
+  5–10 GiB buildoutput en zo'n 400 KB gzip per appellatiepagina zonder caching.
+  De scènecache in de repository is onbegrensd.
+- **Klaar wanneer:** een spike toont één gehasht, cachebaar SVG-asset per scène
+  en detailniveau (`<use>` of overlay), grover niveau voor inbedding, budget op
+  pagina-gzip; no-JS-selectie, geforceerde kleuren, print en de kiezer blijven
+  werken; miniaturen volgen dezelfde route; besluit over vervolg vastgelegd.
+- **Planning:** vóór de tweede regiobatch.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-084` — Scènedekking afleiden uit de kennisgraaf
+
+- **Status:** open
+- **Prioriteit:** midden
+- **Scope:** `data/geography/scenes/*`, `scripts/geography/build.ts`, pipelinevalidatie, `e2e/atlas.spec.ts`
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-08`, `SCL-17`)
+- **Bevinding:** een nieuwe regio vraagt handwerk op zes tot acht plekken;
+  `intended_entities` wordt niet gevalideerd tegen `part_of`; het
+  scèneregister in de browsertests is met de hand bijgehouden.
+- **Klaar wanneer:** `intended_entities` wordt gevalideerd tegen de graaf en
+  standaard afgeleid; het e2e-register wordt gegenereerd uit het model.
+- **Planning:** vóór de tweede regiobatch.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-085` — Manifest normaliseren en oriëntatie-identiteit vastleggen
+
+- **Status:** open
+- **Prioriteit:** midden
+- **Scope:** `data/geography/manifest.yaml`, `mappings/ign-orientation.yaml`,
+  `scripts/geography/fetch.ts`, `import.ts`, `data/geography/README.md`
+- **Categorie:** atlas-gis, data
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-08`, `SCL-09`)
+- **Bevinding:** twintig losse WFS-verzoeken per envelop in één manifest;
+  oriëntatie-ID's zijn regio-loos (`geo.river.garonne`) terwijl de geometrie
+  tot één envelop is bijgesneden, zodat een tweede envelop met dezelfde rivier
+  botst.
+- **Klaar wanneer:** datasetblok plus verzoeken, gesplitst per bron of land,
+  verzoeken per envelop gebundeld; een ID-beleid voor rivieren en meren over
+  enveloppen heen, vastgelegd in het geografiebeleid of §4.
+- **Planning:** vóór de tweede regiobatch.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-086` — Incrementele Atlas-build en geografische benchmark
+
+- **Status:** open
+- **Prioriteit:** midden
+- **Scope:** `scripts/content/pipeline.ts`, `scripts/geography/build.ts`, benchmarkfixtures
+- **Categorie:** engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-04`, `SCL-16`)
+- **Bevinding:** de weergavebuild draait ongecached in iedere contentbuild en
+  contentcheck; de benchmark kent geen geografisch fixturecontract.
+- **Klaar wanneer:** cache per scène op een invoerhash; weergavebuild alleen
+  bij gewijzigde geografie of buildcode; synthetisch geografisch fixturecontract
+  in de benchmark; meting vóór en na.
+- **Planning:** vóór de tweede regiobatch.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-087` — Bronadapters voor de geografie-import
+
+- **Status:** open
+- **Prioriteit:** midden; uiterlijk vóór de eerste niet-Franse bron
+- **Scope:** `scripts/geography/import.ts`, `scripts/geography/lib/**`, `data/geography/mappings/**`
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-06`)
+- **Bevinding:** de import kent twee hardgecodeerde tabellen (INAO en IGN) en
+  geen bronadapter.
+- **Klaar wanneer:** een `SourceAdapter`-interface met mapping per bron of
+  land en beperkingstekst per bron; INAO en IGN als eerste adapters; tests op
+  fixtures.
+- **Planning:** vóór de eerste niet-Franse bron.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-088` — Taalonafhankelijke Atlas-copy en consolidatie van routecopy
+
+- **Status:** open
+- **Prioriteit:** laag
+- **Scope:** `src/components/atlas/copy.ts`, `src/app/[lang]/atlas/**`, home-ingang
+- **Categorie:** engineering, redactie
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-12`), `QCR-2026-11-01-02` (`QA-16`)
+- **Bevinding:** `atlasCopy` valt voor elke taal behalve `nl` stil terug op
+  Engels; Atlas-copy staat verspreid over `copy.ts`, inline code in beide
+  routes en de home, met gedupliceerde eyebrow-logica.
+- **Klaar wanneer:** `Record<Locale, AtlasCopy>` met `Locale` in plaats van
+  `"nl" | "en"`; alle routecopy in `copy.ts`; één eyebrow-helper.
+- **Planning:** backlog.
+- **Log:** 2026-11-01 — geregistreerd uit beide reviews.
+
+### `MNT-089` — Pure resolutiestap voor scèneweergave
+
+- **Status:** open
+- **Prioriteit:** laag
+- **Scope:** `src/components/atlas/atlas-scene.tsx`, `src/content/geography.ts`
+- **Categorie:** engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-13`), `QCR-2026-11-01-02` (`QA-20`)
+- **Bevinding:** `AtlasScene` (470 regels) is component en viewmodel tegelijk
+  met vier aanroepen van `getEntityById`; `variant="overview"` wordt ook voor
+  gewone scènepagina's gebruikt.
+- **Klaar wanneer:** `resolveSceneView` naast de repository; componenten puur
+  op props; variantnamen beschrijven de plaats (`page`, `embedded`).
+- **Planning:** backlog.
+- **Log:** 2026-11-01 — geregistreerd uit beide reviews.
+
+### `MNT-090` — Register van laagsoorten
+
+- **Status:** open
+- **Prioriteit:** laag; fase 4
+- **Scope:** `src/content/model/geography.ts`, `scripts/geography/lib/**`, `src/components/atlas/**`, `atlas.css`
+- **Categorie:** atlas-gis, engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-10`)
+- **Bevinding:** soorten en rollen zijn gesloten en verspreid over schema,
+  build, component, legenda en stijl; een nieuwe laag (reliëf, aanplant) raakt
+  ze allemaal.
+- **Klaar wanneer:** één tabel per laagsoort voedt schema, build, component,
+  legenda en stijl; reliëf als apart assettype beschreven.
+- **Planning:** bij de eerste nieuwe laag van fase 4.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-091` — Canonieke serializer zonder Prettier-koppeling
+
+- **Status:** open
+- **Prioriteit:** laag
+- **Scope:** `scripts/geography/import.ts`, `data/geography/features/**`, `.prettierignore`, geografiebeleid
+- **Categorie:** atlas-gis, data
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-15`)
+- **Bevinding:** de canonieke GeoJSON is Prettier-opgemaakt, zodat checksums
+  van de Prettier-versie afhangen; 8 decimalen (≈ 1 mm) is meer dan de bron
+  draagt.
+- **Klaar wanneer:** eigen deterministische GeoJSON-uitvoer, features buiten
+  Prettier; de precisievraag is in het geografiebeleid beantwoord.
+- **Planning:** backlog.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview.
+
+### `MNT-092` — Atlas-stijlen en gedeelde constanten
+
+- **Status:** open
+- **Prioriteit:** laag
+- **Scope:** `src/styles/atlas.css`, `src/styles/responsive.css`, `src/components/atlas/**`, tests
+- **Categorie:** engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-14`), `QCR-2026-11-01-02` (`QA-23`)
+- **Bevinding:** `atlas.css` (7,3 KB gzip) laadt op elke pagina; het breekpunt
+  980/981 en andere constanten staan in TS en CSS zonder test; negen
+  CSS-klassen worden uit templatestrings opgebouwd en lijken ongebruikt.
+- **Klaar wanneer:** een test bewaakt de gedeelde TS/CSS-constanten; klassen
+  zijn vindbaar; de vraag over routeniveau-CSS staat in het design-system-plan.
+- **Planning:** backlog.
+- **Log:** 2026-11-01 — geregistreerd uit beide reviews.
+
+### `MNT-093` — Atlas-documentatie en opruiming
+
+- **Status:** open
+- **Prioriteit:** midden; volgende documentronde
+- **Scope:** `docs/atlas-plan.md` §5 en §8, `docs/developer-guide.md`,
+  `docs/project-map.md`, `data/geography/README.md`, `src/content/geography.ts`,
+  `src/content/model/geography.ts`, `scripts/geography/lib/**`, `e2e/atlas.spec.ts`
+- **Categorie:** documentatie, engineering
+- **Herkomst:** `QCR-2026-11-01-01` (`SCL-16`, `SCL-17`), `QCR-2026-11-01-02` (`QA-22`, `QA-24`)
+- **Bevinding:** het §5-voorbeeld zet water vóór context terwijl de build het
+  omgekeerd doet; developer guide en project map noemen de Atlas-modules niet;
+  de README beschrijft de buildmodules niet; twee foutmodules en een dubbel
+  geëxporteerde `writeAtomically`; `getAtlasFeatureForEntity` is alleen in
+  tests in gebruik; een schemacommentaar breekt halverwege; dubbele
+  ontwikkelcheck en dubbele lookup in de repository.
+- **Klaar wanneer:** documenten gelijk aan de code; dode en dubbele code weg;
+  e2e gebruikt de modeltypen.
+- **Planning:** volgende documentronde, of mee met `MNT-079`.
+- **Log:** 2026-11-01 — geregistreerd uit beide reviews.
+
+### `MNT-094` — Scènepagina: skiplink naar de kaart en eerlijk kader zonder JavaScript
+
+- **Status:** open
+- **Prioriteit:** midden
+- **Scope:** `src/components/atlas/atlas-scene.tsx`, `atlas-scene-enhancer.tsx`, `copy.ts`, `e2e/atlas.spec.ts`
+- **Categorie:** toegankelijkheid, atlas-gis
+- **Herkomst:** `QCR-2026-11-01-02` (`QA-12`, `QA-13`, `QA-11`)
+- **Bevinding:** op 1440 px is het kaartkader tabstop 53, achter 37 lijstlinks,
+  zonder "Naar de kaart"-link; zonder JavaScript wordt het kader nog als
+  "Interactieve kaart" met toetsenhulp aangekondigd die niet werkt; bij printen
+  gaan twee pagina's lijst aan de kaart vooraf en wordt de aanwijsinstructie
+  meegeprint.
+- **Klaar wanneer:** een skiplink naar de kaart vóór de lijst; het kader
+  beschrijft zichzelf zonder script eerlijk; print laat de instructie weg;
+  browsertests dekken dit.
+- **Planning:** samen met de open rijen van `QCR-2026-10-31-02`.
+- **Log:** 2026-11-01 — geregistreerd uit de QA-review.
+
+### `MNT-095` — Contrast van gedempte tekst
+
+- **Status:** open
+- **Prioriteit:** midden; sitebreed
+- **Scope:** `src/styles/tokens.css`, afgeleide regels
+- **Categorie:** toegankelijkheid
+- **Herkomst:** `QCR-2026-11-01-02` (`QA-14`)
+- **Bevinding:** gedempte tekst (`--muted`) haalt 4,04:1 op 12 px, onder de
+  4,5:1 van WCAG AA voor kleine tekst.
+- **Klaar wanneer:** het token of de kleine varianten halen 4,5:1; gemeten in
+  de browser op de betrokken plekken.
+- **Planning:** backlog; klein.
+- **Log:** 2026-11-01 — geregistreerd uit de QA-review.
+
+### `MNT-096` — Cycluscontrole op `part_of` in de contentpijplijn
+
+- **Status:** open
+- **Prioriteit:** midden; klein
+- **Scope:** `scripts/content/*` (relatie-audit), `src/content/model/*`, tests
+- **Categorie:** engineering, kennisarchitectuur
+- **Herkomst:** `QCR-2026-11-01-01` (fase 2, portaalcode)
+- **Bevinding:** de pijplijn controleert `part_of` niet op cycli; het portaal
+  vangt een cyclus zelf op, maar een cyclus is een datafout die bij
+  `content:check` hoort te falen.
+- **Klaar wanneer:** `content:check` faalt met een leesbare melding bij een
+  `part_of`-cyclus; de portaalopvang blijft als vangnet; test op fixtures.
+- **Planning:** mee met `MNT-084` of eerder.
+- **Log:** 2026-11-01 — geregistreerd uit de schaalbaarheidsreview, fase 2.
 
 ### `MNT-013` — Wereldwijde druivenverspreiding via Atlas
 

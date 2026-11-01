@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     : { localPatterns: [{ pathname: "/media/**" }] },
   outputFileTracingRoot: projectRoot,
   outputFileTracingIncludes: {
-    "/*": ["./src/generated/content/knowledge-base.json"],
+    "/*": ["./src/generated/content/knowledge-base.json", "./src/generated/geography/**/*.json"],
   },
   turbopack: {
     root: projectRoot,

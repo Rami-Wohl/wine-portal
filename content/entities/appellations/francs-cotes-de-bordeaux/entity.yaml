@@ -32,5 +32,6 @@ source_refs:
   - source.inao-cotes-bordeaux-specification-2026
   - source.civb-francs-cotes-de-bordeaux
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.francs-cotes-de-bordeaux
 depth: foundation
 last_reviewed: 2026-09-12

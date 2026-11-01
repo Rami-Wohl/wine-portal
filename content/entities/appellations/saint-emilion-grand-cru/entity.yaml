@@ -44,5 +44,6 @@ source_refs:
   - source.unesco-saint-emilion-jurisdiction
   - source.inao-saint-emilion-classification-2022
   - source.decanter-cheval-blanc-ausone-withdrawal-2021
+geography_id: geo.appellation-area.saint-emilion-grand-cru
 depth: foundation
 last_reviewed: 2026-09-08

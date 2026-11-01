@@ -55,5 +55,6 @@ source_refs:
   - source.chateau-coutet-history
   - source.chateau-coutet-second-wine
   - source.chateau-coutet-opalie
+geography_id: geo.appellation-area.barsac
 depth: foundation
 last_reviewed: 2026-09-14

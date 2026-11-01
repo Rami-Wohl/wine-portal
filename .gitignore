@@ -44,3 +44,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated geography display scenes (rebuild with npm run content:build)
+/src/generated/geography/
+
+# raw geography downloads (recreate with the geography fetch step)
+/data/geography/cache/

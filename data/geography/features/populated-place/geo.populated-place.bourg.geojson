@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.bourg",
+  "properties": {
+    "id": "geo.populated-place.bourg",
+    "kind": "populated-place",
+    "name_nl": "Bourg",
+    "name_en": "Bourg"
+  },
+  "bbox": [-0.55956383, 45.03920388, -0.55956383, 45.03920388],
+  "geometry": { "type": "Point", "coordinates": [-0.55956383, 45.03920388] }
+}

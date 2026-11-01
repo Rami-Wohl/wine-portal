@@ -1,3 +1,4 @@
+import { EntityAtlas } from "@/components/atlas/entity-atlas";
 import { ContentDocumentView } from "@/components/content-document";
 import { EntityLink } from "@/components/entity-link";
 import { KnowledgeDepth } from "@/components/knowledge-depth";
@@ -190,6 +191,7 @@ export default async function EntityPage({ params, searchParams }: EntityPagePro
           <KnowledgeDepth initialDepth={entity.depth} maxDepth={maxContentDepth}>
             <article className="entity-body">
               <ContentDocumentView
+                afterSummary={<EntityAtlas entity={entity} locale={locale} />}
                 document={entity.content[locale]}
                 locale={locale}
                 media={media}
@@ -200,6 +202,7 @@ export default async function EntityPage({ params, searchParams }: EntityPagePro
         ) : (
           <article className="entity-body">
             <ContentDocumentView
+              afterSummary={<EntityAtlas entity={entity} locale={locale} />}
               document={entity.content[locale]}
               locale={locale}
               media={media}
@@ -207,7 +210,9 @@ export default async function EntityPage({ params, searchParams }: EntityPagePro
             />
           </article>
         )
-      ) : null}
+      ) : (
+        <EntityAtlas entity={entity} locale={locale} />
+      )}
 
       {hasSupportingInformation ? (
         <div className="entity-support-layout">

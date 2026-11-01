@@ -1,0 +1,46 @@
+id: geo.river.vesle
+kind: river
+names:
+  nl: Vesle
+  en: Vesle
+geometry:
+  file: geo.river.vesle.geojson
+  type: MultiLineString
+  sha256: 688b8ce5c4bf0238db79df018b9366ced00e21536a7c46956de3485d3afe616e
+  vertex_count: 3160
+  bbox: [3.46774309, 48.97940132, 4.60336989, 49.39369472]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:troncon_hydrographique
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: 3d9c3b5e0734544fd39c3fba244f728c27090293a37b91ce5ccbb96d4464c590
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:troncon_hydrographique
+    property: cpx_toponyme_de_cours_d_eau
+    values: la Vesle
+    feature_count: 248
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: watercourse-centreline-segments
+precision: regional-orientation
+limitations: Cartographic centreline segments at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a hydrographic survey, a navigation line or a flood extent.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-river-vesle-champagne (layer BDCARTO_V5:troncon_hydrographique; request, edition and checksum pinned in the manifest): all 248 features with cpx_toponyme_de_cours_d_eau in {''la Vesle''} intersecting the champagne envelope, kept as whole features in verified cleabs order without clipping. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. 248 BD CARTO segments named "la Vesle" inside the Champagne envelope; the Vesle flows through Reims.'
+supersedes: null

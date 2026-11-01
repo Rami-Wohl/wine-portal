@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.la-reole",
+  "properties": {
+    "id": "geo.populated-place.la-reole",
+    "kind": "populated-place",
+    "name_nl": "La Réole",
+    "name_en": "La Réole"
+  },
+  "bbox": [-0.04140052, 44.5810043, -0.04140052, 44.5810043],
+  "geometry": { "type": "Point", "coordinates": [-0.04140052, 44.5810043] }
+}

@@ -1,0 +1,34 @@
+# Scene definition (docs/atlas-plan.md §5). Drawing order is the layer order; within the
+# selectable layer the build draws larger areas first. Coverage is computed from intended_entities.
+id: scene.blayais-bourgeais
+owner: region.blayais-bourgeais
+extent:
+  mode: fit
+  padding: 0.1
+projection: mercator
+layers:
+  - id: context
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.bordeaux
+    role: context
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.blaye-cotes-de-bordeaux
+      - geo.appellation-area.cotes-de-bourg
+    role: selectable
+  - id: water
+    kinds: [water-body, river]
+    features:
+      - geo.water-body.gironde-estuary
+      - geo.river.dordogne
+      - geo.river.garonne
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.blaye
+      - geo.populated-place.bourg
+intended_entities:
+  - appellation.blaye-cotes-de-bordeaux
+  - appellation.cotes-de-bourg

@@ -60,5 +60,6 @@ source_refs:
   - source.domaine-de-chevalier-wines
   - source.carbonnieux-history
   - source.carbonnieux-vineyard
+geography_id: geo.appellation-area.pessac-leognan
 depth: foundation
 last_reviewed: 2026-09-14

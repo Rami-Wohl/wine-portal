@@ -1,0 +1,56 @@
+# Scene definition (docs/atlas-plan.md §5). Drawing order is the layer order; within the
+# selectable layer the build draws larger areas first. Coverage is computed from intended_entities.
+id: scene.libournais
+owner: region.libournais
+extent:
+  mode: fit
+  padding: 0.08
+projection: mercator
+layers:
+  - id: context
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.bordeaux
+    role: context
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.saint-emilion
+      - geo.appellation-area.saint-emilion-grand-cru
+      - geo.appellation-area.lussac-saint-emilion
+      - geo.appellation-area.montagne-saint-emilion
+      - geo.appellation-area.puisseguin-saint-emilion
+      - geo.appellation-area.saint-georges-saint-emilion
+      - geo.appellation-area.pomerol
+      - geo.appellation-area.lalande-de-pomerol
+      - geo.appellation-area.fronsac
+      - geo.appellation-area.canon-fronsac
+      - geo.appellation-area.castillon-cotes-de-bordeaux
+      - geo.appellation-area.francs-cotes-de-bordeaux
+    role: selectable
+  - id: water
+    kinds: [river]
+    features:
+      - geo.river.dordogne
+      - geo.river.isle
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.libourne
+      - geo.populated-place.saint-emilion
+      - geo.populated-place.pomerol
+      - geo.populated-place.fronsac
+      - geo.populated-place.castillon-la-bataille
+intended_entities:
+  - appellation.saint-emilion
+  - appellation.saint-emilion-grand-cru
+  - appellation.lussac-saint-emilion
+  - appellation.montagne-saint-emilion
+  - appellation.puisseguin-saint-emilion
+  - appellation.saint-georges-saint-emilion
+  - appellation.pomerol
+  - appellation.lalande-de-pomerol
+  - appellation.fronsac
+  - appellation.canon-fronsac
+  - appellation.castillon-cotes-de-bordeaux
+  - appellation.francs-cotes-de-bordeaux

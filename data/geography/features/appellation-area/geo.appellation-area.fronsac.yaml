@@ -1,0 +1,48 @@
+id: geo.appellation-area.fronsac
+kind: appellation-area
+owner: appellation.fronsac
+geometry:
+  file: geo.appellation-area.fronsac.geojson
+  type: Polygon
+  sha256: 346c80764334bcbe470b142f8ab3978ea7b3d59a1591657de07d783496250f40
+  vertex_count: 545
+  bbox: [-0.34943869, 44.88892463, -0.24203026, 45.01416642]
+source:
+  source_id: source.inao-geographical-areas-2026
+  dataset_id: 5d7fb2856f444171a5f2780b
+  resource_id: 687d62d7-8ee6-4997-a47a-81e3183be31b
+  release: 2026-10-26
+  retrieved_at: 2026-10-30
+  resource_sha256: 36b95bd8e88dc0412c1e83c917907527105dc710d60f4d381502dcf0ec2551ef
+  crs: IGNF:LAMB93
+  encoding: UTF-8
+  feature_key:
+    id_app: 33
+    id_denom: 92
+    signe: AOC
+    type_denom: appellation
+    app: Fronsac
+    denom: Fronsac
+licence:
+  id: etalab-2.0
+  attribution: INAO, Délimitation des aires géographiques des SIQO, édition du 26 octobre 2026
+  notes: informative geometry; official dossiers carry the legal delimitation
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: ring-orientation
+    convention: rfc7946
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: geographical-production-area
+precision: regional-orientation
+limitations: Not a parcel delimitation, planted area or survey boundary. INAO publishes the shape for information; the commune list in the cahier des charges is the legal delimitation.
+review:
+  status: published
+  reviewed_at: 2026-10-30
+  notes: Matched in the 2026-10-26 edition on type_denom, denom; the DBF fields id_app, id_denom, app, signe are blank in every record of this edition, so these values were confirmed against the INAO product register of 2025-12-31 instead. Read with shapefile@0.6.6 (UTF-8 DBF, type_denom 'appellation') from the pinned ZIP (fflate@0.8.3); reprojected with proj4@2.22.0 with explicit longitude-latitude order and no datum shift (RGF93 treated as WGS 84, difference under one metre); coordinates rounded to 8 decimal degrees (about one millimetre) after reprojection; no other coordinate change. Seven communes in the INAO commune list; the shape lies inside or on the boundary of the Bordeaux shape and contains the Canon Fronsac shape.
+supersedes: null

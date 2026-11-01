@@ -1,0 +1,46 @@
+id: geo.river.seine
+kind: river
+names:
+  nl: Seine
+  en: Seine
+geometry:
+  file: geo.river.seine.geojson
+  type: MultiLineString
+  sha256: c8c26ff644cb5524ca54ec54cefd775e19d057245bd0af321a01f536f8703ef7
+  vertex_count: 6487
+  bbox: [2.86959576, 47.6797465, 4.66286468, 48.55893142]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:troncon_hydrographique
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: a8450af4cf723a3c740efe44a9f2251571c5480e4747afe2e64f54aff8886927
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:troncon_hydrographique
+    property: cpx_toponyme_de_cours_d_eau
+    values: la Seine
+    feature_count: 1240
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: watercourse-centreline-segments
+precision: regional-orientation
+limitations: Cartographic centreline segments at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a hydrographic survey, a navigation line or a flood extent.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-river-seine-champagne (layer BDCARTO_V5:troncon_hydrographique; request, edition and checksum pinned in the manifest): all 1240 features with cpx_toponyme_de_cours_d_eau in {''la Seine''} intersecting the champagne envelope, kept as whole features in verified cleabs order without clipping. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. 1,240 BD CARTO segments named "la Seine" inside the Champagne envelope (Aube department and the upper course); segments with other toponyms, such as "Bras de la Seine" and "la Petite Seine", are not requested.'
+supersedes: null

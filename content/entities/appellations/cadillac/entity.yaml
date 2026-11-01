@@ -40,5 +40,6 @@ source_refs:
   - source.boagri-cadillac-specification-2026
   - source.inrae-bordeaux-climate-adaptation
   - source.dgccrf-wine-labels-2025
+geography_id: geo.appellation-area.cadillac
 depth: foundation
 last_reviewed: 2026-09-13

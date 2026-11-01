@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.chalons-en-champagne",
+  "properties": {
+    "id": "geo.populated-place.chalons-en-champagne",
+    "kind": "populated-place",
+    "name_nl": "Châlons-en-Champagne",
+    "name_en": "Châlons-en-Champagne"
+  },
+  "bbox": [4.36310235, 48.95660104, 4.36310235, 48.95660104],
+  "geometry": { "type": "Point", "coordinates": [4.36310235, 48.95660104] }
+}

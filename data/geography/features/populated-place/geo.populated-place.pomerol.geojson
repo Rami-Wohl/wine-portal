@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.pomerol",
+  "properties": {
+    "id": "geo.populated-place.pomerol",
+    "kind": "populated-place",
+    "name_nl": "Pomerol",
+    "name_en": "Pomerol"
+  },
+  "bbox": [-0.19998458, 44.9318786, -0.19998458, 44.9318786],
+  "geometry": { "type": "Point", "coordinates": [-0.19998458, 44.9318786] }
+}

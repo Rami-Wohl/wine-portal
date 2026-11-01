@@ -16,6 +16,7 @@ import {
   type LearningPath,
 } from "../../src/content/model";
 import { auditEntityLinks, loadContentPlans, scaffoldPlanDependencies } from "./dependencies";
+import { addGeographyRecord, square } from "./fixtures/geography";
 import { generateEntityPackage } from "./generator";
 import { buildContent, ContentValidationError } from "./pipeline";
 
@@ -388,19 +389,30 @@ afterEach(async () => {
 describe("content pipeline validation", () => {
   it("builds valid content and its lookup indexes", async () => {
     const root = await temporaryRoot();
+    await addEntity(root, { id: "region.example", nlSlug: "voorbeeld" });
+    // A geography reference requires its verified record (docs/atlas-plan.md §4).
     await addEntity(root, {
-      id: "region.example",
-      nlSlug: "voorbeeld",
-      geographyId: "geo.example",
+      id: "appellation.example",
+      geographyId: "geo.appellation-area.example",
+    });
+    await addSource(root, "source.fixture-dataset");
+    await addGeographyRecord(root, {
+      id: "geo.appellation-area.example",
+      owner: "appellation.example",
+      geometry: square(0, 45, 0.5),
     });
 
     const { knowledgeBase } = await buildContent({ root, write: false });
 
-    expect(knowledgeBase.indexes.entity_ids).toEqual(["region.example"]);
+    expect(knowledgeBase.indexes.entity_ids).toEqual(["appellation.example", "region.example"]);
     expect(knowledgeBase.indexes.entities_by_type.region).toEqual(["region.example"]);
     expect(knowledgeBase.indexes.localized_slugs.nl["region:voorbeeld"]).toBe("region.example");
-    expect(knowledgeBase.indexes.geography["geo.example"]).toBe("region.example");
-    expect(knowledgeBase.indexes.search[0]).toMatchObject({
+    expect(knowledgeBase.indexes.geography).toEqual({
+      "geo.appellation-area.example": "appellation.example",
+    });
+    expect(
+      knowledgeBase.indexes.search.find((entry) => entry.id === "region.example"),
+    ).toMatchObject({
       kind: "entity",
       id: "region.example",
       entity_type: "region",

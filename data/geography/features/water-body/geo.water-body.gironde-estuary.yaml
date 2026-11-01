@@ -1,0 +1,49 @@
+id: geo.water-body.gironde-estuary
+kind: water-body
+names:
+  nl: Gironde-estuarium
+  en: Gironde estuary
+geometry:
+  file: geo.water-body.gironde-estuary.geojson
+  type: MultiPolygon
+  sha256: 0ad9a5c43647d96947047a9cf391e4f396a8db43af2149249e58192150908563
+  vertex_count: 8760
+  bbox: [-1.06480193, 45.04214652, -0.60843386, 45.61866847]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:plan_d_eau
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: 6f563b4a133735c39f18b2a97ca3955f6636b5529666dd2886455515f4cc577a
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:plan_d_eau
+    property: toponyme
+    values: la Gironde
+    feature_count: 1
+    cleabs: PLANDEAU0000002292062751
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: ring-orientation
+    convention: rfc7946
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: estuary-water-surface
+precision: regional-orientation
+limitations: Cartographic water surface at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a tidal, flood, navigation or property limit.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-water-gironde-estuary (layer BDCARTO_V5:plan_d_eau; request, edition and checksum pinned in the manifest): the single object with toponyme ''la Gironde'' and cleabs PLANDEAU0000002292062751 intersecting the bordeaux envelope. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. One BD CARTO plan_d_eau object of nature "Estuaire" named "la Gironde", from the Bec d''Ambès to the Pointe de Grave. Surface at the source''s cartographic generalisation; not a tidal or navigation limit.'
+supersedes: null

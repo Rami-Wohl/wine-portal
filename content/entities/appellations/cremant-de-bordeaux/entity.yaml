@@ -43,5 +43,6 @@ source_refs:
   - source.inao-cremant-bordeaux-overview
   - source.inao-cremant-bordeaux-specification-2026
   - source.msha-bordeaux-wine-history
+geography_id: geo.appellation-area.cremant-de-bordeaux
 depth: foundation
 last_reviewed: 2026-09-12

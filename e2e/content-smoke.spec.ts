@@ -435,16 +435,26 @@ test("active entity content flows comfortably across desktop and mobile", async 
   const dimensions = await page.evaluate(() => {
     const header = document.querySelector(".entity-header")?.getBoundingClientRect();
     const figure = document.querySelector(".content-block-figure")?.getBoundingClientRect();
+    const atlas = document.querySelector("[data-entity-atlas]")?.getBoundingClientRect();
     return {
       documentWidth: document.documentElement.scrollWidth,
       viewportWidth: document.documentElement.clientWidth,
       headerHeight: header?.height ?? 0,
       figureTop: figure?.top ?? Infinity,
+      atlasTop: atlas?.top ?? Infinity,
+      atlasBottom: atlas?.bottom ?? null,
     };
   });
   expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth);
   expect(dimensions.headerHeight).toBeLessThan(260);
-  expect(dimensions.figureTop).toBeLessThan(1000);
+  // A visual appears early and imagery is not buried under prose. With an embedded map the
+  // map is the first visual and the first figure follows within a screen of its bottom edge.
+  expect(Math.min(dimensions.figureTop, dimensions.atlasTop)).toBeLessThan(1000);
+  if (dimensions.atlasBottom === null) {
+    expect(dimensions.figureTop).toBeLessThan(1000);
+  } else {
+    expect(dimensions.figureTop - dimensions.atlasBottom).toBeLessThan(1000);
+  }
 });
 
 test("knowledge depth progressively reveals additional Bordeaux content", async ({ page }) => {
@@ -493,12 +503,17 @@ test("Médoc keeps its regional distinctions, imagery and depth layers usable on
   await page.goto("/regions/medoc");
 
   await expect(page.getByRole("heading", { level: 1, name: "Médoc" })).toBeVisible();
-  await expect(
-    page.getByRole("img", { name: /Wijngaarden van Pauillac gezien vanaf de Gironde/ }),
-  ).toHaveJSProperty("complete", true);
-  await expect(
-    page.getByRole("img", { name: /Vissershutten op palen langs het brede Gironde-estuarium/ }),
-  ).toHaveJSProperty("complete", true);
+  // Figures load lazily; bring each near the viewport before asking whether it completed,
+  // then return to the top so the depth controls keep their original viewport context.
+  for (const name of [
+    /Wijngaarden van Pauillac gezien vanaf de Gironde/,
+    /Vissershutten op palen langs het brede Gironde-estuarium/,
+  ]) {
+    const image = page.getByRole("img", { name });
+    await image.scrollIntoViewIfNeeded();
+    await expect(image).toHaveJSProperty("complete", true);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
   await expect(
     page.locator("#overzicht").getByRole("link", { name: "Moulis-en-Médoc", exact: true }),
   ).toHaveAttribute("href", "/appellations/moulis-en-medoc");

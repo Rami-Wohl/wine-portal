@@ -1,0 +1,1714 @@
+{
+  "review_id": "QCR-2026-10-31-01",
+  "reviewed_at": "2026-10-31",
+  "status": "orientation-import-and-scene-definition",
+  "sources": {
+    "bdcarto": {
+      "dataset_id": "IGNF_BD-CARTO",
+      "catalogue": "https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_BD-CARTO",
+      "data_gouv_dataset": "675871b46e60265b46ab3562",
+      "licence": "Licence Ouverte / Open Licence 2.0 (CSW otherConstraints; data.gouv.fr lov2)",
+      "edition_on_service": "BD CARTO® V5 2026-03-15",
+      "spatial_resolution": "1:50 000 to 1:250 000 (CSW)",
+      "crs_requested": "EPSG:2154",
+      "access": "Géoplateforme WFS 2.0.0 GetFeature, application/json, SORTBY=cleabs; responses committed under data/geography/raw/ign-bd-carto-v5/",
+      "raw_directory": "ign-bd-carto-v5",
+      "catalogue_check_2026_10_31": "CSW GetRecordById IGNF_BD-CARTO returns fileIdentifier IGNF_BD-CARTO (edition 5.0, no editionDate)"
+    },
+    "adminexpress": {
+      "dataset_id": "IGNF_ADMIN-EXPRESS",
+      "catalogue": "https://cartes.gouv.fr/rechercher-une-donnee/dataset/IGNF_ADMIN-EXPRESS",
+      "data_gouv_dataset": "5808de39c751df1e0679df72",
+      "licence": "Licence Ouverte / Open Licence 2.0 (CSW otherConstraints; data.gouv.fr lov2)",
+      "edition_on_service": "ADMIN EXPRESS COG 2026, code officiel géographique au 1er janvier 2026; WFS layer abstract (GetCapabilities checked 2026-10-31): 'ADMINEXPRESS COG 2026 Chef-lieu de commune ; édition 2026-01-01'; the earlier yearly namespaces carry the same templated 'Édition YYYY-01-01'; no separate publication date given by the service",
+      "crs_requested": "EPSG:2154",
+      "access": "Géoplateforme WFS 2.0.0 GetFeature; responses committed under data/geography/raw/ign-admin-express-cog-2026/",
+      "raw_directory": "ign-admin-express-cog-2026",
+      "attribution": "IGN, ADMIN EXPRESS COG 2026 (code officiel géographique au 1er janvier 2026), service Géoplateforme consulté le 30 octobre 2026",
+      "catalogue_check_2026_10_31": "CSW GetRecordById IGNF_ADMIN-EXPRESS returns fileIdentifier IGNF_ADMIN-EXPRESS (edition 4.0, no editionDate)"
+    },
+    "bulk_alternatives": "IGN distributes BD CARTO, BD TOPO and ADMIN EXPRESS bulk files as 7z archives; no 7z extractor is available, so the pinned WFS requests with committed responses were used (contract §6 rule for service-only access). Natural Earth was not needed."
+  },
+  "envelopes": {
+    "bordeaux": {
+      "wgs84": [-1.5, 44.1, 0.55, 45.8],
+      "lambert93": [339900, 6336487, 509729, 6532221],
+      "notes": "Union of the 38 Bordeaux-cluster appellation bboxes [-1.1695, 44.3241, 0.3151, 45.5736] widened by about 0.3 degrees west (Atlantic coast and Arcachon basin) and 0.22 degrees elsewhere; lambert93 is the bounding rectangle of the projected envelope outline."
+    },
+    "champagne": {
+      "wgs84": [2.9, 47.7, 5.15, 49.7],
+      "lambert93": [692500, 6733290, 861234, 6957774],
+      "notes": "Champagne appellation bbox [3.1370, 47.9235, 4.8998, 49.4554] widened by about 0.24 degrees; lambert93 is the bounding rectangle of the projected envelope outline."
+    }
+  },
+  "raw_responses": [
+    {
+      "id": "ign-bdcarto-river-garonne-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Garonne','Fleuve la Garonne')",
+      "bytes": 346329,
+      "sha256": "4f28e36fe25dfcdcc37468f67bbf4d109f25b50ba45740d2238295cb83d0e01b",
+      "feature_count": 349,
+      "retrieved_at_time": "2026-10-30T12:29:12.108Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-river-dordogne-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Dordogne')",
+      "bytes": 304224,
+      "sha256": "4727429f9143b8de66ef5ab9cee1d6bc015c25eab154d1c6f28845221e36d163",
+      "feature_count": 307,
+      "retrieved_at_time": "2026-10-30T12:29:13.047Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-river-isle-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('l''Isle')",
+      "bytes": 550155,
+      "sha256": "27e35972400af16baaf441623ad2c0ce59baeffc39498285d0386fa187029027",
+      "feature_count": 548,
+      "retrieved_at_time": "2026-10-30T12:29:17.781Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-river-ciron-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('le Ciron')",
+      "bytes": 310177,
+      "sha256": "2fef036f5f1cf557df06ac465d11ab31c5a42f5ecb98a78cfb35af64bbe2dc6a",
+      "feature_count": 275,
+      "retrieved_at_time": "2026-10-30T12:29:18.709Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-gironde-estuary",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='la Gironde' AND nature='Estuaire'",
+      "bytes": 305505,
+      "sha256": "6f563b4a133735c39f18b2a97ca3955f6636b5529666dd2886455515f4cc577a",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:19.957Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-d-hourtin",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac d''Hourtin'",
+      "bytes": 50227,
+      "sha256": "1210a6adeec8e4544a914b0168de45f2ea4813074e29fcd87465d3663aa85bba",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:20.640Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-de-carcans",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac de Carcans'",
+      "bytes": 37192,
+      "sha256": "8aef42ee3b4b219dc4b94282cc4f774c7a13c620d8752b593c82adb3790b9cc5",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:21.045Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-de-lacanau",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac de Lacanau'",
+      "bytes": 49737,
+      "sha256": "11b505d6b2de5695db5151047e40d8697858ede552301ae2be38c9401cb9aff8",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:21.407Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-de-cazaux-et-sanguinet",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND toponyme='Lac de Cazaux et Sanguinet'",
+      "bytes": 47520,
+      "sha256": "ea88253233acb6d5529a8d621d55c9b26cb4e9cca0bb28bfe1093cecc351afc1",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:21.769Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-coastline-bordeaux",
+      "layer": "BDCARTO_V5:limite_terre_mer",
+      "cql_filter": "BBOX(geometrie,339900,6336487,509729,6532221,'EPSG:2154') AND type_de_limite IS NULL AND niveau='Plus hautes eaux'",
+      "bytes": 1787953,
+      "sha256": "c88e228c388a026df729cbe95c61fca7926203d4462713e95377d6befb5ac4d9",
+      "feature_count": 217,
+      "retrieved_at_time": "2026-10-30T12:29:22.317Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "cql_filter": "code_insee_de_la_commune IN ('33063','33314','33395','33423','33268','33240','33243','33394','33328','33174','33108','33227','33081','33504','33030','33327','33058','33067','33352','33402','33140')",
+      "bytes": 11607,
+      "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+      "feature_count": 21,
+      "retrieved_at_time": "2026-10-30T12:29:22.939Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-river-marne-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Marne')",
+      "bytes": 1101818,
+      "sha256": "c9035bc9092bcd0d8b953c9251f64b8805e70c069a842cf16e2d02626557c887",
+      "feature_count": 1049,
+      "retrieved_at_time": "2026-10-30T12:29:23.630Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-river-aube-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('l''Aube')",
+      "bytes": 1099702,
+      "sha256": "2192a140faffc76ef4616e9dbc57cbb026d8c1658ce7c6e6334f554de72b5e52",
+      "feature_count": 1018,
+      "retrieved_at_time": "2026-10-30T12:29:25.839Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-river-seine-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Seine')",
+      "bytes": 1279771,
+      "sha256": "a8450af4cf723a3c740efe44a9f2251571c5480e4747afe2e64f54aff8886927",
+      "feature_count": 1240,
+      "retrieved_at_time": "2026-10-30T12:29:27.868Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-river-vesle-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND cpx_toponyme_de_cours_d_eau IN ('la Vesle')",
+      "bytes": 320358,
+      "sha256": "3d9c3b5e0734544fd39c3fba244f728c27090293a37b91ce5ccbb96d4464c590",
+      "feature_count": 248,
+      "retrieved_at_time": "2026-10-30T12:29:28.934Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-du-der-chantecoq",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac du Der-Chantecoq'",
+      "bytes": 46583,
+      "sha256": "2db5370bbea048f5b03b160e28abbd6c6ca747887251e1b0f5a70fce7e8d0eef",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:29.680Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-d-orient",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac d''Orient (Réservoir Seine)'",
+      "bytes": 23643,
+      "sha256": "64f2d3bb3b51607140672d95889fef7befa72af3b64a3d93c2d63a575c9a437c",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:30.069Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-d-auzon-temple",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac d''Auzon-Temple (Réservoir Aube)'",
+      "bytes": 34820,
+      "sha256": "a337b08ed60512078fa8371bac4cf2174ad774d1dfbd51c7b840f90df8665f92",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:30.469Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-bdcarto-water-lac-d-amance",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "cql_filter": "BBOX(geometrie,692500,6733290,861234,6957774,'EPSG:2154') AND toponyme='Lac d''Amance (Réservoir Aube)'",
+      "bytes": 16112,
+      "sha256": "d4b3246dd7fab205f987585db2c4b60ebd68751ce790e2f1ed2e0a13b8f5fae7",
+      "feature_count": 1,
+      "retrieved_at_time": "2026-10-30T12:29:30.811Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    },
+    {
+      "id": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "cql_filter": "code_insee_de_la_commune IN ('51454','51230','51108','51649','10387','10033','10034','02168')",
+      "bytes": 4593,
+      "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+      "feature_count": 8,
+      "retrieved_at_time": "2026-10-30T12:29:31.146Z",
+      "identical_content_on_second_request": "yes (only the server timeStamp differs)"
+    }
+  ],
+  "checks": {
+    "records": 47,
+    "by_kind": {
+      "river": 8,
+      "water-body": 9,
+      "coastline": 1,
+      "populated-place": 29
+    },
+    "published": 47,
+    "total_vertices": 96598,
+    "geojson_bytes_total": 3565430,
+    "dropped": [
+      "none of the requested places; Margaux is served as the chef-lieu of Margaux-Cantenac (INSEE 33268, chef-lieu locality Margaux) and Cadillac as Cadillac-sur-Garonne (INSEE 33081)"
+    ],
+    "sub_display_resolution_parts": {
+      "note": "BD CARTO segments and island holes shorter than about 20 m exist in the source and are kept in the canonical records",
+      "garonne_parts_under_50m": 13,
+      "isle_parts_under_50m": 95,
+      "marne_parts_under_50m": 245,
+      "coastline_parts_under_50m": 54,
+      "gironde_estuary_holes": 12
+    },
+    "cleabs_order": "every committed response is in strictly increasing cleabs order; asserted by the import since 2026-10-31"
+  },
+  "records": [
+    {
+      "id": "geo.river.garonne",
+      "kind": "river",
+      "names": {
+        "nl": "Garonne",
+        "en": "Garonne"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-garonne-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["la Garonne", "Fleuve la Garonne"]
+      },
+      "source_features": 349,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 1414,
+      "bbox_wgs84": [-0.6807896, 44.15797769, 0.62766089, 45.08909474],
+      "geojson_bytes": 55941,
+      "geojson_sha256": "795c97fb6abf36a5399c116f85a0acf38f571f75bf09fa09b525590ff267e463",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-garonne-bordeaux.geojson",
+        "bytes": 346329,
+        "sha256": "4f28e36fe25dfcdcc37468f67bbf4d109f25b50ba45740d2238295cb83d0e01b",
+        "retrieved_at_time": "2026-10-30T12:29:12.108Z"
+      }
+    },
+    {
+      "id": "geo.river.dordogne",
+      "kind": "river",
+      "names": {
+        "nl": "Dordogne",
+        "en": "Dordogne"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-dordogne-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["la Dordogne"]
+      },
+      "source_features": 307,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 1221,
+      "bbox_wgs84": [-0.61463276, 44.81369294, 0.62553838, 45.04734718],
+      "geojson_bytes": 48423,
+      "geojson_sha256": "d3b04cdb67488bd59ac5873555a95d77341130bb1e9b634ad9a19e3210d45fd9",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-dordogne-bordeaux.geojson",
+        "bytes": 304224,
+        "sha256": "4727429f9143b8de66ef5ab9cee1d6bc015c25eab154d1c6f28845221e36d163",
+        "retrieved_at_time": "2026-10-30T12:29:13.047Z"
+      }
+    },
+    {
+      "id": "geo.river.isle",
+      "kind": "river",
+      "names": {
+        "nl": "Isle",
+        "en": "Isle"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-isle-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["l'Isle"]
+      },
+      "source_features": 548,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 2478,
+      "bbox_wgs84": [-0.26971602, 44.91532031, 0.62784252, 45.19727679],
+      "geojson_bytes": 95945,
+      "geojson_sha256": "f9d55e9aeacf1ce7dc4c30550234fb60a674f18448fdb795977fb51511547717",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-isle-bordeaux.geojson",
+        "bytes": 550155,
+        "sha256": "27e35972400af16baaf441623ad2c0ce59baeffc39498285d0386fa187029027",
+        "retrieved_at_time": "2026-10-30T12:29:17.781Z"
+      }
+    },
+    {
+      "id": "geo.river.ciron",
+      "kind": "river",
+      "names": {
+        "nl": "Ciron",
+        "en": "Ciron"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-ciron-bordeaux",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["le Ciron"]
+      },
+      "source_features": 275,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 2192,
+      "bbox_wgs84": [-0.38414467, 44.09852863, 0.05112629, 44.74788543],
+      "geojson_bytes": 83105,
+      "geojson_sha256": "89f46c0f445e95080a6ef961946323d2cce913abc48cd1e69a13ea1341891fc2",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-ciron-bordeaux.geojson",
+        "bytes": 310177,
+        "sha256": "2fef036f5f1cf557df06ac465d11ab31c5a42f5ecb98a78cfb35af64bbe2dc6a",
+        "retrieved_at_time": "2026-10-30T12:29:18.709Z"
+      }
+    },
+    {
+      "id": "geo.water-body.gironde-estuary",
+      "kind": "water-body",
+      "names": {
+        "nl": "Gironde-estuarium",
+        "en": "Gironde estuary"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-gironde-estuary",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "toponyme",
+        "values": ["la Gironde"],
+        "cleabs": "PLANDEAU0000002292062751"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 8760,
+      "bbox_wgs84": [-1.06480193, 45.04214652, -0.60843386, 45.61866847],
+      "geojson_bytes": 331629,
+      "geojson_sha256": "0ad9a5c43647d96947047a9cf391e4f396a8db43af2149249e58192150908563",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-gironde-estuary.geojson",
+        "bytes": 305505,
+        "sha256": "6f563b4a133735c39f18b2a97ca3955f6636b5529666dd2886455515f4cc577a",
+        "retrieved_at_time": "2026-10-30T12:29:19.957Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-d-hourtin",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac d'Hourtin",
+        "en": "Lac d'Hourtin"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-d-hourtin",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac d'Hourtin"],
+        "cleabs": "PLANDEAU0000002000784182"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 1425,
+      "bbox_wgs84": [-1.14100653, 45.12859521, -1.07132897, 45.21249483],
+      "geojson_bytes": 54930,
+      "geojson_sha256": "6fa426ae5c7dbab1a5c6c1a5ad6c26c6004f1480712dd11c21c2e8e7a81d361b",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-d-hourtin.geojson",
+        "bytes": 50227,
+        "sha256": "1210a6adeec8e4544a914b0168de45f2ea4813074e29fcd87465d3663aa85bba",
+        "retrieved_at_time": "2026-10-30T12:29:20.640Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-de-carcans",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac de Carcans",
+        "en": "Lac de Carcans"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-de-carcans",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac de Carcans"],
+        "cleabs": "PLANDEAU0000002000784193"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 1052,
+      "bbox_wgs84": [-1.14711919, 45.06026635, -1.08243927, 45.12916431],
+      "geojson_bytes": 41024,
+      "geojson_sha256": "f170000f18ee7c65f83983c70628ecf3884a088d46c75d704f0d15eeb7229ef5",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-de-carcans.geojson",
+        "bytes": 37192,
+        "sha256": "8aef42ee3b4b219dc4b94282cc4f774c7a13c620d8752b593c82adb3790b9cc5",
+        "retrieved_at_time": "2026-10-30T12:29:21.045Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-de-lacanau",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac de Lacanau",
+        "en": "Lac de Lacanau"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-de-lacanau",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac de Lacanau"],
+        "cleabs": "PLANDEAU0000002000784208"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 1411,
+      "bbox_wgs84": [-1.14573886, 44.9252907, -1.09117342, 45.00565796],
+      "geojson_bytes": 54403,
+      "geojson_sha256": "92192d5e3e9eb8a29abb8167554b45368b7b607c8553b6e97649e35da6a0a299",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-de-lacanau.geojson",
+        "bytes": 49737,
+        "sha256": "11b505d6b2de5695db5151047e40d8697858ede552301ae2be38c9401cb9aff8",
+        "retrieved_at_time": "2026-10-30T12:29:21.407Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-de-cazaux-et-sanguinet",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac de Cazaux et de Sanguinet",
+        "en": "Lac de Cazaux et de Sanguinet"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-de-cazaux-et-sanguinet",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac de Cazaux et Sanguinet"],
+        "cleabs": "PLANDEAU0000002000784178"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 1348,
+      "bbox_wgs84": [-1.20133159, 44.43167573, -1.07432728, 44.53008058],
+      "geojson_bytes": 51514,
+      "geojson_sha256": "04c1500f08a984a64eabfe300bdafd3921950e2b4aa503860c55269ed181fd7e",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-de-cazaux-et-sanguinet.geojson",
+        "bytes": 47520,
+        "sha256": "ea88253233acb6d5529a8d621d55c9b26cb4e9cca0bb28bfe1093cecc351afc1",
+        "retrieved_at_time": "2026-10-30T12:29:21.769Z"
+      }
+    },
+    {
+      "id": "geo.coastline.gironde-atlantic",
+      "kind": "coastline",
+      "names": {
+        "nl": "Atlantische kust",
+        "en": "Atlantic coast"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-coastline-bordeaux",
+      "layer": "BDCARTO_V5:limite_terre_mer",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "niveau",
+        "values": ["Plus hautes eaux"],
+        "type_de_limite": null
+      },
+      "source_features": 217,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 49382,
+      "bbox_wgs84": [-1.35133398, 44.0014091, -0.18616944, 45.98191279],
+      "geojson_bytes": 1770496,
+      "geojson_sha256": "19001dfec881f98d0be0ee9521b259afd8dc45becb3cce3b5eb33972778a85c4",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-coastline-bordeaux.geojson",
+        "bytes": 1787953,
+        "sha256": "c88e228c388a026df729cbe95c61fca7926203d4462713e95377d6befb5ac4d9",
+        "retrieved_at_time": "2026-10-30T12:29:22.317Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.bordeaux",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Bordeaux",
+        "en": "Bordeaux"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33063"],
+        "expect": {
+          "nom_officiel": "Bordeaux",
+          "nom_du_chef_lieu": "Bordeaux"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.57937892, 44.8378966, -0.57937892, 44.8378966],
+      "geojson_bytes": 352,
+      "geojson_sha256": "b683bc927c67d5b52685c397fb826462819123c6ca41d86d42cc57b1db09afa6",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.pauillac",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Pauillac",
+        "en": "Pauillac"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33314"],
+        "expect": {
+          "nom_officiel": "Pauillac",
+          "nom_du_chef_lieu": "Pauillac"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.7462981, 45.19951815, -0.7462981, 45.19951815],
+      "geojson_bytes": 352,
+      "geojson_sha256": "2e3cec2ead2f7ed58b277b93a9779574bccf92e26e5777e9c7c0f8005223d8f8",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.saint-estephe",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Saint-Estèphe",
+        "en": "Saint-Estèphe"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33395"],
+        "expect": {
+          "nom_officiel": "Saint-Estèphe",
+          "nom_du_chef_lieu": "Canteloup"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.77246351, 45.25935146, -0.77246351, 45.25935146],
+      "geojson_bytes": 377,
+      "geojson_sha256": "ef8913d7df8ff0366e62dedc63720088ac17c34a9ad3e284c4af009fcf636fbe",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.saint-julien-beychevelle",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Saint-Julien-Beychevelle",
+        "en": "Saint-Julien-Beychevelle"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33423"],
+        "expect": {
+          "nom_officiel": "Saint-Julien-Beychevelle",
+          "nom_du_chef_lieu": "Saint-Julien-Beychevelle"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.74095554, 45.1655576, -0.74095554, 45.1655576],
+      "geojson_bytes": 416,
+      "geojson_sha256": "229943e2f6788259d035b77b80d02d53705503a9a32d449d3c49768e1486c723",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.margaux",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Margaux",
+        "en": "Margaux"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33268"],
+        "expect": {
+          "nom_officiel": "Margaux-Cantenac",
+          "nom_du_chef_lieu": "Margaux"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.67763081, 45.04201427, -0.67763081, 45.04201427],
+      "geojson_bytes": 351,
+      "geojson_sha256": "1e656854e701bd6b9d44cbf72713bd0243e8294647092e490fb345c15764db8f",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.lesparre-medoc",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Lesparre-Médoc",
+        "en": "Lesparre-Médoc"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33240"],
+        "expect": {
+          "nom_officiel": "Lesparre-Médoc",
+          "nom_du_chef_lieu": "Lesparre-Médoc"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.93571446, 45.30590207, -0.93571446, 45.30590207],
+      "geojson_bytes": 381,
+      "geojson_sha256": "48852f2b4f9164c2efa68f9a53e7efeb64c7fa7a3be75c5dd54409736b3457b6",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.libourne",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Libourne",
+        "en": "Libourne"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33243"],
+        "expect": {
+          "nom_officiel": "Libourne",
+          "nom_du_chef_lieu": "Libourne"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.24534636, 44.91444633, -0.24534636, 44.91444633],
+      "geojson_bytes": 355,
+      "geojson_sha256": "f0cd585055984dbe794905b380010fac2d72b0b657e8c6337148a962351bdfc3",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.saint-emilion",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Saint-Émilion",
+        "en": "Saint-Émilion"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33394"],
+        "expect": {
+          "nom_officiel": "Saint-Émilion",
+          "nom_du_chef_lieu": "Saint-Émilion"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.15572345, 44.89436698, -0.15572345, 44.89436698],
+      "geojson_bytes": 377,
+      "geojson_sha256": "0f3df7f1a8929d39b94e8279a9122d5e03ac6c68117b5da0baf13c5b57776bff",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.pomerol",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Pomerol",
+        "en": "Pomerol"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33328"],
+        "expect": {
+          "nom_officiel": "Pomerol",
+          "nom_du_chef_lieu": "Trochau"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.19998458, 44.9318786, -0.19998458, 44.9318786],
+      "geojson_bytes": 348,
+      "geojson_sha256": "0ae3f47b9d43c11c39e94e6746e391ab23d12b6681929d1066d6e572c614e52e",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.fronsac",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Fronsac",
+        "en": "Fronsac"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33174"],
+        "expect": {
+          "nom_officiel": "Fronsac",
+          "nom_du_chef_lieu": "Fronsac"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.27155567, 44.92439539, -0.27155567, 44.92439539],
+      "geojson_bytes": 351,
+      "geojson_sha256": "a2e025d04d94241d6fb2c57004c8b7eeb8aac08e10cb4431532a0ed5e5664fe2",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.castillon-la-bataille",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Castillon-la-Bataille",
+        "en": "Castillon-la-Bataille"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33108"],
+        "expect": {
+          "nom_officiel": "Castillon-la-Bataille",
+          "nom_du_chef_lieu": "Castillon-la-Bataille"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.04307294, 44.85209968, -0.04307294, 44.85209968],
+      "geojson_bytes": 407,
+      "geojson_sha256": "e432e2fb0da5acab340881bece492e6b4f860b1a56967fb22fbd8a80c6890c13",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.langon",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Langon",
+        "en": "Langon"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33227"],
+        "expect": {
+          "nom_officiel": "Langon",
+          "nom_du_chef_lieu": "Langon"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.24485314, 44.55301055, -0.24485314, 44.55301055],
+      "geojson_bytes": 347,
+      "geojson_sha256": "9a9e08cf52e4261bf0d4a40a876d448de883f0bf78f75f9c4dbd380d4cebbc29",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.cadillac-sur-garonne",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Cadillac-sur-Garonne",
+        "en": "Cadillac-sur-Garonne"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33081"],
+        "expect": {
+          "nom_officiel": "Cadillac-sur-Garonne",
+          "nom_du_chef_lieu": "Cadillac-sur-Garonne"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.32039663, 44.63704249, -0.32039663, 44.63704249],
+      "geojson_bytes": 403,
+      "geojson_sha256": "4c495fae923b0897ddfd97956d77c1e175defc7af2d1fa50f2dc1184d785e695",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.sauternes",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Sauternes",
+        "en": "Sauternes"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33504"],
+        "expect": {
+          "nom_officiel": "Sauternes",
+          "nom_du_chef_lieu": "Sauternes"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.34328698, 44.5311922, -0.34328698, 44.5311922],
+      "geojson_bytes": 356,
+      "geojson_sha256": "cea17e5861d99801fb50ab80fd03e61781b604f1fb0152ee73d599f600231f64",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.barsac",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Barsac",
+        "en": "Barsac"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33030"],
+        "expect": {
+          "nom_officiel": "Barsac",
+          "nom_du_chef_lieu": "Barsac"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.31728451, 44.60786784, -0.31728451, 44.60786784],
+      "geojson_bytes": 347,
+      "geojson_sha256": "244f9cb29f765312a82928c34ad09d4d6e35ea1756e435d02b718b1df71e202b",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.podensac",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Podensac",
+        "en": "Podensac"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33327"],
+        "expect": {
+          "nom_officiel": "Podensac",
+          "nom_du_chef_lieu": "Podensac"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.35441935, 44.65063698, -0.35441935, 44.65063698],
+      "geojson_bytes": 355,
+      "geojson_sha256": "1cb53bc65f64313681f0bf6279a353c70318e21682340ee0bc0b456144665658",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.blaye",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Blaye",
+        "en": "Blaye"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33058"],
+        "expect": {
+          "nom_officiel": "Blaye",
+          "nom_du_chef_lieu": "Blaye"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.66301635, 45.12680535, -0.66301635, 45.12680535],
+      "geojson_bytes": 343,
+      "geojson_sha256": "f2f910b5adbb35d5cffa1017db9508804f44346b97ae16c5cb088df66d31d0e5",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.bourg",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Bourg",
+        "en": "Bourg"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33067"],
+        "expect": {
+          "nom_officiel": "Bourg",
+          "nom_du_chef_lieu": "Bourg"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.55956383, 45.03920388, -0.55956383, 45.03920388],
+      "geojson_bytes": 343,
+      "geojson_sha256": "4f3376bdcf32c8fca460418d38ed5e5652a970b9d0368df3dc676a98ecd17d13",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.la-reole",
+      "kind": "populated-place",
+      "names": {
+        "nl": "La Réole",
+        "en": "La Réole"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33352"],
+        "expect": {
+          "nom_officiel": "La Réole",
+          "nom_du_chef_lieu": "La Réole"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.04140052, 44.5810043, -0.04140052, 44.5810043],
+      "geojson_bytes": 354,
+      "geojson_sha256": "31cbb9db9f4143ae86e6517fc2d1514a114eec4729b33a4d183a33a71d69a7b4",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.sainte-foy-la-grande",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Sainte-Foy-la-Grande",
+        "en": "Sainte-Foy-la-Grande"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33402"],
+        "expect": {
+          "nom_officiel": "Sainte-Foy-la-Grande",
+          "nom_du_chef_lieu": "Sainte-Foy-la-Grande"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [0.21503371, 44.84179873, 0.21503371, 44.84179873],
+      "geojson_bytes": 400,
+      "geojson_sha256": "c61f62fbd33e7d0039e89c45293839365275b04908574065a10d33ea98a932cd",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.creon",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Créon",
+        "en": "Créon"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-bordeaux",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "bordeaux",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["33140"],
+        "expect": {
+          "nom_officiel": "Créon",
+          "nom_du_chef_lieu": "Créon"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [-0.34852498, 44.77437108, -0.34852498, 44.77437108],
+      "geojson_bytes": 345,
+      "geojson_sha256": "583a6ff53388e0ee90b8144f9d9066cd8b2a47966241667b6643770fc3345c5d",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-bordeaux.geojson",
+        "bytes": 11607,
+        "sha256": "a1e2284735ae24e5c4ab18cea2c979c6f9a3f7482ec21c8be8e2dc56ccf3cfa2",
+        "retrieved_at_time": "2026-10-30T12:29:22.939Z"
+      }
+    },
+    {
+      "id": "geo.river.marne",
+      "kind": "river",
+      "names": {
+        "nl": "Marne",
+        "en": "Marne"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-marne-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "champagne",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["la Marne"]
+      },
+      "source_features": 1049,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 6044,
+      "bbox_wgs84": [2.8915661, 48.03889349, 5.23549386, 49.09850654],
+      "geojson_bytes": 227341,
+      "geojson_sha256": "b15d749784cc18d86db92cec4f9c6bdb3e4015fe0b3e5b9ef60bd07ed8dbc6c7",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-marne-champagne.geojson",
+        "bytes": 1101818,
+        "sha256": "c9035bc9092bcd0d8b953c9251f64b8805e70c069a842cf16e2d02626557c887",
+        "retrieved_at_time": "2026-10-30T12:29:23.630Z"
+      }
+    },
+    {
+      "id": "geo.river.aube",
+      "kind": "river",
+      "names": {
+        "nl": "Aube",
+        "en": "Aube"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-aube-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "champagne",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["l'Aube"]
+      },
+      "source_features": 1018,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 6781,
+      "bbox_wgs84": [3.71479015, 47.75243877, 5.16254584, 48.58409259],
+      "geojson_bytes": 252478,
+      "geojson_sha256": "b6e1791c0520968ddd243c0c9610036af6305499ba6f9cf9442e11bfab2d7ed4",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-aube-champagne.geojson",
+        "bytes": 1099702,
+        "sha256": "2192a140faffc76ef4616e9dbc57cbb026d8c1658ce7c6e6334f554de72b5e52",
+        "retrieved_at_time": "2026-10-30T12:29:25.839Z"
+      }
+    },
+    {
+      "id": "geo.river.seine",
+      "kind": "river",
+      "names": {
+        "nl": "Seine",
+        "en": "Seine"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-seine-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "champagne",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["la Seine"]
+      },
+      "source_features": 1240,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 6487,
+      "bbox_wgs84": [2.86959576, 47.6797465, 4.66286468, 48.55893142],
+      "geojson_bytes": 245880,
+      "geojson_sha256": "c8c26ff644cb5524ca54ec54cefd775e19d057245bd0af321a01f536f8703ef7",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-seine-champagne.geojson",
+        "bytes": 1279771,
+        "sha256": "a8450af4cf723a3c740efe44a9f2251571c5480e4747afe2e64f54aff8886927",
+        "retrieved_at_time": "2026-10-30T12:29:27.868Z"
+      }
+    },
+    {
+      "id": "geo.river.vesle",
+      "kind": "river",
+      "names": {
+        "nl": "Vesle",
+        "en": "Vesle"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-river-vesle-champagne",
+      "layer": "BDCARTO_V5:troncon_hydrographique",
+      "envelope": "champagne",
+      "selection": {
+        "property": "cpx_toponyme_de_cours_d_eau",
+        "values": ["la Vesle"]
+      },
+      "source_features": 248,
+      "geometry_type": "MultiLineString",
+      "vertex_count": 3160,
+      "bbox_wgs84": [3.46774309, 48.97940132, 4.60336989, 49.39369472],
+      "geojson_bytes": 114204,
+      "geojson_sha256": "688b8ce5c4bf0238db79df018b9366ced00e21536a7c46956de3485d3afe616e",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-river-vesle-champagne.geojson",
+        "bytes": 320358,
+        "sha256": "3d9c3b5e0734544fd39c3fba244f728c27090293a37b91ce5ccbb96d4464c590",
+        "retrieved_at_time": "2026-10-30T12:29:28.934Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-du-der-chantecoq",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac du Der-Chantecoq",
+        "en": "Lac du Der-Chantecoq"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-du-der-chantecoq",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "champagne",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac du Der-Chantecoq"],
+        "cleabs": "PLANDEAU0000002000761196"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 1322,
+      "bbox_wgs84": [4.69690816, 48.55155583, 4.86010117, 48.61172208],
+      "geojson_bytes": 49241,
+      "geojson_sha256": "5b7d0d5a48ba812d32ba7ef201b21e72de9350a135c3746bc417867dc8ed3dc2",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-du-der-chantecoq.geojson",
+        "bytes": 46583,
+        "sha256": "2db5370bbea048f5b03b160e28abbd6c6ca747887251e1b0f5a70fce7e8d0eef",
+        "retrieved_at_time": "2026-10-30T12:29:29.680Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-d-orient",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac d'Orient",
+        "en": "Lac d'Orient"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-d-orient",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "champagne",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac d'Orient (Réservoir Seine)"],
+        "cleabs": "PLANDEAU0000002000761613"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 662,
+      "bbox_wgs84": [4.29753594, 48.2426102, 4.37954918, 48.30565335],
+      "geojson_bytes": 24765,
+      "geojson_sha256": "f59a89d47396492a39ab1e3b114179b74a9c2ece0143f6ea8b888f9dbeff1966",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-d-orient.geojson",
+        "bytes": 23643,
+        "sha256": "64f2d3bb3b51607140672d95889fef7befa72af3b64a3d93c2d63a575c9a437c",
+        "retrieved_at_time": "2026-10-30T12:29:30.069Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-d-auzon-temple",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac d'Auzon-Temple",
+        "en": "Lac d'Auzon-Temple"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-d-auzon-temple",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "champagne",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac d'Auzon-Temple (Réservoir Aube)"],
+        "cleabs": "PLANDEAU0000002000761426"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 984,
+      "bbox_wgs84": [4.36565366, 48.29639803, 4.47360659, 48.34975681],
+      "geojson_bytes": 36645,
+      "geojson_sha256": "790c9cd61a8bdcfe0de21cf241b2606b56fc496c4223e84040af982dfb990424",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-d-auzon-temple.geojson",
+        "bytes": 34820,
+        "sha256": "a337b08ed60512078fa8371bac4cf2174ad774d1dfbd51c7b840f90df8665f92",
+        "retrieved_at_time": "2026-10-30T12:29:30.469Z"
+      }
+    },
+    {
+      "id": "geo.water-body.lac-d-amance",
+      "kind": "water-body",
+      "names": {
+        "nl": "Lac d'Amance",
+        "en": "Lac d'Amance"
+      },
+      "review_status": "published",
+      "resource": "ign-bdcarto-water-lac-d-amance",
+      "layer": "BDCARTO_V5:plan_d_eau",
+      "envelope": "champagne",
+      "selection": {
+        "property": "toponyme",
+        "values": ["Lac d'Amance (Réservoir Aube)"],
+        "cleabs": "PLANDEAU0000002000761531"
+      },
+      "source_features": 1,
+      "geometry_type": "MultiPolygon",
+      "vertex_count": 446,
+      "bbox_wgs84": [4.48969513, 48.31331385, 4.52716677, 48.35604554],
+      "geojson_bytes": 16864,
+      "geojson_sha256": "d8a52ee51b3decdf79783bdc3bf9dc39d5489b6a667b4de4299a1b3ba16a3837",
+      "raw_response": {
+        "file": "data/geography/raw/ign-bd-carto-v5/ign-bdcarto-water-lac-d-amance.geojson",
+        "bytes": 16112,
+        "sha256": "d4b3246dd7fab205f987585db2c4b60ebd68751ce790e2f1ed2e0a13b8f5fae7",
+        "retrieved_at_time": "2026-10-30T12:29:30.811Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.reims",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Reims",
+        "en": "Reims"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["51454"],
+        "expect": {
+          "nom_officiel": "Reims",
+          "nom_du_chef_lieu": "Reims"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [4.03153123, 49.2582655, 4.03153123, 49.2582655],
+      "geojson_bytes": 337,
+      "geojson_sha256": "a882a39ed04ae06e3be2c63561a4108243032b60b6c521e03009ee3482a2efee",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.epernay",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Épernay",
+        "en": "Épernay"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["51230"],
+        "expect": {
+          "nom_officiel": "Épernay",
+          "nom_du_chef_lieu": "Épernay"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [3.95866328, 49.04376368, 3.95866328, 49.04376368],
+      "geojson_bytes": 350,
+      "geojson_sha256": "c318d9fd1db42291c653c525fa285bd49c062a05be83c5aa2cbdd8ede43cee22",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.chalons-en-champagne",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Châlons-en-Champagne",
+        "en": "Châlons-en-Champagne"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["51108"],
+        "expect": {
+          "nom_officiel": "Châlons-en-Champagne",
+          "nom_du_chef_lieu": "Châlons-en-Champagne"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [4.36310235, 48.95660104, 4.36310235, 48.95660104],
+      "geojson_bytes": 402,
+      "geojson_sha256": "e156177f66c43c0a087de9612c00a7631abf1f048360652298a7e6fa31c0c75b",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.troyes",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Troyes",
+        "en": "Troyes"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["10387"],
+        "expect": {
+          "nom_officiel": "Troyes",
+          "nom_du_chef_lieu": "Troyes"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [4.07398934, 48.29765995, 4.07398934, 48.29765995],
+      "geojson_bytes": 344,
+      "geojson_sha256": "caeb68188fcaf199da2de3df344180860d88ed7dbca642fce778d38c8be621af",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.bar-sur-aube",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Bar-sur-Aube",
+        "en": "Bar-sur-Aube"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["10033"],
+        "expect": {
+          "nom_officiel": "Bar-sur-Aube",
+          "nom_du_chef_lieu": "Bar-sur-Aube"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [4.70576019, 48.23332865, 4.70576019, 48.23332865],
+      "geojson_bytes": 368,
+      "geojson_sha256": "1f4e9c9cbcafa0fe7af189f0c330830c12fcb20c2c38bf9a62268007c5553d75",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.bar-sur-seine",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Bar-sur-Seine",
+        "en": "Bar-sur-Seine"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["10034"],
+        "expect": {
+          "nom_officiel": "Bar-sur-Seine",
+          "nom_du_chef_lieu": "Bar-sur-Seine"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [4.37356376, 48.11425729, 4.37356376, 48.11425729],
+      "geojson_bytes": 372,
+      "geojson_sha256": "0467f0b5c1e2fb0f7f8f1445ec61bd404668327e6c859cbab6a2ef2b7092e1dd",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.chateau-thierry",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Château-Thierry",
+        "en": "Château-Thierry"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["02168"],
+        "expect": {
+          "nom_officiel": "Château-Thierry",
+          "nom_du_chef_lieu": "Château-Thierry"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [3.40249741, 49.04609395, 3.40249741, 49.04609395],
+      "geojson_bytes": 382,
+      "geojson_sha256": "6dacb81ff351f8e3aa8679a4870d325e8ebe76362f41e55dfec165089e9e80fa",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    },
+    {
+      "id": "geo.populated-place.vitry-le-francois",
+      "kind": "populated-place",
+      "names": {
+        "nl": "Vitry-le-François",
+        "en": "Vitry-le-François"
+      },
+      "review_status": "published",
+      "resource": "ign-adminexpress-places-champagne",
+      "layer": "ADMINEXPRESS-COG.2026:chef_lieu_de_commune",
+      "envelope": "champagne",
+      "selection": {
+        "property": "code_insee_de_la_commune",
+        "values": ["51649"],
+        "expect": {
+          "nom_officiel": "Vitry-le-François",
+          "nom_du_chef_lieu": "Vitry-le-François"
+        }
+      },
+      "source_features": 1,
+      "geometry_type": "Point",
+      "vertex_count": 1,
+      "bbox_wgs84": [4.58930442, 48.7247908, 4.58930442, 48.7247908],
+      "geojson_bytes": 387,
+      "geojson_sha256": "6b5ac3eed6abf369d765697d332e1393bf50fbd085b93183d658f8b07fd6a020",
+      "raw_response": {
+        "file": "data/geography/raw/ign-admin-express-cog-2026/ign-adminexpress-places-champagne.geojson",
+        "bytes": 4593,
+        "sha256": "fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa",
+        "retrieved_at_time": "2026-10-30T12:29:31.146Z"
+      }
+    }
+  ]
+}

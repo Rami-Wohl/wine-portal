@@ -8,3 +8,6 @@ test-results/
 src/generated/content/
 public/media/
 **/*.md
+
+# Pinned raw geography service responses: byte-exact checksums, never reformat
+data/geography/raw/

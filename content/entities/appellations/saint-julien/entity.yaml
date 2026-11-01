@@ -43,5 +43,6 @@ source_refs:
   - source.brgm-bordeaux-geology-2022
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.saint-julien
 depth: foundation
 last_reviewed: 2026-09-11

@@ -1,0 +1,1311 @@
+/* Atlas scenes: server-rendered SVG map, list alternative, legend and overlay controls; and the
+ * Atlas portal at /atlas.
+ * Map colours are scoped here; colour never carries meaning alone (patterns, outlines, labels do).
+ */
+
+.atlas-scene {
+  /* Estimated rendered map width in CSS px per breakpoint (see responsive.css). It sizes
+   * labels and markers before JavaScript measures the real width. It is deliberately
+   * different from ASSUMED_RENDER_PX in labels.ts (640): that constant is the fixed
+   * reference width the server plans label visibility against; the client scales those
+   * thresholds by the measured width, so the two never need to agree.
+   */
+  --atlas-render-px: 760;
+  /* Layout knobs: the responsive overrides and the embedded variant set only these
+   * custom properties, so every selector stays at single-class specificity.
+   */
+  --atlas-list-width: 290px;
+  --atlas-body-gap: clamp(1.5rem, 3vw, 2.5rem);
+  --atlas-body-columns: var(--atlas-list-width) minmax(0, 1fr);
+  --atlas-body-areas: "list map" "list legend";
+  --atlas-area-columns: 1fr;
+  --atlas-map-max-height: 78vh;
+  /* Wide screens: the list beside the map stays as tall as the map, which the map column's
+   * width and the scene's proportions decide (the body is the size container), or its
+   * height cap. The +2px is the frame border. Narrow screens stack and drop the cap. */
+  --atlas-list-max-height: min(
+    calc(
+      (100cqi - var(--atlas-list-width) - var(--atlas-body-gap)) * var(--atlas-base-height) /
+        var(--atlas-base-width) + 2px
+    ),
+    calc(var(--atlas-map-max-height) + 2px)
+  );
+  --atlas-list-position: sticky;
+  --atlas-list-fade: block;
+  /* Map controls: a column over the frame's top-right corner on wide screens; narrow screens
+   * turn them into a bar attached below the frame (responsive.css). */
+  --atlas-controls-position: absolute;
+  --atlas-controls-inset: 8px 8px auto auto;
+  --atlas-controls-display: grid;
+  --atlas-controls-gap: 6px;
+  --atlas-controls-surface: transparent;
+  --atlas-controls-border: 0;
+  --atlas-controls-radius: 0;
+  --atlas-control-border: 1px solid var(--line-strong);
+  --atlas-control-radius: var(--radius-sm);
+  --atlas-control-shadow: 0 2px 8px rgb(37 40 35 / 12%);
+  --atlas-control-surface: color-mix(in srgb, var(--raised) 88%, transparent);
+  --atlas-frame-radius: var(--radius-md);
+  --atlas-keys-inset: auto auto 8px 8px;
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin: 0;
+  min-width: 0;
+}
+/* Map colours, shared by the scenes and the portal's thumbnails. */
+.atlas-scene,
+.atlas-portal {
+  --atlas-canvas: var(--surface);
+  --atlas-area-fill: color-mix(in srgb, var(--leaf) 26%, var(--surface));
+  --atlas-area-fill-strong: color-mix(in srgb, var(--leaf) 46%, var(--surface));
+  --atlas-area-line: var(--leaf);
+  /* Rows in the area list and the chooser: hover, highlighted area, primary choice. */
+  --atlas-row-highlight: color-mix(in srgb, var(--leaf-soft) 50%, var(--surface));
+  --atlas-highlight-fill: color-mix(in srgb, var(--brand) 20%, var(--surface));
+  --atlas-highlight-line: var(--brand-dark);
+  --atlas-context-line: var(--line-strong);
+  --atlas-hatch: color-mix(in srgb, var(--muted) 55%, var(--surface));
+  --atlas-water-fill: var(--water);
+  --atlas-water-line: var(--water-line);
+  --atlas-water-label: var(--water-label);
+  --atlas-place: var(--ink);
+}
+.atlas-scene-heading {
+  min-width: 0;
+  max-width: var(--reading);
+}
+.atlas-scene-title {
+  margin-bottom: 0.6rem;
+  font: 500 clamp(1.8rem, 3vw, 2.5rem) / 1.08 var(--font-display);
+  letter-spacing: -0.025em;
+}
+.atlas-scene-embedded .atlas-scene-title {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+}
+.atlas-scene-intro {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.atlas-scene-notice {
+  margin: 0.9rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--brand);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+/* Body: list, map and legend in DOM order. Wide screens put the list in a left column beside
+ * the map with the legend directly under the map; narrow screens stack all three. */
+.atlas-scene-body {
+  display: grid;
+  grid-template-columns: var(--atlas-body-columns);
+  grid-template-areas: var(--atlas-body-areas);
+  gap: 1.25rem var(--atlas-body-gap);
+  align-items: start;
+  min-width: 0;
+  container-type: inline-size;
+}
+.atlas-scene-body > .atlas-feature-list {
+  grid-area: list;
+}
+.atlas-scene-body > .atlas-map-panel {
+  grid-area: map;
+}
+.atlas-scene-legend {
+  grid-area: legend;
+  min-width: 0;
+}
+/* Embedded in a reading column: heading, caption and link, the map, then one disclosure. */
+.atlas-scene-embedded {
+  --atlas-area-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+.atlas-scene-embedded .atlas-scene-title {
+  margin-bottom: 0.3rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+}
+.atlas-scene-embedded .atlas-scene-intro {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.atlas-scene-link {
+  margin: 0.2rem 0 0;
+  font-size: 0.86rem;
+  font-weight: 720;
+}
+.atlas-scene-link a {
+  /* Standalone link: at least a 24px target. */
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  color: var(--brand);
+  text-decoration: none;
+}
+.atlas-scene-link a:hover {
+  color: var(--brand-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+/* Entity pages embed the owner region's scene in the reading flow, after the summary. */
+.entity-atlas {
+  min-width: 0;
+}
+
+/* List alternative. Beside the map it sticks below the site header and scrolls within the
+ * map's height; stacked it is an ordinary block. */
+.atlas-feature-list {
+  position: var(--atlas-list-position);
+  top: var(--header-offset);
+  display: grid;
+  gap: 1.1rem;
+  align-content: start;
+  min-width: 0;
+  max-height: var(--atlas-list-max-height);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+/* Scroll cue for the list column: a fade at its bottom edge, which scroll-driven animation
+ * removes once the end is reached where supported; elsewhere it stays as a static fade. */
+.atlas-scene-body > .atlas-feature-list::after {
+  position: sticky;
+  bottom: -1.15rem;
+  display: var(--atlas-list-fade);
+  height: 2.5rem;
+  margin: calc(-2.5rem - 1.1rem) -1.25rem -1.15rem;
+  background: linear-gradient(transparent, var(--surface));
+  content: "";
+  pointer-events: none;
+}
+@supports (animation-timeline: scroll()) {
+  .atlas-scene-body > .atlas-feature-list::after {
+    animation: atlas-list-fade linear both;
+    animation-timeline: scroll(nearest block);
+  }
+}
+@keyframes atlas-list-fade {
+  0%,
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Inside the embedded map's disclosure the list is part of the text, not a panel. */
+.atlas-about .atlas-feature-list {
+  position: static;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.atlas-list-title,
+.atlas-legend-title {
+  margin: 0;
+  font: 520 1.2rem/1.2 var(--font-display);
+}
+.atlas-list-group {
+  display: grid;
+  gap: 0.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+.atlas-list-group-title {
+  margin: 0;
+  color: var(--muted);
+  font: 720 0.7rem/1.2 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.atlas-area-list,
+.atlas-missing-list {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-area-list {
+  grid-template-columns: var(--atlas-area-columns);
+  column-gap: 1rem;
+}
+.atlas-area-list-current {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+/* Folded list: closed in the server markup, native disclosure, no script needed. */
+.atlas-list-disclosure > summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--brand-dark);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 720;
+  list-style: none;
+}
+.atlas-list-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.atlas-list-disclosure > summary::after {
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: none;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: rotate(45deg) translateY(-0.12rem);
+}
+.atlas-list-disclosure[open] > summary::after {
+  transform: rotate(225deg) translate(-0.12rem, -0.12rem);
+}
+.atlas-list-disclosure[open] > summary {
+  margin-bottom: 0.9rem;
+}
+/* Beside the map the open list is a column, not a disclosure: its "show" line would mislead.
+ * 981px is the shared wide breakpoint: WIDE_QUERY in atlas-scene-enhancer.tsx and the
+ * max-width: 980px block in responsive.css must move together with this query. */
+@media (min-width: 981px) {
+  .atlas-list-disclosure[open] > summary {
+    display: none;
+  }
+}
+.atlas-list-disclosure-body {
+  display: grid;
+  gap: 1.1rem;
+}
+.atlas-area-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.6rem;
+  min-width: 0;
+  padding: 0.3rem 1rem;
+  margin-inline: -0.5rem;
+}
+.atlas-area-item.is-active,
+.atlas-area-item.is-highlighted {
+  background: var(--atlas-row-highlight);
+}
+.atlas-area-item.is-highlighted {
+  box-shadow: inset 3px 0 var(--brand);
+}
+.atlas-area-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--brand-dark);
+  font-size: 0.95rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+a.atlas-area-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+.atlas-area-link-static {
+  color: var(--ink);
+  font-weight: 600;
+}
+.atlas-area-type,
+.atlas-area-state {
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+.atlas-area-state {
+  font-weight: 650;
+}
+.atlas-area-item.is-highlighted .atlas-area-state {
+  color: var(--brand);
+}
+.atlas-missing-list li {
+  color: var(--ink);
+  font-size: 0.88rem;
+}
+.atlas-missing-name {
+  font-weight: 650;
+}
+.atlas-missing-reason,
+.atlas-list-empty {
+  color: var(--muted);
+}
+.atlas-list-empty {
+  margin: 0;
+  font-size: 0.88rem;
+}
+.atlas-orientation {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+}
+.atlas-orientation div {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.5rem;
+  font-size: 0.86rem;
+}
+.atlas-orientation dt {
+  color: var(--muted);
+  font-weight: 650;
+}
+.atlas-orientation dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Map panel, frame and the controls overlaid on it */
+.atlas-map-panel,
+.atlas-map-enhancer {
+  min-width: 0;
+}
+.atlas-map-enhancer {
+  position: relative;
+}
+.atlas-map-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--atlas-frame-radius);
+  background: var(--atlas-canvas);
+}
+/* Enhanced: a pointer drag pans, one finger scrolls the page, two fingers are the map's. */
+.atlas-map-enhancer[data-ready] .atlas-map-frame {
+  cursor: grab;
+  touch-action: pan-y;
+}
+.atlas-map-frame:focus-visible {
+  outline-offset: 2px;
+}
+.atlas-map-controls {
+  position: var(--atlas-controls-position);
+  z-index: 1;
+  inset: var(--atlas-controls-inset);
+  display: var(--atlas-controls-display);
+  gap: var(--atlas-controls-gap);
+  border: var(--atlas-controls-border);
+  border-top: 0;
+  border-radius: var(--atlas-controls-radius);
+  background: var(--atlas-controls-surface);
+}
+.atlas-map-control {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: var(--atlas-control-border);
+  border-radius: var(--atlas-control-radius);
+  background: var(--atlas-control-surface);
+  box-shadow: var(--atlas-control-shadow);
+  color: var(--brand-dark);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Hover only where a pointer hovers: a tap must not leave a highlighted button behind. */
+@media (hover: hover) {
+  .atlas-map-control:hover {
+    border-color: var(--brand);
+  }
+}
+/* The ring comes from keyboard focus only (base.css :focus-visible). */
+.atlas-map-control:focus:not(:focus-visible) {
+  outline: none;
+}
+.atlas-map-control:focus-visible {
+  outline-offset: 2px;
+}
+.atlas-map-control:disabled,
+.atlas-map-control[aria-disabled="true"] {
+  color: var(--muted);
+  cursor: default;
+}
+.atlas-map-control:disabled {
+  opacity: 0.6;
+}
+.atlas-map-control-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+/* Pointer-only controls and instructions need the enhancement: hidden without scripting. The
+ * controls are already in the server markup, disabled until ready, so nothing moves. */
+@media (scripting: none) {
+  .atlas-map-controls,
+  .atlas-needs-script {
+    display: none;
+  }
+}
+.atlas-scene:not(:has(.atlas-map-enhancer[data-ready])) .atlas-needs-script {
+  display: none;
+}
+/* Transient gesture hint ("Ctrl + scroll", "two fingers"): never takes input. */
+.atlas-map-hint {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: rgb(37 40 35 / 84%);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s;
+  visibility: hidden;
+}
+.atlas-map-hint[data-visible="true"] {
+  opacity: 1;
+  visibility: visible;
+}
+/* Keyboard help, shown while the frame itself has keyboard focus. */
+.atlas-map-keys-caption {
+  position: absolute;
+  z-index: 1;
+  inset: var(--atlas-keys-inset);
+  display: none;
+  max-width: calc(100% - 76px);
+  margin: 0;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--raised);
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  pointer-events: none;
+}
+.atlas-map-frame:focus-visible > .atlas-map-keys-caption {
+  display: block;
+}
+.atlas-map {
+  /* User units per CSS pixel; JS overrides with the measured value when it zooms or resizes. */
+  --atlas-u: calc(var(--atlas-view-width) / var(--atlas-render-px));
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: var(--atlas-map-max-height);
+  aspect-ratio: var(--atlas-base-width) / var(--atlas-base-height);
+}
+
+/* Features. Strokes stay crisp at any zoom; fills are translucent so overlaps darken. */
+.atlas-feature {
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.atlas-layer-water .atlas-geometry-area {
+  stroke: var(--atlas-water-line);
+  stroke-width: 0.75px;
+}
+.atlas-layer-water .atlas-geometry-line {
+  /* Dashed so rivers differ from area outlines by shape, not colour or width alone. */
+  fill: none;
+  stroke: var(--atlas-water-line);
+  stroke-width: 2px;
+  stroke-dasharray: 7 4;
+}
+.atlas-water-base {
+  fill: var(--atlas-water-fill);
+}
+.atlas-water-line {
+  fill: none;
+  stroke: var(--atlas-water-line);
+  stroke-width: 0.6;
+  opacity: 0.75;
+}
+.atlas-hatch-line {
+  stroke: var(--atlas-hatch);
+  stroke-width: 0.9;
+}
+.atlas-layer-context .atlas-geometry-area {
+  stroke: var(--atlas-context-line);
+  stroke-width: 1px;
+}
+.atlas-layer-selectable .atlas-geometry-area {
+  fill: var(--atlas-area-fill);
+  fill-opacity: 0.72;
+  stroke: var(--atlas-area-line);
+  stroke-width: 1.25px;
+}
+.atlas-link {
+  cursor: pointer;
+}
+.atlas-link:hover .atlas-geometry-area,
+.atlas-link:focus-visible .atlas-geometry-area,
+.atlas-link.is-active .atlas-geometry-area,
+.atlas-feature.is-active {
+  fill: var(--atlas-area-fill-strong);
+  stroke-width: 2.25px;
+}
+.atlas-link:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 64%, white);
+  outline-offset: 2px;
+}
+.atlas-link:focus-visible .atlas-geometry-area {
+  stroke: var(--brand);
+  stroke-dasharray: 6 3;
+}
+.atlas-layer-selectable [data-highlighted="true"] .atlas-geometry-area,
+.atlas-layer-selectable .atlas-geometry-area[data-highlighted="true"],
+.atlas-layer-context [data-highlighted="true"] .atlas-geometry-area,
+.atlas-layer-context .atlas-geometry-area[data-highlighted="true"] {
+  fill: var(--atlas-highlight-fill);
+  fill-opacity: 0.85;
+  stroke: var(--atlas-highlight-line);
+  stroke-width: 3px;
+}
+.atlas-place circle {
+  r: calc(3.5px * var(--atlas-u));
+  fill: var(--atlas-place);
+  stroke: var(--atlas-canvas);
+  stroke-width: calc(1.5px * var(--atlas-u));
+}
+/* Towns read as towns: a dot plus smaller, lighter text than the area names (labels.ts PLACE_FONT_PX). */
+.atlas-place text {
+  fill: var(--muted-strong);
+  font: 500 calc(10.5px * var(--atlas-u)) var(--font-body);
+  dominant-baseline: middle;
+  paint-order: stroke;
+  stroke: var(--atlas-canvas);
+  stroke-width: calc(3px * var(--atlas-u));
+  stroke-linejoin: round;
+  transform: translate(calc(6.5px * var(--atlas-u)), 0);
+  pointer-events: none;
+}
+/* Orientation layers never take a click or hover: they sit above the area fills, and
+ * their names live in the list. A click on a river, the estuary or a town falls
+ * through to the area underneath. */
+.atlas-layer-water,
+.atlas-layer-places,
+.atlas-place,
+.atlas-highlight-overlay {
+  pointer-events: none;
+}
+/* The highlighted outline repeated above water (atlas-scene.tsx). */
+.atlas-highlight-outline {
+  fill: none;
+  stroke: var(--atlas-highlight-line);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.atlas-labels {
+  pointer-events: none;
+}
+.atlas-label {
+  fill: var(--ink);
+  font: 650 calc(12px * var(--atlas-u)) var(--font-body);
+  text-anchor: middle;
+  dominant-baseline: middle;
+  paint-order: stroke;
+  stroke: var(--atlas-canvas);
+  stroke-width: calc(3.5px * var(--atlas-u));
+  stroke-linejoin: round;
+}
+/* Planner-chosen offset off a town marker, one label line in screen px (labels.ts LABEL_SHIFT_PX). */
+.atlas-label[data-shift="-1"] {
+  transform: translateY(calc(-15px * var(--atlas-u)));
+}
+.atlas-label[data-shift="1"] {
+  transform: translateY(calc(15px * var(--atlas-u)));
+}
+.atlas-label-context {
+  fill: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.atlas-label-water {
+  fill: var(--atlas-water-label);
+  font-style: italic;
+  font-weight: 600;
+}
+.atlas-label-highlight {
+  fill: var(--brand-dark);
+  font-weight: 760;
+}
+.atlas-label[data-visible="false"],
+.atlas-place text[data-visible="false"] {
+  display: none;
+}
+
+/* Overlap chooser */
+.atlas-chooser {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: min(280px, calc(100% - 16px));
+  /* Placed inside the frame by atlas-chooser.tsx; a long list scrolls in its body only, so
+   * the close button never moves out of view. */
+  max-height: calc(100% - 16px);
+  padding: 0.9rem 1rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--raised);
+  box-shadow: 0 12px 32px rgb(37 40 35 / 16%);
+}
+/* Narrow frames: a sheet along the frame's bottom edge (set by atlas-chooser.tsx). */
+.atlas-chooser[data-sheet="true"] {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  max-height: 85%;
+  border-width: 1px 0 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+.atlas-chooser-body {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.atlas-chooser-title {
+  margin: 0 0 0.2rem;
+  font: 600 1rem/1.25 var(--font-display);
+}
+.atlas-chooser-intro {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.atlas-chooser ul {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-chooser li a,
+.atlas-chooser li span {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  color: var(--brand-dark);
+  font-weight: 650;
+  text-decoration: none;
+}
+.atlas-chooser li span {
+  color: var(--muted);
+}
+/* The most specific area is the likely aim: it reads as the primary choice. */
+.atlas-chooser-primary a,
+.atlas-chooser-primary span {
+  background: var(--atlas-row-highlight);
+  box-shadow: inset 3px 0 var(--brand);
+  font-weight: 760;
+}
+.atlas-chooser-context {
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+.atlas-chooser-context a {
+  color: var(--brand-dark);
+  font-weight: 650;
+}
+.atlas-chooser li a:hover {
+  background: var(--canvas);
+}
+.atlas-chooser-close {
+  flex: none;
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Legend */
+.atlas-legend {
+  display: grid;
+  gap: 1rem;
+}
+.atlas-legend-coverage {
+  min-width: 0;
+}
+.atlas-legend-coverage p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+.atlas-legend-coverage .atlas-legend-missing {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+.atlas-legend-section,
+.atlas-about {
+  display: grid;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.atlas-about > summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--ink);
+  cursor: pointer;
+  font: 520 1.05rem/1.2 var(--font-display);
+  list-style: none;
+}
+.atlas-about > summary::-webkit-details-marker {
+  display: none;
+}
+.atlas-about > summary::after {
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: none;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: rotate(45deg) translateY(-0.12rem);
+}
+.atlas-about[open] > summary::after {
+  transform: rotate(225deg) translate(-0.12rem, -0.12rem);
+}
+.atlas-about .atlas-legend-title,
+.atlas-about .atlas-list-title {
+  font-size: 1.05rem;
+}
+.atlas-about-body,
+.atlas-about-legend {
+  display: grid;
+  gap: 1rem;
+}
+.atlas-about-legend {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.atlas-legend-keys {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 0.9rem 1.5rem;
+  margin: 0;
+}
+.atlas-legend-keys dt {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.atlas-legend-keys dd {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.atlas-swatch {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+.atlas-swatch-shape {
+  stroke-width: 1.25;
+}
+.atlas-swatch-area .atlas-swatch-shape {
+  fill: var(--atlas-area-fill);
+  stroke: var(--atlas-area-line);
+}
+.atlas-swatch-context .atlas-swatch-shape {
+  stroke: var(--atlas-context-line);
+}
+.atlas-swatch-water .atlas-swatch-shape {
+  stroke: var(--atlas-water-line);
+}
+.atlas-swatch-river {
+  fill: none;
+  stroke: var(--atlas-water-line);
+  stroke-width: 1.6;
+  stroke-dasharray: 3 2;
+  stroke-linecap: round;
+}
+.atlas-swatch-place-dot {
+  fill: var(--atlas-place);
+  stroke: var(--atlas-canvas);
+  stroke-width: 1.5;
+}
+.atlas-legend-scale {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.atlas-legend-credits {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+.atlas-legend-label {
+  margin: 0;
+  color: var(--muted);
+  font: 720 0.7rem/1.2 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.atlas-legend-credits ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-legend-credits li,
+.atlas-legend-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.atlas-legend-credits a {
+  color: var(--brand-dark);
+}
+
+/* Forced colours: meaning stays in patterns, outlines and labels. */
+@media (forced-colors: active) {
+  .atlas-map-frame,
+  .atlas-map-control {
+    border-color: CanvasText;
+  }
+  .atlas-map-hint {
+    border: 1px solid CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+  /* Transparent fills: stacked and overlapping areas stay visible as outlines, and
+   * the whole area stays hit-testable (a fill of none would leave only the stroke). */
+  .atlas-layer-selectable .atlas-geometry-area,
+  .atlas-layer-context .atlas-geometry-area,
+  .atlas-swatch-area .atlas-swatch-shape,
+  .atlas-swatch-context .atlas-swatch-shape {
+    fill: Canvas;
+    fill-opacity: 0;
+    stroke: CanvasText;
+    pointer-events: visible;
+  }
+  .atlas-layer-context .atlas-geometry-area,
+  .atlas-swatch-context .atlas-swatch-shape {
+    stroke-dasharray: 4 3;
+  }
+  .atlas-pattern-note {
+    display: none;
+  }
+  .atlas-pattern-note-forced {
+    display: inline;
+  }
+  .atlas-highlight-outline {
+    stroke: Highlight;
+    stroke-width: 4px;
+  }
+  .atlas-layer-water .atlas-geometry-line,
+  .atlas-water-line,
+  .atlas-swatch-river,
+  .atlas-hatch-line,
+  .atlas-layer-context .atlas-geometry-area,
+  .atlas-layer-water .atlas-geometry-area {
+    stroke: CanvasText;
+  }
+  .atlas-water-base {
+    fill: Canvas;
+  }
+  .atlas-link:hover .atlas-geometry-area,
+  .atlas-link:focus-visible .atlas-geometry-area,
+  .atlas-link.is-active .atlas-geometry-area,
+  .atlas-feature.is-active {
+    fill-opacity: 0;
+    stroke: Highlight;
+    stroke-width: 3px;
+  }
+  .atlas-layer-selectable [data-highlighted="true"] .atlas-geometry-area,
+  .atlas-layer-selectable .atlas-geometry-area[data-highlighted="true"],
+  .atlas-layer-context [data-highlighted="true"] .atlas-geometry-area,
+  .atlas-layer-context .atlas-geometry-area[data-highlighted="true"] {
+    fill-opacity: 0;
+    stroke: Highlight;
+    stroke-width: 4px;
+    stroke-dasharray: none;
+  }
+  .atlas-label-water,
+  .atlas-label-highlight {
+    fill: CanvasText;
+  }
+  .atlas-label,
+  .atlas-place text {
+    fill: CanvasText;
+    stroke: Canvas;
+  }
+  .atlas-place circle,
+  .atlas-swatch-place-dot {
+    fill: CanvasText;
+    stroke: Canvas;
+  }
+}
+
+/* The hatching note in the legend; forced colours swap it for the dashed-outline note. */
+.atlas-pattern-note-forced {
+  display: none;
+}
+
+/* Print: map, full list, legend and credits on paper; no controls. Disclosure bodies
+ * print open: ::details-content where supported, and the enhancer opens them on
+ * beforeprint everywhere else. */
+@media print {
+  .atlas-map-controls,
+  .atlas-map-hint,
+  .atlas-map-keys-caption,
+  .atlas-chooser,
+  .atlas-list-disclosure > summary,
+  .atlas-about > summary {
+    display: none;
+  }
+  .atlas-scene {
+    --atlas-body-columns: 1fr;
+    --atlas-body-areas: "list" "map" "legend";
+    --atlas-list-position: static;
+    --atlas-list-max-height: none;
+    --atlas-list-fade: none;
+    --atlas-map-max-height: 170mm;
+  }
+  /* A page-safe map: at most 170mm tall, the width following the scene's proportions. */
+  .atlas-map {
+    width: min(100%, calc(170mm * var(--atlas-base-width) / var(--atlas-base-height)));
+    margin-inline: auto;
+  }
+  .atlas-map-panel,
+  .atlas-legend-keys > div {
+    break-inside: avoid;
+  }
+  .atlas-list-disclosure[open] > summary,
+  .atlas-about[open] > summary {
+    margin: 0;
+  }
+}
+@media print {
+  .atlas-list-disclosure::details-content,
+  .atlas-about::details-content {
+    display: contents;
+    content-visibility: visible;
+  }
+}
+
+/* Reduced motion: the gesture hint appears and disappears without a fade. */
+@media (prefers-reduced-motion: reduce) {
+  .atlas-map-hint {
+    transition: none;
+  }
+}
+
+/* Atlas pages: the map is the content, so the intro sits tighter than on other pages and the
+ * scene map starts within the first screen. Scoped here; the shared page-intro stays as is. */
+.atlas-page .page-intro {
+  padding-block: clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2.25rem);
+}
+
+/* Atlas portal (/atlas): finder, then one section per top-level region (later: per place level
+ * above regions), each with its own lead card and a grid of cards for its children. Deeper
+ * levels are links inside a card. Every card has exactly one link; the link stretches over it. */
+.atlas-portal {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  margin-bottom: var(--section);
+}
+.atlas-portal [hidden] {
+  display: none !important;
+}
+.atlas-portal-preview-note {
+  color: var(--muted-strong);
+  font-size: 0.92rem;
+}
+.atlas-portal-empty {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+.atlas-portal-finder {
+  max-width: var(--reading);
+}
+.atlas-portal-finder > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.atlas-portal-finder .search-field input {
+  padding-block: 0.8rem;
+}
+/* The finder keeps its button beside the field at every width (the site search stacks them on
+ * phones), so the first region starts higher; higher specificity than responsive.css. */
+.atlas-portal-finder .search-field {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0;
+}
+.atlas-portal-finder .search-field input {
+  border-radius: 10px 0 0 10px;
+}
+.atlas-portal-finder .search-field button {
+  min-height: 48px;
+  padding-inline: 1.1rem;
+  border-radius: 0 10px 10px 0;
+}
+/* Reserved line: the count appears while typing without moving the page below. */
+.atlas-portal-status {
+  min-height: 1.5em;
+  margin: 0.5rem 0 0;
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+}
+.atlas-portal-status a {
+  color: var(--brand-dark);
+}
+.atlas-portal-jump summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.atlas-portal-jump ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-portal-section {
+  min-width: 0;
+  scroll-margin-top: 5rem;
+}
+.atlas-portal-section-title {
+  margin-bottom: 1rem;
+  font: 500 clamp(1.6rem, 3vw, 2.1rem)/1.1 var(--font-display);
+}
+/* Wide: the section's lead card beside its children; responsive.css stacks them. */
+.atlas-portal-section-body {
+  display: grid;
+  grid-template-columns: var(--atlas-portal-columns, minmax(220px, 2fr) minmax(0, 7fr));
+  gap: var(--atlas-portal-gap, clamp(0.75rem, 2vw, 1.25rem));
+  align-items: start;
+}
+.atlas-portal-section-compact .atlas-portal-section-body {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 380px;
+}
+.atlas-portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+  gap: var(--atlas-portal-gap, clamp(0.75rem, 2vw, 1.25rem));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Cards in a row share their row tracks, so names and state lines line up across the row. */
+.atlas-portal-grid > li {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  min-width: 0;
+}
+.atlas-portal-card {
+  position: relative;
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  align-content: start;
+  row-gap: 0.3rem;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--ink);
+}
+.atlas-portal-card-lead {
+  position: var(--atlas-portal-lead-position, sticky);
+  top: 5.5rem;
+  grid-template-rows: auto auto auto auto;
+  grid-row: auto;
+}
+/* A card without a map has no thumbnail row: it leaves the row's shared tracks and keeps only
+ * its own content, so nothing reads as a missing image. */
+.atlas-portal-card-text {
+  grid-template-rows: none;
+  align-self: start;
+}
+.atlas-portal-card.atlas-portal-card-text > * {
+  grid-row: auto;
+}
+.atlas-portal-about {
+  position: relative;
+  z-index: 1;
+  grid-row: 4;
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+.atlas-portal-about a {
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+.atlas-portal-card:hover {
+  border-color: var(--brand);
+}
+.atlas-portal-card:has(.atlas-portal-link:focus-visible) {
+  outline: 3px solid color-mix(in srgb, var(--brand) 64%, white);
+  outline-offset: 2px;
+}
+.atlas-portal-thumb {
+  display: block;
+  grid-row: 1;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 0.35rem;
+}
+.atlas-portal-card-lead .atlas-portal-thumb {
+  height: clamp(150px, 22vw, 230px);
+}
+.atlas-portal-thumb-area {
+  fill: var(--atlas-area-fill);
+  fill-opacity: 0.85;
+  stroke: var(--atlas-area-line);
+  stroke-linejoin: round;
+  stroke-width: 0.6;
+}
+.atlas-portal-card-title {
+  grid-row: 2;
+  margin: 0;
+  font: 520 1.15rem/1.2 var(--font-display);
+  text-wrap: pretty;
+}
+.atlas-portal-grid .atlas-portal-card-title {
+  font-size: 1.05rem;
+}
+.atlas-portal-card-lead .atlas-portal-card-title {
+  font-size: 1.3rem;
+}
+.atlas-portal-link {
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+.atlas-portal-link:focus-visible {
+  outline: none;
+}
+/* The one link covers the card; links to deeper levels sit above it. */
+.atlas-portal-link::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+}
+.atlas-portal-nobreak {
+  white-space: nowrap;
+}
+.atlas-portal-state {
+  grid-row: 3;
+  color: var(--muted-strong);
+  font-size: 0.85rem;
+}
+.atlas-portal-sub {
+  position: relative;
+  z-index: 1;
+  grid-row: 4;
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0;
+  padding: 0.55rem 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+.atlas-portal-sub .atlas-portal-sub {
+  margin: 0.2rem 0 0 0.9rem;
+  padding-top: 0.2rem;
+  border-top: 0;
+}
+.atlas-portal-sub a {
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+/* The appellation that made the finder show a region; takes no space while empty. */
+.atlas-portal-area-hit {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+}
+.atlas-portal-area-hit:empty {
+  display: none;
+}
+.atlas-portal-sub .atlas-portal-state {
+  display: block;
+  font-size: 0.8rem;
+}
+@media (forced-colors: active) {
+  .atlas-portal-thumb-area {
+    fill: Canvas;
+    stroke: CanvasText;
+  }
+  .atlas-portal-card:has(.atlas-portal-link:focus-visible) {
+    outline-color: Highlight;
+  }
+}
+@media print {
+  .atlas-portal-finder,
+  .atlas-portal-jump {
+    display: none;
+  }
+  .atlas-portal-card {
+    break-inside: avoid;
+  }
+}
+
+/* Visually hidden, still read: the scene-route map heading and the keyboard help. Last in the
+ * file so it wins over the element's own class at equal specificity. */
+.atlas-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

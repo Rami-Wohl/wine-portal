@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.epernay",
+  "properties": {
+    "id": "geo.populated-place.epernay",
+    "kind": "populated-place",
+    "name_nl": "Épernay",
+    "name_en": "Épernay"
+  },
+  "bbox": [3.95866328, 49.04376368, 3.95866328, 49.04376368],
+  "geometry": { "type": "Point", "coordinates": [3.95866328, 49.04376368] }
+}

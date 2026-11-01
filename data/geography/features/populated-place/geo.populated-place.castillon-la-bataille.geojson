@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.castillon-la-bataille",
+  "properties": {
+    "id": "geo.populated-place.castillon-la-bataille",
+    "kind": "populated-place",
+    "name_nl": "Castillon-la-Bataille",
+    "name_en": "Castillon-la-Bataille"
+  },
+  "bbox": [-0.04307294, 44.85209968, -0.04307294, 44.85209968],
+  "geometry": { "type": "Point", "coordinates": [-0.04307294, 44.85209968] }
+}

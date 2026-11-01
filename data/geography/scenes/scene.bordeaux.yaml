@@ -1,0 +1,130 @@
+# Scene definition (docs/atlas-plan.md §5). Atlas overview: the Bordeaux appellation area and the
+# two umbrella appellations with its shape are the context layer, every other published
+# Bordeaux-cluster appellation is selectable. Water is drawn above the land fills. Coverage of
+# intended_entities is computed by the build; Côtes de Bordeaux is held and appears as a gap.
+id: scene.bordeaux
+owner: region.bordeaux
+extent:
+  mode: fit
+  padding: 0.05
+projection: mercator
+layers:
+  - id: context
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.bordeaux
+      # Bordeaux Supérieur and Crémant de Bordeaux have the identical shape of the overarching
+      # Bordeaux area. As selectable fills they would cover the overview as one flat slab and read
+      # as a sub-region, so they are context here; they stay in intended_entities.
+      - geo.appellation-area.bordeaux-superieur
+      - geo.appellation-area.cremant-de-bordeaux
+    role: context
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.barsac
+      - geo.appellation-area.blaye-cotes-de-bordeaux
+      - geo.appellation-area.cadillac-cotes-de-bordeaux
+      - geo.appellation-area.castillon-cotes-de-bordeaux
+      - geo.appellation-area.francs-cotes-de-bordeaux
+      - geo.appellation-area.sainte-foy-cotes-de-bordeaux
+      - geo.appellation-area.cadillac
+      - geo.appellation-area.canon-fronsac
+      - geo.appellation-area.cerons
+      - geo.appellation-area.cotes-de-bourg
+      - geo.appellation-area.entre-deux-mers
+      - geo.appellation-area.fronsac
+      - geo.appellation-area.graves
+      - geo.appellation-area.graves-superieures
+      - geo.appellation-area.haut-medoc
+      - geo.appellation-area.lalande-de-pomerol
+      - geo.appellation-area.listrac-medoc
+      - geo.appellation-area.loupiac
+      - geo.appellation-area.lussac-saint-emilion
+      - geo.appellation-area.margaux
+      - geo.appellation-area.medoc
+      - geo.appellation-area.montagne-saint-emilion
+      - geo.appellation-area.moulis-en-medoc
+      - geo.appellation-area.pauillac
+      - geo.appellation-area.pessac-leognan
+      - geo.appellation-area.pomerol
+      - geo.appellation-area.puisseguin-saint-emilion
+      - geo.appellation-area.saint-emilion
+      - geo.appellation-area.saint-emilion-grand-cru
+      - geo.appellation-area.saint-estephe
+      - geo.appellation-area.saint-georges-saint-emilion
+      - geo.appellation-area.saint-julien
+      - geo.appellation-area.sainte-croix-du-mont
+      - geo.appellation-area.sauternes
+    role: selectable
+  - id: water
+    kinds: [coastline, water-body, river]
+    features:
+      - geo.coastline.gironde-atlantic
+      - geo.water-body.gironde-estuary
+      - geo.water-body.lac-d-hourtin
+      - geo.water-body.lac-de-carcans
+      - geo.water-body.lac-de-lacanau
+      - geo.water-body.lac-de-cazaux-et-sanguinet
+      - geo.river.garonne
+      - geo.river.dordogne
+      - geo.river.isle
+      - geo.river.ciron
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.bordeaux
+      - geo.populated-place.lesparre-medoc
+      - geo.populated-place.pauillac
+      - geo.populated-place.margaux
+      - geo.populated-place.blaye
+      - geo.populated-place.bourg
+      - geo.populated-place.libourne
+      - geo.populated-place.saint-emilion
+      - geo.populated-place.castillon-la-bataille
+      - geo.populated-place.sainte-foy-la-grande
+      - geo.populated-place.creon
+      - geo.populated-place.la-reole
+      - geo.populated-place.langon
+      - geo.populated-place.cadillac-sur-garonne
+      - geo.populated-place.podensac
+      - geo.populated-place.sauternes
+intended_entities:
+  - appellation.barsac
+  - appellation.bordeaux
+  - appellation.bordeaux-superieur
+  - appellation.cremant-de-bordeaux
+  - appellation.cotes-de-bordeaux
+  - appellation.blaye-cotes-de-bordeaux
+  - appellation.cadillac-cotes-de-bordeaux
+  - appellation.castillon-cotes-de-bordeaux
+  - appellation.francs-cotes-de-bordeaux
+  - appellation.sainte-foy-cotes-de-bordeaux
+  - appellation.cadillac
+  - appellation.canon-fronsac
+  - appellation.cerons
+  - appellation.cotes-de-bourg
+  - appellation.entre-deux-mers
+  - appellation.fronsac
+  - appellation.graves
+  - appellation.graves-superieures
+  - appellation.haut-medoc
+  - appellation.lalande-de-pomerol
+  - appellation.listrac-medoc
+  - appellation.loupiac
+  - appellation.lussac-saint-emilion
+  - appellation.margaux
+  - appellation.medoc
+  - appellation.montagne-saint-emilion
+  - appellation.moulis-en-medoc
+  - appellation.pauillac
+  - appellation.pessac-leognan
+  - appellation.pomerol
+  - appellation.puisseguin-saint-emilion
+  - appellation.saint-emilion
+  - appellation.saint-emilion-grand-cru
+  - appellation.saint-estephe
+  - appellation.saint-georges-saint-emilion
+  - appellation.saint-julien
+  - appellation.sainte-croix-du-mont
+  - appellation.sauternes

@@ -1,3 +1,4 @@
+import { ATLAS_PREVIEW } from "@/content/geography";
 import { languageAlternates } from "@/i18n/routing";
 import { pageLocale, type LocalePageProps } from "@/i18n/server";
 import type { Metadata } from "next";
@@ -28,8 +29,8 @@ export default async function AboutPage({ params }: LocalePageProps) {
           </p>
           <p>
             {locale === "nl"
-              ? "Initieel was mijn idee om een specifiek curriculum op te zetten voor mezelf, met alleen de onderwerpen waar ik me op dat moment verder in wilde verdiepen. Maar gaandeweg leek het me een steeds mooier idee om een vollediger platform te bouwen waarin zoveel mogelijk wijnkennis beschikbaar is, en je op verschillende manieren door de kennis heen kan navigeren."
-              : "Initially, I wanted to create a personal curriculum covering the topics I was keen to study next. Over time, the idea grew into a broader platform that makes wine knowledge available through several different ways of exploring and learning."}{" "}
+              ? `Initieel was mijn idee om een specifiek curriculum op te zetten voor mezelf, met alleen de onderwerpen waar ik me op dat moment verder in wilde verdiepen. Maar gaandeweg leek het me een steeds mooier idee om een vollediger platform te bouwen waarin zoveel mogelijk wijnkennis beschikbaar is, en je op verschillende manieren door de kennis heen kan navigeren. Naast ontdekken en leren is er een Atlas${ATLAS_PREVIEW ? " in voorvertoning" : ""}, op basis van geverifieerde geografische data.`
+              : `Initially, I wanted to create a personal curriculum covering the topics I was keen to study next. Over time, the idea grew into a broader platform that makes wine knowledge available through several different ways of exploring and learning. Alongside exploring and learning there is an Atlas${ATLAS_PREVIEW ? " preview" : ""}, built on verified geographic data.`}{" "}
           </p>
         </section>
         <section>

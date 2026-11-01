@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.langon",
+  "properties": {
+    "id": "geo.populated-place.langon",
+    "kind": "populated-place",
+    "name_nl": "Langon",
+    "name_en": "Langon"
+  },
+  "bbox": [-0.24485314, 44.55301055, -0.24485314, 44.55301055],
+  "geometry": { "type": "Point", "coordinates": [-0.24485314, 44.55301055] }
+}

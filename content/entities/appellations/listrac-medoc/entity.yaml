@@ -38,5 +38,6 @@ source_refs:
   - source.msha-bordeaux-wine-history
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.listrac-medoc
 depth: foundation
 last_reviewed: 2026-09-11

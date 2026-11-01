@@ -40,13 +40,16 @@ for (const locale of ["nl", "en"] as const) {
       await expect(page.locator("#etiket-en-aankoop")).toBeVisible();
       await expect(page.locator(`#${wine.detail}`)).toBeHidden();
 
-      const photo = page.locator("article figure img").first();
+      // Scope to the content figure: the embedded Atlas map is a figure with its own caption.
+      const photo = page.locator("article .content-block-figure img").first();
       await photo.scrollIntoViewIfNeeded();
       await expect(photo).toHaveAttribute("alt", /\S/);
       await expect
         .poll(() => photo.evaluate((img: HTMLImageElement) => img.naturalWidth))
         .toBeGreaterThan(0);
-      await expect(page.locator("article figure figcaption").first()).toContainText("CC BY-SA");
+      await expect(page.locator("article .content-block-figure figcaption").first()).toContainText(
+        "CC BY-SA",
+      );
 
       await page
         .getByRole("button", { name: locale === "nl" ? "Verdieping" : "Intermediate", exact: true })

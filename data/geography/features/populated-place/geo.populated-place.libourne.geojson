@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.libourne",
+  "properties": {
+    "id": "geo.populated-place.libourne",
+    "kind": "populated-place",
+    "name_nl": "Libourne",
+    "name_en": "Libourne"
+  },
+  "bbox": [-0.24534636, 44.91444633, -0.24534636, 44.91444633],
+  "geometry": { "type": "Point", "coordinates": [-0.24534636, 44.91444633] }
+}

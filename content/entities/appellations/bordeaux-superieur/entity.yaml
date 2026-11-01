@@ -43,5 +43,6 @@ source_refs:
   - source.inao-bordeaux-superieur-specification-2026
   - source.msha-bordeaux-wine-history
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.bordeaux-superieur
 depth: foundation
 last_reviewed: 2026-09-12

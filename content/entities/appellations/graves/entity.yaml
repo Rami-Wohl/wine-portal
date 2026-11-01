@@ -52,5 +52,6 @@ source_refs:
   - source.dgccrf-wine-labels-2025
   - source.inrae-bordeaux-climate-adaptation
   - source.eambrosia-graves-superieures-register-2026
+geography_id: geo.appellation-area.graves
 depth: foundation
 last_reviewed: 2026-09-22

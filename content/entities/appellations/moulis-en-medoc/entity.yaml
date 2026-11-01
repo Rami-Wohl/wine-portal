@@ -42,5 +42,6 @@ source_refs:
   - source.chasse-spleen-parcels
   - source.chasse-spleen-other-wines
   - source.ugcb-chateau-poujeaux
+geography_id: geo.appellation-area.moulis-en-medoc
 depth: foundation
 last_reviewed: 2026-09-15

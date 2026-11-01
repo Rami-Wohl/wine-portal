@@ -34,5 +34,6 @@ source_refs:
   - source.inao-montagne-saint-emilion-overview
   - source.boagri-montagne-saint-emilion-specification-2019
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.montagne-saint-emilion
 depth: foundation
 last_reviewed: 2026-09-13

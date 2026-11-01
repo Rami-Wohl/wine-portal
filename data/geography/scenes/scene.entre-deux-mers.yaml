@@ -1,0 +1,46 @@
+# Scene definition (docs/atlas-plan.md §5). Drawing order is the layer order; within the
+# selectable layer the build draws larger areas first. Coverage is computed from intended_entities.
+id: scene.entre-deux-mers
+owner: region.entre-deux-mers
+extent:
+  mode: fit
+  padding: 0.08
+projection: mercator
+layers:
+  - id: context
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.bordeaux
+    role: context
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.entre-deux-mers
+      - geo.appellation-area.cadillac
+      - geo.appellation-area.cadillac-cotes-de-bordeaux
+      - geo.appellation-area.loupiac
+      - geo.appellation-area.sainte-croix-du-mont
+      - geo.appellation-area.sainte-foy-cotes-de-bordeaux
+    role: selectable
+  - id: water
+    kinds: [river]
+    features:
+      - geo.river.garonne
+      - geo.river.dordogne
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.bordeaux
+      - geo.populated-place.creon
+      - geo.populated-place.libourne
+      - geo.populated-place.la-reole
+      - geo.populated-place.langon
+      - geo.populated-place.cadillac-sur-garonne
+      - geo.populated-place.sainte-foy-la-grande
+intended_entities:
+  - appellation.entre-deux-mers
+  - appellation.cadillac
+  - appellation.cadillac-cotes-de-bordeaux
+  - appellation.loupiac
+  - appellation.sainte-croix-du-mont
+  - appellation.sainte-foy-cotes-de-bordeaux

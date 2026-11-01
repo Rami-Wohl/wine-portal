@@ -32,5 +32,6 @@ source_refs:
   - source.sainte-foy-cotes-de-bordeaux-overview
   - source.msha-bordeaux-wine-history
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.sainte-foy-cotes-de-bordeaux
 depth: foundation
 last_reviewed: 2026-09-12

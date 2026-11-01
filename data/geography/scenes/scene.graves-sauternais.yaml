@@ -1,0 +1,45 @@
+# Scene definition (docs/atlas-plan.md §5). Drawing order is the layer order; within the
+# selectable layer the build draws larger areas first. Coverage is computed from intended_entities.
+id: scene.graves-sauternais
+owner: region.graves-sauternais
+extent:
+  mode: fit
+  padding: 0.08
+projection: mercator
+layers:
+  - id: context
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.bordeaux
+    role: context
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.graves
+      - geo.appellation-area.graves-superieures
+      - geo.appellation-area.pessac-leognan
+      - geo.appellation-area.cerons
+      - geo.appellation-area.barsac
+      - geo.appellation-area.sauternes
+    role: selectable
+  - id: water
+    kinds: [river]
+    features:
+      - geo.river.garonne
+      - geo.river.ciron
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.bordeaux
+      - geo.populated-place.podensac
+      - geo.populated-place.barsac
+      - geo.populated-place.sauternes
+      - geo.populated-place.langon
+      - geo.populated-place.cadillac-sur-garonne
+intended_entities:
+  - appellation.graves
+  - appellation.graves-superieures
+  - appellation.pessac-leognan
+  - appellation.cerons
+  - appellation.barsac
+  - appellation.sauternes

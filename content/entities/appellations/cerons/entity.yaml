@@ -39,5 +39,6 @@ source_refs:
   - source.boagri-cerons-specification-2023
   - source.inrae-bordeaux-climate-adaptation
   - source.dgccrf-wine-labels-2025
+geography_id: geo.appellation-area.cerons
 depth: foundation
 last_reviewed: 2026-09-13

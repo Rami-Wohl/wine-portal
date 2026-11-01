@@ -1,0 +1,46 @@
+id: geo.river.aube
+kind: river
+names:
+  nl: Aube
+  en: Aube
+geometry:
+  file: geo.river.aube.geojson
+  type: MultiLineString
+  sha256: b6e1791c0520968ddd243c0c9610036af6305499ba6f9cf9442e11bfab2d7ed4
+  vertex_count: 6781
+  bbox: [3.71479015, 47.75243877, 5.16254584, 48.58409259]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:troncon_hydrographique
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: 2192a140faffc76ef4616e9dbc57cbb026d8c1658ce7c6e6334f554de72b5e52
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:troncon_hydrographique
+    property: cpx_toponyme_de_cours_d_eau
+    values: l'Aube
+    feature_count: 1018
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: watercourse-centreline-segments
+precision: regional-orientation
+limitations: Cartographic centreline segments at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a hydrographic survey, a navigation line or a flood extent.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-river-aube-champagne (layer BDCARTO_V5:troncon_hydrographique; request, edition and checksum pinned in the manifest): all 1018 features with cpx_toponyme_de_cours_d_eau in {''l''Aube''} intersecting the champagne envelope, kept as whole features in verified cleabs order without clipping. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. 1,018 BD CARTO segments named "l''Aube" inside the Champagne envelope; "Bras de l''Aube", "l''Aubette" and "l''Aubetin" carry other toponyms and are not requested.'
+supersedes: null

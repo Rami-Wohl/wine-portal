@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.reims",
+  "properties": {
+    "id": "geo.populated-place.reims",
+    "kind": "populated-place",
+    "name_nl": "Reims",
+    "name_en": "Reims"
+  },
+  "bbox": [4.03153123, 49.2582655, 4.03153123, 49.2582655],
+  "geometry": { "type": "Point", "coordinates": [4.03153123, 49.2582655] }
+}

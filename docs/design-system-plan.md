@@ -20,8 +20,10 @@ te veranderen.
    gerenderd.
 4. **Paginasamenstellingen** — Explore, Verdiepingen, Learn en entitypagina's
    gebruiken dezelfde visuele taal. Entity- en narrative-routing is actief;
-   learning paths, lesnavigatie en lokale voortgang zijn actief. Atlas is sinds
-   2026-10-30 geparkeerd; de pagina, links en specifieke styling zijn verwijderd.
+   learning paths, lesnavigatie en lokale voortgang zijn actief. Atlas is op de
+   featurebranch gebouwd volgens [atlas-plan.md](atlas-plan.md): SVG-scènes,
+   lijstalternatief, legenda en kiezer onder `src/components/atlas/`, met
+   `atlas.css` in de importvolgorde.
 
 ## Stylesheetindeling en cascade
 
@@ -41,6 +43,7 @@ clientnavigatie. De bestanden houden de bestaande semantische classnamen aan.
 | `article-layouts.css` | About, breadcrumbs, entitykoppen, dieptebediening, relaties en bronnen |
 | `lessons.css` | Lescontext, voltooiing, vorige/volgende en gedeelde Learn-hoverstaten |
 | `content.css` | Contentblocks, dieptezichtbaarheid, tabellen, figuren en citations |
+| `atlas.css` | Atlas-scènes: kaart-SVG, patronen, lijstalternatief, legenda, kiezer en bediening; gebruikt `--water`-tokens |
 | `responsive.css` | Bestaande overrides over componentgrenzen, per breakpoint |
 | `reduced-motion.css` | Laatste overrides voor verminderde beweging |
 

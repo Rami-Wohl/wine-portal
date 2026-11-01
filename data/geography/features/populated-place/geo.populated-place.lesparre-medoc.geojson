@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.lesparre-medoc",
+  "properties": {
+    "id": "geo.populated-place.lesparre-medoc",
+    "kind": "populated-place",
+    "name_nl": "Lesparre-Médoc",
+    "name_en": "Lesparre-Médoc"
+  },
+  "bbox": [-0.93571446, 45.30590207, -0.93571446, 45.30590207],
+  "geometry": { "type": "Point", "coordinates": [-0.93571446, 45.30590207] }
+}

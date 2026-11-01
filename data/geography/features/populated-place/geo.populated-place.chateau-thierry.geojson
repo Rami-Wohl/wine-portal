@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.chateau-thierry",
+  "properties": {
+    "id": "geo.populated-place.chateau-thierry",
+    "kind": "populated-place",
+    "name_nl": "Château-Thierry",
+    "name_en": "Château-Thierry"
+  },
+  "bbox": [3.40249741, 49.04609395, 3.40249741, 49.04609395],
+  "geometry": { "type": "Point", "coordinates": [3.40249741, 49.04609395] }
+}

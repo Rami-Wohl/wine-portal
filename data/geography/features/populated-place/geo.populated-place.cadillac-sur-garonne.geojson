@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.cadillac-sur-garonne",
+  "properties": {
+    "id": "geo.populated-place.cadillac-sur-garonne",
+    "kind": "populated-place",
+    "name_nl": "Cadillac-sur-Garonne",
+    "name_en": "Cadillac-sur-Garonne"
+  },
+  "bbox": [-0.32039663, 44.63704249, -0.32039663, 44.63704249],
+  "geometry": { "type": "Point", "coordinates": [-0.32039663, 44.63704249] }
+}

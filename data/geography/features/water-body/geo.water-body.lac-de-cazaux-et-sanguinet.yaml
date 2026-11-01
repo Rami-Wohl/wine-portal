@@ -1,0 +1,49 @@
+id: geo.water-body.lac-de-cazaux-et-sanguinet
+kind: water-body
+names:
+  nl: Lac de Cazaux et de Sanguinet
+  en: Lac de Cazaux et de Sanguinet
+geometry:
+  file: geo.water-body.lac-de-cazaux-et-sanguinet.geojson
+  type: MultiPolygon
+  sha256: 04c1500f08a984a64eabfe300bdafd3921950e2b4aa503860c55269ed181fd7e
+  vertex_count: 1348
+  bbox: [-1.20133159, 44.43167573, -1.07432728, 44.53008058]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:plan_d_eau
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: ea88253233acb6d5529a8d621d55c9b26cb4e9cca0bb28bfe1093cecc351afc1
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:plan_d_eau
+    property: toponyme
+    values: Lac de Cazaux et Sanguinet
+    feature_count: 1
+    cleabs: PLANDEAU0000002000784178
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: ring-orientation
+    convention: rfc7946
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: lake-water-surface
+precision: regional-orientation
+limitations: Cartographic water surface at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a tidal, flood, navigation or property limit.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-water-lac-de-cazaux-et-sanguinet (layer BDCARTO_V5:plan_d_eau; request, edition and checksum pinned in the manifest): the single object with toponyme ''Lac de Cazaux et Sanguinet'' and cleabs PLANDEAU0000002000784178 intersecting the bordeaux envelope. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. One BD CARTO plan_d_eau object of nature "Lac", at the southern edge of the Bordeaux envelope; the source spells it "Lac de Cazaux et Sanguinet".'
+supersedes: null

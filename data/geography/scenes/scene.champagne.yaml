@@ -1,0 +1,38 @@
+# Scene definition (docs/atlas-plan.md §5). Champagne has no Bordeaux context layer; the owner
+# region.champagne is a draft entity, so the scene follows the publication status of its owner.
+id: scene.champagne
+owner: region.champagne
+extent:
+  mode: fit
+  padding: 0.06
+projection: mercator
+layers:
+  - id: appellations
+    kinds: [appellation-area]
+    features:
+      - geo.appellation-area.champagne
+    role: selectable
+  - id: water
+    kinds: [river, water-body]
+    features:
+      - geo.river.marne
+      - geo.river.aube
+      - geo.river.seine
+      - geo.river.vesle
+      - geo.water-body.lac-du-der-chantecoq
+      - geo.water-body.lac-d-orient
+      - geo.water-body.lac-d-auzon-temple
+      - geo.water-body.lac-d-amance
+  - id: places
+    kinds: [populated-place]
+    features:
+      - geo.populated-place.reims
+      - geo.populated-place.epernay
+      - geo.populated-place.chalons-en-champagne
+      - geo.populated-place.troyes
+      - geo.populated-place.bar-sur-aube
+      - geo.populated-place.bar-sur-seine
+      - geo.populated-place.chateau-thierry
+      - geo.populated-place.vitry-le-francois
+intended_entities:
+  - appellation.champagne

@@ -200,6 +200,39 @@ describe("ContentDocumentView", () => {
     },
   );
 
+  it("renders the afterSummary slot once, directly after the first summary block", () => {
+    const html = renderToStaticMarkup(
+      <ContentDocumentView
+        afterSummary={<aside data-slot="map">Kaart</aside>}
+        document={document}
+        locale="nl"
+        media={[]}
+        sources={[source]}
+      />,
+    );
+    expect(html.match(/data-slot="map"/g)).toHaveLength(1);
+    expect(html.indexOf('id="orientatie"')).toBeLessThan(html.indexOf('data-slot="map"'));
+    expect(html.indexOf('data-slot="map"')).toBeLessThan(html.indexOf('id="uitleg"'));
+
+    const withoutSummary: ContentDocument = { blocks: document.blocks.slice(1) };
+    const first = renderToStaticMarkup(
+      <ContentDocumentView
+        afterSummary={<aside data-slot="map">Kaart</aside>}
+        document={withoutSummary}
+        locale="nl"
+        media={[]}
+        sources={[source]}
+      />,
+    );
+    expect(first.indexOf('data-slot="map"')).toBeLessThan(first.indexOf('id="uitleg"'));
+    // Without a slot nothing is added: the markup equals the slotted render minus the slot.
+    expect(
+      renderToStaticMarkup(
+        <ContentDocumentView document={document} locale="nl" media={[]} sources={[source]} />,
+      ),
+    ).toBe(html.replace('<aside data-slot="map">Kaart</aside>', ""));
+  });
+
   it("renders semantic blocks, canonical entity routes, and accessible citations", () => {
     const html = renderToStaticMarkup(
       <ContentDocumentView document={document} locale="nl" media={[]} sources={[source]} />,

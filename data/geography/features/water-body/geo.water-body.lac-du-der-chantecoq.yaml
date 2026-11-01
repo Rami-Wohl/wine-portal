@@ -1,0 +1,49 @@
+id: geo.water-body.lac-du-der-chantecoq
+kind: water-body
+names:
+  nl: Lac du Der-Chantecoq
+  en: Lac du Der-Chantecoq
+geometry:
+  file: geo.water-body.lac-du-der-chantecoq.geojson
+  type: MultiPolygon
+  sha256: 5b7d0d5a48ba812d32ba7ef201b21e72de9350a135c3746bc417867dc8ed3dc2
+  vertex_count: 1322
+  bbox: [4.69690816, 48.55155583, 4.86010117, 48.61172208]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:plan_d_eau
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: 2db5370bbea048f5b03b160e28abbd6c6ca747887251e1b0f5a70fce7e8d0eef
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:plan_d_eau
+    property: toponyme
+    values: Lac du Der-Chantecoq
+    feature_count: 1
+    cleabs: PLANDEAU0000002000761196
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: ring-orientation
+    convention: rfc7946
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: reservoir-water-surface
+precision: regional-orientation
+limitations: Cartographic water surface at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a tidal, flood, navigation or property limit.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-water-lac-du-der-chantecoq (layer BDCARTO_V5:plan_d_eau; request, edition and checksum pinned in the manifest): the single object with toponyme ''Lac du Der-Chantecoq'' and cleabs PLANDEAU0000002000761196 intersecting the champagne envelope. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. One BD CARTO plan_d_eau object of nature "Retenue-digue" (the Marne reservoir).'
+supersedes: null

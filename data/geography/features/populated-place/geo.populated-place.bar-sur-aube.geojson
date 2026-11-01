@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.bar-sur-aube",
+  "properties": {
+    "id": "geo.populated-place.bar-sur-aube",
+    "kind": "populated-place",
+    "name_nl": "Bar-sur-Aube",
+    "name_en": "Bar-sur-Aube"
+  },
+  "bbox": [4.70576019, 48.23332865, 4.70576019, 48.23332865],
+  "geometry": { "type": "Point", "coordinates": [4.70576019, 48.23332865] }
+}

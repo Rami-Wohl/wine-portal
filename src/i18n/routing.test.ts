@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { getDiscoveryEntries } from "@/content/discovery";
+import { ATLAS_PREVIEW } from "@/content/geography";
 import { getPublishedSearchIndex } from "@/content/repository";
 import { searchKnowledge } from "@/content/search";
 import sitemap from "@/app/sitemap";
@@ -79,7 +80,10 @@ describe("public language identity", () => {
     expect(urls.size).toBe(entries.length);
     for (const entry of entries) {
       const path = new URL(entry.url).pathname;
-      expect(path).not.toMatch(/\/nl(?:\/|$)|\/search$|\/atlas$|\/complete$/);
+      expect(path).not.toMatch(/\/nl(?:\/|$)|\/search$|\/complete$/);
+      // Atlas routes are excluded only while Atlas is a labelled preview; after the phase 3
+      // release gate src/app/metadata.test.ts covers which Atlas routes are listed.
+      if (ATLAS_PREVIEW) expect(path).not.toMatch(/\/atlas(?:\/|$)/);
       for (const href of Object.values(entry.alternates!.languages!))
         expect(href && urls.has(href)).toBe(true);
       expect(entry.url).not.toMatch(/[?#]/);

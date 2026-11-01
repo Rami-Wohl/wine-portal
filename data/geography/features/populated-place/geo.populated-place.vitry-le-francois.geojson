@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.vitry-le-francois",
+  "properties": {
+    "id": "geo.populated-place.vitry-le-francois",
+    "kind": "populated-place",
+    "name_nl": "Vitry-le-François",
+    "name_en": "Vitry-le-François"
+  },
+  "bbox": [4.58930442, 48.7247908, 4.58930442, 48.7247908],
+  "geometry": { "type": "Point", "coordinates": [4.58930442, 48.7247908] }
+}

@@ -1,0 +1,49 @@
+id: geo.populated-place.troyes
+kind: populated-place
+names:
+  nl: Troyes
+  en: Troyes
+geometry:
+  file: geo.populated-place.troyes.geojson
+  type: Point
+  sha256: caeb68188fcaf199da2de3df344180860d88ed7dbca642fce778d38c8be621af
+  vertex_count: 1
+  bbox: [4.07398934, 48.29765995, 4.07398934, 48.29765995]
+source:
+  source_id: source.ign-admin-express-cog-2026
+  dataset_id: IGNF_ADMIN-EXPRESS
+  resource_id: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+  release: 2026-01-01
+  retrieved_at: 2026-10-30
+  resource_sha256: fd7c79cf93dcb42ce9e4fd857c8b3cd0e473a9e226021cf6af6393fb16ac56aa
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: ADMINEXPRESS-COG.2026:chef_lieu_de_commune
+    property: code_insee_de_la_commune
+    values: "10387"
+    feature_count: 1
+    nom_officiel: Troyes
+    nom_du_chef_lieu: Troyes
+    cleabs: CHFL_COM0000000000010387
+licence:
+  id: etalab-2.0
+  attribution: IGN, ADMIN EXPRESS COG 2026 (code officiel géographique au 1er janvier 2026), service Géoplateforme consulté le 30 octobre 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: commune-chef-lieu
+precision: regional-orientation
+limitations: Position of the commune's chef-lieu in ADMIN EXPRESS for orientation; not a settlement extent, an address or a winery location.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: "Selected from the committed WFS response ign-adminexpress-places-champagne (layer ADMINEXPRESS-COG.2026:chef_lieu_de_commune; request, edition and checksum pinned in the manifest): the chef-lieu point with code_insee_de_la_commune '10387' (nom_officiel 'Troyes', nom_du_chef_lieu 'Troyes') intersecting the champagne envelope. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. Chef-lieu point of the commune of Troyes (INSEE 10387)."
+supersedes: null

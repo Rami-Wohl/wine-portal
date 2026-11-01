@@ -1,0 +1,49 @@
+id: geo.water-body.lac-d-orient
+kind: water-body
+names:
+  nl: Lac d'Orient
+  en: Lac d'Orient
+geometry:
+  file: geo.water-body.lac-d-orient.geojson
+  type: MultiPolygon
+  sha256: f59a89d47396492a39ab1e3b114179b74a9c2ece0143f6ea8b888f9dbeff1966
+  vertex_count: 662
+  bbox: [4.29753594, 48.2426102, 4.37954918, 48.30565335]
+source:
+  source_id: source.ign-bd-carto-v5-2026
+  dataset_id: IGNF_BD-CARTO
+  resource_id: BDCARTO_V5:plan_d_eau
+  release: 2026-03-15
+  retrieved_at: 2026-10-30
+  resource_sha256: 64f2d3bb3b51607140672d95889fef7befa72af3b64a3d93c2d63a575c9a437c
+  crs: EPSG:2154
+  encoding: UTF-8
+  feature_key:
+    layer: BDCARTO_V5:plan_d_eau
+    property: toponyme
+    values: Lac d'Orient (Réservoir Seine)
+    feature_count: 1
+    cleabs: PLANDEAU0000002000761613
+licence:
+  id: etalab-2.0
+  attribution: IGN, BD CARTO® V5, édition du 15 mars 2026
+  notes: cartographic reference geometry reused under Licence Ouverte 2.0; the credit names the publisher, dataset and edition without implying endorsement
+transformation:
+  - step: reproject
+    from: EPSG:2154
+    to: EPSG:4326
+    axis_order: lon-lat
+    tool: proj4@2.22.0
+  - step: ring-orientation
+    convention: rfc7946
+  - step: coordinate-precision
+    decimals: 8
+    unit: degree
+meaning: reservoir-water-surface
+precision: regional-orientation
+limitations: Cartographic water surface at BD CARTO® scale (1:50 000 to 1:250 000) for regional orientation; not a tidal, flood, navigation or property limit.
+review:
+  status: published
+  reviewed_at: 2026-10-31
+  notes: 'Selected from the committed WFS response ign-bdcarto-water-lac-d-orient (layer BDCARTO_V5:plan_d_eau; request, edition and checksum pinned in the manifest): the single object with toponyme ''Lac d''Orient (Réservoir Seine)'' and cleabs PLANDEAU0000002000761613 intersecting the champagne envelope. Reprojected from EPSG:2154 with explicit longitude-latitude order and no datum shift; coordinates rounded to 8 decimal degrees. One BD CARTO plan_d_eau object of nature "Retenue-digue", named "Lac d''Orient (Réservoir Seine)" in the source.'
+supersedes: null

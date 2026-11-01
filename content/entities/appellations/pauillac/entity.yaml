@@ -65,5 +65,6 @@ source_refs:
   - source.grand-puy-lacoste-chateau
   - source.pontet-canet-history
   - source.pontet-canet-practices
+geography_id: geo.appellation-area.pauillac
 depth: foundation
 last_reviewed: 2026-09-22

@@ -408,11 +408,17 @@ export function ContentDocumentView({
   locale,
   media,
   sources,
+  afterSummary,
 }: {
   document: ContentDocument;
   locale: Locale;
   media: MediaAsset[];
   sources: Source[];
+  /**
+   * Rendered once in the reading flow, directly after the first top-level
+   * summary block (or first when the document has none), e.g. the Atlas map.
+   */
+  afterSummary?: ReactNode;
 }) {
   const sourceMap = new Map(sources.map((source) => [source.id, source]));
   const sourceNumbers = new Map(sources.map((source, index) => [source.id, index + 1]));
@@ -425,6 +431,13 @@ export function ContentDocumentView({
     key: string;
     type: "other" | "section";
   }> = [];
+  const afterSummaryUnit = {
+    content: afterSummary,
+    depth: null,
+    key: "after-summary",
+    type: "other" as const,
+  };
+  let slotPlaced = false;
   for (let index = 0; index < document.blocks.length; index += 1) {
     const block = document.blocks[index];
     const galleryAsset =
@@ -459,6 +472,10 @@ export function ContentDocumentView({
         key: block.id,
         type: "other",
       });
+      if (afterSummary && !slotPlaced && block.type === "summary" && block.parent === null) {
+        units.push(afterSummaryUnit);
+        slotPlaced = true;
+      }
       continue;
     }
 
@@ -515,6 +532,8 @@ export function ContentDocumentView({
       type: "section",
     });
   }
+
+  if (afterSummary && !slotPlaced) units.unshift(afterSummaryUnit);
 
   const contentItems: ReactNode[] = [];
   for (let index = 0; index < units.length; index += 1) {

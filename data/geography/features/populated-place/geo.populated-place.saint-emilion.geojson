@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "geo.populated-place.saint-emilion",
+  "properties": {
+    "id": "geo.populated-place.saint-emilion",
+    "kind": "populated-place",
+    "name_nl": "Saint-Émilion",
+    "name_en": "Saint-Émilion"
+  },
+  "bbox": [-0.15572345, 44.89436698, -0.15572345, 44.89436698],
+  "geometry": { "type": "Point", "coordinates": [-0.15572345, 44.89436698] }
+}

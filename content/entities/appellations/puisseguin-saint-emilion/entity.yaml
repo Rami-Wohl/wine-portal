@@ -34,5 +34,6 @@ source_refs:
   - source.inao-puisseguin-saint-emilion-overview
   - source.inao-puisseguin-saint-emilion-specification-2023
   - source.inrae-bordeaux-climate-adaptation
+geography_id: geo.appellation-area.puisseguin-saint-emilion
 depth: foundation
 last_reviewed: 2026-09-13
